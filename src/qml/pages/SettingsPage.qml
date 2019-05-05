@@ -30,6 +30,17 @@ Page {
                 text: qsTr("Show hidden files")
                 onCheckedChanged: engine.writeSetting("show-hidden-files", showHiddenFiles.checked.toString())
             }
+            TextSwitch {
+                id: showThumbnails
+                text: qsTr("Show thumbnails where possible")
+                onCheckedChanged: engine.writeSetting("show-thumbnails", showThumbnails.checked.toString())
+            }
+            TextSwitch {
+                id: cacheThumbnails
+                text: qsTr("Cache thumbnails")
+                enabled: showThumbnails.checked
+                onCheckedChanged: engine.writeSetting("cache-thumbnails", cacheThumbnails.checked.toString())
+            }
 
             Spacer { height: 2*Theme.paddingLarge }
 
@@ -102,8 +113,8 @@ Page {
         if (status === PageStatus.Activating) {
             showDirsFirst.checked = (engine.readSetting("show-dirs-first") === "true");
             showHiddenFiles.checked = (engine.readSetting("show-hidden-files") === "true");
+            showThumbnails.checked = (engine.readSetting("show-thumbnails") === "true");
+            cacheThumbnails.checked = (engine.readSetting("cache-thumbnails") === "true");
         }
     }
 }
-
-
