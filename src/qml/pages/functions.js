@@ -33,19 +33,6 @@ function trim(s)
 
 function goToFolder(folder)
 {
-//    // first, go to root so that the page stack has only one page
-//    goToRoot(PageStackAction.Immediate);
-
-//    // open the folders one by one
-//    var dirs = folder.split("/");
-//    var path = "";
-//    for (var i = 1; i < dirs.length; ++i) {
-//        path += "/"+dirs[i];
-//        // animate the last push
-//        var action = (i < dirs.length-1) ? PageStackAction.Immediate : PageStackAction.Animated;
-//        pageStack.push(Qt.resolvedUrl("DirectoryPage.qml"), { dir: path }, action);
-//    }
-
     main.lastPath = folder;
     var dirs = folder.split("/");
     var path = "";
@@ -59,42 +46,6 @@ function goToFolder(folder)
         pageStack.push(pagePath, { dir: path }, PageStackAction.Immediate);
     }
     pageStack.push(pagePath, { dir: folder }, PageStackAction.Animated);
-
-
-//    // prepare the folders one by one
-//    var dirs = folder.split("/");
-//    var path = "";
-//    var pages = [{'page': Qt.resolvedUrl("DirectoryPage.qml"), 'properties': { dir: '/' }}];
-
-//    for (var i = 1; i < dirs.length; ++i) {
-//        if (i < dirs.length-1) {
-//            path += "/"+dirs[i];
-//            pages.push({'page': Qt.resolvedUrl("DirectoryPage.qml"), 'properties': { dir: path }});
-//        }
-//    }
-
-//    main.lastPath = folder
-//    pageStack.clear();
-//    pageStack.push(pages, { dir: path + "/"+dirs[dirs.length-1] }, PageStackAction.Immediate);
-//    pageStack.push(Qt.resolvedUrl("DirectoryPage.qml"), { dir: path }, PageStackAction.Animated);
-
-
-//    main.lastPath = folder
-//    //pageStack.clear();
-//    //pageStack.push(Qt.resolvedUrl("DirectoryPage.qml"), { dir: folder }, PageStackAction.Animated);
-
-//    // prepare the folders one by one
-//    var dirs = folder.split("/");
-//    var path = "";
-//    var pages = [{'page': Qt.resolvedUrl("DirectoryPage.qml"), 'properties': { dir: '/' }}];
-
-//    for (var i = 1; i < dirs.length; ++i) {
-//        path += "/"+dirs[i];
-//        pages.push({'page': Qt.resolvedUrl("DirectoryPage.qml"), 'properties': { dir: path }});
-//    }
-
-//    pageStack.clear();
-//    pageStack.push(pages, { dir: path }, PageStackAction.Animated);
 }
 
 // Goes to Home folder
