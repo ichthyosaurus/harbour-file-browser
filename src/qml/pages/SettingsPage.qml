@@ -59,7 +59,7 @@ Page {
                 Label {
                     id: version
                     text: qsTr("Version")+" "
-                    font.pixelSize: Theme.fontSizeExtraSmall
+                    font.pixelSize: Theme.fontSizeSmall
                     color: Theme.highlightColor
                 }
                 Label {
@@ -87,7 +87,7 @@ Page {
                     text: qsTr("File Browser is free and unencumbered software released "+
                           "into the public domain.") + "<br><a href='dummy'>" + qsTr("Read full text >>") + "</a>"
                     wrapMode: Text.Wrap
-                    font.pixelSize: Theme.fontSizeExtraSmall
+                    font.pixelSize: Theme.fontSizeSmall
                     onLinkActivated: pdItem.clicked(undefined)
                 }
             }
