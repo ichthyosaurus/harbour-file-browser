@@ -63,8 +63,8 @@ Page {
                     color: Theme.highlightColor
                 }
                 Label {
-                    text: "1.7.4.1" // Version number must be changed manually!
-                    font.pixelSize: Theme.fontSizeExtraSmall
+                    text: "1.7.4.1 (fork)" // Version number must be changed manually!
+                    font.pixelSize: Theme.fontSizeSmall
                     color: Theme.highlightColor
                 }
             }
