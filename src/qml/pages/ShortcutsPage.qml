@@ -16,10 +16,26 @@ Page {
 
         VerticalScrollDecorator { }
 
+        PullDownMenu {
+            MenuItem {
+                text: qsTr("Settings")
+                onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
+            }
+            MenuItem {
+                text: qsTr("Search")
+                onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
+                                          { dir: StandardPaths.home });
+            }
+        }
+
         model: listModel
 
         header: PageHeader {
-            title: qsTr("File Browser")
+            title: qsTr("File Browser")+" "+Functions.unicodeBlackDownPointingTriangle()
+            MouseArea {
+                anchors.fill: parent
+                onClicked: dirPopup.show();
+            }
         }
 
         delegate: Component {
@@ -171,5 +187,11 @@ Page {
     //                               "bookmark": true })
     //        }
         }
+    }
+
+    DirPopup {
+        id: dirPopup
+        anchors.fill: parent
+        menuTop: Theme.itemSizeMedium
     }
 }

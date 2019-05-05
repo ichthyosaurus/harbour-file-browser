@@ -31,8 +31,7 @@ function trim(s)
     return s.replace(/^\s+|\s+$/g, "");
 }
 
-function goToFolder(folder)
-{
+function goToFolder(folder) {
     main.lastPath = folder;
     var dirs = folder.split("/");
     var path = "";
