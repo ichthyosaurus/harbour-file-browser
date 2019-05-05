@@ -8,7 +8,7 @@ Page {
     SilicaFlickable {
         id: flickable
         anchors.fill: parent
-        contentHeight: column.height
+        contentHeight: column.height + Theme.horizontalPageMargin
         VerticalScrollDecorator { flickable: flickable }
 
         Column {
