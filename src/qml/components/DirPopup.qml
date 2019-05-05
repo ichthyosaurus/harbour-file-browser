@@ -71,19 +71,17 @@ Item {
             onClosed: {
                 if (_selectedMenu === "home") {
                     Functions.goToHome();
-
                 } else if (_selectedMenu === "android-storage") {
                     var androidSdcard = engine.androidSdcardPath();
+
                     if (engine.exists(androidSdcard)) {
                         Functions.goToFolder(androidSdcard);
                     } else {
                         // this assumes that the page has a notificationPanel
                         notificationPanel.showText(qsTr("Android Storage not found"), androidSdcard);
                     }
-
                 } else if (_selectedMenu === "root") {
                     Functions.goToRoot();
-
                 } else if (_selectedMenu === "sdcard") {
                     var sdcard = engine.sdcardPath();
                     if (engine.exists(sdcard)) {
@@ -92,10 +90,17 @@ Item {
                         // this assumes that the page has a notificationPanel
                         notificationPanel.showText(qsTr("SD Card not found"), sdcard);
                     }
+                } else if (_selectedMenu === "shortcuts") {
+                    Functions.goToShortcuts();
                 }
+
                 _selectedMenu = "";
             }
 
+            MenuItem {
+                text: qsTr("Bookmarks")
+                onClicked: _selectedMenu = "shortcuts"
+            }
             MenuItem {
                 text: qsTr("Home")
                 onClicked: _selectedMenu = "home"
@@ -117,5 +122,4 @@ Item {
             }
         }
     }
-
 }
