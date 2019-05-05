@@ -1,22 +1,18 @@
 
 // Go to root using the optional operationType parameter
 // @param operationType PageStackAction.Immediate or Animated, Animated is default)
-function goToRoot(operationType)
-{
-    if (operationType !== PageStackAction.Immediate &&
-            operationType !== PageStackAction.Animated)
-        operationType = PageStackAction.Animated;
+function goToRoot(operationType) {
+    if (operationType !== PageStackAction.Immediate) operationType = PageStackAction.Animated;
+    main.lastPath = "/"
+    pageStack.clear();
+    pageStack.push(Qt.resolvedUrl("DirectoryPage.qml"), { dir: "/" }, operationType);
+}
 
-    // find the first page
-    var firstPage = pageStack.previousPage();
-    if (!firstPage)
-        return;
-    while (pageStack.previousPage(firstPage)) {
-        firstPage = pageStack.previousPage(firstPage);
-    }
-
-    // pop to first page
-    pageStack.pop(firstPage, operationType);
+function goToShortcuts(operationType) {
+    if (operationType !== PageStackAction.Immediate) operationType = PageStackAction.Animated;
+    pageStack.clear();
+    pageStack.push(Qt.resolvedUrl("ShortcutsPage.qml"), { lastPath: main.lastPath }, operationType);
+    return;
 }
 
 // returns true if string s1 starts with string s2
@@ -37,18 +33,68 @@ function trim(s)
 
 function goToFolder(folder)
 {
-    // first, go to root so that the page stack has only one page
-    goToRoot(PageStackAction.Immediate);
+//    // first, go to root so that the page stack has only one page
+//    goToRoot(PageStackAction.Immediate);
 
-    // open the folders one by one
+//    // open the folders one by one
+//    var dirs = folder.split("/");
+//    var path = "";
+//    for (var i = 1; i < dirs.length; ++i) {
+//        path += "/"+dirs[i];
+//        // animate the last push
+//        var action = (i < dirs.length-1) ? PageStackAction.Immediate : PageStackAction.Animated;
+//        pageStack.push(Qt.resolvedUrl("DirectoryPage.qml"), { dir: path }, action);
+//    }
+
+    main.lastPath = folder;
     var dirs = folder.split("/");
     var path = "";
-    for (var i = 1; i < dirs.length; ++i) {
+    var pagePath = Qt.resolvedUrl("DirectoryPage.qml");
+
+    // open the folders one by one
+    pageStack.clear();
+    pageStack.push(pagePath, { dir: "/" }, PageStackAction.Immediate);
+    for (var i = 1; i < dirs.length-1; ++i) {
         path += "/"+dirs[i];
-        // animate the last push
-        var action = (i < dirs.length-1) ? PageStackAction.Immediate : PageStackAction.Animated;
-        pageStack.push(Qt.resolvedUrl("DirectoryPage.qml"), { dir: path }, action);
+        pageStack.push(pagePath, { dir: path }, PageStackAction.Immediate);
     }
+    pageStack.push(pagePath, { dir: folder }, PageStackAction.Animated);
+
+
+//    // prepare the folders one by one
+//    var dirs = folder.split("/");
+//    var path = "";
+//    var pages = [{'page': Qt.resolvedUrl("DirectoryPage.qml"), 'properties': { dir: '/' }}];
+
+//    for (var i = 1; i < dirs.length; ++i) {
+//        if (i < dirs.length-1) {
+//            path += "/"+dirs[i];
+//            pages.push({'page': Qt.resolvedUrl("DirectoryPage.qml"), 'properties': { dir: path }});
+//        }
+//    }
+
+//    main.lastPath = folder
+//    pageStack.clear();
+//    pageStack.push(pages, { dir: path + "/"+dirs[dirs.length-1] }, PageStackAction.Immediate);
+//    pageStack.push(Qt.resolvedUrl("DirectoryPage.qml"), { dir: path }, PageStackAction.Animated);
+
+
+//    main.lastPath = folder
+//    //pageStack.clear();
+//    //pageStack.push(Qt.resolvedUrl("DirectoryPage.qml"), { dir: folder }, PageStackAction.Animated);
+
+//    // prepare the folders one by one
+//    var dirs = folder.split("/");
+//    var path = "";
+//    var pages = [{'page': Qt.resolvedUrl("DirectoryPage.qml"), 'properties': { dir: '/' }}];
+
+//    for (var i = 1; i < dirs.length; ++i) {
+//        path += "/"+dirs[i];
+//        pages.push({'page': Qt.resolvedUrl("DirectoryPage.qml"), 'properties': { dir: path }});
+//    }
+
+//    pageStack.clear();
+//    pageStack.push(pages, { dir: path }, PageStackAction.Animated);
 }
 
 // Goes to Home folder
