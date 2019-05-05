@@ -57,6 +57,7 @@ Page {
                                           { dir: page.dir });
             }
             MenuItem {
+                visible: engine.clipboardCount > 0
                 text: qsTr("Paste") +
                       (engine.clipboardCount > 0 ? " ("+engine.clipboardCount+")" : "")
                 onClicked: {
