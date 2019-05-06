@@ -78,19 +78,33 @@ Page {
                     }
                 }
 
-                Text {
-                    id: shortcutPath
-                    width: parent.width - image.width - Theme.horizontalPageMargin
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                    color: iconButton.pressed ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                    text: Functions.unicodeArrow() + " " + model.location
-                    visible: model.location === model.name ? false : true
-                    elide: Text.ElideRight
+                Row {
+                    spacing: 0
+                    width: Screen.width - x - Theme.horizontalPageMargin
                     anchors {
                         left: image.right
-                        leftMargin: Theme.paddingSmall
+                        leftMargin: Theme.paddingMedium
                         top: shortcutLabel.bottom
                         topMargin: 2
+                    }
+
+                    Text {
+                        id: sizeInfo
+                        property var space: model.showsize ? engine.diskSpace(model.location) : []
+                        font.pixelSize: Theme.fontSizeExtraSmall
+                        color: iconButton.pressed ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                        text: (space.length > 0 ? space[0] + " • " + space[1] + " • " : "")
+                        visible: model.showsize
+                    }
+
+                    Text {
+                        id: shortcutPath
+                        width: parent.width - (sizeInfo.visible ? sizeInfo.width : 0)
+                        font.pixelSize: Theme.fontSizeExtraSmall
+                        color: iconButton.pressed ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                        text: Functions.unicodeArrow() + " " + model.location
+                        visible: model.location === model.name ? false : true
+                        elide: Text.ElideMiddle
                     }
                 }
 
@@ -138,7 +152,8 @@ Page {
             listModel.append({ "section": qsTr("Locations"),
                                "name": qsTr("Home"),
                                "thumbnail": "icon-m-home",
-                               "location": StandardPaths.home })
+                               "location": StandardPaths.home,
+                               "showsize": true })
             listModel.append({ "section": qsTr("Locations"),
                                "name": qsTr("Documents"),
                                "thumbnail": "icon-m-file-document-light",
@@ -167,7 +182,8 @@ Page {
                 listModel.append({ "section": qsTr("Storage devices"),
                                    "name": qsTr("SD card"),
                                    "thumbnail": "icon-m-sd-card",
-                                   "location": engine.sdcardPath() })
+                                   "location": engine.sdcardPath(),
+                                   "showsize": true })
             }
 
             // TODO support external drives via USB OTG
