@@ -44,7 +44,7 @@ Page {
             BackgroundItem {
                 id: iconButton
                 width: shortcutsView.width
-                height: Screen.height / 14
+                height: Screen.height / 15
 
                 onClicked: {
                     Functions.goToFolder(model.location)
@@ -174,6 +174,11 @@ Page {
                                "name": qsTr("Videos"),
                                "thumbnail": "icon-m-file-video",
                                "location": StandardPaths.videos })
+            listModel.append({ "section": qsTr("Locations"),
+                               "name": qsTr("Root"),
+                               "thumbnail": "icon-m-file-rpm",
+                               "location": "/",
+                               "showsize": true })
             listModel.append({ "section": qsTr("Android locations"),
                                "name": qsTr("Android storage"),
                                "thumbnail": "icon-m-file-apk",
