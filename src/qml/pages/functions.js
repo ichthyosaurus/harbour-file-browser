@@ -53,17 +53,14 @@ function goToFolder(folder) {
         })
         if (!existingTarget) {
             goToRoot();
-            console.log("A root")
         } else {
             pageStack.pop(existingTarget, PageStackAction.Animated);
-            console.log("A", existingTarget.dir)
         }
 
         return;
     } else if (shared === "/" || shared === "") {
         goToRoot();
-        rest = folder//.replace("/", "");
-        console.log("B", shared, rest, folder)
+        rest = folder
     } else if (shared !== "") {
         var existingBase = pageStack.find(function(page) {
             if (page.dir === shared) return true;
@@ -71,7 +68,6 @@ function goToFolder(folder) {
         })
         pageStack.pop(existingBase, PageStackAction.Immediate);
         rest = folder.replace(shared+"/", "");
-        console.log("C", shared, rest, folder)
     }
 
     var dirs = rest.split("/");
