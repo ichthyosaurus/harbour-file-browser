@@ -113,6 +113,7 @@ Page {
                 x: Theme.paddingLarge
                 width: Theme.iconSizeSmall
                 height: Theme.iconSizeSmall
+                asynchronous: true
                 Component.onCompleted: {
                     var qml = Theme.lightPrimaryColor ? "../components/MyHighlightImage3.qml"
                                                       : "../components/MyHighlightImage2.qml";
