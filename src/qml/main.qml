@@ -7,6 +7,6 @@ ApplicationWindow {
     property string coverText: "File Browser"
     cover: Qt.resolvedUrl("cover/FileBrowserCover.qml")
     initialPage: Component {
-        DirectoryPage { dir: StandardPaths.home }
+        DirectoryPage { initial: true; }
     }
 }
