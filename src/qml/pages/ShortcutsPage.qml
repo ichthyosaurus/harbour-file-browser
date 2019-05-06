@@ -31,11 +31,7 @@ Page {
         model: listModel
 
         header: PageHeader {
-            title: qsTr("File Browser")+" "+Functions.unicodeBlackDownPointingTriangle()
-            MouseArea {
-                anchors.fill: parent
-                onClicked: dirPopup.show();
-            }
+            title: qsTr("Places")
         }
 
         delegate: Component {
@@ -141,14 +137,12 @@ Page {
             id: listModel
         }
 
-        Component.onCompleted: updateModel()
+        Component.onCompleted: {
+            updateModel()
+        }
 
         function updateModel() {
             listModel.clear()
-            listModel.append({ "section": qsTr("Locations"),
-                               "name": qsTr("Last location"),
-                               "thumbnail": "icon-m-back",
-                               "location": main.lastPath })
             listModel.append({ "section": qsTr("Locations"),
                                "name": qsTr("Home"),
                                "thumbnail": "icon-m-home",
@@ -208,11 +202,5 @@ Page {
     //                               "bookmark": true })
     //        }
         }
-    }
-
-    DirPopup {
-        id: dirPopup
-        anchors.fill: parent
-        menuTop: Theme.itemSizeMedium
     }
 }

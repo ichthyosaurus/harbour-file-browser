@@ -125,7 +125,7 @@ Page {
                        Functions.unicodeBlackDownPointingTriangle()
                 MouseArea {
                     anchors.fill: parent
-                    onClicked: dirPopup.show();
+                    onClicked: pageStack.push(Qt.resolvedUrl("ShortcutsPage.qml"));
                 }
             }
 
@@ -292,12 +292,6 @@ Page {
         if (status === PageStatus.Activating) {
             coverText = Functions.lastPartOfPath(page.file);
         }
-    }
-
-    DirPopup {
-        id: dirPopup
-        anchors.fill: parent
-        menuTop: Theme.itemSizeMedium
     }
 
     NotificationPanel {

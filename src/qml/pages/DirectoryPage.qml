@@ -89,7 +89,7 @@ Page {
                    Functions.unicodeBlackDownPointingTriangle()
             MouseArea {
                 anchors.fill: parent
-                onClicked: dirPopup.show();
+                onClicked: pageStack.push(Qt.resolvedUrl("ShortcutsPage.qml"));
             }
         }
 
@@ -174,10 +174,8 @@ Page {
 
             onClicked: {
                 if (model.isDir) {
-                    var nextDir = fileModel.appendPath(listLabel.text);
                     pageStack.push(Qt.resolvedUrl("DirectoryPage.qml"),
-                                   { dir: nextDir });
-                    main.lastPath = nextDir;
+                                   { dir: fileModel.appendPath(listLabel.text) });
                 } else {
                     pageStack.push(Qt.resolvedUrl("FilePage.qml"),
                                    { file: fileModel.appendPath(listLabel.text) });
@@ -302,12 +300,6 @@ Page {
                 Functions.goToHome();
             }
         }
-    }
-
-    DirPopup {
-        id: dirPopup
-        anchors.fill: parent
-        menuTop: Theme.itemSizeMedium
     }
 
     // connect signals from engine to panels

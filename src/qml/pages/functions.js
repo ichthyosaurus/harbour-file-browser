@@ -3,7 +3,6 @@
 // @param operationType PageStackAction.Immediate or Animated, Animated is default)
 function goToRoot(operationType) {
     if (operationType !== PageStackAction.Immediate) operationType = PageStackAction.Animated;
-    main.lastPath = "/"
     pageStack.clear();
     pageStack.push(Qt.resolvedUrl("DirectoryPage.qml"), { dir: "/" }, operationType);
 }
@@ -11,7 +10,7 @@ function goToRoot(operationType) {
 function goToShortcuts(operationType) {
     if (operationType !== PageStackAction.Immediate) operationType = PageStackAction.Animated;
     pageStack.clear();
-    pageStack.push(Qt.resolvedUrl("ShortcutsPage.qml"), { lastPath: main.lastPath }, operationType);
+    pageStack.push(Qt.resolvedUrl("ShortcutsPage.qml"), {}, operationType);
     return;
 }
 
@@ -32,14 +31,14 @@ function trim(s)
 }
 
 function goToFolder(folder) {
-    main.lastPath = folder;
     var dirs = folder.split("/");
     var path = "";
     var pagePath = Qt.resolvedUrl("DirectoryPage.qml");
 
     // open the folders one by one
-    pageStack.clear();
-    pageStack.push(pagePath, { dir: "/" }, PageStackAction.Immediate);
+    goToRoot(PageStackAction.Immediate);
+    if (folder === "/") return;
+
     for (var i = 1; i < dirs.length-1; ++i) {
         path += "/"+dirs[i];
         pageStack.push(pagePath, { dir: path }, PageStackAction.Immediate);
@@ -97,5 +96,5 @@ function unicodeArrow()
 
 function unicodeBlackDownPointingTriangle()
 {
-    return "\u25be"; // unicode for down pointing triangle symbol (for top dir dropdown)
+    return "\u25b8"; // unicode for down pointing triangle symbol (for top dir dropdown)
 }

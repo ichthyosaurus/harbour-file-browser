@@ -4,7 +4,6 @@ import "pages"
 
 ApplicationWindow {
     id: main
-    property string lastPath: StandardPaths.home
     property string coverText: "File Browser"
 
     cover: Qt.resolvedUrl("cover/FileBrowserCover.qml")
