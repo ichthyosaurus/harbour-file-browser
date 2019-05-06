@@ -5,9 +5,8 @@ import "pages"
 ApplicationWindow {
     id: main
     property string coverText: "File Browser"
-
     cover: Qt.resolvedUrl("cover/FileBrowserCover.qml")
     initialPage: Component {
-        ShortcutsPage { }
+        DirectoryPage { dir: StandardPaths.home }
     }
 }
