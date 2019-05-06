@@ -173,12 +173,15 @@ Page {
             }
 
             onClicked: {
-                if (model.isDir)
+                if (model.isDir) {
+                    var nextDir = fileModel.appendPath(listLabel.text);
                     pageStack.push(Qt.resolvedUrl("DirectoryPage.qml"),
-                                   { dir: fileModel.appendPath(listLabel.text) });
-                else
+                                   { dir: nextDir });
+                    main.lastPath = nextDir;
+                } else {
                     pageStack.push(Qt.resolvedUrl("FilePage.qml"),
                                    { file: fileModel.appendPath(listLabel.text) });
+                }
             }
             MouseArea {
                 width: Theme.itemSizeSmall
