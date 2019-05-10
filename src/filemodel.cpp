@@ -304,7 +304,25 @@ void FileModel::applySettings(QDir &dir) {
     // sorting
     QDir::SortFlag dirsFirst = settings.value("show-dirs-first", false).toBool() ?
                                    QDir::DirsFirst : (QDir::SortFlag)0;
-    dir.setSorting(QDir::Name | dirsFirst);
+    QString sortSetting = settings.value("listing-sort-by", "name").toString();
+    QDir::SortFlag sortBy = QDir::Name;
+
+    if (sortSetting == "name") {
+        sortBy = QDir::Name;
+    } else if (sortSetting == "size") {
+        sortBy = QDir::Size;
+    } else if (sortSetting == "modified") {
+        sortBy = QDir::Time;
+    } else if (sortSetting == "type") {
+        sortBy = QDir::Type;
+    } else {
+        sortBy = QDir::Name;
+    }
+
+    QDir::SortFlag order = settings.value("listing-order", "default").toString() == "default" ?
+                               (QDir::SortFlag)0 : QDir::Reversed;
+
+    dir.setSorting(sortBy | dirsFirst | order);
 }
 
 void FileModel::readAllEntries()

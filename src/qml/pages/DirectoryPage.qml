@@ -41,6 +41,10 @@ Page {
                 onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
             }
             MenuItem {
+                text: qsTr("Sort")
+                onClicked: pageStack.push(Qt.resolvedUrl("SortingPage.qml"))
+            }
+            MenuItem {
                 text: qsTr("Create Folder")
                 onClicked: {
                     var dialog = pageStack.push(Qt.resolvedUrl("CreateFolderDialog.qml"),
