@@ -21,6 +21,10 @@ Page {
 
             PageHeader {
                 title: qsTr("Sorting")
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: pageStack.pop();
+                }
             }
 
             SelectableListView {

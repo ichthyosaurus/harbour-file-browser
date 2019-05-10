@@ -90,6 +90,10 @@ Page {
 
         header: PageHeader {
             title: Functions.formatPathForTitle(page.dir)
+            MouseArea {
+                anchors.fill: parent
+                onClicked: pageStack.push(Qt.resolvedUrl("SortingPage.qml"));
+            }
         }
 
         delegate: ListItem {
