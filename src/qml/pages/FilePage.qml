@@ -74,6 +74,13 @@ Page {
                     })
                 }
             }
+
+            MenuItem {
+                text: qsTr("View Contents")
+                visible: !fileData.isDir
+                onClicked: viewContents()
+            }
+
             MenuItem {
                 text: qsTr("Rename")
                 onClicked: {
@@ -88,11 +95,6 @@ Page {
                 }
             }
 
-            MenuItem {
-                text: qsTr("View Contents")
-                visible: !fileData.isDir
-                onClicked: viewContents()
-            }
             // open/install tries to open the file and fileData.onProcessExited shows error
             // if it fails
             MenuItem {
