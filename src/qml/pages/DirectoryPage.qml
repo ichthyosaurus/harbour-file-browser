@@ -99,6 +99,8 @@ Page {
             }
         }
 
+        footer: Spacer { }
+
         delegate: ListItem {
             id: fileItem
             menu: contextMenu
