@@ -299,6 +299,20 @@ Page {
         page: page
     }
 
+    Timer {
+        id: preparationTimer
+        running: false
+        repeat: false
+        interval: 10
+        onTriggered: {
+            viewContents(true);
+        }
+    }
+
+    Component.onCompleted: {
+        preparationTimer.start();
+    }
+
     function isImageFile()
     {
         return fileData.mimeType === "image/jpeg" || fileData.mimeType === "image/png" ||
@@ -339,29 +353,38 @@ Page {
 
     function quickView()
     {
-        // dirs are special cases - there's no way to display their contents, so go to them
-        if (fileData.isDir && fileData.isSymLink) {
-            Functions.goToFolder(fileData.symLinkTarget);
-
-        } else if (fileData.isDir) {
-            Functions.goToFolder(fileData.file);
-
-        } else {
-            viewContents();
-        }
+        viewContents();
     }
 
-    function viewContents()
+    function viewContents(asAttached)
     {
+        // dirs are special cases - there's no way to display their contents, so go to them
+        if (fileData.isDir) {
+            if (fileData.isSymLink) {
+                Functions.goToFolder(fileData.symLinkTarget);
+            } else {
+                Functions.goToFolder(fileData.file);
+            }
+            return;
+        }
+
+        var method;
+
+        if (asAttached) {
+            method = pageStack.pushAttached;
+        } else {
+            method = pageStack.push;
+        }
+
         // view depending on file type
         if (isZipFile()) {
-            pageStack.push(Qt.resolvedUrl("ConsolePage.qml"),
+            method(Qt.resolvedUrl("ConsolePage.qml"),
                          { title: Functions.lastPartOfPath(fileData.file),
                            command: "unzip",
                            arguments: [ "-Z", "-2ht", fileData.file ] });
 
         } else if (isRpmFile()) {
-            pageStack.push(Qt.resolvedUrl("ConsolePage.qml"),
+            method(Qt.resolvedUrl("ConsolePage.qml"),
                          { title: Functions.lastPartOfPath(fileData.file),
                            command: "rpm",
                            arguments: [ "-qlp", "--info", fileData.file ] });
@@ -369,12 +392,12 @@ Page {
         } else if (fileData.mimeType === "application/x-tar" ||
                    fileData.mimeType === "application/x-compressed-tar" ||
                    fileData.mimeType === "application/x-bzip-compressed-tar") {
-            pageStack.push(Qt.resolvedUrl("ConsolePage.qml"),
+            method(Qt.resolvedUrl("ConsolePage.qml"),
                          { title: Functions.lastPartOfPath(fileData.file),
                            command: "tar",
                            arguments: [ "tf", fileData.file ] });
         } else {
-            pageStack.push(Qt.resolvedUrl("ViewPage.qml"), { path: page.file });
+            method(Qt.resolvedUrl("ViewPage.qml"), { path: page.file });
         }
     }
 
@@ -387,7 +410,4 @@ Page {
             audioPlayer.stop();
         }
     }
-
 }
-
-
