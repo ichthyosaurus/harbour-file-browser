@@ -2,14 +2,6 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="el" sourcelanguage="en">
 <context>
-    <name>AboutPage</name>
-    <message>
-        <location filename="../qml/pages/AboutPage.qml" line="19"/>
-        <source>Public Domain</source>
-        <translation>Κοινό κτήμα</translation>
-    </message>
-</context>
-<context>
     <name>ConsoleModel</name>
     <message>
         <location filename="../consolemodel.cpp" line="101"/>
@@ -30,10 +22,6 @@
 <context>
     <name>CreateFolderDialog</name>
     <message>
-        <source>Create Folder</source>
-        <translation type="vanished">Δημιουργία φακέλου</translation>
-    </message>
-    <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="30"/>
         <source>Create</source>
         <translation>Δημιουργία</translation>
@@ -51,49 +39,6 @@
     </message>
 </context>
 <context>
-    <name>DirPopup</name>
-    <message>
-        <location filename="../qml/components/DirPopup.qml" line="22"/>
-        <source>Root (%1)</source>
-        <translation>Ρίζα (%1)</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/DirPopup.qml" line="25"/>
-        <source>Root</source>
-        <translation>Ρίζα</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/DirPopup.qml" line="32"/>
-        <source>SD Card (%1)</source>
-        <translation>Κάρτα SD (%1)</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/DirPopup.qml" line="35"/>
-        <source>SD Card</source>
-        <translation>Κάρτα SD</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/DirPopup.qml" line="81"/>
-        <source>Android Storage not found</source>
-        <translation>Δεν βρέθηκε χώρος αποθήκευσης Android</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/DirPopup.qml" line="93"/>
-        <source>SD Card not found</source>
-        <translation>Δεν βρέθηκε κάρτα SD</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/DirPopup.qml" line="100"/>
-        <source>Home</source>
-        <translation>Προσωπικός φάκελος</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/DirPopup.qml" line="104"/>
-        <source>Android Storage</source>
-        <translation>Χώρος αποθήκευσης Android</translation>
-    </message>
-</context>
-<context>
     <name>DirectoryPage</name>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="40"/>
@@ -102,71 +47,76 @@
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="44"/>
+        <source>Sort</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/DirectoryPage.qml" line="48"/>
         <source>Create Folder</source>
         <translation>Δημιουργία φακέλου</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="55"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="59"/>
         <source>Search</source>
         <translation>Αναζήτηση</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="60"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="65"/>
         <source>Paste</source>
         <translation>Επικόλληση</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="71"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="78"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="76"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="83"/>
         <source>Copying</source>
         <translation>Αντιγραφή</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="71"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="78"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="76"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="83"/>
         <source>Moving</source>
         <translation>Μετακίνηση</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="201"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="202"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="275"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="277"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="207"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="208"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="281"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="283"/>
         <source>Deleting</source>
         <translation>Διαγραφή</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="217"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="223"/>
         <source>Cut</source>
         <translation>Αποκοπή</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="221"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="227"/>
         <source>Copy</source>
         <translation>Αντιγραφή</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="225"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="231"/>
         <source>Delete</source>
         <translation>Διαγραφή</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="232"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="238"/>
         <source>Properties</source>
         <translation>Ιδιότητες</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="245"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="251"/>
         <source>No files</source>
         <translation>Κανένα αρχείο</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="319"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="337"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>Μήπως προσπαθείτε τη μετακίνηση μεταξύ του τηλεφώνου και της κάρτας SD; Δεν δουλεύει, δοκιμάστε την αντιγραφή.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="321"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="339"/>
         <source>Perhaps the storage is full?</source>
         <translation>Ίσως ο αποθετικός χώρος είναι πλήρης;</translation>
     </message>
@@ -317,14 +267,14 @@
         <translation>dir</translation>
     </message>
     <message>
-        <location filename="../filemodel.cpp" line="300"/>
-        <location filename="../filemodel.cpp" line="338"/>
+        <location filename="../filemodel.cpp" line="332"/>
+        <location filename="../filemodel.cpp" line="364"/>
         <source>Folder does not exist</source>
         <translation>Ο φάκελος δεν υπάρχει</translation>
     </message>
     <message>
-        <location filename="../filemodel.cpp" line="304"/>
-        <location filename="../filemodel.cpp" line="344"/>
+        <location filename="../filemodel.cpp" line="336"/>
+        <location filename="../filemodel.cpp" line="370"/>
         <source>No permission to read the folder</source>
         <translation>Δεν έχετε άδεια ανάγνωσης στον φάκελο</translation>
     </message>
@@ -397,83 +347,79 @@
         <translation>Αλλαγή αδειών</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="78"/>
+        <location filename="../qml/pages/FilePage.qml" line="85"/>
         <source>Rename</source>
         <translation>Μετονομασία</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="92"/>
+        <location filename="../qml/pages/FilePage.qml" line="79"/>
         <source>View Contents</source>
         <translation>Προβολή του περιεχομένου</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="99"/>
+        <location filename="../qml/pages/FilePage.qml" line="101"/>
         <source>Install</source>
         <translation>Εγκατάσταση</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="99"/>
+        <location filename="../qml/pages/FilePage.qml" line="101"/>
         <source>Open</source>
         <translation>Άνοιγμα</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="103"/>
+        <location filename="../qml/pages/FilePage.qml" line="105"/>
         <source>File cannot be opened</source>
         <translation>Αδύνατο το άνοιγμα του αρχείου</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="104"/>
+        <location filename="../qml/pages/FilePage.qml" line="106"/>
         <source>This type of file cannot be opened.</source>
         <translation>Αδύνατο το άνοιγμα αυτού του τύπου του αρχείου.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="112"/>
+        <location filename="../qml/pages/FilePage.qml" line="114"/>
         <source>Go to Target</source>
         <translation>Μετάβαση στον προορισμό</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="236"/>
+        <location filename="../qml/pages/FilePage.qml" line="233"/>
         <source>Location</source>
         <translation>Τοποθεσία</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="240"/>
+        <location filename="../qml/pages/FilePage.qml" line="237"/>
         <source>Type</source>
         <translation>Τύπος</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="242"/>
+        <location filename="../qml/pages/FilePage.qml" line="239"/>
         <source>Link to %1</source>
         <translation>Σύνδεσμος στο %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="246"/>
+        <location filename="../qml/pages/FilePage.qml" line="243"/>
         <source>Size</source>
         <translation>Μέγεθος</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="250"/>
+        <location filename="../qml/pages/FilePage.qml" line="247"/>
         <source>Permissions</source>
         <translation>Άδειες</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="254"/>
+        <location filename="../qml/pages/FilePage.qml" line="251"/>
         <source>Owner</source>
         <translation>Ιδιοκτήτης</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="258"/>
+        <location filename="../qml/pages/FilePage.qml" line="255"/>
         <source>Group</source>
         <translation>Ομάδα</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="262"/>
+        <location filename="../qml/pages/FilePage.qml" line="259"/>
         <source>Last modified</source>
         <translation>Τελευταία τροποποίηση</translation>
-    </message>
-    <message>
-        <source>Created</source>
-        <translation type="vanished">Δημιουργήθηκε</translation>
     </message>
 </context>
 <context>
@@ -520,6 +466,14 @@
     </message>
 </context>
 <context>
+    <name>LicensePage</name>
+    <message>
+        <location filename="../qml/pages/LicensePage.qml" line="19"/>
+        <source>Public Domain</source>
+        <translation type="unfinished">Κοινό κτήμα</translation>
+    </message>
+</context>
+<context>
     <name>OverwriteDialog</name>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="27"/>
@@ -539,10 +493,6 @@
 </context>
 <context>
     <name>PermissionsDialog</name>
-    <message>
-        <source>Change Permissions</source>
-        <translation type="vanished">Αλλαγή αδειών</translation>
-    </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="56"/>
         <source>Change</source>
@@ -1093,7 +1043,7 @@
     <name>SettingsPage</name>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="21"/>
-        <location filename="../qml/pages/SettingsPage.qml" line="99"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="113"/>
         <source>Settings</source>
         <translation>Ρυθμίσεις</translation>
     </message>
@@ -1108,29 +1058,166 @@
         <translation>Εμφάνιση των κρυφών αρχείων</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="37"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="35"/>
+        <source>Show thumbnails where possible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="40"/>
+        <source>Cache thumbnails</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="48"/>
         <source>About File Browser</source>
         <translation>Σχετικά με τον File Browser</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="50"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="61"/>
         <source>Version</source>
         <translation>Έκδοση</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="76"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="85"/>
         <source>File Browser is free and unencumbered software released into the public domain.</source>
         <translation>Ο File Browser είναι ένα ελεύθερο λογισμικό κοινού κτήματος.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="77"/>
-        <source>Read full text &gt;&gt;</source>
-        <translation>Ανάγνωση του πλήρες κειμένου &gt;&gt;</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="88"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="102"/>
         <source>The source code is available at</source>
         <translation>Ο πηγαίος κώδικας είναι διαθέσιμος στο</translation>
+    </message>
+</context>
+<context>
+    <name>ShortcutsPage</name>
+    <message>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="21"/>
+        <source>Settings</source>
+        <translation type="unfinished">Ρυθμίσεις</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="25"/>
+        <source>Search</source>
+        <translation type="unfinished">Αναζήτηση</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="34"/>
+        <source>Places</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="146"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="151"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="155"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="159"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="163"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="167"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="171"/>
+        <source>Locations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="147"/>
+        <source>Home</source>
+        <translation type="unfinished">Προσωπικός φάκελος</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="152"/>
+        <source>Documents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="156"/>
+        <source>Downloads</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="160"/>
+        <source>Music</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="164"/>
+        <source>Pictures</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="168"/>
+        <source>Videos</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="172"/>
+        <source>Root</source>
+        <translation type="unfinished">Ρίζα</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="176"/>
+        <source>Android locations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="177"/>
+        <source>Android storage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="181"/>
+        <source>Storage devices</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="182"/>
+        <source>SD card</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SortingPage</name>
+    <message>
+        <location filename="../qml/pages/SortingPage.qml" line="23"/>
+        <source>Sorting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SortingPage.qml" line="31"/>
+        <source>Sort by...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SortingPage.qml" line="36"/>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SortingPage.qml" line="40"/>
+        <source>Size</source>
+        <translation type="unfinished">Μέγεθος</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SortingPage.qml" line="44"/>
+        <source>Modification time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SortingPage.qml" line="48"/>
+        <source>File type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SortingPage.qml" line="61"/>
+        <source>Order...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SortingPage.qml" line="66"/>
+        <source>default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SortingPage.qml" line="70"/>
+        <source>reversed</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
