@@ -74,7 +74,7 @@ Page {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 height: pdLabel.height
-                onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
+                onClicked: pageStack.push(Qt.resolvedUrl("LicensePage.qml"))
 
                 Label {
                     id: pdLabel
