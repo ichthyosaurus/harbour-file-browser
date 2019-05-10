@@ -74,6 +74,7 @@ private:
     void refreshEntries();
     void clearModel();
     bool filesContains(const QList<StatFileInfo> &files, const StatFileInfo &fileData) const;
+    void applySettings(QDir& dir);
 
     QString m_dir;
     QList<StatFileInfo> m_files;

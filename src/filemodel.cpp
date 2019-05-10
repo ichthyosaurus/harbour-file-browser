@@ -293,6 +293,20 @@ void FileModel::recountSelectedFiles()
     }
 }
 
+void FileModel::applySettings(QDir &dir) {
+    QSettings settings;
+
+    // filters
+    QDir::Filter hidden = settings.value("show-hidden-files", false).toBool() ?
+                              QDir::Hidden : (QDir::Filter)0;
+    dir.setFilter(QDir::AllDirs | QDir::Files | QDir::NoDotAndDotDot | QDir::System | hidden);
+
+    // sorting
+    QDir::SortFlag dirsFirst = settings.value("show-dirs-first", false).toBool() ?
+                                   QDir::DirsFirst : (QDir::SortFlag)0;
+    dir.setSorting(QDir::Name | dirsFirst);
+}
+
 void FileModel::readAllEntries()
 {
     QDir dir(m_dir);
@@ -305,13 +319,7 @@ void FileModel::readAllEntries()
         return;
     }
 
-    QSettings settings;
-    bool hiddenSetting = settings.value("show-hidden-files", false).toBool();
-    QDir::Filter hidden = hiddenSetting ? QDir::Hidden : (QDir::Filter)0;
-    dir.setFilter(QDir::AllDirs | QDir::Files | QDir::NoDotAndDotDot | QDir::System | hidden);
-
-    if (settings.value("show-dirs-first", false).toBool())
-        dir.setSorting(QDir::Name | QDir::DirsFirst);
+    applySettings(dir);
 
     QStringList fileList = dir.entryList();
     foreach (QString filename, fileList) {
@@ -346,13 +354,7 @@ void FileModel::refreshEntries()
         return;
     }
 
-    QSettings settings;
-    bool hiddenSetting = settings.value("show-hidden-files", false).toBool();
-    QDir::Filter hidden = hiddenSetting ? QDir::Hidden : (QDir::Filter)0;
-    dir.setFilter(QDir::AllDirs | QDir::Files | QDir::NoDotAndDotDot | QDir::System | hidden);
-
-    if (settings.value("show-dirs-first", false).toBool())
-        dir.setSorting(QDir::Name | QDir::DirsFirst);
+    applySettings(dir);
 
     // read all files
     QList<StatFileInfo> newFiles;
