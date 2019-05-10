@@ -37,10 +37,6 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: qsTr("Settings")
-                onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
-            }
-            MenuItem {
                 text: qsTr("Sort")
                 onClicked: pageStack.push(Qt.resolvedUrl("SortingPage.qml"))
             }
@@ -54,11 +50,6 @@ Page {
                             notificationPanel.showText(dialog.errorMessage, "")
                     })
                 }
-            }
-            MenuItem {
-                text: qsTr("Search")
-                onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
-                                          { dir: page.dir });
             }
             MenuItem {
                 visible: engine.clipboardCount > 0
@@ -85,6 +76,18 @@ Page {
                         engine.pasteFiles(page.dir);
                     }
                 }
+            }
+        }
+
+        PushUpMenu {
+            MenuItem {
+                text: qsTr("Search")
+                onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
+                                          { dir: page.dir });
+            }
+            MenuItem {
+                text: qsTr("Settings")
+                onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
             }
         }
 
