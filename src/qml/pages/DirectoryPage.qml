@@ -85,12 +85,7 @@ Page {
         }
 
         header: PageHeader {
-            title: Functions.formatPathForTitle(page.dir) + " " +
-                   Functions.unicodeBlackDownPointingTriangle()
-            MouseArea {
-                anchors.fill: parent
-                onClicked: pageStack.push(Qt.resolvedUrl("ShortcutsPage.qml"));
-            }
+            title: Functions.formatPathForTitle(page.dir)
         }
 
         delegate: ListItem {

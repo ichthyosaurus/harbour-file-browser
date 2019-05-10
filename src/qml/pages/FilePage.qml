@@ -123,12 +123,7 @@ Page {
             anchors.right: parent.right
 
             PageHeader {
-                title: Functions.formatPathForTitle(fileData.absolutePath) + " " +
-                       Functions.unicodeBlackDownPointingTriangle()
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: pageStack.push(Qt.resolvedUrl("ShortcutsPage.qml"));
-                }
+                title: Functions.formatPathForTitle(fileData.absolutePath)
             }
 
             // file info texts, visible if error is not set

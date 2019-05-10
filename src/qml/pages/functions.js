@@ -126,8 +126,3 @@ function unicodeArrow()
 {
     return "\u2192"; // unicode for right pointing arrow symbol (for links)
 }
-
-function unicodeBlackDownPointingTriangle()
-{
-    return "\u25b8"; // unicode for down pointing triangle symbol (for top dir dropdown)
-}
