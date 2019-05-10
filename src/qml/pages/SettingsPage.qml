@@ -70,25 +70,28 @@ Page {
             }
             Spacer { height: Theme.paddingLarge }
             BackgroundItem {
-                id: pdItem
                 anchors.left: parent.left
                 anchors.right: parent.right
-                height: pdLabel.height
+                height: aboutColumn.height
                 onClicked: pageStack.push(Qt.resolvedUrl("LicensePage.qml"))
 
-                Label {
-                    id: pdLabel
+                Column {
+                    id: aboutColumn
                     x: Theme.horizontalPageMargin
                     width: parent.width - 2*x
-                    color: Theme.highlightColor
-                    textFormat: Text.StyledText
-                    linkColor: Theme.primaryColor
-
-                    text: qsTr("File Browser is free and unencumbered software released "+
-                          "into the public domain.") + "<br><a href='dummy'>" + qsTr("Read full text >>") + "</a>"
-                    wrapMode: Text.Wrap
-                    font.pixelSize: Theme.fontSizeSmall
-                    onLinkActivated: pdItem.clicked(undefined)
+                    Label {
+                        width: parent.width
+                        color: Theme.highlightColor
+                        text: qsTr("File Browser is free and unencumbered software released "+
+                              "into the public domain.")
+                        wrapMode: Text.Wrap
+                        font.pixelSize: Theme.fontSizeSmall
+                    }
+                    Label {
+                        anchors.right: parent.right
+                        color: Theme.primaryColor
+                        text: "\u2022 \u2022 \u2022" // three dots
+                    }
                 }
             }
 
@@ -98,7 +101,7 @@ Page {
                 width: parent.width - 2*x
                 text: qsTr("The source code is available at") + "\nhttps://github.com/karip/harbour-file-browser"
                 wrapMode: Text.Wrap
-                font.pixelSize: Theme.fontSizeTiny
+                font.pixelSize: Theme.fontSizeExtraSmall
                 color: Theme.highlightColor
             }
         }
