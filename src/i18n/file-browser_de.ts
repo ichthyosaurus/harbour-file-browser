@@ -48,7 +48,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="44"/>
         <source>Sort</source>
-        <translation type="unfinished"></translation>
+        <translation>Sortieren</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="48"/>
@@ -470,7 +470,7 @@
     <message>
         <location filename="../qml/pages/LicensePage.qml" line="19"/>
         <source>Public Domain</source>
-        <translation type="unfinished">Public Domain</translation>
+        <translation>Public Domain</translation>
     </message>
 </context>
 <context>
@@ -572,7 +572,7 @@
     <message>
         <location filename="../jhead/jhead-api.cpp" line="144"/>
         <source>(Strobe light detected) </source>
-        <translation>(Blitzlicht erkannt)</translation>
+        <translation>(Blitzlicht erkannt) </translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="145"/>
@@ -1063,12 +1063,12 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="35"/>
         <source>Show thumbnails where possible</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorschaubilder anzeigen (wenn möglich)</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="40"/>
         <source>Cache thumbnails</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorschaubilder zwischenspeichern</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="48"/>
@@ -1096,17 +1096,17 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="21"/>
         <source>Settings</source>
-        <translation type="unfinished">Einstellungen</translation>
+        <translation>Einstellungen</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="25"/>
         <source>Search</source>
-        <translation type="unfinished">Suchen</translation>
+        <translation>Suchen</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="34"/>
         <source>Places</source>
-        <translation type="unfinished"></translation>
+        <translation>Orte</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="146"/>
@@ -1117,62 +1117,62 @@
         <location filename="../qml/pages/ShortcutsPage.qml" line="167"/>
         <location filename="../qml/pages/ShortcutsPage.qml" line="171"/>
         <source>Locations</source>
-        <translation type="unfinished"></translation>
+        <translation>Verzeichnisse</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="147"/>
         <source>Home</source>
-        <translation type="unfinished">Benutzerverzeichnis</translation>
+        <translation>Benutzerverzeichnis</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="152"/>
         <source>Documents</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokumente</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="156"/>
         <source>Downloads</source>
-        <translation type="unfinished"></translation>
+        <translation>Downloads</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="160"/>
         <source>Music</source>
-        <translation type="unfinished"></translation>
+        <translation>Musik</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="164"/>
         <source>Pictures</source>
-        <translation type="unfinished"></translation>
+        <translation>Bilder</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="168"/>
         <source>Videos</source>
-        <translation type="unfinished"></translation>
+        <translation>Videos</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="172"/>
         <source>Root</source>
-        <translation type="unfinished">Stammverzeichnis</translation>
+        <translation>Stammverzeichnis</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="176"/>
         <source>Android locations</source>
-        <translation type="unfinished"></translation>
+        <translation>Android-Verzeichnisse</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="177"/>
         <source>Android storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Android-Datenspeicher</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="181"/>
         <source>Storage devices</source>
-        <translation type="unfinished"></translation>
+        <translation>Massenspeicher</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="182"/>
         <source>SD card</source>
-        <translation type="unfinished"></translation>
+        <translation>SD-Karte</translation>
     </message>
 </context>
 <context>
@@ -1180,47 +1180,47 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="23"/>
         <source>Sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>Sortierung</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="31"/>
         <source>Sort by...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sortieren nach ...</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="36"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Name</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="40"/>
         <source>Size</source>
-        <translation type="unfinished">Größe</translation>
+        <translation>Größe</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="44"/>
         <source>Modification time</source>
-        <translation type="unfinished"></translation>
+        <translation>Änderungszeitpunkt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="48"/>
         <source>File type</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateityp</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="61"/>
         <source>Order...</source>
-        <translation type="unfinished"></translation>
+        <translation>Reihenfolge ...</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="66"/>
         <source>default</source>
-        <translation type="unfinished"></translation>
+        <translation>normal</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="70"/>
         <source>reversed</source>
-        <translation type="unfinished"></translation>
+        <translation>umgekehrt</translation>
     </message>
 </context>
 </TS>
