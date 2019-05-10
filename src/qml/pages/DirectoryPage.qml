@@ -287,19 +287,37 @@ Page {
         }
     }
 
-    onStatusChanged: {
-        // clear file selections when the directory is changed
-        clearSelectedFiles();
-
-        // update cover
-        if (status === PageStatus.Activating) {
-            coverText = Functions.lastPartOfPath(page.dir)+"/";
-
-            // go to Home on startup
-            if (page.initial) {
-                page.initial = false;
-                Functions.goToHome();
+    // require page to be x milliseconds active before
+    // pushing the attached page, so the page is not pushed
+    // while navigating (= building the back-tree)
+    Timer {
+        id:  preparationTimer
+        interval: 15
+        running: false
+        repeat: false
+        onTriggered: {
+            if (status === PageStatus.Active) {
+                if (!canNavigateForward) {
+                    pageStack.pushAttached(Qt.resolvedUrl("ShortcutsPage.qml"));
+                }
+                coverText = Functions.lastPartOfPath(page.dir)+"/"; // update cover
             }
+        }
+    }
+
+    onStatusChanged: {
+        if (status === PageStatus.Deactivating) {
+            // clear file selections when the directory is changed
+            clearSelectedFiles();
+        }
+
+        if (status === PageStatus.Active) {
+            preparationTimer.start();
+        }
+
+        if (status === PageStatus.Activating && page.initial) {
+            page.initial = false;
+            Functions.goToHome();
         }
     }
 
@@ -334,5 +352,3 @@ Page {
     }
 
 }
-
-
