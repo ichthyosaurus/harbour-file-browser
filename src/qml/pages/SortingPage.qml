@@ -64,11 +64,11 @@ Page {
                 model: ListModel {
                     ListElement {
                         label: qsTr("default")
-                        value: "asc"
+                        value: "default"
                     }
                     ListElement {
                         label: qsTr("reversed")
-                        value: "desc"
+                        value: "reversed"
                     }
                 }
 
