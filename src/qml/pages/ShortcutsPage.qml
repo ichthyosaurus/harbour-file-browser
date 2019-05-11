@@ -12,7 +12,7 @@ Page {
         id: shortcutsView
 
         width: parent.width
-        height: parent.height
+        height: parent.height - 2*Theme.horizontalPageMargin
 
         VerticalScrollDecorator { }
 
@@ -40,7 +40,7 @@ Page {
             BackgroundItem {
                 id: iconButton
                 width: shortcutsView.width
-                height: Screen.height / 15
+                height: Theme.itemSizeSmall
 
                 onClicked: {
                     Functions.goToFolder(model.location)
