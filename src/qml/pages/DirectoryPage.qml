@@ -93,6 +93,8 @@ Page {
 
         header: PageHeader {
             title: Functions.formatPathForTitle(page.dir)
+            _titleItem.elide: Text.ElideMiddle
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: pageStack.push(Qt.resolvedUrl("SortingPage.qml"));
