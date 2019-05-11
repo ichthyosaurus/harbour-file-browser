@@ -327,7 +327,7 @@ Page {
 
         if (status === PageStatus.Activating && page.initial) {
             page.initial = false;
-            Functions.goToHome();
+            goToHome();
         }
     }
 
@@ -361,4 +361,10 @@ Page {
         onCancelled: engine.cancel()
     }
 
+    // custom signals
+    signal goToHome()
+
+    onGoToHome: {
+        Functions.goToHome();
+    }
 }
