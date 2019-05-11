@@ -420,6 +420,12 @@ void Engine::writeSetting(QString key, QString value)
     emit settingsChanged();
 }
 
+void Engine::removeSetting(QString key) {
+    QSettings settings;
+    settings.remove(key);
+    emit settingsChanged();
+}
+
 void Engine::setProgress(int progress, QString filename)
 {
     m_progress = progress;

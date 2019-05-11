@@ -63,6 +63,7 @@ public:
     // access settings
     Q_INVOKABLE QString readSetting(QString key, QString defaultValue = QString());
     Q_INVOKABLE void writeSetting(QString key, QString value);
+    Q_INVOKABLE void removeSetting(QString key);
 
 signals:
     void clipboardCountChanged();
