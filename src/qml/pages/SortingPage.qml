@@ -92,6 +92,12 @@ Page {
             }
 
             TextSwitch {
+                id: sortCaseSensitive
+                text: qsTr("Sort case-sensitively")
+                onCheckedChanged: engine.writeSetting("sort-case-sensitive", sortCaseSensitive.checked.toString())
+            }
+
+            TextSwitch {
                 id: showThumbnails
                 text: qsTr("Show thumbnails where possible")
                 onCheckedChanged: engine.writeSetting("show-thumbnails", showThumbnails.checked.toString())
@@ -101,6 +107,7 @@ Page {
 
     Component.onCompleted: {
         showDirsFirst.checked = (engine.readSetting("show-dirs-first") === "true");
+        sortCaseSensitive.checked = (engine.readSetting("sort-case-sensitive") === "true");
         showHiddenFiles.checked = (engine.readSetting("show-hidden-files") === "true");
         showThumbnails.checked = (engine.readSetting("show-thumbnails") === "true");
     }

@@ -41,6 +41,11 @@ Page {
                 enabled: showThumbnails.checked
                 onCheckedChanged: engine.writeSetting("cache-thumbnails", cacheThumbnails.checked.toString())
             }
+            TextSwitch {
+                id: sortCaseSensitive
+                text: qsTr("Sort case-sensitively")
+                onCheckedChanged: engine.writeSetting("sort-case-sensitive", sortCaseSensitive.checked.toString())
+            }
 
             Spacer { height: 2*Theme.paddingLarge }
 
@@ -118,6 +123,7 @@ Page {
             showHiddenFiles.checked = (engine.readSetting("show-hidden-files") === "true");
             showThumbnails.checked = (engine.readSetting("show-thumbnails") === "true");
             cacheThumbnails.checked = (engine.readSetting("cache-thumbnails") === "true");
+            sortCaseSensitive.checked = (engine.readSetting("sort-case-sensitive") === "true");
         }
     }
 }

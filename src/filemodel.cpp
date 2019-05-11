@@ -321,8 +321,10 @@ void FileModel::applySettings(QDir &dir) {
 
     QDir::SortFlag order = settings.value("listing-order", "default").toString() == "default" ?
                                (QDir::SortFlag)0 : QDir::Reversed;
+    QDir::SortFlag caseSensitive = settings.value("sort-case-sensitive", "false").toString() == "false" ?
+                               QDir::IgnoreCase : (QDir::SortFlag)0;
 
-    dir.setSorting(sortBy | dirsFirst | order);
+    dir.setSorting(sortBy | dirsFirst | order | caseSensitive);
 }
 
 void FileModel::readAllEntries()
