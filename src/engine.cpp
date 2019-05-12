@@ -401,56 +401,38 @@ QString Engine::chmod(QString path,
     return QString();
 }
 
-QString Engine::readSetting(QString key, QString defaultValue, QString fileName)
-{
-    if (fileName.isEmpty()) {
-        QSettings settings;
-        return readSetting(settings, key, defaultValue);
-    } else {
-        QSettings settings(fileName, QSettings::IniFormat);
-        return readSetting(settings, key, defaultValue);
-    }
-}
-
-void Engine::writeSetting(QString key, QString value, QString fileName)
-{
-    if (fileName.isEmpty()) {
-        QSettings settings;
-        return writeSetting(settings, key, value);
-    } else {
-        QSettings settings(fileName, QSettings::IniFormat);
-        return writeSetting(settings, key, value);
-    }
-}
-
-void Engine::removeSetting(QString key, QString fileName)
-{
-    if (fileName.isEmpty()) {
-        QSettings settings;
-        return removeSetting(settings, key);
-    } else {
-        QSettings settings(fileName, QSettings::IniFormat);
-        return removeSetting(settings, key);
-    }
-}
-
-QString Engine::readSetting(QSettings& settings, QString key, QString defaultValue)
-{
+QString Engine::readSetting(QString key, QString defaultValue, QString fileName) {
+    QSettings settings(fileName, QSettings::IniFormat);
     return settings.value(key, defaultValue).toString();
 }
 
-void Engine::writeSetting(QSettings& settings, QString key, QString value)
-{
-    // do nothing if value didn't change
-    if (settings.value(key) == value)
-        return;
+QString Engine::readSetting(QString key, QString defaultValue) {
+    QSettings settings;
+    return settings.value(key, defaultValue).toString();
+}
 
+void Engine::writeSetting(QString key, QString value, QString fileName) {
+    QSettings settings(fileName, QSettings::IniFormat);
+    if (settings.value(key) == value) return; // do nothing if value didn't change
     settings.setValue(key, value);
-
     emit settingsChanged();
 }
 
-void Engine::removeSetting(QSettings& settings, QString key) {
+void Engine::writeSetting(QString key, QString value) {
+    QSettings settings;
+    if (settings.value(key) == value) return; // do nothing if value didn't change
+    settings.setValue(key, value);
+    emit settingsChanged();
+}
+
+void Engine::removeSetting(QString key, QString fileName) {
+    QSettings settings(fileName, QSettings::IniFormat);
+    settings.remove(key);
+    emit settingsChanged();
+}
+
+void Engine::removeSetting(QString key) {
+    QSettings settings;
     settings.remove(key);
     emit settingsChanged();
 }
