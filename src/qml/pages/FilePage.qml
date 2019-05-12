@@ -257,7 +257,7 @@ Page {
                 }
                 DetailItem {
                     label: qsTr("Last modified")
-                    value: fileData.modified
+                    value: fileData.modifiedLong
                 }
                 // Display metadata with priority >= 5
                 Repeater {

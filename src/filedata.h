@@ -24,6 +24,7 @@ class FileData : public QObject
     Q_PROPERTY(QString group READ group() NOTIFY groupChanged())
     Q_PROPERTY(QString size READ size() NOTIFY sizeChanged())
     Q_PROPERTY(QString modified READ modified() NOTIFY modifiedChanged())
+    Q_PROPERTY(QString modifiedLong READ modifiedLong() NOTIFY modifiedChanged())
     Q_PROPERTY(QString created READ created() NOTIFY createdChanged())
     Q_PROPERTY(QString absolutePath READ absolutePath() NOTIFY absolutePathChanged())
     Q_PROPERTY(QString name READ name() NOTIFY nameChanged())
@@ -51,8 +52,10 @@ public:
     QString owner() const;
     QString group() const;
     QString size() const;
-    QString modified() const;
-    QString created() const;
+    QString modified(bool longFormat = false) const;
+    QString modifiedLong() const;
+    QString created(bool longFormat = false) const;
+    QString createdLong() const;
     QString absolutePath() const;
     QString name() const { return m_fileInfo.fileName(); }
     QString suffix() const { return m_fileInfo.suffix().toLower(); }

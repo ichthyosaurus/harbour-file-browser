@@ -11,7 +11,7 @@
 QString suffixToIconName(QString suffix);
 QString permissionsToString(QFile::Permissions permissions);
 QString filesizeToString(qint64 filesize);
-QString datetimeToString(QDateTime datetime);
+QString datetimeToString(QDateTime datetime, bool longFormat = false);
 
 QString infoToIconName(const StatFileInfo &info);
 
