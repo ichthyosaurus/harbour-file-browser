@@ -1,5 +1,7 @@
 #include "filemodel.h"
 #include <QDateTime>
+#include <QMimeType>
+#include <QMimeDatabase>
 #include <QSettings>
 #include <QGuiApplication>
 #include <unistd.h>
@@ -171,6 +173,16 @@ QString FileModel::fileNameAt(int fileIndex)
         return QString();
 
     return m_files.at(fileIndex).absoluteFilePath();
+}
+
+QString FileModel::mimeTypeAt(int fileIndex) {
+    QString file = fileNameAt(fileIndex);
+
+    if (file.isEmpty()) return QString();
+
+    QMimeDatabase db;
+    QMimeType type = db.mimeTypeForFile(file);
+    return type.name();
 }
 
 void FileModel::toggleSelectedFile(int fileIndex)

@@ -45,6 +45,7 @@ public:
     Q_INVOKABLE QString appendPath(QString dirName);
     Q_INVOKABLE QString parentPath();
     Q_INVOKABLE QString fileNameAt(int fileIndex);
+    Q_INVOKABLE QString mimeTypeAt(int fileIndex);
 
     // file selection
     Q_INVOKABLE void toggleSelectedFile(int fileIndex);

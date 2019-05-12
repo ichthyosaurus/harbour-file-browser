@@ -249,6 +249,18 @@ Page {
                          onClicked: engine.copyFiles([ fileModel.fileNameAt(index) ]);
                      }
                      MenuItem {
+                         visible: main.sharingEnabled && !isLink && !isDir
+                         text: qsTr("Share")
+                         onClicked: {
+                            pageStack.animatorPush("Sailfish.TransferEngine.SharePage", {
+                                source: Qt.resolvedUrl(fileModel.fileNameAt(index)),
+                                mimeType: fileModel.mimeTypeAt(index),
+                                serviceFilter: ["sharing", "e-mail"]
+                            })
+                        }
+                     }
+
+                     MenuItem {
                          text: qsTr("Delete")
                          onClicked:  {
                              deleteFile(fileModel.fileNameAt(index));
