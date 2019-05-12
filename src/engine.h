@@ -5,6 +5,7 @@
 #include <QVariant>
 
 class FileWorker;
+class QSettings;
 
 /**
  * @brief Engine to handle file operations, settings and other generic functionality.
@@ -61,9 +62,9 @@ public:
                               bool othersRead, bool othersWrite, bool othersExecute);
 
     // access settings
-    Q_INVOKABLE QString readSetting(QString key, QString defaultValue = QString());
-    Q_INVOKABLE void writeSetting(QString key, QString value);
-    Q_INVOKABLE void removeSetting(QString key);
+    Q_INVOKABLE QString readSetting(QString key, QString defaultValue = QString(), QString fileName = QString());
+    Q_INVOKABLE void writeSetting(QString key, QString value, QString fileName = QString());
+    Q_INVOKABLE void removeSetting(QString key, QString fileName = QString());
 
 signals:
     void clipboardCountChanged();
@@ -83,6 +84,10 @@ private:
     QStringList mountPoints() const;
     QString createHexDump(char *buffer, int size, int bytesPerLine);
     QStringList makeStringList(QString msg, QString str = QString());
+
+    QString readSetting(QSettings& settings, QString key, QString defaultValue = QString());
+    void writeSetting(QSettings& settings, QString key, QString value);
+    void removeSetting(QSettings& settings, QString key);
 
     QStringList m_clipboardFiles;
     bool m_clipboardContainsCopy;
