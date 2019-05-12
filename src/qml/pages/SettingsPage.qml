@@ -21,6 +21,11 @@ Page {
             PageHeader { title: qsTr("Settings") }
 
             TextSwitch {
+                id: useLocalSettings
+                text: qsTr("Use per-directory view settings")
+                onCheckedChanged: engine.writeSetting("use-local-view-settings", useLocalSettings.checked.toString())
+            }
+            TextSwitch {
                 id: showDirsFirst
                 text: qsTr("Show folders first")
                 onCheckedChanged: engine.writeSetting("show-dirs-first", showDirsFirst.checked.toString())
@@ -124,6 +129,7 @@ Page {
             showThumbnails.checked = (engine.readSetting("show-thumbnails") === "true");
             cacheThumbnails.checked = (engine.readSetting("cache-thumbnails") === "true");
             sortCaseSensitive.checked = (engine.readSetting("sort-case-sensitive") === "true");
+            useLocalSettings.checked = (engine.readSetting("use-local-view-settings") === "true");
         }
     }
 }
