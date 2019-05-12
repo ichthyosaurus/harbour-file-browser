@@ -79,7 +79,7 @@ Page {
 
         header: Item {
             width: parent.width
-            height: Theme.itemSizeLarge
+            height: Theme.itemSizeExtraLarge
 
             SearchField {
                 id: searchField
@@ -131,25 +131,32 @@ Page {
             Label {
                 id: foundText
                 visible: false
-                anchors.left: parent.left
-                anchors.leftMargin: searchField.textLeftMargin
-                anchors.top: searchField.bottom
-                anchors.topMargin: -Theme.paddingLarge
-                text: qsTr("%1 hits").arg(listModel.count)
+
+                anchors {
+                    left: parent.left
+                    leftMargin: searchField.textLeftMargin
+                    top: searchField.bottom
+                    topMargin: -Theme.paddingMedium
+                }
+
+                text: qsTr("%n hit(s)", "", listModel.count)
                 font.pixelSize: Theme.fontSizeTiny
                 color: searchField.placeholderColor
             }
             Label {
-                anchors.left: parent.left
-                anchors.leftMargin: 3*Theme.itemSizeSmall
-                anchors.right: parent.right
-                anchors.rightMargin: Theme.paddingLarge
-                anchors.top: searchField.bottom
-                anchors.topMargin: -Theme.paddingSmall
+                anchors {
+                    left: foundText.left
+                    leftMargin: Theme.itemSizeSmall
+                    right: parent.right
+                    rightMargin: Theme.paddingLarge
+                    top: searchField.bottom
+                    topMargin: -Theme.paddingMedium
+                }
+
                 text: page.currentDirectory
                 font.pixelSize: Theme.fontSizeTiny
                 color: Theme.secondaryColor
-                elide: Text.ElideRight
+                elide: Text.ElideMiddle
             }
         }
 
@@ -405,5 +412,3 @@ Page {
         coverText = qsTr("Search");
     }
 }
-
-
