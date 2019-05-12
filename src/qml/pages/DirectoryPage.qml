@@ -86,6 +86,20 @@ Page {
                                           { dir: page.dir });
             }
             MenuItem {
+                id: bookmarkEntry
+                property bool hasBookmark: Functions.hasBookmark(dir)
+                text: hasBookmark ? qsTr("Remove bookmark") : qsTr("Add to bookmarks")
+                onClicked: {
+                    if (hasBookmark) {
+                        removeBookmark(dir);
+                        hasBookmark = false;
+                    } else {
+                        addBookmark(dir);
+                        hasBookmark = true;
+                    }
+                }
+            }
+            MenuItem {
                 text: qsTr("Settings")
                 onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
             }
@@ -350,6 +364,16 @@ Page {
         }
     }
 
+    Connections {
+        target: main
+        onBookmarkAdded: {
+            if (path === dir) bookmarkEntry.hasBookmark = true;
+        }
+        onBookmarkRemoved: {
+            if (path === dir) bookmarkEntry.hasBookmark = false;
+        }
+    }
+
     NotificationPanel {
         id: notificationPanel
         page: page
@@ -362,7 +386,17 @@ Page {
     }
 
     // custom signals
+    signal addBookmark(var path)
+    signal removeBookmark(var path)
     signal goToHome()
+
+    onAddBookmark: {
+        Functions.addBookmark(path);
+    }
+
+    onRemoveBookmark: {
+        Functions.removeBookmark(path);
+    }
 
     onGoToHome: {
         Functions.goToHome();

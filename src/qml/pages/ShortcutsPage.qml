@@ -135,9 +135,8 @@ Page {
                     }
 
                     onClicked: {
-                        if (!model.bookmark) return
-                        //settings.removeBookmarkPath(model.location) TODO
-                        updateModel()
+                        if (!model.bookmark) return;
+                        Functions.removeBookmark(model.location);
                     }
                 }
             }
@@ -206,19 +205,30 @@ Page {
             // TODO support external drives via USB OTG
 
             // Add bookmarks if there are any
-            // TODO support bookmarks
-    //        var bookmarks = None//settings.getBookmarks()
+            var bookmarks = Functions.getBookmarks();
 
-    //        for (var key in bookmarks)
-    //        {
-    //            var entry = bookmarks[key];
+            for (var key in bookmarks) {
+                listModel.append({ "section": qsTr("Bookmarks"),
+                                   "name": engine.readSetting("bookmarks"+bookmarks[key]),
+                                   "thumbnail": "icon-m-favorite",
+                                   "location": bookmarks[key],
+                                   "bookmark": true })
+            }
+        }
+    }
 
-    //            listModel.append({ "section": qsTr("Bookmarks"),
-    //                               "name": entry,
-    //                               "thumbnail": "icon-m-favorite",
-    //                               "location": key,
-    //                               "bookmark": true })
-    //        }
+    Connections {
+        target: main
+        onBookmarkAdded: {
+            shortcutsView.updateModel();
+        }
+        onBookmarkRemoved: {
+            for (var i = 0; i < listModel.count; i++) {
+                if (listModel.get(i).bookmark === true && listModel.get(i).location === path) {
+                    //listModel.get(i).animateRemoval(shortcutsView);
+                    listModel.remove(i);
+                }
+            }
         }
     }
 }

@@ -4,6 +4,9 @@ import "pages"
 
 ApplicationWindow {
     id: main
+    signal bookmarkAdded(var path)
+    signal bookmarkRemoved(var path)
+
     property string coverText: "File Browser"
     cover: Qt.resolvedUrl("cover/FileBrowserCover.qml")
     initialPage: Component {

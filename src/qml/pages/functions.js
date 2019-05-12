@@ -97,6 +97,41 @@ function formatPathForTitle(path)
     return path.substring(i+1)+"/";
 }
 
+// bookmark handling
+function addBookmark(path) {
+    var bookmarks = getBookmarks();
+    bookmarks.push(path);
+    engine.writeSetting("bookmarks/"+path, lastPartOfPath(path));
+    engine.writeSetting("bookmark-entries", JSON.stringify(bookmarks));
+    main.bookmarkAdded(path);
+}
+
+function removeBookmark(path) {
+    var bookmarks = getBookmarks();
+    var filteredBookmarks = bookmarks.filter(function(e) { return e !== path; });
+    engine.writeSetting("bookmark-entries", JSON.stringify(filteredBookmarks));
+    engine.removeSetting("bookmarks/"+path);
+    main.bookmarkRemoved(path);
+}
+
+function hasBookmark(path) {
+    if (engine.readSetting("bookmarks/"+path) !== "") {
+        return true;
+    }
+    return false;
+}
+
+function getBookmarks() {
+    var entries = engine.readSetting("bookmark-entries");
+
+    if (entries === "") {
+        engine.writeSetting("bookmark-entries", JSON.stringify([]));
+        entries = engine.readSetting("bookmark-entries");
+    }
+
+    return JSON.parse(entries);
+}
+
 // returns the text after the last / in a path
 function lastPartOfPath(path)
 {
