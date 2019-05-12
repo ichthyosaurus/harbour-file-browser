@@ -233,9 +233,9 @@ QStringList Engine::diskSpace(QString path)
     if (path == "/media/sdcard")
         return QStringList();
 
-    // run df for the given path to get disk space
+    // run df in POSIX mode for the given path to get disk space
     QString blockSize = "--block-size=1024";
-    QString result = execute("/bin/df", QStringList() << blockSize << path, false);
+    QString result = execute("/bin/df", QStringList() << "-P" << blockSize << path, false);
     if (result.isEmpty())
         return QStringList();
 
@@ -244,7 +244,7 @@ QStringList Engine::diskSpace(QString path)
     if (lines.count() < 2)
         return QStringList();
 
-    // get first line and its columns
+    // get second line and its columns
     QString line = lines.at(1);
     QStringList columns = line.split(QRegExp("\\s+"), QString::SkipEmptyParts);
     if (columns.count() < 5)

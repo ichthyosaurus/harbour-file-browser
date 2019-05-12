@@ -87,11 +87,26 @@ Page {
 
                     Text {
                         id: sizeInfo
-                        property var space: model.showsize ? engine.diskSpace(model.location) : []
+                        visible: model.showsize
                         font.pixelSize: Theme.fontSizeExtraSmall
                         color: iconButton.pressed ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                        text: (space.length > 0 ? space[0] + " • " + space[1] + " • " : "")
-                        visible: model.showsize
+                        text: (visible ? "... \u2022 ... \u2022 " : "")
+
+                        function updateText() {
+                            if (visible) {
+                                var space = engine.diskSpace(model.location);
+                                text = (space.length > 0 ? space[0] + " \u2022 " + space[1] + " \u2022 " : "");
+                            } else {
+                                text = "";
+                            }
+                        }
+
+                        Component.onCompleted: {
+                            updateText();
+                        }
+                        onVisibleChanged: {
+                            updateText();
+                        }
                     }
 
                     Text {
