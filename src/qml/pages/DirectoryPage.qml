@@ -38,7 +38,7 @@ Page {
         PullDownMenu {
             MenuItem {
                 text: qsTr("Sort")
-                onClicked: pageStack.push(Qt.resolvedUrl("SortingPage.qml"))
+                onClicked: pageStack.push(Qt.resolvedUrl("SortingPage.qml"), { dir: dir })
             }
             MenuItem {
                 text: qsTr("Create Folder")
@@ -111,7 +111,7 @@ Page {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: pageStack.push(Qt.resolvedUrl("SortingPage.qml"));
+                onClicked: pageStack.push(Qt.resolvedUrl("SortingPage.qml"), { dir: dir });
             }
         }
 

@@ -305,25 +305,79 @@ void FileModel::recountSelectedFiles()
     }
 }
 
+/**
+ * @brief Applies global and/or local directory settings to the current listing.
+ *
+ * @section Local Settings
+ * Local settings are read from a hidden file '.directory' in the current directory
+ * and use the same entries as KDE's file manager Dolphin.
+ *
+ * @code
+ * .directory:
+ *
+ * [Dolphin]
+ * SortOrder=(deleted = default)/1 (= reversed)
+ * SortRole=(deleted = name)/size/modificationtime/type
+ *
+ * [Settings]
+ * HiddenFilesShown=bool
+ *
+ * # not yet used:
+ * [Dolphin]
+ * PreviewsShown=bool
+ * Version=4
+ * Timestamp=2019,31,12,23,59,59
+ * @endcode
+ *
+ * The following entries are in the 'Sailfish' group because
+ * Dolphin does not use them:
+ *
+ * @code
+ * [Sailfish]
+ * ShowDirectoriesFirst=bool
+ * SortCaseSensitively=bool
+ * @endcode
+ *
+ * @section Global Settings
+ * Global settings are read from the default config file.
+ *
+ * @code
+ * [General]
+ * use-local-view-settings=bool
+ * show-hidden-files=bool
+ * show-dirs-first=bool
+ * listing-order=default/reversed
+ * listing-sort-by=name/size/modificationtime/type
+ * sort-case-sensitive=bool
+ * @endcode
+ *
+ */
 void FileModel::applySettings(QDir &dir) {
     QSettings settings;
+    QSettings local(dir.absoluteFilePath(".directory"), QSettings::IniFormat);
+    bool useLocal = settings.value("use-local-view-settings", false).toBool();
 
     // filters
-    QDir::Filter hidden = settings.value("show-hidden-files", false).toBool() ?
-                              QDir::Hidden : (QDir::Filter)0;
-    dir.setFilter(QDir::AllDirs | QDir::Files | QDir::NoDotAndDotDot | QDir::System | hidden);
+    bool hidden = settings.value("show-hidden-files", false).toBool();
+    if (useLocal) hidden = local.value("Settings/HiddenFilesShown", hidden).toBool();
+    QDir::Filter hiddenFilter = hidden ? QDir::Hidden : (QDir::Filter)0;
+
+    dir.setFilter(QDir::AllDirs | QDir::Files | QDir::NoDotAndDotDot | QDir::System | hiddenFilter);
 
     // sorting
-    QDir::SortFlag dirsFirst = settings.value("show-dirs-first", false).toBool() ?
-                                   QDir::DirsFirst : (QDir::SortFlag)0;
+    bool dirsFirst = settings.value("show-dirs-first", false).toBool();
+    if (useLocal) dirsFirst = local.value("Sailfish/ShowDirectoriesFirst", dirsFirst).toBool();
+    QDir::SortFlag dirsFirstFlag = dirsFirst ? QDir::DirsFirst : (QDir::SortFlag)0;
+
     QString sortSetting = settings.value("listing-sort-by", "name").toString();
+    if (useLocal) sortSetting = local.value("Dolphin/SortRole", sortSetting).toString();
     QDir::SortFlag sortBy = QDir::Name;
 
     if (sortSetting == "name") {
         sortBy = QDir::Name;
     } else if (sortSetting == "size") {
         sortBy = QDir::Size;
-    } else if (sortSetting == "modified") {
+    } else if (sortSetting == "modificationtime") {
         sortBy = QDir::Time;
     } else if (sortSetting == "type") {
         sortBy = QDir::Type;
@@ -331,12 +385,15 @@ void FileModel::applySettings(QDir &dir) {
         sortBy = QDir::Name;
     }
 
-    QDir::SortFlag order = settings.value("listing-order", "default").toString() == "default" ?
-                               (QDir::SortFlag)0 : QDir::Reversed;
-    QDir::SortFlag caseSensitive = settings.value("sort-case-sensitive", "false").toString() == "false" ?
-                               QDir::IgnoreCase : (QDir::SortFlag)0;
+    bool orderDefault = settings.value("listing-order", "default").toString() == "default";
+    if (useLocal) orderDefault = local.value("Dolphin/SortOrder", 0) == 0 ? true : false;
+    QDir::SortFlag orderFlag = orderDefault ? (QDir::SortFlag)0 : QDir::Reversed;
 
-    dir.setSorting(sortBy | dirsFirst | order | caseSensitive);
+    bool caseSensitive = settings.value("sort-case-sensitive", false).toBool();
+    if (useLocal) caseSensitive = local.value("Sailfish/SortCaseSensitively", caseSensitive).toBool();
+    QDir::SortFlag caseSensitiveFlag = caseSensitive ? (QDir::SortFlag)0 : QDir::IgnoreCase;
+
+    dir.setSorting(sortBy | dirsFirstFlag | orderFlag | caseSensitiveFlag);
 }
 
 void FileModel::readAllEntries()

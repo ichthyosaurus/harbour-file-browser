@@ -60,7 +60,7 @@ Column {
         }
     }
 
-    Component.onCompleted: {
+    function selectInitial() {
         if (initial) {
             for (var i = 0; i < model.count; i++) {
                 if (model.get(i).value === initial) {
@@ -69,5 +69,13 @@ Column {
                 }
             }
         }
+    }
+
+    onInitialChanged: {
+        selectInitial();
+    }
+
+    Component.onCompleted: {
+        selectInitial();
     }
 }
