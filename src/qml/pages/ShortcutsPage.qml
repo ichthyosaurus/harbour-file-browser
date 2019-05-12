@@ -61,11 +61,12 @@ Page {
 
                 Label {
                     id: shortcutLabel
-                    width: parent.width - image.width - Theme.horizontalPageMargin
+                    width: page.width - x -
+                           (deleteBookmarkBtn.visible ? deleteBookmarkBtn.width : Theme.horizontalPageMargin)
                     font.pixelSize: Theme.fontSizeMedium
                     color: iconButton.pressed ? Theme.highlightColor : Theme.primaryColor
                     text: model.name
-                    elide: Text.ElideRight
+                    truncationMode: TruncationMode.Fade
                     anchors {
                         left: image.right
                         leftMargin: Theme.paddingMedium
@@ -76,12 +77,12 @@ Page {
 
                 Row {
                     spacing: 0
-                    width: Screen.width - x - Theme.horizontalPageMargin
                     anchors {
                         left: image.right
                         leftMargin: Theme.paddingMedium
                         top: shortcutLabel.bottom
                         topMargin: 2
+                        right: shortcutLabel.right
                     }
 
                     Text {
@@ -109,11 +110,13 @@ Page {
                     width: Theme.itemSizeSmall
                     height: Theme.itemSizeSmall
                     visible: model.bookmark ? true : false
-                    icon.source: "image://theme/icon-m-close"
+                    icon.source: "image://theme/icon-m-clear"
+
                     anchors {
                         top: parent.top
                         right: parent.right
-                        rightMargin: Theme.paddingLarge
+                        rightMargin: Theme.paddingSmall
+                        leftMargin: Theme.paddingSmall
                     }
 
                     onClicked: {
