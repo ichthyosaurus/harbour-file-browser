@@ -10,6 +10,7 @@ Page {
 
     SilicaListView {
         id: shortcutsView
+        signal itemClicked(var path)
 
         width: parent.width
         height: parent.height - 2*Theme.horizontalPageMargin
@@ -44,7 +45,7 @@ Page {
                 height: Theme.itemSizeSmall
 
                 onClicked: {
-                    Functions.goToFolder(model.location)
+                    shortcutsView.itemClicked(model.location);
                 }
 
                 Image {
@@ -216,20 +217,27 @@ Page {
                                    "bookmark": true })
             }
         }
+
+        Connections {
+            target: main
+            onBookmarkAdded: {
+                shortcutsView.updateModel();
+            }
+            onBookmarkRemoved: {
+                for (var i = 0; i < listModel.count; i++) {
+                    if (listModel.get(i).bookmark === true && listModel.get(i).location === path) {
+                        //listModel.get(i).animateRemoval(shortcutsView);
+                        listModel.remove(i);
+                    }
+                }
+            }
+        }
     }
 
     Connections {
-        target: main
-        onBookmarkAdded: {
-            shortcutsView.updateModel();
-        }
-        onBookmarkRemoved: {
-            for (var i = 0; i < listModel.count; i++) {
-                if (listModel.get(i).bookmark === true && listModel.get(i).location === path) {
-                    //listModel.get(i).animateRemoval(shortcutsView);
-                    listModel.remove(i);
-                }
-            }
+        target: shortcutsView
+        onItemClicked: {
+            Functions.goToFolder(path);
         }
     }
 }
