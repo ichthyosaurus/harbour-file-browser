@@ -136,7 +136,7 @@ Page {
 
         if (useLocal) {
             sortList.initial = engine.readSetting("Dolphin/SortRole", sort, conf);
-            orderList.initial = engine.readSetting("Dolphin/SortOrder", order, conf);
+            orderList.initial = engine.readSetting("Dolphin/SortOrder", order === "default" ? "0" : "1", conf) === "0" ? "default" : "reversed";
         } else {
             sortList.initial = sort;
             orderList.initial = order;
