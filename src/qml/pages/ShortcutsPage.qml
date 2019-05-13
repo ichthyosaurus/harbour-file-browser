@@ -34,8 +34,9 @@ Page {
             title: qsTr("Places")
         }
 
-        delegate: Component {
+        delegate: ListItem {
             id: listItem
+            ListView.onRemove: animateRemoval(listItem) // enable animated list item removals
 
             BackgroundItem {
                 id: iconButton
