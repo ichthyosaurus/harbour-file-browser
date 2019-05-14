@@ -18,7 +18,10 @@ Page {
             anchors.left: parent.left
             anchors.right: parent.right
 
-            PageHeader { title: qsTr("Settings") }
+            PageHeader {
+                title: qsTr("Settings")
+                description: qsTr("Global preferences")
+            }
 
             TextSwitch {
                 id: useLocalSettings
@@ -43,7 +46,6 @@ Page {
             TextSwitch {
                 id: cacheThumbnails
                 text: qsTr("Cache thumbnails")
-                enabled: showThumbnails.checked
                 onCheckedChanged: engine.writeSetting("cache-thumbnails", cacheThumbnails.checked.toString())
             }
             TextSwitch {
