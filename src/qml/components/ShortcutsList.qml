@@ -4,24 +4,55 @@ import harbour.file.browser.FileModel 1.0
 import "../pages/functions.js" as Functions
 
 SilicaListView {
-    id: shortcutsView
-    property var sections: ["locations", "android", "external", "bookmarks"]
+    id: view
 
-    signal itemClicked(var path)
+    property bool selectable: false
+    property bool multiSelect: false
+    property var initialSelection
+    property var sections: ["locations", "android", "external", "bookmarks"]
+    property var _selectedIndex: []
+
+    signal itemClicked(var clickedIndex, var path)
 
     model: listModel
 
     delegate: ListItem {
         id: listItem
+        property bool selected: false
         ListView.onRemove: animateRemoval(listItem) // enable animated list item removals
 
         BackgroundItem {
             id: iconButton
-            width: shortcutsView.width
+            width: view.width
             height: Theme.itemSizeSmall
 
             onClicked: {
-                shortcutsView.itemClicked(model.location);
+                view.itemClicked(index, model.location);
+            }
+
+            Binding on highlighted {
+                when: selected || down
+                value: true
+            }
+
+            Connections {
+                target: view
+                onItemClicked: {
+                    if (index === clickedIndex) { // toggle
+                        if (view._selectedIndex.indexOf(index) == -1) { // select
+                            if (multiSelect) view._selectedIndex.push(index);
+                            else view._selectedIndex = [index];
+                            selected = true;
+                        } else if (multiSelect) { // deselect
+                            view._selectedIndex = view._selectedIndex.filter(function(item) {
+                                return item !== index
+                            })
+                            selected = false;
+                        }
+                    } else if (!multiSelect) {
+                        selected = false;
+                    }
+                }
             }
 
             Image {
@@ -39,7 +70,7 @@ SilicaListView {
 
             Label {
                 id: shortcutLabel
-                width: shortcutsView.width - x -
+                width: view.width - x -
                        (deleteBookmarkBtn.visible ? deleteBookmarkBtn.width : Theme.horizontalPageMargin)
                 font.pixelSize: Theme.fontSizeMedium
                 color: iconButton.pressed ? Theme.highlightColor : Theme.primaryColor
@@ -121,7 +152,7 @@ SilicaListView {
     }
 
     ViewPlaceholder {
-         enabled: shortcutsView.count === 0
+         enabled: view.count === 0
          text: "Nothing to show here..."
      }
 
@@ -210,12 +241,11 @@ SilicaListView {
     Connections {
         target: main
         onBookmarkAdded: {
-            shortcutsView.updateModel();
+            view.updateModel();
         }
         onBookmarkRemoved: {
             for (var i = 0; i < listModel.count; i++) {
                 if (listModel.get(i).bookmark === true && listModel.get(i).location === path) {
-                    //listModel.get(i).animateRemoval(shortcutsView);
                     listModel.remove(i);
                 }
             }
