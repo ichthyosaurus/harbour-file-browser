@@ -39,7 +39,7 @@ function sharedStart(array){
 function goToFolder(folder) {
     var pagePath = Qt.resolvedUrl("DirectoryPage.qml");
     var prevPage = pageStack.previousPage();
-    var cur = "", shared = "", rest = "";
+    var cur = "", shared = "", rest = "", basePath = "";
 
     if (prevPage !== null) {
         cur = prevPage.dir
@@ -61,20 +61,21 @@ function goToFolder(folder) {
     } else if (shared === "/" || shared === "") {
         goToRoot();
         rest = folder
+        basePath = ""
     } else if (shared !== "") {
         var existingBase = pageStack.find(function(page) {
             if (page.dir === shared) return true;
             return false;
         })
         pageStack.pop(existingBase, PageStackAction.Immediate);
-        rest = folder.replace(shared+"/", "");
+        rest = folder.replace(shared+"/", "/");
+        basePath = shared;
     }
 
     var dirs = rest.split("/");
-    var path = "";
     for (var j = 1; j < dirs.length-1; ++j) {
-        path += "/"+dirs[j];
-        pageStack.push(pagePath, { dir: path }, PageStackAction.Immediate);
+        basePath += "/"+dirs[j];
+        pageStack.push(pagePath, { dir: basePath }, PageStackAction.Immediate);
     }
     pageStack.push(pagePath, { dir: folder }, PageStackAction.Animated);
 }
