@@ -5,6 +5,8 @@ import "../pages/functions.js" as Functions
 
 SilicaListView {
     id: shortcutsView
+    property var sections: ["locations", "android", "external", "bookmarks"]
+
     signal itemClicked(var path)
 
     model: listModel
@@ -118,6 +120,11 @@ SilicaListView {
         }
     }
 
+    ViewPlaceholder {
+         enabled: shortcutsView.count === 0
+         text: "Nothing to show here..."
+     }
+
     section {
         property: 'section'
         delegate: SectionHeader {
@@ -136,59 +143,67 @@ SilicaListView {
 
     function updateModel() {
         listModel.clear()
-        listModel.append({ "section": qsTr("Locations"),
-                           "name": qsTr("Home"),
-                           "thumbnail": "icon-m-home",
-                           "location": StandardPaths.home,
-                           "showsize": true })
-        listModel.append({ "section": qsTr("Locations"),
-                           "name": qsTr("Documents"),
-                           "thumbnail": "icon-m-file-document-light",
-                           "location": StandardPaths.documents })
-        listModel.append({ "section": qsTr("Locations"),
-                           "name": qsTr("Downloads"),
-                           "thumbnail": "icon-m-cloud-download",
-                           "location": StandardPaths.download })
-        listModel.append({ "section": qsTr("Locations"),
-                           "name": qsTr("Music"),
-                           "thumbnail": "icon-m-file-audio",
-                           "location": StandardPaths.music })
-        listModel.append({ "section": qsTr("Locations"),
-                           "name": qsTr("Pictures"),
-                           "thumbnail": "icon-m-file-image",
-                           "location": StandardPaths.pictures })
-        listModel.append({ "section": qsTr("Locations"),
-                           "name": qsTr("Videos"),
-                           "thumbnail": "icon-m-file-video",
-                           "location": StandardPaths.videos })
-        listModel.append({ "section": qsTr("Locations"),
-                           "name": qsTr("Root"),
-                           "thumbnail": "icon-m-file-rpm",
-                           "location": "/",
-                           "showsize": true })
-        listModel.append({ "section": qsTr("Android locations"),
-                           "name": qsTr("Android storage"),
-                           "thumbnail": "icon-m-file-apk",
-                           "location": StandardPaths.home + "/android_storage" })
-        if (engine.sdcardPath() !== "") {
-            listModel.append({ "section": qsTr("Storage devices"),
-                               "name": qsTr("SD card"),
-                               "thumbnail": "icon-m-sd-card",
-                               "location": engine.sdcardPath(),
-                               "showsize": true })
-        }
 
-        // TODO support external drives via USB OTG
+        for (var i = 0; i < sections.length; i++) {
+            var s = sections[i];
+            if (s === "locations") {
+                listModel.append({ "section": qsTr("Locations"),
+                                   "name": qsTr("Home"),
+                                   "thumbnail": "icon-m-home",
+                                   "location": StandardPaths.home,
+                                   "showsize": true })
+                listModel.append({ "section": qsTr("Locations"),
+                                   "name": qsTr("Documents"),
+                                   "thumbnail": "icon-m-file-document-light",
+                                   "location": StandardPaths.documents })
+                listModel.append({ "section": qsTr("Locations"),
+                                   "name": qsTr("Downloads"),
+                                   "thumbnail": "icon-m-cloud-download",
+                                   "location": StandardPaths.download })
+                listModel.append({ "section": qsTr("Locations"),
+                                   "name": qsTr("Music"),
+                                   "thumbnail": "icon-m-file-audio",
+                                   "location": StandardPaths.music })
+                listModel.append({ "section": qsTr("Locations"),
+                                   "name": qsTr("Pictures"),
+                                   "thumbnail": "icon-m-file-image",
+                                   "location": StandardPaths.pictures })
+                listModel.append({ "section": qsTr("Locations"),
+                                   "name": qsTr("Videos"),
+                                   "thumbnail": "icon-m-file-video",
+                                   "location": StandardPaths.videos })
+                listModel.append({ "section": qsTr("Locations"),
+                                   "name": qsTr("Root"),
+                                   "thumbnail": "icon-m-file-rpm",
+                                   "location": "/",
+                                   "showsize": true })
+            } else if (s === "android") {
+                listModel.append({ "section": qsTr("Android locations"),
+                                   "name": qsTr("Android storage"),
+                                   "thumbnail": "icon-m-file-apk",
+                                   "location": StandardPaths.home + "/android_storage" })
+            } else if (s === "external") {
+                if (engine.sdcardPath() !== "") {
+                    listModel.append({ "section": qsTr("Storage devices"),
+                                       "name": qsTr("SD card"),
+                                       "thumbnail": "icon-m-sd-card",
+                                       "location": engine.sdcardPath(),
+                                       "showsize": true })
+                }
 
-        // Add bookmarks if there are any
-        var bookmarks = Functions.getBookmarks();
+                // TODO support external drives via USB OTG
+            } else if (s === "bookmarks") {
+                // Add bookmarks if there are any
+                var bookmarks = Functions.getBookmarks();
 
-        for (var key in bookmarks) {
-            listModel.append({ "section": qsTr("Bookmarks"),
-                               "name": engine.readSetting("bookmarks"+bookmarks[key]),
-                               "thumbnail": "icon-m-favorite",
-                               "location": bookmarks[key],
-                               "bookmark": true })
+                for (var key in bookmarks) {
+                    listModel.append({ "section": qsTr("Bookmarks"),
+                                       "name": engine.readSetting("bookmarks"+bookmarks[key]),
+                                       "thumbnail": "icon-m-favorite",
+                                       "location": bookmarks[key],
+                                       "bookmark": true })
+                }
+            }
         }
     }
 
