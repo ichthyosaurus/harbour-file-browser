@@ -10,7 +10,6 @@ Page {
 
     SilicaFlickable {
         anchors.fill: parent
-        contentHeight: column.height
         VerticalScrollDecorator { }
 
         PullDownMenu {
