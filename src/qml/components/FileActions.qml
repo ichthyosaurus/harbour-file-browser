@@ -17,8 +17,8 @@ Item {
                              main.orientation === Orientation.PortraitInverted
     property int itemSize: Theme.iconSizeMedium
     property bool enabled: true
-
     property bool showLabel: true
+    property bool displayClose: false
 
     property bool showSelection: true
     property bool showCut: true
@@ -33,11 +33,17 @@ Item {
     property bool showEdit: true
 
     signal selectAllTriggered
-    signal closeTriggered
+    signal cutTriggered
+    signal copyTriggered
     signal deleteTriggered
-    signal archiveTriggered
+    signal closeTriggered
+    signal propertiesTriggered
+    signal renameTriggered
+    signal shareTriggered
+    signal transferTriggered
+    signal compressTriggered
+    signal extractTriggered
     signal editTriggered
-    property bool displayClose: false
 
     onSelectedCountChanged: {
         labelText = qsTr("%1 selected").arg(selectedCount)
@@ -67,11 +73,11 @@ Item {
             enabled: enabled; icon.width: itemSize; icon.height: itemSize
             icon.source: displayClose ? "image://theme/icon-m-clear"
                                       : "../images/toolbar-select-all.png"
-            onClicked: { displayClose ? closeTriggered() : selectAllTriggered(); }
             onPressAndHold: {
                 if (displayClose) labelText = qsTr("clear selection");
                 else labelText = qsTr("select all");
             }
+            onClicked: { displayClose ? closeTriggered() : selectAllTriggered(); }
         }
         IconButton {
             visible: showCut
@@ -81,6 +87,7 @@ Item {
                 var files = selectedFiles();
                 engine.cutFiles(files);
                 labelText = qsTr("%1 cut").arg(engine.clipboardCount);
+                cutTriggered();
             }
             onPressAndHold: labelText = qsTr("cut files")
         }
@@ -88,17 +95,19 @@ Item {
             visible: showCopy
             enabled: enabled; icon.width: itemSize; icon.height: itemSize
             icon.source: "../images/toolbar-copy.png"
+            onPressAndHold: labelText = qsTr("copy files")
             onClicked: {
                 var files = selectedFiles();
                 engine.copyFiles(files);
                 labelText = qsTr("%1 copied").arg(engine.clipboardCount);
+                copyTriggered();
             }
-            onPressAndHold: labelText = qsTr("copy files")
         }
         IconButton {
             visible: showTransfer
             enabled: enabled; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-shuffle"
+            onPressAndHold: labelText = qsTr("transfer files")
             onClicked: {
                 var files = selectedFiles();
                 var dialog = pageStack.push(Qt.resolvedUrl("../pages/TransferDialog.qml"),
@@ -107,15 +116,15 @@ Item {
                     if (dialog.errorMessage === "") fileData.refresh(); // FIXME has to be in FilePage
                     else notificationPanel.showTextWithTimer(dialog.errorMessage, "");
                 });
+                transferTriggered();
             }
-            onPressAndHold: labelText = qsTr("transfer files")
         }
         IconButton {
             visible: showDelete
             enabled: enabled; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-delete"
-            onClicked: { deleteTriggered(); }
             onPressAndHold: labelText = qsTr("delete files")
+            onClicked: { deleteTriggered(); }
         }
     }
 
@@ -127,6 +136,7 @@ Item {
             visible: showRename
             enabled: selectedCount === 1; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-font-size"
+            onPressAndHold: labelText = qsTr("rename files")
             onClicked: {
                 var files = selectedFiles();
                 var dialog = pageStack.push(Qt.resolvedUrl("../pages/RenameDialog.qml"),
@@ -134,8 +144,8 @@ Item {
                 dialog.accepted.connect(function() {
                     if (dialog.errorMessage !== "") notificationPanel.showTextWithTimer(dialog.errorMessage, "");
                 })
+                renameTriggered();
             }
-            onPressAndHold: labelText = qsTr("rename files")
         }
         IconButton {
             visible: showShare
@@ -151,34 +161,36 @@ Item {
                     mimeType: fileData.mimeType,
                     serviceFilter: ["sharing", "e-mail"]
                 })
+                shareTriggered();
             }
         }
-        IconButton {
+        IconButton { // NOT IMPLEMENTED YET
             visible: showArchive && false
             enabled: false; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-file-archive-folder"
-            onClicked: { archiveTriggered(); }
+            onClicked: { compressTriggered(); }
             onPressAndHold: {
                 labelText = qsTr("compress files")
                 // labelText = qsTr("extract archive")
             }
         }
-        IconButton {
+        IconButton { // NOT IMPLEMENTED YET
             visible: showEdit && false
             enabled: false; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-edit"
-            onClicked: { editTriggered(); }
             onPressAndHold: labelText = qsTr("edit files")
+            onClicked: { editTriggered(); }
         }
         IconButton {
             visible: showProperties
             enabled: selectedCount === 1; icon.width: itemSize; icon.height: itemSize
             icon.source: "../images/toolbar-properties.png"
+            onPressAndHold: labelText = qsTr("show file properties")
             onClicked: {
                 var files = selectedFiles();
                 pageStack.push(Qt.resolvedUrl("../pages/FilePage.qml"), { file: files[0] });
+                propertiesTriggered();
             }
-            onPressAndHold: labelText = qsTr("show file properties")
         }
     }
 }
