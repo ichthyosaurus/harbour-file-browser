@@ -19,15 +19,17 @@ Item {
 
     property bool showLabel: true
 
+    property bool showSelection: true
     property bool showCut: true
     property bool showCopy: true
     property bool showDelete: true
-    property bool showInfo: true
-    property bool showSelection: true
+    property bool showProperties: true
 
     property bool showRename: true
     property bool showShare: true
     property bool showTransfer: true
+    property bool showArchive: true
+    property bool showEdit: true
 
     signal selectAllTriggered
     signal closeTriggered
@@ -84,7 +86,7 @@ Item {
             onClicked: { deleteTriggered(); }
         }
         IconButton {
-            visible: showInfo
+            visible: showProperties
             enabled: selectedCount === 1; icon.width: itemSize; icon.height: itemSize
             icon.source: "../images/toolbar-properties.png"
             onClicked: { propertyTriggered(); }
