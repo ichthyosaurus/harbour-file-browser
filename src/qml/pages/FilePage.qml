@@ -218,6 +218,15 @@ Page {
                     }
                 }
 
+                FileActions {
+                    selectedFiles: function() {
+                        return [file];
+                    }
+                    selectedCount: 1
+                    showProperties: false
+                    showSelection: false
+                }
+
                 // Display metadata with priotity < 5
                 Repeater {
                     model: fileData.metaData

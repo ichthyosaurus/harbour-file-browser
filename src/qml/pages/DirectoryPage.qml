@@ -332,10 +332,6 @@ Page {
                     engine.deleteFiles(files);
                 });
             }
-            onPropertyTriggered: {
-                var files = fileModel.selectedFiles();
-                pageStack.push(Qt.resolvedUrl("FilePage.qml"), { file: files[0] });
-            }
         }
     }
 
