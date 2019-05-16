@@ -296,15 +296,13 @@ Page {
         selectionPanel.overrideText = "";
     }
 
-    // a bit hackery: called from selection panel
-    function selectedFiles() { var files = fileModel.selectedFiles(); return files; }
-
     SelectionPanel {
         id: selectionPanel
         selectedCount: fileModel.selectedFileCount
         enabled: !page.remorsePopupActive && !page.remorseItemActive
         orientation: page.orientation
         displayClose: fileModel.selectedFileCount == fileModel.fileCount
+        selectedFiles: function() { return fileModel.selectedFiles(); }
 
         onSelectAllTriggered: selectAllFiles();
         onCloseTriggered: clearSelectedFiles();

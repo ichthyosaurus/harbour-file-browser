@@ -1,8 +1,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-// bottom dock panel to display cut & copy controls
-// this requires that its parent implements selectedFiles() function
+// bottom dock panel to display file action icons
 DockedPanel {
     id: dockPanel
     width: parent.width
@@ -16,19 +15,17 @@ DockedPanel {
     signal deleteTriggered
     signal propertyTriggered
 
-    // oriantation of the panel
-    property int orientation: Orientation.Portrait
+    // function returning a list of selected files (has to be provided)
+    property var selectedFiles: function() {
+        console.log("error: missing implementation of SelectionPanel::selectedFiles()!")
+        return -1;
+    }
 
-    // number of selected items
-    property int selectedCount: 0
-
+    property int orientation: Orientation.Portrait // orientation of the panel
+    property int selectedCount: 0 // number of selected items
     property bool displayClose: false
-
-    // enable or disable the buttons
-    property bool enabled: true
-
-    // override text is shown if set, it gets cleared whenever selected file count changes
-    property string overrideText: ""
+    property bool enabled: true // enable or disable the buttons
+    property string overrideText: "" // override text is shown if set, it gets cleared whenever selected file count changes
 
     // property to indicate that the panel is really visible (open or showing closing animation)
     property bool shouldBeVisible: false
@@ -67,7 +64,7 @@ DockedPanel {
                 icon.height: Theme.iconSizeMedium
                 icon.source: "../images/toolbar-cut.png"
                 onClicked: {
-                    var files = dockPanel.parent.selectedFiles();
+                    var files = dockPanel.selectedFiles();
                     engine.cutFiles(files);
                     dockPanel.overrideText = qsTr("%1 cut").arg(engine.clipboardCount);
                 }
@@ -79,7 +76,7 @@ DockedPanel {
                 icon.height: Theme.iconSizeMedium
                 icon.source: "../images/toolbar-copy.png"
                 onClicked: {
-                    var files = dockPanel.parent.selectedFiles();
+                    var files = dockPanel.selectedFiles();
                     engine.copyFiles(files);
                     dockPanel.overrideText = qsTr("%1 copied").arg(engine.clipboardCount);
                 }
@@ -171,7 +168,7 @@ DockedPanel {
             icon.height: Theme.iconSizeMedium
             icon.source: "../images/toolbar-cut.png"
             onClicked: {
-                var files = dockPanel.parent.selectedFiles();
+                var files = dockPanel.selectedFiles();
                 engine.cutFiles(files);
                 dockPanel.overrideText = qsTr("%1 cut").arg(engine.clipboardCount);
             }
@@ -184,7 +181,7 @@ DockedPanel {
             icon.height: Theme.iconSizeMedium
             icon.source: "../images/toolbar-copy.png"
             onClicked: {
-                var files = dockPanel.parent.selectedFiles();
+                var files = dockPanel.selectedFiles();
                 engine.copyFiles(files);
                 dockPanel.overrideText = qsTr("%1 copied").arg(engine.clipboardCount);
             }
