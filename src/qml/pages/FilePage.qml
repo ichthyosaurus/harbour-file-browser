@@ -219,6 +219,7 @@ Page {
                 }
 
                 FileActions {
+                    x: -parent.x
                     selectedFiles: function() {
                         return [file];
                     }
