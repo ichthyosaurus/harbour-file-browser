@@ -38,6 +38,7 @@ SilicaListView {
             Connections {
                 target: view
                 onItemClicked: {
+                    if (!selectable) return;
                     if (index === clickedIndex) { // toggle
                         if (view._selectedIndex.indexOf(index) == -1) { // select
                             if (multiSelect) view._selectedIndex.push(index);
