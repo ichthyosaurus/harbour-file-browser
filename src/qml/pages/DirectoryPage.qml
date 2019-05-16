@@ -323,7 +323,7 @@ Page {
 
     // require page to be x milliseconds active before
     // pushing the attached page, so the page is not pushed
-    // while navigating (= building the back-tree)
+    // while navigating (= while building the back-tree)
     Timer {
         id:  preparationTimer
         interval: 15
@@ -351,7 +351,7 @@ Page {
 
         if (status === PageStatus.Activating && page.initial) {
             page.initial = false;
-            goToHome();
+            Functions.goToFolder(StandardPaths.home);
         }
     }
 
@@ -398,7 +398,6 @@ Page {
     // custom signals
     signal addBookmark(var path)
     signal removeBookmark(var path)
-    signal goToHome()
 
     onAddBookmark: {
         Functions.addBookmark(path);
@@ -408,7 +407,4 @@ Page {
         Functions.removeBookmark(path);
     }
 
-    onGoToHome: {
-        Functions.goToHome();
-    }
 }
