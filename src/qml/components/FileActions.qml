@@ -38,6 +38,10 @@ Item {
     signal editTriggered
     property bool displayClose: false
 
+    onSelectedCountChanged: {
+        labelText = qsTr("%1 selected").arg(selectedCount)
+    }
+
     Label {
         id: label
         visible: showLabel
