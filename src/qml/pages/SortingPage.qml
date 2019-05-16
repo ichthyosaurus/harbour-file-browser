@@ -163,7 +163,6 @@ Page {
     function saveSetting(keyGlobal, keyLocal, trueLocal, falseLocal, valueStr) {
         if (useLocalSettings()) {
             engine.writeSetting(keyLocal, (valueStr === "true" ? trueLocal : falseLocal), getConfigPath());
-            console.log(keyLocal, (valueStr === "true" ? trueLocal : falseLocal), getConfigPath())
         } else {
             engine.writeSetting(keyGlobal, valueStr);
         }
