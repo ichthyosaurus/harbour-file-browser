@@ -1,5 +1,6 @@
 ﻿import QtQuick 2.6
 import Sailfish.Silica 1.0
+import harbour.file.browser.FileData 1.0
 
 Item {
     width: isUpright ? Screen.width : Screen.height
@@ -40,6 +41,10 @@ Item {
 
     onSelectedCountChanged: {
         labelText = qsTr("%1 selected").arg(selectedCount)
+    }
+
+    FileData {
+        id: fileData
     }
 
     Label {
@@ -136,15 +141,17 @@ Item {
             visible: showShare
             enabled: selectedCount === 1; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-share"
+            onPressAndHold: labelText = qsTr("share files")
             onClicked: {
                 var files = selectedFiles();
+                fileData.file = files[0];
+                fileData.refresh();
                 pageStack.animatorPush("Sailfish.TransferEngine.SharePage", {
                     source: Qt.resolvedUrl(files[0]),
-                    mimeType: "", // TODO
+                    mimeType: fileData.mimeType,
                     serviceFilter: ["sharing", "e-mail"]
                 })
             }
-            onPressAndHold: labelText = qsTr("share files")
         }
         IconButton {
             visible: showArchive && false
