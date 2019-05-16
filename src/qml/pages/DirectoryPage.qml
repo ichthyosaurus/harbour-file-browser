@@ -91,6 +91,7 @@ Page {
                 property bool hasBookmark: Functions.hasBookmark(dir)
                 text: hasBookmark ? qsTr("Remove bookmark") : qsTr("Add to bookmarks")
                 onClicked: {
+                    clearSelectedFiles();
                     if (hasBookmark) {
                         removeBookmark(dir);
                         hasBookmark = false;
