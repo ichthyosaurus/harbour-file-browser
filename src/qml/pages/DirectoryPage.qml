@@ -11,6 +11,7 @@ Page {
     property bool initial: false // this is set to true if the page is initial page
     property bool remorsePopupActive: false // set to true when remorsePopup is active
     property bool remorseItemActive: false // set to true when remorseItem is active (item level)
+    property bool thumbnailsShown: updateThumbnailsState()
 
     FileModel {
         id: fileModel
@@ -119,9 +120,18 @@ Page {
 
         delegate: ListItem {
             id: fileItem
+
+            property int itemSize: page.thumbnailsShown ? Theme.itemSizeExtraLarge : Theme.itemSizeSmall
+
+            Component.onCompleted: {
+                page.thumbnailsShownChanged.connect(function (){
+                    itemSize = page.thumbnailsShown ? Theme.itemSizeExtraLarge : Theme.itemSizeSmall
+                });
+            }
+
             menu: contextMenu
             width: ListView.view.width
-            contentHeight: listLabel.height+listSize.height + 13
+            contentHeight: itemSize
 
             // background shown when item is selected
             Rectangle {
@@ -129,22 +139,22 @@ Page {
                 anchors.fill: parent
                 color: fileItem.highlightedColor
             }
+
             // HighlightImage replaced with a Loader so that HighlightImage or Image
             // can be loaded depending on Sailfish version (lightPrimaryColor is defined on SF3)
             Loader {
                 id: listIcon
-                anchors.verticalCenter: listLabel.verticalCenter
+                anchors.verticalCenter: thumbnailsShown ? parent.verticalCenter : listLabel.verticalCenter
                 x: Theme.paddingLarge
-                width: Theme.iconSizeSmall
-                height: Theme.iconSizeSmall
-                asynchronous: true
+                width: itemSize === Theme.itemSizeSmall ? Theme.iconSizeSmall : itemSize
+                height: width
                 Component.onCompleted: {
                     var qml = Theme.lightPrimaryColor ? "../components/HighlightImageSF3.qml"
                                                       : "../components/HighlightImageSF2.qml";
                     setSource(qml, {
-                        imgsrc: "../images/small-"+fileIcon+".png",
-                        imgw: Theme.iconSizeSmall,
-                        imgh: Theme.iconSizeSmall
+                        imgsrc: "../images/"+(thumbnailsShown ? "large" : "small")+"-"+fileIcon+".png",
+                        imgw: width,
+                        imgh: height
                     })
                 }
 
@@ -158,12 +168,13 @@ Page {
                 anchors.verticalCenter: listLabel.verticalCenter
                 x: Theme.paddingLarge - 2*Theme.pixelRatio
                 width: Theme.iconSizeSmall + 4*Theme.pixelRatio
-                height: Theme.iconSizeSmall + 4*Theme.pixelRatio
+                height: width
                 color: "transparent"
                 border.color: Theme.highlightColor
                 border.width: 2.25 * Theme.pixelRatio
                 radius: width * 0.5
             }
+
             Label {
                 id: listLabel
                 anchors.left: listIcon.right
@@ -210,8 +221,9 @@ Page {
                                    { file: fileModel.appendPath(listLabel.text) });
                 }
             }
+
             MouseArea {
-                width: Theme.itemSizeSmall
+                width: itemSize
                 height: parent.height
                 onClicked: {
                     fileModel.toggleSelectedFile(index);
@@ -353,6 +365,9 @@ Page {
                 notificationPanel.showText(message, filename);
             }
         }
+        onSettingsChanged: {
+            updateThumbnailsState();
+        }
     }
 
     // require page to be x milliseconds active before
@@ -389,6 +404,12 @@ Page {
         }
     }
 
+    function updateThumbnailsState() {
+        var showThumbs = engine.readSetting("show-thumbnails");
+        if (engine.readSetting("use-local-view-settings", "false") === "true") {
+            thumbnailsShown = engine.readSetting("Dolphin/PreviewsShown", showThumbs, dir+"/.directory") === "true";
+        } else {
+            thumbnailsShown = showThumbs === "true";
         }
     }
 
