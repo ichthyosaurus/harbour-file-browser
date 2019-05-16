@@ -10,6 +10,7 @@ Item {
         console.log("error: missing implementation of FileActions::selectedFiles()!")
         return -1;
     }
+    property int selectedCount: 0
     property alias labelText: label.text
     property bool isUpright: main.orientation === Orientation.Portrait ||
                              main.orientation === Orientation.PortraitInverted
@@ -17,11 +18,13 @@ Item {
     property bool enabled: true
 
     property bool showLabel: true
+
     property bool showCut: true
     property bool showCopy: true
     property bool showDelete: true
     property bool showInfo: true
     property bool showSelection: true
+
     property bool showRename: true
     property bool showShare: true
     property bool showTransfer: true
@@ -82,7 +85,7 @@ Item {
         }
         IconButton {
             visible: showInfo
-            enabled: enabled; icon.width: itemSize; icon.height: itemSize
+            enabled: selectedCount === 1; icon.width: itemSize; icon.height: itemSize
             icon.source: "../images/toolbar-properties.png"
             onClicked: { propertyTriggered(); }
         }
