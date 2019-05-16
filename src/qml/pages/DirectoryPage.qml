@@ -321,6 +321,36 @@ Page {
         }
     }
 
+    NotificationPanel {
+        id: notificationPanel
+        page: page
+    }
+
+    ProgressPanel {
+        id: progressPanel
+        page: page
+        onCancelled: engine.cancel()
+    }
+
+    // connect signals from engine to panels
+    Connections {
+        target: engine
+        onProgressChanged: progressPanel.text = engine.progressFilename
+        onWorkerDone: progressPanel.hide()
+        onWorkerErrorOccurred: {
+            // the error signal goes to all pages in pagestack, show it only in the active one
+            if (progressPanel.open) {
+                progressPanel.hide();
+                if (message === "Unknown error")
+                    filename = qsTr("Trying to move between phone and SD Card? It does not work, try copying.");
+                else if (message === "Failure to write block")
+                    filename = qsTr("Perhaps the storage is full?");
+
+                notificationPanel.showText(message, filename);
+            }
+        }
+    }
+
     // require page to be x milliseconds active before
     // pushing the attached page, so the page is not pushed
     // while navigating (= while building the back-tree)
@@ -355,56 +385,17 @@ Page {
         }
     }
 
-    // connect signals from engine to panels
-    Connections {
-        target: engine
-        onProgressChanged: progressPanel.text = engine.progressFilename
-        onWorkerDone: progressPanel.hide()
-        onWorkerErrorOccurred: {
-            // the error signal goes to all pages in pagestack, show it only in the active one
-            if (progressPanel.open) {
-                progressPanel.hide();
-                if (message === "Unknown error")
-                    filename = qsTr("Trying to move between phone and SD Card? It does not work, try copying.");
-                else if (message === "Failure to write block")
-                    filename = qsTr("Perhaps the storage is full?");
-
-                notificationPanel.showText(message, filename);
-            }
         }
     }
 
     Connections {
         target: main
-        onBookmarkAdded: {
-            if (path === dir) bookmarkEntry.hasBookmark = true;
-        }
-        onBookmarkRemoved: {
-            if (path === dir) bookmarkEntry.hasBookmark = false;
-        }
+        onBookmarkAdded: if (path === dir) bookmarkEntry.hasBookmark = true;
+        onBookmarkRemoved: if (path === dir) bookmarkEntry.hasBookmark = false;
     }
 
-    NotificationPanel {
-        id: notificationPanel
-        page: page
-    }
-
-    ProgressPanel {
-        id: progressPanel
-        page: page
-        onCancelled: engine.cancel()
-    }
-
-    // custom signals
     signal addBookmark(var path)
     signal removeBookmark(var path)
-
-    onAddBookmark: {
-        Functions.addBookmark(path);
-    }
-
-    onRemoveBookmark: {
-        Functions.removeBookmark(path);
-    }
-
+    onAddBookmark: Functions.addBookmark(path)
+    onRemoveBookmark: Functions.removeBookmark(path)
 }
