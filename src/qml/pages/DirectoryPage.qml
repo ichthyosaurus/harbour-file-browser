@@ -139,8 +139,8 @@ Page {
                 height: Theme.iconSizeSmall
                 asynchronous: true
                 Component.onCompleted: {
-                    var qml = Theme.lightPrimaryColor ? "../components/MyHighlightImage3.qml"
-                                                      : "../components/MyHighlightImage2.qml";
+                    var qml = Theme.lightPrimaryColor ? "../components/HighlightImageSF3.qml"
+                                                      : "../components/HighlightImageSF2.qml";
                     setSource(qml, {
                         imgsrc: "../images/small-"+fileIcon+".png",
                         imgw: Theme.iconSizeSmall,

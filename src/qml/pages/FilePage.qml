@@ -179,8 +179,8 @@ Page {
                             width: 128 * Theme.pixelRatio
                             height: 128 * Theme.pixelRatio
                             Component.onCompleted: {
-                                var qml = Theme.lightPrimaryColor ? "../components/MyHighlightImage3.qml"
-                                                                  : "../components/MyHighlightImage2.qml";
+                                var qml = Theme.lightPrimaryColor ? "../components/HighlightImageSF3.qml"
+                                                                  : "../components/HighlightImageSF2.qml";
                                 setSource(qml, {
                                     imgsrc: "../images/large-"+fileData.icon+".png",
                                     imgw: 128 * Theme.pixelRatio,
