@@ -91,21 +91,26 @@ Item {
             onPressAndHold: labelText = qsTr("copy files")
         }
         IconButton {
+            visible: showTransfer
+            enabled: enabled; icon.width: itemSize; icon.height: itemSize
+            icon.source: "image://theme/icon-m-shuffle"
+            onClicked: {
+                var files = selectedFiles();
+                var dialog = pageStack.push(Qt.resolvedUrl("../pages/TransferDialog.qml"),
+                                            { toTransfer: files });
+                dialog.accepted.connect(function() {
+                    if (dialog.errorMessage === "") fileData.refresh(); // FIXME has to be in FilePage
+                    else notificationPanel.showTextWithTimer(dialog.errorMessage, "");
+                });
+            }
+            onPressAndHold: labelText = qsTr("transfer files")
+        }
+        IconButton {
             visible: showDelete
             enabled: enabled; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-delete"
             onClicked: { deleteTriggered(); }
             onPressAndHold: labelText = qsTr("delete files")
-        }
-        IconButton {
-            visible: showProperties
-            enabled: selectedCount === 1; icon.width: itemSize; icon.height: itemSize
-            icon.source: "../images/toolbar-properties.png"
-            onClicked: {
-                var files = selectedFiles();
-                pageStack.push(Qt.resolvedUrl("../pages/FilePage.qml"), { file: files[0] });
-            }
-            onPressAndHold: labelText = qsTr("show file properties")
         }
     }
 
@@ -142,21 +147,6 @@ Item {
             onPressAndHold: labelText = qsTr("share files")
         }
         IconButton {
-            visible: showTransfer
-            enabled: enabled; icon.width: itemSize; icon.height: itemSize
-            icon.source: "image://theme/icon-m-shuffle"
-            onClicked: {
-                var files = selectedFiles();
-                var dialog = pageStack.push(Qt.resolvedUrl("../pages/TransferDialog.qml"),
-                                            { toTransfer: files });
-                dialog.accepted.connect(function() {
-                    if (dialog.errorMessage === "") fileData.refresh(); // FIXME has to be in FilePage
-                    else notificationPanel.showTextWithTimer(dialog.errorMessage, "");
-                });
-            }
-            onPressAndHold: labelText = qsTr("transfer files")
-        }
-        IconButton {
             visible: showArchive && false
             enabled: false; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-file-archive-folder"
@@ -172,6 +162,16 @@ Item {
             icon.source: "image://theme/icon-m-edit"
             onClicked: { editTriggered(); }
             onPressAndHold: labelText = qsTr("edit files")
+        }
+        IconButton {
+            visible: showProperties
+            enabled: selectedCount === 1; icon.width: itemSize; icon.height: itemSize
+            icon.source: "../images/toolbar-properties.png"
+            onClicked: {
+                var files = selectedFiles();
+                pageStack.push(Qt.resolvedUrl("../pages/FilePage.qml"), { file: files[0] });
+            }
+            onPressAndHold: labelText = qsTr("show file properties")
         }
     }
 }
