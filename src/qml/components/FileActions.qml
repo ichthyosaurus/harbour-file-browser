@@ -40,7 +40,7 @@ Item {
     signal propertiesTriggered
     signal renameTriggered(var oldFiles, var newFiles)
     signal shareTriggered
-    signal transferTriggered
+    signal transferTriggered(var oldFiles, var newFiles)
     signal compressTriggered
     signal extractTriggered
     signal editTriggered
@@ -113,10 +113,12 @@ Item {
                 var dialog = pageStack.push(Qt.resolvedUrl("../pages/TransferDialog.qml"),
                                             { toTransfer: files });
                 dialog.accepted.connect(function() {
-                    if (dialog.errorMessage === "") fileData.refresh(); // FIXME has to be in FilePage
-                    else notificationPanel.showTextWithTimer(dialog.errorMessage, "");
+                    if (dialog.errorMessage === "") {
+                        transferTriggered(files, dialog.newLocations);
+                    } else {
+                        notificationPanel.showTextWithTimer(dialog.errorMessage, "");
+                    }
                 });
-                transferTriggered();
             }
         }
         IconButton {

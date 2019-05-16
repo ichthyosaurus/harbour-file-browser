@@ -238,6 +238,9 @@ Page {
                         page.file = newFiles[0]
                         fileData.refresh();
                     }
+                    onTransferTriggered: {
+                        // TODO show progress panel and go back to last directory
+                    }
                 }
 
                 // Display metadata with priotity < 5

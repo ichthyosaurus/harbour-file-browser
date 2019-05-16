@@ -9,6 +9,7 @@ Dialog {
     property var toTransfer: []
     property var targets: []
     property var selectedAction
+    property string errorMessage: ""
 
     allowedOrientations: Orientation.All
 
