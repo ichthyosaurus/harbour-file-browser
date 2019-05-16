@@ -60,12 +60,12 @@ QString datetimeToString(QDateTime datetime, bool longFormat)
     // return time for today or date+time for older
     // include more information if 'longFormat' is true
     if (datetime.date() == QDate::currentDate()) {
-        return datetime.toString(QObject::tr("h:mm:ss"));
+        return datetime.toString(QObject::tr("hh:mm:ss"));
     } else {
         if (longFormat) {
-            return datetime.toString(QObject::tr("d MMM yyyy, hh:mm:ss t"));
+            return datetime.toString(QObject::tr("dd MMM yyyy, hh:mm:ss t"));
         } else {
-            return datetime.toString(QObject::tr("d MMM yyyy, hh:mm"));
+            return datetime.toString(QObject::tr("dd.MM.yy, hh:mm"));
         }
     }
 }
