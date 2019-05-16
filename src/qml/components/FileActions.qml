@@ -63,6 +63,10 @@ Item {
             icon.source: displayClose ? "image://theme/icon-m-clear"
                                       : "../images/toolbar-select-all.png"
             onClicked: { displayClose ? closeTriggered() : selectAllTriggered(); }
+            onPressAndHold: {
+                if (displayClose) labelText = qsTr("clear selection");
+                else labelText = qsTr("select all");
+            }
         }
         IconButton {
             visible: showCut
@@ -73,6 +77,7 @@ Item {
                 engine.cutFiles(files);
                 labelText = qsTr("%1 cut").arg(engine.clipboardCount);
             }
+            onPressAndHold: labelText = qsTr("cut files")
         }
         IconButton {
             visible: showCopy
@@ -83,12 +88,14 @@ Item {
                 engine.copyFiles(files);
                 labelText = qsTr("%1 copied").arg(engine.clipboardCount);
             }
+            onPressAndHold: labelText = qsTr("copy files")
         }
         IconButton {
             visible: showDelete
             enabled: enabled; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-delete"
             onClicked: { deleteTriggered(); }
+            onPressAndHold: labelText = qsTr("delete files")
         }
         IconButton {
             visible: showProperties
@@ -98,6 +105,7 @@ Item {
                 var files = selectedFiles();
                 pageStack.push(Qt.resolvedUrl("../pages/FilePage.qml"), { file: files[0] });
             }
+            onPressAndHold: labelText = qsTr("show file properties")
         }
     }
 
@@ -117,6 +125,7 @@ Item {
                     if (dialog.errorMessage !== "") notificationPanel.showTextWithTimer(dialog.errorMessage, "");
                 })
             }
+            onPressAndHold: labelText = qsTr("rename files")
         }
         IconButton {
             visible: showShare
@@ -130,6 +139,7 @@ Item {
                     serviceFilter: ["sharing", "e-mail"]
                 })
             }
+            onPressAndHold: labelText = qsTr("share files")
         }
         IconButton {
             visible: showTransfer
@@ -144,18 +154,24 @@ Item {
                     else notificationPanel.showTextWithTimer(dialog.errorMessage, "");
                 });
             }
+            onPressAndHold: labelText = qsTr("transfer files")
         }
         IconButton {
-            visible: showArchive
+            visible: showArchive && false
             enabled: false; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-file-archive-folder"
             onClicked: { archiveTriggered(); }
+            onPressAndHold: {
+                labelText = qsTr("compress files")
+                // labelText = qsTr("extract archive")
+            }
         }
         IconButton {
-            visible: showEdit
+            visible: showEdit && false
             enabled: false; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-edit"
             onClicked: { editTriggered(); }
+            onPressAndHold: labelText = qsTr("edit files")
         }
     }
 }
