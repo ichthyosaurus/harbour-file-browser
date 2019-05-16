@@ -343,9 +343,7 @@ Page {
         id: selectionPanel
         selectedCount: _selectedFileCount
         enabled: !page.remorsePopupActive && !page.remorseItemActive
-        orientation: page.orientation
         displayClose: _selectedFileCount === listModel.count
-
         selectedFiles: parent.selectedFiles
 
         Connections {

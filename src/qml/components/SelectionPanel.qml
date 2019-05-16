@@ -13,7 +13,6 @@ DockedPanel {
     property alias selectedFiles: fileActions.selectedFiles
     property alias displayClose: fileActions.displayClose
     property alias actions: fileActions
-    property int orientation: Orientation.Portrait // orientation of the panel
     property int selectedCount: 0 // number of selected items
     property bool enabled: true // enable or disable the buttons
     property string overrideText: "" // override text is shown if set, it gets cleared whenever selected file count changes
