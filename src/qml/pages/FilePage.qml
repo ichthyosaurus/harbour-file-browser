@@ -238,6 +238,15 @@ Page {
                         page.file = newFiles[0]
                         fileData.refresh();
                     }
+                    onDeleteTriggered: {
+                        remorsePopup.execute(qsTr("Deleting"), function() {
+                            // TODO use progress panel of previous page
+                            // var prevPage = pageStack.previousPage();
+                            pageStack.pop();
+                            // prevPage.progressPanel.showText(qsTr("Deleting"));
+                            engine.deleteFiles([page.file]);
+                        });
+                    }
                     onTransferTriggered: {
                         // TODO show progress panel and go back to last directory
                     }
