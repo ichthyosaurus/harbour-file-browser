@@ -60,7 +60,7 @@ SilicaListView {
                 id: image
                 width: height
                 source: "image://theme/" + model.thumbnail + "?" + (
-                            listItem.selected ? Theme.highlightColor : Theme.primaryColor)
+                            iconButton.highlighted ? Theme.highlightColor : Theme.primaryColor)
                 anchors {
                     left: parent.left
                     top: parent.top
@@ -74,7 +74,7 @@ SilicaListView {
                 width: view.width - x -
                        (deleteBookmarkBtn.visible ? deleteBookmarkBtn.width : Theme.horizontalPageMargin)
                 font.pixelSize: Theme.fontSizeMedium
-                color: listItem.selected ? Theme.highlightColor : Theme.primaryColor
+                color: iconButton.highlighted ? Theme.highlightColor : Theme.primaryColor
                 text: model.name
                 truncationMode: TruncationMode.Fade
                 anchors {
@@ -99,7 +99,7 @@ SilicaListView {
                     id: sizeInfo
                     visible: model.showsize
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    color: listItem.selected ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                    color: iconButton.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
                     text: (visible ? "... \u2022 ... \u2022 " : "")
 
                     function updateText() {
@@ -123,7 +123,7 @@ SilicaListView {
                     id: shortcutPath
                     width: parent.width - (sizeInfo.visible ? sizeInfo.width : 0)
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    color: listItem.selected ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                    color: iconButton.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
                     text: Functions.unicodeArrow() + " " + model.location
                     visible: model.location === model.name ? false : true
                     elide: Text.ElideMiddle
