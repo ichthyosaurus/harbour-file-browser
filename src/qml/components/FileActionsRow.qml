@@ -27,6 +27,10 @@ Row {
                 anchors.left: tiedTo.right
                 anchors.horizontalCenter: undefined
             }
+            PropertyChanges {
+                target: group
+                anchors.leftMargin: Theme.paddingLarge
+            }
         }
     ]
 
