@@ -38,7 +38,7 @@ Item {
     signal deleteTriggered
     signal closeTriggered
     signal propertiesTriggered
-    signal renameTriggered
+    signal renameTriggered(var oldFiles, var newFiles)
     signal shareTriggered
     signal transferTriggered
     signal compressTriggered
@@ -143,8 +143,8 @@ Item {
                                             { path: files[0] })
                 dialog.accepted.connect(function() {
                     if (dialog.errorMessage !== "") notificationPanel.showTextWithTimer(dialog.errorMessage, "");
+                    renameTriggered(files, [dialog.newPath]);
                 })
-                renameTriggered();
             }
         }
         IconButton {

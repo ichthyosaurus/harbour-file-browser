@@ -16,6 +16,10 @@ Page {
         file: page.file
     }
 
+    RemorsePopup {
+        id: remorsePopup
+    }
+
     ConsoleModel {
         id: consoleModel
 
@@ -229,6 +233,11 @@ Page {
                     showSelection: false
                     showShare: !(fileData.isDir || fileData.isSymLink)
                     showEdit: !fileData.isDir
+
+                    onRenameTriggered: {
+                        page.file = newFiles[0]
+                        fileData.refresh();
+                    }
                 }
 
                 // Display metadata with priotity < 5
