@@ -346,20 +346,25 @@ Page {
         orientation: page.orientation
         displayClose: _selectedFileCount === listModel.count
 
-        onSelectAllTriggered: selectAllFiles();
-        onCloseTriggered: clearSelectedFiles();
-        onDeleteTriggered: {
-            var files = selectedFiles();
-            remorsePopupActive = true;
-            remorsePopup.execute(qsTr("Deleting"), function() {
-                clearSelectedFiles();
-                progressPanel.showText(qsTr("Deleting"));
-                engine.deleteFiles(files);
-            });
-        }
-        onPropertyTriggered: {
-            var files = selectedFiles();
-            pageStack.push(Qt.resolvedUrl("FilePage.qml"), { file: files[0] });
+        selectedFiles: parent.selectedFiles
+
+        Connections {
+            target: selectionPanel.actions
+            onCloseTriggered: clearSelectedFiles();
+            onSelectAllTriggered: selectAllFiles();
+            onDeleteTriggered: {
+                var files = selectedFiles();
+                remorsePopupActive = true;
+                remorsePopup.execute(qsTr("Deleting"), function() {
+                    clearSelectedFiles();
+                    progressPanel.showText(qsTr("Deleting"));
+                    engine.deleteFiles(files);
+                });
+            }
+            onPropertyTriggered: {
+                var files = selectedFiles();
+                pageStack.push(Qt.resolvedUrl("FilePage.qml"), { file: files[0] });
+            }
         }
     }
 

@@ -320,20 +320,23 @@ Page {
         displayClose: fileModel.selectedFileCount == fileModel.fileCount
         selectedFiles: function() { return fileModel.selectedFiles(); }
 
-        onSelectAllTriggered: selectAllFiles();
-        onCloseTriggered: clearSelectedFiles();
-        onDeleteTriggered: {
-            var files = fileModel.selectedFiles();
-            remorsePopupActive = true;
-            remorsePopup.execute(qsTr("Deleting"), function() {
-                clearSelectedFiles();
-                progressPanel.showText(qsTr("Deleting"));
-                engine.deleteFiles(files);
-            });
-        }
-        onPropertyTriggered: {
-            var files = fileModel.selectedFiles();
-            pageStack.push(Qt.resolvedUrl("FilePage.qml"), { file: files[0] });
+        Connections {
+            target: selectionPanel.actions
+            onCloseTriggered: clearSelectedFiles();
+            onSelectAllTriggered: selectAllFiles();
+            onDeleteTriggered: {
+                var files = fileModel.selectedFiles();
+                remorsePopupActive = true;
+                remorsePopup.execute(qsTr("Deleting"), function() {
+                    clearSelectedFiles();
+                    progressPanel.showText(qsTr("Deleting"));
+                    engine.deleteFiles(files);
+                });
+            }
+            onPropertyTriggered: {
+                var files = fileModel.selectedFiles();
+                pageStack.push(Qt.resolvedUrl("FilePage.qml"), { file: files[0] });
+            }
         }
     }
 
