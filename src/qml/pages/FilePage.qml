@@ -224,8 +224,11 @@ Page {
                         return [file];
                     }
                     selectedCount: 1
+                    labelText: ""
                     showProperties: false
                     showSelection: false
+                    showShare: !(fileData.isDir || fileData.isSymLink)
+                    showEdit: !fileData.isDir
                 }
 
                 // Display metadata with priotity < 5
