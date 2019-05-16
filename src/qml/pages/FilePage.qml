@@ -85,20 +85,6 @@ Page {
                 onClicked: viewContents()
             }
 
-            MenuItem {
-                text: qsTr("Rename")
-                onClicked: {
-                    var dialog = pageStack.push(Qt.resolvedUrl("RenameDialog.qml"),
-                                                { path: page.file })
-                    dialog.accepted.connect(function() {
-                        if (dialog.errorMessage === "")
-                            page.file = dialog.newPath;
-                        else
-                            notificationPanel.showTextWithTimer(dialog.errorMessage, "");
-                    })
-                }
-            }
-
             // open/install tries to open the file and fileData.onProcessExited shows error
             // if it fails
             MenuItem {
