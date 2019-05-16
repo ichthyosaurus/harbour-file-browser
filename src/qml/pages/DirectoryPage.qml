@@ -147,7 +147,11 @@ Page {
                         imgh: Theme.iconSizeSmall
                     })
                 }
+
+                property bool highlighted: fileItem.highlighted || isSelected
+                onHighlightedChanged: item.highlighted = highlighted
             }
+
             // circle shown when item is selected
             Rectangle {
                 visible: isSelected

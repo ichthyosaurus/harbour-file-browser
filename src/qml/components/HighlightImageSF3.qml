@@ -6,6 +6,8 @@ Item {
     property alias imgsrc: myimg.source
     property alias imgw: myimg.width
     property alias imgh: myimg.height
+    property alias highlighted: myimg.highlighted
+
     HighlightImage {
         id: myimg
         color: Theme.primaryColor

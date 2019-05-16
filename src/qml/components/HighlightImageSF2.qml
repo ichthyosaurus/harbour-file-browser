@@ -6,6 +6,8 @@ Item {
     property alias imgsrc: myimg.source
     property alias imgw: myimg.width
     property alias imgh: myimg.height
+    property bool highlighted: false // not possible on Sailfish 2
+
     Image {
         id: myimg
     }
