@@ -226,10 +226,9 @@ Page {
                     }
                     onDeleteTriggered: {
                         remorsePopup.execute(qsTr("Deleting"), function() {
-                            // TODO use progress panel of previous page
-                            // var prevPage = pageStack.previousPage();
+                            var prevPage = pageStack.previousPage();
                             pageStack.pop();
-                            // prevPage.progressPanel.showText(qsTr("Deleting"));
+                            prevPage.progressPanel.showText(qsTr("Deleting"));
                             engine.deleteFiles([page.file]);
                         });
                     }
