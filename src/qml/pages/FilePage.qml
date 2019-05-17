@@ -65,6 +65,10 @@ Page {
         contentHeight: column.height
         VerticalScrollDecorator { flickable: flickable }
 
+        visible: !transferPanel.visible
+        opacity: visible ? 1 : 0
+        Behavior on opacity { NumberAnimation { duration: 300 } }
+
         PullDownMenu {
             MenuItem {
                 text: qsTr("Change Permissions")
@@ -234,7 +238,8 @@ Page {
                         });
                     }
                     onTransferTriggered: {
-                        // TODO show progress panel and go back to last directory
+                        if (selectedAction === "move") pageStack.pop();
+                        transferPanel.startTransfer(toTransfer, targets, selectedAction);
                     }
                 }
 
@@ -314,6 +319,15 @@ Page {
     NotificationPanel {
         id: notificationPanel
         page: page
+    }
+
+    TransferPanel {
+        id: transferPanel
+        page: page
+        Component.onCompleted: {
+            var prevPage = pageStack.previousPage();
+            if (prevPage.progressPanel) progressPanel = prevPage.progressPanel;
+        }
     }
 
     Timer {

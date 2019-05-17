@@ -34,6 +34,10 @@ Page {
         anchors.bottomMargin: selectionPanel.visible ? selectionPanel.visibleSize : 0
         clip: true
 
+        visible: !transferPanel.visible
+        opacity: visible ? 1 : 0
+        Behavior on opacity { NumberAnimation { duration: 300 } }
+
         model: fileModel
 
         VerticalScrollDecorator { flickable: fileList }
@@ -318,6 +322,10 @@ Page {
                     engine.deleteFiles(files);
                 });
             }
+            onTransferTriggered: {
+                if (remorsePopupActive) return;
+                transferPanel.startTransfer(toTransfer, targets, selectedAction);
+            }
         }
     }
 
@@ -330,6 +338,12 @@ Page {
         id: progressPanel
         page: page
         onCancelled: engine.cancel()
+    }
+
+    TransferPanel {
+        id: transferPanel
+        page: page
+        progressPanel: progressPanel
     }
 
     // connect signals from engine to panels
