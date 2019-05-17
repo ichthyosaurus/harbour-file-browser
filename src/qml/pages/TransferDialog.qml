@@ -58,6 +58,14 @@ Dialog {
     function updateStatus() {
         if (selectedAction !== "" && shortcutsView._selectedIndex.length > 0) {
             canAccept = true;
+
+            if (selectedAction === "link") {
+                notificationPanel.showTextWithTimer(qsTr("Linking files is not yet supported"), "");
+                canAccept = false;
+            } else if (shortcutsView._selectedIndex.length > 1 && selectedAction === "move") {
+                notificationPanel.showTextWithTimer(qsTr("Moving files to multiple locations is not yet supported"), "");
+                canAccept = false;
+            }
         } else {
             canAccept = false;
         }
@@ -65,6 +73,21 @@ Dialog {
 
     onAccepted: {
         targets = shortcutsView.getSelectedLocations();
+
+        if (selectedAction === "copy") {
+            engine.copyFiles(toTransfer);
+        } else if (selectedAction === "move") {
+            engine.cutFiles(toTransfer);
+        } else if (selectedAction === "link") {
+            // not yet implemented
+        }
+
+        // the transfer has to be completed on the destination page
+        // e.g. like this:
+        //
+        // for (var i = 0; i < targets.length; i++) {
+        //     Functions.pasteFiles(targets[i], progressPanel, function() { console.log("->", targets[i]); });
+        // }
     }
 
     Component.onCompleted: {
