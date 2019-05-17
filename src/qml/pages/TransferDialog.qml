@@ -34,6 +34,7 @@ Dialog {
             multiSelect: true
             onItemSelected: dialog.updateStatus();
             onItemDeselected: dialog.updateStatus();
+            allowDeleteBookmarks: false
 
             header: Item {
                 width: dialog.width

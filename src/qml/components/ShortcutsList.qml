@@ -8,6 +8,7 @@ SilicaListView {
 
     property bool selectable: false
     property bool multiSelect: false
+    property bool allowDeleteBookmarks: true
     property var initialSelection
     property var sections: ["locations", "android", "external", "bookmarks"]
     property var _selectedIndex: []
@@ -138,7 +139,7 @@ SilicaListView {
                 id: deleteBookmarkBtn
                 width: Theme.itemSizeSmall
                 height: Theme.itemSizeSmall
-                visible: model.bookmark ? true : false
+                visible: (model.bookmark ? true : false) && allowDeleteBookmarks
                 icon.source: "image://theme/icon-m-clear"
 
                 anchors {
