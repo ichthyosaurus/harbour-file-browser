@@ -3,7 +3,7 @@ import Sailfish.Silica 1.0
 
 Item {
     id: action
-    property var selection
+    property string selection: ""
 
     Row {
         anchors.fill: parent

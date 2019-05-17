@@ -13,6 +13,8 @@ SilicaListView {
     property var _selectedIndex: []
 
     signal itemClicked(var clickedIndex, var path)
+    signal itemSelected(var clickedIndex, var path)
+    signal itemDeselected(var clickedIndex, var path) // only for multiSelect
 
     model: listModel
 
@@ -44,11 +46,13 @@ SilicaListView {
                             if (multiSelect) view._selectedIndex.push(index);
                             else view._selectedIndex = [index];
                             selected = true;
+                            itemSelected(index, model.location);
                         } else if (multiSelect) { // deselect
                             view._selectedIndex = view._selectedIndex.filter(function(item) {
                                 return item !== index
                             })
                             selected = false;
+                            itemDeselected(index, model.location);
                         }
                     } else if (!multiSelect) {
                         selected = false;
