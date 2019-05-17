@@ -156,13 +156,11 @@ Rectangle {
         id: mainConnections
         target: null
         onAccepted: {
-            console.log("ACCEPTED");
             mainConnections.target = null
             panel.visible = false;
             panel._doPaste();
         }
         onRejected: {
-            console.log("REJECTED");
             mainConnections.target = null;
             panel.visible = false;
             if (panel._toGo > 0) panel._doRecursiveTransfer();
@@ -187,7 +185,6 @@ Rectangle {
 
     function _doRecursiveTransfer() {
         engineConnection.target = null;
-        console.log("->", _current, _toGo, targets[_current], action);
 
         if (action === "copy") {
             engine.copyFiles(files);
@@ -204,20 +201,15 @@ Rectangle {
         }
 
         _currentDir = targets[_current]
-        console.log(_currentDir)
         _toGo -= 1; _current += 1;
 
         var existingFiles = engine.listExistingFiles(_currentDir);
         if (existingFiles.length > 0) { // overwrite
-            console.log("=> overwrite")
             mainConnections.target = actionsRelay;
             panel.visible = true;
         } else { // everything's fine
-            console.log("=> normal")
             _doPaste();
         }
-
-        console.log("done->", _current, _toGo, _currentDir, action);
     }
 
     function _doPaste() {
