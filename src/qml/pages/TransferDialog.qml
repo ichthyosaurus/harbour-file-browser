@@ -8,10 +8,17 @@ Dialog {
     id: dialog
     property var toTransfer: []
     property var targets: []
-    property var selectedAction
+    property string selectedAction: ""
     property string errorMessage: ""
 
     allowedOrientations: Orientation.All
+    canAccept: false
+
+    NotificationPanel {
+        id: notificationPanel
+        z: 100
+        page: page
+    }
 
     SilicaFlickable {
         id: flickable
@@ -25,6 +32,8 @@ Dialog {
             sections: ["bookmarks", "locations", "android", "external"]
             selectable: true
             multiSelect: true
+            onItemSelected: dialog.updateStatus();
+            onItemDeselected: dialog.updateStatus();
 
             header: Item {
                 width: dialog.width
@@ -37,14 +46,31 @@ Dialog {
                     height: Theme.itemSizeMedium
                     anchors.top: head.bottom
                     anchors.topMargin: Theme.paddingMedium
-                    onSelectionChanged: dialog.selectedAction = selection
+                    onSelectionChanged: {
+                        dialog.selectedAction = selection
+                        dialog.updateStatus();
+                    }
                 }
             }
         }
     }
 
+    function updateStatus() {
+        if (selectedAction !== "" && shortcutsView._selectedIndex.length > 0) {
+            canAccept = true;
+        } else {
+            canAccept = false;
+        }
+    }
+
     onAccepted: {
         targets = shortcutsView.getSelectedLocations();
-        console.log("TRANSFER ACCEPTED", toTransfer, targets, selectedAction)
+    }
+
+    Component.onCompleted: {
+        if (!toTransfer.length) {
+            canAccept = false;
+            notificationPanel.showTextWithTimer(qsTr("Nothing selected to transfer"), "");
+        }
     }
 }
