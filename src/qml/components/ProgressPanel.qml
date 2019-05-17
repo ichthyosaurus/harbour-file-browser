@@ -49,7 +49,11 @@ Item {
 
         dock: Dock.Top
         open: false
-        onOpenChanged: page.backNavigation = !open; // disable back navigation
+        onOpenChanged: {
+            // disable all page navigation
+            page.backNavigation = !open;
+            page.forwardNavigation = !open;
+        }
 
         Rectangle {
             anchors.fill: parent
