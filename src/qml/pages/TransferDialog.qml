@@ -37,18 +37,33 @@ Dialog {
 
             header: Item {
                 width: dialog.width
-                height: head.height + action.height + Theme.paddingLarge
+                height: head.height + col.height + Theme.paddingLarge
 
                 DialogHeader { id: head }
-                TransferActionBar {
-                    id: action
-                    width: parent.width
-                    height: Theme.itemSizeMedium
+
+                Column {
+                    id: col
                     anchors.top: head.bottom
-                    anchors.topMargin: Theme.paddingMedium
-                    onSelectionChanged: {
-                        dialog.selectedAction = selection
-                        dialog.updateStatus();
+                    width: parent.width
+                    spacing: Theme.paddingLarge
+
+                    Label {
+                        text: qsTr("%n item(s) selected for transferring", "", toTransfer.length);
+                        x: Theme.horizontalPageMargin
+                        color: Theme.highlightColor
+                        opacity: 0.7
+                    }
+
+                    TransferActionBar {
+                        id: action
+                        width: parent.width
+                        height: Theme.itemSizeMedium
+                        anchors.top: head.bottom
+                        anchors.topMargin: Theme.paddingMedium
+                        onSelectionChanged: {
+                            dialog.selectedAction = selection
+                            dialog.updateStatus();
+                        }
                     }
                 }
             }
