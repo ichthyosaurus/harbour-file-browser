@@ -40,7 +40,7 @@ Item {
     signal propertiesTriggered
     signal renameTriggered(var oldFiles, var newFiles)
     signal shareTriggered
-    signal transferTriggered(var oldFiles, var newFiles)
+    signal transferTriggered(var toTransfer, var targets, var selectedAction)
     signal compressTriggered
     signal extractTriggered
     signal editTriggered
@@ -114,7 +114,7 @@ Item {
                                             { toTransfer: files });
                 dialog.accepted.connect(function() {
                     if (dialog.errorMessage === "") {
-                        transferTriggered(files, dialog.newLocations);
+                        transferTriggered(dialog.toTransfer, dialog.targets, dialog.selectedAction);
                     } else {
                         notificationPanel.showTextWithTimer(dialog.errorMessage, "");
                     }
