@@ -10,7 +10,6 @@ Page {
     id: page
     allowedOrientations: Orientation.All
     property string file: "/"
-    property alias progressPanel: progressPanel
     property alias notificationPanel: notificationPanel
 
     FileData {
