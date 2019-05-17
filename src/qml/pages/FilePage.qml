@@ -10,6 +10,8 @@ Page {
     id: page
     allowedOrientations: Orientation.All
     property string file: "/"
+    property alias progressPanel: progressPanel
+    property alias notificationPanel: notificationPanel
 
     FileData {
         id: fileData
@@ -228,7 +230,7 @@ Page {
                         remorsePopup.execute(qsTr("Deleting"), function() {
                             var prevPage = pageStack.previousPage();
                             pageStack.pop();
-                            prevPage.progressPanel.showText(qsTr("Deleting"));
+                            if (prevPage.progressPanel) prevPage.progressPanel.showText(qsTr("Deleting"));
                             engine.deleteFiles([page.file]);
                         });
                     }

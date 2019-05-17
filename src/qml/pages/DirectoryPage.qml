@@ -13,6 +13,7 @@ Page {
     property bool remorseItemActive: false // set to true when remorseItem is active (item level)
     property bool thumbnailsShown: updateThumbnailsState()
     property alias progressPanel: progressPanel
+    property alias notificationPanel: notificationPanel
 
     FileModel {
         id: fileModel
