@@ -42,4 +42,10 @@ Item {
             highlighted: action.selection === "link"
         }
     }
+
+    Component.onCompleted: {
+        var defTransfer = engine.readSetting("default-transfer-action", "");
+        if (defTransfer === "none") defTransfer = "";
+        action.selection = defTransfer;
+    }
 }

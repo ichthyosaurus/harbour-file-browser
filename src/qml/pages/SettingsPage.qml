@@ -20,7 +20,10 @@ Page {
 
             PageHeader {
                 title: qsTr("Settings")
-                description: qsTr("Global preferences")
+            }
+
+            SectionHeader {
+                text: "Global view preferences"
             }
 
             TextSwitch {
@@ -52,6 +55,26 @@ Page {
                 id: sortCaseSensitive
                 text: qsTr("Sort case-sensitively")
                 onCheckedChanged: engine.writeSetting("sort-case-sensitive", sortCaseSensitive.checked.toString())
+            }
+
+            SectionHeader {
+                text: "Transfer preferences"
+            }
+
+            ComboBox {
+                id: defaultTransfer
+                width: parent.width
+                label: "Default transfer action"
+                currentIndex: -1
+                menu: ContextMenu {
+                    MenuItem { text: qsTr("copy"); property string action: "copy"; }
+                    MenuItem { text: qsTr("move"); property string action: "move"; }
+                    MenuItem { text: qsTr("link"); property string action: "link"; }
+                    MenuItem { text: qsTr("none"); property string action: "none"; }
+                }
+                onValueChanged: {
+                    engine.writeSetting("default-transfer-action", currentItem.action);
+                }
             }
 
             Spacer { height: 2*Theme.paddingLarge }
@@ -132,6 +155,17 @@ Page {
             cacheThumbnails.checked = (engine.readSetting("cache-thumbnails") === "true");
             sortCaseSensitive.checked = (engine.readSetting("sort-case-sensitive") === "true");
             useLocalSettings.checked = (engine.readSetting("use-local-view-settings") === "true");
+
+            var defTransfer = engine.readSetting("default-transfer-action", "none");
+            if (defTransfer === "copy") {
+                defaultTransfer.currentIndex = 0;
+            } else if (defTransfer === "move") {
+                defaultTransfer.currentIndex = 1;
+            } else if (defTransfer === "link") {
+                defaultTransfer.currentIndex = 2;
+            } else {
+                defaultTransfer.currentIndex = 3;
+            }
         }
     }
 }
