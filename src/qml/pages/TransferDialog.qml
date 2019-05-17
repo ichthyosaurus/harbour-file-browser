@@ -58,8 +58,6 @@ Dialog {
                         id: action
                         width: parent.width
                         height: Theme.itemSizeMedium
-                        anchors.top: head.bottom
-                        anchors.topMargin: Theme.paddingMedium
                         onSelectionChanged: {
                             dialog.selectedAction = selection
                             dialog.updateStatus();
