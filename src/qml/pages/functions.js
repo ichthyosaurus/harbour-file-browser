@@ -112,3 +112,31 @@ function formatPathForSearch(path) {
 function unicodeArrow() {
     return "\u2192"; // unicode for right pointing arrow symbol (for links)
 }
+
+function pasteFiles(targetDir, progressPanel, runBefore) {
+    if (engine.clipboardCount === 0) return;
+    if (targetDir === undefined) return;
+
+    var existingFiles = engine.listExistingFiles(targetDir);
+    if (existingFiles.length > 0) {
+      // show overwrite dialog
+      var dialog = pageStack.push(Qt.resolvedUrl("OverwriteDialog.qml"),
+                                  { "files": existingFiles })
+      dialog.accepted.connect(function() {
+          if (progressPanel !== undefined) {
+            progressPanel.showText(engine.clipboardContainsCopy ?
+                                       qsTr("Copying") : qsTr("Moving"))
+          }
+          if (runBefore !== undefined) runBefore();
+          engine.pasteFiles(targetDir);
+      })
+    } else {
+      // no overwrite dialog
+      if (progressPanel !== undefined) {
+          progressPanel.showText(engine.clipboardContainsCopy ?
+                                     qsTr("Copying") : qsTr("Moving"))
+      }
+      if (runBefore !== undefined) runBefore();
+      engine.pasteFiles(targetDir);
+    }
+}
