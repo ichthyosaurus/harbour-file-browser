@@ -40,7 +40,8 @@ Item {
                 var mimeType = mimeTypeCallback();
 
                 if (   mimeType.indexOf("image/") === -1
-                    && mimeType.indexOf("application/pdf") === -1) {
+                    && mimeType.indexOf("application/pdf") === -1
+                    && mimeType.indexOf("video/") === -1) {
                     canThumb = false
                 }
             }
