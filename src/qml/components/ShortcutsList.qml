@@ -28,6 +28,7 @@ SilicaListView {
             id: iconButton
             width: view.width
             height: Theme.itemSizeSmall
+            enabled: !editLabel.visible
 
             onClicked: {
                 view.itemClicked(index, model.location);
@@ -41,6 +42,7 @@ SilicaListView {
             Connections {
                 target: view
                 onItemClicked: {
+                    if (editLabel.visible && editLabel.focus) iconButton.endEditing(true);
                     if (!selectable) return;
                     if (index === clickedIndex) { // toggle
                         if (view._selectedIndex.indexOf(index) == -1) { // select
@@ -76,8 +78,6 @@ SilicaListView {
 
             Label {
                 id: shortcutLabel
-                width: view.width - x -
-                       (deleteBookmarkBtn.visible ? deleteBookmarkBtn.width : Theme.horizontalPageMargin)
                 font.pixelSize: Theme.fontSizeMedium
                 color: iconButton.highlighted ? Theme.highlightColor : Theme.primaryColor
                 text: model.name
@@ -88,9 +88,35 @@ SilicaListView {
                     top: parent.top
                     topMargin: model.location === model.name ? (parent.height / 2) - (height / 2) : 5
                 }
+                width: view.width - x -
+                       (deleteBookmarkBtn.visible ? deleteBookmarkBtn.width : Theme.horizontalPageMargin)
+            }
+
+            TextField {
+                id: editLabel
+                visible: !shortcutLabel.visible
+                z: infoRow.z-1
+                placeholderText: shortcutLabel.text
+                text: shortcutLabel.text
+                labelVisible: false
+                textTopMargin: 0
+                textMargin: 0
+                anchors {
+                    left: image.right
+                    leftMargin: Theme.paddingMedium
+                    top: parent.top
+                    topMargin: model.location === model.name ? (parent.height / 2) - (height / 2) : 5
+                }
+                width: view.width - x -
+                       (deleteBookmarkBtn.visible ? deleteBookmarkBtn.width : Theme.horizontalPageMargin)
+                Connections {
+                    target: editLabel._editor
+                    onAccepted: iconButton.endEditing(true);
+                }
             }
 
             Row {
+                id: infoRow
                 spacing: 0
                 anchors {
                     left: image.right
@@ -99,6 +125,9 @@ SilicaListView {
                     topMargin: 2
                     right: shortcutLabel.right
                 }
+
+                visible: true; opacity: visible ? 1 : 0
+                Behavior on opacity { NumberAnimation { duration: 100 } }
 
                 Text {
                     id: sizeInfo
@@ -135,12 +164,53 @@ SilicaListView {
                 }
             }
 
+            onPressAndHold: {
+                if ((model.bookmark ? true : false) && allowDeleteBookmarks) {
+                    infoRow.visible = false;
+                    shortcutLabel.visible = false;
+                    deleteBookmarkBtn.visible = true;
+                    endEditTimer.start();
+                }
+            }
+
+            function commitBookmarkName() {
+                var oldText = editLabel.placeholderColor;
+                var newText = editLabel.text;
+                if (newText === "" || oldText === newText || !location) return;
+                engine.writeSetting("Bookmarks"+location, newText);
+                shortcutLabel.text = newText;
+            }
+
+            function endEditing(forceCommit) {
+                if (!editLabel.visible) return;
+                if (editLabel.focus) {
+                    if (!forceCommit) return;
+                    editLabel.readOnly = true;
+                    commitBookmarkName();
+                }
+                deleteBookmarkBtn.visible = false;
+                shortcutLabel.visible = true;
+                infoRow.visible = true;
+                editLabel.readOnly = false;
+            }
+
+            Timer {
+                id: endEditTimer
+                interval: 4000
+                repeat: false
+                onTriggered: {
+                    if (editLabel.focus) { restart(); return; }
+                    iconButton.endEditing();
+                }
+            }
+
             IconButton {
                 id: deleteBookmarkBtn
                 width: Theme.itemSizeSmall
                 height: Theme.itemSizeSmall
-                visible: (model.bookmark ? true : false) && allowDeleteBookmarks
                 icon.source: "image://theme/icon-m-clear"
+                visible: false; opacity: visible ? 1 : 0
+                Behavior on opacity { NumberAnimation { duration: 100 } }
 
                 anchors {
                     top: parent.top
