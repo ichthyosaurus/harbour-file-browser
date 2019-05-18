@@ -159,7 +159,7 @@ SilicaListView {
 
     ViewPlaceholder {
          enabled: view.count === 0
-         text: "Nothing to show here..."
+         text: qsTr("Nothing to show here...")
      }
 
     section {
