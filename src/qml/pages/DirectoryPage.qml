@@ -422,15 +422,15 @@ Page {
     }
 
     function updateThumbnailsState() {
-        var showThumbs = engine.readSetting("show-thumbnails");
-        if (engine.readSetting("use-local-view-settings", "false") === "true") {
+        var showThumbs = engine.readSetting("View/PreviewsShown");
+        if (engine.readSetting("View/UseLocalSettings", "false") === "true") {
             thumbnailsShown = engine.readSetting("Dolphin/PreviewsShown", showThumbs, dir+"/.directory") === "true";
         } else {
             thumbnailsShown = showThumbs === "true";
         }
 
         if (thumbnailsShown) {
-            var thumbSize = engine.readSetting("thumbnails-size", "medium");
+            var thumbSize = engine.readSetting("View/PreviewsSize", "medium");
             if (thumbSize === "small") {
                 fileIconSize = Theme.itemSizeMedium
             } else if (thumbSize === "medium") {

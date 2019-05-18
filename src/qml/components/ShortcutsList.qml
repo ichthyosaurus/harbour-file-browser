@@ -235,7 +235,7 @@ SilicaListView {
 
                 for (var key in bookmarks) {
                     listModel.append({ "section": qsTr("Bookmarks"),
-                                       "name": engine.readSetting("bookmarks"+bookmarks[key]),
+                                       "name": engine.readSetting("Bookmarks"+bookmarks[key]),
                                        "thumbnail": "icon-m-favorite",
                                        "location": bookmarks[key],
                                        "bookmark": true })

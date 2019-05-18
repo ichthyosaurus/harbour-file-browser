@@ -55,7 +55,7 @@ Page {
                     if (useLocalSettings()) {
                         engine.writeSetting("Dolphin/SortRole", newValue.toString(), getConfigPath());
                     } else {
-                        engine.writeSetting("listing-sort-by", newValue.toString());
+                        engine.writeSetting("View/SortRole", newValue.toString());
                     }
                 }
             }
@@ -81,7 +81,7 @@ Page {
                     if (useLocalSettings()) {
                         engine.writeSetting("Dolphin/SortOrder", newValue.toString() === "default" ? "0" : "1", getConfigPath());
                     } else {
-                        engine.writeSetting("listing-order", newValue.toString());
+                        engine.writeSetting("View/SortOrder", newValue.toString());
                     }
                 }
             }
@@ -91,25 +91,25 @@ Page {
             TextSwitch {
                 id: showDirsFirst
                 text: qsTr("Show folders first")
-                onCheckedChanged: saveSetting("show-dirs-first", "Sailfish/ShowDirectoriesFirst", "true", "false", showDirsFirst.checked.toString())
+                onCheckedChanged: saveSetting("View/ShowDirectoriesFirst", "Sailfish/ShowDirectoriesFirst", "true", "false", showDirsFirst.checked.toString())
             }
 
             TextSwitch {
                 id: showHiddenFiles
                 text: qsTr("Show hidden files")
-                onCheckedChanged: saveSetting("show-hidden-files", "Settings/HiddenFilesShown", "true", "false", showHiddenFiles.checked.toString())
+                onCheckedChanged: saveSetting("View/HiddenFilesShown", "Settings/HiddenFilesShown", "true", "false", showHiddenFiles.checked.toString())
             }
 
             TextSwitch {
                 id: sortCaseSensitive
                 text: qsTr("Sort case-sensitively")
-                onCheckedChanged: saveSetting("sort-case-sensitive", "Sailfish/SortCaseSensitively", "true", "false", sortCaseSensitive.checked.toString())
+                onCheckedChanged: saveSetting("View/SortCaseSensitively", "Sailfish/SortCaseSensitively", "true", "false", sortCaseSensitive.checked.toString())
             }
 
             TextSwitch {
                 id: showThumbnails
                 text: qsTr("Show preview images")
-                onCheckedChanged: saveSetting("show-thumbnails", "Dolphin/PreviewsShown", "true", "false", showThumbnails.checked.toString())
+                onCheckedChanged: saveSetting("View/PreviewsShown", "Dolphin/PreviewsShown", "true", "false", showThumbnails.checked.toString())
             }
 
             ComboBox {
@@ -124,7 +124,7 @@ Page {
                     MenuItem { text: qsTr("large"); property string action: "large"; }
                     MenuItem { text: qsTr("huge"); property string action: "huge"; }
                 }
-                onValueChanged: engine.writeSetting("thumbnails-size", currentItem.action);
+                onValueChanged: engine.writeSetting("View/PreviewsSize", currentItem.action);
             }
         }
     }
@@ -134,7 +134,7 @@ Page {
     }
 
     function useLocalSettings() {
-        return engine.readSetting("use-local-view-settings", "false") === "true";
+        return engine.readSetting("View/UseLocalSettings", "false") === "true";
     }
 
     function updateShownSettings() {
@@ -146,8 +146,8 @@ Page {
             header.description = qsTr("Global settings");
         }
 
-        var sort = engine.readSetting("listing-sort-by");
-        var order = engine.readSetting("listing-order");
+        var sort = engine.readSetting("View/SortRole", "name");
+        var order = engine.readSetting("View/SortOrder", "default");
         var conf = getConfigPath();
 
         if (useLocal) {
@@ -158,10 +158,10 @@ Page {
             orderList.initial = order;
         }
 
-        var dirsFirst = engine.readSetting("show-dirs-first");
-        var caseSensitive = engine.readSetting("sort-case-sensitive");
-        var showHidden = engine.readSetting("show-hidden-files");
-        var showThumbs = engine.readSetting("show-thumbnails");
+        var dirsFirst = engine.readSetting("View/ShowDirectoriesFirst", "true");
+        var caseSensitive = engine.readSetting("View/SortCaseSensitively", "false");
+        var showHidden = engine.readSetting("View/HiddenFilesShown", "false");
+        var showThumbs = engine.readSetting("View/PreviewsShown", "false");
 
         if (useLocal) {
             showDirsFirst.checked = (engine.readSetting("Sailfish/ShowDirectoriesFirst", dirsFirst, conf) === "true");
@@ -175,7 +175,7 @@ Page {
             showThumbnails.checked = (showThumbs === "true");
         }
 
-        var thumbSize = engine.readSetting("thumbnails-size", "medium");
+        var thumbSize = engine.readSetting("View/PreviewsSize", "medium");
         if (thumbSize === "small") thumbnailSize.currentIndex = 0;
         else if (thumbSize === "medium") thumbnailSize.currentIndex = 1;
         else if (thumbSize === "large") thumbnailSize.currentIndex = 2;

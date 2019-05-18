@@ -29,27 +29,27 @@ Page {
             TextSwitch {
                 id: useLocalSettings
                 text: qsTr("Use per-directory view settings")
-                onCheckedChanged: engine.writeSetting("use-local-view-settings", useLocalSettings.checked.toString())
+                onCheckedChanged: engine.writeSetting("View/UseLocalSettings", useLocalSettings.checked.toString())
             }
             TextSwitch {
                 id: showDirsFirst
                 text: qsTr("Show folders first")
-                onCheckedChanged: engine.writeSetting("show-dirs-first", showDirsFirst.checked.toString())
+                onCheckedChanged: engine.writeSetting("View/ShowDirectoriesFirst", showDirsFirst.checked.toString())
             }
             TextSwitch {
                 id: showHiddenFiles
                 text: qsTr("Show hidden files")
-                onCheckedChanged: engine.writeSetting("show-hidden-files", showHiddenFiles.checked.toString())
+                onCheckedChanged: engine.writeSetting("View/HiddenFilesShown", showHiddenFiles.checked.toString())
             }
             TextSwitch {
                 id: showThumbnails
                 text: qsTr("Show preview images")
-                onCheckedChanged: engine.writeSetting("show-thumbnails", showThumbnails.checked.toString())
+                onCheckedChanged: engine.writeSetting("View/PreviewsShown", showThumbnails.checked.toString())
             }
             TextSwitch {
                 id: sortCaseSensitive
                 text: qsTr("Sort case-sensitively")
-                onCheckedChanged: engine.writeSetting("sort-case-sensitive", sortCaseSensitive.checked.toString())
+                onCheckedChanged: engine.writeSetting("View/SortCaseSensitively", sortCaseSensitive.checked.toString())
             }
 
             ComboBox {
@@ -63,7 +63,7 @@ Page {
                     MenuItem { text: qsTr("large"); property string action: "large"; }
                     MenuItem { text: qsTr("huge"); property string action: "huge"; }
                 }
-                onValueChanged: engine.writeSetting("thumbnails-size", currentItem.action);
+                onValueChanged: engine.writeSetting("View/PreviewsSize", currentItem.action);
             }
 
             SectionHeader {
@@ -81,7 +81,7 @@ Page {
                     MenuItem { text: qsTr("link"); property string action: "link"; }
                     MenuItem { text: qsTr("none"); property string action: "none"; }
                 }
-                onValueChanged: engine.writeSetting("default-transfer-action", currentItem.action);
+                onValueChanged: engine.writeSetting("Transfer/DefaultAction", currentItem.action);
             }
 
             Spacer { height: 2*Theme.paddingLarge }
@@ -156,13 +156,13 @@ Page {
 
         // read settings
         if (status === PageStatus.Activating) {
-            showDirsFirst.checked = (engine.readSetting("show-dirs-first") === "true");
-            showHiddenFiles.checked = (engine.readSetting("show-hidden-files") === "true");
-            showThumbnails.checked = (engine.readSetting("show-thumbnails") === "true");
-            sortCaseSensitive.checked = (engine.readSetting("sort-case-sensitive") === "true");
-            useLocalSettings.checked = (engine.readSetting("use-local-view-settings") === "true");
+            showDirsFirst.checked = (engine.readSetting("View/ShowDirectoriesFirst", "true") === "true");
+            showHiddenFiles.checked = (engine.readSetting("View/HiddenFilesShown", "false") === "true");
+            showThumbnails.checked = (engine.readSetting("View/PreviewsShown", "false") === "true");
+            sortCaseSensitive.checked = (engine.readSetting("View/SortCaseSensitively", "false") === "true");
+            useLocalSettings.checked = (engine.readSetting("View/UseLocalSettings", "true") === "true");
 
-            var defTransfer = engine.readSetting("default-transfer-action", "none");
+            var defTransfer = engine.readSetting("Transfer/DefaultAction", "none");
             if (defTransfer === "copy") {
                 defaultTransfer.currentIndex = 0;
             } else if (defTransfer === "move") {
@@ -173,7 +173,7 @@ Page {
                 defaultTransfer.currentIndex = 3;
             }
 
-            var thumbSize = engine.readSetting("thumbnails-size", "medium");
+            var thumbSize = engine.readSetting("View/PreviewsSize", "medium");
             if (thumbSize === "small") thumbnailSize.currentIndex = 0;
             else if (thumbSize === "medium") thumbnailSize.currentIndex = 1;
             else if (thumbSize === "large") thumbnailSize.currentIndex = 2;

@@ -64,8 +64,8 @@ function addBookmark(path) {
     if (!path) return;
     var bookmarks = getBookmarks();
     bookmarks.push(path);
-    engine.writeSetting("bookmarks/"+path, lastPartOfPath(path));
-    engine.writeSetting("bookmark-entries", JSON.stringify(bookmarks));
+    engine.writeSetting("Bookmarks/"+path, lastPartOfPath(path));
+    engine.writeSetting("Bookmarks/Entries", JSON.stringify(bookmarks));
     main.bookmarkAdded(path);
 }
 
@@ -73,14 +73,14 @@ function removeBookmark(path) {
     if (!path) return;
     var bookmarks = getBookmarks();
     var filteredBookmarks = bookmarks.filter(function(e) { return e !== path; });
-    engine.writeSetting("bookmark-entries", JSON.stringify(filteredBookmarks));
-    engine.removeSetting("bookmarks/"+path);
+    engine.writeSetting("Bookmarks/Entries", JSON.stringify(filteredBookmarks));
+    engine.removeSetting("Bookmarks/"+path);
     main.bookmarkRemoved(path);
 }
 
 function hasBookmark(path) {
     if (!path) return false;
-    if (engine.readSetting("bookmarks/"+path) !== "") return true;
+    if (engine.readSetting("Bookmarks/"+path) !== "") return true;
     return false;
 }
 

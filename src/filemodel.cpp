@@ -305,71 +305,25 @@ void FileModel::recountSelectedFiles()
     }
 }
 
-/**
- * @brief Applies global and/or local directory settings to the current listing.
- *
- * @section Local Settings
- * Local settings are read from a hidden file '.directory' in the current directory
- * and use the same entries as KDE's file manager Dolphin.
- *
- * @code
- * .directory:
- *
- * [Dolphin]
- * SortOrder=(deleted = default)/1 (= reversed)
- * SortRole=(deleted = name)/size/modificationtime/type
- *
- * [Settings]
- * HiddenFilesShown=bool
- *
- * # not yet used:
- * [Dolphin]
- * PreviewsShown=bool
- * Version=4
- * Timestamp=2019,31,12,23,59,59
- * @endcode
- *
- * The following entries are in the 'Sailfish' group because
- * Dolphin does not use them:
- *
- * @code
- * [Sailfish]
- * ShowDirectoriesFirst=bool
- * SortCaseSensitively=bool
- * @endcode
- *
- * @section Global Settings
- * Global settings are read from the default config file.
- *
- * @code
- * [General]
- * use-local-view-settings=bool
- * show-hidden-files=bool
- * show-dirs-first=bool
- * listing-order=default/reversed
- * listing-sort-by=name/size/modificationtime/type
- * sort-case-sensitive=bool
- * @endcode
- *
- */
+// see SETTINGS for details
 void FileModel::applySettings(QDir &dir) {
     QSettings settings;
     QSettings local(dir.absoluteFilePath(".directory"), QSettings::IniFormat);
-    bool useLocal = settings.value("use-local-view-settings", false).toBool();
+    bool useLocal = settings.value("View/UseLocalSettings", true).toBool();
 
     // filters
-    bool hidden = settings.value("show-hidden-files", false).toBool();
+    bool hidden = settings.value("View/HiddenFilesShown", false).toBool();
     if (useLocal) hidden = local.value("Settings/HiddenFilesShown", hidden).toBool();
     QDir::Filter hiddenFilter = hidden ? QDir::Hidden : (QDir::Filter)0;
 
     dir.setFilter(QDir::AllDirs | QDir::Files | QDir::NoDotAndDotDot | QDir::System | hiddenFilter);
 
     // sorting
-    bool dirsFirst = settings.value("show-dirs-first", false).toBool();
+    bool dirsFirst = settings.value("View/ShowDirectoriesFirst", true).toBool();
     if (useLocal) dirsFirst = local.value("Sailfish/ShowDirectoriesFirst", dirsFirst).toBool();
     QDir::SortFlag dirsFirstFlag = dirsFirst ? QDir::DirsFirst : (QDir::SortFlag)0;
 
-    QString sortSetting = settings.value("listing-sort-by", "name").toString();
+    QString sortSetting = settings.value("View/SortRole", "name").toString();
     if (useLocal) sortSetting = local.value("Dolphin/SortRole", sortSetting).toString();
     QDir::SortFlag sortBy = QDir::Name;
 
@@ -385,11 +339,11 @@ void FileModel::applySettings(QDir &dir) {
         sortBy = QDir::Name;
     }
 
-    bool orderDefault = settings.value("listing-order", "default").toString() == "default";
+    bool orderDefault = settings.value("View/SortOrder", "default").toString() == "default";
     if (useLocal) orderDefault = local.value("Dolphin/SortOrder", 0) == 0 ? true : false;
     QDir::SortFlag orderFlag = orderDefault ? (QDir::SortFlag)0 : QDir::Reversed;
 
-    bool caseSensitive = settings.value("sort-case-sensitive", false).toBool();
+    bool caseSensitive = settings.value("View/SortCaseSensitively", false).toBool();
     if (useLocal) caseSensitive = local.value("Sailfish/SortCaseSensitively", caseSensitive).toBool();
     QDir::SortFlag caseSensitiveFlag = caseSensitive ? (QDir::SortFlag)0 : QDir::IgnoreCase;
 
