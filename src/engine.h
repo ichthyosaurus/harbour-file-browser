@@ -37,7 +37,7 @@ public:
     // returns a list of existing files if clipboard files already exist
     // or an empty list if no existing files
     Q_INVOKABLE QStringList listExistingFiles(QString destDirectory);
-    Q_INVOKABLE void pasteFiles(QString destDirectory);
+    Q_INVOKABLE void pasteFiles(QString destDirectory, bool asSymlinks = false);
 
     // cancel asynch methods
     Q_INVOKABLE void cancel();

@@ -96,7 +96,7 @@ QStringList Engine::listExistingFiles(QString destDirectory)
     return existingFiles;
 }
 
-void Engine::pasteFiles(QString destDirectory)
+void Engine::pasteFiles(QString destDirectory, bool asSymlinks)
 {
     if (m_clipboardFiles.isEmpty()) {
         emit workerErrorOccurred(tr("No files to paste"), "");
@@ -133,12 +133,13 @@ void Engine::pasteFiles(QString destDirectory)
     m_clipboardFiles.clear();
     emit clipboardCountChanged();
 
-    if (m_clipboardContainsCopy) {
+    if (asSymlinks) {
+        m_fileWorker->startSymlinkFiles(files, destDirectory);
+    } else if (m_clipboardContainsCopy) {
         m_fileWorker->startCopyFiles(files, destDirectory);
-        return;
+    } else {
+        m_fileWorker->startMoveFiles(files, destDirectory);
     }
-
-    m_fileWorker->startMoveFiles(files, destDirectory);
 }
 
 void Engine::cancel()

@@ -16,6 +16,7 @@ Rectangle {
     property string action: ""
     property Page page
     property Item progressPanel
+    property Item notificationPanel
 
     property int _toGo: 0
     property int _current: 0
@@ -196,17 +197,21 @@ Rectangle {
                 engine.cutFiles(files);
             }
         } else if (action === "link") {
-            // not yet implemented
-            return;
+            engine.copyFiles(files);
         }
 
         _currentDir = targets[_current]
         _toGo -= 1; _current += 1;
 
         var existingFiles = engine.listExistingFiles(_currentDir);
-        if (existingFiles.length > 0) { // overwrite
-            mainConnections.target = actionsRelay;
-            panel.visible = true;
+        if (existingFiles.length > 0) { // ask for permission to overwrite
+            if (action === "link") {
+                notificationPanel.showText(qsTr("Unable to overwrite existing file with symlink"), "");
+                return;
+            } else {
+                mainConnections.target = actionsRelay;
+                panel.visible = true;
+            }
         } else { // everything's fine
             _doPaste();
         }
@@ -222,6 +227,6 @@ Rectangle {
         engineConnection.target = null;
         if (_toGo > 0) engineConnection.target = engine;
         else _finished = true;
-        engine.pasteFiles(_currentDir);
+        engine.pasteFiles(_currentDir, (action === "link" ? true : false));
     }
 }

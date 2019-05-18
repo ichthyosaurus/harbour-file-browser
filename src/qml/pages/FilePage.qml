@@ -326,7 +326,8 @@ Page {
         page: page
         Component.onCompleted: {
             var prevPage = pageStack.previousPage();
-            if (prevPage.progressPanel) progressPanel = prevPage.progressPanel;
+            if (prevPage.progressPanel) transferPanel.progressPanel = prevPage.progressPanel;
+            if (prevPage.notificationPanel) transferPanel.notificationPanel = prevPage.notificationPanel;
         }
     }
 

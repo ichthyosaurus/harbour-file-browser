@@ -181,8 +181,10 @@ Page {
                 anchors.left: listIcon.right
                 anchors.leftMargin: Theme.paddingMedium
                 anchors.top: listLabel.bottom
-                text: !(isLink && isDir) ? size : Functions.unicodeArrow()+" "+symLinkTarget
+                text: isLink ? (isDir ? (Functions.unicodeArrow()+" "+symLinkTarget) :
+                                        (size+" "+qsTr("(link)"))) : (size) //  !(isLink && isDir) ? size : Functions.unicodeArrow()+" "+symLinkTarget
                 color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                elide: Text.ElideRight
                 font.pixelSize: Theme.fontSizeExtraSmall
             }
             Label {
@@ -344,6 +346,7 @@ Page {
         id: transferPanel
         page: page
         progressPanel: progressPanel
+        notificationPanel: notificationPanel
     }
 
     // connect signals from engine to panels

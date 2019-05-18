@@ -2,6 +2,25 @@
 #include <QDateTime>
 #include "globals.h"
 
+// creates a "Document (2)" numbered name from the given filename
+static QString createNumberedFilename(QString filename)
+{
+    QFileInfo fileinfo(filename);
+    QString suffix = fileinfo.suffix();
+    if (!suffix.isEmpty()) {
+        suffix = "."+suffix;
+    }
+    int dotpos = filename.lastIndexOf('.');
+    QString basename = dotpos >= 0 ? filename.left(dotpos) : filename;
+    int number = 2;
+    QString numberedFilename = QString("%1 (%2)%3").arg(basename).arg(number).arg(suffix);
+    while (QFileInfo::exists(numberedFilename)) {
+        ++number;
+        numberedFilename = QString("%1 (%2)%3").arg(basename).arg(number).arg(suffix);
+    }
+    return numberedFilename;
+}
+
 FileWorker::FileWorker(QObject *parent) :
     QThread(parent),
     m_mode(DeleteMode),
@@ -64,6 +83,23 @@ void FileWorker::startMoveFiles(QStringList filenames, QString destDirectory)
     start();
 }
 
+void FileWorker::startSymlinkFiles(QStringList filenames, QString destDirectory)
+{
+    if (isRunning()) {
+        emit errorOccurred(tr("File operation already in progress"), "");
+        return;
+    }
+
+    if (!validateFilenames(filenames))
+        return;
+
+    m_mode = SymlinkMode;
+    m_filenames = filenames;
+    m_destDirectory = destDirectory;
+    m_cancelled.storeRelease(KeepRunning);
+    start();
+}
+
 void FileWorker::cancel()
 {
     m_cancelled.storeRelease(Cancelled);
@@ -72,6 +108,10 @@ void FileWorker::cancel()
 void FileWorker::run()
 {
     switch (m_mode) {
+    case SymlinkMode:
+        symlinkFiles();
+        break;
+
     case DeleteMode:
         deleteFiles();
         break;
@@ -93,6 +133,52 @@ bool FileWorker::validateFilenames(const QStringList &filenames)
         }
     }
     return true;
+}
+
+#include <QDebug>
+void FileWorker::symlinkFiles()
+{
+    int fileIndex = 0;
+    int fileCount = m_filenames.count();
+
+    QDir dest(m_destDirectory);
+    foreach (QString filename, m_filenames) {
+        m_progress = 100 * fileIndex / fileCount;
+        emit progressChanged(m_progress, filename);
+
+        // stop if cancelled
+        if (m_cancelled.loadAcquire() == Cancelled) {
+            emit errorOccurred(tr("Cancelled"), filename);
+            return;
+        }
+
+        QFileInfo fileInfo(filename);
+        QString newname = dest.absoluteFilePath(fileInfo.fileName());
+
+        if (filename == newname) { // pasting over the source file, so copy a renamed file
+            if (QFileInfo::exists(newname)) {
+                newname = createNumberedFilename(newname);
+            }
+        } else {
+            // the destination exists either as a regular file/folder or as a symlink: abort
+            if (QFileInfo::exists(newname)) {
+                emit errorOccurred(QString("Unable to overwrite existing file with symlink"), filename);
+                return;
+            }
+        }
+
+        QFile file(filename);
+        if (!file.link(newname)) {
+            emit errorOccurred(file.errorString(), filename);
+            return;
+        }
+
+        fileIndex++;
+    }
+
+    m_progress = 100;
+    emit progressChanged(m_progress, "");
+    emit done();
 }
 
 QString FileWorker::deleteFile(QString filename)
@@ -152,25 +238,6 @@ void FileWorker::deleteFiles()
     m_progress = 100;
     emit progressChanged(m_progress, "");
     emit done();
-}
-
-// creates a "Document (2)" numbered name from the given filename
-static QString createNumberedFilename(QString filename)
-{
-    QFileInfo fileinfo(filename);
-    QString suffix = fileinfo.suffix();
-    if (!suffix.isEmpty()) {
-        suffix = "."+suffix;
-    }
-    int dotpos = filename.lastIndexOf('.');
-    QString basename = dotpos >= 0 ? filename.left(dotpos) : filename;
-    int number = 2;
-    QString numberedFilename = QString("%1 (%2)%3").arg(basename).arg(number).arg(suffix);
-    while (QFileInfo::exists(numberedFilename)) {
-        ++number;
-        numberedFilename = QString("%1 (%2)%3").arg(basename).arg(number).arg(suffix);
-    }
-    return numberedFilename;
 }
 
 void FileWorker::copyOrMoveFiles()

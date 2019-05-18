@@ -72,11 +72,6 @@ Dialog {
     function updateStatus() {
         if (selectedAction !== "" && shortcutsView._selectedIndex.length > 0) {
             canAccept = true;
-
-            if (selectedAction === "link") {
-                notificationPanel.showTextWithTimer(qsTr("Linking files is not yet supported"), "");
-                canAccept = false;
-            }
         } else {
             canAccept = false;
         }
