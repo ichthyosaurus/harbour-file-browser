@@ -111,6 +111,21 @@ Page {
                 text: qsTr("Show preview images")
                 onCheckedChanged: saveSetting("show-thumbnails", "Dolphin/PreviewsShown", "true", "false", showThumbnails.checked.toString())
             }
+
+            ComboBox {
+                id: thumbnailSize
+                visible: showThumbnails.checked
+                width: parent.width
+                label: qsTr("Thumbnail size")
+                currentIndex: -1
+                menu: ContextMenu {
+                    MenuItem { text: qsTr("small"); property string action: "small"; }
+                    MenuItem { text: qsTr("medium"); property string action: "medium"; }
+                    MenuItem { text: qsTr("large"); property string action: "large"; }
+                    MenuItem { text: qsTr("huge"); property string action: "huge"; }
+                }
+                onValueChanged: engine.writeSetting("thumbnails-size", currentItem.action);
+            }
         }
     }
 
@@ -159,6 +174,12 @@ Page {
             showHiddenFiles.checked = (showHidden === "true");
             showThumbnails.checked = (showThumbs === "true");
         }
+
+        var thumbSize = engine.readSetting("thumbnails-size", "medium");
+        if (thumbSize === "small") thumbnailSize.currentIndex = 0;
+        else if (thumbSize === "medium") thumbnailSize.currentIndex = 1;
+        else if (thumbSize === "large") thumbnailSize.currentIndex = 2;
+        else if (thumbSize === "huge") thumbnailSize.currentIndex = 3;
     }
 
     function saveSetting(keyGlobal, keyLocal, trueLocal, falseLocal, valueStr) {
