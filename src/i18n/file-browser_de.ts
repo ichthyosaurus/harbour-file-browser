@@ -78,7 +78,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="174"/>
         <source>(link)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Link)</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="242"/>
@@ -121,12 +121,12 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="336"/>
         <source>Internally not ready</source>
-        <translation type="unfinished"></translation>
+        <translation>Intern noch nicht bereit</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="336"/>
         <source>Please simply try again</source>
-        <translation type="unfinished"></translation>
+        <translation>Versuchen Sie es bitte noch einmal</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="373"/>
@@ -1158,7 +1158,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="26"/>
         <source>Global view preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Globale Ansichtseinstellungen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="31"/>
@@ -1178,7 +1178,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="46"/>
         <source>Show preview images</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorschaubilder anzeigen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="51"/>
@@ -1188,37 +1188,37 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="58"/>
         <source>Thumbnail size</source>
-        <translation type="unfinished"></translation>
+        <translation>Grösse der Vorschaubilder</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="61"/>
         <source>small</source>
-        <translation type="unfinished"></translation>
+        <translation>klein</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="62"/>
         <source>medium</source>
-        <translation type="unfinished"></translation>
+        <translation>mittel</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="63"/>
         <source>large</source>
-        <translation type="unfinished"></translation>
+        <translation>gross</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="64"/>
         <source>huge</source>
-        <translation type="unfinished"></translation>
+        <translation>sehr gross</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="70"/>
         <source>Transfer preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateiverwaltungseinstellungen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="76"/>
         <source>Default transfer action</source>
-        <translation type="unfinished"></translation>
+        <translation>Standard-Aktion</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="79"/>
@@ -1266,7 +1266,7 @@
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="162"/>
         <source>Nothing to show here...</source>
-        <translation type="unfinished"></translation>
+        <translation>Es gibt hier nichts zu sehen ...</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="187"/>
@@ -1423,32 +1423,32 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="111"/>
         <source>Show preview images</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorschaubilder anzeigen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="119"/>
         <source>Thumbnail size</source>
-        <translation type="unfinished"></translation>
+        <translation>Grösse der Vorschaubilder</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="122"/>
         <source>small</source>
-        <translation type="unfinished"></translation>
+        <translation>klein</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="123"/>
         <source>medium</source>
-        <translation type="unfinished"></translation>
+        <translation>mittel</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="124"/>
         <source>large</source>
-        <translation type="unfinished"></translation>
+        <translation>gross</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="125"/>
         <source>huge</source>
-        <translation type="unfinished"></translation>
+        <translation>sehr gross</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="144"/>
@@ -1500,48 +1500,48 @@
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="38"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n Datei</numerusform>
+            <numerusform>%n Dateien</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="38"/>
         <source>%n destination(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n Ziel</numerusform>
+            <numerusform>%n Ziele</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="43"/>
         <source>Successfully copied</source>
-        <translation type="unfinished"></translation>
+        <translation>Erfolgreich kopiert</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="45"/>
         <source>Successfully moved</source>
-        <translation type="unfinished"></translation>
+        <translation>Erfolgreich verschoben</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="47"/>
         <source>Successfully linked</source>
-        <translation type="unfinished"></translation>
+        <translation>Erfolgreich verknüpft</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="51"/>
         <source>Failed to copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopieren fehlgeschlagen</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="53"/>
         <source>Failed to move</source>
-        <translation type="unfinished"></translation>
+        <translation>Verschieben fehlgeschlagen</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="55"/>
         <source>Failed to link</source>
-        <translation type="unfinished"></translation>
+        <translation>Verknüpfen fehlgeschlagen</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="93"/>
