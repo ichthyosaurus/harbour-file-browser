@@ -12,6 +12,7 @@ Page {
     property bool remorsePopupActive: false // set to true when remorsePopup is active
     property bool remorseItemActive: false // set to true when remorseItem is active (item level)
     property bool thumbnailsShown: updateThumbnailsState()
+    property int  fileIconSize: Theme.iconSizeSmall
     property alias progressPanel: progressPanel
     property alias notificationPanel: notificationPanel
 
@@ -110,20 +111,9 @@ Page {
 
         delegate: ListItem {
             id: fileItem
-
-            property int itemSize: page.thumbnailsShown ? Theme.itemSizeExtraLarge : Theme.itemSizeSmall
-
-            Component.onCompleted: {
-                page.thumbnailsShownChanged.connect(function (){
-                    if (!page) return;
-                    if (page.thumbnailsShown) itemSize = Theme.itemSizeExtraLarge
-                    else itemSize = Theme.itemSizeSmall
-                });
-            }
-
             menu: contextMenu
             width: ListView.view.width
-            contentHeight: itemSize
+            contentHeight: fileIconSize
 
             // background shown when item is selected
             Rectangle {
@@ -134,9 +124,10 @@ Page {
 
             FileIcon {
                 id: listIcon
+                clip: true
                 anchors.verticalCenter: thumbnailsShown ? parent.verticalCenter : listLabel.verticalCenter
                 x: Theme.paddingLarge
-                width: itemSize === Theme.itemSizeSmall ? Theme.iconSizeSmall : itemSize
+                width: (!thumbnailsShown && fileIconSize === Theme.itemSizeSmall) ? Theme.iconSizeSmall : fileIconSize
                 height: width
                 showThumbnail: thumbnailsShown
                 highlighted: fileItem.highlighted || isSelected
@@ -206,7 +197,7 @@ Page {
             }
 
             MouseArea {
-                width: itemSize
+                width: fileIconSize
                 height: parent.height
                 onClicked: {
                     fileModel.toggleSelectedFile(index);
@@ -406,6 +397,21 @@ Page {
             thumbnailsShown = engine.readSetting("Dolphin/PreviewsShown", showThumbs, dir+"/.directory") === "true";
         } else {
             thumbnailsShown = showThumbs === "true";
+        }
+
+        if (thumbnailsShown) {
+            var thumbSize = engine.readSetting("thumbnails-size", "medium");
+            if (thumbSize === "small") {
+                fileIconSize = Theme.itemSizeMedium
+            } else if (thumbSize === "medium") {
+                fileIconSize = Theme.itemSizeExtraLarge
+            } else if (thumbSize === "large") {
+                fileIconSize = page.width/3
+            } else if (thumbSize === "huge") {
+                fileIconSize = page.width/3*2
+            }
+        } else {
+            fileIconSize = Theme.itemSizeSmall
         }
     }
 

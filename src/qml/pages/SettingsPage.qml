@@ -57,6 +57,22 @@ Page {
                 onCheckedChanged: engine.writeSetting("sort-case-sensitive", sortCaseSensitive.checked.toString())
             }
 
+            ComboBox {
+                id: thumbnailSize
+                width: parent.width
+                label: "Thumbnail size"
+                currentIndex: -1
+                menu: ContextMenu {
+                    MenuItem { text: qsTr("small"); property string action: "small"; }
+                    MenuItem { text: qsTr("medium"); property string action: "medium"; }
+                    MenuItem { text: qsTr("large"); property string action: "large"; }
+                    MenuItem { text: qsTr("huge"); property string action: "huge"; }
+                }
+                onValueChanged: {
+                    engine.writeSetting("thumbnails-size", currentItem.action);
+                }
+            }
+
             SectionHeader {
                 text: "Transfer preferences"
             }
@@ -165,6 +181,17 @@ Page {
                 defaultTransfer.currentIndex = 2;
             } else {
                 defaultTransfer.currentIndex = 3;
+            }
+
+            var thumbSize = engine.readSetting("thumbnails-size", "medium");
+            if (thumbSize === "small") {
+                thumbnailSize.currentIndex = 0;
+            } else if (thumbSize === "medium") {
+                thumbnailSize.currentIndex = 1;
+            } else if (thumbSize === "large") {
+                thumbnailSize.currentIndex = 2;
+            } else if (thumbSize === "huge") {
+                thumbnailSize.currentIndex = 3;
             }
         }
     }
