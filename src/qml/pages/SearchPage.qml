@@ -45,6 +45,10 @@ Page {
         anchors.bottomMargin: selectionPanel.visible ? selectionPanel.visibleSize : 0
         footer: Spacer { height: Theme.horizontalPageMargin; }
 
+        visible: true
+        opacity: visible ? 1 : 0
+        Behavior on opacity { NumberAnimation { duration: 300 } }
+
         clip: true
 
         // prevent newly added list delegates from stealing focus away from the search field
@@ -427,11 +431,16 @@ Page {
     Loader {
         id: transferPanel
         asynchronous: true
-        visible: (status === Loader.Ready ? item.visible : false)
+        anchors.fill: parent
         Component.onCompleted: {
             setSource(Qt.resolvedUrl("../components/TransferPanel.qml"),
                       { "page": page, "progressPanel": progressPanel,
                         "notificationPanel": notificationPanel });
+        }
+        Connections {
+            target: transferPanel.item
+            onOverlayShown: { fileList.visible = false; }
+            onOverlayHidden: { fileList.visible = true; }
         }
     }
 

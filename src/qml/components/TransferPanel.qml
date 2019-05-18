@@ -27,6 +27,8 @@ Rectangle {
     property bool _successful: false
 
     signal transfersFinished(var success)
+    signal overlayShown
+    signal overlayHidden(var accepted)
 
     on_FinishedChanged: {
         if (_finished) {
@@ -200,11 +202,13 @@ Rectangle {
         target: null
         onAccepted: {
             mainConnections.target = null
+            overlayHidden(true);
             panel.visible = false;
             panel._doPaste();
         }
         onRejected: {
             mainConnections.target = null;
+            overlayHidden(false);
             panel.visible = false;
             if (panel._toGo > 0) panel._doRecursiveTransfer();
             else _finished = true;
@@ -265,6 +269,7 @@ Rectangle {
                 return;
             } else {
                 mainConnections.target = actionsRelay;
+                overlayShown()
                 panel.visible = true;
             }
         } else { // everything's fine
