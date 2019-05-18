@@ -371,6 +371,11 @@ Page {
                     engine.deleteFiles(files);
                 });
             }
+            onTransferTriggered: {
+                if (remorsePopupActive) return;
+                if (transferPanel.status === Loader.Ready) transferPanel.item.startTransfer(toTransfer, targets, selectedAction);
+                else notificationPanel.showText(qsTr("Internally not ready"), qsTr("Please simply try again"));
+            }
         }
     }
 
@@ -417,6 +422,17 @@ Page {
         id: progressPanel
         page: page
         onCancelled: engine.cancel()
+    }
+
+    Loader {
+        id: transferPanel
+        asynchronous: true
+        visible: (status === Loader.Ready ? item.visible : false)
+        Component.onCompleted: {
+            setSource(Qt.resolvedUrl("../components/TransferPanel.qml"),
+                      { "page": page, "progressPanel": progressPanel,
+                        "notificationPanel": notificationPanel });
+        }
     }
 
     function clearCover() {
