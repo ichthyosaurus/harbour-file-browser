@@ -61,6 +61,7 @@ function goToFolder(folder) {
 
 // bookmark handling
 function addBookmark(path) {
+    if (!path) return;
     var bookmarks = getBookmarks();
     bookmarks.push(path);
     engine.writeSetting("bookmarks/"+path, lastPartOfPath(path));
@@ -69,6 +70,7 @@ function addBookmark(path) {
 }
 
 function removeBookmark(path) {
+    if (!path) return;
     var bookmarks = getBookmarks();
     var filteredBookmarks = bookmarks.filter(function(e) { return e !== path; });
     engine.writeSetting("bookmark-entries", JSON.stringify(filteredBookmarks));
@@ -77,6 +79,7 @@ function removeBookmark(path) {
 }
 
 function hasBookmark(path) {
+    if (!path) return false;
     if (engine.readSetting("bookmarks/"+path) !== "") return true;
     return false;
 }
