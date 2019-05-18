@@ -86,10 +86,10 @@ function hasBookmark(path) {
 
 function getBookmarks() {
     try {
-        var entries = JSON.parse(engine.readSetting("bookmark-entries"));
+        var entries = JSON.parse(engine.readSetting("Bookmarks/Entries"));
         return entries;
     } catch (SyntaxError) {
-        engine.writeSetting("bookmark-entries", JSON.stringify([]));
+        engine.writeSetting("Bookmarks/Entries", JSON.stringify([]));
         return [];
     }
 }
