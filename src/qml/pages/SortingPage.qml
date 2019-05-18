@@ -108,7 +108,7 @@ Page {
 
             TextSwitch {
                 id: showThumbnails
-                text: qsTr("Show thumbnails where possible")
+                text: qsTr("Show preview images")
                 onCheckedChanged: saveSetting("show-thumbnails", "Dolphin/PreviewsShown", "true", "false", showThumbnails.checked.toString())
             }
         }

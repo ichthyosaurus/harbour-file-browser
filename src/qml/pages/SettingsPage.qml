@@ -43,7 +43,7 @@ Page {
             }
             TextSwitch {
                 id: showThumbnails
-                text: qsTr("Show thumbnails where possible")
+                text: qsTr("Show preview images")
                 onCheckedChanged: engine.writeSetting("show-thumbnails", showThumbnails.checked.toString())
             }
             TextSwitch {
