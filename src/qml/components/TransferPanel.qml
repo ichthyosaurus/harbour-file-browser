@@ -22,11 +22,38 @@ Rectangle {
     property int _current: 0
     property string _currentDir: ""
     property bool _finished: false
+    property bool _successful: false
 
     on_FinishedChanged: {
         if (_finished) {
             page.backNavigation = true
             page.forwardNavigation = true
+        }
+    }
+
+    on_SuccessfulChanged: {
+        if (!_finished) return;
+
+        function notifyFinish(message) {
+            notificationPanel.showText(message, qsTr("%n file(s)", "", files.length)+" / "+qsTr("%n destination(s)", "", targets.length));
+        }
+
+        if (_successful) {
+            if (action === "copy") {
+                notifyFinish(qsTr("Successfully copied"));
+            } else if (action === "move") {
+                notifyFinish(qsTr("Successfully moved"));
+            } else if (action === "link") {
+                notifyFinish(qsTr("Successfully linked"));
+            }
+        } else {
+            if (action === "copy") {
+                notifyFinish(qsTr("Failed to copy"));
+            } else if (action === "move") {
+                notifyFinish(qsTr("Failed to move"));
+            } else if (action === "link") {
+                notifyFinish(qsTr("Failed to link"));
+            }
         }
     }
 
@@ -136,6 +163,7 @@ Rectangle {
         onWorkerDone: progressPanel.hide()
         onWorkerErrorOccurred: {
             // the error signal goes to all pages in pagestack, show it only in the active one
+            _successful = false;
             if (progressPanel.open) {
                 progressPanel.hide();
                 if (message === "Unknown error")
@@ -150,7 +178,10 @@ Rectangle {
     Connections {
         id: engineConnection
         target: null
-        onWorkerDone: panel._doRecursiveTransfer();
+        onWorkerDone: {
+            if (!_finished) panel._doRecursiveTransfer();
+            else _successful = true;
+        }
     }
 
     Connections {
@@ -180,6 +211,7 @@ Rectangle {
         _toGo = targets.length;
         _current = 0;
         _finished = false;
+        _successful = false;
 
         _doRecursiveTransfer();
     }
@@ -207,6 +239,7 @@ Rectangle {
         if (existingFiles.length > 0) { // ask for permission to overwrite
             if (action === "link") {
                 notificationPanel.showText(qsTr("Unable to overwrite existing file with symlink"), "");
+                _successful = false;
                 return;
             } else {
                 mainConnections.target = actionsRelay;
@@ -224,8 +257,8 @@ Rectangle {
         else if (action === "link") panelText = qsTr("Linking");
         progressPanel.showText(panelText);
 
-        engineConnection.target = null;
-        if (_toGo > 0) engineConnection.target = engine;
+        engineConnection.target = engine;
+        if (_toGo > 0) _finished = false;
         else _finished = true;
         engine.pasteFiles(_currentDir, (action === "link" ? true : false));
     }
