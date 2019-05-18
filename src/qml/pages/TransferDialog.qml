@@ -9,6 +9,7 @@ Dialog {
     property var toTransfer: []
     property var targets: []
     property string selectedAction: ""
+    property bool goToTarget: false
     property string errorMessage: ""
 
     allowedOrientations: Orientation.All
@@ -63,6 +64,13 @@ Dialog {
                             dialog.updateStatus();
                         }
                     }
+
+                    TextSwitch {
+                        id: goToTargetSwitch
+                        text: qsTr("Switch to target directory")
+                        enabled: shortcutsView._selectedIndex.length <= 1
+                        onCheckedChanged: goToTarget = checked;
+                    }
                 }
             }
         }
@@ -78,6 +86,8 @@ Dialog {
 
     onAccepted: {
         targets = shortcutsView.getSelectedLocations();
+        goToTarget = (goToTarget && targets.length <= 1);
+
         // the transfer has to be completed on the destination page
         // (e.g. using TransferPanel)
     }

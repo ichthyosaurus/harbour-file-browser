@@ -24,6 +24,8 @@ Rectangle {
     property bool _finished: false
     property bool _successful: false
 
+    signal transfersFinished(var success)
+
     on_FinishedChanged: {
         if (_finished) {
             page.backNavigation = true;
@@ -55,6 +57,8 @@ Rectangle {
                 notifyFinish(qsTr("Failed to link"));
             }
         }
+
+        transfersFinished(_successful);
     }
 
     MouseArea { // to catch all "stray" clicks
