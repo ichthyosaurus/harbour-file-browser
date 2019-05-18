@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import "../pages/functions.js" as Functions
 
 Rectangle {
     id: panel
@@ -14,6 +15,7 @@ Rectangle {
     property var files: []
     property var targets: []
     property string action: ""
+    property bool goToTarget: false
     property Page page
     property Item progressPanel
     property Item notificationPanel
@@ -37,7 +39,7 @@ Rectangle {
         if (!_finished) return;
 
         function notifyFinish(message) {
-            notificationPanel.showText(message, qsTr("%n file(s)", "", files.length)+" / "+qsTr("%n destination(s)", "", targets.length));
+            notificationPanel.showTextWithTimer(message, qsTr("%n file(s)", "", files.length)+" / "+qsTr("%n destination(s)", "", targets.length));
         }
 
         if (_successful) {
@@ -59,6 +61,11 @@ Rectangle {
         }
 
         transfersFinished(_successful);
+    }
+
+    onTransfersFinished: {
+        if (!success || targets[0] === "") return;
+        if (goToTarget) afterTransferConnection.target = notificationPanel;
     }
 
     MouseArea { // to catch all "stray" clicks
@@ -204,9 +211,20 @@ Rectangle {
         }
     }
 
-    function startTransfer(toTransfer, targetDirs, selectedAction) {
+    Connections {
+        id: afterTransferConnection
+        target: null
+        onOpenChanged: {
+            if (target.open) return;
+            target = null;
+            Functions.goToFolder(targets[0]);
+        }
+    }
+
+    function startTransfer(toTransfer, targetDirs, selectedAction, goToTarget) {
         page.backNavigation = false;
         page.forwardNavigation = false;
+        panel.goToTarget = (goToTarget ? true : false);
 
         files = toTransfer;
         targets = targetDirs;

@@ -245,21 +245,7 @@ Page {
                             pageStack.pop();
                         }
 
-                        if (goToTarget) {
-                            afterTransfer.goTo = targets[0];
-                            afterTransfer.target = transferPanel;
-                        }
-
-                        transferPanel.startTransfer(toTransfer, targets, selectedAction);
-                    }
-                    Connections {
-                        id: afterTransfer
-                        target: null; property string goTo: ""
-                        onTransfersFinished: {
-                            if (!success || goTo === "") return;
-                            target = null;
-                            Functions.goToFolder(goTo);
-                        }
+                        transferPanel.startTransfer(toTransfer, targets, selectedAction, goToTarget);
                     }
                 }
 
