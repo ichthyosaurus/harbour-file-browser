@@ -158,32 +158,56 @@ Page {
                 elide: Text.ElideRight
                 color: fileItem.highlighted || isSelected ? Theme.highlightColor : Theme.primaryColor
             }
-            Label {
-                id: listSize
-                anchors.left: listIcon.right
-                anchors.leftMargin: Theme.paddingMedium
-                anchors.top: listLabel.bottom
-                text: isLink ? (isDir ? (Functions.unicodeArrow()+" "+symLinkTarget) :
-                                        (size+" "+qsTr("(link)"))) : (size) //  !(isLink && isDir) ? size : Functions.unicodeArrow()+" "+symLinkTarget
-                color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                elide: Text.ElideRight
-                font.pixelSize: Theme.fontSizeExtraSmall
-            }
-            Label {
-                visible: !(isLink && isDir)
-                anchors.top: listLabel.bottom
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: filekind+permissions
-                color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                font.pixelSize: Theme.fontSizeExtraSmall
-            }
-            Label {
-                visible: !(isLink && isDir)
-                anchors.top: listLabel.bottom
-                anchors.right: listLabel.right
-                text: modified
-                color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                font.pixelSize: Theme.fontSizeExtraSmall
+
+            Flow {
+                anchors {
+                    left: listIcon.right
+                    leftMargin: Theme.paddingMedium
+                    right: parent.right
+                    rightMargin: Theme.paddingLarge
+                    top: listLabel.bottom
+                }
+
+                Label {
+                    id: sizeLabel
+                    text: isLink ? (isDir ? (Functions.unicodeArrow()+" "+symLinkTarget) :
+                                            (size+" "+qsTr("(link)"))) : (size) //  !(isLink && isDir) ? size : Functions.unicodeArrow()+" "+symLinkTarget
+                    color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                    elide: Text.ElideRight
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                }
+                Label {
+                    id: permsLabel
+                    visible: !(isLink && isDir)
+                    text: filekind+permissions
+                    color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                }
+                Label {
+                    id: datesLabel
+                    visible: !(isLink && isDir)
+                    text: modified
+                    color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                    wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                }
+
+                states: [
+                    State {
+                        when: listLabel.width >= 2*page.width/3
+                        PropertyChanges { target: listLabel; wrapMode: Text.NoWrap; elide: Text.ElideRight; maximumLineCount: 1 }
+                        PropertyChanges { target: sizeLabel; width: listLabel.width/3; horizontalAlignment: Text.AlignLeft }
+                        PropertyChanges { target: permsLabel; width: listLabel.width/3; horizontalAlignment: Text.AlignHCenter }
+                        PropertyChanges { target: datesLabel; width: listLabel.width/3; horizontalAlignment: Text.AlignRight }
+                    },
+                    State {
+                        when: listLabel.width < 2*page.width/3
+                        PropertyChanges { target: listLabel; wrapMode: Text.WrapAtWordBoundaryOrAnywhere; elide: Text.ElideRight; maximumLineCount: 2 }
+                        PropertyChanges { target: sizeLabel; width: listLabel.width; horizontalAlignment: Text.AlignLeft }
+                        PropertyChanges { target: permsLabel; width: listLabel.width; horizontalAlignment: Text.AlignLeft }
+                        PropertyChanges { target: datesLabel; width: listLabel.width; horizontalAlignment: Text.AlignLeft }
+                    }
+                ]
             }
 
             onClicked: {
