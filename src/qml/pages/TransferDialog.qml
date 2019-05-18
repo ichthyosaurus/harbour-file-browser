@@ -51,8 +51,7 @@ Dialog {
                     Label {
                         text: qsTr("%n item(s) selected for transferring", "", toTransfer.length);
                         x: Theme.horizontalPageMargin
-                        color: Theme.highlightColor
-                        opacity: 0.7
+                        color: Theme.secondaryColor
                     }
 
                     TransferActionBar {
