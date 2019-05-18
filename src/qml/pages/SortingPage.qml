@@ -6,6 +6,7 @@ import "../components"
 Page {
     id: page
     property string dir;
+    allowedOrientations: Orientation.All
 
     SilicaFlickable {
         id: flickable
