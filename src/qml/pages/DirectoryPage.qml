@@ -132,6 +132,9 @@ Page {
                 showThumbnail: thumbnailsShown
                 highlighted: fileItem.highlighted || isSelected
                 file: fileModel.appendPath(listLabel.text)
+                isDirectoryCallback: function() { return isDir; }
+                mimeTypeCallback: function() { return fileModel.mimeTypeAt(index); }
+                fileIconCallback: function() { return fileIcon; }
             }
 
             // circle shown when item is selected

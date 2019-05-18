@@ -3,12 +3,14 @@ import Sailfish.Silica 1.0
 import Sailfish.Gallery 1.0
 
 // a file icon or thumbnail for directory listings
-// NOTE index, fileModel, fileIcon, and isDir have to be provided by the parent / context
 Item {
     id: base
     property string file: ""
     property bool showThumbnail: false
     property bool highlighted: false
+    property var isDirectoryCallback
+    property var mimeTypeCallback
+    property var fileIconCallback
 
     Component.onCompleted: refresh();
     onShowThumbnailChanged: refresh();
@@ -22,7 +24,7 @@ Item {
             id: img
             source: base.file
             size: _thumbnailSize
-            mimeType: fileModel ? fileModel.mimeTypeAt(index) : ""
+            mimeType: mimeTypeCallback !== undefined ? mimeTypeCallback() : ""
             property alias highlighted: img.down
         }
     }
@@ -32,10 +34,10 @@ Item {
         var canThumb = true;
 
         if (showThumbnail) {
-            if (isDir) {
+            if (isDirectoryCallback !== undefined && isDirectoryCallback()) {
                 canThumb = false
-            } else if (fileModel) {
-                var mimeType = fileModel.mimeTypeAt(index)
+            } else if (mimeTypeCallback !== undefined) {
+                var mimeType = mimeTypeCallback();
 
                 if (   mimeType.indexOf("image/") === -1
                     && mimeType.indexOf("application/pdf") === -1) {
@@ -49,12 +51,12 @@ Item {
             listIcon.source = ""
             thumbnail.sourceComponent = thumbnailComponent
         } else {
-            if (!fileIcon) return;
+            if (fileIconCallback === undefined) return;
             thumbnail.source = ""
             var qmlIcon = Theme.lightPrimaryColor ? "../components/HighlightImageSF3.qml"
                                               : "../components/HighlightImageSF2.qml";
             listIcon.setSource(qmlIcon, {
-                imgsrc: "../images/"+(canThumb ? "large" : "small")+"-"+fileIcon+".png",
+                imgsrc: "../images/"+(canThumb ? "large" : "small")+"-"+fileIconCallback()+".png",
                 imgw: _thumbnailSize,
                 imgh: _thumbnailSize,
             })
