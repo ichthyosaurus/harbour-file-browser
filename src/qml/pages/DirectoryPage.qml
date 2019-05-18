@@ -256,7 +256,12 @@ Page {
                  id: contextMenu
                  ContextMenu {
                      // cancel delete if context menu is opened
-                     onActiveChanged: { remorsePopup.cancel(); clearSelectedFiles(); }
+                     onActiveChanged: {
+                         if (!active) return;
+                         remorsePopup.cancel();
+                         clearSelectedFiles();
+                         if (ctxBookmark.visible) ctxBookmark.hasBookmark = Functions.hasBookmark(fileModel.fileNameAt(index))
+                     }
                      MenuItem {
                          text: qsTr("Cut")
                          onClicked: engine.cutFiles([ fileModel.fileNameAt(index) ]);
@@ -278,11 +283,25 @@ Page {
                             })
                         }
                      }
-
                      MenuItem {
                          text: qsTr("Delete")
                          onClicked:  {
                              deleteFile(fileModel.fileNameAt(index));
+                         }
+                     }
+                     MenuItem {
+                         id: ctxBookmark
+                         visible: model.isDir
+                         property bool hasBookmark: visible ? Functions.hasBookmark(fileModel.fileNameAt(index)) : false
+                         text: hasBookmark ? qsTr("Remove bookmark") : qsTr("Add to bookmarks")
+                         onClicked: {
+                             if (hasBookmark) {
+                                 page.removeBookmark(fileModel.fileNameAt(index));
+                                 hasBookmark = false;
+                             } else {
+                                 page.addBookmark(fileModel.fileNameAt(index));
+                                 hasBookmark = true;
+                             }
                          }
                      }
                      MenuItem {
