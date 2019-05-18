@@ -79,84 +79,96 @@ Page {
 
         header: Item {
             width: parent.width
-            height: Theme.itemSizeExtraLarge
+            height: head.height + Theme.itemSizeExtraLarge
 
-            SearchField {
-                id: searchField
-                anchors.left: parent.left
-                anchors.right: cancelSearchButton.left
-                y: Theme.paddingSmall
-                placeholderText: qsTr("Search %1").arg(Functions.formatPathForSearch(page.dir))
-                inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhNoPredictiveText
-
-                // get focus when page is shown for the first time
-                Component.onCompleted: forceActiveFocus()
-
-
-                // return key on virtual keyboard starts or restarts search
-                EnterKey.enabled: true
-                EnterKey.iconSource: "image://theme/icon-m-enter-accept"
-                EnterKey.onClicked: {
-                    notificationPanel.hide();
-                    listModel.update(searchField.text);
-                    foundText.visible = true;
-                    searchField.focus = false;
-                }
+            PageHeader {
+                id: head
+                title: qsTr("Search")
+                description: page.dir
             }
-            // our own "IconButton" to make the mouse area large and easier to tap
-            IconButton {
-                id: cancelSearchButton
-                anchors.right: parent.right
-                anchors.top: searchField.top
-                width: Theme.iconSizeMedium+Theme.paddingLarge
-                height: searchField.height
-                onClicked: {
-                        if (!searchEngine.running) {
-                            listModel.update(searchField.text);
-                            foundText.visible = true;
-                        } else {
-                            searchEngine.cancel()
-                        }
+
+            Item {
+                anchors.top: head.bottom
+                width: parent.width
+                height: Theme.itemSizeExtraLarge
+
+                SearchField {
+                    id: searchField
+                    anchors.left: parent.left
+                    anchors.right: cancelSearchButton.left
+                    y: Theme.paddingSmall
+                    placeholderText: qsTr("Search %1").arg(Functions.formatPathForSearch(page.dir))
+                    inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhNoPredictiveText
+
+                    // get focus when page is shown for the first time
+                    Component.onCompleted: forceActiveFocus()
+
+
+                    // return key on virtual keyboard starts or restarts search
+                    EnterKey.enabled: true
+                    EnterKey.iconSource: "image://theme/icon-m-enter-accept"
+                    EnterKey.onClicked: {
+                        notificationPanel.hide();
+                        listModel.update(searchField.text);
+                        foundText.visible = true;
+                        searchField.focus = false;
                     }
-                icon.source: searchEngine.running ? "image://theme/icon-m-clear" :
-                                                       "image://theme/icon-m-right"
-            }
-            BusyIndicator {
-                id: searchBusy
-                anchors.centerIn: cancelSearchButton
-                running: searchEngine.running
-                size: BusyIndicatorSize.Small
-            }
-
-            Label {
-                id: foundText
-                visible: false
-
-                anchors {
-                    left: parent.left
-                    leftMargin: searchField.textLeftMargin
-                    top: searchField.bottom
-                    topMargin: -Theme.paddingMedium
+                }
+                // our own "IconButton" to make the mouse area large and easier to tap
+                IconButton {
+                    id: cancelSearchButton
+                    anchors.right: parent.right
+                    anchors.top: searchField.top
+                    width: Theme.iconSizeMedium+Theme.paddingLarge
+                    height: searchField.height
+                    onClicked: {
+                            if (!searchEngine.running) {
+                                listModel.update(searchField.text);
+                                foundText.visible = true;
+                            } else {
+                                searchEngine.cancel()
+                            }
+                        }
+                    icon.source: searchEngine.running ? "image://theme/icon-m-clear" :
+                                                           "image://theme/icon-m-right"
+                }
+                BusyIndicator {
+                    id: searchBusy
+                    anchors.centerIn: cancelSearchButton
+                    running: searchEngine.running
+                    size: BusyIndicatorSize.Small
                 }
 
-                text: qsTr("%n hit(s)", "", listModel.count)
-                font.pixelSize: Theme.fontSizeTiny
-                color: searchField.placeholderColor
-            }
-            Label {
-                anchors {
-                    left: foundText.left
-                    leftMargin: Theme.itemSizeSmall
-                    right: parent.right
-                    rightMargin: Theme.paddingLarge
-                    top: searchField.bottom
-                    topMargin: -Theme.paddingMedium
-                }
+                Label {
+                    id: foundText
+                    visible: false
 
-                text: page.currentDirectory
-                font.pixelSize: Theme.fontSizeTiny
-                color: Theme.secondaryColor
-                elide: Text.ElideMiddle
+                    anchors {
+                        left: parent.left
+                        leftMargin: searchField.textLeftMargin
+                        top: searchField.bottom
+                        topMargin: -Theme.paddingMedium
+                    }
+
+                    text: qsTr("%n hit(s)", "", listModel.count)
+                    font.pixelSize: Theme.fontSizeTiny
+                    color: searchField.placeholderColor
+                }
+                Label {
+                    anchors {
+                        left: foundText.left
+                        leftMargin: Theme.itemSizeSmall
+                        right: parent.right
+                        rightMargin: Theme.paddingLarge
+                        top: searchField.bottom
+                        topMargin: -Theme.paddingMedium
+                    }
+
+                    text: page.currentDirectory
+                    font.pixelSize: Theme.fontSizeTiny
+                    color: Theme.secondaryColor
+                    elide: Text.ElideMiddle
+                }
             }
         }
 
