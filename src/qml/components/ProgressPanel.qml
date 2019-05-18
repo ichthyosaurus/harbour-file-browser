@@ -8,6 +8,7 @@ Item {
 
     // reference to page to prevent back navigation (required)
     property Item page
+    property bool blockNavigation: true
 
     // large text displayed on panel
     property string headerText: ""
@@ -50,9 +51,11 @@ Item {
         dock: Dock.Top
         open: false
         onOpenChanged: {
-            // disable all page navigation
-            page.backNavigation = !open;
-            page.forwardNavigation = !open;
+            if (blockNavigation) {
+                // disable all page navigation
+                page.backNavigation = !open;
+                page.forwardNavigation = !open;
+            }
         }
 
         Rectangle {

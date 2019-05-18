@@ -26,8 +26,8 @@ Rectangle {
 
     on_FinishedChanged: {
         if (_finished) {
-            page.backNavigation = true
-            page.forwardNavigation = true
+            page.backNavigation = true;
+            page.forwardNavigation = true;
         }
     }
 
