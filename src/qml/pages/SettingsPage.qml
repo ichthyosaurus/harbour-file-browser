@@ -63,9 +63,7 @@ Page {
                     MenuItem { text: qsTr("large"); property string action: "large"; }
                     MenuItem { text: qsTr("huge"); property string action: "huge"; }
                 }
-                onValueChanged: {
-                    engine.writeSetting("thumbnails-size", currentItem.action);
-                }
+                onValueChanged: engine.writeSetting("thumbnails-size", currentItem.action);
             }
 
             SectionHeader {
@@ -83,9 +81,7 @@ Page {
                     MenuItem { text: qsTr("link"); property string action: "link"; }
                     MenuItem { text: qsTr("none"); property string action: "none"; }
                 }
-                onValueChanged: {
-                    engine.writeSetting("default-transfer-action", currentItem.action);
-                }
+                onValueChanged: engine.writeSetting("default-transfer-action", currentItem.action);
             }
 
             Spacer { height: 2*Theme.paddingLarge }
@@ -178,15 +174,10 @@ Page {
             }
 
             var thumbSize = engine.readSetting("thumbnails-size", "medium");
-            if (thumbSize === "small") {
-                thumbnailSize.currentIndex = 0;
-            } else if (thumbSize === "medium") {
-                thumbnailSize.currentIndex = 1;
-            } else if (thumbSize === "large") {
-                thumbnailSize.currentIndex = 2;
-            } else if (thumbSize === "huge") {
-                thumbnailSize.currentIndex = 3;
-            }
+            if (thumbSize === "small") thumbnailSize.currentIndex = 0;
+            else if (thumbSize === "medium") thumbnailSize.currentIndex = 1;
+            else if (thumbSize === "large") thumbnailSize.currentIndex = 2;
+            else if (thumbSize === "huge") thumbnailSize.currentIndex = 3;
         }
     }
 }
