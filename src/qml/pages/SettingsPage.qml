@@ -23,7 +23,7 @@ Page {
             }
 
             SectionHeader {
-                text: "Global view preferences"
+                text: qsTr("Global view preferences")
             }
 
             TextSwitch {
@@ -55,7 +55,7 @@ Page {
             ComboBox {
                 id: thumbnailSize
                 width: parent.width
-                label: "Thumbnail size"
+                label: qsTr("Thumbnail size")
                 currentIndex: -1
                 menu: ContextMenu {
                     MenuItem { text: qsTr("small"); property string action: "small"; }
@@ -69,13 +69,13 @@ Page {
             }
 
             SectionHeader {
-                text: "Transfer preferences"
+                text: qsTr("Transfer preferences")
             }
 
             ComboBox {
                 id: defaultTransfer
                 width: parent.width
-                label: "Default transfer action"
+                label: qsTr("Default transfer action")
                 currentIndex: -1
                 menu: ContextMenu {
                     MenuItem { text: qsTr("copy"); property string action: "copy"; }
