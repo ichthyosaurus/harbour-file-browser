@@ -27,7 +27,7 @@ Page {
         onMatchFound: listModel.append({ fullname: fullname, filename: filename,
                                          absoluteDir: absoluteDir,
                                          fileIcon: fileIcon, fileKind: fileKind,
-                                         isSelected: false
+                                         isSelected: false, mimeType: mimeType
                                        });
         onWorkerDone: { clearCover(); }
         onWorkerErrorOccurred: { clearCover(); notificationPanel.showText(message, filename); }

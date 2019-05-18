@@ -35,7 +35,7 @@ signals:
 
     void progressChanged(QString directory);
     void matchFound(QString fullname, QString filename, QString absoluteDir,
-                    QString fileIcon, QString fileKind);
+                    QString fileIcon, QString fileKind, QString mimeType);
     void workerDone();
     void workerErrorOccurred(QString message, QString filename);
 
