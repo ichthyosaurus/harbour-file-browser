@@ -333,11 +333,15 @@ Page {
         onCancelled: engine.cancel()
     }
 
-    TransferPanel {
+    Loader {
         id: transferPanel
-        page: page
-        progressPanel: progressPanel
-        notificationPanel: notificationPanel
+        asynchronous: true
+        visible: (status === Loader.Ready ? item.visible : false)
+        Component.onCompleted: {
+            setSource(Qt.resolvedUrl("../components/TransferPanel.qml"),
+                      { "page": page, "progressPanel": progressPanel,
+                        "notificationPanel": notificationPanel });
+        }
     }
 
     // connect signals from engine to panels
