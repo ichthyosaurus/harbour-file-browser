@@ -268,6 +268,8 @@ Page {
                      MenuItem {
                          visible: main.sharingEnabled && !isLink && !isDir
                          text: qsTr("Share")
+                         // sadly, SharePage can only handle one sole single lone and lonely orientation
+                         enabled: page.orientation === Orientation.Portrait
                          onClicked: {
                             pageStack.animatorPush("Sailfish.TransferEngine.SharePage", {
                                 source: Qt.resolvedUrl(fileModel.fileNameAt(index)),

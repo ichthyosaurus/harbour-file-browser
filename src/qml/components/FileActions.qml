@@ -151,7 +151,9 @@ Item {
         }
         IconButton {
             visible: showShare
-            enabled: selectedCount === 1; icon.width: itemSize; icon.height: itemSize
+            // sadly, SharePage can only handle one sole single lone and lonely orientation
+            enabled: selectedCount === 1 && main.orientation === Orientation.Portrait
+            icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-share"
             onPressAndHold: labelText = qsTr("share files")
             onClicked: {
