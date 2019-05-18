@@ -186,24 +186,22 @@ Page {
                 anchors.fill: parent
                 color: fileItem.highlightedColor
             }
-            // HighlightImage replaced with a Loader so that HighlightImage or Image
-            // can be loaded depending on Sailfish version (lightPrimaryColor is defined on SF3)
-            Loader {
+
+            FileIcon {
                 id: listIcon
-                anchors.verticalCenter: listLabel.verticalCenter
+                clip: true
+                anchors.verticalCenter: parent.verticalCenter
                 x: Theme.paddingLarge
-                width: Theme.iconSizeSmall
-                height: Theme.iconSizeSmall
-                Component.onCompleted: {
-                    var qml = Theme.lightPrimaryColor ? "../components/HighlightImageSF3.qml"
-                                                      : "../components/HighlightImageSF2.qml";
-                    setSource(qml, {
-                        imgsrc: "../images/small-"+fileIcon+".png",
-                        imgw: Theme.iconSizeSmall,
-                        imgh: Theme.iconSizeSmall
-                    })
-                }
+                width: Theme.itemSizeSmall
+                height: width
+                showThumbnail: true
+                highlighted: fileItem.highlighted || isSelected
+                file: model.fullname
+                isDirectoryCallback: function() { return model.fileKind === "d"; }
+                mimeTypeCallback: function() { return model.mimeType; }
+                fileIconCallback: function() { return fileIcon; }
             }
+
             // circle shown when item is selected
             Rectangle {
                 visible: isSelected
