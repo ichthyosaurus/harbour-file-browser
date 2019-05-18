@@ -333,7 +333,7 @@ Page {
             onTransferTriggered: {
                 if (remorsePopupActive) return;
                 if (transferPanel.status === Loader.Ready) transferPanel.item.startTransfer(toTransfer, targets, selectedAction);
-                else notificationPanel.showText(qsTr("Internally not ready", "Please simply try again"));
+                else notificationPanel.showText(qsTr("Internally not ready"), qsTr("Please simply try again"));
             }
         }
     }
