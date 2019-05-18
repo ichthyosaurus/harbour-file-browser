@@ -238,7 +238,12 @@ Page {
                         });
                     }
                     onTransferTriggered: {
-                        if (selectedAction === "move") pageStack.pop();
+                        if (selectedAction === "move") {
+                            var prevPage = pageStack.previousPage();
+                            if (prevPage.progressPanel) transferPanel.progressPanel = prevPage.progressPanel;
+                            if (prevPage.notificationPanel) transferPanel.notificationPanel = prevPage.notificationPanel;
+                            pageStack.pop();
+                        }
                         transferPanel.startTransfer(toTransfer, targets, selectedAction);
                     }
                 }
@@ -321,14 +326,17 @@ Page {
         page: page
     }
 
+    ProgressPanel {
+        id: progressPanel
+        page: page
+        onCancelled: engine.cancel()
+    }
+
     TransferPanel {
         id: transferPanel
         page: page
-        Component.onCompleted: {
-            var prevPage = pageStack.previousPage();
-            if (prevPage.progressPanel) transferPanel.progressPanel = prevPage.progressPanel;
-            if (prevPage.notificationPanel) transferPanel.notificationPanel = prevPage.notificationPanel;
-        }
+        progressPanel: progressPanel
+        notificationPanel: notificationPanel
     }
 
     Timer {
