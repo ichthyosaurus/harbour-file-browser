@@ -47,11 +47,6 @@ Page {
                 onCheckedChanged: engine.writeSetting("show-thumbnails", showThumbnails.checked.toString())
             }
             TextSwitch {
-                id: cacheThumbnails
-                text: qsTr("Cache thumbnails")
-                onCheckedChanged: engine.writeSetting("cache-thumbnails", cacheThumbnails.checked.toString())
-            }
-            TextSwitch {
                 id: sortCaseSensitive
                 text: qsTr("Sort case-sensitively")
                 onCheckedChanged: engine.writeSetting("sort-case-sensitive", sortCaseSensitive.checked.toString())
@@ -168,7 +163,6 @@ Page {
             showDirsFirst.checked = (engine.readSetting("show-dirs-first") === "true");
             showHiddenFiles.checked = (engine.readSetting("show-hidden-files") === "true");
             showThumbnails.checked = (engine.readSetting("show-thumbnails") === "true");
-            cacheThumbnails.checked = (engine.readSetting("cache-thumbnails") === "true");
             sortCaseSensitive.checked = (engine.readSetting("sort-case-sensitive") === "true");
             useLocalSettings.checked = (engine.readSetting("use-local-view-settings") === "true");
 
