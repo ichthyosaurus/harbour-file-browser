@@ -115,7 +115,9 @@ Page {
 
             Component.onCompleted: {
                 page.thumbnailsShownChanged.connect(function (){
-                    itemSize = page.thumbnailsShown ? Theme.itemSizeExtraLarge : Theme.itemSizeSmall
+                    if (!page) return;
+                    if (page.thumbnailsShown) itemSize = Theme.itemSizeExtraLarge
+                    else itemSize = Theme.itemSizeSmall
                 });
             }
 
@@ -130,26 +132,15 @@ Page {
                 color: fileItem.highlightedColor
             }
 
-            // HighlightImage replaced with a Loader so that HighlightImage or Image
-            // can be loaded depending on Sailfish version (lightPrimaryColor is defined on SF3)
-            Loader {
+            FileIcon {
                 id: listIcon
                 anchors.verticalCenter: thumbnailsShown ? parent.verticalCenter : listLabel.verticalCenter
                 x: Theme.paddingLarge
                 width: itemSize === Theme.itemSizeSmall ? Theme.iconSizeSmall : itemSize
                 height: width
-                Component.onCompleted: {
-                    var qml = Theme.lightPrimaryColor ? "../components/HighlightImageSF3.qml"
-                                                      : "../components/HighlightImageSF2.qml";
-                    setSource(qml, {
-                        imgsrc: "../images/"+(thumbnailsShown ? "large" : "small")+"-"+fileIcon+".png",
-                        imgw: width,
-                        imgh: height
-                    })
-                }
-
-                property bool highlighted: fileItem.highlighted || isSelected
-                onHighlightedChanged: item.highlighted = highlighted
+                showThumbnail: thumbnailsShown
+                highlighted: fileItem.highlighted || isSelected
+                file: fileModel.appendPath(listLabel.text)
             }
 
             // circle shown when item is selected
