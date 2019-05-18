@@ -43,6 +43,8 @@ Page {
         id: fileList
         anchors.fill: parent
         anchors.bottomMargin: selectionPanel.visible ? selectionPanel.visibleSize : 0
+        footer: Spacer { height: Theme.horizontalPageMargin; }
+
         clip: true
 
         // prevent newly added list delegates from stealing focus away from the search field
