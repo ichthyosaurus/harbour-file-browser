@@ -69,6 +69,11 @@ Dialog {
                         text: qsTr("Switch to target directory")
                         enabled: shortcutsView._selectedIndex.length <= 1
                         onCheckedChanged: goToTarget = checked;
+                        Connections {
+                            target: shortcutsView;
+                            onItemSelected: goToTargetSwitch.enabled = (shortcutsView._selectedIndex.length <= 1)
+                            onItemDeselected: goToTargetSwitch.enabled = (shortcutsView._selectedIndex.length <= 1)
+                        }
                     }
                 }
             }
