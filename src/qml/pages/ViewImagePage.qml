@@ -29,6 +29,12 @@ Page {
     property alias title: header.title
     property alias path: image.source
 
+    onStatusChanged: {
+        if (page.status === PageStatus.Inactive && image.status === Image.Ready) {
+            image.fitToScreen()
+        }
+    }
+
     Flickable {
         id: flickable
         anchors.fill: parent
