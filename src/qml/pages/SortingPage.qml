@@ -33,22 +33,10 @@ Page {
                 title: qsTr("Sort by...")
 
                 model: ListModel {
-                    ListElement {
-                        label: qsTr("Name")
-                        value: "name"
-                    }
-                    ListElement {
-                        label: qsTr("Size")
-                        value: "size"
-                    }
-                    ListElement {
-                        label: qsTr("Modification time")
-                        value: "modificationtime"
-                    }
-                    ListElement {
-                        label: qsTr("File type")
-                        value: "type"
-                    }
+                    ListElement { label: qsTr("Name"); value: "name" }
+                    ListElement { label: qsTr("Size"); value: "size" }
+                    ListElement { label: qsTr("Modification time"); value: "modificationtime" }
+                    ListElement { label: qsTr("File type"); value: "type" }
                 }
 
                 onSelectionChanged: {
@@ -67,14 +55,8 @@ Page {
                 title: qsTr("Order...")
 
                 model: ListModel {
-                    ListElement {
-                        label: qsTr("default")
-                        value: "default"
-                    }
-                    ListElement {
-                        label: qsTr("reversed")
-                        value: "reversed"
-                    }
+                    ListElement { label: qsTr("default"); value: "default" }
+                    ListElement { label: qsTr("reversed"); value: "reversed" }
                 }
 
                 onSelectionChanged: {
@@ -88,43 +70,43 @@ Page {
 
             Spacer { height: 2*Theme.paddingLarge }
 
-            TextSwitch {
-                id: showDirsFirst
-                text: qsTr("Show folders first")
-                onCheckedChanged: saveSetting("View/ShowDirectoriesFirst", "Sailfish/ShowDirectoriesFirst", "true", "false", showDirsFirst.checked.toString())
+            SelectableListView {
+                id: thumbList
+                title: qsTr("Preview images")
+
+                model: ListModel {
+                    ListElement { label: qsTr("none"); value: "none" }
+                    ListElement { label: qsTr("small"); value: "small" }
+                    ListElement { label: qsTr("medium"); value: "medium" }
+                    ListElement { label: qsTr("large"); value: "large" }
+                    ListElement { label: qsTr("huge"); value: "huge" }
+                }
+
+                onSelectionChanged: {
+                    if (newValue.toString() === "none") saveSetting("View/PreviewsShown", "Dolphin/PreviewsShown", "true", "false", "false")
+                    else {
+                        saveSetting("View/PreviewsShown", "Dolphin/PreviewsShown", "true", "false", "true")
+                        engine.writeSetting("View/PreviewsSize", newValue.toString());
+                    }
+                }
             }
+
+            Spacer { height: 2*Theme.paddingLarge }
 
             TextSwitch {
                 id: showHiddenFiles
                 text: qsTr("Show hidden files")
                 onCheckedChanged: saveSetting("View/HiddenFilesShown", "Settings/HiddenFilesShown", "true", "false", showHiddenFiles.checked.toString())
             }
-
+            TextSwitch {
+                id: showDirsFirst
+                text: qsTr("Show folders first")
+                onCheckedChanged: saveSetting("View/ShowDirectoriesFirst", "Sailfish/ShowDirectoriesFirst", "true", "false", showDirsFirst.checked.toString())
+            }
             TextSwitch {
                 id: sortCaseSensitive
                 text: qsTr("Sort case-sensitively")
                 onCheckedChanged: saveSetting("View/SortCaseSensitively", "Sailfish/SortCaseSensitively", "true", "false", sortCaseSensitive.checked.toString())
-            }
-
-            TextSwitch {
-                id: showThumbnails
-                text: qsTr("Show preview images")
-                onCheckedChanged: saveSetting("View/PreviewsShown", "Dolphin/PreviewsShown", "true", "false", showThumbnails.checked.toString())
-            }
-
-            ComboBox {
-                id: thumbnailSize
-                visible: showThumbnails.checked
-                width: parent.width
-                label: qsTr("Thumbnail size")
-                currentIndex: -1
-                menu: ContextMenu {
-                    MenuItem { text: qsTr("small"); property string action: "small"; }
-                    MenuItem { text: qsTr("medium"); property string action: "medium"; }
-                    MenuItem { text: qsTr("large"); property string action: "large"; }
-                    MenuItem { text: qsTr("huge"); property string action: "huge"; }
-                }
-                onValueChanged: engine.writeSetting("View/PreviewsSize", currentItem.action);
             }
         }
     }
@@ -139,16 +121,12 @@ Page {
 
     function updateShownSettings() {
         var useLocal = useLocalSettings();
-
-        if (useLocal) {
-            header.description = qsTr("Local settings");
-        } else {
-            header.description = qsTr("Global settings");
-        }
+        if (useLocal) header.description = qsTr("Local preferences");
+        else header.description = qsTr("Global preferences");
+        var conf = getConfigPath();
 
         var sort = engine.readSetting("View/SortRole", "name");
         var order = engine.readSetting("View/SortOrder", "default");
-        var conf = getConfigPath();
 
         if (useLocal) {
             sortList.initial = engine.readSetting("Dolphin/SortRole", sort, conf);
@@ -163,23 +141,19 @@ Page {
         var showHidden = engine.readSetting("View/HiddenFilesShown", "false");
         var showThumbs = engine.readSetting("View/PreviewsShown", "false");
 
+        if (showThumbs === "true") thumbList.initial = engine.readSetting("View/PreviewsSize", "medium");
+        else thumbList.initial = "none";
+
         if (useLocal) {
             showDirsFirst.checked = (engine.readSetting("Sailfish/ShowDirectoriesFirst", dirsFirst, conf) === "true");
             sortCaseSensitive.checked = (engine.readSetting("Sailfish/SortCaseSensitively", caseSensitive, conf) === "true");
             showHiddenFiles.checked = (engine.readSetting("Settings/HiddenFilesShown", showHidden, conf) === "true");
-            showThumbnails.checked = (engine.readSetting("Dolphin/PreviewsShown", showThumbs, conf) === "true");
+            showThumbs = engine.readSetting("Dolphin/PreviewsShown", showThumbs, conf);
         } else {
             showDirsFirst.checked = (dirsFirst === "true");
             sortCaseSensitive.checked = (caseSensitive === "true");
             showHiddenFiles.checked = (showHidden === "true");
-            showThumbnails.checked = (showThumbs === "true");
         }
-
-        var thumbSize = engine.readSetting("View/PreviewsSize", "medium");
-        if (thumbSize === "small") thumbnailSize.currentIndex = 0;
-        else if (thumbSize === "medium") thumbnailSize.currentIndex = 1;
-        else if (thumbSize === "large") thumbnailSize.currentIndex = 2;
-        else if (thumbSize === "huge") thumbnailSize.currentIndex = 3;
     }
 
     function saveSetting(keyGlobal, keyLocal, trueLocal, falseLocal, valueStr) {
@@ -192,5 +166,8 @@ Page {
 
     Component.onCompleted: {
         updateShownSettings();
+
     }
+
+    onStatusChanged: if (status === PageStatus.Active) pageStack.pushAttached(Qt.resolvedUrl("SettingsPage.qml"));
 }
