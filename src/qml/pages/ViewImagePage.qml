@@ -23,6 +23,7 @@
 
 import QtQuick 2.6
 import Sailfish.Silica 1.0
+import "../components"
 
 Page {
     id: page
@@ -41,9 +42,11 @@ Page {
         z: 100
         anchors.fill: parent
         visible: false
+        property bool isEditing: cropRotateRow.visible || drawRow.visible || writeRow.visible
         NumberAnimation { id: hideShowAnim; target: overlay; duration: 80; property: "opacity"; from: overlay.opacity }
         function show() { opacity = 0; visible = true; hideShowAnim.to = 1; hideShowAnim.start(); }
         function hide() { visible = true; hideShowAnim.to = 0; hideShowAnim.start(); visible = false; }
+        onVisibleChanged: if (!visible) actions.visible = true; // reset visibility
 
         Rectangle {
             MouseArea { anchors.fill: parent }  // catch stray clicks
@@ -57,25 +60,22 @@ Page {
 
             Label {
                 id: title
-                width: parent.width - actions.width - 2*Theme.paddingLarge
                 anchors {
                     top: parent.top
                     bottom: parent.bottom
-                    right: parent.right
+                    left: parent.left
                     margins: Theme.horizontalPageMargin
+                    right: actions.visible ? actions.left : parent.right
                 }
 
                 color: Theme.highlightColor
                 font.pixelSize: Theme.fontSizeLarge
                 truncationMode: TruncationMode.Fade
                 horizontalAlignment: Text.AlignRight
-
                 MouseArea {
                     anchors.fill: parent
-                    onClicked: {
-                        actions.visible = !actions.visible
-                        title.width = overlay.width - (actions.visible ? (actions.width + 2*Theme.paddingLarge) : Theme.horizontalPageMargin)
-                    }
+                    Timer { id: resetTimer; interval: 3500; onTriggered: actions.visible = true; }
+                    onClicked: { actions.visible = !actions.visible; resetTimer.start(); }
                 }
             }
 
@@ -86,7 +86,7 @@ Page {
                 anchors {
                     top: parent.top
                     bottom: parent.bottom
-                    left: parent.left
+                    right: parent.right
                     margins: Theme.paddingMedium
                 }
 
@@ -166,10 +166,22 @@ Page {
                 Behavior on opacity { NumberAnimation { duration: 80 } }
                 anchors.fill: parent
 
+                onVisibleChanged: {
+                    if (!visible) {
+                        pinchArea.enabled = true;
+                        pinchArea.zoomToScale(1);
+                        return;
+                    }
+                    pinchArea.zoomToScale(Math.min((image.paintedHeight-2*cropAreaOverlay.radius)/image.paintedHeight,
+                                                   (image.paintedWidth-2*cropAreaOverlay.radius)/image.paintedWidth));
+                    pinchArea.enabled = false;
+                }
+
                 BackgroundItem {
                     width: cropRotateRow.width/3
                     anchors.left: parent.left; anchors.leftMargin: Theme.paddingMedium
                     anchors.verticalCenter: rotateBtn.verticalCenter
+                    onClicked: cropRotateRow.visible = !cropRotateRow.visible
                     Label {
                         text: qsTr("Cancel")
                         color: parent.highlighted ? Theme.highlightColor : Theme.primaryColor
@@ -182,6 +194,7 @@ Page {
                     icon.width: Theme.iconSizeMedium; icon.height: Theme.iconSizeMedium
                     icon.source: "image://theme/icon-m-sync"
                     anchors.bottom: parent.bottom; anchors.bottomMargin: Theme.paddingMedium; anchors.horizontalCenter: parent.horizontalCenter
+                    onClicked: image.rotation += 90
                 }
                 BackgroundItem {
                     width: cropRotateRow.width/3
@@ -304,19 +317,20 @@ Page {
                 property bool pinchRequested: false
                 onDoubleClicked: {
                     pinchRequested = true
-                    if (image.status !== Image.Ready) return;
-                    bounceBackAnimation.to = pinchArea.minScale;
-                    bounceBackAnimation.quick = true;
-                    bounceBackAnimation.start();
+                    if (image.status !== Image.Ready || overlay.isEditing) return;
+                    pinchArea.zoomToScale(pinchArea.minScale, true)
                 }
                 function singleClick() {
                     if (pinchRequested) {
                         pinchRequested = false;
                         return;
+                    } else if (overlay.visible && overlay.isEditing) {
+                        return;
+                    } else if (overlay.visible) {
+                        overlay.hide();
+                    } else {
+                        overlay.show();
                     }
-
-                    if (overlay.visible) overlay.hide();
-                    else overlay.show();
                 }
             }
 
@@ -329,15 +343,18 @@ Page {
             onPinchFinished: {
                 flickable.returnToBounds()
                 if (image.scale < pinchArea.minScale) {
-                    bounceBackAnimation.to = pinchArea.minScale
-                    bounceBackAnimation.quick = false;
-                    bounceBackAnimation.start()
+                    zoomToScale(pinchArea.minScale, false)
                 }
                 else if (image.scale > pinchArea.maxScale) {
-                    bounceBackAnimation.to = pinchArea.maxScale
-                    bounceBackAnimation.quick = false;
-                    bounceBackAnimation.start()
+                    zoomToScale(pinchArea.maxScale, false)
                 }
+            }
+
+            function zoomToScale(newScale, quick) {
+                if (quick === true) bounceBackAnimation.quick = true
+                else bounceBackAnimation.quick = false
+                bounceBackAnimation.to = newScale;
+                bounceBackAnimation.start()
             }
 
             NumberAnimation {
@@ -347,6 +364,172 @@ Page {
                 duration: quick ? 150 : 250
                 property: "scale"
                 from: image.scale
+            }
+        }
+    }
+
+    Item {
+        id: cropAreaOverlay
+        anchors.fill: parent
+        visible: cropRotateRow.visible
+        property real radius: 0.8*(Theme.iconSizeMedium/2)
+
+        Canvas {
+            id: frame
+            anchors.fill: parent
+            onPaint: {
+                var ctx = getContext("2d")
+                ctx.fillStyle = Qt.rgba(0, 0, 0, 0.2);
+                ctx.fillRect(0, 0, width, height)
+                ctx.fillStyle = Qt.rgba(0, 0, 0, 0);
+                ctx.globalCompositeOperation = "copy"
+                ctx.strokeStyle = Theme.highlightColor
+                ctx.beginPath()
+                ctx.moveTo(topLeft.center.x, topLeft.center.y)
+                ctx.lineTo(topRight.center.x, topRight.center.y)
+                ctx.lineTo(bottomRight.center.x, bottomRight.center.y)
+                ctx.lineTo(bottomLeft.center.x, bottomLeft.center.y)
+                ctx.closePath()
+                ctx.fill()
+                ctx.stroke()
+            }
+        }
+
+        CornerMarker {
+            id: topLeft
+            radius: parent.radius
+            initialCenterX: (image.width - image.paintedWidth) / 2 + radius
+            initialCenterY: (image.height - image.paintedHeight) / 2 + radius
+            minX: (image.width - image.paintedWidth) / 2
+            maxX: (image.width + image.paintedWidth) / 2 - 2*radius
+            minY: (image.height - image.paintedHeight) / 2
+            maxY: (image.height + image.paintedHeight) / 2 - 2*radius
+            onCenterChanged: {
+                if (!dragActive) return;
+                bottomLeft.x = x; topRight.y = y;
+                frame.requestPaint();
+            }
+        }
+
+        CornerMarker {
+            id: topRight
+            radius: parent.radius
+            initialCenterX: (image.width  + image.paintedWidth) / 2 - radius
+            initialCenterY: (image.height - image.paintedHeight) / 2 + radius
+            minX: (image.width - image.paintedWidth) / 2
+            maxX: (image.width + image.paintedWidth) / 2 - 2*radius
+            minY: (image.height - image.paintedHeight) / 2
+            maxY: (image.height + image.paintedHeight) / 2 - 2*radius
+            onCenterChanged: {
+                if (!dragActive) return;
+                bottomRight.x = x; topLeft.y = y;
+                frame.requestPaint();
+            }
+
+        }
+
+        CornerMarker {
+            id: bottomLeft
+            radius: parent.radius
+            initialCenterX: (image.width  - image.paintedWidth) / 2 + radius
+            initialCenterY: (image.height + image.paintedHeight) / 2 - radius
+            minX: (image.width - image.paintedWidth) / 2
+            maxX: (image.width + image.paintedWidth) / 2 - 2*radius
+            minY: (image.height - image.paintedHeight) / 2
+            maxY: (image.height + image.paintedHeight) / 2 - 2*radius
+            onCenterChanged: {
+                if (!dragActive) return;
+                topLeft.x = x; bottomRight.y = y;
+                frame.requestPaint();
+            }
+
+        }
+
+        CornerMarker {
+            id: bottomRight
+            radius: parent.radius
+            initialCenterX: (image.width  + image.paintedWidth) / 2 - radius
+            initialCenterY: (image.height + image.paintedHeight) / 2 - radius
+            minX: (image.width - image.paintedWidth) / 2
+            maxX: (image.width + image.paintedWidth) / 2 - 2*radius
+            minY: (image.height - image.paintedHeight) / 2
+            maxY: (image.height + image.paintedHeight) / 2 - 2*radius
+            onCenterChanged: {
+                if (!dragActive) return;
+                topRight.x = x; bottomLeft.y = y;
+                frame.requestPaint();
+            }
+        }
+
+        CornerMarker {
+            id: topCenter
+            radius: parent.radius
+            beVCenter: true
+            initialCenterX: image.width/2
+            initialCenterY: (image.height - image.paintedHeight) / 2 + radius
+            minX: (image.width - image.paintedWidth) / 2
+            maxX: (image.width + image.paintedWidth) / 2 - 2*radius
+            minY: (image.height - image.paintedHeight) / 2
+            maxY: (image.height + image.paintedHeight) / 2 - 2*radius
+            onCenterChanged: {
+                if (!dragActive) return;
+                topLeft.y = y; topRight.y = y;
+                x = Math.min(topLeft.x, topRight.x)+Math.abs(topLeft.x-topRight.x)/2
+                frame.requestPaint();
+            }
+        }
+
+        CornerMarker {
+            id: bottomCenter
+            radius: parent.radius
+            beVCenter: true
+            initialCenterX: image.width/2
+            initialCenterY: (image.height + image.paintedHeight) / 2 - radius
+            minX: (image.width - image.paintedWidth) / 2
+            maxX: (image.width + image.paintedWidth) / 2 - 2*radius
+            minY: (image.height - image.paintedHeight) / 2
+            maxY: (image.height + image.paintedHeight) / 2 - 2*radius
+            onCenterChanged: {
+                if (!dragActive) return;
+                bottomLeft.y = y; bottomRight.y = y;
+                x = Math.min(bottomLeft.x, bottomRight.x)+Math.abs(bottomLeft.x-bottomRight.x)/2
+                frame.requestPaint();
+            }
+        }
+
+        CornerMarker {
+            id: leftCenter
+            radius: parent.radius
+            beHCenter: true
+            initialCenterX: (image.width  - image.paintedWidth) / 2 + radius
+            initialCenterY: image.height/2
+            minX: (image.width - image.paintedWidth) / 2
+            maxX: (image.width + image.paintedWidth) / 2 - 2*radius
+            minY: (image.height - image.paintedHeight) / 2
+            maxY: (image.height + image.paintedHeight) / 2 - 2*radius
+            onCenterChanged: {
+                if (!dragActive) return;
+                bottomLeft.x = x; topLeft.x = x;
+                y = Math.min(bottomLeft.y, topLeft.y)+Math.abs(bottomLeft.y-topLeft.y)/2
+                frame.requestPaint();
+            }
+        }
+
+        CornerMarker {
+            id: rightCenter
+            radius: parent.radius
+            beHCenter: true
+            initialCenterX: (image.width  + image.paintedWidth) / 2 - radius
+            initialCenterY: image.height/2
+            minX: (image.width - image.paintedWidth) / 2
+            maxX: (image.width + image.paintedWidth) / 2 - 2*radius
+            minY: (image.height - image.paintedHeight) / 2
+            maxY: (image.height + image.paintedHeight) / 2 - 2*radius
+            onCenterChanged: {
+                if (!dragActive) return;
+                bottomRight.x = x; topRight.x = x;
+                y = Math.min(bottomRight.y, topRight.y)+Math.abs(bottomRight.y-topRight.y)/2
+                frame.requestPaint();
             }
         }
     }
