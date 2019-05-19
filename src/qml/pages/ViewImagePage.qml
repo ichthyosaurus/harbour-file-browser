@@ -65,16 +65,10 @@ Page {
                 smooth: !flickable.moving
 
                 onStatusChanged: {
-                    print("hmm")
                     if (status === Image.Ready) {
                         fitToScreen()
                         loadedAnimation.start()
-                        print("OK")
                     }
-                }
-
-                onSourceChanged: {
-                    print(source)
                 }
 
                 NumberAnimation {
