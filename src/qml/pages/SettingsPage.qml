@@ -22,66 +22,76 @@ Page {
                 title: qsTr("Settings")
             }
 
-            SectionHeader {
-                text: qsTr("Global view preferences")
-            }
-
-            TextSwitch {
-                id: useLocalSettings
-                text: qsTr("Use per-directory view settings")
-                onCheckedChanged: engine.writeSetting("View/UseLocalSettings", useLocalSettings.checked.toString())
-            }
-            TextSwitch {
-                id: showDirsFirst
-                text: qsTr("Show folders first")
-                onCheckedChanged: engine.writeSetting("View/ShowDirectoriesFirst", showDirsFirst.checked.toString())
-            }
-            TextSwitch {
-                id: showHiddenFiles
-                text: qsTr("Show hidden files")
-                onCheckedChanged: engine.writeSetting("View/HiddenFilesShown", showHiddenFiles.checked.toString())
-            }
-            TextSwitch {
-                id: showThumbnails
-                text: qsTr("Show preview images")
-                onCheckedChanged: engine.writeSetting("View/PreviewsShown", showThumbnails.checked.toString())
-            }
-            TextSwitch {
-                id: sortCaseSensitive
-                text: qsTr("Sort case-sensitively")
-                onCheckedChanged: engine.writeSetting("View/SortCaseSensitively", sortCaseSensitive.checked.toString())
-            }
-
-            ComboBox {
-                id: thumbnailSize
-                width: parent.width
-                label: qsTr("Thumbnail size")
-                currentIndex: -1
-                menu: ContextMenu {
-                    MenuItem { text: qsTr("small"); property string action: "small"; }
-                    MenuItem { text: qsTr("medium"); property string action: "medium"; }
-                    MenuItem { text: qsTr("large"); property string action: "large"; }
-                    MenuItem { text: qsTr("huge"); property string action: "huge"; }
+            GroupedDrawer {
+                id: viewGroup
+                title: qsTr("View")
+                contents: Column {
+                    property alias useLocalSettings: v1.checked
+                    property alias showHiddenFiles: v2.checked
+                    property alias showThumbnails: v3.checked
+                    property alias thumbnailSize: v4
+                    TextSwitch {
+                        id: v1; text: qsTr("Use per-directory view settings")
+                        onCheckedChanged: engine.writeSetting("View/UseLocalSettings", checked.toString())
+                    }
+                    TextSwitch {
+                        id: v2; text: qsTr("Show hidden files")
+                        onCheckedChanged: engine.writeSetting("View/HiddenFilesShown", checked.toString())
+                    }
+                    TextSwitch {
+                        id: v3; text: qsTr("Show preview images")
+                        onCheckedChanged: engine.writeSetting("View/PreviewsShown", checked.toString())
+                    }
+                    ComboBox {
+                        id: v4; width: parent.width
+                        label: qsTr("Thumbnail size")
+                        currentIndex: -1
+                        menu: ContextMenu {
+                            MenuItem { text: qsTr("small"); property string action: "small"; }
+                            MenuItem { text: qsTr("medium"); property string action: "medium"; }
+                            MenuItem { text: qsTr("large"); property string action: "large"; }
+                            MenuItem { text: qsTr("huge"); property string action: "huge"; }
+                        }
+                        onValueChanged: engine.writeSetting("View/PreviewsSize", currentItem.action);
+                    }
                 }
-                onValueChanged: engine.writeSetting("View/PreviewsSize", currentItem.action);
             }
 
-            SectionHeader {
-                text: qsTr("Transfer preferences")
-            }
-
-            ComboBox {
-                id: defaultTransfer
-                width: parent.width
-                label: qsTr("Default transfer action")
-                currentIndex: -1
-                menu: ContextMenu {
-                    MenuItem { text: qsTr("copy"); property string action: "copy"; }
-                    MenuItem { text: qsTr("move"); property string action: "move"; }
-                    MenuItem { text: qsTr("link"); property string action: "link"; }
-                    MenuItem { text: qsTr("none"); property string action: "none"; }
+            GroupedDrawer {
+                id: sortingGroup
+                title: qsTr("Sorting")
+                contents: Column {
+                    property alias showDirsFirst: s1.checked
+                    property alias sortCaseSensitive: s2.checked
+                    TextSwitch {
+                        id: s1; text: qsTr("Show folders first")
+                        onCheckedChanged: { engine.writeSetting("View/ShowDirectoriesFirst", checked.toString()) }
+                    }
+                    TextSwitch {
+                        id: s2; text: qsTr("Sort case-sensitively")
+                        onCheckedChanged: engine.writeSetting("View/SortCaseSensitively", checked.toString())
+                    }
                 }
-                onValueChanged: engine.writeSetting("Transfer/DefaultAction", currentItem.action);
+            }
+
+            GroupedDrawer {
+                id: transferGroup
+                title: qsTr("Transfer")
+                contents: Column {
+                    property alias defaultTransfer: t1
+                    ComboBox {
+                        id: t1; width: parent.width
+                        label: qsTr("Default transfer action")
+                        currentIndex: -1
+                        menu: ContextMenu {
+                            MenuItem { text: qsTr("copy"); property string action: "copy"; }
+                            MenuItem { text: qsTr("move"); property string action: "move"; }
+                            MenuItem { text: qsTr("link"); property string action: "link"; }
+                            MenuItem { text: qsTr("none"); property string action: "none"; }
+                        }
+                        onValueChanged: engine.writeSetting("Transfer/DefaultAction", currentItem.action);
+                    }
+                }
             }
 
             Spacer { height: 2*Theme.paddingLarge }
@@ -156,28 +166,28 @@ Page {
 
         // read settings
         if (status === PageStatus.Activating) {
-            showDirsFirst.checked = (engine.readSetting("View/ShowDirectoriesFirst", "true") === "true");
-            showHiddenFiles.checked = (engine.readSetting("View/HiddenFilesShown", "false") === "true");
-            showThumbnails.checked = (engine.readSetting("View/PreviewsShown", "false") === "true");
-            sortCaseSensitive.checked = (engine.readSetting("View/SortCaseSensitively", "false") === "true");
-            useLocalSettings.checked = (engine.readSetting("View/UseLocalSettings", "true") === "true");
+            sortingGroup.contentItem.showDirsFirst = (engine.readSetting("View/ShowDirectoriesFirst", "true") === "true");
+            sortingGroup.contentItem.sortCaseSensitive = (engine.readSetting("View/SortCaseSensitively", "false") === "true");
+            viewGroup.contentItem.showHiddenFiles = (engine.readSetting("View/HiddenFilesShown", "false") === "true");
+            viewGroup.contentItem.showThumbnails = (engine.readSetting("View/PreviewsShown", "false") === "true");
+            viewGroup.contentItem.useLocalSettings = (engine.readSetting("View/UseLocalSettings", "true") === "true");
 
             var defTransfer = engine.readSetting("Transfer/DefaultAction", "none");
             if (defTransfer === "copy") {
-                defaultTransfer.currentIndex = 0;
+                transferGroup.contentItem.defaultTransfer.currentIndex = 0;
             } else if (defTransfer === "move") {
-                defaultTransfer.currentIndex = 1;
+                transferGroup.contentItem.defaultTransfer.currentIndex = 1;
             } else if (defTransfer === "link") {
-                defaultTransfer.currentIndex = 2;
+                transferGroup.contentItem.defaultTransfer.currentIndex = 2;
             } else {
-                defaultTransfer.currentIndex = 3;
+                transferGroup.contentItem.defaultTransfer.currentIndex = 3;
             }
 
             var thumbSize = engine.readSetting("View/PreviewsSize", "medium");
-            if (thumbSize === "small") thumbnailSize.currentIndex = 0;
-            else if (thumbSize === "medium") thumbnailSize.currentIndex = 1;
-            else if (thumbSize === "large") thumbnailSize.currentIndex = 2;
-            else if (thumbSize === "huge") thumbnailSize.currentIndex = 3;
+            if (thumbSize === "small") viewGroup.contentItem.thumbnailSize.currentIndex = 0;
+            else if (thumbSize === "medium") viewGroup.contentItem.thumbnailSize.currentIndex = 1;
+            else if (thumbSize === "large") viewGroup.contentItem.thumbnailSize.currentIndex = 2;
+            else if (thumbSize === "huge") viewGroup.contentItem.thumbnailSize.currentIndex = 3;
         }
     }
 }
