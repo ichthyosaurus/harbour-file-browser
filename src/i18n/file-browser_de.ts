@@ -1041,7 +1041,7 @@
     <message>
         <location filename="../globals.cpp" line="66"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
-        <translation>d. MMM. yyyy, hh:mm:ss t</translation>
+        <translation>d. MMM yyyy, hh:mm:ss t</translation>
     </message>
     <message>
         <location filename="../globals.cpp" line="68"/>
