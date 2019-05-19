@@ -29,7 +29,7 @@ Page {
                     property alias useLocalSettings: v1.checked
                     property alias showHiddenFiles: v2.checked
                     property alias showThumbnails: v3.checked
-                    property alias thumbnailSize: v4
+                    property alias thumbSize: v4.currentIndex
                     TextSwitch {
                         id: v1; text: qsTr("Use per-directory view settings")
                         onCheckedChanged: engine.writeSetting("View/UseLocalSettings", checked.toString())
@@ -63,6 +63,8 @@ Page {
                 contents: Column {
                     property alias showDirsFirst: s1.checked
                     property alias sortCaseSensitive: s2.checked
+                    property alias sortRole: s3.currentIndex
+                    property alias sortOrder: s4.currentIndex
                     TextSwitch {
                         id: s1; text: qsTr("Show folders first")
                         onCheckedChanged: { engine.writeSetting("View/ShowDirectoriesFirst", checked.toString()) }
@@ -70,6 +72,26 @@ Page {
                     TextSwitch {
                         id: s2; text: qsTr("Sort case-sensitively")
                         onCheckedChanged: engine.writeSetting("View/SortCaseSensitively", checked.toString())
+                    }
+                    ComboBox {
+                        id: s3; label: qsTr("Sort by")
+                        onValueChanged: engine.writeSetting("View/SortRole", currentItem.value);
+                        currentIndex: -1
+                        menu: ContextMenu {
+                            MenuItem { text: qsTr("name"); property string value: "name" }
+                            MenuItem { text: qsTr("size"); property string value: "size" }
+                            MenuItem { text: qsTr("modification time"); property string value: "modificationtime" }
+                            MenuItem { text: qsTr("file type"); property string value: "type" }
+                        }
+                    }
+                    ComboBox {
+                        id: s4; label: qsTr("Sort order")
+                        onValueChanged: engine.writeSetting("View/SortOrder", currentItem.value);
+                        currentIndex: -1
+                        menu: ContextMenu {
+                            MenuItem { text: qsTr("default"); property string value: "default" }
+                            MenuItem { text: qsTr("reversed"); property string value: "reversed" }
+                        }
                     }
                 }
             }
@@ -184,10 +206,20 @@ Page {
             }
 
             var thumbSize = engine.readSetting("View/PreviewsSize", "medium");
-            if (thumbSize === "small") viewGroup.contentItem.thumbnailSize.currentIndex = 0;
-            else if (thumbSize === "medium") viewGroup.contentItem.thumbnailSize.currentIndex = 1;
-            else if (thumbSize === "large") viewGroup.contentItem.thumbnailSize.currentIndex = 2;
-            else if (thumbSize === "huge") viewGroup.contentItem.thumbnailSize.currentIndex = 3;
+            if (thumbSize === "small") viewGroup.contentItem.thumbSize = 0;
+            else if (thumbSize === "medium") viewGroup.contentItem.thumbSize = 1;
+            else if (thumbSize === "large") viewGroup.contentItem.thumbSize = 2;
+            else if (thumbSize === "huge") viewGroup.contentItem.thumbSize = 3;
+
+            var sortBy = engine.readSetting("View/SortRole", "name");
+            if (sortBy === "name") sortingGroup.contentItem.sortRole = 0;
+            else if (sortBy === "size") sortingGroup.contentItem.sortRole = 1;
+            else if (sortBy === "modificationtime") sortingGroup.contentItem.sortRole = 2;
+            else if (sortBy === "type") sortingGroup.contentItem.sortRole = 3;
+
+            var order = engine.readSetting("View/SortOrder", "default");
+            if (order === "default") sortingGroup.contentItem.sortOrder = 0;
+            else if (order === "reversed") sortingGroup.contentItem.sortOrder = 1;
         }
     }
 }
