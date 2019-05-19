@@ -1506,7 +1506,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/TransferDialog.qml" line="97"/>
+        <location filename="../qml/pages/TransferDialog.qml" line="102"/>
         <source>Nothing selected to transfer</source>
         <translation type="unfinished"></translation>
     </message>

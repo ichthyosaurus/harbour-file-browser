@@ -1124,12 +1124,12 @@
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="381"/>
         <source>Internally not ready</source>
-        <translation type="unfinished">Intern noch nicht bereit</translation>
+        <translation>Intern noch nicht bereit</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="381"/>
         <source>Please simply try again</source>
-        <translation type="unfinished">Versuchen Sie es bitte noch einmal</translation>
+        <translation>Versuchen Sie es bitte erneut</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="92"/>
@@ -1504,10 +1504,10 @@
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="69"/>
         <source>Switch to target directory</source>
-        <translation type="unfinished"></translation>
+        <translation>nachher zum Zielordner wechseln</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TransferDialog.qml" line="97"/>
+        <location filename="../qml/pages/TransferDialog.qml" line="102"/>
         <source>Nothing selected to transfer</source>
         <translation>Nichts zum verwalten ausgewählt</translation>
     </message>
