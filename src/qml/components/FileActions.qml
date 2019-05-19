@@ -155,7 +155,7 @@ Item {
             }
         }
         IconButton {
-            visible: showShare
+            visible: showShare && main.sharingEnabled
             // sadly, SharePage can only handle one sole single lone and lonely orientation
             enabled: selectedCount === 1 && main.orientation === Orientation.Portrait
             icon.width: itemSize; icon.height: itemSize
