@@ -26,6 +26,7 @@ DockedPanel {
         id: fileActions
         labelText: dockPanel.overrideText === "" ? qsTr("%1 selected").arg(dockPanel.selectedCount)
                                                  : dockPanel.overrideText
+        errorCallback: function(errorMsg) { notificationPanel.showTextWithTimer(errorMsg, ""); }
         enabled: enabled
     }
 }

@@ -255,62 +255,54 @@ Page {
             Component {
                  id: contextMenu
                  ContextMenu {
+                     id: menu
                      // cancel delete if context menu is opened
                      onActiveChanged: {
-                         if (!active) return;
-                         remorsePopup.cancel();
-                         clearSelectedFiles();
-                         if (ctxBookmark.visible) ctxBookmark.hasBookmark = Functions.hasBookmark(fileModel.fileNameAt(index))
+                        if (!active) return;
+                        remorsePopup.cancel();
+                        clearSelectedFiles();
+                        if (ctxBookmark.visible) ctxBookmark.hasBookmark = Functions.hasBookmark(fileModel.fileNameAt(index))
+                     }
+                     FileActions {
+                         id: fileActions
+                         showLabel: false
+                         selectedFiles: function() { return [fileModel.fileNameAt(index)]; }
+                         selectedCount: 1
+                         showShare: !model.isLink
+                         showSelection: false; showEdit: false; showArchive: false
+                         onDeleteTriggered: {
+                             menu.close();
+                             remorsePopupActive = true;
+                             remorsePopup.execute(qsTr("Deleting"), function() {
+                                 clearSelectedFiles();
+                                 progressPanel.showText(qsTr("Deleting"));
+                                 engine.deleteFiles([fileModel.fileNameAt(index)]);
+                             });
+                         }
+                         onCutTriggered: menu.close();
+                         onCopyTriggered: menu.close();
+                         // As the menu is closed when a new page is pushed on the stack,
+                         // we cannot receive the transferTriggered signal. (Or rather,
+                         // it cannot be sent, because it is deleted.)
+                         // This means that transferring from here is impossible,
+                         // plus that we cannot notify errors when renaming.
+                         // Cut, copy, delete, info, and share work fine, though.
+                         showTransfer: false
                      }
                      MenuItem {
-                         text: qsTr("Cut")
-                         onClicked: engine.cutFiles([ fileModel.fileNameAt(index) ]);
-                     }
-                     MenuItem {
-                         text: qsTr("Copy")
-                         onClicked: engine.copyFiles([ fileModel.fileNameAt(index) ]);
-                     }
-                     MenuItem {
-                         visible: main.sharingEnabled && !isLink && !isDir
-                         text: qsTr("Share")
-                         // sadly, SharePage can only handle one sole single lone and lonely orientation
-                         enabled: page.orientation === Orientation.Portrait
-                         onClicked: {
-                            pageStack.animatorPush("Sailfish.TransferEngine.SharePage", {
-                                source: Qt.resolvedUrl(fileModel.fileNameAt(index)),
-                                mimeType: fileModel.mimeTypeAt(index),
-                                serviceFilter: ["sharing", "e-mail"]
-                            })
+                        id: ctxBookmark
+                        visible: model.isDir
+                        property bool hasBookmark: visible ? Functions.hasBookmark(fileModel.fileNameAt(index)) : false
+                        text: hasBookmark ? qsTr("Remove bookmark") : qsTr("Add to bookmarks")
+                        onClicked: {
+                            if (hasBookmark) {
+                                page.removeBookmark(fileModel.fileNameAt(index));
+                                hasBookmark = false;
+                            } else {
+                                page.addBookmark(fileModel.fileNameAt(index));
+                                hasBookmark = true;
+                            }
                         }
-                     }
-                     MenuItem {
-                         text: qsTr("Delete")
-                         onClicked:  {
-                             deleteFile(fileModel.fileNameAt(index));
-                         }
-                     }
-                     MenuItem {
-                         id: ctxBookmark
-                         visible: model.isDir
-                         property bool hasBookmark: visible ? Functions.hasBookmark(fileModel.fileNameAt(index)) : false
-                         text: hasBookmark ? qsTr("Remove bookmark") : qsTr("Add to bookmarks")
-                         onClicked: {
-                             if (hasBookmark) {
-                                 page.removeBookmark(fileModel.fileNameAt(index));
-                                 hasBookmark = false;
-                             } else {
-                                 page.addBookmark(fileModel.fileNameAt(index));
-                                 hasBookmark = true;
-                             }
-                         }
-                     }
-                     MenuItem {
-                         visible: model.isDir
-                         text: qsTr("Properties")
-                         onClicked:  {
-                             pageStack.push(Qt.resolvedUrl("FilePage.qml"),
-                                            { file: fileModel.fileNameAt(index) });
-                         }
                      }
                  }
              }

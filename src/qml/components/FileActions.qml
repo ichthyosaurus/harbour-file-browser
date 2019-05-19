@@ -3,14 +3,17 @@ import Sailfish.Silica 1.0
 import harbour.file.browser.FileData 1.0
 
 Item {
+    id: base
     width: isUpright ? Screen.width : Screen.height
-    height: isUpright ? label.height+groupA.height+groupB.height : label.height
+    height: isUpright ? (showLabel ? label.height : 0)+groupA.height+groupB.height :
+                        itemSize+Theme.paddingLarge
 
     property var selectedFiles: function() {
         // function returning a list of selected files (has to be provided)
         console.log("error: missing implementation of FileActions::selectedFiles()!")
         return -1;
     }
+    property var errorCallback: function(errorMsg) { console.error("FileActions:", errorMsg); }
     property int selectedCount: 0
     property alias labelText: label.text
     property bool isUpright: main.orientation === Orientation.Portrait ||
@@ -56,8 +59,10 @@ Item {
     Label {
         id: label
         visible: showLabel
-        height: isUpright ? itemSize : itemSize+Theme.paddingLarge
-        width: isUpright ? parent.width : 2*Theme.itemSizeLarge
+        height: showLabel ? (isUpright ? itemSize : itemSize+Theme.paddingLarge) : 1
+        width: showLabel ? (isUpright ? parent.width : 2*Theme.itemSizeLarge) : (
+            (parent.width-(groupA.width+groupB.width))/2-groupA.anchors.leftMargin
+                           )
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         color: Theme.highlightColor
@@ -116,7 +121,7 @@ Item {
                     if (dialog.errorMessage === "") {
                         transferTriggered(dialog.toTransfer, dialog.targets, dialog.selectedAction, dialog.goToTarget);
                     } else {
-                        notificationPanel.showTextWithTimer(dialog.errorMessage, "");
+                        errorCallback(dialog.errorMessage);
                     }
                 });
             }
@@ -144,7 +149,7 @@ Item {
                 var dialog = pageStack.push(Qt.resolvedUrl("../pages/RenameDialog.qml"),
                                             { path: files[0] })
                 dialog.accepted.connect(function() {
-                    if (dialog.errorMessage !== "") notificationPanel.showTextWithTimer(dialog.errorMessage, "");
+                    if (dialog.errorMessage !== "") errorCallback(dialog.errorMessage);
                     renameTriggered(files, [dialog.newPath]);
                 })
             }

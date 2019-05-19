@@ -218,6 +218,7 @@ Page {
                     selectedFiles: function() {
                         return [file];
                     }
+                    errorCallback: function(errorMsg) { notificationPanel.showTextWithTimer(errorMsg, ""); }
                     selectedCount: 1
                     labelText: ""
                     showProperties: false
