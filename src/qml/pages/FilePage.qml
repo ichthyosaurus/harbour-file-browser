@@ -437,6 +437,9 @@ Page {
                          { title: Functions.lastPartOfPath(fileData.file),
                            command: "tar",
                            arguments: [ "tf", fileData.file ] });
+        } else if (isImageFile()) {
+            print("path:", page.file)
+            method(Qt.resolvedUrl("ViewImagePage.qml"), { path: page.file, title: page.file });
         } else {
             method(Qt.resolvedUrl("ViewPage.qml"), { path: page.file });
         }
