@@ -176,8 +176,9 @@ SilicaListView {
             function commitBookmarkName() {
                 var oldText = editLabel.placeholderColor;
                 var newText = editLabel.text;
-                if (newText === "" || oldText === newText || !location) return;
-                engine.writeSetting("Bookmarks"+location, newText);
+                if (newText === "" || oldText === newText || model.location === "" || !model.location) return;
+                console.log("save bookmark", model.location, newText, oldText);
+                engine.writeSetting("Bookmarks"+model.location, newText);
                 shortcutLabel.text = newText;
             }
 
@@ -220,7 +221,7 @@ SilicaListView {
                 }
 
                 onClicked: {
-                    if (!model.bookmark) return;
+                    if (!model.bookmark || !model.location) return;
                     Functions.removeBookmark(model.location);
                 }
             }
@@ -304,6 +305,8 @@ SilicaListView {
                 var bookmarks = Functions.getBookmarks();
 
                 for (var key in bookmarks) {
+                    if (bookmarks[key] === "") continue;
+                    if (key === "") console.warn("empty name for", bookmarks[key]);
                     listModel.append({ "section": qsTr("Bookmarks"),
                                        "name": engine.readSetting("Bookmarks"+bookmarks[key]),
                                        "thumbnail": "icon-m-favorite",
