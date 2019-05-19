@@ -21,7 +21,7 @@
  * along with this program.  If not, see  <http://www.gnu.org/licenses/>
  */
 
-import QtQuick 2.0
+import QtQuick 2.6
 import Sailfish.Silica 1.0
 
 Page {
@@ -112,6 +112,17 @@ Page {
             property real minScale: 1.0
             property real maxScale: 3.0
 
+            MouseArea {
+                anchors.fill: parent
+                propagateComposedEvents: false
+                onDoubleClicked: {
+                    if (image.status !== Image.Ready) return;
+                    bounceBackAnimation.to = pinchArea.minScale;
+                    bounceBackAnimation.quick = true;
+                    bounceBackAnimation.start();
+                }
+            }
+
             anchors.fill: parent
             enabled: image.status === Image.Ready
             pinch.target: image
@@ -122,10 +133,12 @@ Page {
                 flickable.returnToBounds()
                 if (image.scale < pinchArea.minScale) {
                     bounceBackAnimation.to = pinchArea.minScale
+                    bounceBackAnimation.quick = false;
                     bounceBackAnimation.start()
                 }
                 else if (image.scale > pinchArea.maxScale) {
                     bounceBackAnimation.to = pinchArea.maxScale
+                    bounceBackAnimation.quick = false;
                     bounceBackAnimation.start()
                 }
             }
@@ -133,7 +146,8 @@ Page {
             NumberAnimation {
                 id: bounceBackAnimation
                 target: image
-                duration: 250
+                property bool quick: false
+                duration: quick ? 150 : 250
                 property: "scale"
                 from: image.scale
             }
