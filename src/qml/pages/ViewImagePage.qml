@@ -26,12 +26,199 @@ import Sailfish.Silica 1.0
 
 Page {
     id: page
-    property alias title: header.title
+    allowedOrientations: Orientation.All
+    property alias title: title.text
     property alias path: image.source
 
     onStatusChanged: {
         if (page.status === PageStatus.Inactive && image.status === Image.Ready) {
             image.fitToScreen()
+        }
+    }
+
+    Item {
+        id: overlay
+        z: 100
+        anchors.fill: parent
+        visible: false
+        NumberAnimation { id: hideShowAnim; target: overlay; duration: 80; property: "opacity"; from: overlay.opacity }
+        function show() { opacity = 0; visible = true; hideShowAnim.to = 1; hideShowAnim.start(); }
+        function hide() { visible = true; hideShowAnim.to = 0; hideShowAnim.start(); visible = false; }
+
+        Rectangle {
+            MouseArea { anchors.fill: parent }  // catch stray clicks
+            anchors.top: parent.top
+            height: 1.5*Theme.itemSizeLarge
+            width: parent.width
+            gradient: Gradient {
+                GradientStop { position: 0.0; color: Theme.rgba(Theme.highlightBackgroundColor, 0.5) }
+                GradientStop { position: 1.0; color: "transparent" }
+            }
+
+            Label {
+                id: title
+                width: parent.width - actions.width - 2*Theme.paddingLarge
+                anchors {
+                    top: parent.top
+                    bottom: parent.bottom
+                    right: parent.right
+                    margins: Theme.horizontalPageMargin
+                }
+
+                color: Theme.highlightColor
+                font.pixelSize: Theme.fontSizeLarge
+                truncationMode: TruncationMode.Fade
+                horizontalAlignment: Text.AlignRight
+
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+                        actions.visible = !actions.visible
+                        title.width = overlay.width - (actions.visible ? (actions.width + 2*Theme.paddingLarge) : Theme.horizontalPageMargin)
+                    }
+                }
+            }
+
+            Row {
+                id: actions
+                visible: true; opacity: visible ? 1 : 0
+                Behavior on opacity { NumberAnimation { duration: 80 } }
+                anchors {
+                    top: parent.top
+                    bottom: parent.bottom
+                    left: parent.left
+                    margins: Theme.paddingMedium
+                }
+
+                spacing: 0
+                property int itemSize: 0.9*Theme.iconSizeMedium
+
+                IconButton {
+                    icon.width: parent.itemSize; icon.height: parent.itemSize
+                    icon.source: "image://theme/icon-m-crop"
+                    highlighted: cropRotateRow.visible || pressed
+                    onClicked: {
+                        cropRotateRow.visible = !cropRotateRow.visible
+                        drawRow.visible = false
+                        writeRow.visible = false
+                    }
+
+                    Rectangle {
+                        visible: parent.highlighted
+                        anchors.fill: parent; anchors.margins: 5
+                        antialiasing: true
+                        radius: (width / 2)
+                        color: Theme.rgba(Theme.highlightBackgroundColor, Theme.highlightBackgroundOpacity)
+                    }
+                }
+                IconButton {
+                    icon.width: parent.itemSize; icon.height: parent.itemSize
+                    icon.source: "image://theme/icon-m-edit"
+                    highlighted: drawRow.visible || pressed
+                    onClicked: {
+                        cropRotateRow.visible = false
+                        drawRow.visible = !drawRow.visible
+                        writeRow.visible = false
+                    }
+
+                    Rectangle {
+                        visible: parent.highlighted
+                        anchors.fill: parent; anchors.margins: 5
+                        antialiasing: true
+                        radius: (width / 2)
+                        color: Theme.rgba(Theme.highlightBackgroundColor, Theme.highlightBackgroundOpacity)
+                    }
+                }
+                IconButton {
+                    icon.width: parent.itemSize; icon.height: parent.itemSize
+                    icon.source: "image://theme/icon-m-text-input"
+                    highlighted: writeRow.visible || pressed
+                    onClicked: {
+                        cropRotateRow.visible = false
+                        drawRow.visible = false
+                        writeRow.visible = !writeRow.visible
+                    }
+
+                    Rectangle {
+                        visible: parent.highlighted
+                        anchors.fill: parent; anchors.margins: 5
+                        antialiasing: true
+                        radius: (width / 2)
+                        color: Theme.rgba(Theme.highlightBackgroundColor, Theme.highlightBackgroundOpacity)
+                    }
+                }
+            }
+        }
+
+        Rectangle {
+            MouseArea { anchors.fill: parent }  // catch stray clicks
+            anchors.bottom: parent.bottom
+            height: 1.5*Theme.itemSizeLarge
+            width: parent.width
+            gradient: Gradient {
+                GradientStop { position: 0.0; color: "transparent" }
+                GradientStop { position: 1.0; color: Theme.rgba(Theme.highlightBackgroundColor, 0.6) }
+            }
+
+            Item {
+                id: cropRotateRow
+                visible: false; opacity: visible ? 1 : 0
+                Behavior on opacity { NumberAnimation { duration: 80 } }
+                anchors.fill: parent
+
+                BackgroundItem {
+                    width: cropRotateRow.width/3
+                    anchors.left: parent.left; anchors.leftMargin: Theme.paddingMedium
+                    anchors.verticalCenter: rotateBtn.verticalCenter
+                    Label {
+                        text: qsTr("Cancel")
+                        color: parent.highlighted ? Theme.highlightColor : Theme.primaryColor
+                        horizontalAlignment: Text.AlignRight
+                        anchors.centerIn: parent
+                    }
+                }
+                IconButton {
+                    id: rotateBtn
+                    icon.width: Theme.iconSizeMedium; icon.height: Theme.iconSizeMedium
+                    icon.source: "image://theme/icon-m-sync"
+                    anchors.bottom: parent.bottom; anchors.bottomMargin: Theme.paddingMedium; anchors.horizontalCenter: parent.horizontalCenter
+                }
+                BackgroundItem {
+                    width: cropRotateRow.width/3
+                    anchors.right: parent.right; anchors.rightMargin: Theme.paddingMedium
+                    anchors.verticalCenter: rotateBtn.verticalCenter
+                    Label {
+                        text: qsTr("Apply")
+                        color: parent.highlighted ? Theme.highlightColor : Theme.primaryColor
+                        horizontalAlignment: Text.AlignLeft
+                        anchors.centerIn: parent
+                    }
+                }
+            }
+
+            Item {
+                id: drawRow
+                visible: false; opacity: visible ? 1 : 0
+                Behavior on opacity { NumberAnimation { duration: 80 } }
+                anchors.fill: parent
+
+                Label {
+                    anchors.centerIn: parent
+                    text: qsTr("not implemented yet")
+                }
+            }
+
+            Item {
+                id: writeRow
+                visible: false; opacity: visible ? 1 : 0
+                Behavior on opacity { NumberAnimation { duration: 80 } }
+                anchors.fill: parent
+
+                Label {
+                    anchors.centerIn: parent
+                    text: qsTr("not implemented yet")
+                }
+            }
         }
     }
 
@@ -43,8 +230,6 @@ Page {
         clip: true
 
         onHeightChanged: if (imageView.status === Image.Ready) imageView.fitToScreen();
-
-        PageHeader { id: header }
 
         Item {
             id: imageView
@@ -114,12 +299,24 @@ Page {
 
             MouseArea {
                 anchors.fill: parent
-                propagateComposedEvents: false
+                Timer { id: timer; interval: 200; onTriggered: parent.singleClick() }
+                onClicked: timer.start()
+                property bool pinchRequested: false
                 onDoubleClicked: {
+                    pinchRequested = true
                     if (image.status !== Image.Ready) return;
                     bounceBackAnimation.to = pinchArea.minScale;
                     bounceBackAnimation.quick = true;
                     bounceBackAnimation.start();
+                }
+                function singleClick() {
+                    if (pinchRequested) {
+                        pinchRequested = false;
+                        return;
+                    }
+
+                    if (overlay.visible) overlay.hide();
+                    else overlay.show();
                 }
             }
 
