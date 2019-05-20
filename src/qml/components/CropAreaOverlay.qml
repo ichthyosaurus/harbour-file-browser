@@ -28,6 +28,21 @@ Item {
         }
     }
 
+    function updateCenterMarkers(skip) {
+        if (skip !== "horizontal") {
+            topCenter.x = Math.min(topLeft.x, topRight.x)+Math.abs(topLeft.x-topRight.x)/2
+            topCenter.y = topLeft.y;
+            bottomCenter.x = Math.min(bottomLeft.x, bottomRight.x)+Math.abs(bottomLeft.x-bottomRight.x)/2;
+            bottomCenter.y = bottomLeft.y;
+        }
+        if (skip !== "vertical") {
+            leftCenter.y = Math.min(bottomLeft.y, topLeft.y)+Math.abs(bottomLeft.y-topLeft.y)/2;
+            leftCenter.x = topLeft.x;
+            rightCenter.y = Math.min(bottomRight.y, topRight.y)+Math.abs(bottomRight.y-topRight.y)/2;
+            rightCenter.x = topRight.x;
+        }
+    }
+
     CornerMarker {
         id: topLeft
         radius: parent.radius
@@ -40,6 +55,7 @@ Item {
         onCenterChanged: {
             if (!dragActive) return;
             bottomLeft.x = x; topRight.y = y;
+            updateCenterMarkers();
             frame.requestPaint();
         }
     }
@@ -56,6 +72,7 @@ Item {
         onCenterChanged: {
             if (!dragActive) return;
             bottomRight.x = x; topLeft.y = y;
+            updateCenterMarkers();
             frame.requestPaint();
         }
 
@@ -73,6 +90,7 @@ Item {
         onCenterChanged: {
             if (!dragActive) return;
             topLeft.x = x; bottomRight.y = y;
+            updateCenterMarkers();
             frame.requestPaint();
         }
 
@@ -90,6 +108,7 @@ Item {
         onCenterChanged: {
             if (!dragActive) return;
             topRight.x = x; bottomLeft.y = y;
+            updateCenterMarkers();
             frame.requestPaint();
         }
     }
@@ -108,6 +127,7 @@ Item {
             if (!dragActive) return;
             topLeft.y = y; topRight.y = y;
             x = Math.min(topLeft.x, topRight.x)+Math.abs(topLeft.x-topRight.x)/2
+            updateCenterMarkers("horizontal");
             frame.requestPaint();
         }
     }
@@ -126,6 +146,7 @@ Item {
             if (!dragActive) return;
             bottomLeft.y = y; bottomRight.y = y;
             x = Math.min(bottomLeft.x, bottomRight.x)+Math.abs(bottomLeft.x-bottomRight.x)/2
+            updateCenterMarkers("horizontal");
             frame.requestPaint();
         }
     }
@@ -144,6 +165,7 @@ Item {
             if (!dragActive) return;
             bottomLeft.x = x; topLeft.x = x;
             y = Math.min(bottomLeft.y, topLeft.y)+Math.abs(bottomLeft.y-topLeft.y)/2
+            updateCenterMarkers("vertical");
             frame.requestPaint();
         }
     }
@@ -162,6 +184,7 @@ Item {
             if (!dragActive) return;
             bottomRight.x = x; topRight.x = x;
             y = Math.min(bottomRight.y, topRight.y)+Math.abs(bottomRight.y-topRight.y)/2
+            updateCenterMarkers("vertical");
             frame.requestPaint();
         }
     }
