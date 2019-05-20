@@ -48,7 +48,7 @@ Page {
     Flickable {
         id: flickable
         anchors.fill: parent
-        contentWidth: imageView.width;
+        contentWidth: imageView.width
         contentHeight: imageView.height
         clip: true
 
@@ -63,6 +63,7 @@ Page {
             Image {
                 id: image
                 property real prevScale
+                property alias imageRotation: imageRotation
 
                 width: flickable.width
                 height: flickable.height
@@ -113,6 +114,13 @@ Page {
                     anchors.centerIn: parent
                     running: image.status !== Image.Ready
                 }
+
+                transform: [
+                    Rotation {
+                        id: imageRotation
+                        origin { x: width/2; y: height/2 }
+                    }
+                ]
             }
         }
 

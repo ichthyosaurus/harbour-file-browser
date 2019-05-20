@@ -28,6 +28,11 @@ Item {
         }
     }
 
+    transform: Rotation {
+        origin: image.imageRotation.origin
+        angle: image.imageRotation.angle
+    }
+
     function updateCenterMarkers(skip) {
         if (skip !== "horizontal") {
             topCenter.x = Math.min(topLeft.x, topRight.x)+Math.abs(topLeft.x-topRight.x)/2
