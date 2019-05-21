@@ -177,7 +177,7 @@ Item {
                 width: cropRotateRow.width/3
                 anchors.left: parent.left; anchors.leftMargin: Theme.paddingMedium
                 anchors.verticalCenter: rotateBtn.verticalCenter
-                onClicked: { cropEnabled = !cropEnabled; image.imageRotation.angle = parent.sourceRotation; }
+                onClicked: { cropEnabled = !cropEnabled; image.imageRotation.reset(parent.sourceRotation); }
                 Label {
                     text: qsTr("Cancel")
                     color: parent.highlighted ? Theme.highlightColor : Theme.primaryColor
@@ -190,7 +190,7 @@ Item {
                 icon.width: Theme.iconSizeMedium; icon.height: Theme.iconSizeMedium
                 icon.source: "image://theme/icon-m-sync"
                 anchors.bottom: parent.bottom; anchors.bottomMargin: Theme.paddingMedium; anchors.horizontalCenter: parent.horizontalCenter
-                onClicked: image.imageRotation.angle = (image.imageRotation.angle+90) % 360
+                onClicked: image.imageRotation.rotateRight();
             }
             BackgroundItem {
                 width: cropRotateRow.width/3

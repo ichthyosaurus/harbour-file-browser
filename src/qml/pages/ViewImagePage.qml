@@ -86,8 +86,6 @@ Page {
                     }
                 }
 
-                Behavior on rotation { NumberAnimation { duration: 150 } }
-
                 NumberAnimation {
                     id: loadedAnimation
                     target: image
@@ -119,6 +117,23 @@ Page {
                     Rotation {
                         id: imageRotation
                         origin { x: width/2; y: height/2 }
+
+                        NumberAnimation on angle {
+                            id: angleAnim; from: imageRotation.angle
+                            onStopped: imageRotation.angle = to % 360
+                        }
+
+                        function rotateRight() {
+                            angleAnim.to = angle+90;
+                            angleAnim.duration = 150;
+                            angleAnim.start();
+                        }
+                        function reset(to) {
+                            if (Math.abs(angle-to) > 180) angleAnim.to = to+360;
+                            else angleAnim.to = to;
+                            angleAnim.duration = 150*(Math.abs((angle-angleAnim.to)/90));
+                            angleAnim.start();
+                        }
                     }
                 ]
             }
