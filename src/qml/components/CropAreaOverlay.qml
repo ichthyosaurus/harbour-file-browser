@@ -12,6 +12,13 @@ Item {
             id: rotationTr
             origin: image.imageRotation.origin
             angle: image.imageRotation.angle
+        },
+        Scale {
+            origin: image.imageRotation.origin
+            xScale: rotationTr.angle % 180 === 0 ? (image.paintedWidth*image.scale)/(image.paintedWidth-2*base.radius) :
+                                                   (image.paintedHeight*image.scale)/(image.paintedHeight-2*base.radius)
+            yScale: rotationTr.angle % 180 === 0 ? (image.paintedHeight*image.scale)/(image.paintedHeight-2*base.radius) :
+                                                   (image.paintedWidth*image.scale)/(image.paintedWidth-2*base.radius)
         }
     ]
 
