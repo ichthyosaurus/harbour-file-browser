@@ -13,7 +13,9 @@ Item {
         onPaint: {
             var ctx = getContext("2d")
             ctx.fillStyle = Qt.rgba(0, 0, 0, 0.2);
-            ctx.fillRect(0, 0, width, height)
+            ctx.fillRect((image.width  - image.paintedWidth) /2,
+                         (image.height - image.paintedHeight)/2,
+                         image.paintedWidth, image.paintedHeight)
             ctx.fillStyle = Qt.rgba(0, 0, 0, 0);
             ctx.globalCompositeOperation = "copy"
             ctx.strokeStyle = Theme.highlightColor
