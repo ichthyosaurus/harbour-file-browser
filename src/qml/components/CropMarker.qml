@@ -51,6 +51,11 @@ Item {
     width: radius * 6
     height: radius * 6
 
+    function reset() {
+        x = Qt.binding(function() {return initialCenterX - 3*radius; })
+        y = Qt.binding(function() {return initialCenterY - 3*radius; })
+    }
+
     Rectangle {
         id: rectangle
         anchors.centerIn: parent

@@ -31,6 +31,7 @@ Item {
     transform: Rotation {
         origin: image.imageRotation.origin
         angle: image.imageRotation.angle
+        onAngleChanged: frame.requestPaint();
     }
 
     function updateCenterMarkers(skip) {
@@ -46,6 +47,12 @@ Item {
             rightCenter.y = Math.min(bottomRight.y, topRight.y)+Math.abs(bottomRight.y-topRight.y)/2;
             rightCenter.x = topRight.x;
         }
+    }
+
+    function reset() {
+        topLeft.reset(); topCenter.reset(); topRight.reset();
+        bottomLeft.reset(); bottomCenter.reset(); bottomRight.reset();
+        frame.requestPaint();
     }
 
     CropMarker {

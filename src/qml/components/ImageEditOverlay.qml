@@ -177,7 +177,7 @@ Item {
                 width: cropRotateRow.width/3
                 anchors.left: parent.left; anchors.leftMargin: Theme.paddingMedium
                 anchors.verticalCenter: rotateBtn.verticalCenter
-                onClicked: { cropEnabled = !cropEnabled; image.imageRotation.reset(parent.sourceRotation); }
+                onClicked: { cropEnabled = !cropEnabled; image.imageRotation.reset(parent.sourceRotation); cropAreaOverlay.reset(); }
                 Label {
                     text: qsTr("Cancel")
                     color: parent.highlighted ? Theme.highlightColor : Theme.primaryColor
