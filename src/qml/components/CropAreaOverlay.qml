@@ -48,7 +48,7 @@ Item {
         }
     }
 
-    CornerMarker {
+    CropMarker {
         id: topLeft
         radius: parent.radius
         initialCenterX: (image.width - image.paintedWidth) / 2 + radius
@@ -65,7 +65,7 @@ Item {
         }
     }
 
-    CornerMarker {
+    CropMarker {
         id: topRight
         radius: parent.radius
         initialCenterX: (image.width  + image.paintedWidth) / 2 - radius
@@ -83,7 +83,7 @@ Item {
 
     }
 
-    CornerMarker {
+    CropMarker {
         id: bottomLeft
         radius: parent.radius
         initialCenterX: (image.width  - image.paintedWidth) / 2 + radius
@@ -101,7 +101,7 @@ Item {
 
     }
 
-    CornerMarker {
+    CropMarker {
         id: bottomRight
         radius: parent.radius
         initialCenterX: (image.width  + image.paintedWidth) / 2 - radius
@@ -118,7 +118,7 @@ Item {
         }
     }
 
-    CornerMarker {
+    CropMarker {
         id: topCenter
         radius: parent.radius
         beVCenter: true
@@ -136,7 +136,7 @@ Item {
         }
     }
 
-    CornerMarker {
+    CropMarker {
         id: bottomCenter
         radius: parent.radius
         beVCenter: true
@@ -154,7 +154,7 @@ Item {
         }
     }
 
-    CornerMarker {
+    CropMarker {
         id: leftCenter
         radius: parent.radius
         beHCenter: true
@@ -172,7 +172,7 @@ Item {
         }
     }
 
-    CornerMarker {
+    CropMarker {
         id: rightCenter
         radius: parent.radius
         beHCenter: true
