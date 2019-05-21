@@ -53,6 +53,7 @@ Item {
 
     function reset() {
         topLeft.reset(); topCenter.reset(); topRight.reset();
+        leftCenter.reset(); rightCenter.reset();
         bottomLeft.reset(); bottomCenter.reset(); bottomRight.reset();
         frame.requestPaint();
     }
