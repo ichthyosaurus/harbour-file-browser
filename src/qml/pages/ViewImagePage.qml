@@ -30,6 +30,7 @@ Page {
     allowedOrientations: Orientation.All
     property alias title: overlay.title
     property alias path: image.source
+    property bool editMode: false
 
     onStatusChanged: {
         if (page.status === PageStatus.Inactive && image.status === Image.Ready) {
@@ -40,7 +41,7 @@ Page {
     ImageEditOverlay {
         id: overlay
         anchors.fill: parent
-        visible: false
+        visible: editMode
         image: image
         pinch: pinchArea
     }
