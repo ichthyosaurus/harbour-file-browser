@@ -33,10 +33,9 @@ Item {
 
     Rectangle {
         id: topRow
-        MouseArea { anchors.fill: parent }  // catch stray clicks
-
+        MouseArea { anchors.fill: parent } // catch stray clicks
         anchors.top: parent.top
-        height: 1.5*Theme.itemSizeLarge
+        height: Theme.itemSizeLarge
         width: parent.width
 
         gradient: Gradient {
@@ -143,9 +142,10 @@ Item {
     }
 
     Rectangle {
-        MouseArea { anchors.fill: parent }  // catch stray clicks
+        id: bottomRow
+        MouseArea { anchors.fill: parent } // catch stray clicks
         anchors.bottom: parent.bottom
-        height: 1.5*Theme.itemSizeLarge
+        height: Theme.itemSizeLarge
         width: parent.width
 
         gradient: Gradient {
@@ -168,8 +168,9 @@ Item {
                     pinch.zoomToScale(1);
                     return;
                 }
-                pinch.zoomToScale(Math.min((image.paintedHeight-2*cropAreaOverlay.radius)/image.paintedHeight,
-                                               (image.paintedWidth-2*cropAreaOverlay.radius)/image.paintedWidth));
+                var scale = Math.min(overlay.width / image.width,
+                                     (overlay.height-topRow.height-bottomRow.height) / image.height, 1);
+                pinch.zoomToScale(scale);
                 pinch.enabled = false;
             }
 
