@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.6
 import Sailfish.Silica 1.0
 
 Item {
@@ -7,34 +7,13 @@ Item {
     property real radius: 0.8*(Theme.iconSizeMedium/2)
     property var image
 
-    Canvas {
-        id: frame
-        anchors.fill: parent
-        onPaint: {
-            var ctx = getContext("2d")
-            ctx.fillStyle = Qt.rgba(0, 0, 0, 0.2);
-            ctx.fillRect((image.width  - image.paintedWidth) /2,
-                         (image.height - image.paintedHeight)/2,
-                         image.paintedWidth, image.paintedHeight)
-            ctx.fillStyle = Qt.rgba(0, 0, 0, 0);
-            ctx.globalCompositeOperation = "copy"
-            ctx.strokeStyle = Theme.highlightColor
-            ctx.beginPath()
-            ctx.moveTo(topLeft.center.x, topLeft.center.y)
-            ctx.lineTo(topRight.center.x, topRight.center.y)
-            ctx.lineTo(bottomRight.center.x, bottomRight.center.y)
-            ctx.lineTo(bottomLeft.center.x, bottomLeft.center.y)
-            ctx.closePath()
-            ctx.fill()
-            ctx.stroke()
+    transform: [
+        Rotation {
+            id: rotationTr
+            origin: image.imageRotation.origin
+            angle: image.imageRotation.angle
         }
-    }
-
-    transform: Rotation {
-        origin: image.imageRotation.origin
-        angle: image.imageRotation.angle
-        onAngleChanged: frame.requestPaint();
-    }
+    ]
 
     function updateCenterMarkers(skip) {
         if (skip !== "horizontal") {
@@ -55,7 +34,49 @@ Item {
         topLeft.reset(); topCenter.reset(); topRight.reset();
         leftCenter.reset(); rightCenter.reset();
         bottomLeft.reset(); bottomCenter.reset(); bottomRight.reset();
-        frame.requestPaint();
+    }
+
+    Rectangle {
+        color: "transparent"
+        visible: true
+        x: topLeft.initialCenterX
+        y: topLeft.initialCenterY
+        width: bottomRight.initialCenterX-x
+        height: bottomRight.initialCenterY-y
+
+        Rectangle {
+            id: boundariesRect
+            anchors.fill: parent
+            color: Theme.rgba(Theme.highlightDimmerColor, Theme.highlightBackgroundOpacity)
+            visible: false
+            layer.enabled: true
+            layer.smooth: true
+        }
+
+        Rectangle {
+            id: cropRect
+            x: Math.min((leftCenter.x+leftCenter.width/2), (rightCenter.x+rightCenter.width/2)) - parent.x
+            y: Math.min(topCenter.y+topCenter.height/2, bottomCenter.y+bottomCenter.height/2) - parent.y
+            width: Math.abs(leftCenter.x-rightCenter.x)
+            height: Math.abs(topCenter.y-bottomCenter.y)
+            color: "#000"
+            visible: true
+        }
+
+        layer.enabled: true
+        layer.samplerName: "maskSource"
+        layer.effect: ShaderEffect {
+            property variant source: boundariesRect
+            fragmentShader: "
+                varying highp vec2 qt_TexCoord0;
+                uniform highp float qt_Opacity;
+                uniform lowp sampler2D source;
+                uniform lowp sampler2D maskSource;
+                void main(void) {
+                    gl_FragColor = texture2D(source, qt_TexCoord0.st) * (1.0-texture2D(maskSource, qt_TexCoord0.st).a) * qt_Opacity;
+                }
+            "
+        }
     }
 
     CropMarker {
@@ -71,7 +92,6 @@ Item {
             if (!dragActive) return;
             bottomLeft.x = x; topRight.y = y;
             updateCenterMarkers();
-            frame.requestPaint();
         }
     }
 
@@ -88,7 +108,6 @@ Item {
             if (!dragActive) return;
             bottomRight.x = x; topLeft.y = y;
             updateCenterMarkers();
-            frame.requestPaint();
         }
 
     }
@@ -106,7 +125,6 @@ Item {
             if (!dragActive) return;
             topLeft.x = x; bottomRight.y = y;
             updateCenterMarkers();
-            frame.requestPaint();
         }
 
     }
@@ -124,7 +142,6 @@ Item {
             if (!dragActive) return;
             topRight.x = x; bottomLeft.y = y;
             updateCenterMarkers();
-            frame.requestPaint();
         }
     }
 
@@ -142,7 +159,6 @@ Item {
             if (!dragActive) return;
             topLeft.y = y; topRight.y = y;
             updateCenterMarkers("horizontal");
-            frame.requestPaint();
         }
     }
 
@@ -160,7 +176,6 @@ Item {
             if (!dragActive) return;
             bottomLeft.y = y; bottomRight.y = y;
             updateCenterMarkers("horizontal");
-            frame.requestPaint();
         }
     }
 
@@ -178,7 +193,6 @@ Item {
             if (!dragActive) return;
             bottomLeft.x = x; topLeft.x = x;
             updateCenterMarkers("vertical");
-            frame.requestPaint();
         }
     }
 
@@ -196,7 +210,6 @@ Item {
             if (!dragActive) return;
             bottomRight.x = x; topRight.x = x;
             updateCenterMarkers("vertical");
-            frame.requestPaint();
         }
     }
 }
