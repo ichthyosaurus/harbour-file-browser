@@ -148,6 +148,15 @@ Page {
                 border.color: Theme.highlightColor
                 border.width: 2.25 * Theme.pixelRatio
                 radius: width * 0.5
+
+                Rectangle {
+                    id: selectionGlow
+                    visible: false
+                    anchors.centerIn: parent
+                    width: Theme.iconSizeExtraLarge; height: width
+                    radius: width/2
+                    color: Theme.rgba(Theme.highlightBackgroundColor, Theme.highlightBackgroundOpacity)
+                }
             }
 
             Label {
@@ -227,9 +236,32 @@ Page {
                 width: fileIconSize
                 height: parent.height
                 onClicked: {
-                    fileModel.toggleSelectedFile(index);
-                    selectionPanel.open = (fileModel.selectedFileCount > 0);
-                    selectionPanel.overrideText = "";
+                    toggleSelection(index);
+                }
+                onPressAndHold: {
+                    if (!isSelected) toggleSelection(index);
+                    selectionGlow.visible = true;
+                    selectionShiftConn.target = page;
+                }
+            }
+
+            Connections {
+                id: selectionShiftConn
+                target: null
+                onSelectionChanged: {
+                    selectionShiftConn.target = null;
+                    if (model.index > index) {
+                        for (var i = model.index-1; i > index; i--) {
+                            toggleSelection(i, false);
+                        }
+                    } else if (model.index === index) {
+                        return;
+                    } else {
+                        for (var j = model.index+1; j < index; j++) {
+                            toggleSelection(j, false);
+                        }
+                    }
+                    selectionGlow.visible = false;
                 }
             }
 
@@ -313,6 +345,15 @@ Page {
             enabled: fileModel.fileCount === 0 || fileModel.errorMessage !== ""
             text: fileModel.errorMessage !== "" ? fileModel.errorMessage : qsTr("No files")
         }
+    }
+
+    signal selectionChanged(var index)
+    function toggleSelection(index, notify) {
+        fileModel.toggleSelectedFile(index);
+        selectionPanel.open = (fileModel.selectedFileCount > 0);
+        selectionPanel.overrideText = "";
+        if (notify === false) return;
+        selectionChanged(index);
     }
 
     function clearSelectedFiles() {
