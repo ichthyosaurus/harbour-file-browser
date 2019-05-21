@@ -154,7 +154,18 @@ Page {
                 onDoubleClicked: {
                     pinchRequested = true
                     if (image.status !== Image.Ready || overlay.isEditing) return;
-                    pinchArea.zoomToScale(pinchArea.minScale, true)
+
+                    var newScale = 1
+                    if (image.scale === pinchArea.minScale) {
+                        if (image.paintedWidth > image.paintedHeight) { // wide -> fit height
+                            newScale = flickable.height/image.paintedHeight;
+                        } else { // high -> fit width
+                            newScale = flickable.width/image.paintedWidth;
+                        }
+                    } else {
+                        newScale = pinchArea.minScale;
+                    }
+                    pinchArea.zoomToScale(newScale, true);
                 }
                 function singleClick() {
                     if (pinchRequested) {
