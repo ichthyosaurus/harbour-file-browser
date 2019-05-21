@@ -121,7 +121,6 @@ Page {
                         NumberAnimation on angle {
                             id: angleAnim; from: imageRotation.angle
                             onStopped: imageRotation.angle = to % 360
-                            easing: Easing.InOutQuad
                         }
 
                         function rotateRight() {
