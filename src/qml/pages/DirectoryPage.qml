@@ -199,7 +199,7 @@ Page {
                     State {
                         when: listLabel.width >= 2*page.width/3
                         PropertyChanges { target: listLabel; wrapMode: Text.NoWrap; elide: Text.ElideRight; maximumLineCount: 1 }
-                        PropertyChanges { target: sizeLabel; width: listLabel.width/3; horizontalAlignment: Text.AlignLeft }
+                        PropertyChanges { target: sizeLabel; width: ((isLink && isDir) ? listLabel.width : listLabel.width/3); horizontalAlignment: Text.AlignLeft }
                         PropertyChanges { target: permsLabel; width: listLabel.width/3; horizontalAlignment: Text.AlignHCenter }
                         PropertyChanges { target: datesLabel; width: listLabel.width/3; horizontalAlignment: Text.AlignRight }
                     },
