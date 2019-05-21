@@ -66,7 +66,7 @@ Item {
             y: Math.min(topCenter.y+topCenter.height/2, bottomCenter.y+bottomCenter.height/2) - parent.y
             width: Math.abs(leftCenter.x-rightCenter.x)
             height: Math.abs(topCenter.y-bottomCenter.y)
-            color: "#000"
+            color: "black"
             visible: true
         }
 
