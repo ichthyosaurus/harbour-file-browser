@@ -124,14 +124,13 @@ Item {
         beVCenter: true
         initialCenterX: image.width/2
         initialCenterY: (image.height - image.paintedHeight) / 2 + radius
-        minX: (image.width - image.paintedWidth) / 2
-        maxX: (image.width + image.paintedWidth) / 2 - 2*radius
+        minX: Math.min(topLeft.x, topRight.x)+Math.abs(topLeft.x-topRight.x)/2 + 2*radius
+        maxX: minX
         minY: (image.height - image.paintedHeight) / 2
         maxY: (image.height + image.paintedHeight) / 2 - 2*radius
         onCenterChanged: {
             if (!dragActive) return;
             topLeft.y = y; topRight.y = y;
-            x = Math.min(topLeft.x, topRight.x)+Math.abs(topLeft.x-topRight.x)/2
             updateCenterMarkers("horizontal");
             frame.requestPaint();
         }
@@ -143,14 +142,13 @@ Item {
         beVCenter: true
         initialCenterX: image.width/2
         initialCenterY: (image.height + image.paintedHeight) / 2 - radius
-        minX: (image.width - image.paintedWidth) / 2
-        maxX: (image.width + image.paintedWidth) / 2 - 2*radius
+        minX: Math.min(bottomLeft.x, bottomRight.x)+Math.abs(bottomLeft.x-bottomRight.x)/2 + 2*radius
+        maxX: minX
         minY: (image.height - image.paintedHeight) / 2
         maxY: (image.height + image.paintedHeight) / 2 - 2*radius
         onCenterChanged: {
             if (!dragActive) return;
             bottomLeft.y = y; bottomRight.y = y;
-            x = Math.min(bottomLeft.x, bottomRight.x)+Math.abs(bottomLeft.x-bottomRight.x)/2
             updateCenterMarkers("horizontal");
             frame.requestPaint();
         }
@@ -164,12 +162,11 @@ Item {
         initialCenterY: image.height/2
         minX: (image.width - image.paintedWidth) / 2
         maxX: (image.width + image.paintedWidth) / 2 - 2*radius
-        minY: (image.height - image.paintedHeight) / 2
-        maxY: (image.height + image.paintedHeight) / 2 - 2*radius
+        minY: Math.min(bottomLeft.y, topLeft.y)+Math.abs(bottomLeft.y-topLeft.y)/2 + 2*radius
+        maxY: minY
         onCenterChanged: {
             if (!dragActive) return;
             bottomLeft.x = x; topLeft.x = x;
-            y = Math.min(bottomLeft.y, topLeft.y)+Math.abs(bottomLeft.y-topLeft.y)/2
             updateCenterMarkers("vertical");
             frame.requestPaint();
         }
@@ -183,12 +180,11 @@ Item {
         initialCenterY: image.height/2
         minX: (image.width - image.paintedWidth) / 2
         maxX: (image.width + image.paintedWidth) / 2 - 2*radius
-        minY: (image.height - image.paintedHeight) / 2
-        maxY: (image.height + image.paintedHeight) / 2 - 2*radius
+        minY: Math.min(bottomRight.y, topRight.y)+Math.abs(bottomRight.y-topRight.y)/2 + 2*radius
+        maxY: minY
         onCenterChanged: {
             if (!dragActive) return;
             bottomRight.x = x; topRight.x = x;
-            y = Math.min(bottomRight.y, topRight.y)+Math.abs(bottomRight.y-topRight.y)/2
             updateCenterMarkers("vertical");
             frame.requestPaint();
         }
