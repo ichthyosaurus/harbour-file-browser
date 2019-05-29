@@ -52,12 +52,10 @@ Page {
         contentWidth: imageView.width
         contentHeight: imageView.height
         clip: true
-
-        onHeightChanged: if (imageView.status === Image.Ready) imageView.fitToScreen();
+        onHeightChanged: if (image.status === Image.Ready) image.fitToScreen();
 
         Item {
             id: imageView
-
             width: Math.max(image.width*image.scale, flickable.width)
             height: Math.max(image.height*image.scale, flickable.height)
 
@@ -66,18 +64,19 @@ Page {
                 property real prevScale
                 property alias imageRotation: imageRotation
 
-                width: flickable.width
-                height: flickable.height
-
                 function fitToScreen() {
-                    scale = Math.min(flickable.width / width, flickable.height / height, 1)
+                    scale = Math.min(flickable.width / width, flickable.height / height)
                     pinchArea.minScale = scale
+                    pinchArea.maxScale = 4*Math.max(flickable.width / width, flickable.height / height)
                     prevScale = scale
                 }
 
                 anchors.centerIn: parent
                 fillMode: Image.PreserveAspectFit
+                cache: false
                 asynchronous: true
+                sourceSize.height: Screen.height;
+                sourceSize.width: Screen.width;
                 smooth: !flickable.moving
 
                 onStatusChanged: {
@@ -106,18 +105,13 @@ Page {
                         flickable.contentY = yoff - flickable.height / 2
                     }
                     prevScale = scale
-                }
-
-                BusyIndicator {
-                    size: BusyIndicatorSize.Large
-                    anchors.centerIn: parent
-                    running: image.status !== Image.Ready
+                    flickable.returnToBounds();
                 }
 
                 transform: [
                     Rotation {
                         id: imageRotation
-                        origin { x: width/2; y: height/2 }
+                        origin { x: image.width/2; y: image.height/2 }
 
                         NumberAnimation on angle {
                             id: angleAnim; from: imageRotation.angle
@@ -155,12 +149,12 @@ Page {
                     pinchRequested = true
                     if (image.status !== Image.Ready || overlay.isEditing) return;
 
-                    var newScale = 1
+                    var newScale = pinchArea.minScale;
                     if (image.scale === pinchArea.minScale) {
-                        if (image.paintedWidth > image.paintedHeight) { // wide -> fit height
-                            newScale = flickable.height/image.paintedHeight;
+                        if (image.width > image.height) { // wide -> fit height
+                            newScale = (flickable.height-5)/image.height;
                         } else { // high -> fit width
-                            newScale = flickable.width/image.paintedWidth;
+                            newScale = (flickable.width-5)/image.width;
                         }
                     } else {
                         newScale = pinchArea.minScale;
@@ -211,6 +205,54 @@ Page {
                 duration: quick ? 150 : 250
                 property: "scale"
                 from: image.scale
+            }
+        }
+    }
+
+    Loader {
+        anchors.centerIn: parent
+        sourceComponent: {
+            switch (image.status) {
+            case Image.Loading:
+                return loadingIndicator
+            case Image.Error:
+                return failedLoading
+            default:
+                return undefined
+            }
+        }
+
+        Component {
+            id: loadingIndicator
+
+            Item {
+                height: childrenRect.height
+                width: page.width
+
+                BusyIndicator {
+                    id: imageLoadingIndicator
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    running: true
+                }
+
+                Text {
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                        top: imageLoadingIndicator.bottom; topMargin: Theme.paddingLarge
+                    }
+                    font.pixelSize: Theme.fontSizeSmall;
+                    color: Theme.highlightColor;
+                    text: qsTr("Loading image... %1").arg(Math.round(image.progress*100) + "%")
+                }
+            }
+        }
+
+        Component {
+            id: failedLoading
+            Text {
+                font.pixelSize: constant.fontXSmall;
+                text: qsTr("Error loading image")
+                color: Theme.highlightColor
             }
         }
     }
