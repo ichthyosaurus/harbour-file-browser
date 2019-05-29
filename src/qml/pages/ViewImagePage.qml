@@ -28,7 +28,7 @@ import "../components"
 Page {
     id: page
     allowedOrientations: Orientation.All
-    property alias title: overlay.title
+    property alias title: titleLabel.text
     property alias path: image.source
     property bool editMode: false
 
@@ -38,12 +38,44 @@ Page {
         }
     }
 
-    ImageEditOverlay {
+    Item {
         id: overlay
+        z: 100
         anchors.fill: parent
-        visible: editMode
-        image: image
-        pinch: pinchArea
+        visible: false
+
+        NumberAnimation { id: showAnim; target: overlay; duration: 80; property: "opacity"; to: 1.0; from: target.opacity;
+            onStarted: target.visible = true; }
+        NumberAnimation { id: hideAnim; target: overlay; duration: 80; property: "opacity"; to: 0.0; from: target.opacity;
+            onStopped: target.visible = false }
+        function show() { showAnim.start(); }
+        function hide() { hideAnim.start(); }
+
+        Rectangle {
+            anchors.top: parent.top
+            height: Theme.itemSizeLarge
+            width: parent.width
+
+            gradient: Gradient {
+                GradientStop { position: 0.0; color: Theme.rgba(Theme.highlightBackgroundColor, 0.5) }
+                GradientStop { position: 1.0; color: "transparent" }
+            }
+
+            Label {
+                id: titleLabel
+                anchors {
+                    top: parent.top
+                    bottom: parent.bottom
+                    right: parent.right
+                    margins: Theme.horizontalPageMargin
+                }
+
+                color: Theme.highlightColor
+                font.pixelSize: Theme.fontSizeLarge
+                truncationMode: TruncationMode.Fade
+                horizontalAlignment: Text.AlignRight
+            }
+        }
     }
 
     Flickable {
