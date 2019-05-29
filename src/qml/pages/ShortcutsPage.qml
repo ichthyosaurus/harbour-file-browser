@@ -37,4 +37,10 @@ Page {
             }
         }
     }
+
+    onStatusChanged: {
+        if (status === PageStatus.Active) {
+            main.coverText = Functions.lastPartOfPath(currentPath)+"/"; // update cover
+        }
+    }
 }
