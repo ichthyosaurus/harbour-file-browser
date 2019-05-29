@@ -112,7 +112,7 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="79"/>
         <source>(link)</source>
-        <translation type="unfinished">(Link)</translation>
+        <translation>(Link)</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="170"/>
@@ -120,17 +120,17 @@
         <location filename="../qml/components/DirectoryPageEntry.qml" line="201"/>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="203"/>
         <source>Deleting</source>
-        <translation type="unfinished">Lösche</translation>
+        <translation>Lösche</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="221"/>
         <source>Remove bookmark</source>
-        <translation type="unfinished">Lesezeichen entfernen</translation>
+        <translation>Lesezeichen entfernen</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="221"/>
         <source>Add to bookmarks</source>
-        <translation type="unfinished">Lesezeichen hinzufügen</translation>
+        <translation>Lesezeichen hinzufügen</translation>
     </message>
 </context>
 <context>
@@ -1182,7 +1182,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="64"/>
         <source>Sorting</source>
-        <translation type="unfinished">Sortierung</translation>
+        <translation>Sortierung</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="75"/>
@@ -1197,7 +1197,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="27"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>Ansicht</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="52"/>
@@ -1222,47 +1222,47 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="79"/>
         <source>Sort by</source>
-        <translation type="unfinished"></translation>
+        <translation>Sortieren nach</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="83"/>
         <source>name</source>
-        <translation type="unfinished"></translation>
+        <translation>Name</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="84"/>
         <source>size</source>
-        <translation type="unfinished"></translation>
+        <translation>Grösse</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="85"/>
         <source>modification time</source>
-        <translation type="unfinished"></translation>
+        <translation>Änderungszeitpunkt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="86"/>
         <source>file type</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateityp</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="90"/>
         <source>Sort order</source>
-        <translation type="unfinished"></translation>
+        <translation>Reihenfolge</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="94"/>
         <source>default</source>
-        <translation type="unfinished">normal</translation>
+        <translation>normal</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="95"/>
         <source>reversed</source>
-        <translation type="unfinished">umgekehrt</translation>
+        <translation>umgekehrt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="103"/>
         <source>Transfer</source>
-        <translation type="unfinished"></translation>
+        <translation>Verwaltung</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="108"/>
@@ -1452,12 +1452,12 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="75"/>
         <source>Preview images</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorschaubilder</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="79"/>
         <source>none</source>
-        <translation type="unfinished">nichts</translation>
+        <translation>keine</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="104"/>
@@ -1467,12 +1467,12 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="125"/>
         <source>Local preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Lokale Einstellungen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="126"/>
         <source>Global preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Globale Einstellungen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="99"/>
@@ -1648,12 +1648,12 @@
     <message>
         <location filename="../qml/pages/ViewImagePage.qml" line="277"/>
         <source>Loading image... %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Bild wird geladen ... %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewImagePage.qml" line="286"/>
         <source>Error loading image</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler beim Laden des Bildes</translation>
     </message>
 </context>
 <context>
@@ -1681,7 +1681,7 @@
     <message>
         <location filename="../qml/main.qml" line="20"/>
         <source>Version %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Version %1</translation>
     </message>
 </context>
 </TS>
