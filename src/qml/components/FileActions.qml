@@ -142,7 +142,7 @@ Item {
         IconButton {
             visible: showRename
             enabled: selectedCount === 1; icon.width: itemSize; icon.height: itemSize
-            icon.source: "image://theme/icon-m-font-size"
+            icon.source: "../images/toolbar-rename.png"
             onPressAndHold: labelText = qsTr("rename files")
             onClicked: {
                 var files = selectedFiles();

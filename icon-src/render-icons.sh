@@ -7,7 +7,7 @@ for i in 86 108 128 172; do
 done
 
 root="../src/qml/images"
-files=(harbour-file-browser@86)
+files=(toolbar-rename@64 harbour-file-browser@86)
 mkdir -p "$root"
 
 for img in "${files[@]}"; do
