@@ -21,7 +21,7 @@ Page {
             MenuItem {
                 text: qsTr("Search")
                 onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
-                                          { dir: StandardPaths.home });
+                                          { dir: currentPath === "" ? StandardPaths.home : currentPath });
             }
         }
 
