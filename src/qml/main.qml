@@ -9,11 +9,11 @@ ApplicationWindow {
 
     // set to false to disable sharing functionality
     // as sharing is not allowed in Jolla store
-    property bool sharingEnabled: true
+    readonly property bool sharingEnabled: true
 
     // set to false to disable file thumbnails
     // as the required API is not allowed in Jolla store
-    property bool thumbnailsEnabled: true
+    readonly property bool thumbnailsEnabled: true
 
     // note: version number has to be updated manually!
     readonly property string versionNumber: "1.8.0"
