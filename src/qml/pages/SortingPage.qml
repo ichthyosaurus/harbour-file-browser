@@ -141,9 +141,6 @@ Page {
         var showHidden = engine.readSetting("View/HiddenFilesShown", "false");
         var showThumbs = engine.readSetting("View/PreviewsShown", "false");
 
-        if (showThumbs === "true") thumbList.initial = engine.readSetting("View/PreviewsSize", "medium");
-        else thumbList.initial = "none";
-
         if (useLocal) {
             showDirsFirst.checked = (engine.readSetting("Sailfish/ShowDirectoriesFirst", dirsFirst, conf) === "true");
             sortCaseSensitive.checked = (engine.readSetting("Sailfish/SortCaseSensitively", caseSensitive, conf) === "true");
@@ -154,6 +151,9 @@ Page {
             sortCaseSensitive.checked = (caseSensitive === "true");
             showHiddenFiles.checked = (showHidden === "true");
         }
+
+        if (showThumbs === "true") thumbList.initial = engine.readSetting("View/PreviewsSize", "medium");
+        else thumbList.initial = "none";
     }
 
     function saveSetting(keyGlobal, keyLocal, trueLocal, falseLocal, valueStr) {
