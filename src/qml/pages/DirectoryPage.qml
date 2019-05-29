@@ -231,7 +231,7 @@ Page {
         onTriggered: {
             if (status === PageStatus.Active) {
                 if (!canNavigateForward) {
-                    pageStack.pushAttached(Qt.resolvedUrl("ShortcutsPage.qml"));
+                    pageStack.pushAttached(Qt.resolvedUrl("ShortcutsPage.qml"), { currentPath: dir });
                 }
                 coverText = Functions.lastPartOfPath(page.dir)+"/"; // update cover
             }

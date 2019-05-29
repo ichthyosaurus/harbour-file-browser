@@ -7,6 +7,7 @@ import "../components"
 Page {
     id: page
     allowedOrientations: Orientation.All
+    property string currentPath: ""
 
     SilicaFlickable {
         anchors.fill: parent
