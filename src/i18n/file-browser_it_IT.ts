@@ -67,78 +67,70 @@
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="82"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="296"/>
         <source>Remove bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="82"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="296"/>
         <source>Add to bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="177"/>
-        <source>(link)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="245"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="246"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="351"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="353"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="160"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="162"/>
         <source>Deleting</source>
         <translation>Elimino</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="266"/>
-        <source>Cut</source>
-        <translation>Taglia</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="270"/>
-        <source>Copy</source>
-        <translation>Copia</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="275"/>
-        <source>Share</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="287"/>
-        <source>Delete</source>
-        <translation>Elimina</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="309"/>
-        <source>Properties</source>
-        <translation>Proprietà</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="322"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="122"/>
         <source>No files</source>
         <translation>Nessun file</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="360"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="169"/>
         <source>Internally not ready</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="360"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="169"/>
         <source>Please simply try again</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="402"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="211"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>Cercavi di spostare tra telefono e Scheda SD? Non funiona, prova a copiare.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="404"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="213"/>
         <source>Perhaps the storage is full?</source>
         <translation>Forse lo spazio è esaurito?</translation>
+    </message>
+</context>
+<context>
+    <name>DirectoryPageEntry</name>
+    <message>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="79"/>
+        <source>(link)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="170"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="171"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="201"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="203"/>
+        <source>Deleting</source>
+        <translation type="unfinished">Elimino</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="221"/>
+        <source>Remove bookmark</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="221"/>
+        <source>Add to bookmarks</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -234,72 +226,72 @@
 <context>
     <name>FileActions</name>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="49"/>
+        <location filename="../qml/components/FileActions.qml" line="52"/>
         <source>%1 selected</source>
         <translation type="unfinished">%1 selezionati</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="77"/>
+        <location filename="../qml/components/FileActions.qml" line="82"/>
         <source>clear selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="78"/>
+        <location filename="../qml/components/FileActions.qml" line="83"/>
         <source>select all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="89"/>
+        <location filename="../qml/components/FileActions.qml" line="94"/>
         <source>%1 cut</source>
         <translation type="unfinished">%1 tagliati</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="92"/>
+        <location filename="../qml/components/FileActions.qml" line="97"/>
         <source>cut files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="98"/>
+        <location filename="../qml/components/FileActions.qml" line="103"/>
         <source>copy files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="102"/>
+        <location filename="../qml/components/FileActions.qml" line="107"/>
         <source>%1 copied</source>
         <translation type="unfinished">%1 copiati</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="110"/>
+        <location filename="../qml/components/FileActions.qml" line="115"/>
         <source>transfer files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="128"/>
+        <location filename="../qml/components/FileActions.qml" line="133"/>
         <source>delete files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="141"/>
+        <location filename="../qml/components/FileActions.qml" line="146"/>
         <source>rename files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="158"/>
+        <location filename="../qml/components/FileActions.qml" line="163"/>
         <source>share files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="177"/>
+        <location filename="../qml/components/FileActions.qml" line="182"/>
         <source>compress files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="185"/>
+        <location filename="../qml/components/FileActions.qml" line="190"/>
         <source>edit files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="192"/>
+        <location filename="../qml/components/FileActions.qml" line="197"/>
         <source>show file properties</source>
         <translation type="unfinished"></translation>
     </message>
@@ -470,48 +462,48 @@
         <translation>Vai alla destinazione</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="233"/>
-        <location filename="../qml/pages/FilePage.qml" line="236"/>
+        <location filename="../qml/pages/FilePage.qml" line="234"/>
+        <location filename="../qml/pages/FilePage.qml" line="237"/>
         <source>Deleting</source>
         <translation type="unfinished">Elimino</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="264"/>
+        <location filename="../qml/pages/FilePage.qml" line="265"/>
         <source>Location</source>
         <translation>Posizione</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="268"/>
+        <location filename="../qml/pages/FilePage.qml" line="269"/>
         <source>Type</source>
         <translation>Tipo</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="270"/>
+        <location filename="../qml/pages/FilePage.qml" line="271"/>
         <source>Link to %1</source>
         <translation>Collegamento a %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="274"/>
+        <location filename="../qml/pages/FilePage.qml" line="275"/>
         <source>Size</source>
         <translation>Dimensione</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="278"/>
+        <location filename="../qml/pages/FilePage.qml" line="279"/>
         <source>Permissions</source>
         <translation>Permessi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="282"/>
+        <location filename="../qml/pages/FilePage.qml" line="283"/>
         <source>Owner</source>
         <translation>Proprietario</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="286"/>
+        <location filename="../qml/pages/FilePage.qml" line="287"/>
         <source>Group</source>
         <translation>Gruppo</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="290"/>
+        <location filename="../qml/pages/FilePage.qml" line="291"/>
         <source>Last modified</source>
         <translation>Ultima modifica</translation>
     </message>
@@ -1160,112 +1152,152 @@
     <name>SettingsPage</name>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="22"/>
-        <location filename="../qml/pages/SettingsPage.qml" line="155"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="182"/>
         <source>Settings</source>
         <translation>Impostazioni</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="26"/>
-        <source>Global view preferences</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="31"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="34"/>
         <source>Use per-directory view settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="36"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="71"/>
         <source>Show folders first</source>
         <translation>Mostra prima le cartelle</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="41"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="38"/>
         <source>Show hidden files</source>
         <translation>Mostra i file nascosti</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="46"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="42"/>
         <source>Show preview images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="51"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="64"/>
+        <source>Sorting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="75"/>
         <source>Sort case-sensitively</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="58"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="49"/>
         <source>Thumbnail size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="61"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="27"/>
+        <source>View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="52"/>
         <source>small</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="62"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="53"/>
         <source>medium</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="63"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="54"/>
         <source>large</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="64"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="55"/>
         <source>huge</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="70"/>
-        <source>Transfer preferences</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="76"/>
-        <source>Default transfer action</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../qml/pages/SettingsPage.qml" line="79"/>
-        <source>copy</source>
+        <source>Sort by</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="80"/>
-        <source>move</source>
+        <location filename="../qml/pages/SettingsPage.qml" line="83"/>
+        <source>name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="81"/>
-        <source>link</source>
+        <location filename="../qml/pages/SettingsPage.qml" line="84"/>
+        <source>size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="82"/>
-        <source>none</source>
+        <location filename="../qml/pages/SettingsPage.qml" line="85"/>
+        <source>modification time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="86"/>
+        <source>file type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="90"/>
+        <source>Sort order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="94"/>
+        <source>default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="95"/>
+        <source>reversed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="103"/>
+        <source>Transfer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="108"/>
+        <source>Default transfer action</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="111"/>
+        <source>copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="112"/>
+        <source>move</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="113"/>
+        <source>link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="114"/>
+        <source>none</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="124"/>
         <source>About File Browser</source>
         <translation>Informazioni su File Browser</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="103"/>
-        <source>Version</source>
-        <translation>Versione</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="127"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="154"/>
         <source>File Browser is free and unencumbered software released into the public domain.</source>
         <translation>File Browser è un programma libero e svincolato, rilasciato in pubblico dominio.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="144"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="171"/>
         <source>The source code is available at</source>
         <translation>Il codice sorgente è disponibile su</translation>
     </message>
@@ -1273,78 +1305,78 @@
 <context>
     <name>ShortcutsList</name>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="232"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="233"/>
         <source>Nothing to show here...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="257"/>
-        <location filename="../qml/components/ShortcutsList.qml" line="262"/>
-        <location filename="../qml/components/ShortcutsList.qml" line="266"/>
-        <location filename="../qml/components/ShortcutsList.qml" line="270"/>
-        <location filename="../qml/components/ShortcutsList.qml" line="274"/>
-        <location filename="../qml/components/ShortcutsList.qml" line="278"/>
-        <location filename="../qml/components/ShortcutsList.qml" line="282"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="258"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="263"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="267"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="271"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="275"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="279"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="283"/>
         <source>Locations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="258"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="259"/>
         <source>Home</source>
         <translation type="unfinished">Home</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="263"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="264"/>
         <source>Documents</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="267"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="268"/>
         <source>Downloads</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="271"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="272"/>
         <source>Music</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="275"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="276"/>
         <source>Pictures</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="279"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="280"/>
         <source>Videos</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="283"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="284"/>
         <source>Root</source>
         <translation type="unfinished">Radice</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="288"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="289"/>
         <source>Android locations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="289"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="290"/>
         <source>Android storage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="294"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="295"/>
         <source>Storage devices</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="295"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="296"/>
         <source>SD card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="307"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="310"/>
         <source>Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1352,17 +1384,17 @@
 <context>
     <name>ShortcutsPage</name>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="17"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="18"/>
         <source>Settings</source>
         <translation type="unfinished">Impostazioni</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="21"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="22"/>
         <source>Search</source>
         <translation type="unfinished">Cerca</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="35"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="36"/>
         <source>Places</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1380,44 +1412,64 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SortingPage.qml" line="37"/>
+        <location filename="../qml/pages/SortingPage.qml" line="36"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SortingPage.qml" line="41"/>
+        <location filename="../qml/pages/SortingPage.qml" line="37"/>
         <source>Size</source>
         <translation type="unfinished">Dimensione</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SortingPage.qml" line="45"/>
+        <location filename="../qml/pages/SortingPage.qml" line="38"/>
         <source>Modification time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SortingPage.qml" line="49"/>
+        <location filename="../qml/pages/SortingPage.qml" line="39"/>
         <source>File type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SortingPage.qml" line="67"/>
+        <location filename="../qml/pages/SortingPage.qml" line="55"/>
         <source>Order...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SortingPage.qml" line="71"/>
+        <location filename="../qml/pages/SortingPage.qml" line="58"/>
         <source>default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SortingPage.qml" line="75"/>
+        <location filename="../qml/pages/SortingPage.qml" line="59"/>
         <source>reversed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SortingPage.qml" line="93"/>
+        <location filename="../qml/pages/SortingPage.qml" line="75"/>
+        <source>Preview images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SortingPage.qml" line="79"/>
+        <source>none</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SortingPage.qml" line="104"/>
         <source>Show folders first</source>
         <translation type="unfinished">Mostra prima le cartelle</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SortingPage.qml" line="125"/>
+        <source>Local preferences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SortingPage.qml" line="126"/>
+        <source>Global preferences</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="99"/>
@@ -1425,48 +1477,28 @@
         <translation type="unfinished">Mostra i file nascosti</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SortingPage.qml" line="105"/>
+        <location filename="../qml/pages/SortingPage.qml" line="109"/>
         <source>Sort case-sensitively</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SortingPage.qml" line="111"/>
-        <source>Show preview images</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SortingPage.qml" line="119"/>
-        <source>Thumbnail size</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SortingPage.qml" line="122"/>
+        <location filename="../qml/pages/SortingPage.qml" line="80"/>
         <source>small</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SortingPage.qml" line="123"/>
+        <location filename="../qml/pages/SortingPage.qml" line="81"/>
         <source>medium</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SortingPage.qml" line="124"/>
+        <location filename="../qml/pages/SortingPage.qml" line="82"/>
         <source>large</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SortingPage.qml" line="125"/>
+        <location filename="../qml/pages/SortingPage.qml" line="83"/>
         <source>huge</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SortingPage.qml" line="144"/>
-        <source>Local settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SortingPage.qml" line="146"/>
-        <source>Global settings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1609,6 +1641,19 @@
     </message>
 </context>
 <context>
+    <name>ViewImagePage</name>
+    <message>
+        <location filename="../qml/pages/ViewImagePage.qml" line="277"/>
+        <source>Loading image... %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ViewImagePage.qml" line="286"/>
+        <source>Error loading image</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>functions</name>
     <message>
         <location filename="../qml/pages/functions.js" line="111"/>
@@ -1626,6 +1671,14 @@
         <location filename="../qml/pages/functions.js" line="140"/>
         <source>Moving</source>
         <translation type="unfinished">Sposto</translation>
+    </message>
+</context>
+<context>
+    <name>main</name>
+    <message>
+        <location filename="../qml/main.qml" line="20"/>
+        <source>Version %1</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
