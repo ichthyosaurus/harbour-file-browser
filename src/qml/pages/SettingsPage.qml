@@ -129,20 +129,13 @@ Page {
                 color: Theme.highlightColor
             }
             Spacer { height: Theme.paddingLarge }
-            Row {
+            Label {
+                id: version
                 x: Theme.horizontalPageMargin
                 width: parent.width - 2*x
-                Label {
-                    id: version
-                    text: qsTr("Version")+" "
-                    font.pixelSize: Theme.fontSizeSmall
-                    color: Theme.highlightColor
-                }
-                Label {
-                    text: "1.8.0" // Version number must be changed manually!
-                    font.pixelSize: Theme.fontSizeSmall
-                    color: Theme.highlightColor
-                }
+                text: main.versionString
+                font.pixelSize: Theme.fontSizeSmall
+                color: Theme.highlightColor
             }
             Spacer { height: Theme.paddingLarge }
             BackgroundItem {

@@ -15,6 +15,10 @@ ApplicationWindow {
     // as the required API is not allowed in Jolla store
     property bool thumbnailsEnabled: true
 
+    // note: version number has to be updated manually!
+    readonly property string versionNumber: "1.8.0"
+    readonly property string versionString: qsTr("Version %1").arg(versionNumber)
+
     property string coverText: "File Browser"
     cover: Qt.resolvedUrl("cover/FileBrowserCover.qml")
     initialPage: Component {
