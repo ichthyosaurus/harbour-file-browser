@@ -11,6 +11,10 @@ ApplicationWindow {
     // as sharing is not allowed in Jolla store
     property bool sharingEnabled: true
 
+    // set to false to disable file thumbnails
+    // as the required API is not allowed in Jolla store
+    property bool thumbnailsEnabled: true
+
     property string coverText: "File Browser"
     cover: Qt.resolvedUrl("cover/FileBrowserCover.qml")
     initialPage: Component {

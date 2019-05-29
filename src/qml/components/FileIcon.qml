@@ -1,6 +1,5 @@
 import QtQuick 2.6
 import Sailfish.Silica 1.0
-import Sailfish.Gallery 1.0
 
 // a file icon or thumbnail for directory listings
 Item {
@@ -18,20 +17,11 @@ Item {
     property bool ready: false
     property int _thumbnailSize: base.width
 
-    Component {
-        id: thumbnailComponent
-        ThumbnailImage {
-            id: img
-            source: base.file
-            size: _thumbnailSize
-            mimeType: mimeTypeCallback !== undefined ? mimeTypeCallback() : ""
-            property alias highlighted: img.down
-        }
-    }
-
     function refresh() {
         ready = false;
         var canThumb = true;
+
+        if (!main.thumbnailsEnabled) showThumbnail = false
 
         if (showThumbnail) {
             if (isDirectoryCallback !== undefined && isDirectoryCallback()) {
@@ -49,8 +39,12 @@ Item {
         }
 
         if (showThumbnail) {
-            listIcon.source = ""
-            thumbnail.sourceComponent = thumbnailComponent
+            listIcon.source = "";
+            listIcon.setSource("../components/SailfishThumbnail.qml", {
+                source: base.file,
+                size: _thumbnailSize,
+                mimeType: mimeTypeCallback !== undefined ? mimeTypeCallback() : "",
+            });
         } else {
             if (fileIconCallback === undefined) return;
             thumbnail.source = ""
@@ -60,7 +54,7 @@ Item {
                 imgsrc: "../images/"+(canThumb ? "large" : "small")+"-"+fileIconCallback()+".png",
                 imgw: _thumbnailSize,
                 imgh: _thumbnailSize,
-            })
+            });
         }
     }
 

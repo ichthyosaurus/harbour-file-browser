@@ -40,10 +40,12 @@ Page {
                     }
                     TextSwitch {
                         id: v3; text: qsTr("Show preview images")
+                        visible: main.thumbnailsEnabled
                         onCheckedChanged: engine.writeSetting("View/PreviewsShown", checked.toString())
                     }
                     ComboBox {
                         id: v4; width: parent.width
+                        visible: main.thumbnailsEnabled
                         label: qsTr("Thumbnail size")
                         currentIndex: -1
                         menu: ContextMenu {
