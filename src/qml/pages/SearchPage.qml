@@ -10,6 +10,7 @@ Page {
 
     property string dir: "/" // holds the top directory where all searches will be made
     property string currentDirectory: "" // holds the directory which is being searched by SearchEngine
+    property string searchText: "" // holds the initial search text
 
     // used to disable SelectionPanel while remorse timer is active
     property bool remorsePopupActive: false // set to true when remorsePopup is active (at top of page)
@@ -105,6 +106,7 @@ Page {
                     y: Theme.paddingSmall
                     placeholderText: qsTr("Search below “%1”").arg(Functions.formatPathForSearch(page.dir))
                     inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhNoPredictiveText
+                    text: page.searchText
 
                     // get focus when page is shown for the first time
                     Component.onCompleted: forceActiveFocus()

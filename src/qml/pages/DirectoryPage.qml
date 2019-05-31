@@ -16,7 +16,10 @@ Page {
     property alias progressPanel: progressPanel
     property alias notificationPanel: notificationPanel
     property alias hasBookmark: bookmarkEntry.hasBookmark
+    property string currentFilter: ""
 
+    signal viewFilterChanged(var filterString)
+    signal clearViewFilter()
     FileModel {
         id: fileModel
         dir: page.dir
@@ -45,6 +48,10 @@ Page {
         VerticalScrollDecorator { flickable: fileList }
 
         PullDownMenu {
+            id: pullDownMenu
+            on_AtFinalPositionChanged: filterField.forceActiveFocus()
+            onActiveChanged: filterField.focus = false
+
             MenuItem {
                 text: qsTr("View Preferences")
                 onClicked: pageStack.push(Qt.resolvedUrl("SortingPage.qml"), { dir: dir })
@@ -61,18 +68,37 @@ Page {
                 }
             }
             MenuItem {
-                visible: engine.clipboardCount === 0
-                text: qsTr("Search")
-                onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
-                                          { dir: page.dir });
-            }
-            MenuItem {
                 visible: engine.clipboardCount > 0
                 text: qsTr("Paste") +
                       (engine.clipboardCount > 0 ? " ("+engine.clipboardCount+")" : "")
                 onClicked: {
                     if (remorsePopupActive) return;
                     Functions.pasteFiles(page.dir, progressPanel, clearSelectedFiles);
+                }
+            }
+
+            SearchField {
+                id: filterField
+                width: parent.width
+                height: Theme.itemSizeSmall
+                placeholderText: qsTr("Filter directory contents")
+                inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhNoPredictiveText
+                font.pixelSize: Theme.fontSizeMedium
+                onTextChanged: {
+                    page.viewFilterChanged(text);
+                    page.currentFilter = text;
+                    if (text === "") pullDownMenu.close();
+                }
+
+                // return key on virtual keyboard starts or restarts search
+                EnterKey.enabled: true
+                EnterKey.iconSource: "image://theme/icon-m-enter-accept"
+                EnterKey.onClicked: {
+                    pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
+                                   { dir: page.dir, searchText: filterField.text });
+                }
+                Component.onCompleted: {
+                    page.clearViewFilter.connect(function() { text = ""; })
                 }
             }
         }
@@ -108,7 +134,45 @@ Page {
             }
         }
 
-        footer: Spacer { }
+        footer: Column {
+            x: 0; width: page.width
+            height: footerSpacer.height +
+                    (footerLabel.visible ? topSpacer.height + footerLabel.height : 0)
+            Spacer {
+                id: topSpacer
+                visible: footerLabel.visible
+                height: Theme.paddingLarge
+            }
+
+            Row {
+                id: footerLabel
+                visible: page.currentFilter !== ""
+                spacing: Theme.paddingLarge
+                anchors.right: parent.right
+                anchors.rightMargin: Theme.horizontalPageMargin
+                layoutDirection: Qt.RightToLeft
+                IconButton {
+                    id: clearButton
+                    anchors.verticalCenter: parent.verticalCenter
+                    width: Theme.iconSizeMedium
+                    onClicked: page.clearViewFilter()
+                    icon.source: "image://theme/icon-m-clear"
+                }
+                Label {
+                    anchors.verticalCenter: parent.verticalCenter
+                    width: page.width-(2*Theme.horizontalPageMargin+parent.spacing+clearButton.width)
+                    color: Theme.highlightColor
+                    text: qsTr("filtered by: %1").arg(currentFilter)
+                    // use elide instead of fade because it must be truncated on the right
+                    truncationMode: TruncationMode.Elide
+                    elide: "ElideRight"
+                    horizontalAlignment: Text.AlignRight
+                    verticalAlignment: Text.AlignVCenter
+                }
+            }
+
+            Spacer { id: footerSpacer }
+        }
 
         delegate: Component {
             Loader {

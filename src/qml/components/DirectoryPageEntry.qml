@@ -6,7 +6,18 @@ import "../pages/functions.js" as Functions
 ListItem {
     id: fileItem
     menu: contextMenu
-    contentHeight: fileIconSize
+    contentHeight: visible ? fileIconSize : 0
+
+    Connections {
+        target: page
+        onMultiSelectionFinished: selectionGlow.visible = false
+        onMultiSelectionStarted: if (index !== model.index) selectionGlow.visible = false
+        onViewFilterChanged: {
+            if (filterString === "") visible = true;
+            else if (listLabel.text.indexOf(filterString) === -1) visible = false;
+            else visible = true;
+        }
+    }
 
     // background shown when item is selected
     Rectangle {
@@ -144,12 +155,6 @@ ListItem {
                 if (!isSelected) toggleSelection(index, false);
                 selectionGlow.visible = true;
             }
-        }
-
-        Connections {
-            target: page
-            onMultiSelectionFinished: selectionGlow.visible = false
-            onMultiSelectionStarted: if (index !== model.index) selectionGlow.visible = false
         }
     }
 
