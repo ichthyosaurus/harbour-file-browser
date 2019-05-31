@@ -59,7 +59,7 @@ Dialog {
             Label {
                 x: Theme.horizontalPageMargin
                 width: parent.width - 2*x
-                text: qsTr("Change permissions for") + "\n" + path
+                text: qsTr("Change permissions for\n%1").arg(path)
                 color: Theme.secondaryColor
                 wrapMode: Text.Wrap
             }

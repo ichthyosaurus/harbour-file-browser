@@ -43,7 +43,7 @@ Dialog {
             Label {
                 x: Theme.horizontalPageMargin
                 width: parent.width - 2*x
-                text: qsTr("Give a new name for") + "\n" + path
+                text: qsTr("Give a new name for\n%1").arg(path)
                 color: Theme.secondaryColor
                 wrapMode: Text.Wrap
             }

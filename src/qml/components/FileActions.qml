@@ -49,7 +49,7 @@ Item {
     signal editTriggered
 
     onSelectedCountChanged: {
-        labelText = qsTr("%1 selected").arg(selectedCount)
+        labelText = qsTr("%n file(s) selected", "", selectedCount);
     }
 
     FileData {
@@ -88,23 +88,23 @@ Item {
             visible: showCut
             enabled: enabled; icon.width: itemSize; icon.height: itemSize
             icon.source: "../images/toolbar-cut.png"
+            onPressAndHold: labelText = qsTr("cut file(s)", "", selectedCount);
             onClicked: {
                 var files = selectedFiles();
                 engine.cutFiles(files);
-                labelText = qsTr("%1 cut").arg(engine.clipboardCount);
+                labelText = qsTr("%n file(s) cut", "", engine.clipboardCount);
                 cutTriggered();
             }
-            onPressAndHold: labelText = qsTr("cut files")
         }
         IconButton {
             visible: showCopy
             enabled: enabled; icon.width: itemSize; icon.height: itemSize
             icon.source: "../images/toolbar-copy.png"
-            onPressAndHold: labelText = qsTr("copy files")
+            onPressAndHold: labelText = qsTr("copy file(s)", "", selectedCount);
             onClicked: {
                 var files = selectedFiles();
                 engine.copyFiles(files);
-                labelText = qsTr("%1 copied").arg(engine.clipboardCount);
+                labelText = qsTr("%n file(s) copied", "", engine.clipboardCount);
                 copyTriggered();
             }
         }
@@ -112,7 +112,7 @@ Item {
             visible: showTransfer
             enabled: enabled; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-shuffle"
-            onPressAndHold: labelText = qsTr("transfer files")
+            onPressAndHold: labelText = qsTr("transfer file(s)", "", selectedCount);
             onClicked: {
                 var files = selectedFiles();
                 var dialog = pageStack.push(Qt.resolvedUrl("../pages/TransferDialog.qml"),
@@ -130,7 +130,7 @@ Item {
             visible: showDelete
             enabled: enabled; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-delete"
-            onPressAndHold: labelText = qsTr("delete files")
+            onPressAndHold: labelText = qsTr("delete file(s)", "", selectedCount);
             onClicked: { deleteTriggered(); }
         }
     }
@@ -143,7 +143,7 @@ Item {
             visible: showRename
             enabled: selectedCount === 1; icon.width: itemSize; icon.height: itemSize
             icon.source: "../images/toolbar-rename.png"
-            onPressAndHold: labelText = qsTr("rename files")
+            onPressAndHold: labelText = qsTr("rename file(s)", "", selectedCount);
             onClicked: {
                 var files = selectedFiles();
                 var dialog = pageStack.push(Qt.resolvedUrl("../pages/RenameDialog.qml"),
@@ -160,7 +160,7 @@ Item {
             enabled: selectedCount === 1 && main.orientation === Orientation.Portrait
             icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-share"
-            onPressAndHold: labelText = qsTr("share files")
+            onPressAndHold: labelText = qsTr("share file(s)", "", selectedCount);
             onClicked: {
                 var files = selectedFiles();
                 fileData.file = files[0];
@@ -179,7 +179,7 @@ Item {
             icon.source: "image://theme/icon-m-file-archive-folder"
             onClicked: { compressTriggered(); }
             onPressAndHold: {
-                labelText = qsTr("compress files")
+                labelText = qsTr("compress file(s)", "", selectedCount);
                 // labelText = qsTr("extract archive")
             }
         }
@@ -187,14 +187,14 @@ Item {
             visible: showEdit && false
             enabled: false; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-edit"
-            onPressAndHold: labelText = qsTr("edit files")
+            onPressAndHold: labelText = qsTr("edit file(s)", "", selectedCount);
             onClicked: { editTriggered(); }
         }
         IconButton {
             visible: showProperties
             enabled: selectedCount === 1; icon.width: itemSize; icon.height: itemSize
             icon.source: "../images/toolbar-properties.png"
-            onPressAndHold: labelText = qsTr("show file properties")
+            onPressAndHold: labelText = qsTr("show file properties");
             onClicked: {
                 var files = selectedFiles();
                 pageStack.push(Qt.resolvedUrl("../pages/FilePage.qml"), { file: files[0] });

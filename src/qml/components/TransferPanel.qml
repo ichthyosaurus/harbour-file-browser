@@ -46,19 +46,19 @@ Rectangle {
 
         if (_successful) {
             if (action === "copy") {
-                notifyFinish(qsTr("Successfully copied"));
+                notifyFinish(qsTr("Successfully copied", "", files.length));
             } else if (action === "move") {
-                notifyFinish(qsTr("Successfully moved"));
+                notifyFinish(qsTr("Successfully moved", "", files.length));
             } else if (action === "link") {
-                notifyFinish(qsTr("Successfully linked"));
+                notifyFinish(qsTr("Successfully linked", "", files.length));
             }
         } else {
             if (action === "copy") {
-                notifyFinish(qsTr("Failed to copy"));
+                notifyFinish(qsTr("Failed to copy", "", files.length));
             } else if (action === "move") {
-                notifyFinish(qsTr("Failed to move"));
+                notifyFinish(qsTr("Failed to move", "", files.length));
             } else if (action === "link") {
-                notifyFinish(qsTr("Failed to link"));
+                notifyFinish(qsTr("Failed to link", "", files.length));
             }
         }
 
