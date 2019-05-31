@@ -140,7 +140,7 @@ Rectangle {
 
                 Label {
                     id: label
-                    text: qsTr("These files or folders already exist in %1:").arg(_currentDir)
+                    text: qsTr("These files or folders already exist in “%1”:").arg(_currentDir)
                     wrapMode: Text.Wrap
                     anchors.left: parent.left
                     anchors.leftMargin: Theme.paddingLarge

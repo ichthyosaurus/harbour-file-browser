@@ -30,7 +30,7 @@ Dialog {
             }
             Label {
                 id: dialogLabel
-                text: dir !== "" ? qsTr("These files or folders already exist in %1:").arg(dir) :
+                text: dir !== "" ? qsTr("These files or folders already exist in “%1”:").arg(dir) :
                                    qsTr("These files or folders already exist:")
                 wrapMode: Text.Wrap
                 anchors.top: dialogHeader.bottom

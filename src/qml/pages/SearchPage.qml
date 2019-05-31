@@ -103,7 +103,7 @@ Page {
                     anchors.left: parent.left
                     anchors.right: cancelSearchButton.left
                     y: Theme.paddingSmall
-                    placeholderText: qsTr("Search %1").arg(Functions.formatPathForSearch(page.dir))
+                    placeholderText: qsTr("Search below “%1”").arg(Functions.formatPathForSearch(page.dir))
                     inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhNoPredictiveText
 
                     // get focus when page is shown for the first time
