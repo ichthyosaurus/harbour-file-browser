@@ -123,6 +123,37 @@ Page {
         }
     }
 
+    signal multiSelectionStarted(var index)
+    signal multiSelectionFinished(var index)
+    Connections {
+        id: quickSelectionConnections
+        property var startIndex
+        target: null
+        onSelectionChanged: {
+            quickSelectionConnections.target = null;
+            multiSelectionFinished(startIndex);
+            if (quickSelectionConnections.startIndex === undefined) return;
+            if (quickSelectionConnections.startIndex > index) {
+                for (var i = quickSelectionConnections.startIndex-1; i > index; i--) {
+                    toggleSelection(i, false);
+                }
+            } else if (quickSelectionConnections.startIndex === index) {
+                quickSelectionConnections.startIndex = undefined;
+                return;
+            } else {
+                for (var j = quickSelectionConnections.startIndex+1; j < index; j++) {
+                    toggleSelection(j, false);
+                }
+            }
+            quickSelectionConnections.startIndex = undefined;
+        }
+    }
+
+    onMultiSelectionStarted: {
+        quickSelectionConnections.startIndex = index;
+        quickSelectionConnections.target = page;
+    }
+
     signal selectionChanged(var index)
     function toggleSelection(index, notify) {
         fileModel.toggleSelectedFile(index);

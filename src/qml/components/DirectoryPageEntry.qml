@@ -41,6 +41,7 @@ ListItem {
         border.color: Theme.highlightColor
         border.width: 2.25 * Theme.pixelRatio
         radius: width * 0.5
+        onVisibleChanged: if (!visible) selectionGlow.visible = false
 
         Rectangle {
             id: selectionGlow
@@ -128,33 +129,27 @@ ListItem {
     MouseArea {
         width: fileIconSize
         height: parent.height
-        onClicked: {
-            toggleSelection(index);
+        onPressed: shiftTimer.start()
+        onPositionChanged: if (shiftTimer.running) shiftTimer.stop();
+        onReleased: {
+            if (!selectionGlow.visible) toggleSelection(index);
+            if (shiftTimer.running) shiftTimer.stop();
         }
-        onPressAndHold: {
-            if (!isSelected) toggleSelection(index);
-            selectionGlow.visible = true;
-            selectionShiftConn.target = page;
-        }
-    }
 
-    Connections {
-        id: selectionShiftConn
-        target: null
-        onSelectionChanged: {
-            selectionShiftConn.target = null;
-            if (model.index > index) {
-                for (var i = model.index-1; i > index; i--) {
-                    toggleSelection(i, false);
-                }
-            } else if (model.index === index) {
-                return;
-            } else {
-                for (var j = model.index+1; j < index; j++) {
-                    toggleSelection(j, false);
-                }
+        Timer {
+            id: shiftTimer
+            interval: 300
+            onTriggered: {
+                page.multiSelectionStarted(model.index);
+                if (!isSelected) toggleSelection(index, false);
+                selectionGlow.visible = true;
             }
-            selectionGlow.visible = false;
+        }
+
+        Connections {
+            target: page
+            onMultiSelectionFinished: selectionGlow.visible = false
+            onMultiSelectionStarted: if (index !== model.index) selectionGlow.visible = false
         }
     }
 
