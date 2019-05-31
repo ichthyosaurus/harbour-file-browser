@@ -20,6 +20,12 @@ Page {
 
     signal viewFilterChanged(var filterString)
     signal clearViewFilter()
+    signal multiSelectionStarted(var index)
+    signal multiSelectionFinished(var index)
+    signal selectionChanged(var index)
+    signal addBookmark(var path)
+    signal removeBookmark(var path)
+
     FileModel {
         id: fileModel
         dir: page.dir
@@ -188,8 +194,6 @@ Page {
         }
     }
 
-    signal multiSelectionStarted(var index)
-    signal multiSelectionFinished(var index)
     Connections {
         id: quickSelectionConnections
         property var startIndex
@@ -219,7 +223,6 @@ Page {
         quickSelectionConnections.target = page;
     }
 
-    signal selectionChanged(var index)
     function toggleSelection(index, notify) {
         fileModel.toggleSelectedFile(index);
         selectionPanel.open = (fileModel.selectedFileCount > 0);
@@ -392,8 +395,6 @@ Page {
         onBookmarkRemoved: if (path === dir) bookmarkEntry.hasBookmark = false;
     }
 
-    signal addBookmark(var path)
-    signal removeBookmark(var path)
     onAddBookmark: Functions.addBookmark(path)
     onRemoveBookmark: Functions.removeBookmark(path)
 }
