@@ -61,6 +61,12 @@ Page {
                 }
             }
             MenuItem {
+                visible: engine.clipboardCount === 0
+                text: qsTr("Search")
+                onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
+                                          { dir: page.dir });
+            }
+            MenuItem {
                 visible: engine.clipboardCount > 0
                 text: qsTr("Paste") +
                       (engine.clipboardCount > 0 ? " ("+engine.clipboardCount+")" : "")
