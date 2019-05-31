@@ -177,7 +177,6 @@ SilicaListView {
                 var oldText = editLabel.placeholderColor;
                 var newText = editLabel.text;
                 if (newText === "" || oldText === newText || model.location === "" || !model.location) return;
-                console.log("save bookmark", model.location, newText, oldText);
                 engine.writeSetting("Bookmarks"+model.location, newText);
                 shortcutLabel.text = newText;
             }
