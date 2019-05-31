@@ -21,7 +21,7 @@ Page {
 
             PageHeader {
                 id: header
-                title: qsTr("Sorting")
+                title: qsTr("Sorting and View")
                 MouseArea {
                     anchors.fill: parent
                     onClicked: pageStack.pop();

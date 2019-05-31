@@ -46,7 +46,7 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: qsTr("Sort")
+                text: qsTr("View Preferences")
                 onClicked: pageStack.push(Qt.resolvedUrl("SortingPage.qml"), { dir: dir })
             }
             MenuItem {
