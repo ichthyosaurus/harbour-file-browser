@@ -85,9 +85,9 @@ Page {
             }
 
             MenuItem {
-                text: qsTr("View Contents")
+                text: qsTr("View Raw Contents")
                 visible: !fileData.isDir
-                onClicked: viewContents()
+                onClicked: viewContents(false, true)
             }
 
             // open/install tries to open the file and fileData.onProcessExited shows error
@@ -398,7 +398,7 @@ Page {
         viewContents();
     }
 
-    function viewContents(asAttached)
+    function viewContents(asAttached, forceRawView)
     {
         // dirs are special cases - there's no way to display their contents, so go to them
         if (fileData.isDir) {
@@ -419,6 +419,11 @@ Page {
         }
 
         // view depending on file type
+        if (forceRawView) {
+            method(Qt.resolvedUrl("ViewPage.qml"), { path: page.file });
+            return;
+        }
+
         if (isZipFile()) {
             method(Qt.resolvedUrl("ConsolePage.qml"),
                          { title: Functions.lastPartOfPath(fileData.file),
