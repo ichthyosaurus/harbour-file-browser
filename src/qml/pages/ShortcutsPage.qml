@@ -23,6 +23,20 @@ Page {
                 onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
                                           { dir: currentPath === "" ? StandardPaths.home : currentPath });
             }
+            MenuItem {
+                property bool hasPrevious: pageStack.previousPage() ? true : false
+                property var hasBookmark: hasPrevious ? pageStack.previousPage().hasBookmark : undefined
+                visible: currentPath !== "" && hasPrevious
+                text: (hasBookmark !== undefined) ?
+                          (hasBookmark ?
+                               qsTr("Remove bookmark for “%1”").arg(Functions.lastPartOfPath(currentPath)) :
+                               qsTr("Add “%1” to bookmarks").arg(Functions.lastPartOfPath(currentPath))) : ""
+                onClicked: {
+                    if (hasBookmark !== undefined) {
+                        pageStack.previousPage().toggleBookmark();
+                    }
+                }
+            }
         }
 
         ShortcutsList {

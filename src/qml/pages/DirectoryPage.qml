@@ -15,6 +15,7 @@ Page {
     property int  fileIconSize: Theme.iconSizeSmall
     property alias progressPanel: progressPanel
     property alias notificationPanel: notificationPanel
+    property alias hasBookmark: bookmarkEntry.hasBookmark
 
     FileModel {
         id: fileModel
@@ -82,13 +83,7 @@ Page {
                 text: hasBookmark ? qsTr("Remove bookmark") : qsTr("Add to bookmarks")
                 onClicked: {
                     clearSelectedFiles();
-                    if (hasBookmark) {
-                        removeBookmark(dir);
-                        hasBookmark = false;
-                    } else {
-                        addBookmark(dir);
-                        hasBookmark = true;
-                    }
+                    toggleBookmark();
                 }
             }
             MenuItem {
@@ -308,6 +303,16 @@ Page {
             }
         } else {
             fileIconSize = Theme.itemSizeSmall
+        }
+    }
+
+    function toggleBookmark() {
+        if (hasBookmark) {
+            removeBookmark(dir);
+            hasBookmark = false;
+        } else {
+            addBookmark(dir);
+            hasBookmark = true;
         }
     }
 
