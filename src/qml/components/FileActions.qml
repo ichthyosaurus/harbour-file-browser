@@ -78,6 +78,7 @@ Item {
             enabled: enabled; icon.width: itemSize; icon.height: itemSize
             icon.source: displayClose ? "image://theme/icon-m-clear"
                                       : "../images/toolbar-select-all.png"
+            icon.color: Theme.primaryColor
             onPressAndHold: {
                 if (displayClose) labelText = qsTr("clear selection");
                 else labelText = qsTr("select all");
@@ -88,6 +89,7 @@ Item {
             visible: showCut
             enabled: enabled; icon.width: itemSize; icon.height: itemSize
             icon.source: "../images/toolbar-cut.png"
+            icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("cut file(s)", "", selectedCount);
             onClicked: {
                 var files = selectedFiles();
@@ -100,6 +102,7 @@ Item {
             visible: showCopy
             enabled: enabled; icon.width: itemSize; icon.height: itemSize
             icon.source: "../images/toolbar-copy.png"
+            icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("copy file(s)", "", selectedCount);
             onClicked: {
                 var files = selectedFiles();
@@ -112,6 +115,7 @@ Item {
             visible: showTransfer
             enabled: enabled; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-shuffle"
+            icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("transfer file(s)", "", selectedCount);
             onClicked: {
                 var files = selectedFiles();
@@ -130,6 +134,7 @@ Item {
             visible: showDelete
             enabled: enabled; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-delete"
+            icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("delete file(s)", "", selectedCount);
             onClicked: { deleteTriggered(); }
         }
@@ -143,6 +148,7 @@ Item {
             visible: showRename
             enabled: selectedCount === 1; icon.width: itemSize; icon.height: itemSize
             icon.source: "../images/toolbar-rename.png"
+            icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("rename file(s)", "", selectedCount);
             onClicked: {
                 var files = selectedFiles();
@@ -160,6 +166,7 @@ Item {
             enabled: selectedCount === 1 && main.orientation === Orientation.Portrait
             icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-share"
+            icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("share file(s)", "", selectedCount);
             onClicked: {
                 var files = selectedFiles();
@@ -177,6 +184,7 @@ Item {
             visible: showArchive && false
             enabled: false; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-file-archive-folder"
+            icon.color: Theme.primaryColor
             onClicked: { compressTriggered(); }
             onPressAndHold: {
                 labelText = qsTr("compress file(s)", "", selectedCount);
@@ -187,6 +195,7 @@ Item {
             visible: showEdit && false
             enabled: false; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-edit"
+            icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("edit file(s)", "", selectedCount);
             onClicked: { editTriggered(); }
         }
@@ -194,6 +203,7 @@ Item {
             visible: showProperties
             enabled: selectedCount === 1; icon.width: itemSize; icon.height: itemSize
             icon.source: "../images/toolbar-properties.png"
+            icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("show file properties");
             onClicked: {
                 var files = selectedFiles();
