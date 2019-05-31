@@ -49,9 +49,22 @@ Dialog {
                     spacing: Theme.paddingLarge
 
                     Label {
-                        text: qsTr("%n item(s) selected for transferring", "", toTransfer.length);
+                        id: statusLabel
+                        text: updateText()
                         x: Theme.horizontalPageMargin
                         color: Theme.secondaryColor
+
+                        function updateText() {
+                            text = qsTr("%n item(s) selected for transferring", "", toTransfer.length) +
+                                   "\n" + qsTr("%n destinations(s) selected", "",
+                                               shortcutsView._selectedIndex.length)
+                        }
+
+                        Connections {
+                            target: shortcutsView;
+                            onItemSelected: statusLabel.updateText()
+                            onItemDeselected: statusLabel.updateText()
+                        }
                     }
 
                     TransferActionBar {
