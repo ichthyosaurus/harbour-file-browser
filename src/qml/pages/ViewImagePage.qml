@@ -63,7 +63,7 @@ Page {
             width: Math.max(image.width*image.scale, flickable.width)
             height: Math.max(image.height*image.scale, flickable.height)
 
-            Image {
+            AnimatedImage {
                 id: image
                 property real prevScale
                 property alias imageRotation: imageRotation
@@ -79,8 +79,6 @@ Page {
                 fillMode: Image.PreserveAspectFit
                 cache: false
                 asynchronous: true
-                sourceSize.height: Screen.height;
-                sourceSize.width: Screen.width;
                 smooth: !flickable.moving
 
                 onStatusChanged: {

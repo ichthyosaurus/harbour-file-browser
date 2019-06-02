@@ -152,7 +152,7 @@ Page {
                         id: openArea
                         width: parent.width
 
-                        Image { // preview of image, max height 400
+                        AnimatedImage { // preview of image, max height 400
                             id: imagePreview
                             visible: isImageFile()
                             source: visible ? fileData.file : "" // access the source only if img is visible
