@@ -63,7 +63,7 @@ Item {
         anchors.fill: parent
         color: "transparent"
         border.width: 1
-        border.color: Theme.secondaryColor
+        border.color: Theme.rgba(Theme.secondaryColor, Theme.highlightBackgroundOpacity)
         visible: !ready
     }
 
