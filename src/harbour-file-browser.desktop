@@ -5,5 +5,6 @@ Name=File Browser
 Icon=harbour-file-browser
 Exec=harbour-file-browser
 Categories=System;FileTools;FileManager
-# Finnish (fi)
+Name[en]=File Browser
 Name[fi]=Tiedostoselain
+Name[de]=Dateiverwaltung
