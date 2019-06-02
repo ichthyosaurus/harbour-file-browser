@@ -54,6 +54,5 @@ Item {
         sizeLabel.text = (sizes[0] === "-" ? qsTr("?? bytes") : sizes[0]);
         dirCountLabel.text = qsTr("%n directory/ies", "", parseInt(sizes[1], 10));
         fileCountLabel.text = qsTr("%n file(s)", "", parseInt(sizes[2], 10));
-        print(sizes)
     }
 }
