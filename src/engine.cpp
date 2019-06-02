@@ -226,6 +226,29 @@ bool Engine::exists(QString filename)
     return QFile::exists(filename);
 }
 
+QStringList Engine::fileSizeInfo(QStringList paths)
+{
+    if (paths.isEmpty()) return QStringList() << "-" << "0" << "0";
+
+    QStringList result;
+
+    QString diskusage = execute("/usr/bin/du", QStringList() << paths <<
+                                "--bytes" << "--one-file-system" <<
+                                "--summarize" << "--total", false);
+    QStringList duLines = diskusage.split(QRegExp("[\n\r]"));
+    QString duTotalStr = duLines.at(duLines.count()-2).split(QRegExp("[\\s]+"))[0].trimmed();
+    qint64 duTotal = duTotalStr.toLongLong() * 1LL;
+    result << (duTotal > 0 ? filesizeToString(duTotal) : "-");
+
+    QString dirs = execute("/bin/find", QStringList() << paths << "-type" << "d", false);
+    result << QString::number(dirs.split(QRegExp("[\n\r]")).count());
+
+    QString files = execute("/bin/find", QStringList() << paths << "-type" << "f", false);
+    result << QString::number(files.split(QRegExp("[\n\r]")).count());
+
+    return result;
+}
+
 QStringList Engine::diskSpace(QString path)
 {
     if (path.isEmpty())

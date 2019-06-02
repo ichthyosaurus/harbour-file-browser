@@ -271,9 +271,8 @@ Page {
                            ? qsTr("Link to %1").arg(fileData.mimeTypeComment) + "\n("+fileData.mimeType+")"
                            : fileData.mimeTypeComment + "\n("+fileData.mimeType+")"
                 }
-                DetailItem {
-                    label: qsTr("Size")
-                    value: fileData.size
+                SizeDetailItem {
+                    files: page.file
                 }
                 DetailItem {
                     label: qsTr("Permissions")

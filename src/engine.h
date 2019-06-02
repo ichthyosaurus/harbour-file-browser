@@ -52,6 +52,7 @@ public:
 
     // synchronous methods
     Q_INVOKABLE bool exists(QString filename);
+    Q_INVOKABLE QStringList fileSizeInfo(QStringList paths);
     Q_INVOKABLE QStringList diskSpace(QString path);
     Q_INVOKABLE QStringList readFile(QString filename);
     Q_INVOKABLE QString mkdir(QString path, QString name);
