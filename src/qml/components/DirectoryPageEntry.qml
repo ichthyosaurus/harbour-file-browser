@@ -62,6 +62,7 @@ ListItem {
         }
     }
 
+    property alias listLabelWidth: listLabel.width // see https://doc.qt.io/qt-5/qtquick-performance.html
     Label {
         id: listLabel
         anchors.left: listIcon.right
@@ -74,7 +75,8 @@ ListItem {
         color: fileItem.highlighted || isSelected ? Theme.highlightColor : Theme.primaryColor
     }
 
-    Flow {
+    Loader {
+        asynchronous: true
         anchors {
             left: listIcon.right
             leftMargin: Theme.paddingMedium
@@ -82,47 +84,49 @@ ListItem {
             rightMargin: Theme.paddingLarge
             top: listLabel.bottom
         }
-
-        Label {
-            id: sizeLabel
-            text: isLink ? (isDir ? (Functions.unicodeArrow()+" "+symLinkTarget) :
-                                    (size+" "+qsTr("(link)"))) : (size) //  !(isLink && isDir) ? size : Functions.unicodeArrow()+" "+symLinkTarget
-            color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
-            elide: Text.ElideRight
-            font.pixelSize: Theme.fontSizeExtraSmall
-        }
-        Label {
-            id: permsLabel
-            visible: !(isLink && isDir)
-            text: filekind+permissions
-            color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
-            font.pixelSize: Theme.fontSizeExtraSmall
-        }
-        Label {
-            id: datesLabel
-            visible: !(isLink && isDir)
-            text: modified
-            color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
-            font.pixelSize: Theme.fontSizeExtraSmall
-            wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-        }
-
-        states: [
-            State {
-                when: listLabel.width >= 2*page.width/3
-                PropertyChanges { target: listLabel; wrapMode: Text.NoWrap; elide: Text.ElideRight; maximumLineCount: 1 }
-                PropertyChanges { target: sizeLabel; width: ((isLink && isDir) ? listLabel.width : listLabel.width/3); horizontalAlignment: Text.AlignLeft }
-                PropertyChanges { target: permsLabel; width: listLabel.width/3; horizontalAlignment: Text.AlignHCenter }
-                PropertyChanges { target: datesLabel; width: listLabel.width/3; horizontalAlignment: Text.AlignRight }
-            },
-            State {
-                when: listLabel.width < 2*page.width/3
-                PropertyChanges { target: listLabel; wrapMode: Text.WrapAtWordBoundaryOrAnywhere; elide: Text.ElideRight; maximumLineCount: 2 }
-                PropertyChanges { target: sizeLabel; width: listLabel.width; horizontalAlignment: Text.AlignLeft }
-                PropertyChanges { target: permsLabel; width: listLabel.width; horizontalAlignment: Text.AlignLeft }
-                PropertyChanges { target: datesLabel; width: listLabel.width; horizontalAlignment: Text.AlignLeft }
+        sourceComponent: Flow {
+            anchors.fill: parent
+            Label {
+                id: sizeLabel
+                text: isLink ? (isDir ? (Functions.unicodeArrow()+" "+symLinkTarget) :
+                                        (size+" "+qsTr("(link)"))) : (size) //  !(isLink && isDir) ? size : Functions.unicodeArrow()+" "+symLinkTarget
+                color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                elide: Text.ElideRight
+                font.pixelSize: Theme.fontSizeExtraSmall
             }
-        ]
+            Label {
+                id: permsLabel
+                visible: !(isLink && isDir)
+                text: filekind+permissions
+                color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                font.pixelSize: Theme.fontSizeExtraSmall
+            }
+            Label {
+                id: datesLabel
+                visible: !(isLink && isDir)
+                text: modified
+                color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                font.pixelSize: Theme.fontSizeExtraSmall
+                wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+            }
+
+            states: [
+                State {
+                    when: listLabelWidth >= 2*page.width/3
+                    PropertyChanges { target: listLabel; wrapMode: Text.NoWrap; elide: Text.ElideRight; maximumLineCount: 1 }
+                    PropertyChanges { target: sizeLabel; width: ((isLink && isDir) ? listLabelWidth : listLabelWidth/3); horizontalAlignment: Text.AlignLeft }
+                    PropertyChanges { target: permsLabel; width: listLabelWidth/3; horizontalAlignment: Text.AlignHCenter }
+                    PropertyChanges { target: datesLabel; width: listLabelWidth/3; horizontalAlignment: Text.AlignRight }
+                },
+                State {
+                    when: listLabelWidth < 2*page.width/3
+                    PropertyChanges { target: listLabel; wrapMode: Text.WrapAtWordBoundaryOrAnywhere; elide: Text.ElideRight; maximumLineCount: 2 }
+                    PropertyChanges { target: sizeLabel; width: listLabelWidth; horizontalAlignment: Text.AlignLeft }
+                    PropertyChanges { target: permsLabel; width: listLabelWidth; horizontalAlignment: Text.AlignLeft }
+                    PropertyChanges { target: datesLabel; width: listLabelWidth; horizontalAlignment: Text.AlignLeft }
+                }
+            ]
+        }
     }
 
     onClicked: {
