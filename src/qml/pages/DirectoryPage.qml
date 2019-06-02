@@ -365,8 +365,6 @@ Page {
             thumbnailsShown = showThumbs === "true";
         }
 
-        if (!thumbnailsEnabled) thumbnailsShown = false;
-
         if (thumbnailsShown) {
             var thumbSize = engine.readSetting("View/PreviewsSize", "medium");
             if (thumbSize === "small") {

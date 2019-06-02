@@ -21,8 +21,6 @@ Item {
         ready = false;
         var canThumb = true;
 
-        if (!thumbnailsEnabled) showThumbnail = false
-
         if (showThumbnail) {
             if (isDirectory) {
                 canThumb = false
