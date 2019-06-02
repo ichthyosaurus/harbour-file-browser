@@ -48,6 +48,17 @@ int main(int argc, char *argv[])
     QVariant engineVariant = qVariantFromValue(engine.data());
     qApp->setProperty("engine", engineVariant);
 
+    QString initialDirectory = QDir::homePath();
+    if (argc >= 2) {
+        QFileInfo info(QString::fromUtf8(argv[1]));
+
+        if (info.exists() && info.isDir()) {
+            initialDirectory = info.absoluteFilePath();
+        }
+    }
+
+    view->rootContext()->setContextProperty("initialDirectory", initialDirectory);
+
     view->setSource(SailfishApp::pathTo("qml/main.qml"));
     view->show();
 

@@ -349,7 +349,7 @@ Page {
 
         if (status === PageStatus.Activating && page.initial) {
             page.initial = false;
-            Functions.goToFolder(StandardPaths.home);
+            Functions.goToFolder(initialDirectory);
         }
     }
 
