@@ -157,21 +157,6 @@ ListItem {
         }
     }
 
-    RemorseItem {
-        id: remorseItem
-        onTriggered: remorseItemActive = false
-        onCanceled: remorseItemActive = false
-    }
-
-    // delete file after remorse time
-    function deleteFile(deleteFilename) {
-        remorseItemActive = true;
-        remorseItem.execute(fileItem, qsTr("Deleting"), function() {
-            progressPanel.showText(qsTr("Deleting"));
-            engine.deleteFiles([ deleteFilename ]);
-        });
-    }
-
     // enable animated list item removals
     ListView.onRemove: animateRemoval(fileItem)
 
