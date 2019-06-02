@@ -63,13 +63,8 @@ Page {
 
             Label {
                 id: titleLabel
-                anchors {
-                    top: parent.top
-                    bottom: parent.bottom
-                    right: parent.right
-                    margins: Theme.horizontalPageMargin
-                }
-
+                anchors.fill: parent
+                anchors.margins: Theme.horizontalPageMargin
                 color: Theme.highlightColor
                 font.pixelSize: Theme.fontSizeLarge
                 truncationMode: TruncationMode.Fade
