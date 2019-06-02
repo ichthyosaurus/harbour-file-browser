@@ -156,7 +156,8 @@ ListItem {
                 page.multiSelectionStarted(model.index);
                 if (!isSelected) toggleSelection(index, false);
                 selectionGlow.visible = true;
-                page.multiSelectionFinished.connect(function() { selectionGlow.visible = false; });
+                page.multiSelectionFinished.connect(function(index) { selectionGlow.visible = false; });
+                page.multiSelectionStarted.connect(function(index) { if (index !== model.index) selectionGlow.visible = false; });
             }
         }
     }
