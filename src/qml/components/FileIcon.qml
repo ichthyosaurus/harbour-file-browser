@@ -7,7 +7,7 @@ Item {
     property string file: ""
     property bool showThumbnail: false
     property bool highlighted: false
-    property var isDirectoryCallback
+    property bool isDirectory: false
     property var mimeTypeCallback
     property var fileIconCallback
 
@@ -24,7 +24,7 @@ Item {
         if (!main.thumbnailsEnabled) showThumbnail = false
 
         if (showThumbnail) {
-            if (isDirectoryCallback !== undefined && isDirectoryCallback()) {
+            if (isDirectory) {
                 canThumb = false
             } else if (mimeTypeCallback !== undefined) {
                 var mimeType = mimeTypeCallback();

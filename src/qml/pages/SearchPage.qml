@@ -203,7 +203,7 @@ Page {
                 showThumbnail: true
                 highlighted: fileItem.highlighted || isSelected
                 file: model.fullname
-                isDirectoryCallback: function() { return model.fileKind === "d"; }
+                isDirectory: model.fileKind === "d"
                 mimeTypeCallback: function() { return model.mimeType; }
                 fileIconCallback: function() { return fileIcon; }
             }

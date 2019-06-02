@@ -34,7 +34,7 @@ ListItem {
         showThumbnail: thumbnailsShown
         highlighted: fileItem.highlighted || isSelected
         file: fileModel.appendPath(listLabel.text)
-        isDirectoryCallback: function() { return isDir; }
+        isDirectory: isDir
         mimeTypeCallback: function() { return fileModel.mimeTypeAt(index); }
         fileIconCallback: function() { return fileIcon; }
     }
