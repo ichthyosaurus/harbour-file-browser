@@ -23,8 +23,6 @@ Page {
     signal multiSelectionStarted(var index)
     signal multiSelectionFinished(var index)
     signal selectionChanged(var index)
-    signal addBookmark(var path)
-    signal removeBookmark(var path)
 
     FileModel {
         id: fileModel
@@ -381,10 +379,10 @@ Page {
 
     function toggleBookmark() {
         if (hasBookmark) {
-            removeBookmark(dir);
+            Functions.removeBookmark(dir);
             hasBookmark = false;
         } else {
-            addBookmark(dir);
+            Functions.addBookmark(dir);
             hasBookmark = true;
         }
     }
@@ -394,7 +392,4 @@ Page {
         onBookmarkAdded: if (path === dir) bookmarkEntry.hasBookmark = true;
         onBookmarkRemoved: if (path === dir) bookmarkEntry.hasBookmark = false;
     }
-
-    onAddBookmark: Functions.addBookmark(path)
-    onRemoveBookmark: Functions.removeBookmark(path)
 }
