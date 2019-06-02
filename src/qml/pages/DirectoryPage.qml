@@ -194,25 +194,25 @@ Page {
 
     Connections {
         id: quickSelectionConnections
-        property var startIndex
+        property int startIndex: -1
         target: null
         onSelectionChanged: {
-            quickSelectionConnections.target = null;
+            target = null;
             multiSelectionFinished(startIndex);
-            if (quickSelectionConnections.startIndex === undefined) return;
-            if (quickSelectionConnections.startIndex > index) {
-                for (var i = quickSelectionConnections.startIndex-1; i > index; i--) {
+            if (startIndex < 0) return;
+            if (startIndex > index) {
+                for (var i = startIndex-1; i > index; i--) {
                     toggleSelection(i, false);
                 }
-            } else if (quickSelectionConnections.startIndex === index) {
-                quickSelectionConnections.startIndex = undefined;
+            } else if (startIndex === index) {
+                startIndex = undefined;
                 return;
             } else {
-                for (var j = quickSelectionConnections.startIndex+1; j < index; j++) {
+                for (var j = startIndex+1; j < index; j++) {
                     toggleSelection(j, false);
                 }
             }
-            quickSelectionConnections.startIndex = undefined;
+            startIndex = -1;
         }
     }
 
