@@ -60,6 +60,7 @@ public:
                               bool ownerRead, bool ownerWrite, bool ownerExecute,
                               bool groupRead, bool groupWrite, bool groupExecute,
                               bool othersRead, bool othersWrite, bool othersExecute);
+    Q_INVOKABLE bool openNewWindow(QStringList arguments = QStringList()) const;
 
     // access settings
     Q_INVOKABLE QString readSetting(QString key, QString defaultValue, QString fileName);

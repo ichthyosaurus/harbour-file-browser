@@ -24,6 +24,10 @@ Page {
                                           { dir: currentPath === "" ? StandardPaths.home : currentPath });
             }
             MenuItem {
+                text: qsTr("Open new window")
+                onClicked: engine.openNewWindow(dir);
+            }
+            MenuItem {
                 property bool hasPrevious: pageStack.previousPage() ? true : false
                 property var hasBookmark: hasPrevious ? pageStack.previousPage().hasBookmark : undefined
                 visible: currentPath !== "" && hasPrevious

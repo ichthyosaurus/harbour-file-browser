@@ -3,6 +3,7 @@
 #include <QTextStream>
 #include <QSettings>
 #include <QStandardPaths>
+#include <QProcess>
 #include <unistd.h>
 #include "globals.h"
 #include "fileworker.h"
@@ -400,6 +401,17 @@ QString Engine::chmod(QString path,
         return tr("Cannot change permissions") + "\n" + file.errorString();
 
     return QString();
+}
+
+bool Engine::openNewWindow(QStringList arguments) const
+{
+    QFileInfo info(QCoreApplication::applicationFilePath());
+
+    if (!info.exists() || !info.isFile()) {
+        return false;
+    } else {
+        return QProcess::startDetached(info.absoluteFilePath(), arguments);
+    }
 }
 
 QString Engine::readSetting(QString key, QString defaultValue, QString fileName) {
