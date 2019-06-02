@@ -76,7 +76,7 @@ ListItem {
     }
 
     Loader {
-        asynchronous: true
+        asynchronous: false
         anchors {
             left: listIcon.right
             leftMargin: Theme.paddingMedium
