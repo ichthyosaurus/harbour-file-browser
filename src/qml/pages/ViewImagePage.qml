@@ -282,7 +282,7 @@ Page {
         Component {
             id: failedLoading
             Text {
-                font.pixelSize: constant.fontXSmall;
+                font.pixelSize: Theme.fontSizeMedium
                 text: qsTr("Error loading image")
                 color: Theme.highlightColor
             }
