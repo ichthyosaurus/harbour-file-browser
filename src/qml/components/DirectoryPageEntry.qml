@@ -6,16 +6,7 @@ import "../pages/functions.js" as Functions
 ListItem {
     id: fileItem
     menu: contextMenu
-    contentHeight: visible ? fileIconSize : 0
-
-    Connections {
-        target: page
-        onViewFilterChanged: {
-            if (filterString === "") visible = true;
-            else if (listLabel.text.indexOf(filterString) === -1) visible = false;
-            else visible = true;
-        }
-    }
+    contentHeight: fileIconSize
 
     // background shown when item is selected
     Rectangle {
