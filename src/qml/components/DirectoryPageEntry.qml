@@ -10,8 +10,6 @@ ListItem {
 
     Connections {
         target: page
-        onMultiSelectionFinished: selectionGlow.visible = false
-        onMultiSelectionStarted: if (index !== model.index) selectionGlow.visible = false
         onViewFilterChanged: {
             if (filterString === "") visible = true;
             else if (listLabel.text.indexOf(filterString) === -1) visible = false;
@@ -154,6 +152,7 @@ ListItem {
                 page.multiSelectionStarted(model.index);
                 if (!isSelected) toggleSelection(index, false);
                 selectionGlow.visible = true;
+                page.multiSelectionFinished.connect(function() { selectionGlow.visible = false; });
             }
         }
     }
