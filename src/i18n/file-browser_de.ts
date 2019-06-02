@@ -84,22 +84,22 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="60"/>
         <source>View Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Ansichtseinstellungen</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="88"/>
         <source>Filter directory contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordnerinhalte filtern</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="127"/>
         <source>Open new window</source>
-        <translation type="unfinished"></translation>
+        <translation>Neues Fenster öffnen</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="174"/>
         <source>filtered by: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Filter: %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="271"/>
@@ -241,9 +241,9 @@
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="52"/>
         <source>%n file(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n Datei ausgewählt</numerusform>
+            <numerusform>%n Dateien ausgewählt</numerusform>
         </translation>
     </message>
     <message>
@@ -259,81 +259,81 @@
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="93"/>
         <source>cut file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Datei ausschneiden</numerusform>
+            <numerusform>Dateien ausschneiden</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="97"/>
         <source>%n file(s) cut</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n Datei ausgeschnitten</numerusform>
+            <numerusform>%n Dateien ausgeschnitten</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="106"/>
         <source>copy file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Datei kopieren</numerusform>
+            <numerusform>Dateien kopieren</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="110"/>
         <source>%n file(s) copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n Datei kopiert</numerusform>
+            <numerusform>%n Dateien kopiert</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="119"/>
         <source>transfer file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Datei verwalten</numerusform>
+            <numerusform>Dateien verwalten</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="138"/>
         <source>delete file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Datei löschen</numerusform>
+            <numerusform>Dateien löschen</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="152"/>
         <source>rename file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Datei umbenennen</numerusform>
+            <numerusform>Dateien umbenennen</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="170"/>
         <source>share file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Datei freigeben</numerusform>
+            <numerusform>Dateien freigeben</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="190"/>
         <source>compress file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Datei komprimieren</numerusform>
+            <numerusform>Dateien komprimieren</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="199"/>
         <source>edit file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Datei bearbeiten</numerusform>
+            <numerusform>Dateien bearbeiten</numerusform>
         </translation>
     </message>
     <message>
@@ -480,7 +480,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="88"/>
         <source>View Raw Contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei-Rohdaten anzeigen</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="96"/>
@@ -607,18 +607,21 @@
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="32"/>
         <source>Selection Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Auswahleigenschaften</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../qml/pages/MultiFilePage.qml" line="64"/>
         <source>%n item(s) selected</source>
-        <translation type="unfinished"></translation>
+        <translation>
+            <numerusform>%n Element ausgewählt</numerusform>
+            <numerusform>%n Elemente ausgewählt</numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="85"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="89"/>
         <source>Deleting</source>
-        <translation type="unfinished">Lösche</translation>
+        <translation>Lösche</translation>
     </message>
 </context>
 <context>
@@ -636,7 +639,7 @@
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="33"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation type="unfinished"></translation>
+        <translation>Diese Dateien oder Ordner existieren bereits in „%1“:</translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="34"/>
@@ -655,7 +658,8 @@
         <location filename="../qml/pages/PermissionsDialog.qml" line="62"/>
         <source>Change permissions for
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Berechtigungen ändern:
+%1</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="82"/>
@@ -1113,7 +1117,8 @@
         <location filename="../qml/pages/RenameDialog.qml" line="46"/>
         <source>Give a new name for
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Neuen Dateinamen angeben:
+%1</translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="58"/>
@@ -1127,7 +1132,7 @@
     <message>
         <location filename="../qml/components/SailfishThumbnail.qml" line="31"/>
         <source>No thumbnail available</source>
-        <translation type="unfinished"></translation>
+        <translation>keine Vorschau möglich</translation>
     </message>
 </context>
 <context>
@@ -1145,7 +1150,7 @@
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="107"/>
         <source>Search below “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>in „%1“ suchen</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SearchPage.qml" line="161"/>
@@ -1218,9 +1223,9 @@
     <message numerus="yes">
         <location filename="../qml/components/SelectionPanel.qml" line="27"/>
         <source>%n file(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n Datei ausgewählt</numerusform>
+            <numerusform>%n Dateien ausgewählt</numerusform>
         </translation>
     </message>
 </context>
@@ -1472,17 +1477,17 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="27"/>
         <source>Open new window</source>
-        <translation type="unfinished"></translation>
+        <translation>Neues Fenster öffnen</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="36"/>
         <source>Remove bookmark for “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Lesezeichen für „%1“ entfernen</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="37"/>
         <source>Add “%1” to bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Lesezeichen für „%1“ hinzufügen</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="54"/>
@@ -1495,40 +1500,40 @@
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="13"/>
         <source>Size</source>
-        <translation type="unfinished">Größe</translation>
+        <translation>Größe</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="34"/>
         <source>size</source>
-        <translation type="unfinished">Grösse</translation>
+        <translation>Größe</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="41"/>
         <source>directories</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordner</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="48"/>
         <source>files</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateien</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="54"/>
         <source>?? bytes</source>
-        <translation type="unfinished"></translation>
+        <translation>?? Bytes</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="55"/>
         <source>%n directory/ies</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n Ordner</numerusform>
+            <numerusform>%n Ordner</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="56"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n Datei</numerusform>
             <numerusform>%n Dateien</numerusform>
         </translation>
@@ -1619,7 +1624,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="24"/>
         <source>Sorting and View</source>
-        <translation type="unfinished"></translation>
+        <translation>Sortierung und Ansicht</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="80"/>
@@ -1668,9 +1673,9 @@
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="59"/>
         <source>%n destinations(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n Ziel ausgewählt</numerusform>
+            <numerusform>%n Ziele ausgewählt</numerusform>
         </translation>
     </message>
     <message>
@@ -1705,49 +1710,49 @@
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="49"/>
         <source>Successfully copied</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>Erfolgreich kopiert</numerusform>
-            <numerusform></numerusform>
+            <numerusform>Erfolgreich kopiert</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="51"/>
         <source>Successfully moved</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>Erfolgreich verschoben</numerusform>
-            <numerusform></numerusform>
+            <numerusform>Erfolgreich verschoben</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="53"/>
         <source>Successfully linked</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>Erfolgreich verknüpft</numerusform>
-            <numerusform></numerusform>
+            <numerusform>Erfolgreich verknüpft</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="57"/>
         <source>Failed to copy</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>Kopieren fehlgeschlagen</numerusform>
-            <numerusform></numerusform>
+            <numerusform>Kopieren fehlgeschlagen</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="59"/>
         <source>Failed to move</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>Verschieben fehlgeschlagen</numerusform>
-            <numerusform></numerusform>
+            <numerusform>Verschieben fehlgeschlagen</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="61"/>
         <source>Failed to link</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>Verknüpfen fehlgeschlagen</numerusform>
-            <numerusform></numerusform>
+            <numerusform>Verknüpfen fehlgeschlagen</numerusform>
         </translation>
     </message>
     <message>
@@ -1768,7 +1773,7 @@
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="143"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation type="unfinished"></translation>
+        <translation>Diese Dateien oder Ordner existieren bereits in „%1“:</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="183"/>
