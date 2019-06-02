@@ -33,9 +33,9 @@ FileModel::FileModel(QObject *parent) :
     connect(m_watcher, SIGNAL(directoryChanged(const QString&)), this, SLOT(refresh()));
     connect(m_watcher, SIGNAL(fileChanged(const QString&)), this, SLOT(refresh()));
 
-    // refresh model every time settings are changed
+    // refresh model every time view settings are changed
     Engine *engine = qApp->property("engine").value<Engine *>();
-    connect(engine, SIGNAL(settingsChanged()), this, SLOT(refreshFull()));
+    connect(engine, SIGNAL(viewSettingsChanged()), this, SLOT(refreshFull()));
 }
 
 FileModel::~FileModel()

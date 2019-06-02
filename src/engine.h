@@ -78,6 +78,7 @@ signals:
     void workerErrorOccurred(QString message, QString filename);
     void fileDeleted(QString fullname);
 
+    void viewSettingsChanged();
     void settingsChanged();
 
 private slots:

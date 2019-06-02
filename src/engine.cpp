@@ -424,6 +424,7 @@ void Engine::writeSetting(QString key, QString value) {
     if (settings.value(key) == value) return; // do nothing if value didn't change
     settings.setValue(key, value);
     emit settingsChanged();
+    if (key.startsWith("View/")) emit viewSettingsChanged();
 }
 
 void Engine::removeSetting(QString key, QString fileName) {
@@ -436,6 +437,7 @@ void Engine::removeSetting(QString key) {
     QSettings settings;
     settings.remove(key);
     emit settingsChanged();
+    if (key.startsWith("View/")) emit viewSettingsChanged();
 }
 
 void Engine::setProgress(int progress, QString filename)
