@@ -89,6 +89,7 @@ Page {
                 inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhNoPredictiveText
                 font.pixelSize: Theme.fontSizeMedium
                 onTextChanged: {
+                    page.clearSelectedFiles();
                     page.viewFilterChanged(text);
                     page.currentFilter = text;
                     if (text === "") pullDownMenu.close();
