@@ -288,10 +288,11 @@ Page {
                       { "page": page, "progressPanel": progressPanel,
                         "notificationPanel": notificationPanel });
         }
-        Connections {
-            target: transferPanel.item
-            onOverlayShown: { fileList.visible = false; }
-            onOverlayHidden: { fileList.visible = true; }
+        onStatusChanged: {
+            if (status === Loader.Ready) {
+                item.overlayShown.connect(function() { fileList.visible = false; });
+                item.overlayHidden.connect(function() { fileList.visible = true; });
+            }
         }
     }
 
@@ -387,9 +388,8 @@ Page {
         }
     }
 
-    Connections {
-        target: main
-        onBookmarkAdded: if (path === dir) bookmarkEntry.hasBookmark = true;
-        onBookmarkRemoved: if (path === dir) bookmarkEntry.hasBookmark = false;
+    Component.onCompleted: {
+        main.bookmarkAdded.connect(function(path) { if (path === dir) bookmarkEntry.hasBookmark = true; });
+        main.bookmarkRemoved.connect(function(path) { if (path === dir) bookmarkEntry.hasBookmark = false; });
     }
 }
