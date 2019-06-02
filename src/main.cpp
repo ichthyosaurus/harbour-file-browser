@@ -59,6 +59,14 @@ int main(int argc, char *argv[])
 
     view->rootContext()->setContextProperty("initialDirectory", initialDirectory);
 
+#ifdef NO_HARBOUR_COMPLIANCE
+    view->rootContext()->setContextProperty("sharingEnabled", QVariant::fromValue(true));
+    view->rootContext()->setContextProperty("thumbnailsEnabled", QVariant::fromValue(true));
+#else
+    view->rootContext()->setContextProperty("sharingEnabled", QVariant::fromValue(false));
+    view->rootContext()->setContextProperty("thumbnailsEnabled", QVariant::fromValue(false));
+#endif
+
     view->setSource(SailfishApp::pathTo("qml/main.qml"));
     view->show();
 

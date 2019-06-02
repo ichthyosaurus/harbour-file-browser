@@ -73,7 +73,7 @@ Page {
             SelectableListView {
                 id: thumbList
                 title: qsTr("Preview images")
-                visible: main.thumbnailsEnabled
+                visible: thumbnailsEnabled
 
                 model: ListModel {
                     ListElement { label: qsTr("none"); value: "none" }

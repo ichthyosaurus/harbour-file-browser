@@ -3,6 +3,10 @@ TARGET = harbour-file-browser
 
 CONFIG += sailfishapp
 
+# define here whether to be Jolla-store-conformant by setting
+# resp. omitting NO_HARBOUR_COMPLIANCE
+#DEFINES += NO_HARBOUR_COMPLIANCE
+
 SOURCES += main.cpp filemodel.cpp filedata.cpp engine.cpp fileworker.cpp searchengine.cpp \
            searchworker.cpp consolemodel.cpp statfileinfo.cpp globals.cpp
 HEADERS += filemodel.h filedata.h engine.h fileworker.h searchengine.h searchworker.h \

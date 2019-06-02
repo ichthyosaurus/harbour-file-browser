@@ -21,7 +21,7 @@ Item {
         ready = false;
         var canThumb = true;
 
-        if (!main.thumbnailsEnabled) showThumbnail = false
+        if (!thumbnailsEnabled) showThumbnail = false
 
         if (showThumbnail) {
             if (isDirectory) {
