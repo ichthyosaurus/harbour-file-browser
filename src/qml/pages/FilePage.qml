@@ -223,7 +223,7 @@ Page {
                     labelText: ""
                     showProperties: false
                     showSelection: false
-                    showShare: !(fileData.isDir || fileData.isSymLink)
+                    showShare: !fileData.isSymLink
                     showEdit: !fileData.isDir
 
                     onRenameTriggered: {
