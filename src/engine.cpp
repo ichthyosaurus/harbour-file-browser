@@ -3,6 +3,7 @@
 #include <QTextStream>
 #include <QSettings>
 #include <QStandardPaths>
+#include <QCoreApplication>
 #include <QProcess>
 #include <unistd.h>
 #include "globals.h"
