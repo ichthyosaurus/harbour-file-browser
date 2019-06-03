@@ -243,7 +243,8 @@ void FileModel::selectAllFiles()
     int row = 0;
     while (iter.hasNext()) {
         StatFileInfo &info = iter.next();
-        info.setSelected(true);
+        // select all currently matched files
+        info.setSelected(info.isMatched());
         // emit signal for views
         QModelIndex topLeft = index(row, 0);
         QModelIndex bottomRight = index(row, 0);
