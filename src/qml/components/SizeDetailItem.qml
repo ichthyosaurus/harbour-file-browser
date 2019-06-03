@@ -51,8 +51,8 @@ Item {
     // TODO load size info asynchronously
     Component.onCompleted: {
         var sizes = engine.fileSizeInfo(files);
-        sizeLabel.text = (sizes[0] === "-" ? qsTr("?? bytes") : sizes[0]);
-        dirCountLabel.text = qsTr("%n directory/ies", "", parseInt(sizes[1], 10));
+        sizeLabel.text = (sizes[0] === "-" ? qsTr("unknown size") : sizes[0]);
+        dirCountLabel.text = qsTr("%n directories", "", parseInt(sizes[1], 10));
         fileCountLabel.text = qsTr("%n file(s)", "", parseInt(sizes[2], 10));
     }
 }
