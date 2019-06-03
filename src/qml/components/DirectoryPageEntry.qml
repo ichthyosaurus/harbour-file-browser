@@ -7,6 +7,8 @@ ListItem {
     id: fileItem
     menu: contextMenu
     contentHeight: fileIconSize
+    visible: isMatched
+    height: isMatched ? contentHeight : 0
 
     // background shown when item is selected
     Rectangle {

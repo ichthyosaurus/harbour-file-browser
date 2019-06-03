@@ -18,7 +18,6 @@ Page {
     property alias hasBookmark: bookmarkEntry.hasBookmark
     property string currentFilter: ""
 
-    signal viewFilterChanged(var filterString)
     signal clearViewFilter()
     signal multiSelectionStarted(var index)
     signal multiSelectionFinished(var index)
@@ -27,6 +26,7 @@ Page {
     FileModel {
         id: fileModel
         dir: page.dir
+        filterString: currentFilter
         // page.status does not exactly work - root folder seems to be active always??
         active: page.status === PageStatus.Active
     }
@@ -99,7 +99,6 @@ Page {
                     background: null
                     onTextChanged: {
                         page.clearSelectedFiles();
-                        page.viewFilterChanged(text);
                         page.currentFilter = text;
                     }
 

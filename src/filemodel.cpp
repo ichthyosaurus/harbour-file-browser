@@ -19,7 +19,8 @@ enum {
     IsDirRole = Qt::UserRole + 8,
     IsLinkRole = Qt::UserRole + 9,
     SymLinkTargetRole = Qt::UserRole + 10,
-    IsSelectedRole = Qt::UserRole + 11
+    IsSelectedRole = Qt::UserRole + 11,
+    IsMatchedRole = Qt::UserRole + 12
 };
 
 FileModel::FileModel(QObject *parent) :
@@ -29,6 +30,8 @@ FileModel::FileModel(QObject *parent) :
     m_dirty(false)
 {
     m_dir = "";
+    m_filterString = "";
+
     m_watcher = new QFileSystemWatcher(this);
     connect(m_watcher, SIGNAL(directoryChanged(const QString&)), this, SLOT(refresh()));
     connect(m_watcher, SIGNAL(fileChanged(const QString&)), this, SLOT(refresh()));
@@ -36,6 +39,7 @@ FileModel::FileModel(QObject *parent) :
     // refresh model every time view settings are changed
     Engine *engine = qApp->property("engine").value<Engine *>();
     connect(engine, SIGNAL(viewSettingsChanged()), this, SLOT(refreshFull()));
+    connect(this, SIGNAL(filterStringChanged()), this, SLOT(applyFilterString()));
 }
 
 FileModel::~FileModel()
@@ -92,6 +96,9 @@ QVariant FileModel::data(const QModelIndex &index, int role) const
     case IsSelectedRole:
         return info.isSelected();
 
+    case IsMatchedRole:
+        return info.isMatched();
+
     default:
         return QVariant();
     }
@@ -111,6 +118,7 @@ QHash<int, QByteArray> FileModel::roleNames() const
     roles.insert(IsLinkRole, QByteArray("isLink"));
     roles.insert(SymLinkTargetRole, QByteArray("symLinkTarget"));
     roles.insert(IsSelectedRole, QByteArray("isSelected"));
+    roles.insert(IsMatchedRole, QByteArray("isMatched"));
     return roles;
 }
 
@@ -160,6 +168,12 @@ void FileModel::setActive(bool active)
         readDirectory();
 
     m_dirty = false;
+}
+
+void FileModel::setFilterString(QString newFilter)
+{
+    m_filterString = newFilter;
+    emit filterStringChanged();
 }
 
 QString FileModel::parentPath()
@@ -305,6 +319,8 @@ void FileModel::recountSelectedFiles()
     }
 }
 
+
+
 // see SETTINGS for details
 void FileModel::applySettings(QDir &dir) {
     QSettings settings;
@@ -350,6 +366,22 @@ void FileModel::applySettings(QDir &dir) {
     dir.setSorting(sortBy | dirsFirstFlag | orderFlag | caseSensitiveFlag);
 }
 
+void FileModel::applyFilterString()
+{
+    QMutableListIterator<StatFileInfo> iter(m_files);
+    int row = 0;
+    while (iter.hasNext()) {
+        StatFileInfo &info = iter.next();
+        bool match = info.fileName().contains(m_filterString);
+        info.setFilterMatched(match);
+        // emit signal for views
+        QModelIndex topLeft = index(row, 0);
+        QModelIndex bottomRight = index(row, 0);
+        emit dataChanged(topLeft, bottomRight);
+        row++;
+    }
+}
+
 void FileModel::readAllEntries()
 {
     QDir dir(m_dir);
@@ -370,6 +402,8 @@ void FileModel::readAllEntries()
         StatFileInfo info(fullpath);
         m_files.append(info);
     }
+
+    applyFilterString();
 }
 
 void FileModel::refreshEntries()
@@ -429,6 +463,8 @@ void FileModel::refreshEntries()
             endInsertRows();
         }
     }
+
+    applyFilterString();
 
     if (m_files.count() != oldFileCount)
         emit fileCountChanged();
