@@ -21,9 +21,8 @@ Page {
 
             PageHeader { title: Functions.lastPartOfPath(page.path) }
 
-            Label {
+            TextArea {
                 id: portraitText
-                textFormat: Text.PlainText
                 width: parent.width
                 wrapMode: Text.WrapAnywhere
                 font.pixelSize: Theme.fontSizeTiny
@@ -31,10 +30,15 @@ Page {
                 color: Theme.secondaryColor
                 visible: page.orientation === Orientation.Portrait ||
                          page.orientation === Orientation.PortraitInverted
+                inputMethodHints: Qt.ImhNoPredictiveText
+                softwareInputPanelEnabled: false
+                on_BackgroundItemChanged: {
+                    _backgroundItem.destroy()
+                    _backgroundItem = null
+                }
             }
-            Label {
+            TextArea {
                 id: landscapeText
-                textFormat: Text.PlainText
                 width: parent.width
                 wrapMode: Text.WrapAnywhere
                 font.pixelSize: Theme.fontSizeTiny
@@ -42,6 +46,12 @@ Page {
                 color: Theme.secondaryColor
                 visible: page.orientation === Orientation.Landscape ||
                          page.orientation === Orientation.LandscapeInverted
+                softwareInputPanelEnabled: false
+                inputMethodHints: Qt.ImhNoPredictiveText
+                on_BackgroundItemChanged: {
+                    _backgroundItem.destroy()
+                    _backgroundItem = null
+                }
             }
             Spacer {
                 height: 2*Theme.paddingLarge
