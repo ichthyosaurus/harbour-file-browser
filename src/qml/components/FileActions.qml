@@ -14,7 +14,7 @@ Item {
         return -1;
     }
     property var errorCallback: function(errorMsg) { console.error("FileActions:", errorMsg); }
-    property int selectedCount: 0
+    property int selectedCount
     property alias labelText: label.text
     property bool isUpright: main.orientation === Orientation.Portrait ||
                              main.orientation === Orientation.PortraitInverted
@@ -201,13 +201,19 @@ Item {
         }
         IconButton {
             visible: showProperties
-            enabled: selectedCount === 1; icon.width: itemSize; icon.height: itemSize
+            icon.width: itemSize; icon.height: itemSize
             icon.source: "../images/toolbar-properties.png"
             icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("show file properties");
             onClicked: {
                 var files = selectedFiles();
-                pageStack.push(Qt.resolvedUrl("../pages/FilePage.qml"), { file: files[0] });
+
+                if (files.length > 1) {
+                    pageStack.push(Qt.resolvedUrl("../pages/MultiFilePage.qml"), { files: files });
+                } else {
+                    pageStack.push(Qt.resolvedUrl("../pages/FilePage.qml"), { file: files[0] });
+                }
+
                 propertiesTriggered();
             }
         }
