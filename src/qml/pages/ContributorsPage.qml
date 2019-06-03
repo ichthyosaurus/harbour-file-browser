@@ -24,6 +24,13 @@ Page {
                 ]
             }
 
+            SectionHeader { text: qsTr("Icons") }
+
+            DetailList {
+                label: qsTr("Design")
+                values: ["Sailfish (Jolla)", "Kari Pihkala", "Mirian Margiani"]
+            }
+
             SectionHeader { text: qsTr("Translations") }
 
             DetailList {
