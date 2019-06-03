@@ -15,10 +15,6 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: qsTr("Settings")
-                onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
-            }
-            MenuItem {
                 text: qsTr("Search")
                 onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
                                           { dir: currentPath === "" ? StandardPaths.home : currentPath });
@@ -59,6 +55,7 @@ Page {
     onStatusChanged: {
         if (status === PageStatus.Active) {
             main.coverText = Functions.lastPartOfPath(currentPath)+"/"; // update cover
+            if (!forwardNavigation) pageStack.pushAttached(Qt.resolvedUrl("SettingsPage.qml"));
         }
     }
 }

@@ -188,10 +188,6 @@ Page {
                 text: qsTr("Open new window")
                 onClicked: engine.openNewWindow(dir);
             }
-            MenuItem {
-                text: qsTr("Settings")
-                onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
-            }
         }
 
         header: PageHeader {
