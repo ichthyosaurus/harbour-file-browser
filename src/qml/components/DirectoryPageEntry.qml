@@ -121,6 +121,11 @@ ListItem {
     }
 
     onClicked: {
+        if (selectionGlow.visible) {
+            toggleSelection(index);
+            return;
+        }
+
         if (model.isDir) {
             pageStack.push(Qt.resolvedUrl("../pages/DirectoryPage.qml"),
                            { dir: fileModel.appendPath(listLabel.text) });

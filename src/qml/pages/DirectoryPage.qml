@@ -210,7 +210,7 @@ Page {
                     toggleSelection(i, false);
                 }
             } else if (startIndex === index) {
-                startIndex = undefined;
+                startIndex = -1;
                 return;
             } else {
                 for (var j = startIndex+1; j < index; j++) {
