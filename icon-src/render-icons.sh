@@ -18,7 +18,7 @@ done
 echo "rendering toolbar icons..."
 
 root="../src/qml/images"
-files=(toolbar-rename@64 harbour-file-browser@86 icon-btn-search@112)
+files=(toolbar-rename@64 harbour-file-browser@86 harbour-file-browser-root@86 icon-btn-search@112)
 mkdir -p "$root"
 
 for img in "${files[@]}"; do
