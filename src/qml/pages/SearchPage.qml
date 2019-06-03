@@ -138,7 +138,7 @@ Page {
                             }
                         }
                     icon.source: searchEngine.running ? "image://theme/icon-m-clear" :
-                                                           "image://theme/icon-m-right"
+                                                           "../images/icon-btn-search.png"
                 }
                 BusyIndicator {
                     id: searchBusy
