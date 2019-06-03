@@ -21,7 +21,7 @@ SilicaListView {
 
     delegate: ListItem {
         id: listItem
-        property bool selected: false
+        property bool selected: view._selectedIndex.indexOf(index) !== -1
         ListView.onRemove: animateRemoval(listItem) // enable animated list item removals
 
         BackgroundItem {
