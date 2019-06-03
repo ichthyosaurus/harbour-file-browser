@@ -11,6 +11,7 @@ Page {
     property string dir: "/" // holds the top directory where all searches will be made
     property string currentDirectory: "" // holds the directory which is being searched by SearchEngine
     property string searchText: "" // holds the initial search text
+    property bool startImmediately: false // if search text is given, start search as soon as page is ready
 
     // used to disable SelectionPanel while remorse timer is active
     property bool remorsePopupActive: false // set to true when remorsePopup is active (at top of page)
@@ -109,7 +110,7 @@ Page {
                     text: page.searchText
 
                     // get focus when page is shown for the first time
-                    Component.onCompleted: forceActiveFocus()
+                    Component.onCompleted: if (!startImmediately) forceActiveFocus();
 
 
                     // return key on virtual keyboard starts or restarts search
@@ -149,7 +150,7 @@ Page {
 
                 Label {
                     id: foundText
-                    visible: false
+                    visible: startImmediately
 
                     anchors {
                         left: parent.left
@@ -392,6 +393,14 @@ Page {
 
         if (status === PageStatus.Activating)
             clearCover();
+
+        if (status === PageStatus.Active) {
+            if (startImmediately === true && searchText !== "") {
+                listModel.update(searchText);
+                foundText.visible = true;
+                searchField.focus = false;
+            }
+        }
     }
 
     // connect signals from engine to panels
