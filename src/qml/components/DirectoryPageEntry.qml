@@ -206,10 +206,10 @@ ListItem {
                 text: hasBookmark ? qsTr("Remove bookmark") : qsTr("Add to bookmarks")
                 onClicked: {
                     if (hasBookmark) {
-                        page.removeBookmark(fileModel.fileNameAt(index));
+                        Functions.removeBookmark(fileModel.fileNameAt(index));
                         hasBookmark = false;
                     } else {
-                        page.addBookmark(fileModel.fileNameAt(index));
+                        Functions.addBookmark(fileModel.fileNameAt(index));
                         hasBookmark = true;
                     }
                 }
