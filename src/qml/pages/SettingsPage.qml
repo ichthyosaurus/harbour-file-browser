@@ -175,6 +175,9 @@ Page {
     }
 
     onStatusChanged: {
+        if (status === PageStatus.Active)
+            pageStack.pushAttached(Qt.resolvedUrl("ContributorsPage.qml"));
+
         // update cover
         if (status === PageStatus.Activating)
             coverText = qsTr("Settings");
