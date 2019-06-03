@@ -81,31 +81,82 @@ Page {
                 }
             }
 
-            SearchField {
-                id: filterField
+            Item {
+                height: Theme.itemSizeMedium
                 width: parent.width
-                height: Theme.itemSizeSmall
-                placeholderText: qsTr("Filter directory contents")
-                inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhNoPredictiveText
-                font.pixelSize: Theme.fontSizeMedium
-                onTextChanged: {
-                    page.clearSelectedFiles();
-                    page.viewFilterChanged(text);
-                    page.currentFilter = text;
-                    if (text === "") pullDownMenu.close();
+
+                TextField {
+                    id: filterField
+                    width: parent.width-2*clearFilterButton.width
+                    height: Theme.itemSizeMedium
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.verticalCenter: parent.verticalCenter
+                    placeholderText: qsTr("Filter directory contents")
+                    inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhNoPredictiveText
+                    font.pixelSize: Theme.fontSizeMedium
+                    horizontalAlignment: Text.AlignHCenter
+
+                    background: null
+                    onTextChanged: {
+                        page.clearSelectedFiles();
+                        page.viewFilterChanged(text);
+                        page.currentFilter = text;
+                    }
+
+                     EnterKey.enabled: true
+                     EnterKey.iconSource: "image://theme/icon-m-enter-accept"
+                     EnterKey.onClicked: {
+                         pullDownMenu.close();
+                     }
+                     Component.onCompleted: {
+                         page.clearViewFilter.connect(function() { text = ""; })
+                     }
                 }
 
-                // return key on virtual keyboard starts or restarts search
-                EnterKey.enabled: true
-                EnterKey.iconSource: "image://theme/icon-m-enter-accept"
-                EnterKey.onClicked: {
-                    pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
-                                   { dir: page.dir, searchText: filterField.text });
+                IconButton {
+                    id: clearFilterButton
+                    anchors {
+                        right: parent.right
+                        rightMargin: Theme.horizontalPageMargin
+                        leftMargin: Theme.horizontalPageMargin
+                        top: filterField.top
+                    }
+                    width: Theme.iconSizeMedium
+                    height: Theme.iconSizeMedium
+                    icon.source: "image://theme/icon-m-clear"
+                    enabled: filterField.enabled
+                    opacity: filterField.text.length > 0 ? 1 : 0
+                    Behavior on opacity { FadeAnimation {} }
+
+                    onClicked: {
+                        filterField.text = "";
+                        pullDownMenu.close();
+                    }
                 }
-                Component.onCompleted: {
-                    page.clearViewFilter.connect(function() { text = ""; })
+
+                IconButton {
+                    id: searchFilterButton
+                    anchors {
+                        left: parent.left
+                        rightMargin: Theme.horizontalPageMargin
+                        leftMargin: Theme.horizontalPageMargin
+                        top: filterField.top
+                    }
+                    width: Theme.iconSizeMedium
+                    height: Theme.iconSizeMedium
+                    icon.source: "../images/icon-btn-search.png"
+                    enabled: filterField.enabled
+                    opacity: filterField.text.length > 0 ? 1 : 0
+                    Behavior on opacity { FadeAnimation {} }
+
+                    onClicked: {
+                        pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
+                            { dir: page.dir, searchText: filterField.text,
+                              startImmediately: true });
+                    }
                 }
             }
+
         }
 
         PushUpMenu {
