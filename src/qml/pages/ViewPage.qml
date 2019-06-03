@@ -81,7 +81,7 @@ Page {
             coverText = Functions.lastPartOfPath(page.path);
             // reading file returns three texts, message, portrait and landscape texts
             var txts = engine.readFile(page.path);
-            message.text = txts[0];
+            message.text = txts[0] === "" ? "" : "⸻ %1 ⸻".arg(txts[0]);
             portraitText.text = txts[1];
             landscapeText.text = txts[2];
         }
