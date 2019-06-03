@@ -9,12 +9,13 @@ Column {
     property string label
     property var values
     property int maxEntries: -1
+    property var preprocessor: function(str) { return str; }
 
     Repeater {
         model: maxEntries > 0 ? (maxEntries > values.length ? values.length : maxEntries) : values.length
         delegate: DetailItem {
             label: index === 0 ? base.label : ""
-            value: values[index]
+            value: preprocessor(values[index])
         }
     }
 
