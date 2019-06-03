@@ -382,6 +382,13 @@ Page {
         return fileData.mimeTypeInherits("application/zip");
     }
 
+    function isTarArchive()
+    {
+        return    fileData.mimeType === "application/x-tar"
+               || fileData.mimeType === "application/x-compressed-tar"
+               || fileData.mimeType === "application/x-bzip-compressed-tar"
+    }
+
     function isRpmFile()
     {
         return fileData.mimeType === "application/x-rpm";
@@ -435,9 +442,7 @@ Page {
                            command: "rpm",
                            arguments: [ "-qlp", "--info", fileData.file ] });
 
-        } else if (fileData.mimeType === "application/x-tar" ||
-                   fileData.mimeType === "application/x-compressed-tar" ||
-                   fileData.mimeType === "application/x-bzip-compressed-tar") {
+        } else if (isTarArchive()) {
             method(Qt.resolvedUrl("ConsolePage.qml"),
                          { title: Functions.lastPartOfPath(fileData.file),
                            command: "tar",
