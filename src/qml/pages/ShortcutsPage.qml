@@ -15,15 +15,6 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: qsTr("Search")
-                onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
-                                          { dir: currentPath === "" ? StandardPaths.home : currentPath });
-            }
-            MenuItem {
-                text: qsTr("Open new window")
-                onClicked: engine.openNewWindow(dir);
-            }
-            MenuItem {
                 property bool hasPrevious: pageStack.previousPage() ? true : false
                 property var hasBookmark: hasPrevious ? pageStack.previousPage().hasBookmark : undefined
                 visible: currentPath !== "" && hasPrevious
@@ -36,6 +27,15 @@ Page {
                         pageStack.previousPage().toggleBookmark();
                     }
                 }
+            }
+            MenuItem {
+                text: qsTr("Open new window")
+                onClicked: engine.openNewWindow(dir);
+            }
+            MenuItem {
+                text: qsTr("Search")
+                onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
+                                          { dir: currentPath === "" ? StandardPaths.home : currentPath });
             }
         }
 
