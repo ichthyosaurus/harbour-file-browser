@@ -1,16 +1,32 @@
 #!/bin/bash
 
+echo "rendering app icon..."
+
 root="../src/icons"
 for i in 86 108 128 172; do
     mkdir -p "$root/${i}x$i"
+
+    if [[ ! "harbour-file-browser.svg" -nt "$root/${i}x$i/harbour-file-browser.png" ]]; then
+        echo "nothing to do for ${i}x$i"
+        continue
+    fi
+
     inkscape -z -e "$root/${i}x$i/harbour-file-browser.png" -w "$i" -h "$i" harbour-file-browser.svg
 done
+
+
+echo "rendering toolbar icons..."
 
 root="../src/qml/images"
 files=(toolbar-rename@64 harbour-file-browser@86)
 mkdir -p "$root"
 
 for img in "${files[@]}"; do
+    if [[ ! "${img%@*}.svg" -nt "$root/${img%@*}.png" ]]; then
+        echo "nothing to do for '${img%@*}.svg'"
+        continue
+    fi
+
     inkscape -z -e "$root/${img%@*}.png" -w "${img#*@}" -h "${img#*@}" "${img%@*}.svg"
 done
 
