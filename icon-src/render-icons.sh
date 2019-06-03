@@ -13,3 +13,29 @@ mkdir -p "$root"
 for img in "${files[@]}"; do
     inkscape -z -e "$root/${img%@*}.png" -w "${img#*@}" -h "${img#*@}" "${img%@*}.svg"
 done
+
+
+echo "rendering file icons..."
+
+files=(file-stack)
+mkdir -p "$root"
+
+for img in "${files[@]}"; do
+    skip=
+
+    if [[ "${img%@*}.svg" -nt "$root/large-${img%@*}.png" ]]; then
+        inkscape -z -e "$root/large-${img}.png" -w "128" -h "128" "${img}.svg"
+    else
+        skip+="large "
+    fi
+
+    if [[ "${img%@*}.svg" -nt "$root/small-${img%@*}.png" ]]; then
+        inkscape -z -e "$root/small-${img}.png" -w "32" -h "32" "${img}.svg"
+    else
+        skip+="small"
+    fi
+
+    if [[ -n "$skip" ]]; then
+        echo "nothing to do for '${img}.svg': $skip"
+    fi
+done
