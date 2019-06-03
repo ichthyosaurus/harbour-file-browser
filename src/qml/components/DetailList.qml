@@ -8,12 +8,30 @@ Column {
 
     property string label
     property var values
+    property int maxEntries: -1
 
     Repeater {
-        model: values.length
+        model: maxEntries > 0 ? (maxEntries > values.length ? values.length : maxEntries) : values.length
         delegate: DetailItem {
             label: index === 0 ? base.label : ""
             value: values[index]
         }
+    }
+
+    Label {
+        id: moreText
+        visible: maxEntries > 0 && values.length > maxEntries
+        text: qsTr("... and %n more", "", values.length-maxEntries)
+        anchors {
+            left: parent.horizontalCenter
+            right: parent.right
+            leftMargin: Theme.paddingSmall
+            rightMargin: Theme.horizontalPageMargin
+            topMargin: Theme.paddingSmall
+        }
+        horizontalAlignment: Text.AlignLeft
+        color: Theme.secondaryHighlightColor
+        font.pixelSize: Theme.fontSizeSmall
+        wrapMode: Text.Wrap
     }
 }
