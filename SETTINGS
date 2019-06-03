@@ -4,6 +4,10 @@
 
 SETTING                             VALUES                                      OLD KEY (in [General])
 
+[General]
+DefaultFilterAction=filter          filter/search
+ShowFullDirectoryPaths=false        bool
+
 [Transfer]
 DefaultAction=none                  copy/move/link/none                         default-transfer-action
 

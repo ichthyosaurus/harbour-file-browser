@@ -97,12 +97,15 @@ Page {
             }
 
             GroupedDrawer {
-                id: transferGroup
-                title: qsTr("Transfer")
+                id: behaviourGroup
+                title: qsTr("Behavior and View")
                 contents: Column {
-                    property alias defaultTransfer: t1
+                    property alias defaultTransfer: b1.currentIndex
+                    property alias defaultFilter: b2.currentIndex
+                    property alias showFullPaths: b3.checked
+
                     ComboBox {
-                        id: t1; width: parent.width
+                        id: b1; width: parent.width
                         label: qsTr("Default transfer action")
                         currentIndex: -1
                         menu: ContextMenu {
@@ -112,6 +115,20 @@ Page {
                             MenuItem { text: qsTr("none"); property string action: "none"; }
                         }
                         onValueChanged: engine.writeSetting("Transfer/DefaultAction", currentItem.action);
+                    }
+                    ComboBox {
+                        id: b2; width: parent.width
+                        label: qsTr("Default filter line action")
+                        currentIndex: -1
+                        menu: ContextMenu {
+                            MenuItem { text: qsTr("return to directory view"); property string action: "filter"; }
+                            MenuItem { text: qsTr("start recursive search"); property string action: "search"; }
+                        }
+                        onValueChanged: engine.writeSetting("General/DefaultFilterAction", currentItem.action);
+                    }
+                    TextSwitch {
+                        id: b3; text: qsTr("Show full directory paths")
+                        onCheckedChanged: engine.writeSetting("General/ShowFullDirectoryPaths", checked.toString())
                     }
                 }
             }
@@ -189,17 +206,23 @@ Page {
             viewGroup.contentItem.showHiddenFiles = (engine.readSetting("View/HiddenFilesShown", "false") === "true");
             viewGroup.contentItem.showThumbnails = (engine.readSetting("View/PreviewsShown", "false") === "true");
             viewGroup.contentItem.useLocalSettings = (engine.readSetting("View/UseLocalSettings", "true") === "true");
+            behaviourGroup.contentItem.showFullPaths = (engine.readSetting("General/ShowFullDirectoryPaths", "false") === "true");
 
             var defTransfer = engine.readSetting("Transfer/DefaultAction", "none");
             if (defTransfer === "copy") {
-                transferGroup.contentItem.defaultTransfer.currentIndex = 0;
+                behaviourGroup.contentItem.defaultTransfer = 0;
             } else if (defTransfer === "move") {
-                transferGroup.contentItem.defaultTransfer.currentIndex = 1;
+                behaviourGroup.contentItem.defaultTransfer = 1;
             } else if (defTransfer === "link") {
-                transferGroup.contentItem.defaultTransfer.currentIndex = 2;
+                behaviourGroup.contentItem.defaultTransfer = 2;
             } else {
-                transferGroup.contentItem.defaultTransfer.currentIndex = 3;
+                behaviourGroup.contentItem.defaultTransfer = 3;
             }
+
+            var defFilter = engine.readSetting("General/DefaultFilterAction", "filter");
+            if (defFilter === "filter") behaviourGroup.contentItem.defaultFilter = 0;
+            else if (defFilter === "search") behaviourGroup.contentItem.defaultFilter = 1;
+            else behaviourGroup.contentItem.defaultFilter = 0;
 
             var thumbSize = engine.readSetting("View/PreviewsSize", "medium");
             if (thumbSize === "small") viewGroup.contentItem.thumbSize = 0;

@@ -109,6 +109,13 @@ function lastPartOfPath(path) {
     return path.substring(i+1);
 }
 
+function dirName(path) {
+    if (path === "/") return "";
+    var i = path.lastIndexOf("/");
+    if (i < -1) return path;
+    return path.substring(0, i+1);
+}
+
 function formatPathForTitle(path) {
     if (path === "/") return "File Browser: /";
     return lastPartOfPath(path)+"/";

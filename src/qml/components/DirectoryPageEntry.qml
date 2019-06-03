@@ -10,6 +10,9 @@ ListItem {
     visible: isMatched
     height: isMatched ? contentHeight : 0
 
+    // warning: huge performance impact with large directories
+    // Behavior on height { NumberAnimation { } }
+
     // background shown when item is selected
     Rectangle {
         visible: isSelected

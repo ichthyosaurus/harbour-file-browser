@@ -17,6 +17,10 @@ Page {
     property alias notificationPanel: notificationPanel
     property alias hasBookmark: bookmarkEntry.hasBookmark
     property string currentFilter: ""
+    // set to true when full dir path should be shown in page header
+    property bool fullPathShown: (engine.readSetting("General/ShowFullDirectoryPaths", "false") === "true")
+    // set to true to enable starting deep search when pressing 'Enter' in filter input
+    property bool quickSearchEnabled: (engine.readSetting("General/DefaultFilterAction", "filter") === "search")
 
     signal clearViewFilter()
     signal multiSelectionStarted(var index)
@@ -105,7 +109,13 @@ Page {
                      EnterKey.enabled: true
                      EnterKey.iconSource: "image://theme/icon-m-enter-accept"
                      EnterKey.onClicked: {
-                         pullDownMenu.close();
+                         if (page.quickSearchEnabled) {
+                             pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
+                                 { dir: page.dir, searchText: filterField.text,
+                                   startImmediately: true });
+                         } else {
+                             pullDownMenu.close();
+                         }
                      }
                      Component.onCompleted: {
                          page.clearViewFilter.connect(function() { text = ""; })
@@ -145,6 +155,7 @@ Page {
                     height: Theme.iconSizeMedium
                     icon.source: "../images/icon-btn-search.png"
                     enabled: filterField.enabled
+                    highlighted: down || page.quickSearchEnabled
                     opacity: filterField.text.length > 0 ? 1 : 0
                     Behavior on opacity { FadeAnimation {} }
 
@@ -186,6 +197,7 @@ Page {
         header: PageHeader {
             title: Functions.formatPathForTitle(page.dir)
             _titleItem.elide: Text.ElideMiddle
+            description: page.fullPathShown ? Functions.dirName(page.dir) : ""
 
             MouseArea {
                 anchors.fill: parent
@@ -370,6 +382,8 @@ Page {
         }
         onSettingsChanged: {
             updateThumbnailsState();
+            page.fullPathShown = (engine.readSetting("General/ShowFullDirectoryPaths", "false") === "true");
+            page.quickSearchEnabled = (engine.readSetting("General/DefaultFilterAction", "filter") === "search");
         }
     }
 
@@ -377,7 +391,7 @@ Page {
     // pushing the attached page, so the page is not pushed
     // while navigating (= while building the back-tree)
     Timer {
-        id:  preparationTimer
+        id: preparationTimer
         interval: 15
         running: false
         repeat: false
