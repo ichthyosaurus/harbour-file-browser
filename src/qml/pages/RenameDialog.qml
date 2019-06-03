@@ -58,6 +58,7 @@ Dialog {
                 placeholderText: qsTr("New name")
                 label: qsTr("New name")
                 focus: true
+                inputMethodHints: Qt.ImhNoPredictiveText
 
                 // return key on virtual keyboard accepts the dialog
                 EnterKey.enabled: newName.text.length > 0
