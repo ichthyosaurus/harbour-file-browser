@@ -438,6 +438,18 @@ bool Engine::openNewWindow(QStringList arguments) const
     }
 }
 
+bool Engine::pathIsDirectory(QString path) const
+{
+    StatFileInfo info(path);
+    return info.isDirAtEnd();
+}
+
+bool Engine::pathIsFile(QString path) const
+{
+    StatFileInfo info(path);
+    return info.isFileAtEnd();
+}
+
 QString Engine::readSetting(QString key, QString defaultValue, QString fileName) {
     QSettings settings(fileName, QSettings::IniFormat);
     return settings.value(key, defaultValue).toString();

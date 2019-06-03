@@ -62,6 +62,8 @@ public:
                               bool groupRead, bool groupWrite, bool groupExecute,
                               bool othersRead, bool othersWrite, bool othersExecute);
     Q_INVOKABLE bool openNewWindow(QStringList arguments = QStringList()) const;
+    Q_INVOKABLE bool pathIsDirectory(QString path) const;
+    Q_INVOKABLE bool pathIsFile(QString path) const;
 
     // access settings
     Q_INVOKABLE QString readSetting(QString key, QString defaultValue, QString fileName);
