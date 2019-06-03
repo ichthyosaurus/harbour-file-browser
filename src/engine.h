@@ -51,6 +51,7 @@ public:
     Q_INVOKABLE QString androidSdcardPath() const;
 
     // synchronous methods
+    Q_INVOKABLE bool runningAsRoot();
     Q_INVOKABLE bool exists(QString filename);
     Q_INVOKABLE QStringList fileSizeInfo(QStringList paths);
     Q_INVOKABLE QStringList diskSpace(QString path);

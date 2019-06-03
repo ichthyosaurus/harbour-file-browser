@@ -3,14 +3,28 @@ import Sailfish.Silica 1.0
 
 CoverBackground {
     anchors.fill: parent
+    property bool runningAsRoot: engine.runningAsRoot()
 
     Image {
+        id: bgIcon
         y: Theme.paddingLarge
         anchors.horizontalCenter: parent.horizontalCenter
         opacity: 0.4
         width: Theme.iconSizeLarge
         height: width
-        source: "../images/harbour-file-browser.png"
+        source: runningAsRoot ? "../images/harbour-file-browser-root.png"
+                              : "../images/harbour-file-browser.png"
+    }
+
+    Label {
+        visible: runningAsRoot
+        anchors.centerIn: bgIcon
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignVCenter
+        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+        textFormat: Text.RichText
+        text: "<b>" + qsTr("Root Mode") + "</b>"
+        color: Theme.highlightColor
     }
 
     Label {

@@ -219,6 +219,12 @@ QString Engine::androidSdcardPath() const
     return QStandardPaths::writableLocation(QStandardPaths::HomeLocation)+"/android_storage";
 }
 
+bool Engine::runningAsRoot()
+{
+    if (geteuid() == 0) return true;
+    return false;
+}
+
 bool Engine::exists(QString filename)
 {
     if (filename.isEmpty())
