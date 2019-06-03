@@ -32,10 +32,7 @@ Page {
                          page.orientation === Orientation.PortraitInverted
                 inputMethodHints: Qt.ImhNoPredictiveText
                 softwareInputPanelEnabled: false
-                on_BackgroundItemChanged: {
-                    _backgroundItem.destroy()
-                    _backgroundItem = null
-                }
+                background: null
             }
             TextArea {
                 id: landscapeText
@@ -48,10 +45,7 @@ Page {
                          page.orientation === Orientation.LandscapeInverted
                 softwareInputPanelEnabled: false
                 inputMethodHints: Qt.ImhNoPredictiveText
-                on_BackgroundItemChanged: {
-                    _backgroundItem.destroy()
-                    _backgroundItem = null
-                }
+                background: null
             }
             Spacer {
                 height: 2*Theme.paddingLarge
