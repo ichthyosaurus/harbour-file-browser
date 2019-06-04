@@ -8,7 +8,7 @@ ListItem {
     menu: contextMenu
     contentHeight: fileIconSize
     visible: isMatched
-    height: isMatched ? contentHeight : 0
+    height: isMatched ? contentHeight + (_menuItem ? _menuItem.height : 0) : 0
 
     // warning: huge performance impact with large directories
     // Behavior on height { NumberAnimation { } }
