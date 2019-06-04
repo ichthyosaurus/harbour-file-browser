@@ -24,10 +24,8 @@ Page {
                 ]
             }
 
-            SectionHeader { text: qsTr("Icons") }
-
             DetailList {
-                label: qsTr("Design")
+                label: qsTr("Icon Design")
                 values: ["Sailfish (Jolla)", "Kari Pihkala", "Mirian Margiani"]
             }
 
