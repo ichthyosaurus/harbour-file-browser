@@ -20,6 +20,89 @@
     </message>
 </context>
 <context>
+    <name>ContributorsPage</name>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="15"/>
+        <source>Contributors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="17"/>
+        <source>Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="20"/>
+        <source>Programming</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="28"/>
+        <source>Icon Design</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="32"/>
+        <source>Translations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="35"/>
+        <source>English</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="39"/>
+        <source>German</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="43"/>
+        <source>Finnish</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="47"/>
+        <source>Chinese</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="51"/>
+        <source>Russian</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="55"/>
+        <source>Swedish</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="59"/>
+        <source>Italian</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="63"/>
+        <source>Spanish</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="67"/>
+        <source>French</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="71"/>
+        <source>Dutch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="75"/>
+        <source>Greek</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>CreateFolderDialog</name>
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="30"/>
@@ -39,85 +122,92 @@
     </message>
 </context>
 <context>
+    <name>DetailList</name>
+    <message numerus="yes">
+        <location filename="../qml/components/DetailList.qml" line="25"/>
+        <source>... and %n more</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+</context>
+<context>
     <name>DirectoryPage</name>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="131"/>
-        <source>Settings</source>
-        <translation>Настройки</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="64"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="68"/>
         <source>Create Folder</source>
         <translation>Создать папку</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="113"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="174"/>
         <source>Search</source>
         <translation>Поиск</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="76"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="80"/>
         <source>Paste</source>
         <translation>Вставить</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="120"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="181"/>
         <source>Remove bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="120"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="181"/>
         <source>Add to bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="262"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="264"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="320"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="322"/>
         <source>Deleting</source>
         <translation>Удаление</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="196"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="254"/>
         <source>No files</source>
         <translation>Нет файлов</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="60"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="64"/>
         <source>View Preferences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="88"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="98"/>
         <source>Filter directory contents</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="127"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="188"/>
         <source>Open new window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="174"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="232"/>
         <source>filtered by: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="271"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="329"/>
         <source>Internally not ready</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="271"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="329"/>
         <source>Please simply try again</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="314"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="372"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>Перемещение между SD картой и внутренней памятью не работает, используйте копирование.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="316"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="374"/>
         <source>Perhaps the storage is full?</source>
         <translation>Не хватает памяти?</translation>
     </message>
@@ -125,23 +215,23 @@
 <context>
     <name>DirectoryPageEntry</name>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="83"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="88"/>
         <source>(link)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="181"/>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="183"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="191"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="193"/>
         <source>Deleting</source>
         <translation type="unfinished">Удаление</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="201"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="211"/>
         <source>Remove bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="201"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="211"/>
         <source>Add to bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
@@ -169,69 +259,68 @@
         <translation>Невозможно переместить/скопировать в самого себя</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="298"/>
+        <location filename="../engine.cpp" line="304"/>
         <source>File does not exist</source>
         <translation>Файл не существует</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="300"/>
+        <location filename="../engine.cpp" line="306"/>
         <source>Broken symbolic link</source>
         <translation>Испорченная символьная ссылка</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="305"/>
+        <location filename="../engine.cpp" line="311"/>
         <source>Cannot read this type of file</source>
         <translation>Невозможно прочитать данный тип файла</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="311"/>
+        <location filename="../engine.cpp" line="317"/>
         <source>No permission to read the file</source>
         <translation>Недостаточно прав для чтения</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="315"/>
         <location filename="../engine.cpp" line="321"/>
+        <location filename="../engine.cpp" line="327"/>
         <source>Error reading file</source>
         <translation>Ошибка чтения файла</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="324"/>
+        <location filename="../engine.cpp" line="330"/>
         <source>Empty file</source>
         <translation>Пустой файл</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="350"/>
-        <location filename="../engine.cpp" line="351"/>
-        <source>--- Binary file preview clipped at %1 kB ---</source>
-        <translation>--- Просмотр первых %1 кБ бинарного файла ---</translation>
+        <location filename="../engine.cpp" line="356"/>
+        <source>Binary file preview clipped at %1 kB</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="370"/>
-        <source>--- Text file preview clipped at %1 lines ---</source>
-        <translation>--- Просмотр первых %1 строк текстового файла ---</translation>
+        <location filename="../engine.cpp" line="375"/>
+        <source>Text file preview clipped at %1 lines</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="372"/>
-        <source>--- Text file preview clipped at %1 kB ---</source>
-        <translation>--- Просмотр первых %1 кБ текстового файла ---</translation>
+        <location filename="../engine.cpp" line="377"/>
+        <source>Text file preview clipped at %1 kB</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="384"/>
+        <location filename="../engine.cpp" line="390"/>
         <source>No permissions to create %1</source>
         <translation>Недостаточно прав для создания %1</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="386"/>
+        <location filename="../engine.cpp" line="392"/>
         <source>Cannot create folder %1</source>
         <translation>Невозможно создать папку %1</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="402"/>
+        <location filename="../engine.cpp" line="408"/>
         <source>Cannot rename %1</source>
         <translation>Невозможно переименовать %1</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="425"/>
+        <location filename="../engine.cpp" line="431"/>
         <source>Cannot change permissions</source>
         <translation>Невозможно изменить права</translation>
     </message>
@@ -354,6 +443,14 @@
     </message>
 </context>
 <context>
+    <name>FileBrowserCover</name>
+    <message>
+        <location filename="../qml/cover/FileBrowserCover.qml" line="26"/>
+        <source>Root Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>FileData</name>
     <message>
         <location filename="../filedata.cpp" line="112"/>
@@ -399,24 +496,24 @@
 <context>
     <name>FileModel</name>
     <message>
-        <location filename="../filemodel.cpp" line="73"/>
+        <location filename="../filemodel.cpp" line="77"/>
         <source>dir-link</source>
         <translation>ссылка на каталог</translation>
     </message>
     <message>
-        <location filename="../filemodel.cpp" line="74"/>
+        <location filename="../filemodel.cpp" line="78"/>
         <source>dir</source>
         <translation>каталог</translation>
     </message>
     <message>
-        <location filename="../filemodel.cpp" line="357"/>
-        <location filename="../filemodel.cpp" line="389"/>
+        <location filename="../filemodel.cpp" line="390"/>
+        <location filename="../filemodel.cpp" line="424"/>
         <source>Folder does not exist</source>
         <translation>Каталог не существует</translation>
     </message>
     <message>
-        <location filename="../filemodel.cpp" line="361"/>
-        <location filename="../filemodel.cpp" line="395"/>
+        <location filename="../filemodel.cpp" line="394"/>
+        <location filename="../filemodel.cpp" line="430"/>
         <source>No permission to read the folder</source>
         <translation>Недостаточно прав для чтения каталога</translation>
     </message>
@@ -621,7 +718,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/MultiFilePage.qml" line="64"/>
+        <location filename="../qml/pages/MultiFilePage.qml" line="61"/>
         <source>%n item(s) selected</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -630,10 +727,26 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MultiFilePage.qml" line="85"/>
-        <location filename="../qml/pages/MultiFilePage.qml" line="89"/>
+        <location filename="../qml/pages/MultiFilePage.qml" line="80"/>
+        <location filename="../qml/pages/MultiFilePage.qml" line="84"/>
         <source>Deleting</source>
         <translation type="unfinished">Удаление</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MultiFilePage.qml" line="105"/>
+        <source>Directories</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MultiFilePage.qml" line="114"/>
+        <source>Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MultiFilePage.qml" line="130"/>
+        <location filename="../qml/pages/MultiFilePage.qml" line="139"/>
+        <source>none</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1145,17 +1258,17 @@
 <context>
     <name>SearchPage</name>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="71"/>
+        <location filename="../qml/pages/SearchPage.qml" line="72"/>
         <source>Searching</source>
         <translation>Поиск</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="82"/>
+        <location filename="../qml/pages/SearchPage.qml" line="83"/>
         <source>Settings</source>
         <translation>Настройки</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="107"/>
+        <location filename="../qml/pages/SearchPage.qml" line="108"/>
         <source>Search below “%1”</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1207,8 +1320,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="93"/>
-        <location filename="../qml/pages/SearchPage.qml" line="450"/>
+        <location filename="../qml/pages/SearchPage.qml" line="94"/>
+        <location filename="../qml/pages/SearchPage.qml" line="456"/>
         <source>Search</source>
         <translation>Поиск</translation>
     </message>
@@ -1242,7 +1355,7 @@
     <name>SettingsPage</name>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="22"/>
-        <location filename="../qml/pages/SettingsPage.qml" line="180"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="201"/>
         <source>Settings</source>
         <translation>Настройки</translation>
     </message>
@@ -1348,46 +1461,66 @@
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="101"/>
-        <source>Transfer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="106"/>
-        <source>Default transfer action</source>
+        <source>Behavior and View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="109"/>
-        <source>copy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="110"/>
-        <source>move</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="111"/>
-        <source>link</source>
+        <source>Default transfer action</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="112"/>
+        <source>copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="113"/>
+        <source>move</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="114"/>
+        <source>link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="115"/>
         <source>none</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="122"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="121"/>
+        <source>Default filter line action</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="124"/>
+        <source>return to directory view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="125"/>
+        <source>start recursive search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="130"/>
+        <source>Show full directory paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="139"/>
         <source>About File Browser</source>
         <translation>О приложении</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="152"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="169"/>
         <source>File Browser is free and unencumbered software released into the public domain.</source>
         <translation>File Browser - свободное программное обеспечение, распространяемое на правах общественного достояния.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="169"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="186"/>
         <source>The source code is available at</source>
         <translation>Исходный код доступен на</translation>
     </message>
@@ -1474,32 +1607,27 @@
 <context>
     <name>ShortcutsPage</name>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="18"/>
-        <source>Settings</source>
-        <translation type="unfinished">Настройки</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="22"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="36"/>
         <source>Search</source>
         <translation type="unfinished">Поиск</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="27"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="32"/>
         <source>Open new window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="36"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="23"/>
         <source>Remove bookmark for “%1”</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="37"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="24"/>
         <source>Add “%1” to bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="54"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="50"/>
         <source>Places</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1528,12 +1656,12 @@
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="54"/>
-        <source>?? bytes</source>
+        <source>unknown size</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="55"/>
-        <source>%n directory/ies</source>
+        <source>%n directories</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -1843,19 +1971,19 @@
 <context>
     <name>functions</name>
     <message>
-        <location filename="../qml/pages/functions.js" line="118"/>
+        <location filename="../qml/pages/functions.js" line="125"/>
         <source>root</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/functions.js" line="138"/>
-        <location filename="../qml/pages/functions.js" line="147"/>
+        <location filename="../qml/pages/functions.js" line="145"/>
+        <location filename="../qml/pages/functions.js" line="154"/>
         <source>Copying</source>
         <translation type="unfinished">Копирование</translation>
     </message>
     <message>
-        <location filename="../qml/pages/functions.js" line="138"/>
-        <location filename="../qml/pages/functions.js" line="147"/>
+        <location filename="../qml/pages/functions.js" line="145"/>
+        <location filename="../qml/pages/functions.js" line="154"/>
         <source>Moving</source>
         <translation type="unfinished">Перемещение</translation>
     </message>
