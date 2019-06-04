@@ -24,82 +24,82 @@
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="15"/>
         <source>Contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>Mitwirkende</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="17"/>
         <source>Code</source>
-        <translation type="unfinished"></translation>
+        <translation>Quellcode</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="20"/>
         <source>Programming</source>
-        <translation type="unfinished"></translation>
+        <translation>Programmierung</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="28"/>
         <source>Icon Design</source>
-        <translation type="unfinished"></translation>
+        <translation>Icon-Design</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="32"/>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Übersetzungen</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="35"/>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation>Englisch</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="39"/>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation>Deutsch</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="43"/>
         <source>Finnish</source>
-        <translation type="unfinished"></translation>
+        <translation>Finnisch</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="47"/>
         <source>Chinese</source>
-        <translation type="unfinished"></translation>
+        <translation>Chinesisch</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="51"/>
         <source>Russian</source>
-        <translation type="unfinished"></translation>
+        <translation>Russisch</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="55"/>
         <source>Swedish</source>
-        <translation type="unfinished"></translation>
+        <translation>Schwedisch</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="59"/>
         <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <translation>Italienisch</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="63"/>
         <source>Spanish</source>
-        <translation type="unfinished"></translation>
+        <translation>Spanisch</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="67"/>
         <source>French</source>
-        <translation type="unfinished"></translation>
+        <translation>Französisch</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="71"/>
         <source>Dutch</source>
-        <translation type="unfinished"></translation>
+        <translation>Niederländisch</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="75"/>
         <source>Greek</source>
-        <translation type="unfinished"></translation>
+        <translation>Griechisch</translation>
     </message>
 </context>
 <context>
@@ -126,9 +126,9 @@
     <message numerus="yes">
         <location filename="../qml/components/DetailList.qml" line="25"/>
         <source>... and %n more</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>... und %n mehr</numerusform>
+            <numerusform>... und %n mehr</numerusform>
         </translation>
     </message>
 </context>
@@ -291,17 +291,17 @@
     <message>
         <location filename="../engine.cpp" line="356"/>
         <source>Binary file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>Binärdatei-Vorschau auf %1 kB begrenzt</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="375"/>
         <source>Text file preview clipped at %1 lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Textdatei-Vorschau auf %1 Zeilen begrenzt</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="377"/>
         <source>Text file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>Textdatei-Vorschau auf %1 kB begrenzt</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="390"/>
@@ -435,7 +435,7 @@
     <message>
         <location filename="../qml/cover/FileBrowserCover.qml" line="26"/>
         <source>Root Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Root-Modus</translation>
     </message>
 </context>
 <context>
@@ -722,18 +722,18 @@
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="105"/>
         <source>Directories</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordner</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="114"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateien</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="130"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="139"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation>keine</translation>
     </message>
 </context>
 <context>
@@ -1452,7 +1452,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="101"/>
         <source>Behavior and View</source>
-        <translation type="unfinished"></translation>
+        <translation>Verhalten und Ansicht</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="109"/>
@@ -1482,22 +1482,22 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="121"/>
         <source>Default filter line action</source>
-        <translation type="unfinished"></translation>
+        <translation>Standardaktion beim Filtern</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="124"/>
         <source>return to directory view</source>
-        <translation type="unfinished"></translation>
+        <translation>zur Ordneransicht zurückkehren</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="125"/>
         <source>start recursive search</source>
-        <translation type="unfinished"></translation>
+        <translation>rekursive Suche starten</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="130"/>
         <source>Show full directory paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Vollständige Ordnerpfade anzeigen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="139"/>
@@ -1647,14 +1647,14 @@
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="54"/>
         <source>unknown size</source>
-        <translation type="unfinished"></translation>
+        <translation>unbekannte Größe</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="55"/>
         <source>%n directories</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n Ordner</numerusform>
+            <numerusform>%n Ordner</numerusform>
         </translation>
     </message>
     <message numerus="yes">
