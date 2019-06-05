@@ -14,7 +14,7 @@ Page {
 
             PageHeader { title: qsTr("Contributors") }
 
-            SectionHeader { text: qsTr("Code") }
+            SectionHeader { text: qsTr("Development") }
 
             DetailList {
                 label: qsTr("Programming")
