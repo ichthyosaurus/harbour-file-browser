@@ -7,8 +7,7 @@ ApplicationWindow {
     signal bookmarkAdded(var path)
     signal bookmarkRemoved(var path)
 
-    // note: version number has to be updated manually!
-    readonly property string versionNumber: "1.8.0"
+    // note: version number has to be updated only in harbour-file-browser.spec!
     readonly property string versionString: qsTr("Version %1").arg(versionNumber)
 
     property string coverText: "File Browser"

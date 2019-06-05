@@ -3,6 +3,7 @@ TARGET = harbour-file-browser
 
 CONFIG += sailfishapp
 
+DEFINES += RELEASE_VERSION=\\\"$$VERSION\\\"
 # define here whether to be Jolla-store-conformant by setting
 # resp. omitting NO_HARBOUR_COMPLIANCE
 #DEFINES += NO_HARBOUR_COMPLIANCE

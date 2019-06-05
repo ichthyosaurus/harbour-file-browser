@@ -58,6 +58,7 @@ int main(int argc, char *argv[])
     }
 
     view->rootContext()->setContextProperty("initialDirectory", initialDirectory);
+    view->rootContext()->setContextProperty("versionNumber", QString(RELEASE_VERSION));
 
 #ifdef NO_HARBOUR_COMPLIANCE
     view->rootContext()->setContextProperty("sharingEnabled", QVariant::fromValue(true));
