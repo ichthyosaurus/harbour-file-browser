@@ -54,6 +54,7 @@ public:
     Q_INVOKABLE void toggleSelectedFile(int fileIndex);
     Q_INVOKABLE void clearSelectedFiles();
     Q_INVOKABLE void selectAllFiles();
+    Q_INVOKABLE void selectRange(int firstIndex, int lastIndex, bool selected = true);
     Q_INVOKABLE QStringList selectedFiles() const;
 
 public slots:

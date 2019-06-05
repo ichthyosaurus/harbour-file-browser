@@ -101,10 +101,7 @@ Page {
                     horizontalAlignment: Text.AlignHCenter
 
                     background: null
-                    onTextChanged: {
-                        page.clearSelectedFiles();
-                        page.currentFilter = text;
-                    }
+                    onTextChanged: page.currentFilter = text;
 
                      EnterKey.enabled: true
                      EnterKey.iconSource: "image://theme/icon-m-enter-accept"
@@ -266,19 +263,7 @@ Page {
         onSelectionChanged: {
             target = null;
             multiSelectionFinished(startIndex);
-            if (startIndex < 0) return;
-            if (startIndex > index) {
-                for (var i = startIndex-1; i > index; i--) {
-                    toggleSelection(i, false);
-                }
-            } else if (startIndex === index) {
-                startIndex = -1;
-                return;
-            } else {
-                for (var j = startIndex+1; j < index; j++) {
-                    toggleSelection(j, false);
-                }
-            }
+            fileModel.selectRange(startIndex, index);
             startIndex = -1;
         }
     }

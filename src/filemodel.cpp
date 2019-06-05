@@ -255,6 +255,47 @@ void FileModel::selectAllFiles()
     emit selectedFileCountChanged();
 }
 
+void FileModel::selectRange(int firstIndex, int lastIndex, bool selected)
+{
+    // fail silently if indices are invalid
+    if (   firstIndex >= m_files.length()
+        || firstIndex < 0
+        || lastIndex >= m_files.length()
+        || lastIndex < 0
+       ) return;
+
+    if (firstIndex > lastIndex) {
+        int tmp = firstIndex;
+        firstIndex = lastIndex;
+        lastIndex = tmp;
+    }
+
+    QMutableListIterator<StatFileInfo> iter(m_files);
+    int row = 0; int count = 0;
+    while (iter.hasNext()) {
+        StatFileInfo &info = iter.next();
+
+        if (   row >= firstIndex
+            && row <= lastIndex
+            && info.isMatched()
+            && info.isSelected() != selected) {
+            info.setSelected(selected);
+            // emit signal for views
+            QModelIndex topLeft = index(row, 0);
+            QModelIndex bottomRight = index(row, 0);
+            emit dataChanged(topLeft, bottomRight);
+        }
+
+        if (info.isSelected()) count++;
+        row++;
+    }
+
+    if (count != m_selectedFileCount) {
+        m_selectedFileCount = count;
+        emit selectedFileCountChanged();
+    }
+}
+
 QStringList FileModel::selectedFiles() const
 {
     if (m_selectedFileCount == 0)
