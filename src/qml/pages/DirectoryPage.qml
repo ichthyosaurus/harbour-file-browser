@@ -186,7 +186,11 @@ Page {
             }
             MenuItem {
                 text: qsTr("Open new window")
-                onClicked: engine.openNewWindow(dir);
+                onClicked: {
+                    engine.openNewWindow(dir);
+                    notificationPanel.showTextWithTimer(qsTr("New window opened"),
+                        qsTr("Sometimes the application stays in the background"));
+                }
             }
         }
 

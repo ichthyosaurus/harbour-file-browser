@@ -9,6 +9,11 @@ Page {
     allowedOrientations: Orientation.All
     property string currentPath: ""
 
+    NotificationPanel {
+        id: notificationPanel
+        page: page
+    }
+
     SilicaFlickable {
         anchors.fill: parent
         VerticalScrollDecorator { }
@@ -32,6 +37,8 @@ Page {
                 text: qsTr("Open new window")
                 onClicked: {
                     engine.openNewWindow(currentPath);
+                    notificationPanel.showTextWithTimer(qsTr("New window opened"),
+                        qsTr("Sometimes the application stays in the background"));
                 }
             }
             MenuItem {
