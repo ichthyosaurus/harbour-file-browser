@@ -30,7 +30,9 @@ Page {
             }
             MenuItem {
                 text: qsTr("Open new window")
-                onClicked: engine.openNewWindow(dir);
+                onClicked: {
+                    engine.openNewWindow(currentPath);
+                }
             }
             MenuItem {
                 text: qsTr("Search")
