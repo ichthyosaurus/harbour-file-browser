@@ -44,6 +44,7 @@ File Browser for Sailfish OS. Browse files on the phone.
 
 %qtc_qmake5 \
     VERSION=%{version} \
+    HARBOUR_COMPLIANCE=on
 
 %qtc_make %{?_smp_mflags}
 

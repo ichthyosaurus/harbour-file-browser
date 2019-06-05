@@ -5,5 +5,8 @@ SUBDIRS = src
 # Usually it makes sense to build tests only if main component can be built
 CONFIG += ordered
 
-# Inclusion of features that do not comply to Harbour's rules
-# can be configured in src/src.pro. See there for details.
+# Note:
+# - The current version number can be configured in the spec-file.
+# - Whether or not to include features against Harbour's rules
+#   can be configured in the spec-file by passing
+#   HARBOUR_COMPLIANCE=on (resp. =off) as option to qmake.

@@ -4,9 +4,11 @@ TARGET = harbour-file-browser
 CONFIG += sailfishapp
 
 DEFINES += RELEASE_VERSION=\\\"$$VERSION\\\"
-# define here whether to be Jolla-store-conformant by setting
-# resp. omitting NO_HARBOUR_COMPLIANCE
-#DEFINES += NO_HARBOUR_COMPLIANCE
+
+# note: see harbour-file-browser.pro and harbour-file-browser.spec for details
+equals(HARBOUR_COMPLIANCE, off) {
+    DEFINES += NO_HARBOUR_COMPLIANCE
+}
 
 SOURCES += main.cpp filemodel.cpp filedata.cpp engine.cpp fileworker.cpp searchengine.cpp \
            searchworker.cpp consolemodel.cpp statfileinfo.cpp globals.cpp
