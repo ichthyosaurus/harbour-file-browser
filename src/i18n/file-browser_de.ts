@@ -29,7 +29,7 @@
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="17"/>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Entwicklung</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="20"/>
@@ -188,12 +188,12 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="188"/>
         <source>New window opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Neues Fenster geöffnet</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="189"/>
         <source>Sometimes the application stays in the background</source>
-        <translation type="unfinished">Manchmal bleibt die Anwendung im Hintergrund</translation>
+        <translation>Manchmal bleibt die Anwendung im Hintergrund</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="233"/>
@@ -1629,12 +1629,12 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="40"/>
         <source>New window opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Neues Fenster geöffnet</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="41"/>
         <source>Sometimes the application stays in the background</source>
-        <translation type="unfinished">Manchmal bleibt die Anwendung im Hintergrund</translation>
+        <translation>Manchmal bleibt die Anwendung im Hintergrund</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="59"/>
