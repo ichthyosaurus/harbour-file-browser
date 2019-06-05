@@ -201,22 +201,22 @@ QString FileModel::mimeTypeAt(int fileIndex) {
 
 void FileModel::toggleSelectedFile(int fileIndex)
 {
+    if (fileIndex >= m_files.length() || fileIndex < 0) return; // fail silently
+
+    StatFileInfo info = m_files.at(fileIndex);
+
     if (!m_files.at(fileIndex).isSelected()) {
-        StatFileInfo info = m_files.at(fileIndex);
         info.setSelected(true);
-        m_files[fileIndex] = info;
         m_selectedFileCount++;
     } else {
-        StatFileInfo info = m_files.at(fileIndex);
         info.setSelected(false);
-        m_files[fileIndex] = info;
         m_selectedFileCount--;
     }
-    // emit signal for views
+
+    m_files[fileIndex] = info;
     QModelIndex topLeft = index(fileIndex, 0);
     QModelIndex bottomRight = index(fileIndex, 0);
     emit dataChanged(topLeft, bottomRight);
-
     emit selectedFileCountChanged();
 }
 
@@ -240,18 +240,23 @@ void FileModel::clearSelectedFiles()
 void FileModel::selectAllFiles()
 {
     QMutableListIterator<StatFileInfo> iter(m_files);
-    int row = 0;
+    int row = 0; uint count = 0;
+
     while (iter.hasNext()) {
         StatFileInfo &info = iter.next();
-        // select all currently matched files
-        info.setSelected(info.isMatched());
+        if (!info.isMatched()) {
+            row++; continue;
+        }
+
+        info.setSelected(true);
         // emit signal for views
         QModelIndex topLeft = index(row, 0);
         QModelIndex bottomRight = index(row, 0);
         emit dataChanged(topLeft, bottomRight);
-        row++;
+        row++; count++;
     }
-    m_selectedFileCount = m_files.count();
+
+    m_selectedFileCount = count;
     emit selectedFileCountChanged();
 }
 
@@ -411,16 +416,30 @@ void FileModel::applySettings(QDir &dir) {
 void FileModel::applyFilterString()
 {
     QMutableListIterator<StatFileInfo> iter(m_files);
-    int row = 0;
+    int row = 0; int count = 0;
     while (iter.hasNext()) {
         StatFileInfo &info = iter.next();
         bool match = info.fileName().contains(m_filterString);
-        info.setFilterMatched(match);
-        // emit signal for views
-        QModelIndex topLeft = index(row, 0);
-        QModelIndex bottomRight = index(row, 0);
-        emit dataChanged(topLeft, bottomRight);
+
+        if (   info.isMatched() != match
+            || (!match && info.isSelected())) {
+
+            info.setFilterMatched(match);
+            if (!match) info.setSelected(false);
+
+            // emit signal for views
+            QModelIndex topLeft = index(row, 0);
+            QModelIndex bottomRight = index(row, 0);
+            emit dataChanged(topLeft, bottomRight);
+        }
+
+        if (info.isSelected()) count++;
         row++;
+    }
+
+    if (count != m_selectedFileCount) {
+        m_selectedFileCount = count;
+        emit selectedFileCountChanged();
     }
 }
 
