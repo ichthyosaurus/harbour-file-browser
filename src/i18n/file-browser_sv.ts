@@ -28,7 +28,7 @@
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="17"/>
-        <source>Code</source>
+        <source>Development</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -140,7 +140,7 @@
         <translation>Skapa mapp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="174"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="171"/>
         <source>Search</source>
         <translation>Sök</translation>
     </message>
@@ -150,23 +150,23 @@
         <translation>Klistra in</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="181"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="178"/>
         <source>Remove bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="181"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="178"/>
         <source>Add to bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="320"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="322"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="309"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
         <source>Deleting</source>
         <translation>Tar bort</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="254"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="255"/>
         <source>No files</source>
         <translation>Inga filer</translation>
     </message>
@@ -181,32 +181,42 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="188"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="185"/>
         <source>Open new window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="232"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="188"/>
+        <source>New window opened</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/DirectoryPage.qml" line="189"/>
+        <source>Sometimes the application stays in the background</source>
+        <translation type="unfinished">Ibland stannar programmet i bakgrunden</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/DirectoryPage.qml" line="233"/>
         <source>filtered by: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="329"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="318"/>
         <source>Internally not ready</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="329"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="318"/>
         <source>Please simply try again</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="372"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="361"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>Försöker du flytta mellan telefon och SD-kort? Det fungerar inte, försök med kopiering.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="374"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="363"/>
         <source>Perhaps the storage is full?</source>
         <translation>Lagringsutrymmet kanske är fullt?</translation>
     </message>
@@ -494,14 +504,14 @@
         <translation>mapp</translation>
     </message>
     <message>
-        <location filename="../filemodel.cpp" line="390"/>
-        <location filename="../filemodel.cpp" line="424"/>
+        <location filename="../filemodel.cpp" line="450"/>
+        <location filename="../filemodel.cpp" line="484"/>
         <source>Folder does not exist</source>
         <translation>Mappen finns inte</translation>
     </message>
     <message>
-        <location filename="../filemodel.cpp" line="394"/>
-        <location filename="../filemodel.cpp" line="430"/>
+        <location filename="../filemodel.cpp" line="454"/>
+        <location filename="../filemodel.cpp" line="490"/>
         <source>No permission to read the folder</source>
         <translation>Behörighet att läsa mappen saknas</translation>
     </message>
@@ -1261,7 +1271,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/SearchPage.qml" line="161"/>
+        <location filename="../qml/pages/SearchPage.qml" line="162"/>
         <source>%n hit(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -1269,46 +1279,46 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="291"/>
         <location filename="../qml/pages/SearchPage.qml" line="292"/>
-        <location filename="../qml/pages/SearchPage.qml" line="374"/>
-        <location filename="../qml/pages/SearchPage.qml" line="376"/>
+        <location filename="../qml/pages/SearchPage.qml" line="293"/>
+        <location filename="../qml/pages/SearchPage.qml" line="375"/>
+        <location filename="../qml/pages/SearchPage.qml" line="377"/>
         <source>Deleting</source>
         <translation>Tar bort</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="307"/>
+        <location filename="../qml/pages/SearchPage.qml" line="308"/>
         <source>Go to containing folder</source>
         <translation>Gå till målmappen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="311"/>
+        <location filename="../qml/pages/SearchPage.qml" line="312"/>
         <source>Cut</source>
         <translation>Klipp ut</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="315"/>
+        <location filename="../qml/pages/SearchPage.qml" line="316"/>
         <source>Copy</source>
         <translation>Kopiera</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="319"/>
+        <location filename="../qml/pages/SearchPage.qml" line="320"/>
         <source>Delete</source>
         <translation>Ta bort</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="383"/>
+        <location filename="../qml/pages/SearchPage.qml" line="384"/>
         <source>Internally not ready</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="383"/>
+        <location filename="../qml/pages/SearchPage.qml" line="384"/>
         <source>Please simply try again</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="94"/>
-        <location filename="../qml/pages/SearchPage.qml" line="456"/>
+        <location filename="../qml/pages/SearchPage.qml" line="457"/>
         <source>Search</source>
         <translation>Sök</translation>
     </message>
@@ -1593,27 +1603,37 @@
 <context>
     <name>ShortcutsPage</name>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="36"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="45"/>
         <source>Search</source>
         <translation type="unfinished">Sök</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="32"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="37"/>
         <source>Open new window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="23"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="28"/>
         <source>Remove bookmark for “%1”</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="24"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="29"/>
         <source>Add “%1” to bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="50"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="40"/>
+        <source>New window opened</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="41"/>
+        <source>Sometimes the application stays in the background</source>
+        <translation type="unfinished">Ibland stannar programmet i bakgrunden</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="59"/>
         <source>Places</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1965,7 +1985,7 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../qml/main.qml" line="12"/>
+        <location filename="../qml/main.qml" line="11"/>
         <source>Version %1</source>
         <translation type="unfinished"></translation>
     </message>
