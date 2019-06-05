@@ -137,6 +137,7 @@ Page {
                                 searchEngine.cancel()
                             }
                         }
+                    icon.color: Theme.primaryColor
                     icon.source: searchEngine.running ? "image://theme/icon-m-clear" :
                                                            "../images/icon-btn-search.png"
                 }
