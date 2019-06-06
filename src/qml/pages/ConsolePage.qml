@@ -48,6 +48,7 @@ Page {
             anchors.fill: parent
             model: consoleModel
             header: header
+            footer: Spacer { height: Theme.horizontalPageMargin }
 
             VerticalScrollDecorator {
                 visible: horizontalFlick.contentWidth > horizontalFlick.width
