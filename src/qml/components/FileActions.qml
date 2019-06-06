@@ -146,17 +146,19 @@ Item {
 
         IconButton {
             visible: showRename
-            enabled: selectedCount === 1; icon.width: itemSize; icon.height: itemSize
+            enabled: selectedCount > 0 && selectedCount <= 20
+            icon.width: itemSize; icon.height: itemSize
             icon.source: "../images/toolbar-rename.png"
             icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("rename file(s)", "", selectedCount);
             onClicked: {
                 var files = selectedFiles();
                 var dialog = pageStack.push(Qt.resolvedUrl("../pages/RenameDialog.qml"),
-                                            { path: files[0] })
+                                            { 'files': files })
                 dialog.accepted.connect(function() {
-                    if (dialog.errorMessage !== "") errorCallback(dialog.errorMessage);
-                    renameTriggered(files, [dialog.newPath]);
+                    // TODO show all error messages
+                    if (dialog.errorMessages.length !== 0) errorCallback(dialog.errorMessage[0]);
+                    renameTriggered(files, dialog.newFiles);
                 })
             }
         }
