@@ -135,7 +135,6 @@ bool FileWorker::validateFilenames(const QStringList &filenames)
     return true;
 }
 
-#include <QDebug>
 void FileWorker::symlinkFiles()
 {
     int fileIndex = 0;
