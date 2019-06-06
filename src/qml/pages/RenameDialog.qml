@@ -12,7 +12,7 @@ Dialog {
 
     id: dialog
     allowedOrientations: Orientation.All
-    canAccept: newName.text !== ""
+    canAccept: false
 
     onAccepted: {
         var res = engine.rename(path, newName.text);
@@ -64,9 +64,9 @@ Dialog {
                 EnterKey.enabled: newName.text.length > 0
                 EnterKey.iconSource: "image://theme/icon-m-enter-accept"
                 EnterKey.onClicked: dialog.accept()
+
+                onTextChanged: canAccept = text !== "" && !engine.exists(Functions.dirName(path)+text)
             }
         }
     }
 }
-
-
