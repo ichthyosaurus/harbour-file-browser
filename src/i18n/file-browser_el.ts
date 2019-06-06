@@ -337,7 +337,7 @@
 <context>
     <name>FileActions</name>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="52"/>
+        <location filename="../qml/components/FileActions.qml" line="51"/>
         <source>%n file(s) selected</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -345,17 +345,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="83"/>
+        <location filename="../qml/components/FileActions.qml" line="82"/>
         <source>clear selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="84"/>
+        <location filename="../qml/components/FileActions.qml" line="83"/>
         <source>select all</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="93"/>
+        <location filename="../qml/components/FileActions.qml" line="92"/>
         <source>cut file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -363,7 +363,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="97"/>
+        <location filename="../qml/components/FileActions.qml" line="96"/>
         <source>%n file(s) cut</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -371,7 +371,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="106"/>
+        <location filename="../qml/components/FileActions.qml" line="105"/>
         <source>copy file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -379,7 +379,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="110"/>
+        <location filename="../qml/components/FileActions.qml" line="109"/>
         <source>%n file(s) copied</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -387,7 +387,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="119"/>
+        <location filename="../qml/components/FileActions.qml" line="118"/>
         <source>transfer file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -395,7 +395,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="138"/>
+        <location filename="../qml/components/FileActions.qml" line="137"/>
         <source>delete file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -411,7 +411,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="170"/>
+        <location filename="../qml/components/FileActions.qml" line="171"/>
         <source>share file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -419,7 +419,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="190"/>
+        <location filename="../qml/components/FileActions.qml" line="191"/>
         <source>compress file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -435,7 +435,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="207"/>
+        <location filename="../qml/components/FileActions.qml" line="208"/>
         <source>show file properties</source>
         <translation type="unfinished"></translation>
     </message>
@@ -671,31 +671,31 @@
         <translation>Κενό όνομα αρχείου</translation>
     </message>
     <message>
-        <location filename="../fileworker.cpp" line="188"/>
+        <location filename="../fileworker.cpp" line="187"/>
         <source>File not found</source>
         <translation>Το αρχείο δεν βρέθηκε</translation>
     </message>
     <message>
-        <location filename="../fileworker.cpp" line="201"/>
+        <location filename="../fileworker.cpp" line="200"/>
         <source>Folder delete failed</source>
         <translation>Η διαγραφή του φακέλου απέτυχε</translation>
     </message>
     <message>
-        <location filename="../fileworker.cpp" line="151"/>
-        <location filename="../fileworker.cpp" line="223"/>
-        <location filename="../fileworker.cpp" line="255"/>
-        <location filename="../fileworker.cpp" line="351"/>
-        <location filename="../fileworker.cpp" line="367"/>
+        <location filename="../fileworker.cpp" line="150"/>
+        <location filename="../fileworker.cpp" line="222"/>
+        <location filename="../fileworker.cpp" line="254"/>
+        <location filename="../fileworker.cpp" line="350"/>
+        <location filename="../fileworker.cpp" line="366"/>
         <source>Cancelled</source>
         <translation>Ακυρώθηκε</translation>
     </message>
     <message>
-        <location filename="../fileworker.cpp" line="336"/>
+        <location filename="../fileworker.cpp" line="335"/>
         <source>Source folder does not exist</source>
         <translation>Ο φάκελος πηγής δεν υπάρχει</translation>
     </message>
     <message>
-        <location filename="../fileworker.cpp" line="343"/>
+        <location filename="../fileworker.cpp" line="342"/>
         <source>Cannot create target folder %1</source>
         <translation>Αδύνατη η δημιουργία του φακέλου προορισμού %1</translation>
     </message>
@@ -1227,19 +1227,19 @@
 <context>
     <name>RenameDialog</name>
     <message>
-        <location filename="../qml/pages/RenameDialog.qml" line="40"/>
+        <location filename="../qml/pages/RenameDialog.qml" line="43"/>
         <source>Rename</source>
         <translation>Μετονομασία</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RenameDialog.qml" line="46"/>
+        <location filename="../qml/pages/RenameDialog.qml" line="62"/>
         <source>Give a new name for
 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/RenameDialog.qml" line="58"/>
-        <location filename="../qml/pages/RenameDialog.qml" line="59"/>
+        <location filename="../qml/pages/RenameDialog.qml" line="72"/>
+        <location filename="../qml/pages/RenameDialog.qml" line="73"/>
         <source>New name</source>
         <translation>Νέο όνομα</translation>
     </message>
