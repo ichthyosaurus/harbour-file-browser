@@ -45,7 +45,6 @@ Item {
     signal shareTriggered
     signal transferTriggered(var toTransfer, var targets, var selectedAction, var goToTarget)
     signal compressTriggered
-    signal extractTriggered
     signal editTriggered
 
     onSelectedCountChanged: {
@@ -190,7 +189,6 @@ Item {
             onClicked: { compressTriggered(); }
             onPressAndHold: {
                 labelText = qsTr("compress file(s)", "", selectedCount);
-                // labelText = qsTr("extract archive")
             }
         }
         IconButton { // NOT IMPLEMENTED YET
