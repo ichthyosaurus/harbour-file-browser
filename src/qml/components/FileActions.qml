@@ -32,7 +32,7 @@ Item {
     property bool showRename: true
     property bool showShare: true
     property bool showTransfer: true
-    property bool showArchive: true
+    property bool showCompress: true
     property bool showEdit: true
 
     signal selectAllTriggered
@@ -182,7 +182,7 @@ Item {
             }
         }
         IconButton { // NOT IMPLEMENTED YET
-            visible: showArchive && false
+            visible: showCompress && false
             enabled: false; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-file-archive-folder"
             icon.color: Theme.primaryColor

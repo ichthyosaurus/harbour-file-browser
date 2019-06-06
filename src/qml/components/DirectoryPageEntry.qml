@@ -184,7 +184,7 @@ ListItem {
                  selectedFiles: function() { return [fileModel.fileNameAt(index)]; }
                  selectedCount: 1
                  showShare: !model.isLink
-                 showSelection: false; showEdit: false; showArchive: false
+                 showSelection: false; showEdit: false; showCompress: false
                  onDeleteTriggered: {
                      menu.close();
                      remorsePopupActive = true;
