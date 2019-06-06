@@ -74,7 +74,7 @@ Item {
 
         IconButton {
             visible: showSelection
-            enabled: enabled; icon.width: itemSize; icon.height: itemSize
+            enabled: base.enabled; icon.width: itemSize; icon.height: itemSize
             icon.source: displayClose ? "image://theme/icon-m-clear"
                                       : "../images/toolbar-select-all.png"
             icon.color: Theme.primaryColor
@@ -86,7 +86,7 @@ Item {
         }
         IconButton {
             visible: showCut
-            enabled: enabled; icon.width: itemSize; icon.height: itemSize
+            enabled: base.enabled && selectedCount > 0; icon.width: itemSize; icon.height: itemSize
             icon.source: "../images/toolbar-cut.png"
             icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("cut file(s)", "", selectedCount);
@@ -99,7 +99,7 @@ Item {
         }
         IconButton {
             visible: showCopy
-            enabled: enabled; icon.width: itemSize; icon.height: itemSize
+            enabled: base.enabled && selectedCount > 0; icon.width: itemSize; icon.height: itemSize
             icon.source: "../images/toolbar-copy.png"
             icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("copy file(s)", "", selectedCount);
@@ -112,7 +112,7 @@ Item {
         }
         IconButton {
             visible: showTransfer
-            enabled: enabled; icon.width: itemSize; icon.height: itemSize
+            enabled: base.enabled && selectedCount > 0; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-shuffle"
             icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("transfer file(s)", "", selectedCount);
@@ -131,7 +131,7 @@ Item {
         }
         IconButton {
             visible: showDelete
-            enabled: enabled; icon.width: itemSize; icon.height: itemSize
+            enabled: base.enabled && selectedCount > 0; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-delete"
             icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("delete file(s)", "", selectedCount);
@@ -183,7 +183,7 @@ Item {
         }
         IconButton { // NOT IMPLEMENTED YET
             visible: showCompress && false
-            enabled: false; icon.width: itemSize; icon.height: itemSize
+            enabled: false && selectedCount > 0; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-file-archive-folder"
             icon.color: Theme.primaryColor
             onClicked: { compressTriggered(); }
@@ -193,7 +193,7 @@ Item {
         }
         IconButton { // NOT IMPLEMENTED YET
             visible: showEdit && false
-            enabled: false; icon.width: itemSize; icon.height: itemSize
+            enabled: false && selectedCount > 0; icon.width: itemSize; icon.height: itemSize
             icon.source: "image://theme/icon-m-edit"
             icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("edit file(s)", "", selectedCount);
@@ -201,6 +201,7 @@ Item {
         }
         IconButton {
             visible: showProperties
+            enabled: base.enabled && selectedCount > 0
             icon.width: itemSize; icon.height: itemSize
             icon.source: "../images/toolbar-properties.png"
             icon.color: Theme.primaryColor
