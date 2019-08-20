@@ -186,12 +186,12 @@ ListItem {
                  showShare: !model.isLink
                  showSelection: false; showEdit: false; showCompress: false
                  onDeleteTriggered: {
-                     menu.close();
                      remorsePopupActive = true;
                      remorsePopup.execute(qsTr("Deleting"), function() {
                          clearSelectedFiles();
                          progressPanel.showText(qsTr("Deleting"));
                          engine.deleteFiles([fileModel.fileNameAt(index)]);
+                         menu.close();
                      });
                  }
                  onCutTriggered: menu.close();
