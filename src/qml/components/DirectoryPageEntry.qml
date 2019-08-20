@@ -168,43 +168,43 @@ ListItem {
 
     // context menu is activated with long press
     Component {
-         id: contextMenu
-         ContextMenu {
-             id: menu
-             // cancel delete if context menu is opened
-             onActiveChanged: {
+        id: contextMenu
+        ContextMenu {
+            id: menu
+            // cancel delete if context menu is opened
+            onActiveChanged: {
                 if (!active) return;
                 remorsePopup.cancel();
                 clearSelectedFiles();
                 if (ctxBookmark.visible) ctxBookmark.hasBookmark = Functions.hasBookmark(fileModel.fileNameAt(index))
-             }
-             FileActions {
-                 id: fileActions
-                 showLabel: false
-                 selectedFiles: function() { return [fileModel.fileNameAt(index)]; }
-                 selectedCount: 1
-                 showShare: !model.isLink
-                 showSelection: false; showEdit: false; showCompress: false
-                 onDeleteTriggered: {
-                     remorsePopupActive = true;
-                     remorsePopup.execute(qsTr("Deleting"), function() {
-                         clearSelectedFiles();
-                         progressPanel.showText(qsTr("Deleting"));
-                         engine.deleteFiles([fileModel.fileNameAt(index)]);
-                         menu.close();
-                     });
-                 }
-                 onCutTriggered: menu.close();
-                 onCopyTriggered: menu.close();
-                 // As the menu is closed when a new page is pushed on the stack,
-                 // we cannot receive the transferTriggered signal. (Or rather,
-                 // it cannot be sent, because it is deleted.)
-                 // This means that transferring from here is impossible,
-                 // plus that we cannot notify errors when renaming.
-                 // Cut, copy, delete, info, and share work fine, though.
-                 showTransfer: false
-             }
-             MenuItem {
+            }
+            FileActions {
+                id: fileActions
+                showLabel: false
+                selectedFiles: function() { return [fileModel.fileNameAt(index)]; }
+                selectedCount: 1
+                showShare: !model.isLink
+                showSelection: false; showEdit: false; showCompress: false
+                onDeleteTriggered: {
+                    remorsePopupActive = true;
+                    remorsePopup.execute(qsTr("Deleting"), function() {
+                        clearSelectedFiles();
+                        progressPanel.showText(qsTr("Deleting"));
+                        engine.deleteFiles([fileModel.fileNameAt(index)]);
+                        menu.close();
+                    });
+                }
+                onCutTriggered: menu.close();
+                onCopyTriggered: menu.close();
+                // As the menu is closed when a new page is pushed on the stack,
+                // we cannot receive the transferTriggered signal. (Or rather,
+                // it cannot be sent, because it is deleted.)
+                // This means that transferring from here is impossible,
+                // plus that we cannot notify errors when renaming.
+                // Cut, copy, delete, info, and share work fine, though.
+                showTransfer: false
+            }
+            MenuItem {
                 id: ctxBookmark
                 visible: model.isDir
                 property bool hasBookmark: visible ? Functions.hasBookmark(fileModel.fileNameAt(index)) : false
@@ -218,7 +218,7 @@ ListItem {
                         hasBookmark = true;
                     }
                 }
-             }
-         }
-     }
+            }
+        }
+    }
 }
