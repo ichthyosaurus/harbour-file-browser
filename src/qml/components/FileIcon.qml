@@ -1,4 +1,4 @@
-import QtQuick 2.6
+import QtQuick 2.2
 import Sailfish.Silica 1.0
 
 // a file icon or thumbnail for directory listings
