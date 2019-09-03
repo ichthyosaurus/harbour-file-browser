@@ -23,8 +23,10 @@ HEADERS += jhead/jhead-api.h jhead/jhead.h
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 
 i18n.path = /usr/share/harbour-file-browser/i18n
-i18n.files = i18n/file-browser_de.qm \
+i18n.files = i18n/file-browser_de_DE.qm \
+             i18n/file-browser_de_CH.qm \
              i18n/file-browser_el.qm \
+             i18n/file-browser_en_US.qm \
              i18n/file-browser_es.qm \
              i18n/file-browser_fi.qm \
              i18n/file-browser_fr.qm \
@@ -45,8 +47,10 @@ INSTALLS += i18n
 system(lrelease $$PWD/i18n/*.ts)
 
 TRANSLATIONS = \
-    i18n/file-browser_de.ts \
+    i18n/file-browser_de_DE.ts \
+    i18n/file-browser_de_CH.ts \
     i18n/file-browser_el.ts \
+    i18n/file-browser_en_US.ts \
     i18n/file-browser_es.ts \
     i18n/file-browser_fi.ts \
     i18n/file-browser_fr.ts \
