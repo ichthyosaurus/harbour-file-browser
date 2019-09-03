@@ -248,10 +248,10 @@ QStringList Engine::fileSizeInfo(QStringList paths)
     result << (duTotal > 0 ? filesizeToString(duTotal) : "-");
 
     QString dirs = execute("/bin/find", QStringList() << paths << "-type" << "d", false);
-    result << QString::number(dirs.split(QRegExp("[\n\r]")).count());
+    result << QString::number(dirs.split(QRegExp("[\n\r]")).count()-1);
 
     QString files = execute("/bin/find", QStringList() << paths << "-type" << "f", false);
-    result << QString::number(files.split(QRegExp("[\n\r]")).count());
+    result << QString::number(files.split(QRegExp("[\n\r]")).count()-1);
 
     return result;
 }
