@@ -7,10 +7,13 @@ URL: https://github.com/karip/harbour-file-browser
 License: Public domain
 Sources:
 - '%{name}-%{version}.tar.bz2'
+
 Description: |-
   File Browser for Sailfish OS. Browse files on the phone.
+
 Configure: none
 Builder: qtc5
+
 PkgConfigBR:
 - Qt5Core
 - Qt5Qml
@@ -18,8 +21,13 @@ PkgConfigBR:
 - sailfishapp
 
 NoAutoReqProv: yes
+
 Requires:
 - libsailfishapp
+
+PkgBR:
+- qt5-qttools-linguist
+
 Files:
 # Do not include whole %{_datadir}/applications as that would include tests too
 # the following defattr will cause two defattrs in .spec file, how to get only one?
@@ -29,6 +37,3 @@ Files:
 - '%{_datadir}/%{name}/qml'
 - '%{_datadir}/%{name}/i18n'
 - '%attr(755,root,root) %{_bindir}/%{name}' # permission to run the executable
-
-PkgBR:
-- qt5-qttools-linguist

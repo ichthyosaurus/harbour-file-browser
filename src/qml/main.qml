@@ -7,7 +7,7 @@ ApplicationWindow {
     signal bookmarkAdded(var path)
     signal bookmarkRemoved(var path)
 
-    // note: version number has to be updated only in harbour-file-browser.spec!
+    // note: version number has to be updated only in harbour-file-browser.yaml!
     readonly property string versionString: qsTr("Version %1").arg(versionNumber)
 
     property string coverText: "File Browser"

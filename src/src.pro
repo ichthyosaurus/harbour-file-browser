@@ -3,9 +3,10 @@ TARGET = harbour-file-browser
 
 CONFIG += sailfishapp
 
-DEFINES += RELEASE_VERSION=\\\"$$VERSION\\\"
-
 # note: see harbour-file-browser.pro and harbour-file-browser.spec for details
+HARBOUR_COMPLIANCE = $$(FILEBROWSER_HARBOUR_COMPLIANCE)
+DEFINES += RELEASE_VERSION=\\\"$$(FILEBROWSER_VERSION)\\\"
+
 equals(HARBOUR_COMPLIANCE, off) {
     DEFINES += NO_HARBOUR_COMPLIANCE
 }
