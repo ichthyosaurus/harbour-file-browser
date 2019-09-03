@@ -229,8 +229,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="191"/>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="193"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="190"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="192"/>
         <source>Deleting</source>
         <translation type="unfinished">Διαγραφή</translation>
     </message>
@@ -703,9 +703,13 @@
 <context>
     <name>LicensePage</name>
     <message>
-        <location filename="../qml/pages/LicensePage.qml" line="19"/>
         <source>Public Domain</source>
-        <translation type="unfinished">Κοινό κτήμα</translation>
+        <translation type="obsolete">Κοινό κτήμα</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/LicensePage.qml" line="19"/>
+        <source>License</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1350,7 +1354,7 @@
     <name>SettingsPage</name>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="22"/>
-        <location filename="../qml/pages/SettingsPage.qml" line="201"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="204"/>
         <source>Settings</source>
         <translation>Ρυθμίσεις</translation>
     </message>
@@ -1511,11 +1515,15 @@
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="169"/>
-        <source>File Browser is free and unencumbered software released into the public domain.</source>
-        <translation>Ο File Browser είναι ένα ελεύθερο λογισμικό κοινού κτήματος.</translation>
+        <source>This beta version of File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="186"/>
+        <source>File Browser is free and unencumbered software released into the public domain.</source>
+        <translation type="vanished">Ο File Browser είναι ένα ελεύθερο λογισμικό κοινού κτήματος.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="187"/>
         <source>The source code is available at</source>
         <translation>Ο πηγαίος κώδικας είναι διαθέσιμος στο</translation>
     </message>
@@ -1964,21 +1972,12 @@
 <context>
     <name>functions</name>
     <message>
-        <location filename="../qml/pages/functions.js" line="125"/>
-        <source>root</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/functions.js" line="145"/>
-        <location filename="../qml/pages/functions.js" line="154"/>
         <source>Copying</source>
-        <translation type="unfinished">Αντιγραφή</translation>
+        <translation type="obsolete">Αντιγραφή</translation>
     </message>
     <message>
-        <location filename="../qml/pages/functions.js" line="145"/>
-        <location filename="../qml/pages/functions.js" line="154"/>
         <source>Moving</source>
-        <translation type="unfinished">Μετακίνηση</translation>
+        <translation type="obsolete">Μετακίνηση</translation>
     </message>
 </context>
 <context>
