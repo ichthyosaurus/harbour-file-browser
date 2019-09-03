@@ -4,7 +4,9 @@ Version: 1.8.0
 Release: 0
 Group: Qt/Qt
 URL: https://github.com/karip/harbour-file-browser
-License: Public domain
+
+License: GPLv3+
+
 Sources:
 - '%{name}-%{version}.tar.bz2'
 

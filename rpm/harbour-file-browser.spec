@@ -16,7 +16,7 @@ Summary:    File Browser for Sailfish OS
 Version:    1.8.0
 Release:    0
 Group:      Qt/Qt
-License:    Public domain
+License:    GPLv3+
 URL:        https://github.com/karip/harbour-file-browser
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-file-browser.yaml
