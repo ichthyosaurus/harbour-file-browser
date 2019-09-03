@@ -1462,7 +1462,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="101"/>
         <source>Behavior and View</source>
-        <translation>Verhalten und Ansicht</translation>
+        <translation>Verhalten und Anzeige</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="109"/>
