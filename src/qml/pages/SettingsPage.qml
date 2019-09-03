@@ -174,7 +174,7 @@ Page {
                     }
                     Label {
                         anchors.right: parent.right
-                        color: Theme.primaryColor
+                        color: Theme.highlightColor
                         text: "\u2022 \u2022 \u2022" // three dots
                     }
                 }
