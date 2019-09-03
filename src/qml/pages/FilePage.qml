@@ -250,7 +250,7 @@ Page {
                     }
                 }
 
-                // Display metadata with priotity < 5
+                // Display metadata with priority < 5
                 Repeater {
                     model: fileData.metaData
                     // first char is priority (0-9), labels and values are delimited with ':'
