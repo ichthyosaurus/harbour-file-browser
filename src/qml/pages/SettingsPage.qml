@@ -184,7 +184,9 @@ Page {
             Label {
                 x: Theme.horizontalPageMargin
                 width: parent.width - 2*x
-                text: qsTr("The source code is available at") + "\nhttps://github.com/karip/harbour-file-browser"
+                text: qsTr("The source code is available at") + "\n" +
+                      "https://github.com/karip/harbour-file-browser" + "\n" +
+                      "https://github.com/ichthyosaurus/harbour-file-browser"
                 wrapMode: Text.Wrap
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: Theme.highlightColor
