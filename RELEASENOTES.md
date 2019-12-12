@@ -1,9 +1,9 @@
 
 # File Browser Release Notes
 
-## Version 2.0.0-beta (2019-09-03)
+## Version 2.0.0-beta (2019-12-12)
 
-Published in OpenRepos on 2019-09-03.
+Published in OpenRepos on 2019-12-12.
 
  * Performance improvements in
  *     - changing directories
