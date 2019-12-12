@@ -1,5 +1,5 @@
 TEMPLATE=app
-TARGET = harbour-file-browser
+TARGET = harbour-file-browser-beta
 
 CONFIG += sailfishapp
 
@@ -22,7 +22,7 @@ HEADERS += jhead/jhead-api.h jhead/jhead.h
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 
-i18n.path = /usr/share/harbour-file-browser/i18n
+i18n.path = /usr/share/harbour-file-browser-beta/i18n
 i18n.files = i18n/file-browser_de_DE.qm \
              i18n/file-browser_de_CH.qm \
              i18n/file-browser_el.qm \

@@ -2,18 +2,19 @@
 
 echo "rendering app icon..."
 
+postfix="-beta"
 root="../src/icons"
 appicons=(harbour-file-browser harbour-file-browser-root)
 for i in 86 108 128 172; do
     mkdir -p "$root/${i}x$i"
 
     for a in "${appicons[@]}"; do
-        if [[ ! "$a.svg" -nt "$root/${i}x$i/$a.png" ]]; then
+        if [[ ! "$a.svg" -nt "$root/${i}x$i/$a$postfix.png" ]]; then
             echo "nothing to do for $a at ${i}x$i"
             continue
         fi
 
-        inkscape -z -e "$root/${i}x$i/$a.png" -w "$i" -h "$i" "$a.svg"
+        inkscape -z -e "$root/${i}x$i/$a$postfix.png" -w "$i" -h "$i" "$a.svg"
     done
 done
 
