@@ -10,6 +10,8 @@ Page {
 
     property string dir: "/" // holds the top directory where all searches will be made
     property string currentDirectory: "" // holds the directory which is being searched by SearchEngine
+    property string searchText: "" // holds the initial search text
+    property bool startImmediately: false // if search text is given, start search as soon as page is ready
 
     // used to disable SelectionPanel while remorse timer is active
     property bool remorsePopupActive: false // set to true when remorsePopup is active (at top of page)
@@ -27,7 +29,7 @@ Page {
         onMatchFound: listModel.append({ fullname: fullname, filename: filename,
                                          absoluteDir: absoluteDir,
                                          fileIcon: fileIcon, fileKind: fileKind,
-                                         isSelected: false
+                                         isSelected: false, mimeType: mimeType
                                        });
         onWorkerDone: { clearCover(); }
         onWorkerErrorOccurred: { clearCover(); notificationPanel.showText(message, filename); }
@@ -43,6 +45,12 @@ Page {
         id: fileList
         anchors.fill: parent
         anchors.bottomMargin: selectionPanel.visible ? selectionPanel.visibleSize : 0
+        footer: Spacer { height: Theme.horizontalPageMargin; }
+
+        visible: true
+        opacity: visible ? 1 : 0
+        Behavior on opacity { NumberAnimation { duration: 300 } }
+
         clip: true
 
         // prevent newly added list delegates from stealing focus away from the search field
@@ -79,77 +87,97 @@ Page {
 
         header: Item {
             width: parent.width
-            height: Theme.itemSizeLarge
+            height: head.height + Theme.itemSizeExtraLarge
 
-            SearchField {
-                id: searchField
-                anchors.left: parent.left
-                anchors.right: cancelSearchButton.left
-                y: Theme.paddingSmall
-                placeholderText: qsTr("Search %1").arg(Functions.formatPathForSearch(page.dir))
-                inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhNoPredictiveText
-
-                // get focus when page is shown for the first time
-                Component.onCompleted: forceActiveFocus()
-
-
-                // return key on virtual keyboard starts or restarts search
-                EnterKey.enabled: true
-                EnterKey.iconSource: "image://theme/icon-m-enter-accept"
-                EnterKey.onClicked: {
-                    notificationPanel.hide();
-                    listModel.update(searchField.text);
-                    foundText.visible = true;
-                    searchField.focus = false;
-                }
+            PageHeader {
+                id: head
+                title: qsTr("Search")
+                description: page.dir
             }
-            // our own "IconButton" to make the mouse area large and easier to tap
-            IconButton {
-                id: cancelSearchButton
-                anchors.right: parent.right
-                anchors.top: searchField.top
-                width: Theme.iconSizeMedium+Theme.paddingLarge
-                height: searchField.height
-                onClicked: {
-                        if (!searchEngine.running) {
-                            listModel.update(searchField.text);
-                            foundText.visible = true;
-                        } else {
-                            searchEngine.cancel()
-                        }
+
+            Item {
+                anchors.top: head.bottom
+                width: parent.width
+                height: Theme.itemSizeExtraLarge
+
+                SearchField {
+                    id: searchField
+                    anchors.left: parent.left
+                    anchors.right: cancelSearchButton.left
+                    y: Theme.paddingSmall
+                    placeholderText: qsTr("Search below “%1”").arg(Functions.formatPathForSearch(page.dir))
+                    inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhNoPredictiveText
+                    text: page.searchText
+
+                    // get focus when page is shown for the first time
+                    Component.onCompleted: if (!startImmediately) forceActiveFocus();
+
+                    // return key on virtual keyboard starts or restarts search
+                    EnterKey.enabled: true
+                    EnterKey.iconSource: "image://theme/icon-m-enter-accept"
+                    EnterKey.onClicked: {
+                        notificationPanel.hide();
+                        listModel.update(searchField.text);
+                        foundText.visible = true;
+                        searchField.focus = false;
                     }
-                icon.source: searchEngine.running ? "image://theme/icon-m-clear" :
-                                                       "image://theme/icon-m-right"
-            }
-            BusyIndicator {
-                id: searchBusy
-                anchors.centerIn: cancelSearchButton
-                running: searchEngine.running
-                size: BusyIndicatorSize.Small
-            }
+                }
+                // our own "IconButton" to make the mouse area large and easier to tap
+                IconButton {
+                    id: cancelSearchButton
+                    anchors.right: parent.right
+                    anchors.top: searchField.top
+                    width: Theme.iconSizeMedium+Theme.paddingLarge
+                    height: searchField.height
+                    onClicked: {
+                            if (!searchEngine.running) {
+                                listModel.update(searchField.text);
+                                foundText.visible = true;
+                            } else {
+                                searchEngine.cancel()
+                            }
+                        }
+                    icon.color: Theme.primaryColor
+                    icon.source: searchEngine.running ? "image://theme/icon-m-clear" :
+                                                           "../images/icon-btn-search.png"
+                }
+                BusyIndicator {
+                    id: searchBusy
+                    anchors.centerIn: cancelSearchButton
+                    running: searchEngine.running
+                    size: BusyIndicatorSize.Small
+                }
 
-            Label {
-                id: foundText
-                visible: false
-                anchors.left: parent.left
-                anchors.leftMargin: searchField.textLeftMargin
-                anchors.top: searchField.bottom
-                anchors.topMargin: -Theme.paddingLarge
-                text: qsTr("%1 hits").arg(listModel.count)
-                font.pixelSize: Theme.fontSizeTiny
-                color: searchField.placeholderColor
-            }
-            Label {
-                anchors.left: parent.left
-                anchors.leftMargin: 3*Theme.itemSizeSmall
-                anchors.right: parent.right
-                anchors.rightMargin: Theme.paddingLarge
-                anchors.top: searchField.bottom
-                anchors.topMargin: -Theme.paddingSmall
-                text: page.currentDirectory
-                font.pixelSize: Theme.fontSizeTiny
-                color: Theme.secondaryColor
-                elide: Text.ElideRight
+                Label {
+                    id: foundText
+                    visible: startImmediately
+
+                    anchors {
+                        left: parent.left
+                        leftMargin: searchField.textLeftMargin
+                        top: searchField.bottom
+                        topMargin: -Theme.paddingMedium
+                    }
+
+                    text: qsTr("%n hit(s)", "", listModel.count)
+                    font.pixelSize: Theme.fontSizeTiny
+                    color: searchField.placeholderColor
+                }
+                Label {
+                    anchors {
+                        left: foundText.left
+                        leftMargin: Theme.itemSizeSmall
+                        right: parent.right
+                        rightMargin: Theme.paddingLarge
+                        top: searchField.bottom
+                        topMargin: -Theme.paddingMedium
+                    }
+
+                    text: page.currentDirectory
+                    font.pixelSize: Theme.fontSizeTiny
+                    color: Theme.secondaryColor
+                    elide: Text.ElideMiddle
+                }
             }
         }
 
@@ -165,24 +193,22 @@ Page {
                 anchors.fill: parent
                 color: fileItem.highlightedColor
             }
-            // HighlightImage replaced with a Loader so that HighlightImage or Image
-            // can be loaded depending on Sailfish version (lightPrimaryColor is defined on SF3)
-            Loader {
+
+            FileIcon {
                 id: listIcon
-                anchors.verticalCenter: listLabel.verticalCenter
+                clip: true
+                anchors.verticalCenter: parent.verticalCenter
                 x: Theme.paddingLarge
-                width: Theme.iconSizeSmall
-                height: Theme.iconSizeSmall
-                Component.onCompleted: {
-                    var qml = Theme.lightPrimaryColor ? "../components/MyHighlightImage3.qml"
-                                                      : "../components/MyHighlightImage2.qml";
-                    setSource(qml, {
-                        imgsrc: "../images/small-"+fileIcon+".png",
-                        imgw: Theme.iconSizeSmall,
-                        imgh: Theme.iconSizeSmall
-                    })
-                }
+                width: Theme.itemSizeSmall
+                height: width
+                showThumbnail: true
+                highlighted: fileItem.highlighted || isSelected
+                file: model.fullname
+                isDirectory: model.fileKind === "d"
+                mimeTypeCallback: function() { return model.mimeType; }
+                fileIconCallback: function() { return fileIcon; }
             }
+
             // circle shown when item is selected
             Rectangle {
                 visible: isSelected
@@ -336,23 +362,27 @@ Page {
         id: selectionPanel
         selectedCount: _selectedFileCount
         enabled: !page.remorsePopupActive && !page.remorseItemActive
-        orientation: page.orientation
         displayClose: _selectedFileCount === listModel.count
+        selectedFiles: parent.selectedFiles
 
-        onSelectAllTriggered: selectAllFiles();
-        onCloseTriggered: clearSelectedFiles();
-        onDeleteTriggered: {
-            var files = selectedFiles();
-            remorsePopupActive = true;
-            remorsePopup.execute(qsTr("Deleting"), function() {
-                clearSelectedFiles();
-                progressPanel.showText(qsTr("Deleting"));
-                engine.deleteFiles(files);
-            });
-        }
-        onPropertyTriggered: {
-            var files = selectedFiles();
-            pageStack.push(Qt.resolvedUrl("FilePage.qml"), { file: files[0] });
+        Connections {
+            target: selectionPanel.actions
+            onCloseTriggered: clearSelectedFiles();
+            onSelectAllTriggered: selectAllFiles();
+            onDeleteTriggered: {
+                var files = selectedFiles();
+                remorsePopupActive = true;
+                remorsePopup.execute(qsTr("Deleting"), function() {
+                    clearSelectedFiles();
+                    progressPanel.showText(qsTr("Deleting"));
+                    engine.deleteFiles(files);
+                });
+            }
+            onTransferTriggered: {
+                if (remorsePopupActive) return;
+                if (transferPanel.status === Loader.Ready) transferPanel.item.startTransfer(toTransfer, targets, selectedAction, goToTarget);
+                else notificationPanel.showText(qsTr("Internally not ready"), qsTr("Please simply try again"));
+            }
         }
     }
 
@@ -363,6 +393,12 @@ Page {
 
         if (status === PageStatus.Activating)
             clearCover();
+
+        if (status === PageStatus.Active) {
+            if (startImmediately === true && searchText !== "") {
+                listModel.update(searchText);
+            }
+        }
     }
 
     // connect signals from engine to panels
@@ -401,9 +437,23 @@ Page {
         onCancelled: engine.cancel()
     }
 
+    Loader {
+        id: transferPanel
+        asynchronous: true
+        anchors.fill: parent
+        Component.onCompleted: {
+            setSource(Qt.resolvedUrl("../components/TransferPanel.qml"),
+                      { "page": page, "progressPanel": progressPanel,
+                        "notificationPanel": notificationPanel });
+        }
+        Connections {
+            target: transferPanel.item
+            onOverlayShown: { fileList.visible = false; }
+            onOverlayHidden: { fileList.visible = true; }
+        }
+    }
+
     function clearCover() {
         coverText = qsTr("Search");
     }
 }
-
-

@@ -1,16 +1,22 @@
-Name: harbour-file-browser
+Name: harbour-file-browser-beta
 Summary: File Browser for Sailfish OS
-Version: 1.8.0
+Version: 2.0.0
 Release: 0
+
 Group: Qt/Qt
 URL: https://github.com/karip/harbour-file-browser
-License: Public domain
+
+License: GPLv3+
+
 Sources:
 - '%{name}-%{version}.tar.bz2'
+
 Description: |-
-  File Browser for Sailfish OS. Browse files on the phone.
+  File Browser for Sailfish OS. Browse files on the phone. (Beta version.)
+
 Configure: none
 Builder: qtc5
+
 PkgConfigBR:
 - Qt5Core
 - Qt5Qml
@@ -18,20 +24,19 @@ PkgConfigBR:
 - sailfishapp
 
 NoAutoReqProv: yes
+
 Requires:
 - libsailfishapp
+
+PkgBR:
+- qt5-qttools-linguist
+
 Files:
 # Do not include whole %{_datadir}/applications as that would include tests too
 # the following defattr will cause two defattrs in .spec file, how to get only one?
 - '%defattr(644,root,root,755)' # default permissions for all files and folders
-- '%{_datadir}/icons/hicolor/86x86/apps/%{name}.png'
-- '%{_datadir}/icons/hicolor/108x108/apps/%{name}.png'
-- '%{_datadir}/icons/hicolor/128x128/apps/%{name}.png'
-- '%{_datadir}/icons/hicolor/172x172/apps/%{name}.png'
+- '%{_datadir}/icons/hicolor/*/apps/%{name}.png'
 - '%{_datadir}/applications/%{name}.desktop'
 - '%{_datadir}/%{name}/qml'
 - '%{_datadir}/%{name}/i18n'
 - '%attr(755,root,root) %{_bindir}/%{name}' # permission to run the executable
-
-PkgBR:
-- qt5-qttools-linguist 

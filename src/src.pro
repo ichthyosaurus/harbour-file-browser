@@ -1,7 +1,15 @@
 TEMPLATE=app
-TARGET = harbour-file-browser
+TARGET = harbour-file-browser-beta
 
 CONFIG += sailfishapp
+
+# note: see harbour-file-browser.pro and harbour-file-browser.spec for details
+HARBOUR_COMPLIANCE = $$(FILEBROWSER_HARBOUR_COMPLIANCE)
+DEFINES += RELEASE_VERSION=\\\"$$(FILEBROWSER_VERSION)\\\"
+
+equals(HARBOUR_COMPLIANCE, off) {
+    DEFINES += NO_HARBOUR_COMPLIANCE
+}
 
 SOURCES += main.cpp filemodel.cpp filedata.cpp engine.cpp fileworker.cpp searchengine.cpp \
            searchworker.cpp consolemodel.cpp statfileinfo.cpp globals.cpp
@@ -14,9 +22,11 @@ HEADERS += jhead/jhead-api.h jhead/jhead.h
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 
-i18n.path = /usr/share/harbour-file-browser/i18n
-i18n.files = i18n/file-browser_de.qm \
+i18n.path = /usr/share/harbour-file-browser-beta/i18n
+i18n.files = i18n/file-browser_de_DE.qm \
+             i18n/file-browser_de_CH.qm \
              i18n/file-browser_el.qm \
+             i18n/file-browser_en_US.qm \
              i18n/file-browser_es.qm \
              i18n/file-browser_fi.qm \
              i18n/file-browser_fr.qm \
@@ -28,12 +38,19 @@ i18n.files = i18n/file-browser_de.qm \
 
 INSTALLS += i18n
 
+# rootIcons.path = /usr/share/icons/hicolor/*/apps
+# rootIcons.files = icons/*/harbour-file-browser-root.png
+#
+# INSTALLS += rootIcons
+
 # automatic generation of the translation .qm files from .ts files
 system(lrelease $$PWD/i18n/*.ts)
 
 TRANSLATIONS = \
-    i18n/file-browser_de.ts \
+    i18n/file-browser_de_DE.ts \
+    i18n/file-browser_de_CH.ts \
     i18n/file-browser_el.ts \
+    i18n/file-browser_en_US.ts \
     i18n/file-browser_es.ts \
     i18n/file-browser_fi.ts \
     i18n/file-browser_fr.ts \

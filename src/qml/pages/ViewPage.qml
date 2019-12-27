@@ -21,9 +21,8 @@ Page {
 
             PageHeader { title: Functions.lastPartOfPath(page.path) }
 
-            Label {
+            TextArea {
                 id: portraitText
-                textFormat: Text.PlainText
                 width: parent.width
                 wrapMode: Text.WrapAnywhere
                 font.pixelSize: Theme.fontSizeTiny
@@ -31,10 +30,12 @@ Page {
                 color: Theme.secondaryColor
                 visible: page.orientation === Orientation.Portrait ||
                          page.orientation === Orientation.PortraitInverted
+                inputMethodHints: Qt.ImhNoPredictiveText
+                softwareInputPanelEnabled: false
+                background: null
             }
-            Label {
+            TextArea {
                 id: landscapeText
-                textFormat: Text.PlainText
                 width: parent.width
                 wrapMode: Text.WrapAnywhere
                 font.pixelSize: Theme.fontSizeTiny
@@ -42,6 +43,9 @@ Page {
                 color: Theme.secondaryColor
                 visible: page.orientation === Orientation.Landscape ||
                          page.orientation === Orientation.LandscapeInverted
+                softwareInputPanelEnabled: false
+                inputMethodHints: Qt.ImhNoPredictiveText
+                background: null
             }
             Spacer {
                 height: 2*Theme.paddingLarge
@@ -71,7 +75,7 @@ Page {
             coverText = Functions.lastPartOfPath(page.path);
             // reading file returns three texts, message, portrait and landscape texts
             var txts = engine.readFile(page.path);
-            message.text = txts[0];
+            message.text = txts[0] === "" ? "" : "⸻ %1 ⸻".arg(txts[0]);
             portraitText.text = txts[1];
             landscapeText.text = txts[2];
         }

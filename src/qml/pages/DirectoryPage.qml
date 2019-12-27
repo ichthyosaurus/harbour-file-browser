@@ -11,10 +11,26 @@ Page {
     property bool initial: false // this is set to true if the page is initial page
     property bool remorsePopupActive: false // set to true when remorsePopup is active
     property bool remorseItemActive: false // set to true when remorseItem is active (item level)
+    property bool thumbnailsShown: updateThumbnailsState()
+    property int  fileIconSize: Theme.iconSizeSmall
+    property alias progressPanel: progressPanel
+    property alias notificationPanel: notificationPanel
+    property alias hasBookmark: bookmarkEntry.hasBookmark
+    property string currentFilter: ""
+    // set to true when full dir path should be shown in page header
+    property bool fullPathShown: (engine.readSetting("General/ShowFullDirectoryPaths", "false") === "true")
+    // set to true to enable starting deep search when pressing 'Enter' in filter input
+    property bool quickSearchEnabled: (engine.readSetting("General/DefaultFilterAction", "filter") === "search")
+
+    signal clearViewFilter()
+    signal multiSelectionStarted(var index)
+    signal multiSelectionFinished(var index)
+    signal selectionChanged(var index)
 
     FileModel {
         id: fileModel
         dir: page.dir
+        filterString: currentFilter
         // page.status does not exactly work - root folder seems to be active always??
         active: page.status === PageStatus.Active
     }
@@ -31,14 +47,22 @@ Page {
         anchors.bottomMargin: selectionPanel.visible ? selectionPanel.visibleSize : 0
         clip: true
 
+        visible: true
+        opacity: visible ? 1 : 0
+        Behavior on opacity { NumberAnimation { duration: 300 } }
+
         model: fileModel
 
         VerticalScrollDecorator { flickable: fileList }
 
         PullDownMenu {
+            id: pullDownMenu
+            on_AtFinalPositionChanged: filterField.forceActiveFocus()
+            onActiveChanged: filterField.focus = false
+
             MenuItem {
-                text: qsTr("Settings")
-                onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
+                text: qsTr("View Preferences")
+                onClicked: pageStack.push(Qt.resolvedUrl("SortingPage.qml"), { dir: dir })
             }
             MenuItem {
                 text: qsTr("Create Folder")
@@ -52,191 +76,177 @@ Page {
                 }
             }
             MenuItem {
+                visible: engine.clipboardCount > 0
+                text: qsTr("Paste") +
+                      (engine.clipboardCount > 0 ? " ("+engine.clipboardCount+")" : "")
+                onClicked: {
+                    if (remorsePopupActive) return;
+                    Functions.pasteFiles(page.dir, progressPanel, clearSelectedFiles);
+                }
+            }
+
+            Item {
+                height: Theme.itemSizeMedium
+                width: parent.width
+
+                TextField {
+                    id: filterField
+                    width: parent.width-2*clearFilterButton.width
+                    height: Theme.itemSizeMedium
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.verticalCenter: parent.verticalCenter
+                    placeholderText: qsTr("Filter directory contents")
+                    inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhNoPredictiveText
+                    font.pixelSize: Theme.fontSizeMedium
+                    horizontalAlignment: Text.AlignHCenter
+
+                    background: null
+                    onTextChanged: page.currentFilter = text;
+
+                     EnterKey.enabled: true
+                     EnterKey.iconSource: "image://theme/icon-m-enter-accept"
+                     EnterKey.onClicked: {
+                         if (page.quickSearchEnabled) {
+                             pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
+                                 { dir: page.dir, searchText: filterField.text,
+                                   startImmediately: true });
+                         } else {
+                             pullDownMenu.close();
+                         }
+                     }
+                     Component.onCompleted: {
+                         page.clearViewFilter.connect(function() { text = ""; })
+                     }
+                }
+
+                IconButton {
+                    id: clearFilterButton
+                    anchors {
+                        right: parent.right
+                        rightMargin: Theme.horizontalPageMargin
+                        leftMargin: Theme.horizontalPageMargin
+                        top: filterField.top
+                    }
+                    width: Theme.iconSizeMedium
+                    height: Theme.iconSizeMedium
+                    icon.source: "image://theme/icon-m-clear"
+                    enabled: filterField.enabled
+                    opacity: filterField.text.length > 0 ? 1 : 0
+                    Behavior on opacity { FadeAnimation {} }
+
+                    onClicked: {
+                        filterField.text = "";
+                        pullDownMenu.close();
+                    }
+                }
+
+                IconButton {
+                    id: searchFilterButton
+                    anchors {
+                        left: parent.left
+                        rightMargin: Theme.horizontalPageMargin
+                        leftMargin: Theme.horizontalPageMargin
+                        top: filterField.top
+                    }
+                    width: Theme.iconSizeMedium
+                    height: Theme.iconSizeMedium
+                    icon.source: "../images/icon-btn-search.png"
+                    enabled: filterField.enabled
+                    highlighted: down || page.quickSearchEnabled
+                    opacity: filterField.text.length > 0 ? 1 : 0
+                    Behavior on opacity { FadeAnimation {} }
+
+                    onClicked: {
+                        pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
+                            { dir: page.dir, searchText: filterField.text,
+                              startImmediately: true });
+                    }
+                }
+            }
+
+        }
+
+        PushUpMenu {
+            MenuItem {
                 text: qsTr("Search")
                 onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
                                           { dir: page.dir });
             }
             MenuItem {
-                text: qsTr("Paste") +
-                      (engine.clipboardCount > 0 ? " ("+engine.clipboardCount+")" : "")
+                id: bookmarkEntry
+                property bool hasBookmark: Functions.hasBookmark(dir)
+                text: hasBookmark ? qsTr("Remove bookmark") : qsTr("Add to bookmarks")
                 onClicked: {
-                    if (remorsePopupActive) return;
-                    var existingFiles = engine.listExistingFiles(page.dir);
-                    if (existingFiles.length > 0) {
-                        // show overwrite dialog
-                        var dialog = pageStack.push(Qt.resolvedUrl("OverwriteDialog.qml"),
-                                                    { "files": existingFiles })
-                        dialog.accepted.connect(function() {
-                            progressPanel.showText(engine.clipboardContainsCopy ?
-                                                       qsTr("Copying") : qsTr("Moving"))
-                            clearSelectedFiles();
-                            engine.pasteFiles(page.dir);
-                        })
-                    } else {
-                        // no overwrite dialog
-                        progressPanel.showText(engine.clipboardContainsCopy ?
-                                                   qsTr("Copying") : qsTr("Moving"))
-                        clearSelectedFiles();
-                        engine.pasteFiles(page.dir);
-                    }
+                    clearSelectedFiles();
+                    toggleBookmark();
+                }
+            }
+            MenuItem {
+                text: qsTr("Open new window")
+                onClicked: {
+                    engine.openNewWindow(dir);
+                    notificationPanel.showTextWithTimer(qsTr("New window opened"),
+                        qsTr("Sometimes the application stays in the background"));
                 }
             }
         }
 
         header: PageHeader {
-            title: Functions.formatPathForTitle(page.dir) + " " +
-                   Functions.unicodeBlackDownPointingTriangle()
+            title: Functions.formatPathForTitle(page.dir)
+            _titleItem.elide: Text.ElideMiddle
+            description: page.fullPathShown ? Functions.dirName(page.dir) : ""
+
             MouseArea {
                 anchors.fill: parent
-                onClicked: dirPopup.show();
+                onClicked: pageStack.push(Qt.resolvedUrl("SortingPage.qml"), { dir: dir });
             }
         }
 
-        delegate: ListItem {
-            id: fileItem
-            menu: contextMenu
-            width: ListView.view.width
-            contentHeight: listLabel.height+listSize.height + 13
+        footer: Column {
+            x: 0; width: page.width
+            height: footerSpacer.height +
+                    (footerLabel.visible ? topSpacer.height + footerLabel.height : 0)
+            Spacer {
+                id: topSpacer
+                visible: footerLabel.visible
+                height: Theme.paddingLarge
+            }
 
-            // background shown when item is selected
-            Rectangle {
-                visible: isSelected
-                anchors.fill: parent
-                color: fileItem.highlightedColor
-            }
-            // HighlightImage replaced with a Loader so that HighlightImage or Image
-            // can be loaded depending on Sailfish version (lightPrimaryColor is defined on SF3)
-            Loader {
-                id: listIcon
-                anchors.verticalCenter: listLabel.verticalCenter
-                x: Theme.paddingLarge
-                width: Theme.iconSizeSmall
-                height: Theme.iconSizeSmall
-                Component.onCompleted: {
-                    var qml = Theme.lightPrimaryColor ? "../components/MyHighlightImage3.qml"
-                                                      : "../components/MyHighlightImage2.qml";
-                    setSource(qml, {
-                        imgsrc: "../images/small-"+fileIcon+".png",
-                        imgw: Theme.iconSizeSmall,
-                        imgh: Theme.iconSizeSmall
-                    })
-                }
-            }
-            // circle shown when item is selected
-            Rectangle {
-                visible: isSelected
-                anchors.verticalCenter: listLabel.verticalCenter
-                x: Theme.paddingLarge - 2*Theme.pixelRatio
-                width: Theme.iconSizeSmall + 4*Theme.pixelRatio
-                height: Theme.iconSizeSmall + 4*Theme.pixelRatio
-                color: "transparent"
-                border.color: Theme.highlightColor
-                border.width: 2.25 * Theme.pixelRatio
-                radius: width * 0.5
-            }
-            Label {
-                id: listLabel
-                anchors.left: listIcon.right
-                anchors.leftMargin: Theme.paddingMedium
+            Row {
+                id: footerLabel
+                visible: page.currentFilter !== ""
+                spacing: Theme.paddingLarge
                 anchors.right: parent.right
-                anchors.rightMargin: Theme.paddingLarge
-                y: Theme.paddingSmall
-                text: filename
-                elide: Text.ElideRight
-                color: fileItem.highlighted || isSelected ? Theme.highlightColor : Theme.primaryColor
-            }
-            Label {
-                id: listSize
-                anchors.left: listIcon.right
-                anchors.leftMargin: Theme.paddingMedium
-                anchors.top: listLabel.bottom
-                text: !(isLink && isDir) ? size : Functions.unicodeArrow()+" "+symLinkTarget
-                color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                font.pixelSize: Theme.fontSizeExtraSmall
-            }
-            Label {
-                visible: !(isLink && isDir)
-                anchors.top: listLabel.bottom
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: filekind+permissions
-                color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                font.pixelSize: Theme.fontSizeExtraSmall
-            }
-            Label {
-                visible: !(isLink && isDir)
-                anchors.top: listLabel.bottom
-                anchors.right: listLabel.right
-                text: modified
-                color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                font.pixelSize: Theme.fontSizeExtraSmall
-            }
-
-            onClicked: {
-                if (model.isDir)
-                    pageStack.push(Qt.resolvedUrl("DirectoryPage.qml"),
-                                   { dir: fileModel.appendPath(listLabel.text) });
-                else
-                    pageStack.push(Qt.resolvedUrl("FilePage.qml"),
-                                   { file: fileModel.appendPath(listLabel.text) });
-            }
-            MouseArea {
-                width: Theme.itemSizeSmall
-                height: parent.height
-                onClicked: {
-                    fileModel.toggleSelectedFile(index);
-                    selectionPanel.open = (fileModel.selectedFileCount > 0);
-                    selectionPanel.overrideText = "";
+                anchors.rightMargin: Theme.horizontalPageMargin
+                layoutDirection: Qt.RightToLeft
+                IconButton {
+                    id: clearButton
+                    anchors.verticalCenter: parent.verticalCenter
+                    width: Theme.iconSizeMedium
+                    onClicked: page.clearViewFilter()
+                    icon.source: "image://theme/icon-m-clear"
+                }
+                Label {
+                    anchors.verticalCenter: parent.verticalCenter
+                    width: page.width-(2*Theme.horizontalPageMargin+parent.spacing+clearButton.width)
+                    color: Theme.highlightColor
+                    text: qsTr("filtered by: %1").arg(currentFilter)
+                    // use elide instead of fade because it must be truncated on the right
+                    truncationMode: TruncationMode.Elide
+                    elide: "ElideRight"
+                    horizontalAlignment: Text.AlignRight
+                    verticalAlignment: Text.AlignVCenter
                 }
             }
 
-            RemorseItem {
-                id: remorseItem
-                onTriggered: remorseItemActive = false
-                onCanceled: remorseItemActive = false
+            Spacer { id: footerSpacer }
+        }
+
+        delegate: Component {
+            Loader {
+                width: fileList.width
+                source: "../components/DirectoryPageEntry.qml"
             }
-
-            // delete file after remorse time
-            function deleteFile(deleteFilename) {
-                remorseItemActive = true;
-                remorseItem.execute(fileItem, qsTr("Deleting"), function() {
-                    progressPanel.showText(qsTr("Deleting"));
-                    engine.deleteFiles([ deleteFilename ]);
-                });
-            }
-
-            // enable animated list item removals
-            ListView.onRemove: animateRemoval(fileItem)
-
-            // context menu is activated with long press
-            Component {
-                 id: contextMenu
-                 ContextMenu {
-                     // cancel delete if context menu is opened
-                     onActiveChanged: { remorsePopup.cancel(); clearSelectedFiles(); }
-                     MenuItem {
-                         text: qsTr("Cut")
-                         onClicked: engine.cutFiles([ fileModel.fileNameAt(index) ]);
-                     }
-                     MenuItem {
-                         text: qsTr("Copy")
-                         onClicked: engine.copyFiles([ fileModel.fileNameAt(index) ]);
-                     }
-                     MenuItem {
-                         text: qsTr("Delete")
-                         onClicked:  {
-                             deleteFile(fileModel.fileNameAt(index));
-                         }
-                     }
-                     MenuItem {
-                         visible: model.isDir
-                         text: qsTr("Properties")
-                         onClicked:  {
-                             pageStack.push(Qt.resolvedUrl("FilePage.qml"),
-                                            { file: fileModel.fileNameAt(index) });
-                         }
-                     }
-                 }
-             }
         }
 
         // text if no files or error message
@@ -244,6 +254,31 @@ Page {
             enabled: fileModel.fileCount === 0 || fileModel.errorMessage !== ""
             text: fileModel.errorMessage !== "" ? fileModel.errorMessage : qsTr("No files")
         }
+    }
+
+    Connections {
+        id: quickSelectionConnections
+        property int startIndex: -1
+        target: null
+        onSelectionChanged: {
+            target = null;
+            multiSelectionFinished(startIndex);
+            fileModel.selectRange(startIndex, index);
+            startIndex = -1;
+        }
+    }
+
+    onMultiSelectionStarted: {
+        quickSelectionConnections.startIndex = index;
+        quickSelectionConnections.target = page;
+    }
+
+    function toggleSelection(index, notify) {
+        fileModel.toggleSelectedFile(index);
+        selectionPanel.open = (fileModel.selectedFileCount > 0);
+        selectionPanel.overrideText = "";
+        if (notify === false) return;
+        selectionChanged(index);
     }
 
     function clearSelectedFiles() {
@@ -257,53 +292,60 @@ Page {
         selectionPanel.overrideText = "";
     }
 
-    // a bit hackery: called from selection panel
-    function selectedFiles() { var files = fileModel.selectedFiles(); return files; }
-
     SelectionPanel {
         id: selectionPanel
         selectedCount: fileModel.selectedFileCount
         enabled: !page.remorsePopupActive && !page.remorseItemActive
-        orientation: page.orientation
         displayClose: fileModel.selectedFileCount == fileModel.fileCount
+        selectedFiles: function() { return fileModel.selectedFiles(); }
 
-        onSelectAllTriggered: selectAllFiles();
-        onCloseTriggered: clearSelectedFiles();
-        onDeleteTriggered: {
-            var files = fileModel.selectedFiles();
-            remorsePopupActive = true;
-            remorsePopup.execute(qsTr("Deleting"), function() {
-                clearSelectedFiles();
-                progressPanel.showText(qsTr("Deleting"));
-                engine.deleteFiles(files);
-            });
-        }
-        onPropertyTriggered: {
-            var files = fileModel.selectedFiles();
-            pageStack.push(Qt.resolvedUrl("FilePage.qml"), { file: files[0] });
-        }
-    }
-
-    onStatusChanged: {
-        // clear file selections when the directory is changed
-        clearSelectedFiles();
-
-        // update cover
-        if (status === PageStatus.Activating) {
-            coverText = Functions.lastPartOfPath(page.dir)+"/";
-
-            // go to Home on startup
-            if (page.initial) {
-                page.initial = false;
-                Functions.goToHome();
+        Connections {
+            target: selectionPanel.actions
+            onCloseTriggered: clearSelectedFiles();
+            onSelectAllTriggered: selectAllFiles();
+            onDeleteTriggered: {
+                var files = fileModel.selectedFiles();
+                remorsePopupActive = true;
+                remorsePopup.execute(qsTr("Deleting"), function() {
+                    clearSelectedFiles();
+                    progressPanel.showText(qsTr("Deleting"));
+                    engine.deleteFiles(files);
+                });
+            }
+            onTransferTriggered: {
+                if (remorsePopupActive) return;
+                if (transferPanel.status === Loader.Ready) transferPanel.item.startTransfer(toTransfer, targets, selectedAction, goToTarget);
+                else notificationPanel.showText(qsTr("Internally not ready"), qsTr("Please simply try again"));
             }
         }
     }
 
-    DirPopup {
-        id: dirPopup
+    NotificationPanel {
+        id: notificationPanel
+        page: page
+    }
+
+    ProgressPanel {
+        id: progressPanel
+        page: page
+        onCancelled: engine.cancel()
+    }
+
+    Loader {
+        id: transferPanel
+        asynchronous: true
         anchors.fill: parent
-        menuTop: Theme.itemSizeMedium
+        Component.onCompleted: {
+            setSource(Qt.resolvedUrl("../components/TransferPanel.qml"),
+                      { "page": page, "progressPanel": progressPanel,
+                        "notificationPanel": notificationPanel });
+        }
+        onStatusChanged: {
+            if (status === Loader.Ready) {
+                item.overlayShown.connect(function() { fileList.visible = false; });
+                item.overlayHidden.connect(function() { fileList.visible = true; });
+            }
+        }
     }
 
     // connect signals from engine to panels
@@ -323,19 +365,83 @@ Page {
                 notificationPanel.showText(message, filename);
             }
         }
+        onSettingsChanged: {
+            updateThumbnailsState();
+            page.fullPathShown = (engine.readSetting("General/ShowFullDirectoryPaths", "false") === "true");
+            page.quickSearchEnabled = (engine.readSetting("General/DefaultFilterAction", "filter") === "search");
+        }
     }
 
-    NotificationPanel {
-        id: notificationPanel
-        page: page
+    // require page to be x milliseconds active before
+    // pushing the attached page, so the page is not pushed
+    // while navigating (= while building the back-tree)
+    Timer {
+        id: preparationTimer
+        interval: 15
+        running: false
+        repeat: false
+        onTriggered: {
+            if (status === PageStatus.Active) {
+                if (!canNavigateForward) {
+                    pageStack.pushAttached(Qt.resolvedUrl("ShortcutsPage.qml"), { currentPath: dir });
+                }
+                coverText = Functions.lastPartOfPath(page.dir)+"/"; // update cover
+            }
+        }
     }
 
-    ProgressPanel {
-        id: progressPanel
-        page: page
-        onCancelled: engine.cancel()
+    onStatusChanged: {
+        if (status === PageStatus.Deactivating) {
+            // clear file selections when the directory is changed
+            clearSelectedFiles();
+        }
+
+        if (status === PageStatus.Active) {
+            preparationTimer.start();
+        }
+
+        if (status === PageStatus.Activating && page.initial) {
+            page.initial = false;
+            Functions.goToFolder(initialDirectory);
+        }
     }
 
+    function updateThumbnailsState() {
+        var showThumbs = engine.readSetting("View/PreviewsShown");
+        if (engine.readSetting("View/UseLocalSettings", "false") === "true") {
+            thumbnailsShown = engine.readSetting("Dolphin/PreviewsShown", showThumbs, dir+"/.directory") === "true";
+        } else {
+            thumbnailsShown = showThumbs === "true";
+        }
+
+        if (thumbnailsShown) {
+            var thumbSize = engine.readSetting("View/PreviewsSize", "medium");
+            if (thumbSize === "small") {
+                fileIconSize = Theme.itemSizeMedium
+            } else if (thumbSize === "medium") {
+                fileIconSize = Theme.itemSizeExtraLarge
+            } else if (thumbSize === "large") {
+                fileIconSize = page.width/3
+            } else if (thumbSize === "huge") {
+                fileIconSize = page.width/3*2
+            }
+        } else {
+            fileIconSize = Theme.itemSizeSmall
+        }
+    }
+
+    function toggleBookmark() {
+        if (hasBookmark) {
+            Functions.removeBookmark(dir);
+            hasBookmark = false;
+        } else {
+            Functions.addBookmark(dir);
+            hasBookmark = true;
+        }
+    }
+
+    Component.onCompleted: {
+        main.bookmarkAdded.connect(function(path) { if (path === dir) bookmarkEntry.hasBookmark = true; });
+        main.bookmarkRemoved.connect(function(path) { if (path === dir) bookmarkEntry.hasBookmark = false; });
+    }
 }
-
-

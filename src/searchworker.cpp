@@ -62,7 +62,7 @@ QString SearchWorker::searchRecursively(QString directory, QString searchTerm)
     emit progressChanged(m_currentDirectory);
 
     QSettings settings;
-    bool hiddenSetting = settings.value("show-hidden-files", false).toBool();
+    bool hiddenSetting = settings.value("View/HiddenFilesShown", false).toBool();
     QDir::Filter hidden = hiddenSetting ? QDir::Hidden : (QDir::Filter)0;
 
     // search dirs

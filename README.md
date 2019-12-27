@@ -1,11 +1,18 @@
 # File Browser for Sailfish OS
 
-A minimal file browser tool to view files on 
-[Sailfish OS](https://sailfishos.org/) and 
+A minimal file browser tool to view files on
+[Sailfish OS](https://sailfishos.org/) and
 [Jolla phones](http://jolla.com/).
 
 There is a [FAQ](https://github.com/karip/harbour-file-browser/blob/master/FAQ.md)
 about most common questions.
+
+### Beta / Development Notice
+
+This repository contains the development of version 2.0.0 of File Browser.
+
+See the RELEASENOTES.md for further details.
+
 
 ### Warning
 
@@ -23,19 +30,19 @@ responsibility if that happens. So, be careful.
  * View contents of APK, RPM, ZIP and TAR packages
  * View contents of text and binary files
  * Select multiple files (by tapping the file icons)
- * Cut, copy and paste files (move/copy files) (by long pressing an 
+ * Cut, copy and paste files (move/copy files) (by long pressing an
    item or tapping the file icons)
  * Rename files and folders
  * Create new folders
- * Delete files and folders (by long pressing an item or tapping 
+ * Delete files and folders (by long pressing an item or tapping
    the file icons)
  * Show hidden files (filenames starting with a dot)
  * Change permissions
 
 ### Acknowledgements
 
-File Browser is based on the excellent 
-[Helloworld Pro](https://github.com/amarchen/helloworld-pro-sailfish) 
+File Browser is based on the excellent
+[Helloworld Pro](https://github.com/amarchen/helloworld-pro-sailfish)
 template.
 
 The Exif data is displayed with [JHead](http://www.sentex.net/~mwandel/jhead/),
@@ -55,16 +62,29 @@ which are good when accessing Android storage.
 ## Building
 
 1. Get the source code
-2. Open the harbour-file-browser.pro in Sailfish OS IDE 
+2. Open the harbour-file-browser.pro in Sailfish OS IDE
    (Qt Creator for Sailfish)
 3. To run on emulator, select the i486 target and press the run button
-4. To build for the device, select the armv7hl target and deploy all, 
+4. To build for the device, select the armv7hl target and deploy all,
    the rpm packages will be in the RPMS folder
 
 ## License
 
-All files in this project have been released into public domain, which 
-means that you can do whatever you want with this software. See below 
+### Changes in this repository (version 2.0.0)
+
+[![GNU GPL v3.0](http://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl.html)
+
+View official GNU site <http://www.gnu.org/licenses/gpl.html>.
+
+[![OSI](http://opensource.org/trademarks/opensource/OSI-Approved-License-100x137.png)](https://opensource.org/licenses/GPL-3.0)
+
+[View the Open Source Initiative site.](https://opensource.org/licenses/GPL-3.0)
+
+
+### Up until version 1.8.0
+
+All files in this project have been released into public domain, which
+means that you can do whatever you want with this software. See below
 for details.
 
 ***

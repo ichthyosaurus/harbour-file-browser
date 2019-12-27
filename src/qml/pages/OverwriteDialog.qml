@@ -4,6 +4,7 @@ import "../components"
 
 Dialog {
     property variant files: [] // this must be set to a string list, e.g. [ "file1", "file2" ]
+    property string dir: ""
 
     id: dialog
     allowedOrientations: Orientation.All
@@ -29,7 +30,8 @@ Dialog {
             }
             Label {
                 id: dialogLabel
-                text: qsTr("These files or folders already exist:")
+                text: dir !== "" ? qsTr("These files or folders already exist in “%1”:").arg(dir) :
+                                   qsTr("These files or folders already exist:")
                 wrapMode: Text.Wrap
                 anchors.top: dialogHeader.bottom
                 anchors.left: parent.left

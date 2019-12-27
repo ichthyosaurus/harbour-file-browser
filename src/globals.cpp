@@ -55,15 +55,19 @@ QString filesizeToString(qint64 filesize)
     return QObject::tr("%1 GB").arg(locale.toString((double)filesize/1000000000.0, 'f', 2));
 }
 
-QString datetimeToString(QDateTime datetime)
+QString datetimeToString(QDateTime datetime, bool longFormat)
 {
-    QLocale locale;
-
-    // return time for today or date for older
-    if (datetime.date() == QDate::currentDate())
-        return locale.toString(datetime.time(), QLocale::NarrowFormat);
-
-    return locale.toString(datetime.date(), QLocale::NarrowFormat);
+    // return time for today or date+time for older
+    // include more information if 'longFormat' is true
+    if (datetime.date() == QDate::currentDate()) {
+        return datetime.toString(QObject::tr("hh:mm:ss"));
+    } else {
+        if (longFormat) {
+            return datetime.toString(QObject::tr("dd MMM yyyy, hh:mm:ss t"));
+        } else {
+            return datetime.toString(QObject::tr("dd.MM.yy, hh:mm"));
+        }
+    }
 }
 
 QString infoToIconName(const StatFileInfo &info)

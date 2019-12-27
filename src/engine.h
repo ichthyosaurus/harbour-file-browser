@@ -5,6 +5,7 @@
 #include <QVariant>
 
 class FileWorker;
+class QSettings;
 
 /**
  * @brief Engine to handle file operations, settings and other generic functionality.
@@ -36,7 +37,7 @@ public:
     // returns a list of existing files if clipboard files already exist
     // or an empty list if no existing files
     Q_INVOKABLE QStringList listExistingFiles(QString destDirectory);
-    Q_INVOKABLE void pasteFiles(QString destDirectory);
+    Q_INVOKABLE void pasteFiles(QString destDirectory, bool asSymlinks = false);
 
     // cancel asynch methods
     Q_INVOKABLE void cancel();
@@ -50,7 +51,9 @@ public:
     Q_INVOKABLE QString androidSdcardPath() const;
 
     // synchronous methods
+    Q_INVOKABLE bool runningAsRoot();
     Q_INVOKABLE bool exists(QString filename);
+    Q_INVOKABLE QStringList fileSizeInfo(QStringList paths);
     Q_INVOKABLE QStringList diskSpace(QString path);
     Q_INVOKABLE QStringList readFile(QString filename);
     Q_INVOKABLE QString mkdir(QString path, QString name);
@@ -59,10 +62,17 @@ public:
                               bool ownerRead, bool ownerWrite, bool ownerExecute,
                               bool groupRead, bool groupWrite, bool groupExecute,
                               bool othersRead, bool othersWrite, bool othersExecute);
+    Q_INVOKABLE bool openNewWindow(QStringList arguments = QStringList()) const;
+    Q_INVOKABLE bool pathIsDirectory(QString path) const;
+    Q_INVOKABLE bool pathIsFile(QString path) const;
 
     // access settings
+    Q_INVOKABLE QString readSetting(QString key, QString defaultValue, QString fileName);
     Q_INVOKABLE QString readSetting(QString key, QString defaultValue = QString());
+    Q_INVOKABLE void writeSetting(QString key, QString value, QString fileName);
     Q_INVOKABLE void writeSetting(QString key, QString value);
+    Q_INVOKABLE void removeSetting(QString key, QString fileName);
+    Q_INVOKABLE void removeSetting(QString key);
 
 signals:
     void clipboardCountChanged();
@@ -73,6 +83,7 @@ signals:
     void workerErrorOccurred(QString message, QString filename);
     void fileDeleted(QString fullname);
 
+    void viewSettingsChanged();
     void settingsChanged();
 
 private slots:

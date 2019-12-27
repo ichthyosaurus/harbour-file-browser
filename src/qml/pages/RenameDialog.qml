@@ -4,68 +4,114 @@ import "functions.js" as Functions
 import "../components"
 
 Dialog {
-    property string path: ""
-
-    // return values
-    property string errorMessage: ""
-    property string newPath: ""
-
     id: dialog
     allowedOrientations: Orientation.All
-    canAccept: newName.text !== ""
+    canAccept: _readyCount === files.length
+
+    property var files: []
+    property var newFiles: []
+    property string basePath: ""
+    property string errorMessages: []
+    property int _readyCount: 0
+
+    Component.onCompleted: basePath = Functions.dirName(files[0])
 
     onAccepted: {
-        var res = engine.rename(path, newName.text);
-        newPath = res[0]
-        errorMessage = res[1]
-    }
-
-    Component.onCompleted: {
-        newName.text = Functions.lastPartOfPath(path)
+        for (var i = 0; i < repeater.count; i++) {
+            var item = repeater.itemAt(i);
+            if (!item) continue;
+            var res = engine.rename(item.originalName, item.nameField.text);
+            if (res[1] !== "") errorMessages.push(res[1])
+            newFiles.push(res[0]);
+        }
     }
 
     SilicaFlickable {
         id: flickable
         anchors.fill: parent
-        contentHeight: column.height
+        contentHeight: column.height + Theme.horizontalPageMargin
         VerticalScrollDecorator { flickable: flickable }
 
         Column {
             id: column
             anchors.left: parent.left
             anchors.right: parent.right
+            spacing: 2*Theme.paddingLarge
 
             DialogHeader {
                 id: dialogHeader
                 acceptText: qsTr("Rename")
             }
 
-            Label {
-                x: Theme.horizontalPageMargin
-                width: parent.width - 2*x
-                text: qsTr("Give a new name for") + "\n" + path
-                color: Theme.secondaryColor
-                wrapMode: Text.Wrap
-            }
+            Repeater {
+                id: repeater
+                model: files.length
+                Component.onCompleted: itemAt(0).nameField.forceActiveFocus();
 
-            Spacer {
-                height: Theme.paddingLarge
-            }
+                delegate: Column {
+                    property alias nameField: newNameLabel
+                    property string originalName: files[index]
 
-            TextField {
-                id: newName
-                width: parent.width
-                placeholderText: qsTr("New name")
-                label: qsTr("New name")
-                focus: true
+                    height: titleLabel.height + Theme.paddingLarge + newNameLabel.height
+                    width: dialog.width
 
-                // return key on virtual keyboard accepts the dialog
-                EnterKey.enabled: newName.text.length > 0
-                EnterKey.iconSource: "image://theme/icon-m-enter-accept"
-                EnterKey.onClicked: dialog.accept()
+                    Label {
+                        id: titleLabel
+                        x: Theme.horizontalPageMargin
+                        width: parent.width - 2*x
+                        text: qsTr("Give a new name for\n%1").arg(parent.originalName)
+                        color: Theme.secondaryColor
+                        wrapMode: Text.Wrap
+                    }
+
+                    Spacer { height: Theme.paddingLarge}
+
+                    TextField {
+                        id: newNameLabel
+                        width: parent.width
+                        placeholderText: qsTr("New name")
+                        label: qsTr("New name")
+                        inputMethodHints: Qt.ImhNoPredictiveText
+
+                        // when enter is pressed, either
+                        // - go to next text field
+                        // - accept dialog (if possible)
+                        // - else hide the virtual keyboard
+                        EnterKey.enabled: newNameLabel.text.length > 0
+                        EnterKey.iconSource: ((index < files.length-1) ? "image://theme/icon-m-enter-next" :
+                            (dialog.canAccept ? "image://theme/icon-m-enter-accept" : "image://theme/icon-m-enter-close"))
+                        EnterKey.onClicked: {
+                            var next = repeater.itemAt(index+1)
+                            if (next && next.nameField) next.nameField.forceActiveFocus();
+                            else if (dialog.canAccept) accept();
+                        }
+
+                        property bool notifiedAsReady: false
+                        onTextChanged: {
+                            if (text === "" || engine.exists(basePath+text)) {
+                                color = "red";
+
+                                if (notifiedAsReady) {
+                                    dialog._readyCount -= 1;
+                                    notifiedAsReady = false;
+                                }
+                            } else {
+                                color = Theme.primaryColor;
+
+                                if (!notifiedAsReady) {
+                                    dialog._readyCount += 1;
+                                    notifiedAsReady = true;
+                                }
+                            }
+                        }
+
+                        Component.onCompleted: {
+                            text = Functions.lastPartOfPath(parent.originalName)
+                            dialog._readyCount = 0; notifiedAsReady = false;
+                        }
+                    }
+                }
             }
         }
     }
 }
-
-

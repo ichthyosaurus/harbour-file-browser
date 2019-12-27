@@ -1,4 +1,5 @@
 #include "searchengine.h"
+#include <QMimeDatabase>
 #include <QDateTime>
 #include "searchworker.h"
 #include "statfileinfo.h"
@@ -63,6 +64,8 @@ void SearchEngine::cancel()
 void SearchEngine::emitMatchFound(QString fullpath)
 {
     StatFileInfo info(fullpath);
+    QMimeDatabase db;
+    QString mimeType = db.mimeTypeForFile(fullpath).name();
     emit matchFound(fullpath, info.fileName(), info.absoluteDir().absolutePath(),
-                    infoToIconName(info), info.kind());
+                    infoToIconName(info), info.kind(), mimeType);
 }

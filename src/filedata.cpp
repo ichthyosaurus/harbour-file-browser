@@ -63,14 +63,24 @@ QString FileData::size() const
     return filesizeToString(m_fileInfo.size());
 }
 
-QString FileData::modified() const
+QString FileData::modified(bool longFormat) const
 {
-    return datetimeToString(m_fileInfo.lastModified());
+    return datetimeToString(m_fileInfo.lastModified(), longFormat);
 }
 
-QString FileData::created() const
+QString FileData::modifiedLong() const
 {
-    return datetimeToString(m_fileInfo.created());
+    return modified(true);
+}
+
+QString FileData::created(bool longFormat) const
+{
+    return datetimeToString(m_fileInfo.created(), longFormat);
+}
+
+QString FileData::createdLong() const
+{
+    return created(true);
 }
 
 QString FileData::absolutePath() const

@@ -1,105 +1,159 @@
 
-// Go to root using the optional operationType parameter
-// @param operationType PageStackAction.Immediate or Animated, Animated is default)
-function goToRoot(operationType)
-{
-    if (operationType !== PageStackAction.Immediate &&
-            operationType !== PageStackAction.Animated)
-        operationType = PageStackAction.Animated;
-
-    // find the first page
-    var firstPage = pageStack.previousPage();
-    if (!firstPage)
-        return;
-    while (pageStack.previousPage(firstPage)) {
-        firstPage = pageStack.previousPage(firstPage);
-    }
-
-    // pop to first page
-    pageStack.pop(firstPage, operationType);
-}
-
-// returns true if string s1 starts with string s2
-function startsWith(s1, s2)
-{
-    if (!s1 || !s2)
-        return false;
-
-    var start = s1.substring(0, s2.length);
-    return start === s2;
+function goToRoot(animated) {
+    pageStack.clear();
+    pageStack.push(Qt.resolvedUrl("DirectoryPage.qml"), { dir: "/" }, animated === true ? PageStackAction.Animated : PageStackAction.Immediate);
 }
 
 // trims a string from left and right
-function trim(s)
-{
+function trim(s) {
     return s.replace(/^\s+|\s+$/g, "");
 }
 
-function goToFolder(folder)
-{
-    // first, go to root so that the page stack has only one page
-    goToRoot(PageStackAction.Immediate);
+function sharedStart(array) {
+    var A=array.concat().sort(), a1=A[0].split("/"), a2=A[A.length-1].split("/"), L=a1.length, i=0;
+    while(i<L && a1[i]===a2[i]) i++;
+    return a1.slice(0, i).join("/");
+}
 
-    // open the folders one by one
-    var dirs = folder.split("/");
-    var path = "";
-    for (var i = 1; i < dirs.length; ++i) {
-        path += "/"+dirs[i];
-        // animate the last push
-        var action = (i < dirs.length-1) ? PageStackAction.Immediate : PageStackAction.Animated;
-        pageStack.push(Qt.resolvedUrl("DirectoryPage.qml"), { dir: path }, action);
+function goToFolder(folder) {
+    var pagePath = Qt.resolvedUrl("DirectoryPage.qml");
+    var prevPage = pageStack.previousPage();
+    var cur = "", shared = "", rest = "", basePath = "";
+
+    if (prevPage !== null) {
+        cur = prevPage.dir
+        shared = sharedStart([folder, cur]);
+    }
+
+    if (shared === folder) {
+        var existingTarget = pageStack.find(function(page) {
+            if (page.dir === folder) return true;
+            return false;
+        })
+        if (!existingTarget) {
+            goToRoot(true);
+        } else {
+            pageStack.pop(existingTarget, PageStackAction.Animated);
+        }
+
+        return;
+    } else if (shared === "/" || shared === "") {
+        goToRoot(false);
+        rest = folder
+        basePath = ""
+    } else if (shared !== "") {
+        var existingBase = pageStack.find(function(page) {
+            if (page.dir === shared) return true;
+            return false;
+        })
+        pageStack.pop(existingBase, PageStackAction.Immediate);
+        rest = folder.replace(shared+"/", "/");
+        basePath = shared;
+    }
+
+    var dirs = rest.split("/");
+    for (var j = 1; j < dirs.length-1; ++j) {
+        basePath += "/"+dirs[j];
+        pageStack.push(pagePath, { dir: basePath }, PageStackAction.Immediate);
+    }
+    pageStack.push(pagePath, { dir: folder }, PageStackAction.Animated);
+}
+
+// Bookmark Handling
+// FIXME There seems to happen a race condition when trying to
+// write the name of a new bookmark and reading said name
+// simultaniously. This results in the entire 'Bookmarks/*' block
+// being deleted. Implementing settings caching and synchronous
+// write-out in the engine would probably fix this.
+// Currently we simply ignore empty bookmark names and silently replace
+// them with the bookmarked directory's name.
+function addBookmark(path) {
+    if (!path) return;
+    var bookmarks = getBookmarks();
+    bookmarks.push(path);
+    engine.writeSetting("Bookmarks/"+path, lastPartOfPath(path));
+    engine.writeSetting("Bookmarks/Entries", JSON.stringify(bookmarks));
+    main.bookmarkAdded(path);
+}
+
+function removeBookmark(path) {
+    if (!path) return;
+    var bookmarks = getBookmarks();
+    var filteredBookmarks = bookmarks.filter(function(e) { return e !== path; });
+    engine.writeSetting("Bookmarks/Entries", JSON.stringify(filteredBookmarks));
+    engine.removeSetting("Bookmarks/"+path);
+    main.bookmarkRemoved(path);
+}
+
+function hasBookmark(path) {
+    if (!path) return false;
+    if (engine.readSetting("Bookmarks/"+path) !== "") return true;
+    return false;
+}
+
+function getBookmarks() {
+    try {
+        var entries = JSON.parse(engine.readSetting("Bookmarks/Entries"));
+        return entries;
+    } catch (SyntaxError) {
+        engine.writeSetting("Bookmarks/Entries", JSON.stringify([]));
+        return [];
     }
 }
 
-// Goes to Home folder
-function goToHome()
-{
-    goToFolder(engine.homeFolder());
-}
-
-function formatPathForTitle(path)
-{
-    if (path === "/")
-        return "File Browser: /";
-
-    var i = path.lastIndexOf("/");
-    if (i < -1)
-        return path;
-
-    return path.substring(i+1)+"/";
-}
-
 // returns the text after the last / in a path
-function lastPartOfPath(path)
-{
-    if (path === "/")
-        return "";
-
+function lastPartOfPath(path) {
+    if (path === "/") return "";
     var i = path.lastIndexOf("/");
-    if (i < -1)
-        return path;
-
+    if (i < -1) return path;
     return path.substring(i+1);
 }
 
-function formatPathForSearch(path)
-{
-    if (path === "/")
-        return "root";
-
+function dirName(path) {
+    if (path === "/") return "";
     var i = path.lastIndexOf("/");
-    if (i < -1)
-        return path;
-
-    return path.substring(i+1);
+    if (i < -1) return path;
+    return path.substring(0, i+1);
 }
 
-function unicodeArrow()
-{
+function formatPathForTitle(path) {
+    if (path === "/") return "File Browser: /";
+    return lastPartOfPath(path)+"/";
+}
+
+function formatPathForSearch(path) {
+    if (path === "/") return qsTr("root"); //: root directory (placeholder in search mask)
+    return lastPartOfPath(path);
+}
+
+function unicodeArrow() {
     return "\u2192"; // unicode for right pointing arrow symbol (for links)
 }
 
-function unicodeBlackDownPointingTriangle()
-{
-    return "\u25be"; // unicode for down pointing triangle symbol (for top dir dropdown)
+function pasteFiles(targetDir, progressPanel, runBefore) {
+    if (engine.clipboardCount === 0) return;
+    if (targetDir === undefined) return;
+
+    var existingFiles = engine.listExistingFiles(targetDir);
+    if (existingFiles.length > 0) {
+      // show overwrite dialog
+      var dialog = pageStack.push(Qt.resolvedUrl("OverwriteDialog.qml"),
+                                  { "files": existingFiles })
+      dialog.accepted.connect(function() {
+          if (progressPanel !== undefined) {
+            progressPanel.showText(engine.clipboardContainsCopy ?
+                                       qsTr("Copying") : qsTr("Moving"))
+          }
+          if (runBefore !== undefined) runBefore();
+          engine.pasteFiles(targetDir);
+      })
+    } else {
+      // no overwrite dialog
+      if (progressPanel !== undefined) {
+          progressPanel.showText(engine.clipboardContainsCopy ?
+                                     qsTr("Copying") : qsTr("Moving"))
+      }
+      if (runBefore !== undefined) runBefore();
+      engine.pasteFiles(targetDir);
+    }
 }

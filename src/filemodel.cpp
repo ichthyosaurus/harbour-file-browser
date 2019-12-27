@@ -1,5 +1,7 @@
 #include "filemodel.h"
 #include <QDateTime>
+#include <QMimeType>
+#include <QMimeDatabase>
 #include <QSettings>
 #include <QGuiApplication>
 #include <unistd.h>
@@ -17,7 +19,8 @@ enum {
     IsDirRole = Qt::UserRole + 8,
     IsLinkRole = Qt::UserRole + 9,
     SymLinkTargetRole = Qt::UserRole + 10,
-    IsSelectedRole = Qt::UserRole + 11
+    IsSelectedRole = Qt::UserRole + 11,
+    IsMatchedRole = Qt::UserRole + 12
 };
 
 FileModel::FileModel(QObject *parent) :
@@ -27,13 +30,16 @@ FileModel::FileModel(QObject *parent) :
     m_dirty(false)
 {
     m_dir = "";
+    m_filterString = "";
+
     m_watcher = new QFileSystemWatcher(this);
     connect(m_watcher, SIGNAL(directoryChanged(const QString&)), this, SLOT(refresh()));
     connect(m_watcher, SIGNAL(fileChanged(const QString&)), this, SLOT(refresh()));
 
-    // refresh model every time settings are changed
+    // refresh model every time view settings are changed
     Engine *engine = qApp->property("engine").value<Engine *>();
-    connect(engine, SIGNAL(settingsChanged()), this, SLOT(refreshFull()));
+    connect(engine, SIGNAL(viewSettingsChanged()), this, SLOT(refreshFull()));
+    connect(this, SIGNAL(filterStringChanged()), this, SLOT(applyFilterString()));
 }
 
 FileModel::~FileModel()
@@ -90,6 +96,9 @@ QVariant FileModel::data(const QModelIndex &index, int role) const
     case IsSelectedRole:
         return info.isSelected();
 
+    case IsMatchedRole:
+        return info.isMatched();
+
     default:
         return QVariant();
     }
@@ -109,6 +118,7 @@ QHash<int, QByteArray> FileModel::roleNames() const
     roles.insert(IsLinkRole, QByteArray("isLink"));
     roles.insert(SymLinkTargetRole, QByteArray("symLinkTarget"));
     roles.insert(IsSelectedRole, QByteArray("isSelected"));
+    roles.insert(IsMatchedRole, QByteArray("isMatched"));
     return roles;
 }
 
@@ -160,6 +170,12 @@ void FileModel::setActive(bool active)
     m_dirty = false;
 }
 
+void FileModel::setFilterString(QString newFilter)
+{
+    m_filterString = newFilter;
+    emit filterStringChanged();
+}
+
 QString FileModel::parentPath()
 {
     return QDir::cleanPath(QDir(m_dir).absoluteFilePath(".."));
@@ -173,24 +189,34 @@ QString FileModel::fileNameAt(int fileIndex)
     return m_files.at(fileIndex).absoluteFilePath();
 }
 
+QString FileModel::mimeTypeAt(int fileIndex) {
+    QString file = fileNameAt(fileIndex);
+
+    if (file.isEmpty()) return QString();
+
+    QMimeDatabase db;
+    QMimeType type = db.mimeTypeForFile(file);
+    return type.name();
+}
+
 void FileModel::toggleSelectedFile(int fileIndex)
 {
+    if (fileIndex >= m_files.length() || fileIndex < 0) return; // fail silently
+
+    StatFileInfo info = m_files.at(fileIndex);
+
     if (!m_files.at(fileIndex).isSelected()) {
-        StatFileInfo info = m_files.at(fileIndex);
         info.setSelected(true);
-        m_files[fileIndex] = info;
         m_selectedFileCount++;
     } else {
-        StatFileInfo info = m_files.at(fileIndex);
         info.setSelected(false);
-        m_files[fileIndex] = info;
         m_selectedFileCount--;
     }
-    // emit signal for views
+
+    m_files[fileIndex] = info;
     QModelIndex topLeft = index(fileIndex, 0);
     QModelIndex bottomRight = index(fileIndex, 0);
     emit dataChanged(topLeft, bottomRight);
-
     emit selectedFileCountChanged();
 }
 
@@ -214,18 +240,65 @@ void FileModel::clearSelectedFiles()
 void FileModel::selectAllFiles()
 {
     QMutableListIterator<StatFileInfo> iter(m_files);
-    int row = 0;
+    int row = 0; uint count = 0;
+
     while (iter.hasNext()) {
         StatFileInfo &info = iter.next();
+        if (!info.isMatched()) {
+            row++; continue;
+        }
+
         info.setSelected(true);
         // emit signal for views
         QModelIndex topLeft = index(row, 0);
         QModelIndex bottomRight = index(row, 0);
         emit dataChanged(topLeft, bottomRight);
+        row++; count++;
+    }
+
+    m_selectedFileCount = count;
+    emit selectedFileCountChanged();
+}
+
+void FileModel::selectRange(int firstIndex, int lastIndex, bool selected)
+{
+    // fail silently if indices are invalid
+    if (   firstIndex >= m_files.length()
+        || firstIndex < 0
+        || lastIndex >= m_files.length()
+        || lastIndex < 0
+       ) return;
+
+    if (firstIndex > lastIndex) {
+        int tmp = firstIndex;
+        firstIndex = lastIndex;
+        lastIndex = tmp;
+    }
+
+    QMutableListIterator<StatFileInfo> iter(m_files);
+    int row = 0; int count = 0;
+    while (iter.hasNext()) {
+        StatFileInfo &info = iter.next();
+
+        if (   row >= firstIndex
+            && row <= lastIndex
+            && info.isMatched()
+            && info.isSelected() != selected) {
+            info.setSelected(selected);
+            // emit signal for views
+            QModelIndex topLeft = index(row, 0);
+            QModelIndex bottomRight = index(row, 0);
+            emit dataChanged(topLeft, bottomRight);
+        }
+
+        if (info.isSelected()) count++;
         row++;
     }
-    m_selectedFileCount = m_files.count();
-    emit selectedFileCountChanged();
+
+    if (count != m_selectedFileCount) {
+        m_selectedFileCount = count;
+        emit selectedFileCountChanged();
+    }
 }
 
 QStringList FileModel::selectedFiles() const
@@ -293,6 +366,83 @@ void FileModel::recountSelectedFiles()
     }
 }
 
+
+
+// see SETTINGS for details
+void FileModel::applySettings(QDir &dir) {
+    QSettings settings;
+    QSettings local(dir.absoluteFilePath(".directory"), QSettings::IniFormat);
+    bool useLocal = settings.value("View/UseLocalSettings", true).toBool();
+
+    // filters
+    bool hidden = settings.value("View/HiddenFilesShown", false).toBool();
+    if (useLocal) hidden = local.value("Settings/HiddenFilesShown", hidden).toBool();
+    QDir::Filter hiddenFilter = hidden ? QDir::Hidden : (QDir::Filter)0;
+
+    dir.setFilter(QDir::AllDirs | QDir::Files | QDir::NoDotAndDotDot | QDir::System | hiddenFilter);
+
+    // sorting
+    bool dirsFirst = settings.value("View/ShowDirectoriesFirst", true).toBool();
+    if (useLocal) dirsFirst = local.value("Sailfish/ShowDirectoriesFirst", dirsFirst).toBool();
+    QDir::SortFlag dirsFirstFlag = dirsFirst ? QDir::DirsFirst : (QDir::SortFlag)0;
+
+    QString sortSetting = settings.value("View/SortRole", "name").toString();
+    if (useLocal) sortSetting = local.value("Dolphin/SortRole", sortSetting).toString();
+    QDir::SortFlag sortBy = QDir::Name;
+
+    if (sortSetting == "name") {
+        sortBy = QDir::Name;
+    } else if (sortSetting == "size") {
+        sortBy = QDir::Size;
+    } else if (sortSetting == "modificationtime") {
+        sortBy = QDir::Time;
+    } else if (sortSetting == "type") {
+        sortBy = QDir::Type;
+    } else {
+        sortBy = QDir::Name;
+    }
+
+    bool orderDefault = settings.value("View/SortOrder", "default").toString() == "default";
+    if (useLocal) orderDefault = local.value("Dolphin/SortOrder", 0) == 0 ? true : false;
+    QDir::SortFlag orderFlag = orderDefault ? (QDir::SortFlag)0 : QDir::Reversed;
+
+    bool caseSensitive = settings.value("View/SortCaseSensitively", false).toBool();
+    if (useLocal) caseSensitive = local.value("Sailfish/SortCaseSensitively", caseSensitive).toBool();
+    QDir::SortFlag caseSensitiveFlag = caseSensitive ? (QDir::SortFlag)0 : QDir::IgnoreCase;
+
+    dir.setSorting(sortBy | dirsFirstFlag | orderFlag | caseSensitiveFlag);
+}
+
+void FileModel::applyFilterString()
+{
+    QMutableListIterator<StatFileInfo> iter(m_files);
+    int row = 0; int count = 0;
+    while (iter.hasNext()) {
+        StatFileInfo &info = iter.next();
+        bool match = info.fileName().contains(m_filterString);
+
+        if (   info.isMatched() != match
+            || (!match && info.isSelected())) {
+
+            info.setFilterMatched(match);
+            if (!match) info.setSelected(false);
+
+            // emit signal for views
+            QModelIndex topLeft = index(row, 0);
+            QModelIndex bottomRight = index(row, 0);
+            emit dataChanged(topLeft, bottomRight);
+        }
+
+        if (info.isSelected()) count++;
+        row++;
+    }
+
+    if (count != m_selectedFileCount) {
+        m_selectedFileCount = count;
+        emit selectedFileCountChanged();
+    }
+}
+
 void FileModel::readAllEntries()
 {
     QDir dir(m_dir);
@@ -305,13 +455,7 @@ void FileModel::readAllEntries()
         return;
     }
 
-    QSettings settings;
-    bool hiddenSetting = settings.value("show-hidden-files", false).toBool();
-    QDir::Filter hidden = hiddenSetting ? QDir::Hidden : (QDir::Filter)0;
-    dir.setFilter(QDir::AllDirs | QDir::Files | QDir::NoDotAndDotDot | QDir::System | hidden);
-
-    if (settings.value("show-dirs-first", false).toBool())
-        dir.setSorting(QDir::Name | QDir::DirsFirst);
+    applySettings(dir);
 
     QStringList fileList = dir.entryList();
     foreach (QString filename, fileList) {
@@ -319,6 +463,8 @@ void FileModel::readAllEntries()
         StatFileInfo info(fullpath);
         m_files.append(info);
     }
+
+    applyFilterString();
 }
 
 void FileModel::refreshEntries()
@@ -346,13 +492,7 @@ void FileModel::refreshEntries()
         return;
     }
 
-    QSettings settings;
-    bool hiddenSetting = settings.value("show-hidden-files", false).toBool();
-    QDir::Filter hidden = hiddenSetting ? QDir::Hidden : (QDir::Filter)0;
-    dir.setFilter(QDir::AllDirs | QDir::Files | QDir::NoDotAndDotDot | QDir::System | hidden);
-
-    if (settings.value("show-dirs-first", false).toBool())
-        dir.setSorting(QDir::Name | QDir::DirsFirst);
+    applySettings(dir);
 
     // read all files
     QList<StatFileInfo> newFiles;
@@ -384,6 +524,8 @@ void FileModel::refreshEntries()
             endInsertRows();
         }
     }
+
+    applyFilterString();
 
     if (m_files.count() != oldFileCount)
         emit fileCountChanged();

@@ -10,10 +10,15 @@ Page {
     id: page
     allowedOrientations: Orientation.All
     property string file: "/"
+    property alias notificationPanel: notificationPanel
 
     FileData {
         id: fileData
         file: page.file
+    }
+
+    RemorsePopup {
+        id: remorsePopup
     }
 
     ConsoleModel {
@@ -57,8 +62,12 @@ Page {
     SilicaFlickable {
         id: flickable
         anchors.fill: parent
-        contentHeight: column.height
+        contentHeight: column.height + Theme.horizontalPageMargin
         VerticalScrollDecorator { flickable: flickable }
+
+        visible: !transferPanel.visible
+        opacity: visible ? 1 : 0
+        Behavior on opacity { NumberAnimation { duration: 300 } }
 
         PullDownMenu {
             MenuItem {
@@ -74,25 +83,13 @@ Page {
                     })
                 }
             }
-            MenuItem {
-                text: qsTr("Rename")
-                onClicked: {
-                    var dialog = pageStack.push(Qt.resolvedUrl("RenameDialog.qml"),
-                                                { path: page.file })
-                    dialog.accepted.connect(function() {
-                        if (dialog.errorMessage === "")
-                            page.file = dialog.newPath;
-                        else
-                            notificationPanel.showTextWithTimer(dialog.errorMessage, "");
-                    })
-                }
-            }
 
             MenuItem {
-                text: qsTr("View Contents")
+                text: qsTr("View Raw Contents")
                 visible: !fileData.isDir
-                onClicked: viewContents()
+                onClicked: viewContents(false, true)
             }
+
             // open/install tries to open the file and fileData.onProcessExited shows error
             // if it fails
             MenuItem {
@@ -121,12 +118,7 @@ Page {
             anchors.right: parent.right
 
             PageHeader {
-                title: Functions.formatPathForTitle(fileData.absolutePath) + " " +
-                       Functions.unicodeBlackDownPointingTriangle()
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: dirPopup.show();
-                }
+                title: Functions.formatPathForTitle(fileData.absolutePath)
             }
 
             // file info texts, visible if error is not set
@@ -160,7 +152,7 @@ Page {
                         id: openArea
                         width: parent.width
 
-                        Image { // preview of image, max height 400
+                        AnimatedImage { // preview of image, max height 400
                             id: imagePreview
                             visible: isImageFile()
                             source: visible ? fileData.file : "" // access the source only if img is visible
@@ -182,8 +174,8 @@ Page {
                             width: 128 * Theme.pixelRatio
                             height: 128 * Theme.pixelRatio
                             Component.onCompleted: {
-                                var qml = Theme.lightPrimaryColor ? "../components/MyHighlightImage3.qml"
-                                                                  : "../components/MyHighlightImage2.qml";
+                                var qml = Theme.lightPrimaryColor ? "../components/HighlightImageSF3.qml"
+                                                                  : "../components/HighlightImageSF2.qml";
                                 setSource(qml, {
                                     imgsrc: "../images/large-"+fileData.icon+".png",
                                     imgw: 128 * Theme.pixelRatio,
@@ -221,7 +213,44 @@ Page {
                     }
                 }
 
-                // Display metadata with priotity < 5
+                FileActions {
+                    x: -parent.x
+                    selectedFiles: function() {
+                        return [file];
+                    }
+                    errorCallback: function(errorMsg) { notificationPanel.showTextWithTimer(errorMsg, ""); }
+                    selectedCount: 1
+                    labelText: ""
+                    showProperties: false
+                    showSelection: false
+                    showShare: !fileData.isSymLink
+                    showEdit: !fileData.isDir
+
+                    onRenameTriggered: {
+                        page.file = newFiles[0]
+                        fileData.refresh();
+                    }
+                    onDeleteTriggered: {
+                        remorsePopup.execute(qsTr("Deleting"), function() {
+                            var prevPage = pageStack.previousPage();
+                            pageStack.pop();
+                            if (prevPage.progressPanel) prevPage.progressPanel.showText(qsTr("Deleting"));
+                            engine.deleteFiles([page.file]);
+                        });
+                    }
+                    onTransferTriggered: {
+                        if (selectedAction === "move") {
+                            var prevPage = pageStack.previousPage();
+                            if (prevPage.progressPanel) transferPanel.progressPanel = prevPage.progressPanel;
+                            if (prevPage.notificationPanel) transferPanel.notificationPanel = prevPage.notificationPanel;
+                            pageStack.pop();
+                        }
+
+                        transferPanel.startTransfer(toTransfer, targets, selectedAction, goToTarget);
+                    }
+                }
+
+                // Display metadata with priority < 5
                 Repeater {
                     model: fileData.metaData
                     // first char is priority (0-9), labels and values are delimited with ':'
@@ -242,9 +271,8 @@ Page {
                            ? qsTr("Link to %1").arg(fileData.mimeTypeComment) + "\n("+fileData.mimeType+")"
                            : fileData.mimeTypeComment + "\n("+fileData.mimeType+")"
                 }
-                DetailItem {
-                    label: qsTr("Size")
-                    value: fileData.size
+                SizeDetailItem {
+                    files: page.file
                 }
                 DetailItem {
                     label: qsTr("Permissions")
@@ -260,7 +288,7 @@ Page {
                 }
                 DetailItem {
                     label: qsTr("Last modified")
-                    value: fileData.modified
+                    value: fileData.modifiedLong
                 }
                 // Display metadata with priority >= 5
                 Repeater {
@@ -294,15 +322,36 @@ Page {
         }
     }
 
-    DirPopup {
-        id: dirPopup
-        anchors.fill: parent
-        menuTop: Theme.itemSizeMedium
-    }
-
     NotificationPanel {
         id: notificationPanel
         page: page
+    }
+
+    ProgressPanel {
+        id: progressPanel
+        page: page
+        onCancelled: engine.cancel()
+    }
+
+    TransferPanel {
+        id: transferPanel
+        page: page
+        progressPanel: progressPanel
+        notificationPanel: notificationPanel
+    }
+
+    Timer {
+        id: preparationTimer
+        running: false
+        repeat: false
+        interval: 10
+        onTriggered: {
+            viewContents(true);
+        }
+    }
+
+    Component.onCompleted: {
+        preparationTimer.start();
     }
 
     function isImageFile()
@@ -333,6 +382,13 @@ Page {
         return fileData.mimeTypeInherits("application/zip");
     }
 
+    function isTarArchive()
+    {
+        return    fileData.mimeType === "application/x-tar"
+               || fileData.mimeType === "application/x-compressed-tar"
+               || fileData.mimeType === "application/x-bzip-compressed-tar"
+    }
+
     function isRpmFile()
     {
         return fileData.mimeType === "application/x-rpm";
@@ -345,42 +401,56 @@ Page {
 
     function quickView()
     {
-        // dirs are special cases - there's no way to display their contents, so go to them
-        if (fileData.isDir && fileData.isSymLink) {
-            Functions.goToFolder(fileData.symLinkTarget);
-
-        } else if (fileData.isDir) {
-            Functions.goToFolder(fileData.file);
-
-        } else {
-            viewContents();
-        }
+        viewContents();
     }
 
-    function viewContents()
+    function viewContents(asAttached, forceRawView)
     {
+        // dirs are special cases - there's no way to display their contents, so go to them
+        if (fileData.isDir) {
+            if (fileData.isSymLink) {
+                Functions.goToFolder(fileData.symLinkTarget);
+            } else {
+                Functions.goToFolder(fileData.file);
+            }
+            return;
+        }
+
+        var method;
+
+        if (asAttached) {
+            method = pageStack.pushAttached;
+        } else {
+            method = pageStack.push;
+        }
+
         // view depending on file type
+        if (forceRawView) {
+            method(Qt.resolvedUrl("ViewPage.qml"), { path: page.file });
+            return;
+        }
+
         if (isZipFile()) {
-            pageStack.push(Qt.resolvedUrl("ConsolePage.qml"),
+            method(Qt.resolvedUrl("ConsolePage.qml"),
                          { title: Functions.lastPartOfPath(fileData.file),
                            command: "unzip",
                            arguments: [ "-Z", "-2ht", fileData.file ] });
 
         } else if (isRpmFile()) {
-            pageStack.push(Qt.resolvedUrl("ConsolePage.qml"),
+            method(Qt.resolvedUrl("ConsolePage.qml"),
                          { title: Functions.lastPartOfPath(fileData.file),
                            command: "rpm",
                            arguments: [ "-qlp", "--info", fileData.file ] });
 
-        } else if (fileData.mimeType === "application/x-tar" ||
-                   fileData.mimeType === "application/x-compressed-tar" ||
-                   fileData.mimeType === "application/x-bzip-compressed-tar") {
-            pageStack.push(Qt.resolvedUrl("ConsolePage.qml"),
+        } else if (isTarArchive()) {
+            method(Qt.resolvedUrl("ConsolePage.qml"),
                          { title: Functions.lastPartOfPath(fileData.file),
                            command: "tar",
                            arguments: [ "tf", fileData.file ] });
+        } else if (isImageFile()) {
+            method(Qt.resolvedUrl("ViewImagePage.qml"), { path: page.file, title: page.file });
         } else {
-            pageStack.push(Qt.resolvedUrl("ViewPage.qml"), { path: page.file });
+            method(Qt.resolvedUrl("ViewPage.qml"), { path: page.file });
         }
     }
 
@@ -393,7 +463,4 @@ Page {
             audioPlayer.stop();
         }
     }
-
 }
-
-

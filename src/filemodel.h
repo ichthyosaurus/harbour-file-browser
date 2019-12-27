@@ -22,6 +22,7 @@ class FileModel : public QAbstractListModel
     Q_PROPERTY(QString errorMessage READ errorMessage() NOTIFY errorMessageChanged())
     Q_PROPERTY(bool active READ active() WRITE setActive(bool) NOTIFY activeChanged())
     Q_PROPERTY(int selectedFileCount READ selectedFileCount() NOTIFY selectedFileCountChanged())
+    Q_PROPERTY(QString filterString READ filterString() WRITE setFilterString(QString) NOTIFY filterStringChanged())
 
 public:
     explicit FileModel(QObject *parent = 0);
@@ -40,16 +41,20 @@ public:
     bool active() const { return m_active; }
     void setActive(bool active);
     int selectedFileCount() const { return m_selectedFileCount; }
+    QString filterString() const { return m_filterString; }
+    void setFilterString(QString newFilter);
 
     // methods accessible from QML
     Q_INVOKABLE QString appendPath(QString dirName);
     Q_INVOKABLE QString parentPath();
     Q_INVOKABLE QString fileNameAt(int fileIndex);
+    Q_INVOKABLE QString mimeTypeAt(int fileIndex);
 
     // file selection
     Q_INVOKABLE void toggleSelectedFile(int fileIndex);
     Q_INVOKABLE void clearSelectedFiles();
     Q_INVOKABLE void selectAllFiles();
+    Q_INVOKABLE void selectRange(int firstIndex, int lastIndex, bool selected = true);
     Q_INVOKABLE QStringList selectedFiles() const;
 
 public slots:
@@ -64,9 +69,11 @@ signals:
     void errorMessageChanged();
     void activeChanged();
     void selectedFileCountChanged();
+    void filterStringChanged();
 
 private slots:
     void readDirectory();
+    void applyFilterString();
 
 private:
     void recountSelectedFiles();
@@ -74,8 +81,10 @@ private:
     void refreshEntries();
     void clearModel();
     bool filesContains(const QList<StatFileInfo> &files, const StatFileInfo &fileData) const;
+    void applySettings(QDir& dir);
 
     QString m_dir;
+    QString m_filterString;
     QList<StatFileInfo> m_files;
     int m_selectedFileCount;
     QString m_errorMessage;

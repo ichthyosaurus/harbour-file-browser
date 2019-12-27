@@ -8,6 +8,7 @@ Item {
 
     // reference to page to prevent back navigation (required)
     property Item page
+    property bool blockNavigation: true
 
     // large text displayed on panel
     property string headerText: ""
@@ -49,7 +50,13 @@ Item {
 
         dock: Dock.Top
         open: false
-        onOpenChanged: page.backNavigation = !open; // disable back navigation
+        onOpenChanged: {
+            if (blockNavigation) {
+                // disable all page navigation
+                page.backNavigation = !open;
+                page.forwardNavigation = !open;
+            }
+        }
 
         Rectangle {
             anchors.fill: parent
@@ -72,16 +79,12 @@ Item {
             anchors.bottom: parent.bottom
             color: cancelMouseArea.pressed ? Theme.secondaryHighlightColor : "transparent"
 
-            MouseArea {
+            IconButton {
                 id: cancelMouseArea
                 anchors.fill: parent
+                enabled: true; icon.width: Theme.iconSizeMedium; icon.height: Theme.iconSizeMedium
+                icon.source: "image://theme/icon-m-clear"
                 onClicked: cancelled();
-                enabled: true
-                Text {
-                    anchors.centerIn: parent
-                    color: Theme.primaryColor
-                    text: "\u00d7" // times symbol (cross)
-                }
             }
         }
         Label {

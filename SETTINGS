@@ -1,0 +1,48 @@
+# Settings
+
+## Global Settings
+
+SETTING                             VALUES                                      OLD KEY (in [General])
+
+[General]
+DefaultFilterAction=filter          filter/search
+ShowFullDirectoryPaths=false        bool
+
+[Transfer]
+DefaultAction=none                  copy/move/link/none                         default-transfer-action
+
+[View]
+SortRole=name                       name/size/modificationtime/type             listing-sort-by
+SortOrder=default                   default/reversed                            listing-order
+SortCaseSensitively=false           bool                                        sort-case-sensitive
+ShowDirectoriesFirst=true           bool                                        show-dirs-first
+HiddenFilesShown=false              bool                                        show-hidden-files
+PreviewsShown=false                 bool                                        show-thumbnails
+PreviewsSize=medium                 small/medium/large/huge                     thumbnails-size
+UseLocalSettings=true               bool                                        use-local-view-settings
+
+[Bookmarks]
+Entries="[\"...\"]"                 list of paths as JSON string                bookmark-entries
+home\nemo\Devel=Devel               'path=bookmark name' for each bookmark
+
+
+## Local Settings
+
+Local settings are read from a hidden file '.directory' in the current directory
+and use the same entries as KDE's file manager Dolphin.
+
+[Dolphin]
+SortOrder=0                         deleted/0/1 (1 = reversed)
+SortRole=name                       name/size/modificationtime/type
+
+[Settings]
+HiddenFilesShown=false              bool
+
+[Dolphin]
+PreviewsShown=false                 bool
+Version=4                           (not used yet)
+Timestamp=2019,31,12,23,59,59       (not used yet)
+
+[Sailfish]                          not used by Dolphin
+ShowDirectoriesFirst=true           bool
+SortCaseSensitively=false           bool

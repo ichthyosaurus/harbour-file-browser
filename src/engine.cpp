@@ -3,6 +3,8 @@
 #include <QTextStream>
 #include <QSettings>
 #include <QStandardPaths>
+#include <QCoreApplication>
+#include <QProcess>
 #include <unistd.h>
 #include "globals.h"
 #include "fileworker.h"
@@ -96,7 +98,7 @@ QStringList Engine::listExistingFiles(QString destDirectory)
     return existingFiles;
 }
 
-void Engine::pasteFiles(QString destDirectory)
+void Engine::pasteFiles(QString destDirectory, bool asSymlinks)
 {
     if (m_clipboardFiles.isEmpty()) {
         emit workerErrorOccurred(tr("No files to paste"), "");
@@ -133,12 +135,13 @@ void Engine::pasteFiles(QString destDirectory)
     m_clipboardFiles.clear();
     emit clipboardCountChanged();
 
-    if (m_clipboardContainsCopy) {
+    if (asSymlinks) {
+        m_fileWorker->startSymlinkFiles(files, destDirectory);
+    } else if (m_clipboardContainsCopy) {
         m_fileWorker->startCopyFiles(files, destDirectory);
-        return;
+    } else {
+        m_fileWorker->startMoveFiles(files, destDirectory);
     }
-
-    m_fileWorker->startMoveFiles(files, destDirectory);
 }
 
 void Engine::cancel()
@@ -216,12 +219,41 @@ QString Engine::androidSdcardPath() const
     return QStandardPaths::writableLocation(QStandardPaths::HomeLocation)+"/android_storage";
 }
 
+bool Engine::runningAsRoot()
+{
+    if (geteuid() == 0) return true;
+    return false;
+}
+
 bool Engine::exists(QString filename)
 {
     if (filename.isEmpty())
         return false;
 
     return QFile::exists(filename);
+}
+
+QStringList Engine::fileSizeInfo(QStringList paths)
+{
+    if (paths.isEmpty()) return QStringList() << "-" << "0" << "0";
+
+    QStringList result;
+
+    QString diskusage = execute("/usr/bin/du", QStringList() << paths <<
+                                "--bytes" << "--one-file-system" <<
+                                "--summarize" << "--total", false);
+    QStringList duLines = diskusage.split(QRegExp("[\n\r]"));
+    QString duTotalStr = duLines.at(duLines.count()-2).split(QRegExp("[\\s]+"))[0].trimmed();
+    qint64 duTotal = duTotalStr.toLongLong() * 1LL;
+    result << (duTotal > 0 ? filesizeToString(duTotal) : "-");
+
+    QString dirs = execute("/bin/find", QStringList() << paths << "-type" << "d", false);
+    result << QString::number(dirs.split(QRegExp("[\n\r]")).count()-1);
+
+    QString files = execute("/bin/find", QStringList() << paths << "-type" << "f", false);
+    result << QString::number(files.split(QRegExp("[\n\r]")).count()-1);
+
+    return result;
 }
 
 QStringList Engine::diskSpace(QString path)
@@ -233,9 +265,9 @@ QStringList Engine::diskSpace(QString path)
     if (path == "/media/sdcard")
         return QStringList();
 
-    // run df for the given path to get disk space
+    // run df in POSIX mode for the given path to get disk space
     QString blockSize = "--block-size=1024";
-    QString result = execute("/bin/df", QStringList() << blockSize << path, false);
+    QString result = execute("/bin/df", QStringList() << "-P" << blockSize << path, false);
     if (result.isEmpty())
         return QStringList();
 
@@ -244,7 +276,7 @@ QStringList Engine::diskSpace(QString path)
     if (lines.count() < 2)
         return QStringList();
 
-    // get first line and its columns
+    // get second line and its columns
     QString line = lines.at(1);
     QStringList columns = line.split(QRegExp("\\s+"), QString::SkipEmptyParts);
     if (columns.count() < 5)
@@ -321,8 +353,7 @@ QStringList Engine::readFile(QString filename)
         QString msg = "";
 
         if (!atEnd) {
-            msg = tr("--- Binary file preview clipped at %1 kB ---").arg(maxBinSize/1024);
-            msg = tr("--- Binary file preview clipped at %1 kB ---").arg(maxBinSize/1024);
+            msg = tr("Binary file preview clipped at %1 kB").arg(maxBinSize/1024);
         }
 
         return QStringList() << msg << out8 << out16;
@@ -340,10 +371,11 @@ QStringList Engine::readFile(QString filename)
     }
 
     QString msg = "";
-    if (lineCount == maxLines)
-        msg = tr("--- Text file preview clipped at %1 lines ---").arg(maxLines);
-    else if (!atEnd)
-        msg = tr("--- Text file preview clipped at %1 kB ---").arg(maxSize/1024);
+    if (lineCount == maxLines) {
+        msg = tr("Text file preview clipped at %1 lines").arg(maxLines);
+    } else if (!atEnd) {
+        msg = tr("Text file preview clipped at %1 kB").arg(maxSize/1024);
+    }
 
     return makeStringList(msg, lines.join("\n"));
 }
@@ -401,23 +433,65 @@ QString Engine::chmod(QString path,
     return QString();
 }
 
-QString Engine::readSetting(QString key, QString defaultValue)
+bool Engine::openNewWindow(QStringList arguments) const
 {
+    QFileInfo info(QCoreApplication::applicationFilePath());
+
+    if (!info.exists() || !info.isFile()) {
+        return false;
+    } else {
+        return QProcess::startDetached(info.absoluteFilePath(), arguments);
+    }
+}
+
+bool Engine::pathIsDirectory(QString path) const
+{
+    StatFileInfo info(path);
+    return info.isDirAtEnd();
+}
+
+bool Engine::pathIsFile(QString path) const
+{
+    StatFileInfo info(path);
+    return info.isFileAtEnd();
+}
+
+QString Engine::readSetting(QString key, QString defaultValue, QString fileName) {
+    QSettings settings(fileName, QSettings::IniFormat);
+    return settings.value(key, defaultValue).toString();
+}
+
+QString Engine::readSetting(QString key, QString defaultValue) {
     QSettings settings;
     return settings.value(key, defaultValue).toString();
 }
 
-void Engine::writeSetting(QString key, QString value)
-{
-    QSettings settings;
-
-    // do nothing if value didn't change
-    if (settings.value(key) == value)
-        return;
-
+void Engine::writeSetting(QString key, QString value, QString fileName) {
+    QSettings settings(fileName, QSettings::IniFormat);
+    if (settings.value(key) == value) return; // do nothing if value didn't change
     settings.setValue(key, value);
-
     emit settingsChanged();
+}
+
+void Engine::writeSetting(QString key, QString value) {
+    QSettings settings;
+    if (settings.value(key) == value) return; // do nothing if value didn't change
+    settings.setValue(key, value);
+    emit settingsChanged();
+    if (key.startsWith("View/")) emit viewSettingsChanged();
+}
+
+void Engine::removeSetting(QString key, QString fileName) {
+    QSettings settings(fileName, QSettings::IniFormat);
+    settings.remove(key);
+    emit settingsChanged();
+}
+
+void Engine::removeSetting(QString key) {
+    QSettings settings;
+    settings.remove(key);
+    emit settingsChanged();
+    if (key.startsWith("View/")) emit viewSettingsChanged();
 }
 
 void Engine::setProgress(int progress, QString filename)

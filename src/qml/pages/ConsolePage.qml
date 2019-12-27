@@ -22,37 +22,64 @@ Page {
         id: consoleModel
     }
 
+    PageHeader {
+        id: header
+        title: page.title
+    }
+
     // display console text as a list, it is much faster compared to a Text item
-    SilicaListView {
-        id: itemList
-        anchors.fill: parent
+    SilicaFlickable {
+        id: horizontalFlick
+        flickableDirection: "HorizontalFlick"
+        contentWidth: itemList.contentWidth
+        HorizontalScrollDecorator { flickable: horizontalFlick }
+        clip: true
 
-        model: consoleModel
+        anchors {
+            top: header.bottom
+            topMargin: Theme.paddingMedium
+            bottom: parent.bottom
+            left: parent.left
+            right: parent.right
+        }
 
-        VerticalScrollDecorator { flickable: itemList }
+        SilicaListView {
+            id: itemList
+            anchors.fill: parent
+            model: consoleModel
+            header: header
+            footer: Spacer { height: Theme.horizontalPageMargin }
 
-        header: PageHeader { title: page.title }
+            VerticalScrollDecorator {
+                visible: horizontalFlick.contentWidth > horizontalFlick.width
+                anchors.right: undefined // places scrollbar on the left
+                flickable: itemList
+            }
 
-        delegate: Item {
-            id: listItem
-            width: ListView.view.width
-            height: listLabel.height-24
+            VerticalScrollDecorator { flickable: itemList }
 
-            Text {
-                id: listLabel
-                x: Theme.horizontalPageMargin
-                width: parent.width - 2*x
+            delegate: Item {
+                id: listItem
+                width: ListView.view.width
+                height: listLabel.height-24
 
-                text: modelData
-                textFormat: Text.PlainText
-                color: page.consoleColor
-                wrapMode: Text.NoWrap
-                elide: Text.ElideRight
-                font.pixelSize: Theme.fontSizeTiny
-                font.family: "Monospace"
+                Text {
+                    id: listLabel
+                    x: Theme.horizontalPageMargin
+                    text: modelData
+                    textFormat: Text.PlainText
+                    color: page.consoleColor
+                    wrapMode: Text.NoWrap
+                    elide: Text.ElideRight
+                    font.pixelSize: Theme.fontSizeTiny
+                    font.family: "Monospace"
+                    Component.onCompleted: {
+                        if ((width+2*x) > horizontalFlick.contentWidth) {
+                            horizontalFlick.contentWidth = width+2*x;
+                        }
+                    }
+                }
             }
         }
     }
 }
-
-

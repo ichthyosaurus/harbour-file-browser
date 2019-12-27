@@ -19,6 +19,7 @@ public:
     void startDeleteFiles(QStringList filenames);
     void startCopyFiles(QStringList filenames, QString destDirectory);
     void startMoveFiles(QStringList filenames, QString destDirectory);
+    void startSymlinkFiles(QStringList filenames, QString destDirectory);
 
     void cancel();
 
@@ -36,7 +37,7 @@ protected:
 
 private:
     enum Mode {
-        DeleteMode, CopyMode, MoveMode
+        DeleteMode, CopyMode, MoveMode, SymlinkMode
     };
     enum CancelStatus {
         Cancelled = 0, KeepRunning = 1
@@ -47,6 +48,7 @@ private:
     QString deleteFile(QString filename);
     void deleteFiles();
     void copyOrMoveFiles();
+    void symlinkFiles();
     QString copyDirRecursively(QString srcDirectory, QString destDirectory);
     QString copyOverwrite(QString src, QString dest);
 
