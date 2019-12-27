@@ -1518,7 +1518,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="169"/>
         <source>This beta version of File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation>Esta es una versión beta de File Browser publicada bajo los términos de la versión 3 o posterior de GNU GPL. Este es un programa libre: eres libre de cambiarlo y redistribuirlo. No hay garantía, hasta el punto que la ley lo permita.</translation>
+        <translation>Esta es una versión beta de File Browser publicada bajo los términos de la versión 3 o posterior de GNU GPL. Este es un programa libre: eres libre de modificarlo y redistribuirlo. No se ofrece ninguna garantía, en la medida permitida por la ley.</translation>
     </message>
     <message>
         <source>File Browser is free and unencumbered software released into the public domain.</source>
