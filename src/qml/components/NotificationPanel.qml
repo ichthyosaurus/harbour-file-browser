@@ -56,7 +56,7 @@ Item {
 
         Rectangle {
             anchors.fill: parent
-            color: "black"
+            color: Theme.overlayBackgroundColor ? Theme.overlayBackgroundColor : "black"
             opacity: 0.7
         }
         MouseArea {
@@ -70,12 +70,9 @@ Item {
         Label {
             id: headerLabel
             visible: dockedPanel.open
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.top: parent.top
-            anchors.leftMargin: Theme.paddingLarge
-            anchors.rightMargin: Theme.paddingLarge
-            anchors.topMargin: 40
+            x: Theme.horizontalPageMargin
+            width: parent.width - 2*x
+            y: 2*Theme.paddingLarge
             horizontalAlignment: Text.AlignHCenter
             text: ""
             wrapMode: Text.Wrap
@@ -84,11 +81,9 @@ Item {
         Label {
             id: textLabel
             visible: dockedPanel.open
-            anchors.left: parent.left
-            anchors.right: parent.right
+            x: Theme.horizontalPageMargin
+            width: parent.width - 2*x
             anchors.top: headerLabel.bottom
-            anchors.leftMargin: Theme.paddingLarge
-            anchors.rightMargin: Theme.paddingLarge
             horizontalAlignment: Text.AlignHCenter
             text: ""
             wrapMode: Text.Wrap

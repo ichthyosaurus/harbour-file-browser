@@ -53,22 +53,19 @@ Dialog {
 
             DialogHeader {
                 id: dialogHeader
-                title: qsTr("Change Permissions")
                 acceptText: qsTr("Change")
             }
 
             Label {
-                anchors.left: parent.left
-                anchors.right: parent.right
-                anchors.leftMargin: Theme.paddingLarge
-                anchors.rightMargin: Theme.paddingLarge
+                x: Theme.horizontalPageMargin
+                width: parent.width - 2*x
                 text: qsTr("Change permissions for") + "\n" + path
                 color: Theme.secondaryColor
                 wrapMode: Text.Wrap
             }
 
             Spacer {
-                height: 40
+                height: 2*Theme.paddingLarge
             }
 
             // read, write, execute small labels
@@ -111,13 +108,13 @@ Dialog {
                     width: parent.width/2
                     Label {
                         id: ownerName
-                        width: parent.width-20
+                        width: parent.width - Theme.paddingLarge
                         text: ""
                         color: Theme.highlightColor
                         horizontalAlignment: Text.AlignRight
                     }
                     Label {
-                        width: parent.width-20
+                        width: parent.width - Theme.paddingLarge
                         text: qsTr("Owner")
                         font.pixelSize: Theme.fontSizeExtraSmall
                         color: Theme.secondaryColor
@@ -149,13 +146,13 @@ Dialog {
                     width: parent.width/2
                     Label {
                         id: groupName
-                        width: parent.width-20
+                        width: parent.width - Theme.paddingLarge
                         text: ""
                         color: Theme.highlightColor
                         horizontalAlignment: Text.AlignRight
                     }
                     Label {
-                        width: parent.width-20
+                        width: parent.width - Theme.paddingLarge
                         text: qsTr("Group")
                         font.pixelSize: Theme.fontSizeExtraSmall
                         color: Theme.secondaryColor
@@ -187,7 +184,7 @@ Dialog {
                     width: parent.width/2
                     height: parent.height
                     Label {
-                        width: parent.width-20
+                        width: parent.width - Theme.paddingLarge
                         height: parent.height
                         text: qsTr("Others")
                         color: Theme.highlightColor

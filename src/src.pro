@@ -6,15 +6,22 @@ CONFIG += sailfishapp
 SOURCES += main.cpp filemodel.cpp filedata.cpp engine.cpp fileworker.cpp searchengine.cpp \
            searchworker.cpp consolemodel.cpp statfileinfo.cpp globals.cpp
 HEADERS += filemodel.h filedata.h engine.h fileworker.h searchengine.h searchworker.h \
-           consolemodel.h statfileinfo.cpp globals.h
+           consolemodel.h statfileinfo.h globals.h
 
 SOURCES += jhead/jhead-api.cpp jhead/exif.c jhead/gpsinfo.c jhead/iptc.c jhead/jpgfile.c \
            jhead/jpgqguess.c jhead/makernote.c
 HEADERS += jhead/jhead-api.h jhead/jhead.h
 
+SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
+
 i18n.path = /usr/share/harbour-file-browser/i18n
 i18n.files = i18n/file-browser_de.qm \
+             i18n/file-browser_el.qm \
+             i18n/file-browser_es.qm \
              i18n/file-browser_fi.qm \
+             i18n/file-browser_fr.qm \
+             i18n/file-browser_it_IT.qm \
+             i18n/file-browser_nl.qm \
              i18n/file-browser_ru_RU.qm \
              i18n/file-browser_sv.qm \
              i18n/file-browser_zh_CN.qm
@@ -26,7 +33,12 @@ system(lrelease $$PWD/i18n/*.ts)
 
 TRANSLATIONS = \
     i18n/file-browser_de.ts \
+    i18n/file-browser_el.ts \
+    i18n/file-browser_es.ts \
     i18n/file-browser_fi.ts \
+    i18n/file-browser_fr.ts \
+    i18n/file-browser_it_IT.ts \
+    i18n/file-browser_nl.ts \
     i18n/file-browser_ru_RU.ts \
     i18n/file-browser_sv.ts \
     i18n/file-browser_zh_CN.ts
@@ -34,6 +46,7 @@ TRANSLATIONS = \
 lupdate_only {
 SOURCES += \
     qml/*.qml \
+    qml/cover/*.qml \
     qml/pages/*.qml \
     qml/components/*.qml
 }
@@ -47,31 +60,11 @@ OTHER_FILES = \
 # how to kill this particular Creator's plugin
 #    ../rpm/harbour-file-browser.yaml \
     ../rpm/harbour-file-browser.spec \
-    qml/pages/DirectoryPage.qml \
-    qml/pages/FilePage.qml \
-    qml/pages/ConsolePage.qml \
-    qml/pages/SearchPage.qml \
-    qml/pages/ViewPage.qml \
-    qml/pages/SettingsPage.qml \
-    qml/pages/CreateFolderDialog.qml \
-    qml/pages/RenameDialog.qml \
-    qml/pages/PermissionsDialog.qml \
-    qml/pages/AboutPage.qml \
-    qml/components/DirPopup.qml \
-    qml/components/Spacer.qml \
-    qml/components/CenteredField.qml \
-    qml/components/LetterSwitch.qml \
-    qml/components/DoubleMenuItem.qml \
-    qml/components/InteractionBlocker.qml \
-    qml/components/NotificationPanel.qml \
-    qml/components/ProgressPanel.qml \
-    qml/components/SelectionPanel.qml \
-    qml/main.qml \
+    qml/pages/*.qml \
+    qml/cover/*.qml \
+    qml/components/*.qml \
+    qml/*.qml \
     qml/functions.js \
-    i18n/file-browser_de.ts \
-    i18n/file-browser_fi.ts \
-    i18n/file-browser_ru_RU.ts \
-    i18n/file-browser_sv.ts \
-    i18n/file-browser_zh_CN.ts
+    i18n/*.ts
 
 INCLUDEPATH += $$PWD

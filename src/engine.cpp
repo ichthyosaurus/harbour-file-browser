@@ -28,10 +28,10 @@ Engine::Engine(QObject *parent) :
 
 Engine::~Engine()
 {
+    m_fileWorker->cancel(); // ask the background thread to exit its loop
     // is this the way to force stop the worker thread?
-    m_fileWorker->cancel(); // stop possibly running background thread
     m_fileWorker->wait();   // wait until thread stops
-    delete m_fileWorker;    // delete it
+    m_fileWorker->deleteLater();    // delete it
 }
 
 void Engine::deleteFiles(QStringList filenames)
@@ -65,6 +65,37 @@ void Engine::copyFiles(QStringList filenames)
     emit clipboardContainsCopyChanged();
 }
 
+QStringList Engine::listExistingFiles(QString destDirectory)
+{
+    if (m_clipboardFiles.isEmpty()) {
+        return QStringList();
+    }
+    QDir dest(destDirectory);
+    if (!dest.exists()) {
+        return QStringList();
+    }
+
+    QStringList existingFiles;
+    foreach (QString filename, m_clipboardFiles) {
+        QFileInfo fileInfo(filename);
+        QString newname = dest.absoluteFilePath(fileInfo.fileName());
+
+        // source and dest filenames are the same? let pasteFiles() create a numbered copy for it.
+        if (filename == newname) {
+            continue;
+        }
+
+        // dest is under source? (directory) let pasteFiles() return an error.
+        if (newname.startsWith(filename)) {
+            return QStringList();
+        }
+        if (QFile::exists(newname)) {
+            existingFiles.append(fileInfo.fileName());
+        }
+    }
+    return existingFiles;
+}
+
 void Engine::pasteFiles(QString destDirectory)
 {
     if (m_clipboardFiles.isEmpty()) {
@@ -72,7 +103,6 @@ void Engine::pasteFiles(QString destDirectory)
         return;
     }
 
-    QStringList files = m_clipboardFiles;
     setProgress(0, "");
 
     QDir dest(destDirectory);
@@ -81,23 +111,25 @@ void Engine::pasteFiles(QString destDirectory)
         return;
     }
 
-    foreach (QString filename, files) {
+    // validate that the files can be pasted
+    foreach (QString filename, m_clipboardFiles) {
         QFileInfo fileInfo(filename);
         QString newname = dest.absoluteFilePath(fileInfo.fileName());
 
-        // source and dest filenames are the same?
-        if (filename == newname) {
-            emit workerErrorOccurred(tr("Can't overwrite itself"), newname);
+        // moving and source and dest filenames are the same?
+        if (!m_clipboardContainsCopy && filename == newname) {
+            emit workerErrorOccurred(tr("Cannot overwrite itself"), newname);
             return;
         }
 
         // dest is under source? (directory)
-        if (newname.startsWith(filename)) {
-            emit workerErrorOccurred(tr("Can't move/copy to itself"), filename);
+        if (newname.startsWith(filename) && newname != filename) {
+            emit workerErrorOccurred(tr("Cannot move/copy to itself"), filename);
             return;
         }
     }
 
+    QStringList files = m_clipboardFiles;
     m_clipboardFiles.clear();
     emit clipboardCountChanged();
 
@@ -119,14 +151,39 @@ QString Engine::homeFolder() const
     return QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
 }
 
+static QStringList subdirs(const QString &dirname)
+{
+    QDir dir(dirname);
+    if (!dir.exists())
+        return QStringList();
+    dir.setFilter(QDir::AllDirs | QDir::NoDotAndDotDot);
+    QStringList list = dir.entryList();
+    QStringList abslist;
+    foreach (QString relpath, list) {
+        abslist.append(dir.absoluteFilePath(relpath));
+    }
+    return abslist;
+}
+
 QString Engine::sdcardPath() const
 {
-    // get sdcard dir candidates
-    QDir dir("/media/sdcard");
-    if (!dir.exists())
-        return QString();
-    dir.setFilter(QDir::AllDirs | QDir::NoDotAndDotDot);
-    QStringList sdcards = dir.entryList();
+    // from SailfishOS 2.2.0 onwards, "/media/sdcard" is
+    // a symbolic link instead of a folder. In that case, follow the link
+    // to the actual folder.
+    QString sdcardFolder = "/media/sdcard";
+    QFileInfo fileinfo(sdcardFolder);
+    if (fileinfo.isSymLink()) {
+        sdcardFolder = fileinfo.symLinkTarget();
+    }
+
+    // get sdcard dir candidates for "/media/sdcard" (or its symlink target)
+    QStringList sdcards = subdirs(sdcardFolder);
+
+    // some users may have a symlink from "/media/sdcard/nemo" (not from "/media/sdcard"), which means
+    // no sdcards are found, so also get candidates directly from "/run/media/nemo" for those users
+    if (sdcardFolder != "/run/media/nemo")
+        sdcards.append(subdirs("/run/media/nemo"));
+
     if (sdcards.isEmpty())
         return QString();
 
@@ -135,8 +192,8 @@ QString Engine::sdcardPath() const
     QMutableStringListIterator i(sdcards);
     while (i.hasNext()) {
         QString dirname = i.next();
-        QString abspath = dir.absoluteFilePath(dirname);
-        if (!mps.contains(abspath))
+        // is it a mount point?
+        if (!mps.contains(dirname))
             i.remove();
     }
 
@@ -146,9 +203,11 @@ QString Engine::sdcardPath() const
 
     // if only one directory, then return it
     if (sdcards.count() == 1)
-        return dir.absoluteFilePath(sdcards.first());
+        return sdcards.first();
 
-    // if multiple directories, then return "/media/sdcard", which is the parent for them
+    // if multiple directories, then return the sdcard parent folder
+    // this works for SFOS<2.2 and SFOS>=2.2, because "/media/sdcard" should exist in both
+    // as a folder or symlink
     return "/media/sdcard";
 }
 
@@ -217,11 +276,12 @@ QStringList Engine::readFile(QString filename)
 
     // don't read unsafe system files
     if (!fileInfo.isSafeToRead()) {
-        return makeStringList(tr("Can't read this type of file") + "\n" + filename);
+        return makeStringList(tr("Cannot read this type of file") + "\n" + filename);
     }
 
     // check permissions
-    if (access(filename, R_OK) == -1)
+    QFileInfo info(filename);
+    if (!info.isReadable())
         return makeStringList(tr("No permission to read the file") + "\n" + filename);
 
     QFile file(filename);
@@ -293,7 +353,8 @@ QString Engine::mkdir(QString path, QString name)
     QDir dir(path);
 
     if (!dir.mkdir(name)) {
-        if (access(dir.absolutePath(), W_OK) == -1)
+        QFileInfo info(path);
+        if (!info.isWritable())
             return tr("No permissions to create %1").arg(name);
 
         return tr("Cannot create folder %1").arg(name);

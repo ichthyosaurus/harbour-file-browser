@@ -69,7 +69,7 @@ void FileWorker::cancel()
     m_cancelled.storeRelease(Cancelled);
 }
 
-void FileWorker::run() Q_DECL_OVERRIDE
+void FileWorker::run()
 {
     switch (m_mode) {
     case DeleteMode:
@@ -154,6 +154,25 @@ void FileWorker::deleteFiles()
     emit done();
 }
 
+// creates a "Document (2)" numbered name from the given filename
+static QString createNumberedFilename(QString filename)
+{
+    QFileInfo fileinfo(filename);
+    QString suffix = fileinfo.suffix();
+    if (!suffix.isEmpty()) {
+        suffix = "."+suffix;
+    }
+    int dotpos = filename.lastIndexOf('.');
+    QString basename = dotpos >= 0 ? filename.left(dotpos) : filename;
+    int number = 2;
+    QString numberedFilename = QString("%1 (%2)%3").arg(basename).arg(number).arg(suffix);
+    while (QFileInfo::exists(numberedFilename)) {
+        ++number;
+        numberedFilename = QString("%1 (%2)%3").arg(basename).arg(number).arg(suffix);
+    }
+    return numberedFilename;
+}
+
 void FileWorker::copyOrMoveFiles()
 {
     int fileIndex = 0;
@@ -172,6 +191,22 @@ void FileWorker::copyOrMoveFiles()
 
         QFileInfo fileInfo(filename);
         QString newname = dest.absoluteFilePath(fileInfo.fileName());
+
+        if (filename == newname) { // pasting over the source file, so copy a renamed file
+            if (QFileInfo::exists(newname)) {
+                newname = createNumberedFilename(newname);
+            }
+
+        } else {
+            // not pasting over the source file, but the destination already has the file: delete it
+            if (QFileInfo::exists(newname)) {
+                QString errorString = deleteFile(newname);
+                if (!errorString.isEmpty()) {
+                    emit errorOccurred(errorString, filename);
+                    return;
+                }
+            }
+        }
 
         // move or copy and stop if errors
         QFile file(filename);
@@ -231,14 +266,14 @@ QString FileWorker::copyDirRecursively(QString srcDirectory, QString destDirecto
 
     QDir srcDir(srcDirectory);
     if (!srcDir.exists())
-        return tr("Source folder doesn't exist");
+        return tr("Source folder does not exist");
 
     QDir destDir(destDirectory);
     if (!destDir.exists()) {
         QDir d(destDir);
         d.cdUp();
         if (!d.mkdir(destDir.dirName()))
-            return tr("Can't create target folder %1").arg(destDirectory);
+            return tr("Cannot create target folder %1").arg(destDirectory);
     }
 
     // copy files
@@ -278,13 +313,6 @@ QString FileWorker::copyDirRecursively(QString srcDirectory, QString destDirecto
 
 QString FileWorker::copyOverwrite(QString src, QString dest)
 {
-    // delete destination if it exists
-    QFile dfile(dest);
-    if (dfile.exists()) {
-        if (!dfile.remove())
-            return dfile.errorString();
-    }
-
     QFileInfo fileInfo(src);
     if (fileInfo.isSymLink()) {
         // copy symlink by creating a new link

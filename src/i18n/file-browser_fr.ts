@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fr" sourcelanguage="en">
 <context>
     <name>AboutPage</name>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="19"/>
         <source>Public Domain</source>
-        <translation>Public Domain</translation>
+        <translation>Domaine public</translation>
     </message>
 </context>
 <context>
@@ -14,40 +14,40 @@
     <message>
         <location filename="../consolemodel.cpp" line="101"/>
         <source>** crashed</source>
-        <translation>** kaatui</translation>
+        <translation>** a connu un souci</translation>
     </message>
     <message>
         <location filename="../consolemodel.cpp" line="104"/>
         <source>** error: %1</source>
-        <translation>** virhe: %1</translation>
+        <translation>** erreur : %1</translation>
     </message>
     <message>
         <location filename="../consolemodel.cpp" line="113"/>
         <source>** error</source>
-        <translation>** virhe</translation>
+        <translation>** erreur</translation>
     </message>
 </context>
 <context>
     <name>CreateFolderDialog</name>
     <message>
         <source>Create Folder</source>
-        <translation type="vanished">Luo kansio</translation>
+        <translation type="vanished">Créer un dossier</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="30"/>
         <source>Create</source>
-        <translation>Luo</translation>
+        <translation>Créer</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="36"/>
         <source>Create a new folder under</source>
-        <translation>Luo uusi kansio</translation>
+        <translation>Créer un nouveau dossier dans</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="48"/>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="49"/>
         <source>Folder name</source>
-        <translation>Kansion nimi</translation>
+        <translation>Nom du dossier</translation>
     </message>
 </context>
 <context>
@@ -55,42 +55,42 @@
     <message>
         <location filename="../qml/components/DirPopup.qml" line="22"/>
         <source>Root (%1)</source>
-        <translation>Juurihakemisto (%1)</translation>
+        <translation>Racine (%1)</translation>
     </message>
     <message>
         <location filename="../qml/components/DirPopup.qml" line="25"/>
         <source>Root</source>
-        <translation>Juurihakemisto</translation>
+        <translation>Racine</translation>
     </message>
     <message>
         <location filename="../qml/components/DirPopup.qml" line="32"/>
         <source>SD Card (%1)</source>
-        <translation>Muistikortti (%1)</translation>
+        <translation>Carte SD (%1)</translation>
     </message>
     <message>
         <location filename="../qml/components/DirPopup.qml" line="35"/>
         <source>SD Card</source>
-        <translation>Muistikortti</translation>
+        <translation>Carte SD</translation>
     </message>
     <message>
         <location filename="../qml/components/DirPopup.qml" line="81"/>
         <source>Android Storage not found</source>
-        <translation>Android-hakemisto ei löytynyt</translation>
+        <translation>Stockage Android introuvable</translation>
     </message>
     <message>
         <location filename="../qml/components/DirPopup.qml" line="93"/>
         <source>SD Card not found</source>
-        <translation>Muistikorttia ei löytynyt</translation>
+        <translation>Carte SD introuvable</translation>
     </message>
     <message>
         <location filename="../qml/components/DirPopup.qml" line="100"/>
         <source>Home</source>
-        <translation>Koti</translation>
+        <translation>Home</translation>
     </message>
     <message>
         <location filename="../qml/components/DirPopup.qml" line="104"/>
         <source>Android Storage</source>
-        <translation>Android-hakemisto</translation>
+        <translation>Stockage Android</translation>
     </message>
 </context>
 <context>
@@ -98,34 +98,34 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="40"/>
         <source>Settings</source>
-        <translation>Asetukset</translation>
+        <translation>Paramètres</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="44"/>
         <source>Create Folder</source>
-        <translation>Luo kansio</translation>
+        <translation>Créer un dossier</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="55"/>
         <source>Search</source>
-        <translation>Haku</translation>
+        <translation>Recherche</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="60"/>
         <source>Paste</source>
-        <translation>Liitä</translation>
+        <translation>Coller</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="71"/>
         <location filename="../qml/pages/DirectoryPage.qml" line="78"/>
         <source>Copying</source>
-        <translation>Kopioidaan</translation>
+        <translation>Copie</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="71"/>
         <location filename="../qml/pages/DirectoryPage.qml" line="78"/>
         <source>Moving</source>
-        <translation>Siirretään</translation>
+        <translation>Déplacement</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="201"/>
@@ -133,132 +133,132 @@
         <location filename="../qml/pages/DirectoryPage.qml" line="275"/>
         <location filename="../qml/pages/DirectoryPage.qml" line="277"/>
         <source>Deleting</source>
-        <translation>Poistetaan</translation>
+        <translation>Suppression</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="217"/>
         <source>Cut</source>
-        <translation>Leikkaa</translation>
+        <translation>Couper</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="221"/>
         <source>Copy</source>
-        <translation>Kopioi</translation>
+        <translation>Copier</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="225"/>
         <source>Delete</source>
-        <translation>Poista</translation>
+        <translation>Supprimer</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="232"/>
         <source>Properties</source>
-        <translation>Ominaisuudet</translation>
+        <translation>Propriétés</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="245"/>
         <source>No files</source>
-        <translation>Ei tiedostoja</translation>
+        <translation>Aucun fichier</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="319"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation>Yrititkö siirtää puhelimen ja SD-kortin välillä? Se ei toimi, kokeile kopiointia.</translation>
+        <translation>Souhaitez-vous basculer entre le téléphone et le carte SD ? Si cela échoue essayez de copier les fichiers.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="321"/>
         <source>Perhaps the storage is full?</source>
-        <translation>Ehkäpä tila on loppu?</translation>
+        <translation>L&apos;espace de stockage est peut-être plein ?</translation>
     </message>
 </context>
 <context>
     <name>Engine</name>
     <message>
-        <location filename="../engine.cpp" line="102"/>
-        <source>No files to paste</source>
-        <translation>Ei liitettäviä tiedostoja</translation>
-    </message>
-    <message>
         <location filename="../engine.cpp" line="110"/>
         <source>Destination does not exist</source>
-        <translation>Kohdekansiota ei ole olemassa</translation>
+        <translation>La destination n&apos;existe pas</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="121"/>
         <source>Cannot overwrite itself</source>
-        <translation>Ei voi kirjoittaa itsensä päälle</translation>
+        <translation>Impossible d&apos;écraser le fichier avec le lui-même</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="127"/>
         <source>Cannot move/copy to itself</source>
-        <translation>Ei voi siirtää/kopioida itsensä päälle</translation>
+        <translation>Impossible de déplacer/copier vers lui-même</translation>
+    </message>
+    <message>
+        <location filename="../engine.cpp" line="102"/>
+        <source>No files to paste</source>
+        <translation>Aucun fichier à coller</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="272"/>
         <source>File does not exist</source>
-        <translation>Tiedostoa ei ole olemassa</translation>
+        <translation>Le fichier n&apos;existe pas</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="274"/>
         <source>Broken symbolic link</source>
-        <translation>Hajonnut symbolinen linkki</translation>
+        <translation>Lien symbolique cassé</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="279"/>
         <source>Cannot read this type of file</source>
-        <translation>Tätä tiedostotyyppiä ei voi lukea</translation>
+        <translation>Impossible de lire ce type de fichier</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="285"/>
         <source>No permission to read the file</source>
-        <translation>Ei oikeuksia lukea tiedostoa</translation>
+        <translation>Vous n&apos;avez pas la permission de lire ce fichier</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="289"/>
         <location filename="../engine.cpp" line="295"/>
         <source>Error reading file</source>
-        <translation>Virhe luettaessa tiedostoa</translation>
+        <translation>Erreur de lecture du fichier</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="298"/>
         <source>Empty file</source>
-        <translation>Tyhjä tiedosto</translation>
+        <translation>Fichier vide</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="324"/>
         <location filename="../engine.cpp" line="325"/>
         <source>--- Binary file preview clipped at %1 kB ---</source>
-        <translation>-- Binääritiedoston esikatselu leikattu %1 kt kohdalta --</translation>
+        <translation>--- Aperçu du fichier binaire coupé à %1 ko ---</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="344"/>
         <source>--- Text file preview clipped at %1 lines ---</source>
-        <translation>-- Tekstitiedoston esikatselu leikattu %1 rivin kohdalta --</translation>
+        <translation>--- Aperçu du fichier binaire coupé ligne %1 ---</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="346"/>
         <source>--- Text file preview clipped at %1 kB ---</source>
-        <translation>-- Tekstitiedoston esikatselu leikattu %1 kt kohdalta --</translation>
+        <translation>--- Aperçu du fichier texte coupé à %1 ko ---</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="358"/>
         <source>No permissions to create %1</source>
-        <translation>Ei oikeuksia luoda kohdetta %1</translation>
+        <translation>Vous n&apos;avez pas la permission de créer %1</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="376"/>
         <source>Cannot rename %1</source>
-        <translation>Uudelleennimeäminen epäonnistui %1</translation>
+        <translation>Impossible de renommer %1</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="399"/>
         <source>Cannot change permissions</source>
-        <translation>Oikeuksia ei voi muuttaa</translation>
+        <translation>Impossible de changer les permissions</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="360"/>
         <source>Cannot create folder %1</source>
-        <translation>Kansiota %1 ei voitu luoda</translation>
+        <translation>Impossible de créer le dossier %1</translation>
     </message>
 </context>
 <context>
@@ -266,17 +266,17 @@
     <message>
         <location filename="../filedata.cpp" line="102"/>
         <source>File does not exist</source>
-        <translation>Tiedostoa ei ole olemassa</translation>
+        <translation>Le fichier n&apos;existe pas</translation>
     </message>
     <message>
         <location filename="../filedata.cpp" line="136"/>
         <source>block device</source>
-        <translation>block device</translation>
+        <translation>dispositif de blocage</translation>
     </message>
     <message>
         <location filename="../filedata.cpp" line="140"/>
         <source>character device</source>
-        <translation>character device</translation>
+        <translation>dispositif de caractère</translation>
     </message>
     <message>
         <location filename="../filedata.cpp" line="144"/>
@@ -291,17 +291,17 @@
     <message>
         <location filename="../filedata.cpp" line="152"/>
         <source>folder</source>
-        <translation>kansio</translation>
+        <translation>dossier</translation>
     </message>
     <message>
         <location filename="../filedata.cpp" line="157"/>
         <source>unknown</source>
-        <translation>tuntematon</translation>
+        <translation>inconnu</translation>
     </message>
     <message>
         <location filename="../filedata.cpp" line="180"/>
         <source>Image Size</source>
-        <translation>Kuvan koko</translation>
+        <translation>Taille de l&apos;image</translation>
     </message>
 </context>
 <context>
@@ -320,13 +320,13 @@
         <location filename="../filemodel.cpp" line="300"/>
         <location filename="../filemodel.cpp" line="338"/>
         <source>Folder does not exist</source>
-        <translation>Kansiota ei ole olemassa</translation>
+        <translation>Le dossier n&apos;existe pas</translation>
     </message>
     <message>
         <location filename="../filemodel.cpp" line="304"/>
         <location filename="../filemodel.cpp" line="344"/>
         <source>No permission to read the folder</source>
-        <translation>Ei oikeuksia lukea kansiota</translation>
+        <translation>Vous n&apos;avez pas la permission de lire le dossier</translation>
     </message>
 </context>
 <context>
@@ -334,146 +334,146 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="26"/>
         <source>Install launched</source>
-        <translation>Asennus aloitettu</translation>
+        <translation>Installation lancée</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="27"/>
         <source>If nothing happens, then the package is probably faulty.</source>
-        <translation>Jos mitään ei tapahdu, niin paketti saattaa olla viallinen.</translation>
+        <translation>Si rien ne se passe il est probable que le paquet soit défectueux.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="31"/>
         <source>Open successful</source>
-        <translation>Avaus onnistui</translation>
+        <translation>Ouvert avec succès</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="32"/>
         <source>Sometimes the application stays in the background</source>
-        <translation>Toisinaan avattu ohjelma jääpi taustalle, toisinaan ei.</translation>
+        <translation>Parfois l&apos;application reste en arrière-plan</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="34"/>
         <source>Internal error</source>
-        <translation>Sisäinen virhe</translation>
+        <translation>Erreur interne</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="37"/>
         <source>File not found</source>
-        <translation>Tiedostoa ei löytynyt</translation>
+        <translation>Fichier non trouvé</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="40"/>
         <source>No application to open the file</source>
-        <translation>Ei ohjelmaa tiedoston avaamiseen</translation>
+        <translation>Aucune application pour ouvrir ce fichier</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="41"/>
         <source>xdg-open found no preferred application</source>
-        <translation>xdg-open ei löytänyt sopivaa ohjelmaa</translation>
+        <translation>xdg-open n&apos;a pas trouvé d&apos;application favorite</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="43"/>
         <source>Action failed</source>
-        <translation>Toiminto epäonnistui</translation>
+        <translation>L&apos;action a échoué</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="46"/>
         <source>xdg-open not found</source>
-        <translation>Ohjelmaa xdg-open ei löydy</translation>
+        <translation>xdg-open introuvable</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="49"/>
         <source>xdg-open crash?</source>
-        <translation>xdg-open kaatui?</translation>
+        <translation>xdg-open a planté ?</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="52"/>
         <source>xdg-open error</source>
-        <translation>xdg-open virhe</translation>
+        <translation>Erreur de xdg-open</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="65"/>
         <source>Change Permissions</source>
-        <translation>Muuta oikeuksia</translation>
+        <translation>Changer les permissions</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="78"/>
         <source>Rename</source>
-        <translation>Nimeä uudelleen</translation>
+        <translation>Renommer</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="92"/>
         <source>View Contents</source>
-        <translation>Näytä sisältö</translation>
+        <translation>Voir le contenu</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="99"/>
         <source>Install</source>
-        <translation>Asenna</translation>
+        <translation>Installer</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="99"/>
         <source>Open</source>
-        <translation>Avaa</translation>
+        <translation>Ouvrir</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="103"/>
         <source>File cannot be opened</source>
-        <translation>Tiedostoa ei voi avata</translation>
+        <translation>Impossible d&apos;ouvrir le fichier</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="104"/>
         <source>This type of file cannot be opened.</source>
-        <translation>Tämän tyyppistä tiedostoa ei voi avata.</translation>
+        <translation>Ce type de fichier n&apos;est pas ouvrable.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="112"/>
         <source>Go to Target</source>
-        <translation>Mene linkin kohteeseen</translation>
+        <translation>Aller à la destination</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="236"/>
         <source>Location</source>
-        <translation>Sijainti</translation>
+        <translation>Emplacement</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="240"/>
         <source>Type</source>
-        <translation>Tyyppi</translation>
+        <translation>Type</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="242"/>
         <source>Link to %1</source>
-        <translation>Linkki kohteeseen %1</translation>
+        <translation>Lien ver %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="246"/>
         <source>Size</source>
-        <translation>Koko</translation>
+        <translation>Taille</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="250"/>
         <source>Permissions</source>
-        <translation>Oikeudet</translation>
+        <translation>Permissions</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="254"/>
         <source>Owner</source>
-        <translation>Omistaja</translation>
+        <translation>Propiétaire</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="258"/>
         <source>Group</source>
-        <translation>Ryhmä</translation>
+        <translation>Groupe</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="262"/>
         <source>Last modified</source>
-        <translation>Viimeksi muokattu</translation>
+        <translation>Dernière modification</translation>
     </message>
     <message>
         <source>Created</source>
-        <translation type="vanished">Luotu</translation>
+        <translation type="vanished">Créé</translation>
     </message>
 </context>
 <context>
@@ -483,22 +483,22 @@
         <location filename="../fileworker.cpp" line="36"/>
         <location filename="../fileworker.cpp" line="53"/>
         <source>File operation already in progress</source>
-        <translation>Tiedosto-operaatio on jo käynnissä</translation>
+        <translation>Opération sur le fichier déjà en cours</translation>
     </message>
     <message>
         <location filename="../fileworker.cpp" line="91"/>
         <source>Empty filename</source>
-        <translation>Tyhjä tiedoston nimi</translation>
+        <translation>Nombre de dossiers vides</translation>
     </message>
     <message>
         <location filename="../fileworker.cpp" line="102"/>
         <source>File not found</source>
-        <translation>Tiedosto ei löydy</translation>
+        <translation>Fichier introuvable</translation>
     </message>
     <message>
         <location filename="../fileworker.cpp" line="115"/>
         <source>Folder delete failed</source>
-        <translation>Kansion poisto epäonnistui</translation>
+        <translation>Échec lors de la suppression du dossier</translation>
     </message>
     <message>
         <location filename="../fileworker.cpp" line="137"/>
@@ -506,17 +506,17 @@
         <location filename="../fileworker.cpp" line="284"/>
         <location filename="../fileworker.cpp" line="300"/>
         <source>Cancelled</source>
-        <translation>Peruttu</translation>
+        <translation>Annulé</translation>
     </message>
     <message>
         <location filename="../fileworker.cpp" line="269"/>
         <source>Source folder does not exist</source>
-        <translation>Lähdekansiota ei ole olemassa</translation>
+        <translation>Le dossier source n&apos;existe pas</translation>
     </message>
     <message>
         <location filename="../fileworker.cpp" line="276"/>
         <source>Cannot create target folder %1</source>
-        <translation>Kohdekansiota ei voi luoda %1</translation>
+        <translation>Impossible de créer le dossier de destination %1</translation>
     </message>
 </context>
 <context>
@@ -524,132 +524,112 @@
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="27"/>
         <source>Replace?</source>
-        <translation>Korvataanko?</translation>
+        <translation>Remplacer ?</translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="28"/>
         <source>Replace</source>
-        <translation>Korvaa</translation>
+        <translation>Remplacer</translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="32"/>
         <source>These files or folders already exist:</source>
-        <translation>Nämä tiedostot tai hakemistot ovat jo olemassa:</translation>
+        <translation>Ces fichiers et répertoires existent déjà :</translation>
     </message>
 </context>
 <context>
     <name>PermissionsDialog</name>
     <message>
         <source>Change Permissions</source>
-        <translation type="vanished">Muuta oikeuksia</translation>
+        <translation type="vanished">Changer les permissions</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="56"/>
         <source>Change</source>
-        <translation>Muuta</translation>
+        <translation>Changer</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="62"/>
         <source>Change permissions for</source>
-        <translation>Muuta oikeuksia</translation>
+        <translation>Changer les permissions pour</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="82"/>
         <source>Read</source>
-        <translation>Luku</translation>
+        <translation>Lecture</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="90"/>
         <source>Write</source>
-        <translation>Kirj.</translation>
+        <translation>Écriture</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="97"/>
         <source>Execute</source>
-        <translation>Suoritus</translation>
+        <translation>Executer</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="118"/>
         <source>Owner</source>
-        <translation>Omistaja</translation>
+        <translation>Propiétaire</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="156"/>
         <source>Group</source>
-        <translation>Ryhmä</translation>
+        <translation>Groupe</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="189"/>
         <source>Others</source>
-        <translation>Muut</translation>
+        <translation>Autres</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../globals.cpp" line="47"/>
-        <source>%1 bytes</source>
-        <translation>%1 tavua</translation>
-    </message>
-    <message>
-        <location filename="../globals.cpp" line="50"/>
-        <source>%1 kB</source>
-        <translation>%1 kt</translation>
-    </message>
-    <message>
-        <location filename="../globals.cpp" line="53"/>
-        <source>%1 MB</source>
-        <translation>%1 Mt</translation>
-    </message>
-    <message>
-        <location filename="../globals.cpp" line="55"/>
-        <source>%1 GB</source>
-        <translation>%1 Gt</translation>
-    </message>
-    <message>
         <location filename="../jhead/jhead-api.cpp" line="120"/>
         <source>Make:%1</source>
-        <translation>Valmistaja:%1</translation>
+        <translation>Fabriquant : %1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="121"/>
         <source>Model:%1</source>
-        <translation>Malli:%1</translation>
+        <translation>Modèle : %1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="124"/>
         <source>Date/Time:%1</source>
-        <translation>Päiväys/aika:%1</translation>
+        <translation>Date/Heure : %1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="131"/>
         <source>Orientation:%1</source>
-        <translation>Suunta:%1</translation>
+        <translation>Orientation : %1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="136"/>
         <source>Color/BW:Black and White</source>
-        <translation>Väri/MV:Mustavalkoinen</translation>
+        <translation>Coleur/NB : Noir et blanc</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="143"/>
         <source>(Strobe light not detected)</source>
-        <translation>(Strobe-valoa ei havaittu)</translation>
+        <translation>(lumière stroboscopique non détectée)</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="144"/>
         <source>(Strobe light detected) </source>
-        <translation>(Strobe-valoa havaittu)</translation>
+        <translation>(lumière stroboscopique détectée)</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="145"/>
         <source>(Manual)</source>
-        <translation>(Manuaalinen)</translation>
+        <translation>(Manuel)</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="146"/>
         <source>(Manual, return light not detected)</source>
-        <translation>(Manuaalinen, heijastunutta valoa ei havaittu)</translation>
+        <translation>(Manuel, flash non détecté)</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="148"/>
@@ -660,98 +640,98 @@
     <message>
         <location filename="../jhead/jhead-api.cpp" line="149"/>
         <source>(Auto, return light not detected)</source>
-        <translation>(Auto,  heijastunutta valoa ei havaittu)</translation>
+        <translation>(Auto, flash non détecté)</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="150"/>
         <source>(Auto, return light detected)</source>
-        <translation>(Auto,  heijastunutta valoa havaittu)</translation>
+        <translation>(Auto, flash détecté)</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="151"/>
         <source>(Red eye reduction mode)</source>
-        <translation>(Punasilmäisyyden vähennyksellä)</translation>
+        <translation>(Mode réduction des yeux rouges)</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="152"/>
         <source>(Red eye reduction mode return light not detected)</source>
-        <translation>(Punasilmäisyyden vähennyksellä heijastunutta valoa ei havaittu)</translation>
+        <translation>(Mode réduction des yeux rouges avec le flash non détecté)</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="147"/>
         <source>(Manual, return light detected)</source>
-        <translation>(Manuaalinen, heijastunutta valoa havaittu)</translation>
+        <translation>(Manuel, flash détecté)</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="153"/>
         <source>(Red eye reduction mode return light detected)</source>
-        <translation>(Punasilmäisyyden vähennyksellä heijastunutta valoa havaittu)</translation>
+        <translation>(Mode réduction des yeux rouges avec le flash détecté)</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="154"/>
         <source>(Manual, red eye reduction mode)</source>
-        <translation>(Manuaalinen, punasilmäisyyden vähennyksellä)</translation>
+        <translation>(Manuel, mode réduction des yeux rouges)</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="155"/>
         <source>(Manual, red eye reduction mode, return light not detected)</source>
-        <translation>(Manuaalinen, punasilmäisyyden vähennyksellä, heijastunutta valoa ei havaittu)</translation>
+        <translation>(Manuel, mode réduction des yeux rouges, flash non détecté)</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="156"/>
         <source>(Red eye reduction mode, return light detected)</source>
-        <translation>(Punasilmäisyyden vähennyksellä, heijastunutta valoa havaittu)</translation>
+        <translation>(mode réduction des yeux rouges, flash détecté)</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="157"/>
         <source>(Auto, red eye reduction mode)</source>
-        <translation>(Auto, punasilmäisyyden vähennyksellä)</translation>
+        <translation>(Auto, mode réduction des yeux rouges)</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="158"/>
         <source>(Auto, red eye reduction mode, return light not detected)</source>
-        <translation>(Auto, punasilmäisyyden vähennyksellä, heijastunutta valoa ei havaittu)</translation>
+        <translation>(Auto, mode réduction des yeux rouges, flash non détecté)</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="159"/>
         <source>(Auto, red eye reduction mode, return light detected)</source>
-        <translation>(Auto, punasilmäisyyden vähennyksellä, heijastunutta valoa havaittu)</translation>
+        <translation>(Auto, mode réduction des yeux rouges, flash détecté)</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="161"/>
         <source>Flash:Yes</source>
-        <translation>Salama:Päällä</translation>
+        <translation>Flash : oui</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="168"/>
         <source>Flash:No</source>
-        <translation>Salama:Pois päältä</translation>
+        <translation>Flash : non</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="174"/>
         <source>Focal Length:%1mm</source>
-        <translation>Polttoväli:%1mm</translation>
+        <translation>Longitude focale : %1mm</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="176"/>
         <source>(35mm equivalent: %1mm)</source>
-        <translation>(35mm vastaavuus: %1mm)</translation>
+        <translation>(Équivalente à 35mm : %1mm)</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="183"/>
         <source>Digital Zoom:%1x</source>
-        <translation>Digitaalizoomi:%1x</translation>
+        <translation>Zoom numérique : %1x</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="187"/>
         <source>CCD Width:%1</source>
-        <translation>CCD-leveys:%1</translation>
+        <translation>Largeur CCD : %1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="193"/>
         <location filename="../jhead/jhead-api.cpp" line="195"/>
         <source>Exposure Time:%1</source>
-        <translation>Valotusaika:%1</translation>
+        <translation>Temps d&apos;exposition : %1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="198"/>
@@ -761,223 +741,243 @@
     <message>
         <location filename="../jhead/jhead-api.cpp" line="203"/>
         <source>Aperture:f/%1</source>
-        <translation>Aukko:f/%1</translation>
+        <translation>Ouverture : f/%1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="207"/>
         <source>Focus Distance:Infinite</source>
-        <translation>Tarkennusetäisyys:Ääretön</translation>
+        <translation>Mise au point : infinie</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="209"/>
         <source>Focus Distance:%1m</source>
-        <translation>Tarkennusetäisyys:%1m</translation>
+        <translation>Mise au point : %1m</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="214"/>
         <source>ISO Equivalent:%1</source>
-        <translation>ISO-vastaavuus:%1</translation>
+        <translation>ISO : %1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="220"/>
         <source>Exposure Bias:%1</source>
-        <translation>Valotuksen korjaus:%1</translation>
+        <translation>Compensation de l&apos;exposition:%1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="225"/>
         <source>White Balance:Manual</source>
-        <translation>Valkotasapaino:Manuaalinen</translation>
+        <translation>Balance des blancs : manuelle</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="228"/>
         <source>White Balance:Auto</source>
-        <translation>Valkotasapaino:Automaattinen</translation>
+        <translation>Balance des blancs : auto</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="235"/>
         <source>Light Source:Daylight</source>
-        <translation>Valonlähde:Päivänvalo</translation>
+        <translation>Source de lumière : naturelle</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="238"/>
         <source>Light Source:Fluorescent</source>
-        <translation>Valonlähde:Loisteputki</translation>
+        <translation>Source de lumière : tube fluorescent</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="241"/>
         <source>Light Source:Incandescent</source>
-        <translation>Valonlähde:Keinovalo</translation>
+        <translation>Source de lumière : ampoule incandescente</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="244"/>
         <source>Light Source:Flash</source>
-        <translation>Valonlähde:Salama</translation>
+        <translation>Source de lumière : flash</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="247"/>
         <source>Light Source:Fine weather</source>
-        <translation>Valonlähde:Hyvä sää</translation>
+        <translation>Source de lumière : journée ensoleillée</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="250"/>
         <source>Light Source:Shade</source>
-        <translation>Valonlähde:Pilvinen</translation>
+        <translation>Source de lumière : nuageux</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="258"/>
         <source>Metering Mode:</source>
-        <translation>Mittaustapa:</translation>
+        <translation>Mode de mesure : </translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="260"/>
         <source>Average</source>
-        <translation>Keskiarvo</translation>
+        <translation>Normal</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="261"/>
         <source>Center weighted average</source>
-        <translation>Keskustaa painottava keskiarvo</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="262"/>
-        <source>Spot</source>
-        <translation>Piste</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="263"/>
-        <source>Multi spot</source>
-        <translation>Monipiste</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="264"/>
-        <source>Pattern</source>
-        <translation>Arvioiva</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="265"/>
-        <source>Partial</source>
-        <translation>Osittainen</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="266"/>
-        <source>Other</source>
-        <translation>Muu</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="267"/>
-        <source>Unknown (%1)</source>
-        <translation>Tuntematon (%1)</translation>
+        <translation>Centre moyenne pondérée</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="273"/>
         <source>Exposure Program:</source>
-        <translation>Valotusohjelma:</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="276"/>
-        <source>Manual</source>
-        <translation>Manuaalinen</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="279"/>
-        <source>Program (auto)</source>
-        <translation>Ohjelmoitu (auto)</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="282"/>
-        <source>Aperture priority (semi-auto)</source>
-        <translation>Aukko-prioriteetti (semi-auto)</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="285"/>
-        <source>Shutter priority (semi-auto)</source>
-        <translation>Suljin-prioriteetti (semi-auto)</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="288"/>
-        <source>Creative Program (based towards depth of field)</source>
-        <translation>Creative-ohjelma (syvyysterävyyttä varten)</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="291"/>
-        <source>Action program (based towards fast shutter speed)</source>
-        <translation>Action-ohjelma (nopeaa suljinaikaa varten)</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="294"/>
-        <source>Portrait mode</source>
-        <translation>Muotokuvaustila</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="297"/>
-        <source>Landscape mode</source>
-        <translation>Maisemakuvaustila</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="307"/>
-        <source>Exposure Mode:Manual</source>
-        <translation>Valotustila:Manuaalinen</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="309"/>
-        <source>Exposure Mode:Auto bracketing</source>
-        <translation>Valotustila:Autom. haarukointi</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="314"/>
-        <source>Focus Range:</source>
-        <translation>Tarkennus:</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="317"/>
-        <source>Macro</source>
-        <translation>Makro</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="320"/>
-        <source>Close</source>
-        <translation>Lähelle</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="323"/>
-        <source>Distant</source>
-        <translation>Kauas</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="338"/>
-        <source>JPEG Process:Unknown</source>
-        <translation>JPEG-prosessointi:Tuntematon</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="342"/>
-        <source>JPEG Process:%1</source>
-        <translation>JPEG-prosessointi:%1</translation>
+        <translation>Programme d&apos;exposition : </translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="349"/>
         <source>Latitude:%1</source>
-        <translation>Leveyspiiri:%1</translation>
+        <translation>Latitude : %1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="350"/>
         <source>Longitude:%1</source>
-        <translation>Pituuspiiri:%1</translation>
+        <translation>Longitude : %1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="352"/>
         <source>Altitude:%1</source>
-        <translation>Korkeus:%1</translation>
+        <translation>Altitude : %1</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="262"/>
+        <source>Spot</source>
+        <translation>Point</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="263"/>
+        <source>Multi spot</source>
+        <translation>Matrice</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="264"/>
+        <source>Pattern</source>
+        <translation>Patron</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="265"/>
+        <source>Partial</source>
+        <translation>Partiel</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="266"/>
+        <source>Other</source>
+        <translation>Autre</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="267"/>
+        <source>Unknown (%1)</source>
+        <translation>Inconnu (%1)</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="276"/>
+        <source>Manual</source>
+        <translation>Manuel</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="279"/>
+        <source>Program (auto)</source>
+        <translation>Programme (auto)</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="282"/>
+        <source>Aperture priority (semi-auto)</source>
+        <translation>Priorité à l&apos;ouverture (semi-auto)</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="285"/>
+        <source>Shutter priority (semi-auto)</source>
+        <translation>Priorité à l&apos;obturateur (semi-auto)</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="288"/>
+        <source>Creative Program (based towards depth of field)</source>
+        <translation>Mode créatif (en s&apos;appuyant sur le profondeur de champ)</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="291"/>
+        <source>Action program (based towards fast shutter speed)</source>
+        <translation>Mode action (en s&apos;appuyant sur la vitesse d&apos;obturation)</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="294"/>
+        <source>Portrait mode</source>
+        <translation>Mode portrait</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="297"/>
+        <source>Landscape mode</source>
+        <translation>Mode paysage</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="307"/>
+        <source>Exposure Mode:Manual</source>
+        <translation>Mode d&apos;exposition : Manuel</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="309"/>
+        <source>Exposure Mode:Auto bracketing</source>
+        <translation>Mode d&apos;exposition : Auto</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="314"/>
+        <source>Focus Range:</source>
+        <translation>Plage de mise au point : </translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="317"/>
+        <source>Macro</source>
+        <translation>Macro</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="320"/>
+        <source>Close</source>
+        <translation>Proche</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="323"/>
+        <source>Distant</source>
+        <translation>Distant</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="338"/>
+        <source>JPEG Process:Unknown</source>
+        <translation>Processus JPEG : inconnu</translation>
+    </message>
+    <message>
+        <location filename="../jhead/jhead-api.cpp" line="342"/>
+        <source>JPEG Process:%1</source>
+        <translation>Processus JPEG : %1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="358"/>
         <source>JPEG Quality:%1</source>
-        <translation>JPEG-laatu:%1</translation>
+        <translation>Qualité JPEG : %1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="364"/>
         <location filename="../jhead/jhead-api.cpp" line="375"/>
         <source>Comment:</source>
-        <translation>Kommentti:</translation>
+        <translation>Commentaire : </translation>
+    </message>
+    <message>
+        <location filename="../globals.cpp" line="47"/>
+        <source>%1 bytes</source>
+        <translation>%1 octets</translation>
+    </message>
+    <message>
+        <location filename="../globals.cpp" line="50"/>
+        <source>%1 kB</source>
+        <translation>%1 ko</translation>
+    </message>
+    <message>
+        <location filename="../globals.cpp" line="53"/>
+        <source>%1 MB</source>
+        <translation>%1 Mo</translation>
+    </message>
+    <message>
+        <location filename="../globals.cpp" line="55"/>
+        <source>%1 GB</source>
+        <translation>%1 Go</translation>
     </message>
 </context>
 <context>
@@ -985,18 +985,18 @@
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="40"/>
         <source>Rename</source>
-        <translation>Nimeä uudelleen</translation>
+        <translation>Renommer</translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="46"/>
         <source>Give a new name for</source>
-        <translation>Anna uusi nimi kohteelle</translation>
+        <translation>Attribuer un nouveau nom à</translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="58"/>
         <location filename="../qml/pages/RenameDialog.qml" line="59"/>
         <source>New name</source>
-        <translation>Uusi nimi</translation>
+        <translation>Nouveau nom</translation>
     </message>
 </context>
 <context>
@@ -1004,22 +1004,22 @@
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="64"/>
         <source>Searching</source>
-        <translation>Haetaan</translation>
+        <translation>Recherche en cours</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="75"/>
         <source>Settings</source>
-        <translation>Asetukset</translation>
+        <translation>Paramètres</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="89"/>
         <source>Search %1</source>
-        <translation>Haku: %1</translation>
+        <translation>Examiner %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="138"/>
         <source>%1 hits</source>
-        <translation>%1 tulosta</translation>
+        <translation>%1 résultats</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="266"/>
@@ -1027,32 +1027,32 @@
         <location filename="../qml/pages/SearchPage.qml" line="347"/>
         <location filename="../qml/pages/SearchPage.qml" line="349"/>
         <source>Deleting</source>
-        <translation>Poistetaan</translation>
+        <translation>Suppression</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="282"/>
         <source>Go to containing folder</source>
-        <translation>Mene kansioon</translation>
+        <translation>Aller au dossier contenant le fichier</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="286"/>
         <source>Cut</source>
-        <translation>Leikkaa</translation>
+        <translation>Couper</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="290"/>
         <source>Copy</source>
-        <translation>Kopioi</translation>
+        <translation>Copier</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="294"/>
         <source>Delete</source>
-        <translation>Poista</translation>
+        <translation>Effacer</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="405"/>
         <source>Search</source>
-        <translation>Haku</translation>
+        <translation>Recherche</translation>
     </message>
 </context>
 <context>
@@ -1060,12 +1060,12 @@
     <message>
         <location filename="../searchworker.cpp" line="19"/>
         <source>Search already in progress</source>
-        <translation>Haku on jo käynnissä</translation>
+        <translation>La recherche est déjà en cours</translation>
     </message>
     <message>
         <location filename="../searchworker.cpp" line="23"/>
         <source>Bad search parameters</source>
-        <translation>Hakuparametreissä virhe</translation>
+        <translation>Paramètres de recherche incorrects</translation>
     </message>
 </context>
 <context>
@@ -1074,19 +1074,19 @@
         <location filename="../qml/components/SelectionPanel.qml" line="46"/>
         <location filename="../qml/components/SelectionPanel.qml" line="150"/>
         <source>%1 selected</source>
-        <translation>%1 valittu</translation>
+        <translation>%1 sélectionné</translation>
     </message>
     <message>
         <location filename="../qml/components/SelectionPanel.qml" line="72"/>
         <location filename="../qml/components/SelectionPanel.qml" line="176"/>
         <source>%1 cut</source>
-        <translation>%1 leikattu</translation>
+        <translation>%1 coupé</translation>
     </message>
     <message>
         <location filename="../qml/components/SelectionPanel.qml" line="84"/>
         <location filename="../qml/components/SelectionPanel.qml" line="189"/>
         <source>%1 copied</source>
-        <translation>%1 kopioitu</translation>
+        <translation>%1 copié</translation>
     </message>
 </context>
 <context>
@@ -1095,42 +1095,42 @@
         <location filename="../qml/pages/SettingsPage.qml" line="21"/>
         <location filename="../qml/pages/SettingsPage.qml" line="99"/>
         <source>Settings</source>
-        <translation>Asetukset</translation>
+        <translation>Paramètres</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="25"/>
         <source>Show folders first</source>
-        <translation>Näytä kansiot ensin</translation>
+        <translation>Afficher les dossiers en premier</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="30"/>
         <source>Show hidden files</source>
-        <translation>Näytä piilotiedostot</translation>
+        <translation>Afficher les fichiers cachés</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="37"/>
         <source>About File Browser</source>
-        <translation>Tietoja File Browserista</translation>
+        <translation>À propos de File Browser</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="50"/>
         <source>Version</source>
-        <translation>Versio</translation>
+        <translation>Version</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="76"/>
         <source>File Browser is free and unencumbered software released into the public domain.</source>
-        <translation>File Browser is free and unencumbered software released into the public domain.</translation>
+        <translation>File Browser est libre, ouvert et publié dans le domaine public.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="77"/>
         <source>Read full text &gt;&gt;</source>
-        <translation>Lue koko teksti &gt;&gt;</translation>
+        <translation>Lire le texte complet &gt;&gt;</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="88"/>
         <source>The source code is available at</source>
-        <translation>Lähdekoodi löytyy osoitteesta</translation>
+        <translation>Le code source est disponible sur</translation>
     </message>
 </context>
 </TS>

@@ -13,7 +13,7 @@ Name:       harbour-file-browser
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    File Browser for Sailfish OS
-Version:    1.6
+Version:    1.8.0
 Release:    0
 Group:      Qt/Qt
 License:    Public domain
@@ -66,6 +66,9 @@ desktop-file-install --delete-original       \
 %defattr(-,root,root,-)
 %defattr(644,root,root,755)
 %{_datadir}/icons/hicolor/86x86/apps/%{name}.png
+%{_datadir}/icons/hicolor/108x108/apps/%{name}.png
+%{_datadir}/icons/hicolor/128x128/apps/%{name}.png
+%{_datadir}/icons/hicolor/172x172/apps/%{name}.png
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/%{name}/qml
 %{_datadir}/%{name}/i18n

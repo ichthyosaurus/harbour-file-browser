@@ -1,6 +1,40 @@
 
 # File Browser Release Notes
 
+## Version 1.8.0 (2019-05-12)
+
+Published in Jolla store on 2019-05-13.
+
+ * Added a confirmation dialog for file overwriting
+ * Fixed colors and icons for Sailfish 3 light ambiences
+
+## Version 1.7.3 (2018-07-05)
+
+Published in Jolla store on 2018-07-05.
+
+ * Fixed the SDCard location for users with an unusual sdcard symlink
+
+## Version 1.7.2 (2018-06-11)
+
+Published in Jolla store on 2018-06-11.
+
+ * Fixed SDCard location for Sailfish 2.2.0
+ * Fixed to start on Sailfish 1 phones
+
+## Version 1.7.1 (2018-02-11)
+
+Published in Jolla store on 2018-02-12.
+
+ * Added translations for French, Dutch and Greek
+ * Fixed icons for high density screens
+
+## Version 1.7 (2016-06-27)
+
+Published in Jolla store on 2016-06-28.
+
+ * Add translations for Italian, Russian, Spanish and Swedish
+ * Small UI improvements to match the Sailfish look
+
 ## Version 1.6 (2015-03-22)
 
 Published in Jolla store on 2015-03-23.

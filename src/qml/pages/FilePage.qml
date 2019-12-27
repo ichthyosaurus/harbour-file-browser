@@ -100,8 +100,8 @@ Page {
                 visible: !fileData.isDir
                 onClicked: {
                     if (!fileData.isSafeToOpen()) {
-                        notificationPanel.showTextWithTimer(qsTr("File can't be opened"),
-                                                   qsTr("This type of file can't be opened."));
+                        notificationPanel.showTextWithTimer(qsTr("File cannot be opened"),
+                                                   qsTr("This type of file cannot be opened."));
                         return;
                     }
                     consoleModel.executeCommand("xdg-open", [ page.file ])
@@ -132,10 +132,8 @@ Page {
             // file info texts, visible if error is not set
             Column {
                 visible: fileData.errorMessage === ""
-                anchors.left: parent.left
-                anchors.right: parent.right
-                anchors.leftMargin: Theme.paddingLarge
-                anchors.rightMargin: Theme.paddingLarge
+                x: Theme.horizontalPageMargin
+                width: parent.width - 2*x
 
                 IconButton {
                     id: playButton
@@ -150,7 +148,7 @@ Page {
                         source: ""
                     }
                 }
-                Spacer { height: 10; visible: playButton.visible } // fix to playButton height
+                Spacer { height: Theme.paddingMedium; visible: playButton.visible } // fix to playButton height
                 // clickable icon and filename
                 BackgroundItem {
                     id: openButton
@@ -168,17 +166,30 @@ Page {
                             source: visible ? fileData.file : "" // access the source only if img is visible
                             anchors.left: parent.left
                             anchors.right: parent.right
-                            height: implicitHeight < 400 && implicitHeight != 0 ? implicitHeight : 400
+                            height: implicitHeight < 400 * Theme.pixelRatio && implicitHeight != 0
+                                    ? implicitHeight * Theme.pixelRatio
+                                    : 400 * Theme.pixelRatio
                             width: parent.width
                             fillMode: Image.PreserveAspectFit
                             asynchronous: true
                         }
-                        Image {
+                        // HighlightImage replaced with a Loader so that HighlightImage or Image
+                        // can be loaded depending on Sailfish version (lightPrimaryColor is defined on SF3)
+                        Loader {
                             id: icon
-                            anchors.topMargin: 6
                             anchors.horizontalCenter: parent.horizontalCenter
-                            source: "../images/large-"+fileData.icon+".png"
                             visible: !imagePreview.visible && !playButton.visible
+                            width: 128 * Theme.pixelRatio
+                            height: 128 * Theme.pixelRatio
+                            Component.onCompleted: {
+                                var qml = Theme.lightPrimaryColor ? "../components/MyHighlightImage3.qml"
+                                                                  : "../components/MyHighlightImage2.qml";
+                                setSource(qml, {
+                                    imgsrc: "../images/large-"+fileData.icon+".png",
+                                    imgw: 128 * Theme.pixelRatio,
+                                    imgh: 128 * Theme.pixelRatio
+                                })
+                            }
                         }
                         Spacer { // spacing if image or play button is visible
                             id: spacer
@@ -206,76 +217,60 @@ Page {
                                     (openButton.highlighted ? Theme.highlightColor
                                                             : Theme.primaryColor)
                         }
-                        Spacer { height: 20 }
+                        Spacer { height: Theme.paddingLarge }
                     }
                 }
-                Spacer { height: 10 }
 
                 // Display metadata with priotity < 5
                 Repeater {
                     model: fileData.metaData
                     // first char is priority (0-9), labels and values are delimited with ':'
-                    CenteredField {
+                    DetailItem {
                         visible: modelData.charAt(0) < '5'
                         label: modelData.substring(1, modelData.indexOf(":"))
                         value: Functions.trim(modelData.substring(modelData.indexOf(":")+1))
                     }
                 }
-                Spacer {
-                    height: 10
-                }
 
-                CenteredField {
+                DetailItem {
                     label: qsTr("Location")
                     value: fileData.absolutePath
                 }
-                CenteredField {
+                DetailItem {
                     label: qsTr("Type")
-                    value: fileData.isSymLink ? qsTr("Link to %1").arg(fileData.mimeTypeComment) :
-                                                fileData.mimeTypeComment
+                    value: fileData.isSymLink
+                           ? qsTr("Link to %1").arg(fileData.mimeTypeComment) + "\n("+fileData.mimeType+")"
+                           : fileData.mimeTypeComment + "\n("+fileData.mimeType+")"
                 }
-                CenteredField {
-                    label: "" // blank label
-                    value: "("+fileData.mimeType+")"
-                    valueElide: (page.orientation === Orientation.Portrait ||
-                                 page.orientation === Orientation.PortraitInverted)
-                                ? Text.ElideMiddle : Text.ElideNone
-                }
-                CenteredField {
+                DetailItem {
                     label: qsTr("Size")
                     value: fileData.size
                 }
-                CenteredField {
+                DetailItem {
                     label: qsTr("Permissions")
                     value: fileData.permissions
                 }
-                CenteredField {
+                DetailItem {
                     label: qsTr("Owner")
                     value: fileData.owner
                 }
-                CenteredField {
+                DetailItem {
                     label: qsTr("Group")
                     value: fileData.group
                 }
-                CenteredField {
+                DetailItem {
                     label: qsTr("Last modified")
                     value: fileData.modified
-                }
-                Spacer {
-                    height: 10
                 }
                 // Display metadata with priority >= 5
                 Repeater {
                     model: fileData.metaData
                     // first char is priority (0-9), labels and values are delimited with ':'
-                    CenteredField {
+                    DetailItem {
                         visible: modelData.charAt(0) >= '5'
                         label: modelData.substring(1, modelData.indexOf(":"))
                         value: Functions.trim(modelData.substring(modelData.indexOf(":")+1))
                     }
-                }
-                Spacer {
-                    height: 10
                 }
             }
 
@@ -295,14 +290,14 @@ Page {
     // update cover
     onStatusChanged: {
         if (status === PageStatus.Activating) {
-            coverPlaceholder.text = Functions.lastPartOfPath(page.file);
+            coverText = Functions.lastPartOfPath(page.file);
         }
     }
 
     DirPopup {
         id: dirPopup
         anchors.fill: parent
-        menuTop: 100
+        menuTop: Theme.itemSizeMedium
     }
 
     NotificationPanel {

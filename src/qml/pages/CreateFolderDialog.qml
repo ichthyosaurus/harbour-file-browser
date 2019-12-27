@@ -27,22 +27,19 @@ Dialog {
 
             DialogHeader {
                 id: dialogHeader
-                title: qsTr("Create Folder")
                 acceptText: qsTr("Create")
             }
 
             Label {
-                anchors.left: parent.left
-                anchors.right: parent.right
-                anchors.leftMargin: Theme.paddingLarge
-                anchors.rightMargin: Theme.paddingLarge
-                text: qsTr("Create a new folder under") + "\n" + path
-                color: Theme.secondaryColor
+                x: Theme.horizontalPageMargin
+                width: parent.width - 2*x
+                text: qsTr("Create a new folder under") + "\n" + path + (path != "/" ? "/" : "");
+                color: Theme.highlightColor
                 wrapMode: Text.Wrap
             }
 
             Spacer {
-                height: 20
+                height: Theme.paddingLarge
             }
 
             TextField {

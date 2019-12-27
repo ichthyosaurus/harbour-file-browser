@@ -32,7 +32,7 @@ signals: // signals, can be connected from a thread to another
     void fileDeleted(QString fullname);
 
 protected:
-    void run();
+    void run() Q_DECL_OVERRIDE;
 
 private:
     enum Mode {
@@ -44,7 +44,7 @@ private:
 
     bool validateFilenames(const QStringList &filenames);
 
-    QString deleteFile(QString filenames);
+    QString deleteFile(QString filename);
     void deleteFiles();
     void copyOrMoveFiles();
     QString copyDirRecursively(QString srcDirectory, QString destDirectory);

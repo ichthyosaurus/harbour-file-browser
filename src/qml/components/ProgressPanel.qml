@@ -53,7 +53,7 @@ Item {
 
         Rectangle {
             anchors.fill: parent
-            color: "black"
+            color: Theme.overlayBackgroundColor ? Theme.overlayBackgroundColor : "black"
             opacity: 0.7
         }
         BusyIndicator {
@@ -67,7 +67,7 @@ Item {
         Rectangle {
             id: cancelButton
             anchors.right: parent.right
-            width: 100
+            width: Theme.itemSizeMedium
             anchors.top: parent.top
             anchors.bottom: parent.bottom
             color: cancelMouseArea.pressed ? Theme.secondaryHighlightColor : "transparent"
@@ -80,17 +80,17 @@ Item {
                 Text {
                     anchors.centerIn: parent
                     color: Theme.primaryColor
-                    text: "X"
+                    text: "\u00d7" // times symbol (cross)
                 }
             }
         }
         Label {
             id: progressHeader
             visible: dockedPanel.open
+
+            y: 2*Theme.paddingLarge
             anchors.left: parent.left
             anchors.right: cancelButton.left
-            anchors.top: parent.top
-            anchors.topMargin: 40
             anchors.leftMargin: progressBusy.width + Theme.paddingLarge*4
             anchors.rightMargin: Theme.paddingLarge
             text: progressPanel.headerText

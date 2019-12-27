@@ -50,15 +50,21 @@ DockedPanel {
         }
         Row {
             anchors.horizontalCenter: parent.horizontalCenter
-            spacing: 20
+            spacing: Theme.paddingLarge
             IconButton {
+                id: iconbutton1
                 enabled: dockPanel.enabled
+                icon.width: Theme.iconSizeMedium
+                icon.height: Theme.iconSizeMedium
                 icon.source: displayClose ? "image://theme/icon-m-close"
                                           : "../images/toolbar-select-all.png"
                 onClicked: { displayClose ? closeTriggered() : selectAllTriggered(); }
             }
             IconButton {
+                id: iconbutton2
                 enabled: dockPanel.enabled
+                icon.width: Theme.iconSizeMedium
+                icon.height: Theme.iconSizeMedium
                 icon.source: "../images/toolbar-cut.png"
                 onClicked: {
                     var files = dockPanel.parent.selectedFiles();
@@ -67,7 +73,10 @@ DockedPanel {
                 }
             }
             IconButton {
+                id: iconbutton3
                 enabled: dockPanel.enabled
+                icon.width: Theme.iconSizeMedium
+                icon.height: Theme.iconSizeMedium
                 icon.source: "../images/toolbar-copy.png"
                 onClicked: {
                     var files = dockPanel.parent.selectedFiles();
@@ -76,14 +85,52 @@ DockedPanel {
                 }
             }
             IconButton {
+                id: iconbutton4
                 enabled: dockPanel.enabled
+                icon.width: Theme.iconSizeMedium
+                icon.height: Theme.iconSizeMedium
                 icon.source: "image://theme/icon-m-delete"
                 onClicked: { deleteTriggered(); }
             }
             IconButton {
+                id: iconbutton5
                 enabled: dockPanel.enabled
+                icon.width: Theme.iconSizeMedium
+                icon.height: Theme.iconSizeMedium
                 icon.source: "../images/toolbar-properties.png"
                 onClicked: { propertyTriggered(); }
+            }
+            // set icon color for IconButtons only on Sailfish 3 (when overlayBackgroundColor is defined)
+            // these won't be set on Sailfish 2 which doesn't have Theme.lightPrimaryColor
+            Binding {
+                target: iconbutton1
+                property: "icon.color"
+                value: Theme.primaryColor
+                when: Theme.lightPrimaryColor !== undefined
+            }
+            Binding {
+                target: iconbutton2
+                property: "icon.color"
+                value: Theme.primaryColor
+                when: Theme.lightPrimaryColor !== undefined
+            }
+            Binding {
+                target: iconbutton3
+                property: "icon.color"
+                value: Theme.primaryColor
+                when: Theme.lightPrimaryColor !== undefined
+            }
+            Binding {
+                target: iconbutton4
+                property: "icon.color"
+                value: Theme.primaryColor
+                when: Theme.lightPrimaryColor !== undefined
+            }
+            Binding {
+                target: iconbutton5
+                property: "icon.color"
+                value: Theme.primaryColor
+                when: Theme.lightPrimaryColor !== undefined
             }
         }
     }
@@ -94,10 +141,10 @@ DockedPanel {
                  dockPanel.orientation === Orientation.LandscapeInverted
         anchors.horizontalCenter: parent.horizontalCenter
         height: cutButton.height + Theme.paddingLarge*2
-        spacing: 20
+        spacing: Theme.paddingLarge
         Spacer { width: Theme.paddingLarge; height: parent.height }
         Label {
-            width: 220
+            width: 2*Theme.itemSizeLarge
             anchors.verticalCenter: parent.verticalCenter
             horizontalAlignment: Text.AlignHCenter
             text: dockPanel.overrideText === "" ? qsTr("%1 selected").arg(dockPanel.selectedCount)
@@ -105,10 +152,13 @@ DockedPanel {
             color: dockPanel.enabled ? Theme.highlightColor : Theme.secondaryColor
             font.pixelSize: Theme.fontSizeExtraSmall
         }
-        Spacer { width: 20; height: parent.height }
+        Spacer { width: Theme.paddingLarge; height: parent.height }
         IconButton {
+            id: viconbutton1
             enabled: dockPanel.enabled
             anchors.verticalCenter: parent.verticalCenter
+            icon.width: Theme.iconSizeMedium
+            icon.height: Theme.iconSizeMedium
             icon.source: displayClose ? "image://theme/icon-m-close"
                                       : "../images/toolbar-select-all.png"
             onClicked: { displayClose ? closeTriggered() : selectAllTriggered(); }
@@ -117,6 +167,8 @@ DockedPanel {
             id: cutButton
             enabled: dockPanel.enabled
             anchors.verticalCenter: parent.verticalCenter
+            icon.width: Theme.iconSizeMedium
+            icon.height: Theme.iconSizeMedium
             icon.source: "../images/toolbar-cut.png"
             onClicked: {
                 var files = dockPanel.parent.selectedFiles();
@@ -125,8 +177,11 @@ DockedPanel {
             }
         }
         IconButton {
+            id: viconbutton3
             enabled: dockPanel.enabled
             anchors.verticalCenter: parent.verticalCenter
+            icon.width: Theme.iconSizeMedium
+            icon.height: Theme.iconSizeMedium
             icon.source: "../images/toolbar-copy.png"
             onClicked: {
                 var files = dockPanel.parent.selectedFiles();
@@ -135,16 +190,54 @@ DockedPanel {
             }
         }
         IconButton {
+            id: viconbutton4
             enabled: dockPanel.enabled
             anchors.verticalCenter: parent.verticalCenter
+            icon.width: Theme.iconSizeMedium
+            icon.height: Theme.iconSizeMedium
             icon.source: "image://theme/icon-m-delete"
             onClicked: { deleteTriggered(); }
         }
         IconButton {
+            id: viconbutton5
             enabled: dockPanel.enabled
             anchors.verticalCenter: parent.verticalCenter
+            icon.width: Theme.iconSizeMedium
+            icon.height: Theme.iconSizeMedium
             icon.source: "../images/toolbar-properties.png"
             onClicked: { propertyTriggered(); }
+        }
+        // set icon color for IconButtons only on Sailfish 3 (when overlayBackgroundColor is defined)
+        // these won't be set on Sailfish 2 which doesn't have Theme.lightPrimaryColor
+        Binding {
+            target: viconbutton1
+            property: "icon.color"
+            value: Theme.primaryColor
+            when: Theme.lightPrimaryColor !== undefined
+        }
+        Binding {
+            target: cutButton
+            property: "icon.color"
+            value: Theme.primaryColor
+            when: Theme.lightPrimaryColor !== undefined
+        }
+        Binding {
+            target: viconbutton3
+            property: "icon.color"
+            value: Theme.primaryColor
+            when: Theme.lightPrimaryColor !== undefined
+        }
+        Binding {
+            target: viconbutton4
+            property: "icon.color"
+            value: Theme.primaryColor
+            when: Theme.lightPrimaryColor !== undefined
+        }
+        Binding {
+            target: viconbutton5
+            property: "icon.color"
+            value: Theme.primaryColor
+            when: Theme.lightPrimaryColor !== undefined
         }
     }
 }

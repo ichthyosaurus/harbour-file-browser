@@ -61,10 +61,24 @@ Page {
                       (engine.clipboardCount > 0 ? " ("+engine.clipboardCount+")" : "")
                 onClicked: {
                     if (remorsePopupActive) return;
-                    progressPanel.showText(engine.clipboardContainsCopy ?
-                                               qsTr("Copying") : qsTr("Moving"))
-                    clearSelectedFiles();
-                    engine.pasteFiles(page.dir);
+                    var existingFiles = engine.listExistingFiles(page.dir);
+                    if (existingFiles.length > 0) {
+                        // show overwrite dialog
+                        var dialog = pageStack.push(Qt.resolvedUrl("OverwriteDialog.qml"),
+                                                    { "files": existingFiles })
+                        dialog.accepted.connect(function() {
+                            progressPanel.showText(engine.clipboardContainsCopy ?
+                                                       qsTr("Copying") : qsTr("Moving"))
+                            clearSelectedFiles();
+                            engine.pasteFiles(page.dir);
+                        })
+                    } else {
+                        // no overwrite dialog
+                        progressPanel.showText(engine.clipboardContainsCopy ?
+                                                   qsTr("Copying") : qsTr("Moving"))
+                        clearSelectedFiles();
+                        engine.pasteFiles(page.dir);
+                    }
                 }
             }
         }
@@ -90,34 +104,43 @@ Page {
                 anchors.fill: parent
                 color: fileItem.highlightedColor
             }
-
-            Image {
+            // HighlightImage replaced with a Loader so that HighlightImage or Image
+            // can be loaded depending on Sailfish version (lightPrimaryColor is defined on SF3)
+            Loader {
                 id: listIcon
-                anchors.left: parent.left
-                anchors.leftMargin: Theme.paddingLarge
-                anchors.top: parent.top
-                anchors.topMargin: 11
-                source: "../images/small-"+fileIcon+".png"
+                anchors.verticalCenter: listLabel.verticalCenter
+                x: Theme.paddingLarge
+                width: Theme.iconSizeSmall
+                height: Theme.iconSizeSmall
+                Component.onCompleted: {
+                    var qml = Theme.lightPrimaryColor ? "../components/MyHighlightImage3.qml"
+                                                      : "../components/MyHighlightImage2.qml";
+                    setSource(qml, {
+                        imgsrc: "../images/small-"+fileIcon+".png",
+                        imgw: Theme.iconSizeSmall,
+                        imgh: Theme.iconSizeSmall
+                    })
+                }
             }
             // circle shown when item is selected
-            Label {
+            Rectangle {
                 visible: isSelected
-                anchors.left: parent.left
-                anchors.leftMargin: Theme.paddingLarge-4
-                anchors.top: parent.top
-                anchors.topMargin: 3
-                text: "\u25cb"
-                color: Theme.highlightColor
-                font.pixelSize: Theme.fontSizeLarge
+                anchors.verticalCenter: listLabel.verticalCenter
+                x: Theme.paddingLarge - 2*Theme.pixelRatio
+                width: Theme.iconSizeSmall + 4*Theme.pixelRatio
+                height: Theme.iconSizeSmall + 4*Theme.pixelRatio
+                color: "transparent"
+                border.color: Theme.highlightColor
+                border.width: 2.25 * Theme.pixelRatio
+                radius: width * 0.5
             }
             Label {
                 id: listLabel
                 anchors.left: listIcon.right
-                anchors.leftMargin: 10
+                anchors.leftMargin: Theme.paddingMedium
                 anchors.right: parent.right
                 anchors.rightMargin: Theme.paddingLarge
-                anchors.top: parent.top
-                anchors.topMargin: 5
+                y: Theme.paddingSmall
                 text: filename
                 elide: Text.ElideRight
                 color: fileItem.highlighted || isSelected ? Theme.highlightColor : Theme.primaryColor
@@ -125,7 +148,7 @@ Page {
             Label {
                 id: listSize
                 anchors.left: listIcon.right
-                anchors.leftMargin: 10
+                anchors.leftMargin: Theme.paddingMedium
                 anchors.top: listLabel.bottom
                 text: !(isLink && isDir) ? size : Functions.unicodeArrow()+" "+symLinkTarget
                 color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
@@ -157,7 +180,7 @@ Page {
                                    { file: fileModel.appendPath(listLabel.text) });
             }
             MouseArea {
-                width: 90
+                width: Theme.itemSizeSmall
                 height: parent.height
                 onClicked: {
                     fileModel.toggleSelectedFile(index);
@@ -217,15 +240,9 @@ Page {
         }
 
         // text if no files or error message
-        Text {
-            width: parent.width
-            anchors.leftMargin: Theme.paddingLarge
-            anchors.rightMargin: Theme.paddingLarge
-            horizontalAlignment: Qt.AlignHCenter
-            y: -fileList.contentY + 100
-            visible: fileModel.fileCount === 0 || fileModel.errorMessage !== ""
+        ViewPlaceholder {
+            enabled: fileModel.fileCount === 0 || fileModel.errorMessage !== ""
             text: fileModel.errorMessage !== "" ? fileModel.errorMessage : qsTr("No files")
-            color: Theme.highlightColor
         }
     }
 
@@ -273,7 +290,7 @@ Page {
 
         // update cover
         if (status === PageStatus.Activating) {
-            coverPlaceholder.text = Functions.lastPartOfPath(page.dir)+"/";
+            coverText = Functions.lastPartOfPath(page.dir)+"/";
 
             // go to Home on startup
             if (page.initial) {
@@ -286,7 +303,7 @@ Page {
     DirPopup {
         id: dirPopup
         anchors.fill: parent
-        menuTop: 100
+        menuTop: Theme.itemSizeMedium
     }
 
     // connect signals from engine to panels
@@ -299,7 +316,7 @@ Page {
             if (progressPanel.open) {
                 progressPanel.hide();
                 if (message === "Unknown error")
-                    filename = qsTr("Trying to move between phone and SD Card? It doesn't work, try copying.");
+                    filename = qsTr("Trying to move between phone and SD Card? It does not work, try copying.");
                 else if (message === "Failure to write block")
                     filename = qsTr("Perhaps the storage is full?");
 
