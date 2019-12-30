@@ -45,7 +45,7 @@ Page {
             }
             DetailList {
                 label: qsTr("Chinese")
-                values: ["Tyler Temp"]
+                values: ["Tyler Temp", "dashinfantry"]
             }
             DetailList {
                 label: qsTr("Russian")
