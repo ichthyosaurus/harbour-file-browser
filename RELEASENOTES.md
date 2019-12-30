@@ -1,6 +1,13 @@
 
 # File Browser Release Notes
 
+## Version 2.0.1-beta (2019-12-30)
+
+Published in OpenRepos on 2019-12-30.
+
+ * Updated translations: Swedish, Chinese, Spanish
+ * (other translations still need updating - contributors welcome!)
+
 ## Version 2.0.0-beta (2019-12-12)
 
 Published in OpenRepos on 2019-12-12.
