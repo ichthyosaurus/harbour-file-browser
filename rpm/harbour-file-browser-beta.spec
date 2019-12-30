@@ -19,7 +19,7 @@ Group:      Qt/Qt
 License:    GPLv3+
 URL:        https://github.com/karip/harbour-file-browser
 Source0:    %{name}-%{version}.tar.bz2
-Source100:  harbour-file-browser.yaml
+Source100:  harbour-file-browser-beta.yaml
 AutoReqProv:    0
 Requires:   libsailfishapp
 BuildRequires:  pkgconfig(Qt5Core)
@@ -30,7 +30,7 @@ BuildRequires:  qt5-qttools-linguist
 BuildRequires:  desktop-file-utils
 
 %description
-File Browser for Sailfish OS. Browse files on the phone.
+File Browser for Sailfish OS. Browse files on the phone. (Beta version.)
 
 %prep
 %setup -q -n %{name}-%{version}
