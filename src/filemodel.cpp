@@ -7,6 +7,7 @@
 #include <unistd.h>
 #include "settingshandler.h"
 #include "globals.h"
+#include <QDebug>
 
 enum {
     FilenameRole = Qt::UserRole + 1,
@@ -38,7 +39,7 @@ FileModel::FileModel(QObject *parent) :
 
     // refresh model every time view settings are changed
     m_settings = qApp->property("settings").value<Settings*>();
-    connect(m_settings, SIGNAL(viewSettingsChanged()), this, SLOT(refreshFull()));
+    connect(m_settings, SIGNAL(viewSettingsChanged(QString)), this, SLOT(refreshFull(QString)));
     connect(this, SIGNAL(filterStringChanged()), this, SLOT(applyFilterString()));
 }
 
@@ -325,8 +326,15 @@ void FileModel::refresh()
     m_dirty = false;
 }
 
-void FileModel::refreshFull()
+void FileModel::refreshFull(QString localPath)
 {
+    if (!localPath.isEmpty() && localPath != m_dir) {
+        // ignore changes to local settings of a different directory
+        qDebug() << "ignore" << localPath << m_dir;
+        return;
+    }
+
+    qDebug() << "refresh full" << localPath << m_active << m_dir;
     if (!m_active) {
         m_dirty = true;
         return;
@@ -370,6 +378,8 @@ void FileModel::recountSelectedFiles()
 void FileModel::applySettings(QDir &dir) {
     QString localPath = dir.absoluteFilePath(".directory");
     bool useLocal = m_settings->readVariant("View/UseLocalSettings", true).toBool();
+
+    qDebug() << "apply settings" << dir.absolutePath() << useLocal;
 
     // filters
     bool hidden = m_settings->readVariant("View/HiddenFilesShown", false).toBool();

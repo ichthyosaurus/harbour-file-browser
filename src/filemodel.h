@@ -63,7 +63,7 @@ public slots:
     // reads the directory and inserts/removes model items as needed
     Q_INVOKABLE void refresh();
     // reads the directory and sets all model items
-    Q_INVOKABLE void refreshFull();
+    Q_INVOKABLE void refreshFull(QString localPath = QString());
 
 signals:
     void dirChanged();

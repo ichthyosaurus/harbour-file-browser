@@ -369,7 +369,8 @@ Page {
 
     Connections {
         target: settings
-        onSettingsChanged: {
+        onViewSettingsChanged: {
+            if (localPath !== dir) return;
             updateThumbnailsState();
             page.fullPathShown = (engine.readSetting("General/ShowFullDirectoryPaths", "false") === "true");
             page.quickSearchEnabled = (engine.readSetting("General/DefaultFilterAction", "filter") === "search");
