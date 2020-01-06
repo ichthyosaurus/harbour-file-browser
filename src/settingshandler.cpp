@@ -20,6 +20,14 @@
 #include <QSettings>
 #include "settingshandler.h"
 
+Settings::Settings(QObject *parent) : QObject(parent) {
+    QSettings global;
+    m_globalConfigPath = global.fileName();
+}
+
+Settings::~Settings() {
+    //
+}
 QVariant Settings::readVariant(const QString &key, const QVariant &defaultValue, const QString &fileName) {
     if (fileName.isEmpty()) {
         // global settings

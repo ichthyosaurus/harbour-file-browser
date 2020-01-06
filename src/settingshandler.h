@@ -28,6 +28,8 @@ class Settings : public QObject
     Q_OBJECT
 
 public:
+    explicit Settings(QObject *parent = 0);
+    ~Settings();
     Q_INVOKABLE QString read(QString key, QString defaultValue = QString(), QString fileName = QString());
     Q_INVOKABLE void write(QString key, QString value, QString fileName = QString());
     Q_INVOKABLE void remove(QString key, QString fileName = QString());
@@ -38,6 +40,9 @@ public:
 signals:
     void settingsChanged();
     void viewSettingsChanged();
+
+private:
+    QString m_globalConfigPath;
 };
 
 #endif // SETTINGSHANDLER_H
