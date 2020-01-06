@@ -158,7 +158,24 @@ Page {
 
     function saveSetting(keyGlobal, keyLocal, trueLocal, falseLocal, valueStr) {
         if (useLocalSettings()) {
-            engine.writeSetting(keyLocal, (valueStr === "true" ? trueLocal : falseLocal), getConfigPath());
+            var currentGlobal = engine.readSetting(keyGlobal) === trueLocal ? "true" : "false";
+
+            if (valueStr === currentGlobal) {
+                // If the new value matches the currently set global setting,
+                // we remove the local setting. This makes sure that local settings
+                // are updated as expected when global setting change. We assume
+                // that users don't want to "set this setting locally to a fixed value",
+                // but instead want to "enable" or "disable" a setting. For example:
+                // hidden files are globally hidden; the user shows them explicitly
+                // via the local settings. The user hides them again but sets the
+                // global setting so they are shown. The user expects them now the
+                // be shown in all directories. If we would simply save "hidden
+                // file are hidden here", then the user would have to change the
+                // local settings again, which is counterintuitive.
+                engine.removeSetting(keyLocal, getConfigPath());
+            } else {
+                engine.writeSetting(keyLocal, (valueStr === "true" ? trueLocal : falseLocal), getConfigPath());
+            }
         } else {
             engine.writeSetting(keyGlobal, valueStr);
         }
