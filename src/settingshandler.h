@@ -20,20 +20,20 @@
 #ifndef SETTINGSHANDLER_H
 #define SETTINGSHANDLER_H
 
+#include <QVariant>
 #include <QString>
-#include <QSettings>
 
 class Settings : public QObject
 {
     Q_OBJECT
 
 public:
-    Q_INVOKABLE QString read(QString key, QString defaultValue, QString fileName);
-    Q_INVOKABLE QString read(QString key, QString defaultValue = QString());
-    Q_INVOKABLE void write(QString key, QString value, QString fileName);
-    Q_INVOKABLE void write(QString key, QString value);
-    Q_INVOKABLE void remove(QString key, QString fileName);
-    Q_INVOKABLE void remove(QString key);
+    Q_INVOKABLE QString read(QString key, QString defaultValue = QString(), QString fileName = QString());
+    Q_INVOKABLE void write(QString key, QString value, QString fileName = QString());
+    Q_INVOKABLE void remove(QString key, QString fileName = QString());
+
+    QVariant readVariant(const QString& key, const QVariant& defaultValue = QVariant(), const QString& fileName = QString());
+    void writeVariant(const QString& key, const QVariant& value, const QString& fileName = QString());
 
 signals:
     void settingsChanged();

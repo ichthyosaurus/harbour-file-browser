@@ -17,48 +17,63 @@
  *
  */
 
+#include <QSettings>
 #include "settingshandler.h"
 
-QString Settings::read(QString key, QString defaultValue, QString fileName) {
-    QSettings settings(fileName, QSettings::IniFormat);
-    return settings.value(key, defaultValue).toString();
-}
-
-QString Settings::read(QString key, QString defaultValue) {
-    QSettings settings;
-    return settings.value(key, defaultValue).toString();
-}
-
-void Settings::write(QString key, QString value, QString fileName) {
-    QSettings settings(fileName, QSettings::IniFormat);
-    if (settings.value(key) == value) return;
-    settings.setValue(key, value);
-    emit settingsChanged();
-}
-
-void Settings::write(QString key, QString value) {
-    QSettings settings;
-    if (settings.value(key) == value) return;
-    settings.setValue(key, value);
-
-    emit settingsChanged();
-    if (key.startsWith("View/")) {
-        emit viewSettingsChanged();
+QVariant Settings::readVariant(const QString &key, const QVariant &defaultValue, const QString &fileName) {
+    if (fileName.isEmpty()) {
+        // global settings
+        QSettings settings;
+        return settings.value(key, defaultValue);
+    } else {
+        // local settings
+        QSettings settings(fileName, QSettings::IniFormat);
+        return settings.value(key, defaultValue);
     }
 }
 
-void Settings::remove(QString key, QString fileName) {
-    QSettings settings(fileName, QSettings::IniFormat);
-    settings.remove(key);
-    emit settingsChanged();
+QString Settings::read(QString key, QString defaultValue, QString fileName) {
+    return readVariant(key, defaultValue, fileName).toString();
 }
 
-void Settings::remove(QString key) {
-    QSettings settings;
-    settings.remove(key);
+void Settings::writeVariant(const QString &key, const QVariant &value, const QString &fileName) {
+    if (fileName.isEmpty()) {
+        // global settings
+        QSettings settings;
+        if (settings.value(key) == value) return;
+        settings.setValue(key, value);
 
-    emit settingsChanged();
-    if (key.startsWith("View/")) {
-        emit viewSettingsChanged();
+        emit settingsChanged();
+        if (key.startsWith("View/")) {
+            emit viewSettingsChanged();
+        }
+    } else {
+        // local settings
+        QSettings settings(fileName, QSettings::IniFormat);
+        if (settings.value(key) == value) return;
+        settings.setValue(key, value);
+        emit settingsChanged();
+    }
+}
+
+void Settings::write(QString key, QString value, QString fileName) {
+    writeVariant(key, value, fileName);
+}
+
+void Settings::remove(QString key, QString fileName) {
+    if (fileName.isEmpty()) {
+        // global settings
+        QSettings settings;
+        settings.remove(key);
+
+        emit settingsChanged();
+        if (key.startsWith("View/")) {
+            emit viewSettingsChanged();
+        }
+    } else {
+        // local settings
+        QSettings settings(fileName, QSettings::IniFormat);
+        settings.remove(key);
+        emit settingsChanged();
     }
 }
