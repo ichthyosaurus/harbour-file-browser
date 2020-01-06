@@ -7,7 +7,6 @@
 #include <unistd.h>
 #include "settingshandler.h"
 #include "globals.h"
-#include <QDebug>
 
 enum {
     FilenameRole = Qt::UserRole + 1,
@@ -330,11 +329,9 @@ void FileModel::refreshFull(QString localPath)
 {
     if (!localPath.isEmpty() && localPath != m_dir) {
         // ignore changes to local settings of a different directory
-        qDebug() << "ignore" << localPath << m_dir;
         return;
     }
 
-    qDebug() << "refresh full" << localPath << m_active << m_dir;
     if (!m_active) {
         m_dirty = true;
         return;
@@ -378,8 +375,6 @@ void FileModel::recountSelectedFiles()
 void FileModel::applySettings(QDir &dir) {
     QString localPath = dir.absoluteFilePath(".directory");
     bool useLocal = m_settings->readVariant("View/UseLocalSettings", true).toBool();
-
-    qDebug() << "apply settings" << dir.absolutePath() << useLocal;
 
     // filters
     bool hidden = m_settings->readVariant("View/HiddenFilesShown", false).toBool();

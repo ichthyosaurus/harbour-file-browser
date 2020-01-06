@@ -23,8 +23,6 @@
 #include <QFileInfo>
 #include "settingshandler.h"
 
-#include <QDebug>
-
 Settings::Settings(QObject *parent) : QObject(parent) {
     QSettings global;
     m_globalConfigPath = global.fileName();
@@ -84,7 +82,6 @@ QVariant Settings::readVariant(const QString &key, const QVariant &defaultValue,
 
     if (!fileInfo.exists() || !fileInfo.isReadable() || pathIsProtected(usedFile)) {
         QMutexLocker locker(&m_mutex);
-        qDebug() << "read runtime" << key;
         if (getRuntimeSettings(fileInfo).contains(key)) {
             return getRuntimeSettings(fileInfo)[key];
         }
@@ -115,7 +112,6 @@ void Settings::writeVariant(const QString &key, const QVariant &value, const QSt
     if (pathIsProtected(usedFile) || !fileInfo.isWritable()) {
         QMutexLocker locker(&m_mutex);
         getRuntimeSettings(fileInfo)[key] = value;
-        qDebug() << "write runtime" << key;
     } else {
         flushRuntimeSettings(usedFile);
         QSettings settings(usedFile, QSettings::IniFormat);
@@ -145,7 +141,6 @@ void Settings::remove(QString key, QString fileName) {
     if (pathIsProtected(fileName) || !fileInfo.isWritable()) {
         QMutexLocker locker(&m_mutex);
         getRuntimeSettings(fileInfo).remove(key);
-        qDebug() << "remove runtime" << key;
     } else {
         flushRuntimeSettings(fileName);
         QSettings settings(fileName, QSettings::IniFormat);
