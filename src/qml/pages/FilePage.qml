@@ -377,6 +377,11 @@ Page {
         return isAudioFile() | isVideoFile();
     }
 
+    function isPdfFile()
+    {
+        return fileData.mimeType === "application/pdf";
+    }
+
     function isZipFile()
     {
         return fileData.mimeTypeInherits("application/zip");
@@ -449,6 +454,10 @@ Page {
                            arguments: [ "tf", fileData.file ] });
         } else if (isImageFile()) {
             method(Qt.resolvedUrl("ViewImagePage.qml"), { path: page.file, title: page.file });
+        } else if (pdfViewerEnabled && isPdfFile()) {
+            method("Sailfish.Office.PDFDocumentPage", {
+                title: fileData.name, source: fileData.file, mimeType: fileData.mimeType
+            })
         } else {
             method(Qt.resolvedUrl("ViewPage.qml"), { path: page.file });
         }
