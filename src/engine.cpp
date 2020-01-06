@@ -9,6 +9,7 @@
 #include "globals.h"
 #include "fileworker.h"
 #include "statfileinfo.h"
+#include "settingshandler.h"
 
 Engine::Engine(QObject *parent) :
     QObject(parent),
@@ -16,6 +17,7 @@ Engine::Engine(QObject *parent) :
     m_progress(0)
 {
     m_fileWorker = new FileWorker;
+    m_settings = qApp->property("settings").value<Settings*>();
 
     // update progress property when worker progresses
     connect(m_fileWorker, SIGNAL(progressChanged(int, QString)),
@@ -457,41 +459,27 @@ bool Engine::pathIsFile(QString path) const
 }
 
 QString Engine::readSetting(QString key, QString defaultValue, QString fileName) {
-    QSettings settings(fileName, QSettings::IniFormat);
-    return settings.value(key, defaultValue).toString();
+    return m_settings->readSetting(key, defaultValue, fileName);
 }
 
 QString Engine::readSetting(QString key, QString defaultValue) {
-    QSettings settings;
-    return settings.value(key, defaultValue).toString();
+    return m_settings->readSetting(key, defaultValue);
 }
 
 void Engine::writeSetting(QString key, QString value, QString fileName) {
-    QSettings settings(fileName, QSettings::IniFormat);
-    if (settings.value(key) == value) return; // do nothing if value didn't change
-    settings.setValue(key, value);
-    emit settingsChanged();
+    m_settings->writeSetting(key, value, fileName);
 }
 
 void Engine::writeSetting(QString key, QString value) {
-    QSettings settings;
-    if (settings.value(key) == value) return; // do nothing if value didn't change
-    settings.setValue(key, value);
-    emit settingsChanged();
-    if (key.startsWith("View/")) emit viewSettingsChanged();
+    m_settings->writeSetting(key, value);
 }
 
 void Engine::removeSetting(QString key, QString fileName) {
-    QSettings settings(fileName, QSettings::IniFormat);
-    settings.remove(key);
-    emit settingsChanged();
+    m_settings->removeSetting(key, fileName);
 }
 
 void Engine::removeSetting(QString key) {
-    QSettings settings;
-    settings.remove(key);
-    emit settingsChanged();
-    if (key.startsWith("View/")) emit viewSettingsChanged();
+    m_settings->removeSetting(key);
 }
 
 void Engine::setProgress(int progress, QString filename)

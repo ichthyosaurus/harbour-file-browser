@@ -5,7 +5,7 @@
 #include <QVariant>
 
 class FileWorker;
-class QSettings;
+class Settings;
 
 /**
  * @brief Engine to handle file operations, settings and other generic functionality.
@@ -83,9 +83,6 @@ signals:
     void workerErrorOccurred(QString message, QString filename);
     void fileDeleted(QString fullname);
 
-    void viewSettingsChanged();
-    void settingsChanged();
-
 private slots:
     void setProgress(int progress, QString filename);
 
@@ -94,12 +91,13 @@ private:
     QString createHexDump(char *buffer, int size, int bytesPerLine);
     QStringList makeStringList(QString msg, QString str = QString());
 
+    Settings* m_settings;
     QStringList m_clipboardFiles;
     bool m_clipboardContainsCopy;
     int m_progress;
     QString m_progressFilename;
     QString m_errorMessage;
-    FileWorker *m_fileWorker;
+    FileWorker* m_fileWorker;
 };
 
 #endif // ENGINE_H
