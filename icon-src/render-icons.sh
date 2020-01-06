@@ -37,7 +37,7 @@ done
 
 echo "rendering file icons..."
 
-files=(file-stack)
+files=(file-stack file-audio file-compressed file-pdf)
 mkdir -p "$root"
 
 for img in "${files[@]}"; do
