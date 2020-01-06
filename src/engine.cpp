@@ -459,27 +459,27 @@ bool Engine::pathIsFile(QString path) const
 }
 
 QString Engine::readSetting(QString key, QString defaultValue, QString fileName) {
-    return m_settings->readSetting(key, defaultValue, fileName);
+    return m_settings->read(key, defaultValue, fileName);
 }
 
 QString Engine::readSetting(QString key, QString defaultValue) {
-    return m_settings->readSetting(key, defaultValue);
+    return m_settings->read(key, defaultValue);
 }
 
 void Engine::writeSetting(QString key, QString value, QString fileName) {
-    m_settings->writeSetting(key, value, fileName);
+    m_settings->write(key, value, fileName);
 }
 
 void Engine::writeSetting(QString key, QString value) {
-    m_settings->writeSetting(key, value);
+    m_settings->write(key, value);
 }
 
 void Engine::removeSetting(QString key, QString fileName) {
-    m_settings->removeSetting(key, fileName);
+    m_settings->remove(key, fileName);
 }
 
 void Engine::removeSetting(QString key) {
-    m_settings->removeSetting(key);
+    m_settings->remove(key);
 }
 
 void Engine::setProgress(int progress, QString filename)

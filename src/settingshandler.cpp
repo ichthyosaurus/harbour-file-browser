@@ -19,24 +19,24 @@
 
 #include "settingshandler.h"
 
-QString Settings::readSetting(QString key, QString defaultValue, QString fileName) {
+QString Settings::read(QString key, QString defaultValue, QString fileName) {
     QSettings settings(fileName, QSettings::IniFormat);
     return settings.value(key, defaultValue).toString();
 }
 
-QString Settings::readSetting(QString key, QString defaultValue) {
+QString Settings::read(QString key, QString defaultValue) {
     QSettings settings;
     return settings.value(key, defaultValue).toString();
 }
 
-void Settings::writeSetting(QString key, QString value, QString fileName) {
+void Settings::write(QString key, QString value, QString fileName) {
     QSettings settings(fileName, QSettings::IniFormat);
     if (settings.value(key) == value) return;
     settings.setValue(key, value);
     emit settingsChanged();
 }
 
-void Settings::writeSetting(QString key, QString value) {
+void Settings::write(QString key, QString value) {
     QSettings settings;
     if (settings.value(key) == value) return;
     settings.setValue(key, value);
@@ -47,13 +47,13 @@ void Settings::writeSetting(QString key, QString value) {
     }
 }
 
-void Settings::removeSetting(QString key, QString fileName) {
+void Settings::remove(QString key, QString fileName) {
     QSettings settings(fileName, QSettings::IniFormat);
     settings.remove(key);
     emit settingsChanged();
 }
 
-void Settings::removeSetting(QString key) {
+void Settings::remove(QString key) {
     QSettings settings;
     settings.remove(key);
 

@@ -28,12 +28,12 @@ class Settings : public QObject
     Q_OBJECT
 
 public:
-    Q_INVOKABLE QString readSetting(QString key, QString defaultValue, QString fileName);
-    Q_INVOKABLE QString readSetting(QString key, QString defaultValue = QString());
-    Q_INVOKABLE void writeSetting(QString key, QString value, QString fileName);
-    Q_INVOKABLE void writeSetting(QString key, QString value);
-    Q_INVOKABLE void removeSetting(QString key, QString fileName);
-    Q_INVOKABLE void removeSetting(QString key);
+    Q_INVOKABLE QString read(QString key, QString defaultValue, QString fileName);
+    Q_INVOKABLE QString read(QString key, QString defaultValue = QString());
+    Q_INVOKABLE void write(QString key, QString value, QString fileName);
+    Q_INVOKABLE void write(QString key, QString value);
+    Q_INVOKABLE void remove(QString key, QString fileName);
+    Q_INVOKABLE void remove(QString key);
 
 signals:
     void settingsChanged();
