@@ -21,7 +21,11 @@
 #define SETTINGSHANDLER_H
 
 #include <QVariant>
+#include <QMap>
 #include <QString>
+#include <QMutex>
+
+class QFileInfo;
 
 class Settings : public QObject
 {
@@ -30,6 +34,8 @@ class Settings : public QObject
 public:
     explicit Settings(QObject *parent = 0);
     ~Settings();
+
+    Q_INVOKABLE bool pathIsProtected(QString path) const;
     Q_INVOKABLE QString read(QString key, QString defaultValue = QString(), QString fileName = QString());
     Q_INVOKABLE void write(QString key, QString value, QString fileName = QString());
     Q_INVOKABLE void remove(QString key, QString fileName = QString());
@@ -39,10 +45,18 @@ public:
 
 signals:
     void settingsChanged();
-    void viewSettingsChanged();
+    void viewSettingsChanged(QString localPath);
 
 private:
+    void flushRuntimeSettings(QString fileName);
+    bool hasRuntimeSettings(QFileInfo file);
+    QMap<QString, QVariant>& getRuntimeSettings(QFileInfo file);
+
+    // in-memory settings to be used when local settings are not available
+    // It is a QMap of QMap, combining file paths with their local settings QMaps.
+    QMap<QString, QMap<QString, QVariant>> m_runtimeSettings;
     QString m_globalConfigPath;
+    QMutex m_mutex;
 };
 
 #endif // SETTINGSHANDLER_H

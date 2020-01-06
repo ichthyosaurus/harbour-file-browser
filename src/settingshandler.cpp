@@ -17,8 +17,13 @@
  *
  */
 
+#include <QMutexLocker>
 #include <QSettings>
+#include <QDir>
+#include <QFileInfo>
 #include "settingshandler.h"
+
+#include <QDebug>
 
 Settings::Settings(QObject *parent) : QObject(parent) {
     QSettings global;
@@ -28,16 +33,68 @@ Settings::Settings(QObject *parent) : QObject(parent) {
 Settings::~Settings() {
     //
 }
-QVariant Settings::readVariant(const QString &key, const QVariant &defaultValue, const QString &fileName) {
-    if (fileName.isEmpty()) {
-        // global settings
-        QSettings settings;
-        return settings.value(key, defaultValue);
-    } else {
-        // local settings
-        QSettings settings(fileName, QSettings::IniFormat);
-        return settings.value(key, defaultValue);
+
+bool Settings::pathIsProtected(QString path) const {
+    QString absolutePath = QFileInfo(path).absoluteFilePath();
+
+    if (   absolutePath.startsWith(QDir::home().absolutePath()) /* user's home directory */
+        || absolutePath.startsWith(QString("/run/media/") +
+                                   QDir::home().dirName()) /* below /run/media/USER */
+       ) {
+        return false; // unprotected
     }
+
+    return true; // protected
+}
+
+void Settings::flushRuntimeSettings(QString fileName) {
+    QFileInfo fileInfo = QFileInfo(fileName);
+    QMutexLocker locker(&m_mutex);
+
+    if (pathIsProtected(fileName) || !QFileInfo(fileName).isWritable() || !hasRuntimeSettings(fileInfo)) {
+        return;
+    }
+
+    QMap<QString, QVariant> data = getRuntimeSettings(fileInfo);
+    m_runtimeSettings.remove(fileInfo.absoluteFilePath());
+    locker.unlock();
+
+    QSettings settings(fileName, QSettings::IniFormat);
+
+    for (QString key : data.keys()) {
+        QVariant value = data[key];
+
+        if (settings.value(key) == value) continue;
+        settings.setValue(key, value);
+    }
+}
+
+bool Settings::hasRuntimeSettings(QFileInfo file) {
+    return m_runtimeSettings.contains(file.absoluteFilePath());
+}
+
+QMap<QString, QVariant>& Settings::getRuntimeSettings(QFileInfo file) {
+    return m_runtimeSettings[file.absoluteFilePath()];
+}
+
+QVariant Settings::readVariant(const QString &key, const QVariant &defaultValue, const QString &fileName) {
+    QString usedFile = fileName;
+    if (fileName.isEmpty()) usedFile = m_globalConfigPath;
+    QFileInfo fileInfo = QFileInfo(usedFile);
+
+    if (!fileInfo.exists() || !fileInfo.isReadable() || pathIsProtected(usedFile)) {
+        QMutexLocker locker(&m_mutex);
+        qDebug() << "read runtime" << key;
+        if (getRuntimeSettings(fileInfo).contains(key)) {
+            return getRuntimeSettings(fileInfo)[key];
+        }
+
+        return defaultValue;
+    }
+
+    flushRuntimeSettings(usedFile);
+    QSettings settings(usedFile, QSettings::IniFormat);
+    return settings.value(key, defaultValue);
 }
 
 QString Settings::read(QString key, QString defaultValue, QString fileName) {
@@ -45,22 +102,30 @@ QString Settings::read(QString key, QString defaultValue, QString fileName) {
 }
 
 void Settings::writeVariant(const QString &key, const QVariant &value, const QString &fileName) {
-    if (fileName.isEmpty()) {
-        // global settings
-        QSettings settings;
-        if (settings.value(key) == value) return;
-        settings.setValue(key, value);
+    QString usedFile = fileName;
+    bool usingLocalConfig = true;
 
-        emit settingsChanged();
-        if (key.startsWith("View/")) {
-            emit viewSettingsChanged();
-        }
+    if (fileName.isEmpty()) {
+        usedFile = m_globalConfigPath;
+        usingLocalConfig = false;
+    }
+
+    QFileInfo fileInfo = QFileInfo(usedFile);
+
+    if (pathIsProtected(usedFile) || !fileInfo.isWritable()) {
+        QMutexLocker locker(&m_mutex);
+        getRuntimeSettings(fileInfo)[key] = value;
+        qDebug() << "write runtime" << key;
     } else {
-        // local settings
-        QSettings settings(fileName, QSettings::IniFormat);
+        flushRuntimeSettings(usedFile);
+        QSettings settings(usedFile, QSettings::IniFormat);
         if (settings.value(key) == value) return;
         settings.setValue(key, value);
-        emit settingsChanged();
+    }
+
+    emit settingsChanged();
+    if (usedFile != m_globalConfigPath || key.startsWith("View/")) {
+        emit viewSettingsChanged(usingLocalConfig ? fileInfo.dir().absolutePath() : "");
     }
 }
 
@@ -69,19 +134,26 @@ void Settings::write(QString key, QString value, QString fileName) {
 }
 
 void Settings::remove(QString key, QString fileName) {
+    bool usingLocalConfig = true;
     if (fileName.isEmpty()) {
-        // global settings
-        QSettings settings;
-        settings.remove(key);
+        fileName = m_globalConfigPath;
+        usingLocalConfig = false;
+    }
 
-        emit settingsChanged();
-        if (key.startsWith("View/")) {
-            emit viewSettingsChanged();
-        }
+    QFileInfo fileInfo = QFileInfo(fileName);
+
+    if (pathIsProtected(fileName) || !fileInfo.isWritable()) {
+        QMutexLocker locker(&m_mutex);
+        getRuntimeSettings(fileInfo).remove(key);
+        qDebug() << "remove runtime" << key;
     } else {
-        // local settings
+        flushRuntimeSettings(fileName);
         QSettings settings(fileName, QSettings::IniFormat);
         settings.remove(key);
-        emit settingsChanged();
+    }
+
+    emit settingsChanged();
+    if (usingLocalConfig || key.startsWith("View/")) {
+        emit viewSettingsChanged(usingLocalConfig ? fileInfo.dir().absolutePath() : "");
     }
 }
