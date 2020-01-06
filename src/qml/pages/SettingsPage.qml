@@ -32,15 +32,15 @@ Page {
                     property alias thumbSize: v4.currentIndex
                     TextSwitch {
                         id: v1; text: qsTr("Use per-directory view settings")
-                        onCheckedChanged: engine.writeSetting("View/UseLocalSettings", checked.toString())
+                        onCheckedChanged: settings.write("View/UseLocalSettings", checked.toString())
                     }
                     TextSwitch {
                         id: v2; text: qsTr("Show hidden files")
-                        onCheckedChanged: engine.writeSetting("View/HiddenFilesShown", checked.toString())
+                        onCheckedChanged: settings.write("View/HiddenFilesShown", checked.toString())
                     }
                     TextSwitch {
                         id: v3; text: qsTr("Show preview images")
-                        onCheckedChanged: engine.writeSetting("View/PreviewsShown", checked.toString())
+                        onCheckedChanged: settings.write("View/PreviewsShown", checked.toString())
                     }
                     ComboBox {
                         id: v4; width: parent.width
@@ -52,7 +52,7 @@ Page {
                             MenuItem { text: qsTr("large"); property string action: "large"; }
                             MenuItem { text: qsTr("huge"); property string action: "huge"; }
                         }
-                        onValueChanged: engine.writeSetting("View/PreviewsSize", currentItem.action);
+                        onValueChanged: settings.write("View/PreviewsSize", currentItem.action);
                     }
                 }
             }
@@ -67,15 +67,15 @@ Page {
                     property alias sortOrder: s4.currentIndex
                     TextSwitch {
                         id: s1; text: qsTr("Show folders first")
-                        onCheckedChanged: { engine.writeSetting("View/ShowDirectoriesFirst", checked.toString()) }
+                        onCheckedChanged: { settings.write("View/ShowDirectoriesFirst", checked.toString()) }
                     }
                     TextSwitch {
                         id: s2; text: qsTr("Sort case-sensitively")
-                        onCheckedChanged: engine.writeSetting("View/SortCaseSensitively", checked.toString())
+                        onCheckedChanged: settings.write("View/SortCaseSensitively", checked.toString())
                     }
                     ComboBox {
                         id: s3; label: qsTr("Sort by")
-                        onValueChanged: engine.writeSetting("View/SortRole", currentItem.value);
+                        onValueChanged: settings.write("View/SortRole", currentItem.value);
                         currentIndex: -1
                         menu: ContextMenu {
                             MenuItem { text: qsTr("name"); property string value: "name" }
@@ -86,7 +86,7 @@ Page {
                     }
                     ComboBox {
                         id: s4; label: qsTr("Sort order")
-                        onValueChanged: engine.writeSetting("View/SortOrder", currentItem.value);
+                        onValueChanged: settings.write("View/SortOrder", currentItem.value);
                         currentIndex: -1
                         menu: ContextMenu {
                             MenuItem { text: qsTr("default"); property string value: "default" }
@@ -114,7 +114,7 @@ Page {
                             MenuItem { text: qsTr("link"); property string action: "link"; }
                             MenuItem { text: qsTr("none"); property string action: "none"; }
                         }
-                        onValueChanged: engine.writeSetting("Transfer/DefaultAction", currentItem.action);
+                        onValueChanged: settings.write("Transfer/DefaultAction", currentItem.action);
                     }
                     ComboBox {
                         id: b2; width: parent.width
@@ -124,11 +124,11 @@ Page {
                             MenuItem { text: qsTr("return to directory view"); property string action: "filter"; }
                             MenuItem { text: qsTr("start recursive search"); property string action: "search"; }
                         }
-                        onValueChanged: engine.writeSetting("General/DefaultFilterAction", currentItem.action);
+                        onValueChanged: settings.write("General/DefaultFilterAction", currentItem.action);
                     }
                     TextSwitch {
                         id: b3; text: qsTr("Show full directory paths")
-                        onCheckedChanged: engine.writeSetting("General/ShowFullDirectoryPaths", checked.toString())
+                        onCheckedChanged: settings.write("General/ShowFullDirectoryPaths", checked.toString())
                     }
                 }
             }
@@ -205,14 +205,14 @@ Page {
 
         // read settings
         if (status === PageStatus.Activating) {
-            sortingGroup.contentItem.showDirsFirst = (engine.readSetting("View/ShowDirectoriesFirst", "true") === "true");
-            sortingGroup.contentItem.sortCaseSensitive = (engine.readSetting("View/SortCaseSensitively", "false") === "true");
-            viewGroup.contentItem.showHiddenFiles = (engine.readSetting("View/HiddenFilesShown", "false") === "true");
-            viewGroup.contentItem.showThumbnails = (engine.readSetting("View/PreviewsShown", "false") === "true");
-            viewGroup.contentItem.useLocalSettings = (engine.readSetting("View/UseLocalSettings", "true") === "true");
-            behaviourGroup.contentItem.showFullPaths = (engine.readSetting("General/ShowFullDirectoryPaths", "false") === "true");
+            sortingGroup.contentItem.showDirsFirst = (settings.read("View/ShowDirectoriesFirst", "true") === "true");
+            sortingGroup.contentItem.sortCaseSensitive = (settings.read("View/SortCaseSensitively", "false") === "true");
+            viewGroup.contentItem.showHiddenFiles = (settings.read("View/HiddenFilesShown", "false") === "true");
+            viewGroup.contentItem.showThumbnails = (settings.read("View/PreviewsShown", "false") === "true");
+            viewGroup.contentItem.useLocalSettings = (settings.read("View/UseLocalSettings", "true") === "true");
+            behaviourGroup.contentItem.showFullPaths = (settings.read("General/ShowFullDirectoryPaths", "false") === "true");
 
-            var defTransfer = engine.readSetting("Transfer/DefaultAction", "none");
+            var defTransfer = settings.read("Transfer/DefaultAction", "none");
             if (defTransfer === "copy") {
                 behaviourGroup.contentItem.defaultTransfer = 0;
             } else if (defTransfer === "move") {
@@ -223,24 +223,24 @@ Page {
                 behaviourGroup.contentItem.defaultTransfer = 3;
             }
 
-            var defFilter = engine.readSetting("General/DefaultFilterAction", "filter");
+            var defFilter = settings.read("General/DefaultFilterAction", "filter");
             if (defFilter === "filter") behaviourGroup.contentItem.defaultFilter = 0;
             else if (defFilter === "search") behaviourGroup.contentItem.defaultFilter = 1;
             else behaviourGroup.contentItem.defaultFilter = 0;
 
-            var thumbSize = engine.readSetting("View/PreviewsSize", "medium");
+            var thumbSize = settings.read("View/PreviewsSize", "medium");
             if (thumbSize === "small") viewGroup.contentItem.thumbSize = 0;
             else if (thumbSize === "medium") viewGroup.contentItem.thumbSize = 1;
             else if (thumbSize === "large") viewGroup.contentItem.thumbSize = 2;
             else if (thumbSize === "huge") viewGroup.contentItem.thumbSize = 3;
 
-            var sortBy = engine.readSetting("View/SortRole", "name");
+            var sortBy = settings.read("View/SortRole", "name");
             if (sortBy === "name") sortingGroup.contentItem.sortRole = 0;
             else if (sortBy === "size") sortingGroup.contentItem.sortRole = 1;
             else if (sortBy === "modificationtime") sortingGroup.contentItem.sortRole = 2;
             else if (sortBy === "type") sortingGroup.contentItem.sortRole = 3;
 
-            var order = engine.readSetting("View/SortOrder", "default");
+            var order = settings.read("View/SortOrder", "default");
             if (order === "default") sortingGroup.contentItem.sortOrder = 0;
             else if (order === "reversed") sortingGroup.contentItem.sortOrder = 1;
         }

@@ -41,9 +41,9 @@ Page {
 
                 onSelectionChanged: {
                     if (useLocalSettings()) {
-                        engine.writeSetting("Dolphin/SortRole", newValue.toString(), getConfigPath());
+                        settings.write("Dolphin/SortRole", newValue.toString(), getConfigPath());
                     } else {
-                        engine.writeSetting("View/SortRole", newValue.toString());
+                        settings.write("View/SortRole", newValue.toString());
                     }
                 }
             }
@@ -61,9 +61,9 @@ Page {
 
                 onSelectionChanged: {
                     if (useLocalSettings()) {
-                        engine.writeSetting("Dolphin/SortOrder", newValue.toString() === "default" ? "0" : "1", getConfigPath());
+                        settings.write("Dolphin/SortOrder", newValue.toString() === "default" ? "0" : "1", getConfigPath());
                     } else {
-                        engine.writeSetting("View/SortOrder", newValue.toString());
+                        settings.write("View/SortOrder", newValue.toString());
                     }
                 }
             }
@@ -86,7 +86,7 @@ Page {
                     if (newValue.toString() === "none") saveSetting("View/PreviewsShown", "Dolphin/PreviewsShown", "true", "false", "false")
                     else {
                         saveSetting("View/PreviewsShown", "Dolphin/PreviewsShown", "true", "false", "true")
-                        engine.writeSetting("View/PreviewsSize", newValue.toString());
+                        settings.write("View/PreviewsSize", newValue.toString());
                     }
                 }
             }
@@ -116,7 +116,7 @@ Page {
     }
 
     function useLocalSettings() {
-        return engine.readSetting("View/UseLocalSettings", "false") === "true";
+        return settings.read("View/UseLocalSettings", "false") === "true";
     }
 
     function updateShownSettings() {
@@ -125,40 +125,40 @@ Page {
         else header.description = qsTr("Global preferences");
         var conf = getConfigPath();
 
-        var sort = engine.readSetting("View/SortRole", "name");
-        var order = engine.readSetting("View/SortOrder", "default");
+        var sort = settings.read("View/SortRole", "name");
+        var order = settings.read("View/SortOrder", "default");
 
         if (useLocal) {
-            sortList.initial = engine.readSetting("Dolphin/SortRole", sort, conf);
-            orderList.initial = engine.readSetting("Dolphin/SortOrder", order === "default" ? "0" : "1", conf) === "0" ? "default" : "reversed";
+            sortList.initial = settings.read("Dolphin/SortRole", sort, conf);
+            orderList.initial = settings.read("Dolphin/SortOrder", order === "default" ? "0" : "1", conf) === "0" ? "default" : "reversed";
         } else {
             sortList.initial = sort;
             orderList.initial = order;
         }
 
-        var dirsFirst = engine.readSetting("View/ShowDirectoriesFirst", "true");
-        var caseSensitive = engine.readSetting("View/SortCaseSensitively", "false");
-        var showHidden = engine.readSetting("View/HiddenFilesShown", "false");
-        var showThumbs = engine.readSetting("View/PreviewsShown", "false");
+        var dirsFirst = settings.read("View/ShowDirectoriesFirst", "true");
+        var caseSensitive = settings.read("View/SortCaseSensitively", "false");
+        var showHidden = settings.read("View/HiddenFilesShown", "false");
+        var showThumbs = settings.read("View/PreviewsShown", "false");
 
         if (useLocal) {
-            showDirsFirst.checked = (engine.readSetting("Sailfish/ShowDirectoriesFirst", dirsFirst, conf) === "true");
-            sortCaseSensitive.checked = (engine.readSetting("Sailfish/SortCaseSensitively", caseSensitive, conf) === "true");
-            showHiddenFiles.checked = (engine.readSetting("Settings/HiddenFilesShown", showHidden, conf) === "true");
-            showThumbs = engine.readSetting("Dolphin/PreviewsShown", showThumbs, conf);
+            showDirsFirst.checked = (settings.read("Sailfish/ShowDirectoriesFirst", dirsFirst, conf) === "true");
+            sortCaseSensitive.checked = (settings.read("Sailfish/SortCaseSensitively", caseSensitive, conf) === "true");
+            showHiddenFiles.checked = (settings.read("Settings/HiddenFilesShown", showHidden, conf) === "true");
+            showThumbs = settings.read("Dolphin/PreviewsShown", showThumbs, conf);
         } else {
             showDirsFirst.checked = (dirsFirst === "true");
             sortCaseSensitive.checked = (caseSensitive === "true");
             showHiddenFiles.checked = (showHidden === "true");
         }
 
-        if (showThumbs === "true") thumbList.initial = engine.readSetting("View/PreviewsSize", "medium");
+        if (showThumbs === "true") thumbList.initial = settings.read("View/PreviewsSize", "medium");
         else thumbList.initial = "none";
     }
 
     function saveSetting(keyGlobal, keyLocal, trueLocal, falseLocal, valueStr) {
         if (useLocalSettings()) {
-            var currentGlobal = engine.readSetting(keyGlobal) === trueLocal ? "true" : "false";
+            var currentGlobal = settings.read(keyGlobal) === trueLocal ? "true" : "false";
 
             if (valueStr === currentGlobal) {
                 // If the new value matches the currently set global setting,
@@ -172,12 +172,12 @@ Page {
                 // be shown in all directories. If we would simply save "hidden
                 // file are hidden here", then the user would have to change the
                 // local settings again, which is counterintuitive.
-                engine.removeSetting(keyLocal, getConfigPath());
+                settings.remove(keyLocal, getConfigPath());
             } else {
-                engine.writeSetting(keyLocal, (valueStr === "true" ? trueLocal : falseLocal), getConfigPath());
+                settings.write(keyLocal, (valueStr === "true" ? trueLocal : falseLocal), getConfigPath());
             }
         } else {
-            engine.writeSetting(keyGlobal, valueStr);
+            settings.write(keyGlobal, valueStr);
         }
     }
 

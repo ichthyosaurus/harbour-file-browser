@@ -44,7 +44,7 @@ Item {
     }
 
     Component.onCompleted: {
-        var defTransfer = engine.readSetting("Transfer/DefaultAction", "");
+        var defTransfer = settings.read("Transfer/DefaultAction", "");
         if (defTransfer === "none") defTransfer = "";
         action.selection = defTransfer;
     }

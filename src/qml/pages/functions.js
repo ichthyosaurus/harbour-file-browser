@@ -71,8 +71,8 @@ function addBookmark(path) {
     if (!path) return;
     var bookmarks = getBookmarks();
     bookmarks.push(path);
-    engine.writeSetting("Bookmarks/"+path, lastPartOfPath(path));
-    engine.writeSetting("Bookmarks/Entries", JSON.stringify(bookmarks));
+    settings.write("Bookmarks/"+path, lastPartOfPath(path));
+    settings.write("Bookmarks/Entries", JSON.stringify(bookmarks));
     main.bookmarkAdded(path);
 }
 
@@ -80,23 +80,23 @@ function removeBookmark(path) {
     if (!path) return;
     var bookmarks = getBookmarks();
     var filteredBookmarks = bookmarks.filter(function(e) { return e !== path; });
-    engine.writeSetting("Bookmarks/Entries", JSON.stringify(filteredBookmarks));
-    engine.removeSetting("Bookmarks/"+path);
+    settings.write("Bookmarks/Entries", JSON.stringify(filteredBookmarks));
+    settings.remove("Bookmarks/"+path);
     main.bookmarkRemoved(path);
 }
 
 function hasBookmark(path) {
     if (!path) return false;
-    if (engine.readSetting("Bookmarks/"+path) !== "") return true;
+    if (settings.read("Bookmarks/"+path) !== "") return true;
     return false;
 }
 
 function getBookmarks() {
     try {
-        var entries = JSON.parse(engine.readSetting("Bookmarks/Entries"));
+        var entries = JSON.parse(settings.read("Bookmarks/Entries"));
         return entries;
     } catch (SyntaxError) {
-        engine.writeSetting("Bookmarks/Entries", JSON.stringify([]));
+        settings.write("Bookmarks/Entries", JSON.stringify([]));
         return [];
     }
 }
