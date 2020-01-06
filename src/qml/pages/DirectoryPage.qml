@@ -365,6 +365,10 @@ Page {
                 notificationPanel.showText(message, filename);
             }
         }
+    }
+
+    Connections {
+        target: settings
         onSettingsChanged: {
             updateThumbnailsState();
             page.fullPathShown = (engine.readSetting("General/ShowFullDirectoryPaths", "false") === "true");

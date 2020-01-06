@@ -5,7 +5,7 @@
 #include <QSettings>
 #include <QGuiApplication>
 #include <unistd.h>
-#include "engine.h"
+#include "settingshandler.h"
 #include "globals.h"
 
 enum {
@@ -37,8 +37,8 @@ FileModel::FileModel(QObject *parent) :
     connect(m_watcher, SIGNAL(fileChanged(const QString&)), this, SLOT(refresh()));
 
     // refresh model every time view settings are changed
-    Engine *engine = qApp->property("engine").value<Engine *>();
-    connect(engine, SIGNAL(viewSettingsChanged()), this, SLOT(refreshFull()));
+    Settings* settings = qApp->property("settings").value<Settings*>();
+    connect(settings, SIGNAL(viewSettingsChanged()), this, SLOT(refreshFull()));
     connect(this, SIGNAL(filterStringChanged()), this, SLOT(applyFilterString()));
 }
 
