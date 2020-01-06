@@ -5,7 +5,7 @@
 #include <QSettings>
 #include <QGuiApplication>
 #include <unistd.h>
-#include "engine.h"
+#include "settingshandler.h"
 #include "globals.h"
 
 enum {
@@ -37,8 +37,8 @@ FileModel::FileModel(QObject *parent) :
     connect(m_watcher, SIGNAL(fileChanged(const QString&)), this, SLOT(refresh()));
 
     // refresh model every time view settings are changed
-    Engine *engine = qApp->property("engine").value<Engine *>();
-    connect(engine, SIGNAL(viewSettingsChanged()), this, SLOT(refreshFull()));
+    m_settings = qApp->property("settings").value<Settings*>();
+    connect(m_settings, SIGNAL(viewSettingsChanged(QString)), this, SLOT(refreshFull(QString)));
     connect(this, SIGNAL(filterStringChanged()), this, SLOT(applyFilterString()));
 }
 
@@ -325,8 +325,13 @@ void FileModel::refresh()
     m_dirty = false;
 }
 
-void FileModel::refreshFull()
+void FileModel::refreshFull(QString localPath)
 {
+    if (!localPath.isEmpty() && localPath != m_dir) {
+        // ignore changes to local settings of a different directory
+        return;
+    }
+
     if (!m_active) {
         m_dirty = true;
         return;
@@ -366,28 +371,25 @@ void FileModel::recountSelectedFiles()
     }
 }
 
-
-
 // see SETTINGS for details
 void FileModel::applySettings(QDir &dir) {
-    QSettings settings;
-    QSettings local(dir.absoluteFilePath(".directory"), QSettings::IniFormat);
-    bool useLocal = settings.value("View/UseLocalSettings", true).toBool();
+    QString localPath = dir.absoluteFilePath(".directory");
+    bool useLocal = m_settings->readVariant("View/UseLocalSettings", true).toBool();
 
     // filters
-    bool hidden = settings.value("View/HiddenFilesShown", false).toBool();
-    if (useLocal) hidden = local.value("Settings/HiddenFilesShown", hidden).toBool();
+    bool hidden = m_settings->readVariant("View/HiddenFilesShown", false).toBool();
+    if (useLocal) hidden = m_settings->readVariant("Settings/HiddenFilesShown", hidden, localPath).toBool();
     QDir::Filter hiddenFilter = hidden ? QDir::Hidden : (QDir::Filter)0;
 
     dir.setFilter(QDir::AllDirs | QDir::Files | QDir::NoDotAndDotDot | QDir::System | hiddenFilter);
 
     // sorting
-    bool dirsFirst = settings.value("View/ShowDirectoriesFirst", true).toBool();
-    if (useLocal) dirsFirst = local.value("Sailfish/ShowDirectoriesFirst", dirsFirst).toBool();
+    bool dirsFirst = m_settings->readVariant("View/ShowDirectoriesFirst", true).toBool();
+    if (useLocal) dirsFirst = m_settings->readVariant("Sailfish/ShowDirectoriesFirst", dirsFirst, localPath).toBool();
     QDir::SortFlag dirsFirstFlag = dirsFirst ? QDir::DirsFirst : (QDir::SortFlag)0;
 
-    QString sortSetting = settings.value("View/SortRole", "name").toString();
-    if (useLocal) sortSetting = local.value("Dolphin/SortRole", sortSetting).toString();
+    QString sortSetting = m_settings->readVariant("View/SortRole", "name").toString();
+    if (useLocal) sortSetting = m_settings->readVariant("Dolphin/SortRole", sortSetting, localPath).toString();
     QDir::SortFlag sortBy = QDir::Name;
 
     if (sortSetting == "name") {
@@ -402,12 +404,12 @@ void FileModel::applySettings(QDir &dir) {
         sortBy = QDir::Name;
     }
 
-    bool orderDefault = settings.value("View/SortOrder", "default").toString() == "default";
-    if (useLocal) orderDefault = local.value("Dolphin/SortOrder", 0) == 0 ? true : false;
+    bool orderDefault = m_settings->readVariant("View/SortOrder", "default").toString() == "default";
+    if (useLocal) orderDefault = m_settings->readVariant("Dolphin/SortOrder", 0, localPath) == 0 ? true : false;
     QDir::SortFlag orderFlag = orderDefault ? (QDir::SortFlag)0 : QDir::Reversed;
 
-    bool caseSensitive = settings.value("View/SortCaseSensitively", false).toBool();
-    if (useLocal) caseSensitive = local.value("Sailfish/SortCaseSensitively", caseSensitive).toBool();
+    bool caseSensitive = m_settings->readVariant("View/SortCaseSensitively", false).toBool();
+    if (useLocal) caseSensitive = m_settings->readVariant("Sailfish/SortCaseSensitively", caseSensitive, localPath).toBool();
     QDir::SortFlag caseSensitiveFlag = caseSensitive ? (QDir::SortFlag)0 : QDir::IgnoreCase;
 
     dir.setSorting(sortBy | dirsFirstFlag | orderFlag | caseSensitiveFlag);

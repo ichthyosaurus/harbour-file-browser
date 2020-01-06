@@ -5,7 +5,7 @@
 #include <QVariant>
 
 class FileWorker;
-class QSettings;
+class Settings;
 
 /**
  * @brief Engine to handle file operations, settings and other generic functionality.
@@ -66,14 +66,6 @@ public:
     Q_INVOKABLE bool pathIsDirectory(QString path) const;
     Q_INVOKABLE bool pathIsFile(QString path) const;
 
-    // access settings
-    Q_INVOKABLE QString readSetting(QString key, QString defaultValue, QString fileName);
-    Q_INVOKABLE QString readSetting(QString key, QString defaultValue = QString());
-    Q_INVOKABLE void writeSetting(QString key, QString value, QString fileName);
-    Q_INVOKABLE void writeSetting(QString key, QString value);
-    Q_INVOKABLE void removeSetting(QString key, QString fileName);
-    Q_INVOKABLE void removeSetting(QString key);
-
 signals:
     void clipboardCountChanged();
     void clipboardContainsCopyChanged();
@@ -83,9 +75,6 @@ signals:
     void workerErrorOccurred(QString message, QString filename);
     void fileDeleted(QString fullname);
 
-    void viewSettingsChanged();
-    void settingsChanged();
-
 private slots:
     void setProgress(int progress, QString filename);
 
@@ -94,12 +83,13 @@ private:
     QString createHexDump(char *buffer, int size, int bytesPerLine);
     QStringList makeStringList(QString msg, QString str = QString());
 
+    Settings* m_settings;
     QStringList m_clipboardFiles;
     bool m_clipboardContainsCopy;
     int m_progress;
     QString m_progressFilename;
     QString m_errorMessage;
-    FileWorker *m_fileWorker;
+    FileWorker* m_fileWorker;
 };
 
 #endif // ENGINE_H

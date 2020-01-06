@@ -177,7 +177,7 @@ SilicaListView {
                 var oldText = editLabel.placeholderColor;
                 var newText = editLabel.text;
                 if (newText === "" || oldText === newText || model.location === "" || !model.location) return;
-                engine.writeSetting("Bookmarks"+model.location, newText);
+                settings.write("Bookmarks"+model.location, newText);
                 shortcutLabel.text = newText;
             }
 
@@ -305,7 +305,7 @@ SilicaListView {
 
                 for (var key in bookmarks) {
                     if (bookmarks[key] === "") continue;
-                    var name = engine.readSetting("Bookmarks"+bookmarks[key]);
+                    var name = settings.read("Bookmarks"+bookmarks[key]);
 
                     if (name === "") {
                         // console.warn("empty bookmark name for", bookmarks[key]);

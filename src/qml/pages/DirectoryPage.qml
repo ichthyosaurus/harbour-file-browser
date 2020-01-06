@@ -18,9 +18,9 @@ Page {
     property alias hasBookmark: bookmarkEntry.hasBookmark
     property string currentFilter: ""
     // set to true when full dir path should be shown in page header
-    property bool fullPathShown: (engine.readSetting("General/ShowFullDirectoryPaths", "false") === "true")
+    property bool fullPathShown: (settings.read("General/ShowFullDirectoryPaths", "false") === "true")
     // set to true to enable starting deep search when pressing 'Enter' in filter input
-    property bool quickSearchEnabled: (engine.readSetting("General/DefaultFilterAction", "filter") === "search")
+    property bool quickSearchEnabled: (settings.read("General/DefaultFilterAction", "filter") === "search")
 
     signal clearViewFilter()
     signal multiSelectionStarted(var index)
@@ -365,10 +365,15 @@ Page {
                 notificationPanel.showText(message, filename);
             }
         }
-        onSettingsChanged: {
+    }
+
+    Connections {
+        target: settings
+        onViewSettingsChanged: {
+            if (localPath !== dir) return;
             updateThumbnailsState();
-            page.fullPathShown = (engine.readSetting("General/ShowFullDirectoryPaths", "false") === "true");
-            page.quickSearchEnabled = (engine.readSetting("General/DefaultFilterAction", "filter") === "search");
+            page.fullPathShown = (settings.read("General/ShowFullDirectoryPaths", "false") === "true");
+            page.quickSearchEnabled = (settings.read("General/DefaultFilterAction", "filter") === "search");
         }
     }
 
@@ -407,15 +412,15 @@ Page {
     }
 
     function updateThumbnailsState() {
-        var showThumbs = engine.readSetting("View/PreviewsShown");
-        if (engine.readSetting("View/UseLocalSettings", "false") === "true") {
-            thumbnailsShown = engine.readSetting("Dolphin/PreviewsShown", showThumbs, dir+"/.directory") === "true";
+        var showThumbs = settings.read("View/PreviewsShown");
+        if (settings.read("View/UseLocalSettings", "false") === "true") {
+            thumbnailsShown = settings.read("Dolphin/PreviewsShown", showThumbs, dir+"/.directory") === "true";
         } else {
             thumbnailsShown = showThumbs === "true";
         }
 
         if (thumbnailsShown) {
-            var thumbSize = engine.readSetting("View/PreviewsSize", "medium");
+            var thumbSize = settings.read("View/PreviewsSize", "medium");
             if (thumbSize === "small") {
                 fileIconSize = Theme.itemSizeMedium
             } else if (thumbSize === "medium") {
