@@ -66,14 +66,6 @@ public:
     Q_INVOKABLE bool pathIsDirectory(QString path) const;
     Q_INVOKABLE bool pathIsFile(QString path) const;
 
-    // access settings
-    Q_INVOKABLE QString readSetting(QString key, QString defaultValue, QString fileName);
-    Q_INVOKABLE QString readSetting(QString key, QString defaultValue = QString());
-    Q_INVOKABLE void writeSetting(QString key, QString value, QString fileName);
-    Q_INVOKABLE void writeSetting(QString key, QString value);
-    Q_INVOKABLE void removeSetting(QString key, QString fileName);
-    Q_INVOKABLE void removeSetting(QString key);
-
 signals:
     void clipboardCountChanged();
     void clipboardContainsCopyChanged();
