@@ -6,6 +6,8 @@
 #include <QFileSystemWatcher>
 #include "statfileinfo.h"
 
+class Settings;
+
 /**
  * @brief The FileModel class can be used as a model in a ListView to display a list of files
  * in the current directory. It has methods to change the current directory and to access
@@ -91,6 +93,7 @@ private:
     bool m_active;
     bool m_dirty;
     QFileSystemWatcher *m_watcher;
+    Settings* m_settings;
 };
 
 
