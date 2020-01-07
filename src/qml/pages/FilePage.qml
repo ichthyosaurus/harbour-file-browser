@@ -15,6 +15,8 @@ Page {
     FileData {
         id: fileData
         file: page.file
+        property string category
+        Component.onCompleted: category = typeCategory()
     }
 
     RemorsePopup {
@@ -27,12 +29,12 @@ Page {
         // called when open command exits
         onProcessExited: {
             if (exitCode === 0) {
-                if (isApkFile()) {
+                if (fileData.category === "apk") {
                     notificationPanel.showTextWithTimer(qsTr("Install launched"),
                                                qsTr("If nothing happens, then the package is probably faulty."));
                     return;
                 }
-                if (!isRpmFile())
+                if (!fileData.category !== "rpm")
                     notificationPanel.showTextWithTimer(qsTr("Open successful"),
                                                qsTr("Sometimes the application stays in the background"));
             } else if (exitCode === 1) {
@@ -93,7 +95,7 @@ Page {
             // open/install tries to open the file and fileData.onProcessExited shows error
             // if it fails
             MenuItem {
-                text: isRpmFile() || isApkFile() ? qsTr("Install") : qsTr("Open")
+                text: fileData.category === "rpm" || fileData.category === "apk" ? qsTr("Install") : qsTr("Open")
                 visible: !fileData.isDir
                 onClicked: {
                     if (!fileData.isSafeToOpen()) {
@@ -129,7 +131,7 @@ Page {
 
                 IconButton {
                     id: playButton
-                    visible: isAudioFile()
+                    visible: fileData.category === "audio"
                     icon.source: audioPlayer.playbackState !== MediaPlayer.PlayingState ?
                                      "image://theme/icon-l-play" :
                                      "image://theme/icon-l-pause"
@@ -154,7 +156,7 @@ Page {
 
                         AnimatedImage { // preview of image, max height 400
                             id: imagePreview
-                            visible: isImageFile()
+                            visible: fileData.category === "image"
                             source: visible ? fileData.file : "" // access the source only if img is visible
                             anchors.left: parent.left
                             anchors.right: parent.right
@@ -354,56 +356,6 @@ Page {
         preparationTimer.start();
     }
 
-    function isImageFile()
-    {
-        return fileData.mimeType === "image/jpeg" || fileData.mimeType === "image/png" ||
-                fileData.mimeType === "image/gif";
-    }
-
-    function isAudioFile()
-    {
-        return fileData.mimeType === "audio/x-wav" || fileData.mimeType === "audio/mpeg" ||
-                fileData.mimeType === "audio/x-vorbis+ogg" || fileData.mimeType === "audio/flac" ||
-                fileData.mimeType === "audio/mp4";
-    }
-
-    function isVideoFile()
-    {
-        return fileData.mimeType === "video/quicktime" || fileData.mimeType === "video/mp4";
-    }
-
-    function isMediaFile()
-    {
-        return isAudioFile() | isVideoFile();
-    }
-
-    function isPdfFile()
-    {
-        return fileData.mimeType === "application/pdf";
-    }
-
-    function isZipFile()
-    {
-        return fileData.mimeTypeInherits("application/zip");
-    }
-
-    function isTarArchive()
-    {
-        return    fileData.mimeType === "application/x-tar"
-               || fileData.mimeType === "application/x-compressed-tar"
-               || fileData.mimeType === "application/x-bzip-compressed-tar"
-    }
-
-    function isRpmFile()
-    {
-        return fileData.mimeType === "application/x-rpm";
-    }
-
-    function isApkFile()
-    {
-        return fileData.suffix === "apk" && fileData.mimeType === "application/vnd.android.package-archive";
-    }
-
     function quickView()
     {
         viewContents();
@@ -435,26 +387,26 @@ Page {
             return;
         }
 
-        if (isZipFile()) {
+        if (fileData.category === "zip") {
             method(Qt.resolvedUrl("ConsolePage.qml"),
                          { title: Functions.lastPartOfPath(fileData.file),
                            command: "unzip",
                            arguments: [ "-Z", "-2ht", fileData.file ] });
 
-        } else if (isRpmFile()) {
+        } else if (fileData.category === "rpm") {
             method(Qt.resolvedUrl("ConsolePage.qml"),
                          { title: Functions.lastPartOfPath(fileData.file),
                            command: "rpm",
                            arguments: [ "-qlp", "--info", fileData.file ] });
 
-        } else if (isTarArchive()) {
+        } else if (fileData.category === "tar") {
             method(Qt.resolvedUrl("ConsolePage.qml"),
                          { title: Functions.lastPartOfPath(fileData.file),
                            command: "tar",
                            arguments: [ "tf", fileData.file ] });
-        } else if (isImageFile()) {
+        } else if (fileData.category === "image") {
             method(Qt.resolvedUrl("ViewImagePage.qml"), { path: page.file, title: page.file });
-        } else if (pdfViewerEnabled && isPdfFile()) {
+        } else if (pdfViewerEnabled && fileData.category === "pdf") {
             method("Sailfish.Office.PDFDocumentPage", {
                 title: fileData.name, source: fileData.file, mimeType: fileData.mimeType
             })

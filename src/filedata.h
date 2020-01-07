@@ -68,8 +68,9 @@ public:
 
     // methods accessible from QML
     Q_INVOKABLE void refresh();
-    Q_INVOKABLE bool mimeTypeInherits(QString parentMimeType);
+    Q_INVOKABLE bool mimeTypeInherits(QString parentMimeType) const;
     Q_INVOKABLE bool isSafeToOpen() const { return m_fileInfo.isSafeToRead(); }
+    Q_INVOKABLE QString typeCategory() const;
 
 signals:
     void fileChanged();
