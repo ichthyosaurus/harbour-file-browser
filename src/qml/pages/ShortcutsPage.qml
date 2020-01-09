@@ -66,5 +66,8 @@ Page {
             main.coverText = Functions.lastPartOfPath(currentPath)+"/"; // update cover
             if (!forwardNavigation) pageStack.pushAttached(Qt.resolvedUrl("SettingsPage.qml"));
         }
+        if (status === PageStatus.Activating || status === PageStatus.Deactivating) {
+            shortcutsView._isEditing = false;
+        }
     }
 }
