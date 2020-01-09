@@ -162,7 +162,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="185"/>
         <source>Copy path to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordnerpfad kopieren</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="307"/>
@@ -1220,12 +1220,12 @@
     <message>
         <location filename="../engine.cpp" line="218"/>
         <source>SD card</source>
-        <translation type="unfinished">SD-Karte</translation>
+        <translation>SD-Karte</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="220"/>
         <source>Removable Media</source>
-        <translation type="unfinished"></translation>
+        <translation>Wechselmedium</translation>
     </message>
 </context>
 <context>
@@ -1530,7 +1530,7 @@
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="230"/>
         <source>Open system settings</source>
-        <translation type="unfinished"></translation>
+        <translation>System-Einstellungen öffnen</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="240"/>
@@ -1644,7 +1644,7 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="58"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktualisieren</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="22"/>
