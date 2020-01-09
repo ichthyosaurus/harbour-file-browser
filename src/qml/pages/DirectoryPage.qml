@@ -182,11 +182,9 @@ Page {
                 }
             }
             MenuItem {
-                text: qsTr("Open new window")
+                text: qsTr("Copy path to clipboard")
                 onClicked: {
-                    engine.openNewWindow(dir);
-                    notificationPanel.showTextWithTimer(qsTr("New window opened"),
-                        qsTr("Sometimes the application stays in the background"));
+                    Clipboard.text = page.dir;
                 }
             }
         }
