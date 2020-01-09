@@ -75,12 +75,11 @@ QMap<QString, QVariant>& Settings::getRuntimeSettings(QFileInfo file) {
     return m_runtimeSettings[file.absoluteFilePath()];
 }
 
-QVariant Settings::readVariant(const QString &key, const QVariant &defaultValue, const QString &fileName) {
-    QString usedFile = fileName;
-    if (fileName.isEmpty()) usedFile = m_globalConfigPath;
-    QFileInfo fileInfo = QFileInfo(usedFile);
+QVariant Settings::readVariant(QString key, const QVariant &defaultValue, QString fileName) {
+    if (fileName.isEmpty()) fileName = m_globalConfigPath;
+    QFileInfo fileInfo = QFileInfo(fileName);
 
-    if (!fileInfo.exists() || !fileInfo.isReadable() || pathIsProtected(usedFile)) {
+    if (!fileInfo.exists() || !fileInfo.isReadable() || pathIsProtected(fileName)) {
         QMutexLocker locker(&m_mutex);
         if (getRuntimeSettings(fileInfo).contains(key)) {
             return getRuntimeSettings(fileInfo)[key];
@@ -89,8 +88,8 @@ QVariant Settings::readVariant(const QString &key, const QVariant &defaultValue,
         return defaultValue;
     }
 
-    flushRuntimeSettings(usedFile);
-    QSettings settings(usedFile, QSettings::IniFormat);
+    flushRuntimeSettings(fileName);
+    QSettings settings(fileName, QSettings::IniFormat);
     return settings.value(key, defaultValue);
 }
 
@@ -98,29 +97,28 @@ QString Settings::read(QString key, QString defaultValue, QString fileName) {
     return readVariant(key, defaultValue, fileName).toString();
 }
 
-void Settings::writeVariant(const QString &key, const QVariant &value, const QString &fileName) {
-    QString usedFile = fileName;
+void Settings::writeVariant(QString key, const QVariant &value, QString fileName) {
     bool usingLocalConfig = true;
 
     if (fileName.isEmpty()) {
-        usedFile = m_globalConfigPath;
+        fileName = m_globalConfigPath;
         usingLocalConfig = false;
     }
 
-    QFileInfo fileInfo = QFileInfo(usedFile);
+    QFileInfo fileInfo = QFileInfo(fileName);
 
-    if (pathIsProtected(usedFile) || !fileInfo.isWritable()) {
+    if (pathIsProtected(fileName) || !fileInfo.isWritable()) {
         QMutexLocker locker(&m_mutex);
         getRuntimeSettings(fileInfo)[key] = value;
     } else {
-        flushRuntimeSettings(usedFile);
-        QSettings settings(usedFile, QSettings::IniFormat);
+        flushRuntimeSettings(fileName);
+        QSettings settings(fileName, QSettings::IniFormat);
         if (settings.value(key) == value) return;
         settings.setValue(key, value);
     }
 
     emit settingsChanged();
-    if (usedFile != m_globalConfigPath || key.startsWith("View/")) {
+    if (fileName != m_globalConfigPath || key.startsWith("View/")) {
         emit viewSettingsChanged(usingLocalConfig ? fileInfo.dir().absolutePath() : "");
     }
 }

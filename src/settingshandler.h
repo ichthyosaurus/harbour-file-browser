@@ -40,8 +40,8 @@ public:
     Q_INVOKABLE void write(QString key, QString value, QString fileName = QString());
     Q_INVOKABLE void remove(QString key, QString fileName = QString());
 
-    QVariant readVariant(const QString& key, const QVariant& defaultValue = QVariant(), const QString& fileName = QString());
-    void writeVariant(const QString& key, const QVariant& value, const QString& fileName = QString());
+    QVariant readVariant(QString key, const QVariant& defaultValue = QVariant(), QString fileName = QString());
+    void writeVariant(QString key, const QVariant& value, QString fileName = QString());
 
 signals:
     void settingsChanged();
