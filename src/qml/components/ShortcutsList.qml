@@ -28,9 +28,10 @@ SilicaListView {
         id: listItem
         property bool selected: view._selectedIndex.indexOf(index) !== -1
         ListView.onRemove: animateRemoval(listItem) // enable animated list item removals
+        menu: model.contextMenu
 
             width: view.width
-            height: Theme.itemSizeSmall
+            height: Theme.itemSizeSmall + (_menuItem ? _menuItem.height : 0)
 
             onClicked: {
                     if (!_isEditing) itemClicked(index, model.location);
@@ -220,6 +221,18 @@ SilicaListView {
                 model.name = newText;
                 settings.write("Bookmarks/"+model.location, newText);
             }
+    }
+
+    Component {
+        id: contextMenu
+        ContextMenu {
+            MenuItem {
+                text: qsTr("Open system settings");
+                onClicked: {
+                    pageStack.push(Qt.resolvedUrl("/usr/share/jolla-settings/pages/storage/storage.qml"));
+                }
+            }
+        }
     }
 
     ViewPlaceholder {
