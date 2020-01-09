@@ -9,13 +9,18 @@ SilicaListView {
     property bool selectable: false
     property bool multiSelect: false
     property bool allowDeleteBookmarks: true
+    property bool editable: true
     property var initialSelection
     property var sections: ["locations", "android", "external", "bookmarks"]
-    property var _selectedIndex: []
 
     signal itemClicked(var clickedIndex, var path)
     signal itemSelected(var clickedIndex, var path)
     signal itemDeselected(var clickedIndex, var path) // only for multiSelect
+
+    property var _selectedIndex: []
+    property bool _isEditing: false
+    function _editBookmarks() { if (editable) _isEditing = true; }
+    function _finishEditing() { _isEditing = false; }
 
     model: listModel
 
@@ -24,14 +29,12 @@ SilicaListView {
         property bool selected: view._selectedIndex.indexOf(index) !== -1
         ListView.onRemove: animateRemoval(listItem) // enable animated list item removals
 
-        BackgroundItem {
-            id: iconButton
             width: view.width
             height: Theme.itemSizeSmall
-            enabled: !editLabel.visible
 
             onClicked: {
-                view.itemClicked(index, model.location);
+                    if (!_isEditing) itemClicked(index, model.location);
+                    else _finishEditing();
             }
 
             Binding on highlighted {
@@ -42,7 +45,6 @@ SilicaListView {
             Connections {
                 target: view
                 onItemClicked: {
-                    if (editLabel.visible && editLabel.focus) iconButton.endEditing(true);
                     if (!selectable) return;
                     if (index === clickedIndex) { // toggle
                         if (view._selectedIndex.indexOf(index) == -1) { // select
@@ -67,7 +69,7 @@ SilicaListView {
                 id: image
                 width: height
                 source: "image://theme/" + model.thumbnail + "?" + (
-                            iconButton.highlighted ? Theme.highlightColor : Theme.primaryColor)
+                            listItem.highlighted ? Theme.highlightColor : Theme.primaryColor)
                 anchors {
                     left: parent.left
                     top: parent.top
@@ -79,7 +81,7 @@ SilicaListView {
             Label {
                 id: shortcutLabel
                 font.pixelSize: Theme.fontSizeMedium
-                color: iconButton.highlighted ? Theme.highlightColor : Theme.primaryColor
+                color: listItem.highlighted ? Theme.highlightColor : Theme.primaryColor
                 text: model.name
                 truncationMode: TruncationMode.Fade
                 anchors {
@@ -96,8 +98,8 @@ SilicaListView {
                 id: editLabel
                 visible: !shortcutLabel.visible
                 z: infoRow.z-1
-                placeholderText: shortcutLabel.text
-                text: shortcutLabel.text
+                placeholderText: model.name
+                text: model.name
                 labelVisible: false
                 textTopMargin: 0
                 textMargin: 0
@@ -109,10 +111,7 @@ SilicaListView {
                 }
                 width: view.width - x -
                        (deleteBookmarkBtn.visible ? deleteBookmarkBtn.width : Theme.horizontalPageMargin)
-                Connections {
-                    target: editLabel._editor
-                    onAccepted: iconButton.endEditing(true);
-                }
+                Connections { target: editLabel._editor; onAccepted: _finishEditing(); }
             }
 
             Row {
@@ -133,7 +132,7 @@ SilicaListView {
                     id: sizeInfo
                     visible: model.showsize
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    color: iconButton.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                    color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
                     text: (visible ? "... \u2022 ... \u2022 " : "")
 
                     function updateText() {
@@ -157,7 +156,7 @@ SilicaListView {
                     id: shortcutPath
                     width: parent.width - (sizeInfo.visible ? sizeInfo.width : 0)
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    color: iconButton.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                    color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
                     text: Functions.unicodeArrow() + " " + model.location
                     visible: model.location === model.name ? false : true
                     elide: Text.ElideMiddle
@@ -165,42 +164,8 @@ SilicaListView {
             }
 
             onPressAndHold: {
-                if ((model.bookmark ? true : false) && allowDeleteBookmarks) {
-                    infoRow.visible = false;
-                    shortcutLabel.visible = false;
-                    deleteBookmarkBtn.visible = true;
-                    endEditTimer.start();
-                }
-            }
-
-            function commitBookmarkName() {
-                var oldText = editLabel.placeholderColor;
-                var newText = editLabel.text;
-                if (newText === "" || oldText === newText || model.location === "" || !model.location) return;
-                settings.write("Bookmarks"+model.location, newText);
-                shortcutLabel.text = newText;
-            }
-
-            function endEditing(forceCommit) {
-                if (!editLabel.visible) return;
-                if (editLabel.focus) {
-                    if (!forceCommit) return;
-                    editLabel.readOnly = true;
-                    commitBookmarkName();
-                }
-                deleteBookmarkBtn.visible = false;
-                shortcutLabel.visible = true;
-                infoRow.visible = true;
-                editLabel.readOnly = false;
-            }
-
-            Timer {
-                id: endEditTimer
-                interval: 4000
-                repeat: false
-                onTriggered: {
-                    if (editLabel.focus) { restart(); return; }
-                    iconButton.endEditing();
+                if (model.bookmark ? true : false) {
+                    _editBookmarks();
                 }
             }
 
@@ -208,7 +173,7 @@ SilicaListView {
                 id: deleteBookmarkBtn
                 width: Theme.itemSizeSmall
                 height: Theme.itemSizeSmall
-                icon.source: "image://theme/icon-m-clear"
+                icon.source: "image://theme/icon-m-remove"
                 visible: false; opacity: visible ? 1 : 0
                 Behavior on opacity { NumberAnimation { duration: 100 } }
 
@@ -224,7 +189,37 @@ SilicaListView {
                     Functions.removeBookmark(model.location);
                 }
             }
-        }
+
+            states: [
+                State {
+                    name: "" // default state
+                    PropertyChanges { target: infoRow; visible: true; }
+                    PropertyChanges { target: shortcutLabel; visible: true; }
+                    PropertyChanges { target: deleteBookmarkBtn; visible: false; }
+                    PropertyChanges { target: editLabel; readOnly: true; }
+                },
+                State {
+                    name: "editing"
+                    when: _isEditing && model.bookmark === true;
+                    PropertyChanges { target: infoRow; visible: false; }
+                    PropertyChanges { target: shortcutLabel; visible: false; }
+                    PropertyChanges { target: deleteBookmarkBtn; visible: allowDeleteBookmarks; }
+                    PropertyChanges { target: editLabel; readOnly: false; text: model.name; }
+                }
+            ]
+
+            onStateChanged: {
+                if (state !== "") return;
+                var oldText = model.name;
+                var newText = editLabel.text;
+
+                if (newText === "" || oldText === newText || model.location === "" || !model.location) {
+                    return;
+                }
+
+                model.name = newText;
+                settings.write("Bookmarks/"+model.location, newText);
+            }
     }
 
     ViewPlaceholder {
