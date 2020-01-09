@@ -14,9 +14,14 @@ Page {
         page: page
     }
 
-    SilicaFlickable {
+    ShortcutsList {
+        id: shortcutsView
         anchors.fill: parent
-        VerticalScrollDecorator { }
+        onItemClicked: Functions.goToFolder(path)
+
+        header: PageHeader { title: qsTr("Places") }
+        footer: Spacer { id: footerSpacer }
+        VerticalScrollDecorator { flickable: shortcutsView; }
 
         PullDownMenu {
             MenuItem {
@@ -48,15 +53,10 @@ Page {
             }
         }
 
-        ShortcutsList {
-            id: shortcutsView
-            onItemClicked: Functions.goToFolder(path)
-
-            width: parent.width
-            height: parent.height - 2*Theme.horizontalPageMargin
-
-            header: PageHeader {
-                title: qsTr("Places")
+        PushUpMenu {
+            MenuItem {
+                text: qsTr("Refresh")
+                onClicked: shortcutsView.updateModel();
             }
         }
     }
