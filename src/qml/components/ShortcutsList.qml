@@ -303,8 +303,9 @@ SilicaListView {
                     var name = settings.read("Bookmarks/"+bookmarks[key]);
 
                     if (name === "") {
-                        // console.warn("empty bookmark name for", bookmarks[key]);
+                        console.warn("empty bookmark name for", bookmarks[key], "reset to default value");
                         name = Functions.lastPartOfPath(bookmarks[key]);
+                        settings.write("Bookmarks/"+bookmarks[key], Functions.lastPartOfPath(bookmarks[key]));
                     }
 
                     listModel.append({ "section": qsTr("Bookmarks"),
