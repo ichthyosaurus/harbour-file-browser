@@ -60,13 +60,6 @@ function goToFolder(folder) {
 }
 
 // Bookmark Handling
-// FIXME There seems to happen a race condition when trying to
-// write the name of a new bookmark and reading said name
-// simultaniously. This results in the entire 'Bookmarks/*' block
-// being deleted. Implementing settings caching and synchronous
-// write-out in the engine would probably fix this.
-// Currently we simply ignore empty bookmark names and silently replace
-// them with the bookmarked directory's name.
 function addBookmark(path) {
     if (!path) return;
     var bookmarks = getBookmarks();
