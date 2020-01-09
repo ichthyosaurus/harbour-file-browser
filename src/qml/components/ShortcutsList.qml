@@ -30,197 +30,197 @@ SilicaListView {
         ListView.onRemove: animateRemoval(listItem) // enable animated list item removals
         menu: model.contextMenu
 
-            width: view.width
-            height: Theme.itemSizeSmall + (_menuItem ? _menuItem.height : 0)
+        width: view.width
+        height: Theme.itemSizeSmall + (_menuItem ? _menuItem.height : 0)
+
+        onClicked: {
+                if (!_isEditing) itemClicked(index, model.location);
+                else _finishEditing();
+        }
+
+        Binding on highlighted {
+            when: selected || down
+            value: true
+        }
+
+        Connections {
+            target: view
+            onItemClicked: {
+                if (!selectable) return;
+                if (index === clickedIndex) { // toggle
+                    if (view._selectedIndex.indexOf(index) == -1) { // select
+                        if (multiSelect) view._selectedIndex.push(index);
+                        else view._selectedIndex = [index];
+                        selected = true;
+                        itemSelected(index, model.location);
+                    } else if (multiSelect) { // deselect
+                        view._selectedIndex = view._selectedIndex.filter(function(item) {
+                            return item !== index
+                        })
+                        selected = false;
+                        itemDeselected(index, model.location);
+                    }
+                } else if (!multiSelect) {
+                    selected = false;
+                }
+            }
+        }
+
+        Image {
+            id: image
+            width: height
+            source: "image://theme/" + model.thumbnail + "?" + (
+                        listItem.highlighted ? Theme.highlightColor : Theme.primaryColor)
+            anchors {
+                left: parent.left
+                top: parent.top
+                bottom: parent.bottom
+                margins: Theme.paddingMedium
+            }
+        }
+
+        Label {
+            id: shortcutLabel
+            font.pixelSize: Theme.fontSizeMedium
+            color: listItem.highlighted ? Theme.highlightColor : Theme.primaryColor
+            text: model.name
+            truncationMode: TruncationMode.Fade
+            anchors {
+                left: image.right
+                leftMargin: Theme.paddingMedium
+                top: parent.top
+                topMargin: model.location === model.name ? (parent.height / 2) - (height / 2) : 5
+            }
+            width: view.width - x -
+                   (deleteBookmarkBtn.visible ? deleteBookmarkBtn.width : Theme.horizontalPageMargin)
+        }
+
+        TextField {
+            id: editLabel
+            visible: !shortcutLabel.visible
+            z: infoRow.z-1
+            placeholderText: model.name
+            text: model.name
+            labelVisible: false
+            textTopMargin: 0
+            textMargin: 0
+            anchors {
+                left: image.right
+                leftMargin: Theme.paddingMedium
+                top: parent.top
+                topMargin: model.location === model.name ? (parent.height / 2) - (height / 2) : 5
+            }
+            width: view.width - x -
+                   (deleteBookmarkBtn.visible ? deleteBookmarkBtn.width : Theme.horizontalPageMargin)
+            Connections { target: editLabel._editor; onAccepted: _finishEditing(); }
+        }
+
+        Row {
+            id: infoRow
+            spacing: 0
+            anchors {
+                left: image.right
+                leftMargin: Theme.paddingMedium
+                top: shortcutLabel.bottom
+                topMargin: 2
+                right: shortcutLabel.right
+            }
+
+            visible: true; opacity: visible ? 1 : 0
+            Behavior on opacity { NumberAnimation { duration: 100 } }
+
+            Text {
+                id: sizeInfo
+                visible: model.showsize
+                font.pixelSize: Theme.fontSizeExtraSmall
+                color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                text: (visible ? "... \u2022 ... \u2022 " : "")
+
+                function updateText() {
+                    if (visible) {
+                        var space = engine.diskSpace(model.location);
+                        text = (space.length > 0 ? space[0] + " \u2022 " + space[1] + " \u2022 " : "");
+                    } else {
+                        text = "";
+                    }
+                }
+
+                Component.onCompleted: {
+                    updateText();
+                }
+                onVisibleChanged: {
+                    updateText();
+                }
+            }
+
+            Text {
+                id: shortcutPath
+                width: parent.width - (sizeInfo.visible ? sizeInfo.width : 0)
+                font.pixelSize: Theme.fontSizeExtraSmall
+                color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                text: Functions.unicodeArrow() + " " + model.location
+                visible: model.location === model.name ? false : true
+                elide: Text.ElideMiddle
+            }
+        }
+
+        onPressAndHold: {
+            if (model.bookmark ? true : false) {
+                _editBookmarks();
+            }
+        }
+
+        IconButton {
+            id: deleteBookmarkBtn
+            width: Theme.itemSizeSmall
+            height: Theme.itemSizeSmall
+            icon.source: "image://theme/icon-m-remove"
+            visible: false; opacity: visible ? 1 : 0
+            Behavior on opacity { NumberAnimation { duration: 100 } }
+
+            anchors {
+                top: parent.top
+                right: parent.right
+                rightMargin: Theme.paddingSmall
+                leftMargin: Theme.paddingSmall
+            }
 
             onClicked: {
-                    if (!_isEditing) itemClicked(index, model.location);
-                    else _finishEditing();
+                if (!model.bookmark || !model.location) return;
+                Functions.removeBookmark(model.location);
+            }
+        }
+
+        states: [
+            State {
+                name: "" // default state
+                PropertyChanges { target: infoRow; visible: true; }
+                PropertyChanges { target: shortcutLabel; visible: true; }
+                PropertyChanges { target: deleteBookmarkBtn; visible: false; }
+                PropertyChanges { target: editLabel; readOnly: true; }
+            },
+            State {
+                name: "editing"
+                when: _isEditing && model.bookmark === true;
+                PropertyChanges { target: infoRow; visible: false; }
+                PropertyChanges { target: shortcutLabel; visible: false; }
+                PropertyChanges { target: deleteBookmarkBtn; visible: allowDeleteBookmarks; }
+                PropertyChanges { target: editLabel; readOnly: false; text: model.name; }
+            }
+        ]
+
+        onStateChanged: {
+            if (state !== "") return;
+            var oldText = model.name;
+            var newText = editLabel.text;
+
+            if (newText === "" || oldText === newText || model.location === "" || !model.location) {
+                return;
             }
 
-            Binding on highlighted {
-                when: selected || down
-                value: true
-            }
-
-            Connections {
-                target: view
-                onItemClicked: {
-                    if (!selectable) return;
-                    if (index === clickedIndex) { // toggle
-                        if (view._selectedIndex.indexOf(index) == -1) { // select
-                            if (multiSelect) view._selectedIndex.push(index);
-                            else view._selectedIndex = [index];
-                            selected = true;
-                            itemSelected(index, model.location);
-                        } else if (multiSelect) { // deselect
-                            view._selectedIndex = view._selectedIndex.filter(function(item) {
-                                return item !== index
-                            })
-                            selected = false;
-                            itemDeselected(index, model.location);
-                        }
-                    } else if (!multiSelect) {
-                        selected = false;
-                    }
-                }
-            }
-
-            Image {
-                id: image
-                width: height
-                source: "image://theme/" + model.thumbnail + "?" + (
-                            listItem.highlighted ? Theme.highlightColor : Theme.primaryColor)
-                anchors {
-                    left: parent.left
-                    top: parent.top
-                    bottom: parent.bottom
-                    margins: Theme.paddingMedium
-                }
-            }
-
-            Label {
-                id: shortcutLabel
-                font.pixelSize: Theme.fontSizeMedium
-                color: listItem.highlighted ? Theme.highlightColor : Theme.primaryColor
-                text: model.name
-                truncationMode: TruncationMode.Fade
-                anchors {
-                    left: image.right
-                    leftMargin: Theme.paddingMedium
-                    top: parent.top
-                    topMargin: model.location === model.name ? (parent.height / 2) - (height / 2) : 5
-                }
-                width: view.width - x -
-                       (deleteBookmarkBtn.visible ? deleteBookmarkBtn.width : Theme.horizontalPageMargin)
-            }
-
-            TextField {
-                id: editLabel
-                visible: !shortcutLabel.visible
-                z: infoRow.z-1
-                placeholderText: model.name
-                text: model.name
-                labelVisible: false
-                textTopMargin: 0
-                textMargin: 0
-                anchors {
-                    left: image.right
-                    leftMargin: Theme.paddingMedium
-                    top: parent.top
-                    topMargin: model.location === model.name ? (parent.height / 2) - (height / 2) : 5
-                }
-                width: view.width - x -
-                       (deleteBookmarkBtn.visible ? deleteBookmarkBtn.width : Theme.horizontalPageMargin)
-                Connections { target: editLabel._editor; onAccepted: _finishEditing(); }
-            }
-
-            Row {
-                id: infoRow
-                spacing: 0
-                anchors {
-                    left: image.right
-                    leftMargin: Theme.paddingMedium
-                    top: shortcutLabel.bottom
-                    topMargin: 2
-                    right: shortcutLabel.right
-                }
-
-                visible: true; opacity: visible ? 1 : 0
-                Behavior on opacity { NumberAnimation { duration: 100 } }
-
-                Text {
-                    id: sizeInfo
-                    visible: model.showsize
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                    color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                    text: (visible ? "... \u2022 ... \u2022 " : "")
-
-                    function updateText() {
-                        if (visible) {
-                            var space = engine.diskSpace(model.location);
-                            text = (space.length > 0 ? space[0] + " \u2022 " + space[1] + " \u2022 " : "");
-                        } else {
-                            text = "";
-                        }
-                    }
-
-                    Component.onCompleted: {
-                        updateText();
-                    }
-                    onVisibleChanged: {
-                        updateText();
-                    }
-                }
-
-                Text {
-                    id: shortcutPath
-                    width: parent.width - (sizeInfo.visible ? sizeInfo.width : 0)
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                    color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                    text: Functions.unicodeArrow() + " " + model.location
-                    visible: model.location === model.name ? false : true
-                    elide: Text.ElideMiddle
-                }
-            }
-
-            onPressAndHold: {
-                if (model.bookmark ? true : false) {
-                    _editBookmarks();
-                }
-            }
-
-            IconButton {
-                id: deleteBookmarkBtn
-                width: Theme.itemSizeSmall
-                height: Theme.itemSizeSmall
-                icon.source: "image://theme/icon-m-remove"
-                visible: false; opacity: visible ? 1 : 0
-                Behavior on opacity { NumberAnimation { duration: 100 } }
-
-                anchors {
-                    top: parent.top
-                    right: parent.right
-                    rightMargin: Theme.paddingSmall
-                    leftMargin: Theme.paddingSmall
-                }
-
-                onClicked: {
-                    if (!model.bookmark || !model.location) return;
-                    Functions.removeBookmark(model.location);
-                }
-            }
-
-            states: [
-                State {
-                    name: "" // default state
-                    PropertyChanges { target: infoRow; visible: true; }
-                    PropertyChanges { target: shortcutLabel; visible: true; }
-                    PropertyChanges { target: deleteBookmarkBtn; visible: false; }
-                    PropertyChanges { target: editLabel; readOnly: true; }
-                },
-                State {
-                    name: "editing"
-                    when: _isEditing && model.bookmark === true;
-                    PropertyChanges { target: infoRow; visible: false; }
-                    PropertyChanges { target: shortcutLabel; visible: false; }
-                    PropertyChanges { target: deleteBookmarkBtn; visible: allowDeleteBookmarks; }
-                    PropertyChanges { target: editLabel; readOnly: false; text: model.name; }
-                }
-            ]
-
-            onStateChanged: {
-                if (state !== "") return;
-                var oldText = model.name;
-                var newText = editLabel.text;
-
-                if (newText === "" || oldText === newText || model.location === "" || !model.location) {
-                    return;
-                }
-
-                model.name = newText;
-                settings.write("Bookmarks/"+model.location, newText);
-            }
+            model.name = newText;
+            settings.write("Bookmarks/"+model.location, newText);
+        }
     }
 
     Component {
