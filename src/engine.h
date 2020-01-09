@@ -47,8 +47,8 @@ public:
 
     // file paths
     Q_INVOKABLE QString homeFolder() const;
-    Q_INVOKABLE QString sdcardPath() const;
     Q_INVOKABLE QString androidSdcardPath() const;
+    Q_INVOKABLE QVariantList externalDrives() const;
 
     // synchronous methods
     Q_INVOKABLE bool runningAsRoot();
@@ -79,7 +79,7 @@ private slots:
     void setProgress(int progress, QString filename);
 
 private:
-    QStringList mountPoints() const;
+    QMap<QString, QString> mountPoints() const;
     QString createHexDump(char *buffer, int size, int bytesPerLine);
     QStringList makeStringList(QString msg, QString str = QString());
 

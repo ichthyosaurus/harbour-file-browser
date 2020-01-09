@@ -285,15 +285,17 @@ SilicaListView {
                                    "thumbnail": "icon-m-file-apk",
                                    "location": StandardPaths.home + "/android_storage" })
             } else if (s === "external") {
-                if (engine.sdcardPath() !== "") {
-                    listModel.append({ "section": qsTr("Storage devices"),
-                                       "name": qsTr("SD card"),
-                                       "thumbnail": "icon-m-sd-card",
-                                       "location": engine.sdcardPath(),
-                                       "showsize": true })
-                }
+                var drives = engine.externalDrives();
 
-                // TODO support external drives via USB OTG
+                for (var d in drives) {
+                    console.log("->", drives[d].path, drives[d].title);
+                    listModel.append({ "section": qsTr("Storage devices"),
+                                       "name": drives[d].title,
+                                       "thumbnail": drives[d].title === qsTr("SD card") ? "icon-m-sd-card" : "icon-m-usb",
+                                       "location": drives[d].path,
+                                       "showsize": true,
+                                       "contextMenu": contextMenu })
+                }
             } else if (s === "bookmarks") {
                 // Add bookmarks if there are any
                 var bookmarks = Functions.getBookmarks();
