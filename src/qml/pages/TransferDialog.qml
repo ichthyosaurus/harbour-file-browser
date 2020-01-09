@@ -31,6 +31,7 @@ Dialog {
             width: flickable.width
             height: flickable.height - 2*Theme.horizontalPageMargin
             sections: ["bookmarks", "locations", "android", "external"]
+            editable: false
             selectable: true
             multiSelect: true
             onItemSelected: dialog.updateStatus();
