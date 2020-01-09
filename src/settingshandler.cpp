@@ -76,6 +76,7 @@ QMap<QString, QVariant>& Settings::getRuntimeSettings(QFileInfo file) {
 }
 
 QVariant Settings::readVariant(QString key, const QVariant &defaultValue, QString fileName) {
+    sanitizeKey(key);
     if (fileName.isEmpty()) fileName = m_globalConfigPath;
     QFileInfo fileInfo = QFileInfo(fileName);
 
@@ -98,6 +99,7 @@ QString Settings::read(QString key, QString defaultValue, QString fileName) {
 }
 
 void Settings::writeVariant(QString key, const QVariant &value, QString fileName) {
+    sanitizeKey(key);
     bool usingLocalConfig = true;
 
     if (fileName.isEmpty()) {
@@ -123,11 +125,24 @@ void Settings::writeVariant(QString key, const QVariant &value, QString fileName
     }
 }
 
+void Settings::sanitizeKey(QString& key) {
+    // Replace all but the first occurrence of '/' by '#',
+    // so '/' can appear without being treated as divider for sub-groups.
+    // This is needed for saving paths as keys (eg. for bookmarks).
+
+    if (key.indexOf('/') == -1) return;
+    int pos = key.indexOf('/');
+    key.replace(pos, 1, '&');
+    key.replace('/', '#');
+    key.replace(pos, 1, '/');
+}
+
 void Settings::write(QString key, QString value, QString fileName) {
     writeVariant(key, value, fileName);
 }
 
 void Settings::remove(QString key, QString fileName) {
+    sanitizeKey(key);
     bool usingLocalConfig = true;
     if (fileName.isEmpty()) {
         fileName = m_globalConfigPath;

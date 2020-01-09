@@ -48,6 +48,7 @@ signals:
     void viewSettingsChanged(QString localPath);
 
 private:
+    void sanitizeKey(QString& key);
     void flushRuntimeSettings(QString fileName);
     bool hasRuntimeSettings(QFileInfo file);
     QMap<QString, QVariant>& getRuntimeSettings(QFileInfo file);

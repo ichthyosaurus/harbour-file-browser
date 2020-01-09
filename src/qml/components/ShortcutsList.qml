@@ -300,7 +300,7 @@ SilicaListView {
 
                 for (var key in bookmarks) {
                     if (bookmarks[key] === "") continue;
-                    var name = settings.read("Bookmarks"+bookmarks[key]);
+                    var name = settings.read("Bookmarks/"+bookmarks[key]);
 
                     if (name === "") {
                         // console.warn("empty bookmark name for", bookmarks[key]);
