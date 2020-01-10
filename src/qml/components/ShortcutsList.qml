@@ -114,13 +114,25 @@ SilicaListView {
                 top: parent.top
                 topMargin: model.location === model.name ? (parent.height / 2) - (height / 2) : 5
             }
+
+            // waiting for deleteBookmarkBtn.opacity === 1.0, ie. waiting for the
+            // transition to finish, makes sure we don't see graphical glitches
+            // when changing from/to edit mode
             width: view.width - x -
-                   (deleteBookmarkBtn.visible ? deleteBookmarkBtn.width : Theme.horizontalPageMargin)
+                   (deleteBookmarkBtn.opacity === 1.0 ? deleteBookmarkBtn.width : Theme.horizontalPageMargin)
+
+            property bool shown: true
+            opacity: shown ? 1.0 : 0.0; visible: opacity != 0.0
+            Behavior on opacity { NumberAnimation { duration: 100 } }
         }
 
         TextField {
             id: editLabel
-            visible: !shortcutLabel.visible
+
+            property bool shown: !shortcutLabel.shown
+            opacity: shown ? 1.0 : 0.0; visible: opacity != 0.0
+            Behavior on opacity { NumberAnimation { duration: 100 } }
+
             z: infoRow.z-1
             placeholderText: model.name
             text: model.name
@@ -149,7 +161,8 @@ SilicaListView {
                 right: shortcutLabel.right
             }
 
-            visible: true; opacity: visible ? 1 : 0
+            property bool shown: true
+            opacity: shown ? 1.0 : 0.0; visible: opacity != 0.0
             Behavior on opacity { NumberAnimation { duration: 100 } }
 
             Text {
@@ -198,7 +211,9 @@ SilicaListView {
             width: Theme.itemSizeSmall
             height: Theme.itemSizeSmall
             icon.source: "image://theme/icon-m-remove"
-            visible: false; opacity: visible ? 1 : 0
+
+            property bool shown: false
+            opacity: shown ? 1.0 : 0.0; visible: opacity != 0.0
             Behavior on opacity { NumberAnimation { duration: 100 } }
 
             anchors {
@@ -217,17 +232,17 @@ SilicaListView {
         states: [
             State {
                 name: "" // default state
-                PropertyChanges { target: infoRow; visible: true; }
-                PropertyChanges { target: shortcutLabel; visible: true; }
-                PropertyChanges { target: deleteBookmarkBtn; visible: false; }
+                PropertyChanges { target: infoRow; shown: true; }
+                PropertyChanges { target: shortcutLabel; shown: true; }
+                PropertyChanges { target: deleteBookmarkBtn; shown: false; }
                 PropertyChanges { target: editLabel; readOnly: true; }
             },
             State {
                 name: "editing"
                 when: _isEditing && model.bookmark === true;
-                PropertyChanges { target: infoRow; visible: false; }
-                PropertyChanges { target: shortcutLabel; visible: false; }
-                PropertyChanges { target: deleteBookmarkBtn; visible: allowDeleteBookmarks; }
+                PropertyChanges { target: infoRow; shown: false; }
+                PropertyChanges { target: shortcutLabel; shown: false; }
+                PropertyChanges { target: deleteBookmarkBtn; shown: allowDeleteBookmarks; }
                 PropertyChanges { target: editLabel; readOnly: false; text: model.name; }
             }
         ]
