@@ -12,10 +12,19 @@ ListItem {
     highlighted: down || isSelected || selectionArea.pressed
     property alias listLabelWidth: listLabel.width // see https://doc.qt.io/qt-5/qtquick-performance.html
 
+    AnimatedImage {
+        id: gallery
+        visible: false; height: 0
+        source: "" // access the source only if image is visible
+        anchors { top: parent.top; left: parent.left }
+        fillMode: Image.PreserveAspectFit
+        asynchronous: true
+    }
+
     Item {
         anchors {
             left: parent.left; right: parent.right
-            top: parent.top; bottom: parent.bottom
+            top: gallery.bottom; bottom: parent.bottom
         }
 
         FileIcon {
@@ -158,6 +167,9 @@ ListItem {
         if (model.isDir) {
             pageStack.push(Qt.resolvedUrl("../pages/DirectoryPage.qml"),
                            { dir: fileModel.appendPath(listLabel.text) });
+        } else if (state === "galleryAvailable") {
+            pageStack.push(Qt.resolvedUrl("../pages/ViewImagePage.qml"),
+                           { path: fileModel.appendPath(listLabel.text), title: filename });
         } else {
             pageStack.push(Qt.resolvedUrl("../pages/FilePage.qml"),
                            { file: fileModel.appendPath(listLabel.text) });
@@ -174,6 +186,29 @@ ListItem {
                 height: 0
                 contentHeight: 0
             }
+        },
+        State {
+            name: "galleryAvailable"
+            when: viewState === "gallery" && fileIcon === "file-image"
+            PropertyChanges {
+                target: gallery
+                visible: true
+                source: dir+"/"+filename
+                height: Theme.paddingMedium + sourceSize.height * (parent.width / sourceSize.width)
+                width: parent.width
+            }
+            PropertyChanges {
+                target: fileItem
+                contentHeight: Theme.itemSizeMedium + gallery.height
+            }
+            PropertyChanges { target: listIcon; showThumbnail: false; width: Theme.iconSizeSmall }
+            AnchorChanges { target: listIcon; anchors.verticalCenter: listLabel.verticalCenter }
+            AnchorChanges { target: selectionArea; anchors.right: parent.right }
+        },
+        State {
+            name: "galleryUnavailable"; extend: "hidden"
+            // hide everything except directories, images, and videos
+            when: viewState === "gallery" && fileIcon !== "file-image" && fileIcon !== "file-video" && !isDir
         },
         State {
             name: "previewBaseState"

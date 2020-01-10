@@ -410,12 +410,16 @@ Page {
 
     function updateThumbnailsState() {
         var showThumbs = settings.read("View/PreviewsShown", "false");
+        var galleryActive = settings.read("View/EnableGalleryMode", "false");
 
         if (settings.read("View/UseLocalSettings", "false") === "true") {
             showThumbs = settings.read("Dolphin/PreviewsShown", showThumbs, dir+"/.directory");
+            galleryActive = settings.read("Sailfish/EnableGalleryMode", galleryActive, dir+"/.directory");
         }
 
-        if (showThumbs === "true") {
+        if (galleryActive === "true") {
+            viewState = "gallery";
+        } else if (showThumbs === "true") {
             viewState = "preview/" + settings.read("View/PreviewsSize", "medium");
         } else {
             viewState = "";

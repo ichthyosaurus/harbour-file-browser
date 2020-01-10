@@ -99,6 +99,13 @@ Page {
                 onCheckedChanged: saveSetting("View/HiddenFilesShown", "Settings/HiddenFilesShown", "true", "false", showHiddenFiles.checked.toString())
             }
             TextSwitch {
+                id: enableGallery
+                text: qsTr("Enable gallery mode")
+                description: qsTr("In gallery mode, images will be shown comfortably large, "
+                    + "and all entries except for images, videos, and directories will be hidden.")
+                onCheckedChanged: saveSetting("View/EnableGalleryMode", "Sailfish/EnableGalleryMode", "true", "false", enableGallery.checked.toString())
+            }
+            TextSwitch {
                 id: showDirsFirst
                 text: qsTr("Show folders first")
                 onCheckedChanged: saveSetting("View/ShowDirectoriesFirst", "Sailfish/ShowDirectoriesFirst", "true", "false", showDirsFirst.checked.toString())
@@ -137,17 +144,20 @@ Page {
         }
 
         var dirsFirst = settings.read("View/ShowDirectoriesFirst", "true");
+        var withGallery = settings.read("View/EnableGalleryMode", "false");
         var caseSensitive = settings.read("View/SortCaseSensitively", "false");
         var showHidden = settings.read("View/HiddenFilesShown", "false");
         var showThumbs = settings.read("View/PreviewsShown", "false");
 
         if (useLocal) {
             showDirsFirst.checked = (settings.read("Sailfish/ShowDirectoriesFirst", dirsFirst, conf) === "true");
+            enableGallery.checked = (settings.read("Sailfish/EnableGalleryMode", withGallery, conf) === "true");
             sortCaseSensitive.checked = (settings.read("Sailfish/SortCaseSensitively", caseSensitive, conf) === "true");
             showHiddenFiles.checked = (settings.read("Settings/HiddenFilesShown", showHidden, conf) === "true");
             showThumbs = settings.read("Dolphin/PreviewsShown", showThumbs, conf);
         } else {
             showDirsFirst.checked = (dirsFirst === "true");
+            enableGallery.checked = (withGallery === "true");
             sortCaseSensitive.checked = (caseSensitive === "true");
             showHiddenFiles.checked = (showHidden === "true");
         }

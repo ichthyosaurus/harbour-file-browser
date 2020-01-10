@@ -30,6 +30,7 @@ Page {
                     property alias showHiddenFiles: v2.checked
                     property alias showThumbnails: v3.checked
                     property alias thumbSize: v4.currentIndex
+                    property alias enableGallery: v5.checked
                     TextSwitch {
                         id: v1; text: qsTr("Use per-directory view settings")
                         onCheckedChanged: settings.write("View/UseLocalSettings", checked.toString())
@@ -53,6 +54,12 @@ Page {
                             MenuItem { text: qsTr("huge"); property string action: "huge"; }
                         }
                         onValueChanged: settings.write("View/PreviewsSize", currentItem.action);
+                    }
+                    TextSwitch {
+                        id: v5; text: qsTr("Enable gallery mode")
+                        description: qsTr("In gallery mode, images will be shown comfortably large, "
+                            + "and all entries except for images, videos, and directories will be hidden.")
+                        onCheckedChanged: settings.write("View/EnableGalleryMode", checked.toString())
                     }
                 }
             }
@@ -210,6 +217,7 @@ Page {
             viewGroup.contentItem.showHiddenFiles = (settings.read("View/HiddenFilesShown", "false") === "true");
             viewGroup.contentItem.showThumbnails = (settings.read("View/PreviewsShown", "false") === "true");
             viewGroup.contentItem.useLocalSettings = (settings.read("View/UseLocalSettings", "true") === "true");
+            viewGroup.contentItem.enableGallery = (settings.read("View/EnableGalleryMode", "false") === "true");
             behaviourGroup.contentItem.showFullPaths = (settings.read("General/ShowFullDirectoryPaths", "false") === "true");
 
             var defTransfer = settings.read("Transfer/DefaultAction", "none");
