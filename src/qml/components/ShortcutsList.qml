@@ -301,7 +301,6 @@ SilicaListView {
                 var drives = engine.externalDrives();
 
                 for (var d in drives) {
-                    console.log("->", drives[d].path, drives[d].title);
                     listModel.append({ "section": qsTr("Storage devices"),
                                        "name": drives[d].title,
                                        "thumbnail": drives[d].title === qsTr("SD card") ? "icon-m-sd-card" : "icon-m-usb",
