@@ -33,6 +33,7 @@ SilicaListView {
         width: view.width
         height: Theme.itemSizeSmall + (_menuItem ? _menuItem.height : 0)
 
+        enabled: !_isEditing || !model.bookmark
         onClicked: {
                 if (!_isEditing) itemClicked(index, model.location);
                 else _finishEditing();
