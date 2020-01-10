@@ -66,16 +66,38 @@ SilicaListView {
             }
         }
 
-        Image {
-            id: image
+        Item {
+            id: icon
             width: height
-            source: "image://theme/" + model.thumbnail + "?" + (
-                        listItem.highlighted ? Theme.highlightColor : Theme.primaryColor)
             anchors {
                 left: parent.left
                 top: parent.top
                 bottom: parent.bottom
                 margins: Theme.paddingMedium
+            }
+
+            Image {
+                anchors.fill: parent
+                source: "image://theme/" + model.thumbnail + "?" + (
+                            listItem.highlighted ? Theme.highlightColor : Theme.primaryColor)
+
+                property bool shown: !_isEditing || !model.bookmark
+                opacity: shown ? 1.0 : 0.0; visible: opacity != 0.0
+                Behavior on opacity { NumberAnimation { duration: 100 } }
+            }
+
+            IconButton {
+                anchors.fill: parent
+                icon.source: "image://theme/icon-m-up"
+
+                property bool shown: _isEditing && model.bookmark
+                opacity: shown ? 1.0 : 0.0; visible: opacity != 0.0
+                Behavior on opacity { NumberAnimation { duration: 100 } }
+
+                onClicked: {
+                    if (!model.bookmark || !model.location) return;
+                    Functions.moveBookmark(model.location);
+                }
             }
         }
 
@@ -86,7 +108,7 @@ SilicaListView {
             text: model.name
             truncationMode: TruncationMode.Fade
             anchors {
-                left: image.right
+                left: icon.right
                 leftMargin: Theme.paddingMedium
                 top: parent.top
                 topMargin: model.location === model.name ? (parent.height / 2) - (height / 2) : 5
@@ -105,7 +127,7 @@ SilicaListView {
             textTopMargin: 0
             textMargin: 0
             anchors {
-                left: image.right
+                left: icon.right
                 leftMargin: Theme.paddingMedium
                 top: parent.top
                 topMargin: model.location === model.name ? (parent.height / 2) - (height / 2) : 5
@@ -119,7 +141,7 @@ SilicaListView {
             id: infoRow
             spacing: 0
             anchors {
-                left: image.right
+                left: icon.right
                 leftMargin: Theme.paddingMedium
                 top: shortcutLabel.bottom
                 topMargin: 2
@@ -342,6 +364,24 @@ SilicaListView {
                 if (listModel.get(i).bookmark === true && listModel.get(i).location === path) {
                     listModel.remove(i);
                 }
+            }
+        }
+        onBookmarkMoved: {
+            var topMostBookmark = undefined;
+            var index = undefined;
+            for (var i = 0; i < listModel.count; i++) {
+                if (listModel.get(i).bookmark !== true) continue;
+                if (topMostBookmark === undefined) topMostBookmark = i;
+                if (listModel.get(i).location === path) {
+                    index = i;
+                    break;
+                }
+            }
+
+            if (index === undefined) {
+                console.warn("failed to move bookmark: no index found", path);
+            } else {
+                listModel.move(index, index-1 < topMostBookmark ? listModel.count-1 : index-1, 1);
             }
         }
     }
