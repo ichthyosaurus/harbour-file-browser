@@ -11,7 +11,7 @@ SilicaListView {
     property bool allowDeleteBookmarks: true
     property bool editable: true
     property var initialSelection
-    property var sections: ["locations", "android", "external", "bookmarks"]
+    property var sections: ["locations", "external", "bookmarks"]
 
     signal itemClicked(var clickedIndex, var path)
     signal itemSelected(var clickedIndex, var path)
@@ -326,15 +326,14 @@ SilicaListView {
                                    "thumbnail": "icon-m-file-video",
                                    "location": StandardPaths.videos })
                 listModel.append({ "section": qsTr("Locations"),
+                                   "name": qsTr("Android storage"),
+                                   "thumbnail": "icon-m-file-apk",
+                                   "location": StandardPaths.home + "/android_storage" })
+                listModel.append({ "section": qsTr("Locations"),
                                    "name": qsTr("Root"),
                                    "thumbnail": "icon-m-file-rpm",
                                    "location": "/",
                                    "showsize": true })
-            } else if (s === "android") {
-                listModel.append({ "section": qsTr("Android locations"),
-                                   "name": qsTr("Android storage"),
-                                   "thumbnail": "icon-m-file-apk",
-                                   "location": StandardPaths.home + "/android_storage" })
             } else if (s === "external") {
                 var drives = engine.externalDrives();
 
