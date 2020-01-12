@@ -214,23 +214,23 @@
 <context>
     <name>DirectoryPageEntry</name>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="93"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="129"/>
         <source>(link)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="265"/>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="267"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="314"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="316"/>
         <source>Deleting</source>
         <translation type="unfinished">Poistetaan</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="286"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="335"/>
         <source>Remove bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="286"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="335"/>
         <source>Add to bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
@@ -604,43 +604,43 @@
         <translation>Mene linkin kohteeseen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="236"/>
-        <location filename="../qml/pages/FilePage.qml" line="239"/>
+        <location filename="../qml/pages/FilePage.qml" line="238"/>
+        <location filename="../qml/pages/FilePage.qml" line="241"/>
         <source>Deleting</source>
         <translation type="unfinished">Poistetaan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="267"/>
+        <location filename="../qml/pages/FilePage.qml" line="269"/>
         <source>Location</source>
         <translation>Sijainti</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="271"/>
+        <location filename="../qml/pages/FilePage.qml" line="273"/>
         <source>Type</source>
         <translation>Tyyppi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="273"/>
+        <location filename="../qml/pages/FilePage.qml" line="275"/>
         <source>Link to %1</source>
         <translation>Linkki kohteeseen %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="280"/>
+        <location filename="../qml/pages/FilePage.qml" line="282"/>
         <source>Permissions</source>
         <translation>Oikeudet</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="284"/>
+        <location filename="../qml/pages/FilePage.qml" line="286"/>
         <source>Owner</source>
         <translation>Omistaja</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="288"/>
+        <location filename="../qml/pages/FilePage.qml" line="290"/>
         <source>Group</source>
         <translation>Ryhmä</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="292"/>
+        <location filename="../qml/pages/FilePage.qml" line="294"/>
         <source>Last modified</source>
         <translation>Viimeksi muokattu</translation>
     </message>
@@ -1977,12 +1977,12 @@
 <context>
     <name>ViewImagePage</name>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="247"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="212"/>
         <source>Loading image... %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="256"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="221"/>
         <source>Error loading image</source>
         <translation type="unfinished"></translation>
     </message>

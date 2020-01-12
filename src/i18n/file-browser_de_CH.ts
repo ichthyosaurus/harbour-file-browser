@@ -214,23 +214,23 @@
 <context>
     <name>DirectoryPageEntry</name>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="93"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="129"/>
         <source>(link)</source>
         <translation>(Link)</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="265"/>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="267"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="314"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="316"/>
         <source>Deleting</source>
         <translation>Lösche</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="286"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="335"/>
         <source>Remove bookmark</source>
         <translation>Lesezeichen entfernen</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="286"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="335"/>
         <source>Add to bookmarks</source>
         <translation>Lesezeichen hinzufügen</translation>
     </message>
@@ -604,43 +604,43 @@
         <translation>Zu Ziel gehen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="236"/>
-        <location filename="../qml/pages/FilePage.qml" line="239"/>
+        <location filename="../qml/pages/FilePage.qml" line="238"/>
+        <location filename="../qml/pages/FilePage.qml" line="241"/>
         <source>Deleting</source>
         <translation>Lösche</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="267"/>
+        <location filename="../qml/pages/FilePage.qml" line="269"/>
         <source>Location</source>
         <translation>Ort</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="271"/>
+        <location filename="../qml/pages/FilePage.qml" line="273"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="273"/>
+        <location filename="../qml/pages/FilePage.qml" line="275"/>
         <source>Link to %1</source>
         <translation>Link zu %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="280"/>
+        <location filename="../qml/pages/FilePage.qml" line="282"/>
         <source>Permissions</source>
         <translation>Berechtigungen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="284"/>
+        <location filename="../qml/pages/FilePage.qml" line="286"/>
         <source>Owner</source>
         <translation>Besitzer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="288"/>
+        <location filename="../qml/pages/FilePage.qml" line="290"/>
         <source>Group</source>
         <translation>Gruppe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="292"/>
+        <location filename="../qml/pages/FilePage.qml" line="294"/>
         <source>Last modified</source>
         <translation>Zuletzt geändert</translation>
     </message>
@@ -1982,12 +1982,12 @@
 <context>
     <name>ViewImagePage</name>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="247"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="212"/>
         <source>Loading image... %1</source>
         <translation>Bild wird geladen ... %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="256"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="221"/>
         <source>Error loading image</source>
         <translation>Fehler beim Laden des Bildes</translation>
     </message>

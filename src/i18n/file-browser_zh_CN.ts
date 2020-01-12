@@ -213,23 +213,23 @@
 <context>
     <name>DirectoryPageEntry</name>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="93"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="129"/>
         <source>(link)</source>
         <translation>(链接)</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="265"/>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="267"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="314"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="316"/>
         <source>Deleting</source>
         <translation>删除中</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="286"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="335"/>
         <source>Remove bookmark</source>
         <translation>移除收藏</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="286"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="335"/>
         <source>Add to bookmarks</source>
         <translation>添加到收藏</translation>
     </message>
@@ -592,43 +592,43 @@
         <translation>跳转到目标</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="236"/>
-        <location filename="../qml/pages/FilePage.qml" line="239"/>
+        <location filename="../qml/pages/FilePage.qml" line="238"/>
+        <location filename="../qml/pages/FilePage.qml" line="241"/>
         <source>Deleting</source>
         <translation>删除中</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="267"/>
+        <location filename="../qml/pages/FilePage.qml" line="269"/>
         <source>Location</source>
         <translation>位置</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="271"/>
+        <location filename="../qml/pages/FilePage.qml" line="273"/>
         <source>Type</source>
         <translation>类型</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="273"/>
+        <location filename="../qml/pages/FilePage.qml" line="275"/>
         <source>Link to %1</source>
         <translation>链接到 %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="280"/>
+        <location filename="../qml/pages/FilePage.qml" line="282"/>
         <source>Permissions</source>
         <translation>权限</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="284"/>
+        <location filename="../qml/pages/FilePage.qml" line="286"/>
         <source>Owner</source>
         <translation>所有者</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="288"/>
+        <location filename="../qml/pages/FilePage.qml" line="290"/>
         <source>Group</source>
         <translation>用户组</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="292"/>
+        <location filename="../qml/pages/FilePage.qml" line="294"/>
         <source>Last modified</source>
         <translation>上次修改</translation>
     </message>
@@ -1951,12 +1951,12 @@
 <context>
     <name>ViewImagePage</name>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="247"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="212"/>
         <source>Loading image... %1</source>
         <translation>正在加载图片... %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="256"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="221"/>
         <source>Error loading image</source>
         <translation>加载图片出错</translation>
     </message>
