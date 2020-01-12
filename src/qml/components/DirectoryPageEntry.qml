@@ -42,6 +42,21 @@ ListItem {
         }
     }
 
+    Component {
+        id: galleryVideoComponent
+        Item {
+            height: Theme.itemSizeExtraLarge
+            width: parent.width
+            Image {
+                anchors.centerIn: parent
+                height: Theme.itemSizeLarge
+                source: "image://theme/icon-l-play?" + (fileItem.highlighted
+                    ? Theme.highlightColor : Theme.primaryColor)
+                fillMode: Image.PreserveAspectFit
+            }
+        }
+    }
+
     Item {
         anchors {
             left: parent.left; right: parent.right
@@ -230,11 +245,16 @@ ListItem {
             name: "galleryAvailableStill"; extend: "galleryAvailableBase"
             when: viewState === "gallery" && fileIcon === "file-image"
             PropertyChanges { target: gallery; sourceComponent: galleryStillComponent }
+        },
+        State {
+            name: "galleryAvailableVideo"; extend: "galleryAvailableBase"
+            when: viewState === "gallery" && fileIcon === "file-video"
+            PropertyChanges { target: gallery; sourceComponent: galleryVideoComponent }
+        },
         State {
             name: "galleryUnavailable"; extend: "hidden"
             // hide everything except directories, images, and videos
             when: viewState === "gallery" && fileIcon !== "file-image" && fileIcon !== "file-video" && !isDir
-        },
         },
         State {
             name: "previewBaseState"
