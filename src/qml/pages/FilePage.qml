@@ -154,16 +154,18 @@ Page {
                         id: openArea
                         width: parent.width
 
-                        AnimatedImage { // preview of image, max height 400
+                        Image { // preview of image, max height 400
                             id: imagePreview
                             visible: fileData.category === "image"
-                            source: visible ? fileData.file : "" // access the source only if img is visible
+                            source: visible ? fileData.file : "" // access source only if image is visible
                             anchors.left: parent.left
                             anchors.right: parent.right
+                            sourceSize.width: parent.width
+                            sourceSize.height: 4*Theme.itemSizeHuge
+                            width: parent.width
                             height: implicitHeight < 400 * Theme.pixelRatio && implicitHeight != 0
                                     ? implicitHeight * Theme.pixelRatio
                                     : 400 * Theme.pixelRatio
-                            width: parent.width
                             fillMode: Image.PreserveAspectFit
                             asynchronous: true
                         }
