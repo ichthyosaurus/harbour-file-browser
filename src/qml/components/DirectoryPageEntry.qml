@@ -11,14 +11,35 @@ ListItem {
     ListView.onRemove: animateRemoval(fileItem) // enable animated list item removals
     highlighted: down || isSelected || selectionArea.pressed
     property alias listLabelWidth: listLabel.width // see https://doc.qt.io/qt-5/qtquick-performance.html
+    property bool galleryModeActiveAvailable: false
 
-    AnimatedImage {
+    Loader {
         id: gallery
-        visible: false; height: 0
-        source: "" // access the source only if image is visible
-        anchors { top: parent.top; left: parent.left }
-        fillMode: Image.PreserveAspectFit
-        asynchronous: true
+        sourceComponent: undefined
+        anchors { top: parent.top; left: parent.left; right: parent.right }
+        visible: true; active: true
+    }
+
+    Component {
+        id: galleryStillComponent
+        Image {
+            // 'fillMode: Image.PreserveAspectFit' does not scale up, so we do it manually
+            asynchronous: true
+            source: dir+"/"+filename
+            sourceSize.width: parent.width
+            width: parent.width
+            height: Theme.paddingMedium + width * (implicitHeight / implicitWidth)
+        }
+    }
+
+    Component {
+        id: galleryAnimatedComponent
+        AnimatedImage {
+            asynchronous: true
+            source: dir+"/"+filename
+            width: parent.width
+            height: Theme.paddingMedium + sourceSize.height * (width / sourceSize.width)
+        }
     }
 
     Item {
@@ -167,7 +188,7 @@ ListItem {
         if (model.isDir) {
             pageStack.push(Qt.resolvedUrl("../pages/DirectoryPage.qml"),
                            { dir: fileModel.appendPath(listLabel.text) });
-        } else if (state === "galleryAvailable") {
+        } else if (galleryModeActiveAvailable && fileIcon === "file-image") {
             pageStack.push(Qt.resolvedUrl("../pages/ViewImagePage.qml"),
                            { path: fileModel.appendPath(listLabel.text), title: filename });
         } else {
@@ -188,27 +209,32 @@ ListItem {
             }
         },
         State {
-            name: "galleryAvailable"
-            when: viewState === "gallery" && fileIcon === "file-image"
-            PropertyChanges {
-                target: gallery
-                visible: true
-                source: dir+"/"+filename
-                height: Theme.paddingMedium + sourceSize.height * (parent.width / sourceSize.width)
-                width: parent.width
-            }
+            name: "galleryAvailableBase"
             PropertyChanges {
                 target: fileItem
                 contentHeight: Theme.itemSizeMedium + gallery.height
+                galleryModeActiveAvailable: true
             }
             PropertyChanges { target: listIcon; showThumbnail: false; width: Theme.iconSizeSmall }
             AnchorChanges { target: listIcon; anchors.verticalCenter: listLabel.verticalCenter }
             AnchorChanges { target: selectionArea; anchors.right: parent.right }
         },
         State {
+            name: "galleryAvailableAnimated"; extend: "galleryAvailableBase"
+            when:    viewState === "gallery"
+                  && fileIcon === "file-image"
+                  && String(filename).toLowerCase().match(/\.(gif)$/) !== null
+            PropertyChanges { target: gallery; sourceComponent: galleryAnimatedComponent }
+        },
+        State {
+            name: "galleryAvailableStill"; extend: "galleryAvailableBase"
+            when: viewState === "gallery" && fileIcon === "file-image"
+            PropertyChanges { target: gallery; sourceComponent: galleryStillComponent }
+        State {
             name: "galleryUnavailable"; extend: "hidden"
             // hide everything except directories, images, and videos
             when: viewState === "gallery" && fileIcon !== "file-image" && fileIcon !== "file-video" && !isDir
+        },
         },
         State {
             name: "previewBaseState"
