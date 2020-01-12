@@ -206,6 +206,9 @@ ListItem {
         } else if (galleryModeActiveAvailable && fileIcon === "file-image") {
             pageStack.push(Qt.resolvedUrl("../pages/ViewImagePage.qml"),
                            { path: fileModel.appendPath(listLabel.text), title: filename });
+        } else if (galleryModeActiveAvailable && fileIcon === "file-video") {
+            pageStack.push(Qt.resolvedUrl("../pages/ViewVideoPage.qml"),
+                           { path: fileModel.appendPath(listLabel.text), title: filename, autoPlay: true });
         } else {
             pageStack.push(Qt.resolvedUrl("../pages/FilePage.qml"),
                            { file: fileModel.appendPath(listLabel.text) });
