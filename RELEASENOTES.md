@@ -1,6 +1,56 @@
 
 # File Browser Release Notes
 
+## Version 2.1.0-beta (2020-01-12)
+
+Published in OpenRepos on 2020-01-12.
+
+ * Added file icons for compressed files and for PDF files
+ * Implemented a new "Gallery Mode": images will be shown comfortably large, and
+   all entries except for images, videos, and directories will be hidden
+ * Implemented previewing videos directly
+ *     - Note that this is intentionally kept simple.
+ *       Use an external app for anything other than quickly checking what the file contains.
+ *     - Thumbnail images for videos are not available as they are not supported by the system thumbnailer.
+ * Added support for USB OTG devices
+ *     - Any device mounted below /run/media/nemo will now be shown together with the SD card
+ *     - Added a bottom pulley to the shortcuts page to manually refresh the list of devices
+ *     - External storage settings can now directly be accessed via the context menu (see below)
+ * Improved usability of bookmarks and shortcuts
+ *     - Implemented manually sorting bookmarks
+ *     - Fixed wrong icon for deleting bookmarks
+ *     - Fixed bookmarks when transferring files
+ *     - Moved shortcut to Android storage to the main "Locations" section
+ * Improved settings handling to be more robust
+ *     - Please note that all *customized* bookmark names will be reset *once*
+ *       after installing this update
+ *     - Fixed a bug where bookmark names (not the bookmarks themselves) could get lost
+ *     - Added runtime-caching of settings to handle missing permissions
+ *     - Fixed changing view settings in read-only directories
+ *     - Restricted saving local view settings to /home/nemo/* and /run/media/nemo/*,
+ *       so even if File Browser is run as root, no unwanted files will be written
+ *       anywhere
+ *     - Improved settings handling to be more intuitive when resetting a local
+ *       value to the global default
+ * not Harbour-compliant changes:
+ *     - Added showing PDF files directly from the file page (swipe right)
+ *       using Sailfish Office
+ *     - Added context menu to external devices (bookmark page) to directly
+ *       open system settings
+ * Fixed a typo on the sorting options page
+ * Added option to copy current path to clipboard to the main bottom pulley
+ * Fixed showing path in pulley when adding a bookmark via shortcuts page
+ * Performance improvements in
+ *     - loading directories
+ *     - switching between thumbnail modes
+ *     - previewing large images
+
+For developers:
+
+ * Internal API changes
+ *     - Moved settings from Engine to standalone settings handler
+ *     - Replaced separate method for detecting SD cards by method collecting all mounted devices
+
 ## Version 2.0.1-beta (2019-12-30)
 
 Published in OpenRepos on 2019-12-30.
