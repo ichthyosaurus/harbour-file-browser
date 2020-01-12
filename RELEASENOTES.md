@@ -108,7 +108,7 @@ Published in OpenRepos on 2019-12-12.
  * Updated German translation
  * Polished user interface with improvements here and there
 
-Note to developers: for this beta version, the licensing was changed to the GNU GPLv3+.
+Note to developers: for this beta version (2.0.0 and upwards), the licensing was changed to the GNU GPLv3+.
 
 ## Version 1.8.0 (2019-05-12)
 
