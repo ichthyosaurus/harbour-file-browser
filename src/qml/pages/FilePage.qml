@@ -407,7 +407,7 @@ Page {
                            command: "tar",
                            arguments: [ "tf", fileData.file ] });
         } else if (fileData.category === "image") {
-            method(Qt.resolvedUrl("ViewImagePage.qml"), { path: page.file, title: page.file });
+            method(Qt.resolvedUrl("ViewImagePage.qml"), { path: page.file, title: fileData.name });
         } else if (pdfViewerEnabled && fileData.category === "pdf") {
             method("Sailfish.Office.PDFDocumentPage", {
                 title: fileData.name, source: fileData.file, mimeType: fileData.mimeType
