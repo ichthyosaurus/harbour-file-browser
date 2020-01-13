@@ -95,9 +95,44 @@ void FileData::refresh()
     readInfo();
 }
 
-bool FileData::mimeTypeInherits(QString parentMimeType)
+bool FileData::mimeTypeInherits(QString parentMimeType) const
 {
     return m_mimeType.inherits(parentMimeType);
+}
+
+QString FileData::typeCategory() const
+{
+    if (   m_mimeTypeName == "image/jpeg"
+        || m_mimeTypeName == "image/png"
+        || m_mimeTypeName == "image/gif") {
+        return "image";
+    } else if (
+           m_mimeTypeName == "audio/x-wav"
+        || m_mimeTypeName == "audio/mpeg"
+        || m_mimeTypeName == "audio/x-vorbis+ogg"
+        || m_mimeTypeName == "audio/flac"
+        || m_mimeTypeName == "audio/mp4") {
+        return "audio";
+    } else if (
+           m_mimeTypeName == "video/quicktime"
+        || m_mimeTypeName == "video/mp4") {
+        return "video";
+    } else if (m_mimeTypeName == "application/pdf") {
+        return "pdf";
+    } else if (mimeTypeInherits("application/zip")) {
+        return "zip";
+    } else if (
+           m_mimeTypeName == "application/x-tar"
+        || m_mimeTypeName == "application/x-compressed-tar"
+        || m_mimeTypeName == "application/x-bzip-compressed-tar") {
+        return "tar";
+    } else if (m_mimeTypeName == "application/x-rpm") {
+        return "rpm";
+    } else if (suffix() == "apk" && m_mimeTypeName == "application/vnd.android.package-archive") {
+        return "apk";
+    }
+
+    return "none";
 }
 
 void FileData::readInfo()

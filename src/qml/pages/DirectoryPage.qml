@@ -11,16 +11,15 @@ Page {
     property bool initial: false // this is set to true if the page is initial page
     property bool remorsePopupActive: false // set to true when remorsePopup is active
     property bool remorseItemActive: false // set to true when remorseItem is active (item level)
-    property bool thumbnailsShown: updateThumbnailsState()
-    property int  fileIconSize: Theme.iconSizeSmall
     property alias progressPanel: progressPanel
     property alias notificationPanel: notificationPanel
     property alias hasBookmark: bookmarkEntry.hasBookmark
     property string currentFilter: ""
     // set to true when full dir path should be shown in page header
-    property bool fullPathShown: (engine.readSetting("General/ShowFullDirectoryPaths", "false") === "true")
+    property bool fullPathShown: (settings.read("General/ShowFullDirectoryPaths", "false") === "true")
     // set to true to enable starting deep search when pressing 'Enter' in filter input
-    property bool quickSearchEnabled: (engine.readSetting("General/DefaultFilterAction", "filter") === "search")
+    property bool quickSearchEnabled: (settings.read("General/DefaultFilterAction", "filter") === "search")
+    property string viewState: updateThumbnailsState() // state for list delegates
 
     signal clearViewFilter()
     signal multiSelectionStarted(var index)
@@ -182,11 +181,9 @@ Page {
                 }
             }
             MenuItem {
-                text: qsTr("Open new window")
+                text: qsTr("Copy path to clipboard")
                 onClicked: {
-                    engine.openNewWindow(dir);
-                    notificationPanel.showTextWithTimer(qsTr("New window opened"),
-                        qsTr("Sometimes the application stays in the background"));
+                    Clipboard.text = page.dir;
                 }
             }
         }
@@ -365,10 +362,15 @@ Page {
                 notificationPanel.showText(message, filename);
             }
         }
-        onSettingsChanged: {
+    }
+
+    Connections {
+        target: settings
+        onViewSettingsChanged: {
+            if (localPath !== "" && localPath !== dir) return;
             updateThumbnailsState();
-            page.fullPathShown = (engine.readSetting("General/ShowFullDirectoryPaths", "false") === "true");
-            page.quickSearchEnabled = (engine.readSetting("General/DefaultFilterAction", "filter") === "search");
+            page.fullPathShown = (settings.read("General/ShowFullDirectoryPaths", "false") === "true");
+            page.quickSearchEnabled = (settings.read("General/DefaultFilterAction", "filter") === "search");
         }
     }
 
@@ -407,26 +409,20 @@ Page {
     }
 
     function updateThumbnailsState() {
-        var showThumbs = engine.readSetting("View/PreviewsShown");
-        if (engine.readSetting("View/UseLocalSettings", "false") === "true") {
-            thumbnailsShown = engine.readSetting("Dolphin/PreviewsShown", showThumbs, dir+"/.directory") === "true";
-        } else {
-            thumbnailsShown = showThumbs === "true";
+        var showThumbs = settings.read("View/PreviewsShown", "false");
+        var galleryActive = settings.read("View/EnableGalleryMode", "false");
+
+        if (settings.read("View/UseLocalSettings", "false") === "true") {
+            showThumbs = settings.read("Dolphin/PreviewsShown", showThumbs, dir+"/.directory");
+            galleryActive = settings.read("Sailfish/EnableGalleryMode", galleryActive, dir+"/.directory");
         }
 
-        if (thumbnailsShown) {
-            var thumbSize = engine.readSetting("View/PreviewsSize", "medium");
-            if (thumbSize === "small") {
-                fileIconSize = Theme.itemSizeMedium
-            } else if (thumbSize === "medium") {
-                fileIconSize = Theme.itemSizeExtraLarge
-            } else if (thumbSize === "large") {
-                fileIconSize = page.width/3
-            } else if (thumbSize === "huge") {
-                fileIconSize = page.width/3*2
-            }
+        if (galleryActive === "true") {
+            viewState = "gallery";
+        } else if (showThumbs === "true") {
+            viewState = "preview/" + settings.read("View/PreviewsSize", "medium");
         } else {
-            fileIconSize = Theme.itemSizeSmall
+            viewState = "";
         }
     }
 

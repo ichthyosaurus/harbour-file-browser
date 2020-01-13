@@ -9,6 +9,7 @@
 #include "globals.h"
 #include "fileworker.h"
 #include "statfileinfo.h"
+#include "settingshandler.h"
 
 Engine::Engine(QObject *parent) :
     QObject(parent),
@@ -16,6 +17,7 @@ Engine::Engine(QObject *parent) :
     m_progress(0)
 {
     m_fileWorker = new FileWorker;
+    m_settings = qApp->property("settings").value<Settings*>();
 
     // update progress property when worker progresses
     connect(m_fileWorker, SIGNAL(progressChanged(int, QString)),
@@ -168,55 +170,60 @@ static QStringList subdirs(const QString &dirname)
     return abslist;
 }
 
-QString Engine::sdcardPath() const
+QString Engine::androidSdcardPath() const
 {
+    return QStandardPaths::writableLocation(QStandardPaths::HomeLocation)+"/android_storage";
+}
+
+QVariantList Engine::externalDrives() const
+{
+    QVariantList devices;
+
     // from SailfishOS 2.2.0 onwards, "/media/sdcard" is
     // a symbolic link instead of a folder. In that case, follow the link
     // to the actual folder.
     QString sdcardFolder = "/media/sdcard";
     QFileInfo fileinfo(sdcardFolder);
-    if (fileinfo.isSymLink()) {
-        sdcardFolder = fileinfo.symLinkTarget();
-    }
+    if (fileinfo.isSymLink()) sdcardFolder = fileinfo.symLinkTarget();
 
     // get sdcard dir candidates for "/media/sdcard" (or its symlink target)
-    QStringList sdcards = subdirs(sdcardFolder);
+    QStringList candidates = subdirs(sdcardFolder);
 
-    // some users may have a symlink from "/media/sdcard/nemo" (not from "/media/sdcard"), which means
-    // no sdcards are found, so also get candidates directly from "/run/media/nemo" for those users
-    if (sdcardFolder != "/run/media/nemo")
-        sdcards.append(subdirs("/run/media/nemo"));
+    // If the base folder is not already /run/media/nemo, we add it too. This
+    // is, where OTG devices will be mounted.
+    // Also, some users may have a symlink from "/media/sdcard/nemo"
+    // (not from "/media/sdcard"), which means no sdcards would be found before,
+    // so we also get candidates for those users.
+    if (sdcardFolder != "/run/media/nemo") candidates.append(subdirs("/run/media/nemo"));
 
-    if (sdcards.isEmpty())
-        return QString();
+    // no candidates found, abort
+    if (candidates.isEmpty()) return QVariantList();
 
     // remove all directories which are not mount points
-    QStringList mps = mountPoints();
-    QMutableStringListIterator i(sdcards);
+    QMap<QString, QString> mps = mountPoints();
+    QMutableStringListIterator i(candidates);
     while (i.hasNext()) {
         QString dirname = i.next();
-        // is it a mount point?
-        if (!mps.contains(dirname))
-            i.remove();
+        if (!mps.contains(dirname)) i.remove();
     }
 
-    // none found, return empty string
-    if (sdcards.isEmpty())
-        return QString();
+    // all candidates eliminated, abort
+    if (candidates.isEmpty()) return QVariantList();
 
-    // if only one directory, then return it
-    if (sdcards.count() == 1)
-        return sdcards.first();
+    foreach (QString drive, candidates) {
+        QVariantMap data;
+        data.insert("path", drive);
 
-    // if multiple directories, then return the sdcard parent folder
-    // this works for SFOS<2.2 and SFOS>=2.2, because "/media/sdcard" should exist in both
-    // as a folder or symlink
-    return "/media/sdcard";
-}
+        if (mps[drive].startsWith("/dev/mmc")) {
+            data.insert("title", QObject::tr("SD card"));
+        } else {
+            data.insert("title", QObject::tr("Removable Media"));
+        }
 
-QString Engine::androidSdcardPath() const
-{
-    return QStandardPaths::writableLocation(QStandardPaths::HomeLocation)+"/android_storage";
+        devices << data;
+    }
+
+    return devices;
 }
 
 bool Engine::runningAsRoot()
@@ -456,44 +463,6 @@ bool Engine::pathIsFile(QString path) const
     return info.isFileAtEnd();
 }
 
-QString Engine::readSetting(QString key, QString defaultValue, QString fileName) {
-    QSettings settings(fileName, QSettings::IniFormat);
-    return settings.value(key, defaultValue).toString();
-}
-
-QString Engine::readSetting(QString key, QString defaultValue) {
-    QSettings settings;
-    return settings.value(key, defaultValue).toString();
-}
-
-void Engine::writeSetting(QString key, QString value, QString fileName) {
-    QSettings settings(fileName, QSettings::IniFormat);
-    if (settings.value(key) == value) return; // do nothing if value didn't change
-    settings.setValue(key, value);
-    emit settingsChanged();
-}
-
-void Engine::writeSetting(QString key, QString value) {
-    QSettings settings;
-    if (settings.value(key) == value) return; // do nothing if value didn't change
-    settings.setValue(key, value);
-    emit settingsChanged();
-    if (key.startsWith("View/")) emit viewSettingsChanged();
-}
-
-void Engine::removeSetting(QString key, QString fileName) {
-    QSettings settings(fileName, QSettings::IniFormat);
-    settings.remove(key);
-    emit settingsChanged();
-}
-
-void Engine::removeSetting(QString key) {
-    QSettings settings;
-    settings.remove(key);
-    emit settingsChanged();
-    if (key.startsWith("View/")) emit viewSettingsChanged();
-}
-
 void Engine::setProgress(int progress, QString filename)
 {
     m_progress = progress;
@@ -502,12 +471,12 @@ void Engine::setProgress(int progress, QString filename)
     emit progressFilenameChanged();
 }
 
-QStringList Engine::mountPoints() const
+QMap<QString, QString> Engine::mountPoints() const
 {
     // read /proc/mounts and return all mount points for the filesystem
     QFile file("/proc/mounts");
     if (!file.open(QFile::ReadOnly | QFile::Text))
-        return QStringList();
+        return QMap<QString, QString>();
 
     QTextStream in(&file);
     QString result = in.readAll();
@@ -516,17 +485,14 @@ QStringList Engine::mountPoints() const
     QStringList lines = result.split(QRegExp("[\n\r]"));
 
     // get columns
-    QStringList dirs;
+    QMap<QString, QString> paired;
     foreach (QString line, lines) {
         QStringList columns = line.split(QRegExp("\\s+"), QString::SkipEmptyParts);
-        if (columns.count() < 6) // sanity check
-            continue;
-
-        QString dir = columns.at(1);
-        dirs.append(dir);
+        if (columns.count() < 6) continue; // sanity check
+        paired[columns.at(1)] = columns.at(0);
     }
 
-    return dirs;
+    return paired;
 }
 
 QString Engine::createHexDump(char *buffer, int size, int bytesPerLine)

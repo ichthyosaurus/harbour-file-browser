@@ -14,9 +14,14 @@ Page {
         page: page
     }
 
-    SilicaFlickable {
+    ShortcutsList {
+        id: shortcutsView
         anchors.fill: parent
-        VerticalScrollDecorator { }
+        onItemClicked: Functions.goToFolder(path)
+
+        header: PageHeader { title: qsTr("Places") }
+        footer: Spacer { id: footerSpacer }
+        VerticalScrollDecorator { flickable: shortcutsView; }
 
         PullDownMenu {
             MenuItem {
@@ -26,7 +31,7 @@ Page {
                 text: (hasBookmark !== undefined) ?
                           (hasBookmark ?
                                qsTr("Remove bookmark for “%1”").arg(Functions.lastPartOfPath(currentPath)) :
-                               qsTr("Add “%1” to bookmarks").arg(Functions.lastPartOfPath(currentPath))) : ""
+                               qsTr("Add “%1” to bookmarks").arg(currentPath === "/" ? "/" : Functions.lastPartOfPath(currentPath))) : ""
                 onClicked: {
                     if (hasBookmark !== undefined) {
                         pageStack.previousPage().toggleBookmark();
@@ -48,15 +53,10 @@ Page {
             }
         }
 
-        ShortcutsList {
-            id: shortcutsView
-            onItemClicked: Functions.goToFolder(path)
-
-            width: parent.width
-            height: parent.height - 2*Theme.horizontalPageMargin
-
-            header: PageHeader {
-                title: qsTr("Places")
+        PushUpMenu {
+            MenuItem {
+                text: qsTr("Refresh")
+                onClicked: shortcutsView.updateModel();
             }
         }
     }
@@ -65,6 +65,9 @@ Page {
         if (status === PageStatus.Active) {
             main.coverText = Functions.lastPartOfPath(currentPath)+"/"; // update cover
             if (!forwardNavigation) pageStack.pushAttached(Qt.resolvedUrl("SettingsPage.qml"));
+        }
+        if (status === PageStatus.Activating || status === PageStatus.Deactivating) {
+            shortcutsView._isEditing = false;
         }
     }
 }

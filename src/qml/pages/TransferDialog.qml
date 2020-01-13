@@ -30,7 +30,8 @@ Dialog {
             id: shortcutsView
             width: flickable.width
             height: flickable.height - 2*Theme.horizontalPageMargin
-            sections: ["bookmarks", "locations", "android", "external"]
+            sections: ["bookmarks", "locations", "external"]
+            editable: false
             selectable: true
             multiSelect: true
             onItemSelected: dialog.updateStatus();

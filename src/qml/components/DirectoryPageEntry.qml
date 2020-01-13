@@ -6,127 +6,196 @@ import "../pages/functions.js" as Functions
 ListItem {
     id: fileItem
     menu: contextMenu
-    contentHeight: fileIconSize
-    visible: isMatched
-    height: isMatched ? contentHeight + (_menuItem ? _menuItem.height : 0) : 0
-
-    // warning: huge performance impact with large directories
-    // Behavior on height { NumberAnimation { } }
-
-    // background shown when item is selected
-    Rectangle {
-        visible: isSelected
-        anchors.fill: parent
-        color: fileItem.highlightedColor
-    }
-
-    FileIcon {
-        id: listIcon
-        clip: true
-        anchors.verticalCenter: thumbnailsShown ? parent.verticalCenter : listLabel.verticalCenter
-        x: Theme.paddingLarge
-        width: (!thumbnailsShown && fileIconSize === Theme.itemSizeSmall) ? Theme.iconSizeSmall : fileIconSize
-        height: width
-        showThumbnail: thumbnailsShown
-        highlighted: fileItem.highlighted || isSelected
-        file: fileModel.appendPath(listLabel.text)
-        isDirectory: isDir
-        mimeTypeCallback: function() { return fileModel.mimeTypeAt(index); }
-        fileIconCallback: function() { return fileIcon; }
-    }
-
-    // circle shown when item is selected
-    Rectangle {
-        visible: isSelected
-        anchors.verticalCenter: listLabel.verticalCenter
-        x: Theme.paddingLarge - 2*Theme.pixelRatio
-        width: Theme.iconSizeSmall + 4*Theme.pixelRatio
-        height: width
-        color: "transparent"
-        border.color: Theme.highlightColor
-        border.width: 2.25 * Theme.pixelRatio
-        radius: width * 0.5
-        onVisibleChanged: if (!visible) selectionGlow.visible = false
-
-        Rectangle {
-            id: selectionGlow
-            visible: false
-            anchors.centerIn: parent
-            width: Theme.iconSizeExtraLarge; height: width
-            radius: width/2
-            color: Theme.rgba(Theme.highlightBackgroundColor, Theme.highlightBackgroundOpacity)
-        }
-    }
-
+    contentHeight: Theme.itemSizeSmall
+    height: contentHeight + (_menuItem ? _menuItem.height : 0)
+    ListView.onRemove: animateRemoval(fileItem) // enable animated list item removals
+    highlighted: down || isSelected || selectionArea.pressed
     property alias listLabelWidth: listLabel.width // see https://doc.qt.io/qt-5/qtquick-performance.html
-    Label {
-        id: listLabel
-        anchors.left: listIcon.right
-        anchors.leftMargin: Theme.paddingMedium
-        anchors.right: parent.right
-        anchors.rightMargin: Theme.paddingLarge
-        y: Theme.paddingSmall
-        text: filename
-        elide: Text.ElideRight
-        color: fileItem.highlighted || isSelected ? Theme.highlightColor : Theme.primaryColor
-    }
+    property bool galleryModeActiveAvailable: false
 
     Loader {
-        asynchronous: false
-        anchors {
-            left: listIcon.right
-            leftMargin: Theme.paddingMedium
-            right: parent.right
-            rightMargin: Theme.paddingLarge
-            top: listLabel.bottom
+        id: gallery
+        sourceComponent: undefined
+        anchors { top: parent.top; left: parent.left; right: parent.right }
+        visible: true; active: true
+    }
+
+    Component {
+        id: galleryStillComponent
+        Image {
+            // 'fillMode: Image.PreserveAspectFit' does not scale up, so we do it manually
+            asynchronous: true
+            source: dir+"/"+filename
+            sourceSize.width: parent.width
+            width: parent.width
+            height: Theme.paddingMedium + width * (implicitHeight / implicitWidth)
         }
-        sourceComponent: Flow {
-            anchors.fill: parent
-            Label {
-                id: sizeLabel
-                text: isLink ? (isDir ? (Functions.unicodeArrow()+" "+symLinkTarget) :
-                                        (size+" "+qsTr("(link)"))) : (size) //  !(isLink && isDir) ? size : Functions.unicodeArrow()+" "+symLinkTarget
-                color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                elide: Text.ElideRight
-                font.pixelSize: Theme.fontSizeExtraSmall
+    }
+
+    Component {
+        id: galleryAnimatedComponent
+        AnimatedImage {
+            asynchronous: true
+            source: dir+"/"+filename
+            width: parent.width
+            height: Theme.paddingMedium + sourceSize.height * (width / sourceSize.width)
+        }
+    }
+
+    Component {
+        id: galleryVideoComponent
+        Item {
+            height: Theme.itemSizeExtraLarge
+            width: parent.width
+            Image {
+                anchors.centerIn: parent
+                height: Theme.itemSizeLarge
+                source: "image://theme/icon-l-play?" + (fileItem.highlighted
+                    ? Theme.highlightColor : Theme.primaryColor)
+                fillMode: Image.PreserveAspectFit
             }
-            Label {
-                id: permsLabel
-                visible: !(isLink && isDir)
-                text: filekind+permissions
-                color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                font.pixelSize: Theme.fontSizeExtraSmall
+        }
+    }
+
+    Item {
+        anchors {
+            left: parent.left; right: parent.right
+            top: gallery.bottom; bottom: parent.bottom
+        }
+
+        FileIcon {
+            id: listIcon
+            x: Theme.paddingLarge
+            clip: true
+            anchors.verticalCenter: listLabel.verticalCenter
+            width: Theme.iconSizeSmall; height: width
+            showThumbnail: false
+
+            highlighted: fileItem.highlighted
+            file: fileModel.appendPath(listLabel.text)
+            isDirectory: isDir
+            mimeTypeCallback: function() { return fileModel.mimeTypeAt(index); }
+            fileIconCallback: function() { return fileIcon; }
+        }
+
+        // circle shown when item is selected
+        Rectangle {
+            visible: isSelected
+            anchors.verticalCenter: listLabel.verticalCenter
+            x: Theme.paddingLarge - 2*Theme.pixelRatio
+            width: Theme.iconSizeSmall + 4*Theme.pixelRatio
+            height: width
+            color: "transparent"
+            border.color: Theme.highlightColor
+            border.width: 2.25 * Theme.pixelRatio
+            radius: width * 0.5
+            onVisibleChanged: if (!visible) selectionGlow.visible = false
+
+            Rectangle {
+                id: selectionGlow
+                visible: false
+                anchors.centerIn: parent
+                width: Theme.iconSizeExtraLarge; height: width
+                radius: width/2
+                color: Theme.rgba(Theme.highlightBackgroundColor, Theme.highlightBackgroundOpacity)
             }
-            Label {
-                id: datesLabel
-                visible: !(isLink && isDir)
-                text: modified
-                color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                font.pixelSize: Theme.fontSizeExtraSmall
-                wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+        }
+
+        Label {
+            id: listLabel
+            anchors {
+                left: listIcon.right; leftMargin: Theme.paddingMedium
+                right: parent.right; rightMargin: Theme.paddingLarge
+                top: parent.top; topMargin: Theme.paddingSmall
+            }
+            text: filename
+            elide: Text.ElideRight
+            color: fileItem.highlighted ? Theme.highlightColor : Theme.primaryColor
+        }
+
+        Loader {
+            asynchronous: false
+            anchors {
+                left: listIcon.right; leftMargin: Theme.paddingMedium
+                right: parent.right; rightMargin: Theme.paddingLarge
+                top: listLabel.bottom; bottom: parent.bottom
+            }
+            sourceComponent: Flow {
+                anchors.fill: parent
+
+                Label {
+                    id: sizeLabel
+                    text: isLink ? (isDir ? (Functions.unicodeArrow()+" "+symLinkTarget) :
+                                            (size+" "+qsTr("(link)"))) : (size)
+                    color: fileItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                    elide: Text.ElideRight
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                }
+                Label {
+                    id: permsLabel
+                    visible: !(isLink && isDir)
+                    text: filekind+permissions
+                    color: fileItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                }
+                Label {
+                    id: datesLabel
+                    visible: !(isLink && isDir)
+                    text: modified
+                    color: fileItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                    wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                }
+
+                states: [
+                    State {
+                        when: listLabelWidth >= 2*fileItem.width/3
+                        PropertyChanges { target: listLabel; wrapMode: Text.NoWrap; elide: Text.ElideRight; maximumLineCount: 1 }
+                        PropertyChanges { target: sizeLabel; width: ((isLink && isDir) ? listLabelWidth : listLabelWidth/3); horizontalAlignment: Text.AlignLeft }
+                        PropertyChanges { target: permsLabel; width: listLabelWidth/3; horizontalAlignment: Text.AlignHCenter }
+                        PropertyChanges { target: datesLabel; width: listLabelWidth/3; horizontalAlignment: Text.AlignRight }
+                    },
+                    State {
+                        when: listLabelWidth < 2*fileItem.width/3
+                        PropertyChanges { target: listLabel; wrapMode: Text.WrapAtWordBoundaryOrAnywhere; elide: Text.ElideRight; maximumLineCount: 2 }
+                        PropertyChanges { target: sizeLabel; width: listLabelWidth; horizontalAlignment: Text.AlignLeft }
+                        PropertyChanges { target: permsLabel; width: listLabelWidth; horizontalAlignment: Text.AlignLeft }
+                        PropertyChanges { target: datesLabel; width: listLabelWidth; horizontalAlignment: Text.AlignLeft }
+                    }
+                ]
+            }
+        }
+
+        MouseArea {
+            id: selectionArea
+            anchors {
+                left: parent.left; right: listLabel.left
+                top: parent.top; bottom: parent.bottom
             }
 
-            states: [
-                State {
-                    when: listLabelWidth >= 2*page.width/3
-                    PropertyChanges { target: listLabel; wrapMode: Text.NoWrap; elide: Text.ElideRight; maximumLineCount: 1 }
-                    PropertyChanges { target: sizeLabel; width: ((isLink && isDir) ? listLabelWidth : listLabelWidth/3); horizontalAlignment: Text.AlignLeft }
-                    PropertyChanges { target: permsLabel; width: listLabelWidth/3; horizontalAlignment: Text.AlignHCenter }
-                    PropertyChanges { target: datesLabel; width: listLabelWidth/3; horizontalAlignment: Text.AlignRight }
-                },
-                State {
-                    when: listLabelWidth < 2*page.width/3
-                    PropertyChanges { target: listLabel; wrapMode: Text.WrapAtWordBoundaryOrAnywhere; elide: Text.ElideRight; maximumLineCount: 2 }
-                    PropertyChanges { target: sizeLabel; width: listLabelWidth; horizontalAlignment: Text.AlignLeft }
-                    PropertyChanges { target: permsLabel; width: listLabelWidth; horizontalAlignment: Text.AlignLeft }
-                    PropertyChanges { target: datesLabel; width: listLabelWidth; horizontalAlignment: Text.AlignLeft }
-                }
-            ]
+            property int pressAndHoldInterval: 300
+            Timer {
+                interval: parent.pressAndHoldInterval
+                running: parent.pressed
+                onTriggered: parent.pressAndHold("")
+            }
+
+            onPressAndHold: {
+                page.multiSelectionStarted(model.index);
+                if (!isSelected) toggleSelection(index, false);
+                selectionGlow.visible = true;
+                page.multiSelectionFinished.connect(function(index) { selectionGlow.visible = false; });
+                page.multiSelectionStarted.connect(function(index) { if (index !== model.index) selectionGlow.visible = false; });
+            }
+
+            onClicked: {
+                toggleSelection(index);
+            }
         }
     }
 
     onClicked: {
-        if (selectionGlow.visible) {
+        if (fileModel.selectedFileCount > 0) {
             toggleSelection(index);
             return;
         }
@@ -134,37 +203,92 @@ ListItem {
         if (model.isDir) {
             pageStack.push(Qt.resolvedUrl("../pages/DirectoryPage.qml"),
                            { dir: fileModel.appendPath(listLabel.text) });
+        } else if (galleryModeActiveAvailable && fileIcon === "file-image") {
+            pageStack.push(Qt.resolvedUrl("../pages/ViewImagePage.qml"),
+                           { path: fileModel.appendPath(listLabel.text), title: filename });
+        } else if (galleryModeActiveAvailable && fileIcon === "file-video") {
+            pageStack.push(Qt.resolvedUrl("../pages/ViewVideoPage.qml"),
+                           { path: fileModel.appendPath(listLabel.text), title: filename, autoPlay: true });
         } else {
             pageStack.push(Qt.resolvedUrl("../pages/FilePage.qml"),
                            { file: fileModel.appendPath(listLabel.text) });
         }
     }
 
-    MouseArea {
-        width: fileIconSize
-        height: parent.height
-        onPressed: shiftTimer.start()
-        onPositionChanged: if (shiftTimer.running) shiftTimer.stop();
-        onReleased: {
-            if (!selectionGlow.visible) toggleSelection(index);
-            if (shiftTimer.running) shiftTimer.stop();
-        }
-
-        Timer {
-            id: shiftTimer
-            interval: 300
-            onTriggered: {
-                page.multiSelectionStarted(model.index);
-                if (!isSelected) toggleSelection(index, false);
-                selectionGlow.visible = true;
-                page.multiSelectionFinished.connect(function(index) { selectionGlow.visible = false; });
-                page.multiSelectionStarted.connect(function(index) { if (index !== model.index) selectionGlow.visible = false; });
+    states: [
+        State {
+            name: "hidden"
+            when: !isMatched
+            PropertyChanges {
+                target: fileItem
+                visible: false
+                height: 0
+                contentHeight: 0
             }
+        },
+        State {
+            name: "galleryAvailableBase"
+            PropertyChanges {
+                target: fileItem
+                contentHeight: Theme.itemSizeMedium + gallery.height
+                galleryModeActiveAvailable: true
+            }
+            PropertyChanges { target: listIcon; showThumbnail: false; width: Theme.iconSizeSmall }
+            AnchorChanges { target: listIcon; anchors.verticalCenter: listLabel.verticalCenter }
+            AnchorChanges { target: selectionArea; anchors.right: parent.right }
+        },
+        State {
+            name: "galleryAvailableAnimated"; extend: "galleryAvailableBase"
+            when:    viewState === "gallery"
+                  && fileIcon === "file-image"
+                  && String(filename).toLowerCase().match(/\.(gif)$/) !== null
+            PropertyChanges { target: gallery; sourceComponent: galleryAnimatedComponent }
+        },
+        State {
+            name: "galleryAvailableStill"; extend: "galleryAvailableBase"
+            when: viewState === "gallery" && fileIcon === "file-image"
+            PropertyChanges { target: gallery; sourceComponent: galleryStillComponent }
+        },
+        State {
+            name: "galleryAvailableVideo"; extend: "galleryAvailableBase"
+            when: viewState === "gallery" && fileIcon === "file-video"
+            PropertyChanges { target: gallery; sourceComponent: galleryVideoComponent }
+        },
+        State {
+            name: "galleryUnavailable"; extend: "hidden"
+            // hide everything except directories, images, and videos
+            when: viewState === "gallery" && fileIcon !== "file-image" && fileIcon !== "file-video" && !isDir
+        },
+        State {
+            name: "previewBaseState"
+            PropertyChanges { target: listIcon; showThumbnail: true }
+            AnchorChanges { target: listIcon; anchors.verticalCenter: parent.verticalCenter }
+        },
+        State {
+            name: "preview/small"; extend: "previewBaseState"
+            when: viewState === "preview/small"
+            PropertyChanges { target: fileItem; contentHeight: Theme.itemSizeMedium }
+            PropertyChanges { target: listIcon; width: Theme.itemSizeMedium }
+        },
+        State {
+            name: "preview/medium"; extend: "previewBaseState"
+            when: viewState === "preview/medium"
+            PropertyChanges { target: fileItem; contentHeight: Theme.itemSizeExtraLarge }
+            PropertyChanges { target: listIcon; width: Theme.itemSizeExtraLarge }
+        },
+        State {
+            name: "preview/large"; extend: "previewBaseState"
+            when: viewState === "preview/large"
+            PropertyChanges { target: fileItem; contentHeight: fileItem.width/3 }
+            PropertyChanges { target: listIcon; width: fileItem.width/3 }
+        },
+        State {
+            name: "preview/huge"; extend: "previewBaseState"
+            when: viewState === "preview/huge"
+            PropertyChanges { target: fileItem; contentHeight: fileItem.width/3*2 }
+            PropertyChanges { target: listIcon; width: fileItem.width/3*2 }
         }
-    }
-
-    // enable animated list item removals
-    ListView.onRemove: animateRemoval(fileItem)
+    ]
 
     // context menu is activated with long press
     Component {

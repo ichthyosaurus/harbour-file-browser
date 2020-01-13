@@ -16,6 +16,7 @@
 #include "searchengine.h"
 #include "engine.h"
 #include "consolemodel.h"
+#include "settingshandler.h"
 
 int main(int argc, char *argv[])
 {
@@ -40,13 +41,17 @@ int main(int argc, char *argv[])
 
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
-    // QML global engine object
-    QScopedPointer<Engine> engine(new Engine);
-    view->rootContext()->setContextProperty("engine", engine.data());
+    // setup global settings object
+    QScopedPointer<Settings> settings(new Settings);
+    QVariant settingsVariant = qVariantFromValue(settings.data());
+    qApp->setProperty("settings", settingsVariant); // store as singleton
+    view->rootContext()->setContextProperty("settings", settings.data()); // expose to QML
 
-    // store pointer to engine to access it in any class, to make it a singleton
+    // setup global engine object
+    QScopedPointer<Engine> engine(new Engine);
     QVariant engineVariant = qVariantFromValue(engine.data());
-    qApp->setProperty("engine", engineVariant);
+    qApp->setProperty("engine", engineVariant); // store as singleton
+    view->rootContext()->setContextProperty("engine", engine.data()); // expose to QML
 
     QString initialDirectory = QDir::homePath();
     if (argc >= 2) {
@@ -62,8 +67,10 @@ int main(int argc, char *argv[])
 
 #ifdef NO_HARBOUR_COMPLIANCE
     view->rootContext()->setContextProperty("sharingEnabled", QVariant::fromValue(true));
+    view->rootContext()->setContextProperty("pdfViewerEnabled", QVariant::fromValue(true));
 #else
     view->rootContext()->setContextProperty("sharingEnabled", QVariant::fromValue(false));
+    view->rootContext()->setContextProperty("pdfViewerEnabled", QVariant::fromValue(false));
 #endif
 
     view->setSource(SailfishApp::pathTo("qml/main.qml"));

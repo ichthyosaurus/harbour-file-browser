@@ -5,7 +5,7 @@ import "../components"
 Page {
     id: page
     allowedOrientations: Orientation.All
-    property alias title: titleLabel.text
+    property alias title: titleOverlay.title
     property alias path: image.source
     property bool editMode: false
 
@@ -15,40 +15,7 @@ Page {
         }
     }
 
-    Item {
-        id: overlay
-        z: 100
-        anchors.fill: parent
-        visible: false
-
-        NumberAnimation { id: showAnim; target: overlay; duration: 80; property: "opacity"; to: 1.0; from: target.opacity;
-            onStarted: target.visible = true; }
-        NumberAnimation { id: hideAnim; target: overlay; duration: 80; property: "opacity"; to: 0.0; from: target.opacity;
-            onStopped: target.visible = false }
-        function show() { showAnim.start(); }
-        function hide() { hideAnim.start(); }
-
-        Rectangle {
-            anchors.top: parent.top
-            height: Theme.itemSizeLarge
-            width: parent.width
-
-            gradient: Gradient {
-                GradientStop { position: 0.0; color: Theme.rgba(Theme.highlightBackgroundColor, 0.5) }
-                GradientStop { position: 1.0; color: "transparent" }
-            }
-
-            Label {
-                id: titleLabel
-                anchors.fill: parent
-                anchors.margins: Theme.horizontalPageMargin
-                color: Theme.highlightColor
-                font.pixelSize: Theme.fontSizeLarge
-                truncationMode: TruncationMode.Fade
-                horizontalAlignment: Text.AlignRight
-            }
-        }
-    }
+    MediaTitleOverlay { id: titleOverlay }
 
     Flickable {
         id: flickable
@@ -149,7 +116,7 @@ Page {
                 property bool pinchRequested: false
                 onDoubleClicked: {
                     pinchRequested = true
-                    if (image.status !== Image.Ready || overlay.isEditing) return;
+                    if (image.status !== Image.Ready) return;
 
                     var newScale = pinchArea.minScale;
                     if (image.scale === pinchArea.minScale) {
@@ -167,12 +134,10 @@ Page {
                     if (pinchRequested) {
                         pinchRequested = false;
                         return;
-                    } else if (overlay.visible && overlay.isEditing) {
-                        return;
-                    } else if (overlay.visible) {
-                        overlay.hide();
+                    } else if (titleOverlay.visible) {
+                        titleOverlay.hide();
                     } else {
-                        overlay.show();
+                        titleOverlay.show();
                     }
                 }
             }

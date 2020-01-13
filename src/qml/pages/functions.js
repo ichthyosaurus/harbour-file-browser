@@ -60,19 +60,12 @@ function goToFolder(folder) {
 }
 
 // Bookmark Handling
-// FIXME There seems to happen a race condition when trying to
-// write the name of a new bookmark and reading said name
-// simultaniously. This results in the entire 'Bookmarks/*' block
-// being deleted. Implementing settings caching and synchronous
-// write-out in the engine would probably fix this.
-// Currently we simply ignore empty bookmark names and silently replace
-// them with the bookmarked directory's name.
 function addBookmark(path) {
     if (!path) return;
     var bookmarks = getBookmarks();
     bookmarks.push(path);
-    engine.writeSetting("Bookmarks/"+path, lastPartOfPath(path));
-    engine.writeSetting("Bookmarks/Entries", JSON.stringify(bookmarks));
+    settings.write("Bookmarks/"+path, lastPartOfPath(path));
+    settings.write("Bookmarks/Entries", JSON.stringify(bookmarks));
     main.bookmarkAdded(path);
 }
 
@@ -80,23 +73,41 @@ function removeBookmark(path) {
     if (!path) return;
     var bookmarks = getBookmarks();
     var filteredBookmarks = bookmarks.filter(function(e) { return e !== path; });
-    engine.writeSetting("Bookmarks/Entries", JSON.stringify(filteredBookmarks));
-    engine.removeSetting("Bookmarks/"+path);
+    settings.write("Bookmarks/Entries", JSON.stringify(filteredBookmarks));
+    settings.remove("Bookmarks/"+path);
     main.bookmarkRemoved(path);
+}
+
+function moveBookmark(path) {
+    if (!path) return;
+    var bookmarks = getBookmarks();
+    var oldIndex = undefined;
+
+    for (var i = 0; i < bookmarks.length; i++) {
+        if (bookmarks[i] === path) {
+            oldIndex = i;
+            break;
+        }
+    }
+
+    var newIndex = oldIndex === 0 ? bookmarks.length-1 : oldIndex-1;
+    bookmarks.splice(newIndex, 0, bookmarks.splice(oldIndex, 1)[0]);
+    settings.write("Bookmarks/Entries", JSON.stringify(bookmarks));
+    main.bookmarkMoved(path);
 }
 
 function hasBookmark(path) {
     if (!path) return false;
-    if (engine.readSetting("Bookmarks/"+path) !== "") return true;
+    if (settings.read("Bookmarks/"+path) !== "") return true;
     return false;
 }
 
 function getBookmarks() {
     try {
-        var entries = JSON.parse(engine.readSetting("Bookmarks/Entries"));
+        var entries = JSON.parse(settings.read("Bookmarks/Entries"));
         return entries;
     } catch (SyntaxError) {
-        engine.writeSetting("Bookmarks/Entries", JSON.stringify([]));
+        settings.write("Bookmarks/Entries", JSON.stringify([]));
         return [];
     }
 }

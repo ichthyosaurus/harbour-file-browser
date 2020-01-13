@@ -9,7 +9,7 @@ about most common questions.
 
 ### Beta / Development Notice
 
-This repository contains the development of version 2.0.0 of File Browser.
+This repository contains the development of version 2.0.0 and upwards of File Browser.
 
 See the RELEASENOTES.md for further details.
 
@@ -70,7 +70,7 @@ which are good when accessing Android storage.
 
 ## License
 
-### Changes in this repository (version 2.0.0)
+### Changes in this repository (from version 2.0.0)
 
 [![GNU GPL v3.0](http://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl.html)
 
