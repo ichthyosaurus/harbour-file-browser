@@ -161,7 +161,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="184"/>
         <source>Copy path to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="306"/>
@@ -514,12 +514,12 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="39"/>
         <source>Sometimes the application stays in the background</source>
-        <translation>有时是软件会保持后台运行</translation>
+        <translation>有时软件会保持后台运行</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="41"/>
         <source>Internal error</source>
-        <translation type="unfinished"></translation>
+        <translation>内部错误</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="44"/>
@@ -564,7 +564,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="90"/>
         <source>View Raw Contents</source>
-        <translation></translation>
+        <translation>查看 RAW 内容</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="98"/>
@@ -1204,12 +1204,12 @@
     <message>
         <location filename="../engine.cpp" line="218"/>
         <source>SD card</source>
-        <translation type="unfinished">SD卡</translation>
+        <translation>SD卡</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="220"/>
         <source>Removable Media</source>
-        <translation type="unfinished"></translation>
+        <translation>可移除媒体文件</translation>
     </message>
 </context>
 <context>
@@ -1403,12 +1403,12 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="59"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation>开启图库模式</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="60"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="84"/>
@@ -1513,7 +1513,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="194"/>
         <source>The source code is available at</source>
-        <translation>源代码可以在此下载 </translation>
+        <translation>源代码可以在此找到 </translation>
     </message>
 </context>
 <context>
@@ -1521,7 +1521,7 @@
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="268"/>
         <source>Open system settings</source>
-        <translation type="unfinished"></translation>
+        <translation>打开系统设置</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="278"/>
@@ -1538,7 +1538,7 @@
         <location filename="../qml/components/ShortcutsList.qml" line="328"/>
         <location filename="../qml/components/ShortcutsList.qml" line="332"/>
         <source>Locations</source>
-        <translation></translation>
+        <translation>位置</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="304"/>
@@ -1631,7 +1631,7 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="58"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>刷新</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="22"/>
@@ -1731,12 +1731,12 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="103"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation>开启图库模式</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="104"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished"></translation>
+        <translation>在图库模式中，图片会以舒适的大小显示，并且除包含图片及视频的目录外，其它目录将会被隐藏。</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="110"/>
@@ -1776,7 +1776,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="75"/>
         <source>Preview images...</source>
-        <translation type="unfinished"></translation>
+        <translation>预览图片……</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="80"/>
@@ -1966,19 +1966,19 @@
     <message>
         <location filename="../qml/pages/functions.js" line="136"/>
         <source>root</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../qml/pages/functions.js" line="156"/>
         <location filename="../qml/pages/functions.js" line="165"/>
         <source>Copying</source>
-        <translation type="unfinished">正在复制</translation>
+        <translation>正在复制</translation>
     </message>
     <message>
         <location filename="../qml/pages/functions.js" line="156"/>
         <location filename="../qml/pages/functions.js" line="165"/>
         <source>Moving</source>
-        <translation type="unfinished">正在移动</translation>
+        <translation>正在移动</translation>
     </message>
 </context>
 <context>
