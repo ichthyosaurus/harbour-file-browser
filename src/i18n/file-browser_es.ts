@@ -162,7 +162,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="184"/>
         <source>Copy path to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar ruta al portapapeles</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="306"/>
@@ -1217,12 +1217,12 @@
     <message>
         <location filename="../engine.cpp" line="218"/>
         <source>SD card</source>
-        <translation type="unfinished">Tarjeta SD</translation>
+        <translation>Tarjeta SD</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="220"/>
         <source>Removable Media</source>
-        <translation type="unfinished"></translation>
+        <translation>Medio extraíble</translation>
     </message>
 </context>
 <context>
@@ -1419,12 +1419,12 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="59"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar modo galería</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="60"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished"></translation>
+        <translation>Con el modo galería, las imágenes se mostrarán holgadamente grandes, y todas las entradas, salvo imágenes, vídeos y directorios estarán ocultos.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="84"/>
@@ -1537,7 +1537,7 @@
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="268"/>
         <source>Open system settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir ajustes de sistema</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="278"/>
@@ -1647,7 +1647,7 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="58"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualizar</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="22"/>
@@ -1749,12 +1749,12 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="103"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar modo galería</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="104"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished"></translation>
+        <translation>Con el modo galería, las imágenes se mostrarán holgadamente grandes, y todas las entradas, salvo imágenes, vídeos y directorios estarán ocultos.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="110"/>
@@ -1794,7 +1794,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="75"/>
         <source>Preview images...</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista previa de imágenes...</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="80"/>
@@ -1994,19 +1994,19 @@
     <message>
         <location filename="../qml/pages/functions.js" line="136"/>
         <source>root</source>
-        <translation type="unfinished"></translation>
+        <translation>root</translation>
     </message>
     <message>
         <location filename="../qml/pages/functions.js" line="156"/>
         <location filename="../qml/pages/functions.js" line="165"/>
         <source>Copying</source>
-        <translation type="unfinished">Copiando</translation>
+        <translation>Copiando</translation>
     </message>
     <message>
         <location filename="../qml/pages/functions.js" line="156"/>
         <location filename="../qml/pages/functions.js" line="165"/>
         <source>Moving</source>
-        <translation type="unfinished">Moviendo</translation>
+        <translation>Moviendo</translation>
     </message>
 </context>
 <context>
