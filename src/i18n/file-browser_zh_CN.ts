@@ -127,7 +127,7 @@
         <location filename="../qml/components/DetailList.qml" line="25"/>
         <source>... and %n more</source>
         <translation>
-            <numerusform>……再多显示 %n 个。</numerusform>
+            <numerusform>...再多显示 %n 个。</numerusform>
         </translation>
     </message>
 </context>
@@ -1776,7 +1776,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="75"/>
         <source>Preview images...</source>
-        <translation>预览图片……</translation>
+        <translation>预览图片...</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="80"/>
