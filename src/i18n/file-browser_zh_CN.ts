@@ -127,7 +127,7 @@
         <location filename="../qml/components/DetailList.qml" line="25"/>
         <source>... and %n more</source>
         <translation>
-            <numerusform>……再多显示 %n 个。</numerusform>
+            <numerusform>...再多显示 %n 个。</numerusform>
         </translation>
     </message>
 </context>
@@ -161,7 +161,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="184"/>
         <source>Copy path to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>复制路径到剪切板</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="306"/>
@@ -519,7 +519,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="41"/>
         <source>Internal error</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="44"/>
@@ -529,12 +529,12 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="47"/>
         <source>No application to open the file</source>
-        <translation>没有打开该文件的应用</translation>
+        <translation>没有可以打开该文件的软件</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="48"/>
         <source>xdg-open found no preferred application</source>
-        <translation>xdg-open找不到首选的应用</translation>
+        <translation>xdg-open找不到首选软件</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="50"/>
@@ -952,7 +952,7 @@
     <message>
         <location filename="../jhead/jhead-api.cpp" line="207"/>
         <source>Focus Distance:Infinite</source>
-        <translation>Fokusabstand: unendlich</translation>
+        <translation>焦距：无限远</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="209"/>
@@ -1204,12 +1204,12 @@
     <message>
         <location filename="../engine.cpp" line="218"/>
         <source>SD card</source>
-        <translation type="unfinished">SD卡</translation>
+        <translation>SD卡</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="220"/>
         <source>Removable Media</source>
-        <translation type="unfinished"></translation>
+        <translation>可移动媒体</translation>
     </message>
 </context>
 <context>
@@ -1403,12 +1403,12 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="59"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation>开启图库模式</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="60"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished"></translation>
+        <translation>在图库模式，图片会以舒适的方式显示。除包含图片及视频外的所有目录都将会被隐藏。</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="84"/>
@@ -1508,12 +1508,12 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="176"/>
         <source>This beta version of File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation>该测试版本  File Browser 采用 GNU GPL 第三版及以上条款。本软件为自由软件，你可以随意修改及分发。在法律许可范围内无需任何担保。</translation>
+        <translation>该测试版本  File Browser 采用 GNU GPL 第三版及以上条款。本软件为自由软件，你可以随意修改及分发，在法律许可范围内无需任何担保。</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="194"/>
         <source>The source code is available at</source>
-        <translation>源代码可以在此下载 </translation>
+        <translation>源代码可以在此找到</translation>
     </message>
 </context>
 <context>
@@ -1521,7 +1521,7 @@
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="268"/>
         <source>Open system settings</source>
-        <translation type="unfinished"></translation>
+        <translation>打开系统设置</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="278"/>
@@ -1631,7 +1631,7 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="58"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>刷新</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="22"/>
@@ -1670,14 +1670,14 @@
         <location filename="../qml/components/SizeDetailItem.qml" line="55"/>
         <source>%n directories</source>
         <translation>
-            <numerusform>%n  个目录</numerusform>
+            <numerusform>%n 个目录</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="56"/>
         <source>%n file(s)</source>
         <translation>
-            <numerusform>%n  个文件</numerusform>
+            <numerusform>%n 个文件</numerusform>
         </translation>
     </message>
 </context>
@@ -1731,12 +1731,12 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="103"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation>开启图库模式</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="104"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished"></translation>
+        <translation>在图库模式，图片会以舒适的方式显示。除包含图片及视频外的所有目录都将会被隐藏。</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="110"/>
@@ -1761,7 +1761,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="115"/>
         <source>Sort case-sensitively</source>
-        <translation>区分大小写</translation>
+        <translation>分类时区分大小写</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="79"/>
@@ -1776,7 +1776,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="75"/>
         <source>Preview images...</source>
-        <translation type="unfinished"></translation>
+        <translation>预览图像...</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="80"/>
@@ -1825,7 +1825,7 @@
         <location filename="../qml/pages/TransferDialog.qml" line="60"/>
         <source>%n destinations(s) selected</source>
         <translation>
-            <numerusform>已选择 %n 目标位置</numerusform>
+            <numerusform>已选择 %n 个目标位置</numerusform>
         </translation>
     </message>
     <message>
@@ -1900,7 +1900,7 @@
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="106"/>
         <source>Replace?</source>
-        <translation>替换？</translation>
+        <translation>是否替换？</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="122"/>
@@ -1915,7 +1915,7 @@
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="143"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation>“文件或目录已存在于 %1”:</translation>
+        <translation>文件或目录已存在于“%1”:</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="183"/>
@@ -1966,19 +1966,19 @@
     <message>
         <location filename="../qml/pages/functions.js" line="136"/>
         <source>root</source>
-        <translation type="unfinished"></translation>
+        <translation>root</translation>
     </message>
     <message>
         <location filename="../qml/pages/functions.js" line="156"/>
         <location filename="../qml/pages/functions.js" line="165"/>
         <source>Copying</source>
-        <translation type="unfinished">正在复制</translation>
+        <translation>正在复制</translation>
     </message>
     <message>
         <location filename="../qml/pages/functions.js" line="156"/>
         <location filename="../qml/pages/functions.js" line="165"/>
         <source>Moving</source>
-        <translation type="unfinished">正在移动</translation>
+        <translation>正在移动</translation>
     </message>
 </context>
 <context>
@@ -1986,7 +1986,7 @@
     <message>
         <location filename="../qml/main.qml" line="12"/>
         <source>Version %1</source>
-        <translation>版本  %1</translation>
+        <translation>版本 %1</translation>
     </message>
 </context>
 </TS>
