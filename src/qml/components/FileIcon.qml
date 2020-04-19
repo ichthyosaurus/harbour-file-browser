@@ -28,8 +28,10 @@ Item {
                 var mimeType = mimeTypeCallback();
 
                 if (   mimeType.indexOf("image/") === -1
-                    && mimeType.indexOf("application/pdf") === -1
-                    && mimeType.indexOf("video/") === -1) {
+                    // PDFs and videos are not (yet?) supported by the system thumbnailer
+                    // && mimeType.indexOf("application/pdf") === -1
+                    // && mimeType.indexOf("video/") === -1
+                   ) {
                     canThumb = false
                 }
             }
