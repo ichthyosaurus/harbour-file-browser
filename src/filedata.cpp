@@ -109,7 +109,9 @@ QString FileData::typeCategory() const
     } else if (
            m_mimeTypeName == "audio/x-wav"
         || m_mimeTypeName == "audio/mpeg"
+        || m_mimeTypeName == "audio/ogg"
         || m_mimeTypeName == "audio/x-vorbis+ogg"
+        || m_mimeTypeName == "audio/x-opus+ogg"
         || m_mimeTypeName == "audio/flac"
         || m_mimeTypeName == "audio/mp4") {
         return "audio";
