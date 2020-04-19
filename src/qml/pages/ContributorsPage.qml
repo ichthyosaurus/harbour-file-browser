@@ -18,7 +18,7 @@ Page {
 
             DetailList {
                 label: qsTr("Programming")
-                values: ["Kari Pihkala", "Mirian Margiani", "Joona Petrell",
+                values: ["karip", "Mirian Margiani", "Joona Petrell",
                     "Michael Faro-Tusino", "Alin Marin Elena", "jklingen",
                     "Benna", "Malte Veerman", "Marcin Mielniczuk"
                 ]
@@ -26,22 +26,22 @@ Page {
 
             DetailList {
                 label: qsTr("Icon Design")
-                values: ["Sailfish (Jolla)", "Kari Pihkala", "Mirian Margiani"]
+                values: ["Sailfish (Jolla)", "karip", "Mirian Margiani"]
             }
 
             SectionHeader { text: qsTr("Translations") }
 
             DetailList {
                 label: qsTr("English")
-                values: ["Kari Pihkala", "Mirian Margiani"]
+                values: ["karip", "Mirian Margiani"]
             }
             DetailList {
                 label: qsTr("German")
-                values: ["jklingen", "Kari Pihkala", "Mirian Margiani"]
+                values: ["jklingen", "karip", "Mirian Margiani"]
             }
             DetailList {
                 label: qsTr("Finnish")
-                values: ["Kari Pihkala", "Tathhu"]
+                values: ["karip", "Tathhu"]
             }
             DetailList {
                 label: qsTr("Chinese")
@@ -65,7 +65,7 @@ Page {
             }
             DetailList {
                 label: qsTr("French")
-                values: ["Quent-in", "Kari Pihkala", "Quentí"]
+                values: ["Quent-in", "karip", "Quentí"]
             }
             DetailList {
                 label: qsTr("Dutch")

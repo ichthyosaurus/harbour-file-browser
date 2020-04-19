@@ -1,6 +1,14 @@
 
 # File Browser Release Notes
 
+## Version 2.1.1-beta (2020-04-19)
+
+Published in OpenRepos on 2020-04-19.
+
+ * Added support for opus audio files: recognize them as audio, and allow internal playback
+ * Removed trying to show thumbnails for PDF files and videos: the system thumbnailer
+   does not support it
+
 ## Version 2.1.0-beta (2020-01-12)
 
 Published in OpenRepos on 2020-01-12.
