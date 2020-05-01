@@ -46,7 +46,7 @@ public:
     Q_INVOKABLE QString errorMessage() const { return m_errorMessage; }
 
     // file paths
-    Q_INVOKABLE QString androidSdcardPath() const;
+    Q_INVOKABLE QString androidDataPath() const;
     Q_INVOKABLE QVariantList externalDrives() const;
 
     // synchronous methods

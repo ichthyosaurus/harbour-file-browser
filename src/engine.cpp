@@ -167,7 +167,7 @@ static QStringList subdirs(const QString &dirname)
     return abslist;
 }
 
-QString Engine::androidSdcardPath() const
+QString Engine::androidDataPath() const
 {
     return QStandardPaths::writableLocation(QStandardPaths::HomeLocation)+"/android_storage";
 }
