@@ -210,9 +210,9 @@ Item {
                 var files = selectedFiles();
 
                 if (files.length > 1) {
-                    pageStack.push(Qt.resolvedUrl("../pages/MultiFilePage.qml"), { files: files });
+                    pageStack.animatorPush(Qt.resolvedUrl("../pages/MultiFilePage.qml"), { files: files });
                 } else {
-                    pageStack.push(Qt.resolvedUrl("../pages/FilePage.qml"), { file: files[0] });
+                    pageStack.animatorPush(Qt.resolvedUrl("../pages/FilePage.qml"), { file: files[0] });
                 }
 
                 propertiesTriggered();

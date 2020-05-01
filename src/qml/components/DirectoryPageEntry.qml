@@ -212,7 +212,7 @@ ListItem {
             pageStack.push(Qt.resolvedUrl("../pages/ViewVideoPage.qml"),
                            { path: fileModel.appendPath(listLabel.text), title: filename, autoPlay: true });
         } else {
-            pageStack.push(Qt.resolvedUrl("../pages/FilePage.qml"),
+            pageStack.animatorPush(Qt.resolvedUrl("../pages/FilePage.qml"),
                            { file: fileModel.appendPath(listLabel.text) });
         }
     }

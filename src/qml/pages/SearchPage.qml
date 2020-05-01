@@ -250,10 +250,10 @@ Page {
 
             onClicked: {
                 if (model.fileKind === "d")
-                    pageStack.push(Qt.resolvedUrl("DirectoryPage.qml"),
+                    pageStack.animatorPush(Qt.resolvedUrl("DirectoryPage.qml"),
                                    { dir: model.fullname });
                 else
-                    pageStack.push(Qt.resolvedUrl("FilePage.qml"),
+                    pageStack.animatorPush(Qt.resolvedUrl("FilePage.qml"),
                                    { file: model.fullname });
             }
             MouseArea {
