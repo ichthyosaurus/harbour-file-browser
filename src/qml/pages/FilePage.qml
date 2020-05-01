@@ -363,10 +363,13 @@ Page {
         viewContents();
     }
 
+    function viewContents(asAttached, forceRawView) {
     function viewContents(asAttached, forceRawView)
     {
         // dirs are special cases - there's no way to display their contents, so go to them
         if (fileData.isDir) {
+            if (asAttached === true) return; // don't try to switch to them in an attached page
+
             if (fileData.isSymLink) {
                 Functions.goToFolder(fileData.symLinkTarget);
             } else {
