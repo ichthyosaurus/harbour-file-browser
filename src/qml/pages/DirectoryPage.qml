@@ -3,7 +3,6 @@ import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
 
 import "../components"
-import "../js/navigation.js" as Navigation
 import "../js/bookmarks.js" as Bookmarks
 import "../js/paths.js" as Paths
 import "../js/files.js" as Files
@@ -12,7 +11,7 @@ Page {
     id: page
     allowedOrientations: Orientation.All
     property string dir: "/"
-    property bool initial: false // this is set to true if the page is initial page
+
     property bool remorsePopupActive: false // set to true when remorsePopup is active
     property bool remorseItemActive: false // set to true when remorseItem is active (item level)
     property alias progressPanel: progressPanel
@@ -166,7 +165,6 @@ Page {
                     }
                 }
             }
-
         }
 
         PushUpMenu {
@@ -405,10 +403,6 @@ Page {
         if (status === PageStatus.Active) {
             preparationTimer.start();
         }
-
-        if (status === PageStatus.Activating && page.initial) {
-            page.initial = false;
-            Navigation.goToFolder(initialDirectory);
         }
     }
 
