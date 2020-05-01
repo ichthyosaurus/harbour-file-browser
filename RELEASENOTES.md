@@ -1,6 +1,23 @@
 
 # File Browser Release Notes
 
+## Version 2.2.0-beta (2020-05-01)
+
+Published in OpenRepos on 2020-05-01.
+
+ * Fixed showing file info page under SailfishOS 3.3.x.x
+ * Fixed the same for symlinks to directories on another partition
+ * Increased performance when changing directories
+ * Shortcut to Android data will be hidden if the directory is not available
+
+ For developers:
+
+ * Internal API changes
+ *      - Removed some small helper functions
+ *      - Refactored and split scripts and libraries
+ *      - Removed Engine::homeFolder()
+ *      - Renamed Engine::androidSdcardPath() to Engine::androidDataPath()
+
 ## Version 2.1.1-beta (2020-04-19)
 
 Published in OpenRepos on 2020-04-19.
