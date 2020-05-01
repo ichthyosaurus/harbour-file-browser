@@ -169,7 +169,10 @@ static QStringList subdirs(const QString &dirname)
 
 QString Engine::androidDataPath() const
 {
-    return QStandardPaths::writableLocation(QStandardPaths::HomeLocation)+"/android_storage";
+    QString path = QStandardPaths::writableLocation(QStandardPaths::HomeLocation)+"/android_storage";
+    QDir dir(path);
+    if (!dir.exists()) return QString();
+    return path;
 }
 
 QVariantList Engine::externalDrives() const
