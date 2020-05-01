@@ -14,7 +14,9 @@
 Engine::Engine(QObject *parent) :
     QObject(parent),
     m_clipboardContainsCopy(false),
-    m_progress(0)
+    m_progress(0),
+    m__isUsingBusybox(QStringList()),
+    m__checkedBusybox(false)
 {
     m_fileWorker = new FileWorker;
     m_settings = qApp->property("settings").value<Settings*>();
@@ -246,17 +248,28 @@ QStringList Engine::fileSizeInfo(QStringList paths)
 
     QStringList result;
 
-    QString diskusage = execute("/usr/bin/du", QStringList() << paths <<
-                                "--bytes" << "--one-file-system" <<
-                                "--summarize" << "--total", false);
-    QStringList duLines = diskusage.split(QRegExp("[\n\r]"));
-    QString duTotalStr = duLines.at(duLines.count()-2).split(QRegExp("[\\s]+"))[0].trimmed();
-    qint64 duTotal = duTotalStr.toLongLong() * 1LL;
-    result << (duTotal > 0 ? filesizeToString(duTotal) : "-");
+    // from SailfishOS 3.3.x.x onwards, GNU coreutils have been replaced
+    // by BusyBox. This means e.g. 'du' no longer recognizes the options we need...
 
+    // determine disk usage
+    QString diskusage = execute("/usr/bin/du", QStringList() << paths <<
+                                (isUsingBusybox("du") ? "-k" : "--bytes") <<
+                                "-x" << "-s" << "-c", false);
+    QStringList duLines = diskusage.split(QRegExp("[\n\r]"));
+
+    if (duLines.length() < 2) {
+        result << "-"; // got an invalid result
+    } else {
+        QString duTotalStr = duLines.at(duLines.count()-2).split(QRegExp("[\\s]+"))[0].trimmed();
+        qint64 duTotal = duTotalStr.toLongLong() * (isUsingBusybox("du") ? 1000LL : 1LL); // BusyBox cannot show the real byte count
+        result << (duTotal > 0 ? filesizeToString(duTotal) : "-");
+    }
+
+    // count dirs
     QString dirs = execute("/bin/find", QStringList() << paths << "-type" << "d", false);
     result << QString::number(dirs.split(QRegExp("[\n\r]")).count()-1);
 
+    // count files
     QString files = execute("/bin/find", QStringList() << paths << "-type" << "f", false);
     result << QString::number(files.split(QRegExp("[\n\r]")).count()-1);
 
@@ -531,4 +544,24 @@ QStringList Engine::makeStringList(QString msg, QString str)
     QStringList list;
     list << msg << str << str;
     return list;
+}
+
+bool Engine::isUsingBusybox(QString forCommand)
+{
+    if (m__checkedBusybox) return m__isUsingBusybox.contains(forCommand);
+
+    if (!QFile::exists("/bin/busybox")) {
+        m__isUsingBusybox = QStringList();
+    } else {
+        QString result = execute("/bin/busybox", QStringList() << "--list", false);
+        if (result.isEmpty()) {
+            m__isUsingBusybox = QStringList();
+        } else {
+            // split result to lines
+            m__isUsingBusybox = result.split(QRegExp("[\n\r]"));
+        }
+    }
+
+    m__checkedBusybox = true;
+    return isUsingBusybox(forCommand);
 }

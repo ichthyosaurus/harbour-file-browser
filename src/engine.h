@@ -82,6 +82,7 @@ private:
     QMap<QString, QString> mountPoints() const;
     QString createHexDump(char *buffer, int size, int bytesPerLine);
     QStringList makeStringList(QString msg, QString str = QString());
+    bool isUsingBusybox(QString forCommand);
 
     Settings* m_settings;
     QStringList m_clipboardFiles;
@@ -90,6 +91,10 @@ private:
     QString m_progressFilename;
     QString m_errorMessage;
     FileWorker* m_fileWorker;
+
+    // don't use these directly, use isUsingBusybox() instead
+    QStringList m__isUsingBusybox;
+    bool m__checkedBusybox;
 };
 
 #endif // ENGINE_H

@@ -199,6 +199,7 @@ void FileData::readMetaData()
         m_mimeTypeComment = tr("folder");
         return;
     }
+
     if (!m_fileInfo.isFileAtEnd()) { // something strange
         m_mimeTypeName = "application/octet-stream";
         m_mimeTypeComment = tr("unknown");
