@@ -10,6 +10,8 @@ import "../js/files.js" as Files
 Page {
     id: page
     allowedOrientations: Orientation.All
+    property bool _ready: false
+    property string _activeDir: ""
     property string dir: "/"
 
     property bool remorsePopupActive: false // set to true when remorsePopup is active
@@ -31,7 +33,7 @@ Page {
 
     FileModel {
         id: fileModel
-        dir: page.dir
+        dir: _activeDir
         filterString: currentFilter
         // page.status does not exactly work - root folder seems to be active always??
         active: page.status === PageStatus.Active
@@ -250,7 +252,7 @@ Page {
 
         // text if no files or error message
         ViewPlaceholder {
-            enabled: fileModel.fileCount === 0 || fileModel.errorMessage !== ""
+            enabled: _activeDir !== "" && (fileModel.fileCount === 0 || fileModel.errorMessage !== "")
             text: fileModel.errorMessage !== "" ? fileModel.errorMessage : qsTr("No files")
         }
     }
@@ -386,6 +388,9 @@ Page {
                 pageStack.pushAttached(Qt.resolvedUrl("ShortcutsPage.qml"), { currentPath: dir });
             }
             coverText = Paths.lastPartOfPath(page.dir)+"/"; // update cover
+        } else if (status === PageStatus.Activating && _activeDir !== dir) {
+            console.log("loading", dir);
+            _activeDir = dir;
         }
     }
 
