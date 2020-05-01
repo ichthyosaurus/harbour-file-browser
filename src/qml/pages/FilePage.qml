@@ -321,10 +321,14 @@ Page {
         }
     }
 
-    // update cover
     onStatusChanged: {
         if (status === PageStatus.Activating) {
+            // update cover
             coverText = Paths.lastPartOfPath(page.file);
+        } else if (status === PageStatus.Active) {
+            if (!canNavigateForward) {
+                viewContents(true);
+            }
         }
     }
 
@@ -344,20 +348,6 @@ Page {
         page: page
         progressPanel: progressPanel
         notificationPanel: notificationPanel
-    }
-
-    Timer {
-        id: preparationTimer
-        running: false
-        repeat: false
-        interval: 10
-        onTriggered: {
-            viewContents(true);
-        }
-    }
-
-    Component.onCompleted: {
-        preparationTimer.start();
     }
 
     function quickView() {

@@ -376,33 +376,16 @@ Page {
         }
     }
 
-    // require page to be x milliseconds active before
-    // pushing the attached page, so the page is not pushed
-    // while navigating (= while building the back-tree)
-    Timer {
-        id: preparationTimer
-        interval: 15
-        running: false
-        repeat: false
-        onTriggered: {
-            if (status === PageStatus.Active) {
-                if (!canNavigateForward) {
-                    pageStack.pushAttached(Qt.resolvedUrl("ShortcutsPage.qml"), { currentPath: dir });
-                }
-                coverText = Paths.lastPartOfPath(page.dir)+"/"; // update cover
-            }
-        }
-    }
-
     onStatusChanged: {
         if (status === PageStatus.Deactivating) {
             // clear file selections when the directory is changed
             clearSelectedFiles();
-        }
-
-        if (status === PageStatus.Active) {
-            preparationTimer.start();
-        }
+        } else if (status === PageStatus.Active) {
+            if (!canNavigateForward) {
+                pageStack.completeAnimation();
+                pageStack.pushAttached(Qt.resolvedUrl("ShortcutsPage.qml"), { currentPath: dir });
+            }
+            coverText = Paths.lastPartOfPath(page.dir)+"/"; // update cover
         }
     }
 
