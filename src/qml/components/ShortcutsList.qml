@@ -1,7 +1,9 @@
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
-import "../pages/functions.js" as Functions
+
+import "../js/bookmarks.js" as Bookmarks
+import "../js/paths.js" as Paths
 
 SilicaListView {
     id: view
@@ -97,7 +99,7 @@ SilicaListView {
 
                 onClicked: {
                     if (!model.bookmark || !model.location) return;
-                    Functions.moveBookmark(model.location);
+                    Bookmarks.moveBookmark(model.location);
                 }
             }
         }
@@ -194,7 +196,7 @@ SilicaListView {
                 width: parent.width - (sizeInfo.visible ? sizeInfo.width : 0)
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                text: Functions.unicodeArrow() + " " + model.location
+                text: Paths.unicodeArrow() + " " + model.location
                 visible: model.location === model.name ? false : true
                 elide: Text.ElideMiddle
             }
@@ -225,7 +227,7 @@ SilicaListView {
 
             onClicked: {
                 if (!model.bookmark || !model.location) return;
-                Functions.removeBookmark(model.location);
+                Bookmarks.removeBookmark(model.location);
             }
         }
 
@@ -347,7 +349,7 @@ SilicaListView {
                 }
             } else if (s === "bookmarks") {
                 // Add bookmarks if there are any
-                var bookmarks = Functions.getBookmarks();
+                var bookmarks = Bookmarks.getBookmarks();
 
                 for (var key in bookmarks) {
                     if (bookmarks[key] === "") continue;
@@ -355,8 +357,8 @@ SilicaListView {
 
                     if (name === "") {
                         console.warn("empty bookmark name for", bookmarks[key], "reset to default value");
-                        name = Functions.lastPartOfPath(bookmarks[key]);
-                        settings.write("Bookmarks/"+bookmarks[key], Functions.lastPartOfPath(bookmarks[key]));
+                        name = Paths.lastPartOfPath(bookmarks[key]);
+                        settings.write("Bookmarks/"+bookmarks[key], Paths.lastPartOfPath(bookmarks[key]));
                     }
 
                     listModel.append({ "section": qsTr("Bookmarks"),

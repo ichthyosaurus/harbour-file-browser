@@ -3,8 +3,10 @@ import Sailfish.Silica 1.0
 import harbour.file.browser.FileData 1.0
 import harbour.file.browser.ConsoleModel 1.0
 import QtMultimedia 5.0
-import "functions.js" as Functions
+
 import "../components"
+import "../js/navigation.js" as Navigation
+import "../js/paths.js" as Paths
 
 Page {
     id: page
@@ -110,7 +112,7 @@ Page {
             MenuItem {
                 text: qsTr("Go to Target")
                 visible: fileData.isSymLink && fileData.isDir
-                onClicked: Functions.goToFolder(fileData.symLinkTarget);
+                onClicked: Navigation.goToFolder(fileData.symLinkTarget);
             }
         }
 
@@ -120,7 +122,7 @@ Page {
             anchors.right: parent.right
 
             PageHeader {
-                title: Functions.formatPathForTitle(fileData.absolutePath)
+                title: Paths.formatPathForTitle(fileData.absolutePath)
             }
 
             // file info texts, visible if error is not set
@@ -204,7 +206,7 @@ Page {
                         Label {
                             visible: fileData.isSymLink
                             width: parent.width
-                            text: Functions.unicodeArrow()+" "+fileData.symLinkTarget
+                            text: Paths.unicodeArrow()+" "+fileData.symLinkTarget
                             textFormat: Text.PlainText
                             wrapMode: Text.Wrap
                             horizontalAlignment: Text.AlignHCenter
@@ -261,7 +263,7 @@ Page {
                     DetailItem {
                         visible: modelData.charAt(0) < '5'
                         label: modelData.substring(1, modelData.indexOf(":"))
-                        value: Functions.trim(modelData.substring(modelData.indexOf(":")+1))
+                        value: String(modelData.substring(modelData.indexOf(":")+1)).trim()
                     }
                 }
 
@@ -276,7 +278,7 @@ Page {
                            : fileData.mimeTypeComment + "\n("+fileData.mimeType+")"
                 }
                 SizeDetailItem {
-                    files: page.file
+                    files: [page.file]
                 }
                 DetailItem {
                     label: qsTr("Permissions")
@@ -301,7 +303,7 @@ Page {
                     DetailItem {
                         visible: modelData.charAt(0) >= '5'
                         label: modelData.substring(1, modelData.indexOf(":"))
-                        value: Functions.trim(modelData.substring(modelData.indexOf(":")+1))
+                        value: String(modelData.substring(modelData.indexOf(":")+1)).trim()
                     }
                 }
             }
@@ -322,7 +324,7 @@ Page {
     // update cover
     onStatusChanged: {
         if (status === PageStatus.Activating) {
-            coverText = Functions.lastPartOfPath(page.file);
+            coverText = Paths.lastPartOfPath(page.file);
         }
     }
 
@@ -358,22 +360,19 @@ Page {
         preparationTimer.start();
     }
 
-    function quickView()
-    {
+    function quickView() {
         viewContents();
     }
 
     function viewContents(asAttached, forceRawView) {
-    function viewContents(asAttached, forceRawView)
-    {
         // dirs are special cases - there's no way to display their contents, so go to them
         if (fileData.isDir) {
             if (asAttached === true) return; // don't try to switch to them in an attached page
 
             if (fileData.isSymLink) {
-                Functions.goToFolder(fileData.symLinkTarget);
+                Navigation.goToFolder(fileData.symLinkTarget);
             } else {
-                Functions.goToFolder(fileData.file);
+                Navigation.goToFolder(fileData.file);
             }
             return;
         }
@@ -394,19 +393,19 @@ Page {
 
         if (fileData.category === "zip") {
             method(Qt.resolvedUrl("ConsolePage.qml"),
-                         { title: Functions.lastPartOfPath(fileData.file),
+                         { title: Paths.lastPartOfPath(fileData.file),
                            command: "unzip",
                            arguments: [ "-Z", "-2ht", fileData.file ] });
 
         } else if (fileData.category === "rpm") {
             method(Qt.resolvedUrl("ConsolePage.qml"),
-                         { title: Functions.lastPartOfPath(fileData.file),
+                         { title: Paths.lastPartOfPath(fileData.file),
                            command: "rpm",
                            arguments: [ "-qlp", "--info", fileData.file ] });
 
         } else if (fileData.category === "tar") {
             method(Qt.resolvedUrl("ConsolePage.qml"),
-                         { title: Functions.lastPartOfPath(fileData.file),
+                         { title: Paths.lastPartOfPath(fileData.file),
                            command: "tar",
                            arguments: [ "tf", fileData.file ] });
         } else if (fileData.category === "image") {
@@ -422,8 +421,7 @@ Page {
         }
     }
 
-    function playAudio()
-    {
+    function playAudio() {
         if (audioPlayer.playbackState !== MediaPlayer.PlayingState) {
             audioPlayer.source = fileData.file;
             audioPlayer.play();

@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import "../pages/functions.js" as Functions
+
+import "../js/navigation.js" as Navigation
 
 Rectangle {
     id: panel
@@ -221,7 +222,7 @@ Rectangle {
         onOpenChanged: {
             if (target.open) return;
             target = null;
-            Functions.goToFolder(targets[0]);
+            Navigation.goToFolder(targets[0]);
         }
     }
 

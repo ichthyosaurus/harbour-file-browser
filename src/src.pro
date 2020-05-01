@@ -65,7 +65,8 @@ SOURCES += \
     qml/*.qml \
     qml/cover/*.qml \
     qml/pages/*.qml \
-    qml/components/*.qml
+    qml/components/*.qml \
+    qml/js/*.js \
 }
 
 
@@ -77,11 +78,12 @@ OTHER_FILES = \
 # how to kill this particular Creator's plugin
 #    ../rpm/harbour-file-browser.yaml \
     ../rpm/harbour-file-browser.spec \
+    qml/*.qml \
     qml/pages/*.qml \
     qml/cover/*.qml \
     qml/components/*.qml \
-    qml/*.qml \
-    qml/functions.js \
+    qml/js/*.js \
+    qml/images/*.png \
     i18n/*.ts
 
 INCLUDEPATH += $$PWD

@@ -1,8 +1,10 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.file.browser.SearchEngine 1.0
-import "functions.js" as Functions
+
 import "../components"
+import "../js/navigation.js" as Navigation
+import "../js/paths.js" as Paths
 
 Page {
     id: page
@@ -105,7 +107,7 @@ Page {
                     anchors.left: parent.left
                     anchors.right: cancelSearchButton.left
                     y: Theme.paddingSmall
-                    placeholderText: qsTr("Search below “%1”").arg(Functions.formatPathForSearch(page.dir))
+                    placeholderText: qsTr("Search below “%1”").arg(Paths.formatPathForSearch(page.dir))
                     inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhNoPredictiveText
                     text: page.searchText
 
@@ -306,7 +308,7 @@ Page {
                      onActiveChanged: { remorsePopup.cancel(); clearSelectedFiles(); }
                      MenuItem {
                          text: qsTr("Go to containing folder")
-                         onClicked: Functions.goToFolder(model.absoluteDir)
+                         onClicked: Navigation.goToFolder(model.absoluteDir)
                      }
                      MenuItem {
                          text: qsTr("Cut")

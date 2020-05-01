@@ -1,7 +1,9 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
-import "../pages/functions.js" as Functions
+
+import "../js/bookmarks.js" as Bookmarks
+import "../js/paths.js" as Paths
 
 ListItem {
     id: fileItem
@@ -125,7 +127,7 @@ ListItem {
 
                 Label {
                     id: sizeLabel
-                    text: isLink ? (isDir ? (Functions.unicodeArrow()+" "+symLinkTarget) :
+                    text: isLink ? (isDir ? (Paths.unicodeArrow()+" "+symLinkTarget) :
                                             (size+" "+qsTr("(link)"))) : (size)
                     color: fileItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
                     elide: Text.ElideRight
@@ -300,7 +302,7 @@ ListItem {
                 if (!active) return;
                 remorsePopup.cancel();
                 clearSelectedFiles();
-                if (ctxBookmark.visible) ctxBookmark.hasBookmark = Functions.hasBookmark(fileModel.fileNameAt(index))
+                if (ctxBookmark.visible) ctxBookmark.hasBookmark = Bookmarks.hasBookmark(fileModel.fileNameAt(index))
             }
             FileActions {
                 id: fileActions
@@ -331,14 +333,14 @@ ListItem {
             MenuItem {
                 id: ctxBookmark
                 visible: model.isDir
-                property bool hasBookmark: visible ? Functions.hasBookmark(fileModel.fileNameAt(index)) : false
+                property bool hasBookmark: visible ? Bookmarks.hasBookmark(fileModel.fileNameAt(index)) : false
                 text: hasBookmark ? qsTr("Remove bookmark") : qsTr("Add to bookmarks")
                 onClicked: {
                     if (hasBookmark) {
-                        Functions.removeBookmark(fileModel.fileNameAt(index));
+                        Bookmarks.removeBookmark(fileModel.fileNameAt(index));
                         hasBookmark = false;
                     } else {
-                        Functions.addBookmark(fileModel.fileNameAt(index));
+                        Bookmarks.addBookmark(fileModel.fileNameAt(index));
                         hasBookmark = true;
                     }
                 }

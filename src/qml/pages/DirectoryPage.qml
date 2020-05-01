@@ -1,8 +1,12 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
-import "functions.js" as Functions
+
 import "../components"
+import "../js/navigation.js" as Navigation
+import "../js/bookmarks.js" as Bookmarks
+import "../js/paths.js" as Paths
+import "../js/files.js" as Files
 
 Page {
     id: page
@@ -80,7 +84,7 @@ Page {
                       (engine.clipboardCount > 0 ? " ("+engine.clipboardCount+")" : "")
                 onClicked: {
                     if (remorsePopupActive) return;
-                    Functions.pasteFiles(page.dir, progressPanel, clearSelectedFiles);
+                    Files.pasteFiles(page.dir, progressPanel, clearSelectedFiles);
                 }
             }
 
@@ -173,7 +177,7 @@ Page {
             }
             MenuItem {
                 id: bookmarkEntry
-                property bool hasBookmark: Functions.hasBookmark(dir)
+                property bool hasBookmark: Bookmarks.hasBookmark(dir)
                 text: hasBookmark ? qsTr("Remove bookmark") : qsTr("Add to bookmarks")
                 onClicked: {
                     clearSelectedFiles();
@@ -189,9 +193,9 @@ Page {
         }
 
         header: PageHeader {
-            title: Functions.formatPathForTitle(page.dir)
+            title: Paths.formatPathForTitle(page.dir)
             _titleItem.elide: Text.ElideMiddle
-            description: page.fullPathShown ? Functions.dirName(page.dir) : ""
+            description: page.fullPathShown ? Paths.dirName(page.dir) : ""
 
             MouseArea {
                 anchors.fill: parent
@@ -387,7 +391,7 @@ Page {
                 if (!canNavigateForward) {
                     pageStack.pushAttached(Qt.resolvedUrl("ShortcutsPage.qml"), { currentPath: dir });
                 }
-                coverText = Functions.lastPartOfPath(page.dir)+"/"; // update cover
+                coverText = Paths.lastPartOfPath(page.dir)+"/"; // update cover
             }
         }
     }
@@ -404,7 +408,7 @@ Page {
 
         if (status === PageStatus.Activating && page.initial) {
             page.initial = false;
-            Functions.goToFolder(initialDirectory);
+            Navigation.goToFolder(initialDirectory);
         }
     }
 
@@ -428,10 +432,10 @@ Page {
 
     function toggleBookmark() {
         if (hasBookmark) {
-            Functions.removeBookmark(dir);
+            Bookmarks.removeBookmark(dir);
             hasBookmark = false;
         } else {
-            Functions.addBookmark(dir);
+            Bookmarks.addBookmark(dir);
             hasBookmark = true;
         }
     }
