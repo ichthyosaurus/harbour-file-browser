@@ -327,10 +327,15 @@ SilicaListView {
                                    "name": qsTr("Videos"),
                                    "thumbnail": "icon-m-file-video",
                                    "location": StandardPaths.videos })
-                listModel.append({ "section": qsTr("Locations"),
-                                   "name": qsTr("Android storage"),
-                                   "thumbnail": "icon-m-file-apk",
-                                   "location": StandardPaths.home + "/android_storage" })
+
+                var androidPath = engine.androidDataPath();
+                if (androidPath !== "") {
+                    listModel.append({ "section": qsTr("Locations"),
+                                       "name": qsTr("Android storage"),
+                                       "thumbnail": "icon-m-file-apk",
+                                       "location": androidPath })
+                }
+
                 listModel.append({ "section": qsTr("Locations"),
                                    "name": qsTr("Root"),
                                    "thumbnail": "icon-m-file-rpm",
