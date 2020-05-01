@@ -153,11 +153,6 @@ void Engine::cancel()
     m_fileWorker->cancel();
 }
 
-QString Engine::homeFolder() const
-{
-    return QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
-}
-
 static QStringList subdirs(const QString &dirname)
 {
     QDir dir(dirname);
