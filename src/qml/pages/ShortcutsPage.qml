@@ -60,6 +60,13 @@ Page {
                 text: qsTr("Refresh")
                 onClicked: shortcutsView.updateModel();
             }
+            MenuItem {
+                visible: !runningAsRoot && systemSettingsEnabled
+                text: qsTr("Open storage settings");
+                onClicked: {
+                    pageStack.push(Qt.resolvedUrl("/usr/share/jolla-settings/pages/storage/storage.qml"));
+                }
+            }
         }
     }
 
