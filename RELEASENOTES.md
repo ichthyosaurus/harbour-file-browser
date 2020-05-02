@@ -1,6 +1,16 @@
 
 # File Browser Release Notes
 
+## Version 2.2.1-beta (2020-05-02)
+
+Published in OpenRepos on 2020-05-02.
+
+ * Added root mode (packaged separately)
+ * Fixed inconsistent default setting for "View/UseLocalSettings"
+ * Added "open storage settings" to bottom pulley of shortcuts page
+ * Disabled opening system settings from shortcuts for Jolla store and
+   when running as root
+
 ## Version 2.2.0-beta (2020-05-01)
 
 Published in OpenRepos on 2020-05-01.
