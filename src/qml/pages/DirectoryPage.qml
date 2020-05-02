@@ -398,7 +398,7 @@ Page {
         var showThumbs = settings.read("View/PreviewsShown", "false");
         var galleryActive = settings.read("View/EnableGalleryMode", "false");
 
-        if (settings.read("View/UseLocalSettings", "false") === "true") {
+        if (settings.read("View/UseLocalSettings", "true") === "true") {
             showThumbs = settings.read("Dolphin/PreviewsShown", showThumbs, dir+"/.directory");
             galleryActive = settings.read("Sailfish/EnableGalleryMode", galleryActive, dir+"/.directory");
         }

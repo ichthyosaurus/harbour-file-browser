@@ -49,7 +49,7 @@ void Settings::flushRuntimeSettings(QString fileName) {
     QFileInfo fileInfo = QFileInfo(fileName);
     QMutexLocker locker(&m_mutex);
 
-    if (pathIsProtected(fileName) || !QFileInfo(fileName).isWritable() || !hasRuntimeSettings(fileInfo)) {
+    if (pathIsProtected(fileName) || !fileInfo.isWritable() || !hasRuntimeSettings(fileInfo)) {
         return;
     }
 
