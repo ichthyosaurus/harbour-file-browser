@@ -161,7 +161,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="188"/>
         <source>Copy path to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>复制路径到剪切板</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="310"/>
@@ -514,12 +514,12 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="41"/>
         <source>Sometimes the application stays in the background</source>
-        <translation>有时是软件会保持后台运行</translation>
+        <translation>有时软件会保持后台运行</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="43"/>
         <source>Internal error</source>
-        <translation type="unfinished"></translation>
+        <translation>内部错误</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="46"/>
@@ -529,7 +529,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="49"/>
         <source>No application to open the file</source>
-        <translation>没有打开该文件的应用</translation>
+        <translation>没有可以打开该文件的软件</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="50"/>
@@ -544,7 +544,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="55"/>
         <source>xdg-open not found</source>
-        <translation>xdg-open找不到</translation>
+        <translation>无法找到 xdg-open</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="58"/>
@@ -564,7 +564,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="92"/>
         <source>View Raw Contents</source>
-        <translation></translation>
+        <translation>查看 Raw 内容 </translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="100"/>
@@ -952,7 +952,7 @@
     <message>
         <location filename="../jhead/jhead-api.cpp" line="207"/>
         <source>Focus Distance:Infinite</source>
-        <translation>Fokusabstand: unendlich</translation>
+        <translation>焦距：</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="209"/>
@@ -1148,7 +1148,7 @@
     <message>
         <location filename="../jhead/jhead-api.cpp" line="338"/>
         <source>JPEG Process:Unknown</source>
-        <translation>JPEG进程：未知</translation>
+        <translation>JPEG 模式：未知</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="342"/>
@@ -1204,12 +1204,12 @@
     <message>
         <location filename="../engine.cpp" line="220"/>
         <source>SD card</source>
-        <translation type="unfinished">SD卡</translation>
+        <translation>SD卡</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="222"/>
         <source>Removable Media</source>
-        <translation type="unfinished"></translation>
+        <translation>可移动媒体</translation>
     </message>
 </context>
 <context>
@@ -1270,7 +1270,7 @@
         <location filename="../qml/pages/SearchPage.qml" line="377"/>
         <location filename="../qml/pages/SearchPage.qml" line="379"/>
         <source>Deleting</source>
-        <translation>正在删除</translation>
+        <translation>删除</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="310"/>
@@ -1403,12 +1403,12 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="59"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation>打开图库模式</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="60"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished"></translation>
+        <translation>在图库模式下，图片将显示为舒适的大图片，除图片、视频和目录外的所有条目将被隐藏。</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="84"/>
@@ -1493,7 +1493,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="132"/>
         <source>start recursive search</source>
-        <translation>打来循环搜索</translation>
+        <translation>打开循环搜索</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="137"/>
@@ -1521,7 +1521,7 @@
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="270"/>
         <source>Open system settings</source>
-        <translation type="unfinished"></translation>
+        <translation>打开系统设置</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="280"/>
@@ -1631,7 +1631,7 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="60"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="24"/>
@@ -1670,14 +1670,14 @@
         <location filename="../qml/components/SizeDetailItem.qml" line="55"/>
         <source>%n directories</source>
         <translation>
-            <numerusform>%n  个目录</numerusform>
+            <numerusform>%n 个目录</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="56"/>
         <source>%n file(s)</source>
         <translation>
-            <numerusform>%n  个文件</numerusform>
+            <numerusform>%n 个文件</numerusform>
         </translation>
     </message>
 </context>
@@ -1731,12 +1731,12 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="103"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation>开启图库模式</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="104"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished"></translation>
+        <translation>在图库模式下，图片将显示为舒适的大图片，除图片、视频和目录外的所有条目将被隐藏。</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="110"/>
@@ -1776,7 +1776,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="75"/>
         <source>Preview images...</source>
-        <translation type="unfinished"></translation>
+        <translation>预览图片...</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="80"/>
@@ -1825,7 +1825,7 @@
         <location filename="../qml/pages/TransferDialog.qml" line="60"/>
         <source>%n destinations(s) selected</source>
         <translation>
-            <numerusform>已选择 %n 目标位置</numerusform>
+            <numerusform>已选择 %n 个目标位置</numerusform>
         </translation>
     </message>
     <message>
@@ -1940,12 +1940,12 @@
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="284"/>
         <source>Moving</source>
-        <translation>正在移动</translation>
+        <translation>移动</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="285"/>
         <source>Linking</source>
-        <translation>正在链接</translation>
+        <translation>链接</translation>
     </message>
 </context>
 <context>
@@ -1967,13 +1967,13 @@
         <location filename="../qml/js/files.js" line="16"/>
         <location filename="../qml/js/files.js" line="25"/>
         <source>Copying</source>
-        <translation type="unfinished">正在复制</translation>
+        <translation>复制</translation>
     </message>
     <message>
         <location filename="../qml/js/files.js" line="16"/>
         <location filename="../qml/js/files.js" line="25"/>
         <source>Moving</source>
-        <translation type="unfinished">正在移动</translation>
+        <translation>移动</translation>
     </message>
 </context>
 <context>
@@ -1981,7 +1981,7 @@
     <message>
         <location filename="../qml/main.qml" line="14"/>
         <source>Version %1</source>
-        <translation>版本  %1</translation>
+        <translation>版本 %1</translation>
     </message>
 </context>
 <context>
@@ -1989,7 +1989,7 @@
     <message>
         <location filename="../qml/js/paths.js" line="26"/>
         <source>root</source>
-        <translation type="unfinished"></translation>
+        <translation>root</translation>
     </message>
 </context>
 </TS>
