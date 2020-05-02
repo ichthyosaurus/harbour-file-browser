@@ -258,68 +258,68 @@
         <translation>Inga filer att klistra in</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="324"/>
+        <location filename="../engine.cpp" line="322"/>
         <source>File does not exist</source>
         <translation>Filen finns inte</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="326"/>
+        <location filename="../engine.cpp" line="324"/>
         <source>Broken symbolic link</source>
         <translation>Skadad symbolisk länk</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="331"/>
+        <location filename="../engine.cpp" line="329"/>
         <source>Cannot read this type of file</source>
         <translation>Kan inte läsa den här filtypen</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="337"/>
+        <location filename="../engine.cpp" line="335"/>
         <source>No permission to read the file</source>
         <translation>Behörighet att läsa filen saknas</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="341"/>
-        <location filename="../engine.cpp" line="347"/>
+        <location filename="../engine.cpp" line="339"/>
+        <location filename="../engine.cpp" line="345"/>
         <source>Error reading file</source>
         <translation>Fel vid filläsning</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="350"/>
+        <location filename="../engine.cpp" line="348"/>
         <source>Empty file</source>
         <translation>Tom fil</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="376"/>
+        <location filename="../engine.cpp" line="374"/>
         <source>Binary file preview clipped at %1 kB</source>
         <translation>Binär filgranskning klippt vi %1 kB</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="395"/>
+        <location filename="../engine.cpp" line="393"/>
         <source>Text file preview clipped at %1 lines</source>
         <translation>Textfilsgranskning klippt vid %1 rader</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="397"/>
+        <location filename="../engine.cpp" line="395"/>
         <source>Text file preview clipped at %1 kB</source>
         <translation>Textfilsgranskning klippt vid %1 kB</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="410"/>
+        <location filename="../engine.cpp" line="408"/>
         <source>No permissions to create %1</source>
         <translation>Ingen behörighet att skapa %1</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="428"/>
+        <location filename="../engine.cpp" line="426"/>
         <source>Cannot rename %1</source>
         <translation>Kan inte namnändra %1</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="451"/>
+        <location filename="../engine.cpp" line="449"/>
         <source>Cannot change permissions</source>
         <translation>Kan inte ändra behörighet</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="412"/>
+        <location filename="../engine.cpp" line="410"/>
         <source>Cannot create folder %1</source>
         <translation>Kan inte skapa mappen %1</translation>
     </message>
@@ -433,7 +433,7 @@
 <context>
     <name>FileBrowserCover</name>
     <message>
-        <location filename="../qml/cover/FileBrowserCover.qml" line="26"/>
+        <location filename="../qml/cover/FileBrowserCover.qml" line="25"/>
         <source>Root Mode</source>
         <translation>Root-läge</translation>
     </message>
@@ -1216,12 +1216,12 @@
         <translation>dd.MM.yy, hh:mm</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="220"/>
+        <location filename="../engine.cpp" line="218"/>
         <source>SD card</source>
         <translation type="unfinished">SD-kort</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="222"/>
+        <location filename="../engine.cpp" line="220"/>
         <source>Removable Media</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1536,79 +1536,79 @@
 <context>
     <name>ShortcutsList</name>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="270"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="271"/>
         <source>Open system settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="280"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="281"/>
         <source>Nothing to show here...</source>
         <translation>Inget att visa här...</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="305"/>
-        <location filename="../qml/components/ShortcutsList.qml" line="310"/>
-        <location filename="../qml/components/ShortcutsList.qml" line="314"/>
-        <location filename="../qml/components/ShortcutsList.qml" line="318"/>
-        <location filename="../qml/components/ShortcutsList.qml" line="322"/>
-        <location filename="../qml/components/ShortcutsList.qml" line="326"/>
-        <location filename="../qml/components/ShortcutsList.qml" line="330"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="306"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="311"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="315"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="319"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="323"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="327"/>
         <location filename="../qml/components/ShortcutsList.qml" line="334"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="340"/>
         <source>Locations</source>
         <translation>Platser</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="306"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="307"/>
         <source>Home</source>
         <translation>Hem</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="311"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="312"/>
         <source>Documents</source>
         <translation>Dokument</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="315"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="316"/>
         <source>Downloads</source>
         <translation>Nedladdningar</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="319"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="320"/>
         <source>Music</source>
         <translation>Musik</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="323"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="324"/>
         <source>Pictures</source>
         <translation>Foton</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="327"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="328"/>
         <source>Videos</source>
         <translation>Videor</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="335"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="341"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="331"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="335"/>
         <source>Android storage</source>
         <translation>Android-lagring</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="343"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="349"/>
         <source>Storage devices</source>
         <translation>Lagringsenheter</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="345"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="351"/>
         <source>SD card</source>
         <translation>SD-kort</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="364"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="370"/>
         <source>Bookmarks</source>
         <translation>Bokmärken</translation>
     </message>
@@ -1648,6 +1648,11 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="60"/>
         <source>Refresh</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="65"/>
+        <source>Open storage settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
