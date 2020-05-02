@@ -38,11 +38,6 @@ i18n.files = i18n/file-browser_de_DE.qm \
 
 INSTALLS += i18n
 
-# rootIcons.path = /usr/share/icons/hicolor/*/apps
-# rootIcons.files = icons/*/harbour-file-browser-root.png
-#
-# INSTALLS += rootIcons
-
 # automatic generation of the translation .qm files from .ts files
 system(lrelease $$PWD/i18n/*.ts)
 
