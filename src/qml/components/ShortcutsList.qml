@@ -264,9 +264,10 @@ SilicaListView {
     }
 
     Component {
-        id: contextMenu
+        id: settingsContextMenu
         ContextMenu {
             MenuItem {
+                visible: !runningAsRoot && systemSettingsEnabled
                 text: qsTr("Open system settings");
                 onClicked: {
                     pageStack.push(Qt.resolvedUrl("/usr/share/jolla-settings/pages/storage/storage.qml"));
@@ -350,7 +351,7 @@ SilicaListView {
                                        "thumbnail": drives[d].title === qsTr("SD card") ? "icon-m-sd-card" : "icon-m-usb",
                                        "location": drives[d].path,
                                        "showsize": true,
-                                       "contextMenu": contextMenu })
+                                       "contextMenu": (!runningAsRoot && systemSettingsEnabled) ? settingsContextMenu : null, })
                 }
             } else if (s === "bookmarks") {
                 // Add bookmarks if there are any

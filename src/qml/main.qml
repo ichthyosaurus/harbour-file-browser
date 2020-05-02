@@ -12,6 +12,7 @@ ApplicationWindow {
 
     // note: version number has to be updated only in harbour-file-browser.yaml!
     readonly property string versionString: qsTr("Version %1").arg(versionNumber)
+    readonly property bool runningAsRoot: engine.runningAsRoot()
 
     property string coverText: "File Browser"
     cover: Qt.resolvedUrl("cover/FileBrowserCover.qml")
