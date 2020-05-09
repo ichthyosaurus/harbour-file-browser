@@ -8,9 +8,9 @@ included in the package at: `/usr/share/%appname/start-root-helper.c`
 
 ## ** Warning **
 
-USE AT YOUR OWN RISK. This app can be used to corrupt files on the phone
-and make the phone unusable. The author of File Browser does not take any
-responsibility if that happens. So, be careful.
+*USE AT YOUR OWN RISK*. This app can be used to corrupt files on the phone
+and make the phone *unusable*. The author of File Browser does not take any
+responsibility if that happens. So, be very careful.
 
 
 ## Building
