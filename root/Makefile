@@ -7,7 +7,7 @@ default: $(SOURCES) $(SPEC)
 	rm -rf build
 	mkdir build
 	cp -r $(SOURCES) build
-	cd build && rpmbuild --define "debug_package %{nil}" -bb --build-in-place "../$(SPEC)" --define "_rpmdir ../RPMS"
+	cd build && rpmbuild --define "debug_package %{nil}" --define "_rpmdir ../RPMS" --target "$(BUILDARCH)" -bb --build-in-place "../$(SPEC)"
 
 clean:
 	rm -rf build
