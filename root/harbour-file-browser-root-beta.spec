@@ -1,8 +1,7 @@
 %define appname harbour-file-browser-root-beta
 Name: %{appname}
-# BuildArch: armv7hl
 Summary: File Browser with root privileges
-Version: 1.0
+Version: 1.1
 Release: 1
 Group: System/Tools
 License: GPLv3
@@ -52,6 +51,9 @@ cp %appname.desktop %{buildroot}/usr/share/applications/
 cp start-root start-root-helper.c %{buildroot}/usr/share/%appname/
 
 %changelog
+
+* Sun May 10 2020 ichthyosaurus <33604595+ichthyosaurus@users.noreply.github.com> 1.1-1
+- Fixed starting from the terminal
 
 * Sat May 02 2020 ichthyosaurus <33604595+ichthyosaurus@users.noreply.github.com> 1.0-1
 - Fixed building
