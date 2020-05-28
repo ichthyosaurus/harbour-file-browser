@@ -23,8 +23,12 @@ UseLocalSettings=true               bool                                        
 EnableGalleryMode=false             bool
 
 [Bookmarks]
-Entries="[\"...\"]"                 list of paths as JSON string                bookmark-entries
-home\nemo\Devel=Devel               'path=bookmark name' for each bookmark
+Entries="[\"...\"]"                 ordered list of paths as JSON string        bookmark-entries
+                                    (this field saves only the order of elements,
+                                     not the elements themselves)
+home#nemo#Devel=Devel               'path=bookmark name' for each bookmark
+                                    (with all '/' replaced by '#' to distinct
+                                     them from settings groups)
 
 
 ## Local Settings
