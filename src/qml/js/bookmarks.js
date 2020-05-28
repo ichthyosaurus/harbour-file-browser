@@ -3,11 +3,17 @@
 
 .import "paths.js" as Paths
 
-function addBookmark(path) {
+function _defaultFor(arg, val) {
+    return typeof arg !== 'undefined' ? arg : val;
+}
+
+function addBookmark(path, name) {
     if (!path) return;
+    name = _defaultFor(name, Paths.lastPartOfPath(path))
+    settings.write("Bookmarks/"+path, name);
+
     var bookmarks = getBookmarks();
     bookmarks.push(path);
-    settings.write("Bookmarks/"+path, Paths.lastPartOfPath(path));
     settings.write("Bookmarks/Entries", JSON.stringify(bookmarks));
     main.bookmarkAdded(path);
 }
@@ -57,4 +63,16 @@ function getBookmarks() {
         settings.write("Bookmarks/Entries", JSON.stringify(keys));
         return keys;
     }
+}
+
+function getBookmarkName(path) {
+    if (path === "") return "";
+    var name = settings.read("Bookmarks/"+path);
+
+    if (name === "") {
+        console.warn("empty bookmark name for", path, "- reset to default value");
+        addBookmark(path);
+    }
+
+    return name;
 }

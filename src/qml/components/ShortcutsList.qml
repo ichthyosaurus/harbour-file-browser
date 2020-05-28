@@ -259,7 +259,7 @@ SilicaListView {
             }
 
             model.name = newText;
-            settings.write("Bookmarks/"+model.location, newText);
+            Bookmarks.addBookmark(model.location, newText);
         }
     }
 
@@ -358,15 +358,8 @@ SilicaListView {
                 var bookmarks = Bookmarks.getBookmarks();
 
                 for (var key in bookmarks) {
-                    if (bookmarks[key] === "") continue;
-                    var name = settings.read("Bookmarks/"+bookmarks[key]);
-
-                    if (name === "") {
-                        console.warn("empty bookmark name for", bookmarks[key], "reset to default value");
-                        name = Paths.lastPartOfPath(bookmarks[key]);
-                        settings.write("Bookmarks/"+bookmarks[key], Paths.lastPartOfPath(bookmarks[key]));
-                    }
-
+                    var name = Bookmarks.getBookmarkName(bookmarks[key]);
+                    if (name === "") continue;
                     listModel.append({ "section": qsTr("Bookmarks"),
                                        "name": name,
                                        "thumbnail": "icon-m-favorite",
