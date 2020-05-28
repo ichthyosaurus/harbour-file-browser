@@ -50,7 +50,11 @@ function getBookmarks() {
         var entries = JSON.parse(settings.read("Bookmarks/Entries"));
         return entries;
     } catch (SyntaxError) {
-        settings.write("Bookmarks/Entries", JSON.stringify([]));
-        return [];
+        // The ordering field seems to be empty. It is possible that it was lost because
+        // the user moved the settings folder while the app was running. There is no way
+        // to restore it, but at least we can make sure all entries are still shown.
+        var keys = settings.keys("Bookmarks").filter(function(e) { return e !== 'Entries'; });
+        settings.write("Bookmarks/Entries", JSON.stringify(keys));
+        return keys;
     }
 }

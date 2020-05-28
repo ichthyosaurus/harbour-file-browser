@@ -39,6 +39,7 @@ public:
     Q_INVOKABLE QString read(QString key, QString defaultValue = QString(), QString fileName = QString());
     Q_INVOKABLE void write(QString key, QString value, QString fileName = QString());
     Q_INVOKABLE void remove(QString key, QString fileName = QString());
+    Q_INVOKABLE QStringList keys(QString group = QString(), QString fileName = QString());
 
     QVariant readVariant(QString key, const QVariant& defaultValue = QVariant(), QString fileName = QString());
     void writeVariant(QString key, const QVariant& value, QString fileName = QString());

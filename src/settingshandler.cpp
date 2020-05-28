@@ -184,3 +184,26 @@ void Settings::remove(QString key, QString fileName) {
         emit viewSettingsChanged(usingLocalConfig ? fileInfo.dir().absolutePath() : "");
     }
 }
+
+QStringList Settings::keys(QString group, QString fileName) {
+    if (fileName.isEmpty()) fileName = m_globalConfigPath;
+    QFileInfo fileInfo = QFileInfo(fileName);
+    QStringList keys;
+
+    if (!fileInfo.exists() || !fileInfo.isReadable() || pathIsProtected(fileName)) {
+        QMutexLocker locker(&m_mutex);
+        keys = getRuntimeSettings(fileInfo).uniqueKeys();
+    } else {
+        flushRuntimeSettings(fileName);
+        QSettings settings(fileName, QSettings::IniFormat);
+        if (!group.isEmpty()) settings.beginGroup(group);
+        keys = settings.allKeys();
+    }
+
+    for (int i = 0; i < keys.length(); i++) {
+        // Un-sanitize keys. FIXME: this is a dirty hack.
+        keys[i] = keys[i].replace('#', '/');
+    }
+
+    return keys;
+}
