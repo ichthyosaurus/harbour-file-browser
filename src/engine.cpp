@@ -284,7 +284,7 @@ QStringList Engine::diskSpace(QString path)
         return QStringList();
 
     // run df in POSIX mode for the given path to get disk space
-    QString blockSize = "--block-size=1024";
+    QString blockSize = isUsingBusybox("df") ? "-k" : "--block-size=1024";
     QString result = execute("/bin/df", QStringList() << "-P" << blockSize << path, false);
     if (result.isEmpty())
         return QStringList();
