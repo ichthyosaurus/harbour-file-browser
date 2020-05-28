@@ -53,7 +53,7 @@ void Settings::flushRuntimeSettings(QString fileName) {
     QFileInfo fileInfo = QFileInfo(fileName);
     QMutexLocker locker(&m_mutex);
 
-    if (pathIsProtected(fileName) || !fileInfo.isWritable() || !hasRuntimeSettings(fileInfo)) {
+    if (pathIsProtected(fileName) || !isWritable(fileInfo) || !hasRuntimeSettings(fileInfo)) {
         return;
     }
 
@@ -77,6 +77,21 @@ bool Settings::hasRuntimeSettings(QFileInfo file) {
 
 QMap<QString, QVariant>& Settings::getRuntimeSettings(QFileInfo file) {
     return m_runtimeSettings[file.absoluteFilePath()];
+}
+
+bool Settings::isWritable(QFileInfo fileInfo) {
+    // Check whether the file is writable. If it does not exist, check if
+    // its parent directory can be written to.
+    // Use this method instead of plain QFileInfo::isWritable!
+    if (fileInfo.exists()) {
+        if (fileInfo.isFile()) {
+            return fileInfo.isWritable();
+        } else {
+            return false;
+        }
+    } else {
+        return QFileInfo(fileInfo.absolutePath()).isWritable();
+    }
 }
 
 QVariant Settings::readVariant(QString key, const QVariant &defaultValue, QString fileName) {
@@ -113,7 +128,7 @@ void Settings::writeVariant(QString key, const QVariant &value, QString fileName
 
     QFileInfo fileInfo = QFileInfo(fileName);
 
-    if (pathIsProtected(fileName) || !fileInfo.isWritable()) {
+    if (pathIsProtected(fileName) || !isWritable(fileInfo)) {
         QMutexLocker locker(&m_mutex);
         getRuntimeSettings(fileInfo)[key] = value;
     } else {
@@ -155,7 +170,7 @@ void Settings::remove(QString key, QString fileName) {
 
     QFileInfo fileInfo = QFileInfo(fileName);
 
-    if (pathIsProtected(fileName) || !fileInfo.isWritable()) {
+    if (pathIsProtected(fileName) || !isWritable(fileInfo)) {
         QMutexLocker locker(&m_mutex);
         getRuntimeSettings(fileInfo).remove(key);
     } else {

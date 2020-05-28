@@ -52,6 +52,7 @@ private:
     void flushRuntimeSettings(QString fileName);
     bool hasRuntimeSettings(QFileInfo file);
     QMap<QString, QVariant>& getRuntimeSettings(QFileInfo file);
+    bool isWritable(QFileInfo file);
 
     // in-memory settings to be used when local settings are not available
     // It is a QMap of QMap, combining file paths with their local settings QMaps.
