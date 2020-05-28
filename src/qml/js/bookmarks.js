@@ -54,6 +54,8 @@ function hasBookmark(path) {
 function getBookmarks() {
     try {
         var entries = JSON.parse(settings.read("Bookmarks/Entries"));
+        // remove duplicates
+        entries = entries.filter(function(value, index, self){ return self.indexOf(value) === index; });
         return entries;
     } catch (SyntaxError) {
         // The ordering field seems to be empty. It is possible that it was lost because
