@@ -246,10 +246,8 @@ QStringList Engine::fileSizeInfo(QStringList paths)
 
     QStringList result;
 
-    // from SailfishOS 3.3.x.x onwards, GNU coreutils have been replaced
-    // by BusyBox. This means e.g. 'du' no longer recognizes the options we need...
-
     // determine disk usage
+    // cf. docs on Engine::isUsingBusybox
     QString diskusage = execute("/usr/bin/du", QStringList() << paths <<
                                 (isUsingBusybox("du") ? "-k" : "--bytes") <<
                                 "-x" << "-s" << "-c", false);
@@ -264,11 +262,11 @@ QStringList Engine::fileSizeInfo(QStringList paths)
     }
 
     // count dirs
-    QString dirs = execute("/bin/find", QStringList() << paths << "-type" << "d", false);
+    QString dirs = execute("/bin/find", QStringList() << paths << "-type" << "d", false); // same for BusyBox
     result << QString::number(dirs.split(QRegExp("[\n\r]")).count()-1);
 
     // count files
-    QString files = execute("/bin/find", QStringList() << paths << "-type" << "f", false);
+    QString files = execute("/bin/find", QStringList() << paths << "-type" << "f", false); // same for BusyBox
     result << QString::number(files.split(QRegExp("[\n\r]")).count()-1);
 
     return result;
@@ -284,6 +282,7 @@ QStringList Engine::diskSpace(QString path)
         return QStringList();
 
     // run df in POSIX mode for the given path to get disk space
+    // cf. docs on Engine::isUsingBusybox
     QString blockSize = isUsingBusybox("df") ? "-k" : "--block-size=1024";
     QString result = execute("/bin/df", QStringList() << "-P" << blockSize << path, false);
     if (result.isEmpty())
@@ -546,6 +545,9 @@ QStringList Engine::makeStringList(QString msg, QString str)
 
 bool Engine::isUsingBusybox(QString forCommand)
 {
+    // from SailfishOS 3.3.x.x onwards, GNU coreutils have been replaced
+    // by BusyBox. This means e.g. 'du' no longer recognizes the options we need...
+
     if (m__checkedBusybox) return m__isUsingBusybox.contains(forCommand);
 
     if (!QFile::exists("/bin/busybox")) {
