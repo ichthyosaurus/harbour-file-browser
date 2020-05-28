@@ -3,8 +3,8 @@
 SFDK=/opt/SailfishOS-SDK/bin/sfdk
 TARGETS=(
     # note: last field (/-.*?$/) has to be architecture
-    "SailfishOS-3.2.1.20-armv7hl"
-    "SailfishOS-3.2.1.20-i486"
+    "SailfishOS-3.3.0.16-armv7hl"
+    "SailfishOS-3.3.0.16-i486"
 )
 
 showhelp() {
