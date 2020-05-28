@@ -26,6 +26,10 @@
 Settings::Settings(QObject *parent) : QObject(parent) {
     QSettings global;
     m_globalConfigPath = global.fileName();
+
+    if (pathIsProtected(m_globalConfigPath) || !QDir("/").mkpath(QFileInfo(m_globalConfigPath).absolutePath())) {
+        // TODO we should issue a warning that global settings cannot be saved
+    }
 }
 
 Settings::~Settings() {
