@@ -274,8 +274,8 @@ Page {
                 DetailItem {
                     label: qsTr("Type")
                     value: fileData.isSymLink
-                           ? qsTr("Link to %1").arg(fileData.mimeTypeComment) + "\n("+fileData.mimeType+")"
-                           : fileData.mimeTypeComment + "\n("+fileData.mimeType+")"
+                                ? (fileData.isSymLinkBroken ? qsTr("Unknown (link target not found)") : qsTr("Link to %1").arg(fileData.mimeTypeComment) + "\n("+fileData.mimeType+")")
+                                : fileData.mimeTypeComment + "\n("+fileData.mimeType+")"
                 }
                 SizeDetailItem {
                     files: [page.file]
