@@ -257,68 +257,68 @@
         <translation>没有需要粘贴的文件</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="322"/>
+        <location filename="../engine.cpp" line="323"/>
         <source>File does not exist</source>
         <translation>文件不存在</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="324"/>
+        <location filename="../engine.cpp" line="325"/>
         <source>Broken symbolic link</source>
         <translation>损坏的符号链接</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="329"/>
+        <location filename="../engine.cpp" line="330"/>
         <source>Cannot read this type of file</source>
         <translation>无法读取此类型文件</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="335"/>
+        <location filename="../engine.cpp" line="336"/>
         <source>No permission to read the file</source>
         <translation>没有权限读取该文件</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="339"/>
-        <location filename="../engine.cpp" line="345"/>
+        <location filename="../engine.cpp" line="340"/>
+        <location filename="../engine.cpp" line="346"/>
         <source>Error reading file</source>
         <translation>读取文件出错</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="348"/>
+        <location filename="../engine.cpp" line="349"/>
         <source>Empty file</source>
         <translation>空文件</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="374"/>
+        <location filename="../engine.cpp" line="375"/>
         <source>Binary file preview clipped at %1 kB</source>
         <translation>二进制文件预览剪切 %1 KB。</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="393"/>
+        <location filename="../engine.cpp" line="394"/>
         <source>Text file preview clipped at %1 lines</source>
         <translation>文本预览剪切 %1 行</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="395"/>
+        <location filename="../engine.cpp" line="396"/>
         <source>Text file preview clipped at %1 kB</source>
         <translation>文本文件预览剪切 %1 KB</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="408"/>
+        <location filename="../engine.cpp" line="409"/>
         <source>No permissions to create %1</source>
         <translation>没有权限创建 %1</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="426"/>
+        <location filename="../engine.cpp" line="427"/>
         <source>Cannot rename %1</source>
         <translation>无法重命名 %1</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="449"/>
+        <location filename="../engine.cpp" line="450"/>
         <source>Cannot change permissions</source>
         <translation>无法更改权限</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="410"/>
+        <location filename="../engine.cpp" line="411"/>
         <source>Cannot create folder %1</source>
         <translation>无法创建目录 %1</translation>
     </message>
@@ -611,6 +611,11 @@
         <location filename="../qml/pages/FilePage.qml" line="277"/>
         <source>Link to %1</source>
         <translation>链接到 %1</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FilePage.qml" line="277"/>
+        <source>Unknown (link target not found)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="284"/>
@@ -1202,12 +1207,12 @@
         <translation>dd.MM.yy, hh:mm</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="218"/>
+        <location filename="../engine.cpp" line="220"/>
         <source>SD card</source>
         <translation type="unfinished">SD卡</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="220"/>
+        <location filename="../engine.cpp" line="222"/>
         <source>Removable Media</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1591,7 +1596,7 @@
         <translation>SD卡</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="370"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="363"/>
         <source>Bookmarks</source>
         <translation>收藏</translation>
     </message>

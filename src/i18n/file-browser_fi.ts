@@ -258,68 +258,68 @@
         <translation>Ei voi siirtää/kopioida itsensä päälle</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="322"/>
+        <location filename="../engine.cpp" line="323"/>
         <source>File does not exist</source>
         <translation>Tiedostoa ei ole olemassa</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="324"/>
+        <location filename="../engine.cpp" line="325"/>
         <source>Broken symbolic link</source>
         <translation>Hajonnut symbolinen linkki</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="329"/>
+        <location filename="../engine.cpp" line="330"/>
         <source>Cannot read this type of file</source>
         <translation>Tätä tiedostotyyppiä ei voi lukea</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="335"/>
+        <location filename="../engine.cpp" line="336"/>
         <source>No permission to read the file</source>
         <translation>Ei oikeuksia lukea tiedostoa</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="339"/>
-        <location filename="../engine.cpp" line="345"/>
+        <location filename="../engine.cpp" line="340"/>
+        <location filename="../engine.cpp" line="346"/>
         <source>Error reading file</source>
         <translation>Virhe luettaessa tiedostoa</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="348"/>
+        <location filename="../engine.cpp" line="349"/>
         <source>Empty file</source>
         <translation>Tyhjä tiedosto</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="374"/>
+        <location filename="../engine.cpp" line="375"/>
         <source>Binary file preview clipped at %1 kB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="393"/>
+        <location filename="../engine.cpp" line="394"/>
         <source>Text file preview clipped at %1 lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="395"/>
+        <location filename="../engine.cpp" line="396"/>
         <source>Text file preview clipped at %1 kB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="408"/>
+        <location filename="../engine.cpp" line="409"/>
         <source>No permissions to create %1</source>
         <translation>Ei oikeuksia luoda kohdetta %1</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="426"/>
+        <location filename="../engine.cpp" line="427"/>
         <source>Cannot rename %1</source>
         <translation>Uudelleennimeäminen epäonnistui %1</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="449"/>
+        <location filename="../engine.cpp" line="450"/>
         <source>Cannot change permissions</source>
         <translation>Oikeuksia ei voi muuttaa</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="410"/>
+        <location filename="../engine.cpp" line="411"/>
         <source>Cannot create folder %1</source>
         <translation>Kansiota %1 ei voitu luoda</translation>
     </message>
@@ -623,6 +623,11 @@
         <location filename="../qml/pages/FilePage.qml" line="277"/>
         <source>Link to %1</source>
         <translation>Linkki kohteeseen %1</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FilePage.qml" line="277"/>
+        <source>Unknown (link target not found)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="284"/>
@@ -1214,12 +1219,12 @@
         <translation>Kommentti:</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="218"/>
+        <location filename="../engine.cpp" line="220"/>
         <source>SD card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="220"/>
+        <location filename="../engine.cpp" line="222"/>
         <source>Removable Media</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1605,7 +1610,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="370"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="363"/>
         <source>Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>

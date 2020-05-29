@@ -258,68 +258,68 @@
         <translation>Cannot move/copy to itself</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="322"/>
+        <location filename="../engine.cpp" line="323"/>
         <source>File does not exist</source>
         <translation>File does not exist</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="324"/>
+        <location filename="../engine.cpp" line="325"/>
         <source>Broken symbolic link</source>
         <translation>Broken symbolic link</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="329"/>
+        <location filename="../engine.cpp" line="330"/>
         <source>Cannot read this type of file</source>
         <translation>Cannot read this type of file</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="335"/>
+        <location filename="../engine.cpp" line="336"/>
         <source>No permission to read the file</source>
         <translation>No permission to read the file</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="339"/>
-        <location filename="../engine.cpp" line="345"/>
+        <location filename="../engine.cpp" line="340"/>
+        <location filename="../engine.cpp" line="346"/>
         <source>Error reading file</source>
         <translation>Error reading file</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="348"/>
+        <location filename="../engine.cpp" line="349"/>
         <source>Empty file</source>
         <translation>Empty file</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="374"/>
+        <location filename="../engine.cpp" line="375"/>
         <source>Binary file preview clipped at %1 kB</source>
         <translation>Binary file preview clipped at %1 kB</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="393"/>
+        <location filename="../engine.cpp" line="394"/>
         <source>Text file preview clipped at %1 lines</source>
         <translation>Text file preview clipped at %1 lines</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="395"/>
+        <location filename="../engine.cpp" line="396"/>
         <source>Text file preview clipped at %1 kB</source>
         <translation>Text file preview clipped at %1 kB</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="408"/>
+        <location filename="../engine.cpp" line="409"/>
         <source>No permissions to create %1</source>
         <translation>No permissions to create %1</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="410"/>
+        <location filename="../engine.cpp" line="411"/>
         <source>Cannot create folder %1</source>
         <translation>Cannot create folder %1</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="426"/>
+        <location filename="../engine.cpp" line="427"/>
         <source>Cannot rename %1</source>
         <translation>Cannot rename %1</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="449"/>
+        <location filename="../engine.cpp" line="450"/>
         <source>Cannot change permissions</source>
         <translation>Cannot change permissions</translation>
     </message>
@@ -623,6 +623,11 @@
         <location filename="../qml/pages/FilePage.qml" line="277"/>
         <source>Link to %1</source>
         <translation>Link to %1</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FilePage.qml" line="277"/>
+        <source>Unknown (link target not found)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="284"/>
@@ -1215,12 +1220,12 @@
         <translation>Comment:</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="218"/>
+        <location filename="../engine.cpp" line="220"/>
         <source>SD card</source>
         <translation type="unfinished">SD card</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="220"/>
+        <location filename="../engine.cpp" line="222"/>
         <source>Removable Media</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1607,7 +1612,7 @@
         <translation>SD card</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="370"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="363"/>
         <source>Bookmarks</source>
         <translation>Bookmarks</translation>
     </message>
