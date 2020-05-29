@@ -200,7 +200,7 @@ void FileData::readMetaData()
         return;
     }
 
-    if (!m_fileInfo.isFileAtEnd()) { // something strange
+    if (!m_fileInfo.exists()) { // catch e.g. broken links
         m_mimeTypeName = "application/octet-stream";
         m_mimeTypeComment = tr("unknown");
         return;

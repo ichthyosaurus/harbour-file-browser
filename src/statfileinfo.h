@@ -22,9 +22,9 @@ public:
     // these inspect the file itself without following symlinks
 
     // directory
-    bool isDir() const { return S_ISDIR(m_lstat.st_mode); }
+    bool isDir() const { return m_fileInfo.isDir(); /*S_ISDIR(m_lstat.st_mode);*/ }
     // symbolic link
-    bool isSymLink() const { return S_ISLNK(m_lstat.st_mode); }
+    bool isSymLink() const { return m_fileInfo.isSymLink(); /*return S_ISLNK(m_lstat.st_mode);*/ }
     // block special file
     bool isBlk() const { return S_ISBLK(m_lstat.st_mode); }
     // character special file
@@ -42,7 +42,7 @@ public:
     // these inspect the file or if it is a symlink, then its target end point
 
     // directory
-    bool isDirAtEnd() const { return S_ISDIR(m_stat.st_mode); }
+    bool isDirAtEnd() const { return m_fileInfo.isDir(); /*S_ISDIR(m_stat.st_mode);*/ }
     // block special file
     bool isBlkAtEnd() const { return S_ISBLK(m_stat.st_mode); }
     // character special file
