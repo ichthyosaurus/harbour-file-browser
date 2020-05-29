@@ -1,6 +1,25 @@
 
 # File Browser Release Notes
 
+## Version 2.2.2-beta (2020-05-29)
+
+Published in OpenRepos on 2020-05-29.
+
+ * Fixed saving settings when the settings file did not exist
+ * Fixed showing disk space under SFOS 3.3.x.x
+ * Fixed rare possibility of duplicate bookmark entries
+ * Fixed bookmarks vanishing when the user renames the configuration folder while the app is running
+ * Fixed calculating size info and counting files for links or directories containing links
+ * Fixed copying hidden files when copying a directory recursively
+ * Improved user notice when a link is broken
+ * Improved directory/link state detection (might help with a bug regarding CIFS mounts)
+
+ For developers:
+
+ * Internal API changes
+ *      - Documented Engine::isUsingBusybox()
+ *      - Added Settings::keys()
+
 ## Version 2.2.1-beta (2020-05-02)
 
 Published in OpenRepos on 2020-05-02.
