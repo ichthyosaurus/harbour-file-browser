@@ -250,7 +250,7 @@ QStringList Engine::fileSizeInfo(QStringList paths)
     // cf. docs on Engine::isUsingBusybox
     QString diskusage = execute("/usr/bin/du", QStringList() << paths <<
                                 (isUsingBusybox("du") ? "-k" : "--bytes") <<
-                                "-x" << "-s" << "-c", false);
+                                "-x" << "-s" << "-c" << "-L", false);
     QStringList duLines = diskusage.split(QRegExp("[\n\r]"));
 
     if (duLines.length() < 2) {
@@ -262,11 +262,11 @@ QStringList Engine::fileSizeInfo(QStringList paths)
     }
 
     // count dirs
-    QString dirs = execute("/bin/find", QStringList() << paths << "-type" << "d", false); // same for BusyBox
+    QString dirs = execute("/bin/find", QStringList() << "-L" << paths << "-type" << "d", false); // same for BusyBox
     result << QString::number(dirs.split(QRegExp("[\n\r]")).count()-1);
 
     // count files
-    QString files = execute("/bin/find", QStringList() << paths << "-type" << "f", false); // same for BusyBox
+    QString files = execute("/bin/find", QStringList() << "-L" << paths << "(" << "-type" << "f" << "-or" << "-type" << "l" << ")", false); // same for BusyBox
     result << QString::number(files.split(QRegExp("[\n\r]")).count()-1);
 
     return result;
