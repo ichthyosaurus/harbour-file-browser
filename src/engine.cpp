@@ -153,12 +153,14 @@ void Engine::cancel()
     m_fileWorker->cancel();
 }
 
-static QStringList subdirs(const QString &dirname)
+static QStringList subdirs(const QString &dirname, bool includeHidden = false)
 {
     QDir dir(dirname);
-    if (!dir.exists())
-        return QStringList();
-    dir.setFilter(QDir::AllDirs | QDir::NoDotAndDotDot);
+    if (!dir.exists()) return QStringList();
+
+    QDir::Filter hiddenFilter = includeHidden ? QDir::Hidden : (QDir::Filter)0;
+    dir.setFilter(QDir::AllDirs | QDir::NoDotAndDotDot | hiddenFilter);
+
     QStringList list = dir.entryList();
     QStringList abslist;
     foreach (QString relpath, list) {
