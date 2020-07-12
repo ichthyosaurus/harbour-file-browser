@@ -4,3 +4,7 @@ build*
 *~
 *.qm
 dist*
+liverunner*
+
+root/build*
+root/RPMS

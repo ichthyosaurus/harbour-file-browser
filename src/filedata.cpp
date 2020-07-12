@@ -109,7 +109,9 @@ QString FileData::typeCategory() const
     } else if (
            m_mimeTypeName == "audio/x-wav"
         || m_mimeTypeName == "audio/mpeg"
+        || m_mimeTypeName == "audio/ogg"
         || m_mimeTypeName == "audio/x-vorbis+ogg"
+        || m_mimeTypeName == "audio/x-opus+ogg"
         || m_mimeTypeName == "audio/flac"
         || m_mimeTypeName == "audio/mp4") {
         return "audio";
@@ -197,7 +199,8 @@ void FileData::readMetaData()
         m_mimeTypeComment = tr("folder");
         return;
     }
-    if (!m_fileInfo.isFileAtEnd()) { // something strange
+
+    if (!m_fileInfo.exists()) { // catch e.g. broken links
         m_mimeTypeName = "application/octet-stream";
         m_mimeTypeComment = tr("unknown");
         return;

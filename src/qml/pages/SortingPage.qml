@@ -123,7 +123,7 @@ Page {
     }
 
     function useLocalSettings() {
-        return settings.read("View/UseLocalSettings", "false") === "true";
+        return settings.read("View/UseLocalSettings", "true") === "true";
     }
 
     function updateShownSettings() {

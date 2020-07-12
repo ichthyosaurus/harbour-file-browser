@@ -1,7 +1,8 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import "functions.js" as Functions
+
 import "../components"
+import "../js/paths.js" as Paths
 
 Page {
     id: page
@@ -106,7 +107,7 @@ Page {
                     values: getDirectories()
                     maxEntries: 5
                     preprocessor: function(file) {
-                        return Functions.lastPartOfPath(file);
+                        return Paths.lastPartOfPath(file);
                     }
                 }
 
@@ -115,7 +116,7 @@ Page {
                     values: getFiles()
                     maxEntries: 5
                     preprocessor: function(file) {
-                        return Functions.lastPartOfPath(file);
+                        return Paths.lastPartOfPath(file);
                     }
                 }
             }

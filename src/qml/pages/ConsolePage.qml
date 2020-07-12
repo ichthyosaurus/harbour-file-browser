@@ -47,7 +47,6 @@ Page {
             id: itemList
             anchors.fill: parent
             model: consoleModel
-            header: header
             footer: Spacer { height: Theme.horizontalPageMargin }
 
             VerticalScrollDecorator {

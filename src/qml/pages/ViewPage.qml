@@ -1,7 +1,8 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import "functions.js" as Functions
+
 import "../components"
+import "../js/paths.js" as Paths
 
 Page {
     id: page
@@ -19,7 +20,7 @@ Page {
             x: Theme.horizontalPageMargin
             width: parent.width - 2*x
 
-            PageHeader { title: Functions.lastPartOfPath(page.path) }
+            PageHeader { title: Paths.lastPartOfPath(page.path) }
 
             TextArea {
                 id: portraitText
@@ -72,7 +73,7 @@ Page {
     // update cover
     onStatusChanged: {
         if (status === PageStatus.Activating) {
-            coverText = Functions.lastPartOfPath(page.path);
+            coverText = Paths.lastPartOfPath(page.path);
             // reading file returns three texts, message, portrait and landscape texts
             var txts = engine.readFile(page.path);
             message.text = txts[0] === "" ? "" : "⸻ %1 ⸻".arg(txts[0]);

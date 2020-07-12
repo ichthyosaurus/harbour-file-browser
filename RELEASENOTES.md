@@ -1,6 +1,60 @@
 
 # File Browser Release Notes
 
+## Version 2.2.2-beta (2020-05-29)
+
+Published in OpenRepos on 2020-05-29.
+
+ * Fixed saving settings when the settings file did not exist
+ * Fixed showing disk space under SFOS 3.3.x.x
+ * Fixed rare possibility of duplicate bookmark entries
+ * Fixed bookmarks vanishing when the user renames the configuration folder while the app is running
+ * Fixed calculating size info and counting files for links or directories containing links
+ * Fixed copying hidden files when copying a directory recursively
+ * Improved user notice when a link is broken
+ * Improved directory/link state detection (might help with a bug regarding CIFS mounts)
+
+ For developers:
+
+ * Internal API changes
+ *      - Documented Engine::isUsingBusybox()
+ *      - Added Settings::keys()
+
+## Version 2.2.1-beta (2020-05-02)
+
+Published in OpenRepos on 2020-05-02.
+
+ * Added root mode (packaged separately)
+ * Fixed inconsistent default setting for "View/UseLocalSettings"
+ * Added "open storage settings" to bottom pulley of shortcuts page
+ * Disabled opening system settings from shortcuts for Jolla store and
+   when running as root
+
+## Version 2.2.0-beta (2020-05-01)
+
+Published in OpenRepos on 2020-05-01.
+
+ * Fixed showing file info page under SailfishOS 3.3.x.x
+ * Fixed the same for symlinks to directories on another partition
+ * Increased performance when changing directories
+ * Shortcut to Android data will be hidden if the directory is not available
+
+ For developers:
+
+ * Internal API changes
+ *      - Removed some small helper functions
+ *      - Refactored and split scripts and libraries
+ *      - Removed Engine::homeFolder()
+ *      - Renamed Engine::androidSdcardPath() to Engine::androidDataPath()
+
+## Version 2.1.1-beta (2020-04-19)
+
+Published in OpenRepos on 2020-04-19.
+
+ * Added support for opus audio files: recognize them as audio, and allow internal playback
+ * Removed trying to show thumbnails for PDF files and videos: the system thumbnailer
+   does not support it
+
 ## Version 2.1.0-beta (2020-01-12)
 
 Published in OpenRepos on 2020-01-12.
@@ -108,7 +162,7 @@ Published in OpenRepos on 2019-12-12.
  * Updated German translation
  * Polished user interface with improvements here and there
 
-Note to developers: for this beta version, the licensing was changed to the GNU GPLv3+.
+Note to developers: for this beta version (2.0.0 and upwards), the licensing was changed to the GNU GPLv3+.
 
 ## Version 1.8.0 (2019-05-12)
 

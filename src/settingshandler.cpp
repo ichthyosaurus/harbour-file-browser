@@ -26,6 +26,10 @@
 Settings::Settings(QObject *parent) : QObject(parent) {
     QSettings global;
     m_globalConfigPath = global.fileName();
+
+    if (pathIsProtected(m_globalConfigPath) || !QDir("/").mkpath(QFileInfo(m_globalConfigPath).absolutePath())) {
+        // TODO we should issue a warning that global settings cannot be saved
+    }
 }
 
 Settings::~Settings() {
@@ -49,7 +53,7 @@ void Settings::flushRuntimeSettings(QString fileName) {
     QFileInfo fileInfo = QFileInfo(fileName);
     QMutexLocker locker(&m_mutex);
 
-    if (pathIsProtected(fileName) || !QFileInfo(fileName).isWritable() || !hasRuntimeSettings(fileInfo)) {
+    if (pathIsProtected(fileName) || !isWritable(fileInfo) || !hasRuntimeSettings(fileInfo)) {
         return;
     }
 
@@ -73,6 +77,21 @@ bool Settings::hasRuntimeSettings(QFileInfo file) {
 
 QMap<QString, QVariant>& Settings::getRuntimeSettings(QFileInfo file) {
     return m_runtimeSettings[file.absoluteFilePath()];
+}
+
+bool Settings::isWritable(QFileInfo fileInfo) {
+    // Check whether the file is writable. If it does not exist, check if
+    // its parent directory can be written to.
+    // Use this method instead of plain QFileInfo::isWritable!
+    if (fileInfo.exists()) {
+        if (fileInfo.isFile()) {
+            return fileInfo.isWritable();
+        } else {
+            return false;
+        }
+    } else {
+        return QFileInfo(fileInfo.absolutePath()).isWritable();
+    }
 }
 
 QVariant Settings::readVariant(QString key, const QVariant &defaultValue, QString fileName) {
@@ -109,7 +128,7 @@ void Settings::writeVariant(QString key, const QVariant &value, QString fileName
 
     QFileInfo fileInfo = QFileInfo(fileName);
 
-    if (pathIsProtected(fileName) || !fileInfo.isWritable()) {
+    if (pathIsProtected(fileName) || !isWritable(fileInfo)) {
         QMutexLocker locker(&m_mutex);
         getRuntimeSettings(fileInfo)[key] = value;
     } else {
@@ -151,7 +170,7 @@ void Settings::remove(QString key, QString fileName) {
 
     QFileInfo fileInfo = QFileInfo(fileName);
 
-    if (pathIsProtected(fileName) || !fileInfo.isWritable()) {
+    if (pathIsProtected(fileName) || !isWritable(fileInfo)) {
         QMutexLocker locker(&m_mutex);
         getRuntimeSettings(fileInfo).remove(key);
     } else {
@@ -164,4 +183,27 @@ void Settings::remove(QString key, QString fileName) {
     if (usingLocalConfig || key.startsWith("View/")) {
         emit viewSettingsChanged(usingLocalConfig ? fileInfo.dir().absolutePath() : "");
     }
+}
+
+QStringList Settings::keys(QString group, QString fileName) {
+    if (fileName.isEmpty()) fileName = m_globalConfigPath;
+    QFileInfo fileInfo = QFileInfo(fileName);
+    QStringList keys;
+
+    if (!fileInfo.exists() || !fileInfo.isReadable() || pathIsProtected(fileName)) {
+        QMutexLocker locker(&m_mutex);
+        keys = getRuntimeSettings(fileInfo).uniqueKeys();
+    } else {
+        flushRuntimeSettings(fileName);
+        QSettings settings(fileName, QSettings::IniFormat);
+        if (!group.isEmpty()) settings.beginGroup(group);
+        keys = settings.allKeys();
+    }
+
+    for (int i = 0; i < keys.length(); i++) {
+        // Un-sanitize keys. FIXME: this is a dirty hack.
+        keys[i] = keys[i].replace('#', '/');
+    }
+
+    return keys;
 }

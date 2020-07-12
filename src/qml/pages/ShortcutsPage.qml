@@ -1,7 +1,9 @@
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
-import "functions.js" as Functions
+
+import "../js/navigation.js" as Navigation
+import "../js/paths.js" as Paths
 import "../components"
 
 Page {
@@ -17,7 +19,7 @@ Page {
     ShortcutsList {
         id: shortcutsView
         anchors.fill: parent
-        onItemClicked: Functions.goToFolder(path)
+        onItemClicked: Navigation.goToFolder(path)
 
         header: PageHeader { title: qsTr("Places") }
         footer: Spacer { id: footerSpacer }
@@ -30,8 +32,8 @@ Page {
                 visible: currentPath !== "" && hasPrevious
                 text: (hasBookmark !== undefined) ?
                           (hasBookmark ?
-                               qsTr("Remove bookmark for “%1”").arg(Functions.lastPartOfPath(currentPath)) :
-                               qsTr("Add “%1” to bookmarks").arg(currentPath === "/" ? "/" : Functions.lastPartOfPath(currentPath))) : ""
+                               qsTr("Remove bookmark for “%1”").arg(Paths.lastPartOfPath(currentPath)) :
+                               qsTr("Add “%1” to bookmarks").arg(currentPath === "/" ? "/" : Paths.lastPartOfPath(currentPath))) : ""
                 onClicked: {
                     if (hasBookmark !== undefined) {
                         pageStack.previousPage().toggleBookmark();
@@ -58,12 +60,19 @@ Page {
                 text: qsTr("Refresh")
                 onClicked: shortcutsView.updateModel();
             }
+            MenuItem {
+                visible: !runningAsRoot && systemSettingsEnabled
+                text: qsTr("Open storage settings");
+                onClicked: {
+                    pageStack.push(Qt.resolvedUrl("/usr/share/jolla-settings/pages/storage/storage.qml"));
+                }
+            }
         }
     }
 
     onStatusChanged: {
         if (status === PageStatus.Active) {
-            main.coverText = Functions.lastPartOfPath(currentPath)+"/"; // update cover
+            main.coverText = Paths.lastPartOfPath(currentPath)+"/"; // update cover
             if (!forwardNavigation) pageStack.pushAttached(Qt.resolvedUrl("SettingsPage.qml"));
         }
         if (status === PageStatus.Activating || status === PageStatus.Deactivating) {

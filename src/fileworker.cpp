@@ -343,7 +343,7 @@ QString FileWorker::copyDirRecursively(QString srcDirectory, QString destDirecto
     }
 
     // copy files
-    QStringList names = srcDir.entryList(QDir::Files);
+    QStringList names = srcDir.entryList(QDir::Files | QDir::Hidden);
     for (int i = 0 ; i < names.count() ; ++i) {
         // stop if cancelled
         if (m_cancelled.loadAcquire() == Cancelled)
@@ -359,7 +359,7 @@ QString FileWorker::copyDirRecursively(QString srcDirectory, QString destDirecto
     }
 
     // copy dirs
-    names = srcDir.entryList(QDir::NoDotAndDotDot | QDir::AllDirs);
+    names = srcDir.entryList(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::Hidden);
     for (int i = 0 ; i < names.count() ; ++i) {
         // stop if cancelled
         if (m_cancelled.loadAcquire() == Cancelled)

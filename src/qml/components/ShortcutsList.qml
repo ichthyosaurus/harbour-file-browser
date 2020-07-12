@@ -1,7 +1,9 @@
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
-import "../pages/functions.js" as Functions
+
+import "../js/bookmarks.js" as Bookmarks
+import "../js/paths.js" as Paths
 
 SilicaListView {
     id: view
@@ -97,7 +99,7 @@ SilicaListView {
 
                 onClicked: {
                     if (!model.bookmark || !model.location) return;
-                    Functions.moveBookmark(model.location);
+                    Bookmarks.moveBookmark(model.location);
                 }
             }
         }
@@ -194,7 +196,7 @@ SilicaListView {
                 width: parent.width - (sizeInfo.visible ? sizeInfo.width : 0)
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                text: Functions.unicodeArrow() + " " + model.location
+                text: Paths.unicodeArrow() + " " + model.location
                 visible: model.location === model.name ? false : true
                 elide: Text.ElideMiddle
             }
@@ -225,7 +227,7 @@ SilicaListView {
 
             onClicked: {
                 if (!model.bookmark || !model.location) return;
-                Functions.removeBookmark(model.location);
+                Bookmarks.removeBookmark(model.location);
             }
         }
 
@@ -257,14 +259,15 @@ SilicaListView {
             }
 
             model.name = newText;
-            settings.write("Bookmarks/"+model.location, newText);
+            Bookmarks.addBookmark(model.location, newText);
         }
     }
 
     Component {
-        id: contextMenu
+        id: settingsContextMenu
         ContextMenu {
             MenuItem {
+                visible: !runningAsRoot && systemSettingsEnabled
                 text: qsTr("Open system settings");
                 onClicked: {
                     pageStack.push(Qt.resolvedUrl("/usr/share/jolla-settings/pages/storage/storage.qml"));
@@ -325,10 +328,15 @@ SilicaListView {
                                    "name": qsTr("Videos"),
                                    "thumbnail": "icon-m-file-video",
                                    "location": StandardPaths.videos })
-                listModel.append({ "section": qsTr("Locations"),
-                                   "name": qsTr("Android storage"),
-                                   "thumbnail": "icon-m-file-apk",
-                                   "location": StandardPaths.home + "/android_storage" })
+
+                var androidPath = engine.androidDataPath();
+                if (androidPath !== "") {
+                    listModel.append({ "section": qsTr("Locations"),
+                                       "name": qsTr("Android storage"),
+                                       "thumbnail": "icon-m-file-apk",
+                                       "location": androidPath })
+                }
+
                 listModel.append({ "section": qsTr("Locations"),
                                    "name": qsTr("Root"),
                                    "thumbnail": "icon-m-file-rpm",
@@ -343,22 +351,15 @@ SilicaListView {
                                        "thumbnail": drives[d].title === qsTr("SD card") ? "icon-m-sd-card" : "icon-m-usb",
                                        "location": drives[d].path,
                                        "showsize": true,
-                                       "contextMenu": contextMenu })
+                                       "contextMenu": (!runningAsRoot && systemSettingsEnabled) ? settingsContextMenu : null, })
                 }
             } else if (s === "bookmarks") {
                 // Add bookmarks if there are any
-                var bookmarks = Functions.getBookmarks();
+                var bookmarks = Bookmarks.getBookmarks();
 
                 for (var key in bookmarks) {
-                    if (bookmarks[key] === "") continue;
-                    var name = settings.read("Bookmarks/"+bookmarks[key]);
-
-                    if (name === "") {
-                        console.warn("empty bookmark name for", bookmarks[key], "reset to default value");
-                        name = Functions.lastPartOfPath(bookmarks[key]);
-                        settings.write("Bookmarks/"+bookmarks[key], Functions.lastPartOfPath(bookmarks[key]));
-                    }
-
+                    var name = Bookmarks.getBookmarkName(bookmarks[key]);
+                    if (name === "") continue;
                     listModel.append({ "section": qsTr("Bookmarks"),
                                        "name": name,
                                        "thumbnail": "icon-m-favorite",

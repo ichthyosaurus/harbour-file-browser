@@ -3,14 +3,21 @@
 echo "rendering app icon..."
 
 postfix="-beta"
-root="../src/icons"
-appicons=(harbour-file-browser harbour-file-browser-root)
-for i in 86 108 128 172; do
-    mkdir -p "$root/${i}x$i"
 
-    for a in "${appicons[@]}"; do
+default_src=harbour-file-browser
+default_dir="../src/icons"
+root_src=harbour-file-browser-root
+root_dir="../root/icons"
+
+for i in 86 108 128 172; do
+    mkdir -p "$default_dir/${i}x$i"
+    mkdir -p "$root_dir/${i}x$i"
+
+    for a in "$default_src" "$root_src"; do
+        [[ "$a" == "$default_src" ]] && root="$default_dir" || root="$root_dir"
+
         if [[ ! "$a.svg" -nt "$root/${i}x$i/$a$postfix.png" ]]; then
-            echo "nothing to do for $a at ${i}x$i"
+            echo "nothing to be done for $a at ${i}x$i"
             continue
         fi
 
@@ -27,7 +34,7 @@ mkdir -p "$root"
 
 for img in "${files[@]}"; do
     if [[ ! "${img%@*}.svg" -nt "$root/${img%@*}.png" ]]; then
-        echo "nothing to do for '${img%@*}.svg'"
+        echo "nothing to be done for '${img%@*}.svg'"
         continue
     fi
 
@@ -56,6 +63,6 @@ for img in "${files[@]}"; do
     fi
 
     if [[ -n "$skip" ]]; then
-        echo "nothing to do for '${img}.svg': $skip"
+        echo "nothing to be done for '${img}.svg': $skip"
     fi
 done

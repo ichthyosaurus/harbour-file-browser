@@ -3,7 +3,6 @@ import Sailfish.Silica 1.0
 
 CoverBackground {
     anchors.fill: parent
-    property bool runningAsRoot: engine.runningAsRoot()
 
     Image {
         id: bgIcon

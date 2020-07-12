@@ -1,14 +1,19 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
-import "functions.js" as Functions
+
 import "../components"
+import "../js/bookmarks.js" as Bookmarks
+import "../js/paths.js" as Paths
+import "../js/files.js" as Files
 
 Page {
     id: page
     allowedOrientations: Orientation.All
+    property bool _ready: false
+    property string _activeDir: ""
     property string dir: "/"
-    property bool initial: false // this is set to true if the page is initial page
+
     property bool remorsePopupActive: false // set to true when remorsePopup is active
     property bool remorseItemActive: false // set to true when remorseItem is active (item level)
     property alias progressPanel: progressPanel
@@ -28,7 +33,7 @@ Page {
 
     FileModel {
         id: fileModel
-        dir: page.dir
+        dir: _activeDir
         filterString: currentFilter
         // page.status does not exactly work - root folder seems to be active always??
         active: page.status === PageStatus.Active
@@ -80,7 +85,7 @@ Page {
                       (engine.clipboardCount > 0 ? " ("+engine.clipboardCount+")" : "")
                 onClicked: {
                     if (remorsePopupActive) return;
-                    Functions.pasteFiles(page.dir, progressPanel, clearSelectedFiles);
+                    Files.pasteFiles(page.dir, progressPanel, clearSelectedFiles);
                 }
             }
 
@@ -162,7 +167,6 @@ Page {
                     }
                 }
             }
-
         }
 
         PushUpMenu {
@@ -173,7 +177,7 @@ Page {
             }
             MenuItem {
                 id: bookmarkEntry
-                property bool hasBookmark: Functions.hasBookmark(dir)
+                property bool hasBookmark: Bookmarks.hasBookmark(dir)
                 text: hasBookmark ? qsTr("Remove bookmark") : qsTr("Add to bookmarks")
                 onClicked: {
                     clearSelectedFiles();
@@ -189,9 +193,9 @@ Page {
         }
 
         header: PageHeader {
-            title: Functions.formatPathForTitle(page.dir)
+            title: Paths.formatPathForTitle(page.dir)
             _titleItem.elide: Text.ElideMiddle
-            description: page.fullPathShown ? Functions.dirName(page.dir) : ""
+            description: page.fullPathShown ? Paths.dirName(page.dir) : ""
 
             MouseArea {
                 anchors.fill: parent
@@ -248,7 +252,7 @@ Page {
 
         // text if no files or error message
         ViewPlaceholder {
-            enabled: fileModel.fileCount === 0 || fileModel.errorMessage !== ""
+            enabled: _activeDir !== "" && (fileModel.fileCount === 0 || fileModel.errorMessage !== "")
             text: fileModel.errorMessage !== "" ? fileModel.errorMessage : qsTr("No files")
         }
     }
@@ -374,37 +378,19 @@ Page {
         }
     }
 
-    // require page to be x milliseconds active before
-    // pushing the attached page, so the page is not pushed
-    // while navigating (= while building the back-tree)
-    Timer {
-        id: preparationTimer
-        interval: 15
-        running: false
-        repeat: false
-        onTriggered: {
-            if (status === PageStatus.Active) {
-                if (!canNavigateForward) {
-                    pageStack.pushAttached(Qt.resolvedUrl("ShortcutsPage.qml"), { currentPath: dir });
-                }
-                coverText = Functions.lastPartOfPath(page.dir)+"/"; // update cover
-            }
-        }
-    }
-
     onStatusChanged: {
         if (status === PageStatus.Deactivating) {
             // clear file selections when the directory is changed
             clearSelectedFiles();
-        }
-
-        if (status === PageStatus.Active) {
-            preparationTimer.start();
-        }
-
-        if (status === PageStatus.Activating && page.initial) {
-            page.initial = false;
-            Functions.goToFolder(initialDirectory);
+        } else if (status === PageStatus.Active) {
+            if (!canNavigateForward) {
+                pageStack.completeAnimation();
+                pageStack.pushAttached(Qt.resolvedUrl("ShortcutsPage.qml"), { currentPath: dir });
+            }
+            coverText = Paths.lastPartOfPath(page.dir)+"/"; // update cover
+        } else if (status === PageStatus.Activating && _activeDir !== dir) {
+            console.log("loading", dir);
+            _activeDir = dir;
         }
     }
 
@@ -412,7 +398,7 @@ Page {
         var showThumbs = settings.read("View/PreviewsShown", "false");
         var galleryActive = settings.read("View/EnableGalleryMode", "false");
 
-        if (settings.read("View/UseLocalSettings", "false") === "true") {
+        if (settings.read("View/UseLocalSettings", "true") === "true") {
             showThumbs = settings.read("Dolphin/PreviewsShown", showThumbs, dir+"/.directory");
             galleryActive = settings.read("Sailfish/EnableGalleryMode", galleryActive, dir+"/.directory");
         }
@@ -428,10 +414,10 @@ Page {
 
     function toggleBookmark() {
         if (hasBookmark) {
-            Functions.removeBookmark(dir);
+            Bookmarks.removeBookmark(dir);
             hasBookmark = false;
         } else {
-            Functions.addBookmark(dir);
+            Bookmarks.addBookmark(dir);
             hasBookmark = true;
         }
     }

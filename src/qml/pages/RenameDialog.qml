@@ -1,7 +1,8 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import "functions.js" as Functions
+
 import "../components"
+import "../js/paths.js" as Paths
 
 Dialog {
     id: dialog
@@ -14,7 +15,7 @@ Dialog {
     property string errorMessages: []
     property int _readyCount: 0
 
-    Component.onCompleted: basePath = Functions.dirName(files[0])
+    Component.onCompleted: basePath = Paths.dirName(files[0])
 
     onAccepted: {
         for (var i = 0; i < repeater.count; i++) {
@@ -106,7 +107,7 @@ Dialog {
                         }
 
                         Component.onCompleted: {
-                            text = Functions.lastPartOfPath(parent.originalName)
+                            text = Paths.lastPartOfPath(parent.originalName)
                             dialog._readyCount = 0; notifiedAsReady = false;
                         }
                     }

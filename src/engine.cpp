@@ -14,7 +14,9 @@
 Engine::Engine(QObject *parent) :
     QObject(parent),
     m_clipboardContainsCopy(false),
-    m_progress(0)
+    m_progress(0),
+    m__isUsingBusybox(QStringList()),
+    m__checkedBusybox(false)
 {
     m_fileWorker = new FileWorker;
     m_settings = qApp->property("settings").value<Settings*>();
@@ -151,17 +153,14 @@ void Engine::cancel()
     m_fileWorker->cancel();
 }
 
-QString Engine::homeFolder() const
-{
-    return QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
-}
-
-static QStringList subdirs(const QString &dirname)
+static QStringList subdirs(const QString &dirname, bool includeHidden = false)
 {
     QDir dir(dirname);
-    if (!dir.exists())
-        return QStringList();
-    dir.setFilter(QDir::AllDirs | QDir::NoDotAndDotDot);
+    if (!dir.exists()) return QStringList();
+
+    QDir::Filter hiddenFilter = includeHidden ? QDir::Hidden : (QDir::Filter)0;
+    dir.setFilter(QDir::AllDirs | QDir::NoDotAndDotDot | hiddenFilter);
+
     QStringList list = dir.entryList();
     QStringList abslist;
     foreach (QString relpath, list) {
@@ -170,9 +169,12 @@ static QStringList subdirs(const QString &dirname)
     return abslist;
 }
 
-QString Engine::androidSdcardPath() const
+QString Engine::androidDataPath() const
 {
-    return QStandardPaths::writableLocation(QStandardPaths::HomeLocation)+"/android_storage";
+    QString path = QStandardPaths::writableLocation(QStandardPaths::HomeLocation)+"/android_storage";
+    QDir dir(path);
+    if (!dir.exists()) return QString();
+    return path;
 }
 
 QVariantList Engine::externalDrives() const
@@ -246,18 +248,27 @@ QStringList Engine::fileSizeInfo(QStringList paths)
 
     QStringList result;
 
+    // determine disk usage
+    // cf. docs on Engine::isUsingBusybox
     QString diskusage = execute("/usr/bin/du", QStringList() << paths <<
-                                "--bytes" << "--one-file-system" <<
-                                "--summarize" << "--total", false);
+                                (isUsingBusybox("du") ? "-k" : "--bytes") <<
+                                "-x" << "-s" << "-c" << "-L", false);
     QStringList duLines = diskusage.split(QRegExp("[\n\r]"));
-    QString duTotalStr = duLines.at(duLines.count()-2).split(QRegExp("[\\s]+"))[0].trimmed();
-    qint64 duTotal = duTotalStr.toLongLong() * 1LL;
-    result << (duTotal > 0 ? filesizeToString(duTotal) : "-");
 
-    QString dirs = execute("/bin/find", QStringList() << paths << "-type" << "d", false);
+    if (duLines.length() < 2) {
+        result << "-"; // got an invalid result
+    } else {
+        QString duTotalStr = duLines.at(duLines.count()-2).split(QRegExp("[\\s]+"))[0].trimmed();
+        qint64 duTotal = duTotalStr.toLongLong() * (isUsingBusybox("du") ? 1000LL : 1LL); // BusyBox cannot show the real byte count
+        result << (duTotal > 0 ? filesizeToString(duTotal) : "-");
+    }
+
+    // count dirs
+    QString dirs = execute("/bin/find", QStringList() << "-L" << paths << "-type" << "d", false); // same for BusyBox
     result << QString::number(dirs.split(QRegExp("[\n\r]")).count()-1);
 
-    QString files = execute("/bin/find", QStringList() << paths << "-type" << "f", false);
+    // count files
+    QString files = execute("/bin/find", QStringList() << "-L" << paths << "(" << "-type" << "f" << "-or" << "-type" << "l" << ")", false); // same for BusyBox
     result << QString::number(files.split(QRegExp("[\n\r]")).count()-1);
 
     return result;
@@ -273,7 +284,8 @@ QStringList Engine::diskSpace(QString path)
         return QStringList();
 
     // run df in POSIX mode for the given path to get disk space
-    QString blockSize = "--block-size=1024";
+    // cf. docs on Engine::isUsingBusybox
+    QString blockSize = isUsingBusybox("df") ? "-k" : "--block-size=1024";
     QString result = execute("/bin/df", QStringList() << "-P" << blockSize << path, false);
     if (result.isEmpty())
         return QStringList();
@@ -531,4 +543,27 @@ QStringList Engine::makeStringList(QString msg, QString str)
     QStringList list;
     list << msg << str << str;
     return list;
+}
+
+bool Engine::isUsingBusybox(QString forCommand)
+{
+    // from SailfishOS 3.3.x.x onwards, GNU coreutils have been replaced
+    // by BusyBox. This means e.g. 'du' no longer recognizes the options we need...
+
+    if (m__checkedBusybox) return m__isUsingBusybox.contains(forCommand);
+
+    if (!QFile::exists("/bin/busybox")) {
+        m__isUsingBusybox = QStringList();
+    } else {
+        QString result = execute("/bin/busybox", QStringList() << "--list", false);
+        if (result.isEmpty()) {
+            m__isUsingBusybox = QStringList();
+        } else {
+            // split result to lines
+            m__isUsingBusybox = result.split(QRegExp("[\n\r]"));
+        }
+    }
+
+    m__checkedBusybox = true;
+    return isUsingBusybox(forCommand);
 }
