@@ -627,7 +627,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="277"/>
         <source>Unknown (link target not found)</source>
-        <translation type="unfinished"></translation>
+        <translation>Desconocido (destino de enlace no encontrado)</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="284"/>
@@ -1657,7 +1657,7 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="65"/>
         <source>Open storage settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir ajustes de almacenamiento</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="24"/>
@@ -2027,7 +2027,7 @@
     <message>
         <location filename="../qml/js/paths.js" line="26"/>
         <source>root</source>
-        <translation type="unfinished"></translation>
+        <translation>raíz</translation>
     </message>
 </context>
 </TS>
