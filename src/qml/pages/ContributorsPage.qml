@@ -18,7 +18,7 @@ Page {
 
             DetailList {
                 label: qsTr("Programming")
-                values: ["karip", "Mirian Margiani", "Joona Petrell",
+                values: ["Mirian Margiani", "karip", "Joona Petrell",
                     "Michael Faro-Tusino", "Alin Marin Elena", "jklingen",
                     "Benna", "Malte Veerman", "Marcin Mielniczuk"
                 ]
@@ -65,7 +65,7 @@ Page {
             }
             DetailList {
                 label: qsTr("French")
-                values: ["Quent-in", "karip", "Quentí"]
+                values: ["Quent-in (Quentí)", "karip"]
             }
             DetailList {
                 label: qsTr("Dutch")
