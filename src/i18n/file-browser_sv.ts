@@ -162,7 +162,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="188"/>
         <source>Copy path to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiera sökvägen till urklipp</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="310"/>
@@ -627,7 +627,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="277"/>
         <source>Unknown (link target not found)</source>
-        <translation type="unfinished"></translation>
+        <translation>Okänd (länkmålet hittades inte)</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="284"/>
@@ -1223,12 +1223,12 @@
     <message>
         <location filename="../engine.cpp" line="220"/>
         <source>SD card</source>
-        <translation type="unfinished">SD-kort</translation>
+        <translation>SD-kort</translation>
     </message>
     <message>
         <location filename="../engine.cpp" line="222"/>
         <source>Removable Media</source>
-        <translation type="unfinished"></translation>
+        <translation>Flyttbar media</translation>
     </message>
 </context>
 <context>
@@ -1425,12 +1425,12 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="59"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktivera galleriläge</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="60"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished"></translation>
+        <translation>I galleriläget kommer bilder att visas komfortabelt stora och alla poster utom bilder, videor och mappar kommer att vara dolda.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="84"/>
@@ -1543,7 +1543,7 @@
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="271"/>
         <source>Open system settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Öppna systeminställningar</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="281"/>
@@ -1653,12 +1653,12 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="60"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Uppdatera</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="65"/>
         <source>Open storage settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Öppna lagringsinställningar</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="24"/>
@@ -1760,12 +1760,12 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="103"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktivera galleriläge</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="104"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished"></translation>
+        <translation>I galleriläget kommer bilder att visas komfortabelt stora och alla poster utom bilder, videor och mappar kommer att vara dolda.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="110"/>
@@ -1805,7 +1805,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="75"/>
         <source>Preview images...</source>
-        <translation type="unfinished"></translation>
+        <translation>Förhandsvisa bilder...</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="80"/>
@@ -2006,13 +2006,13 @@
         <location filename="../qml/js/files.js" line="16"/>
         <location filename="../qml/js/files.js" line="25"/>
         <source>Copying</source>
-        <translation type="unfinished">Kopierar</translation>
+        <translation>Kopierar</translation>
     </message>
     <message>
         <location filename="../qml/js/files.js" line="16"/>
         <location filename="../qml/js/files.js" line="25"/>
         <source>Moving</source>
-        <translation type="unfinished">Flyttar</translation>
+        <translation>Flyttar</translation>
     </message>
 </context>
 <context>
@@ -2028,7 +2028,7 @@
     <message>
         <location filename="../qml/js/paths.js" line="26"/>
         <source>root</source>
-        <translation type="unfinished"></translation>
+        <translation>root</translation>
     </message>
 </context>
 </TS>
