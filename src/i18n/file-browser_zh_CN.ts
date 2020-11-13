@@ -112,7 +112,7 @@
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="36"/>
         <source>Create a new folder under</source>
-        <translation>新建目录到</translation>
+        <translation>新建目录于</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="48"/>
@@ -127,7 +127,7 @@
         <location filename="../qml/components/DetailList.qml" line="25"/>
         <source>... and %n more</source>
         <translation>
-            <numerusform>……再多显示 %n 个。</numerusform>
+            <numerusform>…再多显示 %n 个。</numerusform>
         </translation>
     </message>
 </context>
@@ -167,7 +167,7 @@
         <location filename="../qml/pages/DirectoryPage.qml" line="310"/>
         <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Deleting</source>
-        <translation>删除中</translation>
+        <translation>删除</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="256"/>
@@ -192,7 +192,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="319"/>
         <source>Internally not ready</source>
-        <translation>筛选失败</translation>
+        <translation>内部未就绪</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="319"/>
@@ -221,7 +221,7 @@
         <location filename="../qml/components/DirectoryPageEntry.qml" line="316"/>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="318"/>
         <source>Deleting</source>
-        <translation>删除中</translation>
+        <translation>删除</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="337"/>
@@ -499,7 +499,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="35"/>
         <source>Install launched</source>
-        <translation>安装软件已启动</translation>
+        <translation>安装已开始</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="36"/>
@@ -534,12 +534,12 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="50"/>
         <source>xdg-open found no preferred application</source>
-        <translation>xdg-open找不到首选的应用</translation>
+        <translation>xdg-open 找不到首选应用</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="52"/>
         <source>Action failed</source>
-        <translation>失败</translation>
+        <translation>操作失败</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="55"/>
@@ -549,17 +549,17 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="58"/>
         <source>xdg-open crash?</source>
-        <translation>xdg-open崩溃了?</translation>
+        <translation>xdg-open 崩溃了?</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="61"/>
         <source>xdg-open error</source>
-        <translation>xdg-open错误</translation>
+        <translation>xdg-open 错误</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="78"/>
         <source>Change Permissions</source>
-        <translation>更改权限</translation>
+        <translation>修改权限</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="92"/>
@@ -579,7 +579,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="104"/>
         <source>File cannot be opened</source>
-        <translation>文件无法打开</translation>
+        <translation>无法打开文件</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="105"/>
@@ -595,7 +595,7 @@
         <location filename="../qml/pages/FilePage.qml" line="240"/>
         <location filename="../qml/pages/FilePage.qml" line="243"/>
         <source>Deleting</source>
-        <translation>删除中</translation>
+        <translation>删除</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="271"/>
@@ -704,7 +704,7 @@
         <location filename="../qml/pages/MultiFilePage.qml" line="81"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="85"/>
         <source>Deleting</source>
-        <translation>删除中</translation>
+        <translation>删除</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="106"/>
@@ -720,7 +720,7 @@
         <location filename="../qml/pages/MultiFilePage.qml" line="131"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="140"/>
         <source>none</source>
-        <translation>取消</translation>
+        <translation>无</translation>
     </message>
 </context>
 <context>
@@ -757,22 +757,22 @@
         <location filename="../qml/pages/PermissionsDialog.qml" line="62"/>
         <source>Change permissions for
 %1</source>
-        <translation>修改 %1 的权限</translation>
+        <translation>修改 %1 权限</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="82"/>
         <source>Read</source>
-        <translation>读</translation>
+        <translation>可读</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="90"/>
         <source>Write</source>
-        <translation>写</translation>
+        <translation>可写</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="97"/>
         <source>Execute</source>
-        <translation>执行</translation>
+        <translation>可执行</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="118"/>
@@ -795,22 +795,22 @@
     <message>
         <location filename="../jhead/jhead-api.cpp" line="120"/>
         <source>Make:%1</source>
-        <translation>创建：%1</translation>
+        <translation>创建:%1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="121"/>
         <source>Model:%1</source>
-        <translation>模式：%1</translation>
+        <translation>模式:%1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="124"/>
         <source>Date/Time:%1</source>
-        <translation>日期/时间：%1</translation>
+        <translation>日期/时间:%1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="131"/>
         <source>Orientation:%1</source>
-        <translation>方向：%1</translation>
+        <translation>方向:%1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="136"/>
@@ -906,17 +906,17 @@
     <message>
         <location filename="../jhead/jhead-api.cpp" line="161"/>
         <source>Flash:Yes</source>
-        <translation>闪光灯：开</translation>
+        <translation>闪光灯:开</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="168"/>
         <source>Flash:No</source>
-        <translation>闪光灯：关</translation>
+        <translation>闪光灯:关</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="174"/>
         <source>Focal Length:%1mm</source>
-        <translation>焦距：%1mm</translation>
+        <translation>焦距:%1mm</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="176"/>
@@ -926,18 +926,18 @@
     <message>
         <location filename="../jhead/jhead-api.cpp" line="183"/>
         <source>Digital Zoom:%1x</source>
-        <translation>数字变焦：%1x</translation>
+        <translation>数字变焦:%1x</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="187"/>
         <source>CCD Width:%1</source>
-        <translation>传感器宽度：%1</translation>
+        <translation>传感器宽度:%1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="193"/>
         <location filename="../jhead/jhead-api.cpp" line="195"/>
         <source>Exposure Time:%1</source>
-        <translation>曝光时间：%1</translation>
+        <translation>曝光时间:%1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="198"/>
@@ -947,72 +947,72 @@
     <message>
         <location filename="../jhead/jhead-api.cpp" line="203"/>
         <source>Aperture:f/%1</source>
-        <translation>光圈：f/%1</translation>
+        <translation>光圈:f/%1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="207"/>
         <source>Focus Distance:Infinite</source>
-        <translation>焦距：</translation>
+        <translation>焦距:</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="209"/>
         <source>Focus Distance:%1m</source>
-        <translation>焦距：%1m</translation>
+        <translation>焦距:%1m</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="214"/>
         <source>ISO Equivalent:%1</source>
-        <translation>等同于ISO：%1</translation>
+        <translation>等同于ISO:%1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="220"/>
         <source>Exposure Bias:%1</source>
-        <translation>曝光偏差：%1</translation>
+        <translation>曝光偏差:%1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="225"/>
         <source>White Balance:Manual</source>
-        <translation>白平衡：手动</translation>
+        <translation>白平衡:手动</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="228"/>
         <source>White Balance:Auto</source>
-        <translation>白平衡：自动</translation>
+        <translation>白平衡:自动</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="235"/>
         <source>Light Source:Daylight</source>
-        <translation>光源：白天</translation>
+        <translation>光源:白天</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="238"/>
         <source>Light Source:Fluorescent</source>
-        <translation>光源：日光灯</translation>
+        <translation>光源:日光灯</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="241"/>
         <source>Light Source:Incandescent</source>
-        <translation>光源：白炽灯</translation>
+        <translation>光源:白炽灯</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="244"/>
         <source>Light Source:Flash</source>
-        <translation>光源：闪光灯</translation>
+        <translation>光源:闪光灯</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="247"/>
         <source>Light Source:Fine weather</source>
-        <translation>光源：晴天</translation>
+        <translation>光源:晴天</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="250"/>
         <source>Light Source:Shade</source>
-        <translation>光源：阴影</translation>
+        <translation>光源:阴影</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="258"/>
         <source>Metering Mode:</source>
-        <translation>测光模式：</translation>
+        <translation>测光模式:</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="260"/>
@@ -1027,23 +1027,23 @@
     <message>
         <location filename="../jhead/jhead-api.cpp" line="273"/>
         <source>Exposure Program:</source>
-        <translation>曝光程序：</translation>
+        <translation>曝光程序:</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="349"/>
         <source>Latitude:%1</source>
         <translatorcomment>Some terminology translation is taken from *basic conception of photography(摄影测量基本概念)* . Thx to Cavalry</translatorcomment>
-        <translation>经度：%1</translation>
+        <translation>经度:%1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="350"/>
         <source>Longitude:%1</source>
-        <translation>纬度：%1</translation>
+        <translation>纬度:%1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="352"/>
         <source>Altitude:%1</source>
-        <translation>高度：%1</translation>
+        <translation>高度:%1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="262"/>
@@ -1118,22 +1118,22 @@
     <message>
         <location filename="../jhead/jhead-api.cpp" line="307"/>
         <source>Exposure Mode:Manual</source>
-        <translation>曝光模式：手动</translation>
+        <translation>曝光模式:手动</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="309"/>
         <source>Exposure Mode:Auto bracketing</source>
-        <translation>曝光模式：自动半包围</translation>
+        <translation>曝光模式:自动半包围</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="314"/>
         <source>Focus Range:</source>
-        <translation>对焦范围：</translation>
+        <translation>对焦范围:</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="317"/>
         <source>Macro</source>
-        <translation>大</translation>
+        <translation>微距</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="320"/>
@@ -1148,23 +1148,23 @@
     <message>
         <location filename="../jhead/jhead-api.cpp" line="338"/>
         <source>JPEG Process:Unknown</source>
-        <translation>JPEG 模式：未知</translation>
+        <translation>JPEG 模式:未知</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="342"/>
         <source>JPEG Process:%1</source>
-        <translation>JPEG模式：%1</translation>
+        <translation>JPEG 模式:%1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="358"/>
         <source>JPEG Quality:%1</source>
-        <translation>JPEG质量：%1</translation>
+        <translation>JPEG 质量:%1</translation>
     </message>
     <message>
         <location filename="../jhead/jhead-api.cpp" line="364"/>
         <location filename="../jhead/jhead-api.cpp" line="375"/>
         <source>Comment:</source>
-        <translation>评论：</translation>
+        <translation>评论:</translation>
     </message>
     <message>
         <location filename="../globals.cpp" line="55"/>
@@ -1245,7 +1245,7 @@
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="74"/>
         <source>Searching</source>
-        <translation>搜索中</translation>
+        <translation>搜索</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="85"/>
@@ -1626,12 +1626,12 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="48"/>
         <source>Sometimes the application stays in the background</source>
-        <translation>有时是应用留在后台运行</translation>
+        <translation>有时应用会保持后台运行</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="60"/>
         <source>Refresh</source>
-        <translation></translation>
+        <translation>刷新</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="24"/>
@@ -1915,7 +1915,7 @@
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="144"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation>“文件或目录已存在于 %1”:</translation>
+        <translation>文件或目录已存在于 %1”:</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="184"/>
@@ -1935,7 +1935,7 @@
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="283"/>
         <source>Copying</source>
-        <translation>正在复制</translation>
+        <translation>复制</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="284"/>
