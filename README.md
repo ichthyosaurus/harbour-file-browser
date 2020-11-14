@@ -4,14 +4,15 @@ A minimal file browser tool to view files on
 [Sailfish OS](https://sailfishos.org/) and
 [Jolla phones](http://jolla.com/).
 
-There is a [FAQ](https://github.com/karip/harbour-file-browser/blob/master/FAQ.md)
+There is a [FAQ](https://github.com/ichthyosaurus/harbour-file-browser/blob/master/FAQ.md)
 about most common questions.
 
 ### Beta / Development Notice
 
 This repository contains the development of version 2.0.0 and upwards of File Browser.
 
-See the RELEASENOTES.md for further details.
+See the [release notes](https://github.com/ichthyosaurus/harbour-file-browser/blob/master/rpm/harbour-file-browser-beta.changes)
+for further details.
 
 
 ### Warning
