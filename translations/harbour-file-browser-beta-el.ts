@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr" sourcelanguage="en">
+<TS version="2.1" language="el" sourcelanguage="en">
 <context>
     <name>ConsoleModel</name>
     <message>
-        <location filename="../consolemodel.cpp" line="101"/>
+        <location filename="../src/consolemodel.cpp" line="101"/>
         <source>** crashed</source>
-        <translation>** a connu un souci</translation>
+        <translation>** κατέρρευσε</translation>
     </message>
     <message>
-        <location filename="../consolemodel.cpp" line="104"/>
+        <location filename="../src/consolemodel.cpp" line="104"/>
         <source>** error: %1</source>
-        <translation>** erreur : %1</translation>
+        <translation>** σφάλμα : %1</translation>
     </message>
     <message>
-        <location filename="../consolemodel.cpp" line="113"/>
+        <location filename="../src/consolemodel.cpp" line="113"/>
         <source>** error</source>
-        <translation>** erreur</translation>
+        <translation>** σφάλμα</translation>
     </message>
 </context>
 <context>
@@ -107,18 +107,18 @@
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="30"/>
         <source>Create</source>
-        <translation>Créer</translation>
+        <translation>Δημιουργία</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="36"/>
         <source>Create a new folder under</source>
-        <translation>Créer un nouveau dossier dans</translation>
+        <translation>Δημιουργία νέου φακέλου στο</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="48"/>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="49"/>
         <source>Folder name</source>
-        <translation>Nom du dossier</translation>
+        <translation>Όνομα φακέλου</translation>
     </message>
 </context>
 <context>
@@ -137,17 +137,17 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="72"/>
         <source>Create Folder</source>
-        <translation>Créer un dossier</translation>
+        <translation>Δημιουργία φακέλου</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="174"/>
         <source>Search</source>
-        <translation>Recherche</translation>
+        <translation>Αναζήτηση</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="84"/>
         <source>Paste</source>
-        <translation>Coller</translation>
+        <translation>Επικόλληση</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="181"/>
@@ -168,12 +168,12 @@
         <location filename="../qml/pages/DirectoryPage.qml" line="310"/>
         <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Deleting</source>
-        <translation>Suppression</translation>
+        <translation>Διαγραφή</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="256"/>
         <source>No files</source>
-        <translation>Aucun fichier</translation>
+        <translation>Κανένα αρχείο</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="68"/>
@@ -203,12 +203,12 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="362"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation>Souhaitez-vous basculer entre le téléphone et le carte SD ? Si cela échoue essayez de copier les fichiers.</translation>
+        <translation>Μήπως προσπαθείτε τη μετακίνηση μεταξύ του τηλεφώνου και της κάρτας SD; Δεν δουλεύει, δοκιμάστε την αντιγραφή.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="364"/>
         <source>Perhaps the storage is full?</source>
-        <translation>L&apos;espace de stockage est peut-être plein ?</translation>
+        <translation>Ίσως ο αποθετικός χώρος είναι πλήρης;</translation>
     </message>
 </context>
 <context>
@@ -222,7 +222,7 @@
         <location filename="../qml/components/DirectoryPageEntry.qml" line="316"/>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="318"/>
         <source>Deleting</source>
-        <translation type="unfinished">Suppression</translation>
+        <translation type="unfinished">Διαγραφή</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="337"/>
@@ -238,90 +238,90 @@
 <context>
     <name>Engine</name>
     <message>
-        <location filename="../engine.cpp" line="116"/>
+        <location filename="../src/engine.cpp" line="116"/>
         <source>Destination does not exist</source>
-        <translation>La destination n&apos;existe pas</translation>
+        <translation>Ο προορισμός δεν υπάρχει</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="127"/>
+        <location filename="../src/engine.cpp" line="127"/>
         <source>Cannot overwrite itself</source>
-        <translation>Impossible d&apos;écraser le fichier avec le lui-même</translation>
+        <translation>Αδύνατη η αντικατάσταση του εαυτού του</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="133"/>
+        <location filename="../src/engine.cpp" line="133"/>
         <source>Cannot move/copy to itself</source>
-        <translation>Impossible de déplacer/copier vers lui-même</translation>
+        <translation>Αδύνατη η μετακίνηση/αντιγραφή στον εαυτό του</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="108"/>
+        <location filename="../src/engine.cpp" line="108"/>
         <source>No files to paste</source>
-        <translation>Aucun fichier à coller</translation>
+        <translation>Κανένα αρχείο προς επικόλληση</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="323"/>
+        <location filename="../src/engine.cpp" line="323"/>
         <source>File does not exist</source>
-        <translation>Le fichier n&apos;existe pas</translation>
+        <translation>Το αρχείο δεν υπάρχει</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="325"/>
+        <location filename="../src/engine.cpp" line="325"/>
         <source>Broken symbolic link</source>
-        <translation>Lien symbolique cassé</translation>
+        <translation>Σπασμένος συμβολικός δεσμός</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="330"/>
+        <location filename="../src/engine.cpp" line="330"/>
         <source>Cannot read this type of file</source>
-        <translation>Impossible de lire ce type de fichier</translation>
+        <translation>Αδύνατη η δημιουργία αυτιού του τύπου αρχείου</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="336"/>
+        <location filename="../src/engine.cpp" line="336"/>
         <source>No permission to read the file</source>
-        <translation>Vous n&apos;avez pas la permission de lire ce fichier</translation>
+        <translation>Δεν έχετε άδεια ανάγνωσης του αρχείου</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="340"/>
-        <location filename="../engine.cpp" line="346"/>
+        <location filename="../src/engine.cpp" line="340"/>
+        <location filename="../src/engine.cpp" line="346"/>
         <source>Error reading file</source>
-        <translation>Erreur de lecture du fichier</translation>
+        <translation>Σφάλμα ανάγνωσης του αρχείου</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="349"/>
+        <location filename="../src/engine.cpp" line="349"/>
         <source>Empty file</source>
-        <translation>Fichier vide</translation>
+        <translation>Κενό αρχείο</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="375"/>
+        <location filename="../src/engine.cpp" line="375"/>
         <source>Binary file preview clipped at %1 kB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="394"/>
+        <location filename="../src/engine.cpp" line="394"/>
         <source>Text file preview clipped at %1 lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="396"/>
+        <location filename="../src/engine.cpp" line="396"/>
         <source>Text file preview clipped at %1 kB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="409"/>
+        <location filename="../src/engine.cpp" line="409"/>
         <source>No permissions to create %1</source>
-        <translation>Vous n&apos;avez pas la permission de créer %1</translation>
+        <translation>Δεν έχετε άδεια δημιουργίας του %1</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="427"/>
+        <location filename="../src/engine.cpp" line="427"/>
         <source>Cannot rename %1</source>
-        <translation>Impossible de renommer %1</translation>
+        <translation>Αδυναμία μετονομασίας του %1</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="450"/>
+        <location filename="../src/engine.cpp" line="450"/>
         <source>Cannot change permissions</source>
-        <translation>Impossible de changer les permissions</translation>
+        <translation>Αδύνατη η αλλαγή των αδειών</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="411"/>
+        <location filename="../src/engine.cpp" line="411"/>
         <source>Cannot create folder %1</source>
-        <translation>Impossible de créer le dossier %1</translation>
+        <translation>Αδυναμία δημιουργίας του φακέλου %1</translation>
     </message>
 </context>
 <context>
@@ -441,69 +441,69 @@
 <context>
     <name>FileData</name>
     <message>
-        <location filename="../filedata.cpp" line="149"/>
+        <location filename="../src/filedata.cpp" line="149"/>
         <source>File does not exist</source>
-        <translation>Le fichier n&apos;existe pas</translation>
+        <translation>Το αρχείο δεν υπάρχει</translation>
     </message>
     <message>
-        <location filename="../filedata.cpp" line="183"/>
+        <location filename="../src/filedata.cpp" line="183"/>
         <source>block device</source>
-        <translation>dispositif de blocage</translation>
+        <translation>συσκευή πλοκάδων</translation>
     </message>
     <message>
-        <location filename="../filedata.cpp" line="187"/>
+        <location filename="../src/filedata.cpp" line="187"/>
         <source>character device</source>
-        <translation>dispositif de caractère</translation>
+        <translation>συσκευή χαρακτήρων</translation>
     </message>
     <message>
-        <location filename="../filedata.cpp" line="191"/>
+        <location filename="../src/filedata.cpp" line="191"/>
         <source>pipe</source>
-        <translation>pipe</translation>
+        <translation>σωλήνωση</translation>
     </message>
     <message>
-        <location filename="../filedata.cpp" line="195"/>
+        <location filename="../src/filedata.cpp" line="195"/>
         <source>socket</source>
-        <translation>socket</translation>
+        <translation>υποδοχή</translation>
     </message>
     <message>
-        <location filename="../filedata.cpp" line="199"/>
+        <location filename="../src/filedata.cpp" line="199"/>
         <source>folder</source>
-        <translation>dossier</translation>
+        <translation>φάκελος</translation>
     </message>
     <message>
-        <location filename="../filedata.cpp" line="205"/>
+        <location filename="../src/filedata.cpp" line="205"/>
         <source>unknown</source>
-        <translation>inconnu</translation>
+        <translation>άγνωστο</translation>
     </message>
     <message>
-        <location filename="../filedata.cpp" line="228"/>
+        <location filename="../src/filedata.cpp" line="228"/>
         <source>Image Size</source>
-        <translation>Taille de l&apos;image</translation>
+        <translation>Μέγεθος εικόνας</translation>
     </message>
 </context>
 <context>
     <name>FileModel</name>
     <message>
-        <location filename="../filemodel.cpp" line="77"/>
+        <location filename="../src/filemodel.cpp" line="77"/>
         <source>dir-link</source>
         <translation>dir-link</translation>
     </message>
     <message>
-        <location filename="../filemodel.cpp" line="78"/>
+        <location filename="../src/filemodel.cpp" line="78"/>
         <source>dir</source>
         <translation>dir</translation>
     </message>
     <message>
-        <location filename="../filemodel.cpp" line="452"/>
-        <location filename="../filemodel.cpp" line="486"/>
+        <location filename="../src/filemodel.cpp" line="452"/>
+        <location filename="../src/filemodel.cpp" line="486"/>
         <source>Folder does not exist</source>
-        <translation>Le dossier n&apos;existe pas</translation>
+        <translation>Ο φάκελος δεν υπάρχει</translation>
     </message>
     <message>
-        <location filename="../filemodel.cpp" line="456"/>
-        <location filename="../filemodel.cpp" line="492"/>
+        <location filename="../src/filemodel.cpp" line="456"/>
+        <location filename="../src/filemodel.cpp" line="492"/>
         <source>No permission to read the folder</source>
-        <translation>Vous n&apos;avez pas la permission de lire le dossier</translation>
+        <translation>Δεν έχετε άδεια ανάγνωσης στον φάκελο</translation>
     </message>
 </context>
 <context>
@@ -511,67 +511,67 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="35"/>
         <source>Install launched</source>
-        <translation>Installation lancée</translation>
+        <translation>Η εγκατάσταση ξεκίνησε</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="36"/>
         <source>If nothing happens, then the package is probably faulty.</source>
-        <translation>Si rien ne se passe il est probable que le paquet soit défectueux.</translation>
+        <translation>Αν δεν συνέβη τίποτα, τότε το πακέτο είναι προφανώς ελαττωματικό.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="40"/>
         <source>Open successful</source>
-        <translation>Ouvert avec succès</translation>
+        <translation>Το άνοιγμα ήταν επιτυχές</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="41"/>
         <source>Sometimes the application stays in the background</source>
-        <translation>Parfois l&apos;application reste en arrière-plan</translation>
+        <translation>Σε ορισμένες περιπτώσεις η εφαρμογή παραμένει στο παρασκήνιο</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="43"/>
         <source>Internal error</source>
-        <translation>Erreur interne</translation>
+        <translation>Εσωτερικό σφάλμα</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="46"/>
         <source>File not found</source>
-        <translation>Fichier non trouvé</translation>
+        <translation>Το αρχείο δεν βρέθηκε</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="49"/>
         <source>No application to open the file</source>
-        <translation>Aucune application pour ouvrir ce fichier</translation>
+        <translation>Καμιά κατάλληλη εφαρμογή για το άνοιγμα του αρχείου</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="50"/>
         <source>xdg-open found no preferred application</source>
-        <translation>xdg-open n&apos;a pas trouvé d&apos;application favorite</translation>
+        <translation>Το xdg-open δεν βρήκε μια προτιμώμενη εφαρμογή</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="52"/>
         <source>Action failed</source>
-        <translation>L&apos;action a échoué</translation>
+        <translation>Αποτυχία ενέργειας</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="55"/>
         <source>xdg-open not found</source>
-        <translation>xdg-open introuvable</translation>
+        <translation>Το xdg-open δεν βρέθηκε</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="58"/>
         <source>xdg-open crash?</source>
-        <translation>xdg-open a planté ?</translation>
+        <translation>Το xdg-open κατέρρευσε;</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="61"/>
         <source>xdg-open error</source>
-        <translation>Erreur de xdg-open</translation>
+        <translation>Σφάλμα του xdg-open</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="78"/>
         <source>Change Permissions</source>
-        <translation>Changer les permissions</translation>
+        <translation>Αλλαγή αδειών</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="92"/>
@@ -581,48 +581,48 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="100"/>
         <source>Install</source>
-        <translation>Installer</translation>
+        <translation>Εγκατάσταση</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="100"/>
         <source>Open</source>
-        <translation>Ouvrir</translation>
+        <translation>Άνοιγμα</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="104"/>
         <source>File cannot be opened</source>
-        <translation>Impossible d&apos;ouvrir le fichier</translation>
+        <translation>Αδύνατο το άνοιγμα του αρχείου</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="105"/>
         <source>This type of file cannot be opened.</source>
-        <translation>Ce type de fichier n&apos;est pas ouvrable.</translation>
+        <translation>Αδύνατο το άνοιγμα αυτού του τύπου του αρχείου.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="113"/>
         <source>Go to Target</source>
-        <translation>Aller à la destination</translation>
+        <translation>Μετάβαση στον προορισμό</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="240"/>
         <location filename="../qml/pages/FilePage.qml" line="243"/>
         <source>Deleting</source>
-        <translation type="unfinished">Suppression</translation>
+        <translation type="unfinished">Διαγραφή</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="271"/>
         <source>Location</source>
-        <translation>Emplacement</translation>
+        <translation>Τοποθεσία</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="275"/>
         <source>Type</source>
-        <translation>Type</translation>
+        <translation>Τύπος</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="277"/>
         <source>Link to %1</source>
-        <translation>Lien ver %1</translation>
+        <translation>Σύνδεσμος στο %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="277"/>
@@ -632,67 +632,67 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="284"/>
         <source>Permissions</source>
-        <translation>Permissions</translation>
+        <translation>Άδειες</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="288"/>
         <source>Owner</source>
-        <translation>Propiétaire</translation>
+        <translation>Ιδιοκτήτης</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="292"/>
         <source>Group</source>
-        <translation>Groupe</translation>
+        <translation>Ομάδα</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="296"/>
         <source>Last modified</source>
-        <translation>Dernière modification</translation>
+        <translation>Τελευταία τροποποίηση</translation>
     </message>
 </context>
 <context>
     <name>FileWorker</name>
     <message>
-        <location filename="../fileworker.cpp" line="39"/>
-        <location filename="../fileworker.cpp" line="55"/>
-        <location filename="../fileworker.cpp" line="72"/>
-        <location filename="../fileworker.cpp" line="89"/>
+        <location filename="../src/fileworker.cpp" line="39"/>
+        <location filename="../src/fileworker.cpp" line="55"/>
+        <location filename="../src/fileworker.cpp" line="72"/>
+        <location filename="../src/fileworker.cpp" line="89"/>
         <source>File operation already in progress</source>
-        <translation>Opération sur le fichier déjà en cours</translation>
+        <translation>Μια διεργασία του αρχείου βρίσκεται ήδη σε εξέλιξη</translation>
     </message>
     <message>
-        <location filename="../fileworker.cpp" line="131"/>
+        <location filename="../src/fileworker.cpp" line="131"/>
         <source>Empty filename</source>
-        <translation>Nombre de dossiers vides</translation>
+        <translation>Κενό όνομα αρχείου</translation>
     </message>
     <message>
-        <location filename="../fileworker.cpp" line="187"/>
+        <location filename="../src/fileworker.cpp" line="187"/>
         <source>File not found</source>
-        <translation>Fichier introuvable</translation>
+        <translation>Το αρχείο δεν βρέθηκε</translation>
     </message>
     <message>
-        <location filename="../fileworker.cpp" line="200"/>
+        <location filename="../src/fileworker.cpp" line="200"/>
         <source>Folder delete failed</source>
-        <translation>Échec lors de la suppression du dossier</translation>
+        <translation>Η διαγραφή του φακέλου απέτυχε</translation>
     </message>
     <message>
-        <location filename="../fileworker.cpp" line="150"/>
-        <location filename="../fileworker.cpp" line="222"/>
-        <location filename="../fileworker.cpp" line="254"/>
-        <location filename="../fileworker.cpp" line="350"/>
-        <location filename="../fileworker.cpp" line="366"/>
+        <location filename="../src/fileworker.cpp" line="150"/>
+        <location filename="../src/fileworker.cpp" line="222"/>
+        <location filename="../src/fileworker.cpp" line="254"/>
+        <location filename="../src/fileworker.cpp" line="350"/>
+        <location filename="../src/fileworker.cpp" line="366"/>
         <source>Cancelled</source>
-        <translation>Annulé</translation>
+        <translation>Ακυρώθηκε</translation>
     </message>
     <message>
-        <location filename="../fileworker.cpp" line="335"/>
+        <location filename="../src/fileworker.cpp" line="335"/>
         <source>Source folder does not exist</source>
-        <translation>Le dossier source n&apos;existe pas</translation>
+        <translation>Ο φάκελος πηγής δεν υπάρχει</translation>
     </message>
     <message>
-        <location filename="../fileworker.cpp" line="342"/>
+        <location filename="../src/fileworker.cpp" line="342"/>
         <source>Cannot create target folder %1</source>
-        <translation>Impossible de créer le dossier de destination %1</translation>
+        <translation>Αδύνατη η δημιουργία του φακέλου προορισμού %1</translation>
     </message>
 </context>
 <context>
@@ -722,7 +722,7 @@
         <location filename="../qml/pages/MultiFilePage.qml" line="81"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="85"/>
         <source>Deleting</source>
-        <translation type="unfinished">Suppression</translation>
+        <translation type="unfinished">Διαγραφή</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="106"/>
@@ -746,12 +746,12 @@
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="28"/>
         <source>Replace?</source>
-        <translation>Remplacer ?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="29"/>
         <source>Replace</source>
-        <translation>Remplacer</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="33"/>
@@ -761,7 +761,7 @@
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="34"/>
         <source>These files or folders already exist:</source>
-        <translation>Ces fichiers et répertoires existent déjà :</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -769,7 +769,7 @@
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="56"/>
         <source>Change</source>
-        <translation>Changer</translation>
+        <translation>Αλλαγή</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="62"/>
@@ -780,451 +780,451 @@
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="82"/>
         <source>Read</source>
-        <translation>Lecture</translation>
+        <translation>Ανάγνωση</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="90"/>
         <source>Write</source>
-        <translation>Écriture</translation>
+        <translation>Εγγραφή</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="97"/>
         <source>Execute</source>
-        <translation>Executer</translation>
+        <translation>Εκτέλεση</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="118"/>
         <source>Owner</source>
-        <translation>Propiétaire</translation>
+        <translation>Ιδιοκτήτης</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="156"/>
         <source>Group</source>
-        <translation>Groupe</translation>
+        <translation>Ομάδα</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="189"/>
         <source>Others</source>
-        <translation>Autres</translation>
+        <translation>Άλλοι</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="120"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="120"/>
         <source>Make:%1</source>
-        <translation>Fabriquant : %1</translation>
+        <translation>Κατασκευαστής: %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="121"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="121"/>
         <source>Model:%1</source>
-        <translation>Modèle : %1</translation>
+        <translation>Μοντέλο: %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="124"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="124"/>
         <source>Date/Time:%1</source>
-        <translation>Date/Heure : %1</translation>
+        <translation>Ημερομηνία/Ώρα: %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="131"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="131"/>
         <source>Orientation:%1</source>
-        <translation>Orientation : %1</translation>
+        <translation>Προσανατολισμός: %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="136"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="136"/>
         <source>Color/BW:Black and White</source>
-        <translation>Coleur/NB : Noir et blanc</translation>
+        <translation>Χρώμα/ΜΛ: Μαύρο και Λευκό</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="143"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="143"/>
         <source>(Strobe light not detected)</source>
-        <translation>(lumière stroboscopique non détectée)</translation>
+        <translation>(δεν ανιχνεύτηκε στροβοσκοπικό φως)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="144"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="144"/>
         <source>(Strobe light detected) </source>
-        <translation>(lumière stroboscopique détectée)</translation>
+        <translation>(ανιχνεύτηκε στροβοσκοπικό φως) </translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="145"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="145"/>
         <source>(Manual)</source>
-        <translation>(Manuel)</translation>
+        <translation>(Χειροκίνητο)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="146"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="146"/>
         <source>(Manual, return light not detected)</source>
-        <translation>(Manuel, flash non détecté)</translation>
+        <translation>(Χειροκίνητο, δεν ανιχνεύτηκε φλας)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="148"/>
-        <location filename="../jhead/jhead-api.cpp" line="166"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="148"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="166"/>
         <source>(Auto)</source>
-        <translation>(Auto)</translation>
+        <translation>(Αυτόματο)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="149"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="149"/>
         <source>(Auto, return light not detected)</source>
-        <translation>(Auto, flash non détecté)</translation>
+        <translation>(Αυτόματο, δεν ανιχνεύτηκε φλας)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="150"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="150"/>
         <source>(Auto, return light detected)</source>
-        <translation>(Auto, flash détecté)</translation>
+        <translation>(Αυτόματο, ανιχνεύτηκε φλας)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="151"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="151"/>
         <source>(Red eye reduction mode)</source>
-        <translation>(Mode réduction des yeux rouges)</translation>
+        <translation>(λειτουργία μείωσης ερυθρών ματιών)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="152"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="152"/>
         <source>(Red eye reduction mode return light not detected)</source>
-        <translation>(Mode réduction des yeux rouges avec le flash non détecté)</translation>
+        <translation>(Λειτουργία μείωσης ερυθρών ματιών με το φλας δεν ανιχνεύτηκε)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="147"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="147"/>
         <source>(Manual, return light detected)</source>
-        <translation>(Manuel, flash détecté)</translation>
+        <translation>(Χειροκίνητο, ανιχνεύτηκε φλας)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="153"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="153"/>
         <source>(Red eye reduction mode return light detected)</source>
-        <translation>(Mode réduction des yeux rouges avec le flash détecté)</translation>
+        <translation>(Λειτουργία μείωσης ερυθρών ματιών με το φλας ανιχνεύτηκε )</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="154"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="154"/>
         <source>(Manual, red eye reduction mode)</source>
-        <translation>(Manuel, mode réduction des yeux rouges)</translation>
+        <translation>(Χειροκίνητο, λειτουργία μείωσης ερυθρών ματιών)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="155"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="155"/>
         <source>(Manual, red eye reduction mode, return light not detected)</source>
-        <translation>(Manuel, mode réduction des yeux rouges, flash non détecté)</translation>
+        <translation>(Χειροκίνητο, λειτουργία μείωσης ερυθρών ματιών, φλας δεν ανιχνεύτηκε)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="156"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="156"/>
         <source>(Red eye reduction mode, return light detected)</source>
-        <translation>(mode réduction des yeux rouges, flash détecté)</translation>
+        <translation>(Λειτουργία μείωσης ερυθρών ματιών, φλας ανιχνεύτηκε)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="157"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="157"/>
         <source>(Auto, red eye reduction mode)</source>
-        <translation>(Auto, mode réduction des yeux rouges)</translation>
+        <translation>(Αυτόματο, λειτουργία μείωσης ερυθρών ματιών)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="158"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="158"/>
         <source>(Auto, red eye reduction mode, return light not detected)</source>
-        <translation>(Auto, mode réduction des yeux rouges, flash non détecté)</translation>
+        <translation>(Αυτόματο, λειτουργία μείωσης ερυθρών ματιών, φλας δεν ανιχνεύτηκε)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="159"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="159"/>
         <source>(Auto, red eye reduction mode, return light detected)</source>
-        <translation>(Auto, mode réduction des yeux rouges, flash détecté)</translation>
+        <translation>(Αυτόματο, λειτουργία μείωσης ερυθρών ματιών, φλας ανιχνεύτηκε)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="161"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="161"/>
         <source>Flash:Yes</source>
-        <translation>Flash : oui</translation>
+        <translation>Φλας: Ναι</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="168"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="168"/>
         <source>Flash:No</source>
-        <translation>Flash : non</translation>
+        <translation>Φλας: Όχι</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="174"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="174"/>
         <source>Focal Length:%1mm</source>
-        <translation>Longitude focale : %1mm</translation>
+        <translation>Εστιακό μήκος: %1mm</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="176"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="176"/>
         <source>(35mm equivalent: %1mm)</source>
-        <translation>(Équivalente à 35mm : %1mm)</translation>
+        <translation>(Ισοδυναμία 35mm: %1mm)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="183"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="183"/>
         <source>Digital Zoom:%1x</source>
-        <translation>Zoom numérique : %1x</translation>
+        <translation>Ψηφιακή εστίαση: %1x</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="187"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="187"/>
         <source>CCD Width:%1</source>
-        <translation>Largeur CCD : %1</translation>
+        <translation>Πλάτος CCD: %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="193"/>
-        <location filename="../jhead/jhead-api.cpp" line="195"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="193"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="195"/>
         <source>Exposure Time:%1</source>
-        <translation>Temps d&apos;exposition : %1</translation>
+        <translation>Χρόνος έκθεσης: %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="198"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="198"/>
         <source>(1/%1)</source>
         <translation>(1/%1)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="203"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="203"/>
         <source>Aperture:f/%1</source>
-        <translation>Ouverture : f/%1</translation>
+        <translation>Διάφραγμα: f/%1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="207"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="207"/>
         <source>Focus Distance:Infinite</source>
-        <translation>Mise au point : infinie</translation>
+        <translation>Εστιακή απόσταση: Άπειρο</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="209"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="209"/>
         <source>Focus Distance:%1m</source>
-        <translation>Mise au point : %1m</translation>
+        <translation>Εστιακή απόσταση: %1m</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="214"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="214"/>
         <source>ISO Equivalent:%1</source>
-        <translation>ISO : %1</translation>
+        <translation>(ISO: %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="220"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="220"/>
         <source>Exposure Bias:%1</source>
-        <translation>Compensation de l&apos;exposition:%1</translation>
+        <translation>Αντιστάθμιση έκθεσης: %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="225"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="225"/>
         <source>White Balance:Manual</source>
-        <translation>Balance des blancs : manuelle</translation>
+        <translation>Ισορροπία λευκού: χειροκίνητο</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="228"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="228"/>
         <source>White Balance:Auto</source>
-        <translation>Balance des blancs : auto</translation>
+        <translation>Ισορροπία λευκού: Αυτόματο</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="235"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="235"/>
         <source>Light Source:Daylight</source>
-        <translation>Source de lumière : naturelle</translation>
+        <translation>Πηγή φωτός: Φως ημέρας</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="238"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="238"/>
         <source>Light Source:Fluorescent</source>
-        <translation>Source de lumière : tube fluorescent</translation>
+        <translation>Πηγή φωτός: Σωλήνας φθορισμού</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="241"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="241"/>
         <source>Light Source:Incandescent</source>
-        <translation>Source de lumière : ampoule incandescente</translation>
+        <translation>Πηγή φωτός: Λυχνία πυράκτωσης</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="244"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="244"/>
         <source>Light Source:Flash</source>
-        <translation>Source de lumière : flash</translation>
+        <translation>Πηγή φωτός: Φλας</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="247"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="247"/>
         <source>Light Source:Fine weather</source>
-        <translation>Source de lumière : journée ensoleillée</translation>
+        <translation>Πηγή φωτός: αίθριος καιρός</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="250"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="250"/>
         <source>Light Source:Shade</source>
-        <translation>Source de lumière : nuageux</translation>
+        <translation>Πηγή φωτός: Νεφελώδης</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="258"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="258"/>
         <source>Metering Mode:</source>
-        <translation>Mode de mesure : </translation>
+        <translation>Φωτομέτρηση:</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="260"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="260"/>
         <source>Average</source>
-        <translation>Normal</translation>
+        <translation>Τυπική</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="261"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="261"/>
         <source>Center weighted average</source>
-        <translation>Centre moyenne pondérée</translation>
+        <translation>Κέντρου βάρους τυπική</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="273"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="273"/>
         <source>Exposure Program:</source>
-        <translation>Programme d&apos;exposition : </translation>
+        <translation>Πρόγραμμα έκθεσης:</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="349"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="349"/>
         <source>Latitude:%1</source>
-        <translation>Latitude : %1</translation>
+        <translation>Γεωγραφικό πλάτος:%1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="350"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="350"/>
         <source>Longitude:%1</source>
-        <translation>Longitude : %1</translation>
+        <translation>Γεωγραφικό μήκος:%1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="352"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="352"/>
         <source>Altitude:%1</source>
-        <translation>Altitude : %1</translation>
+        <translation>Υψόμετρο: %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="262"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="262"/>
         <source>Spot</source>
-        <translation>Point</translation>
+        <translation>Σημείων</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="263"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="263"/>
         <source>Multi spot</source>
-        <translation>Matrice</translation>
+        <translation>Πολυζωνική</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="264"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="264"/>
         <source>Pattern</source>
-        <translation>Patron</translation>
+        <translation>Σχηματομορφής</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="265"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="265"/>
         <source>Partial</source>
-        <translation>Partiel</translation>
+        <translation>Μερική</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="266"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="266"/>
         <source>Other</source>
-        <translation>Autre</translation>
+        <translation>Άλλο</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="267"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="267"/>
         <source>Unknown (%1)</source>
-        <translation>Inconnu (%1)</translation>
+        <translation>Άγνωστο (%1)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="276"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="276"/>
         <source>Manual</source>
-        <translation>Manuel</translation>
+        <translation>Χειροκίνητη</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="279"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="279"/>
         <source>Program (auto)</source>
-        <translation>Programme (auto)</translation>
+        <translation>Πρόγραμμα (αυτόματο)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="282"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="282"/>
         <source>Aperture priority (semi-auto)</source>
-        <translation>Priorité à l&apos;ouverture (semi-auto)</translation>
+        <translation>Προτεραιότητα διαφράγματος (ημιαυτόματο)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="285"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="285"/>
         <source>Shutter priority (semi-auto)</source>
-        <translation>Priorité à l&apos;obturateur (semi-auto)</translation>
+        <translation>Προτεραιότητα κλείστρου (ημιαυτόματο)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="288"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="288"/>
         <source>Creative Program (based towards depth of field)</source>
-        <translation>Mode créatif (en s&apos;appuyant sur le profondeur de champ)</translation>
+        <translation>Δημιουργικό πρόγραμμα (με έμφαση προς το βάθος πεδίου)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="291"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="291"/>
         <source>Action program (based towards fast shutter speed)</source>
-        <translation>Mode action (en s&apos;appuyant sur la vitesse d&apos;obturation)</translation>
+        <translation>Πρόγραμμα δράσης (με έμφαση προς την ταχύτητα κλείστρου)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="294"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="294"/>
         <source>Portrait mode</source>
-        <translation>Mode portrait</translation>
+        <translation>Λειτουργία πορτραίτου</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="297"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="297"/>
         <source>Landscape mode</source>
-        <translation>Mode paysage</translation>
+        <translation>Λειτουργία τοπίου</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="307"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="307"/>
         <source>Exposure Mode:Manual</source>
-        <translation>Mode d&apos;exposition : Manuel</translation>
+        <translation>Λειτουργία έκθεσης: Χειροκίνητο</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="309"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="309"/>
         <source>Exposure Mode:Auto bracketing</source>
-        <translation>Mode d&apos;exposition : Auto</translation>
+        <translation>Λειτουργία έκθεσης: Αυτόματο</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="314"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="314"/>
         <source>Focus Range:</source>
-        <translation>Plage de mise au point : </translation>
+        <translation>Εύρος εστίασης:</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="317"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="317"/>
         <source>Macro</source>
-        <translation>Macro</translation>
+        <translation>Μακροφωτογραφία</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="320"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="320"/>
         <source>Close</source>
-        <translation>Proche</translation>
+        <translation>Κοντινό</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="323"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="323"/>
         <source>Distant</source>
-        <translation>Distant</translation>
+        <translation>Μακρινό</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="338"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="338"/>
         <source>JPEG Process:Unknown</source>
-        <translation>Processus JPEG : inconnu</translation>
+        <translation>Μέθοδος JPEG: Άγνωστο</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="342"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="342"/>
         <source>JPEG Process:%1</source>
-        <translation>Processus JPEG : %1</translation>
+        <translation>Μέθοδος JPEG: %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="358"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="358"/>
         <source>JPEG Quality:%1</source>
-        <translation>Qualité JPEG : %1</translation>
+        <translation>Ποιότητα JPEG: %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="364"/>
-        <location filename="../jhead/jhead-api.cpp" line="375"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="364"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="375"/>
         <source>Comment:</source>
-        <translation>Commentaire : </translation>
+        <translation>Σχόλιο:</translation>
     </message>
     <message>
-        <location filename="../globals.cpp" line="55"/>
+        <location filename="../src/globals.cpp" line="55"/>
         <source>%1 bytes</source>
-        <translation>%1 octets</translation>
+        <translation>%1 byte</translation>
     </message>
     <message>
-        <location filename="../globals.cpp" line="58"/>
+        <location filename="../src/globals.cpp" line="58"/>
         <source>%1 kB</source>
-        <translation>%1 ko</translation>
+        <translation>%1 kB</translation>
     </message>
     <message>
-        <location filename="../globals.cpp" line="61"/>
+        <location filename="../src/globals.cpp" line="61"/>
         <source>%1 MB</source>
-        <translation>%1 Mo</translation>
+        <translation>%1 MB</translation>
     </message>
     <message>
-        <location filename="../globals.cpp" line="63"/>
+        <location filename="../src/globals.cpp" line="63"/>
         <source>%1 GB</source>
-        <translation>%1 Go</translation>
+        <translation>%1 GB</translation>
     </message>
     <message>
-        <location filename="../globals.cpp" line="71"/>
+        <location filename="../src/globals.cpp" line="71"/>
         <source>hh:mm:ss</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../globals.cpp" line="74"/>
+        <location filename="../src/globals.cpp" line="74"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../globals.cpp" line="76"/>
+        <location filename="../src/globals.cpp" line="76"/>
         <source>dd.MM.yy, hh:mm</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="220"/>
+        <location filename="../src/engine.cpp" line="220"/>
         <source>SD card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="222"/>
+        <location filename="../src/engine.cpp" line="222"/>
         <source>Removable Media</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1234,7 +1234,7 @@
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="44"/>
         <source>Rename</source>
-        <translation>Renommer</translation>
+        <translation>Μετονομασία</translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="63"/>
@@ -1246,7 +1246,7 @@
         <location filename="../qml/pages/RenameDialog.qml" line="73"/>
         <location filename="../qml/pages/RenameDialog.qml" line="74"/>
         <source>New name</source>
-        <translation>Nouveau nom</translation>
+        <translation>Νέο όνομα</translation>
     </message>
 </context>
 <context>
@@ -1262,12 +1262,12 @@
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="74"/>
         <source>Searching</source>
-        <translation>Recherche en cours</translation>
+        <translation>Αναζήτηση</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="85"/>
         <source>Settings</source>
-        <translation>Paramètres</translation>
+        <translation>Ρυθμίσεις</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="110"/>
@@ -1288,27 +1288,27 @@
         <location filename="../qml/pages/SearchPage.qml" line="377"/>
         <location filename="../qml/pages/SearchPage.qml" line="379"/>
         <source>Deleting</source>
-        <translation>Suppression</translation>
+        <translation>Διαγραφή</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="310"/>
         <source>Go to containing folder</source>
-        <translation>Aller au dossier contenant le fichier</translation>
+        <translation>Μετάβαση στον φάκελο που το περιέχει</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="314"/>
         <source>Cut</source>
-        <translation>Couper</translation>
+        <translation>Αποκοπή</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="318"/>
         <source>Copy</source>
-        <translation>Copier</translation>
+        <translation>Αντιγραφή</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="322"/>
         <source>Delete</source>
-        <translation>Effacer</translation>
+        <translation>Διαγραφή</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="386"/>
@@ -1324,20 +1324,20 @@
         <location filename="../qml/pages/SearchPage.qml" line="96"/>
         <location filename="../qml/pages/SearchPage.qml" line="459"/>
         <source>Search</source>
-        <translation>Recherche</translation>
+        <translation>Αναζήτηση</translation>
     </message>
 </context>
 <context>
     <name>SearchWorker</name>
     <message>
-        <location filename="../searchworker.cpp" line="19"/>
+        <location filename="../src/searchworker.cpp" line="19"/>
         <source>Search already in progress</source>
-        <translation>La recherche est déjà en cours</translation>
+        <translation>Η αναζήτηση είναι ήδη σε εξέλιξη</translation>
     </message>
     <message>
-        <location filename="../searchworker.cpp" line="23"/>
+        <location filename="../src/searchworker.cpp" line="23"/>
         <source>Bad search parameters</source>
-        <translation>Paramètres de recherche incorrects</translation>
+        <translation>Κακοδιατυπωμένες παράμετροι αναζήτησης</translation>
     </message>
 </context>
 <context>
@@ -1357,7 +1357,7 @@
         <location filename="../qml/pages/SettingsPage.qml" line="22"/>
         <location filename="../qml/pages/SettingsPage.qml" line="211"/>
         <source>Settings</source>
-        <translation>Paramètres</translation>
+        <translation>Ρυθμίσεις</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="35"/>
@@ -1367,12 +1367,12 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="76"/>
         <source>Show folders first</source>
-        <translation>Afficher les dossiers en premier</translation>
+        <translation>Εμφάνιση των φακέλων πρώτα</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="39"/>
         <source>Show hidden files</source>
-        <translation>Afficher les fichiers cachés</translation>
+        <translation>Εμφάνιση των κρυφών αρχείων</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="43"/>
@@ -1522,7 +1522,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="146"/>
         <source>About File Browser</source>
-        <translation>À propos de File Browser</translation>
+        <translation>Σχετικά με τον File Browser</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="176"/>
@@ -1532,7 +1532,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="194"/>
         <source>The source code is available at</source>
-        <translation>Le code source est disponible sur</translation>
+        <translation>Ο πηγαίος κώδικας είναι διαθέσιμος στο</translation>
     </message>
 </context>
 <context>
@@ -1562,7 +1562,7 @@
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="307"/>
         <source>Home</source>
-        <translation type="unfinished">Home</translation>
+        <translation type="unfinished">Προσωπικός φάκελος</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="312"/>
@@ -1592,7 +1592,7 @@
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="341"/>
         <source>Root</source>
-        <translation type="unfinished">Racine</translation>
+        <translation type="unfinished">Ρίζα</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="335"/>
@@ -1620,7 +1620,7 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="52"/>
         <source>Search</source>
-        <translation type="unfinished">Recherche</translation>
+        <translation type="unfinished">Αναζήτηση</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="44"/>
@@ -1645,7 +1645,7 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="48"/>
         <source>Sometimes the application stays in the background</source>
-        <translation type="unfinished">Parfois l&apos;application reste en arrière-plan</translation>
+        <translation type="unfinished">Σε ορισμένες περιπτώσεις η εφαρμογή παραμένει στο παρασκήνιο</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="60"/>
@@ -1668,7 +1668,7 @@
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="13"/>
         <source>Size</source>
-        <translation type="unfinished">Taille</translation>
+        <translation type="unfinished">Μέγεθος</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="34"/>
@@ -1722,7 +1722,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="37"/>
         <source>Size</source>
-        <translation type="unfinished">Taille</translation>
+        <translation type="unfinished">Μέγεθος</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="38"/>
@@ -1767,7 +1767,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="110"/>
         <source>Show folders first</source>
-        <translation type="unfinished">Afficher les dossiers en premier</translation>
+        <translation type="unfinished">Εμφάνιση των φακέλων πρώτα</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="131"/>
@@ -1782,7 +1782,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="98"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">Afficher les fichiers cachés</translation>
+        <translation type="unfinished">Εμφάνιση των κρυφών αρχείων</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="115"/>
@@ -1825,7 +1825,7 @@
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="17"/>
         <source>Copy</source>
-        <translation type="unfinished">Copier</translation>
+        <translation type="unfinished">Αντιγραφή</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="28"/>
@@ -1936,7 +1936,7 @@
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="107"/>
         <source>Replace?</source>
-        <translation type="unfinished">Remplacer ?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="123"/>
@@ -1956,12 +1956,12 @@
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="184"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation type="unfinished">Souhaitez-vous basculer entre le téléphone et le carte SD ? Si cela échoue essayez de copier les fichiers.</translation>
+        <translation type="unfinished">Μήπως προσπαθείτε τη μετακίνηση μεταξύ του τηλεφώνου και της κάρτας SD; Δεν δουλεύει, δοκιμάστε την αντιγραφή.</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="186"/>
         <source>Perhaps the storage is full?</source>
-        <translation type="unfinished">L&apos;espace de stockage est peut-être plein ?</translation>
+        <translation type="unfinished">Ίσως ο αποθετικός χώρος είναι πλήρης;</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="268"/>
@@ -1971,12 +1971,12 @@
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="283"/>
         <source>Copying</source>
-        <translation type="unfinished">Copie</translation>
+        <translation type="unfinished">Αντιγραφή</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="284"/>
         <source>Moving</source>
-        <translation type="unfinished">Déplacement</translation>
+        <translation type="unfinished">Μετακίνηση</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="285"/>
@@ -2003,19 +2003,19 @@
         <location filename="../qml/js/files.js" line="16"/>
         <location filename="../qml/js/files.js" line="25"/>
         <source>Copying</source>
-        <translation type="unfinished">Copie</translation>
+        <translation type="unfinished">Αντιγραφή</translation>
     </message>
     <message>
         <location filename="../qml/js/files.js" line="16"/>
         <location filename="../qml/js/files.js" line="25"/>
         <source>Moving</source>
-        <translation type="unfinished">Déplacement</translation>
+        <translation type="unfinished">Μετακίνηση</translation>
     </message>
 </context>
 <context>
-    <name>main</name>
+    <name>harbour-file-browser-beta</name>
     <message>
-        <location filename="../qml/main.qml" line="14"/>
+        <location filename="../qml/harbour-file-browser-beta.qml" line="14"/>
         <source>Version %1</source>
         <translation type="unfinished"></translation>
     </message>

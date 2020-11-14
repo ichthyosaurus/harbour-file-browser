@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv" sourcelanguage="en">
+<TS version="2.1" language="fr" sourcelanguage="en">
 <context>
     <name>ConsoleModel</name>
     <message>
-        <location filename="../consolemodel.cpp" line="101"/>
+        <location filename="../src/consolemodel.cpp" line="101"/>
         <source>** crashed</source>
-        <translation>** kraschade</translation>
+        <translation>** a connu un souci</translation>
     </message>
     <message>
-        <location filename="../consolemodel.cpp" line="104"/>
+        <location filename="../src/consolemodel.cpp" line="104"/>
         <source>** error: %1</source>
-        <translation>** fel: %1</translation>
+        <translation>** erreur : %1</translation>
     </message>
     <message>
-        <location filename="../consolemodel.cpp" line="113"/>
+        <location filename="../src/consolemodel.cpp" line="113"/>
         <source>** error</source>
-        <translation>** fel</translation>
+        <translation>** erreur</translation>
     </message>
 </context>
 <context>
@@ -24,82 +24,82 @@
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="15"/>
         <source>Contributors</source>
-        <translation>Medverkande</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="17"/>
         <source>Development</source>
-        <translation>Utveckling</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="20"/>
         <source>Programming</source>
-        <translation>Programmering</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="28"/>
         <source>Icon Design</source>
-        <translation>Ikondesign</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="32"/>
         <source>Translations</source>
-        <translation>Översättningar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="35"/>
         <source>English</source>
-        <translation>Engelska</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="39"/>
         <source>German</source>
-        <translation>Tyska</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="43"/>
         <source>Finnish</source>
-        <translation>Finska</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="47"/>
         <source>Chinese</source>
-        <translation>Kinesiska</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="51"/>
         <source>Russian</source>
-        <translation>Ryska</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="55"/>
         <source>Swedish</source>
-        <translation>Svenska</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="59"/>
         <source>Italian</source>
-        <translation>Italienska</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="63"/>
         <source>Spanish</source>
-        <translation>Spanska</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="67"/>
         <source>French</source>
-        <translation>Franska</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="71"/>
         <source>Dutch</source>
-        <translation>Nederländska</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="75"/>
         <source>Greek</source>
-        <translation>Grekiska</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -107,18 +107,18 @@
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="30"/>
         <source>Create</source>
-        <translation>Skapa</translation>
+        <translation>Créer</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="36"/>
         <source>Create a new folder under</source>
-        <translation>Skapa ny mapp under</translation>
+        <translation>Créer un nouveau dossier dans</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="48"/>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="49"/>
         <source>Folder name</source>
-        <translation>Mappnamn</translation>
+        <translation>Nom du dossier</translation>
     </message>
 </context>
 <context>
@@ -126,9 +126,9 @@
     <message numerus="yes">
         <location filename="../qml/components/DetailList.qml" line="25"/>
         <source>... and %n more</source>
-        <translation>
-            <numerusform>... och %n till</numerusform>
-            <numerusform>... och %n till</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -137,78 +137,78 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="72"/>
         <source>Create Folder</source>
-        <translation>Skapa mapp</translation>
+        <translation>Créer un dossier</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="174"/>
         <source>Search</source>
-        <translation>Sök</translation>
+        <translation>Recherche</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="84"/>
         <source>Paste</source>
-        <translation>Klistra in</translation>
+        <translation>Coller</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="181"/>
         <source>Remove bookmark</source>
-        <translation>Ta bort bokmärke</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="181"/>
         <source>Add to bookmarks</source>
-        <translation>Lägg till i bokmärken</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="188"/>
         <source>Copy path to clipboard</source>
-        <translation>Kopiera sökvägen till urklipp</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="310"/>
         <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Deleting</source>
-        <translation>Tar bort</translation>
+        <translation>Suppression</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="256"/>
         <source>No files</source>
-        <translation>Inga filer</translation>
+        <translation>Aucun fichier</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="68"/>
         <source>View Preferences</source>
-        <translation>Inställningar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="102"/>
         <source>Filter directory contents</source>
-        <translation>Filtrera mappinnehåll</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="234"/>
         <source>filtered by: %1</source>
-        <translation>filtrerat efter: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="319"/>
         <source>Internally not ready</source>
-        <translation>Inte klart internt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="319"/>
         <source>Please simply try again</source>
-        <translation>Försök igen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="362"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation>Försöker du flytta mellan telefonminne och SD-kort? Det fungerar inte, försök med kopiering.</translation>
+        <translation>Souhaitez-vous basculer entre le téléphone et le carte SD ? Si cela échoue essayez de copier les fichiers.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="364"/>
         <source>Perhaps the storage is full?</source>
-        <translation>Lagringsutrymmet kanske är fullt?</translation>
+        <translation>L&apos;espace de stockage est peut-être plein ?</translation>
     </message>
 </context>
 <context>
@@ -216,112 +216,112 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="131"/>
         <source>(link)</source>
-        <translation>(länk)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="316"/>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="318"/>
         <source>Deleting</source>
-        <translation>Tar bort</translation>
+        <translation type="unfinished">Suppression</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="337"/>
         <source>Remove bookmark</source>
-        <translation>Ta bort bokmärke</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="337"/>
         <source>Add to bookmarks</source>
-        <translation>Lägg till i bokmärken</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Engine</name>
     <message>
-        <location filename="../engine.cpp" line="116"/>
+        <location filename="../src/engine.cpp" line="116"/>
         <source>Destination does not exist</source>
-        <translation>Målmappen finns inte</translation>
+        <translation>La destination n&apos;existe pas</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="127"/>
+        <location filename="../src/engine.cpp" line="127"/>
         <source>Cannot overwrite itself</source>
-        <translation>Kan inte skriva över sig själv</translation>
+        <translation>Impossible d&apos;écraser le fichier avec le lui-même</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="133"/>
+        <location filename="../src/engine.cpp" line="133"/>
         <source>Cannot move/copy to itself</source>
-        <translation>Kan inte flytta/kopiera till sig själv</translation>
+        <translation>Impossible de déplacer/copier vers lui-même</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="108"/>
+        <location filename="../src/engine.cpp" line="108"/>
         <source>No files to paste</source>
-        <translation>Inga filer att klistra in</translation>
+        <translation>Aucun fichier à coller</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="323"/>
+        <location filename="../src/engine.cpp" line="323"/>
         <source>File does not exist</source>
-        <translation>Filen finns inte</translation>
+        <translation>Le fichier n&apos;existe pas</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="325"/>
+        <location filename="../src/engine.cpp" line="325"/>
         <source>Broken symbolic link</source>
-        <translation>Skadad symbolisk länk</translation>
+        <translation>Lien symbolique cassé</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="330"/>
+        <location filename="../src/engine.cpp" line="330"/>
         <source>Cannot read this type of file</source>
-        <translation>Kan inte läsa den här filtypen</translation>
+        <translation>Impossible de lire ce type de fichier</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="336"/>
+        <location filename="../src/engine.cpp" line="336"/>
         <source>No permission to read the file</source>
-        <translation>Behörighet att läsa filen saknas</translation>
+        <translation>Vous n&apos;avez pas la permission de lire ce fichier</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="340"/>
-        <location filename="../engine.cpp" line="346"/>
+        <location filename="../src/engine.cpp" line="340"/>
+        <location filename="../src/engine.cpp" line="346"/>
         <source>Error reading file</source>
-        <translation>Fel vid filläsning</translation>
+        <translation>Erreur de lecture du fichier</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="349"/>
+        <location filename="../src/engine.cpp" line="349"/>
         <source>Empty file</source>
-        <translation>Tom fil</translation>
+        <translation>Fichier vide</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="375"/>
+        <location filename="../src/engine.cpp" line="375"/>
         <source>Binary file preview clipped at %1 kB</source>
-        <translation>Binär filgranskning klippt vi %1 kB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="394"/>
+        <location filename="../src/engine.cpp" line="394"/>
         <source>Text file preview clipped at %1 lines</source>
-        <translation>Textfilsgranskning klippt vid %1 rader</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="396"/>
+        <location filename="../src/engine.cpp" line="396"/>
         <source>Text file preview clipped at %1 kB</source>
-        <translation>Textfilsgranskning klippt vid %1 kB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="409"/>
+        <location filename="../src/engine.cpp" line="409"/>
         <source>No permissions to create %1</source>
-        <translation>Ingen behörighet att skapa %1</translation>
+        <translation>Vous n&apos;avez pas la permission de créer %1</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="427"/>
+        <location filename="../src/engine.cpp" line="427"/>
         <source>Cannot rename %1</source>
-        <translation>Kan inte namnändra %1</translation>
+        <translation>Impossible de renommer %1</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="450"/>
+        <location filename="../src/engine.cpp" line="450"/>
         <source>Cannot change permissions</source>
-        <translation>Kan inte ändra behörighet</translation>
+        <translation>Impossible de changer les permissions</translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="411"/>
+        <location filename="../src/engine.cpp" line="411"/>
         <source>Cannot create folder %1</source>
-        <translation>Kan inte skapa mappen %1</translation>
+        <translation>Impossible de créer le dossier %1</translation>
     </message>
 </context>
 <context>
@@ -329,105 +329,105 @@
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="51"/>
         <source>%n file(s) selected</source>
-        <translation>
-            <numerusform>%n fil markerad</numerusform>
-            <numerusform>%n filer markerade</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="82"/>
         <source>clear selection</source>
-        <translation>Avmarkera alla</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="83"/>
         <source>select all</source>
-        <translation>Markera alla</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="92"/>
         <source>cut file(s)</source>
-        <translation>
-            <numerusform>Klipp ut filen</numerusform>
-            <numerusform>Klipp ut filerna</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="96"/>
         <source>%n file(s) cut</source>
-        <translation>
-            <numerusform>%n fil urklippt</numerusform>
-            <numerusform>%n filer urklippta</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="105"/>
         <source>copy file(s)</source>
-        <translation>
-            <numerusform>Kopiera filen</numerusform>
-            <numerusform>Kopiera filerna</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="109"/>
         <source>%n file(s) copied</source>
-        <translation>
-            <numerusform>%n fil kopierad</numerusform>
-            <numerusform>%n filer kopierade</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="118"/>
         <source>transfer file(s)</source>
-        <translation>
-            <numerusform>Överför filen</numerusform>
-            <numerusform>Överför filerna</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="137"/>
         <source>delete file(s)</source>
-        <translation>
-            <numerusform>Ta bort filen</numerusform>
-            <numerusform>Ta bort filerna</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="152"/>
         <source>rename file(s)</source>
-        <translation>
-            <numerusform>Byt namn på filen</numerusform>
-            <numerusform>Byt namn på filerna</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="171"/>
         <source>share file(s)</source>
-        <translation>
-            <numerusform>Dela filen</numerusform>
-            <numerusform>Dela filerna</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="191"/>
         <source>compress file(s)</source>
-        <translation>
-            <numerusform>Komprimera filen</numerusform>
-            <numerusform>Komprimera filerna</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="199"/>
         <source>edit file(s)</source>
-        <translation>
-            <numerusform>Redigera filen</numerusform>
-            <numerusform>Redigera filerna</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="208"/>
         <source>show file properties</source>
-        <translation>Visa filegenskaper</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -435,75 +435,75 @@
     <message>
         <location filename="../qml/cover/FileBrowserCover.qml" line="25"/>
         <source>Root Mode</source>
-        <translation>Root-läge</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>FileData</name>
     <message>
-        <location filename="../filedata.cpp" line="149"/>
+        <location filename="../src/filedata.cpp" line="149"/>
         <source>File does not exist</source>
-        <translation>Filen finns inte</translation>
+        <translation>Le fichier n&apos;existe pas</translation>
     </message>
     <message>
-        <location filename="../filedata.cpp" line="183"/>
+        <location filename="../src/filedata.cpp" line="183"/>
         <source>block device</source>
-        <translation>blockenhet</translation>
+        <translation>dispositif de blocage</translation>
     </message>
     <message>
-        <location filename="../filedata.cpp" line="187"/>
+        <location filename="../src/filedata.cpp" line="187"/>
         <source>character device</source>
-        <translation>teckenenhet</translation>
+        <translation>dispositif de caractère</translation>
     </message>
     <message>
-        <location filename="../filedata.cpp" line="191"/>
+        <location filename="../src/filedata.cpp" line="191"/>
         <source>pipe</source>
         <translation>pipe</translation>
     </message>
     <message>
-        <location filename="../filedata.cpp" line="195"/>
+        <location filename="../src/filedata.cpp" line="195"/>
         <source>socket</source>
         <translation>socket</translation>
     </message>
     <message>
-        <location filename="../filedata.cpp" line="199"/>
+        <location filename="../src/filedata.cpp" line="199"/>
         <source>folder</source>
-        <translation>mapp</translation>
+        <translation>dossier</translation>
     </message>
     <message>
-        <location filename="../filedata.cpp" line="205"/>
+        <location filename="../src/filedata.cpp" line="205"/>
         <source>unknown</source>
-        <translation>okänd</translation>
+        <translation>inconnu</translation>
     </message>
     <message>
-        <location filename="../filedata.cpp" line="228"/>
+        <location filename="../src/filedata.cpp" line="228"/>
         <source>Image Size</source>
-        <translation>Bildstorlek</translation>
+        <translation>Taille de l&apos;image</translation>
     </message>
 </context>
 <context>
     <name>FileModel</name>
     <message>
-        <location filename="../filemodel.cpp" line="77"/>
+        <location filename="../src/filemodel.cpp" line="77"/>
         <source>dir-link</source>
-        <translation>mapplänk</translation>
+        <translation>dir-link</translation>
     </message>
     <message>
-        <location filename="../filemodel.cpp" line="78"/>
+        <location filename="../src/filemodel.cpp" line="78"/>
         <source>dir</source>
-        <translation>mapp</translation>
+        <translation>dir</translation>
     </message>
     <message>
-        <location filename="../filemodel.cpp" line="452"/>
-        <location filename="../filemodel.cpp" line="486"/>
+        <location filename="../src/filemodel.cpp" line="452"/>
+        <location filename="../src/filemodel.cpp" line="486"/>
         <source>Folder does not exist</source>
-        <translation>Mappen finns inte</translation>
+        <translation>Le dossier n&apos;existe pas</translation>
     </message>
     <message>
-        <location filename="../filemodel.cpp" line="456"/>
-        <location filename="../filemodel.cpp" line="492"/>
+        <location filename="../src/filemodel.cpp" line="456"/>
+        <location filename="../src/filemodel.cpp" line="492"/>
         <source>No permission to read the folder</source>
-        <translation>Behörighet att läsa mappen saknas</translation>
+        <translation>Vous n&apos;avez pas la permission de lire le dossier</translation>
     </message>
 </context>
 <context>
@@ -511,188 +511,188 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="35"/>
         <source>Install launched</source>
-        <translation>Installation startad</translation>
+        <translation>Installation lancée</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="36"/>
         <source>If nothing happens, then the package is probably faulty.</source>
-        <translation>Paketet är troligen skadat, om inget händer.</translation>
+        <translation>Si rien ne se passe il est probable que le paquet soit défectueux.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="40"/>
         <source>Open successful</source>
-        <translation>Startad</translation>
+        <translation>Ouvert avec succès</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="41"/>
         <source>Sometimes the application stays in the background</source>
-        <translation>Ibland stannar programmet i bakgrunden</translation>
+        <translation>Parfois l&apos;application reste en arrière-plan</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="43"/>
         <source>Internal error</source>
-        <translation>Internt fel</translation>
+        <translation>Erreur interne</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="46"/>
         <source>File not found</source>
-        <translation>Filen kunde inte hittas</translation>
+        <translation>Fichier non trouvé</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="49"/>
         <source>No application to open the file</source>
-        <translation>Det finns inget program att öppna filen med</translation>
+        <translation>Aucune application pour ouvrir ce fichier</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="50"/>
         <source>xdg-open found no preferred application</source>
-        <translation>xdg-open hittade inget associerat program</translation>
+        <translation>xdg-open n&apos;a pas trouvé d&apos;application favorite</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="52"/>
         <source>Action failed</source>
-        <translation>Åtgärden misslyckades</translation>
+        <translation>L&apos;action a échoué</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="55"/>
         <source>xdg-open not found</source>
-        <translation>xdg-open hittades inte</translation>
+        <translation>xdg-open introuvable</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="58"/>
         <source>xdg-open crash?</source>
-        <translation>xdg-open-krasch?</translation>
+        <translation>xdg-open a planté ?</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="61"/>
         <source>xdg-open error</source>
-        <translation>xdg-open-fel</translation>
+        <translation>Erreur de xdg-open</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="78"/>
         <source>Change Permissions</source>
-        <translation>Ändra behörighet</translation>
+        <translation>Changer les permissions</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="92"/>
         <source>View Raw Contents</source>
-        <translation>Visa RAW-innehåll</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="100"/>
         <source>Install</source>
-        <translation>Installera</translation>
+        <translation>Installer</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="100"/>
         <source>Open</source>
-        <translation>Öppna</translation>
+        <translation>Ouvrir</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="104"/>
         <source>File cannot be opened</source>
-        <translation>Filen kan inte öppnas</translation>
+        <translation>Impossible d&apos;ouvrir le fichier</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="105"/>
         <source>This type of file cannot be opened.</source>
-        <translation>Filtypen kan inte öppnas.</translation>
+        <translation>Ce type de fichier n&apos;est pas ouvrable.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="113"/>
         <source>Go to Target</source>
-        <translation>Gå till målet</translation>
+        <translation>Aller à la destination</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="240"/>
         <location filename="../qml/pages/FilePage.qml" line="243"/>
         <source>Deleting</source>
-        <translation>Tar bort</translation>
+        <translation type="unfinished">Suppression</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="271"/>
         <source>Location</source>
-        <translation>Plats</translation>
+        <translation>Emplacement</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="275"/>
         <source>Type</source>
-        <translation>Typ</translation>
+        <translation>Type</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="277"/>
         <source>Link to %1</source>
-        <translation>Länk till %1</translation>
+        <translation>Lien ver %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="277"/>
         <source>Unknown (link target not found)</source>
-        <translation>Okänd (länkmålet hittades inte)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="284"/>
         <source>Permissions</source>
-        <translation>Behörighet</translation>
+        <translation>Permissions</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="288"/>
         <source>Owner</source>
-        <translation>Ägare</translation>
+        <translation>Propiétaire</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="292"/>
         <source>Group</source>
-        <translation>Grupp</translation>
+        <translation>Groupe</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="296"/>
         <source>Last modified</source>
-        <translation>Ändrad</translation>
+        <translation>Dernière modification</translation>
     </message>
 </context>
 <context>
     <name>FileWorker</name>
     <message>
-        <location filename="../fileworker.cpp" line="39"/>
-        <location filename="../fileworker.cpp" line="55"/>
-        <location filename="../fileworker.cpp" line="72"/>
-        <location filename="../fileworker.cpp" line="89"/>
+        <location filename="../src/fileworker.cpp" line="39"/>
+        <location filename="../src/fileworker.cpp" line="55"/>
+        <location filename="../src/fileworker.cpp" line="72"/>
+        <location filename="../src/fileworker.cpp" line="89"/>
         <source>File operation already in progress</source>
-        <translation>Filåtgärd pågår redan</translation>
+        <translation>Opération sur le fichier déjà en cours</translation>
     </message>
     <message>
-        <location filename="../fileworker.cpp" line="131"/>
+        <location filename="../src/fileworker.cpp" line="131"/>
         <source>Empty filename</source>
-        <translation>Tomt filnamn</translation>
+        <translation>Nombre de dossiers vides</translation>
     </message>
     <message>
-        <location filename="../fileworker.cpp" line="187"/>
+        <location filename="../src/fileworker.cpp" line="187"/>
         <source>File not found</source>
-        <translation>Filen hittades inte</translation>
+        <translation>Fichier introuvable</translation>
     </message>
     <message>
-        <location filename="../fileworker.cpp" line="200"/>
+        <location filename="../src/fileworker.cpp" line="200"/>
         <source>Folder delete failed</source>
-        <translation>Mappborttagning misslyckades</translation>
+        <translation>Échec lors de la suppression du dossier</translation>
     </message>
     <message>
-        <location filename="../fileworker.cpp" line="150"/>
-        <location filename="../fileworker.cpp" line="222"/>
-        <location filename="../fileworker.cpp" line="254"/>
-        <location filename="../fileworker.cpp" line="350"/>
-        <location filename="../fileworker.cpp" line="366"/>
+        <location filename="../src/fileworker.cpp" line="150"/>
+        <location filename="../src/fileworker.cpp" line="222"/>
+        <location filename="../src/fileworker.cpp" line="254"/>
+        <location filename="../src/fileworker.cpp" line="350"/>
+        <location filename="../src/fileworker.cpp" line="366"/>
         <source>Cancelled</source>
-        <translation>Avbruten</translation>
+        <translation>Annulé</translation>
     </message>
     <message>
-        <location filename="../fileworker.cpp" line="335"/>
+        <location filename="../src/fileworker.cpp" line="335"/>
         <source>Source folder does not exist</source>
-        <translation>Källmappen finns inte</translation>
+        <translation>Le dossier source n&apos;existe pas</translation>
     </message>
     <message>
-        <location filename="../fileworker.cpp" line="342"/>
+        <location filename="../src/fileworker.cpp" line="342"/>
         <source>Cannot create target folder %1</source>
-        <translation>Kan inte skapa målmappen %1</translation>
+        <translation>Impossible de créer le dossier de destination %1</translation>
     </message>
 </context>
 <context>
@@ -700,7 +700,7 @@
     <message>
         <location filename="../qml/pages/LicensePage.qml" line="19"/>
         <source>License</source>
-        <translation>Licens</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -708,37 +708,37 @@
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="33"/>
         <source>Selection Properties</source>
-        <translation>Egenskaper</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/MultiFilePage.qml" line="62"/>
         <source>%n item(s) selected</source>
-        <translation>
-            <numerusform>%n objekt markerat</numerusform>
-            <numerusform>%n objekt markerade</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="81"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="85"/>
         <source>Deleting</source>
-        <translation>Tar bort</translation>
+        <translation type="unfinished">Suppression</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="106"/>
         <source>Directories</source>
-        <translation>Mappar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="115"/>
         <source>Files</source>
-        <translation>Filer</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="131"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="140"/>
         <source>none</source>
-        <translation>Inget</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -746,22 +746,22 @@
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="28"/>
         <source>Replace?</source>
-        <translation>Vill du ersätta?</translation>
+        <translation>Remplacer ?</translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="29"/>
         <source>Replace</source>
-        <translation>Ersätt</translation>
+        <translation>Remplacer</translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="33"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation>Dessa filer eller mappar finns redan i &quot;%1&quot;:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="34"/>
         <source>These files or folders already exist:</source>
-        <translation>Dessa filer eller mappar finns redan:</translation>
+        <translation>Ces fichiers et répertoires existent déjà :</translation>
     </message>
 </context>
 <context>
@@ -769,466 +769,464 @@
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="56"/>
         <source>Change</source>
-        <translation>Ändra</translation>
+        <translation>Changer</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="62"/>
         <source>Change permissions for
 %1</source>
-        <translation>Ändra nehörigheter för
-%1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="82"/>
         <source>Read</source>
-        <translation>Läs</translation>
+        <translation>Lecture</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="90"/>
         <source>Write</source>
-        <translation>Skriv</translation>
+        <translation>Écriture</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="97"/>
         <source>Execute</source>
-        <translation>Kör</translation>
+        <translation>Executer</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="118"/>
         <source>Owner</source>
-        <translation>Ägare</translation>
+        <translation>Propiétaire</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="156"/>
         <source>Group</source>
-        <translation>Grupp</translation>
+        <translation>Groupe</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="189"/>
         <source>Others</source>
-        <translation>Annat</translation>
+        <translation>Autres</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="121"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="120"/>
+        <source>Make:%1</source>
+        <translation>Fabriquant : %1</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="121"/>
         <source>Model:%1</source>
-        <translation>Modell:%1</translation>
+        <translation>Modèle : %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="124"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="124"/>
         <source>Date/Time:%1</source>
-        <translation>Datum/Tid:%1</translation>
+        <translation>Date/Heure : %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="131"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="131"/>
         <source>Orientation:%1</source>
-        <translation>Orientering:%1</translation>
+        <translation>Orientation : %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="136"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="136"/>
         <source>Color/BW:Black and White</source>
-        <translation>Färg/SV:Svartvit</translation>
+        <translation>Coleur/NB : Noir et blanc</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="143"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="143"/>
         <source>(Strobe light not detected)</source>
-        <translation>(Inget blixtljus upptäckt)</translation>
+        <translation>(lumière stroboscopique non détectée)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="144"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="144"/>
         <source>(Strobe light detected) </source>
-        <translation>(Blixtljus upptäckt) </translation>
+        <translation>(lumière stroboscopique détectée)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="145"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="145"/>
         <source>(Manual)</source>
-        <translation>(Manuell)</translation>
+        <translation>(Manuel)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="146"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="146"/>
         <source>(Manual, return light not detected)</source>
-        <translation>(Manuell, inget återsken upptäckt)</translation>
+        <translation>(Manuel, flash non détecté)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="148"/>
-        <location filename="../jhead/jhead-api.cpp" line="166"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="148"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="166"/>
         <source>(Auto)</source>
         <translation>(Auto)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="149"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="149"/>
         <source>(Auto, return light not detected)</source>
-        <translation>(Auto, inget återsken upptäckt)</translation>
+        <translation>(Auto, flash non détecté)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="150"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="150"/>
         <source>(Auto, return light detected)</source>
-        <translation>(Auto, återsken upptäckt)</translation>
+        <translation>(Auto, flash détecté)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="151"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="151"/>
         <source>(Red eye reduction mode)</source>
-        <translation>(Röda ögonreducering)</translation>
+        <translation>(Mode réduction des yeux rouges)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="152"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="152"/>
         <source>(Red eye reduction mode return light not detected)</source>
-        <translation>(Röda ögonreducering, inget återsken upptäckt)</translation>
+        <translation>(Mode réduction des yeux rouges avec le flash non détecté)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="147"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="147"/>
         <source>(Manual, return light detected)</source>
-        <translation>(Manuell, återsken upptäckt)</translation>
+        <translation>(Manuel, flash détecté)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="120"/>
-        <source>Make:%1</source>
-        <translation>Make:%1</translation>
-    </message>
-    <message>
-        <location filename="../jhead/jhead-api.cpp" line="153"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="153"/>
         <source>(Red eye reduction mode return light detected)</source>
-        <translation>(Röda ögonreducering, återsken upptäckt)</translation>
+        <translation>(Mode réduction des yeux rouges avec le flash détecté)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="154"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="154"/>
         <source>(Manual, red eye reduction mode)</source>
-        <translation>(Manuell, röda ögonreducering)</translation>
+        <translation>(Manuel, mode réduction des yeux rouges)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="155"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="155"/>
         <source>(Manual, red eye reduction mode, return light not detected)</source>
-        <translation>(Manuell, röda ögonreducering, inget återsken upptäckt)</translation>
+        <translation>(Manuel, mode réduction des yeux rouges, flash non détecté)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="156"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="156"/>
         <source>(Red eye reduction mode, return light detected)</source>
-        <translation>(Röda ögonreducering, återsken upptäckt)</translation>
+        <translation>(mode réduction des yeux rouges, flash détecté)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="157"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="157"/>
         <source>(Auto, red eye reduction mode)</source>
-        <translation>(Auto, röda ögonreducering)</translation>
+        <translation>(Auto, mode réduction des yeux rouges)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="158"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="158"/>
         <source>(Auto, red eye reduction mode, return light not detected)</source>
-        <translation>(Auto, röda ögonreducering, inget återsken upptäckt)</translation>
+        <translation>(Auto, mode réduction des yeux rouges, flash non détecté)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="159"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="159"/>
         <source>(Auto, red eye reduction mode, return light detected)</source>
-        <translation>(Auto, röda ögonreducering, återsken upptäckt)</translation>
+        <translation>(Auto, mode réduction des yeux rouges, flash détecté)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="161"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="161"/>
         <source>Flash:Yes</source>
-        <translation>Blixt:Ja</translation>
+        <translation>Flash : oui</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="168"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="168"/>
         <source>Flash:No</source>
-        <translation>Blixt:Nej</translation>
+        <translation>Flash : non</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="174"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="174"/>
         <source>Focal Length:%1mm</source>
-        <translation>Brännvidd:%1mm</translation>
+        <translation>Longitude focale : %1mm</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="176"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="176"/>
         <source>(35mm equivalent: %1mm)</source>
-        <translation>(Motsvarande 35mm: %1mm)</translation>
+        <translation>(Équivalente à 35mm : %1mm)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="183"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="183"/>
         <source>Digital Zoom:%1x</source>
-        <translation>Digital zoom:%1x</translation>
+        <translation>Zoom numérique : %1x</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="187"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="187"/>
         <source>CCD Width:%1</source>
-        <translation>CCD-bredd:%1</translation>
+        <translation>Largeur CCD : %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="193"/>
-        <location filename="../jhead/jhead-api.cpp" line="195"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="193"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="195"/>
         <source>Exposure Time:%1</source>
-        <translation>Exponeringstid:%1</translation>
+        <translation>Temps d&apos;exposition : %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="198"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="198"/>
         <source>(1/%1)</source>
         <translation>(1/%1)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="203"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="203"/>
         <source>Aperture:f/%1</source>
-        <translation>Bländare:f/%1</translation>
+        <translation>Ouverture : f/%1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="207"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="207"/>
         <source>Focus Distance:Infinite</source>
-        <translation>Fokusavstånd:Oändligt</translation>
+        <translation>Mise au point : infinie</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="209"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="209"/>
         <source>Focus Distance:%1m</source>
-        <translation>Fokusavstånd:%1m</translation>
+        <translation>Mise au point : %1m</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="214"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="214"/>
         <source>ISO Equivalent:%1</source>
-        <translation>ISO:%1</translation>
+        <translation>ISO : %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="220"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="220"/>
         <source>Exposure Bias:%1</source>
-        <translation>Exponeringsbias:%1</translation>
+        <translation>Compensation de l&apos;exposition:%1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="225"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="225"/>
         <source>White Balance:Manual</source>
-        <translation>Vitbalans:Manuell</translation>
+        <translation>Balance des blancs : manuelle</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="228"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="228"/>
         <source>White Balance:Auto</source>
-        <translation>Vitbalans:Auto</translation>
+        <translation>Balance des blancs : auto</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="235"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="235"/>
         <source>Light Source:Daylight</source>
-        <translation>Ljuskälla:Dagsljus</translation>
+        <translation>Source de lumière : naturelle</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="238"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="238"/>
         <source>Light Source:Fluorescent</source>
-        <translation>Ljuskälla:Lysrör</translation>
+        <translation>Source de lumière : tube fluorescent</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="241"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="241"/>
         <source>Light Source:Incandescent</source>
-        <translation>Ljuskälla:Glödlampa</translation>
+        <translation>Source de lumière : ampoule incandescente</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="244"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="244"/>
         <source>Light Source:Flash</source>
-        <translation>Ljuskälla:Blixt</translation>
+        <translation>Source de lumière : flash</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="247"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="247"/>
         <source>Light Source:Fine weather</source>
-        <translation>Ljuskälla:Solljus</translation>
+        <translation>Source de lumière : journée ensoleillée</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="250"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="250"/>
         <source>Light Source:Shade</source>
-        <translation>Ljuskälla:Skugga</translation>
+        <translation>Source de lumière : nuageux</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="258"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="258"/>
         <source>Metering Mode:</source>
-        <translation>Mätläge:</translation>
+        <translation>Mode de mesure : </translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="260"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="260"/>
         <source>Average</source>
         <translation>Normal</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="261"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="261"/>
         <source>Center weighted average</source>
-        <translation>Mittviktat medelvärde</translation>
+        <translation>Centre moyenne pondérée</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="273"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="273"/>
         <source>Exposure Program:</source>
-        <translation>Exponeringsprogram:</translation>
+        <translation>Programme d&apos;exposition : </translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="349"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="349"/>
         <source>Latitude:%1</source>
-        <translation>Latitud:%1</translation>
+        <translation>Latitude : %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="350"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="350"/>
         <source>Longitude:%1</source>
-        <translation>Longitud:%1</translation>
+        <translation>Longitude : %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="352"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="352"/>
         <source>Altitude:%1</source>
-        <translation>Altitud:%1</translation>
+        <translation>Altitude : %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="262"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="262"/>
         <source>Spot</source>
-        <translation>Fokuspunkt</translation>
+        <translation>Point</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="263"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="263"/>
         <source>Multi spot</source>
-        <translation>Flerpunkt</translation>
+        <translation>Matrice</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="264"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="264"/>
         <source>Pattern</source>
-        <translatorcomment>Mönster</translatorcomment>
-        <translation></translation>
+        <translation>Patron</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="265"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="265"/>
         <source>Partial</source>
-        <translation>Partiell</translation>
+        <translation>Partiel</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="266"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="266"/>
         <source>Other</source>
-        <translation>Annat</translation>
+        <translation>Autre</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="267"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="267"/>
         <source>Unknown (%1)</source>
-        <translation>Okänd (%1)</translation>
+        <translation>Inconnu (%1)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="276"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="276"/>
         <source>Manual</source>
-        <translation>Manuell</translation>
+        <translation>Manuel</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="279"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="279"/>
         <source>Program (auto)</source>
-        <translation>Program (auto)</translation>
+        <translation>Programme (auto)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="282"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="282"/>
         <source>Aperture priority (semi-auto)</source>
-        <translation>Bländare (semi-auto)</translation>
+        <translation>Priorité à l&apos;ouverture (semi-auto)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="285"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="285"/>
         <source>Shutter priority (semi-auto)</source>
-        <translation>Slutare (semi-auto)</translation>
+        <translation>Priorité à l&apos;obturateur (semi-auto)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="288"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="288"/>
         <source>Creative Program (based towards depth of field)</source>
-        <translation>Kreativt program (baserat på fältdjup)</translation>
+        <translation>Mode créatif (en s&apos;appuyant sur le profondeur de champ)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="291"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="291"/>
         <source>Action program (based towards fast shutter speed)</source>
-        <translation>Rörelseprogram (baserat på kort slutartid)</translation>
+        <translation>Mode action (en s&apos;appuyant sur la vitesse d&apos;obturation)</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="294"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="294"/>
         <source>Portrait mode</source>
-        <translation>Stående</translation>
+        <translation>Mode portrait</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="297"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="297"/>
         <source>Landscape mode</source>
-        <translation>Liggande</translation>
+        <translation>Mode paysage</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="307"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="307"/>
         <source>Exposure Mode:Manual</source>
-        <translation>Exponeringsläge:Manuell</translation>
+        <translation>Mode d&apos;exposition : Manuel</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="309"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="309"/>
         <source>Exposure Mode:Auto bracketing</source>
-        <translation>Exponeringsläge:Autobracketing</translation>
+        <translation>Mode d&apos;exposition : Auto</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="314"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="314"/>
         <source>Focus Range:</source>
-        <translation>Fokusområde:</translation>
+        <translation>Plage de mise au point : </translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="317"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="317"/>
         <source>Macro</source>
         <translation>Macro</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="320"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="320"/>
         <source>Close</source>
-        <translation>Kort avstånd</translation>
+        <translation>Proche</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="323"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="323"/>
         <source>Distant</source>
-        <translation>Långt avstånd</translation>
+        <translation>Distant</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="338"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="338"/>
         <source>JPEG Process:Unknown</source>
-        <translation>JPEG-process:Okänd</translation>
+        <translation>Processus JPEG : inconnu</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="342"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="342"/>
         <source>JPEG Process:%1</source>
-        <translation>JPEG-process:%1</translation>
+        <translation>Processus JPEG : %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="358"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="358"/>
         <source>JPEG Quality:%1</source>
-        <translation>JPEG-kvalitet:%1</translation>
+        <translation>Qualité JPEG : %1</translation>
     </message>
     <message>
-        <location filename="../jhead/jhead-api.cpp" line="364"/>
-        <location filename="../jhead/jhead-api.cpp" line="375"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="364"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="375"/>
         <source>Comment:</source>
-        <translation>Kommentar:</translation>
+        <translation>Commentaire : </translation>
     </message>
     <message>
-        <location filename="../globals.cpp" line="55"/>
+        <location filename="../src/globals.cpp" line="55"/>
         <source>%1 bytes</source>
-        <translation>%1 byte</translation>
+        <translation>%1 octets</translation>
     </message>
     <message>
-        <location filename="../globals.cpp" line="58"/>
+        <location filename="../src/globals.cpp" line="58"/>
         <source>%1 kB</source>
-        <translation>%1 kB</translation>
+        <translation>%1 ko</translation>
     </message>
     <message>
-        <location filename="../globals.cpp" line="61"/>
+        <location filename="../src/globals.cpp" line="61"/>
         <source>%1 MB</source>
-        <translation>%1 MB</translation>
+        <translation>%1 Mo</translation>
     </message>
     <message>
-        <location filename="../globals.cpp" line="63"/>
+        <location filename="../src/globals.cpp" line="63"/>
         <source>%1 GB</source>
-        <translation>%1 GB</translation>
+        <translation>%1 Go</translation>
     </message>
     <message>
-        <location filename="../globals.cpp" line="71"/>
+        <location filename="../src/globals.cpp" line="71"/>
         <source>hh:mm:ss</source>
-        <translation>hh:mm:ss</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../globals.cpp" line="74"/>
+        <location filename="../src/globals.cpp" line="74"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
-        <translation>dd MMM yyyy, hh:mm:ss t</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../globals.cpp" line="76"/>
+        <location filename="../src/globals.cpp" line="76"/>
         <source>dd.MM.yy, hh:mm</source>
-        <translation>dd.MM.yy, hh:mm</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="220"/>
+        <location filename="../src/engine.cpp" line="220"/>
         <source>SD card</source>
-        <translation>SD-kort</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../engine.cpp" line="222"/>
+        <location filename="../src/engine.cpp" line="222"/>
         <source>Removable Media</source>
-        <translation>Flyttbar media</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1236,20 +1234,19 @@
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="44"/>
         <source>Rename</source>
-        <translation>Byt namn</translation>
+        <translation>Renommer</translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="63"/>
         <source>Give a new name for
 %1</source>
-        <translation>Ange ett namn för
-%1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="73"/>
         <location filename="../qml/pages/RenameDialog.qml" line="74"/>
         <source>New name</source>
-        <translation>Nytt namn</translation>
+        <translation>Nouveau nom</translation>
     </message>
 </context>
 <context>
@@ -1257,7 +1254,7 @@
     <message>
         <location filename="../qml/components/SailfishThumbnail.qml" line="31"/>
         <source>No thumbnail available</source>
-        <translation>Ingen miniatyr tillgänglig</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1265,24 +1262,24 @@
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="74"/>
         <source>Searching</source>
-        <translation>Söker</translation>
+        <translation>Recherche en cours</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="85"/>
         <source>Settings</source>
-        <translation>Inställningar</translation>
+        <translation>Paramètres</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="110"/>
         <source>Search below “%1”</source>
-        <translation>Sök under &quot;%1&quot;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SearchPage.qml" line="164"/>
         <source>%n hit(s)</source>
-        <translation>
-            <numerusform>%n träff</numerusform>
-            <numerusform>%n träffar</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -1291,56 +1288,56 @@
         <location filename="../qml/pages/SearchPage.qml" line="377"/>
         <location filename="../qml/pages/SearchPage.qml" line="379"/>
         <source>Deleting</source>
-        <translation>Tar bort</translation>
+        <translation>Suppression</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="310"/>
         <source>Go to containing folder</source>
-        <translation>Gå till målmappen</translation>
+        <translation>Aller au dossier contenant le fichier</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="314"/>
         <source>Cut</source>
-        <translation>Klipp ut</translation>
+        <translation>Couper</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="318"/>
         <source>Copy</source>
-        <translation>Kopiera</translation>
+        <translation>Copier</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="322"/>
         <source>Delete</source>
-        <translation>Ta bort</translation>
+        <translation>Effacer</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="386"/>
         <source>Internally not ready</source>
-        <translation>Inte klart internt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="386"/>
         <source>Please simply try again</source>
-        <translation>Försök igen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="96"/>
         <location filename="../qml/pages/SearchPage.qml" line="459"/>
         <source>Search</source>
-        <translation>Sök</translation>
+        <translation>Recherche</translation>
     </message>
 </context>
 <context>
     <name>SearchWorker</name>
     <message>
-        <location filename="../searchworker.cpp" line="19"/>
+        <location filename="../src/searchworker.cpp" line="19"/>
         <source>Search already in progress</source>
-        <translation>Sökning pågår redan</translation>
+        <translation>La recherche est déjà en cours</translation>
     </message>
     <message>
-        <location filename="../searchworker.cpp" line="23"/>
+        <location filename="../src/searchworker.cpp" line="23"/>
         <source>Bad search parameters</source>
-        <translation>Felaktiga sökparametrar</translation>
+        <translation>Paramètres de recherche incorrects</translation>
     </message>
 </context>
 <context>
@@ -1348,9 +1345,9 @@
     <message numerus="yes">
         <location filename="../qml/components/SelectionPanel.qml" line="27"/>
         <source>%n file(s) selected</source>
-        <translation>
-            <numerusform>%n fil markerad</numerusform>
-            <numerusform>%n filer markerade</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -1360,182 +1357,182 @@
         <location filename="../qml/pages/SettingsPage.qml" line="22"/>
         <location filename="../qml/pages/SettingsPage.qml" line="211"/>
         <source>Settings</source>
-        <translation>Inställningar</translation>
+        <translation>Paramètres</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="35"/>
         <source>Use per-directory view settings</source>
-        <translation>Använd vyinställningar per mapp</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="76"/>
         <source>Show folders first</source>
-        <translation>Visa mappar överst</translation>
+        <translation>Afficher les dossiers en premier</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="39"/>
         <source>Show hidden files</source>
-        <translation>Visa dolda filer</translation>
+        <translation>Afficher les fichiers cachés</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="43"/>
         <source>Show preview images</source>
-        <translation>Visa förhandsgranskningsbilder</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="69"/>
         <source>Sorting</source>
-        <translation>Sortering</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="80"/>
         <source>Sort case-sensitively</source>
-        <translation>Sortera skiftlägeskänsligt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="48"/>
         <source>Thumbnail size</source>
-        <translation>Miniatyrstorlek</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="27"/>
         <source>View</source>
-        <translation>Visning</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="51"/>
         <source>small</source>
-        <translation>Liten</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="52"/>
         <source>medium</source>
-        <translation>Medium</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="53"/>
         <source>large</source>
-        <translation>Stor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="54"/>
         <source>huge</source>
-        <translation>Enorm</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="59"/>
         <source>Enable gallery mode</source>
-        <translation>Aktivera galleriläge</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="60"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation>I galleriläget kommer bilder att visas komfortabelt stora och alla poster utom bilder, videor och mappar kommer att vara dolda.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="84"/>
         <source>Sort by</source>
-        <translation>Sortera efter</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="88"/>
         <source>name</source>
-        <translation>Namn</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="89"/>
         <source>size</source>
-        <translation>Storlek</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="90"/>
         <source>modification time</source>
-        <translation>Ändrad</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="91"/>
         <source>file type</source>
-        <translation>Filtyp</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="95"/>
         <source>Sort order</source>
-        <translation>Sorteringsordning</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="99"/>
         <source>default</source>
-        <translation>Standard</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="100"/>
         <source>reversed</source>
-        <translation>Omvänd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="108"/>
         <source>Behavior and View</source>
-        <translation>Beteende och visning</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="116"/>
         <source>Default transfer action</source>
-        <translation>Standardåtgärd för överföring</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="119"/>
         <source>copy</source>
-        <translation>Kopiera</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="120"/>
         <source>move</source>
-        <translation>Flytta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="121"/>
         <source>link</source>
-        <translation>Länka</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="122"/>
         <source>none</source>
-        <translation>Ingen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="128"/>
         <source>Default filter line action</source>
-        <translation>Standardåtgärd för filterrad</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="131"/>
         <source>return to directory view</source>
-        <translation>Återgå till mappvy</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="132"/>
         <source>start recursive search</source>
-        <translation>Starta rekursiv sökning</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="137"/>
         <source>Show full directory paths</source>
-        <translation>Visa fullständig mappsökväg</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="146"/>
         <source>About File Browser</source>
-        <translation>Om File Browser</translation>
+        <translation>À propos de File Browser</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="176"/>
         <source>This beta version of File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation>Denna betaversion av File Browser släpps under villkoren i GNU GPL version 3 eller senare. Detta är fri programvara: du är fri att ändra och vidaredistribuera den. Det finns ingen garanti, i den utsträckning det är tillåtet enligt lag.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="194"/>
         <source>The source code is available at</source>
-        <translation>Källkoden finns tillgänglig på</translation>
+        <translation>Le code source est disponible sur</translation>
     </message>
 </context>
 <context>
@@ -1543,12 +1540,12 @@
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="271"/>
         <source>Open system settings</source>
-        <translation>Öppna systeminställningar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="281"/>
         <source>Nothing to show here...</source>
-        <translation>Inget att visa här...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="306"/>
@@ -1560,62 +1557,62 @@
         <location filename="../qml/components/ShortcutsList.qml" line="334"/>
         <location filename="../qml/components/ShortcutsList.qml" line="340"/>
         <source>Locations</source>
-        <translation>Platser</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="307"/>
         <source>Home</source>
-        <translation>Hem</translation>
+        <translation type="unfinished">Home</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="312"/>
         <source>Documents</source>
-        <translation>Dokument</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="316"/>
         <source>Downloads</source>
-        <translation>Nedladdningar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="320"/>
         <source>Music</source>
-        <translation>Musik</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="324"/>
         <source>Pictures</source>
-        <translation>Foton</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="328"/>
         <source>Videos</source>
-        <translation>Videor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="341"/>
         <source>Root</source>
-        <translation>Root</translation>
+        <translation type="unfinished">Racine</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="335"/>
         <source>Android storage</source>
-        <translation>Android-lagring</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="349"/>
         <source>Storage devices</source>
-        <translation>Lagringsenheter</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="351"/>
         <source>SD card</source>
-        <translation>SD-kort</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="363"/>
         <source>Bookmarks</source>
-        <translation>Bokmärken</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1623,47 +1620,47 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="52"/>
         <source>Search</source>
-        <translation>Sök</translation>
+        <translation type="unfinished">Recherche</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="44"/>
         <source>Open new window</source>
-        <translation>Öppna nytt fönster</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="35"/>
         <source>Remove bookmark for “%1”</source>
-        <translation>Ta bort bokmärket för &quot;%1&quot;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="36"/>
         <source>Add “%1” to bookmarks</source>
-        <translation>Lägg till &quot;%1&quot; i bokmärken</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="47"/>
         <source>New window opened</source>
-        <translation>Nytt fönster öppnat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="48"/>
         <source>Sometimes the application stays in the background</source>
-        <translation>Ibland stannar programmet i bakgrunden</translation>
+        <translation type="unfinished">Parfois l&apos;application reste en arrière-plan</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="60"/>
         <source>Refresh</source>
-        <translation>Uppdatera</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="65"/>
         <source>Open storage settings</source>
-        <translation>Öppna lagringsinställningar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="24"/>
         <source>Places</source>
-        <translation>Platser</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1671,42 +1668,42 @@
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="13"/>
         <source>Size</source>
-        <translation>Storlek</translation>
+        <translation type="unfinished">Taille</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="34"/>
         <source>size</source>
-        <translation>Storlek</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="41"/>
         <source>directories</source>
-        <translation>Mappar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="48"/>
         <source>files</source>
-        <translation>Filer</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="54"/>
         <source>unknown size</source>
-        <translation>Okänd storlek</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="55"/>
         <source>%n directories</source>
-        <translation>
-            <numerusform>%n mapp</numerusform>
-            <numerusform>%n mappar</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="56"/>
         <source>%n file(s)</source>
-        <translation>
-            <numerusform>%n fil</numerusform>
-            <numerusform>%n filer</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -1715,112 +1712,112 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="33"/>
         <source>Sort by...</source>
-        <translation>Sortera efter...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="36"/>
         <source>Name</source>
-        <translation>Namn</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="37"/>
         <source>Size</source>
-        <translation>Storlek</translation>
+        <translation type="unfinished">Taille</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="38"/>
         <source>Modification time</source>
-        <translation>Ändrad</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="39"/>
         <source>File type</source>
-        <translation>Filtyp</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="55"/>
         <source>Order...</source>
-        <translation>Ordning...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="58"/>
         <source>default</source>
-        <translation>Standard</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="59"/>
         <source>reversed</source>
-        <translation>Omvänd</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="78"/>
         <source>none</source>
-        <translation>Ingen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="103"/>
         <source>Enable gallery mode</source>
-        <translation>Aktivera galleriläge</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="104"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation>I galleriläget kommer bilder att visas komfortabelt stora och alla poster utom bilder, videor och mappar kommer att vara dolda.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="110"/>
         <source>Show folders first</source>
-        <translation>Visa mappar överst</translation>
+        <translation type="unfinished">Afficher les dossiers en premier</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="131"/>
         <source>Local preferences</source>
-        <translation>Lokala inställningar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="132"/>
         <source>Global preferences</source>
-        <translation>Globala inställningar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="98"/>
         <source>Show hidden files</source>
-        <translation>Visa dolda filer</translation>
+        <translation type="unfinished">Afficher les fichiers cachés</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="115"/>
         <source>Sort case-sensitively</source>
-        <translation>Sortera skiftlägeskänsligt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="79"/>
         <source>small</source>
-        <translation>Liten</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="24"/>
         <source>Sorting and View</source>
-        <translation>Sortering och visning</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="75"/>
         <source>Preview images...</source>
-        <translation>Förhandsvisa bilder...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="80"/>
         <source>medium</source>
-        <translation>Medium</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="81"/>
         <source>large</source>
-        <translation>Stor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="82"/>
         <source>huge</source>
-        <translation>Enorm</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1828,17 +1825,17 @@
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="17"/>
         <source>Copy</source>
-        <translation>Kopiera</translation>
+        <translation type="unfinished">Copier</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="28"/>
         <source>Move</source>
-        <translation>Flytta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="39"/>
         <source>Link</source>
-        <translation>Länka</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1846,28 +1843,28 @@
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="59"/>
         <source>%n item(s) selected for transferring</source>
-        <translation>
-            <numerusform>%n objekt markerad för överföring</numerusform>
-            <numerusform>%n objekt markerade för överföring</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="60"/>
         <source>%n destinations(s) selected</source>
-        <translation>
-            <numerusform>%n plats markerad</numerusform>
-            <numerusform>%n platser markerade</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="83"/>
         <source>Switch to target directory</source>
-        <translation>Växla till målmappen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="116"/>
         <source>Nothing selected to transfer</source>
-        <translation>Inget markerat för överföring</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1875,116 +1872,116 @@
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="45"/>
         <source>%n file(s)</source>
-        <translation>
-            <numerusform>%n fil</numerusform>
-            <numerusform>%n filer</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="45"/>
         <source>%n destination(s)</source>
-        <translation>
-            <numerusform>%n målmapp</numerusform>
-            <numerusform>%n målmappar</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="50"/>
         <source>Successfully copied</source>
-        <translation>
-            <numerusform>Kopierat</numerusform>
-            <numerusform>Kopierade</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="52"/>
         <source>Successfully moved</source>
-        <translation>
-            <numerusform>Flyttat</numerusform>
-            <numerusform>Flyttade</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="54"/>
         <source>Successfully linked</source>
-        <translation>
-            <numerusform>Länkat</numerusform>
-            <numerusform>Länkade</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="58"/>
         <source>Failed to copy</source>
-        <translation>
-            <numerusform>Kunde inte kopiera</numerusform>
-            <numerusform>Kunde inte kopiera</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="60"/>
         <source>Failed to move</source>
-        <translation>
-            <numerusform>Kunde inte flytta</numerusform>
-            <numerusform>Kunde inte flytta</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="62"/>
         <source>Failed to link</source>
-        <translation>
-            <numerusform>Kunde inte länka</numerusform>
-            <numerusform>Kunde inte länka</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="107"/>
         <source>Replace?</source>
-        <translation>Vill du ersätta?</translation>
+        <translation type="unfinished">Remplacer ?</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="123"/>
         <source>Cancel</source>
-        <translation>Avbryt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="135"/>
         <source>Overwrite</source>
-        <translation>Skriv över</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="144"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation>Dessa filer eller mappar finns redan i &quot;%1&quot;:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="184"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation>Försöker du flytta mellan telefonminne och SD-kort? Det fungerar inte, försök med kopiering.</translation>
+        <translation type="unfinished">Souhaitez-vous basculer entre le téléphone et le carte SD ? Si cela échoue essayez de copier les fichiers.</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="186"/>
         <source>Perhaps the storage is full?</source>
-        <translation>Lagringsutrymmet kanske är fullt?</translation>
+        <translation type="unfinished">L&apos;espace de stockage est peut-être plein ?</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="268"/>
         <source>Unable to overwrite existing file with symlink</source>
-        <translation>Kan inte skriva över befintlig fil med symbolisk länk</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="283"/>
         <source>Copying</source>
-        <translation>Kopierar</translation>
+        <translation type="unfinished">Copie</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="284"/>
         <source>Moving</source>
-        <translation>Flyttar</translation>
+        <translation type="unfinished">Déplacement</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="285"/>
         <source>Linking</source>
-        <translation>Länkar</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1992,12 +1989,12 @@
     <message>
         <location filename="../qml/pages/ViewImagePage.qml" line="212"/>
         <source>Loading image... %1</source>
-        <translation>Läser in bild... %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewImagePage.qml" line="221"/>
         <source>Error loading image</source>
-        <translation>Kunde inte läsa in bild</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2006,21 +2003,21 @@
         <location filename="../qml/js/files.js" line="16"/>
         <location filename="../qml/js/files.js" line="25"/>
         <source>Copying</source>
-        <translation>Kopierar</translation>
+        <translation type="unfinished">Copie</translation>
     </message>
     <message>
         <location filename="../qml/js/files.js" line="16"/>
         <location filename="../qml/js/files.js" line="25"/>
         <source>Moving</source>
-        <translation>Flyttar</translation>
+        <translation type="unfinished">Déplacement</translation>
     </message>
 </context>
 <context>
-    <name>main</name>
+    <name>harbour-file-browser-beta</name>
     <message>
-        <location filename="../qml/main.qml" line="14"/>
+        <location filename="../qml/harbour-file-browser-beta.qml" line="14"/>
         <source>Version %1</source>
-        <translation>Version %1</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2028,7 +2025,7 @@
     <message>
         <location filename="../qml/js/paths.js" line="26"/>
         <source>root</source>
-        <translation>root</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
