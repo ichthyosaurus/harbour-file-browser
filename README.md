@@ -11,7 +11,7 @@ about most common questions.
 
 This repository contains the development of version 2.0.0 and upwards of File Browser.
 
-See the [release notes](https://github.com/ichthyosaurus/harbour-file-browser/blob/master/rpm/harbour-file-browser-beta.changes)
+See the [release notes](https://github.com/ichthyosaurus/harbour-file-browser/blob/master/CHANGELOG.md)
 for further details.
 
 
