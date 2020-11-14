@@ -42,10 +42,6 @@ responsibility if that happens. So, be careful.
 
 ### Acknowledgements
 
-File Browser is based on the excellent
-[Helloworld Pro](https://github.com/amarchen/helloworld-pro-sailfish)
-template.
-
 The Exif data is displayed with [JHead](http://www.sentex.net/~mwandel/jhead/),
 which is a public domain Exif manipulation tool.
 
