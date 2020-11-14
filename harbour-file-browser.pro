@@ -34,6 +34,13 @@ equals(HARBOUR_COMPLIANCE, off) {
     message("Harbour compliance enabled")
 }
 
+# copy change log file to build root;
+# needed for generating rpm change log entries
+CONFIG += file_copies
+COPIES += changelog
+changelog.files = CHANGELOG.md
+changelog.path = $$OUT_PWD
+
 CONFIG += sailfishapp
 
 SOURCES += src/harbour-file-browser-beta.cpp \
@@ -78,7 +85,7 @@ DISTFILES += qml/*.qml \
     qml/components/*.qml \
     qml/js/*.js \
     qml/images/*.png \
-    rpm/harbour-file-browser-beta.changes \
+    rpm/harbour-file-browser-beta.changes.run \
     rpm/harbour-file-browser-beta.spec \
     rpm/harbour-file-browser-beta.yaml \
     translations/*.ts \
