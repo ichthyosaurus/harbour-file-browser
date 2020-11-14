@@ -1,4 +1,3 @@
-
 # File Browser Release Notes
 
 ## Version 2.2.2-beta (2020-05-29)
