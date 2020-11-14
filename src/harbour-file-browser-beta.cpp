@@ -11,6 +11,7 @@
 #include <QQmlContext>
 #include <QtQuick/QQuickPaintedItem>
 
+#include "requires_defines.h"
 #include "filemodel.h"
 #include "filedata.h"
 #include "searchengine.h"
@@ -30,15 +31,6 @@ int main(int argc, char *argv[])
     qmlRegisterType<ConsoleModel>("harbour.file.browser.ConsoleModel", 1, 0, "ConsoleModel");
 
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
-
-    QTranslator translator;
-    QString locale = QLocale::system().name();
-    //locale="de"; // for testing purposes only
-    if(!translator.load("file-browser_" + locale, SailfishApp::pathTo("i18n").toLocalFile())) {
-        qDebug() << "Couldn't load translation for locale "+locale + " from " + SailfishApp::pathTo("i18n").toLocalFile();
-    }
-    app->installTranslator(&translator);
-
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
     // setup global settings object
@@ -63,7 +55,8 @@ int main(int argc, char *argv[])
     }
 
     view->rootContext()->setContextProperty("initialDirectory", initialDirectory);
-    view->rootContext()->setContextProperty("versionNumber", QString(RELEASE_VERSION));
+    view->rootContext()->setContextProperty("APP_VERSION", QString(APP_VERSION));
+    view->rootContext()->setContextProperty("APP_RELEASE", QString(APP_RELEASE));
 
 #ifdef NO_HARBOUR_COMPLIANCE
     view->rootContext()->setContextProperty("sharingEnabled", QVariant::fromValue(true));
@@ -75,7 +68,7 @@ int main(int argc, char *argv[])
     view->rootContext()->setContextProperty("systemSettingsEnabled", QVariant::fromValue(false));
 #endif
 
-    view->setSource(SailfishApp::pathTo("qml/main.qml"));
+    view->setSource(SailfishApp::pathToMainQml());
     view->show();
 
     return app->exec();

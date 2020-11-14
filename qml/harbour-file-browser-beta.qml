@@ -11,7 +11,7 @@ ApplicationWindow {
     signal bookmarkMoved(var path)
 
     // note: version number has to be updated only in harbour-file-browser.yaml!
-    readonly property string versionString: qsTr("Version %1").arg(versionNumber)
+    readonly property string versionString: qsTr("Version %1").arg(APP_VERSION+"-"+APP_RELEASE)
     readonly property bool runningAsRoot: engine.runningAsRoot()
 
     property string coverText: "File Browser"
