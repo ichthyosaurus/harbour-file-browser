@@ -2,7 +2,8 @@
 
 ## Unreleased
 
- * Nothing so far
+ * Updated translations: Spanish, Swedish, Chinese
+ * Restructured development environment
 
 ## Version 2.2.2-beta (2020-05-29)
 
