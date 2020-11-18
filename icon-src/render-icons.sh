@@ -37,6 +37,10 @@ echo "rendering toolbar icons..."
 
 files=(
     toolbar-rename@64
+    toolbar-copy@64
+    toolbar-cut@64
+    toolbar-properties@64
+    toolbar-select-all@64
     harbour-file-browser@86
     harbour-file-browser-root@86
     icon-btn-search@112

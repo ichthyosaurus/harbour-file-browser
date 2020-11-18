@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg8" width="64" height="64" version="1.1" viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata2">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Mirian Margiani</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:date>2019-2020</dc:date>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <rect id="rect851" x="4.4712" y="3.6861" width="7.6972" height="10.56" rx=".79373" ry=".79373" fill="none" stroke="#fff" stroke-linecap="round" stroke-opacity=".50196" stroke-width=".44978"/>
+ <path id="path853" d="m8.4775 12.093v-3.5074c-0.005076-0.13409-0.010541-0.27844-0.057606-0.38161-0.047065-0.10316-0.15732-0.20488-0.27218-0.24921-0.11486-0.044326-0.27088-0.04982-0.38391-0.050466s-0.19188 0.0032503-0.2707 0.0071453" fill="none" stroke="#fff" stroke-linecap="round" stroke-width=".44978"/>
+ <path id="path857" d="m7.6242 12.18h1.7065" fill="none" stroke="#fff" stroke-linecap="round" stroke-width=".44978"/>
+ <circle id="path865" cx="8.3143" cy="6.3027" r=".48355" fill="#fff"/>
+</svg>
