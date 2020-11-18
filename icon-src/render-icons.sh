@@ -61,6 +61,15 @@ files=(
     file-audio
     file-compressed
     file-pdf
+    file-image
+    file-txt
+    file-video
+    file-apk
+    file-rpm
+    folder
+    folder-link
+    "link"
+    "file"
 )
 root="../qml/images"
 mkdir -p "$root"
