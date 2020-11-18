@@ -1,35 +1,47 @@
 #!/bin/bash
 
+function render() { # 1: input, 2: width, 3: height, 4: output
+    # replace '-o' by '-z -e' for inkscape < 1.0
+    inkscape -o "$4" -w "$2" -h "$3" "$1"
+    pngcrush -ow "$4"
+}
+
 echo "rendering app icon..."
 
-postfix="-beta"
+app_icons=(
+    harbour-file-browser-beta@../icons
+    harbour-file-browser-root-beta@../root/icons
+)
+# app_icons+=(
+#     harbour-file-browser@../icons
+#     harbour-file-browser-root@../root/icons
+# )
 
-default_src=harbour-file-browser
-default_dir="../src/icons"
-root_src=harbour-file-browser-root
-root_dir="../root/icons"
+for s in 86 108 128 172; do
+    for item in "${app_icons[@]}"; do
+        dir="${item##*@}/${s}x$s"
+        img="${item%@*}"
+        mkdir -p "$dir"
 
-for i in 86 108 128 172; do
-    mkdir -p "$default_dir/${i}x$i"
-    mkdir -p "$root_dir/${i}x$i"
-
-    for a in "$default_src" "$root_src"; do
-        [[ "$a" == "$default_src" ]] && root="$default_dir" || root="$root_dir"
-
-        if [[ ! "$a.svg" -nt "$root/${i}x$i/$a$postfix.png" ]]; then
-            echo "nothing to be done for $a at ${i}x$i"
+        if [[ ! "$img.svg" -nt "$dir/$img.png" ]]; then
+            echo "nothing to be done for '$item' at ${s}x$s"
             continue
+        else
+            render "$img.svg" "$s" "$s" "$dir/$img.png"
         fi
-
-        inkscape -z -e "$root/${i}x$i/$a$postfix.png" -w "$i" -h "$i" "$a.svg"
     done
 done
 
 
 echo "rendering toolbar icons..."
 
-root="../src/qml/images"
-files=(toolbar-rename@64 harbour-file-browser@86 harbour-file-browser-root@86 icon-btn-search@112)
+files=(
+    toolbar-rename@64
+    harbour-file-browser@86
+    harbour-file-browser-root@86
+    icon-btn-search@112
+)
+root="../qml/images"
 mkdir -p "$root"
 
 for img in "${files[@]}"; do
@@ -38,31 +50,46 @@ for img in "${files[@]}"; do
         continue
     fi
 
-    inkscape -z -e "$root/${img%@*}.png" -w "${img#*@}" -h "${img#*@}" "${img%@*}.svg"
+    render "${img%@*}.svg" "${img#*@}" "${img#*@}" "$root/${img%@*}.png"
 done
 
 
 echo "rendering file icons..."
 
-files=(file-stack file-audio file-compressed file-pdf)
+files=(
+    file-stack
+    file-audio
+    file-compressed
+    file-pdf
+)
+root="../qml/images"
 mkdir -p "$root"
 
 for img in "${files[@]}"; do
     skip=
 
-    if [[ "${img%@*}.svg" -nt "$root/large-${img%@*}.png" ]]; then
-        inkscape -z -e "$root/large-${img}.png" -w "128" -h "128" "${img}.svg"
+    if [[ "${img}.svg" -nt "$root/large-${img}.png" ]]; then
+        render "${img}.svg" 128 128 "$root/large-${img}.png"
     else
         skip+="large "
     fi
 
-    if [[ "${img%@*}.svg" -nt "$root/small-${img%@*}.png" ]]; then
-        inkscape -z -e "$root/small-${img}.png" -w "32" -h "32" "${img}.svg"
+    if [[ "${img}.svg" -nt "$root/small-${img}.png" ]]; then
+        render "${img}.svg" 32 32 "$root/small-${img}.png"
     else
         skip+="small"
     fi
 
     if [[ -n "$skip" ]]; then
         echo "nothing to be done for '${img}.svg': $skip"
+    fi
+done
+
+for img in ./file-icons-raster/*.png; do
+    out="$root/$(basename "$img")"
+    if [[ "$img" -nt "$out" ]]; then
+        pngcrush "$img" "$out"
+    else
+        echo "nothing to be done for '$img'"
     fi
 done
