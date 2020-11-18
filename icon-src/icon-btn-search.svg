@@ -30,8 +30,8 @@
   <g id="g930" fill="none" stroke="#fff">
    <g id="g883" transform="matrix(.56664 0 0 .56664 6.388 122.24)" stroke-width="1.6343">
     <path id="path848" d="m24.566 290.13c0.48859 0.51615 0.46852 1.33-0.04493 1.8215-0.51333 0.49156-1.3274 0.47584-1.8217-0.0349" stroke-linecap="square" stroke-linejoin="bevel" style="paint-order:normal"/>
-    <path id="path850" transform="translate(-.3164 -.30363)" d="m17.294 286.5c1.9071 1.9071 5.6878 5.6878 5.7214 5.7214"/>
-    <path id="path854" transform="translate(1.5502 -2.0902)" d="m17.294 286.5c1.9071 1.9071 3.8143 3.8143 5.7214 5.7214"/>
+    <path id="path850" transform="translate(-.3164 -.30363)" d="m17.294 286.5 5.7214 5.7214"/>
+    <path id="path854" transform="translate(1.5502 -2.0902)" d="m17.294 286.5 5.7214 5.7214"/>
    </g>
    <circle id="path844" cx="13.568" cy="280.93" r="4.4404" stroke-linecap="square" stroke-linejoin="bevel" stroke-opacity=".59608" stroke-width=".92604" style="paint-order:normal"/>
   </g>
