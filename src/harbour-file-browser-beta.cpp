@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 {
     // CONFIG += sailfishapp sets up QCoreApplication::OrganizationName and ApplicationName
     // so that QSettings can access the app's config file at
-    // /home/nemo/.config/harbour-file-browser/harbour-file-browser.conf
+    // /home/USER/.config/harbour-file-browser/harbour-file-browser.conf
 
     qmlRegisterType<FileModel>("harbour.file.browser.FileModel", 1, 0, "FileModel");
     qmlRegisterType<FileData>("harbour.file.browser.FileData", 1, 0, "FileData");

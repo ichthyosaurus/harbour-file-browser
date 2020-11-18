@@ -3,6 +3,7 @@
 #include <QTextStream>
 #include <QSettings>
 #include <QStandardPaths>
+#include <QDir>
 #include <QCoreApplication>
 #include <QProcess>
 #include <unistd.h>
@@ -191,12 +192,13 @@ QVariantList Engine::externalDrives() const
     // get sdcard dir candidates for "/media/sdcard" (or its symlink target)
     QStringList candidates = subdirs(sdcardFolder);
 
-    // If the base folder is not already /run/media/nemo, we add it too. This
-    // is, where OTG devices will be mounted.
-    // Also, some users may have a symlink from "/media/sdcard/nemo"
-    // (not from "/media/sdcard"), which means no sdcards would be found before,
+    // If the base folder is not already /run/media/USER, we add it too. This
+    // is where OTG devices will be mounted.
+    // Also, some users may have a symlink from "/media/sdcard/USER"
+    // (not from "/media/sdcard"), which means no SD cards would be found before,
     // so we also get candidates for those users.
-    if (sdcardFolder != "/run/media/nemo") candidates.append(subdirs("/run/media/nemo"));
+    QString expectedUserFolder = QString("/run/media/") + QDir::home().dirName();
+    if (sdcardFolder != expectedUserFolder) candidates.append(subdirs(expectedUserFolder));
 
     // no candidates found, abort
     if (candidates.isEmpty()) return QVariantList();
