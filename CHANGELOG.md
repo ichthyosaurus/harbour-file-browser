@@ -3,6 +3,8 @@
 ## Unreleased
 
  * Updated translations: Spanish, Swedish, Chinese
+ * Added and improved documentation
+ * Clarified licenses in source files: GPL v3 (or later) for code, CC-BY-SA 4.0 for graphics
  * Restructured development environment
 
 ## Version 2.2.2-beta (2020-05-29)
