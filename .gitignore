@@ -5,6 +5,7 @@ build*
 *.qm
 dist*
 liverunner*
+add-gpl.sh
 
 root/build*
 root/RPMS
