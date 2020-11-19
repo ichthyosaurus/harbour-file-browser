@@ -1,5 +1,11 @@
-# NOTICE:
 #
+# This file is part of File Browser.
+#
+# SPDX-FileCopyrightText: 2013 Kari Pihkala
+# SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+
 # Application name defined in TARGET has a corresponding QML filename.
 # If name defined in TARGET is changed, the following needs to be done
 # to match new name:

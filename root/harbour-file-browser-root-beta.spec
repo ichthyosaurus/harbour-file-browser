@@ -4,7 +4,7 @@ Summary: File Browser with root privileges
 Version: 1.1
 Release: 1
 Group: System/Tools
-License: GPLv3
+License: GPL-3.0-or-later
 Vendor: ichthyosaurus
 Packager: ichthyosaurus
 Source0: %{name}-%{version}.tar.xz
