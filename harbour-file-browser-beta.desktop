@@ -5,6 +5,9 @@ Name=File Browser
 Icon=harbour-file-browser-beta
 Exec=harbour-file-browser-beta
 Categories=System;FileTools;FileManager
+
+# Translators: the name has to be short enough not to be abbreviated
+# by the system (launcher view).
 Name[en]=File Browser
 Name[fi]=Tiedostoselain
 Name[de]=Dateiverwaltung

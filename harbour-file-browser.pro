@@ -6,6 +6,26 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 
+# TRANSLATORS
+# If you added a new translation catalog, please append its file name to this
+# list. Just copy the last line and modify it as needed.
+# Do not forget to modify the localized app name in the the .desktop file.
+TRANSLATIONS = \
+    translations/harbour-file-browser-beta-de_CH.ts \
+    translations/harbour-file-browser-beta-de_DE.ts \
+    translations/harbour-file-browser-beta-el.ts \
+    translations/harbour-file-browser-beta-en_US.ts \
+    translations/harbour-file-browser-beta-es.ts \
+    translations/harbour-file-browser-beta-fi.ts \
+    translations/harbour-file-browser-beta-fr.ts \
+    translations/harbour-file-browser-beta-it_IT.ts \
+    translations/harbour-file-browser-beta-nl.ts \
+    translations/harbour-file-browser-beta-ru_RU.ts \
+    translations/harbour-file-browser-beta-sv.ts \
+    translations/harbour-file-browser-beta-zh_CN.ts \
+
+# ------------------------------------------------------------------------------
+
 # Application name defined in TARGET has a corresponding QML filename.
 # If name defined in TARGET is changed, the following needs to be done
 # to match new name:
@@ -14,12 +34,10 @@
 #   - desktop filename must be changed
 #   - icon definition filename in desktop file must be changed
 #   - translation filenames have to be changed
-
-# The name of your application
 TARGET = harbour-file-browser-beta
 
 # Note:
-# The current version number and whether or not to include features
+# Current version number and whether or not to include features
 # agains Jolla Harbour's rules can be configured in the yaml-file.
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 DEFINES += APP_RELEASE=\\\"$$RELEASE\\\"
@@ -100,18 +118,3 @@ DISTFILES += qml/*.qml \
 # to disable building translations every time, comment out the
 # following CONFIG line
 CONFIG += sailfishapp_i18n
-
-# Do not forget to modify the localized app name in the the .desktop file.
-TRANSLATIONS = \
-    translations/harbour-file-browser-beta-de_CH.ts \
-    translations/harbour-file-browser-beta-de_DE.ts \
-    translations/harbour-file-browser-beta-el.ts \
-    translations/harbour-file-browser-beta-en_US.ts \
-    translations/harbour-file-browser-beta-es.ts \
-    translations/harbour-file-browser-beta-fi.ts \
-    translations/harbour-file-browser-beta-fr.ts \
-    translations/harbour-file-browser-beta-it_IT.ts \
-    translations/harbour-file-browser-beta-nl.ts \
-    translations/harbour-file-browser-beta-ru_RU.ts \
-    translations/harbour-file-browser-beta-sv.ts \
-    translations/harbour-file-browser-beta-zh_CN.ts \
