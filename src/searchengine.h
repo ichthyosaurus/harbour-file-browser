@@ -25,6 +25,7 @@
 #include <QDir>
 
 class SearchWorker;
+enum class SearchType;
 
 /**
  * @brief The SearchEngine is a front-end for the SearchWorker class.
@@ -48,6 +49,7 @@ public:
 
     // callable from QML
     Q_INVOKABLE void search(QString searchTerm);
+    Q_INVOKABLE void filterDirectories(QString searchTerm);
     Q_INVOKABLE void cancel();
 
 signals:
@@ -64,6 +66,7 @@ private slots:
     void emitMatchFound(QString fullpath);
 
 private:
+    void startSearch(QString searchTerm, SearchType type);
     QString m_dir;
     QString m_errorMessage;
     SearchWorker *m_searchWorker;

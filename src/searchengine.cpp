@@ -69,12 +69,12 @@ bool SearchEngine::running() const
 
 void SearchEngine::search(QString searchTerm)
 {
-    // if search term is not empty, then restart search
-    if (!searchTerm.isEmpty()) {
-        m_searchWorker->cancel();
-        m_searchWorker->wait();
-        m_searchWorker->startSearch(m_dir, searchTerm);
-    }
+    startSearch(searchTerm, SearchType::FilesRecursive);
+}
+
+void SearchEngine::filterDirectories(QString searchTerm)
+{
+    startSearch(searchTerm, SearchType::DirectoriesShallow);
 }
 
 void SearchEngine::cancel()
@@ -89,4 +89,15 @@ void SearchEngine::emitMatchFound(QString fullpath)
     QString mimeType = db.mimeTypeForFile(fullpath).name();
     emit matchFound(fullpath, info.fileName(), info.absoluteDir().absolutePath(),
                     infoToIconName(info), info.kind(), mimeType);
+}
+
+void SearchEngine::startSearch(QString searchTerm, SearchType type)
+{
+    // if search term is not empty or we are only filtering
+    // directories, then restart search
+    if (type == SearchType::DirectoriesShallow || !searchTerm.isEmpty()) {
+        m_searchWorker->cancel();
+        m_searchWorker->wait();
+        m_searchWorker->startSearch(m_dir, searchTerm, type);
+    }
 }
