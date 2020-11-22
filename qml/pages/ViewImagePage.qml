@@ -237,6 +237,9 @@ Page {
         Component {
             id: failedLoading
             Text {
+                width: page.width - 2*Theme.horizontalPageMargin
+                wrapMode: Text.Wrap
+                textFormat: Text.PlainText
                 font.pixelSize: Theme.fontSizeMedium
                 text: qsTr("Error loading image")
                 color: Theme.highlightColor
