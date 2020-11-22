@@ -46,8 +46,7 @@ ListItem {
         }
 
         if (isDir) {
-            pageStack.animatorPush(Qt.resolvedUrl("../pages/DirectoryPage.qml"),
-                                   { dir: fileModel.appendPath(filename) });
+            navigate_goToFolder(fileModel.appendPath(filename));
         } else if (_galleryModeActiveAvailable && fileIcon === "file-image") {
             pageStack.animatorPush(Qt.resolvedUrl("../pages/ViewImagePage.qml"),
                                    { path: fileModel.appendPath(filename), title: filename });
