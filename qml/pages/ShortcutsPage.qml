@@ -76,9 +76,17 @@ Page {
         }
 
         PushUpMenu {
+            id: pulley
+            property bool _refresh: false
+            onActiveChanged: { // delay action until menu is closed
+                busy = true
+                if (!active && _refresh) shortcutsView.updateModel()
+                else _refresh = false
+                busy = false
+            }
             MenuItem {
                 text: qsTr("Refresh")
-                onClicked: shortcutsView.updateModel();
+                onClicked: pulley._refresh = true
             }
             MenuItem {
                 visible: !runningAsRoot && systemSettingsEnabled
