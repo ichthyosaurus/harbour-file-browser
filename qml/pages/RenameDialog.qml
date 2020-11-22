@@ -112,15 +112,14 @@ Dialog {
                         property bool notifiedAsReady: false
                         onTextChanged: {
                             if (text === "" || engine.exists(basePath+text)) {
-                                color = "red";
-
+                                // Theme.errorColor looks too harsh
+                                color = Theme.secondaryHighlightColor
                                 if (notifiedAsReady) {
                                     dialog._readyCount -= 1;
                                     notifiedAsReady = false;
                                 }
                             } else {
                                 color = Theme.primaryColor;
-
                                 if (!notifiedAsReady) {
                                     dialog._readyCount += 1;
                                     notifiedAsReady = true;
