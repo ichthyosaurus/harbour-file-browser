@@ -34,6 +34,7 @@ SilicaListView {
     property bool editable: true
     property var initialSelection
     property var sections: ["locations", "external", "bookmarks"]
+    property var customEntries: ([]) // changing this will _not_ automatically trigger a refresh
 
     signal itemClicked(var clickedIndex, var path)
     signal itemSelected(var clickedIndex, var path)
@@ -322,7 +323,15 @@ SilicaListView {
 
         for (var i = 0; i < sections.length; i++) {
             var s = sections[i];
-            if (s === "locations") {
+            if (s === "custom") {
+                for (var entry in customEntries) {
+                    listModel.append({ "section": qsTr("Custom"),
+                                       "name": Paths.lastPartOfPath(customEntries[entry]),
+                                       "thumbnail": "icon-m-file-folder",
+                                       "location": customEntries[entry]
+                                     })
+                }
+            } else if (s === "locations") {
                 listModel.append({ "section": qsTr("Locations"),
                                    "name": qsTr("Home"),
                                    "thumbnail": "icon-m-home",
