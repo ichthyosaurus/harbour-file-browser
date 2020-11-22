@@ -44,10 +44,6 @@ Page {
         Component.onCompleted: category = typeCategory()
     }
 
-    RemorsePopup {
-        id: remorsePopup
-    }
-
     ConsoleModel {
         id: consoleModel
 
@@ -56,24 +52,21 @@ Page {
             if (exitCode === 0) {
                 if (fileData.category === "apk") {
                     notificationPanel.showTextWithTimer(qsTr("Install launched"),
-                                               qsTr("If nothing happens, then the package is probably faulty."));
+                                                        qsTr("If nothing happens, then the package is probably faulty."));
                     return;
                 }
                 if (!fileData.category !== "rpm")
                     notificationPanel.showTextWithTimer(qsTr("Open successful"),
-                                               qsTr("Sometimes the application stays in the background"));
+                                                        qsTr("Sometimes the application stays in the background"));
             } else if (exitCode === 1) {
-                notificationPanel.showTextWithTimer(qsTr("Internal error"),
-                                               "xdg-open exit code 1");
+                notificationPanel.showTextWithTimer(qsTr("Internal error"), "xdg-open exit code 1");
             } else if (exitCode === 2) {
-                notificationPanel.showTextWithTimer(qsTr("File not found"),
-                                               page.file);
+                notificationPanel.showTextWithTimer(qsTr("File not found"), page.file);
             } else if (exitCode === 3) {
                 notificationPanel.showTextWithTimer(qsTr("No application to open the file"),
-                                               qsTr("xdg-open found no preferred application"));
+                                                    qsTr("xdg-open found no preferred application"));
             } else if (exitCode === 4) {
-                notificationPanel.showTextWithTimer(qsTr("Action failed"),
-                                               "xdg-open exit code 4");
+                notificationPanel.showTextWithTimer(qsTr("Action failed"), "xdg-open exit code 4");
             } else if (exitCode === -88888) {
                 notificationPanel.showTextWithTimer(qsTr("xdg-open not found"), "");
             } else if (exitCode === -99999) {
@@ -172,7 +165,7 @@ Page {
                     x: -parent.x
                     width: parent.width + 2*parent.x
                     height: openArea.height
-                    onClicked: quickView()
+                    onClicked: viewContents(false, false)
 
                     Column {
                         id: openArea
@@ -349,26 +342,14 @@ Page {
         }
     }
 
-    NotificationPanel {
-        id: notificationPanel
-        page: page
-    }
-
-    ProgressPanel {
-        id: progressPanel
-        page: page
-        onCancelled: engine.cancel()
-    }
-
+    RemorsePopup { id: remorsePopup }
+    NotificationPanel { id: notificationPanel; page: page }
+    ProgressPanel { id: progressPanel; page: page; onCancelled: engine.cancel() }
     TransferPanel {
         id: transferPanel
         page: page
         progressPanel: progressPanel
         notificationPanel: notificationPanel
-    }
-
-    function quickView() {
-        viewContents();
     }
 
     function showConsolePage(method, command, arguments) {
@@ -381,33 +362,22 @@ Page {
     }
 
     function viewContents(asAttached, forceRawView) {
-        // dirs are special cases - there's no way to display their contents, so go to them
         if (fileData.isDir) {
+            // dirs are special cases - there's no way to display their contents, so go to them
             if (asAttached === true) return; // don't try to switch to them in an attached page
-
-            if (fileData.isSymLink) {
-                Navigation.goToFolder(fileData.symLinkTarget);
-            } else {
-                Navigation.goToFolder(fileData.file);
-            }
+            if (fileData.isSymLink) Navigation.goToFolder(fileData.symLinkTarget);
+            else Navigation.goToFolder(fileData.file);
             return;
         }
 
-        var method;
-
-        if (asAttached) {
-            method = pageStack.pushAttached;
-        } else {
-            method = pageStack.push;
-        }
+        var method = pageStack.push;
+        if (asAttached) method = pageStack.pushAttached;
 
         // view depending on file type
         if (forceRawView) {
             method(Qt.resolvedUrl("ViewPage.qml"), { path: page.file });
             return;
-        }
-
-        if (fileData.category === "zip") {
+        } else if (fileData.category === "zip") {
             showConsolePage(method, "unzip", [ "-Z", "-2ht", fileData.file ]);
         } else if (fileData.category === "rpm") {
             showConsolePage(method, "rpm", [ "-qlp", "--info", fileData.file ]);
