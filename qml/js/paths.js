@@ -24,6 +24,7 @@
 
 // returns the text after the last / in a path
 function lastPartOfPath(path) {
+    path = path.replace(/\/+/g, '/');
     if (path === "/") return "";
     var i = path.lastIndexOf("/");
     if (i < -1) return path;
@@ -31,6 +32,7 @@ function lastPartOfPath(path) {
 }
 
 function dirName(path) {
+    path = path.replace(/\/+/g, '/');
     if (path === "/") return "";
     var i = path.lastIndexOf("/");
     if (i < -1) return path;
@@ -39,7 +41,8 @@ function dirName(path) {
 
 function formatPathForTitle(path) {
     if (path === "/") return "File Browser: /";
-    return lastPartOfPath(path)+"/";
+    path = path.replace(/\/$/, '');
+    return lastPartOfPath(path)+'/';
 }
 
 function formatPathForSearch(path) {

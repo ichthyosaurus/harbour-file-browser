@@ -448,7 +448,7 @@ Page {
                 pageStack.completeAnimation();
                 pageStack.pushAttached(Qt.resolvedUrl("ShortcutsPage.qml"), { currentPath: dir });
             }
-            coverText = Paths.lastPartOfPath(page.dir)+"/"; // update cover
+            coverText = Paths.lastPartOfPath(page.dir.replace(/\/$/, ''))+"/"; // update cover
         } else if (status === PageStatus.Activating && _activeDir !== dir) {
             console.log("loading", dir);
             _activeDir = dir;
