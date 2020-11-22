@@ -89,14 +89,14 @@ Item {
                     navigate_goForward()
                 } else if (_selectedMenu === "editPath") {
                     console.log("DirPopup: edit path")
-                    pageStack.push(Qt.resolvedUrl("../pages/GoToDialog.qml"),
-                                   { path: directory,
-                                       acceptCallback: function(path){
-                                           pageStack.completeAnimation() // abort dialog's pop animation
-                                           navigate_goToFolder(path)
-                                       },
-                                       acceptText: qsTr("Switch") //: as in "Switch to this folder, please"
-                                   })
+                    var dialog = pageStack.push(Qt.resolvedUrl("../pages/GoToDialog.qml"),{
+                                                    path: directory,
+                                                    acceptText: qsTr("Switch") //: as in "Switch to this folder, please"
+                                                });
+                    dialog.accepted.connect(function() {
+                        pageStack.completeAnimation() // abort dialog's pop animation
+                        navigate_goToFolder(dialog.path)
+                    });
                 } else if (_selectedMenu === "showHidden") {
                     // TODO manage global/local, directory, and default values in SettingsHandler
                     var useLocal = (settings.read("View/UseLocalSettings", "true") === "true");
