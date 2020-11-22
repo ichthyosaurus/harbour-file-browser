@@ -374,7 +374,6 @@ Page {
             item.isSelected = false;
         }
         _selectedFileCount = 0;
-        selectionPanel.open = false;
         selectionPanel.overrideText = "";
     }
     function selectAllFiles() {
@@ -385,7 +384,6 @@ Page {
             item.isSelected = true;
         }
         _selectedFileCount = listModel.count;
-        selectionPanel.open = true;
         selectionPanel.overrideText = "";
     }
 

@@ -44,6 +44,11 @@ DockedPanel {
     onOpenChanged: { if (open) shouldBeVisible = true; }
     onMovingChanged: { if (!open && !moving) shouldBeVisible = false; }
 
+    onSelectedCountChanged: {
+        // it should automatically close after another action cleared the selection
+        if (selectedCount === 0) open = false;
+    }
+
     FileActions {
         id: fileActions
         labelText: dockPanel.overrideText === "" ? qsTr("%n file(s) selected", "", dockPanel.selectedCount)

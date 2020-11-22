@@ -208,7 +208,6 @@ Page {
                 property bool hasBookmark: Bookmarks.hasBookmark(dir)
                 text: hasBookmark ? qsTr("Remove bookmark") : qsTr("Add to bookmarks")
                 onClicked: {
-                    clearSelectedFiles();
                     toggleBookmark();
                 }
             }
@@ -312,12 +311,10 @@ Page {
 
     function clearSelectedFiles() {
         fileModel.clearSelectedFiles();
-        selectionPanel.open = false;
         selectionPanel.overrideText = "";
     }
     function selectAllFiles() {
         fileModel.selectAllFiles();
-        selectionPanel.open = true;
         selectionPanel.overrideText = "";
     }
 
