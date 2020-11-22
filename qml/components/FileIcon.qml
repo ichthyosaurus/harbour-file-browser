@@ -36,6 +36,7 @@ Item {
 
     property bool ready: false
     property int _thumbnailSize: base.width
+    property string _cachedMimeType: ""
 
     function refresh() {
         ready = false;
@@ -46,11 +47,11 @@ Item {
                 canThumb = false
             } else if (mimeTypeCallback !== undefined) {
                 var mimeType = mimeTypeCallback();
+                _cachedMimeType = mimeType;
 
                 if (   mimeType.indexOf("image/") === -1
-                    // PDFs and videos are not (yet?) supported by the system thumbnailer
-                    // && mimeType.indexOf("application/pdf") === -1
-                    // && mimeType.indexOf("video/") === -1
+                    && mimeType.indexOf("video/") === -1
+                    && mimeType.indexOf("application/pdf") === -1
                    ) {
                     canThumb = false
                 }
@@ -63,7 +64,7 @@ Item {
             listIcon.setSource("../components/SailfishThumbnail.qml", {
                 source: base.file,
                 size: _thumbnailSize,
-                mimeType: mimeTypeCallback !== undefined ? mimeTypeCallback() : "",
+                mimeType: _cachedMimeType,
             });
         } else {
             if (fileIconCallback === undefined) return;

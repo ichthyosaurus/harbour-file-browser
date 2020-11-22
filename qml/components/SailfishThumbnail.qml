@@ -26,6 +26,7 @@ Item {
     id: base
     property bool highlighted
     property alias source: thumbnail.source
+    property alias mimeType: thumbnail.mimeType
     property int size: Theme.itemSizeHuge
     width: size
     height: size
