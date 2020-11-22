@@ -20,10 +20,10 @@
 
 import QtQuick 2.2
 import Sailfish.Silica 1.0
+import Nemo.Thumbnailer 1.0
 
 // a file icon or thumbnail for directory listings
 Item {
-    id: base
     property string file: ""
     property bool showThumbnail: false
     property bool highlighted: false
@@ -31,77 +31,35 @@ Item {
     property var mimeTypeCallback
     property var fileIconCallback
 
-    Component.onCompleted: refresh();
-    onShowThumbnailChanged: refresh();
+    property int _thumbnailSize: width
+    property bool _doShowThumbnail: showThumbnail && !isDirectory
 
-    property bool ready: false
-    property int _thumbnailSize: base.width
-    property string _cachedMimeType: ""
+    Thumbnail {
+        id: thumbnailImage
+        source: _doShowThumbnail ? file : ""
+        mimeType: source !== "" ? mimeTypeCallback() : ""
+        width: _thumbnailSize
+        height: width
+        sourceSize.width: width
+        sourceSize.height: height
+        priority: Thumbnail.NormalPriority
 
-    function refresh() {
-        ready = false;
-        var canThumb = true;
-
-        if (showThumbnail) {
-            if (isDirectory) {
-                canThumb = false
-            } else if (mimeTypeCallback !== undefined) {
-                var mimeType = mimeTypeCallback();
-                _cachedMimeType = mimeType;
-
-                if (   mimeType.indexOf("image/") === -1
-                    && mimeType.indexOf("video/") === -1
-                    && mimeType.indexOf("application/pdf") === -1
-                   ) {
-                    canThumb = false
-                }
-            }
-            showThumbnail = canThumb;
-        }
-
-        if (showThumbnail) {
-            listIcon.source = "";
-            listIcon.setSource("../components/SailfishThumbnail.qml", {
-                source: base.file,
-                size: _thumbnailSize,
-                mimeType: _cachedMimeType,
-            });
-        } else {
-            if (fileIconCallback === undefined) return;
-            thumbnail.source = ""
-            var qmlIcon = Theme.lightPrimaryColor ? "../components/HighlightImageSF3.qml"
-                                              : "../components/HighlightImageSF2.qml";
-            listIcon.setSource(qmlIcon, {
-                imgsrc: "../images/"+(canThumb ? "large" : "small")+"-"+fileIconCallback()+".png",
-                imgw: _thumbnailSize,
-                imgh: _thumbnailSize,
-            });
+        Rectangle {
+            anchors.fill: parent
+            color: "transparent"
+            border.width: 1
+            border.color: Theme.rgba(Theme.secondaryColor, Theme.highlightBackgroundOpacity)
+            visible: parent.status === Thumbnail.Loading
         }
     }
 
-    Rectangle {
-        id: rect
-        anchors.fill: parent
-        color: "transparent"
-        border.width: 1
-        border.color: Theme.rgba(Theme.secondaryColor, Theme.highlightBackgroundOpacity)
-        visible: !ready
-    }
-
-    Loader {
-        id: listIcon
-        anchors.fill: parent
+    HighlightImage { // not available in Sailfish 2
+        color: Theme.primaryColor
+        source: (!_doShowThumbnail || thumbnailImage.status === Thumbnail.Error) ?
+                    "../images/large-"+fileIconCallback()+".png" : ""
+        width: _thumbnailSize
+        height: width
+        highlighted: parent.highlighted
         asynchronous: true
-        property alias highlighted: base.highlighted
-        onHighlightedChanged: if (status === Loader.Ready) item.highlighted = base.highlighted
-        onLoaded: if (!showThumbnail) ready = true;
-    }
-
-    Loader {
-        id: thumbnail
-        anchors.fill: parent
-        property alias highlighted: base.highlighted
-        onHighlightedChanged: if (status === Loader.Ready) item.highlighted = base.highlighted
-        onLoaded: if (showThumbnail) ready = true;
     }
 }
