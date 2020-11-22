@@ -95,6 +95,11 @@ function goToFolder(folder, silent) {
     var pagePath = Qt.resolvedUrl("../pages/DirectoryPage.qml");
     var cur = "", shared = "", rest = "", basePath = "", sourceDir = "", above = null;
 
+    if (pageStack.currentPage.hasOwnProperty("dir")) {
+        sourceDir = pageStack.currentPage.dir;
+        if (sourceDir === folder) return;
+    }
+
     var prevPage = pageStack.previousPage();
     while (prevPage && !prevPage.hasOwnProperty("dir")) {
         prevPage = pageStack.previousPage(prevPage);
@@ -103,6 +108,7 @@ function goToFolder(folder, silent) {
     if (prevPage !== null) {
         console.log("- found previous page")
         cur = prevPage.dir
+        if (!sourceDir) sourceDir = cur
         shared = _sharedStart([folder, cur]);
     }
 
