@@ -169,13 +169,15 @@ Page {
                 // clickable icon and filename
                 BackgroundItem {
                     id: openButton
-                    width: parent.width
+                    x: -parent.x
+                    width: parent.width + 2*parent.x
                     height: openArea.height
                     onClicked: quickView()
 
                     Column {
                         id: openArea
-                        width: parent.width
+                        x: -parent.x
+                        width: parent.width - 2*(-parent.x)
 
                         Image { // preview of image, max height 400
                             id: imagePreview
@@ -193,9 +195,8 @@ Page {
                             asynchronous: true
                         }
                         FileIcon {
-                            id: icon2
                             file: page.file
-                            showThumbnail: true
+                            showThumbnail: visible
                             highlighted: openButton.highlighted
                             isDirectory: fileData.isDir
                             mimeTypeCallback: function() { return fileData.mimeType; }
