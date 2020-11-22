@@ -44,7 +44,7 @@ Dialog {
     SearchEngine {
         id: searchEngine
         dir: ""
-        // TODO add maxResults property, set it to ~20
+        maxResults: 20 // TODO is this expected behaviour?
         onDirChanged: console.log("new dir", dir)
         onMatchFound: {
             listModel.append({ fullname: fullname, filename: filename,
