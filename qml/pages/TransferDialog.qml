@@ -21,6 +21,7 @@
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
+import "../js/paths.js" as Paths
 
 import "../components"
 
@@ -50,12 +51,36 @@ Dialog {
             id: shortcutsView
             width: flickable.width
             height: flickable.height - 2*Theme.horizontalPageMargin
-            sections: ["bookmarks", "locations", "external"]
+            sections: ["custom", "bookmarks", "locations", "external"]
+            customEntries: ([])
             editable: false
             selectable: true
             multiSelect: true
-            onItemSelected: dialog.updateStatus();
-            onItemDeselected: dialog.updateStatus();
+            onItemSelected: dialog.updateStatus()
+            onItemDeselected: dialog.updateStatus()
+
+            PullDownMenu {
+                MenuItem {
+                    text: qsTr("Enter path")
+                    onClicked: {
+                        var start = Paths.dirName(toTransfer[0])
+                        start = start.replace(/\/+/g, '/')
+                        start = start.replace(/\/$/, '')
+                        pageStack.push(Qt.resolvedUrl("../pages/GoToDialog.qml"),
+                                       { path: toTransfer.length === 0 ? StandardPaths.home :
+                                                                         start,
+                                           acceptCallback: function(path) {
+                                               path = path.replace(/\/+/g, '/')
+                                               path = path.replace(/\/$/, '')
+                                               shortcutsView.customEntries.push(path)
+                                               shortcutsView.updateModel()
+                                               // TODO find a way to immediately select the new entry
+                                           },
+                                           acceptText: qsTr("Select")
+                                       })
+                    }
+                }
+            }
 
             header: Item {
                 width: dialog.width
