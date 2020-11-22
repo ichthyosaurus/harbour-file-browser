@@ -754,18 +754,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MultiFilePage.qml" line="116"/>
+        <location filename="../qml/pages/MultiFilePage.qml" line="117"/>
         <source>Directories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MultiFilePage.qml" line="125"/>
+        <location filename="../qml/pages/MultiFilePage.qml" line="127"/>
         <source>Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MultiFilePage.qml" line="141"/>
-        <location filename="../qml/pages/MultiFilePage.qml" line="150"/>
+        <location filename="../qml/pages/MultiFilePage.qml" line="143"/>
+        <location filename="../qml/pages/MultiFilePage.qml" line="152"/>
         <source>none</source>
         <translation type="unfinished"></translation>
     </message>
@@ -806,19 +806,25 @@
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/PathEditDialog.qml" line="254"/>
-        <source>%1 file(s)</source>
+        <location filename="../qml/pages/PathEditDialog.qml" line="255"/>
+        <source>%n file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/PathEditDialog.qml" line="256"/>
-        <source>%1 folder(s)</source>
-        <extracomment>translate &apos;0 files&apos; as &apos;no files&apos;</extracomment>
+        <location filename="../qml/pages/PathEditDialog.qml" line="257"/>
+        <source>%n folder(s)</source>
+        <extracomment>hidden if n=0</extracomment>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/PathEditDialog.qml" line="259"/>
+        <source>empty</source>
+        <extracomment>hidden if n=0</extracomment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1787,14 +1793,14 @@
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/SizeDetailItem.qml" line="75"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="78"/>
         <source>%n directories</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/SizeDetailItem.qml" line="76"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="86"/>
         <source>%n file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
