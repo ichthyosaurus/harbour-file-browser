@@ -243,8 +243,7 @@ Page {
         }
 
         // update cover
-        if (status === PageStatus.Activating)
-            coverText = qsTr("Settings");
+        if (status === PageStatus.Activating) main.coverText = qsTr("Settings")
 
         // read settings
         if (status === PageStatus.Activating) {
