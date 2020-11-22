@@ -411,10 +411,7 @@ Page {
     }
 
     onStatusChanged: {
-        if (status === PageStatus.Deactivating) {
-            // clear file selections when the directory is changed
-            clearSelectedFiles();
-        } else if (status === PageStatus.Active) {
+        if (status === PageStatus.Active) {
             if (!canNavigateForward) {
                 pageStack.completeAnimation();
                 pageStack.pushAttached(Qt.resolvedUrl("ShortcutsPage.qml"), { currentPath: dir });
