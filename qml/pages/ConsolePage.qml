@@ -32,16 +32,32 @@ Page {
     property string command: ""
     property variant arguments // this must be set to a string list, e.g. [ "arg1", "arg2" ]
     property color consoleColor: Theme.secondaryColor
+    property string fallbackFile: ""
+    property bool _commandFailed: false
 
     // execute command when page activates
     onStatusChanged: {
         if (status === PageStatus.Activating) {
+            _commandFailed = false;
             consoleModel.executeCommand(page.command, page.arguments);
         }
     }
 
     ConsoleModel {
         id: consoleModel
+        onProcessExited: {
+            if (exitCode === 0) {
+                _commandFailed = false;
+                return;
+            } else if (exitCode === -88888) {
+                console.log("console: command '%1' probably not found (code %2)".arg(command).arg(exitCode))
+            } else if (exitCode === -99999) {
+                console.log("console: command '%1' crashed (code %2)".arg(command).arg(exitCode))
+            } else {
+                console.log("console: command '%1' exited with code %2".arg(command).arg(exitCode))
+            }
+            _commandFailed = true;
+        }
     }
 
     PageHeader {
