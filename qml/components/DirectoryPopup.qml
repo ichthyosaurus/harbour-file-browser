@@ -81,7 +81,26 @@ Item {
                 } else if (_selectedMenu === "editPath") {
                     console.log("EDIT PATH requested")
                 } else if (_selectedMenu === "showHidden") {
-                    console.log("SHOW HIDDEN requested")
+                    // TODO manage global/local, directory, and default values in SettingsHandler
+                    var useLocal = (settings.read("View/UseLocalSettings", "true") === "true");
+                    var configPath = directory+"/.directory";
+                    var currentGlobal = (settings.read("View/HiddenFilesShown", "false") === "true");
+                    var current = currentGlobal
+                    if (useLocal) current = (settings.read("Settings/HiddenFilesShown", currentGlobal, configPath) === "true");
+                    var toggled = !current
+
+                    if (useLocal) {
+                        if (toggled === currentGlobal) {
+                            settings.remove("Settings/HiddenFilesShown", configPath);
+                            console.log("DirPopup: hidden reset")
+                        } else {
+                            settings.write("Settings/HiddenFilesShown", toggled ? "true" : "false", configPath);
+                            console.log("DirPopup: hidden locally set to", toggled)
+                        }
+                    } else {
+                        settings.write("View/HiddenFilesShown", toggled ? "true" : "false");
+                        console.log("DirPopup: hidden globally set to", toggled)
+                    }
                 }
                 _selectedMenu = "";
             }
