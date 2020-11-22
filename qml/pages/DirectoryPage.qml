@@ -46,11 +46,29 @@ Page {
     property bool fullPathShown: (settings.read("General/ShowFullDirectoryPaths", "false") === "true")
     // set to true to enable starting deep search when pressing 'Enter' in filter input
     property bool quickSearchEnabled: (settings.read("General/DefaultFilterAction", "filter") === "search")
+
     property string viewState: updateThumbnailsState() // state for list delegates
+    property int _baseIconSize: (viewState === '' || viewState === 'gallery') ? Theme.iconSizeSmall : _baseEntryHeight
+    property bool _thumbnailsEnabled: viewState !== '' && viewState !== 'gallery'
+    property int _baseEntryHeight: {
+        if (viewState === 'gallery') {
+            return Theme.itemSizeMedium
+        } else if (viewState === "preview/small") {
+            return Theme.itemSizeMedium
+        } else if (viewState === "preview/medium") {
+            return Theme.itemSizeExtraLarge
+        } else if (viewState === "preview/large") {
+            return width/3
+        } else if (viewState === "preview/huge") {
+            return width/3*2
+        } else {
+            return Theme.itemSizeSmall
+        }
+    }
 
     property string _fnElide: settings.read("General/FilenameElideMode", "fade")
-    property int nameTruncMode: _fnElide === 'fade' ? TruncationMode.Fade : TruncationMode.Elide
-    property int nameElideMode: nameTruncMode === TruncationMode.Fade ?
+    property int _nameTruncMode: _fnElide === 'fade' ? TruncationMode.Fade : TruncationMode.Elide
+    property int _nameElideMode: _nameTruncMode === TruncationMode.Fade ?
                                     Text.ElideNone : (_fnElide === 'middle' ?
                                                           Text.ElideMiddle : Text.ElideRight)
 
@@ -273,10 +291,7 @@ Page {
         }
 
         delegate: Component {
-            Loader {
-                width: fileList.width
-                source: "../components/DirectoryPageEntry.qml"
-            }
+            DirectoryPageEntry {}
         }
 
         // text if no files or error message

@@ -26,20 +26,123 @@ import "../js/bookmarks.js" as Bookmarks
 import "../js/paths.js" as Paths
 
 ListItem {
-    id: fileItem
+    id: listItem
+    contentHeight: _baseEntryHeight + _extraContentHeight
     menu: contextMenu
-    contentHeight: Theme.itemSizeSmall
-    height: contentHeight + (_menuItem ? _menuItem.height : 0)
-    ListView.onRemove: animateRemoval(fileItem) // enable animated list item removals
+    ListView.onRemove: animateRemoval(listItem)
     highlighted: down || isSelected || selectionArea.pressed
-    property alias listLabelWidth: listLabel.width // see https://doc.qt.io/qt-5/qtquick-performance.html
-    property bool galleryModeActiveAvailable: false
+
+    property Item _remorseItem
+    property int _extraContentHeight: 0
+    property alias _listLabelWidth: listLabel.width
+    property bool _showSelectionGlow: false
+    property bool _galleryModeActiveAvailable: false
+    property color _detailsColor: highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
+
+    onClicked: {
+        if (fileModel.selectedFileCount > 0) {
+            toggleSelection(index);
+            return;
+        }
+
+        if (isDir) {
+            pageStack.animatorPush(Qt.resolvedUrl("../pages/DirectoryPage.qml"),
+                                   { dir: fileModel.appendPath(filename) });
+        } else if (_galleryModeActiveAvailable && fileIcon === "file-image") {
+            pageStack.animatorPush(Qt.resolvedUrl("../pages/ViewImagePage.qml"),
+                                   { path: fileModel.appendPath(filename), title: filename });
+        } else if (_galleryModeActiveAvailable && fileIcon === "file-video") {
+            pageStack.animatorPush(Qt.resolvedUrl("../pages/ViewVideoPage.qml"),
+                                   { path: fileModel.appendPath(filename), title: filename, autoPlay: true });
+        } else {
+            pageStack.animatorPush(Qt.resolvedUrl("../pages/FilePage.qml"),
+                                   { file: fileModel.appendPath(filename) });
+        }
+    }
+
+    Connections {
+        target: page
+        onMultiSelectionFinished: listItem._showSelectionGlow = false
+        onMultiSelectionStarted: if (index !== model.index) listItem._showSelectionGlow = false
+    }
 
     Loader {
         id: gallery
         sourceComponent: undefined
         anchors { top: parent.top; left: parent.left; right: parent.right }
-        visible: true; active: true
+        visible: active; active: viewState === "gallery"
+    }
+
+    Item {
+        id: infoContainer
+        anchors {
+            left: parent.left; right: parent.right
+            top: gallery.bottom; bottom: parent.bottom
+        }
+
+        Loader {
+            id: listIcon
+            x: Theme.paddingLarge
+            width: _baseIconSize; height: width
+            anchors.verticalCenter: _thumbnailsEnabled ? parent.verticalCenter :
+                                                         listLabel.verticalCenter
+            sourceComponent: listIconComponent
+            asynchronous: index > 20
+        }
+
+        Loader {
+            // circle shown when item is selected
+            anchors.verticalCenter: listLabel.verticalCenter
+            x: Theme.paddingLarge - 2*Theme.pixelRatio
+            width: Theme.iconSizeSmall + 4*Theme.pixelRatio
+            height: width
+            sourceComponent: isSelected ? selectionMarkerComponent : null
+        }
+
+        Label {
+            id: listLabel
+            anchors {
+                left: listIcon.right; leftMargin: Theme.paddingMedium
+                right: parent.right; rightMargin: Theme.paddingLarge
+                top: parent.top; topMargin: Theme.paddingSmall
+            }
+            text: filename
+            truncationMode: _nameTruncMode
+            elide: _nameElideMode
+            highlighted: listItem.highlighted
+        }
+
+        Loader {
+            sourceComponent: fileDetailsComponent
+            asynchronous: index > 20
+            anchors {
+                left: listIcon.right; leftMargin: Theme.paddingMedium
+                right: parent.right; rightMargin: Theme.paddingLarge
+                top: listLabel.bottom; bottom: parent.bottom
+            }
+        }
+
+        MouseArea {
+            id: selectionArea
+            anchors {
+                left: parent.left; right: listLabel.left
+                top: parent.top; bottom: parent.bottom
+            }
+
+            property int pressAndHoldInterval: 300
+            Timer {
+                interval: parent.pressAndHoldInterval
+                running: parent.pressed
+                onTriggered: parent.pressAndHold("")
+            }
+
+            onClicked: toggleSelection(index);
+            onPressAndHold: {
+                if (!isSelected) toggleSelection(index, false);
+                page.multiSelectionStarted(model.index);
+                listItem._showSelectionGlow = true;
+            }
+        }
     }
 
     Component {
@@ -50,7 +153,9 @@ ListItem {
             source: dir+"/"+filename
             sourceSize.width: parent.width
             width: parent.width
-            height: Theme.paddingMedium + width * (implicitHeight / implicitWidth)
+            height: Theme.paddingMedium +
+                    (status === Image.Loading ?
+                         width : (width * (implicitHeight / implicitWidth)))
         }
     }
 
@@ -72,258 +177,117 @@ ListItem {
             Image {
                 anchors.centerIn: parent
                 height: Theme.itemSizeLarge
-                source: "image://theme/icon-l-play?" + (fileItem.highlighted
-                    ? Theme.highlightColor : Theme.primaryColor)
+                source: "image://theme/icon-l-play?" + (listItem.highlighted
+                                                        ? Theme.highlightColor :
+                                                          Theme.primaryColor)
                 fillMode: Image.PreserveAspectFit
             }
         }
     }
 
-    Item {
-        anchors {
-            left: parent.left; right: parent.right
-            top: gallery.bottom; bottom: parent.bottom
-        }
-
+    Component {
+        id: listIconComponent
         FileIcon {
-            id: listIcon
-            x: Theme.paddingLarge
-            anchors.verticalCenter: listLabel.verticalCenter
-            width: Theme.iconSizeSmall; height: width
-            showThumbnail: false
-
-            highlighted: fileItem.highlighted
-            file: fileModel.appendPath(listLabel.text)
+            showThumbnail: _thumbnailsEnabled
+            highlighted: listItem.highlighted
+            file: showThumbnail ? dir+"/"+filename : ""
             isDirectory: isDir
             mimeTypeCallback: function() { return fileModel.mimeTypeAt(index); }
             fileIconCallback: function() { return fileIcon; }
         }
+    }
 
-        // circle shown when item is selected
+    Component {
+        id: fileDetailsComponent
+        Flow {
+            anchors.fill: parent
+            Label {
+                id: sizeLabel
+                text: isLink ? (isDir ? (Paths.unicodeArrow()+" "+symLinkTarget) :
+                                        (size+" "+qsTr("(link)"))) : (size)
+                color: _detailsColor
+                elide: Text.ElideRight
+                font.pixelSize: Theme.fontSizeExtraSmall
+            }
+            Label {
+                id: permsLabel
+                visible: !(isLink && isDir)
+                text: filekind+permissions
+                color: _detailsColor
+                font.pixelSize: Theme.fontSizeExtraSmall
+            }
+            Label {
+                id: datesLabel
+                visible: !(isLink && isDir)
+                text: modified
+                color: _detailsColor
+                font.pixelSize: Theme.fontSizeExtraSmall
+                wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+            }
+
+            states: [
+                State {
+                    when: _listLabelWidth >= 2*listItem.width/3
+                    PropertyChanges { target: listLabel; wrapMode: Text.NoWrap; maximumLineCount: 1 }
+                    PropertyChanges { target: sizeLabel; width: ((isLink && isDir) ? _listLabelWidth : _listLabelWidth/3); horizontalAlignment: Text.AlignLeft }
+                    PropertyChanges { target: permsLabel; width: _listLabelWidth/3; horizontalAlignment: Text.AlignHCenter }
+                    PropertyChanges { target: datesLabel; width: _listLabelWidth/3; horizontalAlignment: Text.AlignRight }
+                },
+                State {
+                    when: _listLabelWidth < 2*listItem.width/3
+                    PropertyChanges { target: listLabel; wrapMode: Text.WrapAtWordBoundaryOrAnywhere; maximumLineCount: 2 }
+                    PropertyChanges { target: sizeLabel; width: _listLabelWidth; horizontalAlignment: Text.AlignLeft }
+                    PropertyChanges { target: permsLabel; width: _listLabelWidth; horizontalAlignment: Text.AlignLeft }
+                    PropertyChanges { target: datesLabel; width: _listLabelWidth; horizontalAlignment: Text.AlignLeft }
+                }
+            ]
+        }
+    }
+
+    Component {
+        id: selectionMarkerComponent
         Rectangle {
             visible: isSelected
-            anchors.verticalCenter: listLabel.verticalCenter
-            x: Theme.paddingLarge - 2*Theme.pixelRatio
-            width: Theme.iconSizeSmall + 4*Theme.pixelRatio
-            height: width
             color: "transparent"
             border.color: Theme.highlightColor
-            border.width: 2.25 * Theme.pixelRatio
-            radius: width * 0.5
-            onVisibleChanged: if (!visible) selectionGlow.visible = false
+            border.width: 2.25*Theme.pixelRatio
+            radius: width*0.5
 
             Rectangle {
-                id: selectionGlow
-                visible: false
+                id: selectionGlow // TODO use only one globally
+                visible: isSelected && listItem._showSelectionGlow
                 anchors.centerIn: parent
                 width: Theme.iconSizeExtraLarge; height: width
                 radius: width/2
                 color: Theme.rgba(Theme.highlightBackgroundColor, Theme.highlightBackgroundOpacity)
             }
         }
-
-        Label {
-            id: listLabel
-            anchors {
-                left: listIcon.right; leftMargin: Theme.paddingMedium
-                right: parent.right; rightMargin: Theme.paddingLarge
-                top: parent.top; topMargin: Theme.paddingSmall
-            }
-            text: filename
-            truncationMode: page.nameTruncMode
-            elide: page.nameElideMode
-            color: fileItem.highlighted ? Theme.highlightColor : Theme.primaryColor
-        }
-
-        Loader {
-            asynchronous: false
-            anchors {
-                left: listIcon.right; leftMargin: Theme.paddingMedium
-                right: parent.right; rightMargin: Theme.paddingLarge
-                top: listLabel.bottom; bottom: parent.bottom
-            }
-            sourceComponent: Flow {
-                anchors.fill: parent
-
-                Label {
-                    id: sizeLabel
-                    text: isLink ? (isDir ? (Paths.unicodeArrow()+" "+symLinkTarget) :
-                                            (size+" "+qsTr("(link)"))) : (size)
-                    color: fileItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                    elide: Text.ElideRight
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                }
-                Label {
-                    id: permsLabel
-                    visible: !(isLink && isDir)
-                    text: filekind+permissions
-                    color: fileItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                }
-                Label {
-                    id: datesLabel
-                    visible: !(isLink && isDir)
-                    text: modified
-                    color: fileItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                    wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-                }
-
-                states: [
-                    State {
-                        when: listLabelWidth >= 2*fileItem.width/3
-                        PropertyChanges { target: listLabel; wrapMode: Text.NoWrap; maximumLineCount: 1 }
-                        PropertyChanges { target: sizeLabel; width: ((isLink && isDir) ? listLabelWidth : listLabelWidth/3); horizontalAlignment: Text.AlignLeft }
-                        PropertyChanges { target: permsLabel; width: listLabelWidth/3; horizontalAlignment: Text.AlignHCenter }
-                        PropertyChanges { target: datesLabel; width: listLabelWidth/3; horizontalAlignment: Text.AlignRight }
-                    },
-                    State {
-                        when: listLabelWidth < 2*fileItem.width/3
-                        PropertyChanges { target: listLabel; wrapMode: Text.WrapAtWordBoundaryOrAnywhere; maximumLineCount: 2 }
-                        PropertyChanges { target: sizeLabel; width: listLabelWidth; horizontalAlignment: Text.AlignLeft }
-                        PropertyChanges { target: permsLabel; width: listLabelWidth; horizontalAlignment: Text.AlignLeft }
-                        PropertyChanges { target: datesLabel; width: listLabelWidth; horizontalAlignment: Text.AlignLeft }
-                    }
-                ]
-            }
-        }
-
-        MouseArea {
-            id: selectionArea
-            anchors {
-                left: parent.left; right: listLabel.left
-                top: parent.top; bottom: parent.bottom
-            }
-
-            property int pressAndHoldInterval: 300
-            Timer {
-                interval: parent.pressAndHoldInterval
-                running: parent.pressed
-                onTriggered: parent.pressAndHold("")
-            }
-
-            onPressAndHold: {
-                page.multiSelectionStarted(model.index);
-                if (!isSelected) toggleSelection(index, false);
-                selectionGlow.visible = true;
-                page.multiSelectionFinished.connect(function(index) { selectionGlow.visible = false; });
-                page.multiSelectionStarted.connect(function(index) { if (index !== model.index) selectionGlow.visible = false; });
-            }
-
-            onClicked: {
-                toggleSelection(index);
-            }
-        }
     }
 
-    onClicked: {
-        if (fileModel.selectedFileCount > 0) {
-            toggleSelection(index);
-            return;
-        }
-
-        if (model.isDir) {
-            pageStack.push(Qt.resolvedUrl("../pages/DirectoryPage.qml"),
-                           { dir: fileModel.appendPath(listLabel.text) });
-        } else if (galleryModeActiveAvailable && fileIcon === "file-image") {
-            pageStack.push(Qt.resolvedUrl("../pages/ViewImagePage.qml"),
-                           { path: fileModel.appendPath(listLabel.text), title: filename });
-        } else if (galleryModeActiveAvailable && fileIcon === "file-video") {
-            pageStack.push(Qt.resolvedUrl("../pages/ViewVideoPage.qml"),
-                           { path: fileModel.appendPath(listLabel.text), title: filename, autoPlay: true });
-        } else {
-            pageStack.animatorPush(Qt.resolvedUrl("../pages/FilePage.qml"),
-                           { file: fileModel.appendPath(listLabel.text) });
-        }
-    }
-
-    states: [
-        State {
-            name: "hidden"
-            when: !isMatched
-            PropertyChanges {
-                target: fileItem
-                visible: false
-                height: 0
-                contentHeight: 0
-            }
-        },
-        State {
-            name: "galleryAvailableBase"
-            PropertyChanges {
-                target: fileItem
-                contentHeight: Theme.itemSizeMedium + gallery.height
-                galleryModeActiveAvailable: true
-            }
-            PropertyChanges { target: listIcon; showThumbnail: false; width: Theme.iconSizeSmall }
-            AnchorChanges { target: listIcon; anchors.verticalCenter: listLabel.verticalCenter }
-            AnchorChanges { target: selectionArea; anchors.right: parent.right }
-        },
-        State {
-            name: "galleryAvailableAnimated"; extend: "galleryAvailableBase"
-            when:    viewState === "gallery"
-                  && fileIcon === "file-image"
-                  && String(filename).toLowerCase().match(/\.(gif)$/) !== null
-            PropertyChanges { target: gallery; sourceComponent: galleryAnimatedComponent }
-        },
-        State {
-            name: "galleryAvailableStill"; extend: "galleryAvailableBase"
-            when: viewState === "gallery" && fileIcon === "file-image"
-            PropertyChanges { target: gallery; sourceComponent: galleryStillComponent }
-        },
-        State {
-            name: "galleryAvailableVideo"; extend: "galleryAvailableBase"
-            when: viewState === "gallery" && fileIcon === "file-video"
-            PropertyChanges { target: gallery; sourceComponent: galleryVideoComponent }
-        },
-        State {
-            name: "galleryUnavailable"; extend: "hidden"
-            // hide everything except directories, images, and videos
-            when: viewState === "gallery" && fileIcon !== "file-image" && fileIcon !== "file-video" && !isDir
-        },
-        State {
-            name: "previewBaseState"
-            PropertyChanges { target: listIcon; showThumbnail: true }
-            AnchorChanges { target: listIcon; anchors.verticalCenter: parent.verticalCenter }
-        },
-        State {
-            name: "preview/small"; extend: "previewBaseState"
-            when: viewState === "preview/small"
-            PropertyChanges { target: fileItem; contentHeight: Theme.itemSizeMedium }
-            PropertyChanges { target: listIcon; width: Theme.itemSizeMedium }
-        },
-        State {
-            name: "preview/medium"; extend: "previewBaseState"
-            when: viewState === "preview/medium"
-            PropertyChanges { target: fileItem; contentHeight: Theme.itemSizeExtraLarge }
-            PropertyChanges { target: listIcon; width: Theme.itemSizeExtraLarge }
-        },
-        State {
-            name: "preview/large"; extend: "previewBaseState"
-            when: viewState === "preview/large"
-            PropertyChanges { target: fileItem; contentHeight: fileItem.width/3 }
-            PropertyChanges { target: listIcon; width: fileItem.width/3 }
-        },
-        State {
-            name: "preview/huge"; extend: "previewBaseState"
-            when: viewState === "preview/huge"
-            PropertyChanges { target: fileItem; contentHeight: fileItem.width/3*2 }
-            PropertyChanges { target: listIcon; width: fileItem.width/3*2 }
-        }
-    ]
-
-    // context menu is activated with long press
     Component {
         id: contextMenu
         ContextMenu {
             id: menu
-            // cancel delete if context menu is opened
+            property bool _toggleBookmark: false
+            property bool _hasBookmark: isDir ? Bookmarks.hasBookmark(fileModel.fileNameAt(index)) : false
             onActiveChanged: {
                 if (!active) return;
-                remorsePopup.cancel();
+                remorsePopup.cancel(); // cancel delete if context menu is opened
+                if (_remorseItem) _remorseItem.cancel();
                 clearSelectedFiles();
-                if (ctxBookmark.visible) ctxBookmark.hasBookmark = Bookmarks.hasBookmark(fileModel.fileNameAt(index))
             }
+            onClosed: {
+                if (_toggleBookmark) {
+                    if (hasBookmark) {
+                        Bookmarks.removeBookmark(fileModel.fileNameAt(index));
+                        hasBookmark = false; visibleChanged();
+                    } else {
+                        Bookmarks.addBookmark(fileModel.fileNameAt(index));
+                        hasBookmark = true; visibleChanged();
+                    }
+                }
+            }
+
             FileActions {
                 id: fileActions
                 showLabel: false
@@ -332,8 +296,7 @@ ListItem {
                 showShare: !model.isLink
                 showSelection: false; showEdit: false; showCompress: false
                 onDeleteTriggered: {
-                    remorsePopupActive = true;
-                    remorsePopup.execute(qsTr("Deleting"), function() {
+                    _remorseItem = listItem.remorseDelete(function(){
                         clearSelectedFiles();
                         progressPanel.showText(qsTr("Deleting"));
                         engine.deleteFiles([fileModel.fileNameAt(index)]);
@@ -351,20 +314,61 @@ ListItem {
                 showTransfer: false
             }
             MenuItem {
-                id: ctxBookmark
                 visible: model.isDir
-                property bool hasBookmark: visible ? Bookmarks.hasBookmark(fileModel.fileNameAt(index)) : false
                 text: hasBookmark ? qsTr("Remove bookmark") : qsTr("Add to bookmarks")
-                onClicked: {
-                    if (hasBookmark) {
-                        Bookmarks.removeBookmark(fileModel.fileNameAt(index));
-                        hasBookmark = false;
-                    } else {
-                        Bookmarks.addBookmark(fileModel.fileNameAt(index));
-                        hasBookmark = true;
-                    }
-                }
+                onClicked: _toggleBookmark = true // delayed action
             }
         }
     }
+
+    states: [
+        State {
+            name: "hiddenAnimated"
+            when: !isMatched && index < 20
+            PropertyChanges {
+                target: listItem
+                hidden: true; _extraContentHeight: 0
+            }
+        },
+        State {
+            name: "hiddenImmediately"
+            when: !isMatched
+            PropertyChanges {
+                target: listItem
+                visible: false; contentHeight: 0; _extraContentHeight: 0
+            }
+        },
+        State {
+            name: "galleryAvailableBase"
+            PropertyChanges {
+                target: listItem
+                _extraContentHeight: gallery.height
+                _galleryModeActiveAvailable: true
+            }
+            // AnchorChanges { target: listIcon; anchors.verticalCenter: listLabel.verticalCenter }
+            AnchorChanges { target: selectionArea; anchors.right: parent.right }
+        },
+        State {
+            name: "galleryAvailableAnimated"; extend: "galleryAvailableBase"
+            when:    viewState === "gallery"
+                  && fileIcon === "file-image"
+                  && String(filename).match(/\.(gif)$/i) !== null
+            PropertyChanges { target: gallery; sourceComponent: galleryAnimatedComponent }
+        },
+        State {
+            name: "galleryAvailableStill"; extend: "galleryAvailableBase"
+            when: viewState === "gallery" && fileIcon === "file-image"
+            PropertyChanges { target: gallery; sourceComponent: galleryStillComponent }
+        },
+        State {
+            name: "galleryAvailableVideo"; extend: "galleryAvailableBase"
+            when: viewState === "gallery" && fileIcon === "file-video"
+            PropertyChanges { target: gallery; sourceComponent: galleryVideoComponent }
+        },
+        State {
+            name: "galleryUnavailable"; extend: "hiddenImmediately"
+            // hide everything except directories, images, and videos
+            when: viewState === "gallery" && fileIcon !== "file-image" && fileIcon !== "file-video" && !isDir
+        }
+    ]
 }
