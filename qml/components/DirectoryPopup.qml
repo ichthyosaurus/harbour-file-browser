@@ -81,7 +81,10 @@ Item {
                 } else if (_selectedMenu === "editPath") {
                     console.log("DirPopup: edit path")
                     pageStack.push(Qt.resolvedUrl("../pages/GoToDialog.qml"),
-                                   { path: directory })
+                                   { path: directory, acceptCallback: function(path){
+                                       pageStack.completeAnimation() // abort dialog's pop animation
+                                       navigate_goToFolder(path)
+                                   }})
                 } else if (_selectedMenu === "showHidden") {
                     // TODO manage global/local, directory, and default values in SettingsHandler
                     var useLocal = (settings.read("View/UseLocalSettings", "true") === "true");
