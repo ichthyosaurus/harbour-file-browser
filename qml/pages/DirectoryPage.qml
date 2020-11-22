@@ -243,10 +243,12 @@ Page {
             title: Paths.formatPathForTitle(page.dir)
             _titleItem.elide: Text.ElideMiddle
             description: page.fullPathShown ? Paths.dirName(page.dir) : ""
+            Component.onCompleted: dirPopup.menuTop = y+height
 
-            MouseArea {
+            BackgroundItem {
                 anchors.fill: parent
-                onClicked: pageStack.push(Qt.resolvedUrl("SortingPage.qml"), { dir: dir });
+                onClicked: dirPopup.show()
+                onPressAndHold: dirPopup.show()
             }
         }
 
@@ -299,6 +301,12 @@ Page {
             enabled: _activeDir !== "" && (fileModel.fileCount === 0 || fileModel.errorMessage !== "")
             text: fileModel.errorMessage !== "" ? fileModel.errorMessage : qsTr("No files")
         }
+    }
+
+    DirectoryPopup {
+        id: dirPopup
+        anchors.fill: parent
+        menuTop: Theme.itemSizeMedium
     }
 
     Connections {
