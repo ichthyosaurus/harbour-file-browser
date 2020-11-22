@@ -21,6 +21,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.file.browser.SearchEngine 1.0
+import harbour.file.browser.FileData 1.0
 
 import "../js/paths.js" as Paths
 
@@ -146,38 +147,58 @@ Dialog {
             }
         }
 
-        delegate: ListItem {
-            id: listItem
-            width: dialog.width
-            // contentHeight: Theme.itemSizeMedium // two line delegate
-            contentHeight: Theme.itemSizeSmall // single line delegate
-            // ListView.onRemove: animateRemoval(listItem)
-            onClicked: dialog.suggestionSelected(filename)
+        delegate: Component {
+            Loader {
+                sourceComponent: Component {
+                    ListItem {
+                        id: listItem
+                        width: dialog.width
+                        // contentHeight: Theme.itemSizeMedium // two line delegate
+                        contentHeight: Theme.itemSizeSmall // single line delegate
+                        onClicked: dialog.suggestionSelected(filename)
 
-            Label {
-                id: upper
-                anchors {
-                    left: parent.left; leftMargin: _searchLeftMargin
-                    right: parent.right; rightMargin: Theme.horizontalPageMargin
-                    bottom: parent.verticalCenter
+                        // we don't want this to be animated because the list changes to quickly
+                        // ListView.onRemove: animateRemoval(listItem)
+                        FileData { id: fileData }
+
+                        Label {
+                            id: upper
+                            anchors {
+                                left: parent.left; leftMargin: _searchLeftMargin
+                                right: parent.right; rightMargin: Theme.horizontalPageMargin
+                                bottom: parent.verticalCenter
+                            }
+                            text: Theme.highlightText(filename, dialog._pathRegex, Theme.highlightColor)
+                            truncationMode: _nameTruncMode
+                            elide: _nameElideMode
+                            textFormat: Text.StyledText
+                        }
+
+                        Label {
+                            id: infoLabel
+                            anchors {
+                                left: parent.left; leftMargin: _searchLeftMargin
+                                right: parent.right; rightMargin: Theme.horizontalPageMargin
+                                top: parent.verticalCenter
+                            }
+                            property int files: fileData.filesCount
+                            property int folders: fileData.dirsCount
+                            text: qsTr("%1 file(s)", "", files).arg(files)+ //: translate '0 files' as 'no files'
+                                  ", "+
+                                  qsTr("%1 folder(s)", "", folders).arg(folders) //: translate '0 folders' as 'no folders'
+                            color: highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                            truncationMode: TruncationMode.Fade
+
+                            Component.onCompleted: {
+                                fileData.file = fullname
+                                fileData.refresh()
+                                files = fileData.filesCount
+                                folders = fileData.dirsCount
+                            }
+                        }
+                    }
                 }
-                text: Theme.highlightText(filename, dialog._pathRegex, Theme.highlightColor)
-                truncationMode: _nameTruncMode
-                elide: _nameElideMode
-                textFormat: Text.StyledText
             }
-
-            /*Label {
-                // line for additional info
-                anchors {
-                    left: parent.left; leftMargin: _searchLeftMargin
-                    right: parent.right; rightMargin: Theme.horizontalPageMargin
-                    top: parent.verticalCenter
-                }
-                text: ""
-                color: highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                truncationMode: TruncationMode.Fade
-            }*/
         }
     }
 }
