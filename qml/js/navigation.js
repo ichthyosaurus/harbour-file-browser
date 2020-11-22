@@ -167,28 +167,7 @@ function goToFolder(folder, silent) {
         backStack.push({type: "dir", path: folder});
         forwardStack = []; // clear the forward stack because we just started a new branch
     }
-
-    var chunkSize = 3
-    if (toPush.length >= chunkSize+2) {
-        // What this tries to fix (but fails):
-        // PageStack chokes when pushing too many pages at once. It
-        // creates visual bugs where parts of earlier pages are still
-        // visible. To work around this, we try pushing the pages in
-        // chunks. pageStack.completeAnimation should make sure all
-        // transitions are skipped - but it still fails with warnings
-        // like 'Warning: cannot push while transition is in progress'...
-        var first = toPush.shift();
-        pageStack.replaceAbove(above, [first]);
-        for (var index = 0; index < toPush.length; index += chunkSize) {
-            var chunk = toPush.slice(index, Math.min(toPush.length, index+chunkSize));
-            console.log("chunk:", index, toPush.length)
-            pageStack.completeAnimation();
-            pageStack.animatorPush(chunk);
-        }
-    } else {
-        pageStack.animatorReplaceAbove(above, toPush);
-    }
-
+    pageStack.animatorReplaceAbove(above, toPush);
     console.log("- done")
 
     /*var dirs = rest.split("/");
