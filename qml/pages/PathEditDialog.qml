@@ -226,7 +226,7 @@ Dialog {
                                 left: parent.left; leftMargin: _searchLeftMargin
                                 right: parent.right; rightMargin: Theme.horizontalPageMargin
                                 bottom: index > 0 ? parent.verticalCenter : parent.bottom
-                                top: index > 0 ? null : parent.top
+                                top: index > 0 ? undefined : parent.top
                             }
                             verticalAlignment: index > 0 ? Text.AlignBottom : Text.AlignVCenter
                             text: index > 0 ?
