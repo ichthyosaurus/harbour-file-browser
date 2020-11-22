@@ -113,11 +113,15 @@ Page {
 
             MenuItem {
                 text: qsTr("View Preferences")
-                onClicked: pageStack.push(Qt.resolvedUrl("SortingPage.qml"), { dir: dir })
+                onClicked: {
+                    pullDownMenu.cancelBounceBack() // don't accidentally focus the filter
+                    pageStack.push(Qt.resolvedUrl("SortingPage.qml"), { dir: dir })
+                }
             }
             MenuItem {
                 text: qsTr("Create Folder")
                 onClicked: {
+                    pullDownMenu.cancelBounceBack() // don't accidentally focus the filter
                     var dialog = pageStack.push(Qt.resolvedUrl("CreateFolderDialog.qml"),
                                           { path: page.dir })
                     dialog.accepted.connect(function() {
