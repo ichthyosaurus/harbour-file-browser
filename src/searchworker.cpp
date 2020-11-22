@@ -35,17 +35,19 @@ SearchWorker::~SearchWorker()
 {
 }
 
-void SearchWorker::startSearch(QString directory, QString searchTerm)
+void SearchWorker::startSearch(QString directory, QString searchTerm, SearchType type)
 {
     if (isRunning()) {
         emit errorOccurred(tr("Search already in progress"), "");
         return;
     }
-    if (directory.isEmpty() || searchTerm.isEmpty()) {
+    if (directory.isEmpty() ||
+            (type == SearchType::FilesRecursive && searchTerm.isEmpty())) {
         emit errorOccurred(tr("Bad search parameters"), "");
         return;
     }
 
+    m_type = type;
     m_directory = directory;
     m_searchTerm = searchTerm;
     m_currentDirectory = directory;
@@ -60,24 +62,30 @@ void SearchWorker::cancel()
 
 void SearchWorker::run()
 {
-    QString errMsg = searchRecursively(m_directory, m_searchTerm.toLower());
-    if (!errMsg.isEmpty())
-        emit errorOccurred(errMsg, m_currentDirectory);
+    QString errMsg;
+    switch (m_type) {
+    case SearchType::FilesRecursive:
+        errMsg = searchFilesRecursive(m_directory, m_searchTerm.toLower());
+        break;
+    case SearchType::DirectoriesShallow:
+        errMsg = searchDirectoriesShallow(m_directory, m_searchTerm.toLower());
+        break;
+    }
 
+    if (!errMsg.isEmpty()) emit errorOccurred(errMsg, m_currentDirectory);
     emit progressChanged("");
     emit done();
 }
 
-QString SearchWorker::searchRecursively(QString directory, QString searchTerm)
+QString SearchWorker::searchFilesRecursive(QString directory, QString searchTerm)
 {
     // skip some system folders - they don't really have any interesting stuff
-    if (directory.startsWith("/proc") ||
-            directory.startsWith("/sys/block"))
+    if (directory.startsWith("/proc") || directory.startsWith("/sys/block")) {
         return QString();
+    }
 
     QDir dir(directory);
-    if (!dir.exists())  // skip "non-existent" directories (found in /dev)
-        return QString();
+    if (!dir.exists()) return QString(); // skip "non-existent" directories (found in /dev)
 
     // update progress
     m_currentDirectory = directory;
@@ -89,38 +97,71 @@ QString SearchWorker::searchRecursively(QString directory, QString searchTerm)
 
     // search dirs
     QStringList names = dir.entryList(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::System | hidden);
-    for (int i = 0 ; i < names.count() ; ++i) {
+    for (auto filename : names) {
         // stop if cancelled
-        if (m_cancelled.loadAcquire() == Cancelled)
+        if (m_cancelled.loadAcquire() == Cancelled) {
             return QString();
+        }
 
-        QString filename = names.at(i);
         QString fullpath = dir.absoluteFilePath(filename);
-
-        if (filename.toLower().indexOf(searchTerm) >= 0)
+        if (filename.contains(searchTerm, Qt::CaseInsensitive)) {
             emit matchFound(fullpath);
+        }
 
         QFileInfo info(fullpath); // skip symlinks to prevent infinite loops
-        if (info.isSymLink())
-            continue;
+        if (info.isSymLink()) continue;
 
-        QString errmsg = searchRecursively(fullpath, searchTerm);
-        if (!errmsg.isEmpty())
-            return errmsg;
+        QString errorMessage = searchFilesRecursive(fullpath, searchTerm);
+        if (!errorMessage.isEmpty()) return errorMessage;
     }
 
     // search files
     names = dir.entryList(QDir::Files | hidden);
-    for (int i = 0 ; i < names.count() ; ++i) {
+    for (auto filename : names) {
         // stop if cancelled
-        if (m_cancelled.loadAcquire() == Cancelled)
+        if (m_cancelled.loadAcquire() == Cancelled) {
             return QString();
+        }
 
-        QString filename = names.at(i);
         QString fullpath = dir.absoluteFilePath(filename);
-
-        if (filename.toLower().indexOf(searchTerm) >= 0)
+        if (filename.contains(searchTerm, Qt::CaseInsensitive)) {
             emit matchFound(fullpath);
+        }
+    }
+
+    return QString();
+}
+
+QString SearchWorker::searchDirectoriesShallow(QString directory, QString searchTerm)
+{
+    QDir dir(directory);
+    if (!dir.exists()) return QString(); // skip "non-existent" directories (found in /dev)
+
+    // update progress
+    m_currentDirectory = directory;
+    emit progressChanged(m_currentDirectory);
+
+    bool hiddenSetting;
+    if (searchTerm.startsWith('.')) {
+        // always include hidden directories if we explicitly search for one
+        hiddenSetting = true;
+    } else {
+        QSettings settings;
+        hiddenSetting = settings.value("View/HiddenFilesShown", false).toBool();
+    }
+    QDir::Filter hidden = hiddenSetting ? QDir::Hidden : static_cast<QDir::Filter>(0);
+
+    // search dirs
+    QStringList names = dir.entryList(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::System | hidden);
+    for (auto filename : names) {
+        // stop if cancelled
+        if (m_cancelled.loadAcquire() == Cancelled) {
+            return QString();
+        }
+        QString fullpath = dir.absoluteFilePath(filename);
+        if (searchTerm.isEmpty() || filename.contains(searchTerm, Qt::CaseInsensitive)) {
+            emit matchFound(fullpath);
+        }
     }
 
     return QString();

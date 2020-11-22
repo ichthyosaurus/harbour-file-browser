@@ -27,6 +27,16 @@
 #include <QDir>
 
 /**
+ * @brief The SearchType enum declares what kind of search will be started.
+ *
+ * @li FilesRecursive: search recursively for all files and folders
+ * @li DirectoriesShallow: search for matching folders in the current directory
+ */
+enum class SearchType {
+    FilesRecursive = 0, DirectoriesShallow
+};
+
+/**
  * @brief SearchWorker does searching in the background.
  */
 class SearchWorker : public QThread
@@ -37,14 +47,12 @@ public:
     explicit SearchWorker(QObject *parent = nullptr);
     ~SearchWorker();
 
-    void startSearch(QString directory, QString searchTerm);
+    void startSearch(QString directory, QString searchTerm, SearchType type);
 
     void cancel();
 
 signals: // signals, can be connected from a thread to another
-
     void progressChanged(QString directory);
-
     void matchFound(QString fullname);
 
     // one of these is emitted when thread ends
@@ -59,8 +67,10 @@ private:
         Cancelled = 0, NotCancelled = 1
     };
 
-    QString searchRecursively(QString directory, QString searchTerm);
+    QString searchFilesRecursive(QString directory, QString searchTerm);
+    QString searchDirectoriesShallow(QString directory, QString searchTerm);
 
+    SearchType m_type;
     QString m_directory;
     QString m_searchTerm;
     QAtomicInt m_cancelled; // atomic so no locks needed
