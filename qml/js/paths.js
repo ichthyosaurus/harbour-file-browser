@@ -48,5 +48,9 @@ function formatPathForSearch(path) {
 }
 
 function unicodeArrow() {
-    return "\u2192"; // unicode for right pointing arrow symbol (for links)
+    return "\u2192"; // unicode symbol: right pointing arrow (for links)
+}
+
+function unicodeBrokenArrow() {
+    return "\u219b"; // unicode symbol: right pointing arrow with stroke (for broken links)
 }

@@ -116,7 +116,7 @@ Page {
                 onClicked: {
                     if (!fileData.isSafeToOpen()) {
                         notificationPanel.showTextWithTimer(qsTr("File cannot be opened"),
-                                                   qsTr("This type of file cannot be opened."));
+                                                            qsTr("This type of file cannot be opened."));
                         return;
                     }
                     consoleModel.executeCommand("xdg-open", [ page.file ])
@@ -132,108 +132,100 @@ Page {
 
         Column {
             id: column
-            anchors.left: parent.left
-            anchors.right: parent.right
-
-            PageHeader {
-                title: Paths.formatPathForTitle(fileData.absolutePath)
-            }
+            anchors { left: parent.left; right: parent.right }
+            PageHeader { title: Paths.formatPathForTitle(fileData.absolutePath) }
+            spacing: 0
 
             // file info texts, visible if error is not set
             Column {
+                id: infoColumn
                 visible: fileData.errorMessage === ""
                 x: Theme.horizontalPageMargin
                 width: parent.width - 2*x
 
-                IconButton {
-                    id: playButton
-                    visible: fileData.category === "audio"
-                    icon.source: audioPlayer.playbackState !== MediaPlayer.PlayingState ?
-                                     "image://theme/icon-l-play" :
-                                     "image://theme/icon-l-pause"
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    onClicked: playAudio();
-                    MediaPlayer { // prelisten of audio
-                        id: audioPlayer
-                        source: ""
-                    }
-                }
-                Spacer { height: Theme.paddingMedium; visible: playButton.visible } // fix to playButton height
                 // clickable icon and filename
                 BackgroundItem {
                     id: openButton
                     x: -parent.x
                     width: parent.width + 2*parent.x
                     height: openArea.height
-                    onClicked: viewContents(false, false)
+                    onClicked: playButton.visible ? playAudio() : viewContents(false, false)
 
                     Column {
                         id: openArea
-                        x: -parent.x
-                        width: parent.width - 2*(-parent.x)
+                        x: infoColumn.x
+                        width: parent.width - 2*infoColumn.x
+                        spacing: 0
+
+                        Spacer { height: Theme.paddingMedium }
+                        IconButton {
+                            id: playButton
+                            visible: fileData.category === "audio"
+                            icon.source: audioPlayer.playbackState !== MediaPlayer.PlayingState ?
+                                             "image://theme/icon-l-play" :
+                                             "image://theme/icon-l-pause"
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            height: Theme.iconSizeLarge
+                            onClicked: openButton.clicked(mouse)
+                        }
+                        Spacer { height: Theme.paddingMedium; visible: playButton.visible }
 
                         Image { // preview of image, max height 400
                             id: imagePreview
                             visible: fileData.category === "image"
-                            source: visible ? fileData.file : "" // access source only if image is visible
-                            anchors.left: parent.left
-                            anchors.right: parent.right
-                            sourceSize.width: parent.width
-                            sourceSize.height: 4*Theme.itemSizeHuge
+                            source: visible ? fileData.file : ""
+                            anchors { left: parent.left; right: parent.right }
+                            sourceSize { width: parent.width; height: 4*Theme.itemSizeHuge }
                             width: parent.width
-                            height: implicitHeight < 400 * Theme.pixelRatio && implicitHeight != 0
-                                    ? implicitHeight * Theme.pixelRatio
-                                    : 400 * Theme.pixelRatio
+                            height: implicitHeight < (400*Theme.pixelRatio) && implicitHeight != 0
+                                    ? implicitHeight*Theme.pixelRatio
+                                    : 400*Theme.pixelRatio
                             fillMode: Image.PreserveAspectFit
                             asynchronous: true
                         }
                         FileIcon {
+                            visible: !imagePreview.visible && !playButton.visible
+                            anchors.horizontalCenter: parent.horizontalCenter
                             file: page.file
                             showThumbnail: visible
                             highlighted: openButton.highlighted
                             isDirectory: fileData.isDir
                             mimeTypeCallback: function() { return fileData.mimeType; }
                             fileIconCallback: function() { return fileData.icon; }
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            visible: !imagePreview.visible && !playButton.visible
                             width: 128 * Theme.pixelRatio
                             height: width
                         }
-                        Spacer { // spacing if image or play button is visible
-                            id: spacer
-                            height: 24
-                            visible: imagePreview.visible || playButton.visible
-                        }
+                        Spacer { height: Theme.paddingMedium }
                         Label {
-                            id: filename
-                            width: parent.width
                             text: fileData.name
+                            width: parent.width
                             textFormat: Text.PlainText
                             wrapMode: Text.Wrap
                             horizontalAlignment: Text.AlignHCenter
-                            color: openButton.highlighted ? Theme.highlightColor : Theme.primaryColor
+                            highlighted: openButton.highlighted
                         }
+                        Spacer { height: Theme.paddingSmall }
                         Label {
+                            text: (fileData.isSymLinkBroken ?
+                                       Paths.unicodeBrokenArrow() : Paths.unicodeArrow()
+                                   )+" "+fileData.symLinkTarget
                             visible: fileData.isSymLink
                             width: parent.width
-                            text: Paths.unicodeArrow()+" "+fileData.symLinkTarget
                             textFormat: Text.PlainText
                             wrapMode: Text.Wrap
                             horizontalAlignment: Text.AlignHCenter
                             font.pixelSize: Theme.fontSizeExtraSmall
-                            color: fileData.isSymLinkBroken ? "red" :
+                            color: fileData.isSymLinkBroken ? Theme.secondaryHighlightColor :
                                     (openButton.highlighted ? Theme.highlightColor
                                                             : Theme.primaryColor)
                         }
-                        Spacer { height: Theme.paddingLarge }
+                        Spacer { height: Theme.paddingMedium }
                     }
                 }
 
                 FileActions {
                     x: -parent.x
-                    selectedFiles: function() {
-                        return [file];
-                    }
+                    selectedFiles: function() { return [file] }
                     errorCallback: function(errorMsg) { notificationPanel.showTextWithTimer(errorMsg, ""); }
                     selectedCount: 1
                     labelText: ""
@@ -265,6 +257,7 @@ Page {
                         transferPanel.startTransfer(toTransfer, targets, selectedAction, goToTarget);
                     }
                 }
+                Spacer { height: 2*Theme.paddingMedium }
 
                 // Display metadata with priority < 5
                 Repeater {
@@ -342,6 +335,7 @@ Page {
         }
     }
 
+    MediaPlayer { id: audioPlayer; source: "" }
     RemorsePopup { id: remorsePopup }
     NotificationPanel { id: notificationPanel; page: page }
     ProgressPanel { id: progressPanel; page: page; onCancelled: engine.cancel() }
