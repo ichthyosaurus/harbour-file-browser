@@ -72,7 +72,21 @@ Item {
     Component.onCompleted: {
         var sizes = engine.fileSizeInfo(files);
         sizeLabel.text = (sizes[0] === "-" ? qsTr("unknown size") : sizes[0]);
-        dirCountLabel.text = qsTr("%n directories", "", parseInt(sizes[1], 10));
-        fileCountLabel.text = qsTr("%n file(s)", "", parseInt(sizes[2], 10));
+
+        var dirsCnt = parseInt(sizes[1], 10);
+        if (dirsCnt > 0) {
+            dirCountLabel.text = qsTr("%n directories", "", dirsCnt);
+        } else {
+            dirCountLabel.visible = false;
+            dirCountLabel.height = 0;
+        }
+
+        var filesCnt = parseInt(sizes[2], 10);
+        if (filesCnt > 0) {
+            fileCountLabel.text = qsTr("%n file(s)", "", filesCnt);
+        } else {
+            fileCountLabel.visible = false;
+            fileCountLabel.height = 0;
+        }
     }
 }

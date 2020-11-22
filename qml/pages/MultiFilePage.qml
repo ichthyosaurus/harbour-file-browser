@@ -113,6 +113,7 @@ Page {
                 }
 
                 DetailList {
+                    visible: values.length > 0
                     label: qsTr("Directories")
                     values: getDirectories()
                     maxEntries: 5
@@ -122,6 +123,7 @@ Page {
                 }
 
                 DetailList {
+                    visible: values.length > 0
                     label: qsTr("Files")
                     values: getFiles()
                     maxEntries: 5

@@ -251,9 +251,9 @@ Dialog {
                             }
                             property int files: fileData.filesCount
                             property int folders: fileData.dirsCount
-                            text: qsTr("%1 file(s)", "", files).arg(files)+ //: translate '0 files' as 'no files'
-                                  ", "+
-                                  qsTr("%1 folder(s)", "", folders).arg(folders) //: translate '0 folders' as 'no folders'
+                            text: (files > 0 ? qsTr("%n file(s)", "", files).arg(files) : "") + //: hidden if n=0
+                                  (files > 0 && folders > 0 ? ", " : "") +
+                                  (folders > 0 ? qsTr("%n folder(s)", "", folders).arg(folders) : "") //: hidden if n=0
                             color: highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
                             truncationMode: TruncationMode.Fade
                             opacity: excluded ? Theme.opacityLow : 1.0
