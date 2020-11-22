@@ -203,7 +203,7 @@ Page {
                     }
                     Label {
                         anchors.right: parent.right
-                        color: Theme.highlightColor
+                        color: Theme.primaryColor // interactive
                         text: "\u2022 \u2022 \u2022" // three dots
                     }
                 }
@@ -213,9 +213,12 @@ Page {
             Label {
                 x: Theme.horizontalPageMargin
                 width: parent.width - 2*x
-                text: qsTr("The source code is available at") + "\n" +
-                      "https://github.com/ichthyosaurus/harbour-file-browser"
+                text: '<style type="text/css">A { color: "%1"; }</style><p>'.arg(Theme.primaryColor) +
+                      qsTr("The source code is available at") + "<br>" +
+                      '<a href="%1">%1</a></p>'.arg(sourceCodeLink)
                 wrapMode: Text.Wrap
+                onLinkActivated: Qt.openUrlExternally(link)
+                textFormat: Text.RichText
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: Theme.highlightColor
             }
