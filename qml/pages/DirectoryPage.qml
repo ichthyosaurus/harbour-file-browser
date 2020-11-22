@@ -48,6 +48,12 @@ Page {
     property bool quickSearchEnabled: (settings.read("General/DefaultFilterAction", "filter") === "search")
     property string viewState: updateThumbnailsState() // state for list delegates
 
+    property string _fnElide: settings.read("General/FilenameElideMode", "fade")
+    property int nameTruncMode: _fnElide === 'fade' ? TruncationMode.Fade : TruncationMode.Elide
+    property int nameElideMode: nameTruncMode === TruncationMode.Fade ?
+                                    Text.ElideNone : (_fnElide === 'middle' ?
+                                                          Text.ElideMiddle : Text.ElideRight)
+
     signal clearViewFilter()
     signal multiSelectionStarted(var index)
     signal multiSelectionFinished(var index)
@@ -395,8 +401,15 @@ Page {
         onViewSettingsChanged: {
             if (localPath !== "" && localPath !== dir) return;
             updateThumbnailsState();
-            page.fullPathShown = (settings.read("General/ShowFullDirectoryPaths", "false") === "true");
-            page.quickSearchEnabled = (settings.read("General/DefaultFilterAction", "filter") === "search");
+        }
+        onSettingsChanged: {
+            if (key === 'General/FilenameElideMode') {
+                page._fnElide = settings.read("General/FilenameElideMode", "fade");
+            } else if (key === 'General/DefaultFilterAction') {
+                page.quickSearchEnabled = (settings.read("General/DefaultFilterAction", "filter") === "search");
+            } else if (key === 'General/ShowFullDirectoryPaths') {
+                page.fullPathShown = (settings.read("General/ShowFullDirectoryPaths", "false") === "true");
+            }
         }
     }
 

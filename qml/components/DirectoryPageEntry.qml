@@ -131,7 +131,8 @@ ListItem {
                 top: parent.top; topMargin: Theme.paddingSmall
             }
             text: filename
-            elide: Text.ElideRight
+            truncationMode: page.nameTruncMode
+            elide: page.nameElideMode
             color: fileItem.highlighted ? Theme.highlightColor : Theme.primaryColor
         }
 
@@ -172,14 +173,14 @@ ListItem {
                 states: [
                     State {
                         when: listLabelWidth >= 2*fileItem.width/3
-                        PropertyChanges { target: listLabel; wrapMode: Text.NoWrap; elide: Text.ElideRight; maximumLineCount: 1 }
+                        PropertyChanges { target: listLabel; wrapMode: Text.NoWrap; maximumLineCount: 1 }
                         PropertyChanges { target: sizeLabel; width: ((isLink && isDir) ? listLabelWidth : listLabelWidth/3); horizontalAlignment: Text.AlignLeft }
                         PropertyChanges { target: permsLabel; width: listLabelWidth/3; horizontalAlignment: Text.AlignHCenter }
                         PropertyChanges { target: datesLabel; width: listLabelWidth/3; horizontalAlignment: Text.AlignRight }
                     },
                     State {
                         when: listLabelWidth < 2*fileItem.width/3
-                        PropertyChanges { target: listLabel; wrapMode: Text.WrapAtWordBoundaryOrAnywhere; elide: Text.ElideRight; maximumLineCount: 2 }
+                        PropertyChanges { target: listLabel; wrapMode: Text.WrapAtWordBoundaryOrAnywhere; maximumLineCount: 2 }
                         PropertyChanges { target: sizeLabel; width: listLabelWidth; horizontalAlignment: Text.AlignLeft }
                         PropertyChanges { target: permsLabel; width: listLabelWidth; horizontalAlignment: Text.AlignLeft }
                         PropertyChanges { target: datesLabel; width: listLabelWidth; horizontalAlignment: Text.AlignLeft }
