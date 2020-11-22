@@ -84,6 +84,24 @@ Page {
                 busy = false
             }
             MenuItem {
+                text: qsTr("Create a new bookmark")
+                onClicked: {
+                    pageStack.push(Qt.resolvedUrl("../pages/GoToDialog.qml"),
+                                   { path: currentPath === "" ? StandardPaths.home : currentPath,
+                                       acceptCallback: function(path) {
+                                           if (!bookmarks_hasBookmark(path)) bookmarks_addBookmark(path)
+                                       },
+                                       customFilter: function(path) {
+                                           // exclude dirs that already have a bookmark
+                                           return !bookmarks_hasBookmark(path);
+                                       },
+                                       hideExcluded: false,
+                                       acceptText: qsTr("Save")
+                                   })
+                }
+            }
+
+            MenuItem {
                 text: qsTr("Refresh")
                 onClicked: pulley._refresh = true
             }
