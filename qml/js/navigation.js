@@ -39,8 +39,8 @@ function goToFolder(folder) {
 
     if (prevPage !== null) {
         console.log("- found previous page")
-        shared = _sharedStart([folder, cur]);
         cur = prevPage.dir
+        shared = _sharedStart([folder, cur]);
     }
 
     if (shared === folder) {
