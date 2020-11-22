@@ -24,10 +24,16 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 // This component displays a list of options on top of a page.
+// It has to be placed in the page root.
 Item {
     id: item
-    property int menuTop: Theme.itemSizeMedium
+    property string directory // directory to operate on
+    property int menuTop: 0 // top 'anchor' where the menu opens
+    readonly property bool active: !_contextMenu ? false : _contextMenu.active
+    readonly property int currentHeight: !_contextMenu ? 0 : _contextMenu.height
+    property alias flickable: backgroundEffect.baseFlickable
 
+    anchors.fill: parent
     property string _selectedMenu: ""
     property Item _contextMenu
 
@@ -41,6 +47,11 @@ Item {
         if (_selectedMenu != "" && _contextMenu) _contextMenu.close();
     }
 
+    DirectoryPopupBackground {
+        id: backgroundEffect
+        directoryPopup: item
+    }
+
     Column {
         anchors.fill: parent
         Spacer { height: menuTop }
@@ -48,7 +59,6 @@ Item {
         Rectangle {
             id: rect
             color: "transparent"
-//            opacity: Theme.highlightBackgroundOpacity
             width: parent.width
             height: _contextMenu ? _contextMenu.height : 0
         }

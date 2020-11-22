@@ -109,6 +109,7 @@ Page {
             id: pullDownMenu
             on_AtFinalPositionChanged: filterField.forceActiveFocus()
             onActiveChanged: filterField.focus = false
+            enabled: !dirPopup.active
 
             MenuItem {
                 text: qsTr("View Preferences")
@@ -305,8 +306,8 @@ Page {
 
     DirectoryPopup {
         id: dirPopup
-        anchors.fill: parent
-        menuTop: Theme.itemSizeMedium
+        directory: _activeDir
+        flickable: fileList
     }
 
     Connections {
