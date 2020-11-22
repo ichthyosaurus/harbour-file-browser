@@ -329,8 +329,10 @@ Page {
 
         Connections {
             target: selectionPanel.actions
-            onCloseTriggered: clearSelectedFiles();
-            onSelectAllTriggered: selectAllFiles();
+            onCloseTriggered: clearSelectedFiles()
+            onSelectAllTriggered: selectAllFiles()
+            onCutTriggered: clearSelectedFiles()
+            onCopyTriggered: clearSelectedFiles()
             onDeleteTriggered: {
                 var files = fileModel.selectedFiles();
                 remorsePopupActive = true;
