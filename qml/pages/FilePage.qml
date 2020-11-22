@@ -421,6 +421,11 @@ Page {
                          { title: Paths.lastPartOfPath(fileData.file),
                            command: "tar",
                            arguments: [ "tf", fileData.file ] });
+        } else if (fileData.category === "sqlite3") {
+            method(Qt.resolvedUrl("ConsolePage.qml"),
+                         { title: Paths.lastPartOfPath(fileData.file),
+                           command: "sqlite3",
+                           arguments: [ fileData.file, ".schema" ] });
         } else if (fileData.category === "image") {
             method(Qt.resolvedUrl("ViewImagePage.qml"), { path: page.file, title: fileData.name });
         } else if (fileData.category === "video") {

@@ -144,6 +144,8 @@ QString FileData::typeCategory() const
         return "pdf";
     } else if (mimeTypeInherits("application/zip")) {
         return "zip";
+    } else if (m_mimeTypeName == "application/vnd.sqlite3") {
+        return "sqlite3";
     } else if (
            m_mimeTypeName == "application/x-tar"
         || m_mimeTypeName == "application/x-compressed-tar"
