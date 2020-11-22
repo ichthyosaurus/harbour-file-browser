@@ -443,7 +443,7 @@ void FileModel::applyFilterString()
     int row = 0; int count = 0;
     while (iter.hasNext()) {
         StatFileInfo &info = iter.next();
-        bool match = info.fileName().contains(m_filterString);
+        bool match = info.fileName().contains(m_filterString, Qt::CaseInsensitive);
 
         if (   info.isMatched() != match
             || (!match && info.isSelected())) {
