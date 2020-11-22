@@ -20,7 +20,7 @@
  * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-﻿import QtQuick 2.0
+import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 // bottom dock panel to display file action icons
