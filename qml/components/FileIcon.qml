@@ -56,7 +56,10 @@ Item {
     HighlightImage { // not available in Sailfish 2
         color: Theme.primaryColor
         source: (!_doShowThumbnail || thumbnailImage.status === Thumbnail.Error) ?
-                    "../images/large-"+fileIconCallback()+".png" : ""
+                    (_thumbnailSize > Theme.iconSizeSmall ?
+                         "../images/large-"+fileIconCallback()+".png" :
+                         "../images/small-"+fileIconCallback()+".png") :
+                    ""
         width: _thumbnailSize
         height: width
         highlighted: parent.highlighted
