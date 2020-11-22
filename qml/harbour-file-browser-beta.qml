@@ -38,6 +38,10 @@ ApplicationWindow {
     readonly property bool runningAsRoot: engine.runningAsRoot()
     readonly property string sourceCodeLink: 'https://github.com/ichthyosaurus/harbour-file-browser'
 
+    // Navigation history: see navigation.js for details
+    property var backStack: ([])
+    property var forwardStack: ([])
+
     // Proxy functions for heavy libraries
     // The basic functions are proxied here. If more functions
     // are needed, the JS file should be loaded in the component.
