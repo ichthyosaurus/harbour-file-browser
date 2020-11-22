@@ -42,6 +42,7 @@ Dialog {
     property bool hideExcluded: false // hide or deactivate excluded suggestions?
 
     signal suggestionSelected(var filename)
+    signal pathReplaced(var newPath)
 
     canAccept: path !== "" && _isReady
     property bool _isReady: false
@@ -98,6 +99,11 @@ Dialog {
             // given text as the search query
             function update(text) {
                 clear();
+                // placeholder entry: will be replaced by 'remove last part of path'
+                listModel.append({ fullname: '(dummy)', filename: '/', absoluteDir: '/',
+                                     fileIcon: '', fileKind: '', mimeType: '',
+                                     excluded: false, isSelected: false
+                                 });
                 searchEngine.filterDirectories(text);
                 console.log("dir filter started:", text);
             }
@@ -133,7 +139,9 @@ Dialog {
 
                 Component.onCompleted: {
                     forceActiveFocus() // grab focus when the page is openend
-                    text = path+"/" // set initial text
+                    path = path.replace(/\/+/g, '/')
+                    path = path.replace(/\/$/, '')+'/'
+                    text = path // set initial text
                 }
 
                 onTextChanged: {
@@ -164,7 +172,14 @@ Dialog {
                 Connections {
                     target: dialog
                     onSuggestionSelected: {
-                        pathField.text = Paths.dirName(path)+filename+"/"
+                        var newPath = '/'+Paths.dirName(path)+filename+'/';
+                        newPath = newPath.replace(/\/+/g, '/')
+                        pathField.text = newPath
+                        pathField.forceActiveFocus()
+                    }
+                    onPathReplaced: {
+                        path = newPath
+                        pathField.text = newPath
                         pathField.forceActiveFocus()
                     }
                 }
@@ -179,21 +194,44 @@ Dialog {
                         width: dialog.width
                         // contentHeight: Theme.itemSizeMedium // two line delegate
                         contentHeight: Theme.itemSizeSmall // single line delegate
-                        onClicked: dialog.suggestionSelected(filename)
                         enabled: !excluded
+                        onClicked: {
+                            if (index > 0) {
+                                dialog.suggestionSelected(filename)
+                            } else {
+                                var newPath = path;
+                                newPath = newPath.replace(/\/$/, '')
+                                newPath = '/'+Paths.dirName(newPath)
+                                newPath = newPath.replace(/\/+/g, '/')
+                                pathReplaced(newPath)
+                            }
+                        }
 
                         // we don't want this to be animated because the list changes to quickly
                         // ListView.onRemove: animateRemoval(listItem)
                         FileData { id: fileData }
+
+                        Icon {
+                            visible: index == 0
+                            source: "image://theme/icon-m-backspace"
+                            anchors {
+                                right: upper.left; rightMargin: Theme.paddingMedium
+                                verticalCenter: upper.verticalCenter
+                            }
+                        }
 
                         Label {
                             id: upper
                             anchors {
                                 left: parent.left; leftMargin: _searchLeftMargin
                                 right: parent.right; rightMargin: Theme.horizontalPageMargin
-                                bottom: parent.verticalCenter
+                                bottom: index > 0 ? parent.verticalCenter : parent.bottom
+                                top: index > 0 ? null : parent.top
                             }
-                            text: Theme.highlightText(filename, dialog._pathRegex, Theme.highlightColor)
+                            verticalAlignment: index > 0 ? Text.AlignBottom : Text.AlignVCenter
+                            text: index > 0 ?
+                                      Theme.highlightText(filename, dialog._pathRegex, Theme.highlightColor) :
+                                      qsTr("Remove last part")
                             truncationMode: _nameTruncMode
                             elide: _nameElideMode
                             textFormat: Text.StyledText
@@ -205,6 +243,7 @@ Dialog {
 
                         Label {
                             id: infoLabel
+                            visible: index > 0
                             anchors {
                                 left: parent.left; leftMargin: _searchLeftMargin
                                 right: parent.right; rightMargin: Theme.horizontalPageMargin
