@@ -2,10 +2,40 @@
 
 ## Unreleased
 
- * Updated translations: Spanish, Swedish, Chinese
+ * Updated translations: Spanish, Swedish, Chinese, German, English (thanks to contributors!)
+ * Implemented navigation history: use the directory popup to navigate back and forward (see below)
+ * Added support for adding shortcuts to a manually entered path (bottom pulley on the shortcuts page)
+ * Added support for adding custom transfer targets by path (top pulley in the transfer dialog)
+ * Added a new directory popup (similar to the old one from version <= 1.8.0)
+ *   - open it by tapping on the page title in a directory listing
+ *   - navigation history: go back, forward, and up ("up" is the same as swiping left)
+ *   - quickly toggle viewing hidden files
+ *   - edit the current path (or e.g. paste a path from clipboard)
+ * Added setting on how to abbreviate/elide filenames
+ * Added preview for SQLite databases
+ * Improved performance on many pages (directory listings, search, shortcuts, navigation, ...)
+ * Fixed a large amount of visual bugs, inconsistencies, and papercuts
+ * Fixed many small bugs concerning edge cases in nagivation, settings, etc.
+ * Fixed accidentally opening the keyboard when switching to the sort/view settings
+ * Allowed rotating all pages (it is still not working perfectly, but this might be a bug in the system)
+ * Fixed handling selections: selections will be cleared less often, e.g. helping with sorting files
+ * Fixed filtering files case-insensitively
+ * Fixed keeping search results without restarting the search after checking a file
+ * Implemented rudimentary video error handling (when previewing files)
+ * Improved error handling in file previews (rpm, sqlite, zip, ...)
+ * Improved file type detection and file icons
+ * Improved support for thumbnails (e.g. PDF and video files can have thumbnails now)
  * Added and improved documentation
- * Clarified licenses in source files: GPL v3 (or later) for code, CC-BY-SA 4.0 for graphics
- * Restructured development environment
+ * Clarified licenses: GPL v3 (or later) for code, CC-BY-SA 4.0 for graphics
+ * Prepared for first non-beta release in Jolla store
+
+ For developers:
+
+ * Restructured the development environment
+ * Implemented a new versatile dialog for manually entering paths, including completion suggestions
+ * Implemented different search types in the search engine
+ * Added support for limiting the amount of search results
+ * Added directory info properties to the file data backend
 
 ## Version 2.2.2-beta (2020-05-29)
 
