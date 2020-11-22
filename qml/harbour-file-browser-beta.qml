@@ -25,6 +25,7 @@ import Sailfish.Silica 1.0
 
 import "pages"
 import "js/navigation.js" as Navigation
+import "js/bookmarks.js" as Bookmarks
 
 ApplicationWindow {
     id: main
@@ -36,6 +37,18 @@ ApplicationWindow {
     readonly property string versionString: qsTr("Version %1").arg(APP_VERSION+"-"+APP_RELEASE)
     readonly property bool runningAsRoot: engine.runningAsRoot()
     readonly property string sourceCodeLink: 'https://github.com/ichthyosaurus/harbour-file-browser'
+
+    // Proxy functions for heavy libraries
+    // The basic functions are proxied here. If more functions
+    // are needed, the JS file should be loaded in the component.
+    function navigate_goToFolder(folder) { return Navigation.goToFolder(folder); }
+    function navigate_goBack() { return Navigation.goBack(); }
+    function navigate_goForward() { return Navigation.goForward(); }
+    function navigate_canGoBack() { return Navigation.canGoBack(); }
+    function navigate_canGoForward() { return Navigation.canGoForward(); }
+    function bookmarks_hasBookmark(path) { return Bookmarks.hasBookmark(path); }
+    function bookmarks_addBookmark(path, name) { return Bookmarks.addBookmark(path, name); }
+    function bookmarks_removeBookmark(path) { return Bookmarks.removeBookmark(path); }
 
     property string coverText: "File Browser"
     cover: Qt.resolvedUrl("cover/FileBrowserCover.qml")
