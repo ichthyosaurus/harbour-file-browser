@@ -98,6 +98,6 @@ void SearchEngine::startSearch(QString searchTerm, SearchType type)
     if (type == SearchType::DirectoriesShallow || !searchTerm.isEmpty()) {
         m_searchWorker->cancel();
         m_searchWorker->wait();
-        m_searchWorker->startSearch(m_dir, searchTerm, type);
+        m_searchWorker->startSearch(m_dir, searchTerm, type, m_maxResults);
     }
 }

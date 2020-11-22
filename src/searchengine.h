@@ -36,6 +36,7 @@ class SearchEngine : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString dir READ dir() WRITE setDir(QString) NOTIFY dirChanged())
+    Q_PROPERTY(int maxResults MEMBER m_maxResults NOTIFY maxResultsChanged)
     Q_PROPERTY(bool running READ running() NOTIFY runningChanged())
 
 public:
@@ -54,6 +55,7 @@ public:
 
 signals:
     void dirChanged();
+    void maxResultsChanged();
     void runningChanged();
 
     void progressChanged(QString directory);
@@ -67,6 +69,7 @@ private slots:
 
 private:
     void startSearch(QString searchTerm, SearchType type);
+    int m_maxResults = {0}; // <= 0 for no restriction
     QString m_dir;
     QString m_errorMessage;
     SearchWorker *m_searchWorker;
