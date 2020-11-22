@@ -72,6 +72,11 @@ Page {
                     if (status === Image.Ready) {
                         fitToScreen()
                         loadedAnimation.start()
+                        statusLoader.sourceComponent = undefined
+                    } else if (status === Image.Loading) {
+                        statusLoader.sourceComponent = loadingIndicator
+                    } else if (status === Image.Error) {
+                        statusLoader.sourceComponent = failedLoading
                     }
                 }
 
@@ -197,53 +202,45 @@ Page {
     }
 
     Loader {
+        id: statusLoader
         anchors.centerIn: parent
-        sourceComponent: {
-            switch (image.status) {
-            case Image.Loading:
-                return loadingIndicator
-            case Image.Error:
-                return failedLoading
-            default:
-                return undefined
+        sourceComponent: undefined
+    }
+
+    Component {
+        id: loadingIndicator
+
+        Item {
+            height: childrenRect.height
+            width: page.width
+
+            BusyIndicator {
+                id: imageLoadingIndicator
+                anchors.horizontalCenter: parent.horizontalCenter
+                running: true
             }
-        }
 
-        Component {
-            id: loadingIndicator
-
-            Item {
-                height: childrenRect.height
-                width: page.width
-
-                BusyIndicator {
-                    id: imageLoadingIndicator
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    running: true
-                }
-
-                Text {
-                    anchors {
-                        horizontalCenter: parent.horizontalCenter
-                        top: imageLoadingIndicator.bottom; topMargin: Theme.paddingLarge
-                    }
-                    font.pixelSize: Theme.fontSizeSmall;
-                    color: Theme.highlightColor;
-                    text: qsTr("Loading image... %1").arg(Math.round(image.progress*100) + "%")
-                }
-            }
-        }
-
-        Component {
-            id: failedLoading
             Text {
-                width: page.width - 2*Theme.horizontalPageMargin
-                wrapMode: Text.Wrap
-                textFormat: Text.PlainText
-                font.pixelSize: Theme.fontSizeMedium
-                text: qsTr("Error loading image")
-                color: Theme.highlightColor
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                    top: imageLoadingIndicator.bottom; topMargin: Theme.paddingLarge
+                }
+                font.pixelSize: Theme.fontSizeSmall;
+                color: Theme.highlightColor;
+                text: qsTr("Loading image... %1").arg(Math.round(image.progress*100) + "%")
             }
+        }
+    }
+
+    Component {
+        id: failedLoading
+        Text {
+            width: page.width - 2*Theme.horizontalPageMargin
+            wrapMode: Text.Wrap
+            textFormat: Text.PlainText
+            font.pixelSize: Theme.fontSizeMedium
+            text: qsTr("Error loading image")
+            color: Theme.highlightColor
         }
     }
 }
