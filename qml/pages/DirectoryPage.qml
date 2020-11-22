@@ -154,20 +154,20 @@ Page {
                     background: null
                     onTextChanged: page.currentFilter = text;
 
-                     EnterKey.enabled: true
-                     EnterKey.iconSource: "image://theme/icon-m-enter-accept"
-                     EnterKey.onClicked: {
-                         if (page.quickSearchEnabled) {
-                             pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
-                                 { dir: page.dir, searchText: filterField.text,
-                                   startImmediately: true });
-                         } else {
-                             pullDownMenu.close();
-                         }
-                     }
-                     Component.onCompleted: {
-                         page.clearViewFilter.connect(function() { text = ""; })
-                     }
+                    EnterKey.enabled: true
+                    EnterKey.iconSource: "image://theme/icon-m-enter-accept"
+                    EnterKey.onClicked: {
+                        if (page.quickSearchEnabled) {
+                            pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
+                                           { dir: page.dir, searchText: filterField.text,
+                                               startImmediately: true });
+                        } else {
+                            pullDownMenu.close();
+                        }
+                    }
+                    Component.onCompleted: {
+                        page.clearViewFilter.connect(function() { text = ""; })
+                    }
                 }
 
                 IconButton {
