@@ -42,6 +42,9 @@ QString suffixToIconName(QString suffix)
         || suffix == "opus"
         || suffix == "m4a") return "file-audio";
     if (   suffix == "mp4"
+        || suffix == "mkv"
+        || suffix == "ogv"
+        || suffix == "avi"
         || suffix == "m4v") return "file-video";
     if (suffix == "pdf") return "file-pdf";
     if (   suffix == "zip"
