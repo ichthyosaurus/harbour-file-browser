@@ -37,6 +37,7 @@ Page {
     property string searchText: "" // holds the initial search text
     property bool startImmediately: false // if search text is given, start search as soon as page is ready
 
+    property bool _initialSearchDone: false
     property string _fnElide: settings.read("General/FilenameElideMode", "fade")
     property int nameTruncMode: _fnElide === 'fade' ? TruncationMode.Fade : TruncationMode.Elide
     property int nameElideMode: nameTruncMode === TruncationMode.Fade ?
@@ -86,8 +87,6 @@ Page {
 
         model: ListModel {
             id: listModel
-            Component.onCompleted: update("")
-
             // updates the model by clearing all data and starting
             // searchEngine search() method asynchronously, using the
             // given text as the search query
@@ -352,6 +351,10 @@ Page {
         }
     }
 
+    function clearCover() {
+        coverText = qsTr("Search");
+    }
+
     // a bit hackery: these are called from selection panel
     function selectedFiles() {
         var list = [];
@@ -409,21 +412,6 @@ Page {
                 if (remorsePopupActive) return;
                 if (transferPanel.status === Loader.Ready) transferPanel.item.startTransfer(toTransfer, targets, selectedAction, goToTarget);
                 else notificationPanel.showText(qsTr("Internally not ready"), qsTr("Please simply try again"));
-            }
-        }
-    }
-
-    // update cover
-    onStatusChanged: {
-        // clear file selections when the directory is changed
-        clearSelectedFiles();
-
-        if (status === PageStatus.Activating)
-            clearCover();
-
-        if (status === PageStatus.Active) {
-            if (startImmediately === true && searchText !== "") {
-                listModel.update(searchText);
             }
         }
     }
@@ -489,7 +477,15 @@ Page {
         }
     }
 
-    function clearCover() {
-        coverText = qsTr("Search");
+    onStatusChanged: {
+        if (_initialSearchDone) return;
+        if (status === PageStatus.Activating) {
+            clearSelectedFiles();
+            clearCover();
+        } else if (status === PageStatus.Active &&
+                   startImmediately === true && searchText !== "") {
+            listModel.update(searchText);
+            _initialSearchDone = true;
+        }
     }
 }
