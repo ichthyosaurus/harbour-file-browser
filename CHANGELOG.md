@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+ * Nothing so far
+
+## Version 2.3.0-beta (2020-11-22)
+
+Published in OpenRepos on 2020-11-22 by ichthyosaurus.
+
  * Updated translations: Spanish, Swedish, Chinese, German, English (thanks to contributors!)
  * Implemented navigation history: use the directory popup to navigate back and forward (see below)
  * Added support for adding shortcuts to a manually entered path (bottom pulley on the shortcuts page)
