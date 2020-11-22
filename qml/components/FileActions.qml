@@ -98,6 +98,7 @@ Item {
             enabled: base.enabled; icon.width: itemSize; icon.height: itemSize
             icon.source: displayClose ? "image://theme/icon-m-clear"
                                       : "../images/toolbar-select-all.png"
+                                   // : "image://theme/icon-m-select-all" -- does not feel intuitive
             icon.color: Theme.primaryColor
             onPressAndHold: {
                 if (displayClose) labelText = qsTr("clear selection");
