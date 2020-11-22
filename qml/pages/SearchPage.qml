@@ -81,8 +81,6 @@ Page {
         opacity: visible ? 1 : 0
         Behavior on opacity { NumberAnimation { duration: 300 } }
 
-        clip: true
-
         // prevent newly added list delegates from stealing focus away from the search field
         currentIndex: -1
 
@@ -224,7 +222,6 @@ Page {
 
             FileIcon {
                 id: listIcon
-                clip: true
                 anchors.verticalCenter: parent.verticalCenter
                 x: Theme.paddingLarge
                 width: Theme.itemSizeSmall

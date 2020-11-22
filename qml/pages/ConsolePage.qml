@@ -55,7 +55,6 @@ Page {
         flickableDirection: "HorizontalFlick"
         contentWidth: itemList.contentWidth
         HorizontalScrollDecorator { flickable: horizontalFlick }
-        clip: true
 
         anchors {
             top: header.bottom

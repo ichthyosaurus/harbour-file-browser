@@ -77,7 +77,6 @@ Page {
         id: fileList
         anchors.fill: parent
         anchors.bottomMargin: selectionPanel.visible ? selectionPanel.visibleSize : 0
-        clip: true
 
         visible: true
         opacity: visible ? 1 : 0

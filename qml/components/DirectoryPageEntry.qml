@@ -88,7 +88,6 @@ ListItem {
         FileIcon {
             id: listIcon
             x: Theme.paddingLarge
-            clip: true
             anchors.verticalCenter: listLabel.verticalCenter
             width: Theme.iconSizeSmall; height: width
             showThumbnail: false
