@@ -23,6 +23,9 @@ import Sailfish.Silica 1.0
 import "../components"
 
 Page {
+    // update cover
+    onStatusChanged: if (status === PageStatus.Activating) main.coverText = qsTr("Contributors")
+
     SilicaFlickable {
         anchors.fill: parent
         contentHeight: column.height + 2*Theme.paddingLarge
