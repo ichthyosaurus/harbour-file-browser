@@ -94,6 +94,8 @@ function goToFolder(folder, silent) {
     console.log("switching to:", folder)
     var pagePath = Qt.resolvedUrl("../pages/DirectoryPage.qml");
     var cur = "", shared = "", rest = "", basePath = "", sourceDir = "", above = null;
+    folder = folder.replace(/\/+/g, '/')
+    folder = folder.replace(/\/$/, '')
 
     if (pageStack.currentPage.hasOwnProperty("dir")) {
         sourceDir = pageStack.currentPage.dir;
