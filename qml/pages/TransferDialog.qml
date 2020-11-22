@@ -66,7 +66,7 @@ Dialog {
                         var start = Paths.dirName(toTransfer[0])
                         start = start.replace(/\/+/g, '/')
                         start = start.replace(/\/$/, '')
-                        pageStack.push(Qt.resolvedUrl("../pages/GoToDialog.qml"),
+                        pageStack.push(Qt.resolvedUrl("../pages/PathEditDialog.qml"),
                                        { path: toTransfer.length === 0 ? StandardPaths.home :
                                                                          start,
                                            acceptCallback: function(path) {
