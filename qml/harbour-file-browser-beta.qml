@@ -29,6 +29,8 @@ import "js/bookmarks.js" as Bookmarks
 
 ApplicationWindow {
     id: main
+    allowedOrientations: defaultAllowedOrientations
+
     signal bookmarkAdded(var path)
     signal bookmarkRemoved(var path)
     signal bookmarkMoved(var path)
