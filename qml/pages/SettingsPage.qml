@@ -132,6 +132,7 @@ Page {
                     property alias defaultTransfer: b1.currentIndex
                     property alias defaultFilter: b2.currentIndex
                     property alias showFullPaths: b3.checked
+                    property alias filenameElideMode: b4.currentIndex
 
                     ComboBox {
                         id: b1; width: parent.width
@@ -154,6 +155,17 @@ Page {
                             MenuItem { text: qsTr("start recursive search"); property string action: "search"; }
                         }
                         onValueChanged: settings.write("General/DefaultFilterAction", currentItem.action);
+                    }
+                    ComboBox {
+                        id: b4; width: parent.width
+                        label: qsTr("File name abbreviation")
+                        currentIndex: -1
+                        menu: ContextMenu {
+                            MenuItem { text: qsTr("fade out"); property string action: "fade"; }
+                            MenuItem { text: qsTr("elide end"); property string action: "end"; }
+                            MenuItem { text: qsTr("elide middle"); property string action: "middle"; }
+                        }
+                        onValueChanged: settings.write("General/FilenameElideMode", currentItem.action);
                     }
                     TextSwitch {
                         id: b3; text: qsTr("Show full directory paths")
@@ -259,6 +271,12 @@ Page {
             if (defFilter === "filter") behaviourGroup.contentItem.defaultFilter = 0;
             else if (defFilter === "search") behaviourGroup.contentItem.defaultFilter = 1;
             else behaviourGroup.contentItem.defaultFilter = 0;
+
+            var elideMode = settings.read("General/FilenameElideMode", "fade");
+            if (elideMode === "fade") behaviourGroup.contentItem.filenameElideMode = 0;
+            else if (elideMode === "end") behaviourGroup.contentItem.filenameElideMode = 1;
+            else if (elideMode === "middle") behaviourGroup.contentItem.filenameElideMode = 2;
+            else behaviourGroup.contentItem.filenameElideMode = 0;
 
             var thumbSize = settings.read("View/PreviewsSize", "medium");
             if (thumbSize === "small") viewGroup.contentItem.thumbSize = 0;

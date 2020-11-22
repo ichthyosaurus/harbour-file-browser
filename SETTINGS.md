@@ -7,6 +7,7 @@
 | **`[General]`**                    |               |                                               |
 | `DefaultFilterAction`              | `filter`      | `filter`/`search`                             |
 | `ShowFullDirectoryPaths`           | `false`       | bool                                          |
+| `FilenameElideMode`                | `fade`        | `fade`/`end`/`middle`                         |
 | **`[Transfer]`**                   |               |                                               |
 | `DefaultAction`                    | `none`        | `copy`/`move`/`link`/`none`                   | `default-transfer-action`
 | **`[View]`**                       |               |                                               |
