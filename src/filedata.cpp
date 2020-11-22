@@ -123,22 +123,11 @@ bool FileData::mimeTypeInherits(QString parentMimeType) const
 
 QString FileData::typeCategory() const
 {
-    if (   m_mimeTypeName == "image/jpeg"
-        || m_mimeTypeName == "image/png"
-        || m_mimeTypeName == "image/gif") {
+    if (m_mimeTypeName.startsWith("image/")) {
         return "image";
-    } else if (
-           m_mimeTypeName == "audio/x-wav"
-        || m_mimeTypeName == "audio/mpeg"
-        || m_mimeTypeName == "audio/ogg"
-        || m_mimeTypeName == "audio/x-vorbis+ogg"
-        || m_mimeTypeName == "audio/x-opus+ogg"
-        || m_mimeTypeName == "audio/flac"
-        || m_mimeTypeName == "audio/mp4") {
+    } else if (m_mimeTypeName.startsWith("audio/")) {
         return "audio";
-    } else if (
-           m_mimeTypeName == "video/quicktime"
-        || m_mimeTypeName == "video/mp4") {
+    } else if (m_mimeTypeName.startsWith("video/")) {
         return "video";
     } else if (m_mimeTypeName == "application/pdf") {
         return "pdf";
