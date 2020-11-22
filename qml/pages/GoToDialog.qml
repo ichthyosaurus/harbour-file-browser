@@ -28,11 +28,16 @@ import "../js/paths.js" as Paths
 Dialog {
     id: dialog
     allowedOrientations: Orientation.All
+    property string path
 
     // set this to a function(var newPath) that is
     // called when the dialog is accepted
     property var acceptCallback
-    property string path
+
+    // set this to a function(var path) that decides
+    // whether or not to include 'path' as suggestion
+    property var customFilter
+    property bool hideExcluded: false // hide or deactivate excluded suggestions?
 
     onAccepted: {
         if (acceptCallback) {
@@ -60,10 +65,21 @@ Dialog {
         maxResults: 20 // TODO is this expected behaviour?
         onDirChanged: console.log("new dir", dir)
         onMatchFound: {
+            var excluded = false;
+            if (customFilter && !customFilter(fullname)) {
+                if (!hideExcluded) {
+                    excluded = true;
+                } else {
+                    console.log("math excluded:", filename);
+                    return;
+                }
+            }
+
             listModel.append({ fullname: fullname, filename: filename,
                                  absoluteDir: absoluteDir,
                                  fileIcon: fileIcon, fileKind: fileKind,
-                                 isSelected: false, mimeType: mimeType
+                                 isSelected: false, mimeType: mimeType,
+                                 excluded: excluded
                              });
             console.log("match added:", filename);
         }
@@ -168,6 +184,7 @@ Dialog {
                         // contentHeight: Theme.itemSizeMedium // two line delegate
                         contentHeight: Theme.itemSizeSmall // single line delegate
                         onClicked: dialog.suggestionSelected(filename)
+                        enabled: !excluded
 
                         // we don't want this to be animated because the list changes to quickly
                         // ListView.onRemove: animateRemoval(listItem)
@@ -184,6 +201,10 @@ Dialog {
                             truncationMode: _nameTruncMode
                             elide: _nameElideMode
                             textFormat: Text.StyledText
+                            color: excluded ? Theme.secondaryColor :
+                                              (upper.highlighted ? Theme.highlightColor :
+                                                                   Theme.primaryColor)
+                            opacity: excluded ? Theme.opacityLow : 1.0
                         }
 
                         Label {
@@ -200,6 +221,7 @@ Dialog {
                                   qsTr("%1 folder(s)", "", folders).arg(folders) //: translate '0 folders' as 'no folders'
                             color: highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
                             truncationMode: TruncationMode.Fade
+                            opacity: excluded ? Theme.opacityLow : 1.0
 
                             Component.onCompleted: {
                                 fileData.file = fullname
