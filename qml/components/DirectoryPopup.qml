@@ -70,11 +70,14 @@ Item {
             // delayed action so that menu has already closed when page transition happens
             onClosed: {
                 if (_selectedMenu === "back") {
-                    console.log("BACK requested")
+                    console.log("DirPopup: go back")
+                    navigate_goBack()
                 } else if (_selectedMenu === "up") {
-                    console.log("UP requested")
+                    console.log("DirPopup: go up")
+                    pageStack.pop()
                 } else if (_selectedMenu === "forward") {
-                    console.log("FORWARD requested")
+                    console.log("DirPopup: go forward")
+                    navigate_goForward()
                 } else if (_selectedMenu === "editPath") {
                     console.log("EDIT PATH requested")
                 } else if (_selectedMenu === "showHidden") {
@@ -87,22 +90,29 @@ Item {
                 anchors { left: parent.left; right: parent.right }
                 height: normalMenuItem.height
                 BackgroundItem {
-                    width: parent.width/3
-                    contentHeight: parent.height
-                    Label { text: qsTr("<"); anchors.centerIn: parent; highlighted: parent.highlighted }
+                    width: parent.width/3; contentHeight: parent.height
                     onClicked: _selectedMenu = "back"
+                    enabled: navigate_canGoBack()
+                    opacity: enabled ? 1.0 : Theme.opacityLow
+                    Icon { source: "image://theme/icon-m-back"; anchors.centerIn: parent }
                 }
                 BackgroundItem {
-                    width: parent.width/3
-                    contentHeight: parent.height
-                    Label { text: qsTr("^"); anchors.centerIn: parent; highlighted: parent.highlighted }
+                    width: parent.width/3; contentHeight: parent.height
                     onClicked: _selectedMenu = "up"
+                    enabled: pageStack.previousPage() !== null
+                    opacity: enabled ? 1.0 : Theme.opacityLow
+                    Icon {
+                        source: "image://theme/icon-m-back"
+                        anchors.centerIn: parent
+                        rotation: 90
+                    }
                 }
                 BackgroundItem {
-                    width: parent.width/3
-                    contentHeight: parent.height
-                    Label { text: qsTr(">"); anchors.centerIn: parent; highlighted: parent.highlighted }
+                    width: parent.width/3; contentHeight: parent.height
                     onClicked: _selectedMenu = "forward"
+                    enabled: navigate_canGoForward()
+                    opacity: enabled ? 1.0 : Theme.opacityLow
+                    Icon { source: "image://theme/icon-m-forward"; anchors.centerIn: parent }
                 }
             }
 
