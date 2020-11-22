@@ -195,7 +195,7 @@ Page {
                     Label {
                         width: parent.width
                         color: Theme.highlightColor
-                        text: qsTr("This beta version of File Browser is released under the terms of the GNU GPL version 3 or later. "+
+                        text: qsTr("File Browser is released under the terms of the GNU GPL version 3 or later. "+
                                    "This is free software: you are free to change and redistribute it. "+
                                    "There is no warranty, to the extent permitted by law.")
                         wrapMode: Text.Wrap
