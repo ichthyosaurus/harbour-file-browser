@@ -409,7 +409,7 @@ Page {
         if (fileData.category === "zip") {
             showConsolePage(method, "unzip", [ "-Z", "-2ht", fileData.file ]);
         } else if (fileData.category === "rpm") {
-            showConsolePage(method, "rpppppppm", [ "-qlp", "--info", fileData.file ]);
+            showConsolePage(method, "rpm", [ "-qlp", "--info", fileData.file ]);
         } else if (fileData.category === "tar") {
             showConsolePage(method, "tar", [ "tf", fileData.file ]);
         } else if (fileData.category === "sqlite3") {
