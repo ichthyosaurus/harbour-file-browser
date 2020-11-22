@@ -28,7 +28,6 @@ import harbour.file.browser.ConsoleModel 1.0
 import QtMultimedia 5.0
 
 import "../components"
-import "../js/navigation.js" as Navigation
 import "../js/paths.js" as Paths
 
 Page {
@@ -126,7 +125,7 @@ Page {
             MenuItem {
                 text: qsTr("Go to Target")
                 visible: fileData.isSymLink && fileData.isDir
-                onClicked: Navigation.goToFolder(fileData.symLinkTarget);
+                onClicked: navigate_goToFolder(fileData.symLinkTarget);
             }
         }
 
@@ -359,8 +358,8 @@ Page {
         if (fileData.isDir) {
             // dirs are special cases - there's no way to display their contents, so go to them
             if (asAttached === true) return; // don't try to switch to them in an attached page
-            if (fileData.isSymLink) Navigation.goToFolder(fileData.symLinkTarget);
-            else Navigation.goToFolder(fileData.file);
+            if (fileData.isSymLink) navigate_goToFolder(fileData.symLinkTarget);
+            else navigate_goToFolder(fileData.file);
             return;
         }
 

@@ -22,7 +22,6 @@ import QtQuick 2.2
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
 
-import "../js/navigation.js" as Navigation
 import "../js/paths.js" as Paths
 import "../components"
 
@@ -39,7 +38,7 @@ Page {
     ShortcutsList {
         id: shortcutsView
         anchors.fill: parent
-        onItemClicked: Navigation.goToFolder(path)
+        onItemClicked: navigate_goToFolder(path)
 
         header: PageHeader { title: qsTr("Places") }
         footer: Spacer { id: footerSpacer }

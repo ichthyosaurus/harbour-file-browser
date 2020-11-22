@@ -25,7 +25,6 @@ import Sailfish.Silica 1.0
 import harbour.file.browser.SearchEngine 1.0
 
 import "../components"
-import "../js/navigation.js" as Navigation
 import "../js/paths.js" as Paths
 
 Page {
@@ -333,7 +332,7 @@ Page {
                      onActiveChanged: { remorsePopup.cancel(); clearSelectedFiles(); }
                      MenuItem {
                          text: qsTr("Go to containing folder")
-                         onClicked: Navigation.goToFolder(model.absoluteDir)
+                         onClicked: navigate_goToFolder(model.absoluteDir)
                      }
                      MenuItem {
                          text: qsTr("Cut")

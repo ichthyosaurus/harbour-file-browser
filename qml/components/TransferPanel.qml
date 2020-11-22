@@ -21,8 +21,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-import "../js/navigation.js" as Navigation
-
 Rectangle {
     id: panel
     anchors.fill: parent
@@ -242,7 +240,7 @@ Rectangle {
         onOpenChanged: {
             if (target.open) return;
             target = null;
-            Navigation.goToFolder(targets[0]);
+            navigate_goToFolder(targets[0]);
         }
     }
 
