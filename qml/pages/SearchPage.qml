@@ -77,6 +77,7 @@ Page {
         anchors.fill: parent
         anchors.bottomMargin: selectionPanel.visible ? selectionPanel.visibleSize : 0
         footer: Spacer { height: Theme.horizontalPageMargin; }
+        clip: true
 
         visible: true
         opacity: visible ? 1 : 0
