@@ -23,6 +23,7 @@ import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
 import "../components"
 
+// TODO manage global/local, directory, and default values in SettingsHandler
 Page {
     id: page
     property string dir;
