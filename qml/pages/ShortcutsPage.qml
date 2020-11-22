@@ -92,7 +92,7 @@ Page {
 
     onStatusChanged: {
         if (status === PageStatus.Active) {
-            main.coverText = Paths.lastPartOfPath(currentPath)+"/"; // update cover
+            main.coverText = qsTr("Places") // update cover
             if (!forwardNavigation) pageStack.pushAttached(Qt.resolvedUrl("SettingsPage.qml"));
         }
         if (status === PageStatus.Activating || status === PageStatus.Deactivating) {
