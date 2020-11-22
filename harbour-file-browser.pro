@@ -109,6 +109,7 @@ DISTFILES += qml/*.qml \
     qml/components/*.qml \
     qml/js/*.js \
     qml/images/*.png \
+    qml/pages/license.html \
     rpm/harbour-file-browser-beta.changes.run \
     rpm/harbour-file-browser-beta.spec \
     rpm/harbour-file-browser-beta.yaml \
