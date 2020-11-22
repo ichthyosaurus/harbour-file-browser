@@ -139,7 +139,7 @@ void Settings::writeVariant(QString key, const QVariant &value, QString fileName
         settings.setValue(key, value);
     }
 
-    emit settingsChanged();
+    emit settingsChanged(key, usingLocalConfig);
     if (fileName != m_globalConfigPath || key.startsWith("View/")) {
         emit viewSettingsChanged(usingLocalConfig ? fileInfo.dir().absolutePath() : "");
     }
@@ -180,7 +180,7 @@ void Settings::remove(QString key, QString fileName) {
         settings.remove(key);
     }
 
-    emit settingsChanged();
+    emit settingsChanged(key, usingLocalConfig);
     if (usingLocalConfig || key.startsWith("View/")) {
         emit viewSettingsChanged(usingLocalConfig ? fileInfo.dir().absolutePath() : "");
     }

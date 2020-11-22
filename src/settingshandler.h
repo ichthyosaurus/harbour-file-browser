@@ -46,7 +46,7 @@ public:
     void writeVariant(QString key, const QVariant& value, QString fileName = QString());
 
 signals:
-    void settingsChanged();
+    void settingsChanged(QString key, bool locally);
     void viewSettingsChanged(QString localPath);
 
 private:
