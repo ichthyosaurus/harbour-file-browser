@@ -55,10 +55,11 @@ Item {
     property bool showCompress: true
     property bool showEdit: true
 
+    // emitted after the action has been completed
     signal selectAllTriggered
     signal cutTriggered
     signal copyTriggered
-    signal deleteTriggered
+    signal deleteTriggered // <- without action
     signal closeTriggered
     signal propertiesTriggered
     signal renameTriggered(var oldFiles, var newFiles)
