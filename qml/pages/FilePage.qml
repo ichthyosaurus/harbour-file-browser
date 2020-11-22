@@ -375,6 +375,7 @@ Page {
                    title: Paths.lastPartOfPath(fileData.file),
                    command: command,
                    arguments: arguments,
+                   fallbackFile: fileData.file
                });
     }
 
