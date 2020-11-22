@@ -40,6 +40,14 @@ Page {
         if (status === PageStatus.Activating) {
             _commandFailed = false;
             consoleModel.executeCommand(page.command, page.arguments);
+        } else if (_commandFailed && status === PageStatus.Active && !canNavigateForward) {
+            pageStack.pushAttached(Qt.resolvedUrl("ViewPage.qml"), { path: fallbackFile })
+        }
+    }
+
+    on_CommandFailedChanged: {
+        if (_commandFailed && status === PageStatus.Active && !canNavigateForward) {
+            pageStack.pushAttached(Qt.resolvedUrl("ViewPage.qml"), { path: fallbackFile })
         }
     }
 
@@ -65,6 +73,21 @@ Page {
         title: page.title
     }
 
+    Label {
+        visible: _commandFailed
+        anchors {
+            bottom: parent.bottom; bottomMargin: 2*Theme.horizontalPageMargin
+            left: parent.left; leftMargin: Theme.horizontalPageMargin
+            right: parent.right; rightMargin: Theme.horizontalPageMargin
+        }
+        height: Theme.itemSizeLarge
+        verticalAlignment: Text.AlignBottom
+        truncationMode: TruncationMode.None
+        wrapMode: Text.WordWrap
+        text: qsTr("Swipe right to view raw contents.")
+        color: Theme.secondaryHighlightColor
+    }
+
     // display console text as a list, it is much faster compared to a Text item
     SilicaFlickable {
         id: horizontalFlick
@@ -73,11 +96,9 @@ Page {
         HorizontalScrollDecorator { flickable: horizontalFlick }
 
         anchors {
-            top: header.bottom
-            topMargin: Theme.paddingMedium
+            left: parent.left; right: parent.right
+            top: parent.top; topMargin: header.height+Theme.paddingMedium
             bottom: parent.bottom
-            left: parent.left
-            right: parent.right
         }
 
         SilicaListView {
