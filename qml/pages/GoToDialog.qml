@@ -29,6 +29,7 @@ Dialog {
     id: dialog
     allowedOrientations: Orientation.All
     property string path
+    property string acceptText
 
     // set this to a function(var newPath) that is
     // called when the dialog is accepted
@@ -117,7 +118,9 @@ Dialog {
 
             DialogHeader {
                 id: head
-                acceptText: qsTr("Switch") //: as in "Switch to this folder, please"
+                acceptText: dialog.acceptText != "" ?
+                                dialog.acceptText :
+                                defaultAcceptText
             }
 
             SearchField {
