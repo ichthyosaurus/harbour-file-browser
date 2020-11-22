@@ -29,6 +29,8 @@ function _defaultFor(arg, val) {
 
 function addBookmark(path, name) {
     if (!path) return;
+    path = path.replace(/\/+/g, '/');
+    path = path.replace(/\/$/, '');
     name = _defaultFor(name, Paths.lastPartOfPath(path))
     settings.write("Bookmarks/"+path, name);
 
@@ -93,6 +95,7 @@ function getBookmarkName(path) {
 
     if (name === "") {
         console.warn("empty bookmark name for", path, "- reset to default value");
+        removeBookmark(path);
         addBookmark(path);
     }
 
