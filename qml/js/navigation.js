@@ -30,13 +30,17 @@ function _sharedStart(array) {
 function goToFolder(folder) {
     console.log("switching to:", folder)
     var pagePath = Qt.resolvedUrl("../pages/DirectoryPage.qml");
-    var prevPage = pageStack.previousPage();
     var cur = "", shared = "", rest = "", basePath = "", above = null;
 
+    var prevPage = pageStack.previousPage();
+    while (prevPage && !prevPage.hasOwnProperty("dir")) {
+        prevPage = pageStack.previousPage(prevPage);
+    }
+
     if (prevPage !== null) {
-        cur = prevPage.dir
-        shared = _sharedStart([folder, cur]);
         console.log("- found previous page")
+        shared = _sharedStart([folder, cur]);
+        cur = prevPage.dir
     }
 
     if (shared === folder) {
