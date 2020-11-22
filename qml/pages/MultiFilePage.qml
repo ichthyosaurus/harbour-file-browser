@@ -58,23 +58,13 @@ Page {
                 width: parent.width - 2*x
                 spacing: Theme.paddingLarge
 
-                // HighlightImage replaced with a Loader so that HighlightImage or Image
-                // can be loaded depending on Sailfish version (lightPrimaryColor is defined on SF3)
-                Loader {
+                Image { // cannot be highlighted
                     id: icon
                     anchors.horizontalCenter: parent.horizontalCenter
-                    visible: !imagePreview.visible && !playButton.visible
                     width: 128 * Theme.pixelRatio
-                    height: 128 * Theme.pixelRatio
-                    Component.onCompleted: {
-                        var qml = Theme.lightPrimaryColor ? "../components/HighlightImageSF3.qml"
-                                                          : "../components/HighlightImageSF2.qml";
-                        setSource(qml, {
-                            imgsrc: "../images/large-file-stack.png",
-                            imgw: 128 * Theme.pixelRatio,
-                            imgh: 128 * Theme.pixelRatio
-                        })
-                    }
+                    height: width
+                    source: "../images/large-file-stack.png"
+                    asynchronous: true
                 }
 
                 Label {
