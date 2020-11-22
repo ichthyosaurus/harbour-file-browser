@@ -106,7 +106,7 @@ Page {
                     textFormat: Text.PlainText
                     color: page.consoleColor
                     wrapMode: Text.NoWrap
-                    elide: Text.ElideRight
+                    elide: Text.ElideNone
                     font.pixelSize: Theme.fontSizeTiny
                     font.family: "Monospace"
                     Component.onCompleted: {
