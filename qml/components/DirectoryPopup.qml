@@ -37,10 +37,19 @@ Item {
     property string _selectedMenu: ""
     property Item _contextMenu
 
+    property bool _hiddenShown: false
+
     function show() {
         if (!_contextMenu) _contextMenu = contextMenuComponent.createObject(rect);
         _selectedMenu = "";
         _contextMenu.open(rect);
+
+        var useLocal = (settings.read("View/UseLocalSettings", "true") === "true");
+        var configPath = directory+"/.directory";
+        var currentGlobal = (settings.read("View/HiddenFilesShown", "false") === "true");
+        var current = currentGlobal;
+        if (useLocal) current = (settings.read("Settings/HiddenFilesShown", currentGlobal, configPath) === "true");
+        _hiddenShown = current;
     }
 
     on_SelectedMenuChanged: {
@@ -97,6 +106,9 @@ Item {
                     if (useLocal) current = (settings.read("Settings/HiddenFilesShown", currentGlobal, configPath) === "true");
                     var toggled = !current
 
+                    // we don't update this here so that the label is not updated unnecessarily
+                    // _hiddenShown = toggled;
+
                     if (useLocal) {
                         if (toggled === currentGlobal) {
                             settings.remove("Settings/HiddenFilesShown", configPath);
@@ -144,7 +156,9 @@ Item {
             }
 
             MenuItem {
-                text: qsTr("Show hidden files")
+                text: _hiddenShown ?
+                          qsTr("Hide hidden files") :
+                          qsTr("Show hidden files")
                 onClicked: _selectedMenu = "showHidden"
             }
             MenuItem {
