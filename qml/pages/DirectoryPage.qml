@@ -198,24 +198,26 @@ Page {
         }
 
         PushUpMenu {
+            id: bottomPulley
+            property bool _toggleBookmark: false
+            onActiveChanged: { // delay action until menu is closed
+                if (!active && _toggleBookmark) toggleBookmark()
+                else _toggleBookmark = false
+            }
             MenuItem {
                 text: qsTr("Search")
                 onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
-                                          { dir: page.dir });
+                                          { dir: page.dir })
             }
             MenuItem {
                 id: bookmarkEntry
                 property bool hasBookmark: Bookmarks.hasBookmark(dir)
                 text: hasBookmark ? qsTr("Remove bookmark") : qsTr("Add to bookmarks")
-                onClicked: {
-                    toggleBookmark();
-                }
+                onClicked: bottomPulley._toggleBookmark = true
             }
             MenuItem {
                 text: qsTr("Copy path to clipboard")
-                onClicked: {
-                    Clipboard.text = page.dir;
-                }
+                onClicked: Clipboard.text = page.dir
             }
         }
 
