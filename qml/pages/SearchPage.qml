@@ -271,12 +271,13 @@ Page {
             }
 
             onClicked: {
-                if (model.fileKind === "d")
+                if (model.fileKind === "d") {
                     pageStack.animatorPush(Qt.resolvedUrl("DirectoryPage.qml"),
-                                   { dir: model.fullname });
-                else
+                                           { dir: model.fullname });
+                } else {
                     pageStack.animatorPush(Qt.resolvedUrl("FilePage.qml"),
-                                   { file: model.fullname });
+                                           { file: model.fullname });
+                }
             }
             MouseArea {
                 width: Theme.itemSizeSmall
