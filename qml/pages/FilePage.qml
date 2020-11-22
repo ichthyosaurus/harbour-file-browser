@@ -76,10 +76,8 @@ Page {
                                                "xdg-open exit code 4");
             } else if (exitCode === -88888) {
                 notificationPanel.showTextWithTimer(qsTr("xdg-open not found"), "");
-
             } else if (exitCode === -99999) {
                 notificationPanel.showTextWithTimer(qsTr("xdg-open crash?"), "");
-
             } else {
                 notificationPanel.showTextWithTimer(qsTr("xdg-open error"), "exit code: "+exitCode);
             }
@@ -372,6 +370,14 @@ Page {
         viewContents();
     }
 
+    function showConsolePage(method, command, arguments) {
+        method(Qt.resolvedUrl("ConsolePage.qml"), {
+                   title: Paths.lastPartOfPath(fileData.file),
+                   command: command,
+                   arguments: arguments,
+               });
+    }
+
     function viewContents(asAttached, forceRawView) {
         // dirs are special cases - there's no way to display their contents, so go to them
         if (fileData.isDir) {
@@ -400,27 +406,13 @@ Page {
         }
 
         if (fileData.category === "zip") {
-            method(Qt.resolvedUrl("ConsolePage.qml"),
-                         { title: Paths.lastPartOfPath(fileData.file),
-                           command: "unzip",
-                           arguments: [ "-Z", "-2ht", fileData.file ] });
-
+            showConsolePage(method, "unzip", [ "-Z", "-2ht", fileData.file ]);
         } else if (fileData.category === "rpm") {
-            method(Qt.resolvedUrl("ConsolePage.qml"),
-                         { title: Paths.lastPartOfPath(fileData.file),
-                           command: "rpm",
-                           arguments: [ "-qlp", "--info", fileData.file ] });
-
+            showConsolePage(method, "rpppppppm", [ "-qlp", "--info", fileData.file ]);
         } else if (fileData.category === "tar") {
-            method(Qt.resolvedUrl("ConsolePage.qml"),
-                         { title: Paths.lastPartOfPath(fileData.file),
-                           command: "tar",
-                           arguments: [ "tf", fileData.file ] });
+            showConsolePage(method, "tar", [ "tf", fileData.file ]);
         } else if (fileData.category === "sqlite3") {
-            method(Qt.resolvedUrl("ConsolePage.qml"),
-                         { title: Paths.lastPartOfPath(fileData.file),
-                           command: "sqlite3",
-                           arguments: [ fileData.file, ".schema" ] });
+            showConsolePage(method, "sqlite3", [ fileData.file, ".schema" ]);
         } else if (fileData.category === "image") {
             method(Qt.resolvedUrl("ViewImagePage.qml"), { path: page.file, title: fileData.name });
         } else if (fileData.category === "video") {
