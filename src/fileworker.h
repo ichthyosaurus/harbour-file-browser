@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2013-2014, 2019 Kari Pihkala
  * SPDX-FileCopyrightText: 2018 Marcin Mielniczuk
- * SPDX-FileCopyrightText: 2019 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -34,7 +34,7 @@ class FileWorker : public QThread
     Q_OBJECT
 
 public:
-    explicit FileWorker(QObject *parent = 0);
+    explicit FileWorker(QObject *parent = nullptr);
     ~FileWorker();
 
     // call these to start the thread, returns false if start failed

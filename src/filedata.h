@@ -58,7 +58,7 @@ class FileData : public QObject
     Q_PROPERTY(QString errorMessage READ errorMessage() NOTIFY errorMessageChanged())
 
 public:
-    explicit FileData(QObject *parent = 0);
+    explicit FileData(QObject *parent = nullptr);
     ~FileData();
 
     // property accessors

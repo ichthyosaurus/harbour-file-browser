@@ -3,6 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2013-2014 Kari Pihkala
  * SPDX-FileCopyrightText: 2018 Marcin Mielniczuk
+ * SPDX-FileCopyrightText: 2020 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -33,7 +34,7 @@ class SearchWorker : public QThread
     Q_OBJECT
 
 public:
-    explicit SearchWorker(QObject *parent = 0);
+    explicit SearchWorker(QObject *parent = nullptr);
     ~SearchWorker();
 
     void startSearch(QString directory, QString searchTerm);

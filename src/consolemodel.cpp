@@ -3,6 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2014-2015 Kari Pihkala
  * SPDX-FileCopyrightText: 2015 Benna
+ * SPDX-FileCopyrightText: 2020 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -27,7 +28,7 @@ enum {
 };
 
 ConsoleModel::ConsoleModel(QObject *parent) :
-    QAbstractListModel(parent), m_process(0)
+    QAbstractListModel(parent), m_process(nullptr)
 {
 }
 
@@ -37,13 +38,13 @@ ConsoleModel::~ConsoleModel()
 
 int ConsoleModel::rowCount(const QModelIndex &parent) const
 {
-    Q_UNUSED(parent);
+    Q_UNUSED(parent)
     return m_lines.count();
 }
 
 QVariant ConsoleModel::data(const QModelIndex &index, int role) const
 {
-    Q_UNUSED(role);
+    Q_UNUSED(role)
     if (!index.isValid() || index.row() > m_lines.count()-1)
         return QVariant();
 
@@ -129,7 +130,7 @@ void ConsoleModel::handleProcessFinish(int exitCode, QProcess::ExitStatus status
 
 void ConsoleModel::handleProcessError(QProcess::ProcessError error)
 {
-    Q_UNUSED(error);
+    Q_UNUSED(error)
     emit processExited(-88888); // if error, then use some error exit code
     appendLine(tr("** error"));
 }

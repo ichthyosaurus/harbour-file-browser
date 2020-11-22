@@ -40,7 +40,7 @@ class Engine : public QObject
     Q_PROPERTY(QString progressFilename READ progressFilename() NOTIFY progressFilenameChanged())
 
 public:
-    explicit Engine(QObject *parent = 0);
+    explicit Engine(QObject *parent = nullptr);
     ~Engine();
 
     // properties

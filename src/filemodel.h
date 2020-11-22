@@ -48,7 +48,7 @@ class FileModel : public QAbstractListModel
     Q_PROPERTY(QString filterString READ filterString() WRITE setFilterString(QString) NOTIFY filterStringChanged())
 
 public:
-    explicit FileModel(QObject *parent = 0);
+    explicit FileModel(QObject *parent = nullptr);
     ~FileModel();
 
     // methods needed by ListView

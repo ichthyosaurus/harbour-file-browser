@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2013-2014 Kari Pihkala
  * SPDX-FileCopyrightText: 2018 Marcin Mielniczuk
- * SPDX-FileCopyrightText: 2019 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -85,7 +85,7 @@ QString SearchWorker::searchRecursively(QString directory, QString searchTerm)
 
     QSettings settings;
     bool hiddenSetting = settings.value("View/HiddenFilesShown", false).toBool();
-    QDir::Filter hidden = hiddenSetting ? QDir::Hidden : (QDir::Filter)0;
+    QDir::Filter hidden = hiddenSetting ? QDir::Hidden : static_cast<QDir::Filter>(0);
 
     // search dirs
     QStringList names = dir.entryList(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::System | hidden);

@@ -181,7 +181,7 @@ static QStringList subdirs(const QString &dirname, bool includeHidden = false)
     QDir dir(dirname);
     if (!dir.exists()) return QStringList();
 
-    QDir::Filter hiddenFilter = includeHidden ? QDir::Hidden : (QDir::Filter)0;
+    QDir::Filter hiddenFilter = includeHidden ? QDir::Hidden : static_cast<QDir::Filter>(0);
     dir.setFilter(QDir::AllDirs | QDir::NoDotAndDotDot | hiddenFilter);
 
     QStringList list = dir.entryList();

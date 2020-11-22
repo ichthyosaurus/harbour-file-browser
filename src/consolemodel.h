@@ -2,6 +2,7 @@
  * This file is part of File Browser.
  *
  * SPDX-FileCopyrightText: 2014-2015 Kari Pihkala
+ * SPDX-FileCopyrightText: 2020 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -34,7 +35,7 @@ class ConsoleModel : public QAbstractListModel
     Q_PROPERTY(QStringList lines READ lines() WRITE setLines(QString) NOTIFY linesChanged())
 
 public:
-    explicit ConsoleModel(QObject *parent = 0);
+    explicit ConsoleModel(QObject *parent = nullptr);
     ~ConsoleModel();
 
     // methods needed by ListView

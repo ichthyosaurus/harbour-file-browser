@@ -2,7 +2,7 @@
  * This file is part of File Browser.
  *
  * SPDX-FileCopyrightText: 2013-2014 Kari Pihkala
- * SPDX-FileCopyrightText: 2019 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -38,7 +38,7 @@ class SearchEngine : public QObject
     Q_PROPERTY(bool running READ running() NOTIFY runningChanged())
 
 public:
-    explicit SearchEngine(QObject *parent = 0);
+    explicit SearchEngine(QObject *parent = nullptr);
     ~SearchEngine();
 
     // property accessors
