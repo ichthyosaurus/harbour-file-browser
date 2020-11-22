@@ -93,7 +93,8 @@ Dialog {
                         id: newNameLabel
                         width: parent.width
                         placeholderText: qsTr("New name")
-                        label: qsTr("New name")
+                        label: notifiedAsReady ? qsTr("New name") :
+                                                 qsTr("A file with this name already exists.")
                         inputMethodHints: Qt.ImhNoPredictiveText
 
                         // when enter is pressed, either
