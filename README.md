@@ -24,11 +24,11 @@ responsibility if that happens. So, be careful.
 
  * Browse and search files and folders on the phone
  * Open files (if xdg-open finds a preferred application)
- * Preview image files and pictures
+ * View image files and pictures as thumbnails or in a gallery
  * Play back WAV, MP3, OGG, and FLAC audio
  * Install Android APK and Sailfish RPM packages
  * View contents of APK, RPM, ZIP and TAR packages
- * Preview contents of text and binary files
+ * Preview contents of video, text, and binary files
  * Select multiple files (by tapping the file icons)
  * Link, cut, move, copy and paste multiple files at once (by long pressing an
    item or tapping the file icons)
