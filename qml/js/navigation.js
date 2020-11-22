@@ -19,7 +19,7 @@
  */
 
 // functions for handling page navigation
-// (no library because variables from the environment are needed)
+// (not a library because variables from the environment are needed)
 
 function _sharedStart(array) {
     var A=array.concat().sort(), a1=A[0].split("/"), a2=A[A.length-1].split("/"), L=a1.length, i=0;

@@ -49,7 +49,7 @@ Page {
 
     property int _selectedFileCount: 0
 
-    // this and its bg worker thread will be destroyed when page in popped from stack
+    // this and its bg worker thread will be destroyed when page is popped from stack
     SearchEngine {
         id: searchEngine
         dir: page.dir
