@@ -34,19 +34,12 @@ Dialog {
     // set this to a function(var newPath) that is
     // called when the dialog is accepted
     property var acceptCallback
+    onAccepted: if (acceptCallback) acceptCallback(path)
 
     // set this to a function(var path) that decides
     // whether or not to include 'path' as suggestion
     property var customFilter
     property bool hideExcluded: false // hide or deactivate excluded suggestions?
-
-    onAccepted: {
-        if (acceptCallback) {
-            acceptCallback(path);
-        } else {
-            console.log("FolderSelectionDialog: invalid callback")
-        }
-    }
 
     signal suggestionSelected(var filename)
 
