@@ -70,7 +70,7 @@ FileModel::~FileModel()
 
 int FileModel::rowCount(const QModelIndex &parent) const
 {
-    Q_UNUSED(parent);
+    Q_UNUSED(parent)
     return m_files.count();
 }
 
@@ -262,7 +262,7 @@ void FileModel::clearSelectedFiles()
 void FileModel::selectAllFiles()
 {
     QMutableListIterator<StatFileInfo> iter(m_files);
-    int row = 0; uint count = 0;
+    int row = 0; int count = 0;
 
     while (iter.hasNext()) {
         StatFileInfo &info = iter.next();
@@ -401,14 +401,14 @@ void FileModel::applySettings(QDir &dir) {
     // filters
     bool hidden = m_settings->readVariant("View/HiddenFilesShown", false).toBool();
     if (useLocal) hidden = m_settings->readVariant("Settings/HiddenFilesShown", hidden, localPath).toBool();
-    QDir::Filter hiddenFilter = hidden ? QDir::Hidden : (QDir::Filter)0;
+    QDir::Filter hiddenFilter = hidden ? QDir::Hidden : static_cast<QDir::Filter>(0);
 
     dir.setFilter(QDir::AllDirs | QDir::Files | QDir::NoDotAndDotDot | QDir::System | hiddenFilter);
 
     // sorting
     bool dirsFirst = m_settings->readVariant("View/ShowDirectoriesFirst", true).toBool();
     if (useLocal) dirsFirst = m_settings->readVariant("Sailfish/ShowDirectoriesFirst", dirsFirst, localPath).toBool();
-    QDir::SortFlag dirsFirstFlag = dirsFirst ? QDir::DirsFirst : (QDir::SortFlag)0;
+    QDir::SortFlag dirsFirstFlag = dirsFirst ? QDir::DirsFirst : static_cast<QDir::SortFlag>(0);
 
     QString sortSetting = m_settings->readVariant("View/SortRole", "name").toString();
     if (useLocal) sortSetting = m_settings->readVariant("Dolphin/SortRole", sortSetting, localPath).toString();
@@ -428,11 +428,11 @@ void FileModel::applySettings(QDir &dir) {
 
     bool orderDefault = m_settings->readVariant("View/SortOrder", "default").toString() == "default";
     if (useLocal) orderDefault = m_settings->readVariant("Dolphin/SortOrder", 0, localPath) == 0 ? true : false;
-    QDir::SortFlag orderFlag = orderDefault ? (QDir::SortFlag)0 : QDir::Reversed;
+    QDir::SortFlag orderFlag = orderDefault ? static_cast<QDir::SortFlag>(0) : QDir::Reversed;
 
     bool caseSensitive = m_settings->readVariant("View/SortCaseSensitively", false).toBool();
     if (useLocal) caseSensitive = m_settings->readVariant("Sailfish/SortCaseSensitively", caseSensitive, localPath).toBool();
-    QDir::SortFlag caseSensitiveFlag = caseSensitive ? (QDir::SortFlag)0 : QDir::IgnoreCase;
+    QDir::SortFlag caseSensitiveFlag = caseSensitive ? static_cast<QDir::SortFlag>(0) : QDir::IgnoreCase;
 
     dir.setSorting(sortBy | dirsFirstFlag | orderFlag | caseSensitiveFlag);
 }
