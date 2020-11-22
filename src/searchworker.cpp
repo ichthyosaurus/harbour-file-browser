@@ -35,7 +35,7 @@ SearchWorker::~SearchWorker()
 {
 }
 
-void SearchWorker::startSearch(QString directory, QString searchTerm, SearchType type)
+void SearchWorker::startSearch(QString directory, QString searchTerm, SearchType type, int maxResults)
 {
     if (isRunning()) {
         emit errorOccurred(tr("Search already in progress"), "");
@@ -47,6 +47,7 @@ void SearchWorker::startSearch(QString directory, QString searchTerm, SearchType
         return;
     }
 
+    m_maxResults = maxResults;
     m_type = type;
     m_directory = directory;
     m_searchTerm = searchTerm;
@@ -77,7 +78,7 @@ void SearchWorker::run()
     emit done();
 }
 
-QString SearchWorker::searchFilesRecursive(QString directory, QString searchTerm)
+QString SearchWorker::searchFilesRecursive(QString directory, QString searchTerm, int lastCount)
 {
     // skip some system folders - they don't really have any interesting stuff
     if (directory.startsWith("/proc") || directory.startsWith("/sys/block")) {
@@ -95,6 +96,10 @@ QString SearchWorker::searchFilesRecursive(QString directory, QString searchTerm
     bool hiddenSetting = settings.value("View/HiddenFilesShown", false).toBool();
     QDir::Filter hidden = hiddenSetting ? QDir::Hidden : static_cast<QDir::Filter>(0);
 
+    int count = 0;
+    if (lastCount > 0) count = lastCount;
+    if (m_maxResults > 0 && count >= m_maxResults)  return QString();
+
     // search dirs
     QStringList names = dir.entryList(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::System | hidden);
     for (auto filename : names) {
@@ -105,13 +110,15 @@ QString SearchWorker::searchFilesRecursive(QString directory, QString searchTerm
 
         QString fullpath = dir.absoluteFilePath(filename);
         if (filename.contains(searchTerm, Qt::CaseInsensitive)) {
+            count++;
             emit matchFound(fullpath);
+            if (m_maxResults > 0 && count >= m_maxResults) return QString();
         }
 
         QFileInfo info(fullpath); // skip symlinks to prevent infinite loops
         if (info.isSymLink()) continue;
 
-        QString errorMessage = searchFilesRecursive(fullpath, searchTerm);
+        QString errorMessage = searchFilesRecursive(fullpath, searchTerm, count);
         if (!errorMessage.isEmpty()) return errorMessage;
     }
 
@@ -125,7 +132,9 @@ QString SearchWorker::searchFilesRecursive(QString directory, QString searchTerm
 
         QString fullpath = dir.absoluteFilePath(filename);
         if (filename.contains(searchTerm, Qt::CaseInsensitive)) {
+            count++;
             emit matchFound(fullpath);
+            if (m_maxResults > 0 && count >= m_maxResults) return QString();
         }
     }
 
@@ -152,6 +161,7 @@ QString SearchWorker::searchDirectoriesShallow(QString directory, QString search
     QDir::Filter hidden = hiddenSetting ? QDir::Hidden : static_cast<QDir::Filter>(0);
 
     // search dirs
+    int count = 0;
     QStringList names = dir.entryList(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::System | hidden);
     for (auto filename : names) {
         // stop if cancelled
@@ -160,7 +170,9 @@ QString SearchWorker::searchDirectoriesShallow(QString directory, QString search
         }
         QString fullpath = dir.absoluteFilePath(filename);
         if (searchTerm.isEmpty() || filename.contains(searchTerm, Qt::CaseInsensitive)) {
+            count++;
             emit matchFound(fullpath);
+            if (m_maxResults > 0 && count >= m_maxResults) break; // we're not recursive
         }
     }
 

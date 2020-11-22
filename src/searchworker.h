@@ -47,7 +47,7 @@ public:
     explicit SearchWorker(QObject *parent = nullptr);
     ~SearchWorker();
 
-    void startSearch(QString directory, QString searchTerm, SearchType type);
+    void startSearch(QString directory, QString searchTerm, SearchType type, int maxResults);
 
     void cancel();
 
@@ -67,9 +67,10 @@ private:
         Cancelled = 0, NotCancelled = 1
     };
 
-    QString searchFilesRecursive(QString directory, QString searchTerm);
+    QString searchFilesRecursive(QString directory, QString searchTerm, int lastCount = 0);
     QString searchDirectoriesShallow(QString directory, QString searchTerm);
 
+    int m_maxResults = {0}; // <= 0 for no restriction
     SearchType m_type;
     QString m_directory;
     QString m_searchTerm;
