@@ -24,6 +24,7 @@
 #include <QDateTime>
 #include <QMimeDatabase>
 #include <QImageReader>
+#include <QSettings>
 #include "globals.h"
 #include "jhead/jhead-api.h"
 
@@ -109,6 +110,28 @@ QString FileData::absolutePath() const
     if (m_file.isEmpty())
         return QString();
     return m_fileInfo.absolutePath();
+}
+
+int FileData::dirsCount() const
+{
+    if (!isDir()) return 0;
+    QSettings settings;
+    bool hiddenSetting = settings.value("View/HiddenFilesShown", false).toBool();
+    QDir::Filter hidden = hiddenSetting ? QDir::Hidden : static_cast<QDir::Filter>(0);
+    QDir dir(m_file);
+    dir.setFilter(QDir::AllDirs | QDir::NoDotAndDotDot | hidden);
+    dir.setSorting(QDir::NoSort);
+    return dir.entryList().length();
+}
+
+int FileData::filesCount() const
+{
+    if (!isDir()) return 0;
+    QSettings settings;
+    bool hiddenSetting = settings.value("View/HiddenFilesShown", false).toBool();
+    QDir::Filter hidden = hiddenSetting ? QDir::Hidden : static_cast<QDir::Filter>(0);
+    QDir dir(m_file);
+    return dir.entryList(QDir::Files | hidden, QDir::NoSort).length();
 }
 
 void FileData::refresh()

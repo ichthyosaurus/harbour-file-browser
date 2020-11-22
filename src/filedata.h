@@ -55,6 +55,8 @@ class FileData : public QObject
     Q_PROPERTY(QString mimeType READ mimeType() NOTIFY mimeTypeChanged())
     Q_PROPERTY(QString mimeTypeComment READ mimeTypeComment() NOTIFY mimeTypeCommentChanged())
     Q_PROPERTY(QStringList metaData READ metaData() NOTIFY metaDataChanged())
+    Q_PROPERTY(int dirsCount READ dirsCount NOTIFY dirsCountChanged)
+    Q_PROPERTY(int filesCount READ filesCount NOTIFY filesCountChanged)
     Q_PROPERTY(QString errorMessage READ errorMessage() NOTIFY errorMessageChanged())
 
 public:
@@ -85,6 +87,8 @@ public:
     QString mimeType() const { return m_mimeTypeName; }
     QString mimeTypeComment() const { return m_mimeTypeComment; }
     QStringList metaData() const { return m_metaData; }
+    int dirsCount() const; // warning: expensive
+    int filesCount() const; // warning: expensive
     QString errorMessage() const { return m_errorMessage; }
 
     // methods accessible from QML
@@ -113,6 +117,8 @@ signals:
     void metaDataChanged();
     void mimeTypeChanged();
     void mimeTypeCommentChanged();
+    void dirsCountChanged();
+    void filesCountChanged();
     void errorMessageChanged();
 
 private:
