@@ -28,12 +28,24 @@ import "../js/paths.js" as Paths
 Dialog {
     id: dialog
     allowedOrientations: Orientation.All
+
+    // set this to a function(var newPath) that is
+    // called when the dialog is accepted
+    property var acceptCallback
     property string path
-    property bool _isReady: false
-    canAccept: path !== "" && _isReady
-    onAccepted: navigate_goToFolder(path)
+
+    onAccepted: {
+        if (acceptCallback) {
+            acceptCallback(path);
+        } else {
+            console.log("FolderSelectionDialog: invalid callback")
+        }
+    }
 
     signal suggestionSelected(var filename)
+
+    canAccept: path !== "" && _isReady
+    property bool _isReady: false
     property var _pathRegex: new RegExp('', 'i')
     property real _searchLeftMargin: Theme.itemSizeSmall+Theme.paddingMedium // = SearchField::textLeftMargin
     property string _fnElide: settings.read("General/FilenameElideMode", "fade")
