@@ -49,7 +49,6 @@ function goBack() {
     var go = backStack.pop();
     forwardStack.push(go);
     var actually = backStack[backStack.length-1];
-    console.log("==>", JSON.stringify(actually), JSON.stringify(go))
     _executeHistory(actually);
 }
 
@@ -161,7 +160,8 @@ function goToFolder(folder, silent) {
     }
     toPush.push({page: pagePath, properties: {dir: folder}});
 
-    console.log("- pushing...", JSON.stringify(toPush))
+    // DEBUG: console.log("- pushing...", JSON.stringify(toPush))
+    console.log("- pushing pages:", toPush.length)
     if (!silent) {
         if (backStack.length > 0 && backStack[backStack.length-1].path !== sourceDir) {
             backStack.push({type: "dir", path: sourceDir});
