@@ -88,22 +88,20 @@ Page {
 
         model: ListModel {
             id: listModel
+            Component.onCompleted: update("")
 
-            // updates the model by clearing all data and starting searchEngine search() method async
-            // using the given txt as the search string
-            function update(txt) {
-                if (txt === "")
-                    searchEngine.cancel();
-
+            // updates the model by clearing all data and starting
+            // searchEngine search() method asynchronously, using the
+            // given text as the search query
+            function update(text) {
+                if (text === "") searchEngine.cancel();
                 clear();
                 clearSelectedFiles();
-                if (txt !== "") {
-                    searchEngine.search(txt);
-                    coverText = qsTr("Searching")+"\n"+txt;
+                if (text !== "") {
+                    searchEngine.search(text);
+                    coverText = qsTr("Searching")+"\n"+text;
                 }
             }
-
-            Component.onCompleted: update("")
         }
 
         VerticalScrollDecorator { flickable: fileList }
