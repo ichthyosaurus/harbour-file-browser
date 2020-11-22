@@ -37,6 +37,12 @@ Page {
     property string searchText: "" // holds the initial search text
     property bool startImmediately: false // if search text is given, start search as soon as page is ready
 
+    property string _fnElide: settings.read("General/FilenameElideMode", "fade")
+    property int nameTruncMode: _fnElide === 'fade' ? TruncationMode.Fade : TruncationMode.Elide
+    property int nameElideMode: nameTruncMode === TruncationMode.Fade ?
+                                    Text.ElideNone : (_fnElide === 'middle' ?
+                                                          Text.ElideMiddle : Text.ElideRight)
+
     // used to disable SelectionPanel while remorse timer is active
     property bool remorsePopupActive: false // set to true when remorsePopup is active (at top of page)
     property bool remorseItemActive: false // set to true when remorseItem is active (item level)
@@ -248,22 +254,23 @@ Page {
             Label {
                 id: listLabel
                 y: Theme.paddingSmall
-                anchors.left: listIcon.right
-                anchors.leftMargin: Theme.paddingMedium
-                anchors.right: parent.right
-                anchors.rightMargin: Theme.paddingLarge
+                anchors {
+                    left: listIcon.right; leftMargin: Theme.paddingMedium
+                    right: parent.right; rightMargin: Theme.paddingLarge
+                }
                 text: filename
                 textFormat: Text.PlainText
-                elide: Text.ElideRight
+                truncationMode: nameTruncMode
+                elide: nameElideMode
                 color: fileItem.highlighted || isSelected ? Theme.highlightColor : Theme.primaryColor
             }
             Label {
                 id: listAbsoluteDir
-                anchors.left: listIcon.right
-                anchors.leftMargin: Theme.paddingMedium
-                anchors.right: parent.right
-                anchors.rightMargin: Theme.paddingLarge
-                anchors.top: listLabel.bottom
+                anchors {
+                    left: listIcon.right; leftMargin: Theme.paddingMedium
+                    right: parent.right; rightMargin: Theme.paddingLarge
+                    top: listLabel.bottom
+                }
                 text: absoluteDir
                 color: fileItem.highlighted || isSelected ? Theme.secondaryHighlightColor : Theme.secondaryColor
                 font.pixelSize: Theme.fontSizeExtraSmall
@@ -422,6 +429,15 @@ Page {
         if (status === PageStatus.Active) {
             if (startImmediately === true && searchText !== "") {
                 listModel.update(searchText);
+            }
+        }
+    }
+
+    Connections {
+        target: settings
+        onSettingsChanged: {
+            if (key === 'General/FilenameElideMode') {
+                page._fnElide = settings.read("General/FilenameElideMode", "fade");
             }
         }
     }
