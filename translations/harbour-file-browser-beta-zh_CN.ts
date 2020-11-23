@@ -17,22 +17,22 @@
     <message>
         <location filename="../src/consolemodel.cpp" line="133"/>
         <source>** command “%1” not found</source>
-        <translation type="unfinished"></translation>
+        <translation>** 命令 “%1” 未找到</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="137"/>
         <source>** timeout reached</source>
-        <translation type="unfinished"></translation>
+        <translation>** 超时</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="139"/>
         <source>** internal communication failed</source>
-        <translation type="unfinished"></translation>
+        <translation>** 内部通讯失败</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="141"/>
         <source>** an unknown error occurred</source>
-        <translation type="unfinished"></translation>
+        <translation>** 出现未知错误</translation>
     </message>
 </context>
 <context>
@@ -40,7 +40,7 @@
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="87"/>
         <source>Swipe right to view raw contents.</source>
-        <translation type="unfinished"></translation>
+        <translation>右滑即可查看 raw 内容。</translation>
     </message>
 </context>
 <context>
@@ -263,17 +263,17 @@
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="155"/>
         <source>Hide hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation>不显示隐藏文件</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="156"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">显示隐藏文件</translation>
+        <translation>显示隐藏文件</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="161"/>
         <source>Edit path</source>
-        <translation type="unfinished"></translation>
+        <translation>编辑路径</translation>
     </message>
 </context>
 <context>
@@ -286,7 +286,7 @@
     <message>
         <location filename="../src/engine.cpp" line="150"/>
         <source>Cannot overwrite itself</source>
-        <translation>不能复写自己</translation>
+        <translation>不能复写自身</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="156"/>
@@ -370,94 +370,94 @@
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="72"/>
         <source>%n file(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>已选择 %n 个文件</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="104"/>
         <source>clear selection</source>
-        <translation type="unfinished"></translation>
+        <translation>清空选择</translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="105"/>
         <source>select all</source>
-        <translation type="unfinished"></translation>
+        <translation>全选</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="114"/>
         <source>cut file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>剪切文件</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="118"/>
         <source>%n file(s) cut</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>剪切 %n 个文件</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="127"/>
         <source>copy file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>复制文件</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="131"/>
         <source>%n file(s) copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>已复制 %n 个文件</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="140"/>
         <source>transfer file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>传输文件</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="159"/>
         <source>delete file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>删除文件</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="174"/>
         <source>rename file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>重命名文件</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="193"/>
         <source>share file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>分享文件</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="213"/>
         <source>compress file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>压缩文件</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="221"/>
         <source>edit file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>编辑文件</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="230"/>
         <source>show file properties</source>
-        <translation type="unfinished"></translation>
+        <translation>显示文件属性</translation>
     </message>
 </context>
 <context>
@@ -657,7 +657,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="279"/>
         <source>Unknown (link target not found)</source>
-        <translation type="unfinished"></translation>
+        <translation>未知(链接目标未找到)</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="286"/>
@@ -798,17 +798,17 @@
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="129"/>
         <source>Path to a folder</source>
-        <translation type="unfinished"></translation>
+        <translation>指向文件夹路径</translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="234"/>
         <source>Remove last part</source>
-        <translation type="unfinished"></translation>
+        <translation>移除上个部分</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/PathEditDialog.qml" line="255"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n 个文件</numerusform>
         </translation>
     </message>
@@ -816,15 +816,15 @@
         <location filename="../qml/pages/PathEditDialog.qml" line="257"/>
         <source>%n folder(s)</source>
         <extracomment>hidden if n=0</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n 个文件夹</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="259"/>
         <source>empty</source>
         <extracomment>hidden if n=0</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>空</translation>
     </message>
 </context>
 <context>
@@ -901,88 +901,88 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="165"/>
         <source>(Strobe light not detected)</source>
-        <translation>（未检测到闪光灯）</translation>
+        <translation>(未检测到闪光灯)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="166"/>
         <source>(Strobe light detected) </source>
-        <translation>（检测到闪光灯）</translation>
+        <translation>(检测到闪光灯)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="167"/>
         <source>(Manual)</source>
-        <translation>（手动）</translation>
+        <translation>(手动)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="168"/>
         <source>(Manual, return light not detected)</source>
-        <translation>（手动，未检测到是否使用闪光灯）</translation>
+        <translation>(手动，未检测到是否使用闪光灯)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="170"/>
         <location filename="../src/jhead/jhead-api.cpp" line="188"/>
         <source>(Auto)</source>
-        <translation>（自动）</translation>
+        <translation>(自动)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="171"/>
         <source>(Auto, return light not detected)</source>
-        <translation>（自动，未检测到是否使用闪光灯）</translation>
+        <translation>(自动，未检测到是否使用闪光灯)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="172"/>
         <source>(Auto, return light detected)</source>
-        <translation>（自动，使用闪光灯）</translation>
+        <translation>(自动，使用闪光灯)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="173"/>
         <source>(Red eye reduction mode)</source>
-        <translation>（减轻红眼模式）</translation>
+        <translation>(减轻红眼模式)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="174"/>
         <source>(Red eye reduction mode return light not detected)</source>
-        <translation>（减轻红眼模式，未检测到是否使用闪光灯）</translation>
+        <translation>(减轻红眼模式，未检测到是否使用闪光灯)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="169"/>
         <source>(Manual, return light detected)</source>
-        <translation>（手动，使用闪光灯）</translation>
+        <translation>(手动，使用闪光灯)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="175"/>
         <source>(Red eye reduction mode return light detected)</source>
-        <translation>（减轻红眼模式，使用闪光灯）</translation>
+        <translation>(减轻红眼模式，使用闪光灯)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="176"/>
         <source>(Manual, red eye reduction mode)</source>
-        <translation>（手动，减轻红眼模式）</translation>
+        <translation>(手动，减轻红眼模式)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="177"/>
         <source>(Manual, red eye reduction mode, return light not detected)</source>
-        <translation>（手动，减轻红眼模式，未检测到是否使用闪光灯）</translation>
+        <translation>(手动，减轻红眼模式，未检测到是否使用闪光灯)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="178"/>
         <source>(Red eye reduction mode, return light detected)</source>
-        <translation>（红眼模式，使用闪光灯）</translation>
+        <translation>(红眼模式，使用闪光灯)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="179"/>
         <source>(Auto, red eye reduction mode)</source>
-        <translation>（自动，减轻红眼模式）</translation>
+        <translation>(自动，减轻红眼模式)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="180"/>
         <source>(Auto, red eye reduction mode, return light not detected)</source>
-        <translation>（自动，减轻红眼模式，未检测到是否使用闪光灯）</translation>
+        <translation>(自动，减轻红眼模式，未检测到是否使用闪光灯)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="181"/>
         <source>(Auto, red eye reduction mode, return light detected)</source>
-        <translation>（自动，减轻红眼模式，使用闪光灯）</translation>
+        <translation>(自动，减轻红眼模式，使用闪光灯)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="183"/>
@@ -1002,7 +1002,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="198"/>
         <source>(35mm equivalent: %1mm)</source>
-        <translation>（等同于35mm: %1mm）</translation>
+        <translation>(等同于35mm: %1mm)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="205"/>
@@ -1023,7 +1023,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="220"/>
         <source>(1/%1)</source>
-        <translation>（1/%1）</translation>
+        <translation>(1/%1)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="225"/>
@@ -1154,7 +1154,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="289"/>
         <source>Unknown (%1)</source>
-        <translation>未知（%1）</translation>
+        <translation>未知(%1)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="298"/>
@@ -1164,27 +1164,27 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="301"/>
         <source>Program (auto)</source>
-        <translation>程序（自动）</translation>
+        <translation>程序(自动)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="304"/>
         <source>Aperture priority (semi-auto)</source>
-        <translation>光圈优先（半自动）</translation>
+        <translation>光圈优先(半自动)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="307"/>
         <source>Shutter priority (semi-auto)</source>
-        <translation>快门优先（半自动）</translation>
+        <translation>快门优先(半自动)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="310"/>
         <source>Creative Program (based towards depth of field)</source>
-        <translation>创造性（基于景深）</translation>
+        <translation>创造性(基于景深)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="313"/>
         <source>Action program (based towards fast shutter speed)</source>
-        <translation>动作模式（基于快门速度）</translation>
+        <translation>动作模式(基于快门速度)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="316"/>
@@ -1298,7 +1298,7 @@
     <message>
         <location filename="../qml/pages/QuickSwitchDialog.qml" line="28"/>
         <source>Switch</source>
-        <translation type="unfinished"></translation>
+        <translation>切换</translation>
     </message>
 </context>
 <context>
@@ -1323,7 +1323,7 @@
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="97"/>
         <source>A file with this name already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>已存在此名称文件。</translation>
     </message>
 </context>
 <context>
@@ -1413,8 +1413,8 @@
     <message numerus="yes">
         <location filename="../qml/components/SelectionPanel.qml" line="54"/>
         <source>%n file(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>已选择 %n 个文件</numerusform>
         </translation>
     </message>
 </context>
@@ -1584,22 +1584,22 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="161"/>
         <source>File name abbreviation</source>
-        <translation type="unfinished"></translation>
+        <translation>文件名称缩写</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="164"/>
         <source>fade out</source>
-        <translation type="unfinished"></translation>
+        <translation>淡出</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="165"/>
         <source>elide end</source>
-        <translation type="unfinished"></translation>
+        <translation>缩写后端</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="166"/>
         <source>elide middle</source>
-        <translation type="unfinished"></translation>
+        <translation>缩写中端</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="171"/>
@@ -1614,7 +1614,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="210"/>
         <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation type="unfinished"></translation>
+        <translation>File Browser 在 GNU GPL 版本3及更高版本条款下发布。这是一个自由软件:你可以自由更改和重新发布。在法律允许的范围内，不作任何保证。</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="229"/>
@@ -1637,7 +1637,7 @@
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="328"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>自定义</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="335"/>
@@ -1649,7 +1649,7 @@
         <location filename="../qml/components/ShortcutsList.qml" line="363"/>
         <location filename="../qml/components/ShortcutsList.qml" line="369"/>
         <source>Locations</source>
-        <translation></translation>
+        <translation>位置</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="336"/>
@@ -1742,12 +1742,12 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="87"/>
         <source>Create a new bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>创建新收藏夹</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="99"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>保存</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="105"/>
@@ -1757,7 +1757,7 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="110"/>
         <source>Open storage settings</source>
-        <translation type="unfinished"></translation>
+        <translation>打开储存设置</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="43"/>
@@ -1944,12 +1944,12 @@
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="64"/>
         <source>Enter path</source>
-        <translation type="unfinished"></translation>
+        <translation>输入路径</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="79"/>
         <source>Select</source>
-        <translation type="unfinished"></translation>
+        <translation>选择</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="104"/>
@@ -2103,7 +2103,7 @@
     <message>
         <location filename="../qml/pages/ViewVideoPage.qml" line="99"/>
         <source>Error playing video</source>
-        <translation type="unfinished"></translation>
+        <translation>播放视频错误</translation>
     </message>
 </context>
 <context>
