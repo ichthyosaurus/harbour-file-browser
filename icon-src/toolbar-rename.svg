@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg id="svg8" width="64" height="64" version="1.1" viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
  <metadata id="metadata2">
   <rdf:RDF>
@@ -25,8 +24,12 @@
    </cc:License>
   </rdf:RDF>
  </metadata>
- <g id="layer1" fill="#fff" font-family="serif" letter-spacing="0px" word-spacing="0px">
-  <text id="text4557" transform="scale(.64234 1.5568)" x="5.4073634" y="8.7015047" font-size="9.9668px" stroke-width=".62292px" style="line-height:12.45844746px" xml:space="preserve"><tspan id="tspan4555" x="5.4073634" y="8.7015047" fill="#ffffff" font-family="'Liberation Serif'" stroke-width=".62292px">I</tspan></text>
-  <text id="text4565" x="6.4200997" y="12.158762" fill-opacity=".50196" font-size="8.3551px" stroke-width=".5222px" style="line-height:10.44392395px" xml:space="preserve"><tspan id="tspan4563" x="6.4200997" y="12.158762" dx="0" fill="#ffffff" fill-opacity=".50196" font-family="'Liberation Serif'" letter-spacing=".77258px" stroke-width=".5222px">...</tspan></text>
+ <g id="text4557" transform="matrix(.5948 0 0 1.4416 .0052037 .63343)" fill="#fff" stroke-width=".52916" aria-label="I">
+  <path id="path848" d="m6.5626 8.9823 1.0899 0.17109v0.33584h-3.0081v-0.33584l1.0725-0.17109-0.034888-7.0941-1.0725-0.16475v-0.34527h3.0081v0.34527l-1.0899 0.16475z" fill="#fff" stroke-width=".52916"/>
+ </g>
+ <g id="text4565" transform="matrix(.92599 0 0 .92599 .33204 .73718)" fill="#fff" fill-opacity=".50196" stroke-width=".52916" aria-label="...">
+  <path id="path851" d="m7.5099 12.5q0 0.26029-0.18592 0.45152-0.18061 0.19123-0.45683 0.19123t-0.46214-0.19123q-0.18061-0.19123-0.18061-0.45152 0-0.27091 0.18592-0.45683 0.18592-0.18592 0.45683-0.18592t0.45683 0.18592q0.18592 0.18592 0.18592 0.45683z"/>
+  <path id="path853" d="m11.236 12.5q0 0.26029-0.18592 0.45152-0.18061 0.19123-0.45683 0.19123-0.27622 0-0.46214-0.19123-0.18061-0.19123-0.18061-0.45152 0-0.27091 0.18592-0.45683 0.18592-0.18592 0.45683-0.18592 0.27091 0 0.45683 0.18592 0.18592 0.18592 0.18592 0.45683z"/>
+  <path id="path855" d="m14.961 12.5q0 0.26029-0.18592 0.45152-0.18061 0.19123-0.45683 0.19123-0.27622 0-0.46214-0.19123-0.18061-0.19123-0.18061-0.45152 0-0.27091 0.18592-0.45683 0.18592-0.18592 0.45683-0.18592 0.27091 0 0.45683 0.18592 0.18592 0.18592 0.18592 0.45683z"/>
  </g>
 </svg>
