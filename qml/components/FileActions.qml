@@ -225,7 +225,7 @@ Item {
             visible: showProperties
             enabled: base.enabled && selectedCount > 0
             icon.width: itemSize; icon.height: itemSize
-            icon.source: "../images/toolbar-properties.png"
+            icon.source: "image://theme/icon-m-about"
             icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("show file properties");
             onClicked: {
