@@ -33,6 +33,8 @@ Item {
 
     property int _thumbnailSize: width
     property bool _doShowThumbnail: showThumbnail && !isDirectory
+    property bool _oversize: _thumbnailSize > Theme.itemSizeExtraLarge
+    property string _iconType: _thumbnailSize > Theme.iconSizeSmall ? "large" : "small"
 
     Thumbnail {
         id: thumbnailImage
@@ -43,24 +45,23 @@ Item {
         sourceSize.width: width
         sourceSize.height: height
         priority: Thumbnail.NormalPriority
+    }
 
-        Rectangle {
-            anchors.fill: parent
-            color: "transparent"
-            border.width: 1
-            border.color: Theme.rgba(Theme.secondaryColor, Theme.highlightBackgroundOpacity)
-            visible: parent.status === Thumbnail.Loading
-        }
+    Rectangle {
+        anchors.fill: thumbnailImage
+        color: "transparent"
+        border.width: 1
+        border.color: Theme.rgba(Theme.secondaryColor, Theme.highlightBackgroundOpacity)
+        visible: thumbnailImage.status === Thumbnail.Loading || _oversize
     }
 
     HighlightImage { // not available in Sailfish 2
+        id: icon
+        anchors.centerIn: thumbnailImage
         color: Theme.primaryColor
         source: (!_doShowThumbnail || thumbnailImage.status === Thumbnail.Error) ?
-                    (_thumbnailSize > Theme.iconSizeSmall ?
-                         "../images/large-"+fileIconCallback()+".png" :
-                         "../images/small-"+fileIconCallback()+".png") :
-                    ""
-        width: _thumbnailSize
+                    "../images/"+_iconType+"-"+fileIconCallback()+".png" : ""
+        width: _oversize ? Theme.itemSizeExtraLarge : _thumbnailSize
         height: width
         highlighted: parent.highlighted
         asynchronous: true
