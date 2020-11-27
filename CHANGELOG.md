@@ -2,7 +2,12 @@
 
 ## Unreleased
 
- * Nothing so far
+ * Updated translations: Swedish, Chinese
+ * Changed file info icon to the default system icon
+ * Changed toolbar icons to 112x112px instead of 64x64px
+ * Fixed height and thickness of toolbar icons (lines) to match system icons
+ * Fixed file previews so file icons don't scale too much
+ * Fixed an error message caused by string formatting
 
 ## Version 2.3.0-beta (2020-11-22)
 
