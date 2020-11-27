@@ -369,7 +369,7 @@
 <context>
     <name>FileActions</name>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="72"/>
+        <location filename="../qml/components/FileActions.qml" line="73"/>
         <source>%n file(s) selected</source>
         <translation>
             <numerusform>%n fil markerad</numerusform>
@@ -377,17 +377,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="104"/>
+        <location filename="../qml/components/FileActions.qml" line="105"/>
         <source>clear selection</source>
         <translation>rensa markering</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="105"/>
+        <location filename="../qml/components/FileActions.qml" line="106"/>
         <source>select all</source>
         <translation>markera alla</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="114"/>
+        <location filename="../qml/components/FileActions.qml" line="115"/>
         <source>cut file(s)</source>
         <translation>
             <numerusform>klipp ut filen</numerusform>
@@ -395,7 +395,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="118"/>
+        <location filename="../qml/components/FileActions.qml" line="119"/>
         <source>%n file(s) cut</source>
         <translation>
             <numerusform>%n fil urklippt</numerusform>
@@ -403,7 +403,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="127"/>
+        <location filename="../qml/components/FileActions.qml" line="128"/>
         <source>copy file(s)</source>
         <translation>
             <numerusform>kopiera filen</numerusform>
@@ -411,7 +411,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="131"/>
+        <location filename="../qml/components/FileActions.qml" line="132"/>
         <source>%n file(s) copied</source>
         <translation>
             <numerusform>%n fil kopierad</numerusform>
@@ -419,7 +419,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="140"/>
+        <location filename="../qml/components/FileActions.qml" line="141"/>
         <source>transfer file(s)</source>
         <translation>
             <numerusform>överför filen</numerusform>
@@ -427,7 +427,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="159"/>
+        <location filename="../qml/components/FileActions.qml" line="160"/>
         <source>delete file(s)</source>
         <translation>
             <numerusform>ta bort filen</numerusform>
@@ -435,7 +435,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="174"/>
+        <location filename="../qml/components/FileActions.qml" line="175"/>
         <source>rename file(s)</source>
         <translation>
             <numerusform>byt namn på filen</numerusform>
@@ -443,7 +443,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="193"/>
+        <location filename="../qml/components/FileActions.qml" line="194"/>
         <source>share file(s)</source>
         <translation>
             <numerusform>dela filen</numerusform>
@@ -451,7 +451,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="213"/>
+        <location filename="../qml/components/FileActions.qml" line="214"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>komprimera filen</numerusform>
@@ -459,7 +459,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="221"/>
+        <location filename="../qml/components/FileActions.qml" line="222"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>komprimera filen</numerusform>
@@ -467,7 +467,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="230"/>
+        <location filename="../qml/components/FileActions.qml" line="231"/>
         <source>show file properties</source>
         <translation>visa filegenskaper</translation>
     </message>
