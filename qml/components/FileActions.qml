@@ -38,7 +38,6 @@ Item {
     property alias labelText: label.text
     property bool isUpright: main.orientation === Orientation.Portrait ||
                              main.orientation === Orientation.PortraitInverted
-    property int itemSize: Theme.iconSizeMedium
     property bool enabled: true
     property bool showLabel: true
     property bool displayClose: false
@@ -54,6 +53,8 @@ Item {
     property bool showTransfer: true
     property bool showCompress: true
     property bool showEdit: true
+
+    property int _itemSize: Theme.iconSizeMedium
 
     // emitted after the action has been completed
     signal selectAllTriggered
