@@ -2,10 +2,13 @@ build*
 *.pro.user
 *.spec.*
 *~
+*.~*
 *.qm
 dist*
 liverunner*
+TODO*
 add-gpl.sh
 
+icon-src/raw
 root/build*
 root/RPMS
