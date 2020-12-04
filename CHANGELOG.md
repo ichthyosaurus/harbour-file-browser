@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+* Nothing so far
+
+## Version 2.3.1-beta (2020-12-04)
+
+Published in OpenRepos on 2020-12-04 by ichthyosaurus.
+
  * Updated translations: Swedish, Chinese
  * Changed file info icon to the default system icon
  * Changed toolbar icons to 112x112px instead of 64x64px
