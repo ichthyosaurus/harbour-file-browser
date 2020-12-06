@@ -479,8 +479,9 @@ Page {
     onStatusChanged: {
         if (_initialSearchDone) return;
         if (status === PageStatus.Activating) {
-            clearSelectedFiles();
+            // clearSelectedFiles();
             clearCover();
+
             // TODO enable once it no longer messes up the page stack
             // main.activePage = {type: "search", path: dir, query: searchText};
             // navigate_syncNavStack();
