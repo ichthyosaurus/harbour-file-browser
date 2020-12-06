@@ -246,10 +246,25 @@ Page {
         }
 
         header: PageHeader {
+            id: header
             title: Paths.formatPathForTitle(page.dir)
-            _titleItem.elide: Text.ElideMiddle
             description: page.fullPathShown ? Paths.dirName(page.dir) : ""
             Component.onCompleted: dirPopup.menuTop = y+height
+
+            leftMargin: menuIcon.width + Theme.horizontalPageMargin + Theme.paddingMedium
+            _titleItem.elide: Text.ElideMiddle
+
+            IconButton {
+                id: menuIcon
+                anchors {
+                    left: parent.left; leftMargin: Theme.horizontalPageMargin
+                    rightMargin: Theme.paddingMedium
+                    verticalCenter: parent.verticalCenter
+                }
+                opacity: Theme.opacityHigh
+                icon.source: "image://theme/icon-m-menu"
+                highlighted: true
+            }
 
             BackgroundItem {
                 anchors.fill: parent
