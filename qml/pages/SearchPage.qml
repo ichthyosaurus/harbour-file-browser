@@ -29,6 +29,7 @@ import "../js/paths.js" as Paths
 
 Page {
     id: page
+    objectName: "searchPage"
     allowedOrientations: Orientation.All
 
     property string dir: "/" // holds the top directory where all searches will be made
@@ -480,6 +481,9 @@ Page {
         if (status === PageStatus.Activating) {
             clearSelectedFiles();
             clearCover();
+            // TODO enable once it no longer messes up the page stack
+            // main.activePage = {type: "search", path: dir, query: searchText};
+            // navigate_syncNavStack();
         } else if (status === PageStatus.Active &&
                    startImmediately === true && searchText !== "") {
             listModel.update(searchText);

@@ -31,6 +31,7 @@ import "../js/files.js" as Files
 
 Page {
     id: page
+    objectName: "directoryPage"
     allowedOrientations: Orientation.All
     property bool _ready: false
     property string _activeDir: ""
@@ -452,6 +453,8 @@ Page {
         } else if (status === PageStatus.Activating && _activeDir !== dir) {
             console.log("loading", dir);
             _activeDir = dir;
+            main.activePage = {type: "dir", path: dir};
+            navigate_syncNavStack();
         }
     }
 

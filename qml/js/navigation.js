@@ -34,122 +34,138 @@
 // { type: string, path: string, properties: object }
 // -- type: "search" or "dir"
 // -- path: directory path
-// -- properties: additional properties, only used for searches
+// -- query: search query (only used for type 'search')
 //
 // TODO: include SearchPage in history
 
+function syncNavStack() {
+    if (currentPage.type !== activePage.type ||
+            currentPage.path !== activePage.path) {
+        backStack.push(JSON.parse(JSON.stringify(currentPage)));
+        currentPage = JSON.parse(JSON.stringify(activePage));
+        forwardStack = []; // clear the forward stack because we just started a new branch
+    }
+}
+
 function goBack() {
     if (!canGoBack()) return;
-    if (backStack.length == 1) {
-        // Situation: we popped a few pages from the page stack
-        // and now we're in a directory that' not in the stacks.
-        backStack.push({type: "dir", path: pageStack.currentPage.dir });
-    }
-
     var go = backStack.pop();
-    forwardStack.push(go);
-    var actually = backStack[backStack.length-1];
-    _executeHistory(actually);
+    forwardStack.push(JSON.parse(JSON.stringify(currentPage)));
+     _debugStacks("goBack")
+    _executeHistory(go);
 }
 
 function goForward() {
     if (!canGoForward()) return;
     var go = forwardStack.pop();
-    backStack.push(go);
+    backStack.push(JSON.parse(JSON.stringify(currentPage)));
+     _debugStacks("goForward")
     _executeHistory(go);
 }
 
-function canGoForward() { return forwardStack.length >= 1; }
+function canGoForward() {
+     _debugStacks("canGoForward")
+    return forwardStack.length > 0
+}
 function canGoBack() {
-    if (backStack.length >= 2) {
-        return true;
-    } else if (backStack.length == 1 &&
-               pageStack.currentPage.hasOwnProperty("dir") &&
-               pageStack.currentPage.dir !== backStack[0].path) {
-        return true;
-    }
-    return false;
+     _debugStacks("canGoBack")
+    return backStack.length > 0
 }
 
 function _executeHistory(go) {
+    currentPage = JSON.parse(JSON.stringify(go));
     if (go.type === "dir") {
         goToFolder(go.path, true) // silent
     } else if (go.type === "search") {
-        goToFolder(go.path, true) // silent
-        pageStack.push(Qt.resolvedUrl("../pages/SearchPage.qml"),
-                       { dir: go.path }, PageStackAction.Immediate)
+        goToFolder(go.path, true, go.query) // silent, immediately start search
     } else {
         console.error("invalid history type:", go.type)
     }
 }
 
+function _debugStacks(hint) {
+    console.log("[stacks:", hint+"]", JSON.stringify(backStack),
+                "||", JSON.stringify(currentPage),
+                "||", JSON.stringify(forwardStack))
+}
+
 function _sharedStart(array) {
     var A=array.concat().sort(), a1=A[0].split("/"), a2=A[A.length-1].split("/"), L=a1.length, i=0;
     while(i<L && a1[i]===a2[i]) i++;
-    return a1.slice(0, i).join("/");
+    var shared = a1.slice(0, i).join("/");
+    shared = shared.replace(/\/+/g, '/');
+    shared = shared.replace(/\/$/, '');
+    if (shared === '') shared = '/' // at least / is always shared
+    return shared;
 }
 
-function goToFolder(folder, silent) {
+function goToFolder(folder, silent, startSearchQuery) {
     console.log("switching to:", folder)
     var pagePath = Qt.resolvedUrl("../pages/DirectoryPage.qml");
-    var cur = "", shared = "", rest = "", basePath = "", sourceDir = "", above = null;
+    var shared = "", rest = "", basePath = "", sourceDir = "", above = null;
     folder = folder.replace(/\/+/g, '/')
     folder = folder.replace(/\/$/, '')
+    if (folder === '') folder = '/'
 
-    if (pageStack.currentPage.hasOwnProperty("dir")) {
+    if (pageStack.currentPage.objectName === "directoryPage") {
+        console.log("- starting at directory")
         sourceDir = pageStack.currentPage.dir;
-        if (sourceDir === folder) return;
-    }
-
-    var prevPage = pageStack.previousPage();
-    while (prevPage && !prevPage.hasOwnProperty("dir")) {
-        prevPage = pageStack.previousPage(prevPage);
-    }
-
-    if (prevPage !== null) {
-        console.log("- found previous page")
-        cur = prevPage.dir
-        if (!sourceDir) sourceDir = cur
-        shared = _sharedStart([folder, cur]);
-    }
-
-    if (shared === folder) {
-        var existingTarget = pageStack.find(function(page) {
-            if (page.dir === folder) return true;
-            return false;
-        })
-        if (!existingTarget) {
-            // something weird happened
-            // replace the complete stack with a new root page
-            pageStack.animatorReplaceAbove(null, Qt.resolvedUrl("../pages/DirectoryPage.qml"), { dir: "/" }, PageStackAction.Animated);
-        } else {
-            pageStack.pop(existingTarget, PageStackAction.Animated);
+    } else {
+        var prevPage = pageStack.previousPage();
+        while (prevPage && !prevPage.objectName === "directoryPage") {
+            // search for the top-most directory page
+            prevPage = pageStack.previousPage(prevPage);
         }
-        console.log("- finished (quick)")
 
-        return;
-    } else if (shared === "/" || shared === "") {
-        above = null;
+        if (prevPage !== null) {
+            console.log("- found previous page")
+            sourceDir = prevPage.dir
+        }
+    }
+
+    if (sourceDir === folder) {
+        console.log("- already at target")
+        shared = sourceDir
+    } else {
+        shared = _sharedStart([folder, sourceDir]);
+    }
+
+    if (!silent && sourceDir !== "") {
+        backStack.push(JSON.parse(JSON.stringify(currentPage)));
+        syncNavStack()
+        currentPage = {type: "dir", path: folder}
+        forwardStack = []; // clear the forward stack because we just started a new branch
+        console.log("go STACKS:", JSON.stringify(backStack), "||", JSON.stringify(currentPage), "||", JSON.stringify(forwardStack))
+    }
+
+    console.log("- searching...")
+    var existingTarget = null;
+    existingTarget = pageStack.find(function(page) {
+        if (page.objectName === "directoryPage" &&
+                page.dir === shared) return true;
+        return false;
+    })
+
+    if (existingTarget === null) {
+        above = null
         rest = folder
         basePath = ""
-        console.log("- shared:", shared)
-    } else if (shared !== "") {
-        console.log("- searching...")
-        var existingBase = pageStack.find(function(page) {
-            if (page.dir === shared) return true;
-            return false;
-        })
-        console.log("- found")
-        above = existingBase;
-        rest = folder.replace(shared+"/", "/");
-        basePath = shared;
-        console.log("- found ok")
+        console.log("- no shared tree")
+    } else {
+        console.log("- shared tree found")
+        if (shared === folder && startSearchQuery === undefined) {
+            pageStack.pop(existingTarget, PageStackAction.Animated);
+            console.log("- finished (quick)")
+            return
+        } else {
+            above = existingTarget;
+            var search = "^"+(shared+"/").replace(/([.-[\](){}\\*?*^$|])/g, "\\$1");
+            rest = folder.replace(new RegExp(search), '/');
+            basePath = shared;
+            console.log("- determined shared tree: ", basePath, rest);
+        }
     }
 
-    // 2020-05-01: use the commented-out code if pageStack does not support
-    // pushing arrays for some reason. This feature might have been added with
-    // a recent update. It is supported since at least 3.2.1.20.
-    console.log("- preparing...")
     var toPush = []
     var dirs = rest.split("/");
 
@@ -160,18 +176,28 @@ function goToFolder(folder, silent) {
     }
     toPush.push({page: pagePath, properties: {dir: folder}});
 
-    // DEBUG: console.log("- pushing...", JSON.stringify(toPush))
-    console.log("- pushing pages:", toPush.length)
-    if (!silent) {
-        if (backStack.length > 0 && backStack[backStack.length-1].path !== sourceDir) {
-            backStack.push({type: "dir", path: sourceDir});
-        }
-        backStack.push({type: "dir", path: folder});
-        forwardStack = []; // clear the forward stack because we just started a new branch
+    if (startSearchQuery !== undefined) {
+        toPush.push({page: Qt.resolvedUrl("../pages/SearchPage.qml"),
+                        properties: {
+                            dir: folder,
+                            searchText: startSearchQuery,
+                            startImmediately: true
+                        }})
     }
-    pageStack.animatorReplaceAbove(above, toPush);
+
+    if (above !== pageStack.currentPage) {
+        console.log("- inserting "+toPush.length+" page(s)")
+        pageStack.animatorReplaceAbove(above, toPush);
+    } else {
+        console.log("- pushing "+toPush.length+" page(s)")
+        pageStack.animatorPush(toPush);
+    }
+
     console.log("- done")
 
+    // 2020-05-01: use the commented-out code if pageStack does not support
+    // pushing arrays for some reason. This feature might have been added with
+    // a recent update. It is supported since at least 3.2.1.20.
     /*var dirs = rest.split("/");
     for (var j = 1; j < dirs.length-1; ++j) {
         basePath += "/"+dirs[j];

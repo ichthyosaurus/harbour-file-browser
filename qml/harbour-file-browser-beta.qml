@@ -43,6 +43,8 @@ ApplicationWindow {
     // Navigation history: see navigation.js for details
     property var backStack: ([])
     property var forwardStack: ([])
+    property var currentPage: ({type: "dir", path: initialDirectory})
+    property var activePage: ({type: "dir", path: initialDirectory})
 
     // Proxy functions for heavy libraries
     // The basic functions are proxied here. If more functions
@@ -52,6 +54,7 @@ ApplicationWindow {
     function navigate_goForward() { return Navigation.goForward(); }
     function navigate_canGoBack() { return Navigation.canGoBack(); }
     function navigate_canGoForward() { return Navigation.canGoForward(); }
+    function navigate_syncNavStack() { return Navigation.syncNavStack(); }
     function bookmarks_hasBookmark(path) { return Bookmarks.hasBookmark(path); }
     function bookmarks_addBookmark(path, name) { return Bookmarks.addBookmark(path, name); }
     function bookmarks_removeBookmark(path) { return Bookmarks.removeBookmark(path); }
@@ -67,7 +70,7 @@ ApplicationWindow {
                 if (status === PageStatus.Activating && initial) {
                     initial = false;
                     pageStack.completeAnimation();
-                    Navigation.goToFolder(initialDirectory);
+                    Navigation.goToFolder(initialDirectory, true); // silent
                 }
             }
         }
