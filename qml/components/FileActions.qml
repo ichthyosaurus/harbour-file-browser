@@ -26,7 +26,7 @@ Item {
     id: base
     width: isUpright ? Screen.width : Screen.height
     height: isUpright ? (showLabel ? label.height : 0)+groupA.height+groupB.height :
-                        itemSize+Theme.paddingLarge
+                        _itemSize+Theme.paddingLarge
 
     property var selectedFiles: function() {
         // function returning a list of selected files (has to be provided)
@@ -60,7 +60,7 @@ Item {
     signal selectAllTriggered
     signal cutTriggered
     signal copyTriggered
-    signal deleteTriggered // <- without action
+    signal deleteTriggered // <- action has to be executed by caller
     signal closeTriggered
     signal propertiesTriggered
     signal renameTriggered(var oldFiles, var newFiles)
@@ -80,7 +80,7 @@ Item {
     Label {
         id: label
         visible: showLabel
-        height: showLabel ? (isUpright ? itemSize : itemSize+Theme.paddingLarge) : 1
+        height: showLabel ? (isUpright ? _itemSize : _itemSize+Theme.paddingLarge) : 1
         width: showLabel ? (isUpright ? parent.width : 2*Theme.itemSizeLarge) : (
             (parent.width-(groupA.width+groupB.width))/2-groupA.anchors.leftMargin
                            )
@@ -96,7 +96,7 @@ Item {
 
         IconButton {
             visible: showSelection
-            enabled: base.enabled; icon.width: itemSize; icon.height: itemSize
+            enabled: base.enabled; icon.width: _itemSize; icon.height: _itemSize
             icon.source: displayClose ? "image://theme/icon-m-clear"
                                       : "../images/toolbar-select-all.png"
                                    // : "image://theme/icon-m-select-all" -- does not feel intuitive
@@ -109,7 +109,7 @@ Item {
         }
         IconButton {
             visible: showCut
-            enabled: base.enabled && selectedCount > 0; icon.width: itemSize; icon.height: itemSize
+            enabled: base.enabled && selectedCount > 0; icon.width: _itemSize; icon.height: _itemSize
             icon.source: "../images/toolbar-cut.png"
             icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("cut file(s)", "", selectedCount);
@@ -122,7 +122,7 @@ Item {
         }
         IconButton {
             visible: showCopy
-            enabled: base.enabled && selectedCount > 0; icon.width: itemSize; icon.height: itemSize
+            enabled: base.enabled && selectedCount > 0; icon.width: _itemSize; icon.height: _itemSize
             icon.source: "../images/toolbar-copy.png"
             icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("copy file(s)", "", selectedCount);
@@ -135,7 +135,7 @@ Item {
         }
         IconButton {
             visible: showTransfer
-            enabled: base.enabled && selectedCount > 0; icon.width: itemSize; icon.height: itemSize
+            enabled: base.enabled && selectedCount > 0; icon.width: _itemSize; icon.height: _itemSize
             icon.source: "image://theme/icon-m-shuffle"
             icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("transfer file(s)", "", selectedCount);
@@ -154,7 +154,7 @@ Item {
         }
         IconButton {
             visible: showDelete
-            enabled: base.enabled && selectedCount > 0; icon.width: itemSize; icon.height: itemSize
+            enabled: base.enabled && selectedCount > 0; icon.width: _itemSize; icon.height: _itemSize
             icon.source: "image://theme/icon-m-delete"
             icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("delete file(s)", "", selectedCount);
@@ -169,7 +169,7 @@ Item {
         IconButton {
             visible: showRename
             enabled: selectedCount > 0 && selectedCount <= 20
-            icon.width: itemSize; icon.height: itemSize
+            icon.width: _itemSize; icon.height: _itemSize
             icon.source: "../images/toolbar-rename.png"
             icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("rename file(s)", "", selectedCount);
@@ -188,7 +188,7 @@ Item {
             visible: showShare && sharingEnabled
             // sadly, SharePage can only handle one sole single lone and lonely orientation
             enabled: selectedCount === 1 && main.orientation === Orientation.Portrait
-            icon.width: itemSize; icon.height: itemSize
+            icon.width: _itemSize; icon.height: _itemSize
             icon.source: "image://theme/icon-m-share"
             icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("share file(s)", "", selectedCount);
@@ -206,7 +206,7 @@ Item {
         }
         IconButton { // NOT IMPLEMENTED YET
             visible: showCompress && false
-            enabled: false && selectedCount > 0; icon.width: itemSize; icon.height: itemSize
+            enabled: false && selectedCount > 0; icon.width: _itemSize; icon.height: _itemSize
             icon.source: "image://theme/icon-m-file-archive-folder"
             icon.color: Theme.primaryColor
             onClicked: { compressTriggered(); }
@@ -216,7 +216,7 @@ Item {
         }
         IconButton { // NOT IMPLEMENTED YET
             visible: showEdit && false
-            enabled: false && selectedCount > 0; icon.width: itemSize; icon.height: itemSize
+            enabled: false && selectedCount > 0; icon.width: _itemSize; icon.height: _itemSize
             icon.source: "image://theme/icon-m-edit"
             icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("edit file(s)", "", selectedCount);
@@ -225,7 +225,7 @@ Item {
         IconButton {
             visible: showProperties
             enabled: base.enabled && selectedCount > 0
-            icon.width: itemSize; icon.height: itemSize
+            icon.width: _itemSize; icon.height: _itemSize
             icon.source: "image://theme/icon-m-about"
             icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("show file properties");
