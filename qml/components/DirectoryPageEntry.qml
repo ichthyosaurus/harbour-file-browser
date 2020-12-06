@@ -39,6 +39,14 @@ ListItem {
     property bool _galleryModeActiveAvailable: false
     property color _detailsColor: highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
 
+    function deleteMe() {
+        _remorseItem = remorseDelete(function(){
+            clearSelectedFiles();
+            progressPanel.showText(qsTr("Deleting"));
+            engine.deleteFiles([fileModel.fileNameAt(index)]);
+        });
+    }
+
     onClicked: {
         if (fileModel.selectedFileCount > 0) {
             toggleSelection(index);
@@ -268,6 +276,7 @@ ListItem {
         ContextMenu {
             id: menu
             property bool _toggleBookmark: false
+            property bool _triggerDelete: false
             property bool _hasBookmark: isDir ? Bookmarks.hasBookmark(fileModel.fileNameAt(index)) : false
             onActiveChanged: {
                 if (!active) return;
@@ -276,6 +285,7 @@ ListItem {
                 clearSelectedFiles();
             }
             onClosed: {
+                // delayed action so that menu has already closed when it is re-arranged
                 if (_toggleBookmark) {
                     if (hasBookmark) {
                         Bookmarks.removeBookmark(fileModel.fileNameAt(index));
@@ -284,6 +294,10 @@ ListItem {
                         Bookmarks.addBookmark(fileModel.fileNameAt(index));
                         hasBookmark = true; visibleChanged();
                     }
+                }
+
+                if (_triggerDelete) {
+                    listItem.deleteMe();
                 }
             }
 
@@ -295,12 +309,8 @@ ListItem {
                 showShare: !model.isLink
                 showSelection: false; showEdit: false; showCompress: false
                 onDeleteTriggered: {
-                    _remorseItem = listItem.remorseDelete(function(){
-                        clearSelectedFiles();
-                        progressPanel.showText(qsTr("Deleting"));
-                        engine.deleteFiles([fileModel.fileNameAt(index)]);
-                        menu.close();
-                    });
+                    menu._triggerDelete = true;
+                    menu.close();
                 }
                 onCutTriggered: menu.close();
                 onCopyTriggered: menu.close();

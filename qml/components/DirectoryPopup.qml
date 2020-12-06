@@ -126,7 +126,7 @@ Item {
                 BackgroundItem {
                     width: parent.width/3; contentHeight: parent.height
                     onClicked: _selectedMenu = "back"
-                    enabled: navigate_canGoBack()
+                    enabled: navigate_canGoBack() === true
                     opacity: enabled ? 1.0 : Theme.opacityLow
                     Icon { source: "image://theme/icon-m-back"; anchors.centerIn: parent }
                 }
@@ -144,7 +144,7 @@ Item {
                 BackgroundItem {
                     width: parent.width/3; contentHeight: parent.height
                     onClicked: _selectedMenu = "forward"
-                    enabled: navigate_canGoForward()
+                    enabled: navigate_canGoForward() === true
                     opacity: enabled ? 1.0 : Theme.opacityLow
                     Icon { source: "image://theme/icon-m-forward"; anchors.centerIn: parent }
                 }
