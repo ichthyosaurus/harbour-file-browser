@@ -47,6 +47,7 @@ Page {
     property bool fullPathShown: (settings.read("General/ShowFullDirectoryPaths", "false") === "true")
     // set to true to enable starting deep search when pressing 'Enter' in filter input
     property bool quickSearchEnabled: (settings.read("General/DefaultFilterAction", "filter") === "search")
+    property bool navMenuIconShown: (settings.read("General/ShowNavigationMenuIcon", "true") === "true")
 
     property string viewState: updateThumbnailsState() // state for list delegates
     property int _baseIconSize: (viewState === '' || viewState === 'gallery') ? Theme.iconSizeSmall : _baseEntryHeight
@@ -251,11 +252,13 @@ Page {
             description: page.fullPathShown ? Paths.dirName(page.dir) : ""
             Component.onCompleted: dirPopup.menuTop = y+height
 
-            leftMargin: menuIcon.width + Theme.horizontalPageMargin + Theme.paddingMedium
+            leftMargin: (navMenuIconShown ? menuIcon.width + Theme.paddingMedium : 0)
+                        + Theme.horizontalPageMargin
             _titleItem.elide: Text.ElideMiddle
 
             IconButton {
                 id: menuIcon
+                visible: navMenuIconShown
                 anchors {
                     left: parent.left; leftMargin: Theme.horizontalPageMargin
                     rightMargin: Theme.paddingMedium
@@ -454,6 +457,8 @@ Page {
                 page.quickSearchEnabled = (settings.read("General/DefaultFilterAction", "filter") === "search");
             } else if (key === 'General/ShowFullDirectoryPaths') {
                 page.fullPathShown = (settings.read("General/ShowFullDirectoryPaths", "false") === "true");
+            } else if (key === 'General/ShowNavigationMenuIcon') {
+                page.navMenuIconShown = (settings.read("General/ShowNavigationMenuIcon", "true") === "true")
             }
         }
     }

@@ -133,6 +133,7 @@ Page {
                     property alias defaultFilter: b2.currentIndex
                     property alias showFullPaths: b3.checked
                     property alias filenameElideMode: b4.currentIndex
+                    property alias showNavigationMenuIcon: b5.checked
 
                     ComboBox {
                         id: b1; width: parent.width
@@ -170,6 +171,10 @@ Page {
                     TextSwitch {
                         id: b3; text: qsTr("Show full directory paths")
                         onCheckedChanged: settings.write("General/ShowFullDirectoryPaths", checked.toString())
+                    }
+                    TextSwitch {
+                        id: b5; text: qsTr("Show navigation menu icon")
+                        onCheckedChanged: settings.write("General/ShowNavigationMenuIcon", checked.toString())
                     }
                 }
             }
@@ -254,6 +259,7 @@ Page {
             viewGroup.contentItem.useLocalSettings = (settings.read("View/UseLocalSettings", "true") === "true");
             viewGroup.contentItem.enableGallery = (settings.read("View/EnableGalleryMode", "false") === "true");
             behaviourGroup.contentItem.showFullPaths = (settings.read("General/ShowFullDirectoryPaths", "false") === "true");
+            behaviourGroup.contentItem.showNavigationMenuIcon = (settings.read("General/ShowNavigationMenuIcon", "true") === "true");
 
             var defTransfer = settings.read("Transfer/DefaultAction", "none");
             if (defTransfer === "copy") {
