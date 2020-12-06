@@ -102,11 +102,7 @@ QVariant Settings::readVariant(QString key, const QVariant &defaultValue, QStrin
 
     if (!fileInfo.exists() || !fileInfo.isReadable() || pathIsProtected(fileName)) {
         QMutexLocker locker(&m_mutex);
-        if (getRuntimeSettings(fileInfo).contains(key)) {
-            return getRuntimeSettings(fileInfo)[key];
-        }
-
-        return defaultValue;
+        return getRuntimeSettings(fileInfo).value(key, defaultValue);
     }
 
     flushRuntimeSettings(fileName);
