@@ -2,7 +2,12 @@
 
 ## Unreleased
 
-* Nothing so far
+* Fixed deleting files via context menu
+* Fixed clearing selection while filtering
+* Added a menu icon to directory headers (can be disabled in the settings)
+* Improved description text for adding custom transfer targets
+* Refactored page navigation and navigation history (even good things can be improved)
+* Fixed some console noise
 
 ## Version 2.3.1-beta (2020-12-04)
 
