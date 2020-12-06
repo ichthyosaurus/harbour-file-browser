@@ -371,7 +371,7 @@ Page {
         id: selectionPanel
         selectedCount: fileModel.selectedFileCount
         enabled: !page.remorsePopupActive && !page.remorseItemActive
-        displayClose: fileModel.selectedFileCount == fileModel.fileCount
+        displayClose: fileModel.selectedFileCount == fileModel.filteredFileCount
         selectedFiles: function() { return fileModel.selectedFiles(); }
 
         Connections {

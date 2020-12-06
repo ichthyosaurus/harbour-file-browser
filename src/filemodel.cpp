@@ -48,6 +48,7 @@ enum {
 FileModel::FileModel(QObject *parent) :
     QAbstractListModel(parent),
     m_selectedFileCount(0),
+    m_matchedFileCount(0),
     m_active(false),
     m_dirty(false)
 {
@@ -147,6 +148,11 @@ QHash<int, QByteArray> FileModel::roleNames() const
 int FileModel::fileCount() const
 {
     return m_files.count();
+}
+
+int FileModel::filteredFileCount() const
+{
+    return m_matchedFileCount;
 }
 
 QString FileModel::errorMessage() const
@@ -441,9 +447,11 @@ void FileModel::applyFilterString()
 {
     QMutableListIterator<StatFileInfo> iter(m_files);
     int row = 0; int count = 0;
+    m_matchedFileCount = 0;
     while (iter.hasNext()) {
         StatFileInfo &info = iter.next();
         bool match = info.fileName().contains(m_filterString, Qt::CaseInsensitive);
+        if (match) m_matchedFileCount++;
 
         if (   info.isMatched() != match
             || (!match && info.isSelected())) {
