@@ -61,7 +61,7 @@ Dialog {
 
             PullDownMenu {
                 MenuItem {
-                    text: qsTr("Enter path")
+                    text: qsTr("Enter target path")
                     onClicked: {
                         var start = Paths.dirName(toTransfer[0])
                         start = start.replace(/\/+/g, '/')
