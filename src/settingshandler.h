@@ -50,11 +50,11 @@ signals:
     void viewSettingsChanged(QString localPath);
 
 private:
-    void sanitizeKey(QString& key);
+    void sanitizeKey(QString& key) const;
     void flushRuntimeSettings(QString fileName);
-    bool hasRuntimeSettings(QFileInfo file);
+    bool hasRuntimeSettings(QFileInfo file) const;
     QMap<QString, QVariant>& getRuntimeSettings(QFileInfo file);
-    bool isWritable(QFileInfo file);
+    bool isWritable(QFileInfo file) const;
 
     // in-memory settings to be used when local settings are not available
     // It is a QMap of QMap, combining file paths with their local settings QMaps.

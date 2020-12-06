@@ -72,7 +72,7 @@ void Settings::flushRuntimeSettings(QString fileName) {
     }
 }
 
-bool Settings::hasRuntimeSettings(QFileInfo file) {
+bool Settings::hasRuntimeSettings(QFileInfo file) const {
     return m_runtimeSettings.contains(file.absoluteFilePath());
 }
 
@@ -80,7 +80,7 @@ QMap<QString, QVariant>& Settings::getRuntimeSettings(QFileInfo file) {
     return m_runtimeSettings[file.absoluteFilePath()];
 }
 
-bool Settings::isWritable(QFileInfo fileInfo) {
+bool Settings::isWritable(QFileInfo fileInfo) const {
     // Check whether the file is writable. If it does not exist, check if
     // its parent directory can be written to.
     // Use this method instead of plain QFileInfo::isWritable!
@@ -145,7 +145,7 @@ void Settings::writeVariant(QString key, const QVariant &value, QString fileName
     }
 }
 
-void Settings::sanitizeKey(QString& key) {
+void Settings::sanitizeKey(QString& key) const {
     // Replace all but the first occurrence of '/' by '#',
     // so '/' can appear without being treated as divider for sub-groups.
     // This is needed for saving paths as keys (eg. for bookmarks).
