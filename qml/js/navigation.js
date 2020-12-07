@@ -112,7 +112,7 @@ function goToFolder(folder, silent, startSearchQuery) {
         sourceDir = pageStack.currentPage.dir;
     } else {
         var prevPage = pageStack.previousPage();
-        while (prevPage && !prevPage.objectName === "directoryPage") {
+        while (prevPage && prevPage.objectName !== "directoryPage") {
             // search for the top-most directory page
             prevPage = pageStack.previousPage(prevPage);
         }
