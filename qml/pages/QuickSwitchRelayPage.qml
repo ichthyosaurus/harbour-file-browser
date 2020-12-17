@@ -38,20 +38,7 @@ Page {
         }
     }
 
-    // we want to place the BusyIndicator in the lower part
-    // of the upper half of the page
-    Item {
-        anchors {
-            top: parent.top; bottom: parent.verticalCenter
-            left: parent.left; right: parent.right
-        }
-        BusyIndicator {
-            anchors {
-                horizontalCenter: parent.horizontalCenter
-                top: parent.verticalCenter
-            }
-            running: true
-            size: BusyIndicatorSize.Large
-        }
+    PageBusyIndicator {
+        running: true
     }
 }
