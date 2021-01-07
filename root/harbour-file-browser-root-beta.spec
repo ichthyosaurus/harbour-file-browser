@@ -55,7 +55,11 @@ cp start-root start-root-helper.c %{buildroot}/usr/share/%appname/
 
 %changelog
 
-* Sun May 10 2020 ichthyosaurus <33604595+ichthyosaurus@users.noreply.github.com> 1.1-1
+* Thu Jan 07 2021 Mirian Margiani <mixosaurus+ichthyo@pm.me> 1.2.0-1
+- Renamed to harbour-file-browser-root (dropped beta suffix)
+- Marked as conflicting with legacy root app/patch
+- Switched versioning scheme to use three digits
+
 * Sun May 10 2020 Mirian Margiani <mixosaurus+ichthyo@pm.me> 1.1-1
 - Fixed starting from the terminal
 
