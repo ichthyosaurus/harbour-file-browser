@@ -2,12 +2,16 @@
 
 ## Unreleased
 
-* Fixed deleting files via context menu
-* Fixed clearing selection while filtering
-* Added a menu icon to directory headers (can be disabled in the settings)
-* Improved description text for adding custom transfer targets
-* Refactored page navigation and navigation history (even good things can be improved)
-* Fixed some console noise
+## Version 2.3.2-beta (2021-01-07)
+
+Published in OpenRepos on 2021-01-07 by ichthyosaurus.
+
+ * Fixed deleting files via context menu
+ * Fixed clearing selection while filtering
+ * Added a menu icon to directory headers (can be disabled in the settings)
+ * Improved description text for adding custom transfer targets
+ * Refactored page navigation and navigation history (even good things can be improved)
+ * Fixed some console noise
 
 ## Version 2.3.1-beta (2020-12-04)
 
