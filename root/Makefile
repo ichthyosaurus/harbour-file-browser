@@ -20,8 +20,9 @@
 
 .PHONY: default clean
 
-SPEC=harbour-file-browser-root-beta.spec
-SOURCES=icons harbour-file-browser-root-beta.desktop start-root-helper.c
+SUFFIX=
+SPEC=harbour-file-browser-root$(SUFFIX).spec
+SOURCES=icons harbour-file-browser-root$(SUFFIX).desktop start-root-helper.c
 
 default: $(SOURCES) $(SPEC)
 	rm -rf build
