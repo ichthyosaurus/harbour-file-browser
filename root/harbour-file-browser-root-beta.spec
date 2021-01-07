@@ -1,4 +1,4 @@
-%define appname harbour-file-browser-root-beta
+%define appname harbour-file-browser
 Name: %{appname}
 Summary: File Browser with root privileges
 Version: 1.1
@@ -9,7 +9,7 @@ Vendor: ichthyosaurus
 Packager: ichthyosaurus
 Source0: %{name}-%{version}.tar.xz
 Provides:      application(%{appname}.desktop)
-Requires:      harbour-file-browser-beta
+Requires:      harbour-file-browser >= 2.0.0
 
 # These two packages only work with legacy File Browser and are
 # no longer needed.
