@@ -48,7 +48,7 @@ OLD_DEFINES = "$$cat($$OUT_PWD/requires_defines.h)"
 !equals(OLD_DEFINES, $$join(DEFINES, ";", "//")) {
     NEW_DEFINES = "$$join(DEFINES, ";", "//")"
     write_file("$$OUT_PWD/requires_defines.h", NEW_DEFINES)
-    message("DEFINES changed...")
+    message("DEFINES changed..." $$DEFINES)
 }
 
 equals(HARBOUR_COMPLIANCE, off) {
