@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+ * Finally out of beta
+
 ## Version 2.3.2-beta (2021-01-07)
 
 Published in OpenRepos on 2021-01-07 by ichthyosaurus.
