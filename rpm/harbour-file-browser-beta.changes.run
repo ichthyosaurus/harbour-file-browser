@@ -18,6 +18,28 @@ if [[ ! -f "$file" ]]; then
     exit 1
 fi
 
+# CHANGELOG.md format:
+#  1: # File Browser Release Notes
+#  2:
+#  3: ## Unreleased
+#  4:
+#  5:  * Nothing so far
+#  6:
+#  7: ## Version X.Y.Z-beta (YYYY-MM-DD)
+#  8:
+#  9: Published in OpenRepos on YYYY-MM-DD by ichthyosaurus.
+# 10:
+# 11:  * Added nice features
+# nn: ...
+#
+# Important: entries (lines starting with an asterisk) must be indented by a
+# single whitespace.
+if grep -qoe '^\*' 2>/dev/null >/dev/null CHANGELOG.md; then
+    echo "error: CHANGELOG.md is badly formatted" >/dev/stderr
+    echo "       see rpm/harbour-file-browser-beta.changes.run for details" >/dev/stderr
+    exit 2
+fi
+
 # Changelog entries following the format below:
 # - Add newest entries to the top of the list.
 # - Separate entries from eachother with a blank line.
