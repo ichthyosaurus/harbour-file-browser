@@ -11,18 +11,18 @@
 # list. Just copy the last line and modify it as needed.
 # Do not forget to modify the localized app name in the the .desktop file.
 TRANSLATIONS = \
-    translations/harbour-file-browser-beta-de_CH.ts \
-    translations/harbour-file-browser-beta-de_DE.ts \
-    translations/harbour-file-browser-beta-el.ts \
-    translations/harbour-file-browser-beta-en_US.ts \
-    translations/harbour-file-browser-beta-es.ts \
-    translations/harbour-file-browser-beta-fi.ts \
-    translations/harbour-file-browser-beta-fr.ts \
-    translations/harbour-file-browser-beta-it_IT.ts \
-    translations/harbour-file-browser-beta-nl.ts \
-    translations/harbour-file-browser-beta-ru_RU.ts \
-    translations/harbour-file-browser-beta-sv.ts \
-    translations/harbour-file-browser-beta-zh_CN.ts \
+    translations/harbour-file-browser-de_CH.ts \
+    translations/harbour-file-browser-de_DE.ts \
+    translations/harbour-file-browser-el.ts \
+    translations/harbour-file-browser-en_US.ts \
+    translations/harbour-file-browser-es.ts \
+    translations/harbour-file-browser-fi.ts \
+    translations/harbour-file-browser-fr.ts \
+    translations/harbour-file-browser-it_IT.ts \
+    translations/harbour-file-browser-nl.ts \
+    translations/harbour-file-browser-ru_RU.ts \
+    translations/harbour-file-browser-sv.ts \
+    translations/harbour-file-browser-zh_CN.ts \
 
 # ------------------------------------------------------------------------------
 
@@ -34,7 +34,7 @@ TRANSLATIONS = \
 #   - desktop filename must be changed
 #   - icon definition filename in desktop file must be changed
 #   - translation filenames have to be changed
-TARGET = harbour-file-browser-beta
+TARGET = harbour-file-browser
 
 # Note:
 # Current version number and whether or not to include features
@@ -67,7 +67,7 @@ changelog.path = $$OUT_PWD
 
 CONFIG += sailfishapp
 
-SOURCES += src/harbour-file-browser-beta.cpp \
+SOURCES += src/harbour-file-browser.cpp \
     src/filemodel.cpp \
     src/filedata.cpp \
     src/engine.cpp \
@@ -110,11 +110,11 @@ DISTFILES += qml/*.qml \
     qml/js/*.js \
     qml/images/*.png \
     qml/pages/license.html \
-    rpm/harbour-file-browser-beta.changes.run \
-    rpm/harbour-file-browser-beta.spec \
-    rpm/harbour-file-browser-beta.yaml \
+    rpm/harbour-file-browser.changes.run \
+    rpm/harbour-file-browser.spec \
+    rpm/harbour-file-browser.yaml \
     translations/*.ts \
-    harbour-file-browser-beta.desktop \
+    harbour-file-browser.desktop \
 
 # to disable building translations every time, comment out the
 # following CONFIG line

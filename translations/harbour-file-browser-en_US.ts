@@ -2157,9 +2157,9 @@
     </message>
 </context>
 <context>
-    <name>harbour-file-browser-beta</name>
+    <name>harbour-file-browser</name>
     <message>
-        <location filename="../qml/harbour-file-browser-beta.qml" line="39"/>
+        <location filename="../qml/harbour-file-browser.qml" line="39"/>
         <source>Version %1</source>
         <translation>Version %1</translation>
     </message>

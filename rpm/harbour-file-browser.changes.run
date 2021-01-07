@@ -4,7 +4,7 @@
 # SPDX-FileCopyrightText: 2020 Mirian Margiani
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
-# This script (as rpm/harbour-file-browser-beta.run) lets mb2 automatically
+# This script (as rpm/harbour-file-browser.run) lets mb2 automatically
 # generate changelog entries from the CHANGELOG.md file.
 #
 # Note: Sailfish SDK's tools are ancient; i.e. sed only supports -r, not -E
@@ -25,7 +25,7 @@ fi
 #  4:
 #  5:  * Nothing so far
 #  6:
-#  7: ## Version X.Y.Z-beta (YYYY-MM-DD)
+#  7: ## Version X.Y.Z[-beta] (YYYY-MM-DD)
 #  8:
 #  9: Published in OpenRepos on YYYY-MM-DD by ichthyosaurus.
 # 10:
@@ -36,7 +36,7 @@ fi
 # single whitespace.
 if grep -qoe '^\*' 2>/dev/null >/dev/null CHANGELOG.md; then
     echo "error: CHANGELOG.md is badly formatted" >/dev/stderr
-    echo "       see rpm/harbour-file-browser-beta.changes.run for details" >/dev/stderr
+    echo "       see rpm/harbour-file-browser.changes.run for details" >/dev/stderr
     exit 2
 fi
 
@@ -58,7 +58,7 @@ latest_version="$(grep '## Version' CHANGELOG.md | head -1)"
 with_latest="$(paste -d '\n' -s <(echo "$latest_version") <(echo "$converted_sans_latest"))"
 
 # convert titles
-# old format: ## Version 2.2.2-beta (2020-05-29)
+# old format: ## Version 2.2.2[-beta] (2020-05-29)
 # new format: * date Author's Name <author's email> version-release
 echo "$with_latest" |\
     perl -p0e 's/\n\nPublished .*? by (.*?)\./ \1/g' |\

@@ -5,10 +5,10 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 # This script uses the converted RPM changelog (generated from CHANGELOG.md by
-# rpm/harbour-file-browser-beta.run) and converts it to be used on OpenRepos.
+# rpm/harbour-file-browser.run) and converts it to be used on OpenRepos.
 #
 
-converter="./rpm/harbour-file-browser-beta.changes.run"
+converter="./rpm/harbour-file-browser.changes.run"
 
 if [[ "$(basename "$(pwd)")" == "rpm" ]]; then
     cd ..  # run from base directory
