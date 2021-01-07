@@ -1,4 +1,4 @@
-Name: harbour-file-browser-beta
+Name: harbour-file-browser
 Summary: File Browser for Sailfish OS
 Version: 2.3.2
 Release: 1
@@ -15,7 +15,7 @@ Sources:
   - '%{name}-%{version}.tar.bz2'
 
 Description: |-
-  File Browser for Sailfish OS. Browse files on the phone. (Beta version.)
+  File Browser for Sailfish OS. A fully-fledged file manager for your phone.
 
 Configure: none
 Builder: qmake5
