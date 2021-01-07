@@ -1,7 +1,7 @@
 %define appname harbour-file-browser
 Name: %{appname}
 Summary: File Browser with root privileges
-Version: 1.1
+Version: 1.2.0
 Release: 1
 Group: System/Tools
 License: GPL-3.0-or-later
