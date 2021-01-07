@@ -22,8 +22,8 @@ render_batch
 
 cNAME="toolbar icons"
 cITEMS=(
-    toolbar-{rename,copy,cut,select-all}@112
-    icon-btn-search@112
+    toolbar/toolbar-{rename,copy,cut,select-all}@112
+    toolbar/icon-btn-search@112
 )
 cRESOLUTIONS=(F1)
 cTARGETS=(../qml/images)
@@ -37,10 +37,10 @@ render_batch
 
 cNAME="file icons"
 cITEMS=(
-    file-{stack,audio,compressed,pdf,image,txt,video,apk,rpm}
-    folder{,-link}
-    link
-    file
+    file/file-{stack,audio,compressed,pdf,image,txt,video,apk,rpm}
+    file/folder{,-link}
+    file/link
+    file/file
 )
 cRESOLUTIONS=(128+large- 32+small-)
 cTARGETS=(../qml/images)
