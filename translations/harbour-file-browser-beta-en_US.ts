@@ -1627,7 +1627,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="176"/>
         <source>Show navigation menu icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Show navigation menu icon</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="185"/>
@@ -1969,7 +1969,7 @@
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="64"/>
         <source>Enter target path</source>
-        <translation type="unfinished"></translation>
+        <translation>Enter target path</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="79"/>
