@@ -1,4 +1,4 @@
-%define appname harbour-file-browser
+%define appname harbour-file-browser-root
 Name: %{appname}
 Summary: File Browser with root privileges
 Version: 1.2.0
