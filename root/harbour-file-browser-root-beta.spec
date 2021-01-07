@@ -11,9 +11,12 @@ Source0: %{name}-%{version}.tar.xz
 Provides:      application(%{appname}.desktop)
 Requires:      harbour-file-browser-beta
 
-## as long as we are in beta there is no conflict
-# Conflicts:     sailfishos-filebrowserroot-patch
-# Conflicts:     filebrowserroot
+# These two packages only work with legacy File Browser and are
+# no longer needed.
+Obsoletes:     sailfishos-filebrowserroot-patch
+Obsoletes:     filebrowserroot
+Conflicts:     sailfishos-filebrowserroot-patch
+Conflicts:     filebrowserroot
 
 %description
 Run File Browser with super user privileges. (For version 2.0.0+.)
