@@ -11,6 +11,9 @@ Source0: %{name}-%{version}.tar.xz
 Provides:      application(%{appname}.desktop)
 Requires:      harbour-file-browser >= 2.0.0
 
+# Remove this line if there's a new beta version around.
+Obsoletes:     harbour-file-browser-root-beta
+
 # These two packages only work with legacy File Browser and are
 # no longer needed.
 Obsoletes:     sailfishos-filebrowserroot-patch
