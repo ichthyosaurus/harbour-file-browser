@@ -59,4 +59,6 @@ echo "$with_latest" |\
         } else {
             print;
         }
-    }'
+    }' |\
+    sed 's/ ichthyosaurus <>/ Mirian Margiani <mixosaurus+ichthyo@pm.me>/g' # |\
+    # sed 's/ karip <>/ karip <karip@example.org>/g'
