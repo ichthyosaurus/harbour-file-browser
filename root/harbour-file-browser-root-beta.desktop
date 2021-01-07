@@ -1,8 +1,8 @@
 [Desktop Entry]
 Type=Application
 Name=File Browser (Root)
-Icon=harbour-file-browser-root-beta
-Exec=/usr/share/harbour-file-browser-root-beta/start-root
+Icon=harbour-file-browser-root
+Exec=/usr/share/harbour-file-browser-root/start-root
 Categories=System;FileTools;FileManager
 X-Desktop-File-Install-Version=0.20
 

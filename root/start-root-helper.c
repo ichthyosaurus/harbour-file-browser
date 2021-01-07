@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -25,6 +25,6 @@
 
 int main() {
     setuid(0);
-    system("su -c 'mkdir -p /run/user/0/dconf' && su -c 'invoker --type=silica-qt5 -n /usr/bin/harbour-file-browser-beta'");
+    system("su -c 'mkdir -p /run/user/0/dconf' && su -c 'invoker --type=silica-qt5 -n /usr/bin/harbour-file-browser'");
     exit(0);
 }
