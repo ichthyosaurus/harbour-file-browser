@@ -6,13 +6,9 @@ A file manager application to view and browser files on
 There is a [FAQ](https://github.com/ichthyosaurus/harbour-file-browser/blob/master/FAQ.md)
 about most common questions.
 
-### Beta / Development Notice
-
-This repository contains the development of version 2.0.0 and upwards of File Browser.
-
-See the [release notes](https://github.com/ichthyosaurus/harbour-file-browser/blob/master/CHANGELOG.md)
+This repository contains the development of version 2.0.0 and upwards of File
+Browser. See the [release notes](https://github.com/ichthyosaurus/harbour-file-browser/blob/master/CHANGELOG.md)
 for further details.
-
 
 ### Warning
 
@@ -41,6 +37,11 @@ responsibility if that happens. So, be careful.
 
 ### Acknowledgements
 
+File Browser had been developed since 2013 by [karip](https://github.com/karip)
+up until version 1.8.0. Source code and compiled packages of legacy versions
+(which were released into the public domain) are still available in karip's
+repository [on Github](https://github.com/karip/harbour-file-browser).
+
 Exif data embedded in image files is displayed with [JHead](http://www.sentex.net/~mwandel/jhead/),
 which is a public domain Exif manipulation tool.
 
@@ -64,8 +65,6 @@ contribute.
 
 ## License
 
-### From version 2.0.0
-
 [![GNU GPL v3.0](http://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl.html)
 [![OSI](http://opensource.org/trademarks/opensource/OSI-Approved-License-100x137.png)](https://opensource.org/licenses/GPL-3.0)
 
@@ -83,37 +82,3 @@ contribute.
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 The source code is available [on Github](https://github.com/ichthyosaurus/harbour-file-browser).
-
-
-### Up until version 1.8.0
-
-Up until version 1.8.0, all files of File Browser had been released into the
-public domain.
-
-    This is free and unencumbered software released into the public domain.
-
-    Anyone is free to copy, modify, publish, use, compile, sell, or
-    distribute this software, either in source code form or as a compiled
-    binary, for any purpose, commercial or non-commercial, and by any
-    means.
-
-    In jurisdictions that recognize copyright laws, the author or authors
-    of this software dedicate any and all copyright interest in the
-    software to the public domain. We make this dedication for the benefit
-    of the public at large and to the detriment of our heirs and
-    successors. We intend this dedication to be an overt act of
-    relinquishment in perpetuity of all present and future rights to this
-    software under copyright law.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-    IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-    OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-    ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-    OTHER DEALINGS IN THE SOFTWARE.
-
-    For more information, please refer to <http://unlicense.org>
-
-Source code and compiled packages of legacy version are available
-[on Github](https://github.com/karip/harbour-file-browser).
