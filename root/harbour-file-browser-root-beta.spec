@@ -53,24 +53,25 @@ cp start-root start-root-helper.c %{buildroot}/usr/share/%appname/
 %changelog
 
 * Sun May 10 2020 ichthyosaurus <33604595+ichthyosaurus@users.noreply.github.com> 1.1-1
+* Sun May 10 2020 Mirian Margiani <mixosaurus+ichthyo@pm.me> 1.1-1
 - Fixed starting from the terminal
 
-* Sat May 02 2020 ichthyosaurus <33604595+ichthyosaurus@users.noreply.github.com> 1.0-1
+* Sat May 02 2020 Mirian Margiani <mixosaurus+ichthyo@pm.me> 1.0-1
 - Fixed building
 - Added and improved documentation
 - Included in harbour-file-browser's main repository
 
-* Mon Dec 30 2019 ichthyosaurus <33604595+ichthyosaurus@users.noreply.github.com> 0.4-1
+* Mon Dec 30 2019 Mirian Margiani <mixosaurus+ichthyo@pm.me> 0.4-1
 - Made compatible with released version 2.0.0+ (beta) of File Browser
 - Renamed and rebuilt package
 - Added re-build instructions to RPM description
 
-* Tue Jun 04 2019 ichthyosaurus <33604595+ichthyosaurus@users.noreply.github.com> 0.3-1
+* Tue Jun 04 2019 Mirian Margiani <mixosaurus+ichthyo@pm.me> 0.3-1
 - Forked version 0.2-5 of filebrowserroot by Schturman
 - Refactored using correct icons and fixed launcher entry
 - Renamed to be more similar to File Browser
 
-* Wed Feb 06 2019 Builder <schturman@hotmail.com> 0.2-5
+* Wed Feb 06 2019 schturman <schturman@hotmail.com> 0.2-5
 - Changes in SPEC file. Obsoletes changed to Conflicts.
 
 %files
