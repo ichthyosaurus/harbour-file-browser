@@ -159,78 +159,78 @@
 <context>
     <name>DirectoryPage</name>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="122"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="124"/>
         <source>Create Folder</source>
         <translation>新建目录</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="231"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="233"/>
         <source>Search</source>
         <translation>搜索</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="135"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="137"/>
         <source>Paste</source>
         <translation>粘贴</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="238"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="240"/>
         <source>Remove bookmark</source>
         <translation>移除收藏</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="238"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="240"/>
         <source>Add to bookmarks</source>
         <translation>添加到收藏</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="242"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="244"/>
         <source>Copy path to clipboard</source>
         <translation>复制路径到剪切板</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="367"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="369"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="386"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="388"/>
         <source>Deleting</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="307"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="326"/>
         <source>No files</source>
         <translation>没有文件</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="115"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="117"/>
         <source>View Preferences</source>
         <translation>查看偏好</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="153"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="155"/>
         <source>Filter directory contents</source>
         <translation>筛选目录内容</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="288"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="307"/>
         <source>filtered by: %1</source>
         <translation>筛选方式:%1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="376"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="395"/>
         <source>Internally not ready</source>
         <translation>内部未就绪</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="376"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="395"/>
         <source>Please simply try again</source>
         <translation>请重试</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="419"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="438"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>想要在手机存储和SD卡之间移动文件？请尝试复制。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="421"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="440"/>
         <source>Perhaps the storage is full?</source>
         <translation>或许存储已满？</translation>
     </message>
@@ -238,22 +238,22 @@
 <context>
     <name>DirectoryPageEntry</name>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="206"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="214"/>
         <source>(link)</source>
         <translation>(链接)</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="300"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="45"/>
         <source>Deleting</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="317"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="327"/>
         <source>Remove bookmark</source>
         <translation>移除收藏</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="317"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="327"/>
         <source>Add to bookmarks</source>
         <translation>添加到收藏</translation>
     </message>
@@ -514,24 +514,24 @@
 <context>
     <name>FileModel</name>
     <message>
-        <location filename="../src/filemodel.cpp" line="99"/>
+        <location filename="../src/filemodel.cpp" line="100"/>
         <source>dir-link</source>
         <translation>目录连接</translation>
     </message>
     <message>
-        <location filename="../src/filemodel.cpp" line="100"/>
+        <location filename="../src/filemodel.cpp" line="101"/>
         <source>dir</source>
         <translation>目录</translation>
     </message>
     <message>
-        <location filename="../src/filemodel.cpp" line="474"/>
-        <location filename="../src/filemodel.cpp" line="508"/>
+        <location filename="../src/filemodel.cpp" line="482"/>
+        <location filename="../src/filemodel.cpp" line="516"/>
         <source>Folder does not exist</source>
         <translation>目录不存在</translation>
     </message>
     <message>
-        <location filename="../src/filemodel.cpp" line="478"/>
-        <location filename="../src/filemodel.cpp" line="514"/>
+        <location filename="../src/filemodel.cpp" line="486"/>
+        <location filename="../src/filemodel.cpp" line="522"/>
         <source>No permission to read the folder</source>
         <translation>没有读取该目录的权限</translation>
     </message>
@@ -1329,68 +1329,68 @@
 <context>
     <name>SearchPage</name>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="99"/>
+        <location filename="../qml/pages/SearchPage.qml" line="100"/>
         <source>Searching</source>
         <translation>搜索</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="108"/>
+        <location filename="../qml/pages/SearchPage.qml" line="109"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="133"/>
+        <location filename="../qml/pages/SearchPage.qml" line="134"/>
         <source>Search below “%1”</source>
         <translation>在 “%1” 下搜索</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/SearchPage.qml" line="187"/>
+        <location filename="../qml/pages/SearchPage.qml" line="188"/>
         <source>%n hit(s)</source>
         <translation>
             <numerusform>%n 条搜索结果</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="318"/>
         <location filename="../qml/pages/SearchPage.qml" line="319"/>
-        <location filename="../qml/pages/SearchPage.qml" line="403"/>
-        <location filename="../qml/pages/SearchPage.qml" line="405"/>
+        <location filename="../qml/pages/SearchPage.qml" line="320"/>
+        <location filename="../qml/pages/SearchPage.qml" line="404"/>
+        <location filename="../qml/pages/SearchPage.qml" line="406"/>
         <source>Deleting</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="334"/>
+        <location filename="../qml/pages/SearchPage.qml" line="335"/>
         <source>Go to containing folder</source>
         <translation>跳转到所在目录</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="338"/>
+        <location filename="../qml/pages/SearchPage.qml" line="339"/>
         <source>Cut</source>
         <translation>剪切</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="342"/>
+        <location filename="../qml/pages/SearchPage.qml" line="343"/>
         <source>Copy</source>
         <translation>复制</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="346"/>
+        <location filename="../qml/pages/SearchPage.qml" line="347"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="412"/>
+        <location filename="../qml/pages/SearchPage.qml" line="413"/>
         <source>Internally not ready</source>
         <translation>搜索失败</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="412"/>
+        <location filename="../qml/pages/SearchPage.qml" line="413"/>
         <source>Please simply try again</source>
         <translation>请重试</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="119"/>
-        <location filename="../qml/pages/SearchPage.qml" line="355"/>
+        <location filename="../qml/pages/SearchPage.qml" line="120"/>
+        <location filename="../qml/pages/SearchPage.qml" line="356"/>
         <source>Search</source>
         <translation>搜索</translation>
     </message>
@@ -1422,7 +1422,7 @@
     <name>SettingsPage</name>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="44"/>
-        <location filename="../qml/pages/SettingsPage.qml" line="246"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="251"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
@@ -1542,82 +1542,87 @@
         <translation>行为及视图</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="139"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="140"/>
         <source>Default transfer action</source>
         <translation>默认传输操作</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="142"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="143"/>
         <source>copy</source>
         <translation>复制</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="143"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="144"/>
         <source>move</source>
         <translation>移动</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="144"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="145"/>
         <source>link</source>
         <translation>链接</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="145"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="146"/>
         <source>none</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="151"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="152"/>
         <source>Default filter line action</source>
         <translation>默认筛选操作</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="154"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="155"/>
         <source>return to directory view</source>
         <translation>返回目录视图</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="155"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="156"/>
         <source>start recursive search</source>
         <translation>打开循环搜索</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="161"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="162"/>
         <source>File name abbreviation</source>
         <translation>文件名称缩写</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="164"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="165"/>
         <source>fade out</source>
         <translation>淡出</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="165"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="166"/>
         <source>elide end</source>
         <translation>缩写后端</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="166"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="167"/>
         <source>elide middle</source>
         <translation>缩写中端</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="171"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="172"/>
         <source>Show full directory paths</source>
         <translation>显示完整目录路径</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="180"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="176"/>
+        <source>Show navigation menu icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="185"/>
         <source>About File Browser</source>
         <translation>关于 File Browser</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="210"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="215"/>
         <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
         <translation>File Browser 在 GNU GPL 版本3及更高版本条款下发布。这是一个自由软件:你可以自由更改和重新发布。在法律允许的范围内，不作任何保证。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="229"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="234"/>
         <source>The source code is available at</source>
         <translation>源代码可以在此下载 </translation>
     </message>
@@ -1943,8 +1948,8 @@
     <name>TransferDialog</name>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="64"/>
-        <source>Enter path</source>
-        <translation>输入路径</translation>
+        <source>Enter target path</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="79"/>
