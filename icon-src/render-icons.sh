@@ -13,8 +13,8 @@ cFORCE=false
 
 cNAME="app icons"
 cITEMS=(
-    harbour-file-browser-beta@../icons/RESXxRESY
-    harbour-file-browser-root-beta@../root/icons/RESXxRESY
+    harbour-file-browser@../icons/RESXxRESY
+    harbour-file-browser-root@../root/icons/RESXxRESY
 )
 cRESOLUTIONS=(86 108 128 172)
 cTARGETS=(F1)
