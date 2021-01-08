@@ -1609,7 +1609,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="176"/>
         <source>Show navigation menu icon</source>
-        <translation type="unfinished"></translation>
+        <translation>显示导航菜单图标</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="185"/>
@@ -1941,7 +1941,7 @@
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="59"/>
         <source>Link</source>
-        <translation>连接</translation>
+        <translation>链接</translation>
     </message>
 </context>
 <context>
@@ -1949,7 +1949,7 @@
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="64"/>
         <source>Enter target path</source>
-        <translation type="unfinished"></translation>
+        <translation>输入目标路径</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="79"/>
