@@ -455,15 +455,15 @@
         <source>compress file(s)</source>
         <translation>
             <numerusform>komprimera filen</numerusform>
-            <numerusform></numerusform>
+            <numerusform>komprimera filerna</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="222"/>
         <source>edit file(s)</source>
         <translation>
-            <numerusform>komprimera filen</numerusform>
-            <numerusform>komprimera filerna</numerusform>
+            <numerusform>redigera filen</numerusform>
+            <numerusform>redigera filerna</numerusform>
         </translation>
     </message>
     <message>
@@ -1628,7 +1628,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="176"/>
         <source>Show navigation menu icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa ikon för navigationsmeny</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="185"/>
@@ -1970,7 +1970,7 @@
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="64"/>
         <source>Enter target path</source>
-        <translation type="unfinished"></translation>
+        <translation>Ange målsökväg</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="79"/>
