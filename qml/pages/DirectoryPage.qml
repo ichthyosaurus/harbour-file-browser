@@ -556,6 +556,7 @@ Page {
     }
 
     Component.onCompleted: {
+        console.log("constructed page:", fileModel.active, _activeDir, dir)
         main.bookmarkAdded.connect(function(path) { if (path === dir) bookmarkEntry.hasBookmark = true; });
         main.bookmarkRemoved.connect(function(path) { if (path === dir) bookmarkEntry.hasBookmark = false; });
     }

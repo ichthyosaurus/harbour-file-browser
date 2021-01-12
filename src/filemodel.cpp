@@ -27,6 +27,7 @@
 #include <QSettings>
 #include <QGuiApplication>
 #include <QRegularExpression>
+#include <QDebug>
 
 #include "filemodel.h"
 #include "filemodelworker.h"
