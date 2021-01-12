@@ -535,10 +535,10 @@ Page {
             }
             coverText = Paths.lastPartOfPath(page.dir)+"/"; // update cover
         } else if (status === PageStatus.Activating) {
-            console.log("loading", dir);
+            console.log("page: activating --", dir);
             main.activePage = {type: "dir", path: dir};
             navigate_syncNavStack();
-            console.log("activated", dir);
+            console.log("page: activating done --", dir);
         }
     }
 
@@ -568,9 +568,5 @@ Page {
             Bookmarks.addBookmark(dir);
             hasBookmark = true;
         }
-    }
-
-    Component.onCompleted: {
-        console.log("constructed page:", fileModel.active, _activeDir, dir)
     }
 }
