@@ -107,15 +107,7 @@ signals:
     void partlyBusyChanged();
 
 private slots:
-    /**
-     * @brief (Re-)Reads all directory contents and rebuilds the model.
-     * The model will be cleared and completely rebuilt.
-     * This method is called when doing a full refresh,
-     * changin active mode, or changing the current directory.
-     */
-    void readDirectory();
     void applyFilterString();
-
     void workerDone(FileModelWorker::Mode mode, QList<StatFileInfo> files);
     void workerErrorOccurred(QString message);
     void workerAddedEntry(int index, StatFileInfo file);
@@ -123,12 +115,21 @@ private slots:
 
 private:
     /**
+     * @brief (Re-)Reads all directory contents and rebuilds the model.
+     * The model will be cleared and completely rebuilt.
+     * This method is called when doing a full refresh,
+     * changin active mode, or changing the current directory.
+     */
+    void doUpdateAllEntries();
+
+    /**
      * @brief Rereads directory contents and updates the model.
      * All contents will be read but only changed entries will
      * be updated in the model.
      * This method is called when normally refreshing a view.
      */
-    void refreshEntries();
+    void doUpdateChangedEntries();
+
     void recountSelectedFiles();
     void clearModel();
     void setBusy(bool busy, bool partlyBusy);

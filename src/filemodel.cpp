@@ -192,7 +192,7 @@ void FileModel::setDir(QString dir)
 
     m_dir = dir;
 
-    readDirectory();
+    doUpdateAllEntries();
     m_dirty = false;
 
     emit dirChanged();
@@ -211,7 +211,7 @@ void FileModel::setActive(bool active)
     m_active = active;
     emit activeChanged();
 
-    if (m_dirty) refreshEntries();
+    if (m_dirty) doUpdateChangedEntries();
 
     m_dirty = false;
 }
@@ -391,7 +391,7 @@ void FileModel::refresh()
         return;
     }
 
-    refreshEntries();
+    doUpdateChangedEntries();
     m_dirty = false;
 }
 
@@ -407,14 +407,8 @@ void FileModel::refreshFull(QString localPath)
         return;
     }
 
-    readDirectory();
+    doUpdateAllEntries();
     m_dirty = false;
-}
-
-void FileModel::readDirectory()
-{
-    setBusy(true);
-    m_worker->startReadFull(m_dir, m_filterString, m_settings);
 }
 
 void FileModel::recountSelectedFiles()
@@ -555,7 +549,13 @@ void FileModel::workerRemovedEntry(int index, StatFileInfo file)
     recountSelectedFiles();
 }
 
-void FileModel::refreshEntries()
+void FileModel::doUpdateAllEntries()
+{
+    setBusy(true);
+    m_worker->startReadFull(m_dir, m_filterString, m_settings);
+}
+
+void FileModel::doUpdateChangedEntries()
 {
     setBusy(false, true);
     m_worker->startReadChanged(m_files, m_dir, m_filterString, m_settings);
