@@ -1,3 +1,9 @@
+# This file is part of File Browser.
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2013 Kari Pihkala
+# SPDX-FileCopyrightText: 2015 tathhu
+# SPDX-FileCopyrightText: 2016 Kari Pihkala
+# SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
 [Desktop Entry]
 Type=Application
 X-Nemo-Application-Type=silica-qt5

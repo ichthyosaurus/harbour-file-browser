@@ -1,3 +1,6 @@
+# This file is part of File Browser.
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
 [Desktop Entry]
 Type=Application
 Name=File Browser (Root)
