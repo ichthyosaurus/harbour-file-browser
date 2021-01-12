@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -28,9 +28,11 @@ Item {
     property bool showThumbnail: false
     property bool highlighted: false
     property bool isDirectory: false
+    property bool showBusy: false
     property var mimeTypeCallback
     property var fileIconCallback
 
+    property real _iconOpacity: showBusy ? Theme.opacityLow : 1.0
     property int _thumbnailSize: width
     property bool _doShowThumbnail: showThumbnail && !isDirectory
     property bool _oversize: _thumbnailSize > Theme.itemSizeExtraLarge
@@ -45,6 +47,7 @@ Item {
         sourceSize.width: width
         sourceSize.height: height
         priority: Thumbnail.NormalPriority
+        opacity: _iconOpacity
     }
 
     Rectangle {
@@ -65,5 +68,22 @@ Item {
         height: width
         highlighted: parent.highlighted
         asynchronous: true
+        opacity: _iconOpacity
+    }
+
+    Component {
+        id: busyComponent
+        BusyIndicator {
+            size: _thumbnailSize > Theme.itemSizeMedium ?
+                      BusyIndicatorSize.Medium :
+                      BusyIndicatorSize.Small
+            running: true
+        }
+    }
+
+    Loader {
+        anchors.centerIn: parent
+        sourceComponent: showBusy ? busyComponent : null
+        enabled: showBusy
     }
 }
