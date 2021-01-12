@@ -1,4 +1,8 @@
 #!/bin/bash
+#
+# This file is part of File Browser and has been released into the public domain.
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
 
 SFDK=/opt/SailfishOS-SDK/bin/sfdk
 TARGETS=(
