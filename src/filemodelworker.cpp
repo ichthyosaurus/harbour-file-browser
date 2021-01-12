@@ -124,7 +124,15 @@ void FileModelWorker::doReadDiff()
 
     m_finalEntries = m_oldEntries;
 
+    // Complexity for one list: O(n^2)
+    // Complexity for both lists: O(n^2) + O(p^2)
+    // This becomes annoyingly slow listings with >1000 entries.
+
     // compare old and new files and do removes if needed
+    // Go from the bottom through all old entries, check if
+    // each entry is anywhere in the new list, emit if not.
+    // After a signal is emitted, all indices higher than the
+    // current one will become invalid.
     for (int i = m_oldEntries.count()-1; i >= 0; --i) {
         StatFileInfo data = m_oldEntries.at(i);
         if (!filesContains(newFiles, data)) {
@@ -135,6 +143,11 @@ void FileModelWorker::doReadDiff()
     }
 
     // compare old and new files and do inserts if needed
+    // Go from the top through all new entries, check if
+    // each entry is anywhere in the old list, emit if not.
+    // After a signal is emitted, all indices lower than the
+    // current one will become valid. Higher indices might be
+    // invalid until we checked them.
     for (int i = 0; i < newFiles.count(); ++i) {
         StatFileInfo data = newFiles.at(i);
         if (!filesContains(m_oldEntries, data)) {
