@@ -335,7 +335,7 @@ bool FileModelWorker::thresholdAbort(size_t currentChanges, const QList<StatFile
 {
     const size_t signalThreshold = FILEMODEL_SIGNAL_THRESHOLD;
     if (currentChanges >= signalThreshold) {
-        logMessage("warning: DiffMode reached threshold, aborted");
+        logMessage("warning: partial refresh reached threshold, upgraded to full");
         emit done(Mode::FullMode, fullFiles);
         return true;
     }
