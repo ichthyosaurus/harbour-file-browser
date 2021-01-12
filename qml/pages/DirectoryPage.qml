@@ -103,7 +103,10 @@ Page {
         opacity: visible ? 1 : 0
         Behavior on opacity { NumberAnimation { duration: 300 } }
 
-        model: fileModel
+        // We explicitly disable the model to show an error
+        // message or the current status.
+        model: (statusMessage.enabled || busyIndicator.enabled) ?
+                   null : fileModel
 
         VerticalScrollDecorator { flickable: fileList }
 
@@ -343,8 +346,18 @@ Page {
 
         // text if no files or error message
         ViewPlaceholder {
-            enabled: _activeDir !== "" && (fileModel.fileCount === 0 || fileModel.errorMessage !== "")
-            text: fileModel.errorMessage !== "" ? fileModel.errorMessage : qsTr("No files")
+            id: statusMessage
+            enabled: !busyIndicator.enabled &&
+                     _activeDir !== "" &&
+                     (fileModel.fileCount === 0 || fileModel.errorMessage !== "")
+            text: fileModel.errorMessage !== "" ? fileModel.errorMessage : qsTr("Empty")
+            hintText: fileModel.errorMessage !== "" ? "" : qsTr("This directory contains no files.")
+        }
+
+        PageBusyIndicator {
+            id: busyIndicator
+            enabled: fileModel.busy
+            running: enabled
         }
     }
 
