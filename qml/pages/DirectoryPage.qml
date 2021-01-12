@@ -177,11 +177,11 @@ Page {
                     horizontalAlignment: Text.AlignHCenter
 
                     background: null
-                    onTextChanged: page.currentFilter = text;
                     onActiveFocusChanged: {
                         if (pullDownMenu._filterBlocked) {
                             pullDownMenu._filterBlocked = !activeFocus
                         }
+                        if (!activeFocus) page.currentFilter = text
                     }
 
                     EnterKey.enabled: true
@@ -196,7 +196,10 @@ Page {
                         }
                     }
                     Component.onCompleted: {
-                        page.clearViewFilter.connect(function() { text = ""; })
+                        page.clearViewFilter.connect(function() {
+                            text = "";
+                            page.currentFilter = "";
+                        })
                     }
                 }
 
