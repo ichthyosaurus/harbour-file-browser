@@ -15,13 +15,17 @@ Source0: %{name}-%{version}.tar.xz
 Provides:      application(%{appname}.desktop)
 Requires:      harbour-file-browser >= 2.0.0
 
-# Remove this line if there's a new beta version around.
-Obsoletes:     harbour-file-browser-root-beta
+# It appears Obsoletes is wrongly interpreted as Conflicts by Sailfish when
+# installing packages via File Browser or Storeman. This means users will have
+# to manually remove obsolete packages.
+
+# (Remove this line if there's a new beta version around.)
+# (Obsoletes:     harbour-file-browser-root-beta)
 
 # These two packages only work with legacy File Browser and are
 # no longer needed.
-Obsoletes:     sailfishos-filebrowserroot-patch
-Obsoletes:     filebrowserroot
+# (Obsoletes:     sailfishos-filebrowserroot-patch)
+# (Obsoletes:     filebrowserroot)
 Conflicts:     sailfishos-filebrowserroot-patch
 Conflicts:     filebrowserroot
 
