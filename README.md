@@ -27,22 +27,26 @@ responsibility if that happens. So, be careful.
 
 ### Features
 
- * Browse and search files and folders on the phone
- * Open files (if xdg-open finds a preferred application)
- * View image files and pictures as thumbnails or in a gallery
- * Play back WAV, MP3, OGG, and FLAC audio
- * Install Android APK and Sailfish RPM packages
- * View contents of APK, RPM, ZIP and TAR packages
- * Preview contents of video, text, and binary files
- * Select multiple files (by tapping the file icons)
- * Link, cut, move, copy and paste multiple files at once (by long pressing an
+ - Browse and search files and folders on the phone
+ - Open files (if xdg-open finds a preferred application)
+ - View image files and pictures as thumbnails or in a gallery
+ - Play back WAV, MP3, OGG, and FLAC audio
+ - Install Android APK and Sailfish RPM packages
+ - View contents of APK, RPM, ZIP and TAR packages
+ - Preview contents of video, text, SQLite databases, and binary files
+ - Select multiple files (by tapping the file icons)
+ - Link, cut, move, copy and paste multiple files at once (by long pressing an
    item or tapping the file icons)
- * Rename files and folders
- * Create new folders
- * Delete files and folders (by long pressing an item or tapping
-   the file icons)
- * Show hidden files (filenames starting with a dot)
- * Edit file and folder permissions
+ - Rename files and folders
+ - Create new folders
+ - Delete files and folders (by long pressing an item or tapping the file icons)
+ - Show hidden files (filenames starting with a dot)
+ - Edit file and folder permissions
+ - Open multiple windows
+ - Copy, edit, or manually enter paths
+ - Quickly filter files from the top pulley
+ - Set per-folder view preferences
+ - Save custom quick shortcuts for navigating and moving files
 
 ### Acknowledgements
 
