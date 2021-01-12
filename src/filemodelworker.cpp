@@ -81,7 +81,7 @@ void FileModelWorker::run()
 void FileModelWorker::logMessage(QString message, bool markSilent)
 {
     qDebug() << "[FileModelWorker]" << message << (markSilent ? "[silent]" : "");
-    qDebug() << "[FileModelWorker] state:" << m_dir << m_mode;
+    qDebug() << "[FileModelWorker] state:" << m_dir << m_mode << FILEMODEL_SIGNAL_THRESHOLD;
 }
 
 void FileModelWorker::logError(QString message)
@@ -116,6 +116,10 @@ void FileModelWorker::doReadFull()
 void FileModelWorker::doReadDiff()
 {
     if (!applySettings()) return; // cancelled
+
+    // To reduce load on the main UI thread, we abort the process and
+    // instead do a full refresh if there are too many changes.
+    uint signalledChanges = 0;
 
     // Algorithm: notify which files were removed, then
     // notify which files were added.
@@ -161,7 +165,9 @@ void FileModelWorker::doReadDiff()
     for (int i = m_oldEntries.count()-1; i >= 0; --i) {
         const StatFileInfo& data = m_oldEntries.at(i);
         if (!newLookup.contains(oldHashes.at(i))) {
+            if (thresholdAbort(signalledChanges, newEntries)) return;
             emit entryRemoved(i, data);
+            signalledChanges++;
             m_finalEntries.removeAt(i);
             if (cancelIfCancelled()) return;
         }
@@ -176,7 +182,9 @@ void FileModelWorker::doReadDiff()
     for (int i = 0; i < newEntries.count(); ++i) {
         const StatFileInfo& data = newEntries.at(i);
         if (!oldLookup.contains(newHashes.at(i))) {
+            if (thresholdAbort(signalledChanges, newEntries)) return;
             emit entryAdded(i, data);
+            signalledChanges++;
             m_finalEntries.insert(i, data);
             if (cancelIfCancelled()) return;
         }
@@ -312,6 +320,20 @@ bool FileModelWorker::applySettings() {
     }
 
     return true;
+}
+
+bool FileModelWorker::thresholdAbort(uint currentChanges, const QList<StatFileInfo>& fullFiles)
+{
+#ifndef FILEMODEL_SIGNAL_THRESHOLD
+#define FILEMODEL_SIGNAL_THRESHOLD 100
+#endif
+    const uint signalThreshold = FILEMODEL_SIGNAL_THRESHOLD;
+    if (currentChanges >= signalThreshold) {
+        logMessage("warning: DiffMode reached threshold, aborted");
+        emit done(Mode::FullMode, fullFiles);
+        return true;
+    }
+    return false;
 }
 
 bool FileModelWorker::filesContains(const QList<StatFileInfo> &files, const StatFileInfo &fileData) const

@@ -53,6 +53,7 @@ QMakeOptions:
   - RELEASE_TYPE=stable
   - VERSION=%{version}
   - RELEASE=%{release}
+  - FILEMODEL_SIGNAL_THRESHOLD=80
 
 # This section specifies build dependencies that are resolved using pkgconfig.
 # This is the preferred way of specifying build dependencies for your package.

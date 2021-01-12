@@ -44,7 +44,8 @@ File Browser for Sailfish OS. A fully-fledged file manager for your phone.
     HARBOUR_COMPLIANCE=off \
     RELEASE_TYPE=stable \
     VERSION=%{version} \
-    RELEASE=%{release}
+    RELEASE=%{release} \
+    FILEMODEL_SIGNAL_THRESHOLD=80
 
 make %{?_smp_mflags}
 
