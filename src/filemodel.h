@@ -85,6 +85,8 @@ public:
     Q_INVOKABLE void selectAllFiles();
     Q_INVOKABLE void selectRange(int firstIndex, int lastIndex, bool selected = true);
     Q_INVOKABLE QStringList selectedFiles() const;
+    Q_INVOKABLE void markSelectedAsDoomed();
+    Q_INVOKABLE void markAsDoomed(QString absoluteFilePath);
 
 public slots:
     // reads the directory and inserts/removes model items as needed
@@ -142,7 +144,5 @@ private:
     bool m_busy = {false};
     bool m_partlyBusy = {false};
 };
-
-
 
 #endif // FILEMODEL_H

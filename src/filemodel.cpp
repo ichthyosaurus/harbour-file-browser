@@ -42,7 +42,8 @@ enum {
     IsLinkRole = Qt::UserRole + 9,
     SymLinkTargetRole = Qt::UserRole + 10,
     IsSelectedRole = Qt::UserRole + 11,
-    IsMatchedRole = Qt::UserRole + 12
+    IsMatchedRole = Qt::UserRole + 12,
+    IsDoomedRole = Qt::UserRole + 13
 };
 
 FileModel::FileModel(QObject *parent) :
@@ -122,6 +123,9 @@ QVariant FileModel::data(const QModelIndex &index, int role) const
     case IsMatchedRole:
         return info.isMatched();
 
+    case IsDoomedRole:
+        return info.isDoomed();
+
     default:
         return QVariant();
     }
@@ -142,6 +146,7 @@ QHash<int, QByteArray> FileModel::roleNames() const
     roles.insert(SymLinkTargetRole, QByteArray("symLinkTarget"));
     roles.insert(IsSelectedRole, QByteArray("isSelected"));
     roles.insert(IsMatchedRole, QByteArray("isMatched"));
+    roles.insert(IsDoomedRole, QByteArray("isDoomed"));
     return roles;
 }
 
@@ -340,6 +345,30 @@ QStringList FileModel::selectedFiles() const
             filenames.append(info.absoluteFilePath());
     }
     return filenames;
+}
+
+void FileModel::markSelectedAsDoomed()
+{
+    // TODO this should save the affected paths in a
+    // global (runtime) registry so it won't be lost when
+    // refreshing the model and when changing directories
+    for (int i = 0; i < m_files.count(); i++) {
+        if (m_files.at(i).isSelected()) {
+            m_files[i].setDoomed(true);
+            emit dataChanged(index(i, 0), index(i, 0));
+        }
+    }
+}
+
+void FileModel::markAsDoomed(QString absoluteFilePath)
+{
+    // Cf. markSelectedAsDoomed
+    for (int i = 0; i < m_files.count(); i++) {
+        if (m_files.at(i).absoluteFilePath() == absoluteFilePath) {
+            m_files[i].setDoomed(true);
+            emit dataChanged(index(i, 0), index(i, 0));
+        }
+    }
 }
 
 void FileModel::refresh()

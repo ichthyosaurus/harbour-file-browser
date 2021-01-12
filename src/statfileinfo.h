@@ -100,6 +100,12 @@ public:
     QString symLinkTarget() const { return m_fileInfo.symLinkTarget(); }
     bool isSymLinkBroken() const;
 
+    // Doomed paths will become invalid soon because the file
+    // is being moved or deleted. This is not real file metadata
+    // and must be set manually.
+    bool isDoomed() const { return m_doomed; }
+    void setDoomed(bool doomed) { m_doomed = doomed; }
+
     // selection
     void setSelected(bool selected);
     bool isSelected() const { return m_selected; }
@@ -117,6 +123,7 @@ private:
     struct stat m_lstat; // file itself without following symlinks
     bool m_selected;
     bool m_filterMatched;
+    bool m_doomed = {false};
 };
 
 #endif // STATFILEINFO_H
