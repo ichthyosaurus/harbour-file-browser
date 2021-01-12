@@ -305,9 +305,7 @@ void FileModel::selectRange(int firstIndex, int lastIndex, bool selected)
        ) return;
 
     if (firstIndex > lastIndex) {
-        int tmp = firstIndex;
-        firstIndex = lastIndex;
-        lastIndex = tmp;
+        std::swap(firstIndex, lastIndex);
     }
 
     QMutableListIterator<StatFileInfo> iter(m_files);
