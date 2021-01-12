@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -26,8 +26,9 @@ import "../components"
 // TODO manage global/local, directory, and default values in SettingsHandler
 Page {
     id: page
-    property string dir;
     allowedOrientations: Orientation.All
+    property string dir
+    property bool _initialized: false
 
     SilicaFlickable {
         id: flickable
@@ -185,9 +186,13 @@ Page {
 
         if (showThumbs === "true") thumbList.initial = settings.read("View/PreviewsSize", "medium");
         else thumbList.initial = "none";
+
+        if (!_initialized) _initialized = true;
     }
 
     function saveSetting(keyGlobal, keyLocal, trueLocal, falseLocal, valueStr) {
+        if (!_initialized) return;
+
         if (useLocalSettings()) {
             var currentGlobal = settings.read(keyGlobal) === trueLocal ? "true" : "false";
 
@@ -214,8 +219,11 @@ Page {
 
     Component.onCompleted: {
         updateShownSettings();
-
     }
 
-    onStatusChanged: if (status === PageStatus.Active) pageStack.pushAttached(Qt.resolvedUrl("SettingsPage.qml"));
+    onStatusChanged: {
+        if (status === PageStatus.Active) {
+            pageStack.pushAttached(Qt.resolvedUrl("SettingsPage.qml"));
+        }
+    }
 }
