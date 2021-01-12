@@ -355,6 +355,7 @@ void FileModel::markSelectedAsDoomed()
     for (int i = 0; i < m_files.count(); i++) {
         if (m_files.at(i).isSelected()) {
             m_files[i].setDoomed(true);
+            m_files[i].setSelected(false); // doomed files can't be selected
             emit dataChanged(index(i, 0), index(i, 0));
         }
     }
@@ -366,6 +367,7 @@ void FileModel::markAsDoomed(QStringList absoluteFilePaths)
     for (int i = 0; i < m_files.count(); i++) {
         if (absoluteFilePaths.contains(m_files.at(i).absoluteFilePath())) {
             m_files[i].setDoomed(true);
+            m_files[i].setSelected(false); // doomed files can't be selected
             emit dataChanged(index(i, 0), index(i, 0));
         }
     }
