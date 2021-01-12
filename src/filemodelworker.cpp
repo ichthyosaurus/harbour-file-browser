@@ -143,6 +143,11 @@ void FileModelWorker::doReadDiff()
     newLookup.reserve(newFileListSize);
     newHashes.reserve(newFileListSize);
 
+    if (thresholdAbort(size_t(std::abs(oldEntriesSize-newFileListSize)), newEntries)) {
+        // threshold would be reached, so we can abort immediately
+        return;
+    }
+
     m_finalEntries = m_oldEntries;
     m_finalEntries.reserve(std::max(oldEntriesSize, newFileListSize));
 
@@ -326,9 +331,9 @@ bool FileModelWorker::applySettings() {
     return true;
 }
 
-bool FileModelWorker::thresholdAbort(uint currentChanges, const QList<StatFileInfo>& fullFiles)
+bool FileModelWorker::thresholdAbort(size_t currentChanges, const QList<StatFileInfo>& fullFiles)
 {
-    const uint signalThreshold = FILEMODEL_SIGNAL_THRESHOLD;
+    const size_t signalThreshold = FILEMODEL_SIGNAL_THRESHOLD;
     if (currentChanges >= signalThreshold) {
         logMessage("warning: DiffMode reached threshold, aborted");
         emit done(Mode::FullMode, fullFiles);
