@@ -136,13 +136,21 @@ void FileModelWorker::doReadDiff()
     // each entry is anywhere in the new list, emit if not.
     // After a signal is emitted, all indices higher than the
     // current one will become invalid.
+    bool haveRemoved = false;
     for (int i = m_oldEntries.count()-1; i >= 0; --i) {
         StatFileInfo data = m_oldEntries.at(i);
         if (!filesContains(newFiles, data)) {
             emit entryRemoved(i, data);
             m_finalEntries.removeAt(i);
+            haveRemoved = true;
             if (cancelIfCancelled()) return;
         }
+    }
+
+    if (haveRemoved) {
+        // We use the reduced list if entries were removed.
+        // This will increase performance of the next run a little bit.
+        m_oldEntries = m_finalEntries;
     }
 
     // compare old and new files and do inserts if needed
