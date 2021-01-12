@@ -36,11 +36,10 @@ TRANSLATIONS = \
 #   - translation filenames have to be changed
 TARGET = harbour-file-browser
 
-# Note:
-# Current version number and whether or not to include features
-# agains Jolla Harbour's rules can be configured in the yaml-file.
+# Note: compile-time options can be configured in the yaml file.
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 DEFINES += APP_RELEASE=\\\"$$RELEASE\\\"
+DEFINES += RELEASE_TYPE=\\\"$$RELEASE_TYPE\\\"
 DEFINES += HARBOUR_COMPLIANCE=\\\"$$HARBOUR_COMPLIANCE\\\"
 HARBOUR_COMPLIANCE=$$HARBOUR_COMPLIANCE
 

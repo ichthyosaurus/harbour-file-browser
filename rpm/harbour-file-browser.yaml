@@ -21,6 +21,7 @@ Configure: none
 Builder: qmake5
 
 QMakeOptions:
+  - RELEASE_TYPE=stable
   - VERSION=%{version}
   - RELEASE=%{release}
   - HARBOUR_COMPLIANCE=off
