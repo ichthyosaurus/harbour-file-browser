@@ -411,40 +411,6 @@ void FileModel::refreshFull(QString localPath)
     m_dirty = false;
 }
 
-void FileModel::recountSelectedFiles()
-{
-    int selectedCount = 0;
-    int matchedCount = 0;
-
-    for (const auto& info : m_files) {
-        if (info.isSelected()) selectedCount++;
-        if (info.isMatched()) matchedCount++;
-    }
-
-    if (m_selectedFileCount != selectedCount) {
-        m_selectedFileCount = selectedCount;
-        emit selectedFileCountChanged();
-    }
-    if (m_matchedFileCount != matchedCount) {
-        m_matchedFileCount = matchedCount;
-        emit filteredFileCountChanged();
-    }
-}
-
-void FileModel::setBusy(bool busy, bool partlyBusy)
-{
-    m_busy = busy;
-    m_partlyBusy = partlyBusy;
-    emit busyChanged();
-    emit partlyBusyChanged();
-}
-
-void FileModel::setBusy(bool busy)
-{
-    m_busy = busy;
-    emit busyChanged();
-}
-
 void FileModel::applyFilterString()
 {
     QRegularExpression filter(
@@ -561,10 +527,44 @@ void FileModel::doUpdateChangedEntries()
     m_worker->startReadChanged(m_files, m_dir, m_filterString, m_settings);
 }
 
+void FileModel::recountSelectedFiles()
+{
+    int selectedCount = 0;
+    int matchedCount = 0;
+
+    for (const auto& info : m_files) {
+        if (info.isSelected()) selectedCount++;
+        if (info.isMatched()) matchedCount++;
+    }
+
+    if (m_selectedFileCount != selectedCount) {
+        m_selectedFileCount = selectedCount;
+        emit selectedFileCountChanged();
+    }
+    if (m_matchedFileCount != matchedCount) {
+        m_matchedFileCount = matchedCount;
+        emit filteredFileCountChanged();
+    }
+}
+
 void FileModel::clearModel()
 {
     beginResetModel();
     m_files.clear();
     endResetModel();
     emit fileCountChanged();
+}
+
+void FileModel::setBusy(bool busy, bool partlyBusy)
+{
+    m_busy = busy;
+    m_partlyBusy = partlyBusy;
+    emit busyChanged();
+    emit partlyBusyChanged();
+}
+
+void FileModel::setBusy(bool busy)
+{
+    m_busy = busy;
+    emit busyChanged();
 }
