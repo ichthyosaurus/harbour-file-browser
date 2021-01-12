@@ -91,6 +91,8 @@ Page {
                         remorsePopup.execute(qsTr("Deleting"), function() {
                             var prevPage = pageStack.previousPage();
                             var filesList = page.files;
+                            console.log("mark as doomed:", filesList)
+                            prevPage.markAsDoomed(filesList);
                             pageStack.pop();
                             if (prevPage.progressPanel) prevPage.progressPanel.showText(qsTr("Deleting"));
                             engine.deleteFiles(filesList);

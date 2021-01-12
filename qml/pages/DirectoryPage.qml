@@ -78,6 +78,9 @@ Page {
     signal multiSelectionStarted(var index)
     signal multiSelectionFinished(var index)
     signal selectionChanged(var index)
+    signal markAsDoomed(var file)
+
+    onMarkAsDoomed: fileModel.markAsDoomed(file)
 
     FileModel {
         id: fileModel
@@ -418,6 +421,7 @@ Page {
                 var files = fileModel.selectedFiles();
                 remorsePopupActive = true;
                 remorsePopup.execute(qsTr("Deleting"), function() {
+                    fileModel.markSelectedAsDoomed();
                     clearSelectedFiles();
                     progressPanel.showText(qsTr("Deleting"));
                     engine.deleteFiles(files);

@@ -240,8 +240,12 @@ Page {
                     onDeleteTriggered: {
                         remorsePopup.execute(qsTr("Deleting"), function() {
                             var prevPage = pageStack.previousPage();
+                            console.log("mark as doomed:", page.file)
+                            prevPage.markAsDoomed(page.file);
                             pageStack.pop();
-                            if (prevPage.progressPanel) prevPage.progressPanel.showText(qsTr("Deleting"));
+                            if (prevPage.progressPanel) {
+                                prevPage.progressPanel.showText(qsTr("Deleting"));
+                            }
                             engine.deleteFiles([page.file]);
                         });
                     }
