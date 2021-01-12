@@ -88,7 +88,8 @@ Page {
         id: fileModel
         dir: _activeDir
         filterString: currentFilter
-        active: page.status === PageStatus.Active
+        active: page.status === PageStatus.Active ||
+                page.status === PageStatus.Activating
     }
 
     RemorsePopup {
