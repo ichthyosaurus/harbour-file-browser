@@ -206,82 +206,80 @@ bool FileModelWorker::verifyOrAbort()
     return true;
 }
 
-// see SETTINGS.md for details
 bool FileModelWorker::applySettings() {
     if (cancelIfCancelled()) return false;
     bool settingsChanged = false;
+    QFlags<QDir::Filter> newFilters = (QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot | QDir::System);
+    QFlags<QDir::SortFlag> newSorting;
+    bool sortTime = false;
 
-    // TODO make sure the keyboard doesn't loose focus
-    /* QString nameFilter = "*"+m_nameFilter+"*";
-    if (m_cachedDir.nameFilters().first() != nameFilter) {
-        m_cachedDir.setNameFilters({nameFilter});
-        settingsChanged = true;
-    } */
+    // load settings, see SETTINGS.md for details
+    if (m_settings) {
+        QString localPath = m_cachedDir.absoluteFilePath(".directory");
+        bool useLocal = m_settings->readVariant("View/UseLocalSettings", true).toBool();
 
-    // there are no settings to apply
-    if (!m_settings) {
+        // filters: show hidden?
+        bool hidden = m_settings->readVariant("View/HiddenFilesShown", false).toBool();
+        if (useLocal) hidden = m_settings->readVariant("Settings/HiddenFilesShown", hidden, localPath).toBool();
+        QDir::Filter hiddenFilter = hidden ? QDir::Hidden : static_cast<QDir::Filter>(0);
+        newFilters |= hiddenFilter;
+
+        // sorting: dirs first?
+        bool dirsFirst = m_settings->readVariant("View/ShowDirectoriesFirst", true).toBool();
+        if (useLocal) dirsFirst = m_settings->readVariant("Sailfish/ShowDirectoriesFirst", dirsFirst, localPath).toBool();
+        if (dirsFirst) newSorting |= QDir::DirsFirst;
+
+        // sorting: sort by...?
+        QString sortSetting = m_settings->readVariant("View/SortRole", "name").toString();
+        if (useLocal) sortSetting = m_settings->readVariant("Dolphin/SortRole", sortSetting, localPath).toString();
+
+        QDir::SortFlag sortBy = QDir::Name;
+        if (sortSetting == "name") {
+            sortBy = QDir::Name;
+        } else if (sortSetting == "size") {
+            sortBy = QDir::Size;
+        } else if (sortSetting == "modificationtime") {
+            // sortBy = QDir::Time; -- no, we sort manually for performance
+            sortTime = true;
+        } else if (sortSetting == "type") {
+            sortBy = QDir::Type;
+        }
+        newSorting |= sortBy;
+
+        // sorting: order reversed?
+        bool orderDefault = m_settings->readVariant("View/SortOrder", "default").toString() == "default";
+        if (useLocal) orderDefault = m_settings->readVariant("Dolphin/SortOrder", 0, localPath) == 0 ? true : false;
+        if (!orderDefault) newSorting |= QDir::Reversed;
+
+        // sorting: ignore case?
+        bool caseSensitive = m_settings->readVariant("View/SortCaseSensitively", false).toBool();
+        if (useLocal) caseSensitive = m_settings->readVariant("Sailfish/SortCaseSensitively", caseSensitive, localPath).toBool();
+        if (!caseSensitive) newSorting |= QDir::IgnoreCase;
+    } else {
         logMessage("error: invalid settings object");
-        m_cachedDir.refresh();
-        return true;
     }
 
-    QString localPath = m_cachedDir.absoluteFilePath(".directory");
-    bool useLocal = m_settings->readVariant("View/UseLocalSettings", true).toBool();
-
-    // filters
-    bool hidden = m_settings->readVariant("View/HiddenFilesShown", false).toBool();
-    if (useLocal) hidden = m_settings->readVariant("Settings/HiddenFilesShown", hidden, localPath).toBool();
-    QDir::Filter hiddenFilter = hidden ? QDir::Hidden : static_cast<QDir::Filter>(0);
-
-    auto newFilters = (QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot | QDir::System | hiddenFilter);
     if (m_cachedDir.filter() != newFilters) {
         m_cachedDir.setFilter(newFilters);
         settingsChanged = true;
+        if (cancelIfCancelled()) return false;
     }
 
-    if (cancelIfCancelled()) return false;
-
-    // sorting
-    bool dirsFirst = m_settings->readVariant("View/ShowDirectoriesFirst", true).toBool();
-    if (useLocal) dirsFirst = m_settings->readVariant("Sailfish/ShowDirectoriesFirst", dirsFirst, localPath).toBool();
-    QDir::SortFlag dirsFirstFlag = dirsFirst ? QDir::DirsFirst : static_cast<QDir::SortFlag>(0);
-
-    QString sortSetting = m_settings->readVariant("View/SortRole", "name").toString();
-    if (useLocal) sortSetting = m_settings->readVariant("Dolphin/SortRole", sortSetting, localPath).toString();
-    QDir::SortFlag sortBy = QDir::Name;
-
-    if (sortSetting == "name") {
-        sortBy = QDir::Name;
-    } else if (sortSetting == "size") {
-        sortBy = QDir::Size;
-    } else if (sortSetting == "modificationtime") {
-        sortBy = QDir::Time;
-    } else if (sortSetting == "type") {
-        sortBy = QDir::Type;
-    } else {
-        sortBy = QDir::Name;
-    }
-
-    bool orderDefault = m_settings->readVariant("View/SortOrder", "default").toString() == "default";
-    if (useLocal) orderDefault = m_settings->readVariant("Dolphin/SortOrder", 0, localPath) == 0 ? true : false;
-    QDir::SortFlag orderFlag = orderDefault ? static_cast<QDir::SortFlag>(0) : QDir::Reversed;
-
-    bool caseSensitive = m_settings->readVariant("View/SortCaseSensitively", false).toBool();
-    if (useLocal) caseSensitive = m_settings->readVariant("Sailfish/SortCaseSensitively", caseSensitive, localPath).toBool();
-    QDir::SortFlag caseSensitiveFlag = caseSensitive ? static_cast<QDir::SortFlag>(0) : QDir::IgnoreCase;
-
-    bool sortTime = (sortBy == QDir::Time);
-    if (sortTime) sortBy = QDir::Name;
-
-    auto newSorting = (sortBy | dirsFirstFlag | orderFlag | caseSensitiveFlag);
     if (m_cachedDir.sorting() != newSorting ||
             m_cachedSortTime != sortTime) {
         m_cachedDir.setSorting(newSorting);
         m_cachedSortTime = sortTime;
         settingsChanged = true;
+        if (cancelIfCancelled()) return false;
     }
 
-    if (cancelIfCancelled()) return false;
+    // TODO make sure the keyboard doesn't loose focus
+    // QString nameFilter = "*"+m_nameFilter+"*";
+    // if (m_cachedDir.nameFilters().first() != nameFilter) {
+    //     m_cachedDir.setNameFilters({nameFilter});
+    //     settingsChanged = true;
+    //     if (cancelIfCancelled()) return false;
+    // }
 
     if (!settingsChanged) {
         // this happens e.g. when deleting or renaming files
@@ -299,7 +297,7 @@ bool FileModelWorker::applySettings() {
     if (cancelIfCancelled()) return false;
 
     if (sortTime) {
-        sortByModTime(m_finalEntries, !orderDefault);
+        sortByModTime(m_finalEntries, newSorting.testFlag(QDir::Reversed));
     }
 
     return true;
