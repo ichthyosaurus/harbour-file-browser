@@ -174,6 +174,9 @@ bool FileModelWorker::verifyOrAbort()
 bool FileModelWorker::applySettings(QDir& dir) {
     if (cancelIfCancelled()) return false;
 
+    // TODO make sure the keyboard doesn't loose focus
+    /* dir.setNameFilters({"*"+m_nameFilter+"*"}); */
+
     // there are no settings to apply
     if (!m_settings) return true;
 
@@ -185,12 +188,8 @@ bool FileModelWorker::applySettings(QDir& dir) {
     if (useLocal) hidden = m_settings->readVariant("Settings/HiddenFilesShown", hidden, localPath).toBool();
     QDir::Filter hiddenFilter = hidden ? QDir::Hidden : static_cast<QDir::Filter>(0);
 
-    dir.setFilter(QDir::AllDirs | QDir::Files | QDir::NoDotAndDotDot | QDir::System | hiddenFilter);
+    dir.setFilter(QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot | QDir::System | hiddenFilter);
 
-    if (!m_nameFilter.isEmpty()) {
-        // TODO implement with support for filtering directories
-        // dir.setNameFilters({m_nameFilter});
-    }
 
     if (cancelIfCancelled()) return false;
 
