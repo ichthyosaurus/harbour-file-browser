@@ -108,10 +108,7 @@ Page {
         opacity: (visible ? (busyIndicator.enabled ? Theme.opacityLow : 1.0) : 0.0)
         Behavior on opacity { NumberAnimation { duration: 300 } }
 
-        // We explicitly disable the model to show an error
-        // message or the current status.
-        model: (statusMessage.enabled || busyIndicator.enabled) ?
-                   null : fileModel
+        model: fileModel
 
         VerticalScrollDecorator { flickable: fileList }
 
@@ -357,6 +354,17 @@ Page {
                      (fileModel.fileCount === 0 || fileModel.errorMessage !== "")
             text: fileModel.errorMessage !== "" ? fileModel.errorMessage : qsTr("Empty")
             hintText: fileModel.errorMessage !== "" ? "" : qsTr("This directory contains no files.")
+            onEnabledChanged: {
+                // We explicitly disable the model to show an error
+                // message or the current status. The view behaves
+                // erratic when doing this in a binding on the model
+                // property. (It jumps to random positions...)
+                if (enabled) {
+                    fileList.model = null
+                } else {
+                    fileList.model = fileModel
+                }
+            }
         }
     }
 
