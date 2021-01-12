@@ -84,7 +84,13 @@ int main(int argc, char *argv[])
 #ifdef NO_HARBOUR_COMPLIANCE
     view->rootContext()->setContextProperty("sharingEnabled", QVariant::fromValue(true));
     view->rootContext()->setContextProperty("pdfViewerEnabled", QVariant::fromValue(true));
-    view->rootContext()->setContextProperty("systemSettingsEnabled", QVariant::fromValue(true));
+    if (!engine->storageSettingsPath().isEmpty()) {
+        // we enable system (storage) settings only if the module is available
+        view->rootContext()->setContextProperty("systemSettingsEnabled", QVariant::fromValue(true));
+    } else {
+        view->rootContext()->setContextProperty("systemSettingsEnabled", QVariant::fromValue(false));
+        qDebug() << "system storage settings not available";
+    }
 #else
     view->rootContext()->setContextProperty("sharingEnabled", QVariant::fromValue(false));
     view->rootContext()->setContextProperty("pdfViewerEnabled", QVariant::fromValue(false));

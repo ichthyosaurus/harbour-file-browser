@@ -291,7 +291,7 @@ SilicaListView {
                 visible: !runningAsRoot && systemSettingsEnabled
                 text: qsTr("Open system settings");
                 onClicked: {
-                    pageStack.push(Qt.resolvedUrl("/usr/share/jolla-settings/pages/storage/storage.qml"));
+                    pageStack.push(Qt.resolvedUrl(engine.storageSettingsPath()));
                 }
             }
         }
