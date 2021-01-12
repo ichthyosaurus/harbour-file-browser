@@ -340,13 +340,15 @@ uint FileModelWorker::hashInfo(const StatFileInfo& f)
 
 void FileModelWorker::sortByModTime(QList<StatFileInfo> &files, bool reverse)
 {
-    std::stable_sort(files.begin(), files.end(), [](const StatFileInfo& a, const StatFileInfo& b) -> bool {
-        return a.lastModifiedStat() < b.lastModifiedStat();
+    std::stable_sort(files.begin(), files.end(), [&](const StatFileInfo& a, const StatFileInfo& b) -> bool {
+        if (reverse) {
+            // stable_sort sorts ascending (using operator<) by default.
+            // We return true if a goes before b, and we want newer dates first by default.
+            return a.lastModifiedStat() < b.lastModifiedStat();
+        } else {
+            return a.lastModifiedStat() > b.lastModifiedStat();
+        }
     });
-
-    if (reverse) {
-        std::reverse(files.begin(), files.end());
-    }
 }
 
 bool FileModelWorker::cancelIfCancelled()
