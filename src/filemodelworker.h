@@ -78,11 +78,13 @@ private:
     bool applySettings();
     bool filesContains(const QList<StatFileInfo> &files, const StatFileInfo &fileData) const;
     uint hashInfo(const StatFileInfo& f);
+    void sortByModTime(QList<StatFileInfo>& files, bool reverse);
 
     // returns true if cancelled and emits an error
     bool cancelIfCancelled();
 
     QDir m_cachedDir = {""};
+    bool m_cachedSortTime = {false};
     Settings* m_settings = {nullptr};
     FileModelWorker::Mode m_mode = {FullMode};
     QList<StatFileInfo> m_finalEntries = {};

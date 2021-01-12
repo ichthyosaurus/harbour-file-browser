@@ -18,6 +18,7 @@
  * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
+#include <algorithm>
 #include <QSettings>
 #include <QByteArray>
 #include <QDebug>
@@ -109,13 +110,6 @@ void FileModelWorker::doStartThread(FileModelWorker::Mode mode, QList<StatFileIn
 void FileModelWorker::doReadFull()
 {
     if (!applySettings()) return; // cancelled
-    QStringList fileList = m_cachedDir.entryList();
-    m_finalEntries.reserve(fileList.size());
-    for (auto filename : fileList) {
-        m_finalEntries.append(StatFileInfo(m_cachedDir.absoluteFilePath(filename)));
-        if (cancelIfCancelled()) return;
-    }
-
     emit done(m_mode, m_finalEntries);
 }
 
@@ -131,26 +125,21 @@ void FileModelWorker::doReadDiff()
 
     QSet<uint> oldLookup;    QSet<uint> newLookup;
     QList<uint> oldHashes;   QList<uint> newHashes;
-    /* + m_oldEntries */     QList<StatFileInfo> newEntries;
-
-    QStringList fileList = m_cachedDir.entryList(); // read all files
+    /* + m_oldEntries */     QList<StatFileInfo> newEntries = m_finalEntries;
 
     auto oldEntriesSize = m_oldEntries.size();
     oldLookup.reserve(oldEntriesSize);
     oldHashes.reserve(oldEntriesSize);
 
-    auto newFileListSize = fileList.size(); // newEntries isn't populated yet
+    auto newFileListSize = newEntries.size();
     newLookup.reserve(newFileListSize);
     newHashes.reserve(newFileListSize);
-    newEntries.reserve(newFileListSize);
 
     m_finalEntries = m_oldEntries;
     m_finalEntries.reserve(std::max(oldEntriesSize, newFileListSize));
 
     // populate new file list and lookup table
-    for (const auto& filename : fileList) {
-        StatFileInfo info(m_cachedDir.absoluteFilePath(filename));
-        newEntries.append(info);
+    for (const auto& info : newEntries) {
         newHashes.append(hashInfo(info));
         newLookup.insert(newHashes.last());
         if (cancelIfCancelled()) return;
@@ -168,7 +157,7 @@ void FileModelWorker::doReadDiff()
     // After a signal is emitted, all indices higher than the
     // current one will become invalid.
     for (int i = m_oldEntries.count()-1; i >= 0; --i) {
-        StatFileInfo data = m_oldEntries.at(i);
+        const StatFileInfo& data = m_oldEntries.at(i);
         if (!newLookup.contains(oldHashes.at(i))) {
             emit entryRemoved(i, data);
             m_finalEntries.removeAt(i);
@@ -183,7 +172,7 @@ void FileModelWorker::doReadDiff()
     // current one will become valid. Higher indices might be
     // invalid until we checked them.
     for (int i = 0; i < newEntries.count(); ++i) {
-        StatFileInfo data = newEntries.at(i);
+        const StatFileInfo& data = newEntries.at(i);
         if (!oldLookup.contains(newHashes.at(i))) {
             emit entryAdded(i, data);
             m_finalEntries.insert(i, data);
@@ -281,9 +270,14 @@ bool FileModelWorker::applySettings() {
     if (useLocal) caseSensitive = m_settings->readVariant("Sailfish/SortCaseSensitively", caseSensitive, localPath).toBool();
     QDir::SortFlag caseSensitiveFlag = caseSensitive ? static_cast<QDir::SortFlag>(0) : QDir::IgnoreCase;
 
+    bool sortTime = (sortBy == QDir::Time);
+    if (sortTime) sortBy = QDir::Name;
+
     auto newSorting = (sortBy | dirsFirstFlag | orderFlag | caseSensitiveFlag);
-    if (m_cachedDir.sorting() != newSorting) {
+    if (m_cachedDir.sorting() != newSorting ||
+            m_cachedSortTime != sortTime) {
         m_cachedDir.setSorting(newSorting);
+        m_cachedSortTime = sortTime;
         settingsChanged = true;
     }
 
@@ -292,6 +286,20 @@ bool FileModelWorker::applySettings() {
     if (!settingsChanged) {
         // this happens e.g. when deleting or renaming files
         m_cachedDir.refresh();
+    }
+
+    // load entries
+    QStringList fileList = m_cachedDir.entryList();
+    m_finalEntries.clear();
+    m_finalEntries.reserve(fileList.size());
+    for (const auto& filename : fileList) {
+        m_finalEntries.append(StatFileInfo(m_cachedDir.absoluteFilePath(filename)));
+    }
+
+    if (cancelIfCancelled()) return false;
+
+    if (sortTime) {
+        sortByModTime(m_finalEntries, !orderDefault);
     }
 
     return true;
@@ -330,6 +338,17 @@ uint FileModelWorker::hashInfo(const StatFileInfo& f)
     result.append(f.isDirAtEnd());
     // qDebug() << "hashed" << f.fileName() << "to" << result << "(" << result.size() << ")";
     return qHash(result);
+}
+
+void FileModelWorker::sortByModTime(QList<StatFileInfo> &files, bool reverse)
+{
+    std::stable_sort(files.begin(), files.end(), [](const StatFileInfo& a, const StatFileInfo& b) -> bool {
+        return a.lastModifiedStat() < b.lastModifiedStat();
+    });
+
+    if (reverse) {
+        std::reverse(files.begin(), files.end());
+    }
 }
 
 bool FileModelWorker::cancelIfCancelled()
