@@ -27,7 +27,7 @@ StatFileInfo::StatFileInfo() :
     refresh();
 }
 
-StatFileInfo::StatFileInfo(QString filename) :
+StatFileInfo::StatFileInfo(const QString& filename) :
     m_filename(filename), m_selected(false)
 {
     refresh();

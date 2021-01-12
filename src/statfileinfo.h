@@ -34,7 +34,7 @@ class StatFileInfo
 {
 public:
     explicit StatFileInfo();
-    explicit StatFileInfo(QString filename);
+    explicit StatFileInfo(const QString &filename);
     ~StatFileInfo();
 
     void setFile(QString filename);

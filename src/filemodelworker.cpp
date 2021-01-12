@@ -110,10 +110,9 @@ void FileModelWorker::doReadFull()
 {
     if (!applySettings()) return; // cancelled
     QStringList fileList = m_cachedDir.entryList();
+    m_finalEntries.reserve(fileList.size());
     for (auto filename : fileList) {
-        QString fullpath = m_cachedDir.absoluteFilePath(filename);
-        StatFileInfo info(fullpath);
-        m_finalEntries.append(info);
+        m_finalEntries.append(StatFileInfo(m_cachedDir.absoluteFilePath(filename)));
         if (cancelIfCancelled()) return;
     }
 
