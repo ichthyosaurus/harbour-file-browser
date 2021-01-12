@@ -217,17 +217,17 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="356"/>
         <source>Empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Leer</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="359"/>
         <source>No files matched the filter.</source>
-        <translation type="unfinished"></translation>
+        <translation>Der Filter passt auf keine Dateien.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="360"/>
         <source>This directory contains no files.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dieser Ordner enthält keine Dateien.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="455"/>
@@ -563,12 +563,12 @@
     <message>
         <location filename="../src/filemodelworker.cpp" line="216"/>
         <source>Folder does not exist</source>
-        <translation type="unfinished">Ordner existiert nicht</translation>
+        <translation>Ordner existiert nicht</translation>
     </message>
     <message>
         <location filename="../src/filemodelworker.cpp" line="221"/>
         <source>No permission to read the folder</source>
-        <translation type="unfinished">Keine Berechtigung, den Ordner zu lesen</translation>
+        <translation>Keine Berechtigung, den Ordner zu lesen</translation>
     </message>
 </context>
 <context>
@@ -671,7 +671,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="148"/>
         <source>The file has been moved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die Datei wurde verschoben.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="259"/>
@@ -783,7 +783,7 @@
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="69"/>
         <source>The files have been moved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die Dateien wurden verschoben.</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/MultiFilePage.qml" line="93"/>
@@ -2197,7 +2197,7 @@
     <message>
         <location filename="../qml/harbour-file-browser.qml" line="39"/>
         <source>Version %1 (%2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Version %1 (%2)</translation>
     </message>
 </context>
 <context>
