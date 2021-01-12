@@ -192,7 +192,9 @@ void FileModel::setDir(QString dir)
 
     m_dir = dir;
 
-    refreshFull();
+    if (m_worker->isRunning()) m_worker->cancel();
+    doUpdateAllEntries();
+
     emit dirChanged();
 }
 
