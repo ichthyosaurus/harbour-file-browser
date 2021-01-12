@@ -512,6 +512,16 @@ Page {
         }
     }
 
+    Connections {
+        target: main
+        onBookmarkAdded: {
+            if (path === dir) bookmarkEntry.hasBookmark = true;
+        }
+        onBookmarkRemoved: {
+            if (path === dir) bookmarkEntry.hasBookmark = false;
+        }
+    }
+
     onStatusChanged: {
         if (status === PageStatus.Active) {
             if (!canNavigateForward) {
@@ -557,7 +567,5 @@ Page {
 
     Component.onCompleted: {
         console.log("constructed page:", fileModel.active, _activeDir, dir)
-        main.bookmarkAdded.connect(function(path) { if (path === dir) bookmarkEntry.hasBookmark = true; });
-        main.bookmarkRemoved.connect(function(path) { if (path === dir) bookmarkEntry.hasBookmark = false; });
     }
 }
