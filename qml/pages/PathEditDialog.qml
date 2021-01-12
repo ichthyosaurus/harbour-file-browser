@@ -157,7 +157,7 @@ Dialog {
                         listModel.update(Paths.lastPartOfPath(path))
                     }
 
-                    var search = Paths.lastPartOfPath(path).replace(/([.-[\](){}\\*?*^$|])/g, "\\$1")
+                    var search = Paths.lastPartOfPath(path).replace(/([-.[\](){}\\*?*^$|])/g, "\\$1")
                     dialog._pathRegex = new RegExp(search, 'i')
                     if (text === "" || !engine.pathIsDirectory(text)) {
                         // Theme.errorColor looks too harsh
