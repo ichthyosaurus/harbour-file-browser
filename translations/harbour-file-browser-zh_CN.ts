@@ -216,17 +216,17 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="356"/>
         <source>Empty</source>
-        <translation type="unfinished"></translation>
+        <translation>空</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="359"/>
         <source>No files matched the filter.</source>
-        <translation type="unfinished"></translation>
+        <translation>没有匹配筛选的文件。</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="360"/>
         <source>This directory contains no files.</source>
-        <translation type="unfinished"></translation>
+        <translation>该目录内没有文件。</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="455"/>
@@ -659,7 +659,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="148"/>
         <source>The file has been moved.</source>
-        <translation type="unfinished"></translation>
+        <translation>文件已移除。</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="259"/>
@@ -771,7 +771,7 @@
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="69"/>
         <source>The files have been moved.</source>
-        <translation type="unfinished"></translation>
+        <translation>文件已移除。</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/MultiFilePage.qml" line="93"/>
