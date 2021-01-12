@@ -197,8 +197,7 @@ void FileModel::setActive(bool active)
     m_active = active;
     emit activeChanged();
 
-    if (m_dirty)
-        readDirectory();
+    if (m_dirty) refreshEntries();
 
     m_dirty = false;
 }
