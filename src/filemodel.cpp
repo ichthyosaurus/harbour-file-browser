@@ -434,42 +434,6 @@ void FileModel::applyFilterString()
 {
     if (m_oldFilterString != m_filterString &&
             !m_dir.isEmpty()) refresh();
-    return;
-
-    QRegularExpression filter(
-                m_filterString.replace(".", "\\.").
-                replace("?", ".").replace("*", ".*?"),
-                QRegularExpression::CaseInsensitiveOption);
-    if (m_filterString.isEmpty()) filter.setPattern(".*");
-
-    QMutableListIterator<StatFileInfo> iter(m_files);
-    int row = 0; int count = 0;
-    m_matchedFileCount = 0;
-    while (iter.hasNext()) {
-        StatFileInfo &info = iter.next();
-        bool match = filter.match(info.fileName()).hasMatch();
-        if (match) m_matchedFileCount++;
-
-        if (   info.isMatched() != match
-            || (!match && info.isSelected())) {
-
-            info.setFilterMatched(match);
-            if (!match) info.setSelected(false);
-
-            // emit signal for views
-            QModelIndex topLeft = index(row, 0);
-            QModelIndex bottomRight = index(row, 0);
-            emit dataChanged(topLeft, bottomRight);
-        }
-
-        if (info.isSelected()) count++;
-        row++;
-    }
-
-    if (count != m_selectedFileCount) {
-        m_selectedFileCount = count;
-        emit selectedFileCountChanged();
-    }
 }
 
 void FileModel::workerDone(FileModelWorker::Mode mode, QList<StatFileInfo> files)
@@ -479,6 +443,7 @@ void FileModel::workerDone(FileModelWorker::Mode mode, QList<StatFileInfo> files
         // workerRemovedEntry(), triggered by the resp. signals
         // TODO emit fileCountChanged();
     } else if (mode == FileModelWorker::Mode::FullMode) {
+        setBusy(m_busy, false); // make sure we're busy
         beginResetModel();
         m_files.clear();
         m_files = files;
@@ -490,7 +455,6 @@ void FileModel::workerDone(FileModelWorker::Mode mode, QList<StatFileInfo> files
     m_errorMessage = ""; // worker finished successfully
     emit errorMessageChanged();
     setBusy(false, false);
-    // applyFilterString(); // TODO remove when filtering in worker
 }
 
 void FileModel::workerErrorOccurred(QString message)
