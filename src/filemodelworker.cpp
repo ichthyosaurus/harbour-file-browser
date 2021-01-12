@@ -292,7 +292,7 @@ bool FileModelWorker::filesContains(const QList<StatFileInfo> &files, const Stat
 bool FileModelWorker::cancelIfCancelled()
 {
     if (m_cancelled.loadAcquire() == Cancelled) {
-        emit error(tr("Directory listing cancelled"));
+        logError("[silent] Directory listing cancelled");
         return true;
     }
     return false;
