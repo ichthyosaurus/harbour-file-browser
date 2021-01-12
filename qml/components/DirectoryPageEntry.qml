@@ -30,7 +30,7 @@ ListItem {
     contentHeight: _baseEntryHeight + _extraContentHeight
     menu: contextMenu
     ListView.onRemove: animateRemoval(listItem)
-    highlighted: down || isSelected || selectionArea.pressed
+    highlighted: down || isSelected || selectionArea.pressed || menuOpen
 
     property Item _remorseItem
     property int _extraContentHeight: 0
