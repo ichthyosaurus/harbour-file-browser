@@ -196,12 +196,22 @@ function goToFolder(folder, silent, startSearchQuery) {
                         }})
     }
 
-    if (above !== pageStack.currentPage) {
-        console.log("- inserting "+toPush.length+" page(s)")
-        pageStack.animatorReplaceAbove(above, toPush);
+    if (toPush.length > 1) {
+        if (above !== pageStack.currentPage) {
+            console.log("- animator: inserting "+toPush.length+" page(s)")
+            pageStack.animatorReplaceAbove(above, toPush);
+        } else {
+            console.log("- animator: pushing "+toPush.length+" page(s)")
+            pageStack.animatorPush(toPush);
+        }
     } else {
-        console.log("- pushing "+toPush.length+" page(s)")
-        pageStack.animatorPush(toPush);
+        if (above !== pageStack.currentPage) {
+            console.log("- inserting "+toPush.length+" page(s)")
+            pageStack.replaceAbove(above, toPush);
+        } else {
+            console.log("- pushing "+toPush.length+" page(s)")
+            pageStack.push(toPush);
+        }
     }
 
     console.log("- done")
