@@ -130,7 +130,7 @@ private:
      */
     void doUpdateChangedEntries();
 
-    void recountSelectedFiles();
+    void updateFileCounts();
     void clearModel();
     void setBusy(bool busy, bool partlyBusy);
     void setBusy(bool busy);

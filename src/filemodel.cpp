@@ -463,7 +463,7 @@ void FileModel::workerDone(FileModelWorker::Mode mode, QList<StatFileInfo> files
         emit fileCountChanged();
     }
 
-    recountSelectedFiles();
+    updateFileCounts();
     m_errorMessage = ""; // worker finished successfully
     emit errorMessageChanged();
     setBusy(false, false);
@@ -475,7 +475,7 @@ void FileModel::workerErrorOccurred(QString message)
     m_errorMessage = message;
     clearModel();
     emit errorMessageChanged();
-    recountSelectedFiles();
+    updateFileCounts();
     setBusy(false, false);
 }
 
@@ -486,7 +486,7 @@ void FileModel::workerAddedEntry(int index, StatFileInfo file)
     endInsertRows();
 
     emit fileCountChanged();
-    recountSelectedFiles();
+    updateFileCounts();
 }
 
 void FileModel::workerRemovedEntry(int index, StatFileInfo file)
@@ -512,7 +512,7 @@ void FileModel::workerRemovedEntry(int index, StatFileInfo file)
     endRemoveRows();
 
     emit fileCountChanged();
-    recountSelectedFiles();
+    updateFileCounts();
 }
 
 void FileModel::doUpdateAllEntries()
@@ -527,7 +527,7 @@ void FileModel::doUpdateChangedEntries()
     m_worker->startReadChanged(m_files, m_dir, m_filterString, m_settings);
 }
 
-void FileModel::recountSelectedFiles()
+void FileModel::updateFileCounts()
 {
     int selectedCount = 0;
     int matchedCount = 0;
