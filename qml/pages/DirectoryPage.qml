@@ -378,10 +378,13 @@ Page {
         property int startIndex: -1
         target: null
         onSelectionChanged: {
-            target = null;
+            quickSelectionConnections.target = null;
+            var startIndex = quickSelectionConnections.startIndex
             multiSelectionFinished(startIndex);
-            fileModel.selectRange(startIndex, index);
-            startIndex = -1;
+            if (index !== startIndex) {
+                fileModel.selectRange(startIndex, index);
+            }
+            quickSelectionConnections.startIndex = -1;
         }
     }
 
