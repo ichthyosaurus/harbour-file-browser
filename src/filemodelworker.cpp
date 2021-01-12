@@ -26,6 +26,10 @@
 #include "statfileinfo.h"
 #include "settingshandler.h"
 
+#ifndef FILEMODEL_SIGNAL_THRESHOLD
+#define FILEMODEL_SIGNAL_THRESHOLD 100
+#endif
+
 FileModelWorker::FileModelWorker(QObject *parent) : QThread(parent) {
     connect(this, &FileModelWorker::error, this, &FileModelWorker::logError);
     connect(this, &FileModelWorker::alreadyRunning, this,
@@ -324,9 +328,6 @@ bool FileModelWorker::applySettings() {
 
 bool FileModelWorker::thresholdAbort(uint currentChanges, const QList<StatFileInfo>& fullFiles)
 {
-#ifndef FILEMODEL_SIGNAL_THRESHOLD
-#define FILEMODEL_SIGNAL_THRESHOLD 100
-#endif
     const uint signalThreshold = FILEMODEL_SIGNAL_THRESHOLD;
     if (currentChanges >= signalThreshold) {
         logMessage("warning: DiffMode reached threshold, aborted");
