@@ -56,6 +56,7 @@ FileModel::FileModel(QObject *parent) :
     m_active(false),
     m_dirty(false)
 {
+    m_worker = new FileModelWorker;
     m_dir = "";
     m_filterString = "";
 
@@ -67,10 +68,20 @@ FileModel::FileModel(QObject *parent) :
     m_settings = qApp->property("settings").value<Settings*>();
     connect(m_settings, SIGNAL(viewSettingsChanged(QString)), this, SLOT(refreshFull(QString)));
     connect(this, SIGNAL(filterStringChanged()), this, SLOT(applyFilterString()));
+
+    // sync worker status
+    connect(m_worker, &FileModelWorker::done, this, &FileModel::workerDone);
+    connect(m_worker, &FileModelWorker::error, this, &FileModel::workerErrorOccurred);
+    connect(m_worker, &FileModelWorker::entryAdded, this, &FileModel::workerAddedEntry);
+    connect(m_worker, &FileModelWorker::entryRemoved, this, &FileModel::workerRemovedEntry);
 }
 
 FileModel::~FileModel()
 {
+    // stop and delete the worker
+    m_worker->cancel();
+    m_worker->wait();
+    m_worker->deleteLater();
 }
 
 int FileModel::rowCount(const QModelIndex &parent) const
@@ -402,19 +413,8 @@ void FileModel::refreshFull(QString localPath)
 
 void FileModel::readDirectory()
 {
-    // wrapped in reset model methods to get views notified
-    beginResetModel();
-
-    m_files.clear();
-    m_errorMessage = "";
-
-    if (!m_dir.isEmpty())
-        readAllEntries();
-
-    endResetModel();
-    emit fileCountChanged();
-    emit errorMessageChanged();
-    recountSelectedFiles();
+    setBusy(true);
+    m_worker->startReadFull(m_dir, m_filterString, m_settings);
 }
 
 void FileModel::recountSelectedFiles()
@@ -533,6 +533,72 @@ void FileModel::applyFilterString()
     }
 }
 
+void FileModel::workerDone(FileModelWorker::Mode mode, QList<StatFileInfo> files)
+{
+    if (mode == FileModelWorker::Mode::DiffMode) {
+        // main work is already handled in workerAddedEntry() and
+        // workerRemovedEntry(), triggered by the resp. signals
+        // TODO emit fileCountChanged();
+    } else if (mode == FileModelWorker::Mode::FullMode) {
+        beginResetModel();
+        m_files.clear();
+        m_files = files;
+        endResetModel();
+        emit fileCountChanged();
+    }
+
+    recountSelectedFiles();
+    m_errorMessage = ""; // worker finished successfully
+    emit errorMessageChanged();
+    setBusy(false, false);
+    applyFilterString();
+}
+
+void FileModel::workerErrorOccurred(QString message)
+{
+    m_errorMessage = message;
+    clearModel();
+    emit errorMessageChanged();
+    recountSelectedFiles();
+    setBusy(false, false);
+}
+
+void FileModel::workerAddedEntry(int index, StatFileInfo file)
+{
+    beginInsertRows(QModelIndex(), index, index);
+    m_files.insert(index, file);
+    endInsertRows();
+
+    emit fileCountChanged();
+    recountSelectedFiles();
+}
+
+void FileModel::workerRemovedEntry(int index, StatFileInfo file)
+{
+    if (m_files.at(index).absoluteFilePath() != file.absoluteFilePath()) {
+        // this case should not be possible
+        auto path = file.absoluteFilePath();
+        bool found = false;
+        for (int i = 0; i < m_files.count(); i++) {
+            if (m_files.at(index).absoluteFilePath() != path) {
+                found = true;
+                index = 0;
+                break;
+            }
+        }
+        if (!found) {
+            return; // TODO log this problem
+        }
+    }
+
+    beginRemoveRows(QModelIndex(), index, index);
+    m_files.removeAt(index);
+    endRemoveRows();
+
+    emit fileCountChanged();
+    recountSelectedFiles();
+}
+
 void FileModel::readAllEntries()
 {
     QDir dir(m_dir);
@@ -559,69 +625,8 @@ void FileModel::readAllEntries()
 
 void FileModel::refreshEntries()
 {
-    m_errorMessage = "";
-
-    // empty dir name
-    if (m_dir.isEmpty()) {
-        clearModel();
-        emit errorMessageChanged();
-        return;
-    }
-
-    QDir dir(m_dir);
-    if (!dir.exists()) {
-        clearModel();
-        m_errorMessage = tr("Folder does not exist");
-        emit errorMessageChanged();
-        return;
-    }
-    if (!dir.isReadable()) {
-        clearModel();
-        m_errorMessage = tr("No permission to read the folder");
-        emit errorMessageChanged();
-        return;
-    }
-
-    applySettings(dir);
-
-    // read all files
-    QList<StatFileInfo> newFiles;
-
-    QStringList fileList = dir.entryList();
-    foreach (QString filename, fileList) {
-        QString fullpath = dir.absoluteFilePath(filename);
-        StatFileInfo info(fullpath);
-        newFiles.append(info);
-    }
-
-    int oldFileCount = m_files.count();
-
-    // compare old and new files and do removes if needed
-    for (int i = m_files.count()-1; i >= 0; --i) {
-        StatFileInfo data = m_files.at(i);
-        if (!filesContains(newFiles, data)) {
-            beginRemoveRows(QModelIndex(), i, i);
-            m_files.removeAt(i);
-            endRemoveRows();
-        }
-    }
-    // compare old and new files and do inserts if needed
-    for (int i = 0; i < newFiles.count(); ++i) {
-        StatFileInfo data = newFiles.at(i);
-        if (!filesContains(m_files, data)) {
-            beginInsertRows(QModelIndex(), i, i);
-            m_files.insert(i, data);
-            endInsertRows();
-        }
-    }
-
-    applyFilterString();
-
-    if (m_files.count() != oldFileCount)
-        emit fileCountChanged();
-
-    emit errorMessageChanged();
-    recountSelectedFiles();
+    setBusy(false, true);
+    m_worker->startReadChanged(m_files, m_dir, m_filterString, m_settings);
 }
 
 void FileModel::clearModel()

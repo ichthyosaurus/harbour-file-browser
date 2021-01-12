@@ -26,6 +26,7 @@
 #include <QDir>
 #include <QFileSystemWatcher>
 #include "statfileinfo.h"
+#include "filemodelworker.h"
 
 class Settings;
 
@@ -115,6 +116,11 @@ private slots:
     void readDirectory();
     void applyFilterString();
 
+    void workerDone(FileModelWorker::Mode mode, QList<StatFileInfo> files);
+    void workerErrorOccurred(QString message);
+    void workerAddedEntry(int index, StatFileInfo file);
+    void workerRemovedEntry(int index, StatFileInfo file);
+
 private:
     /**
      * @brief Rereads directory contents and updates the model.
@@ -141,6 +147,7 @@ private:
     bool m_dirty;
     QFileSystemWatcher *m_watcher;
     Settings* m_settings;
+    FileModelWorker* m_worker;
     bool m_busy = {false};
     bool m_partlyBusy = {false};
 };
