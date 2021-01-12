@@ -217,7 +217,7 @@ bool FileModelWorker::verifyOrAbort()
     return true;
 }
 
-// see SETTINGS for details
+// see SETTINGS.md for details
 bool FileModelWorker::applySettings() {
     if (cancelIfCancelled()) return false;
     bool settingsChanged = false;
@@ -231,6 +231,7 @@ bool FileModelWorker::applySettings() {
 
     // there are no settings to apply
     if (!m_settings) {
+        logMessage("error: invalid settings object");
         m_cachedDir.refresh();
         return true;
     }
