@@ -37,9 +37,10 @@ File Browser for Sailfish OS. A fully-fledged file manager for your phone.
 # << build pre
 
 %qmake5  \
+    HARBOUR_COMPLIANCE=off \
+    RELEASE_TYPE=stable \
     VERSION=%{version} \
-    RELEASE=%{release} \
-    HARBOUR_COMPLIANCE=off
+    RELEASE=%{release}
 
 make %{?_smp_mflags}
 

@@ -20,11 +20,16 @@ Description: |-
 Configure: none
 Builder: qmake5
 
+# HARBOUR_COMPLIANCE: set to 'off' or 'on' to enable/disable features
+#      against Jolla Harbour's rules
+# RELEASE_TYPE: set to a string shown on File Browser's About page
+#      This is planned to trigger different builds for stable/beta releases.
+# VERSION and RELEASE: automatically set to the values defined above
 QMakeOptions:
+  - HARBOUR_COMPLIANCE=off
   - RELEASE_TYPE=stable
   - VERSION=%{version}
   - RELEASE=%{release}
-  - HARBOUR_COMPLIANCE=off
 
 # This section specifies build dependencies that are resolved using pkgconfig.
 # This is the preferred way of specifying build dependencies for your package.
