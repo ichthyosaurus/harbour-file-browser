@@ -54,6 +54,13 @@ void FileModelWorker::startReadChanged(QList<StatFileInfo> oldEntries,
 
 void FileModelWorker::run()
 {
+    if (!verifyOrAbort()) return; // invalid directory
+
+    QDir newDir(m_dir);
+    if (m_cachedDir.canonicalPath() != newDir.canonicalPath()) {
+        m_cachedDir = newDir;
+    }
+
     if (m_mode == FullMode) {
         doReadFull();
     } else if (m_mode == DiffMode) {
@@ -88,14 +95,10 @@ void FileModelWorker::doStartThread(FileModelWorker::Mode mode, QList<StatFileIn
 
 void FileModelWorker::doReadFull()
 {
-    if (!verifyOrAbort()) return;
-
-    QDir dir(m_dir);
-    if (!applySettings(dir)) return; // cancelled
-
-    QStringList fileList = dir.entryList();
+    if (!applySettings()) return; // cancelled
+    QStringList fileList = m_cachedDir.entryList();
     for (auto filename : fileList) {
-        QString fullpath = dir.absoluteFilePath(filename);
+        QString fullpath = m_cachedDir.absoluteFilePath(filename);
         StatFileInfo info(fullpath);
         m_finalEntries.append(info);
         if (cancelIfCancelled()) return;
@@ -106,17 +109,14 @@ void FileModelWorker::doReadFull()
 
 void FileModelWorker::doReadDiff()
 {
-    if (!verifyOrAbort()) return;
-
-    QDir dir(m_dir);
-    if (!applySettings(dir)) return; // cancelled
+    if (!applySettings()) return; // cancelled
 
     // read all files
     QList<StatFileInfo> newFiles;
 
-    QStringList fileList = dir.entryList();
+    QStringList fileList = m_cachedDir.entryList();
     for (auto filename : fileList) {
-        QString fullpath = dir.absoluteFilePath(filename);
+        QString fullpath = m_cachedDir.absoluteFilePath(filename);
         StatFileInfo info(fullpath);
         newFiles.append(info);
         if (cancelIfCancelled()) return;
@@ -171,7 +171,7 @@ bool FileModelWorker::verifyOrAbort()
 }
 
 // see SETTINGS for details
-bool FileModelWorker::applySettings(QDir& dir) {
+bool FileModelWorker::applySettings() {
     if (cancelIfCancelled()) return false;
 
     // TODO make sure the keyboard doesn't loose focus
@@ -180,7 +180,7 @@ bool FileModelWorker::applySettings(QDir& dir) {
     // there are no settings to apply
     if (!m_settings) return true;
 
-    QString localPath = dir.absoluteFilePath(".directory");
+    QString localPath = m_cachedDir.absoluteFilePath(".directory");
     bool useLocal = m_settings->readVariant("View/UseLocalSettings", true).toBool();
 
     // filters
@@ -188,8 +188,10 @@ bool FileModelWorker::applySettings(QDir& dir) {
     if (useLocal) hidden = m_settings->readVariant("Settings/HiddenFilesShown", hidden, localPath).toBool();
     QDir::Filter hiddenFilter = hidden ? QDir::Hidden : static_cast<QDir::Filter>(0);
 
-    dir.setFilter(QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot | QDir::System | hiddenFilter);
-
+    auto newFilters = (QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot | QDir::System | hiddenFilter);
+    if (m_cachedDir.filter() != newFilters) {
+        m_cachedDir.setFilter(newFilters);
+    }
 
     if (cancelIfCancelled()) return false;
 
@@ -222,7 +224,10 @@ bool FileModelWorker::applySettings(QDir& dir) {
     if (useLocal) caseSensitive = m_settings->readVariant("Sailfish/SortCaseSensitively", caseSensitive, localPath).toBool();
     QDir::SortFlag caseSensitiveFlag = caseSensitive ? static_cast<QDir::SortFlag>(0) : QDir::IgnoreCase;
 
-    dir.setSorting(sortBy | dirsFirstFlag | orderFlag | caseSensitiveFlag);
+    auto newSorting = (sortBy | dirsFirstFlag | orderFlag | caseSensitiveFlag);
+    if (m_cachedDir.sorting() != newSorting) {
+        m_cachedDir.setSorting(newSorting);
+    }
 
     if (cancelIfCancelled()) return false;
     return true;

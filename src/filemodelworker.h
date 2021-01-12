@@ -74,12 +74,13 @@ private:
     void doReadDiff();
 
     bool verifyOrAbort();
-    bool applySettings(QDir& dir);
+    bool applySettings();
     bool filesContains(const QList<StatFileInfo> &files, const StatFileInfo &fileData) const;
 
     // returns true if cancelled and emits an error
     bool cancelIfCancelled();
 
+    QDir m_cachedDir = {""};
     Settings* m_settings = {nullptr};
     FileModelWorker::Mode m_mode = {FullMode};
     QList<StatFileInfo> m_finalEntries = {};
