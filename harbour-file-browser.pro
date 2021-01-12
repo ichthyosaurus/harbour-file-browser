@@ -68,6 +68,7 @@ CONFIG += sailfishapp
 
 SOURCES += src/harbour-file-browser.cpp \
     src/filemodel.cpp \
+    src/filemodelworker.cpp \
     src/filedata.cpp \
     src/engine.cpp \
     src/fileworker.cpp \
@@ -79,6 +80,7 @@ SOURCES += src/harbour-file-browser.cpp \
     src/settingshandler.cpp \
 
 HEADERS += src/filemodel.h \
+    src/filemodelworker.h \
     src/filedata.h \
     src/engine.h \
     src/fileworker.h \
