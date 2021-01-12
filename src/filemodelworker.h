@@ -66,6 +66,7 @@ protected:
 
 private slots:
     void logError(QString message);
+    void logMessage(QString message, bool markSilent = true);
 
 private:
     void doStartThread(Mode mode, QList<StatFileInfo> oldEntries,

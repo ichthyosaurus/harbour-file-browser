@@ -44,12 +44,14 @@ void FileModelWorker::cancel()
 
 void FileModelWorker::startReadFull(QString dir, QString nameFilter, Settings* settings)
 {
+    logMessage("note: requested full directory listing");
     doStartThread(FullMode, {}, dir, nameFilter, settings);
 }
 
 void FileModelWorker::startReadChanged(QList<StatFileInfo> oldEntries,
                                        QString dir, QString nameFilter, Settings *settings)
 {
+    logMessage("note: requested partial directory listing");
     doStartThread(DiffMode, oldEntries, dir, nameFilter, settings);
 }
 
@@ -63,19 +65,26 @@ void FileModelWorker::run()
     }
 
     if (m_mode == FullMode) {
+        logMessage("note: started with FullMode");
         doReadFull();
     } else if (m_mode == DiffMode) {
+        logMessage("note: started with DiffMode");
         doReadDiff();
     } else if (m_mode == NoneMode) {
-        qDebug() << "[FileModelWorker] note: started with NoneMode";
+        logMessage("note: started with NoneMode");
         return;
     }
 }
 
+void FileModelWorker::logMessage(QString message, bool markSilent)
+{
+    qDebug() << "[FileModelWorker]" << message << (markSilent ? "[silent]" : "");
+    qDebug() << "[FileModelWorker] state:" << m_dir << m_mode;
+}
+
 void FileModelWorker::logError(QString message)
 {
-    qDebug() << "[FileModelWorker] error:" << message;
-    qDebug() << "[FileModelWorker] state:" << m_dir << m_mode;
+    logMessage("error: "+message, false);
 }
 
 void FileModelWorker::doStartThread(FileModelWorker::Mode mode, QList<StatFileInfo> oldEntries,
@@ -292,7 +301,7 @@ bool FileModelWorker::filesContains(const QList<StatFileInfo> &files, const Stat
 bool FileModelWorker::cancelIfCancelled()
 {
     if (m_cancelled.loadAcquire() == Cancelled) {
-        logError("[silent] Directory listing cancelled");
+        logMessage("warning: directory listing cancelled");
         return true;
     }
     return false;
