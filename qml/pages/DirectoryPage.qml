@@ -432,7 +432,12 @@ Page {
             }
             onTransferTriggered: {
                 if (remorsePopupActive) return;
-                if (transferPanel.status === Loader.Ready) transferPanel.item.startTransfer(toTransfer, targets, selectedAction, goToTarget);
+                if (transferPanel.status === Loader.Ready) {
+                    if (selectedAction === "move") {
+                        fileModel.markAsDoomed(toTransfer);
+                    }
+                    transferPanel.item.startTransfer(toTransfer, targets, selectedAction, goToTarget);
+                }
                 else notificationPanel.showText(qsTr("Internally not ready"), qsTr("Please simply try again"));
             }
         }

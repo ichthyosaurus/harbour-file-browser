@@ -254,6 +254,7 @@ Page {
                             var prevPage = pageStack.previousPage();
                             if (prevPage.progressPanel) transferPanel.progressPanel = prevPage.progressPanel;
                             if (prevPage.notificationPanel) transferPanel.notificationPanel = prevPage.notificationPanel;
+                            prevPage.markAsDoomed(toTransfer);
                             pageStack.pop();
                         }
 
