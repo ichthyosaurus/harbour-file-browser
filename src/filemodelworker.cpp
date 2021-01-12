@@ -138,14 +138,16 @@ void FileModelWorker::doReadDiff()
     m_finalEntries = m_oldEntries;
     m_finalEntries.reserve(std::max(oldEntriesSize, newFileListSize));
 
-    // populate new file list and lookup table
+    // populate new hashes and lookup table
+    // NOTE If necessary we could merge this in the loop
+    // where we initially load the new file list.
     for (const auto& info : newEntries) {
         newHashes.append(hashInfo(info));
         newLookup.insert(newHashes.last());
         if (cancelIfCancelled()) return;
     }
 
-    // populate old list lookup table
+    // populate old hashes and lookup table
     for (const auto& info : m_oldEntries) {
         oldHashes.append(hashInfo(info));
         oldLookup.insert(oldHashes.last());
@@ -296,6 +298,7 @@ bool FileModelWorker::applySettings() {
 
     if (cancelIfCancelled()) return false;
 
+    // apply manual sorting
     if (sortTime) {
         sortByModTime(m_finalEntries, newSorting.testFlag(QDir::Reversed));
     }
