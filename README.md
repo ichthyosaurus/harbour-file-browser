@@ -67,14 +67,18 @@ There are a number of other file managers available in OpenRepos.
 
 ## Building and contributing
 
+Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for details on how you can
+contribute.
+
+If you want to contribute code changes, you can setup your environment by
+following the steps below. This is not needed for contributing to translations,
+as they are managed using [Weblate](https://hosted.weblate.org/projects/harbour-file-browser/).
+
 1. Get the source code
 2. Open `harbour-file-browser.pro` in Sailfish OS IDE (Qt Creator for Sailfish)
 3. To run on emulator, select the `i486` target and press the run button
 4. To build for the device, select the `armv7hl` target and deploy all,
    the RPM packages will be in the RPMS folder
-
-Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for details on how you can
-contribute.
 
 ## License
 

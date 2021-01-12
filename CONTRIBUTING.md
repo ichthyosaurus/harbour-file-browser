@@ -13,7 +13,9 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 It would be wonderful if the app could be translated in as many languages as possible!
 
-If you just found a typo, you can [open an issue](https://github.com/ichthyosaurus/harbour-file-browser/issues/new).
+Translations are managed using [Weblate](https://hosted.weblate.org/projects/harbour-file-browser/).
+
+If you just found a typo, you can also [open an issue](https://github.com/ichthyosaurus/harbour-file-browser/issues/new).
 Include the following details:
 
 1. the language you were using
@@ -21,8 +23,11 @@ Include the following details:
 3. the wrong text
 4. the correct translation
 
+You can easily update translations and even add new languages online. You can
+also create a new pull request with contributions or you can send us an email
+with an updated translation catalog attached.
 
-To add or update a translation, please follow these steps:
+To manually add or update a translation, please follow these steps:
 
 1. *If it did not exists before*, create a new catalog for your language by copying the
    base file [translations/harbour-file-browser.ts](translations/harbour-file-browser.ts).
