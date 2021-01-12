@@ -33,7 +33,6 @@ Page {
     id: page
     objectName: "directoryPage"
     allowedOrientations: Orientation.All
-    property string _activeDir: ""
     property string dir: "/"
 
     property bool remorsePopupActive: false // set to true when remorsePopup is active
@@ -535,7 +534,7 @@ Page {
                 pageStack.pushAttached(Qt.resolvedUrl("ShortcutsPage.qml"), { currentPath: dir });
             }
             coverText = Paths.lastPartOfPath(page.dir)+"/"; // update cover
-        } else if (status === PageStatus.Activating && _activeDir !== dir) {
+        } else if (status === PageStatus.Activating) {
             console.log("loading", dir);
             main.activePage = {type: "dir", path: dir};
             navigate_syncNavStack();
