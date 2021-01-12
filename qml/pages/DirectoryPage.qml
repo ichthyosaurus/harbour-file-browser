@@ -106,7 +106,7 @@ Page {
         clip: true
 
         visible: true
-        opacity: visible ? 1 : 0
+        opacity: (visible ? (busyIndicator.enabled ? Theme.opacityLow : 1.0) : 0.0)
         Behavior on opacity { NumberAnimation { duration: 300 } }
 
         // We explicitly disable the model to show an error
