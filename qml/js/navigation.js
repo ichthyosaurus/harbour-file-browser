@@ -175,11 +175,14 @@ function goToFolder(folder, silent, startSearchQuery) {
         }
     }
 
+    // make sure rest contains only single slashes and doesn't
+    // start or end with one
+    rest = rest.replace(/\/+/g, '/').replace(/^\//, '').replace(/\/$/, '')
     var toPush = []
     var dirs = rest.split("/");
 
     if (basePath === "") toPush.push({page: pagePath, properties: {dir: "/"}});
-    for (var j = 1; j < dirs.length-1; ++j) {
+    for (var j = 0; j < dirs.length-1; ++j) {
         basePath += "/"+dirs[j];
         toPush.push({page: pagePath, properties: {dir: basePath}});
     }
