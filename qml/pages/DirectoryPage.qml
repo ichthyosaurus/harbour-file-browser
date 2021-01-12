@@ -78,9 +78,12 @@ Page {
     signal multiSelectionStarted(var index)
     signal multiSelectionFinished(var index)
     signal selectionChanged(var index)
-    signal markAsDoomed(var file)
 
-    onMarkAsDoomed: fileModel.markAsDoomed(file)
+    signal markAsDoomed(var files) // to be used from other pages
+    onMarkAsDoomed: {
+        clearSelectedFiles()
+        fileModel.markAsDoomed(files)
+    }
 
     FileModel {
         id: fileModel
