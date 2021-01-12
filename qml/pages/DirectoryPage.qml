@@ -109,21 +109,35 @@ Page {
 
         PullDownMenu {
             id: pullDownMenu
-            on_AtFinalPositionChanged: filterField.forceActiveFocus()
-            onActiveChanged: filterField.focus = false
+            on_AtFinalPositionChanged: {
+                if (!_filterBlocked) {
+                    filterField.forceActiveFocus()
+                }
+            }
+            onActiveChanged: filterField.enabled = active
             enabled: !dirPopup.active
+
+            // We explicitly block the filter field when a
+            // menu item is selected so the keyboard won't flicker
+            // while a new page is pushed on the stack.
+            // After returning the user has to enable the filter
+            // field once manually by clicking on it.
+            // This is the only solution that actually worked
+            // because on_AtFinalPositionChanged seems to be
+            // quite unreliable/buggy. (We shouldn't be using it anyways.)
+            property bool _filterBlocked: false
 
             MenuItem {
                 text: qsTr("View Preferences")
                 onClicked: {
-                    pullDownMenu.cancelBounceBack() // don't accidentally focus the filter
-                    pageStack.push(Qt.resolvedUrl("SortingPage.qml"), { dir: dir })
+                    pullDownMenu._filterBlocked = true;
+                    pageStack.push(Qt.resolvedUrl("SortingPage.qml"), { "dir": dir })
                 }
             }
             MenuItem {
                 text: qsTr("Create Folder")
                 onClicked: {
-                    pullDownMenu.cancelBounceBack() // don't accidentally focus the filter
+                    pullDownMenu._filterBlocked = true;
                     var dialog = pageStack.push(Qt.resolvedUrl("CreateFolderDialog.qml"),
                                           { path: page.dir })
                     dialog.accepted.connect(function() {
@@ -159,6 +173,11 @@ Page {
 
                     background: null
                     onTextChanged: page.currentFilter = text;
+                    onActiveFocusChanged: {
+                        if (pullDownMenu._filterBlocked) {
+                            pullDownMenu._filterBlocked = !activeFocus
+                        }
+                    }
 
                     EnterKey.enabled: true
                     EnterKey.iconSource: "image://theme/icon-m-enter-accept"
