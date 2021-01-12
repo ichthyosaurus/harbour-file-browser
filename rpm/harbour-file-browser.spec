@@ -6,6 +6,10 @@
 Name:       harbour-file-browser
 
 # >> macros
+# This file is part of File Browser. It is generated from
+# [this file's name].yaml and shares copyright with it.
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: File Browser contributors
 # << macros
 
 Summary:    File Browser for Sailfish OS

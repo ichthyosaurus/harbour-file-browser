@@ -1,3 +1,7 @@
+# This file is part of File Browser.
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
+
 %define appname harbour-file-browser-root
 Name: %{appname}
 Summary: File Browser with root privileges
