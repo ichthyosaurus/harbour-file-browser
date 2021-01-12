@@ -47,6 +47,8 @@ class FileModel : public QAbstractListModel
     Q_PROPERTY(bool active READ active() WRITE setActive(bool) NOTIFY activeChanged())
     Q_PROPERTY(int selectedFileCount READ selectedFileCount() NOTIFY selectedFileCountChanged())
     Q_PROPERTY(QString filterString READ filterString() WRITE setFilterString(QString) NOTIFY filterStringChanged())
+    Q_PROPERTY(bool busy READ busy() NOTIFY busyChanged())
+    Q_PROPERTY(bool partlyBusy READ partlyBusy() NOTIFY partlyBusyChanged())
 
 public:
     explicit FileModel(QObject *parent = nullptr);
@@ -68,6 +70,8 @@ public:
     int selectedFileCount() const { return m_selectedFileCount; }
     QString filterString() const { return m_filterString; }
     void setFilterString(QString newFilter);
+    bool busy() const { return m_busy; }
+    bool partlyBusy() const { return m_partlyBusy; }
 
     // methods accessible from QML
     Q_INVOKABLE QString appendPath(QString dirName);
@@ -96,6 +100,8 @@ signals:
     void activeChanged();
     void selectedFileCountChanged();
     void filterStringChanged();
+    void busyChanged();
+    void partlyBusyChanged();
 
 private slots:
     void readDirectory();
@@ -119,6 +125,8 @@ private:
     bool m_dirty;
     QFileSystemWatcher *m_watcher;
     Settings* m_settings;
+    bool m_busy = {false};
+    bool m_partlyBusy = {false};
 };
 
 
