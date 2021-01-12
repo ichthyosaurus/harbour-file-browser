@@ -359,12 +359,12 @@ Page {
             text: fileModel.errorMessage !== "" ? fileModel.errorMessage : qsTr("Empty")
             hintText: fileModel.errorMessage !== "" ? "" : qsTr("This directory contains no files.")
         }
+    }
 
-        PageBusyIndicator {
-            id: busyIndicator
-            enabled: fileModel.busy
-            running: enabled
-        }
+    PageBusyIndicator {
+        id: busyIndicator
+        enabled: fileModel.busy
+        running: enabled
     }
 
     DirectoryPopup {
