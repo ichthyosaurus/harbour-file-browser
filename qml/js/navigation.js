@@ -38,10 +38,19 @@
 //
 // TODO: include SearchPage in history
 
+function _pushToStack(stack, page) {
+    if (stack && page && page.path && (
+                stack.length === 0 ||
+                stack[stack.length-1].path.replace(/\/+/g, '/')
+                    !== page.path.replace(/\/+/g, '/'))) {
+        stack.push(JSON.parse(JSON.stringify(page)));
+    }
+}
+
 function syncNavStack() {
     if (currentPage.type !== activePage.type ||
             currentPage.path !== activePage.path) {
-        backStack.push(JSON.parse(JSON.stringify(currentPage)));
+        _pushToStack(backStack, currentPage);
         currentPage = JSON.parse(JSON.stringify(activePage));
         forwardStack = []; // clear the forward stack because we just started a new branch
     }
@@ -50,7 +59,7 @@ function syncNavStack() {
 function goBack() {
     if (!canGoBack()) return;
     var go = backStack.pop();
-    forwardStack.push(JSON.parse(JSON.stringify(currentPage)));
+    _pushToStack(forwardStack, currentPage);
      _debugStacks("goBack")
     _executeHistory(go);
 }
@@ -58,7 +67,7 @@ function goBack() {
 function goForward() {
     if (!canGoForward()) return;
     var go = forwardStack.pop();
-    backStack.push(JSON.parse(JSON.stringify(currentPage)));
+    _pushToStack(backStack, currentPage);
      _debugStacks("goForward")
     _executeHistory(go);
 }
@@ -131,7 +140,7 @@ function goToFolder(folder, silent, startSearchQuery) {
     }
 
     if (!silent && sourceDir !== "") {
-        backStack.push(JSON.parse(JSON.stringify(currentPage)));
+        _pushToStack(backStack, currentPage);
         syncNavStack()
         currentPage = {type: "dir", path: folder}
         forwardStack = []; // clear the forward stack because we just started a new branch
