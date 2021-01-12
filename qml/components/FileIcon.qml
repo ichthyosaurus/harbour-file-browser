@@ -47,14 +47,15 @@ Item {
         sourceSize.width: width
         sourceSize.height: height
         priority: Thumbnail.NormalPriority
-        opacity: _iconOpacity
+        opacity: highlighted ? Theme.opacityLow : _iconOpacity
     }
 
     Rectangle {
         anchors.fill: thumbnailImage
         color: "transparent"
         border.width: 1
-        border.color: Theme.rgba(Theme.secondaryColor, Theme.highlightBackgroundOpacity)
+        border.color: Theme.rgba(highlighted ? Theme.highlightColor : Theme.secondaryColor,
+                                 Theme.highlightBackgroundOpacity)
         visible: thumbnailImage.status === Thumbnail.Loading || _oversize
     }
 
