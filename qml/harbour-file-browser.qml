@@ -76,4 +76,8 @@ ApplicationWindow {
             }
         }
     }
+
+    Component.onCompleted: {
+        console.log("running File Browser: " + versionString)
+    }
 }
