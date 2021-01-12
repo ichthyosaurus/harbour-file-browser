@@ -1,3 +1,11 @@
+<!--
+SPDX-FileCopyrightText: 2013-2016 Kari Pihkala
+SPDX-FileCopyrightText: 2018-2019 Kari Pihkala
+SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
+
+SPDX-License-Identifier: GFDL-1.3-or-later
+-->
+
 # File Browser Release Notes
 
 ## Unreleased

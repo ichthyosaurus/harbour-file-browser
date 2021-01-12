@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
+
+SPDX-License-Identifier: GFDL-1.3-or-later
+-->
+
 # Root mode for File Browser
 
 Run File Browser with super user privileges. (For version 2.0.0+.)

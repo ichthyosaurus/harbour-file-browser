@@ -1,3 +1,12 @@
+<!--
+SPDX-FileCopyrightText: 2013 Michael Faro-Tusino
+SPDX-FileCopyrightText: 2013 karip
+SPDX-FileCopyrightText: 2013-2016 Kari Pihkala
+SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
+
+SPDX-License-Identifier: GFDL-1.3-or-later
+-->
+
 # File Browser for Sailfish OS
 
 A file manager application to view and browser files on
@@ -68,6 +77,9 @@ contribute.
 [![GNU GPL v3.0](http://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl.html)
 [![OSI](http://opensource.org/trademarks/opensource/OSI-Approved-License-100x137.png)](https://opensource.org/licenses/GPL-3.0)
 
+File Browser is released under the terms of the
+[GNU General Public License v3 (or later)](https://spdx.org/licenses/GPL-3.0-or-later.html).
+
     File Browser is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
@@ -82,3 +94,14 @@ contribute.
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 The source code is available [on Github](https://github.com/ichthyosaurus/harbour-file-browser).
+
+All documentation is released under the terms of the
+[GNU Free Documentation License v1.3 (or later)](https://spdx.org/licenses/GFDL-1.3-or-later.html).
+
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with the Invariant Sections being [none yet], with the Front-Cover Texts
+    being [none yet], and with the Back-Cover Texts being [none yet].
+    You should have received a copy of the GNU Free Documentation License
+    along with this document.  If not, see <http://www.gnu.org/licenses/>.

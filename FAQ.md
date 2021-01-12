@@ -1,3 +1,10 @@
+<!--
+SPDX-FileCopyrightText: 2013-2015 Kari Pihkala
+SPDX-FileCopyrightText: 2018 Kari Pihkala
+SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
+
+SPDX-License-Identifier: GFDL-1.3-or-later
+-->
 
 # FAQ for File Browser for Sailfish OS
 
