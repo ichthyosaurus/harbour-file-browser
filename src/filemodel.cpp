@@ -437,50 +437,6 @@ void FileModel::recountSelectedFiles()
     }
 }
 
-// see SETTINGS for details
-void FileModel::applySettings(QDir &dir) {
-    QString localPath = dir.absoluteFilePath(".directory");
-    bool useLocal = m_settings->readVariant("View/UseLocalSettings", true).toBool();
-
-    // filters
-    bool hidden = m_settings->readVariant("View/HiddenFilesShown", false).toBool();
-    if (useLocal) hidden = m_settings->readVariant("Settings/HiddenFilesShown", hidden, localPath).toBool();
-    QDir::Filter hiddenFilter = hidden ? QDir::Hidden : static_cast<QDir::Filter>(0);
-
-    dir.setFilter(QDir::AllDirs | QDir::Files | QDir::NoDotAndDotDot | QDir::System | hiddenFilter);
-
-    // sorting
-    bool dirsFirst = m_settings->readVariant("View/ShowDirectoriesFirst", true).toBool();
-    if (useLocal) dirsFirst = m_settings->readVariant("Sailfish/ShowDirectoriesFirst", dirsFirst, localPath).toBool();
-    QDir::SortFlag dirsFirstFlag = dirsFirst ? QDir::DirsFirst : static_cast<QDir::SortFlag>(0);
-
-    QString sortSetting = m_settings->readVariant("View/SortRole", "name").toString();
-    if (useLocal) sortSetting = m_settings->readVariant("Dolphin/SortRole", sortSetting, localPath).toString();
-    QDir::SortFlag sortBy = QDir::Name;
-
-    if (sortSetting == "name") {
-        sortBy = QDir::Name;
-    } else if (sortSetting == "size") {
-        sortBy = QDir::Size;
-    } else if (sortSetting == "modificationtime") {
-        sortBy = QDir::Time;
-    } else if (sortSetting == "type") {
-        sortBy = QDir::Type;
-    } else {
-        sortBy = QDir::Name;
-    }
-
-    bool orderDefault = m_settings->readVariant("View/SortOrder", "default").toString() == "default";
-    if (useLocal) orderDefault = m_settings->readVariant("Dolphin/SortOrder", 0, localPath) == 0 ? true : false;
-    QDir::SortFlag orderFlag = orderDefault ? static_cast<QDir::SortFlag>(0) : QDir::Reversed;
-
-    bool caseSensitive = m_settings->readVariant("View/SortCaseSensitively", false).toBool();
-    if (useLocal) caseSensitive = m_settings->readVariant("Sailfish/SortCaseSensitively", caseSensitive, localPath).toBool();
-    QDir::SortFlag caseSensitiveFlag = caseSensitive ? static_cast<QDir::SortFlag>(0) : QDir::IgnoreCase;
-
-    dir.setSorting(sortBy | dirsFirstFlag | orderFlag | caseSensitiveFlag);
-}
-
 void FileModel::setBusy(bool busy, bool partlyBusy)
 {
     m_busy = busy;
@@ -599,30 +555,6 @@ void FileModel::workerRemovedEntry(int index, StatFileInfo file)
     recountSelectedFiles();
 }
 
-void FileModel::readAllEntries()
-{
-    QDir dir(m_dir);
-    if (!dir.exists()) {
-        m_errorMessage = tr("Folder does not exist");
-        return;
-    }
-    if (!dir.isReadable()) {
-        m_errorMessage = tr("No permission to read the folder");
-        return;
-    }
-
-    applySettings(dir);
-
-    QStringList fileList = dir.entryList();
-    foreach (QString filename, fileList) {
-        QString fullpath = dir.absoluteFilePath(filename);
-        StatFileInfo info(fullpath);
-        m_files.append(info);
-    }
-
-    applyFilterString();
-}
-
 void FileModel::refreshEntries()
 {
     setBusy(false, true);
@@ -635,20 +567,4 @@ void FileModel::clearModel()
     m_files.clear();
     endResetModel();
     emit fileCountChanged();
-}
-
-bool FileModel::filesContains(const QList<StatFileInfo> &files, const StatFileInfo &fileData) const
-{
-    // check if list contains fileData with relevant info
-    foreach (const StatFileInfo &f, files) {
-        if (f.fileName() == fileData.fileName() &&
-                f.size() == fileData.size() &&
-                f.permissions() == fileData.permissions() &&
-                f.lastModified() == fileData.lastModified() &&
-                f.isSymLink() == fileData.isSymLink() &&
-                f.isDirAtEnd() == fileData.isDirAtEnd()) {
-            return true;
-        }
-    }
-    return false;
 }
