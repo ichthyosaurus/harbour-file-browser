@@ -1,0 +1,23 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: File Browser
+Upstream-Contact: Mirian Margiani <mixosaurus+ichthyo@pm.me>
+Source: https://github.com/ichthyosaurus/harbour-file-browser
+
+Files: translations/*
+Copyright: 2013-2021 File Browser translations contributors
+License: GPL-3.0-or-later
+
+Files: icons/* root/icons/* qml/images/*
+Copyright: Mirian Margiani
+License: CC-BY-SA-4.0
+Comment: These files are generated from the sources at icon-src/*.
+
+Files: icon-src/*
+Copyright: Mirian Margiani
+License: CC-BY-SA-4.0
+Comment: These files contain proper Dublin Core licensing metadata.
+
+Files: icon-src/*
+Copyright: Mirian Margiani
+License: CC-BY-SA-4.0
+Comment: These files contain proper Dublin Core licensing metadata.
