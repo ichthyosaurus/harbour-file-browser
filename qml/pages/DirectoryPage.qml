@@ -316,7 +316,7 @@ Page {
 
             Row {
                 id: footerLabel
-                visible: page.currentFilter !== ""
+                visible: currentFilter !== ""
                 spacing: Theme.paddingLarge
                 anchors.right: parent.right
                 anchors.rightMargin: Theme.horizontalPageMargin
@@ -354,7 +354,10 @@ Page {
             enabled: !busyIndicator.enabled &&
                      (fileModel.fileCount === 0 || fileModel.errorMessage !== "")
             text: fileModel.errorMessage !== "" ? fileModel.errorMessage : qsTr("Empty")
-            hintText: fileModel.errorMessage !== "" ? "" : qsTr("This directory contains no files.")
+            hintText: (fileModel.errorMessage !== "") ?
+                          "" : (currentFilter !== "" ?
+                                    qsTr("No files matched the filter.") :
+                                    qsTr("This directory contains no files."))
             onEnabledChanged: {
                 // We explicitly disable the model to show an error
                 // message or the current status. The view behaves
