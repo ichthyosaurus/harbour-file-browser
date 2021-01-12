@@ -35,6 +35,7 @@ Page {
     allowedOrientations: Orientation.All
     property string file: "/"
     property alias notificationPanel: notificationPanel
+    property bool _hasMoved: false
 
     FileData {
         id: fileData
@@ -87,6 +88,7 @@ Page {
         Behavior on opacity { NumberAnimation { duration: 300 } }
 
         PullDownMenu {
+            enabled: !_hasMoved
             MenuItem {
                 text: qsTr("Change Permissions")
                 onClicked: {
@@ -135,12 +137,28 @@ Page {
             PageHeader { title: Paths.formatPathForTitle(fileData.absolutePath) }
             spacing: 0
 
+            Label {
+                // error label, visible if error message is set
+                visible: fileData.errorMessage !== "" || _hasMoved
+                anchors {
+                    left: parent.left; right: parent.right
+                    margins: Theme.horizontalPageMargin
+                }
+                horizontalAlignment: Text.AlignHCenter
+                text: !_hasMoved ? fileData.errorMessage : qsTr("The file has been moved.")
+                color: Theme.highlightColor
+                wrapMode: Text.Wrap
+            }
+
             // file info texts, visible if error is not set
             Column {
                 id: infoColumn
                 visible: fileData.errorMessage === ""
                 x: Theme.horizontalPageMargin
                 width: parent.width - 2*x
+
+                enabled: !_hasMoved
+                opacity: enabled ? 1.0 : Theme.opacityLow
 
                 // clickable icon and filename
                 BackgroundItem {
@@ -251,13 +269,13 @@ Page {
                     }
                     onTransferTriggered: {
                         if (selectedAction === "move") {
-                            var prevPage = pageStack.previousPage();
+                            pageStack.completeAnimation();
+                            var prevPage = pageStack.previousPage(page);
                             if (prevPage.progressPanel) transferPanel.progressPanel = prevPage.progressPanel;
                             if (prevPage.notificationPanel) transferPanel.notificationPanel = prevPage.notificationPanel;
-                            prevPage.markAsDoomed(toTransfer);
-                            pageStack.pop();
+                            if (prevPage.markAsDoomed) prevPage.markAsDoomed(toTransfer);
+                            page._hasMoved = true;
                         }
-
                         transferPanel.startTransfer(toTransfer, targets, selectedAction, goToTarget);
                     }
                 }
@@ -314,18 +332,15 @@ Page {
                     }
                 }
             }
-
-            // error label, visible if error message is set
-            Label {
-                visible: fileData.errorMessage !== ""
-                anchors.left: parent.left
-                anchors.right: parent.right
-                horizontalAlignment: Text.AlignHCenter
-                text: fileData.errorMessage
-                color: Theme.highlightColor
-                wrapMode: Text.Wrap
-            }
         }
+    }
+
+    on_HasMovedChanged: {
+        if (!_hasMoved) return;
+        // File has moved away, so we disable any details
+        // page. We can't use pageStack.popAttached because
+        // it might be transitioning after a transfer action.
+        canNavigateForward = false;
     }
 
     onStatusChanged: {

@@ -29,6 +29,12 @@ Page {
     allowedOrientations: Orientation.All
     property var files
     property alias notificationPanel: notificationPanel
+    property bool _hasMoved: false
+
+    on_HasMovedChanged: {
+        if (!_hasMoved) return;
+        canNavigateForward = false;
+    }
 
     RemorsePopup {
         id: remorsePopup
@@ -53,10 +59,25 @@ Page {
                 title: qsTr("Selection Properties")
             }
 
+            Label {
+                visible: _hasMoved
+                anchors {
+                    left: parent.left; right: parent.right
+                    margins: Theme.horizontalPageMargin
+                }
+                horizontalAlignment: Text.AlignHCenter
+                text: qsTr("The files have been moved.")
+                color: Theme.highlightColor
+                wrapMode: Text.Wrap
+            }
+
             Column {
                 x: Theme.horizontalPageMargin
                 width: parent.width - 2*x
                 spacing: Theme.paddingLarge
+
+                enabled: !_hasMoved
+                opacity: enabled ? 1.0 : Theme.opacityLow
 
                 Image { // cannot be highlighted
                     id: icon
@@ -100,13 +121,12 @@ Page {
                     }
                     onTransferTriggered: {
                         if (selectedAction === "move") {
-                            var prevPage = pageStack.previousPage();
+                            var prevPage = pageStack.previousPage(page);
                             if (prevPage.progressPanel) transferPanel.progressPanel = prevPage.progressPanel;
                             if (prevPage.notificationPanel) transferPanel.notificationPanel = prevPage.notificationPanel;
-                            prevPage.markAsDoomed(toTransfer);
-                            pageStack.pop();
+                            if (prevPage.markAsDoomed) prevPage.markAsDoomed(toTransfer);
+                            page._hasMoved = true;
                         }
-
                         transferPanel.startTransfer(toTransfer, targets, selectedAction, goToTarget);
                     }
                 }
