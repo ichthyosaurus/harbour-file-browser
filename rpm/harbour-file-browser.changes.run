@@ -29,11 +29,12 @@ fi
 #  8:
 #  9: Published in OpenRepos on YYYY-MM-DD by ichthyosaurus.
 # 10:
-# 11:  * Added nice features
+# 11:  * main entry one (1) space indented
+# 12:  *   - sub-entry additional two (2) spaces indented
 # nn: ...
 #
 # Important: entries (lines starting with an asterisk) must be indented by a
-# single whitespace.
+# single whitespace. Keep one entry per line and don't fold lines.
 if grep -qoe '^\*' 2>/dev/null >/dev/null CHANGELOG.md; then
     echo "error: CHANGELOG.md is badly formatted" >/dev/stderr
     echo "       see rpm/harbour-file-browser.changes.run for details" >/dev/stderr
