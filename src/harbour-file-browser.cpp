@@ -47,6 +47,9 @@ int main(int argc, char *argv[])
     // so that QSettings can access the app's config file at
     // /home/USER/.config/harbour-file-browser/harbour-file-browser.conf
 
+    qRegisterMetaType<FileModelWorker::Mode>("FileModelWorker::Mode");
+    qRegisterMetaType<StatFileInfo>("StatFileInfo");
+    qRegisterMetaType<QList<StatFileInfo>>("QList<StatFileInfo>");
     qmlRegisterType<FileModel>("harbour.file.browser.FileModel", 1, 0, "FileModel");
     qmlRegisterType<FileData>("harbour.file.browser.FileData", 1, 0, "FileData");
     qmlRegisterType<SearchEngine>("harbour.file.browser.SearchEngine", 1, 0, "SearchEngine");
