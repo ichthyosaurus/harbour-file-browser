@@ -8,6 +8,12 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 ## Unreleased
 
+ * Nothing so far
+
+## Version 2.4.0 (2021-01-12)
+
+Published in OpenRepos and Jolla store on 2021-01-12 by ichthyosaurus.
+
  * Finally out of beta
  *   - Configuration is now stored at ~/.config/harbour-file-browser. Copy your beta configuration from ~/.config/harbour-file-browser-beta to keep custom shortcuts.
  *   - You can safely remove the folder ~/.local/share/harbour-file-browser-beta.
