@@ -186,12 +186,20 @@ bool FileModelWorker::verifyOrAbort()
 // see SETTINGS for details
 bool FileModelWorker::applySettings() {
     if (cancelIfCancelled()) return false;
+    bool settingsChanged = false;
 
     // TODO make sure the keyboard doesn't loose focus
-    /* dir.setNameFilters({"*"+m_nameFilter+"*"}); */
+    /* QString nameFilter = "*"+m_nameFilter+"*";
+    if (m_cachedDir.nameFilters().first() != nameFilter) {
+        m_cachedDir.setNameFilters({nameFilter});
+        settingsChanged = true;
+    } */
 
     // there are no settings to apply
-    if (!m_settings) return true;
+    if (!m_settings) {
+        m_cachedDir.refresh();
+        return true;
+    }
 
     QString localPath = m_cachedDir.absoluteFilePath(".directory");
     bool useLocal = m_settings->readVariant("View/UseLocalSettings", true).toBool();
@@ -204,6 +212,7 @@ bool FileModelWorker::applySettings() {
     auto newFilters = (QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot | QDir::System | hiddenFilter);
     if (m_cachedDir.filter() != newFilters) {
         m_cachedDir.setFilter(newFilters);
+        settingsChanged = true;
     }
 
     if (cancelIfCancelled()) return false;
@@ -240,9 +249,16 @@ bool FileModelWorker::applySettings() {
     auto newSorting = (sortBy | dirsFirstFlag | orderFlag | caseSensitiveFlag);
     if (m_cachedDir.sorting() != newSorting) {
         m_cachedDir.setSorting(newSorting);
+        settingsChanged = true;
     }
 
     if (cancelIfCancelled()) return false;
+
+    if (!settingsChanged) {
+        // this happens e.g. when deleting or renaming files
+        m_cachedDir.refresh();
+    }
+
     return true;
 }
 
