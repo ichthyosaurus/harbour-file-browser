@@ -20,13 +20,15 @@
  * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-#include "filemodel.h"
+#include <unistd.h>
 #include <QDateTime>
 #include <QMimeType>
 #include <QMimeDatabase>
 #include <QSettings>
 #include <QGuiApplication>
-#include <unistd.h>
+
+#include "filemodel.h"
+#include "filemodelworker.h"
 #include "settingshandler.h"
 #include "globals.h"
 
