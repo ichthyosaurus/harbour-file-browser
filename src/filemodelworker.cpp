@@ -292,15 +292,23 @@ bool FileModelWorker::applySettings() {
     QStringList fileList = m_cachedDir.entryList();
     m_finalEntries.clear();
     m_finalEntries.reserve(fileList.size());
+    int dirsCount = 0;
     for (const auto& filename : fileList) {
         m_finalEntries.append(StatFileInfo(m_cachedDir.absoluteFilePath(filename)));
+        if (m_finalEntries.last().isDirAtEnd()) dirsCount++;
     }
 
     if (cancelIfCancelled()) return false;
 
     // apply manual sorting
+    if (!newSorting.testFlag(QDir::DirsFirst)) {
+        dirsCount = -1; // don't sort dirs separately
+    }
+
     if (sortTime) {
-        sortByModTime(m_finalEntries, newSorting.testFlag(QDir::Reversed));
+        sortByModTime(m_finalEntries,
+                      newSorting.testFlag(QDir::Reversed),
+                      dirsCount);
     }
 
     return true;
@@ -341,17 +349,30 @@ uint FileModelWorker::hashInfo(const StatFileInfo& f)
     return qHash(result);
 }
 
-void FileModelWorker::sortByModTime(QList<StatFileInfo> &files, bool reverse)
+void FileModelWorker::sortByModTime(QList<StatFileInfo> &files, bool reverse, int dirsFirstCount)
 {
-    std::stable_sort(files.begin(), files.end(), [&](const StatFileInfo& a, const StatFileInfo& b) -> bool {
-        if (reverse) {
-            // stable_sort sorts ascending (using operator<) by default.
-            // We return true if a goes before b, and we want newer dates first by default.
-            return a.lastModifiedStat() < b.lastModifiedStat();
-        } else {
+#define COMP_LAMBDA [&](const StatFileInfo& a, const StatFileInfo& b) -> bool
+    auto doSort = COMP_LAMBDA {
+        // return true if a comes before b
+        if (!reverse /* == default*/) {
+            // STL sorts ascending (using operator<) by default.
+            // We want newer dates first by default, i.e. descending.
             return a.lastModifiedStat() > b.lastModifiedStat();
+        } else /* == reverse*/ {
+            return a.lastModifiedStat() < b.lastModifiedStat();
         }
-    });
+    };
+
+    if (dirsFirstCount > 0) {
+        // QDir placed dirs already at the beginning, so we can just sort
+        // two ranges (dirs and files).
+        std::sort(files.begin(), files.begin()+dirsFirstCount-1, doSort);
+        std::sort(files.begin()+dirsFirstCount, files.end(), doSort);
+    } else {
+        // we sort everything at once without taking care of dirs
+        std::sort(files.begin(), files.end(), doSort);
+    }
+#undef COMP_LAMBDA
 }
 
 bool FileModelWorker::cancelIfCancelled()

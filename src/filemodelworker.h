@@ -78,7 +78,7 @@ private:
     bool applySettings();
     bool filesContains(const QList<StatFileInfo> &files, const StatFileInfo &fileData) const;
     uint hashInfo(const StatFileInfo& f);
-    void sortByModTime(QList<StatFileInfo>& files, bool reverse);
+    void sortByModTime(QList<StatFileInfo>& files, bool reverse, int dirsFirstCount);
 
     // returns true if cancelled and emits an error
     bool cancelIfCancelled();
