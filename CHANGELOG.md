@@ -1,8 +1,6 @@
 <!--
-SPDX-FileCopyrightText: 2013-2016 Kari Pihkala
-SPDX-FileCopyrightText: 2018-2019 Kari Pihkala
+SPDX-FileCopyrightText: 2013-2016, 2018-2019 Kari Pihkala
 SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
-
 SPDX-License-Identifier: GFDL-1.3-or-later
 -->
 
@@ -13,8 +11,10 @@ SPDX-License-Identifier: GFDL-1.3-or-later
  * Finally out of beta
  *   - Configuration is now stored at ~/.config/harbour-file-browser. Copy your beta configuration from ~/.config/harbour-file-browser-beta to keep shortcuts.
  *   - You can safely remove the folder ~/.local/share/harbour-file-browser-beta.
+ *   - Updated root mode for non-beta release (packaged separately)
+ * Fixed a bug causing page navigation by swiping to break
  * Updated Swedish translation
- * Updated root mode for non-beta release (packaged separately)
+ * Improved suggestions highlighting when manually editing the current path
  * Improved system integration: "open storage settings" menu item will only be shown if storage module is installed
 
 ## Version 2.3.2-beta (2021-01-07)
