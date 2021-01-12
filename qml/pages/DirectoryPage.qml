@@ -356,8 +356,7 @@ Page {
             enabled: !busyIndicator.enabled &&
                      _activeDir !== "" &&
                      (fileModel.fileCount === 0 || fileModel.errorMessage !== "")
-            text: fileModel.errorMessage !== "" ? fileModel.errorMessage : qsTr("Empty")
-            hintText: fileModel.errorMessage !== "" ? "" : qsTr("This directory contains no files.")
+            text: fileModel.errorMessage !== "" ? fileModel.errorMessage : qsTr("No files")
         }
 
         PageBusyIndicator {
