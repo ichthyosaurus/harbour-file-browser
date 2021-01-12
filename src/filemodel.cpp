@@ -501,6 +501,7 @@ void FileModel::applyFilterString()
                 m_filterString.replace(".", "\\.").
                 replace("?", ".").replace("*", ".*?"),
                 QRegularExpression::CaseInsensitiveOption);
+    if (m_filterString.isEmpty()) filter.setPattern(".*");
 
     QMutableListIterator<StatFileInfo> iter(m_files);
     int row = 0; int count = 0;
