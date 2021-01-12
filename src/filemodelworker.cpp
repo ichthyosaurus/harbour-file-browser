@@ -27,7 +27,7 @@
 #include "settingshandler.h"
 
 #ifndef FILEMODEL_SIGNAL_THRESHOLD
-#define FILEMODEL_SIGNAL_THRESHOLD 100
+#define FILEMODEL_SIGNAL_THRESHOLD 200
 #endif
 
 FileModelWorker::FileModelWorker(QObject *parent) : QThread(parent) {
