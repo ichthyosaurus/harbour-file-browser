@@ -255,7 +255,7 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="45"/>
         <source>Deleting</source>
-        <translation type="unfinished">Suppression</translation>
+        <translation>Suppression</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="215"/>
@@ -283,7 +283,7 @@
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="156"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">Afficher les fichiers cachés</translation>
+        <translation>Afficher les fichiers cachés</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="161"/>
@@ -563,12 +563,12 @@
     <message>
         <location filename="../src/filemodelworker.cpp" line="216"/>
         <source>Folder does not exist</source>
-        <translation type="unfinished">Le dossier n&apos;existe pas</translation>
+        <translation>Le dossier n&apos;existe pas</translation>
     </message>
     <message>
         <location filename="../src/filemodelworker.cpp" line="221"/>
         <source>No permission to read the folder</source>
-        <translation type="unfinished">Vous n&apos;avez pas la permission de lire le dossier</translation>
+        <translation>Vous n&apos;avez pas la permission de lire le dossier</translation>
     </message>
 </context>
 <context>
@@ -677,7 +677,7 @@
         <location filename="../qml/pages/FilePage.qml" line="259"/>
         <location filename="../qml/pages/FilePage.qml" line="265"/>
         <source>Deleting</source>
-        <translation type="unfinished">Suppression</translation>
+        <translation>Suppression</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="296"/>
@@ -797,7 +797,7 @@
         <location filename="../qml/pages/MultiFilePage.qml" line="112"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="118"/>
         <source>Deleting</source>
-        <translation type="unfinished">Suppression</translation>
+        <translation>Suppression</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="140"/>
@@ -1708,7 +1708,7 @@
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="336"/>
         <source>Home</source>
-        <translation type="unfinished">Home</translation>
+        <translation>Home</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="341"/>
@@ -1743,7 +1743,7 @@
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="370"/>
         <source>Root</source>
-        <translation type="unfinished">Racine</translation>
+        <translation>Racine</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="378"/>
@@ -1792,7 +1792,7 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="71"/>
         <source>Search</source>
-        <translation type="unfinished">Recherche</translation>
+        <translation>Recherche</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="87"/>
@@ -1817,7 +1817,7 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="67"/>
         <source>Sometimes the application stays in the background</source>
-        <translation type="unfinished">Parfois l&apos;application reste en arrière-plan</translation>
+        <translation>Parfois l&apos;application reste en arrière-plan</translation>
     </message>
 </context>
 <context>
@@ -1825,12 +1825,12 @@
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="33"/>
         <source>Size</source>
-        <translation type="unfinished">Taille</translation>
+        <translation>Taille</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="54"/>
         <source>size</source>
-        <translation type="unfinished"></translation>
+        <translation>taille</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="61"/>
@@ -1840,12 +1840,12 @@
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="68"/>
         <source>files</source>
-        <translation type="unfinished"></translation>
+        <translation>fichiers</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="74"/>
         <source>unknown size</source>
-        <translation type="unfinished"></translation>
+        <translation>taille inconnue</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="78"/>
@@ -1858,9 +1858,9 @@
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="86"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n fichier</numerusform>
+            <numerusform>%n fichiers</numerusform>
         </translation>
     </message>
 </context>
@@ -1884,7 +1884,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="59"/>
         <source>Size</source>
-        <translation type="unfinished">Taille</translation>
+        <translation>Taille</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="60"/>
@@ -1954,7 +1954,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="132"/>
         <source>Show folders first</source>
-        <translation type="unfinished">Afficher les dossiers en premier</translation>
+        <translation>Afficher les dossiers en premier</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="137"/>
@@ -1974,7 +1974,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="120"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">Afficher les fichiers cachés</translation>
+        <translation>Afficher les fichiers cachés</translation>
     </message>
 </context>
 <context>
@@ -1982,7 +1982,7 @@
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="37"/>
         <source>Copy</source>
-        <translation type="unfinished">Copier</translation>
+        <translation>Copier</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="48"/>
@@ -2103,7 +2103,7 @@
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="125"/>
         <source>Replace?</source>
-        <translation type="unfinished">Remplacer ?</translation>
+        <translation>Remplacer ?</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="141"/>
@@ -2123,12 +2123,12 @@
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="202"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation type="unfinished">Souhaitez-vous basculer entre le téléphone et le carte SD ? Si cela échoue essayez de copier les fichiers.</translation>
+        <translation>Souhaitez-vous basculer entre le téléphone et le carte SD ? Si cela échoue essayez de copier les fichiers.</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="204"/>
         <source>Perhaps the storage is full?</source>
-        <translation type="unfinished">L&apos;espace de stockage est peut-être plein ?</translation>
+        <translation>L&apos;espace de stockage est peut-être plein ?</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="286"/>
@@ -2138,12 +2138,12 @@
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="301"/>
         <source>Copying</source>
-        <translation type="unfinished">Copie</translation>
+        <translation>Copie</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="302"/>
         <source>Moving</source>
-        <translation type="unfinished">Déplacement</translation>
+        <translation>Déplacement</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="303"/>
@@ -2178,13 +2178,13 @@
         <location filename="../qml/js/files.js" line="36"/>
         <location filename="../qml/js/files.js" line="45"/>
         <source>Copying</source>
-        <translation type="unfinished">Copie</translation>
+        <translation>Copie</translation>
     </message>
     <message>
         <location filename="../qml/js/files.js" line="36"/>
         <location filename="../qml/js/files.js" line="45"/>
         <source>Moving</source>
-        <translation type="unfinished">Déplacement</translation>
+        <translation>Déplacement</translation>
     </message>
 </context>
 <context>
@@ -2200,7 +2200,7 @@
     <message>
         <location filename="../qml/js/paths.js" line="49"/>
         <source>root</source>
-        <translation type="unfinished"></translation>
+        <translation>Racine</translation>
     </message>
 </context>
 </TS>

@@ -255,7 +255,7 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="45"/>
         <source>Deleting</source>
-        <translation type="unfinished">Διαγραφή</translation>
+        <translation>Διαγραφή</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="215"/>
@@ -283,7 +283,7 @@
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="156"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">Εμφάνιση των κρυφών αρχείων</translation>
+        <translation>Εμφάνιση των κρυφών αρχείων</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="161"/>
@@ -563,12 +563,12 @@
     <message>
         <location filename="../src/filemodelworker.cpp" line="216"/>
         <source>Folder does not exist</source>
-        <translation type="unfinished">Ο φάκελος δεν υπάρχει</translation>
+        <translation>Ο φάκελος δεν υπάρχει</translation>
     </message>
     <message>
         <location filename="../src/filemodelworker.cpp" line="221"/>
         <source>No permission to read the folder</source>
-        <translation type="unfinished">Δεν έχετε άδεια ανάγνωσης στον φάκελο</translation>
+        <translation>Δεν έχετε άδεια ανάγνωσης στον φάκελο</translation>
     </message>
 </context>
 <context>
@@ -677,7 +677,7 @@
         <location filename="../qml/pages/FilePage.qml" line="259"/>
         <location filename="../qml/pages/FilePage.qml" line="265"/>
         <source>Deleting</source>
-        <translation type="unfinished">Διαγραφή</translation>
+        <translation>Διαγραφή</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="296"/>
@@ -797,7 +797,7 @@
         <location filename="../qml/pages/MultiFilePage.qml" line="112"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="118"/>
         <source>Deleting</source>
-        <translation type="unfinished">Διαγραφή</translation>
+        <translation>Διαγραφή</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="140"/>
@@ -1708,7 +1708,7 @@
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="336"/>
         <source>Home</source>
-        <translation type="unfinished">Προσωπικός φάκελος</translation>
+        <translation>Προσωπικός φάκελος</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="341"/>
@@ -1743,7 +1743,7 @@
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="370"/>
         <source>Root</source>
-        <translation type="unfinished">Ρίζα</translation>
+        <translation>Ρίζα</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="378"/>
@@ -1792,7 +1792,7 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="71"/>
         <source>Search</source>
-        <translation type="unfinished">Αναζήτηση</translation>
+        <translation>Αναζήτηση</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="87"/>
@@ -1817,7 +1817,7 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="67"/>
         <source>Sometimes the application stays in the background</source>
-        <translation type="unfinished">Σε ορισμένες περιπτώσεις η εφαρμογή παραμένει στο παρασκήνιο</translation>
+        <translation>Σε ορισμένες περιπτώσεις η εφαρμογή παραμένει στο παρασκήνιο</translation>
     </message>
 </context>
 <context>
@@ -1825,7 +1825,7 @@
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="33"/>
         <source>Size</source>
-        <translation type="unfinished">Μέγεθος</translation>
+        <translation>Μέγεθος</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="54"/>
@@ -1884,7 +1884,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="59"/>
         <source>Size</source>
-        <translation type="unfinished">Μέγεθος</translation>
+        <translation>Μέγεθος</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="60"/>
@@ -1954,7 +1954,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="132"/>
         <source>Show folders first</source>
-        <translation type="unfinished">Εμφάνιση των φακέλων πρώτα</translation>
+        <translation>Εμφάνιση των φακέλων πρώτα</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="137"/>
@@ -1974,7 +1974,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="120"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">Εμφάνιση των κρυφών αρχείων</translation>
+        <translation>Εμφάνιση των κρυφών αρχείων</translation>
     </message>
 </context>
 <context>
@@ -1982,7 +1982,7 @@
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="37"/>
         <source>Copy</source>
-        <translation type="unfinished">Αντιγραφή</translation>
+        <translation>Αντιγραφή</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="48"/>
@@ -2123,12 +2123,12 @@
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="202"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation type="unfinished">Μήπως προσπαθείτε τη μετακίνηση μεταξύ του τηλεφώνου και της κάρτας SD; Δεν δουλεύει, δοκιμάστε την αντιγραφή.</translation>
+        <translation>Μήπως προσπαθείτε τη μετακίνηση μεταξύ του τηλεφώνου και της κάρτας SD; Δεν δουλεύει, δοκιμάστε την αντιγραφή.</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="204"/>
         <source>Perhaps the storage is full?</source>
-        <translation type="unfinished">Ίσως ο αποθετικός χώρος είναι πλήρης;</translation>
+        <translation>Ίσως ο αποθετικός χώρος είναι πλήρης;</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="286"/>
@@ -2138,12 +2138,12 @@
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="301"/>
         <source>Copying</source>
-        <translation type="unfinished">Αντιγραφή</translation>
+        <translation>Αντιγραφή</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="302"/>
         <source>Moving</source>
-        <translation type="unfinished">Μετακίνηση</translation>
+        <translation>Μετακίνηση</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="303"/>
@@ -2178,13 +2178,13 @@
         <location filename="../qml/js/files.js" line="36"/>
         <location filename="../qml/js/files.js" line="45"/>
         <source>Copying</source>
-        <translation type="unfinished">Αντιγραφή</translation>
+        <translation>Αντιγραφή</translation>
     </message>
     <message>
         <location filename="../qml/js/files.js" line="36"/>
         <location filename="../qml/js/files.js" line="45"/>
         <source>Moving</source>
-        <translation type="unfinished">Μετακίνηση</translation>
+        <translation>Μετακίνηση</translation>
     </message>
 </context>
 <context>

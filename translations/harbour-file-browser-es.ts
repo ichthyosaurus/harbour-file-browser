@@ -283,7 +283,7 @@
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="156"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">Mostrar archivos ocultos</translation>
+        <translation>Mostrar archivos ocultos</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="161"/>
@@ -563,12 +563,12 @@
     <message>
         <location filename="../src/filemodelworker.cpp" line="216"/>
         <source>Folder does not exist</source>
-        <translation type="unfinished">La carpeta no existe</translation>
+        <translation>La carpeta no existe</translation>
     </message>
     <message>
         <location filename="../src/filemodelworker.cpp" line="221"/>
         <source>No permission to read the folder</source>
-        <translation type="unfinished">No tienes permisos para leer la carpeta</translation>
+        <translation>No tienes permisos para leer la carpeta</translation>
     </message>
 </context>
 <context>
@@ -854,7 +854,7 @@
     <message numerus="yes">
         <location filename="../qml/pages/PathEditDialog.qml" line="255"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n archivo</numerusform>
             <numerusform>%n archivos</numerusform>
         </translation>

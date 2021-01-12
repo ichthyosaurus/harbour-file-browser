@@ -283,7 +283,7 @@
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="156"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">Näytä piilotiedostot</translation>
+        <translation>Näytä piilotiedostot</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="161"/>
@@ -563,12 +563,12 @@
     <message>
         <location filename="../src/filemodelworker.cpp" line="216"/>
         <source>Folder does not exist</source>
-        <translation type="unfinished">Kansiota ei ole olemassa</translation>
+        <translation>Kansiota ei ole olemassa</translation>
     </message>
     <message>
         <location filename="../src/filemodelworker.cpp" line="221"/>
         <source>No permission to read the folder</source>
-        <translation type="unfinished">Ei oikeuksia lukea kansiota</translation>
+        <translation>Ei oikeuksia lukea kansiota</translation>
     </message>
 </context>
 <context>
@@ -797,7 +797,7 @@
         <location filename="../qml/pages/MultiFilePage.qml" line="112"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="118"/>
         <source>Deleting</source>
-        <translation type="unfinished">Poistetaan</translation>
+        <translation>Poistetaan</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="140"/>
@@ -1708,7 +1708,7 @@
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="336"/>
         <source>Home</source>
-        <translation type="unfinished">Koti</translation>
+        <translation>Koti</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="341"/>
@@ -1743,7 +1743,7 @@
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="370"/>
         <source>Root</source>
-        <translation type="unfinished">Juurihakemisto</translation>
+        <translation>Juurihakemisto</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="378"/>
@@ -1792,7 +1792,7 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="71"/>
         <source>Search</source>
-        <translation type="unfinished">Haku</translation>
+        <translation>Haku</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="87"/>
@@ -1817,7 +1817,7 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="67"/>
         <source>Sometimes the application stays in the background</source>
-        <translation type="unfinished">Toisinaan avattu ohjelma jääpi taustalle, toisinaan ei.</translation>
+        <translation>Toisinaan avattu ohjelma jääpi taustalle, toisinaan ei.</translation>
     </message>
 </context>
 <context>
@@ -1825,7 +1825,7 @@
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="33"/>
         <source>Size</source>
-        <translation type="unfinished">Koko</translation>
+        <translation>Koko</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="54"/>
@@ -1884,7 +1884,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="59"/>
         <source>Size</source>
-        <translation type="unfinished">Koko</translation>
+        <translation>Koko</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="60"/>
@@ -1954,7 +1954,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="132"/>
         <source>Show folders first</source>
-        <translation type="unfinished">Näytä kansiot ensin</translation>
+        <translation>Näytä kansiot ensin</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="137"/>
@@ -1974,7 +1974,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="120"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">Näytä piilotiedostot</translation>
+        <translation>Näytä piilotiedostot</translation>
     </message>
 </context>
 <context>
@@ -1982,7 +1982,7 @@
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="37"/>
         <source>Copy</source>
-        <translation type="unfinished">Kopioi</translation>
+        <translation>Kopioi</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="48"/>
@@ -2103,7 +2103,7 @@
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="125"/>
         <source>Replace?</source>
-        <translation type="unfinished">Korvataanko?</translation>
+        <translation>Korvataanko?</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="141"/>
@@ -2123,12 +2123,12 @@
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="202"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation type="unfinished">Yrititkö siirtää puhelimen ja SD-kortin välillä? Se ei toimi, kokeile kopiointia.</translation>
+        <translation>Yrititkö siirtää puhelimen ja SD-kortin välillä? Se ei toimi, kokeile kopiointia.</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="204"/>
         <source>Perhaps the storage is full?</source>
-        <translation type="unfinished">Ehkäpä tila on loppu?</translation>
+        <translation>Ehkäpä tila on loppu?</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="286"/>
@@ -2138,12 +2138,12 @@
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="301"/>
         <source>Copying</source>
-        <translation type="unfinished">Kopioidaan</translation>
+        <translation>Kopioidaan</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="302"/>
         <source>Moving</source>
-        <translation type="unfinished">Siirretään</translation>
+        <translation>Siirretään</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="303"/>
@@ -2178,13 +2178,13 @@
         <location filename="../qml/js/files.js" line="36"/>
         <location filename="../qml/js/files.js" line="45"/>
         <source>Copying</source>
-        <translation type="unfinished">Kopioidaan</translation>
+        <translation>Kopioidaan</translation>
     </message>
     <message>
         <location filename="../qml/js/files.js" line="36"/>
         <location filename="../qml/js/files.js" line="45"/>
         <source>Moving</source>
-        <translation type="unfinished">Siirretään</translation>
+        <translation>Siirretään</translation>
     </message>
 </context>
 <context>

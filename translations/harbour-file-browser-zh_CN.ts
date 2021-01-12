@@ -551,12 +551,12 @@
     <message>
         <location filename="../src/filemodelworker.cpp" line="216"/>
         <source>Folder does not exist</source>
-        <translation type="unfinished">目录不存在</translation>
+        <translation>目录不存在</translation>
     </message>
     <message>
         <location filename="../src/filemodelworker.cpp" line="221"/>
         <source>No permission to read the folder</source>
-        <translation type="unfinished">没有读取该目录的权限</translation>
+        <translation>没有读取该目录的权限</translation>
     </message>
 </context>
 <context>
@@ -2168,7 +2168,7 @@
     <message>
         <location filename="../qml/harbour-file-browser.qml" line="39"/>
         <source>Version %1 (%2)</source>
-        <translation type="unfinished"></translation>
+        <translation>版本 %1 (%2)</translation>
     </message>
 </context>
 <context>

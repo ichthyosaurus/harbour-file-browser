@@ -563,12 +563,12 @@
     <message>
         <location filename="../src/filemodelworker.cpp" line="216"/>
         <source>Folder does not exist</source>
-        <translation type="unfinished">Mappen finns inte</translation>
+        <translation>Mappen finns inte</translation>
     </message>
     <message>
         <location filename="../src/filemodelworker.cpp" line="221"/>
         <source>No permission to read the folder</source>
-        <translation type="unfinished">Behörighet att läsa mappen saknas</translation>
+        <translation>Behörighet att läsa mappen saknas</translation>
     </message>
 </context>
 <context>
