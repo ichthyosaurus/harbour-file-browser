@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2013-2016, 2018-2019 Kari Pihkala
  * SPDX-FileCopyrightText: 2016 Malte Veerman
- * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -250,6 +250,19 @@ QVariantList Engine::externalDrives() const
     }
 
     return devices;
+}
+
+QString Engine::storageSettingsPath()
+{
+#ifndef NO_HARBOUR_COMPLIANCE
+    m_storageSettingsPath = QStringLiteral("");
+#else
+    // this should normally be </usr/share/>jolla-settings/pages/storage/storage.qml
+    m_storageSettingsPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                                   "jolla-settings/pages/storage/storage.qml",
+                                                   QStandardPaths::LocateFile);
+#endif
+    return m_storageSettingsPath;
 }
 
 bool Engine::runningAsRoot()
