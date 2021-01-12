@@ -300,68 +300,68 @@
         <translation>Ei voi siirtää/kopioida itsensä päälle</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="347"/>
+        <location filename="../src/engine.cpp" line="360"/>
         <source>File does not exist</source>
         <translation>Tiedostoa ei ole olemassa</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="349"/>
+        <location filename="../src/engine.cpp" line="362"/>
         <source>Broken symbolic link</source>
         <translation>Hajonnut symbolinen linkki</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="354"/>
+        <location filename="../src/engine.cpp" line="367"/>
         <source>Cannot read this type of file</source>
         <translation>Tätä tiedostotyyppiä ei voi lukea</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="360"/>
+        <location filename="../src/engine.cpp" line="373"/>
         <source>No permission to read the file</source>
         <translation>Ei oikeuksia lukea tiedostoa</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="364"/>
-        <location filename="../src/engine.cpp" line="370"/>
+        <location filename="../src/engine.cpp" line="377"/>
+        <location filename="../src/engine.cpp" line="383"/>
         <source>Error reading file</source>
         <translation>Virhe luettaessa tiedostoa</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="373"/>
+        <location filename="../src/engine.cpp" line="386"/>
         <source>Empty file</source>
         <translation>Tyhjä tiedosto</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="399"/>
+        <location filename="../src/engine.cpp" line="412"/>
         <source>Binary file preview clipped at %1 kB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="418"/>
+        <location filename="../src/engine.cpp" line="431"/>
         <source>Text file preview clipped at %1 lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="420"/>
+        <location filename="../src/engine.cpp" line="433"/>
         <source>Text file preview clipped at %1 kB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="433"/>
+        <location filename="../src/engine.cpp" line="446"/>
         <source>No permissions to create %1</source>
         <translation>Ei oikeuksia luoda kohdetta %1</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="451"/>
+        <location filename="../src/engine.cpp" line="464"/>
         <source>Cannot rename %1</source>
         <translation>Uudelleennimeäminen epäonnistui %1</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="474"/>
+        <location filename="../src/engine.cpp" line="487"/>
         <source>Cannot change permissions</source>
         <translation>Oikeuksia ei voi muuttaa</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="435"/>
+        <location filename="../src/engine.cpp" line="448"/>
         <source>Cannot create folder %1</source>
         <translation>Kansiota %1 ei voitu luoda</translation>
     </message>
@@ -2158,7 +2158,7 @@
     <name>harbour-file-browser</name>
     <message>
         <location filename="../qml/harbour-file-browser.qml" line="39"/>
-        <source>Version %1</source>
+        <source>Version %1 (%2)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

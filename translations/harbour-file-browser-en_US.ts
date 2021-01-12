@@ -300,68 +300,68 @@
         <translation>Cannot move/copy to itself</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="347"/>
+        <location filename="../src/engine.cpp" line="360"/>
         <source>File does not exist</source>
         <translation>File does not exist</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="349"/>
+        <location filename="../src/engine.cpp" line="362"/>
         <source>Broken symbolic link</source>
         <translation>Broken symbolic link</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="354"/>
+        <location filename="../src/engine.cpp" line="367"/>
         <source>Cannot read this type of file</source>
         <translation>Cannot read this type of file</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="360"/>
+        <location filename="../src/engine.cpp" line="373"/>
         <source>No permission to read the file</source>
         <translation>No permission to read the file</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="364"/>
-        <location filename="../src/engine.cpp" line="370"/>
+        <location filename="../src/engine.cpp" line="377"/>
+        <location filename="../src/engine.cpp" line="383"/>
         <source>Error reading file</source>
         <translation>Error reading file</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="373"/>
+        <location filename="../src/engine.cpp" line="386"/>
         <source>Empty file</source>
         <translation>Empty file</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="399"/>
+        <location filename="../src/engine.cpp" line="412"/>
         <source>Binary file preview clipped at %1 kB</source>
         <translation>Binary file preview clipped at %1 kB</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="418"/>
+        <location filename="../src/engine.cpp" line="431"/>
         <source>Text file preview clipped at %1 lines</source>
         <translation>Text file preview clipped at %1 lines</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="420"/>
+        <location filename="../src/engine.cpp" line="433"/>
         <source>Text file preview clipped at %1 kB</source>
         <translation>Text file preview clipped at %1 kB</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="433"/>
+        <location filename="../src/engine.cpp" line="446"/>
         <source>No permissions to create %1</source>
         <translation>No permissions to create %1</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="435"/>
+        <location filename="../src/engine.cpp" line="448"/>
         <source>Cannot create folder %1</source>
         <translation>Cannot create folder %1</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="451"/>
+        <location filename="../src/engine.cpp" line="464"/>
         <source>Cannot rename %1</source>
         <translation>Cannot rename %1</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="474"/>
+        <location filename="../src/engine.cpp" line="487"/>
         <source>Cannot change permissions</source>
         <translation>Cannot change permissions</translation>
     </message>
@@ -2160,8 +2160,8 @@
     <name>harbour-file-browser</name>
     <message>
         <location filename="../qml/harbour-file-browser.qml" line="39"/>
-        <source>Version %1</source>
-        <translation>Version %1</translation>
+        <source>Version %1 (%2)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
