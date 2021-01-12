@@ -58,7 +58,6 @@ FileModel::FileModel(QObject *parent) :
 {
     m_worker = new FileModelWorker;
     m_dir = "";
-    m_filterString = "";
 
     m_watcher = new QFileSystemWatcher(this);
     connect(m_watcher, SIGNAL(directoryChanged(const QString&)), this, SLOT(refresh()));
@@ -135,7 +134,9 @@ QVariant FileModel::data(const QModelIndex &index, int role) const
         return info.isSelected();
 
     case IsMatchedRole:
-        return info.isMatched();
+        // TODO get rid of this role, as filtering is
+        // now done by removing/inserting entries
+        return true; //info.isMatched();
 
     case IsDoomedRole:
         return info.isDoomed();
@@ -227,6 +228,9 @@ void FileModel::setActive(bool active)
 
 void FileModel::setFilterString(QString newFilter)
 {
+    // we change the filter and emit the proper signal,
+    // but we will only refresh the model if anything changed
+    m_oldFilterString = m_filterString;
     m_filterString = newFilter;
     emit filterStringChanged();
 }
@@ -428,8 +432,9 @@ void FileModel::refreshFull(QString localPath)
 
 void FileModel::applyFilterString()
 {
-    /* if (!m_dir.isEmpty()) doUpdateChangedEntries();
-    return; */
+    if (m_oldFilterString != m_filterString &&
+            !m_dir.isEmpty()) refresh();
+    return;
 
     QRegularExpression filter(
                 m_filterString.replace(".", "\\.").
@@ -485,7 +490,7 @@ void FileModel::workerDone(FileModelWorker::Mode mode, QList<StatFileInfo> files
     m_errorMessage = ""; // worker finished successfully
     emit errorMessageChanged();
     setBusy(false, false);
-    applyFilterString(); // TODO remove when filtering in worker
+    // applyFilterString(); // TODO remove when filtering in worker
 }
 
 void FileModel::workerErrorOccurred(QString message)

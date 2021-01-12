@@ -138,7 +138,8 @@ private:
     void setBusy(bool busy);
 
     QString m_dir;
-    QString m_filterString;
+    QString m_filterString = {""};
+    QString m_oldFilterString = {""};
     QList<StatFileInfo> m_files;
     int m_selectedFileCount;
     int m_matchedFileCount;

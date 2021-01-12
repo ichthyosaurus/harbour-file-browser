@@ -275,13 +275,13 @@ bool FileModelWorker::applySettings() {
         if (cancelIfCancelled()) return false;
     }
 
-    // TODO make sure the keyboard doesn't loose focus
-    // QString nameFilter = "*"+m_nameFilter+"*";
-    // if (m_cachedDir.nameFilters().first() != nameFilter) {
-    //     m_cachedDir.setNameFilters({nameFilter});
-    //     settingsChanged = true;
-    //     if (cancelIfCancelled()) return false;
-    // }
+     QString nameFilter = "*"+m_nameFilter+"*";
+     if (m_cachedDir.nameFilters().first() != nameFilter) {
+         m_cachedDir.setNameFilters({nameFilter});
+         settingsChanged = true;
+         logMessage("note: applied name filter '"+nameFilter+"'");
+         if (cancelIfCancelled()) return false;
+     }
 
     if (!settingsChanged) {
         // this happens e.g. when deleting or renaming files
