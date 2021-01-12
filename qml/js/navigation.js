@@ -168,8 +168,7 @@ function goToFolder(folder, silent, startSearchQuery) {
             return
         } else {
             above = existingTarget;
-            var search = "^"+(shared+"/").replace(/([.-[\](){}\\*?*^$|])/g, "\\$1");
-            rest = folder.replace(new RegExp(search), '/');
+            rest = "/"+folder.slice(shared.length)
             basePath = shared;
             console.log("- determined shared tree: ", basePath, rest);
         }
