@@ -393,7 +393,11 @@ void FileModel::markAsDoomed(QStringList absoluteFilePaths)
 void FileModel::refresh()
 {
     if (!m_active) {
-        m_scheduledRefresh = FileModelWorker::Mode::DiffMode;
+        if (m_scheduledRefresh != FileModelWorker::Mode::FullMode) {
+            // we don't want to do only a partial refresh when
+            // a full refresh is already scheduled
+            m_scheduledRefresh = FileModelWorker::Mode::DiffMode;
+        }
         return;
     }
 
