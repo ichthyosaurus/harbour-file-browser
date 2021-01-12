@@ -217,17 +217,17 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="356"/>
         <source>Empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Tom</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="359"/>
         <source>No files matched the filter.</source>
-        <translation type="unfinished"></translation>
+        <translation>Inga filer matchade filtret.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="360"/>
         <source>This directory contains no files.</source>
-        <translation type="unfinished"></translation>
+        <translation>Denna mapp innehåller inga filer.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="455"/>
@@ -671,7 +671,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="148"/>
         <source>The file has been moved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Filen har flyttats.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="259"/>
@@ -783,7 +783,7 @@
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="69"/>
         <source>The files have been moved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Filerna har flyttats.</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/MultiFilePage.qml" line="93"/>
@@ -2195,7 +2195,7 @@
     <message>
         <location filename="../qml/harbour-file-browser.qml" line="39"/>
         <source>Version %1 (%2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Version %1 (%2)</translation>
     </message>
 </context>
 <context>
