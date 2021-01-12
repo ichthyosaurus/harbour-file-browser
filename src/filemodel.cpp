@@ -366,28 +366,32 @@ QStringList FileModel::selectedFiles() const
 
 void FileModel::markSelectedAsDoomed()
 {
-    // TODO this should save the affected paths in a
-    // global (runtime) registry so it won't be lost when
-    // refreshing the model and when changing directories
-    for (int i = 0; i < m_files.count(); i++) {
-        if (m_files.at(i).isSelected()) {
-            m_files[i].setDoomed(true);
-            m_files[i].setSelected(false); // doomed files can't be selected
-            emit dataChanged(index(i, 0), index(i, 0));
-        }
-    }
+    doMarkAsDoomed(m_files, [](StatFileInfo& info){
+        if (info.isSelected()) return true;
+        return false;
+    });
 }
 
 void FileModel::markAsDoomed(QStringList absoluteFilePaths)
 {
-    // Cf. markSelectedAsDoomed
-    for (int i = 0; i < m_files.count(); i++) {
-        if (absoluteFilePaths.contains(m_files.at(i).absoluteFilePath())) {
-            m_files[i].setDoomed(true);
-            m_files[i].setSelected(false); // doomed files can't be selected
+    doMarkAsDoomed(m_files, [&absoluteFilePaths](StatFileInfo& info){
+        if (absoluteFilePaths.contains(info.absoluteFilePath())) return true;
+        return false;
+    });
+}
+
+void FileModel::doMarkAsDoomed(QList<StatFileInfo>& files, std::function<bool(StatFileInfo&)> checker) {
+    // TODO this should save the affected paths in a
+    // global (runtime) registry so it won't be lost when
+    // refreshing the model and when changing directories
+    for (int i = 0; i < files.size(); i++) {
+        if (checker(files[i])) {
+            files[i].setDoomed(true);
+            files[i].setSelected(false); // doomed files can't be selected
             emit dataChanged(index(i, 0), index(i, 0));
         }
     }
+    updateFileCounts();
 }
 
 void FileModel::refresh()

@@ -22,6 +22,7 @@
 #ifndef FILEMODEL_H
 #define FILEMODEL_H
 
+#include <functional>
 #include <QAbstractListModel>
 #include <QDir>
 #include <QFileSystemWatcher>
@@ -129,6 +130,7 @@ private:
      * This method is called when normally refreshing a view.
      */
     void doUpdateChangedEntries();
+    void doMarkAsDoomed(QList<StatFileInfo>& files, std::function<bool(StatFileInfo&)> checker);
 
     void updateFileCounts();
     void clearModel();
