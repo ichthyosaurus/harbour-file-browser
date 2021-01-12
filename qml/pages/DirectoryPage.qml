@@ -86,7 +86,7 @@ Page {
 
     FileModel {
         id: fileModel
-        dir: _activeDir
+        dir: page.dir
         filterString: currentFilter
         active: page.status === PageStatus.Active ||
                 page.status === PageStatus.Activating
@@ -350,7 +350,6 @@ Page {
         ViewPlaceholder {
             id: statusMessage
             enabled: !busyIndicator.enabled &&
-                     _activeDir !== "" &&
                      (fileModel.fileCount === 0 || fileModel.errorMessage !== "")
             text: fileModel.errorMessage !== "" ? fileModel.errorMessage : qsTr("Empty")
             hintText: fileModel.errorMessage !== "" ? "" : qsTr("This directory contains no files.")
@@ -376,7 +375,7 @@ Page {
 
     DirectoryPopup {
         id: dirPopup
-        directory: _activeDir
+        directory: dir
         flickable: fileList
     }
 
@@ -535,12 +534,12 @@ Page {
                 pageStack.completeAnimation();
                 pageStack.pushAttached(Qt.resolvedUrl("ShortcutsPage.qml"), { currentPath: dir });
             }
-            coverText = Paths.lastPartOfPath(page.dir.replace(/\/$/, ''))+"/"; // update cover
+            coverText = Paths.lastPartOfPath(page.dir)+"/"; // update cover
         } else if (status === PageStatus.Activating && _activeDir !== dir) {
             console.log("loading", dir);
-            _activeDir = dir;
             main.activePage = {type: "dir", path: dir};
             navigate_syncNavStack();
+            console.log("activated", dir);
         }
     }
 
