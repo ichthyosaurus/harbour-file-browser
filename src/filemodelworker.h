@@ -40,7 +40,7 @@ class FileModelWorker : public QThread
 
 public:
     enum Mode {
-        FullMode, DiffMode
+        NoneMode, FullMode, DiffMode
     };
 
     explicit FileModelWorker(QObject *parent = nullptr);

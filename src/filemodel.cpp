@@ -53,8 +53,7 @@ FileModel::FileModel(QObject *parent) :
     QAbstractListModel(parent),
     m_selectedFileCount(0),
     m_matchedFileCount(0),
-    m_active(false),
-    m_dirty(false)
+    m_active(false)
 {
     m_worker = new FileModelWorker;
     m_dir = "";
@@ -193,7 +192,6 @@ void FileModel::setDir(QString dir)
     m_dir = dir;
 
     doUpdateAllEntries();
-    m_dirty = false;
 
     emit dirChanged();
 }
@@ -211,9 +209,18 @@ void FileModel::setActive(bool active)
     m_active = active;
     emit activeChanged();
 
-    if (m_dirty) doUpdateChangedEntries();
+    switch (m_scheduledRefresh) {
+    case FileModelWorker::Mode::NoneMode:
+        break; // nothing to refresh
+    case FileModelWorker::Mode::DiffMode:
+        doUpdateChangedEntries();
+        break;
+    case FileModelWorker::Mode::FullMode:
+        doUpdateAllEntries();
+        break;
+    }
 
-    m_dirty = false;
+    m_scheduledRefresh = FileModelWorker::Mode::NoneMode;
 }
 
 void FileModel::setFilterString(QString newFilter)
@@ -387,12 +394,11 @@ void FileModel::markAsDoomed(QStringList absoluteFilePaths)
 void FileModel::refresh()
 {
     if (!m_active) {
-        m_dirty = true;
+        m_scheduledRefresh = FileModelWorker::Mode::DiffMode;
         return;
     }
 
     doUpdateChangedEntries();
-    m_dirty = false;
 }
 
 void FileModel::refreshFull(QString localPath)
@@ -403,12 +409,11 @@ void FileModel::refreshFull(QString localPath)
     }
 
     if (!m_active) {
-        m_dirty = true;
+        m_scheduledRefresh = FileModelWorker::Mode::FullMode;
         return;
     }
 
     doUpdateAllEntries();
-    m_dirty = false;
 }
 
 void FileModel::applyFilterString()

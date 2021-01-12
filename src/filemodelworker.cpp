@@ -19,6 +19,7 @@
  */
 
 #include <QSettings>
+#include <QDebug>
 #include "filemodelworker.h"
 #include "statfileinfo.h"
 #include "settingshandler.h"
@@ -65,10 +66,12 @@ void FileModelWorker::run()
         doReadFull();
     } else if (m_mode == DiffMode) {
         doReadDiff();
+    } else if (m_mode == NoneMode) {
+        qDebug() << "[FileModelWorker] note: started with NoneMode";
+        return;
     }
 }
 
-#include <QDebug>
 void FileModelWorker::logError(QString message)
 {
     qDebug() << "[FileModelWorker] error:" << message;
