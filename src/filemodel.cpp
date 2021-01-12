@@ -443,6 +443,20 @@ void FileModel::applySettings(QDir &dir) {
     dir.setSorting(sortBy | dirsFirstFlag | orderFlag | caseSensitiveFlag);
 }
 
+void FileModel::setBusy(bool busy, bool partlyBusy)
+{
+    m_busy = busy;
+    m_partlyBusy = partlyBusy;
+    emit busyChanged();
+    emit partlyBusyChanged();
+}
+
+void FileModel::setBusy(bool busy)
+{
+    m_busy = busy;
+    emit busyChanged();
+}
+
 void FileModel::applyFilterString()
 {
     QMutableListIterator<StatFileInfo> iter(m_files);

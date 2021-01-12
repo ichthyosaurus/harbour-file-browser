@@ -114,6 +114,8 @@ private:
     void clearModel();
     bool filesContains(const QList<StatFileInfo> &files, const StatFileInfo &fileData) const;
     void applySettings(QDir& dir);
+    void setBusy(bool busy, bool partlyBusy);
+    void setBusy(bool busy);
 
     QString m_dir;
     QString m_filterString;
