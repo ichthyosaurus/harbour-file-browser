@@ -417,14 +417,21 @@ void FileModel::readDirectory()
 
 void FileModel::recountSelectedFiles()
 {
-    int count = 0;
-    foreach (const StatFileInfo &info, m_files) {
-        if (info.isSelected())
-            count++;
+    int selectedCount = 0;
+    int matchedCount = 0;
+
+    for (const auto& info : m_files) {
+        if (info.isSelected()) selectedCount++;
+        if (info.isMatched()) matchedCount++;
     }
-    if (m_selectedFileCount != count) {
-        m_selectedFileCount = count;
+
+    if (m_selectedFileCount != selectedCount) {
+        m_selectedFileCount = selectedCount;
         emit selectedFileCountChanged();
+    }
+    if (m_matchedFileCount != matchedCount) {
+        m_matchedFileCount = matchedCount;
+        emit filteredFileCountChanged();
     }
 }
 
