@@ -33,7 +33,6 @@ Page {
     id: page
     objectName: "directoryPage"
     allowedOrientations: Orientation.All
-    property bool _ready: false
     property string _activeDir: ""
     property string dir: "/"
 
