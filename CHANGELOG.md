@@ -3,6 +3,11 @@
 ## Unreleased
 
  * Finally out of beta
+ *   - Configuration is now stored at ~/.config/harbour-file-browser. Copy your beta configuration from ~/.config/harbour-file-browser-beta to keep shortcuts.
+ *   - You can safely remove the folder ~/.local/share/harbour-file-browser-beta.
+ * Updated Swedish translation
+ * Updated root mode for non-beta release (packaged separately)
+ * Improved system integration: "open storage settings" menu item will only be shown if storage module is installed
 
 ## Version 2.3.2-beta (2021-01-07)
 
