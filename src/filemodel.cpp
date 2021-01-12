@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2013-2015 Kari Pihkala
  * SPDX-FileCopyrightText: 2016 Malte Veerman
- * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
