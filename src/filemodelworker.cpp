@@ -136,9 +136,8 @@ void FileModelWorker::doReadDiff()
 
     m_finalEntries = m_oldEntries;
 
-    // Complexity for one list: O(n^2)
-    // Complexity for both lists: O(n^2) + O(p^2)
-    // This becomes annoyingly slow listings with >1000 entries.
+    // Complexity: O(o*n) + O(n*ro) = ~ O(n^2)+O(n^2)
+    // This becomes annoyingly slow for listings with >1000 entries.
 
     // compare old and new files and do removes if needed
     // Go from the bottom through all old entries, check if
