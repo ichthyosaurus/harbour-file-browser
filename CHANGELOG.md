@@ -9,13 +9,50 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 ## Unreleased
 
  * Finally out of beta
- *   - Configuration is now stored at ~/.config/harbour-file-browser. Copy your beta configuration from ~/.config/harbour-file-browser-beta to keep shortcuts.
+ *   - Configuration is now stored at ~/.config/harbour-file-browser. Copy your beta configuration from ~/.config/harbour-file-browser-beta to keep custom shortcuts.
  *   - You can safely remove the folder ~/.local/share/harbour-file-browser-beta.
  *   - Updated root mode for non-beta release (packaged separately)
+ *   - Note: it might be necessary to manually remove the old packages harbour-file-browser-beta and harbour-file-browser-root-beta
+ * Updated translations: Swedish, Chinese, German
+ * Greatly improved performance when loading folders and moving/deleting files
+ *   - before: loading a folder with 5000 images (sorted by modification time) took ~5 seconds, moving/deleting 1 file took ~8 seconds; with times climbing exponentially
+ *   - now: loading the same folder (any sorting mode) is nearly instantly, moving/deleting too
+ *   - now: sorting mode will no longer noticeably affect performance (sorting by modification time was by far the slowest mode before)
+ *   - note: when deleting/moving/filtering more than 200 files the view will lose its position and jump to the top
+ * Greatly improved filtering performance
+ *   - before: filtering a folder with 5000 images took ~20 seconds, scrolling was nearly impossible
+ *   - now: the same folder filters nearly instantly, scrolling is smooth
+ *   - note: the folder listing will be updated when closing the top menu
+ * Improved navigation performance: switching between folders should feel much more responsive now
  * Fixed a bug causing page navigation by swiping to break
- * Updated Swedish translation
+ * Fixed performance issues when opening view preferences
+ * Fixed keyboard flickering when opening view preferences
+ * Fixed selection panel being closed while one file was still selected
+ * Fixed file pages breaking after file(s) have been moved away
+ * Fixed folder listings jumping to the top after deleting or transferring files and after changing settings
+ * Fixed highlighting files when the context menu is opened, a thumbnail is being shown, or gallery mode is activated
+ * Added support for simple wildcards when filtering
+ *   - use '*' to match any one or more characters
+ *   - use '?' to match any single character
+ *   - use '[abc]' to match one character of the group in square brackets
+ *   - to include a literal '*' or '?' you have to enclose it in square brackets
+ * Added proper user feedback while loading folders
+ * Added indicators for files that are being moved/deleted
+ * Added an informational placeholder when no file matched the filter
  * Improved suggestions highlighting when manually editing the current path
  * Improved system integration: "open storage settings" menu item will only be shown if storage module is installed
+ * Improved navigation menu: duplicate history entries should not happen anymore
+ * Improved licensing: the project is now 'reuse'-compliant (cf. https://reuse.software/spec/)
+
+ For developers:
+
+ * Added and improved some documentation
+ * Added a new worker thread class for loading, refreshing, and sorting folders in the background
+ * Added modification time info from stat(3) to StatFileInfo
+ * Implemented custom sorting by modification time, as QDir's performance is terrible
+ * Implemented a hashing/caching algorithm for partially refreshing folder listings
+ * Improved icon rendering: code can be easily reused in other projects
+ * Clarified licensing for all files: documentation is GFDL, some files are CC0 (all files have proper SPDX license headers now)
 
 ## Version 2.3.2-beta (2021-01-07)
 
