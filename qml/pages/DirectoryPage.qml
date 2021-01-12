@@ -116,6 +116,7 @@ Page {
             }
             onActiveChanged: filterField.enabled = active
             enabled: !dirPopup.active
+            busy: fileModel.busy || fileModel.partlyBusy
 
             // We explicitly block the filter field when a
             // menu item is selected so the keyboard won't flicker
@@ -243,6 +244,7 @@ Page {
 
         PushUpMenu {
             id: bottomPulley
+            busy: pullDownMenu.busy
             property bool _toggleBookmark: false
             onActiveChanged: { // delay action until menu is closed
                 if (!active && _toggleBookmark) toggleBookmark()
