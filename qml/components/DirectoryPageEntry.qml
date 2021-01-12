@@ -160,6 +160,7 @@ ListItem {
             source: dir+"/"+filename
             sourceSize.width: parent.width
             width: parent.width
+            opacity: highlighted ? Theme.opacityLow : 1.0
             height: Theme.paddingMedium +
                     (status === Image.Loading ?
                          width : (width * (implicitHeight / implicitWidth)))
@@ -173,6 +174,7 @@ ListItem {
             source: dir+"/"+filename
             width: parent.width
             height: Theme.paddingMedium + sourceSize.height * (width / sourceSize.width)
+            opacity: highlighted ? Theme.opacityLow : 1.0
         }
     }
 
@@ -181,6 +183,7 @@ ListItem {
         Item {
             height: Theme.itemSizeExtraLarge
             width: parent.width
+            opacity: highlighted ? Theme.opacityLow : 1.0
             Image {
                 anchors.centerIn: parent
                 height: Theme.itemSizeLarge
