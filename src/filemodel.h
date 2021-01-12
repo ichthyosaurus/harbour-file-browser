@@ -104,13 +104,25 @@ signals:
     void partlyBusyChanged();
 
 private slots:
+    /**
+     * @brief (Re-)Reads all directory contents and rebuilds the model.
+     * The model will be cleared and completely rebuilt.
+     * This method is called when doing a full refresh,
+     * changin active mode, or changing the current directory.
+     */
     void readDirectory();
     void applyFilterString();
 
 private:
+    /**
+     * @brief Rereads directory contents and updates the model.
+     * All contents will be read but only changed entries will
+     * be updated in the model.
+     * This method is called when normally refreshing a view.
+     */
+    void refreshEntries();
     void recountSelectedFiles();
     void readAllEntries();
-    void refreshEntries();
     void clearModel();
     bool filesContains(const QList<StatFileInfo> &files, const StatFileInfo &fileData) const;
     void applySettings(QDir& dir);
