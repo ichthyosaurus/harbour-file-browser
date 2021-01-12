@@ -413,6 +413,9 @@ void FileModel::refreshFull(QString localPath)
 
 void FileModel::applyFilterString()
 {
+    /* if (!m_dir.isEmpty()) doUpdateChangedEntries();
+    return; */
+
     QRegularExpression filter(
                 m_filterString.replace(".", "\\.").
                 replace("?", ".").replace("*", ".*?"),
@@ -467,7 +470,7 @@ void FileModel::workerDone(FileModelWorker::Mode mode, QList<StatFileInfo> files
     m_errorMessage = ""; // worker finished successfully
     emit errorMessageChanged();
     setBusy(false, false);
-    applyFilterString();
+    applyFilterString(); // TODO remove when filtering in worker
 }
 
 void FileModel::workerErrorOccurred(QString message)
