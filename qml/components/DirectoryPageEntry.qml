@@ -42,6 +42,7 @@ ListItem {
     function deleteMe() {
         _remorseItem = remorseDelete(function(){
             clearSelectedFiles();
+            markAsDoomed(fileModel.fileNameAt(index));
             progressPanel.showText(qsTr("Deleting"));
             engine.deleteFiles([fileModel.fileNameAt(index)]);
         });
