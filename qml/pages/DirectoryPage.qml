@@ -88,7 +88,6 @@ Page {
         id: fileModel
         dir: _activeDir
         filterString: currentFilter
-        // page.status does not exactly work - root folder seems to be active always??
         active: page.status === PageStatus.Active
     }
 
