@@ -19,6 +19,7 @@
  */
 
 #include <QSettings>
+#include <QByteArray>
 #include <QDebug>
 #include "filemodelworker.h"
 #include "statfileinfo.h"
@@ -123,42 +124,57 @@ void FileModelWorker::doReadDiff()
 {
     if (!applySettings()) return; // cancelled
 
-    // read all files
-    QList<StatFileInfo> newFiles;
+    // Algorithm: notify which files were removed, then
+    // notify which files were added.
+    // Complexity without lookup tables: circa 2*O(n^2).
+    // With lookup tables, this gets reduced to around 4*O(n) or even 4*O(1).
+    // This saves multiple seconds in directories with >1000 entries.
 
-    QStringList fileList = m_cachedDir.entryList();
-    for (auto filename : fileList) {
-        QString fullpath = m_cachedDir.absoluteFilePath(filename);
-        StatFileInfo info(fullpath);
-        newFiles.append(info);
+    QSet<uint> oldLookup;    QSet<uint> newLookup;
+    QList<uint> oldHashes;   QList<uint> newHashes;
+    /* + m_oldEntries */     QList<StatFileInfo> newEntries;
+
+    QStringList fileList = m_cachedDir.entryList(); // read all files
+
+    auto oldEntriesSize = m_oldEntries.size();
+    oldLookup.reserve(oldEntriesSize);
+    oldHashes.reserve(oldEntriesSize);
+
+    auto newFileListSize = fileList.size(); // newEntries isn't populated yet
+    newLookup.reserve(newFileListSize);
+    newHashes.reserve(newFileListSize);
+    newEntries.reserve(newFileListSize);
+
+    m_finalEntries = m_oldEntries;
+    m_finalEntries.reserve(std::max(oldEntriesSize, newFileListSize));
+
+    // populate new file list and lookup table
+    for (const auto& filename : fileList) {
+        StatFileInfo info(m_cachedDir.absoluteFilePath(filename));
+        newEntries.append(info);
+        newHashes.append(hashInfo(info));
+        newLookup.insert(newHashes.last());
         if (cancelIfCancelled()) return;
     }
 
-    m_finalEntries = m_oldEntries;
-
-    // Complexity: O(o*n) + O(n*ro) = ~ O(n^2)+O(n^2)
-    // This becomes annoyingly slow for listings with >1000 entries.
+    // populate old list lookup table
+    for (const auto& info : m_oldEntries) {
+        oldHashes.append(hashInfo(info));
+        oldLookup.insert(oldHashes.last());
+    }
 
     // compare old and new files and do removes if needed
     // Go from the bottom through all old entries, check if
     // each entry is anywhere in the new list, emit if not.
     // After a signal is emitted, all indices higher than the
     // current one will become invalid.
-    bool haveRemoved = false;
     for (int i = m_oldEntries.count()-1; i >= 0; --i) {
         StatFileInfo data = m_oldEntries.at(i);
-        if (!filesContains(newFiles, data)) {
+        if (!newLookup.contains(oldHashes.at(i))) {
             emit entryRemoved(i, data);
             m_finalEntries.removeAt(i);
-            haveRemoved = true;
             if (cancelIfCancelled()) return;
         }
-    }
-
-    if (haveRemoved) {
-        // We use the reduced list if entries were removed.
-        // This will increase performance of the next run a little bit.
-        m_oldEntries = m_finalEntries;
     }
 
     // compare old and new files and do inserts if needed
@@ -167,9 +183,9 @@ void FileModelWorker::doReadDiff()
     // After a signal is emitted, all indices lower than the
     // current one will become valid. Higher indices might be
     // invalid until we checked them.
-    for (int i = 0; i < newFiles.count(); ++i) {
-        StatFileInfo data = newFiles.at(i);
-        if (!filesContains(m_oldEntries, data)) {
+    for (int i = 0; i < newEntries.count(); ++i) {
+        StatFileInfo data = newEntries.at(i);
+        if (!oldLookup.contains(newHashes.at(i))) {
             emit entryAdded(i, data);
             m_finalEntries.insert(i, data);
             if (cancelIfCancelled()) return;
@@ -295,6 +311,25 @@ bool FileModelWorker::filesContains(const QList<StatFileInfo> &files, const Stat
         }
     }
     return false;
+}
+
+uint FileModelWorker::hashInfo(const StatFileInfo& f)
+{
+    QByteArray result;
+    result.reserve(45);
+    result.append(QByteArray::number(qHash(f.fileName())));
+    result.append('#');
+    result.append(QByteArray::number(f.size()));
+    result.append('#');
+    result.append(QByteArray::number(qHash(f.permissions())));
+    result.append('#');
+    result.append(QByteArray::number(qHash(f.lastModified())));
+    result.append('#');
+    result.append(f.isSymLink());
+    result.append('#');
+    result.append(f.isDirAtEnd());
+    // qDebug() << "hashed" << f.fileName() << "to" << result << "(" << result.size() << ")";
+    return qHash(result);
 }
 
 bool FileModelWorker::cancelIfCancelled()

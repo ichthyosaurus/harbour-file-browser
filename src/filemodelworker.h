@@ -77,6 +77,7 @@ private:
     bool verifyOrAbort();
     bool applySettings();
     bool filesContains(const QList<StatFileInfo> &files, const StatFileInfo &fileData) const;
+    uint hashInfo(const StatFileInfo& f);
 
     // returns true if cancelled and emits an error
     bool cancelIfCancelled();
