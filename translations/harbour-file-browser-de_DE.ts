@@ -1153,7 +1153,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="295"/>
         <source>Exposure Program:</source>
-        <translation>Belichtungsprogramm</translation>
+        <translation>Belichtungsprogramm:</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="371"/>
@@ -1319,12 +1319,12 @@
     <message>
         <location filename="../src/globals.cpp" line="99"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
-        <translation>d. MMM yyyy, hh:mm:ss t</translation>
+        <translation>dd. MMM yyyy, hh:mm:ss t</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="101"/>
         <source>dd.MM.yy, hh:mm</source>
-        <translation>d. M. yy, hh:mm</translation>
+        <translation>dd. MM. yy, hh:mm</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="244"/>
