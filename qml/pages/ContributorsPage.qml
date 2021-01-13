@@ -100,6 +100,10 @@ Page {
                 label: qsTr("Greek")
                 values: ["Dimitrios Glentadakis"]
             }
+            DetailList {
+                label: qsTr("Norwegian")
+                values: ["Allan Nordhøy"]
+            }
         }
     }
 }
