@@ -126,6 +126,11 @@
         <source>Greek</source>
         <translation>希腊语</translation>
     </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="104"/>
+        <source>Norwegian</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CreateFolderDialog</name>
@@ -195,10 +200,6 @@
         <translation>删除</translation>
     </message>
     <message>
-        <source>No files</source>
-        <translation type="vanished">没有文件</translation>
-    </message>
-    <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="136"/>
         <source>View Preferences</source>
         <translation>查看偏好</translation>
@@ -252,22 +253,22 @@
 <context>
     <name>DirectoryPageEntry</name>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="215"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="219"/>
         <source>(link)</source>
         <translation>(链接)</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="45"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="46"/>
         <source>Deleting</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="328"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="332"/>
         <source>Remove bookmark</source>
         <translation>移除收藏</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="328"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="332"/>
         <source>Add to bookmarks</source>
         <translation>添加到收藏</translation>
     </message>
@@ -536,14 +537,6 @@
         <location filename="../src/filemodel.cpp" line="115"/>
         <source>dir</source>
         <translation>目录</translation>
-    </message>
-    <message>
-        <source>Folder does not exist</source>
-        <translation type="vanished">目录不存在</translation>
-    </message>
-    <message>
-        <source>No permission to read the folder</source>
-        <translation type="vanished">没有读取该目录的权限</translation>
     </message>
 </context>
 <context>
@@ -2161,10 +2154,6 @@
 </context>
 <context>
     <name>harbour-file-browser</name>
-    <message>
-        <source>Version %1</source>
-        <translation type="vanished">版本 %1</translation>
-    </message>
     <message>
         <location filename="../qml/harbour-file-browser.qml" line="39"/>
         <source>Version %1 (%2)</source>

@@ -126,6 +126,11 @@
         <source>Greek</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="104"/>
+        <source>Norwegian</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CreateFolderDialog</name>
@@ -236,10 +241,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>No files</source>
-        <translation type="vanished">Aucun fichier</translation>
-    </message>
-    <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="498"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>Souhaitez-vous basculer entre le téléphone et le carte SD ? Si cela échoue essayez de copier les fichiers.</translation>
@@ -253,22 +254,22 @@
 <context>
     <name>DirectoryPageEntry</name>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="45"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="46"/>
         <source>Deleting</source>
         <translation>Suppression</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="215"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="219"/>
         <source>(link)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="328"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="332"/>
         <source>Remove bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="328"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="332"/>
         <source>Add to bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
@@ -548,14 +549,6 @@
         <location filename="../src/filemodel.cpp" line="115"/>
         <source>dir</source>
         <translation>dir</translation>
-    </message>
-    <message>
-        <source>Folder does not exist</source>
-        <translation type="vanished">Le dossier n&apos;existe pas</translation>
-    </message>
-    <message>
-        <source>No permission to read the folder</source>
-        <translation type="vanished">Vous n&apos;avez pas la permission de lire le dossier</translation>
     </message>
 </context>
 <context>
@@ -855,8 +848,8 @@
         <location filename="../qml/pages/PathEditDialog.qml" line="255"/>
         <source>%n file(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n fichier</numerusform>
+            <numerusform>%n fichiers</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -1558,7 +1551,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="111"/>
         <source>size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">taille</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="112"/>
@@ -2040,8 +2033,8 @@
         <location filename="../qml/components/TransferPanel.qml" line="63"/>
         <source>%n file(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n fichier</numerusform>
+            <numerusform>%n fichiers</numerusform>
         </translation>
     </message>
     <message numerus="yes">

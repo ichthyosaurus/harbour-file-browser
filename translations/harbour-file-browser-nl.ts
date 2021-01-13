@@ -126,6 +126,11 @@
         <source>Greek</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="104"/>
+        <source>Norwegian</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CreateFolderDialog</name>
@@ -236,10 +241,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>No files</source>
-        <translation type="vanished">Geen bestanden</translation>
-    </message>
-    <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="498"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>Probeer je bestanden te verplaatsen tussen de telefoon en de SD-kaart? Probeer ze te kopiëren als het niet werkt.</translation>
@@ -253,22 +254,22 @@
 <context>
     <name>DirectoryPageEntry</name>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="45"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="46"/>
         <source>Deleting</source>
         <translation>Verwijderen</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="215"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="219"/>
         <source>(link)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="328"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="332"/>
         <source>Remove bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="328"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="332"/>
         <source>Add to bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
@@ -548,14 +549,6 @@
         <location filename="../src/filemodel.cpp" line="115"/>
         <source>dir</source>
         <translation>dir</translation>
-    </message>
-    <message>
-        <source>Folder does not exist</source>
-        <translation type="vanished">Map bestaat niet</translation>
-    </message>
-    <message>
-        <source>No permission to read the folder</source>
-        <translation type="vanished">Geen rechten om de map te lezen</translation>
     </message>
 </context>
 <context>

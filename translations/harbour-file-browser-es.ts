@@ -126,6 +126,11 @@
         <source>Greek</source>
         <translation>Griego</translation>
     </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="104"/>
+        <source>Norwegian</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CreateFolderDialog</name>
@@ -196,10 +201,6 @@
         <translation>Borrando</translation>
     </message>
     <message>
-        <source>No files</source>
-        <translation type="vanished">No hay ficheros</translation>
-    </message>
-    <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="136"/>
         <source>View Preferences</source>
         <translation>Preferencias de visualización</translation>
@@ -253,22 +254,22 @@
 <context>
     <name>DirectoryPageEntry</name>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="215"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="219"/>
         <source>(link)</source>
         <translation>(enlace)</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="45"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="46"/>
         <source>Deleting</source>
         <translation>Borrando</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="328"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="332"/>
         <source>Remove bookmark</source>
         <translation>Borrar marcador</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="328"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="332"/>
         <source>Add to bookmarks</source>
         <translation>Añadir a marcadores</translation>
     </message>
@@ -548,14 +549,6 @@
         <location filename="../src/filemodel.cpp" line="115"/>
         <source>dir</source>
         <translation>dir</translation>
-    </message>
-    <message>
-        <source>Folder does not exist</source>
-        <translation type="vanished">La carpeta no existe</translation>
-    </message>
-    <message>
-        <source>No permission to read the folder</source>
-        <translation type="vanished">No tienes permisos para leer la carpeta</translation>
     </message>
 </context>
 <context>

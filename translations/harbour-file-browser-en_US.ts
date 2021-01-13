@@ -126,6 +126,11 @@
         <source>Greek</source>
         <translation>Greek</translation>
     </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="104"/>
+        <source>Norwegian</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CreateFolderDialog</name>
@@ -220,10 +225,6 @@
         <translation>This directory contains no files.</translation>
     </message>
     <message>
-        <source>No files</source>
-        <translation type="vanished">No files</translation>
-    </message>
-    <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="440"/>
         <location filename="../qml/pages/DirectoryPage.qml" line="443"/>
         <source>Deleting</source>
@@ -253,22 +254,22 @@
 <context>
     <name>DirectoryPageEntry</name>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="215"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="219"/>
         <source>(link)</source>
         <translation>(link)</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="45"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="46"/>
         <source>Deleting</source>
         <translation>Deleting</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="328"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="332"/>
         <source>Remove bookmark</source>
         <translation>Remove bookmark</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="328"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="332"/>
         <source>Add to bookmarks</source>
         <translation>Add to bookmarks</translation>
     </message>
@@ -548,14 +549,6 @@
         <location filename="../src/filemodel.cpp" line="115"/>
         <source>dir</source>
         <translation>dir</translation>
-    </message>
-    <message>
-        <source>Folder does not exist</source>
-        <translation type="vanished">Folder does not exist</translation>
-    </message>
-    <message>
-        <source>No permission to read the folder</source>
-        <translation type="vanished">No permission to read the folder</translation>
     </message>
 </context>
 <context>
