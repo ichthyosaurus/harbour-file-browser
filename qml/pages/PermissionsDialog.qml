@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2014, 2019 Kari Pihkala
  * SPDX-FileCopyrightText: 2016 Joona Petrell
- * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -82,7 +82,7 @@ Dialog {
                 x: Theme.horizontalPageMargin
                 width: parent.width - 2*x
                 text: qsTr("Change permissions for\n%1").arg(path)
-                color: Theme.secondaryColor
+                color: Theme.secondaryHighlightColor
                 wrapMode: Text.Wrap
             }
 
@@ -103,7 +103,7 @@ Dialog {
                     width: executeLabel.width
                     text: qsTr("Read")
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    color: Theme.secondaryColor
+                    color: Theme.secondaryHighlightColor
                     horizontalAlignment: Text.AlignHCenter
                 }
                 Label {
@@ -111,14 +111,14 @@ Dialog {
                     width: executeLabel.width
                     text: qsTr("Write")
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    color: Theme.secondaryColor
+                    color: Theme.secondaryHighlightColor
                     horizontalAlignment: Text.AlignHCenter
                 }
                 Label {
                     id: executeLabel
                     text: qsTr("Execute")
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    color: Theme.secondaryColor
+                    color: Theme.secondaryHighlightColor
                     horizontalAlignment: Text.AlignHCenter
                 }
             }
@@ -139,7 +139,7 @@ Dialog {
                         width: parent.width - Theme.paddingLarge
                         text: qsTr("Owner")
                         font.pixelSize: Theme.fontSizeExtraSmall
-                        color: Theme.secondaryColor
+                        color: Theme.secondaryHighlightColor
                         horizontalAlignment: Text.AlignRight
                     }
                 }
@@ -177,7 +177,7 @@ Dialog {
                         width: parent.width - Theme.paddingLarge
                         text: qsTr("Group")
                         font.pixelSize: Theme.fontSizeExtraSmall
-                        color: Theme.secondaryColor
+                        color: Theme.secondaryHighlightColor
                         horizontalAlignment: Text.AlignRight
                     }
                 }
