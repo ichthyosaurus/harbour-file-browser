@@ -8,7 +8,9 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 ## Unreleased
 
- * Nothing so far
+ * New translation: Norwegian (Bokmal)
+ * Updated translations: Swedish, Chinese, German
+ * Fixed label colors in permissions dialog
 
 ## Version 2.4.0 (2021-01-12)
 
