@@ -1153,7 +1153,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="295"/>
         <source>Exposure Program:</source>
-        <translation>Belichtungsprogramm</translation>
+        <translation>Belichtungsprogramm:</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="371"/>
