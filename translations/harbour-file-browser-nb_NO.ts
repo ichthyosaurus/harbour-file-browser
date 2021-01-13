@@ -228,7 +228,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="455"/>
         <source>Internally not ready</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikke klar internt</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="455"/>
@@ -238,12 +238,12 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="498"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prøver du å flytte mellom telefonen og SD-kort? Det fungerer ikke. Prøv å kopiere.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="500"/>
         <source>Perhaps the storage is full?</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanskje det ikke er mer plass der?</translation>
     </message>
 </context>
 <context>
@@ -317,7 +317,7 @@
     <message>
         <location filename="../src/engine.cpp" line="362"/>
         <source>Broken symbolic link</source>
-        <translation type="unfinished"></translation>
+        <translation>Ødelagt symbolsk lenke</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="367"/>
@@ -500,7 +500,7 @@
     <message>
         <location filename="../src/filedata.cpp" line="218"/>
         <source>block device</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">blokkenhet</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="222"/>
@@ -569,17 +569,17 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="55"/>
         <source>If nothing happens, then the package is probably faulty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hvis ingenting skjer er pakken antagelig skadet.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="59"/>
         <source>Open successful</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Åpnet</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="60"/>
         <source>Sometimes the application stays in the background</source>
-        <translation type="unfinished"></translation>
+        <translation>Noen ganger forblir programmet i bakgrunnen</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="62"/>
@@ -594,7 +594,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="66"/>
         <source>No application to open the file</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mangler program for åpning av fil</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="67"/>
@@ -680,7 +680,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="302"/>
         <source>Unknown (link target not found)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukjent (fant ikke lenkemål)</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="302"/>
@@ -716,7 +716,7 @@
         <location filename="../src/fileworker.cpp" line="94"/>
         <location filename="../src/fileworker.cpp" line="111"/>
         <source>File operation already in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Filoperasjon allerede underveis</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="153"/>
@@ -750,7 +750,7 @@
     <message>
         <location filename="../src/fileworker.cpp" line="364"/>
         <source>Cannot create target folder %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kan ikke opprette målmappe %1</translation>
     </message>
 </context>
 <context>
@@ -918,7 +918,7 @@
     <message>
         <location filename="../src/engine.cpp" line="246"/>
         <source>Removable Media</source>
-        <translation type="unfinished"></translation>
+        <translation>Flyttbart medium</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="80"/>
@@ -943,17 +943,17 @@
     <message>
         <location filename="../src/globals.cpp" line="96"/>
         <source>hh:mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>hh:mm:ss</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="99"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
-        <translation type="unfinished"></translation>
+        <translation>dd MMM yyyy, hh:mm:ss t</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="101"/>
         <source>dd.MM.yy, hh:mm</source>
-        <translation type="unfinished"></translation>
+        <translation>d. M. yy, hh:mm</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="142"/>
@@ -968,7 +968,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="146"/>
         <source>Date/Time:%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dato/tid: %1</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="153"/>
@@ -1009,7 +1009,7 @@
         <location filename="../src/jhead/jhead-api.cpp" line="170"/>
         <location filename="../src/jhead/jhead-api.cpp" line="188"/>
         <source>(Auto)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Automatisk)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="171"/>
@@ -1069,17 +1069,17 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="183"/>
         <source>Flash:Yes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blitz: Ja</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="190"/>
         <source>Flash:No</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blitz: Nei</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="196"/>
         <source>Focal Length:%1mm</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Brennvidde: %1 mm</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="198"/>
@@ -1089,7 +1089,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="205"/>
         <source>Digital Zoom:%1x</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Digitalforstørrelse: %1x</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="209"/>
@@ -1100,12 +1100,12 @@
         <location filename="../src/jhead/jhead-api.cpp" line="215"/>
         <location filename="../src/jhead/jhead-api.cpp" line="217"/>
         <source>Exposure Time:%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Eksponeringstid: %1</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="220"/>
         <source>(1/%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>(1/%1)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="225"/>
@@ -1125,7 +1125,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="236"/>
         <source>ISO Equivalent:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO-ekvivalent: %1</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="242"/>
@@ -1140,12 +1140,12 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="250"/>
         <source>White Balance:Auto</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hvitbalanse: Automatisk</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="257"/>
         <source>Light Source:Daylight</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lyskilde: Dagslys</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="260"/>
@@ -1160,7 +1160,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="266"/>
         <source>Light Source:Flash</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lyskilde: Blitz</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="269"/>
@@ -1180,7 +1180,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="282"/>
         <source>Average</source>
-        <translation type="unfinished"></translation>
+        <translation>Gjennomsnitt</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="283"/>
@@ -1200,17 +1200,17 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="286"/>
         <source>Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>Mønster</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="287"/>
         <source>Partial</source>
-        <translation type="unfinished"></translation>
+        <translation>Delvis</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="288"/>
         <source>Other</source>
-        <translation type="unfinished"></translation>
+        <translation>Annet</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="289"/>
@@ -1230,7 +1230,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="301"/>
         <source>Program (auto)</source>
-        <translation type="unfinished"></translation>
+        <translation>Program (automatisk)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="304"/>
@@ -1305,22 +1305,22 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="371"/>
         <source>Latitude:%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Breddegrad: %1</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="372"/>
         <source>Longitude:%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lengdegrad: %1</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="374"/>
         <source>Altitude:%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Høyde: %1</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="380"/>
         <source>JPEG Quality:%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">JPEG-kvalitet: %1</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="386"/>
@@ -1348,7 +1348,8 @@
         <location filename="../qml/pages/RenameDialog.qml" line="85"/>
         <source>Give a new name for
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Angi et nytt navn for
+%1</translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="95"/>
@@ -1359,7 +1360,7 @@
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="97"/>
         <source>A file with this name already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>En fil med dette navnet finnes allerede.</translation>
     </message>
 </context>
 <context>
@@ -1367,7 +1368,7 @@
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="100"/>
         <source>Searching</source>
-        <translation type="unfinished"></translation>
+        <translation>Søker …</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="109"/>
@@ -1424,7 +1425,7 @@
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="413"/>
         <source>Internally not ready</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikke klar internt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="413"/>
@@ -1437,12 +1438,12 @@
     <message>
         <location filename="../src/searchworker.cpp" line="41"/>
         <source>Search already in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Søk allerede underveis</translation>
     </message>
     <message>
         <location filename="../src/searchworker.cpp" line="46"/>
         <source>Bad search parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>Feilaktige søkeparametre</translation>
     </message>
 </context>
 <context>
@@ -1482,7 +1483,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="65"/>
         <source>Show preview images</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis forhåndsvisningsbilder</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="70"/>
@@ -1512,7 +1513,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="81"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Skru på gallerimodus</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="82"/>
@@ -1522,12 +1523,12 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="91"/>
         <source>Sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>Sortering</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="98"/>
         <source>Show folders first</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bilder først</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="102"/>
@@ -1537,7 +1538,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="106"/>
         <source>Sort by</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorter etter</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="110"/>
@@ -1562,27 +1563,27 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="117"/>
         <source>Sort order</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorteringsrekkefølge</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="121"/>
         <source>default</source>
-        <translation type="unfinished"></translation>
+        <translation>forvalg</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="122"/>
         <source>reversed</source>
-        <translation type="unfinished"></translation>
+        <translation>omvendt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="130"/>
         <source>Behavior and View</source>
-        <translation type="unfinished"></translation>
+        <translation>Oppførsel og visning</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="140"/>
         <source>Default transfer action</source>
-        <translation type="unfinished"></translation>
+        <translation>Forvalgt overføringshandling</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="143"/>
@@ -1766,7 +1767,7 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="55"/>
         <source>Add “%1” to bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bokmerk «%1»</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="63"/>
@@ -1781,7 +1782,7 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="67"/>
         <source>Sometimes the application stays in the background</source>
-        <translation type="unfinished"></translation>
+        <translation>Noen ganger forblir programmet i bakgrunnen</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="71"/>
@@ -1857,7 +1858,7 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="46"/>
         <source>Sorting and View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sortering og visning</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="55"/>
@@ -2017,7 +2018,7 @@
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="161"/>
         <source>Nothing selected to transfer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ingenting valgt for overføring</translation>
     </message>
 </context>
 <context>
@@ -2065,22 +2066,25 @@
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="76"/>
         <source>Failed to copy</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Klarte ikke å kopiere</numerusform>
+            <numerusform>Klarte ikke å kopiere</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="78"/>
         <source>Failed to move</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Klarte ikke å flytte</numerusform>
+            <numerusform>Klarte ikke å flytte</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="80"/>
         <source>Failed to link</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Klarte ikke å lenke</numerusform>
+            <numerusform>Klarte ikke å lenke</numerusform>
         </translation>
     </message>
     <message>
@@ -2101,22 +2105,22 @@
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="162"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation type="unfinished"></translation>
+        <translation>Disse filene eller mappene finnes allerede i «%1»:</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="202"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prøver du å flytte mellom telefon og SD-kort? Det fungerer ikke. Prøv å kopiere.</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="204"/>
         <source>Perhaps the storage is full?</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanskje det ikke er mer plass der?</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="286"/>
         <source>Unable to overwrite existing file with symlink</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunne ikke overskrive eksisterende fil med symbolsk lenke</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="301"/>
