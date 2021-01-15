@@ -90,7 +90,7 @@ Page {
             }
             DetailList {
                 label: qsTr("French")
-                values: ["Quent-in (Quentí)", "karip"]
+                values: ["Quent-in (Quentí)", "karip", "J. Lavoie", "K. Herbert"]
             }
             DetailList {
                 label: qsTr("Dutch")
