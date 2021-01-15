@@ -133,6 +133,8 @@ Page {
             property bool _filterBlocked: false
 
             MenuItem {
+                //: This describes a page with settings for how things are displayed,
+                //: i.e. "preferences regarding the view" (and not "let's view the preferences").
                 text: qsTr("View Preferences")
                 onClicked: {
                     pullDownMenu._filterBlocked = true;
