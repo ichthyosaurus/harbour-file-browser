@@ -261,7 +261,7 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="219"/>
         <source>(link)</source>
-        <translation type="unfinished"></translation>
+        <translation>(lien)</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="332"/>
@@ -289,7 +289,7 @@
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="161"/>
         <source>Edit path</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifier le chemin</translation>
     </message>
 </context>
 <context>
