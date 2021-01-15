@@ -17,12 +17,12 @@
     <message>
         <location filename="../src/consolemodel.cpp" line="133"/>
         <source>** command “%1” not found</source>
-        <translation type="unfinished"></translation>
+        <translation>** commande « %1 » introuvable</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="137"/>
         <source>** timeout reached</source>
-        <translation type="unfinished"></translation>
+        <translation>** délai d’attente atteint</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="139"/>
@@ -54,12 +54,12 @@
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="42"/>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Développement</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="45"/>
         <source>Programming</source>
-        <translation type="unfinished"></translation>
+        <translation>Programmation</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="53"/>
@@ -69,67 +69,67 @@
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="57"/>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Traductions</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="60"/>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation>anglais</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="64"/>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation>allemand</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="68"/>
         <source>Finnish</source>
-        <translation type="unfinished"></translation>
+        <translation>finnois</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="72"/>
         <source>Chinese</source>
-        <translation type="unfinished"></translation>
+        <translation>chinois</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="76"/>
         <source>Russian</source>
-        <translation type="unfinished"></translation>
+        <translation>russe</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="80"/>
         <source>Swedish</source>
-        <translation type="unfinished"></translation>
+        <translation>suédois</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="84"/>
         <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <translation>italien</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="88"/>
         <source>Spanish</source>
-        <translation type="unfinished"></translation>
+        <translation>espagnol</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="92"/>
         <source>French</source>
-        <translation type="unfinished"></translation>
+        <translation>français</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="96"/>
         <source>Dutch</source>
-        <translation type="unfinished"></translation>
+        <translation>néerlandais</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="100"/>
         <source>Greek</source>
-        <translation type="unfinished"></translation>
+        <translation>grec</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="104"/>
         <source>Norwegian</source>
-        <translation type="unfinished"></translation>
+        <translation>norvégien</translation>
     </message>
 </context>
 <context>
@@ -156,9 +156,9 @@
     <message numerus="yes">
         <location filename="../qml/components/DetailList.qml" line="45"/>
         <source>... and %n more</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>... et %n de plus</numerusform>
+            <numerusform>... et %n de plus</numerusform>
         </translation>
     </message>
 </context>
@@ -182,12 +182,12 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="136"/>
         <source>View Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Voir les préférences</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="174"/>
         <source>Filter directory contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtrer le contenu du répertoire</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="268"/>
@@ -212,7 +212,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="356"/>
         <source>Empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Vide</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="359"/>
@@ -847,7 +847,7 @@
     <message numerus="yes">
         <location filename="../qml/pages/PathEditDialog.qml" line="255"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n fichier</numerusform>
             <numerusform>%n fichiers</numerusform>
         </translation>
@@ -947,7 +947,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="166"/>
         <source>(Strobe light detected) </source>
-        <translation>(lumière stroboscopique détectée)</translation>
+        <translation>(lumière stroboscopique détectée) </translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="167"/>
@@ -1134,7 +1134,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="280"/>
         <source>Metering Mode:</source>
-        <translation>Mode de mesure : </translation>
+        <translation>Mode de mesure :</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="282"/>
@@ -1149,7 +1149,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="295"/>
         <source>Exposure Program:</source>
-        <translation>Programme d&apos;exposition : </translation>
+        <translation>Programme d&apos;exposition :</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="371"/>
@@ -1249,7 +1249,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="336"/>
         <source>Focus Range:</source>
-        <translation>Plage de mise au point : </translation>
+        <translation>Plage de mise au point :</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="339"/>
@@ -1285,7 +1285,7 @@
         <location filename="../src/jhead/jhead-api.cpp" line="386"/>
         <location filename="../src/jhead/jhead-api.cpp" line="397"/>
         <source>Comment:</source>
-        <translation>Commentaire : </translation>
+        <translation>Commentaire :</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="80"/>
@@ -1551,7 +1551,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="111"/>
         <source>size</source>
-        <translation type="unfinished">taille</translation>
+        <translation>taille</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="112"/>
@@ -2032,7 +2032,7 @@
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="63"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n fichier</numerusform>
             <numerusform>%n fichiers</numerusform>
         </translation>
