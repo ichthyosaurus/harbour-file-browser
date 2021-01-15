@@ -129,7 +129,7 @@
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="104"/>
         <source>Norwegian</source>
-        <translation type="unfinished"></translation>
+        <translation>Norska</translation>
     </message>
 </context>
 <context>
@@ -1181,7 +1181,7 @@
         <location filename="../src/jhead/jhead-api.cpp" line="286"/>
         <source>Pattern</source>
         <translatorcomment>Mönster</translatorcomment>
-        <translation></translation>
+        <translation>Mönster</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="287"/>
@@ -1256,7 +1256,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="339"/>
         <source>Macro</source>
-        <translation>Macro</translation>
+        <translation>Makro</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="342"/>

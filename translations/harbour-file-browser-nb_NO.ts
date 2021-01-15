@@ -505,12 +505,12 @@
     <message>
         <location filename="../src/filedata.cpp" line="222"/>
         <source>character device</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">tegnenhet</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="226"/>
         <source>pipe</source>
-        <translation type="unfinished"></translation>
+        <translation>rør</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="230"/>
@@ -538,12 +538,12 @@
     <message>
         <location filename="../src/filemodel.cpp" line="114"/>
         <source>dir-link</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">mappelenke</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="115"/>
         <source>dir</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">mappe</translation>
     </message>
 </context>
 <context>
@@ -599,27 +599,27 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="67"/>
         <source>xdg-open found no preferred application</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">xdg-open fant ikke noe foretrukket program</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="69"/>
         <source>Action failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Handling mislyktes</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="71"/>
         <source>xdg-open not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Fant ikke xdg-open</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="73"/>
         <source>xdg-open crash?</source>
-        <translation type="unfinished"></translation>
+        <translation>Krasjet xdg-open?</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="75"/>
         <source>xdg-open error</source>
-        <translation type="unfinished"></translation>
+        <translation>Feil i xdg-open</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="93"/>
@@ -958,7 +958,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="142"/>
         <source>Make:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Merke: %1</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="143"/>
@@ -973,12 +973,12 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="153"/>
         <source>Orientation:%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sideretning: %1</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="158"/>
         <source>Color/BW:Black and White</source>
-        <translation type="unfinished"></translation>
+        <translation>Farge/SV: Svarthvitt</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="165"/>
@@ -993,7 +993,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="167"/>
         <source>(Manual)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Manuell)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="168"/>
@@ -1024,7 +1024,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="173"/>
         <source>(Red eye reduction mode)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Reduksjon av røde øyne)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="174"/>
@@ -1084,7 +1084,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="198"/>
         <source>(35mm equivalent: %1mm)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(35mm-ekvivalent: %1mm)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="205"/>
@@ -1110,17 +1110,17 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="225"/>
         <source>Aperture:f/%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blenderåpning: f/%1</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="229"/>
         <source>Focus Distance:Infinite</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fokusavstand: Uendelig</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="231"/>
         <source>Focus Distance:%1m</source>
-        <translation type="unfinished"></translation>
+        <translation>Fokusavstand: %1 m</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="236"/>
@@ -1135,7 +1135,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="247"/>
         <source>White Balance:Manual</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hvitbalanse: Manuell</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="250"/>
@@ -1150,12 +1150,12 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="260"/>
         <source>Light Source:Fluorescent</source>
-        <translation type="unfinished"></translation>
+        <translation>Lyskilde: Lysstoffrør</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="263"/>
         <source>Light Source:Incandescent</source>
-        <translation type="unfinished"></translation>
+        <translation>Lyskilde: Glødelampe</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="266"/>
@@ -1165,17 +1165,17 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="269"/>
         <source>Light Source:Fine weather</source>
-        <translation type="unfinished"></translation>
+        <translation>Lyskilde: Sollys</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="272"/>
         <source>Light Source:Shade</source>
-        <translation type="unfinished"></translation>
+        <translation>Lyskilde: Skygge</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="280"/>
         <source>Metering Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Målingsmodus:</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="282"/>
@@ -1185,17 +1185,17 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="283"/>
         <source>Center weighted average</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Midtdelsveid gjennonsnitt</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="284"/>
         <source>Spot</source>
-        <translation type="unfinished"></translation>
+        <translation>Punkt</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="285"/>
         <source>Multi spot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flerpunkt</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="286"/>
@@ -1225,7 +1225,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="298"/>
         <source>Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>Manuell</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="301"/>
@@ -1255,7 +1255,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="316"/>
         <source>Portrait mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Stående</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="319"/>
@@ -1280,7 +1280,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="339"/>
         <source>Macro</source>
-        <translation type="unfinished"></translation>
+        <translation>Makro</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="342"/>
@@ -1290,7 +1290,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="345"/>
         <source>Distant</source>
-        <translation type="unfinished"></translation>
+        <translation>Lang avstand</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="360"/>
@@ -1334,7 +1334,7 @@
     <message>
         <location filename="../qml/pages/QuickSwitchDialog.qml" line="28"/>
         <source>Switch</source>
-        <translation type="unfinished"></translation>
+        <translation>Bytt</translation>
     </message>
 </context>
 <context>
@@ -1384,7 +1384,7 @@
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="134"/>
         <source>Search below “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Søk under «%1»</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SearchPage.qml" line="188"/>
@@ -1473,12 +1473,12 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="57"/>
         <source>Use per-directory view settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visningsinnstillinger per mappe</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="61"/>
         <source>Show hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis skjulte filer</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="65"/>
@@ -1518,7 +1518,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="82"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Viser bilder i komfortabel størrelse, og alle andre oppføringer enn bilder, video og mapper er skjult.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="91"/>
@@ -1533,7 +1533,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="102"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sorter versalsensitivt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="106"/>
@@ -1608,12 +1608,12 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="152"/>
         <source>Default filter line action</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Forvalgt handling for filterlinje</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="155"/>
         <source>return to directory view</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">gå tilbake til mappevisning</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="156"/>
@@ -1623,7 +1623,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="162"/>
         <source>File name abbreviation</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Filnavnsforkortelse</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="165"/>
@@ -1633,22 +1633,22 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="166"/>
         <source>elide end</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Elideringsslutt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="167"/>
         <source>elide middle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Elideringsmidt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="172"/>
         <source>Show full directory paths</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vis fullstendige mappestier</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="176"/>
         <source>Show navigation menu icon</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vis menyikon for navigering</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="185"/>
@@ -1658,7 +1658,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="215"/>
         <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">File Browser er gemenhetslig fri programvare lisensiert GPLv3+. Bruk, studer, endre, og distribuer etter evne; med alle. Det er ingen garanti, så-langt det er mulig i lovlig forstand.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="234"/>
@@ -1681,7 +1681,7 @@
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="328"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>Egendefinert</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="335"/>
@@ -1693,7 +1693,7 @@
         <location filename="../qml/components/ShortcutsList.qml" line="363"/>
         <location filename="../qml/components/ShortcutsList.qml" line="369"/>
         <source>Locations</source>
-        <translation type="unfinished"></translation>
+        <translation>Steder</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="336"/>
@@ -1762,7 +1762,7 @@
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="54"/>
         <source>Remove bookmark for “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Fjern «%1»-bokmerke</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="55"/>
@@ -1840,8 +1840,9 @@
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="78"/>
         <source>%n directories</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>én mappe</numerusform>
+            <numerusform>%n mapper</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -1888,17 +1889,17 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="77"/>
         <source>Order...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sortering …</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="80"/>
         <source>default</source>
-        <translation type="unfinished"></translation>
+        <translation>forvalgt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="81"/>
         <source>reversed</source>
-        <translation type="unfinished"></translation>
+        <translation>omvendt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="97"/>
@@ -1913,22 +1914,22 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="101"/>
         <source>small</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">lite</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="102"/>
         <source>medium</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">middels</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="103"/>
         <source>large</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">stort</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="104"/>
         <source>huge</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">enormt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="120"/>
@@ -1938,12 +1939,12 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="125"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gallerimodus</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="126"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Viser bilder i passelig størrelse, og skjuler alle oppføringer unntatt bilder, videoer og mapper.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="132"/>
@@ -1953,17 +1954,17 @@
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="137"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sorter versalsensitivt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="153"/>
         <source>Local preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Lokale innstillinger</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="154"/>
         <source>Global preferences</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Innstillinger for alle brukere</translation>
     </message>
 </context>
 <context>
@@ -1989,7 +1990,7 @@
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="64"/>
         <source>Enter target path</source>
-        <translation type="unfinished"></translation>
+        <translation>Skriv inn målsti</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="79"/>
@@ -1999,15 +2000,17 @@
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="104"/>
         <source>%n item(s) selected for transferring</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n element valgt for overføring</numerusform>
+            <numerusform>%n elementer valgt for overføring</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="105"/>
         <source>%n destinations(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>ett mål valgt</numerusform>
+            <numerusform>%n mål valgt</numerusform>
         </translation>
     </message>
     <message>

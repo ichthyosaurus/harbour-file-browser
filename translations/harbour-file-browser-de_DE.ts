@@ -129,7 +129,7 @@
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="104"/>
         <source>Norwegian</source>
-        <translation type="unfinished"></translation>
+        <translation>Norwegisch</translation>
     </message>
 </context>
 <context>
@@ -1666,7 +1666,7 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="215"/>
         <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</translation>
+        <translation>File Browser unterliegt den Bedingungen der GNU GPL in Version 3 oder höher. Dies ist freie Software: Sie können sie verändern und weitergeben. Soweit gesetzlich zulässig gibt es keinerlei Garantie.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="234"/>
