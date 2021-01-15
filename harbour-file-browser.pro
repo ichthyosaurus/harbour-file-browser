@@ -19,6 +19,7 @@ TRANSLATIONS = \
     translations/harbour-file-browser-fi.ts \
     translations/harbour-file-browser-fr.ts \
     translations/harbour-file-browser-it_IT.ts \
+    translations/harbour-file-browser-nb_NO.ts \
     translations/harbour-file-browser-nl.ts \
     translations/harbour-file-browser-ru_RU.ts \
     translations/harbour-file-browser-sv.ts \
