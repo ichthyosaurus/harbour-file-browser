@@ -126,6 +126,11 @@
         <source>Greek</source>
         <translation>Gresk</translation>
     </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="104"/>
+        <source>Norwegian</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CreateFolderDialog</name>
@@ -160,88 +165,89 @@
 <context>
     <name>DirectoryPage</name>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="136"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="138"/>
         <source>View Preferences</source>
+        <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
         <translation>Vis innstillinger</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="143"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="145"/>
         <source>Create Folder</source>
         <translation>Opprett mappe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="156"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="158"/>
         <source>Paste</source>
         <translation>Lim inn</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="174"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="176"/>
         <source>Filter directory contents</source>
         <translation type="unfinished">Filtrer mappeinnhold</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="261"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="263"/>
         <source>Search</source>
         <translation>Søk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="268"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="270"/>
         <source>Remove bookmark</source>
         <translation>Fjern bokmerke</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="268"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="270"/>
         <source>Add to bookmarks</source>
         <translation type="unfinished">Legg til som bokmerke</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="272"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="274"/>
         <source>Copy path to clipboard</source>
         <translation>Kopier sti til utklippstavle</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="335"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="337"/>
         <source>filtered by: %1</source>
         <translation>Filtrert av: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="356"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="358"/>
         <source>Empty</source>
         <translation>Tom</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="359"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="361"/>
         <source>No files matched the filter.</source>
         <translation type="unfinished">Ingen slike filer.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="360"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="362"/>
         <source>This directory contains no files.</source>
         <translation type="unfinished">Denne mappen inneholder ingen filer.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="440"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="443"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="442"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="445"/>
         <source>Deleting</source>
         <translation>Sletter …</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="455"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="457"/>
         <source>Internally not ready</source>
         <translation>Ikke klar internt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="455"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="457"/>
         <source>Please simply try again</source>
         <translation type="unfinished">Prøv igjen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="498"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="500"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation type="unfinished">Prøver du å flytte mellom telefonen og SD-kort? Det fungerer ikke. Prøv å kopiere.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="500"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="502"/>
         <source>Perhaps the storage is full?</source>
         <translation>Kanskje det ikke er mer plass der?</translation>
     </message>
@@ -249,22 +255,22 @@
 <context>
     <name>DirectoryPageEntry</name>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="215"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="219"/>
         <source>(link)</source>
         <translation>(lenke)</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="45"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="46"/>
         <source>Deleting</source>
         <translation>Sletter …</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="328"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="332"/>
         <source>Remove bookmark</source>
         <translation>Fjern bokmerke</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="328"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="332"/>
         <source>Add to bookmarks</source>
         <translation type="unfinished">Legg til som bokmerke</translation>
     </message>

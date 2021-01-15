@@ -165,88 +165,89 @@
 <context>
     <name>DirectoryPage</name>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="143"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="145"/>
         <source>Create Folder</source>
         <translation>Skapa mapp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="261"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="263"/>
         <source>Search</source>
         <translation>Sök</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="156"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="158"/>
         <source>Paste</source>
         <translation>Klistra in</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="268"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="270"/>
         <source>Remove bookmark</source>
         <translation>Ta bort bokmärke</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="268"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="270"/>
         <source>Add to bookmarks</source>
         <translation>Lägg till i bokmärken</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="272"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="274"/>
         <source>Copy path to clipboard</source>
         <translation>Kopiera sökvägen till urklipp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="440"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="443"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="442"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="445"/>
         <source>Deleting</source>
         <translation>Tar bort</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="136"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="138"/>
         <source>View Preferences</source>
+        <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
         <translation>Inställningar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="174"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="176"/>
         <source>Filter directory contents</source>
         <translation>Filtrera mappinnehåll</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="335"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="337"/>
         <source>filtered by: %1</source>
         <translation>filtrerat efter: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="356"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="358"/>
         <source>Empty</source>
         <translation>Tom</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="359"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="361"/>
         <source>No files matched the filter.</source>
         <translation>Inga filer matchade filtret.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="360"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="362"/>
         <source>This directory contains no files.</source>
         <translation>Denna mapp innehåller inga filer.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="455"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="457"/>
         <source>Internally not ready</source>
         <translation>Inte klart internt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="455"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="457"/>
         <source>Please simply try again</source>
         <translation>Försök igen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="498"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="500"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>Försöker du flytta mellan telefonminne och SD-kort? Det fungerar inte, försök med kopiering.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="500"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="502"/>
         <source>Perhaps the storage is full?</source>
         <translation>Lagringsutrymmet kanske är fullt?</translation>
     </message>
