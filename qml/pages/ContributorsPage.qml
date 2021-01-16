@@ -101,7 +101,7 @@ Page {
                 values: ["Dimitrios Glentadakis"]
             }
             DetailList {
-                label: qsTr("Norwegian")
+                label: qsTr("Norwegian Bokmål")
                 values: ["Allan Nordhøy"]
             }
         }
