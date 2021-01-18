@@ -1,3 +1,24 @@
+/*
+ * This file is part of File Browser.
+ *
+ * SPDX-FileCopyrightText: 2014 Kari Pihkala
+ * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ *
+ * File Browser is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * File Browser is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
 #ifndef STATFILEINFO_H
 #define STATFILEINFO_H
 
@@ -13,7 +34,7 @@ class StatFileInfo
 {
 public:
     explicit StatFileInfo();
-    explicit StatFileInfo(QString filename);
+    explicit StatFileInfo(const QString &filename);
     ~StatFileInfo();
 
     void setFile(QString filename);
@@ -65,6 +86,7 @@ public:
     QString owner() const { return m_fileInfo.owner(); }
     uint ownerId() const { return m_fileInfo.ownerId(); }
     qint64 size() const { return m_fileInfo.size(); }
+    qint64 lastModifiedStat() const { return m_stat.st_mtime; }
     QDateTime lastModified() const { return m_fileInfo.lastModified(); }
     QDateTime created() const { return m_fileInfo.created(); }
     bool exists() const;
@@ -78,6 +100,12 @@ public:
     QString suffix() const { return m_fileInfo.suffix(); }
     QString symLinkTarget() const { return m_fileInfo.symLinkTarget(); }
     bool isSymLinkBroken() const;
+
+    // Doomed paths will become invalid soon because the file
+    // is being moved or deleted. This is not real file metadata
+    // and must be set manually.
+    bool isDoomed() const { return m_doomed; }
+    void setDoomed(bool doomed) { m_doomed = doomed; }
 
     // selection
     void setSelected(bool selected);
@@ -95,7 +123,8 @@ private:
     struct stat m_stat; // after following possible symlinks
     struct stat m_lstat; // file itself without following symlinks
     bool m_selected;
-    bool m_filterMatched;
+    bool m_filterMatched = {true}; // TODO no longer needed, remove
+    bool m_doomed = {false};
 };
 
 #endif // STATFILEINFO_H

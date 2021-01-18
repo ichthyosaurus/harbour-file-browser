@@ -1,20 +1,21 @@
 /*
  * This file is part of File Browser.
- * Copyright (C) 2020  Mirian Margiani
  *
- * This part of File Browser is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * SPDX-FileCopyrightText: 2020 Mirian Margiani
  *
- * File Browser is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * SPDX-License-Identifier: GPL-3.0-or-later
  *
- * You should have received a copy of the GNU General Public License
- * along with File Browser.  If not, see <http://www.gnu.org/licenses/>.
+ * File Browser is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  *
+ * File Browser is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
 #ifndef SETTINGSHANDLER_H
@@ -32,7 +33,7 @@ class Settings : public QObject
     Q_OBJECT
 
 public:
-    explicit Settings(QObject *parent = 0);
+    explicit Settings(QObject *parent = nullptr);
     ~Settings();
 
     Q_INVOKABLE bool pathIsProtected(QString path) const;
@@ -45,15 +46,15 @@ public:
     void writeVariant(QString key, const QVariant& value, QString fileName = QString());
 
 signals:
-    void settingsChanged();
+    void settingsChanged(QString key, bool locally);
     void viewSettingsChanged(QString localPath);
 
 private:
-    void sanitizeKey(QString& key);
+    void sanitizeKey(QString& key) const;
     void flushRuntimeSettings(QString fileName);
-    bool hasRuntimeSettings(QFileInfo file);
+    bool hasRuntimeSettings(QFileInfo file) const;
     QMap<QString, QVariant>& getRuntimeSettings(QFileInfo file);
-    bool isWritable(QFileInfo file);
+    bool isWritable(QFileInfo file) const;
 
     // in-memory settings to be used when local settings are not available
     // It is a QMap of QMap, combining file paths with their local settings QMaps.

@@ -1,68 +1,57 @@
 #!/bin/bash
+#
+# This file is part of File Browser.
+# SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Run this script from the same directory where icon sources are located.
+# See https://github.com/Pretty-SFOS/opal/blob/master/snippets/opal-render-icons.md
+# for documentation.
 
-echo "rendering app icon..."
+source ../libs/opal-render-icons.sh
+cFORCE=false
 
-postfix="-beta"
+cNAME="app icons"
+cITEMS=(
+    harbour-file-browser@../icons/RESXxRESY
+    harbour-file-browser-root@../root/icons/RESXxRESY
+)
+cRESOLUTIONS=(86 108 128 172)
+cTARGETS=(F1)
+render_batch
 
-default_src=harbour-file-browser
-default_dir="../src/icons"
-root_src=harbour-file-browser-root
-root_dir="../root/icons"
+cNAME="toolbar icons"
+cITEMS=(
+    toolbar/toolbar-{rename,copy,cut,select-all}@112
+    toolbar/icon-btn-search@112
+)
+cRESOLUTIONS=(F1)
+cTARGETS=(../qml/images)
+render_batch
 
-for i in 86 108 128 172; do
-    mkdir -p "$default_dir/${i}x$i"
-    mkdir -p "$root_dir/${i}x$i"
+cNAME="cover art"
+cITEMS=(harbour-file-browser{,-root})
+cRESOLUTIONS=(86)
+cTARGETS=(../qml/images)
+render_batch
 
-    for a in "$default_src" "$root_src"; do
-        [[ "$a" == "$default_src" ]] && root="$default_dir" || root="$root_dir"
+cNAME="file icons"
+cITEMS=(
+    file/file-{stack,audio,compressed,pdf,image,txt,video,apk,rpm}
+    file/folder{,-link}
+    file/link
+    file/file
+)
+cRESOLUTIONS=(128+large- 32+small-)
+cTARGETS=(../qml/images)
+render_batch
 
-        if [[ ! "$a.svg" -nt "$root/${i}x$i/$a$postfix.png" ]]; then
-            echo "nothing to be done for $a at ${i}x$i"
-            continue
-        fi
-
-        inkscape -z -e "$root/${i}x$i/$a$postfix.png" -w "$i" -h "$i" "$a.svg"
-    done
-done
-
-
-echo "rendering toolbar icons..."
-
-root="../src/qml/images"
-files=(toolbar-rename@64 harbour-file-browser@86 harbour-file-browser-root@86 icon-btn-search@112)
-mkdir -p "$root"
-
-for img in "${files[@]}"; do
-    if [[ ! "${img%@*}.svg" -nt "$root/${img%@*}.png" ]]; then
-        echo "nothing to be done for '${img%@*}.svg'"
-        continue
-    fi
-
-    inkscape -z -e "$root/${img%@*}.png" -w "${img#*@}" -h "${img#*@}" "${img%@*}.svg"
-done
-
-
-echo "rendering file icons..."
-
-files=(file-stack file-audio file-compressed file-pdf)
-mkdir -p "$root"
-
-for img in "${files[@]}"; do
-    skip=
-
-    if [[ "${img%@*}.svg" -nt "$root/large-${img%@*}.png" ]]; then
-        inkscape -z -e "$root/large-${img}.png" -w "128" -h "128" "${img}.svg"
+echo "crushing raster icons..."
+for img in ./file-icons-raster/*.png; do
+    out="../qml/images/$(basename "$img")"
+    if [[ "$img" -nt "$out" ]]; then
+        pngcrush "$img" "$out"
     else
-        skip+="large "
-    fi
-
-    if [[ "${img%@*}.svg" -nt "$root/small-${img%@*}.png" ]]; then
-        inkscape -z -e "$root/small-${img}.png" -w "32" -h "32" "${img}.svg"
-    else
-        skip+="small"
-    fi
-
-    if [[ -n "$skip" ]]; then
-        echo "nothing to be done for '${img}.svg': $skip"
+        echo "nothing to be done for '$img'"
     fi
 done

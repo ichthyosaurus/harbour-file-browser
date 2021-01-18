@@ -1,10 +1,14 @@
 #!/bin/bash
+#
+# This file is part of File Browser and has been released into the public domain.
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
 
 SFDK=/opt/SailfishOS-SDK/bin/sfdk
 TARGETS=(
     # note: last field (/-.*?$/) has to be architecture
-    "SailfishOS-3.3.0.16-armv7hl"
-    "SailfishOS-3.3.0.16-i486"
+    "SailfishOS-3.4.0.24-armv7hl"
+    "SailfishOS-3.4.0.24-i486"
 )
 
 showhelp() {

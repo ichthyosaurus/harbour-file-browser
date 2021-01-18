@@ -1,10 +1,18 @@
+# This file is part of File Browser and has been released into the public domain.
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
+
 build*
 *.pro.user
 *.spec.*
 *~
+*.~*
 *.qm
 dist*
 liverunner*
+TODO*
+add-gpl.sh
 
+icon-src/raw
 root/build*
 root/RPMS

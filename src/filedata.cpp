@@ -1,8 +1,30 @@
+/*
+ * This file is part of File Browser.
+ *
+ * SPDX-FileCopyrightText: 2013-2015 Kari Pihkala
+ * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ *
+ * File Browser is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * File Browser is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
 #include "filedata.h"
 #include <QDir>
 #include <QDateTime>
 #include <QMimeDatabase>
 #include <QImageReader>
+#include <QSettings>
 #include "globals.h"
 #include "jhead/jhead-api.h"
 
@@ -90,6 +112,28 @@ QString FileData::absolutePath() const
     return m_fileInfo.absolutePath();
 }
 
+int FileData::dirsCount() const
+{
+    if (!isDir()) return 0;
+    QSettings settings;
+    bool hiddenSetting = settings.value("View/HiddenFilesShown", false).toBool();
+    QDir::Filter hidden = hiddenSetting ? QDir::Hidden : static_cast<QDir::Filter>(0);
+    QDir dir(m_file);
+    dir.setFilter(QDir::AllDirs | QDir::NoDotAndDotDot | hidden);
+    dir.setSorting(QDir::NoSort);
+    return dir.entryList().length();
+}
+
+int FileData::filesCount() const
+{
+    if (!isDir()) return 0;
+    QSettings settings;
+    bool hiddenSetting = settings.value("View/HiddenFilesShown", false).toBool();
+    QDir::Filter hidden = hiddenSetting ? QDir::Hidden : static_cast<QDir::Filter>(0);
+    QDir dir(m_file);
+    return dir.entryList(QDir::Files | hidden, QDir::NoSort).length();
+}
+
 void FileData::refresh()
 {
     readInfo();
@@ -102,27 +146,18 @@ bool FileData::mimeTypeInherits(QString parentMimeType) const
 
 QString FileData::typeCategory() const
 {
-    if (   m_mimeTypeName == "image/jpeg"
-        || m_mimeTypeName == "image/png"
-        || m_mimeTypeName == "image/gif") {
+    if (m_mimeTypeName.startsWith("image/")) {
         return "image";
-    } else if (
-           m_mimeTypeName == "audio/x-wav"
-        || m_mimeTypeName == "audio/mpeg"
-        || m_mimeTypeName == "audio/ogg"
-        || m_mimeTypeName == "audio/x-vorbis+ogg"
-        || m_mimeTypeName == "audio/x-opus+ogg"
-        || m_mimeTypeName == "audio/flac"
-        || m_mimeTypeName == "audio/mp4") {
+    } else if (m_mimeTypeName.startsWith("audio/")) {
         return "audio";
-    } else if (
-           m_mimeTypeName == "video/quicktime"
-        || m_mimeTypeName == "video/mp4") {
+    } else if (m_mimeTypeName.startsWith("video/")) {
         return "video";
     } else if (m_mimeTypeName == "application/pdf") {
         return "pdf";
     } else if (mimeTypeInherits("application/zip")) {
         return "zip";
+    } else if (m_mimeTypeName == "application/vnd.sqlite3") {
+        return "sqlite3";
     } else if (
            m_mimeTypeName == "application/x-tar"
         || m_mimeTypeName == "application/x-compressed-tar"

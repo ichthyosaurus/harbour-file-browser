@@ -1,0 +1,87 @@
+#!/bin/bash
+#
+# This file is part of File Browser.
+# SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# This script (as rpm/harbour-file-browser.run) lets mb2 automatically
+# generate changelog entries from the CHANGELOG.md file.
+#
+# Note: Sailfish SDK's tools are ancient; i.e. sed only supports -r, not -E
+
+set -euo pipefail  # be strict and unforgiving
+
+file="CHANGELOG.md"
+
+if [[ ! -f "$file" ]]; then
+    echo "error: changelog source not found (searched in: $(pwd))" >/dev/stderr
+    exit 1
+fi
+
+# CHANGELOG.md format:
+#  1: # File Browser Release Notes
+#  2:
+#  3: ## Unreleased
+#  4:
+#  5:  * Nothing so far
+#  6:
+#  7: ## Version X.Y.Z[-beta] (YYYY-MM-DD)
+#  8:
+#  9: Published in OpenRepos on YYYY-MM-DD by ichthyosaurus.
+# 10:
+# 11:  * main entry one (1) space indented
+# 12:  *   - sub-entry additional two (2) spaces indented
+# nn: ...
+#
+# Important: entries (lines starting with an asterisk) must be indented by a
+# single whitespace. Keep one entry per line and don't fold lines.
+if grep -qoe '^\*' 2>/dev/null >/dev/null CHANGELOG.md; then
+    echo "error: CHANGELOG.md is badly formatted" >/dev/stderr
+    echo "       see rpm/harbour-file-browser.changes.run for details" >/dev/stderr
+    exit 2
+fi
+
+# Changelog entries following the format below:
+# - Add newest entries to the top of the list.
+# - Separate entries from eachother with a blank line.
+#
+# * date Author's Name <author's email> version-release
+# - Summary of changes
+
+# convert everything below the latest (top) version
+# title, unreleased, and latest version are removed
+converted_sans_latest="$(cat CHANGELOG.md | sed 's/^ \* /- /g; s/^ /- *** /g;' | sed '0,/^## Version/d')"
+
+# get the latest version
+latest_version="$(grep '## Version' CHANGELOG.md | head -1)"
+
+# re-insert latest version at the top
+with_latest="$(paste -d '\n' -s <(echo "$latest_version") <(echo "$converted_sans_latest"))"
+
+# convert titles
+# old format: ## Version 2.2.2[-beta] (2020-05-29)
+# new format: * date Author's Name <author's email> version-release
+echo "$with_latest" |\
+    perl -p0e 's/\n\nPublished .*? by (.*?)\./ \1/g' |\
+    # sed '/^Published in /d;' |\
+    sed -re 's/## Version ([0-9.]+(-[-a-zA-Z0-9.]+)?) \(([0-9]+-[0-9]+-[0-9]+)\)( .*?)?$/* \3\4 <> \1/g' |\
+    sed '/^[ ]*$/d; s/^\* /\n* /g' |\
+    LC_ALL=C awk '{
+        date_re="([0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9])"
+        if ($0 ~ "^\* "date_re) {
+            # find dates
+            match($0, date_re, m);
+
+            # convert dates
+            cmd="date -d " m[0] " \"+%a %b %d %Y\" ";
+            cmd | getline converted;
+
+            # save dates
+            sub(date_re, converted);
+            print;
+        } else {
+            print;
+        }
+    }' |\
+    sed 's/ ichthyosaurus <>/ Mirian Margiani <mixosaurus+ichthyo@pm.me>/g' # |\
+    # sed 's/ karip <>/ karip <karip@example.org>/g'

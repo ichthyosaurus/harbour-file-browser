@@ -1,3 +1,25 @@
+/*
+ * This file is part of File Browser.
+ *
+ * SPDX-FileCopyrightText: 2014-2015 Kari Pihkala
+ * SPDX-FileCopyrightText: 2015 Benna
+ * SPDX-FileCopyrightText: 2020 Mirian Margiani
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ *
+ * File Browser is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * File Browser is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
 #include "consolemodel.h"
 #include "globals.h"
 
@@ -6,7 +28,7 @@ enum {
 };
 
 ConsoleModel::ConsoleModel(QObject *parent) :
-    QAbstractListModel(parent), m_process(0)
+    QAbstractListModel(parent), m_process(nullptr)
 {
 }
 
@@ -16,13 +38,13 @@ ConsoleModel::~ConsoleModel()
 
 int ConsoleModel::rowCount(const QModelIndex &parent) const
 {
-    Q_UNUSED(parent);
+    Q_UNUSED(parent)
     return m_lines.count();
 }
 
 QVariant ConsoleModel::data(const QModelIndex &index, int role) const
 {
-    Q_UNUSED(role);
+    Q_UNUSED(role)
     if (!index.isValid() || index.row() > m_lines.count()-1)
         return QVariant();
 
@@ -96,10 +118,9 @@ void ConsoleModel::readProcessChannels()
 
 void ConsoleModel::handleProcessFinish(int exitCode, QProcess::ExitStatus status)
 {
-    if (status == QProcess::CrashExit) { // if it crashed, then use some error exit code
-        exitCode = -99999;
+    if (status == QProcess::CrashExit) {
+        exitCode = -99999; // special error code to catch crashes
         appendLine(tr("** crashed"));
-
     } else if (exitCode != 0) {
         appendLine(tr("** error: %1").arg(exitCode));
     }
@@ -108,7 +129,16 @@ void ConsoleModel::handleProcessFinish(int exitCode, QProcess::ExitStatus status
 
 void ConsoleModel::handleProcessError(QProcess::ProcessError error)
 {
-    Q_UNUSED(error);
-    emit processExited(-88888); // if error, then use some error exit code
-    appendLine(tr("** error"));
+    if (error == QProcess::FailedToStart) {
+        appendLine(tr("** command “%1” not found").arg(m_process->program()));
+    } else if (error == QProcess::Crashed) {
+        appendLine(tr("** crashed"));
+    } else if (error == QProcess::Timedout) {
+        appendLine(tr("** timeout reached"));
+    } else if (error == QProcess::WriteError || error == QProcess::ReadError) {
+        appendLine(tr("** internal communication failed"));
+    } else /*if (error == QProcess::UnknownError)*/ {
+        appendLine(tr("** an unknown error occurred"));
+    }
+    emit processExited(-88888); // special error code to catch process errors
 }

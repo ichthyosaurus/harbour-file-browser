@@ -1,3 +1,24 @@
+/*
+ * This file is part of File Browser.
+ *
+ * SPDX-FileCopyrightText: 2013-2014 Kari Pihkala
+ * SPDX-FileCopyrightText: 2019 Mirian Margiani
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ *
+ * File Browser is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * File Browser is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
 #include "searchengine.h"
 #include <QMimeDatabase>
 #include <QDateTime>
@@ -48,12 +69,12 @@ bool SearchEngine::running() const
 
 void SearchEngine::search(QString searchTerm)
 {
-    // if search term is not empty, then restart search
-    if (!searchTerm.isEmpty()) {
-        m_searchWorker->cancel();
-        m_searchWorker->wait();
-        m_searchWorker->startSearch(m_dir, searchTerm);
-    }
+    startSearch(searchTerm, SearchType::FilesRecursive);
+}
+
+void SearchEngine::filterDirectories(QString searchTerm)
+{
+    startSearch(searchTerm, SearchType::DirectoriesShallow);
 }
 
 void SearchEngine::cancel()
@@ -68,4 +89,15 @@ void SearchEngine::emitMatchFound(QString fullpath)
     QString mimeType = db.mimeTypeForFile(fullpath).name();
     emit matchFound(fullpath, info.fileName(), info.absoluteDir().absolutePath(),
                     infoToIconName(info), info.kind(), mimeType);
+}
+
+void SearchEngine::startSearch(QString searchTerm, SearchType type)
+{
+    // if search term is not empty or we are only filtering
+    // directories, then restart search
+    if (type == SearchType::DirectoriesShallow || !searchTerm.isEmpty()) {
+        m_searchWorker->cancel();
+        m_searchWorker->wait();
+        m_searchWorker->startSearch(m_dir, searchTerm, type, m_maxResults);
+    }
 }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg8" width="112" height="112" version="1.1" viewBox="0 0 29.633 29.633" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata id="metadata2">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Mirian Margiani</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:date>2019-2020</dc:date>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1" transform="translate(0 -267.37)">
+  <circle id="path840" cx="14.817" cy="282.18" r="11.112" fill="#fff" fill-opacity=".2" style="paint-order:normal"/>
+  <g id="g930" fill="none" stroke="#fff">
+   <g id="g883" transform="matrix(.56664 0 0 .56664 6.388 122.24)" stroke-width="1.6343">
+    <path id="path848" d="m24.566 290.13c0.48859 0.51615 0.46852 1.33-0.04493 1.8215-0.51333 0.49156-1.3274 0.47584-1.8217-0.0349" stroke-linecap="square" stroke-linejoin="bevel" style="paint-order:normal"/>
+    <path id="path850" transform="translate(-.3164 -.30363)" d="m17.294 286.5 5.7214 5.7214"/>
+    <path id="path854" transform="translate(1.5502 -2.0902)" d="m17.294 286.5 5.7214 5.7214"/>
+   </g>
+   <circle id="path844" cx="13.568" cy="280.93" r="4.4404" stroke-linecap="square" stroke-linejoin="bevel" stroke-opacity=".59608" stroke-width=".92604" style="paint-order:normal"/>
+  </g>
+ </g>
+</svg>

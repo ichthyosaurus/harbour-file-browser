@@ -1,3 +1,24 @@
+/*
+ * This file is part of File Browser.
+ *
+ * SPDX-FileCopyrightText: 2013-2014, 2019 Kari Pihkala
+ * SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ *
+ * File Browser is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * File Browser is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
 #ifndef ENGINE_H
 #define ENGINE_H
 
@@ -19,7 +40,7 @@ class Engine : public QObject
     Q_PROPERTY(QString progressFilename READ progressFilename() NOTIFY progressFilenameChanged())
 
 public:
-    explicit Engine(QObject *parent = 0);
+    explicit Engine(QObject *parent = nullptr);
     ~Engine();
 
     // properties
@@ -48,6 +69,7 @@ public:
     // file paths
     Q_INVOKABLE QString androidDataPath() const;
     Q_INVOKABLE QVariantList externalDrives() const;
+    Q_INVOKABLE QString storageSettingsPath() /*cached*/; // returns empty without NO_HARBOUR_COMPLIANCE
 
     // synchronous methods
     Q_INVOKABLE bool runningAsRoot();
@@ -90,6 +112,9 @@ private:
     QString m_progressFilename;
     QString m_errorMessage;
     FileWorker* m_fileWorker;
+
+    // cached paths that we assume won't change during runtime
+    QString m_storageSettingsPath = {QStringLiteral("")};
 
     // don't use these directly, use isUsingBusybox() instead
     QStringList m__isUsingBusybox;

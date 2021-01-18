@@ -1,20 +1,21 @@
 /*
  * This file is part of File Browser.
- * Copyright (C) 2020  Mirian Margiani
  *
- * This part of File Browser is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * SPDX-FileCopyrightText: 2020 Mirian Margiani
  *
- * File Browser is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * SPDX-License-Identifier: GPL-3.0-or-later
  *
- * You should have received a copy of the GNU General Public License
- * along with File Browser.  If not, see <http://www.gnu.org/licenses/>.
+ * File Browser is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
  *
+ * File Browser is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
 #include <QMutexLocker>
@@ -71,7 +72,7 @@ void Settings::flushRuntimeSettings(QString fileName) {
     }
 }
 
-bool Settings::hasRuntimeSettings(QFileInfo file) {
+bool Settings::hasRuntimeSettings(QFileInfo file) const {
     return m_runtimeSettings.contains(file.absoluteFilePath());
 }
 
@@ -79,7 +80,7 @@ QMap<QString, QVariant>& Settings::getRuntimeSettings(QFileInfo file) {
     return m_runtimeSettings[file.absoluteFilePath()];
 }
 
-bool Settings::isWritable(QFileInfo fileInfo) {
+bool Settings::isWritable(QFileInfo fileInfo) const {
     // Check whether the file is writable. If it does not exist, check if
     // its parent directory can be written to.
     // Use this method instead of plain QFileInfo::isWritable!
@@ -101,11 +102,7 @@ QVariant Settings::readVariant(QString key, const QVariant &defaultValue, QStrin
 
     if (!fileInfo.exists() || !fileInfo.isReadable() || pathIsProtected(fileName)) {
         QMutexLocker locker(&m_mutex);
-        if (getRuntimeSettings(fileInfo).contains(key)) {
-            return getRuntimeSettings(fileInfo)[key];
-        }
-
-        return defaultValue;
+        return getRuntimeSettings(fileInfo).value(key, defaultValue);
     }
 
     flushRuntimeSettings(fileName);
@@ -138,13 +135,13 @@ void Settings::writeVariant(QString key, const QVariant &value, QString fileName
         settings.setValue(key, value);
     }
 
-    emit settingsChanged();
+    emit settingsChanged(key, usingLocalConfig);
     if (fileName != m_globalConfigPath || key.startsWith("View/")) {
         emit viewSettingsChanged(usingLocalConfig ? fileInfo.dir().absolutePath() : "");
     }
 }
 
-void Settings::sanitizeKey(QString& key) {
+void Settings::sanitizeKey(QString& key) const {
     // Replace all but the first occurrence of '/' by '#',
     // so '/' can appear without being treated as divider for sub-groups.
     // This is needed for saving paths as keys (eg. for bookmarks).
@@ -179,7 +176,7 @@ void Settings::remove(QString key, QString fileName) {
         settings.remove(key);
     }
 
-    emit settingsChanged();
+    emit settingsChanged(key, usingLocalConfig);
     if (usingLocalConfig || key.startsWith("View/")) {
         emit viewSettingsChanged(usingLocalConfig ? fileInfo.dir().absolutePath() : "");
     }

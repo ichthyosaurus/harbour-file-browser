@@ -1,3 +1,24 @@
+/*
+ * This file is part of File Browser.
+ *
+ * SPDX-FileCopyrightText: 2013-2014 Kari Pihkala
+ * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ *
+ * File Browser is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * File Browser is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
 #ifndef FILEDATA_H
 #define FILEDATA_H
 
@@ -34,10 +55,12 @@ class FileData : public QObject
     Q_PROPERTY(QString mimeType READ mimeType() NOTIFY mimeTypeChanged())
     Q_PROPERTY(QString mimeTypeComment READ mimeTypeComment() NOTIFY mimeTypeCommentChanged())
     Q_PROPERTY(QStringList metaData READ metaData() NOTIFY metaDataChanged())
+    Q_PROPERTY(int dirsCount READ dirsCount NOTIFY dirsCountChanged)
+    Q_PROPERTY(int filesCount READ filesCount NOTIFY filesCountChanged)
     Q_PROPERTY(QString errorMessage READ errorMessage() NOTIFY errorMessageChanged())
 
 public:
-    explicit FileData(QObject *parent = 0);
+    explicit FileData(QObject *parent = nullptr);
     ~FileData();
 
     // property accessors
@@ -64,6 +87,8 @@ public:
     QString mimeType() const { return m_mimeTypeName; }
     QString mimeTypeComment() const { return m_mimeTypeComment; }
     QStringList metaData() const { return m_metaData; }
+    int dirsCount() const; // warning: expensive
+    int filesCount() const; // warning: expensive
     QString errorMessage() const { return m_errorMessage; }
 
     // methods accessible from QML
@@ -92,6 +117,8 @@ signals:
     void metaDataChanged();
     void mimeTypeChanged();
     void mimeTypeCommentChanged();
+    void dirsCountChanged();
+    void filesCountChanged();
     void errorMessageChanged();
 
 private:

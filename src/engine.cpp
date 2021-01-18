@@ -1,8 +1,31 @@
+/*
+ * This file is part of File Browser.
+ *
+ * SPDX-FileCopyrightText: 2013-2016, 2018-2019 Kari Pihkala
+ * SPDX-FileCopyrightText: 2016 Malte Veerman
+ * SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ *
+ * File Browser is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * File Browser is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
 #include "engine.h"
 #include <QDateTime>
 #include <QTextStream>
 #include <QSettings>
 #include <QStandardPaths>
+#include <QDir>
 #include <QCoreApplication>
 #include <QProcess>
 #include <unistd.h>
@@ -158,7 +181,7 @@ static QStringList subdirs(const QString &dirname, bool includeHidden = false)
     QDir dir(dirname);
     if (!dir.exists()) return QStringList();
 
-    QDir::Filter hiddenFilter = includeHidden ? QDir::Hidden : (QDir::Filter)0;
+    QDir::Filter hiddenFilter = includeHidden ? QDir::Hidden : static_cast<QDir::Filter>(0);
     dir.setFilter(QDir::AllDirs | QDir::NoDotAndDotDot | hiddenFilter);
 
     QStringList list = dir.entryList();
@@ -191,12 +214,13 @@ QVariantList Engine::externalDrives() const
     // get sdcard dir candidates for "/media/sdcard" (or its symlink target)
     QStringList candidates = subdirs(sdcardFolder);
 
-    // If the base folder is not already /run/media/nemo, we add it too. This
-    // is, where OTG devices will be mounted.
-    // Also, some users may have a symlink from "/media/sdcard/nemo"
-    // (not from "/media/sdcard"), which means no sdcards would be found before,
+    // If the base folder is not already /run/media/USER, we add it too. This
+    // is where OTG devices will be mounted.
+    // Also, some users may have a symlink from "/media/sdcard/USER"
+    // (not from "/media/sdcard"), which means no SD cards would be found before,
     // so we also get candidates for those users.
-    if (sdcardFolder != "/run/media/nemo") candidates.append(subdirs("/run/media/nemo"));
+    QString expectedUserFolder = QString("/run/media/") + QDir::home().dirName();
+    if (sdcardFolder != expectedUserFolder) candidates.append(subdirs(expectedUserFolder));
 
     // no candidates found, abort
     if (candidates.isEmpty()) return QVariantList();
@@ -226,6 +250,19 @@ QVariantList Engine::externalDrives() const
     }
 
     return devices;
+}
+
+QString Engine::storageSettingsPath()
+{
+#ifndef NO_HARBOUR_COMPLIANCE
+    m_storageSettingsPath = QStringLiteral("");
+#else
+    // this should normally be </usr/share/>jolla-settings/pages/storage/storage.qml
+    m_storageSettingsPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                                   "jolla-settings/pages/storage/storage.qml",
+                                                   QStandardPaths::LocateFile);
+#endif
+    return m_storageSettingsPath;
 }
 
 bool Engine::runningAsRoot()
