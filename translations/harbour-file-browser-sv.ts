@@ -128,8 +128,12 @@
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="104"/>
+        <source>Norwegian Bokmål</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Norwegian</source>
-        <translation>Norska</translation>
+        <translation type="vanished">Norska</translation>
     </message>
 </context>
 <context>
