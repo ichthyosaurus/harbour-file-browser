@@ -46,7 +46,8 @@ function formatPathForTitle(path) {
 }
 
 function formatPathForSearch(path) {
-    if (path === "/") return qsTr("root"); //: root directory (placeholder in search mask)
+    //: root directory (placeholder instead of "/" in search mask)
+    if (path === "/") return qsTr("root");
     return lastPartOfPath(path);
 }
 

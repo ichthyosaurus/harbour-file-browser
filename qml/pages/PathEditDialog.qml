@@ -252,11 +252,14 @@ Dialog {
                             property int files: fileData.filesCount
                             property int folders: fileData.dirsCount
                             text: (files > 0 || folders > 0) ?
-                                      (files > 0 ? qsTr("%n file(s)", "", files) : "") + //: hidden if n=0
+                                      //: hidden if n=0
+                                      (files > 0 ? qsTr("%n file(s)", "", files) : "") +
                                       (files > 0 && folders > 0 ? ", " : "") +
-                                      (folders > 0 ? qsTr("%n folder(s)", "", folders) : "") //: hidden if n=0
+                                      //: hidden if n=0
+                                      (folders > 0 ? qsTr("%n folder(s)", "", folders) : "")
                                     :
-                                      qsTr("empty") //: as in 'this folder is empty'
+                                      //: as in 'this folder is empty'
+                                      qsTr("empty")
                             color: highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
                             truncationMode: TruncationMode.Fade
                             opacity: excluded ? Theme.opacityLow : 1.0
