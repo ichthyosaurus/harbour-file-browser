@@ -25,7 +25,8 @@ PathEditDialog {
     id: dialog
     // 'path' has to be set when called
 
-    acceptText: qsTr("Switch") //: as in "Switch to this folder, please"
+    //: as in "Switch to this folder, please"
+    acceptText: qsTr("Switch")
     acceptDestinationAction: PageStackAction.Push
     acceptDestinationProperties: ({ 'targetPath': '' })
     acceptDestination: Qt.resolvedUrl("QuickSwitchRelayPage.qml")

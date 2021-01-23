@@ -846,15 +846,16 @@
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/PathEditDialog.qml" line="255"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="256"/>
         <source>%n file(s)</source>
+        <extracomment>hidden if n=0</extracomment>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/PathEditDialog.qml" line="257"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="259"/>
         <source>%n folder(s)</source>
         <extracomment>hidden if n=0</extracomment>
         <translation type="unfinished">
@@ -863,9 +864,9 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/PathEditDialog.qml" line="259"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="262"/>
         <source>empty</source>
-        <extracomment>hidden if n=0</extracomment>
+        <extracomment>as in &apos;this folder is empty&apos;</extracomment>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1337,8 +1338,9 @@
 <context>
     <name>QuickSwitchDialog</name>
     <message>
-        <location filename="../qml/pages/QuickSwitchDialog.qml" line="28"/>
+        <location filename="../qml/pages/QuickSwitchDialog.qml" line="29"/>
         <source>Switch</source>
+        <extracomment>as in &quot;Switch to this folder, please&quot;</extracomment>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2192,8 +2194,9 @@
 <context>
     <name>paths</name>
     <message>
-        <location filename="../qml/js/paths.js" line="49"/>
+        <location filename="../qml/js/paths.js" line="50"/>
         <source>root</source>
+        <extracomment>root directory (placeholder instead of &quot;/&quot; in search mask)</extracomment>
         <translation>Root</translation>
     </message>
 </context>
