@@ -244,7 +244,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="500"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation>Verschiebst Du von Telefon auf SD-Karte oder umgekehrt? Das funktioniert nicht, probiere es mit Kopieren.</translation>
+        <translation>Verschieben Sie von Telefon auf SD-Karte oder umgekehrt? Das funktioniert nicht, probieren Sie es mit Kopieren.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="502"/>
