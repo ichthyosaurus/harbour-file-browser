@@ -120,15 +120,15 @@ static const TagTable_t ProcessTable[] = {
 // called from other files
 void ErrFatal(const char * msg)
 {
-    Q_UNUSED(msg);
+    Q_UNUSED(msg)
     return;
 }
 
 void ErrNonfatal(const char * msg, int a1, int a2)
 {
-    Q_UNUSED(msg);
-    Q_UNUSED(a1);
-    Q_UNUSED(a2);
+    Q_UNUSED(msg)
+    Q_UNUSED(a1)
+    Q_UNUSED(a2)
     return;
 }
 
