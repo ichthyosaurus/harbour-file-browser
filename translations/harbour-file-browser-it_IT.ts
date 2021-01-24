@@ -949,7 +949,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="166"/>
         <source>(Strobe light detected) </source>
-        <translation>(Luce strobe rilevata)</translation>
+        <translation>(Luce strobe rilevata) </translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="167"/>

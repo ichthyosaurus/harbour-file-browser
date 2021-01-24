@@ -129,7 +129,7 @@
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="104"/>
         <source>Norwegian</source>
-        <translation type="unfinished"></translation>
+        <translation>Norwegian</translation>
     </message>
 </context>
 <context>
@@ -158,7 +158,7 @@
         <source>... and %n more</source>
         <translation>
             <numerusform>... and %n more</numerusform>
-            <numerusform></numerusform>
+            <numerusform>... and %n more</numerusform>
         </translation>
     </message>
 </context>
