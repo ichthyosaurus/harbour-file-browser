@@ -89,7 +89,7 @@
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="72"/>
         <source>Chinese</source>
-        <translation type="unfinished">Kinesisk</translation>
+        <translation>Kinesisk</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="76"/>
@@ -183,7 +183,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="176"/>
         <source>Filter directory contents</source>
-        <translation type="unfinished">Filtrer mappeinnhold</translation>
+        <translation>Filtrer mappeinnhold</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="263"/>
@@ -198,7 +198,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="270"/>
         <source>Add to bookmarks</source>
-        <translation type="unfinished">Legg til som bokmerke</translation>
+        <translation>Legg til som bokmerke</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="274"/>
@@ -218,12 +218,12 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="361"/>
         <source>No files matched the filter.</source>
-        <translation type="unfinished">Ingen slike filer.</translation>
+        <translation>Ingen slike filer.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="362"/>
         <source>This directory contains no files.</source>
-        <translation type="unfinished">Denne mappen inneholder ingen filer.</translation>
+        <translation>Denne mappen inneholder ingen filer.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="442"/>
@@ -239,12 +239,12 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="457"/>
         <source>Please simply try again</source>
-        <translation type="unfinished">Prøv igjen</translation>
+        <translation>Prøv igjen</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="500"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation type="unfinished">Prøver du å flytte mellom telefonen og SD-kort? Det fungerer ikke. Prøv å kopiere.</translation>
+        <translation>Prøver du å flytte mellom telefonen og SD-kort? Det fungerer ikke. Prøv å kopiere.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="502"/>
@@ -272,7 +272,7 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="332"/>
         <source>Add to bookmarks</source>
-        <translation type="unfinished">Legg til som bokmerke</translation>
+        <translation>Legg til som bokmerke</translation>
     </message>
 </context>
 <context>
@@ -280,7 +280,7 @@
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="155"/>
         <source>Hide hidden files</source>
-        <translation type="unfinished">Ikke vis skjulte filer</translation>
+        <translation>Ikke vis skjulte filer</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="156"/>
@@ -318,7 +318,7 @@
     <message>
         <location filename="../src/engine.cpp" line="360"/>
         <source>File does not exist</source>
-        <translation type="unfinished">Filen finnes ikke</translation>
+        <translation>Filen finnes ikke</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="362"/>
@@ -369,12 +369,12 @@
     <message>
         <location filename="../src/engine.cpp" line="448"/>
         <source>Cannot create folder %1</source>
-        <translation type="unfinished">Kan ikke opprette mappe %1</translation>
+        <translation>Kan ikke opprette mappe %1</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="464"/>
         <source>Cannot rename %1</source>
-        <translation type="unfinished">Kan ikke gi nytt navn %1</translation>
+        <translation>Kan ikke gi nytt navn %1</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="487"/>
@@ -493,7 +493,7 @@
     <message>
         <location filename="../qml/cover/FileBrowserCover.qml" line="47"/>
         <source>Root Mode</source>
-        <translation type="unfinished">Rot-modus</translation>
+        <translation>Rot-modus</translation>
     </message>
 </context>
 <context>
@@ -506,12 +506,12 @@
     <message>
         <location filename="../src/filedata.cpp" line="219"/>
         <source>block device</source>
-        <translation type="unfinished">blokkenhet</translation>
+        <translation>blokkenhet</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="223"/>
         <source>character device</source>
-        <translation type="unfinished">tegnenhet</translation>
+        <translation>tegnenhet</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="227"/>
@@ -539,12 +539,12 @@
     <message>
         <location filename="../src/filemodel.cpp" line="114"/>
         <source>dir-link</source>
-        <translation type="unfinished">mappelenke</translation>
+        <translation>mappelenke</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="115"/>
         <source>dir</source>
-        <translation type="unfinished">mappe</translation>
+        <translation>mappe</translation>
     </message>
 </context>
 <context>
@@ -575,7 +575,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="59"/>
         <source>Open successful</source>
-        <translation type="unfinished">Åpnet</translation>
+        <translation>Åpnet</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="60"/>
@@ -595,12 +595,12 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="66"/>
         <source>No application to open the file</source>
-        <translation type="unfinished">Mangler program for åpning av fil</translation>
+        <translation>Mangler program for åpning av fil</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="67"/>
         <source>xdg-open found no preferred application</source>
-        <translation type="unfinished">xdg-open fant ikke noe foretrukket program</translation>
+        <translation>xdg-open fant ikke noe foretrukket program</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="69"/>
@@ -686,7 +686,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="303"/>
         <source>Link to %1</source>
-        <translation type="unfinished">Lenke til %1</translation>
+        <translation>Lenke til %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="310"/>
@@ -741,7 +741,7 @@
     <message>
         <location filename="../src/fileworker.cpp" line="222"/>
         <source>Folder delete failed</source>
-        <translation type="unfinished">Klarte ikke å slette mappe</translation>
+        <translation>Klarte ikke å slette mappe</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="357"/>
@@ -751,7 +751,7 @@
     <message>
         <location filename="../src/fileworker.cpp" line="364"/>
         <source>Cannot create target folder %1</source>
-        <translation type="unfinished">Kan ikke opprette målmappe %1</translation>
+        <translation>Kan ikke opprette målmappe %1</translation>
     </message>
 </context>
 <context>
@@ -1268,7 +1268,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/MultiFilePage.qml" line="112"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="118"/>
         <source>Deleting</source>
-        <translation type="unfinished">Sletter …</translation>
+        <translation>Sletter …</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="140"/>
@@ -1496,7 +1496,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="134"/>
         <source>Search below “%1”</source>
-        <translation type="unfinished">Søk under «%1»</translation>
+        <translation>Søk under «%1»</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SearchPage.qml" line="188"/>
@@ -1542,7 +1542,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="413"/>
         <source>Please simply try again</source>
-        <translation type="unfinished">Prøv igjen</translation>
+        <translation>Prøv igjen</translation>
     </message>
 </context>
 <context>
@@ -1585,7 +1585,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="57"/>
         <source>Use per-directory view settings</source>
-        <translation type="unfinished">Visningsinnstillinger per mappe</translation>
+        <translation>Visningsinnstillinger per mappe</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="61"/>
@@ -1630,7 +1630,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="82"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished">Viser bilder i komfortabel størrelse, og alle andre oppføringer enn bilder, video og mapper er skjult.</translation>
+        <translation>Viser bilder i komfortabel størrelse, og alle andre oppføringer enn bilder, video og mapper er skjult.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="91"/>
@@ -1640,12 +1640,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="98"/>
         <source>Show folders first</source>
-        <translation type="unfinished">Bilder først</translation>
+        <translation>Mapper først</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="102"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished">Sorter versalsensitivt</translation>
+        <translation>Sorter versalsensitivt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="106"/>
@@ -1710,7 +1710,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="145"/>
         <source>link</source>
-        <translation type="unfinished">lenke</translation>
+        <translation>lenke</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="146"/>
@@ -1720,12 +1720,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="152"/>
         <source>Default filter line action</source>
-        <translation type="unfinished">Forvalgt handling for filterlinje</translation>
+        <translation>Forvalgt handling for filterlinje</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="155"/>
         <source>return to directory view</source>
-        <translation type="unfinished">gå tilbake til mappevisning</translation>
+        <translation>gå tilbake til mappevisning</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="156"/>
@@ -1735,7 +1735,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="162"/>
         <source>File name abbreviation</source>
-        <translation type="unfinished">Filnavnsforkortelse</translation>
+        <translation>Filnavnsforkortelse</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="165"/>
@@ -1745,32 +1745,32 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="166"/>
         <source>elide end</source>
-        <translation type="unfinished">Elideringsslutt</translation>
+        <translation>Elideringsslutt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="167"/>
         <source>elide middle</source>
-        <translation type="unfinished">Elideringsmidt</translation>
+        <translation>Elideringsmidt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="172"/>
         <source>Show full directory paths</source>
-        <translation type="unfinished">Vis fullstendige mappestier</translation>
+        <translation>Vis fullstendige mappestier</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="176"/>
         <source>Show navigation menu icon</source>
-        <translation type="unfinished">Vis menyikon for navigering</translation>
+        <translation>Vis menyikon for navigering</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="185"/>
         <source>About File Browser</source>
-        <translation type="unfinished">Om File Browser</translation>
+        <translation>Om File Browser</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="215"/>
         <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation type="unfinished">File Browser er gemenhetslig fri programvare lisensiert GPLv3+. Bruk, studer, endre, og distribuer etter evne; med alle. Det er ingen garanti, så-langt det er mulig i lovlig forstand.</translation>
+        <translation>File Browser er gemenhetslig fri programvare lisensiert GPLv3+. Bruk, studer, endre, og distribuer etter evne; med alle. Det er ingen garanti, så-langt det er mulig i lovlig forstand.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="234"/>
@@ -1788,7 +1788,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="302"/>
         <source>Nothing to show here...</source>
-        <translation type="unfinished">Ingenting å vise her …</translation>
+        <translation>Ingenting å vise her …</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="328"/>
@@ -1879,7 +1879,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="55"/>
         <source>Add “%1” to bookmarks</source>
-        <translation type="unfinished">Bokmerk «%1»</translation>
+        <translation>Bokmerk «%1»</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="63"/>
@@ -1971,12 +1971,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="46"/>
         <source>Sorting and View</source>
-        <translation type="unfinished">Sortering og visning</translation>
+        <translation>Sortering og visning</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="55"/>
         <source>Sort by...</source>
-        <translation type="unfinished">Sorter etter …</translation>
+        <translation>Sorter etter …</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="58"/>
@@ -1996,12 +1996,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="61"/>
         <source>File type</source>
-        <translation type="unfinished">Filtype</translation>
+        <translation>Filtype</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="77"/>
         <source>Order...</source>
-        <translation type="unfinished">Sortering …</translation>
+        <translation>Sortering …</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="80"/>
@@ -2016,7 +2016,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="97"/>
         <source>Preview images...</source>
-        <translation type="unfinished">Forhåndsvis bilder …</translation>
+        <translation>Forhåndsvis bilder …</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="100"/>
@@ -2026,22 +2026,22 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="101"/>
         <source>small</source>
-        <translation type="unfinished">lite</translation>
+        <translation>lite</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="102"/>
         <source>medium</source>
-        <translation type="unfinished">middels</translation>
+        <translation>middels</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="103"/>
         <source>large</source>
-        <translation type="unfinished">stort</translation>
+        <translation>stort</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="104"/>
         <source>huge</source>
-        <translation type="unfinished">enormt</translation>
+        <translation>enormt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="120"/>
@@ -2051,12 +2051,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="125"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished">Gallerimodus</translation>
+        <translation>Gallerimodus</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="126"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished">Viser bilder i passelig størrelse, og skjuler alle oppføringer unntatt bilder, videoer og mapper.</translation>
+        <translation>Viser bilder i passelig størrelse, og skjuler alle oppføringer unntatt bilder, videoer og mapper.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="132"/>
@@ -2066,7 +2066,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="137"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished">Sorter versalsensitivt</translation>
+        <translation>Sorter versalsensitivt</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="153"/>
@@ -2076,7 +2076,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="154"/>
         <source>Global preferences</source>
-        <translation type="unfinished">Innstillinger for alle brukere</translation>
+        <translation>Innstillinger for alle brukere</translation>
     </message>
 </context>
 <context>
@@ -2094,7 +2094,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="59"/>
         <source>Link</source>
-        <translation type="unfinished">Lenke</translation>
+        <translation>Lenke</translation>
     </message>
 </context>
 <context>
@@ -2133,7 +2133,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="161"/>
         <source>Nothing selected to transfer</source>
-        <translation type="unfinished">Ingenting valgt for overføring</translation>
+        <translation>Ingenting valgt for overføring</translation>
     </message>
 </context>
 <context>
@@ -2157,7 +2157,7 @@ exposure program</extracomment>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="68"/>
         <source>Successfully copied</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>Kopiert</numerusform>
             <numerusform>Kopiert</numerusform>
         </translation>
@@ -2165,7 +2165,7 @@ exposure program</extracomment>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="70"/>
         <source>Successfully moved</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>Flyttet</numerusform>
             <numerusform>Flyttet</numerusform>
         </translation>
@@ -2173,7 +2173,7 @@ exposure program</extracomment>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="72"/>
         <source>Successfully linked</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>Lenket</numerusform>
             <numerusform>Lenket</numerusform>
         </translation>
@@ -2225,7 +2225,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="202"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation type="unfinished">Prøver du å flytte mellom telefon og SD-kort? Det fungerer ikke. Prøv å kopiere.</translation>
+        <translation>Prøver du å flytte mellom telefon og SD-kort? Det fungerer ikke. Prøv å kopiere.</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="204"/>
@@ -2263,7 +2263,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewImagePage.qml" line="242"/>
         <source>Error loading image</source>
-        <translation type="unfinished">Klarte ikke å laste inn bilde</translation>
+        <translation>Klarte ikke å laste inn bilde</translation>
     </message>
 </context>
 <context>
@@ -2271,7 +2271,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewVideoPage.qml" line="99"/>
         <source>Error playing video</source>
-        <translation type="unfinished">Klarte ikke å spille video</translation>
+        <translation>Klarte ikke å spille video</translation>
     </message>
 </context>
 <context>
@@ -2280,7 +2280,7 @@ exposure program</extracomment>
         <location filename="../qml/js/files.js" line="36"/>
         <location filename="../qml/js/files.js" line="45"/>
         <source>Copying</source>
-        <translation type="unfinished">Kopierer …</translation>
+        <translation>Kopierer …</translation>
     </message>
     <message>
         <location filename="../qml/js/files.js" line="36"/>

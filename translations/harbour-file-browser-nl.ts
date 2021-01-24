@@ -506,17 +506,17 @@
     <message>
         <location filename="../src/filedata.cpp" line="219"/>
         <source>block device</source>
-        <translation>block device</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="223"/>
         <source>character device</source>
-        <translation>character device</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="227"/>
         <source>pipe</source>
-        <translation>pipe</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="231"/>
@@ -539,12 +539,12 @@
     <message>
         <location filename="../src/filemodel.cpp" line="114"/>
         <source>dir-link</source>
-        <translation>dir-link</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="115"/>
         <source>dir</source>
-        <translation>dir</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
