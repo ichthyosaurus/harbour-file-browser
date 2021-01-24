@@ -12,7 +12,7 @@
     <message>
         <location filename="../src/consolemodel.cpp" line="125"/>
         <source>** error: %1</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="133"/>
@@ -511,44 +511,43 @@
 <context>
     <name>FileData</name>
     <message>
-        <location filename="../src/filedata.cpp" line="184"/>
+        <location filename="../src/filedata.cpp" line="185"/>
         <source>File does not exist</source>
         <translation>Файл не существует</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="218"/>
+        <location filename="../src/filedata.cpp" line="219"/>
         <source>block device</source>
         <translation>блочное устройство</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="222"/>
+        <location filename="../src/filedata.cpp" line="223"/>
         <source>character device</source>
         <translation>символьное устройство</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="226"/>
+        <location filename="../src/filedata.cpp" line="227"/>
         <source>pipe</source>
         <translation>канал</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="230"/>
+        <location filename="../src/filedata.cpp" line="231"/>
         <source>socket</source>
         <translation>сокет</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="234"/>
+        <location filename="../src/filedata.cpp" line="235"/>
         <source>folder</source>
         <translation>каталог</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="240"/>
+        <location filename="../src/filedata.cpp" line="241"/>
         <source>unknown</source>
         <translation>неизвестный</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="263"/>
         <source>Image Size</source>
-        <translation>Размер изображения</translation>
+        <translation type="vanished">Размер изображения</translation>
     </message>
 </context>
 <context>
@@ -686,42 +685,42 @@
         <translation>Удаление</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="296"/>
+        <location filename="../qml/pages/FilePage.qml" line="297"/>
         <source>Location</source>
         <translation>Расположение</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="300"/>
+        <location filename="../qml/pages/FilePage.qml" line="301"/>
         <source>Type</source>
         <translation>Тип</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="302"/>
+        <location filename="../qml/pages/FilePage.qml" line="303"/>
         <source>Link to %1</source>
         <translation>Ссылка на %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="302"/>
+        <location filename="../qml/pages/FilePage.qml" line="303"/>
         <source>Unknown (link target not found)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="309"/>
+        <location filename="../qml/pages/FilePage.qml" line="310"/>
         <source>Permissions</source>
         <translation>Права</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="313"/>
+        <location filename="../qml/pages/FilePage.qml" line="314"/>
         <source>Owner</source>
         <translation>Владелец</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="317"/>
+        <location filename="../qml/pages/FilePage.qml" line="318"/>
         <source>Group</source>
         <translation>Группа</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="321"/>
+        <location filename="../qml/pages/FilePage.qml" line="322"/>
         <source>Last modified</source>
         <translation>Последнее изменение</translation>
     </message>
@@ -769,6 +768,492 @@
         <location filename="../src/fileworker.cpp" line="364"/>
         <source>Cannot create target folder %1</source>
         <translation>Невозможно создать папку %1</translation>
+    </message>
+</context>
+<context>
+    <name>ImageMetaData</name>
+    <message>
+        <location filename="../src/filedata.cpp" line="263"/>
+        <source>Image Size</source>
+        <translation>Размер изображения</translation>
+    </message>
+    <message>
+        <location filename="../src/filedata.cpp" line="269"/>
+        <source>%1 x %2</source>
+        <extracomment>image size description without aspect ratio: 1=width, 2=height</extracomment>
+        <translation>%1 x %2</translation>
+    </message>
+    <message>
+        <location filename="../src/filedata.cpp" line="273"/>
+        <source>%1 x %2 (%3)</source>
+        <extracomment>image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9</extracomment>
+        <translation>%1 x %2 (%3)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="157"/>
+        <source>Make</source>
+        <translation>Производитель</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="158"/>
+        <source>Model</source>
+        <translation>Модель</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="161"/>
+        <source>Date/Time</source>
+        <translation>Дата/Время</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="169"/>
+        <source>Orientation</source>
+        <translation>Ориентация</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="174"/>
+        <source>Color/BW</source>
+        <translation>Цвет/ЧБ</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="174"/>
+        <source>Black and White</source>
+        <translation>Черно-белое</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="182"/>
+        <source>Strobe light not detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Вспышка не сработала</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="184"/>
+        <source>Strobe light detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Вспышка сработала</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="186"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="301"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="362"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="401"/>
+        <source>Manual</source>
+        <extracomment>description of camera flash mode
+----------
+exposure program</extracomment>
+        <translation>Ручной</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="188"/>
+        <source>Manual, return light not detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Ручной режим, вспышка не сработала</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="190"/>
+        <source>Manual, return light detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Ручной режим, вспышка сработала</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="192"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="304"/>
+        <source>Auto</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Авто</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="194"/>
+        <source>Auto, return light not detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Авто, плохое освещение</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="196"/>
+        <source>Auto, return light detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Авто, хорошее освещение</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="198"/>
+        <source>Red eye reduction mode</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Режим устранения эффекта красных глаз</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="200"/>
+        <source>Red eye reduction mode return light not detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Режим устранения эффекта красных глаз, плохое освещение</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="202"/>
+        <source>Red eye reduction mode return light detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Режим устранения эффекта красных глаз, хорошее освещение</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="204"/>
+        <source>Manual, red eye reduction mode</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Ручной режим, режим устранения эффекта красных глаз</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="206"/>
+        <source>Manual, red eye reduction mode, return light not detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Ручной режим, режим устранения эффекта красных глаз, плохое освещение</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="208"/>
+        <source>Red eye reduction mode, return light detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Режим устранения эффекта красных глаз, хорошее освещение</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="210"/>
+        <source>Auto, red eye reduction mode</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Авто, режим устранения эффекта красных глаз</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="212"/>
+        <source>Auto, red eye reduction mode, return light not detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Авто, режим устранения эффекта красных глаз, плохое освещение</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="214"/>
+        <source>Auto, red eye reduction mode, return light detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Авто, режим устранения эффекта красных глаз, хорошее освещение</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="218"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="220"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="224"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="226"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="320"/>
+        <source>Flash</source>
+        <translation>Вспышка</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="218"/>
+        <source>Yes (%1)</source>
+        <translation>Да (%1)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="220"/>
+        <source>Yes</source>
+        <translation>Да</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="224"/>
+        <source>No (Auto)</source>
+        <translation>Нет (авто)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="226"/>
+        <source>No</source>
+        <translation>Нет</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="235"/>
+        <source>%1mm (35mm equivalent: %2mm)</source>
+        <extracomment>size in millimeters</extracomment>
+        <translation>%1мм (Эквивалентное фокусное расстояние: %2мм)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="240"/>
+        <source>%1mm</source>
+        <extracomment>size in millimeters</extracomment>
+        <translation>%1мм</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="243"/>
+        <source>Focal Length</source>
+        <translation>Фокусное расстояние</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="248"/>
+        <source>Digital Zoom</source>
+        <translation>Цифровое увеличение</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="250"/>
+        <source>%1x</source>
+        <extracomment>as in &quot;zoom: %1 times&quot;</extracomment>
+        <translation>%1x</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="256"/>
+        <source>CCD Width</source>
+        <extracomment>photographic sensor width; cf. https://en.wikipedia.org/wiki/Charge-coupled_device</extracomment>
+        <translation>Ширина ПЗС матрицы</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="268"/>
+        <source>%1 (1/%2)</source>
+        <extracomment>exposure time as raw value (1) and as fraction (2)</extracomment>
+        <translation>%1 (1/%2)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="270"/>
+        <source>Exposure Time</source>
+        <translation>Выдержка</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="273"/>
+        <source>Aperture</source>
+        <translation>Диафрагма</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="275"/>
+        <source>f/%1</source>
+        <extracomment>aperture &quot;f&quot; number; cf. https://en.wikipedia.org/wiki/Aperture</extracomment>
+        <translation>f/%1</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="279"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="283"/>
+        <source>Focus Distance</source>
+        <translation>Дистанция фокусировки</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="281"/>
+        <source>Infinite</source>
+        <extracomment>focus distance</extracomment>
+        <translation>Неопределенная</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="285"/>
+        <source>%1m</source>
+        <extracomment>focus distance in meters</extracomment>
+        <translation>%1м</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="290"/>
+        <source>ISO Equivalent</source>
+        <translation>Эквивалент ISO</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="296"/>
+        <source>Exposure Bias</source>
+        <translation>Вилка экспозиции</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="301"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="304"/>
+        <source>White Balance</source>
+        <translation>Баланс белого</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="311"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="314"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="317"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="320"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="323"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="326"/>
+        <source>Light Source</source>
+        <translation>Источник света</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="311"/>
+        <source>Daylight</source>
+        <translation>Естественное освещение</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="314"/>
+        <source>Fluorescent</source>
+        <translation>Флуоресцентная лампа</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="317"/>
+        <source>Incandescent</source>
+        <translation>Лампа накаливания</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="323"/>
+        <source>Fine weather</source>
+        <translation>Ясная погода</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="326"/>
+        <source>Shade</source>
+        <translation>Тень</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="337"/>
+        <source>Average</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Усредненный</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="339"/>
+        <source>Center weighted average</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Центровзвешенный</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="341"/>
+        <source>Spot</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Точечный</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="343"/>
+        <source>Multi spot</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>По нескольким точкам</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="345"/>
+        <source>Pattern</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Шаблон</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="347"/>
+        <source>Partial</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Частичный</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="349"/>
+        <source>Other</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Другой</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="351"/>
+        <source>Unknown (%1)</source>
+        <extracomment>inlcudes an unknown value (1); cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Неизвестно (%1)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="354"/>
+        <source>Metering Mode</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Режим замера экспозиции</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="366"/>
+        <source>Program (auto)</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Программный (авто)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="370"/>
+        <source>Aperture priority (semi-auto)</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Приоритет диафрагмы (полуавтоматический)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="374"/>
+        <source>Shutter priority (semi-auto)</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Приоритет выдержки (полуавтоматический)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="378"/>
+        <source>Creative Program (based towards depth of field)</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Художественный (контроль глубины резкости)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="382"/>
+        <source>Action program (based towards fast shutter speed)</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Движение (контроль затвора)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="386"/>
+        <source>Portrait mode</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Портрет</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="390"/>
+        <source>Landscape mode</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Ландшафт</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="395"/>
+        <source>Exposure Program</source>
+        <translation>Режим съемки</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="401"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="404"/>
+        <source>Exposure Mode</source>
+        <translation>Режим экспозиции</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="406"/>
+        <source>Auto bracketing</source>
+        <extracomment>exposure mode; cf. https://en.wikipedia.org/wiki/Autobracketing#Exposure</extracomment>
+        <translation>Автовилка</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="415"/>
+        <source>Macro</source>
+        <extracomment>focus range</extracomment>
+        <translation>Макро</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="419"/>
+        <source>Close</source>
+        <extracomment>focus range</extracomment>
+        <translation>Близко</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="423"/>
+        <source>Distant</source>
+        <extracomment>focus range</extracomment>
+        <translation>Далеко</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="426"/>
+        <source>Focus Range</source>
+        <translation>Глубина резкости</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="436"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="440"/>
+        <source>JPEG Process</source>
+        <translation>Обработка JPEG</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="436"/>
+        <source>Unknown</source>
+        <translation>Неизвестно</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="447"/>
+        <source>Latitude</source>
+        <translation>Широта</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="448"/>
+        <source>Longitude</source>
+        <translation>Долгота</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="450"/>
+        <source>Altitude</source>
+        <translation>Высота</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="456"/>
+        <source>JPEG Quality</source>
+        <translation>Качество JPEG</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="473"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="484"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="487"/>
+        <source>Comment</source>
+        <translation>Комментарий</translation>
     </message>
 </context>
 <context>
@@ -967,377 +1452,292 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="142"/>
-        <source>Make:%1</source>
-        <translation>Производитель:%1</translation>
+        <source>Make</source>
+        <translation type="vanished">Производитель</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="143"/>
-        <source>Model:%1</source>
-        <translation>Модель:%1</translation>
+        <source>Model</source>
+        <translation type="vanished">Модель</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="146"/>
-        <source>Date/Time:%1</source>
-        <translation>Дата/Время:%1</translation>
+        <source>Date/Time</source>
+        <translation type="vanished">Дата/Время</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="153"/>
-        <source>Orientation:%1</source>
-        <translation>Ориентация:%1</translation>
+        <source>Orientation</source>
+        <translation type="vanished">Ориентация</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="158"/>
         <source>Color/BW:Black and White</source>
-        <translation>Цвет/ЧБ:Черно-белое</translation>
+        <translation type="vanished">Цвет/ЧБ:Черно-белое</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="165"/>
-        <source>(Strobe light not detected)</source>
-        <translation>(Вспышка не сработала)</translation>
+        <source>Strobe light not detected</source>
+        <translation type="vanished">Вспышка не сработала</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="166"/>
-        <source>(Strobe light detected) </source>
-        <translation>(Вспышка сработала)</translation>
+        <source>Strobe light detected</source>
+        <translation type="vanished">Вспышка сработала</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="167"/>
-        <source>(Manual)</source>
-        <translation>(Ручной режим)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="168"/>
-        <source>(Manual, return light not detected)</source>
-        <translation>(Ручной режим, вспышка не сработала)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="169"/>
-        <source>(Manual, return light detected)</source>
-        <translation>(Ручной режим, вспышка сработала)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="170"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="188"/>
-        <source>(Auto)</source>
-        <translation>(Авто)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="171"/>
-        <source>(Auto, return light not detected)</source>
-        <translation>(Авто, плохое освещение)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="172"/>
-        <source>(Auto, return light detected)</source>
-        <translation>(Авто, хорошее освещение)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="173"/>
-        <source>(Red eye reduction mode)</source>
-        <translation>(Режим устранения эффекта красных глаз)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="174"/>
-        <source>(Red eye reduction mode return light not detected)</source>
-        <translation>(Режим устранения эффекта красных глаз, плохое освещение)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="175"/>
-        <source>(Red eye reduction mode return light detected)</source>
-        <translation>(Режим устранения эффекта красных глаз, хорошее освещение)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="176"/>
-        <source>(Manual, red eye reduction mode)</source>
-        <translation>(Ручной режим, режим устранения эффекта красных глаз)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="177"/>
-        <source>(Manual, red eye reduction mode, return light not detected)</source>
-        <translation>(Ручной режим, режим устранения эффекта красных глаз, плохое освещение)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="178"/>
-        <source>(Red eye reduction mode, return light detected)</source>
-        <translation>(Режим устранения эффекта красных глаз, хорошее освещение)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="179"/>
-        <source>(Auto, red eye reduction mode)</source>
-        <translation>(Авто, режим устранения эффекта красных глаз)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="180"/>
-        <source>(Auto, red eye reduction mode, return light not detected)</source>
-        <translation>(Авто, режим устранения эффекта красных глаз, плохое освещение)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="181"/>
-        <source>(Auto, red eye reduction mode, return light detected)</source>
-        <translation>(Авто, режим устранения эффекта красных глаз, хорошее освещение)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="183"/>
-        <source>Flash:Yes</source>
-        <translation>Вспышка:Да</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="190"/>
-        <source>Flash:No</source>
-        <translation>Вспышка:Нет</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="196"/>
-        <source>Focal Length:%1mm</source>
-        <translation>Фокусное расстояние:%1мм</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="198"/>
-        <source>(35mm equivalent: %1mm)</source>
-        <translation>(Эквивалентное фокусное расстояние: %1мм)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="205"/>
-        <source>Digital Zoom:%1x</source>
-        <translation>Цифровое увеличение:%1x</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="209"/>
-        <source>CCD Width:%1</source>
-        <translation>Ширина ПЗС матрицы: %1</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="215"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="217"/>
-        <source>Exposure Time:%1</source>
-        <translation>Выдержка:%1</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="220"/>
-        <source>(1/%1)</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="225"/>
-        <source>Aperture:f/%1</source>
-        <translation>Диафрагма:%1</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="229"/>
-        <source>Focus Distance:Infinite</source>
-        <translation>Дистанция фокусировки:Неопределенная</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="231"/>
-        <source>Focus Distance:%1m</source>
-        <translation>Дистанция фокусировки:%1м</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="236"/>
-        <source>ISO Equivalent:%1</source>
-        <translation>Эквивалент ISO:%1мм</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="242"/>
-        <source>Exposure Bias:%1</source>
-        <translation>Вилка экспозиции:%1</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="247"/>
-        <source>White Balance:Manual</source>
-        <translation>Баланс белого:Ручной режим</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="250"/>
-        <source>White Balance:Auto</source>
-        <translation>Баланс белого:Авто</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="257"/>
-        <source>Light Source:Daylight</source>
-        <translation>Источник света:Естественное освещение</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="260"/>
-        <source>Light Source:Fluorescent</source>
-        <translation>Источник света:Флуоресцентная лампа</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="263"/>
-        <source>Light Source:Incandescent</source>
-        <translation>Источник света:Лампа накаливания</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="266"/>
-        <source>Light Source:Flash</source>
-        <translation>Источник света:Вспышка</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="269"/>
-        <source>Light Source:Fine weather</source>
-        <translation>Источник света:Ясная погода</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="272"/>
-        <source>Light Source:Shade</source>
-        <translation>Источник света:Тень</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="280"/>
-        <source>Metering Mode:</source>
-        <translation>Режим замера экспозиции:</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="282"/>
-        <source>Average</source>
-        <translation>Усредненный</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="283"/>
-        <source>Center weighted average</source>
-        <translation>Центровзвешенный</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="284"/>
-        <source>Spot</source>
-        <translation>Точечный</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="285"/>
-        <source>Multi spot</source>
-        <translation>По нескольким точкам</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="286"/>
-        <source>Pattern</source>
-        <translation>Шаблон</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="287"/>
-        <source>Partial</source>
-        <translation>Частичный</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="288"/>
-        <source>Other</source>
-        <translation>Другой</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="289"/>
-        <source>Unknown (%1)</source>
-        <translation>Неизвестно (%1)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="295"/>
-        <source>Exposure Program:</source>
-        <translation>Режим съемки:</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="298"/>
         <source>Manual</source>
-        <translation>Ручной</translation>
+        <translation type="vanished">Ручной режим</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="301"/>
+        <source>Manual, return light not detected</source>
+        <translation type="vanished">Ручной режим, вспышка не сработала</translation>
+    </message>
+    <message>
+        <source>Manual, return light detected</source>
+        <translation type="vanished">Ручной режим, вспышка сработала</translation>
+    </message>
+    <message>
+        <source>Auto</source>
+        <translation type="vanished">Авто</translation>
+    </message>
+    <message>
+        <source>Auto, return light not detected</source>
+        <translation type="vanished">Авто, плохое освещение</translation>
+    </message>
+    <message>
+        <source>Auto, return light detected</source>
+        <translation type="vanished">Авто, хорошее освещение</translation>
+    </message>
+    <message>
+        <source>Red eye reduction mode</source>
+        <translation type="vanished">Режим устранения эффекта красных глаз</translation>
+    </message>
+    <message>
+        <source>Red eye reduction mode return light not detected</source>
+        <translation type="vanished">Режим устранения эффекта красных глаз, плохое освещение</translation>
+    </message>
+    <message>
+        <source>Red eye reduction mode return light detected</source>
+        <translation type="vanished">Режим устранения эффекта красных глаз, хорошее освещение</translation>
+    </message>
+    <message>
+        <source>Manual, red eye reduction mode</source>
+        <translation type="vanished">Ручной режим, режим устранения эффекта красных глаз</translation>
+    </message>
+    <message>
+        <source>Manual, red eye reduction mode, return light not detected</source>
+        <translation type="vanished">Ручной режим, режим устранения эффекта красных глаз, плохое освещение</translation>
+    </message>
+    <message>
+        <source>Red eye reduction mode, return light detected</source>
+        <translation type="vanished">Режим устранения эффекта красных глаз, хорошее освещение</translation>
+    </message>
+    <message>
+        <source>Auto, red eye reduction mode</source>
+        <translation type="vanished">Авто, режим устранения эффекта красных глаз</translation>
+    </message>
+    <message>
+        <source>Auto, red eye reduction mode, return light not detected</source>
+        <translation type="vanished">Авто, режим устранения эффекта красных глаз, плохое освещение</translation>
+    </message>
+    <message>
+        <source>Auto, red eye reduction mode, return light detected</source>
+        <translation type="vanished">Авто, режим устранения эффекта красных глаз, хорошее освещение</translation>
+    </message>
+    <message>
+        <source>Flash:Yes</source>
+        <translation type="vanished">Вспышка:Да</translation>
+    </message>
+    <message>
+        <source>Flash:No</source>
+        <translation type="vanished">Вспышка:Нет</translation>
+    </message>
+    <message>
+        <source>Focal Length:%1mm</source>
+        <translation type="vanished">Фокусное расстояние:%1мм</translation>
+    </message>
+    <message>
+        <source>35mm equivalent: %1mm</source>
+        <translation type="vanished">Эквивалентное фокусное расстояние: %1мм</translation>
+    </message>
+    <message>
+        <source>Digital Zoom:%1x</source>
+        <translation type="vanished">Цифровое увеличение:%1x</translation>
+    </message>
+    <message>
+        <source>CCD Width</source>
+        <translation type="vanished">Ширина ПЗС матрицы</translation>
+    </message>
+    <message>
+        <source>Exposure Time</source>
+        <translation type="vanished">Выдержка</translation>
+    </message>
+    <message>
+        <source>Aperture:f/%1</source>
+        <translation type="vanished">Диафрагма</translation>
+    </message>
+    <message>
+        <source>Focus Distance:Infinite</source>
+        <translation type="vanished">Дистанция фокусировки:Неопределенная</translation>
+    </message>
+    <message>
+        <source>Focus Distance:%1m</source>
+        <translation type="vanished">Дистанция фокусировки:%1м</translation>
+    </message>
+    <message>
+        <source>ISO Equivalent</source>
+        <translation type="vanished">Эквивалент ISO:%1мм</translation>
+    </message>
+    <message>
+        <source>Exposure Bias</source>
+        <translation type="vanished">Вилка экспозиции</translation>
+    </message>
+    <message>
+        <source>White Balance:Manual</source>
+        <translation type="vanished">Баланс белого:Ручной режим</translation>
+    </message>
+    <message>
+        <source>White Balance:Auto</source>
+        <translation type="vanished">Баланс белого:Авто</translation>
+    </message>
+    <message>
+        <source>Light Source:Daylight</source>
+        <translation type="vanished">Источник света:Естественное освещение</translation>
+    </message>
+    <message>
+        <source>Light Source:Fluorescent</source>
+        <translation type="vanished">Источник света:Флуоресцентная лампа</translation>
+    </message>
+    <message>
+        <source>Light Source:Incandescent</source>
+        <translation type="vanished">Источник света:Лампа накаливания</translation>
+    </message>
+    <message>
+        <source>Light Source:Flash</source>
+        <translation type="vanished">Источник света:Вспышка</translation>
+    </message>
+    <message>
+        <source>Light Source:Fine weather</source>
+        <translation type="vanished">Источник света:Ясная погода</translation>
+    </message>
+    <message>
+        <source>Light Source:Shade</source>
+        <translation type="vanished">Источник света:Тень</translation>
+    </message>
+    <message>
+        <source>Metering Mode:</source>
+        <translation type="vanished">Режим замера экспозиции:</translation>
+    </message>
+    <message>
+        <source>Average</source>
+        <translation type="vanished">Усредненный</translation>
+    </message>
+    <message>
+        <source>Center weighted average</source>
+        <translation type="vanished">Центровзвешенный</translation>
+    </message>
+    <message>
+        <source>Spot</source>
+        <translation type="vanished">Точечный</translation>
+    </message>
+    <message>
+        <source>Multi spot</source>
+        <translation type="vanished">По нескольким точкам</translation>
+    </message>
+    <message>
+        <source>Pattern</source>
+        <translation type="vanished">Шаблон</translation>
+    </message>
+    <message>
+        <source>Partial</source>
+        <translation type="vanished">Частичный</translation>
+    </message>
+    <message>
+        <source>Other</source>
+        <translation type="vanished">Другой</translation>
+    </message>
+    <message>
+        <source>Unknown (%1)</source>
+        <translation type="vanished">Неизвестно (%1)</translation>
+    </message>
+    <message>
+        <source>Exposure Program:</source>
+        <translation type="vanished">Режим съемки:</translation>
+    </message>
+    <message>
         <source>Program (auto)</source>
-        <translation>Программный (авто)</translation>
+        <translation type="vanished">Программный (авто)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="304"/>
         <source>Aperture priority (semi-auto)</source>
-        <translation>Приоритет диафрагмы (полуавтоматический)</translation>
+        <translation type="vanished">Приоритет диафрагмы (полуавтоматический)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="307"/>
         <source>Shutter priority (semi-auto)</source>
-        <translation>Приоритет выдержки (полуавтоматический)</translation>
+        <translation type="vanished">Приоритет выдержки (полуавтоматический)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="310"/>
         <source>Creative Program (based towards depth of field)</source>
-        <translation>Художественный (контроль глубины резкости)</translation>
+        <translation type="vanished">Художественный (контроль глубины резкости)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="313"/>
         <source>Action program (based towards fast shutter speed)</source>
-        <translation>Движение (контроль затвора)</translation>
+        <translation type="vanished">Движение (контроль затвора)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="316"/>
         <source>Portrait mode</source>
-        <translation>Портрет</translation>
+        <translation type="vanished">Портрет</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="319"/>
         <source>Landscape mode</source>
-        <translation>Ландшафт</translation>
+        <translation type="vanished">Ландшафт</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="329"/>
         <source>Exposure Mode:Manual</source>
-        <translation>Режим экспозиции:Ручной режим</translation>
+        <translation type="vanished">Режим экспозиции:Ручной режим</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="331"/>
         <source>Exposure Mode:Auto bracketing</source>
-        <translation>Режим экспозиции:Автовилка</translation>
+        <translation type="vanished">Режим экспозиции:Автовилка</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="336"/>
         <source>Focus Range:</source>
-        <translation>Глубина резкости:</translation>
+        <translation type="vanished">Глубина резкости:</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="339"/>
         <source>Macro</source>
-        <translation>Макро</translation>
+        <translation type="vanished">Макро</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="342"/>
         <source>Close</source>
-        <translation>Близко</translation>
+        <translation type="vanished">Близко</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="345"/>
         <source>Distant</source>
-        <translation>Далеко</translation>
+        <translation type="vanished">Далеко</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="360"/>
         <source>JPEG Process:Unknown</source>
-        <translation>Обработка JPEG:Неизвестно</translation>
+        <translation type="vanished">Обработка JPEG:Неизвестно</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="364"/>
-        <source>JPEG Process:%1</source>
-        <translation>Обработка JPEG:%1</translation>
+        <source>JPEG Process</source>
+        <translation type="vanished">Обработка JPEG</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="371"/>
-        <source>Latitude:%1</source>
-        <translation>Широта:%1</translation>
+        <source>Latitude</source>
+        <translation type="vanished">Широта</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="372"/>
-        <source>Longitude:%1</source>
-        <translation>Долгота:%1</translation>
+        <source>Longitude</source>
+        <translation type="vanished">Долгота</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="374"/>
-        <source>Altitude:%1</source>
-        <translation>Высота:%1</translation>
+        <source>Altitude</source>
+        <translation type="vanished">Высота</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="380"/>
-        <source>JPEG Quality:%1</source>
-        <translation>Качество JPEG:%1</translation>
+        <source>JPEG Quality</source>
+        <translation type="vanished">Качество JPEG</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="386"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="397"/>
         <source>Comment:</source>
-        <translation>Комментарий:</translation>
+        <translation type="vanished">Комментарий:</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="244"/>

@@ -499,44 +499,43 @@
 <context>
     <name>FileData</name>
     <message>
-        <location filename="../src/filedata.cpp" line="184"/>
+        <location filename="../src/filedata.cpp" line="185"/>
         <source>File does not exist</source>
         <translation>Filen finns inte</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="218"/>
+        <location filename="../src/filedata.cpp" line="219"/>
         <source>block device</source>
         <translation>blockenhet</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="222"/>
+        <location filename="../src/filedata.cpp" line="223"/>
         <source>character device</source>
         <translation>teckenenhet</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="226"/>
+        <location filename="../src/filedata.cpp" line="227"/>
         <source>pipe</source>
         <translation>pipe</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="230"/>
+        <location filename="../src/filedata.cpp" line="231"/>
         <source>socket</source>
         <translation>socket</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="234"/>
+        <location filename="../src/filedata.cpp" line="235"/>
         <source>folder</source>
         <translation>mapp</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="240"/>
+        <location filename="../src/filedata.cpp" line="241"/>
         <source>unknown</source>
         <translation>okänd</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="263"/>
         <source>Image Size</source>
-        <translation>Bildstorlek</translation>
+        <translation type="vanished">Bildstorlek</translation>
     </message>
 </context>
 <context>
@@ -674,42 +673,42 @@
         <translation>Tar bort</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="296"/>
+        <location filename="../qml/pages/FilePage.qml" line="297"/>
         <source>Location</source>
         <translation>Plats</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="300"/>
+        <location filename="../qml/pages/FilePage.qml" line="301"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="302"/>
+        <location filename="../qml/pages/FilePage.qml" line="303"/>
         <source>Link to %1</source>
         <translation>Länk till %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="302"/>
+        <location filename="../qml/pages/FilePage.qml" line="303"/>
         <source>Unknown (link target not found)</source>
         <translation>Okänd (länkmålet hittades inte)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="309"/>
+        <location filename="../qml/pages/FilePage.qml" line="310"/>
         <source>Permissions</source>
         <translation>Behörighet</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="313"/>
+        <location filename="../qml/pages/FilePage.qml" line="314"/>
         <source>Owner</source>
         <translation>Ägare</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="317"/>
+        <location filename="../qml/pages/FilePage.qml" line="318"/>
         <source>Group</source>
         <translation>Grupp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="321"/>
+        <location filename="../qml/pages/FilePage.qml" line="322"/>
         <source>Last modified</source>
         <translation>Ändrad</translation>
     </message>
@@ -757,6 +756,492 @@
         <location filename="../src/fileworker.cpp" line="364"/>
         <source>Cannot create target folder %1</source>
         <translation>Kan inte skapa målmappen %1</translation>
+    </message>
+</context>
+<context>
+    <name>ImageMetaData</name>
+    <message>
+        <location filename="../src/filedata.cpp" line="263"/>
+        <source>Image Size</source>
+        <translation>Bildstorlek</translation>
+    </message>
+    <message>
+        <location filename="../src/filedata.cpp" line="269"/>
+        <source>%1 x %2</source>
+        <extracomment>image size description without aspect ratio: 1=width, 2=height</extracomment>
+        <translation>%1 x %2</translation>
+    </message>
+    <message>
+        <location filename="../src/filedata.cpp" line="273"/>
+        <source>%1 x %2 (%3)</source>
+        <extracomment>image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9</extracomment>
+        <translation>%1 x %2 (%3)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="157"/>
+        <source>Make</source>
+        <translation>Make</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="158"/>
+        <source>Model</source>
+        <translation>Modell</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="161"/>
+        <source>Date/Time</source>
+        <translation>Datum/Tid</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="169"/>
+        <source>Orientation</source>
+        <translation>Orientering</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="174"/>
+        <source>Color/BW</source>
+        <translation>Färg/SV</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="174"/>
+        <source>Black and White</source>
+        <translation>Svartvit</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="182"/>
+        <source>Strobe light not detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Inget blixtljus upptäckt</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="184"/>
+        <source>Strobe light detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Blixtljus upptäckt</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="186"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="301"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="362"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="401"/>
+        <source>Manual</source>
+        <extracomment>description of camera flash mode
+----------
+exposure program</extracomment>
+        <translation>Manuell</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="188"/>
+        <source>Manual, return light not detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Manuell, inget återsken upptäckt</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="190"/>
+        <source>Manual, return light detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Manuell, återsken upptäckt</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="192"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="304"/>
+        <source>Auto</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Auto</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="194"/>
+        <source>Auto, return light not detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Auto, inget återsken upptäckt</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="196"/>
+        <source>Auto, return light detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Auto, återsken upptäckt</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="198"/>
+        <source>Red eye reduction mode</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Röda ögonreducering</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="200"/>
+        <source>Red eye reduction mode return light not detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Röda ögonreducering, inget återsken upptäckt</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="202"/>
+        <source>Red eye reduction mode return light detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Röda ögonreducering, återsken upptäckt</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="204"/>
+        <source>Manual, red eye reduction mode</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Manuell, röda ögonreducering</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="206"/>
+        <source>Manual, red eye reduction mode, return light not detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Manuell, röda ögonreducering, inget återsken upptäckt</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="208"/>
+        <source>Red eye reduction mode, return light detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Röda ögonreducering, återsken upptäckt</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="210"/>
+        <source>Auto, red eye reduction mode</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Auto, röda ögonreducering</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="212"/>
+        <source>Auto, red eye reduction mode, return light not detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Auto, röda ögonreducering, inget återsken upptäckt</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="214"/>
+        <source>Auto, red eye reduction mode, return light detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Auto, röda ögonreducering, återsken upptäckt</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="218"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="220"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="224"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="226"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="320"/>
+        <source>Flash</source>
+        <translation>Blixt</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="218"/>
+        <source>Yes (%1)</source>
+        <translation>Ja (%1)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="220"/>
+        <source>Yes</source>
+        <translation>Ja</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="224"/>
+        <source>No (Auto)</source>
+        <translation>Nej (auto)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="226"/>
+        <source>No</source>
+        <translation>Nej</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="235"/>
+        <source>%1mm (35mm equivalent: %2mm)</source>
+        <extracomment>size in millimeters</extracomment>
+        <translation>%1mm (motsvarande 35mm: %2mm)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="240"/>
+        <source>%1mm</source>
+        <extracomment>size in millimeters</extracomment>
+        <translation>%1mm</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="243"/>
+        <source>Focal Length</source>
+        <translation>Brännvidd</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="248"/>
+        <source>Digital Zoom</source>
+        <translation>Digital zoom</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="250"/>
+        <source>%1x</source>
+        <extracomment>as in &quot;zoom: %1 times&quot;</extracomment>
+        <translation>%1x</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="256"/>
+        <source>CCD Width</source>
+        <extracomment>photographic sensor width; cf. https://en.wikipedia.org/wiki/Charge-coupled_device</extracomment>
+        <translation>CCD-bredd</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="268"/>
+        <source>%1 (1/%2)</source>
+        <extracomment>exposure time as raw value (1) and as fraction (2)</extracomment>
+        <translation>%1 (1/%2)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="270"/>
+        <source>Exposure Time</source>
+        <translation>Exponeringstid</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="273"/>
+        <source>Aperture</source>
+        <translation>Bländare</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="275"/>
+        <source>f/%1</source>
+        <extracomment>aperture &quot;f&quot; number; cf. https://en.wikipedia.org/wiki/Aperture</extracomment>
+        <translation>f/%1</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="279"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="283"/>
+        <source>Focus Distance</source>
+        <translation>Fokusavstånd</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="281"/>
+        <source>Infinite</source>
+        <extracomment>focus distance</extracomment>
+        <translation>Oändligt</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="285"/>
+        <source>%1m</source>
+        <extracomment>focus distance in meters</extracomment>
+        <translation>%1m</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="290"/>
+        <source>ISO Equivalent</source>
+        <translation>ISO</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="296"/>
+        <source>Exposure Bias</source>
+        <translation>Exponeringsbias</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="301"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="304"/>
+        <source>White Balance</source>
+        <translation>Vitbalans</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="311"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="314"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="317"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="320"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="323"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="326"/>
+        <source>Light Source</source>
+        <translation>Ljuskälla</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="311"/>
+        <source>Daylight</source>
+        <translation>Dagsljus</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="314"/>
+        <source>Fluorescent</source>
+        <translation>Lysrör</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="317"/>
+        <source>Incandescent</source>
+        <translation>Glödlampa</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="323"/>
+        <source>Fine weather</source>
+        <translation>Solljus</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="326"/>
+        <source>Shade</source>
+        <translation>Skugga</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="337"/>
+        <source>Average</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Normal</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="339"/>
+        <source>Center weighted average</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Mittviktat medelvärde</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="341"/>
+        <source>Spot</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Fokuspunkt</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="343"/>
+        <source>Multi spot</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Flerpunkt</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="345"/>
+        <source>Pattern</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Mönster</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="347"/>
+        <source>Partial</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Partiell</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="349"/>
+        <source>Other</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Annat</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="351"/>
+        <source>Unknown (%1)</source>
+        <extracomment>inlcudes an unknown value (1); cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Okänd (%1)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="354"/>
+        <source>Metering Mode</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Mätläge</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="366"/>
+        <source>Program (auto)</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Program (auto)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="370"/>
+        <source>Aperture priority (semi-auto)</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Bländare (semi-auto)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="374"/>
+        <source>Shutter priority (semi-auto)</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Slutare (semi-auto)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="378"/>
+        <source>Creative Program (based towards depth of field)</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Kreativt program (baserat på fältdjup)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="382"/>
+        <source>Action program (based towards fast shutter speed)</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Rörelseprogram (baserat på kort slutartid)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="386"/>
+        <source>Portrait mode</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Stående</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="390"/>
+        <source>Landscape mode</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Liggande</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="395"/>
+        <source>Exposure Program</source>
+        <translation>Exponeringsprogram</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="401"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="404"/>
+        <source>Exposure Mode</source>
+        <translation>Exponeringsläge</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="406"/>
+        <source>Auto bracketing</source>
+        <extracomment>exposure mode; cf. https://en.wikipedia.org/wiki/Autobracketing#Exposure</extracomment>
+        <translation>Autobracketing</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="415"/>
+        <source>Macro</source>
+        <extracomment>focus range</extracomment>
+        <translation>Makro</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="419"/>
+        <source>Close</source>
+        <extracomment>focus range</extracomment>
+        <translation>Kort avstånd</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="423"/>
+        <source>Distant</source>
+        <extracomment>focus range</extracomment>
+        <translation>Långt avstånd</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="426"/>
+        <source>Focus Range</source>
+        <translation>Fokusområde</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="436"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="440"/>
+        <source>JPEG Process</source>
+        <translation>JPEG-process</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="436"/>
+        <source>Unknown</source>
+        <translation>Okänd</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="447"/>
+        <source>Latitude</source>
+        <translation>Latitud</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="448"/>
+        <source>Longitude</source>
+        <translation>Longitud</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="450"/>
+        <source>Altitude</source>
+        <translation>Altitud</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="456"/>
+        <source>JPEG Quality</source>
+        <translation>JPEG-kvalitet</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="473"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="484"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="487"/>
+        <source>Comment</source>
+        <translation>Kommentar</translation>
     </message>
 </context>
 <context>
@@ -918,378 +1403,297 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="143"/>
-        <source>Model:%1</source>
-        <translation>Modell:%1</translation>
+        <source>Model</source>
+        <translation type="vanished">Modell</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="146"/>
-        <source>Date/Time:%1</source>
-        <translation>Datum/Tid:%1</translation>
+        <source>Date/Time</source>
+        <translation type="vanished">Datum/Tid</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="153"/>
-        <source>Orientation:%1</source>
-        <translation>Orientering:%1</translation>
+        <source>Orientation</source>
+        <translation type="vanished">Orientering</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="158"/>
         <source>Color/BW:Black and White</source>
-        <translation>Färg/SV:Svartvit</translation>
+        <translation type="vanished">Färg/SV:Svartvit</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="165"/>
-        <source>(Strobe light not detected)</source>
-        <translation>(Inget blixtljus upptäckt)</translation>
+        <source>Strobe light not detected</source>
+        <translation type="vanished">Inget blixtljus upptäckt</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="166"/>
-        <source>(Strobe light detected) </source>
-        <translation>(Blixtljus upptäckt) </translation>
+        <source>Strobe light detected</source>
+        <translation type="vanished">(Blixtljus upptäckt) </translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="167"/>
-        <source>(Manual)</source>
-        <translation>(Manuell)</translation>
+        <source>Manual</source>
+        <translation type="vanished">Manuell</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="168"/>
-        <source>(Manual, return light not detected)</source>
-        <translation>(Manuell, inget återsken upptäckt)</translation>
+        <source>Manual, return light not detected</source>
+        <translation type="vanished">Manuell, inget återsken upptäckt</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="170"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="188"/>
-        <source>(Auto)</source>
-        <translation>(Auto)</translation>
+        <source>Auto</source>
+        <translation type="vanished">Auto</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="171"/>
-        <source>(Auto, return light not detected)</source>
-        <translation>(Auto, inget återsken upptäckt)</translation>
+        <source>Auto, return light not detected</source>
+        <translation type="vanished">Auto, inget återsken upptäckt</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="172"/>
-        <source>(Auto, return light detected)</source>
-        <translation>(Auto, återsken upptäckt)</translation>
+        <source>Auto, return light detected</source>
+        <translation type="vanished">Auto, återsken upptäckt</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="173"/>
-        <source>(Red eye reduction mode)</source>
-        <translation>(Röda ögonreducering)</translation>
+        <source>Red eye reduction mode</source>
+        <translation type="vanished">Röda ögonreducering</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="174"/>
-        <source>(Red eye reduction mode return light not detected)</source>
-        <translation>(Röda ögonreducering, inget återsken upptäckt)</translation>
+        <source>Red eye reduction mode return light not detected</source>
+        <translation type="vanished">Röda ögonreducering, inget återsken upptäckt</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="169"/>
-        <source>(Manual, return light detected)</source>
-        <translation>(Manuell, återsken upptäckt)</translation>
+        <source>Manual, return light detected</source>
+        <translation type="vanished">Manuell, återsken upptäckt</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="142"/>
-        <source>Make:%1</source>
-        <translation>Make:%1</translation>
+        <source>Make</source>
+        <translation type="vanished">Make</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="175"/>
-        <source>(Red eye reduction mode return light detected)</source>
-        <translation>(Röda ögonreducering, återsken upptäckt)</translation>
+        <source>Red eye reduction mode return light detected</source>
+        <translation type="vanished">Röda ögonreducering, återsken upptäckt</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="176"/>
-        <source>(Manual, red eye reduction mode)</source>
-        <translation>(Manuell, röda ögonreducering)</translation>
+        <source>Manual, red eye reduction mode</source>
+        <translation type="vanished">Manuell, röda ögonreducering</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="177"/>
-        <source>(Manual, red eye reduction mode, return light not detected)</source>
-        <translation>(Manuell, röda ögonreducering, inget återsken upptäckt)</translation>
+        <source>Manual, red eye reduction mode, return light not detected</source>
+        <translation type="vanished">Manuell, röda ögonreducering, inget återsken upptäckt</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="178"/>
-        <source>(Red eye reduction mode, return light detected)</source>
-        <translation>(Röda ögonreducering, återsken upptäckt)</translation>
+        <source>Red eye reduction mode, return light detected</source>
+        <translation type="vanished">Röda ögonreducering, återsken upptäckt</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="179"/>
-        <source>(Auto, red eye reduction mode)</source>
-        <translation>(Auto, röda ögonreducering)</translation>
+        <source>Auto, red eye reduction mode</source>
+        <translation type="vanished">Auto, röda ögonreducering</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="180"/>
-        <source>(Auto, red eye reduction mode, return light not detected)</source>
-        <translation>(Auto, röda ögonreducering, inget återsken upptäckt)</translation>
+        <source>Auto, red eye reduction mode, return light not detected</source>
+        <translation type="vanished">Auto, röda ögonreducering, inget återsken upptäckt</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="181"/>
-        <source>(Auto, red eye reduction mode, return light detected)</source>
-        <translation>(Auto, röda ögonreducering, återsken upptäckt)</translation>
+        <source>Auto, red eye reduction mode, return light detected</source>
+        <translation type="vanished">Auto, röda ögonreducering, återsken upptäckt</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="183"/>
         <source>Flash:Yes</source>
-        <translation>Blixt:Ja</translation>
+        <translation type="vanished">Blixt:Ja</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="190"/>
         <source>Flash:No</source>
-        <translation>Blixt:Nej</translation>
+        <translation type="vanished">Blixt:Nej</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="196"/>
         <source>Focal Length:%1mm</source>
-        <translation>Brännvidd:%1mm</translation>
+        <translation type="vanished">Brännvidd:%1mm</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="198"/>
-        <source>(35mm equivalent: %1mm)</source>
-        <translation>(Motsvarande 35mm: %1mm)</translation>
+        <source>35mm equivalent: %1mm</source>
+        <translation type="vanished">Motsvarande 35mm: %1mm</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="205"/>
         <source>Digital Zoom:%1x</source>
-        <translation>Digital zoom:%1x</translation>
+        <translation type="vanished">Digital zoom:%1x</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="209"/>
-        <source>CCD Width:%1</source>
-        <translation>CCD-bredd:%1</translation>
+        <source>CCD Width</source>
+        <translation type="vanished">CCD-bredd</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="215"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="217"/>
-        <source>Exposure Time:%1</source>
-        <translation>Exponeringstid:%1</translation>
+        <source>Exposure Time</source>
+        <translation type="vanished">Exponeringstid</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="220"/>
-        <source>(1/%1)</source>
-        <translation>(1/%1)</translation>
+        <source>1/%1</source>
+        <translation type="vanished">1/%1</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="225"/>
         <source>Aperture:f/%1</source>
-        <translation>Bländare:f/%1</translation>
+        <translation type="vanished">Bländare:f/%1</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="229"/>
         <source>Focus Distance:Infinite</source>
-        <translation>Fokusavstånd:Oändligt</translation>
+        <translation type="vanished">Fokusavstånd:Oändligt</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="231"/>
         <source>Focus Distance:%1m</source>
-        <translation>Fokusavstånd:%1m</translation>
+        <translation type="vanished">Fokusavstånd:%1m</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="236"/>
-        <source>ISO Equivalent:%1</source>
-        <translation>ISO:%1</translation>
+        <source>ISO Equivalent</source>
+        <translation type="vanished">ISO</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="242"/>
-        <source>Exposure Bias:%1</source>
-        <translation>Exponeringsbias:%1</translation>
+        <source>Exposure Bias</source>
+        <translation type="vanished">Exponeringsbias</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="247"/>
         <source>White Balance:Manual</source>
-        <translation>Vitbalans:Manuell</translation>
+        <translation type="vanished">Vitbalans:Manuell</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="250"/>
         <source>White Balance:Auto</source>
-        <translation>Vitbalans:Auto</translation>
+        <translation type="vanished">Vitbalans:Auto</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="257"/>
         <source>Light Source:Daylight</source>
-        <translation>Ljuskälla:Dagsljus</translation>
+        <translation type="vanished">Ljuskälla:Dagsljus</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="260"/>
         <source>Light Source:Fluorescent</source>
-        <translation>Ljuskälla:Lysrör</translation>
+        <translation type="vanished">Ljuskälla:Lysrör</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="263"/>
         <source>Light Source:Incandescent</source>
-        <translation>Ljuskälla:Glödlampa</translation>
+        <translation type="vanished">Ljuskälla:Glödlampa</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="266"/>
         <source>Light Source:Flash</source>
-        <translation>Ljuskälla:Blixt</translation>
+        <translation type="vanished">Ljuskälla:Blixt</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="269"/>
         <source>Light Source:Fine weather</source>
-        <translation>Ljuskälla:Solljus</translation>
+        <translation type="vanished">Ljuskälla:Solljus</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="272"/>
         <source>Light Source:Shade</source>
-        <translation>Ljuskälla:Skugga</translation>
+        <translation type="vanished">Ljuskälla:Skugga</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="280"/>
         <source>Metering Mode:</source>
-        <translation>Mätläge:</translation>
+        <translation type="vanished">Mätläge:</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="282"/>
         <source>Average</source>
-        <translation>Normal</translation>
+        <translation type="vanished">Normal</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="283"/>
         <source>Center weighted average</source>
-        <translation>Mittviktat medelvärde</translation>
+        <translation type="vanished">Mittviktat medelvärde</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="295"/>
         <source>Exposure Program:</source>
-        <translation>Exponeringsprogram:</translation>
+        <translation type="vanished">Exponeringsprogram:</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="371"/>
-        <source>Latitude:%1</source>
-        <translation>Latitud:%1</translation>
+        <source>Latitude</source>
+        <translation type="vanished">Latitud</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="372"/>
-        <source>Longitude:%1</source>
-        <translation>Longitud:%1</translation>
+        <source>Longitude</source>
+        <translation type="vanished">Longitud</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="374"/>
-        <source>Altitude:%1</source>
-        <translation>Altitud:%1</translation>
+        <source>Altitude</source>
+        <translation type="vanished">Altitud</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="284"/>
         <source>Spot</source>
-        <translation>Fokuspunkt</translation>
+        <translation type="vanished">Fokuspunkt</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="285"/>
         <source>Multi spot</source>
-        <translation>Flerpunkt</translation>
+        <translation type="vanished">Flerpunkt</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="286"/>
         <source>Pattern</source>
         <translatorcomment>Mönster</translatorcomment>
-        <translation>Mönster</translation>
+        <translation type="vanished">Mönster</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="287"/>
         <source>Partial</source>
-        <translation>Partiell</translation>
+        <translation type="vanished">Partiell</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="288"/>
         <source>Other</source>
-        <translation>Annat</translation>
+        <translation type="vanished">Annat</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="289"/>
         <source>Unknown (%1)</source>
-        <translation>Okänd (%1)</translation>
+        <translation type="vanished">Okänd (%1)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="298"/>
-        <source>Manual</source>
-        <translation>Manuell</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="301"/>
         <source>Program (auto)</source>
-        <translation>Program (auto)</translation>
+        <translation type="vanished">Program (auto)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="304"/>
         <source>Aperture priority (semi-auto)</source>
-        <translation>Bländare (semi-auto)</translation>
+        <translation type="vanished">Bländare (semi-auto)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="307"/>
         <source>Shutter priority (semi-auto)</source>
-        <translation>Slutare (semi-auto)</translation>
+        <translation type="vanished">Slutare (semi-auto)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="310"/>
         <source>Creative Program (based towards depth of field)</source>
-        <translation>Kreativt program (baserat på fältdjup)</translation>
+        <translation type="vanished">Kreativt program (baserat på fältdjup)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="313"/>
         <source>Action program (based towards fast shutter speed)</source>
-        <translation>Rörelseprogram (baserat på kort slutartid)</translation>
+        <translation type="vanished">Rörelseprogram (baserat på kort slutartid)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="316"/>
         <source>Portrait mode</source>
-        <translation>Stående</translation>
+        <translation type="vanished">Stående</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="319"/>
         <source>Landscape mode</source>
-        <translation>Liggande</translation>
+        <translation type="vanished">Liggande</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="329"/>
         <source>Exposure Mode:Manual</source>
-        <translation>Exponeringsläge:Manuell</translation>
+        <translation type="vanished">Exponeringsläge:Manuell</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="331"/>
         <source>Exposure Mode:Auto bracketing</source>
-        <translation>Exponeringsläge:Autobracketing</translation>
+        <translation type="vanished">Exponeringsläge:Autobracketing</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="336"/>
         <source>Focus Range:</source>
-        <translation>Fokusområde:</translation>
+        <translation type="vanished">Fokusområde:</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="339"/>
         <source>Macro</source>
-        <translation>Makro</translation>
+        <translation type="vanished">Makro</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="342"/>
         <source>Close</source>
-        <translation>Kort avstånd</translation>
+        <translation type="vanished">Kort avstånd</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="345"/>
         <source>Distant</source>
-        <translation>Långt avstånd</translation>
+        <translation type="vanished">Långt avstånd</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="360"/>
         <source>JPEG Process:Unknown</source>
-        <translation>JPEG-process:Okänd</translation>
+        <translation type="vanished">JPEG-process:Okänd</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="364"/>
-        <source>JPEG Process:%1</source>
-        <translation>JPEG-process:%1</translation>
+        <source>JPEG Process</source>
+        <translation type="vanished">JPEG-process</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="380"/>
-        <source>JPEG Quality:%1</source>
-        <translation>JPEG-kvalitet:%1</translation>
+        <source>JPEG Quality</source>
+        <translation type="vanished">JPEG-kvalitet</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="386"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="397"/>
         <source>Comment:</source>
-        <translation>Kommentar:</translation>
+        <translation type="vanished">Kommentar:</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="80"/>
