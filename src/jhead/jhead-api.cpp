@@ -31,9 +31,24 @@
 
 // Functions modified to output to a QStringList instead of stdout
 
-#include <QObject>
+#include <QCoreApplication>
 #include <sys/stat.h>
 #include "jhead-api.h"
+
+namespace {
+    class T {
+        // Use T::tr("string") for translations to
+        // reduce clutter in translation files. Strings
+        // will be grouped together in the given context.
+        Q_DECLARE_TR_FUNCTIONS(ImageMetaData)
+    };
+
+    QString asMeta(QString label, QString value) {
+        // format to be used as meta data entry;
+        // label and value must be already translated
+        return label+METADATA_SEPARATOR+value;
+    }
+}
 
 int ShowTags     = FALSE;    // Do not show raw by default.
 int DumpExifMap  = FALSE;
@@ -139,137 +154,176 @@ void ErrNonfatal(const char * msg, int a1, int a2)
 void appendImageInfo(QStringList &metadata)
 {
     if (ImageInfo.CameraMake[0]){
-        metadata.append(QObject::tr("Make:%1").arg(QString::fromUtf8(ImageInfo.CameraMake)));
-        metadata.append(QObject::tr("Model:%1").arg(QString::fromUtf8(ImageInfo.CameraModel)));
+        metadata.append(asMeta(T::tr("Make"), QString::fromUtf8(ImageInfo.CameraMake)));
+        metadata.append(asMeta(T::tr("Model"), QString::fromUtf8(ImageInfo.CameraModel)));
     }
     if (ImageInfo.DateTime[0]){
-        metadata.append(QObject::tr("Date/Time:%1").arg(QString::fromUtf8(ImageInfo.DateTime)));
+        metadata.append(asMeta(T::tr("Date/Time"), QString::fromUtf8(ImageInfo.DateTime)));
     }
 
-//    metadata.append(QObject::tr("Resolution:%1 x %2").arg(ImageInfo.Width).arg(ImageInfo.Height));
+    // image size is handled in filedata.cpp
+    // metadata.append(asMeta(T::tr("Resolution"), T:tr("%1 x %2").arg(ImageInfo.Width).arg(ImageInfo.Height));
 
     if (ImageInfo.Orientation > 1){
-        // Only print orientation if one was supplied, and if its not 1 (normal orientation)
-        metadata.append(QObject::tr("Orientation:%1")
-                        .arg(QString::fromUtf8(OrientTab[ImageInfo.Orientation])));
+        // Only print orientation if one was supplied, and if it is not 1 (normal orientation)
+        metadata.append(asMeta(T::tr("Orientation"),
+                        QString::fromUtf8(OrientTab[ImageInfo.Orientation])));
     }
 
     if (ImageInfo.IsColor == 0){
-        metadata.append(QObject::tr("Color/BW:Black and White"));
+        metadata.append(asMeta(T::tr("Color/BW"), T::tr("Black and White")));
     }
 
     if (ImageInfo.FlashUsed >= 0){
         if (ImageInfo.FlashUsed & 1){
             QString flash;
             switch (ImageInfo.FlashUsed){
-                case 0x5: flash = QObject::tr("(Strobe light not detected)"); break;
-                case 0x7: flash = QObject::tr("(Strobe light detected) "); break;
-                case 0x9: flash = QObject::tr("(Manual)"); break;
-                case 0xd: flash = QObject::tr("(Manual, return light not detected)"); break;
-                case 0xf: flash = QObject::tr("(Manual, return light detected)"); break;
-                case 0x19:flash = QObject::tr("(Auto)"); break;
-                case 0x1d:flash = QObject::tr("(Auto, return light not detected)"); break;
-                case 0x1f:flash = QObject::tr("(Auto, return light detected)"); break;
-                case 0x41:flash = QObject::tr("(Red eye reduction mode)"); break;
-                case 0x45:flash = QObject::tr("(Red eye reduction mode return light not detected)"); break;
-                case 0x47:flash = QObject::tr("(Red eye reduction mode return light detected)"); break;
-                case 0x49:flash = QObject::tr("(Manual, red eye reduction mode)"); break;
-                case 0x4d:flash = QObject::tr("(Manual, red eye reduction mode, return light not detected)"); break;
-                case 0x4f:flash = QObject::tr("(Red eye reduction mode, return light detected)"); break;
-                case 0x59:flash = QObject::tr("(Auto, red eye reduction mode)"); break;
-                case 0x5d:flash = QObject::tr("(Auto, red eye reduction mode, return light not detected)"); break;
-                case 0x5f:flash = QObject::tr("(Auto, red eye reduction mode, return light detected)"); break;
+                //: description of camera flash mode
+                case 0x5: flash = T::tr("Strobe light not detected"); break;
+                //: description of camera flash mode
+                case 0x7: flash = T::tr("Strobe light detected"); break;
+                //: description of camera flash mode
+                case 0x9: flash = T::tr("Manual"); break;
+                //: description of camera flash mode
+                case 0xd: flash = T::tr("Manual, return light not detected"); break;
+                //: description of camera flash mode
+                case 0xf: flash = T::tr("Manual, return light detected"); break;
+                //: description of camera flash mode
+                case 0x19:flash = T::tr("Auto"); break;
+                //: description of camera flash mode
+                case 0x1d:flash = T::tr("Auto, return light not detected"); break;
+                //: description of camera flash mode
+                case 0x1f:flash = T::tr("Auto, return light detected"); break;
+                //: description of camera flash mode
+                case 0x41:flash = T::tr("Red eye reduction mode"); break;
+                //: description of camera flash mode
+                case 0x45:flash = T::tr("Red eye reduction mode return light not detected"); break;
+                //: description of camera flash mode
+                case 0x47:flash = T::tr("Red eye reduction mode return light detected"); break;
+                //: description of camera flash mode
+                case 0x49:flash = T::tr("Manual, red eye reduction mode"); break;
+                //: description of camera flash mode
+                case 0x4d:flash = T::tr("Manual, red eye reduction mode, return light not detected"); break;
+                //: description of camera flash mode
+                case 0x4f:flash = T::tr("Red eye reduction mode, return light detected"); break;
+                //: description of camera flash mode
+                case 0x59:flash = T::tr("Auto, red eye reduction mode"); break;
+                //: description of camera flash mode
+                case 0x5d:flash = T::tr("Auto, red eye reduction mode, return light not detected"); break;
+                //: description of camera flash mode
+                case 0x5f:flash = T::tr("Auto, red eye reduction mode, return light detected"); break;
             }
-            metadata.append(QObject::tr("Flash:Yes")+" "+flash);
 
-        }else{
-            QString flash;
-            switch (ImageInfo.FlashUsed){
-                case 0x18:flash = QObject::tr("(Auto)"); break;
+            if (flash.isEmpty()) {
+                metadata.append(asMeta(T::tr("Flash"), T::tr("Yes (%1)").arg(flash)));
+            } else {
+                metadata.append(asMeta(T::tr("Flash"), T::tr("Yes")));
             }
-            metadata.append(QObject::tr("Flash:No")+" "+flash);
+        } else {
+            if (ImageInfo.FlashUsed == 0x18) {
+                metadata.append(asMeta(T::tr("Flash"), T::tr("No (Auto)")));
+            } else {
+                metadata.append(asMeta(T::tr("Flash"), T::tr("No")));
+            }
         }
     }
 
-
-    if (ImageInfo.FocalLength){
-        QString fl = QObject::tr("Focal Length:%1mm").arg((double)ImageInfo.FocalLength, 3, 'f', 1);
+    if (ImageInfo.FocalLength != 0.0f) {
+        QString fl;
         if (ImageInfo.FocalLength35mmEquiv){
-            fl = fl + " " + QObject::tr("(35mm equivalent: %1mm)").arg(ImageInfo.FocalLength35mmEquiv);
+            //: size in millimeters
+            fl = T::tr("%1mm (35mm equivalent: %2mm)").
+                    arg(static_cast<double>(ImageInfo.FocalLength), 3, 'f', 1).
+                    arg(ImageInfo.FocalLength35mmEquiv);
+        } else {
+            //: size in millimeters
+            fl = T::tr("%1mm").
+                    arg(static_cast<double>(ImageInfo.FocalLength), 3, 'f', 1);
         }
-        metadata.append(fl);
+        metadata.append(asMeta(T::tr("Focal Length"), fl));
     }
 
     if (ImageInfo.DigitalZoomRatio > 1){
         // Digital zoom used.  Shame on you!
-        metadata.append(QObject::tr("Digital Zoom:%1x").arg((double)ImageInfo.DigitalZoomRatio, 1, 'f', 3));
+        metadata.append(asMeta(T::tr("Digital Zoom"),
+                               //: as in "zoom: %1 times"
+                               T::tr("%1x").
+                               arg(static_cast<double>(ImageInfo.DigitalZoomRatio), 1, 'f', 3)));
     }
 
-    if (ImageInfo.CCDWidth){
-        metadata.append(QObject::tr("CCD Width:%1").arg((double)ImageInfo.CCDWidth, 3, 'f', 2));
+    if (ImageInfo.CCDWidth != 0.0f){
+        //: photographic sensor width; cf. https://en.wikipedia.org/wiki/Charge-coupled_device
+        metadata.append(asMeta(T::tr("CCD Width"), QString("%1").arg(static_cast<double>(ImageInfo.CCDWidth), 3, 'f', 2)));
     }
 
-    if (ImageInfo.ExposureTime){
+    if (ImageInfo.ExposureTime != 0.0f) {
         QString et;
-        if (ImageInfo.ExposureTime < 0.010){
-            et = QObject::tr("Exposure Time:%1").arg((double)ImageInfo.ExposureTime, 6, 'f', 4);
+        if (ImageInfo.ExposureTime < 0.010f){
+            et = QString("%1").arg(static_cast<double>(ImageInfo.ExposureTime), 6, 'f', 4);
         }else{
-            et = QObject::tr("Exposure Time:%1").arg((double)ImageInfo.ExposureTime, 5, 'f', 3);
+            et = QString("%1").arg(static_cast<double>(ImageInfo.ExposureTime), 5, 'f', 3);
         }
-        if (ImageInfo.ExposureTime <= 0.5){
-            et = et + " " + QObject::tr("(1/%1)").arg((int)(0.5 + 1/ImageInfo.ExposureTime));
+        if (ImageInfo.ExposureTime <= 0.5f){
+            //: exposure time as raw value (1) and as fraction (2)
+            et = T::tr("%1 (1/%2)").arg(et).arg(static_cast<int>(0.5f + 1.0f/ImageInfo.ExposureTime));
         }
-        metadata.append(et);
+        metadata.append(asMeta(T::tr("Exposure Time"), et));
     }
-    if (ImageInfo.ApertureFNumber){
-        metadata.append(QObject::tr("Aperture:f/%1").arg((double)ImageInfo.ApertureFNumber, 3, 'f', 1));
+    if (ImageInfo.ApertureFNumber != 0.0f) {
+        metadata.append(asMeta(T::tr("Aperture"),
+                               //: aperture "f" number; cf. https://en.wikipedia.org/wiki/Aperture
+                               T::tr("f/%1").arg(static_cast<double>(ImageInfo.ApertureFNumber), 3, 'f', 1)));
     }
-    if (ImageInfo.Distance){
+    if (ImageInfo.Distance != 0.0f) {
         if (ImageInfo.Distance < 0){
-            metadata.append(QObject::tr("Focus Distance:Infinite"));
+            metadata.append(asMeta(T::tr("Focus Distance"),
+                                   //: focus distance
+                                   T::tr("Infinite")));
         }else{
-            metadata.append(QObject::tr("Focus Distance:%1m").arg((double)ImageInfo.Distance, 4, 'f', 2));
+            metadata.append(asMeta(T::tr("Focus Distance"),
+                                   //: focus distance in meters
+                                   T::tr("%1m").arg(static_cast<double>(ImageInfo.Distance), 4, 'f', 2)));
         }
     }
 
     if (ImageInfo.ISOequivalent){
-        metadata.append(QObject::tr("ISO Equivalent:%1").arg((int)ImageInfo.ISOequivalent));
+        metadata.append(asMeta(T::tr("ISO Equivalent"), QString("%1").arg(static_cast<int>(ImageInfo.ISOequivalent))));
     }
 
-    if (ImageInfo.ExposureBias){
+    if (ImageInfo.ExposureBias != 0.0f) {
         // If exposure bias was specified, but set to zero, presumably its no bias at all,
         // so only show it if its nonzero.
-        metadata.append(QObject::tr("Exposure Bias:%1").arg((double)ImageInfo.ExposureBias, 4, 'f', 2));
+        metadata.append(asMeta(T::tr("Exposure Bias"), QString("%1").arg(static_cast<double>(ImageInfo.ExposureBias), 4, 'f', 2)));
     }
 
     switch(ImageInfo.Whitebalance) {
         case 1:
-            metadata.append(QObject::tr("White Balance:Manual"));
+            metadata.append(asMeta(T::tr("White Balance"), T::tr("Manual")));
             break;
         case 0:
-            metadata.append(QObject::tr("White Balance:Auto"));
+            metadata.append(asMeta(T::tr("White Balance"), T::tr("Auto")));
             break;
     }
 
     //Quercus: 17-1-2004 Added LightSource, some cams return this, whitebalance or both
     switch(ImageInfo.LightSource) {
         case 1:
-            metadata.append(QObject::tr("Light Source:Daylight"));
+            metadata.append(asMeta(T::tr("Light Source"), T::tr("Daylight")));
             break;
         case 2:
-            metadata.append(QObject::tr("Light Source:Fluorescent"));
+            metadata.append(asMeta(T::tr("Light Source"), T::tr("Fluorescent")));
             break;
         case 3:
-            metadata.append(QObject::tr("Light Source:Incandescent"));
+            metadata.append(asMeta(T::tr("Light Source"), T::tr("Incandescent")));
             break;
         case 4:
-            metadata.append(QObject::tr("Light Source:Flash"));
+            metadata.append(asMeta(T::tr("Light Source"), T::tr("Flash")));
             break;
         case 9:
-            metadata.append(QObject::tr("Light Source:Fine weather"));
+            metadata.append(asMeta(T::tr("Light Source"), T::tr("Fine weather")));
             break;
         case 11:
-            metadata.append(QObject::tr("Light Source:Shade"));
+            metadata.append(asMeta(T::tr("Light Source"), T::tr("Shade")));
             break;
         default:; //Quercus: 17-1-2004 There are many more modes for this, check Exif2.2 specs
             // If it just says 'unknown' or we don't know it, then
@@ -277,78 +331,100 @@ void appendImageInfo(QStringList &metadata)
     }
 
     if (ImageInfo.MeteringMode > 0){ // 05-jan-2001 vcs
-        QString m = QObject::tr("Metering Mode:");
+        QString m;
         switch(ImageInfo.MeteringMode) {
-        case 1: m += QObject::tr("Average"); break;
-        case 2: m += QObject::tr("Center weighted average"); break;
-        case 3: m += QObject::tr("Spot"); break;
-        case 4: m += QObject::tr("Multi spot"); break;
-        case 5: m += QObject::tr("Pattern"); break;
-        case 6: m += QObject::tr("Partial"); break;
-        case 255: m += QObject::tr("Other"); break;
-        default: m += QObject::tr("Unknown (%1)").arg(ImageInfo.MeteringMode); break;
+        //: cf. https://en.wikipedia.org/wiki/Metering_mode
+        case 1: m += T::tr("Average"); break;
+        //: cf. https://en.wikipedia.org/wiki/Metering_mode
+        case 2: m += T::tr("Center weighted average"); break;
+        //: cf. https://en.wikipedia.org/wiki/Metering_mode
+        case 3: m += T::tr("Spot"); break;
+        //: cf. https://en.wikipedia.org/wiki/Metering_mode
+        case 4: m += T::tr("Multi spot"); break;
+        //: cf. https://en.wikipedia.org/wiki/Metering_mode
+        case 5: m += T::tr("Pattern"); break;
+        //: cf. https://en.wikipedia.org/wiki/Metering_mode
+        case 6: m += T::tr("Partial"); break;
+        //: cf. https://en.wikipedia.org/wiki/Metering_mode
+        case 255: m += T::tr("Other"); break;
+        //: inlcudes an unknown value (1); cf. https://en.wikipedia.org/wiki/Metering_mode
+        default: m += T::tr("Unknown (%1)").arg(ImageInfo.MeteringMode); break;
         }
-        metadata.append(m);
+        //: cf. https://en.wikipedia.org/wiki/Metering_mode
+        metadata.append(asMeta(T::tr("Metering Mode"), m));
     }
 
     if (ImageInfo.ExposureProgram){ // 05-jan-2001 vcs
-        QString e = QObject::tr("Exposure Program:");
+        QString e;
         switch(ImageInfo.ExposureProgram) {
         case 1:
-            e += QObject::tr("Manual");
+            //: exposure program
+            e += T::tr("Manual");
             break;
         case 2:
-            e += QObject::tr("Program (auto)");
+            //: exposure program
+            e += T::tr("Program (auto)");
             break;
         case 3:
-            e += QObject::tr("Aperture priority (semi-auto)");
+            //: exposure program
+            e += T::tr("Aperture priority (semi-auto)");
             break;
         case 4:
-            e += QObject::tr("Shutter priority (semi-auto)");
+            //: exposure program
+            e += T::tr("Shutter priority (semi-auto)");
             break;
         case 5:
-            e += QObject::tr("Creative Program (based towards depth of field)");
+            //: exposure program
+            e += T::tr("Creative Program (based towards depth of field)");
             break;
         case 6:
-            e += QObject::tr("Action program (based towards fast shutter speed)");
+            //: exposure program
+            e += T::tr("Action program (based towards fast shutter speed)");
             break;
         case 7:
-            e += QObject::tr("Portrait mode");
+            //: exposure program
+            e += T::tr("Portrait mode");
             break;
         case 8:
-            e += QObject::tr("Landscape mode");
+            //: exposure program
+            e += T::tr("Landscape mode");
             break;
         default:
             break;
         }
-        metadata.append(e);
+        metadata.append(asMeta(T::tr("Exposure Program"), e));
     }
     switch(ImageInfo.ExposureMode){
         case 0: // Automatic (not worth cluttering up output for)
             break;
-        case 1: metadata.append(QObject::tr("Exposure Mode:Manual"));
+        case 1:
+            metadata.append(asMeta(T::tr("Exposure Mode"), T::tr("Manual")));
             break;
-        case 2: metadata.append(QObject::tr("Exposure Mode:Auto bracketing"));
+        case 2:
+            metadata.append(asMeta(T::tr("Exposure Mode"),
+                                   //: exposure mode; cf. https://en.wikipedia.org/wiki/Autobracketing#Exposure
+                                   T::tr("Auto bracketing")));
             break;
     }
 
     if (ImageInfo.DistanceRange) {
-        QString fr = QObject::tr("Focus Range:");
+        QString fr;
         switch(ImageInfo.DistanceRange) {
             case 1:
-                fr += QObject::tr("Macro");
+                //: focus range
+                fr += T::tr("Macro");
                 break;
             case 2:
-                fr += QObject::tr("Close");
+                //: focus range
+                fr += T::tr("Close");
                 break;
             case 3:
-                fr += QObject::tr("Distant");
+                //: focus range
+                fr += T::tr("Distant");
                 break;
         }
-        metadata.append(fr);
+        metadata.append(asMeta(T::tr("Focus Range"), fr));
     }
-
-
 
     if (ImageInfo.Process != M_SOF0){
         // don't show it if its the plain old boring 'baseline' process, but do
@@ -357,35 +433,36 @@ void appendImageInfo(QStringList &metadata)
         for (a=0;;a++){
             if (a >= PROCESS_TABLE_SIZE){
                 // ran off the end of the table.
-                metadata.append(QObject::tr("JPEG Process:Unknown"));
+                metadata.append(asMeta(T::tr("JPEG Process"), T::tr("Unknown")));
                 break;
             }
             if (ProcessTable[a].Tag == ImageInfo.Process){
-                metadata.append(QObject::tr("JPEG Process:%1").arg(QString::fromUtf8(ProcessTable[a].Desc)));
+                metadata.append(asMeta(T::tr("JPEG Process"), QString("%1").arg(QString::fromUtf8(ProcessTable[a].Desc))));
                 break;
             }
         }
     }
 
     if (ImageInfo.GpsInfoPresent){
-        metadata.append(QObject::tr("Latitude:%1").arg(QString::fromUtf8(ImageInfo.GpsLat)));
-        metadata.append(QObject::tr("Longitude:%1").arg(QString::fromUtf8(ImageInfo.GpsLong)));
+        metadata.append(asMeta(T::tr("Latitude"), QString("%1").arg(QString::fromUtf8(ImageInfo.GpsLat))));
+        metadata.append(asMeta(T::tr("Longitude"), QString("%1").arg(QString::fromUtf8(ImageInfo.GpsLong))));
         if (ImageInfo.GpsAlt[0]) {
-            metadata.append(QObject::tr("Altitude:%1").arg(QString::fromUtf8(ImageInfo.GpsAlt)));
+            metadata.append(asMeta(T::tr("Altitude"), QString("%1").arg(QString::fromUtf8(ImageInfo.GpsAlt))));
         }
 
     }
 
     if (ImageInfo.QualityGuess){
-        metadata.append(QObject::tr("JPEG Quality:%1").arg(ImageInfo.QualityGuess));
+        metadata.append(asMeta(T::tr("JPEG Quality"), QString("%1").arg(ImageInfo.QualityGuess)));
     }
 
     // Print the comment. Print 'Comment:' for each new line of comment.
     if (ImageInfo.Comments[0]){
-        int a,c;
-        QString comment = QObject::tr("Comment:");
-        QByteArray rawComment;
+        int a;
+        char c;
         if (!ImageInfo.CommentWidthchars){
+            QByteArray rawComment;
+            QString comment;
             for (a=0;a<MAX_COMMENT_SIZE;a++){
                 c = ImageInfo.Comments[a];
                 if (c == '\0') break;
@@ -393,8 +470,8 @@ void appendImageInfo(QStringList &metadata)
                     // Do not start a new line if the string ends with a carriage return.
                     if (ImageInfo.Comments[a+1] != '\0'){
                         comment += QString::fromUtf8(rawComment);
-                        metadata.append(comment);
-                        comment = QObject::tr("Comment:");
+                        metadata.append(asMeta(T::tr("Comment"), comment));
+                        comment = "";
                     }else{
                         comment += "\n";
                     }
@@ -404,10 +481,10 @@ void appendImageInfo(QStringList &metadata)
                 }
             }
             comment += QString::fromUtf8(rawComment);
-            metadata.append(comment);
+            metadata.append(asMeta(T::tr("Comment"), comment));
         }else{
-            comment += QString::fromUtf16((ushort *)ImageInfo.Comments, ImageInfo.CommentWidthchars);
-            metadata.append(comment);
+            QString comment = QString::fromUtf16((ushort *)ImageInfo.Comments, ImageInfo.CommentWidthchars);
+            metadata.append(asMeta(T::tr("Comment"), comment));
         }
     }
 }
@@ -496,9 +573,10 @@ void appendIPTC(unsigned char* Data, unsigned int itemlen, QStringList &metadata
         switch (type) {
             case IPTC_RECORD_VERSION:
                 // always 4, so irrelevant information
-                //metadata.append(QObject::tr("Record Version:%1").arg((int)((*pos << 8) + (*(pos+1)))));
+                //metadata.append(T::tr("Record Version:%1").arg((int)((*pos << 8) + (*(pos+1)))));
                 break;
 
+            // TODO translate these...
             case IPTC_SUPLEMENTAL_CATEGORIES:  description = "Suplemental Categories"; break;
             case IPTC_KEYWORDS:                description = "Keywords"; break;
             case IPTC_CAPTION:                 description = "Caption"; break;
@@ -532,7 +610,7 @@ void appendIPTC(unsigned char* Data, unsigned int itemlen, QStringList &metadata
         }
         // display only applications records (02), not envelope records (01)
         if (!description.isEmpty() && signature == 0x1c02) {
-            metadata.append(description+":"+QString::fromUtf8((char *)pos, length));
+            metadata.append(asMeta(description, QString::fromUtf8((char *)pos, length)));
         }
         pos += length;
     }

@@ -59,6 +59,8 @@ class FileData : public QObject
     Q_PROPERTY(int filesCount READ filesCount NOTIFY filesCountChanged)
     Q_PROPERTY(QString errorMessage READ errorMessage() NOTIFY errorMessageChanged())
 
+    Q_PROPERTY(QString STRING_SEP READ stringSeparator() NOTIFY stringSepChanged())
+
 public:
     explicit FileData(QObject *parent = nullptr);
     ~FileData();
@@ -91,6 +93,9 @@ public:
     int filesCount() const; // warning: expensive
     QString errorMessage() const { return m_errorMessage; }
 
+    const QString STRING_SEP;
+    QString stringSeparator() const { return STRING_SEP; }
+
     // methods accessible from QML
     Q_INVOKABLE void refresh();
     Q_INVOKABLE bool mimeTypeInherits(QString parentMimeType) const;
@@ -120,12 +125,14 @@ signals:
     void dirsCountChanged();
     void filesCountChanged();
     void errorMessageChanged();
+    void stringSepChanged();
 
 private:
     void readInfo();
     void readMetaData();
     QString calculateAspectRatio(int width, int height) const;
     QStringList readExifData(QString filename);
+    void addMetaData(uint priority, QString label, QString value);
 
     QString m_file;
     StatFileInfo m_fileInfo;

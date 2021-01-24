@@ -49,4 +49,8 @@ extern "C" {
 
 void showImageInfo(QStringList &metadata);
 
+// we use a random character from Unicode's private range
+// as string separator
+static const QString METADATA_SEPARATOR = QStringLiteral("\uF83F");
+
 QStringList jhead_readJpegFile(const char *FileName, bool *error);

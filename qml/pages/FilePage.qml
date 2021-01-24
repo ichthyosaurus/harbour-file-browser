@@ -284,11 +284,12 @@ Page {
                 // Display metadata with priority < 5
                 Repeater {
                     model: fileData.metaData
-                    // first char is priority (0-9), labels and values are delimited with ':'
+                    // first char is priority (0-9), labels and values are delimited with fileData.STRING_SEP
                     DetailItem {
                         visible: modelData.charAt(0) < '5'
-                        label: modelData.substring(1, modelData.indexOf(":"))
-                        value: String(modelData.substring(modelData.indexOf(":")+1)).trim()
+                        label: modelData.substring(1, modelData.indexOf(fileData.STRING_SEP))
+                        value: String(modelData.substring(
+                                      modelData.indexOf(fileData.STRING_SEP)+1)).trim()
                     }
                 }
 
@@ -324,11 +325,12 @@ Page {
                 // Display metadata with priority >= 5
                 Repeater {
                     model: fileData.metaData
-                    // first char is priority (0-9), labels and values are delimited with ':'
+                    // first char is priority (0-9), labels and values are delimited with fileData.STRING_SEP
                     DetailItem {
                         visible: modelData.charAt(0) >= '5'
-                        label: modelData.substring(1, modelData.indexOf(":"))
-                        value: String(modelData.substring(modelData.indexOf(":")+1)).trim()
+                        label: modelData.substring(1, modelData.indexOf(fileData.STRING_SEP))
+                        value: String(modelData.substring(
+                                      modelData.indexOf(fileData.STRING_SEP)+1)).trim()
                     }
                 }
             }

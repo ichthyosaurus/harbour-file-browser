@@ -29,7 +29,8 @@
 #include "jhead/jhead-api.h"
 
 FileData::FileData(QObject *parent) :
-    QObject(parent)
+    QObject(parent),
+    STRING_SEP(METADATA_SEPARATOR)  // defined in jhead-api.h
 {
     m_file = "";
 }
@@ -251,30 +252,48 @@ void FileData::readMetaData()
     m_mimeTypeComment = m_mimeType.comment();
 
     // read metadata for images
-    // store in m_metaData, first char is priority, then label:value
-    if (m_mimeType.name() == "image/jpeg" || m_mimeType.name() == "image/png" ||
-            m_mimeType.name() == "image/gif") {
-
+    if (m_mimeTypeName == "image/jpeg" || m_mimeTypeName == "image/png" ||
+            m_mimeTypeName == "image/gif" || m_mimeTypeName == "image/tiff" ) {
         // read size
         QImageReader reader(m_file);
         QSize s = reader.size();
         if (s.width() >= 0 && s.height() >= 0) {
+            // we put these string manually in the "ImageMetaData" context
+            // to reduce clutter in translation files
+            QString label = QCoreApplication::translate("ImageMetaData", "Image Size");
+
             QString ar = calculateAspectRatio(s.width(), s.height());
-            m_metaData.append("0" + tr("Image Size") +
-                              QString(":%1 x %2 %3").arg(s.width()).arg(s.height()).arg(ar));
+            if (ar.isEmpty()) {
+                addMetaData(0, label,
+                            //: image size description without aspect ratio: 1=width, 2=height
+                            QCoreApplication::translate("ImageMetaData", "%1 x %2").arg(s.width()).arg(s.height()));
+            } else {
+                addMetaData(0, label,
+                            //: image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9
+                            QCoreApplication::translate("ImageMetaData", "%1 x %2 (%3)").arg(s.width()).arg(s.height()).arg(ar));
+            }
         }
 
         // read exif data
         QStringList exif = readExifData(filename);
         foreach (QString e, exif) {
-            m_metaData.append("8"+e);
+            auto split = e.split(STRING_SEP);
+            QString label, value;
+
+            if (split.length() >= 2) {
+                label = split[0];
+                split.removeFirst();
+                value = split.join(QChar(' '));
+            }
+
+            addMetaData(8, label, value);
         }
 
         // read comments
         QStringList textKeys = reader.textKeys();
         foreach (QString key, textKeys) {
             QString value = reader.text(key);
-            m_metaData.append("9"+key+":"+value);
+            addMetaData(9, key, value);
         }
     }
 }
@@ -286,14 +305,14 @@ QString FileData::calculateAspectRatio(int width, int height) const
 {
     // Jolla Camera almost 16:9 aspect ratio
     if ((width == 3264 && height == 1840) || (height == 1840 && width == 3264)) {
-        return QString("(16:9)");
+        return QString("16:9");
     }
 
     int i = 0;
     while (aspectWidths[i] != -1) {
         if (width * aspectWidths[i] == height * aspectHeights[i] ||
                 height * aspectWidths[i] == width * aspectHeights[i]) {
-            return QString("(%1:%2)").arg(aspectWidths[i]).arg(aspectHeights[i]);
+            return QString("%1:%2").arg(aspectWidths[i]).arg(aspectHeights[i]);
         }
         ++i;
     }
@@ -305,14 +324,18 @@ QStringList FileData::readExifData(QString filename)
     QByteArray ba = filename.toUtf8();
     const char *f = ba.data();
     bool error = false;
-    QStringList list = jhead_readJpegFile(f, &error);
+    return jhead_readJpegFile(f, &error);
+}
 
-    // replace unicode 'fullwidth colon' with normal colon for chinese translation
-    QStringList data;
-    foreach (QString s, list) {
-        s.replace(QChar(0xff1a), QChar(':'));
-        data.append(s);
+// first char is priority (0-9), labels and values are delimited with STRING_SEP
+// label and value are already translated strings
+void FileData::addMetaData(uint priority, QString label, QString value)
+{
+    if (label.isEmpty() || value.isEmpty()) {
+        // ignore: we don't want to include metadata
+        // fields without value and/or without label
+        return;
     }
 
-    return data;
+    m_metaData.append(QString::number(priority)+label+STRING_SEP+value);
 }
