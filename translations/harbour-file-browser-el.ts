@@ -499,44 +499,43 @@
 <context>
     <name>FileData</name>
     <message>
-        <location filename="../src/filedata.cpp" line="184"/>
+        <location filename="../src/filedata.cpp" line="185"/>
         <source>File does not exist</source>
         <translation>Το αρχείο δεν υπάρχει</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="218"/>
+        <location filename="../src/filedata.cpp" line="219"/>
         <source>block device</source>
         <translation>συσκευή πλοκάδων</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="222"/>
+        <location filename="../src/filedata.cpp" line="223"/>
         <source>character device</source>
         <translation>συσκευή χαρακτήρων</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="226"/>
+        <location filename="../src/filedata.cpp" line="227"/>
         <source>pipe</source>
         <translation>σωλήνωση</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="230"/>
+        <location filename="../src/filedata.cpp" line="231"/>
         <source>socket</source>
         <translation>υποδοχή</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="234"/>
+        <location filename="../src/filedata.cpp" line="235"/>
         <source>folder</source>
         <translation>φάκελος</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="240"/>
+        <location filename="../src/filedata.cpp" line="241"/>
         <source>unknown</source>
         <translation>άγνωστο</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="263"/>
         <source>Image Size</source>
-        <translation>Μέγεθος εικόνας</translation>
+        <translation type="vanished">Μέγεθος εικόνας</translation>
     </message>
 </context>
 <context>
@@ -674,42 +673,42 @@
         <translation>Διαγραφή</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="296"/>
+        <location filename="../qml/pages/FilePage.qml" line="297"/>
         <source>Location</source>
         <translation>Τοποθεσία</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="300"/>
+        <location filename="../qml/pages/FilePage.qml" line="301"/>
         <source>Type</source>
         <translation>Τύπος</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="302"/>
+        <location filename="../qml/pages/FilePage.qml" line="303"/>
         <source>Link to %1</source>
         <translation>Σύνδεσμος στο %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="302"/>
+        <location filename="../qml/pages/FilePage.qml" line="303"/>
         <source>Unknown (link target not found)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="309"/>
+        <location filename="../qml/pages/FilePage.qml" line="310"/>
         <source>Permissions</source>
         <translation>Άδειες</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="313"/>
+        <location filename="../qml/pages/FilePage.qml" line="314"/>
         <source>Owner</source>
         <translation>Ιδιοκτήτης</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="317"/>
+        <location filename="../qml/pages/FilePage.qml" line="318"/>
         <source>Group</source>
         <translation>Ομάδα</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="321"/>
+        <location filename="../qml/pages/FilePage.qml" line="322"/>
         <source>Last modified</source>
         <translation>Τελευταία τροποποίηση</translation>
     </message>
@@ -757,6 +756,492 @@
         <location filename="../src/fileworker.cpp" line="364"/>
         <source>Cannot create target folder %1</source>
         <translation>Αδύνατη η δημιουργία του φακέλου προορισμού %1</translation>
+    </message>
+</context>
+<context>
+    <name>ImageMetaData</name>
+    <message>
+        <location filename="../src/filedata.cpp" line="263"/>
+        <source>Image Size</source>
+        <translation>Μέγεθος εικόνας</translation>
+    </message>
+    <message>
+        <location filename="../src/filedata.cpp" line="269"/>
+        <source>%1 x %2</source>
+        <extracomment>image size description without aspect ratio: 1=width, 2=height</extracomment>
+        <translation>%1 x %2</translation>
+    </message>
+    <message>
+        <location filename="../src/filedata.cpp" line="273"/>
+        <source>%1 x %2 (%3)</source>
+        <extracomment>image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9</extracomment>
+        <translation>%1 x %2 (%3)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="157"/>
+        <source>Make</source>
+        <translation>Κατασκευαστής</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="158"/>
+        <source>Model</source>
+        <translation>Μοντέλο</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="161"/>
+        <source>Date/Time</source>
+        <translation>Ημερομηνία/Ώρα</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="169"/>
+        <source>Orientation</source>
+        <translation>Προσανατολισμός</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="174"/>
+        <source>Color/BW</source>
+        <translation>Χρώμα/ΜΛ</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="174"/>
+        <source>Black and White</source>
+        <translation>Μαύρο και Λευκό</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="182"/>
+        <source>Strobe light not detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>δεν ανιχνεύτηκε στροβοσκοπικό φως</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="184"/>
+        <source>Strobe light detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>ανιχνεύτηκε στροβοσκοπικό φως</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="186"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="301"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="362"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="401"/>
+        <source>Manual</source>
+        <extracomment>description of camera flash mode
+----------
+exposure program</extracomment>
+        <translation>Χειροκίνητη</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="188"/>
+        <source>Manual, return light not detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Χειροκίνητο, δεν ανιχνεύτηκε φλας</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="190"/>
+        <source>Manual, return light detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Χειροκίνητο, ανιχνεύτηκε φλας</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="192"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="304"/>
+        <source>Auto</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Αυτόματο</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="194"/>
+        <source>Auto, return light not detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Αυτόματο, δεν ανιχνεύτηκε φλας</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="196"/>
+        <source>Auto, return light detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Αυτόματο, ανιχνεύτηκε φλας</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="198"/>
+        <source>Red eye reduction mode</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>λειτουργία μείωσης ερυθρών ματιών</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="200"/>
+        <source>Red eye reduction mode return light not detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Λειτουργία μείωσης ερυθρών ματιών με το φλας δεν ανιχνεύτηκε</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="202"/>
+        <source>Red eye reduction mode return light detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Λειτουργία μείωσης ερυθρών ματιών με το φλας ανιχνεύτηκε</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="204"/>
+        <source>Manual, red eye reduction mode</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Χειροκίνητο, λειτουργία μείωσης ερυθρών ματιών</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="206"/>
+        <source>Manual, red eye reduction mode, return light not detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Χειροκίνητο, λειτουργία μείωσης ερυθρών ματιών, φλας δεν ανιχνεύτηκε</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="208"/>
+        <source>Red eye reduction mode, return light detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Λειτουργία μείωσης ερυθρών ματιών, φλας ανιχνεύτηκε</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="210"/>
+        <source>Auto, red eye reduction mode</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Αυτόματο, λειτουργία μείωσης ερυθρών ματιών</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="212"/>
+        <source>Auto, red eye reduction mode, return light not detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Αυτόματο, λειτουργία μείωσης ερυθρών ματιών, φλας δεν ανιχνεύτηκε</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="214"/>
+        <source>Auto, red eye reduction mode, return light detected</source>
+        <extracomment>description of camera flash mode</extracomment>
+        <translation>Αυτόματο, λειτουργία μείωσης ερυθρών ματιών, φλας ανιχνεύτηκε</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="218"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="220"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="224"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="226"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="320"/>
+        <source>Flash</source>
+        <translation>Φλας</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="218"/>
+        <source>Yes (%1)</source>
+        <translation>Ναι (%1)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="220"/>
+        <source>Yes</source>
+        <translation>Ναι</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="224"/>
+        <source>No (Auto)</source>
+        <translation>Όχι (αυτόματο)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="226"/>
+        <source>No</source>
+        <translation>Όχι</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="235"/>
+        <source>%1mm (35mm equivalent: %2mm)</source>
+        <extracomment>size in millimeters</extracomment>
+        <translation>%1mm (Ισοδυναμία 35mm: %2mm)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="240"/>
+        <source>%1mm</source>
+        <extracomment>size in millimeters</extracomment>
+        <translation>%1mm</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="243"/>
+        <source>Focal Length</source>
+        <translation>Εστιακό μήκος</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="248"/>
+        <source>Digital Zoom</source>
+        <translation>Ψηφιακή εστίαση</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="250"/>
+        <source>%1x</source>
+        <extracomment>as in &quot;zoom: %1 times&quot;</extracomment>
+        <translation>%1x</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="256"/>
+        <source>CCD Width</source>
+        <extracomment>photographic sensor width; cf. https://en.wikipedia.org/wiki/Charge-coupled_device</extracomment>
+        <translation>Πλάτος CCD</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="268"/>
+        <source>%1 (1/%2)</source>
+        <extracomment>exposure time as raw value (1) and as fraction (2)</extracomment>
+        <translation>%1 (1/%2)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="270"/>
+        <source>Exposure Time</source>
+        <translation>Χρόνος έκθεσης</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="273"/>
+        <source>Aperture</source>
+        <translation>Διάφραγμα</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="275"/>
+        <source>f/%1</source>
+        <extracomment>aperture &quot;f&quot; number; cf. https://en.wikipedia.org/wiki/Aperture</extracomment>
+        <translation>f/%1</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="279"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="283"/>
+        <source>Focus Distance</source>
+        <translation>Εστιακή απόσταση</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="281"/>
+        <source>Infinite</source>
+        <extracomment>focus distance</extracomment>
+        <translation>Άπειρο</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="285"/>
+        <source>%1m</source>
+        <extracomment>focus distance in meters</extracomment>
+        <translation>%1m</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="290"/>
+        <source>ISO Equivalent</source>
+        <translation>Ισοδυναμία ISO</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="296"/>
+        <source>Exposure Bias</source>
+        <translation>Αντιστάθμιση έκθεσης</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="301"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="304"/>
+        <source>White Balance</source>
+        <translation>Ισορροπία λευκού</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="311"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="314"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="317"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="320"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="323"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="326"/>
+        <source>Light Source</source>
+        <translation>Πηγή φωτός</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="311"/>
+        <source>Daylight</source>
+        <translation>Φως ημέρας</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="314"/>
+        <source>Fluorescent</source>
+        <translation>Σωλήνας φθορισμού</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="317"/>
+        <source>Incandescent</source>
+        <translation>Λυχνία πυράκτωσης</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="323"/>
+        <source>Fine weather</source>
+        <translation>αίθριος καιρός</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="326"/>
+        <source>Shade</source>
+        <translation>Νεφελώδης</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="337"/>
+        <source>Average</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Τυπική</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="339"/>
+        <source>Center weighted average</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Κέντρου βάρους τυπική</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="341"/>
+        <source>Spot</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Σημείων</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="343"/>
+        <source>Multi spot</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Πολυζωνική</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="345"/>
+        <source>Pattern</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Σχηματομορφής</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="347"/>
+        <source>Partial</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Μερική</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="349"/>
+        <source>Other</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Άλλο</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="351"/>
+        <source>Unknown (%1)</source>
+        <extracomment>inlcudes an unknown value (1); cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Άγνωστο (%1)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="354"/>
+        <source>Metering Mode</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
+        <translation>Φωτομέτρηση</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="366"/>
+        <source>Program (auto)</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Πρόγραμμα (αυτόματο)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="370"/>
+        <source>Aperture priority (semi-auto)</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Προτεραιότητα διαφράγματος (ημιαυτόματο)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="374"/>
+        <source>Shutter priority (semi-auto)</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Προτεραιότητα κλείστρου (ημιαυτόματο)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="378"/>
+        <source>Creative Program (based towards depth of field)</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Δημιουργικό πρόγραμμα (με έμφαση προς το βάθος πεδίου)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="382"/>
+        <source>Action program (based towards fast shutter speed)</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Πρόγραμμα δράσης (με έμφαση προς την ταχύτητα κλείστρου)</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="386"/>
+        <source>Portrait mode</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Λειτουργία πορτραίτου</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="390"/>
+        <source>Landscape mode</source>
+        <extracomment>exposure program</extracomment>
+        <translation>Λειτουργία τοπίου</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="395"/>
+        <source>Exposure Program</source>
+        <translation>Πρόγραμμα έκθεσης</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="401"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="404"/>
+        <source>Exposure Mode</source>
+        <translation>Λειτουργία έκθεσης</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="406"/>
+        <source>Auto bracketing</source>
+        <extracomment>exposure mode; cf. https://en.wikipedia.org/wiki/Autobracketing#Exposure</extracomment>
+        <translation>Αυτόματο</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="415"/>
+        <source>Macro</source>
+        <extracomment>focus range</extracomment>
+        <translation>Μακροφωτογραφία</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="419"/>
+        <source>Close</source>
+        <extracomment>focus range</extracomment>
+        <translation>Κοντινό</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="423"/>
+        <source>Distant</source>
+        <extracomment>focus range</extracomment>
+        <translation>Μακρινό</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="426"/>
+        <source>Focus Range</source>
+        <translation>Εύρος εστίασης</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="436"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="440"/>
+        <source>JPEG Process</source>
+        <translation>Μέθοδος JPEG</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="436"/>
+        <source>Unknown</source>
+        <translation>άγνωστο</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="447"/>
+        <source>Latitude</source>
+        <translation>Γεωγραφικό πλάτος</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="448"/>
+        <source>Longitude</source>
+        <translation>Γεωγραφικό μήκος</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="450"/>
+        <source>Altitude</source>
+        <translation>Υψόμετρο</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="456"/>
+        <source>JPEG Quality</source>
+        <translation>Ποιότητα JPEG</translation>
+    </message>
+    <message>
+        <location filename="../src/jhead/jhead-api.cpp" line="473"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="484"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="487"/>
+        <source>Comment</source>
+        <translation>Σχόλιο</translation>
     </message>
 </context>
 <context>
@@ -917,377 +1402,296 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="142"/>
         <source>Make:%1</source>
-        <translation>Κατασκευαστής: %1</translation>
+        <translation type="vanished">Κατασκευαστής: %1</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="143"/>
         <source>Model:%1</source>
-        <translation>Μοντέλο: %1</translation>
+        <translation type="vanished">Μοντέλο: %1</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="146"/>
         <source>Date/Time:%1</source>
-        <translation>Ημερομηνία/Ώρα: %1</translation>
+        <translation type="vanished">Ημερομηνία/Ώρα: %1</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="153"/>
         <source>Orientation:%1</source>
-        <translation>Προσανατολισμός: %1</translation>
+        <translation type="vanished">Προσανατολισμός: %1</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="158"/>
         <source>Color/BW:Black and White</source>
-        <translation>Χρώμα/ΜΛ: Μαύρο και Λευκό</translation>
+        <translation type="vanished">Χρώμα/ΜΛ: Μαύρο και Λευκό</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="165"/>
-        <source>(Strobe light not detected)</source>
-        <translation>(δεν ανιχνεύτηκε στροβοσκοπικό φως)</translation>
+        <source>Strobe light not detected</source>
+        <translation type="vanished">δεν ανιχνεύτηκε στροβοσκοπικό φως</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="166"/>
         <source>(Strobe light detected) </source>
-        <translation>(ανιχνεύτηκε στροβοσκοπικό φως) </translation>
+        <translation type="vanished">(ανιχνεύτηκε στροβοσκοπικό φως) </translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="167"/>
-        <source>(Manual)</source>
-        <translation>(Χειροκίνητο)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="168"/>
-        <source>(Manual, return light not detected)</source>
-        <translation>(Χειροκίνητο, δεν ανιχνεύτηκε φλας)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="170"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="188"/>
-        <source>(Auto)</source>
-        <translation>(Αυτόματο)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="171"/>
-        <source>(Auto, return light not detected)</source>
-        <translation>(Αυτόματο, δεν ανιχνεύτηκε φλας)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="172"/>
-        <source>(Auto, return light detected)</source>
-        <translation>(Αυτόματο, ανιχνεύτηκε φλας)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="173"/>
-        <source>(Red eye reduction mode)</source>
-        <translation>(λειτουργία μείωσης ερυθρών ματιών)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="174"/>
-        <source>(Red eye reduction mode return light not detected)</source>
-        <translation>(Λειτουργία μείωσης ερυθρών ματιών με το φλας δεν ανιχνεύτηκε)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="169"/>
-        <source>(Manual, return light detected)</source>
-        <translation>(Χειροκίνητο, ανιχνεύτηκε φλας)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="175"/>
-        <source>(Red eye reduction mode return light detected)</source>
-        <translation>(Λειτουργία μείωσης ερυθρών ματιών με το φλας ανιχνεύτηκε )</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="176"/>
-        <source>(Manual, red eye reduction mode)</source>
-        <translation>(Χειροκίνητο, λειτουργία μείωσης ερυθρών ματιών)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="177"/>
-        <source>(Manual, red eye reduction mode, return light not detected)</source>
-        <translation>(Χειροκίνητο, λειτουργία μείωσης ερυθρών ματιών, φλας δεν ανιχνεύτηκε)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="178"/>
-        <source>(Red eye reduction mode, return light detected)</source>
-        <translation>(Λειτουργία μείωσης ερυθρών ματιών, φλας ανιχνεύτηκε)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="179"/>
-        <source>(Auto, red eye reduction mode)</source>
-        <translation>(Αυτόματο, λειτουργία μείωσης ερυθρών ματιών)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="180"/>
-        <source>(Auto, red eye reduction mode, return light not detected)</source>
-        <translation>(Αυτόματο, λειτουργία μείωσης ερυθρών ματιών, φλας δεν ανιχνεύτηκε)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="181"/>
-        <source>(Auto, red eye reduction mode, return light detected)</source>
-        <translation>(Αυτόματο, λειτουργία μείωσης ερυθρών ματιών, φλας ανιχνεύτηκε)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="183"/>
-        <source>Flash:Yes</source>
-        <translation>Φλας: Ναι</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="190"/>
-        <source>Flash:No</source>
-        <translation>Φλας: Όχι</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="196"/>
-        <source>Focal Length:%1mm</source>
-        <translation>Εστιακό μήκος: %1mm</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="198"/>
-        <source>(35mm equivalent: %1mm)</source>
-        <translation>(Ισοδυναμία 35mm: %1mm)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="205"/>
-        <source>Digital Zoom:%1x</source>
-        <translation>Ψηφιακή εστίαση: %1x</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="209"/>
-        <source>CCD Width:%1</source>
-        <translation>Πλάτος CCD: %1</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="215"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="217"/>
-        <source>Exposure Time:%1</source>
-        <translation>Χρόνος έκθεσης: %1</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="220"/>
-        <source>(1/%1)</source>
-        <translation>(1/%1)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="225"/>
-        <source>Aperture:f/%1</source>
-        <translation>Διάφραγμα: f/%1</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="229"/>
-        <source>Focus Distance:Infinite</source>
-        <translation>Εστιακή απόσταση: Άπειρο</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="231"/>
-        <source>Focus Distance:%1m</source>
-        <translation>Εστιακή απόσταση: %1m</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="236"/>
-        <source>ISO Equivalent:%1</source>
-        <translation>(ISO: %1</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="242"/>
-        <source>Exposure Bias:%1</source>
-        <translation>Αντιστάθμιση έκθεσης: %1</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="247"/>
-        <source>White Balance:Manual</source>
-        <translation>Ισορροπία λευκού: χειροκίνητο</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="250"/>
-        <source>White Balance:Auto</source>
-        <translation>Ισορροπία λευκού: Αυτόματο</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="257"/>
-        <source>Light Source:Daylight</source>
-        <translation>Πηγή φωτός: Φως ημέρας</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="260"/>
-        <source>Light Source:Fluorescent</source>
-        <translation>Πηγή φωτός: Σωλήνας φθορισμού</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="263"/>
-        <source>Light Source:Incandescent</source>
-        <translation>Πηγή φωτός: Λυχνία πυράκτωσης</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="266"/>
-        <source>Light Source:Flash</source>
-        <translation>Πηγή φωτός: Φλας</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="269"/>
-        <source>Light Source:Fine weather</source>
-        <translation>Πηγή φωτός: αίθριος καιρός</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="272"/>
-        <source>Light Source:Shade</source>
-        <translation>Πηγή φωτός: Νεφελώδης</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="280"/>
-        <source>Metering Mode:</source>
-        <translation>Φωτομέτρηση:</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="282"/>
-        <source>Average</source>
-        <translation>Τυπική</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="283"/>
-        <source>Center weighted average</source>
-        <translation>Κέντρου βάρους τυπική</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="295"/>
-        <source>Exposure Program:</source>
-        <translation>Πρόγραμμα έκθεσης:</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="371"/>
-        <source>Latitude:%1</source>
-        <translation>Γεωγραφικό πλάτος:%1</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="372"/>
-        <source>Longitude:%1</source>
-        <translation>Γεωγραφικό μήκος:%1</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="374"/>
-        <source>Altitude:%1</source>
-        <translation>Υψόμετρο: %1</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="284"/>
-        <source>Spot</source>
-        <translation>Σημείων</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="285"/>
-        <source>Multi spot</source>
-        <translation>Πολυζωνική</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="286"/>
-        <source>Pattern</source>
-        <translation>Σχηματομορφής</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="287"/>
-        <source>Partial</source>
-        <translation>Μερική</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="288"/>
-        <source>Other</source>
-        <translation>Άλλο</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="289"/>
-        <source>Unknown (%1)</source>
-        <translation>Άγνωστο (%1)</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="298"/>
         <source>Manual</source>
-        <translation>Χειροκίνητη</translation>
+        <translation type="vanished">Χειροκίνητο</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="301"/>
+        <source>Manual, return light not detected</source>
+        <translation type="vanished">Χειροκίνητο, δεν ανιχνεύτηκε φλας</translation>
+    </message>
+    <message>
+        <source>Auto</source>
+        <translation type="vanished">Αυτόματο</translation>
+    </message>
+    <message>
+        <source>Auto, return light not detected</source>
+        <translation type="vanished">Αυτόματο, δεν ανιχνεύτηκε φλας</translation>
+    </message>
+    <message>
+        <source>Auto, return light detected</source>
+        <translation type="vanished">Αυτόματο, ανιχνεύτηκε φλας</translation>
+    </message>
+    <message>
+        <source>Red eye reduction mode</source>
+        <translation type="vanished">λειτουργία μείωσης ερυθρών ματιών</translation>
+    </message>
+    <message>
+        <source>Red eye reduction mode return light not detected</source>
+        <translation type="vanished">Λειτουργία μείωσης ερυθρών ματιών με το φλας δεν ανιχνεύτηκε</translation>
+    </message>
+    <message>
+        <source>Manual, return light detected</source>
+        <translation type="vanished">Χειροκίνητο, ανιχνεύτηκε φλας</translation>
+    </message>
+    <message>
+        <source>Red eye reduction mode return light detected</source>
+        <translation type="vanished">Λειτουργία μείωσης ερυθρών ματιών με το φλας ανιχνεύτηκε </translation>
+    </message>
+    <message>
+        <source>Manual, red eye reduction mode</source>
+        <translation type="vanished">Χειροκίνητο, λειτουργία μείωσης ερυθρών ματιών</translation>
+    </message>
+    <message>
+        <source>Manual, red eye reduction mode, return light not detected</source>
+        <translation type="vanished">Χειροκίνητο, λειτουργία μείωσης ερυθρών ματιών, φλας δεν ανιχνεύτηκε</translation>
+    </message>
+    <message>
+        <source>Red eye reduction mode, return light detected</source>
+        <translation type="vanished">Λειτουργία μείωσης ερυθρών ματιών, φλας ανιχνεύτηκε</translation>
+    </message>
+    <message>
+        <source>Auto, red eye reduction mode</source>
+        <translation type="vanished">Αυτόματο, λειτουργία μείωσης ερυθρών ματιών</translation>
+    </message>
+    <message>
+        <source>Auto, red eye reduction mode, return light not detected</source>
+        <translation type="vanished">Αυτόματο, λειτουργία μείωσης ερυθρών ματιών, φλας δεν ανιχνεύτηκε</translation>
+    </message>
+    <message>
+        <source>Auto, red eye reduction mode, return light detected</source>
+        <translation type="vanished">Αυτόματο, λειτουργία μείωσης ερυθρών ματιών, φλας ανιχνεύτηκε</translation>
+    </message>
+    <message>
+        <source>Flash:Yes</source>
+        <translation type="vanished">Φλας: Ναι</translation>
+    </message>
+    <message>
+        <source>Flash:No</source>
+        <translation type="vanished">Φλας: Όχι</translation>
+    </message>
+    <message>
+        <source>Focal Length:%1mm</source>
+        <translation type="vanished">Εστιακό μήκος: %1mm</translation>
+    </message>
+    <message>
+        <source>35mm equivalent: %1mm</source>
+        <translation type="vanished">Ισοδυναμία 35mm: %1mm</translation>
+    </message>
+    <message>
+        <source>Digital Zoom:%1x</source>
+        <translation type="vanished">Ψηφιακή εστίαση: %1x</translation>
+    </message>
+    <message>
+        <source>CCD Width:%1</source>
+        <translation type="vanished">Πλάτος CCD: %1</translation>
+    </message>
+    <message>
+        <source>Exposure Time:%1</source>
+        <translation type="vanished">Χρόνος έκθεσης: %1</translation>
+    </message>
+    <message>
+        <source>(1/%1)</source>
+        <translation type="vanished">(1/%1)</translation>
+    </message>
+    <message>
+        <source>Aperture:f/%1</source>
+        <translation type="vanished">Διάφραγμα: f/%1</translation>
+    </message>
+    <message>
+        <source>Focus Distance:Infinite</source>
+        <translation type="vanished">Εστιακή απόσταση: Άπειρο</translation>
+    </message>
+    <message>
+        <source>Focus Distance:%1m</source>
+        <translation type="vanished">Εστιακή απόσταση: %1m</translation>
+    </message>
+    <message>
+        <source>ISO Equivalent:%1</source>
+        <translation type="vanished">(ISO: %1</translation>
+    </message>
+    <message>
+        <source>Exposure Bias:%1</source>
+        <translation type="vanished">Αντιστάθμιση έκθεσης: %1</translation>
+    </message>
+    <message>
+        <source>White Balance:Manual</source>
+        <translation type="vanished">Ισορροπία λευκού: χειροκίνητο</translation>
+    </message>
+    <message>
+        <source>White Balance:Auto</source>
+        <translation type="vanished">Ισορροπία λευκού: Αυτόματο</translation>
+    </message>
+    <message>
+        <source>Light Source:Daylight</source>
+        <translation type="vanished">Πηγή φωτός: Φως ημέρας</translation>
+    </message>
+    <message>
+        <source>Light Source:Fluorescent</source>
+        <translation type="vanished">Πηγή φωτός: Σωλήνας φθορισμού</translation>
+    </message>
+    <message>
+        <source>Light Source:Incandescent</source>
+        <translation type="vanished">Πηγή φωτός: Λυχνία πυράκτωσης</translation>
+    </message>
+    <message>
+        <source>Light Source:Flash</source>
+        <translation type="vanished">Πηγή φωτός: Φλας</translation>
+    </message>
+    <message>
+        <source>Light Source:Fine weather</source>
+        <translation type="vanished">Πηγή φωτός: αίθριος καιρός</translation>
+    </message>
+    <message>
+        <source>Light Source:Shade</source>
+        <translation type="vanished">Πηγή φωτός: Νεφελώδης</translation>
+    </message>
+    <message>
+        <source>Metering Mode:</source>
+        <translation type="vanished">Φωτομέτρηση:</translation>
+    </message>
+    <message>
+        <source>Average</source>
+        <translation type="vanished">Τυπική</translation>
+    </message>
+    <message>
+        <source>Center weighted average</source>
+        <translation type="vanished">Κέντρου βάρους τυπική</translation>
+    </message>
+    <message>
+        <source>Exposure Program:</source>
+        <translation type="vanished">Πρόγραμμα έκθεσης:</translation>
+    </message>
+    <message>
+        <source>Latitude:%1</source>
+        <translation type="vanished">Γεωγραφικό πλάτος:%1</translation>
+    </message>
+    <message>
+        <source>Longitude:%1</source>
+        <translation type="vanished">Γεωγραφικό μήκος:%1</translation>
+    </message>
+    <message>
+        <source>Altitude:%1</source>
+        <translation type="vanished">Υψόμετρο: %1</translation>
+    </message>
+    <message>
+        <source>Spot</source>
+        <translation type="vanished">Σημείων</translation>
+    </message>
+    <message>
+        <source>Multi spot</source>
+        <translation type="vanished">Πολυζωνική</translation>
+    </message>
+    <message>
+        <source>Pattern</source>
+        <translation type="vanished">Σχηματομορφής</translation>
+    </message>
+    <message>
+        <source>Partial</source>
+        <translation type="vanished">Μερική</translation>
+    </message>
+    <message>
+        <source>Other</source>
+        <translation type="vanished">Άλλο</translation>
+    </message>
+    <message>
+        <source>Unknown (%1)</source>
+        <translation type="vanished">Άγνωστο (%1)</translation>
+    </message>
+    <message>
         <source>Program (auto)</source>
-        <translation>Πρόγραμμα (αυτόματο)</translation>
+        <translation type="vanished">Πρόγραμμα (αυτόματο)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="304"/>
         <source>Aperture priority (semi-auto)</source>
-        <translation>Προτεραιότητα διαφράγματος (ημιαυτόματο)</translation>
+        <translation type="vanished">Προτεραιότητα διαφράγματος (ημιαυτόματο)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="307"/>
         <source>Shutter priority (semi-auto)</source>
-        <translation>Προτεραιότητα κλείστρου (ημιαυτόματο)</translation>
+        <translation type="vanished">Προτεραιότητα κλείστρου (ημιαυτόματο)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="310"/>
         <source>Creative Program (based towards depth of field)</source>
-        <translation>Δημιουργικό πρόγραμμα (με έμφαση προς το βάθος πεδίου)</translation>
+        <translation type="vanished">Δημιουργικό πρόγραμμα (με έμφαση προς το βάθος πεδίου)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="313"/>
         <source>Action program (based towards fast shutter speed)</source>
-        <translation>Πρόγραμμα δράσης (με έμφαση προς την ταχύτητα κλείστρου)</translation>
+        <translation type="vanished">Πρόγραμμα δράσης (με έμφαση προς την ταχύτητα κλείστρου)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="316"/>
         <source>Portrait mode</source>
-        <translation>Λειτουργία πορτραίτου</translation>
+        <translation type="vanished">Λειτουργία πορτραίτου</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="319"/>
         <source>Landscape mode</source>
-        <translation>Λειτουργία τοπίου</translation>
+        <translation type="vanished">Λειτουργία τοπίου</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="329"/>
         <source>Exposure Mode:Manual</source>
-        <translation>Λειτουργία έκθεσης: Χειροκίνητο</translation>
+        <translation type="vanished">Λειτουργία έκθεσης: Χειροκίνητο</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="331"/>
         <source>Exposure Mode:Auto bracketing</source>
-        <translation>Λειτουργία έκθεσης: Αυτόματο</translation>
+        <translation type="vanished">Λειτουργία έκθεσης: Αυτόματο</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="336"/>
         <source>Focus Range:</source>
-        <translation>Εύρος εστίασης:</translation>
+        <translation type="vanished">Εύρος εστίασης:</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="339"/>
         <source>Macro</source>
-        <translation>Μακροφωτογραφία</translation>
+        <translation type="vanished">Μακροφωτογραφία</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="342"/>
         <source>Close</source>
-        <translation>Κοντινό</translation>
+        <translation type="vanished">Κοντινό</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="345"/>
         <source>Distant</source>
-        <translation>Μακρινό</translation>
+        <translation type="vanished">Μακρινό</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="360"/>
         <source>JPEG Process:Unknown</source>
-        <translation>Μέθοδος JPEG: Άγνωστο</translation>
+        <translation type="vanished">Μέθοδος JPEG: Άγνωστο</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="364"/>
         <source>JPEG Process:%1</source>
-        <translation>Μέθοδος JPEG: %1</translation>
+        <translation type="vanished">Μέθοδος JPEG: %1</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="380"/>
         <source>JPEG Quality:%1</source>
-        <translation>Ποιότητα JPEG: %1</translation>
+        <translation type="vanished">Ποιότητα JPEG: %1</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="386"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="397"/>
         <source>Comment:</source>
-        <translation>Σχόλιο:</translation>
+        <translation type="vanished">Σχόλιο:</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="80"/>
