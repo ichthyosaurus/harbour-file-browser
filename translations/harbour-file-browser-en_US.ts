@@ -821,9 +821,9 @@
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="186"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="301"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="362"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="401"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="302"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="363"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="402"/>
         <source>Manual</source>
         <extracomment>description of camera flash mode
 ----------
@@ -844,7 +844,7 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="192"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="304"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="305"/>
         <source>Auto</source>
         <extracomment>description of camera flash mode</extracomment>
         <translation>Auto</translation>
@@ -869,15 +869,16 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="200"/>
-        <source>Red eye reduction mode return light not detected</source>
+        <source>Red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation>Red eye reduction mode return light not detected</translation>
+        <translation>Red eye reduction mode, return light not detected</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="202"/>
-        <source>Red eye reduction mode return light detected</source>
+        <location filename="../src/jhead/jhead-api.cpp" line="208"/>
+        <source>Red eye reduction mode, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation>Red eye reduction mode return light detected</translation>
+        <translation>Red eye reduction mode, return light detected</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="204"/>
@@ -890,12 +891,6 @@ exposure program</extracomment>
         <source>Manual, red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
         <translation>Manual, red eye reduction mode, return light not detected</translation>
-    </message>
-    <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="208"/>
-        <source>Red eye reduction mode, return light detected</source>
-        <extracomment>description of camera flash mode</extracomment>
-        <translation>Red eye reduction mode, return light detected</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="210"/>
@@ -920,7 +915,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="220"/>
         <location filename="../src/jhead/jhead-api.cpp" line="224"/>
         <location filename="../src/jhead/jhead-api.cpp" line="226"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="320"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="321"/>
         <source>Flash</source>
         <translation>Flash</translation>
     </message>
@@ -1024,222 +1019,223 @@ exposure program</extracomment>
         <translation>ISO Equivalent</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="296"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="297"/>
         <source>Exposure Bias</source>
+        <extracomment>cf. https://en.wikipedia.org/wiki/Exposure_compensation</extracomment>
         <translation>Exposure Bias</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="301"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="304"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="302"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="305"/>
         <source>White Balance</source>
         <translation>White Balance</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="311"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="314"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="317"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="320"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="323"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="326"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="312"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="315"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="318"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="321"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="324"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="327"/>
         <source>Light Source</source>
         <translation>Light Source</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="311"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="312"/>
         <source>Daylight</source>
         <translation>Daylight</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="314"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="315"/>
         <source>Fluorescent</source>
         <translation>Fluorescent</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="317"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="318"/>
         <source>Incandescent</source>
         <translation>Incandescent</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="323"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="324"/>
         <source>Fine weather</source>
         <translation>Fine weather</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="326"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="327"/>
         <source>Shade</source>
         <translation>Shade</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="337"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="338"/>
         <source>Average</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
         <translation>Average</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="339"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="340"/>
         <source>Center weighted average</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
         <translation>Center weighted average</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="341"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="342"/>
         <source>Spot</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
         <translation>Spot</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="343"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="344"/>
         <source>Multi spot</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
         <translation>Multi spot</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="345"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="346"/>
         <source>Pattern</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
         <translation>Pattern</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="347"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="348"/>
         <source>Partial</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
         <translation>Partial</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="349"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="350"/>
         <source>Other</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
         <translation>Other</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="351"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="352"/>
         <source>Unknown (%1)</source>
         <extracomment>inlcudes an unknown value (1); cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
         <translation>Unknown (%1)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="354"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="355"/>
         <source>Metering Mode</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
         <translation>Metering Mode</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="366"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="367"/>
         <source>Program (auto)</source>
         <extracomment>exposure program</extracomment>
         <translation>Program (auto)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="370"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="371"/>
         <source>Aperture priority (semi-auto)</source>
         <extracomment>exposure program</extracomment>
         <translation>Aperture priority (semi-auto)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="374"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="375"/>
         <source>Shutter priority (semi-auto)</source>
         <extracomment>exposure program</extracomment>
         <translation>Shutter priority (semi-auto)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="378"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="379"/>
         <source>Creative Program (based towards depth of field)</source>
         <extracomment>exposure program</extracomment>
         <translation>Creative Program (based towards depth of field)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="382"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="383"/>
         <source>Action program (based towards fast shutter speed)</source>
         <extracomment>exposure program</extracomment>
         <translation>Action program (based towards fast shutter speed)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="386"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="387"/>
         <source>Portrait mode</source>
         <extracomment>exposure program</extracomment>
         <translation>Portrait mode</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="390"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="391"/>
         <source>Landscape mode</source>
         <extracomment>exposure program</extracomment>
         <translation>Landscape mode</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="395"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="396"/>
         <source>Exposure Program</source>
         <translation>Exposure Program</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="401"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="404"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="402"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="405"/>
         <source>Exposure Mode</source>
         <translation>Exposure Mode</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="406"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="407"/>
         <source>Auto bracketing</source>
         <extracomment>exposure mode; cf. https://en.wikipedia.org/wiki/Autobracketing#Exposure</extracomment>
         <translation>Auto bracketing</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="415"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="416"/>
         <source>Macro</source>
         <extracomment>focus range</extracomment>
         <translation>Macro</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="419"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="420"/>
         <source>Close</source>
         <extracomment>focus range</extracomment>
         <translation>Close</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="423"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="424"/>
         <source>Distant</source>
         <extracomment>focus range</extracomment>
         <translation>Distant</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="426"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="427"/>
         <source>Focus Range</source>
         <translation>Focus Range</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="436"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="440"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="437"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="441"/>
         <source>JPEG Process</source>
         <translation>JPEG Process</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="436"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="437"/>
         <source>Unknown</source>
         <translation>Unknown</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="447"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="448"/>
         <source>Latitude</source>
         <translation>Latitude</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="448"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="449"/>
         <source>Longitude</source>
         <translation>Longitude</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="450"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="451"/>
         <source>Altitude</source>
         <translation>Altitude</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="456"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="457"/>
         <source>JPEG Quality</source>
         <translation>JPEG Quality</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="473"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="484"/>
-        <location filename="../src/jhead/jhead-api.cpp" line="487"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="474"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="485"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="488"/>
         <source>Comment</source>
         <translation>Comment</translation>
     </message>
@@ -1494,12 +1490,12 @@ exposure program</extracomment>
         <translation type="vanished">(Red eye reduction mode)</translation>
     </message>
     <message>
-        <source>(Red eye reduction mode return light not detected)</source>
-        <translation type="vanished">(Red eye reduction mode return light not detected)</translation>
+        <source>(Red eye reduction mode, return light not detected)</source>
+        <translation type="vanished">(Red eye reduction mode, return light not detected)</translation>
     </message>
     <message>
-        <source>(Red eye reduction mode return light detected)</source>
-        <translation type="vanished">(Red eye reduction mode return light detected)</translation>
+        <source>(Red eye reduction mode, return light detected)</source>
+        <translation type="vanished">(Red eye reduction mode, return light detected)</translation>
     </message>
     <message>
         <source>(Manual, red eye reduction mode)</source>
@@ -1508,10 +1504,6 @@ exposure program</extracomment>
     <message>
         <source>(Manual, red eye reduction mode, return light not detected)</source>
         <translation type="vanished">(Manual, red eye reduction mode, return light not detected)</translation>
-    </message>
-    <message>
-        <source>(Red eye reduction mode, return light detected)</source>
-        <translation type="vanished">(Red eye reduction mode, return light detected)</translation>
     </message>
     <message>
         <source>(Auto, red eye reduction mode)</source>

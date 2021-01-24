@@ -197,9 +197,9 @@ void appendImageInfo(QStringList &metadata)
                 //: description of camera flash mode
                 case 0x41:flash = T::tr("Red eye reduction mode"); break;
                 //: description of camera flash mode
-                case 0x45:flash = T::tr("Red eye reduction mode return light not detected"); break;
+                case 0x45:flash = T::tr("Red eye reduction mode, return light not detected"); break;
                 //: description of camera flash mode
-                case 0x47:flash = T::tr("Red eye reduction mode return light detected"); break;
+                case 0x47:flash = T::tr("Red eye reduction mode, return light detected"); break;
                 //: description of camera flash mode
                 case 0x49:flash = T::tr("Manual, red eye reduction mode"); break;
                 //: description of camera flash mode
@@ -293,6 +293,7 @@ void appendImageInfo(QStringList &metadata)
     if (ImageInfo.ExposureBias != 0.0f) {
         // If exposure bias was specified, but set to zero, presumably its no bias at all,
         // so only show it if its nonzero.
+        //: cf. https://en.wikipedia.org/wiki/Exposure_compensation
         metadata.append(asMeta(T::tr("Exposure Bias"), QString("%1").arg(static_cast<double>(ImageInfo.ExposureBias), 4, 'f', 2)));
     }
 
