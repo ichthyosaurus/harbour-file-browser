@@ -109,8 +109,14 @@ QVariant FileModel::data(const QModelIndex &index, int role) const
         return permissionsToString(info.permissions());
 
     case SizeRole:
-        if (info.isDir()) return tr("%n item(s)", "", static_cast<int>(info.dirSize()));
-        return filesizeToString(info.size());
+        if (info.isDir()) {
+            uint size = info.dirSize();
+            //: as in "this folder is empty", but as short as possible
+            if (size == 0) return tr("empty");
+            else return tr("%n item(s)", "", static_cast<int>(size));
+        } else {
+            return filesizeToString(info.size());
+        }
 
     case LastModifiedRole:
         return datetimeToString(info.lastModified());
