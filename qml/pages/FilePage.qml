@@ -313,14 +313,17 @@ Page {
                 DetailItem {
                     label: qsTr("Owner")
                     value: fileData.owner
+                    visible: value !== ""
                 }
                 DetailItem {
                     label: qsTr("Group")
                     value: fileData.group
+                    visible: value !== ""
                 }
                 DetailItem {
                     label: qsTr("Last modified")
                     value: fileData.modifiedLong
+                    visible: value !== ""
                 }
                 // Display metadata with priority >= 5
                 Repeater {
