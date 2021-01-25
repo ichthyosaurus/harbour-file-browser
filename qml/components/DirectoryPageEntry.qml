@@ -215,22 +215,22 @@ ListItem {
             anchors.fill: parent
             Label {
                 id: sizeLabel
-                text: isLink ? (isDir ? (Paths.unicodeArrow()+" "+symLinkTarget) :
-                                        (size+" "+qsTr("(link)"))) : (size)
+                text: isLink ? (size+" "+Paths.unicodeArrow()+" "+symLinkTarget) : (size)
                 color: _detailsColor
-                elide: Text.ElideRight
+                truncationMode: TruncationMode.Fade
+                elide: Text.ElideMiddle
                 font.pixelSize: Theme.fontSizeExtraSmall
             }
             Label {
                 id: permsLabel
-                visible: !(isLink && isDir)
+                visible: !isLink
                 text: filekind+permissions
                 color: _detailsColor
+                truncationMode: TruncationMode.Fade
                 font.pixelSize: Theme.fontSizeExtraSmall
             }
             Label {
                 id: datesLabel
-                visible: !(isLink && isDir)
                 text: modified
                 color: _detailsColor
                 font.pixelSize: Theme.fontSizeExtraSmall
@@ -241,7 +241,7 @@ ListItem {
                 State {
                     when: _listLabelWidth >= 2*listItem.width/3
                     PropertyChanges { target: listLabel; wrapMode: Text.NoWrap; maximumLineCount: 1 }
-                    PropertyChanges { target: sizeLabel; width: ((isLink && isDir) ? _listLabelWidth : _listLabelWidth/3); horizontalAlignment: Text.AlignLeft }
+                    PropertyChanges { target: sizeLabel; width: (isLink ? _listLabelWidth/3*2 : _listLabelWidth/3); horizontalAlignment: Text.AlignLeft }
                     PropertyChanges { target: permsLabel; width: _listLabelWidth/3; horizontalAlignment: Text.AlignHCenter }
                     PropertyChanges { target: datesLabel; width: _listLabelWidth/3; horizontalAlignment: Text.AlignRight }
                 },
@@ -336,22 +336,6 @@ ListItem {
     }
 
     states: [
-        State {
-            name: "hiddenAnimated"
-            when: !isMatched && index < 20
-            PropertyChanges {
-                target: listItem
-                hidden: true; _extraContentHeight: 0
-            }
-        },
-        State {
-            name: "hiddenImmediately"
-            when: !isMatched
-            PropertyChanges {
-                target: listItem
-                visible: false; contentHeight: 0; _extraContentHeight: 0
-            }
-        },
         State {
             name: "galleryAvailableBase"
             PropertyChanges {

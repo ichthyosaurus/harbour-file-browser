@@ -255,11 +255,6 @@
 <context>
     <name>DirectoryPageEntry</name>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="219"/>
-        <source>(link)</source>
-        <translation>(Link)</translation>
-    </message>
-    <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="46"/>
         <source>Deleting</source>
         <translation>Lösche</translation>
@@ -537,14 +532,18 @@
 <context>
     <name>FileModel</name>
     <message>
-        <location filename="../src/filemodel.cpp" line="114"/>
-        <source>dir-link</source>
-        <translation>dir-link</translation>
-    </message>
-    <message>
         <location filename="../src/filemodel.cpp" line="115"/>
-        <source>dir</source>
-        <translation>dir</translation>
+        <source>empty</source>
+        <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
+        <translation>leer</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../src/filemodel.cpp" line="116"/>
+        <source>%n item(s)</source>
+        <translation>
+            <numerusform>%n Element</numerusform>
+            <numerusform>%n Elemente</numerusform>
+        </translation>
     </message>
 </context>
 <context>
@@ -699,14 +698,69 @@
         <translation>Besitzer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="318"/>
+        <location filename="../qml/pages/FilePage.qml" line="319"/>
         <source>Group</source>
         <translation>Gruppe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="322"/>
+        <location filename="../qml/pages/FilePage.qml" line="324"/>
         <source>Last modified</source>
         <translation>Zuletzt geändert</translation>
+    </message>
+</context>
+<context>
+    <name>FileSize</name>
+    <message>
+        <location filename="../src/globals.cpp" line="78"/>
+        <source>B</source>
+        <translation>B</translation>
+    </message>
+    <message>
+        <location filename="../src/globals.cpp" line="79"/>
+        <source>KiB</source>
+        <translation>KiB</translation>
+    </message>
+    <message>
+        <location filename="../src/globals.cpp" line="80"/>
+        <source>MiB</source>
+        <translation>MiB</translation>
+    </message>
+    <message>
+        <location filename="../src/globals.cpp" line="81"/>
+        <source>GiB</source>
+        <translation>GiB</translation>
+    </message>
+    <message>
+        <location filename="../src/globals.cpp" line="82"/>
+        <source>TiB</source>
+        <translation>TiB</translation>
+    </message>
+    <message>
+        <location filename="../src/globals.cpp" line="83"/>
+        <source>PiB</source>
+        <translation>PiB</translation>
+    </message>
+    <message>
+        <location filename="../src/globals.cpp" line="84"/>
+        <source>EiB</source>
+        <translation>EiB</translation>
+    </message>
+    <message>
+        <location filename="../src/globals.cpp" line="85"/>
+        <source>ZiB</source>
+        <translation>ZiB</translation>
+    </message>
+    <message>
+        <location filename="../src/globals.cpp" line="86"/>
+        <source>YiB</source>
+        <translation>YiB</translation>
+    </message>
+    <message>
+        <location filename="../src/globals.cpp" line="106"/>
+        <location filename="../src/globals.cpp" line="110"/>
+        <source>%1 %2</source>
+        <extracomment>1=file size (number), 2=unit (e.g. KiB)</extracomment>
+        <translation>%1 %2</translation>
     </message>
 </context>
 <context>
@@ -1398,37 +1452,17 @@ exposure program</extracomment>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/globals.cpp" line="80"/>
-        <source>%1 bytes</source>
-        <translation>%1 Bytes</translation>
-    </message>
-    <message>
-        <location filename="../src/globals.cpp" line="83"/>
-        <source>%1 kB</source>
-        <translation>%1 kB</translation>
-    </message>
-    <message>
-        <location filename="../src/globals.cpp" line="86"/>
-        <source>%1 MB</source>
-        <translation>%1 MB</translation>
-    </message>
-    <message>
-        <location filename="../src/globals.cpp" line="88"/>
-        <source>%1 GB</source>
-        <translation>%1 GB</translation>
-    </message>
-    <message>
-        <location filename="../src/globals.cpp" line="96"/>
+        <location filename="../src/globals.cpp" line="120"/>
         <source>hh:mm:ss</source>
         <translation>hh:mm:ss</translation>
     </message>
     <message>
-        <location filename="../src/globals.cpp" line="99"/>
+        <location filename="../src/globals.cpp" line="123"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
         <translation>d. MMM yyyy, hh:mm:ss t</translation>
     </message>
     <message>
-        <location filename="../src/globals.cpp" line="101"/>
+        <location filename="../src/globals.cpp" line="125"/>
         <source>dd.MM.yy, hh:mm</source>
         <translation>d. M. yy, hh:mm</translation>
     </message>

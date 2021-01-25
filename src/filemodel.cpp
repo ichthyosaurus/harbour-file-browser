@@ -46,14 +46,12 @@ enum {
     IsLinkRole = Qt::UserRole + 9,
     SymLinkTargetRole = Qt::UserRole + 10,
     IsSelectedRole = Qt::UserRole + 11,
-    IsMatchedRole = Qt::UserRole + 12,
-    IsDoomedRole = Qt::UserRole + 13
+    IsDoomedRole = Qt::UserRole + 12
 };
 
 FileModel::FileModel(QObject *parent) :
     QAbstractListModel(parent),
     m_selectedFileCount(0),
-    m_matchedFileCount(0),
     m_active(false)
 {
     m_worker = new FileModelWorker;
@@ -111,9 +109,14 @@ QVariant FileModel::data(const QModelIndex &index, int role) const
         return permissionsToString(info.permissions());
 
     case SizeRole:
-        if (info.isSymLink() && info.isDirAtEnd()) return tr("dir-link");
-        if (info.isDir()) return tr("dir");
-        return filesizeToString(info.size());
+        if (info.isDir()) {
+            uint size = info.dirSize();
+            //: as in "this folder is empty", but as short as possible
+            if (size == 0) return tr("empty");
+            else return tr("%n item(s)", "", static_cast<int>(size));
+        } else {
+            return filesizeToString(info.size());
+        }
 
     case LastModifiedRole:
         return datetimeToString(info.lastModified());
@@ -132,11 +135,6 @@ QVariant FileModel::data(const QModelIndex &index, int role) const
 
     case IsSelectedRole:
         return info.isSelected();
-
-    case IsMatchedRole:
-        // TODO get rid of this role, as filtering is
-        // now done by removing/inserting entries
-        return true; //info.isMatched();
 
     case IsDoomedRole:
         return info.isDoomed();
@@ -160,7 +158,6 @@ QHash<int, QByteArray> FileModel::roleNames() const
     roles.insert(IsLinkRole, QByteArray("isLink"));
     roles.insert(SymLinkTargetRole, QByteArray("symLinkTarget"));
     roles.insert(IsSelectedRole, QByteArray("isSelected"));
-    roles.insert(IsMatchedRole, QByteArray("isMatched"));
     roles.insert(IsDoomedRole, QByteArray("isDoomed"));
     return roles;
 }
@@ -168,11 +165,6 @@ QHash<int, QByteArray> FileModel::roleNames() const
 int FileModel::fileCount() const
 {
     return m_files.count();
-}
-
-int FileModel::filteredFileCount() const
-{
-    return m_matchedFileCount;
 }
 
 QString FileModel::errorMessage() const
@@ -275,7 +267,7 @@ void FileModel::toggleSelectedFile(int fileIndex)
     m_files[fileIndex] = info;
     QModelIndex topLeft = index(fileIndex, 0);
     QModelIndex bottomRight = index(fileIndex, 0);
-    emit dataChanged(topLeft, bottomRight);
+    emit dataChanged(topLeft, bottomRight, {IsSelectedRole});
     emit selectedFileCountChanged();
 }
 
@@ -289,7 +281,7 @@ void FileModel::clearSelectedFiles()
         // emit signal for views
         QModelIndex topLeft = index(row, 0);
         QModelIndex bottomRight = index(row, 0);
-        emit dataChanged(topLeft, bottomRight);
+        emit dataChanged(topLeft, bottomRight, {IsSelectedRole});
         row++;
     }
     m_selectedFileCount = 0;
@@ -303,15 +295,11 @@ void FileModel::selectAllFiles()
 
     while (iter.hasNext()) {
         StatFileInfo &info = iter.next();
-        if (!info.isMatched()) {
-            row++; continue;
-        }
-
         info.setSelected(true);
         // emit signal for views
         QModelIndex topLeft = index(row, 0);
         QModelIndex bottomRight = index(row, 0);
-        emit dataChanged(topLeft, bottomRight);
+        emit dataChanged(topLeft, bottomRight, {IsSelectedRole});
         row++; count++;
     }
 
@@ -339,13 +327,12 @@ void FileModel::selectRange(int firstIndex, int lastIndex, bool selected)
 
         if (   row >= firstIndex
             && row <= lastIndex
-            && info.isMatched()
             && info.isSelected() != selected) {
             info.setSelected(selected);
             // emit signal for views
             QModelIndex topLeft = index(row, 0);
             QModelIndex bottomRight = index(row, 0);
-            emit dataChanged(topLeft, bottomRight);
+            emit dataChanged(topLeft, bottomRight, {IsSelectedRole});
         }
 
         if (info.isSelected()) count++;
@@ -395,7 +382,7 @@ void FileModel::doMarkAsDoomed(QList<StatFileInfo>& files, std::function<bool(St
         if (checker(files[i])) {
             files[i].setDoomed(true);
             files[i].setSelected(false); // doomed files can't be selected
-            emit dataChanged(index(i, 0), index(i, 0));
+            emit dataChanged(index(i, 0), index(i, 0), {IsDoomedRole, IsSelectedRole});
         }
     }
     updateFileCounts();
@@ -520,20 +507,14 @@ void FileModel::doUpdateChangedEntries()
 void FileModel::updateFileCounts()
 {
     int selectedCount = 0;
-    int matchedCount = 0;
 
     for (const auto& info : m_files) {
         if (info.isSelected()) selectedCount++;
-        if (info.isMatched()) matchedCount++;
     }
 
     if (m_selectedFileCount != selectedCount) {
         m_selectedFileCount = selectedCount;
         emit selectedFileCountChanged();
-    }
-    if (m_matchedFileCount != matchedCount) {
-        m_matchedFileCount = matchedCount;
-        emit filteredFileCountChanged();
     }
 }
 

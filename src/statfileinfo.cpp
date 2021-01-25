@@ -22,7 +22,7 @@
 #include "statfileinfo.h"
 
 StatFileInfo::StatFileInfo() :
-    m_filename(""), m_selected(false), m_filterMatched(true)
+    m_filename(""), m_selected(false)
 {
     refresh();
 }
@@ -55,6 +55,15 @@ QString StatFileInfo::kind() const
     return "?";
 }
 
+uint StatFileInfo::dirSize() const
+{
+    if (!isDirAtEnd()) return 0;
+    return QDir(m_fileInfo.absoluteFilePath(),
+                QStringLiteral(""),
+                QDir::NoSort, QDir::AllEntries |
+                QDir::NoDotAndDotDot | QDir::Hidden).count();
+}
+
 bool StatFileInfo::exists() const
 {
     return m_fileInfo.exists();
@@ -81,11 +90,6 @@ bool StatFileInfo::isSymLinkBroken() const
 void StatFileInfo::setSelected(bool selected)
 {
     m_selected = selected;
-}
-
-void StatFileInfo::setFilterMatched(bool matched)
-{
-    m_filterMatched = matched;
 }
 
 void StatFileInfo::refresh()

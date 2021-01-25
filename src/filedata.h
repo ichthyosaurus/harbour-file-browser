@@ -89,8 +89,8 @@ public:
     QString mimeType() const { return m_mimeTypeName; }
     QString mimeTypeComment() const { return m_mimeTypeComment; }
     QStringList metaData() const { return m_metaData; }
-    int dirsCount() const; // warning: expensive
-    int filesCount() const; // warning: expensive
+    uint dirsCount() const;
+    uint filesCount() const;
     QString errorMessage() const { return m_errorMessage; }
 
     const QString STRING_SEP;

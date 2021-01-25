@@ -44,7 +44,6 @@ class FileModel : public QAbstractListModel
     Q_OBJECT
     Q_PROPERTY(QString dir READ dir() WRITE setDir(QString) NOTIFY dirChanged())
     Q_PROPERTY(int fileCount READ fileCount() NOTIFY fileCountChanged())
-    Q_PROPERTY(int filteredFileCount READ filteredFileCount() NOTIFY filteredFileCountChanged())
     Q_PROPERTY(QString errorMessage READ errorMessage() NOTIFY errorMessageChanged())
     Q_PROPERTY(bool active READ active() WRITE setActive(bool) NOTIFY activeChanged())
     Q_PROPERTY(int selectedFileCount READ selectedFileCount() NOTIFY selectedFileCountChanged())
@@ -65,7 +64,6 @@ public:
     QString dir() const { return m_dir; }
     void setDir(QString dir);
     int fileCount() const;
-    int filteredFileCount() const;
     QString errorMessage() const;
     bool active() const { return m_active; }
     void setActive(bool active);
@@ -99,7 +97,6 @@ public slots:
 signals:
     void dirChanged();
     void fileCountChanged();
-    void filteredFileCountChanged();
     void errorMessageChanged();
     void activeChanged();
     void selectedFileCountChanged();
@@ -142,7 +139,6 @@ private:
     QString m_oldFilterString = {""};
     QList<StatFileInfo> m_files;
     int m_selectedFileCount;
-    int m_matchedFileCount;
     QString m_errorMessage;
     bool m_active;
     QFileSystemWatcher *m_watcher;

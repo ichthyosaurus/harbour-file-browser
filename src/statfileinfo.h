@@ -86,6 +86,7 @@ public:
     QString owner() const { return m_fileInfo.owner(); }
     uint ownerId() const { return m_fileInfo.ownerId(); }
     qint64 size() const { return m_fileInfo.size(); }
+    uint dirSize() const;
     qint64 lastModifiedStat() const { return m_stat.st_mtime; }
     QDateTime lastModified() const { return m_fileInfo.lastModified(); }
     QDateTime created() const { return m_fileInfo.created(); }
@@ -111,10 +112,6 @@ public:
     void setSelected(bool selected);
     bool isSelected() const { return m_selected; }
 
-    // filtering
-    void setFilterMatched(bool matched);
-    bool isMatched() const { return m_filterMatched; }
-
     void refresh();
 
 private:
@@ -123,8 +120,36 @@ private:
     struct stat m_stat; // after following possible symlinks
     struct stat m_lstat; // file itself without following symlinks
     bool m_selected;
-    bool m_filterMatched = {true}; // TODO no longer needed, remove
     bool m_doomed = {false};
 };
+
+inline bool operator==(const StatFileInfo& f1, const StatFileInfo& f2)
+{
+    return (f1.fileName() == f2.fileName() &&
+            f1.size() == f2.size() &&
+            f1.permissions() == f2.permissions() &&
+            f1.lastModifiedStat() == f2.lastModifiedStat() &&
+            f1.isSymLink() == f2.isSymLink() &&
+            f1.isDirAtEnd() == f2.isDirAtEnd());
+}
+
+inline uint qHash(const StatFileInfo& key, uint seed=10)
+{
+    QByteArray result;
+    result.reserve(45);
+    result.append(QByteArray::number(qHash(key.fileName(), seed)));
+    result.append('#');
+    result.append(QByteArray::number(key.size()));
+    result.append('#');
+    result.append(QByteArray::number(qHash(key.permissions(), seed)));
+    result.append('#');
+    result.append(QByteArray::number(key.lastModifiedStat()));
+    result.append('#');
+    result.append(key.isSymLink());
+    result.append('#');
+    result.append(key.isDirAtEnd());
+    // qDebug() << "hashed" << f.fileName() << "to" << result << "(" << result.size() << ")";
+    return qHash(result, seed);
+}
 
 #endif // STATFILEINFO_H
