@@ -342,41 +342,6 @@ bool FileModelWorker::thresholdAbort(size_t currentChanges, const QList<StatFile
     return false;
 }
 
-bool FileModelWorker::filesContains(const QList<StatFileInfo> &files, const StatFileInfo &fileData) const
-{
-    // check if list contains fileData with relevant info
-    for (const auto& f : files) {
-        if (f.fileName() == fileData.fileName() &&
-                f.size() == fileData.size() &&
-                f.permissions() == fileData.permissions() &&
-                f.lastModified() == fileData.lastModified() &&
-                f.isSymLink() == fileData.isSymLink() &&
-                f.isDirAtEnd() == fileData.isDirAtEnd()) {
-            return true;
-        }
-    }
-    return false;
-}
-
-uint FileModelWorker::hashInfo(const StatFileInfo& f)
-{
-    QByteArray result;
-    result.reserve(45);
-    result.append(QByteArray::number(qHash(f.fileName())));
-    result.append('#');
-    result.append(QByteArray::number(f.size()));
-    result.append('#');
-    result.append(QByteArray::number(qHash(f.permissions())));
-    result.append('#');
-    result.append(QByteArray::number(qHash(f.lastModified())));
-    result.append('#');
-    result.append(f.isSymLink());
-    result.append('#');
-    result.append(f.isDirAtEnd());
-    // qDebug() << "hashed" << f.fileName() << "to" << result << "(" << result.size() << ")";
-    return qHash(result);
-}
-
 void FileModelWorker::sortByModTime(QList<StatFileInfo> &files, bool reverse, int dirsFirstCount)
 {
 #define COMP_LAMBDA [&](const StatFileInfo& a, const StatFileInfo& b) -> bool

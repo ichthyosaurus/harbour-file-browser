@@ -77,8 +77,6 @@ private:
     bool verifyOrAbort();
     bool applySettings();
     bool thresholdAbort(size_t currentChanges, const QList<StatFileInfo> &fullFiles);
-    bool filesContains(const QList<StatFileInfo> &files, const StatFileInfo &fileData) const;
-    uint hashInfo(const StatFileInfo& f);
     void sortByModTime(QList<StatFileInfo>& files, bool reverse, int dirsFirstCount);
 
     // returns true if cancelled and emits an error
