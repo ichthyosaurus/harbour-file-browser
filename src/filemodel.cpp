@@ -274,7 +274,7 @@ void FileModel::toggleSelectedFile(int fileIndex)
     m_files[fileIndex] = info;
     QModelIndex topLeft = index(fileIndex, 0);
     QModelIndex bottomRight = index(fileIndex, 0);
-    emit dataChanged(topLeft, bottomRight);
+    emit dataChanged(topLeft, bottomRight, {IsSelectedRole});
     emit selectedFileCountChanged();
 }
 
@@ -288,7 +288,7 @@ void FileModel::clearSelectedFiles()
         // emit signal for views
         QModelIndex topLeft = index(row, 0);
         QModelIndex bottomRight = index(row, 0);
-        emit dataChanged(topLeft, bottomRight);
+        emit dataChanged(topLeft, bottomRight, {IsSelectedRole});
         row++;
     }
     m_selectedFileCount = 0;
@@ -310,7 +310,7 @@ void FileModel::selectAllFiles()
         // emit signal for views
         QModelIndex topLeft = index(row, 0);
         QModelIndex bottomRight = index(row, 0);
-        emit dataChanged(topLeft, bottomRight);
+        emit dataChanged(topLeft, bottomRight, {IsSelectedRole});
         row++; count++;
     }
 
@@ -344,7 +344,7 @@ void FileModel::selectRange(int firstIndex, int lastIndex, bool selected)
             // emit signal for views
             QModelIndex topLeft = index(row, 0);
             QModelIndex bottomRight = index(row, 0);
-            emit dataChanged(topLeft, bottomRight);
+            emit dataChanged(topLeft, bottomRight, {IsSelectedRole});
         }
 
         if (info.isSelected()) count++;
@@ -394,7 +394,7 @@ void FileModel::doMarkAsDoomed(QList<StatFileInfo>& files, std::function<bool(St
         if (checker(files[i])) {
             files[i].setDoomed(true);
             files[i].setSelected(false); // doomed files can't be selected
-            emit dataChanged(index(i, 0), index(i, 0));
+            emit dataChanged(index(i, 0), index(i, 0), {IsDoomedRole, IsSelectedRole});
         }
     }
     updateFileCounts();
