@@ -86,6 +86,7 @@ public:
     QString owner() const { return m_fileInfo.owner(); }
     uint ownerId() const { return m_fileInfo.ownerId(); }
     qint64 size() const { return m_fileInfo.size(); }
+    uint dirSize() const;
     qint64 lastModifiedStat() const { return m_stat.st_mtime; }
     QDateTime lastModified() const { return m_fileInfo.lastModified(); }
     QDateTime created() const { return m_fileInfo.created(); }

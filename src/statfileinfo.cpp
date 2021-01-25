@@ -55,6 +55,14 @@ QString StatFileInfo::kind() const
     return "?";
 }
 
+uint StatFileInfo::dirSize() const
+{
+    if (!isDirAtEnd()) return 0;
+    return QDir(m_fileInfo.absoluteFilePath(),
+                QStringLiteral(""),
+                QDir::NoSort, QDir::AllEntries).count();
+}
+
 bool StatFileInfo::exists() const
 {
     return m_fileInfo.exists();
