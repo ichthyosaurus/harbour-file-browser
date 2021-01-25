@@ -616,7 +616,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="107"/>
         <source>View Raw Contents</source>
-        <translation>查看 Raw 内容 </translation>
+        <translation>查看 Raw 内容</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="115"/>
@@ -1789,7 +1789,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="234"/>
         <source>The source code is available at</source>
-        <translation>源代码可以在此下载 </translation>
+        <translation>源代码可以在此下载</translation>
     </message>
 </context>
 <context>

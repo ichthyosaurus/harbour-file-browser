@@ -501,17 +501,17 @@
     <message>
         <location filename="../src/filedata.cpp" line="219"/>
         <source>block device</source>
-        <translation>block device</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="223"/>
         <source>character device</source>
-        <translation>character device</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="227"/>
         <source>pipe</source>
-        <translation>pipe</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="231"/>
@@ -903,13 +903,13 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="194"/>
         <source>Auto, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation>Auto,  heijastunutta valoa ei havaittu</translation>
+        <translation>Auto, heijastunutta valoa ei havaittu</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="196"/>
         <source>Auto, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation>Auto,  heijastunutta valoa havaittu</translation>
+        <translation>Auto, heijastunutta valoa havaittu</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="198"/>

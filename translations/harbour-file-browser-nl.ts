@@ -501,17 +501,17 @@
     <message>
         <location filename="../src/filedata.cpp" line="219"/>
         <source>block device</source>
-        <translation>block device</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="223"/>
         <source>character device</source>
-        <translation>character device</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="227"/>
         <source>pipe</source>
-        <translation>pipe</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="231"/>
