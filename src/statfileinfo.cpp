@@ -22,7 +22,7 @@
 #include "statfileinfo.h"
 
 StatFileInfo::StatFileInfo() :
-    m_filename(""), m_selected(false), m_filterMatched(true)
+    m_filename(""), m_selected(false)
 {
     refresh();
 }
@@ -90,11 +90,6 @@ bool StatFileInfo::isSymLinkBroken() const
 void StatFileInfo::setSelected(bool selected)
 {
     m_selected = selected;
-}
-
-void StatFileInfo::setFilterMatched(bool matched)
-{
-    m_filterMatched = matched;
 }
 
 void StatFileInfo::refresh()

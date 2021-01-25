@@ -337,22 +337,6 @@ ListItem {
 
     states: [
         State {
-            name: "hiddenAnimated"
-            when: !isMatched && index < 20
-            PropertyChanges {
-                target: listItem
-                hidden: true; _extraContentHeight: 0
-            }
-        },
-        State {
-            name: "hiddenImmediately"
-            when: !isMatched
-            PropertyChanges {
-                target: listItem
-                visible: false; contentHeight: 0; _extraContentHeight: 0
-            }
-        },
-        State {
             name: "galleryAvailableBase"
             PropertyChanges {
                 target: listItem

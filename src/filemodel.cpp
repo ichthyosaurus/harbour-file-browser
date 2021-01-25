@@ -46,14 +46,12 @@ enum {
     IsLinkRole = Qt::UserRole + 9,
     SymLinkTargetRole = Qt::UserRole + 10,
     IsSelectedRole = Qt::UserRole + 11,
-    IsMatchedRole = Qt::UserRole + 12,
-    IsDoomedRole = Qt::UserRole + 13
+    IsDoomedRole = Qt::UserRole + 12
 };
 
 FileModel::FileModel(QObject *parent) :
     QAbstractListModel(parent),
     m_selectedFileCount(0),
-    m_matchedFileCount(0),
     m_active(false)
 {
     m_worker = new FileModelWorker;
@@ -132,11 +130,6 @@ QVariant FileModel::data(const QModelIndex &index, int role) const
     case IsSelectedRole:
         return info.isSelected();
 
-    case IsMatchedRole:
-        // TODO get rid of this role, as filtering is
-        // now done by removing/inserting entries
-        return true; //info.isMatched();
-
     case IsDoomedRole:
         return info.isDoomed();
 
@@ -159,7 +152,6 @@ QHash<int, QByteArray> FileModel::roleNames() const
     roles.insert(IsLinkRole, QByteArray("isLink"));
     roles.insert(SymLinkTargetRole, QByteArray("symLinkTarget"));
     roles.insert(IsSelectedRole, QByteArray("isSelected"));
-    roles.insert(IsMatchedRole, QByteArray("isMatched"));
     roles.insert(IsDoomedRole, QByteArray("isDoomed"));
     return roles;
 }
@@ -167,11 +159,6 @@ QHash<int, QByteArray> FileModel::roleNames() const
 int FileModel::fileCount() const
 {
     return m_files.count();
-}
-
-int FileModel::filteredFileCount() const
-{
-    return m_matchedFileCount;
 }
 
 QString FileModel::errorMessage() const
@@ -302,10 +289,6 @@ void FileModel::selectAllFiles()
 
     while (iter.hasNext()) {
         StatFileInfo &info = iter.next();
-        if (!info.isMatched()) {
-            row++; continue;
-        }
-
         info.setSelected(true);
         // emit signal for views
         QModelIndex topLeft = index(row, 0);
@@ -338,7 +321,6 @@ void FileModel::selectRange(int firstIndex, int lastIndex, bool selected)
 
         if (   row >= firstIndex
             && row <= lastIndex
-            && info.isMatched()
             && info.isSelected() != selected) {
             info.setSelected(selected);
             // emit signal for views
@@ -519,20 +501,14 @@ void FileModel::doUpdateChangedEntries()
 void FileModel::updateFileCounts()
 {
     int selectedCount = 0;
-    int matchedCount = 0;
 
     for (const auto& info : m_files) {
         if (info.isSelected()) selectedCount++;
-        if (info.isMatched()) matchedCount++;
     }
 
     if (m_selectedFileCount != selectedCount) {
         m_selectedFileCount = selectedCount;
         emit selectedFileCountChanged();
-    }
-    if (m_matchedFileCount != matchedCount) {
-        m_matchedFileCount = matchedCount;
-        emit filteredFileCountChanged();
     }
 }
 

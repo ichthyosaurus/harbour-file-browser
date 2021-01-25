@@ -112,10 +112,6 @@ public:
     void setSelected(bool selected);
     bool isSelected() const { return m_selected; }
 
-    // filtering
-    void setFilterMatched(bool matched);
-    bool isMatched() const { return m_filterMatched; }
-
     void refresh();
 
 private:
@@ -124,7 +120,6 @@ private:
     struct stat m_stat; // after following possible symlinks
     struct stat m_lstat; // file itself without following symlinks
     bool m_selected;
-    bool m_filterMatched = {true}; // TODO no longer needed, remove
     bool m_doomed = {false};
 };
 
