@@ -21,6 +21,8 @@
  */
 
 #include "globals.h"
+#include <cmath>
+#include <QCoreApplication>
 #include <QLocale>
 #include <QProcess>
 
@@ -71,21 +73,43 @@ QString permissionsToString(QFile::Permissions permissions)
     return QString::fromLatin1(str);
 }
 
+namespace {
+static QStringList fileSizeNames({
+    QCoreApplication::translate("FileSize", "B"),
+    QCoreApplication::translate("FileSize", "KiB"),
+    QCoreApplication::translate("FileSize", "MiB"),
+    QCoreApplication::translate("FileSize", "GiB"),
+    QCoreApplication::translate("FileSize", "TiB"),
+    QCoreApplication::translate("FileSize", "PiB"),
+    QCoreApplication::translate("FileSize", "EiB"),
+    QCoreApplication::translate("FileSize", "ZiB"),
+    QCoreApplication::translate("FileSize", "YiB"),
+});
+}
+
 QString filesizeToString(qint64 filesize)
 {
-    // convert to kB, MB, GB: use 1000 instead of 1024 as divisor because it seems to be
-    // the usual way to display file size (like on Ubuntu)
+    // convert to KiB, MiB, GiB: we follow SI and use 1024 as divisor.
+    // Values are called properly *bibyte instead of **byte, i.e. kibibyte.
     QLocale locale;
-    if (filesize < 1000LL)
-        return QObject::tr("%1 bytes").arg(locale.toString(filesize));
+    QStringListIterator i(fileSizeNames);
+    QString unit(i.next()); // = first
 
-    if (filesize < 1000000LL)
-        return QObject::tr("%1 kB").arg(locale.toString((double)filesize/1000.0, 'f', 2));
+    uint power = 0;
+    while (filesize >= pow(1024, power+1) && i.hasNext()) {
+        unit = i.next();
+        power++;
+    }
 
-    if (filesize < 1000000000LL)
-        return QObject::tr("%1 MB").arg(locale.toString((double)filesize/1000000.0, 'f', 2));
-
-    return QObject::tr("%1 GB").arg(locale.toString((double)filesize/1000000000.0, 'f', 2));
+    if (filesize < 1024LL) {
+        //: 1=file size (number), 2=unit (e.g. KiB)
+        return QCoreApplication::translate("FileSize", "%1 %2").
+                arg(locale.toString(filesize)).arg(unit);
+    } else {
+        auto num = static_cast<double>(filesize)/pow(1024, power);
+        return QCoreApplication::translate("FileSize", "%1 %2").
+                arg(locale.toString(num, 'f', 2)).arg(unit);
+    }
 }
 
 QString datetimeToString(QDateTime datetime, bool longFormat)

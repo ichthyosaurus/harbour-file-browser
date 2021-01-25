@@ -296,7 +296,7 @@ QStringList Engine::fileSizeInfo(QStringList paths)
         result << "-"; // got an invalid result
     } else {
         QString duTotalStr = duLines.at(duLines.count()-2).split(QRegExp("[\\s]+"))[0].trimmed();
-        qint64 duTotal = duTotalStr.toLongLong() * (isUsingBusybox("du") ? 1000LL : 1LL); // BusyBox cannot show the real byte count
+        qint64 duTotal = duTotalStr.toLongLong() * (isUsingBusybox("du") ? 1024LL : 1LL); // BusyBox cannot show the real byte count
         result << (duTotal > 0 ? filesizeToString(duTotal) : "-");
     }
 
