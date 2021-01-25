@@ -155,14 +155,14 @@ void FileModelWorker::doReadDiff()
     // NOTE If necessary we could merge this in the loop
     // where we initially load the new file list.
     for (const auto& info : newEntries) {
-        newHashes.append(hashInfo(info));
+        newHashes.append(qHash(info));
         newLookup.insert(newHashes.last());
         if (cancelIfCancelled()) return;
     }
 
     // populate old hashes and lookup table
     for (const auto& info : m_oldEntries) {
-        oldHashes.append(hashInfo(info));
+        oldHashes.append(qHash(info));
         oldLookup.insert(oldHashes.last());
     }
 
