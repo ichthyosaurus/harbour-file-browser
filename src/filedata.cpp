@@ -113,26 +113,26 @@ QString FileData::absolutePath() const
     return m_fileInfo.absolutePath();
 }
 
-int FileData::dirsCount() const
+uint FileData::dirsCount() const
 {
     if (!isDir()) return 0;
-    QSettings settings;
-    bool hiddenSetting = settings.value("View/HiddenFilesShown", false).toBool();
-    QDir::Filter hidden = hiddenSetting ? QDir::Hidden : static_cast<QDir::Filter>(0);
-    QDir dir(m_file);
-    dir.setFilter(QDir::AllDirs | QDir::NoDotAndDotDot | hidden);
-    dir.setSorting(QDir::NoSort);
-    return dir.entryList().length();
+    QDir::Filters filters = QDir::AllDirs | QDir::NoDotAndDotDot;
+    if (QSettings().value("View/HiddenFilesShown", false).toBool()) {
+        filters |= QDir::Hidden;
+    }
+    QDir dir(m_file, QStringLiteral(""), QDir::NoSort, filters);
+    return dir.count();
 }
 
-int FileData::filesCount() const
+uint FileData::filesCount() const
 {
     if (!isDir()) return 0;
-    QSettings settings;
-    bool hiddenSetting = settings.value("View/HiddenFilesShown", false).toBool();
-    QDir::Filter hidden = hiddenSetting ? QDir::Hidden : static_cast<QDir::Filter>(0);
-    QDir dir(m_file);
-    return dir.entryList(QDir::Files | hidden, QDir::NoSort).length();
+    QDir::Filters filters = QDir::Files;
+    if (QSettings().value("View/HiddenFilesShown", false).toBool()) {
+        filters |= QDir::Hidden;
+    }
+    QDir dir(m_file, QStringLiteral(""), QDir::NoSort, filters);
+    return dir.count();
 }
 
 void FileData::refresh()
