@@ -501,12 +501,12 @@
     <message>
         <location filename="../src/filedata.cpp" line="219"/>
         <source>block device</source>
-        <translation></translation>
+        <translation>blokapparaat</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="223"/>
         <source>character device</source>
-        <translation></translation>
+        <translation>tekenapparaat</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="227"/>
@@ -535,7 +535,7 @@
         <location filename="../src/filemodel.cpp" line="115"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation type="unfinished">leeg</translation>
+        <translation>leeg</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/filemodel.cpp" line="116"/>
@@ -1398,7 +1398,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/PathEditDialog.qml" line="262"/>
         <source>empty</source>
         <extracomment>as in &apos;this folder is empty&apos;</extracomment>
-        <translation type="unfinished">leeg</translation>
+        <translation>leeg</translation>
     </message>
 </context>
 <context>

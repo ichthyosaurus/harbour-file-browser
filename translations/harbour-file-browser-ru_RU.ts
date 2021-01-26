@@ -7,17 +7,17 @@
         <location filename="../src/consolemodel.cpp" line="123"/>
         <location filename="../src/consolemodel.cpp" line="135"/>
         <source>** crashed</source>
-        <translation></translation>
+        <translation>** разбился</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="125"/>
         <source>** error: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>** ошибка: %1</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="133"/>
         <source>** command “%1” not found</source>
-        <translation type="unfinished"></translation>
+        <translation>** команда «%1» не найдена</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="137"/>
@@ -746,34 +746,34 @@
     <message>
         <location filename="../src/globals.cpp" line="82"/>
         <source>TiB</source>
-        <translation type="unfinished">TiB</translation>
+        <translation>ТиБ</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="83"/>
         <source>PiB</source>
-        <translation type="unfinished">PiB</translation>
+        <translation>ПиБ</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="84"/>
         <source>EiB</source>
-        <translation type="unfinished">EiB</translation>
+        <translation>ЭиБ</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="85"/>
         <source>ZiB</source>
-        <translation type="unfinished">ZiB</translation>
+        <translation>ЗиБ</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="86"/>
         <source>YiB</source>
-        <translation type="unfinished">YiB</translation>
+        <translation>ЙиБ</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="106"/>
         <location filename="../src/globals.cpp" line="110"/>
         <source>%1 %2</source>
         <extracomment>1=file size (number), 2=unit (e.g. KiB)</extracomment>
-        <translation type="unfinished">%1 %2</translation>
+        <translation>%1 %2</translation>
     </message>
 </context>
 <context>
