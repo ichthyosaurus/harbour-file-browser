@@ -8,9 +8,15 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 ## Unreleased
 
+ * Note: translations are now managed using Weblate (https://hosted.weblate.org/projects/harbour-file-browser/) - contributors welcome!
  * New translation: Norwegian Bokmål
- * Updated translations: French, Swedish, Chinese, German
- * Fixed label colors in permissions dialog
+ * Updated translations: Spanish, French, Swedish, Chinese, German, ...
+ * Added item count to folders in listings
+ * Added link target to files in listings
+ * Changed file size display units to SI units (i.e. powers of 2, KiB=1024B instead of kB=1000B)
+ * Improved performance of file size preview and selecting files
+ * Fixed label colors in permissions dialog, rename dialog, transfer dialog, file preview page
+ * Fixed hiding empty file info fields
 
 ## Version 2.4.0 (2021-01-12)
 
