@@ -129,7 +129,7 @@
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="104"/>
         <source>Norwegian</source>
-        <translation type="unfinished"></translation>
+        <translation>挪威语</translation>
     </message>
 </context>
 <context>
@@ -528,8 +528,8 @@
     <message numerus="yes">
         <location filename="../src/filemodel.cpp" line="116"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n 个项目</numerusform>
         </translation>
     </message>
 </context>
@@ -806,13 +806,13 @@
         <location filename="../src/filedata.cpp" line="269"/>
         <source>%1 x %2</source>
         <extracomment>image size description without aspect ratio: 1=width, 2=height</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 x %2</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="273"/>
         <source>%1 x %2 (%3)</source>
         <extracomment>image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 x %2 (%3)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="157"/>
@@ -1042,7 +1042,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="281"/>
         <source>Infinite</source>
         <extracomment>focus distance</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>无限远</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="285"/>
