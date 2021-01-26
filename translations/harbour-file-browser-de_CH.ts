@@ -501,12 +501,12 @@
     <message>
         <location filename="../src/filedata.cpp" line="219"/>
         <source>block device</source>
-        <translation>Block Device</translation>
+        <translation>blockorientiertes Gerät</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="223"/>
         <source>character device</source>
-        <translation>Character Device</translation>
+        <translation>zeichenorientiertes Gerät</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="227"/>

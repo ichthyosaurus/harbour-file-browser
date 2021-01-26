@@ -1398,7 +1398,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/PathEditDialog.qml" line="262"/>
         <source>empty</source>
         <extracomment>as in &apos;this folder is empty&apos;</extracomment>
-        <translation type="unfinished">vuoto</translation>
+        <translation>vuoto</translation>
     </message>
 </context>
 <context>

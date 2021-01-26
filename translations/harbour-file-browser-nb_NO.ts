@@ -540,9 +540,9 @@
     <message numerus="yes">
         <location filename="../src/filemodel.cpp" line="116"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n element</numerusform>
+            <numerusform>%n elementer</numerusform>
         </translation>
     </message>
 </context>
@@ -861,13 +861,13 @@
         <location filename="../src/jhead/jhead-api.cpp" line="182"/>
         <source>Strobe light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Strobe lys ikke oppdaget</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="184"/>
         <source>Strobe light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Strobe lys oppdaget</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="186"/>
@@ -884,13 +884,13 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="188"/>
         <source>Manual, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Manuelt, returlys ikke oppdaget</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="190"/>
         <source>Manual, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Manuelt, returlys oppdaget</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="192"/>
@@ -903,13 +903,13 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="194"/>
         <source>Auto, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Auto, returlys ikke oppdaget</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="196"/>
         <source>Auto, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Auto, returlys oppdaget</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="198"/>
@@ -921,44 +921,44 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="200"/>
         <source>Red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Redusering av røde øyne, returlys ikke oppdaget</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="202"/>
         <location filename="../src/jhead/jhead-api.cpp" line="208"/>
         <source>Red eye reduction mode, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Redusering av røde øyne, returlys oppdaget</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="204"/>
         <source>Manual, red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Manuell, reduksjon av røde øyne</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="206"/>
         <source>Manual, red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Manuell, reduksjon av røde øyne, returlys ikke oppdaget</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="210"/>
         <source>Auto, red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Auto, reduksjon av røde øyne</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="212"/>
         <source>Auto, red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Auto, reduksjon av røde øyne, returlys ikke oppdaget</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="214"/>
         <source>Auto, red eye reduction mode, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Auto, reduksjon av røde øyne, returlys oppdaget</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="218"/>
@@ -1021,7 +1021,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="256"/>
         <source>CCD Width</source>
         <extracomment>photographic sensor width; cf. https://en.wikipedia.org/wiki/Charge-coupled_device</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>CCD-bredde</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="268"/>
@@ -1179,25 +1179,25 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="371"/>
         <source>Aperture priority (semi-auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Blenderprioritet (semi-auto)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="375"/>
         <source>Shutter priority (semi-auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Lukkerprioritet (semi-auto)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="379"/>
         <source>Creative Program (based towards depth of field)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Kreativt program (basert på dybdeskarp)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="383"/>
         <source>Action program (based towards fast shutter speed)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Handlingsprogram (basert mot rask lukkertid)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="387"/>
@@ -1214,19 +1214,19 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="396"/>
         <source>Exposure Program</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksponeringsprogram</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="402"/>
         <location filename="../src/jhead/jhead-api.cpp" line="405"/>
         <source>Exposure Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksponeringsmodus</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="407"/>
         <source>Auto bracketing</source>
         <extracomment>exposure mode; cf. https://en.wikipedia.org/wiki/Autobracketing#Exposure</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Automatisk bracketing</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="416"/>
@@ -1249,7 +1249,7 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="427"/>
         <source>Focus Range</source>
-        <translation type="unfinished"></translation>
+        <translation>Fokusområde</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="437"/>
