@@ -83,7 +83,7 @@ Dialog {
                         x: Theme.horizontalPageMargin
                         width: parent.width - 2*x
                         text: qsTr("Give a new name for\n%1").arg(parent.originalName)
-                        color: Theme.secondaryColor
+                        color: Theme.secondaryHighlightColor
                         wrapMode: Text.Wrap
                     }
 

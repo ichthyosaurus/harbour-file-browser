@@ -98,7 +98,7 @@ Dialog {
                         id: statusLabel
                         text: updateText()
                         x: Theme.horizontalPageMargin
-                        color: Theme.secondaryColor
+                        color: Theme.secondaryHighlightColor
 
                         function updateText() {
                             text = qsTr("%n item(s) selected for transferring", "", toTransfer.length) +

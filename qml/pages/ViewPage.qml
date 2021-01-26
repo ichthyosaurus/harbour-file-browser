@@ -81,7 +81,7 @@ Page {
                 // show medium size if there is no portrait (or landscape text)
                 // in that case, this message becomes main message
                 font.pixelSize: portraitText.text === "" ? Theme.fontSizeMedium : Theme.fontSizeTiny
-                color: portraitText.text === "" ? Theme.highlightColor : Theme.secondaryColor
+                color: portraitText.text === "" ? Theme.highlightColor : Theme.secondaryHighlightColor
                 horizontalAlignment: Text.AlignHCenter
                 visible: message.text !== ""
             }
