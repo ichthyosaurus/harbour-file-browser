@@ -7,15 +7,15 @@ Files: translations/*
 Copyright: 2013-2021 File Browser translations contributors
 License: GPL-3.0-or-later
 
+Files: rpm/harbour-file-browser.spec
+Copyright: File Browser contributors
+License: GPL-3.0-or-later
+Comment: This file is generated from [this file's name].yaml and shares copyright with it.
+
 Files: icons/* root/icons/* qml/images/*
 Copyright: Mirian Margiani
 License: CC-BY-SA-4.0
 Comment: These files are generated from the sources at icon-src/*.
-
-Files: icon-src/*
-Copyright: Mirian Margiani
-License: CC-BY-SA-4.0
-Comment: These files contain proper Dublin Core licensing metadata.
 
 Files: icon-src/*
 Copyright: Mirian Margiani
