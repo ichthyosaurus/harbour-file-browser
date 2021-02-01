@@ -17,6 +17,7 @@ SPDX-License-Identifier: GFDL-1.3-or-later
  * Improved performance of file size preview and selecting files
  * Fixed label colors in permissions dialog, rename dialog, transfer dialog, file preview page
  * Fixed hiding empty file info fields
+ * Fixed creating numbered file names when pasting over existing files with '.' in their path
 
 ## Version 2.4.0 (2021-01-12)
 

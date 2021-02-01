@@ -27,20 +27,35 @@
 // creates a "Document (2)" numbered name from the given filename
 static QString createNumberedFilename(QString filename)
 {
+    if (filename.isEmpty()) {
+        return {}; // TODO notify
+    } else if (filename.endsWith(QChar('/'))) {
+        filename.chop(1);
+    }
+
     QFileInfo fileinfo(filename);
-    QString suffix = fileinfo.suffix();
+    QString path = fileinfo.path();
+    QString suffix, basename;
+
+    if (fileinfo.isDir()) {
+        basename = fileinfo.fileName();
+        // there's no suffix
+    } else {
+        basename = fileinfo.baseName();
+        suffix = fileinfo.completeSuffix();
+    }
+
     if (!suffix.isEmpty()) {
-        suffix = "."+suffix;
+        suffix = QStringLiteral(".")+suffix;
     }
-    int dotpos = filename.lastIndexOf('.');
-    QString basename = dotpos >= 0 ? filename.left(dotpos) : filename;
+
     int number = 2;
-    QString numberedFilename = QString("%1 (%2)%3").arg(basename).arg(number).arg(suffix);
-    while (QFileInfo::exists(numberedFilename)) {
+    QString numberedFilename = QStringLiteral("%1 (%2)%3").arg(basename).arg(number).arg(suffix);
+    while (QFileInfo::exists(path+QStringLiteral("/")+numberedFilename)) {
         ++number;
-        numberedFilename = QString("%1 (%2)%3").arg(basename).arg(number).arg(suffix);
+        numberedFilename = QStringLiteral("%1 (%2)%3").arg(basename).arg(number).arg(suffix);
     }
-    return numberedFilename;
+    return path+QStringLiteral("/")+numberedFilename;
 }
 
 FileWorker::FileWorker(QObject *parent) :
