@@ -8,6 +8,10 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 ## Unreleased
 
+ * Nothing so far
+
+## Version 2.4.1 (2021-02-01)
+
  * Note: translations are now managed using Weblate (https://hosted.weblate.org/projects/harbour-file-browser/) - contributors welcome!
  * New translation: Norwegian Bokmål
  * Updated translations: Spanish, French, Swedish, Chinese, German, ...
