@@ -766,44 +766,44 @@
 <context>
     <name>FileWorker</name>
     <message>
-        <location filename="../src/fileworker.cpp" line="61"/>
-        <location filename="../src/fileworker.cpp" line="77"/>
-        <location filename="../src/fileworker.cpp" line="94"/>
-        <location filename="../src/fileworker.cpp" line="111"/>
+        <location filename="../src/fileworker.cpp" line="76"/>
+        <location filename="../src/fileworker.cpp" line="92"/>
+        <location filename="../src/fileworker.cpp" line="109"/>
+        <location filename="../src/fileworker.cpp" line="126"/>
         <source>File operation already in progress</source>
         <translation>Operazione sui file già in corso</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="153"/>
+        <location filename="../src/fileworker.cpp" line="168"/>
         <source>Empty filename</source>
         <translation>Nome file vuoto</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="209"/>
+        <location filename="../src/fileworker.cpp" line="224"/>
         <source>File not found</source>
         <translation>File non trovato</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="222"/>
+        <location filename="../src/fileworker.cpp" line="237"/>
         <source>Folder delete failed</source>
         <translation>Cancellazione cartella fallita</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="172"/>
-        <location filename="../src/fileworker.cpp" line="244"/>
-        <location filename="../src/fileworker.cpp" line="276"/>
-        <location filename="../src/fileworker.cpp" line="372"/>
-        <location filename="../src/fileworker.cpp" line="388"/>
+        <location filename="../src/fileworker.cpp" line="187"/>
+        <location filename="../src/fileworker.cpp" line="259"/>
+        <location filename="../src/fileworker.cpp" line="291"/>
+        <location filename="../src/fileworker.cpp" line="387"/>
+        <location filename="../src/fileworker.cpp" line="403"/>
         <source>Cancelled</source>
         <translation>Annullato</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="357"/>
+        <location filename="../src/fileworker.cpp" line="372"/>
         <source>Source folder does not exist</source>
         <translation>La cartella origine non esiste</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="364"/>
+        <location filename="../src/fileworker.cpp" line="379"/>
         <source>Cannot create target folder %1</source>
         <translation>Impossibile creare la cartella destinazione %1</translation>
     </message>
