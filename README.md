@@ -7,13 +7,18 @@ SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
 SPDX-License-Identifier: GFDL-1.3-or-later
 -->
 
+![File Browser banner](icon-src/banner.png)
+
 # File Browser for Sailfish OS
+
+[![Translations](https://hosted.weblate.org/widgets/harbour-file-browser/-/main-translations/svg-badge.svg)](https://hosted.weblate.org/projects/harbour-file-browser/main-translations/)
+![Source code license](https://img.shields.io/badge/source_code-GPL--3.0--or--later-yellowdarkgreen)
+![Assets license](https://img.shields.io/badge/icons-CC--BY--SA--4.0-blueviolet)
+![Development status](https://img.shields.io/badge/development-active-blue)
+<!-- [![Liberapay donations](https://img.shields.io/liberapay/receives/ichthyosaurus)](https://liberapay.com/ichthyosaurus) -->
 
 A file manager application to view and browser files on
 [Sailfish OS](https://sailfishos.org/) and [Jolla phones](http://jolla.com/).
-
-There is a [FAQ](https://github.com/ichthyosaurus/harbour-file-browser/blob/master/FAQ.md)
-about most common questions.
 
 This repository contains the development of version 2.0.0 and upwards of File
 Browser. See the [release notes](https://github.com/ichthyosaurus/harbour-file-browser/blob/master/CHANGELOG.md)
@@ -48,7 +53,64 @@ responsibility if that happens. So, be careful.
  - Set per-folder view preferences
  - Save custom quick shortcuts for navigating and moving files
 
-### Acknowledgements
+## Help and support
+
+There is a [FAQ](https://github.com/ichthyosaurus/harbour-file-browser/blob/master/FAQ.md)
+about some common questions.
+
+If your question is not listed there, please visit the
+[thread in the Sailfish forums](https://forum.sailfishos.org/t/file-browser-support-and-feedback-thread/4566).
+You are also welcome to leave a comment on [OpenRepos](https://openrepos.net/content/ichthyosaurus/file-browser)
+or in the Jolla store.
+
+## Translations
+
+It would be wonderful if the app could be translated in as many languages as possible!
+
+Translations are managed using [Weblate](https://hosted.weblate.org/projects/harbour-file-browser/).
+Please prefer this over pull request (which are still welcome, of course).
+If you just found a minor problem, you can also
+[leave a comment in the forum](https://forum.sailfishos.org/t/file-browser-support-and-feedback-thread/4566)
+or [open an issue](https://github.com/ichthyosaurus/harbour-file-browser/issues/new).
+
+Please include the following details:
+
+1. the language you were using
+2. where you found the error
+3. the incorrect text
+4. the correct translation
+
+### Manually updating translations
+
+Please prefer using [Weblate](https://hosted.weblate.org/projects/harbour-file-browser/)
+over this.
+
+You can follow these steps to manually add or update a translation:
+
+1. *If it did not exists before*, create a new catalog for your language by copying the
+   base file [translations/harbour-file-browser.ts](translations/harbour-file-browser.ts).
+   Then add the new translation to [harbour-file-browser.pro](harbour-file-browser.pro).
+2. Add yourself to the list of contributors in [qml/pages/ContributorsPage.qml](qml/pages/ContributorsPage.qml).
+3. Translate the app's name in [harbour-file-browser.desktop](harbour-file-browser.desktop)
+   if there is a (short) native term for "file manager" or "file browser" in your language.
+
+See [the Qt documentation](https://doc.qt.io/qt-5/qml-qtqml-date.html#details) for
+details on how to translate date formats to your *local* format.
+
+## Building and contributing
+
+*Bug reports, and contributions for translations, bug fixes, or new features are always welcome!*
+
+1. Clone the repository: `https://github.com/ichthyosaurus/harbour-file-browser.git`
+2. Open `harbour-file-browser.pro` in Sailfish OS IDE (Qt Creator for Sailfish)
+3. To run on emulator, select the `i486` target and press the run button
+4. To build for the device, select the `armv7hl` target and deploy all,
+   the RPM packages will be in the RPMS folder
+
+Please do not forget to add yourself to the list of contributors in
+[qml/pages/ContributorsPage.qml](qml/pages/ContributorsPage.qml)!
+
+## Acknowledgements
 
 File Browser had been developed since 2013 by [karip](https://github.com/karip)
 up until version 1.8.0. Source code and compiled packages of legacy versions
@@ -65,51 +127,12 @@ in the Jolla Store. Give it a try if you are moving a lot of files.
 
 There are a number of other file managers available in OpenRepos.
 
-## Building and contributing
-
-Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for details on how you can
-contribute.
-
-If you want to contribute code changes, you can setup your environment by
-following the steps below. This is not needed for contributing to translations,
-as they are managed using [Weblate](https://hosted.weblate.org/projects/harbour-file-browser/).
-
-1. Get the source code
-2. Open `harbour-file-browser.pro` in Sailfish OS IDE (Qt Creator for Sailfish)
-3. To run on emulator, select the `i486` target and press the run button
-4. To build for the device, select the `armv7hl` target and deploy all,
-   the RPM packages will be in the RPMS folder
-
 ## License
-
-[![GNU GPL v3.0](http://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl.html)
-[![OSI](http://opensource.org/trademarks/opensource/OSI-Approved-License-100x137.png)](https://opensource.org/licenses/GPL-3.0)
 
 File Browser is released under the terms of the
 [GNU General Public License v3 (or later)](https://spdx.org/licenses/GPL-3.0-or-later.html).
-
-    File Browser is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    File Browser is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 The source code is available [on Github](https://github.com/ichthyosaurus/harbour-file-browser).
-
 All documentation is released under the terms of the
 [GNU Free Documentation License v1.3 (or later)](https://spdx.org/licenses/GFDL-1.3-or-later.html).
 
-    Permission is granted to copy, distribute and/or modify this document
-    under the terms of the GNU Free Documentation License, Version 1.3
-    or any later version published by the Free Software Foundation;
-    with the Invariant Sections being [none yet], with the Front-Cover Texts
-    being [none yet], and with the Back-Cover Texts being [none yet].
-    You should have received a copy of the GNU Free Documentation License
-    along with this document.  If not, see <http://www.gnu.org/licenses/>.
+This project follows the [reuse specification](https://reuse.software/spec/).
