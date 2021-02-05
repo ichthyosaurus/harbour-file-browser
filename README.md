@@ -13,7 +13,7 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 [![Translations](https://hosted.weblate.org/widgets/harbour-file-browser/-/main-translations/svg-badge.svg)](https://hosted.weblate.org/projects/harbour-file-browser/main-translations/)
 ![Source code license](https://img.shields.io/badge/source_code-GPL--3.0--or--later-yellowdarkgreen)
-![Assets license](https://img.shields.io/badge/icons-CC--BY--SA--4.0-blueviolet)
+[![REUSE status](https://api.reuse.software/badge/github.com/ichthyosaurus/harbour-file-browser)](https://api.reuse.software/info/github.com/ichthyosaurus/harbour-file-browser)
 ![Development status](https://img.shields.io/badge/development-active-blue)
 <!-- [![Liberapay donations](https://img.shields.io/liberapay/receives/ichthyosaurus)](https://liberapay.com/ichthyosaurus) -->
 
@@ -135,4 +135,4 @@ The source code is available [on Github](https://github.com/ichthyosaurus/harbou
 All documentation is released under the terms of the
 [GNU Free Documentation License v1.3 (or later)](https://spdx.org/licenses/GFDL-1.3-or-later.html).
 
-This project follows the [reuse specification](https://reuse.software/spec/).
+This project follows the [REUSE specification](https://api.reuse.software/info/github.com/ichthyosaurus/harbour-file-browser).
