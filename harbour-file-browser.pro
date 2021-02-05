@@ -111,7 +111,7 @@ DISTFILES += qml/*.qml \
     qml/components/*.qml \
     qml/js/*.js \
     qml/images/*.png \
-    qml/pages/license.html \
+    qml/pages/LICENSE.html \
     rpm/harbour-file-browser.changes.run \
     rpm/harbour-file-browser.spec \
     rpm/harbour-file-browser.yaml \
