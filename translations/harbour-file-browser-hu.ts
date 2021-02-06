@@ -131,6 +131,21 @@
         <source>Norwegian</source>
         <translation>Norvég</translation>
     </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="108"/>
+        <source>Czech</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="112"/>
+        <source>Slovak</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="116"/>
+        <source>Hungarian</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CreateFolderDialog</name>
@@ -157,7 +172,6 @@
         <location filename="../qml/components/DetailList.qml" line="45"/>
         <source>... and %n more</source>
         <translation>
-            <numerusform>... és még %n</numerusform>
             <numerusform>... és még %n</numerusform>
         </translation>
     </message>
@@ -384,7 +398,6 @@
         <source>%n file(s) selected</source>
         <translation>
             <numerusform>%n fájl kijelölve</numerusform>
-            <numerusform>%n fájl kijelölve</numerusform>
         </translation>
     </message>
     <message>
@@ -401,7 +414,6 @@
         <location filename="../qml/components/FileActions.qml" line="115"/>
         <source>cut file(s)</source>
         <translation>
-            <numerusform>fájl kivágása</numerusform>
             <numerusform>fájl kivágása</numerusform>
         </translation>
     </message>
@@ -423,7 +435,6 @@
         <location filename="../qml/components/FileActions.qml" line="132"/>
         <source>%n file(s) copied</source>
         <translation>
-            <numerusform>%n fájl másolva</numerusform>
             <numerusform>%n fájl másolva</numerusform>
         </translation>
     </message>
@@ -533,7 +544,6 @@
         <location filename="../src/filemodel.cpp" line="116"/>
         <source>%n item(s)</source>
         <translation>
-            <numerusform>%n elem</numerusform>
             <numerusform>%n elem</numerusform>
         </translation>
     </message>
@@ -1313,7 +1323,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/MultiFilePage.qml" line="112"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="118"/>
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Törlés</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="140"/>
@@ -1387,7 +1397,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/PathEditDialog.qml" line="262"/>
         <source>empty</source>
         <extracomment>as in &apos;this folder is empty&apos;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">üres</translation>
     </message>
 </context>
 <context>
@@ -1421,12 +1431,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="140"/>
         <source>Owner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tulajdonos</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="178"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Csoport</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="211"/>
@@ -1512,7 +1522,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/SearchPage.qml" line="120"/>
         <location filename="../qml/pages/SearchPage.qml" line="356"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Keresés</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="134"/>
@@ -1532,7 +1542,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/SearchPage.qml" line="404"/>
         <location filename="../qml/pages/SearchPage.qml" line="406"/>
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Törlés</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="335"/>
@@ -1562,7 +1572,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="413"/>
         <source>Please simply try again</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kérlek próbáld újra</translation>
     </message>
 </context>
 <context>
@@ -1584,7 +1594,7 @@ exposure program</extracomment>
         <location filename="../qml/components/SelectionPanel.qml" line="54"/>
         <source>%n file(s) selected</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n fájl kijelölve</numerusform>
         </translation>
     </message>
 </context>
@@ -1609,7 +1619,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="61"/>
         <source>Show hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rejtett fájlok megjelenítése</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="65"/>
@@ -1913,12 +1923,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="67"/>
         <source>Sometimes the application stays in the background</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Az alkalmazás néha a háttérben marad</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="71"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Keresés</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="87"/>
@@ -2063,7 +2073,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="120"/>
         <source>Show hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rejtett fájlok megjelenítése</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="125"/>
@@ -2232,12 +2242,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="202"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">A telefon és az SD-kártya között helyeznél át? Nem működik, próbálkozz másolással.</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="204"/>
         <source>Perhaps the storage is full?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Talán tele a tárhely?</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="286"/>
