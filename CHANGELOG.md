@@ -8,6 +8,10 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 ## Unreleased
 
+ * Nothing so far
+
+## Version 2.4.2 (2021-02-06)
+
  * New translations: Czech, Slovak, Hungarian
  * Added support for opening directories with xdg-open
  * Updated list of contributors
