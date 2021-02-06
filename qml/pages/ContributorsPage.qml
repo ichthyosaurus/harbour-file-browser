@@ -45,7 +45,7 @@ Page {
                 label: qsTr("Programming")
                 values: ["Mirian Margiani", "karip", "Joona Petrell",
                     "Michael Faro-Tusino", "Alin Marin Elena", "jklingen",
-                    "Benna", "Malte Veerman", "Marcin Mielniczuk"
+                    "Benna", "Malte Veerman", "Marcin Mielniczuk", "Arusekk"
                 ]
             }
 
@@ -103,6 +103,18 @@ Page {
             DetailList {
                 label: qsTr("Norwegian")
                 values: ["Bokmål: Allan Nordhøy"]
+            }
+            DetailList {
+                label: qsTr("Czech")
+                values: ["Malakay X"]
+            }
+            DetailList {
+                label: qsTr("Slovak")
+                values: ["Ladislav Hodas"]
+            }
+            DetailList {
+                label: qsTr("Hungarian")
+                values: ["Sz. G"]
             }
         }
     }
