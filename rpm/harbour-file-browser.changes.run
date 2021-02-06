@@ -11,10 +11,20 @@
 
 set -euo pipefail  # be strict and unforgiving
 
-file="CHANGELOG.md"
+cFILE="CHANGELOG.md"
+cALTERNATIVES=("$cFILE" "../$cFILE" "../../$cFILE")
+cFILE=""
 
-if [[ ! -f "$file" ]]; then
-    echo "error: changelog source not found (searched in: $(pwd))" >/dev/stderr
+for f in "${cALTERNATIVES[@]}"; do
+    if [[ -f "$f" ]]; then
+        cFILE="$f"
+        break
+    fi
+done
+
+if [[ -z "$cFILE" ]]; then
+    echo "error: changelog source not found, searched:" >/dev/stderr
+    printf "\t- $(pwd)/%s\n" "${cALTERNATIVES[@]}"
     exit 1
 fi
 
@@ -35,7 +45,7 @@ fi
 #
 # Important: entries (lines starting with an asterisk) must be indented by a
 # single whitespace. Keep one entry per line and don't fold lines.
-if grep -qoe '^\*' 2>/dev/null >/dev/null CHANGELOG.md; then
+if grep -qoe '^\*' 2>/dev/null >/dev/null "$cFILE"; then
     echo "error: CHANGELOG.md is badly formatted" >/dev/stderr
     echo "       see rpm/harbour-file-browser.changes.run for details" >/dev/stderr
     exit 2
@@ -50,10 +60,10 @@ fi
 
 # convert everything below the latest (top) version
 # title, unreleased, and latest version are removed
-converted_sans_latest="$(cat CHANGELOG.md | sed 's/^ \* /- /g; s/^ /- *** /g;' | sed '0,/^## Version/d')"
+converted_sans_latest="$(cat "$cFILE" | sed 's/^ \* /- /g; s/^ /- *** /g;' | sed '0,/^## Version/d')"
 
 # get the latest version
-latest_version="$(grep '## Version' CHANGELOG.md | head -1)"
+latest_version="$(grep '## Version' "$cFILE" | head -1)"
 
 # re-insert latest version at the top
 with_latest="$(paste -d '\n' -s <(echo "$latest_version") <(echo "$converted_sans_latest"))"
