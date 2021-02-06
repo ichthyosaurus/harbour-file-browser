@@ -75,6 +75,7 @@ echo "$with_latest" |\
             # convert dates
             cmd="date -d " m[0] " \"+%a %b %d %Y\" ";
             cmd | getline converted;
+            close(cmd);
 
             # save dates
             sub(date_re, converted);
