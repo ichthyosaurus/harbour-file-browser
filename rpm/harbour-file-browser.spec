@@ -9,7 +9,7 @@ Name:       harbour-file-browser
 # << macros
 
 Summary:    File Browser for Sailfish OS
-Version:    2.4.1
+Version:    2.4.2
 Release:    1
 Group:      Applications/Productivity
 License:    GPL-3.0-or-later
