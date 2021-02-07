@@ -415,14 +415,12 @@
         <source>cut file(s)</source>
         <translation>
             <numerusform>fájl kivágása</numerusform>
-            <numerusform>fájlok kivágása</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="119"/>
         <source>%n file(s) cut</source>
         <translation>
-            <numerusform>%n fájl kivágva</numerusform>
             <numerusform>%n fájl kivágva</numerusform>
         </translation>
     </message>
@@ -431,7 +429,6 @@
         <source>copy file(s)</source>
         <translation>
             <numerusform>fájl másolása</numerusform>
-            <numerusform>fájlok másolása</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -446,7 +443,6 @@
         <source>transfer file(s)</source>
         <translation>
             <numerusform>fájl áthelyezése</numerusform>
-            <numerusform>fájlok áthelyezése</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -454,7 +450,6 @@
         <source>delete file(s)</source>
         <translation>
             <numerusform>fájl törlése</numerusform>
-            <numerusform>fájlok törlése</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -462,7 +457,6 @@
         <source>rename file(s)</source>
         <translation>
             <numerusform>fájl átnevezése</numerusform>
-            <numerusform>fájlok átnevezése</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -470,7 +464,6 @@
         <source>share file(s)</source>
         <translation>
             <numerusform>fájl megosztása</numerusform>
-            <numerusform>fájlok megosztása</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -478,7 +471,6 @@
         <source>compress file(s)</source>
         <translation>
             <numerusform>fájl tömörítése</numerusform>
-            <numerusform>fájlok tömörítése</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -486,7 +478,6 @@
         <source>edit file(s)</source>
         <translation>
             <numerusform>fájl szerkesztése</numerusform>
-            <numerusform>fájlok szerkesztése</numerusform>
         </translation>
     </message>
     <message>
@@ -1326,7 +1317,6 @@ exposure program</extracomment>
         <source>%n item(s) selected</source>
         <translation>
             <numerusform>%n elem kijelölve</numerusform>
-            <numerusform>%n elem kijelölve</numerusform>
         </translation>
     </message>
     <message>
@@ -1393,7 +1383,6 @@ exposure program</extracomment>
         <extracomment>hidden if n=0</extracomment>
         <translation>
             <numerusform>%n fájl</numerusform>
-            <numerusform>%n fájl</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -1401,7 +1390,6 @@ exposure program</extracomment>
         <source>%n folder(s)</source>
         <extracomment>hidden if n=0</extracomment>
         <translation>
-            <numerusform>%n mappa</numerusform>
             <numerusform>%n mappa</numerusform>
         </translation>
     </message>
@@ -1548,7 +1536,6 @@ exposure program</extracomment>
         <source>%n hit(s)</source>
         <translation>
             <numerusform>%n találat</numerusform>
-            <numerusform>%n találat</numerusform>
         </translation>
     </message>
     <message>
@@ -1609,7 +1596,6 @@ exposure program</extracomment>
         <location filename="../qml/components/SelectionPanel.qml" line="54"/>
         <source>%n file(s) selected</source>
         <translation>
-            <numerusform>%n fájl kijelölve</numerusform>
             <numerusform>%n fájl kijelölve</numerusform>
         </translation>
     </message>
@@ -1760,7 +1746,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="146"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">semmi</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="152"/>
@@ -1900,7 +1886,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="380"/>
         <source>SD card</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SD-kártya</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="392"/>
@@ -1977,7 +1963,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="54"/>
         <source>size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">méret</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="61"/>
@@ -2005,7 +1991,7 @@ exposure program</extracomment>
         <location filename="../qml/components/SizeDetailItem.qml" line="86"/>
         <source>%n file(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n fájl</numerusform>
         </translation>
     </message>
 </context>
@@ -2049,12 +2035,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="80"/>
         <source>default</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">alapértelmezett</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="81"/>
         <source>reversed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">fordított</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="97"/>
@@ -2064,27 +2050,27 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="100"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">semmi</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="101"/>
         <source>small</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">kicsi</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="102"/>
         <source>medium</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">közepes</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="103"/>
         <source>large</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">nagy</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="104"/>
         <source>huge</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">hatalmas</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="120"/>
@@ -2094,22 +2080,22 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="125"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Galériamód engedélyezése</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="126"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Galériamódban a képek komfortosan nagy méretben jelennek meg, a képeken és videókon kívül minden bejegyzés és mappa, el lesz rejtve.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="132"/>
         <source>Show folders first</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mappák megjelenítése elöl</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="137"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rendezés kis- és nagybetű-érzékenyen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="153"/>
@@ -2127,7 +2113,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="37"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Másolás</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="48"/>
@@ -2183,7 +2169,7 @@ exposure program</extracomment>
         <location filename="../qml/components/TransferPanel.qml" line="63"/>
         <source>%n file(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%n fájl</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -2238,7 +2224,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="125"/>
         <source>Replace?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cserélsz?</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="141"/>
@@ -2253,7 +2239,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="162"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ezek a fájlok vagy mappák már léteznek itt „%1“:</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="202"/>
