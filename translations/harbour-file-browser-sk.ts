@@ -515,7 +515,7 @@
     <message>
         <location filename="../qml/cover/FileBrowserCover.qml" line="47"/>
         <source>Root Mode</source>
-        <translation>Koreňový mód</translation>
+        <translation>Režim koreň (root)</translation>
     </message>
 </context>
 <context>
@@ -1692,12 +1692,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="81"/>
         <source>Enable gallery mode</source>
-        <translation>Povoliť režim galérie</translation>
+        <translation>Povoliť režim galéria</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="82"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation>V režime galérie sa obrázky zobrazia primerane veľké a všetky záznamy okrem obrázkov, videí a adresárov sa skryjú.</translation>
+        <translation>V režime galéria sa obrázky zobrazia primerane veľké a všetky záznamy okrem obrázkov, videí a adresárov sa skryjú.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="91"/>
@@ -1752,7 +1752,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="122"/>
         <source>reversed</source>
-        <translation>obrátený</translation>
+        <translation>obrátené</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="130"/>
@@ -1837,7 +1837,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="215"/>
         <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation>File Browser je vydávaný za podmienok GNU GPL verzie 3 alebo novšej. Toto je slobodný softvér: môžete ho slobodne meniť a distribuovať. Bez záruky určenej zákonom.</translation>
+        <translation>Aplikácia File Browser je vydávaná za podmienok GNU GPL verzie 3 alebo novšej. Toto je slobodný softvér: môžete ho slobodne meniť a distribuovať. Bez záruky určenej zákonom.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="234"/>
@@ -2075,12 +2075,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="80"/>
         <source>default</source>
-        <translation>predvolený</translation>
+        <translation>predvolené</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="81"/>
         <source>reversed</source>
-        <translation>obrátený</translation>
+        <translation>obrátené</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="97"/>
@@ -2120,12 +2120,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="125"/>
         <source>Enable gallery mode</source>
-        <translation>Povoliť režim galérie</translation>
+        <translation>Povoliť režim galéria</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="126"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation>V režime galérie sa obrázky zobrazia primerane veľké a všetky záznamy okrem obrázkov, videí a adresárov sa skryjú.</translation>
+        <translation>V režime galéria sa obrázky zobrazia primerane veľké a všetky záznamy okrem obrázkov, videí a adresárov sa skryjú.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="132"/>
@@ -2140,7 +2140,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="153"/>
         <source>Local preferences</source>
-        <translation>Miestne uprednostnenia</translation>
+        <translation>Vlastné predvoľby</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="154"/>

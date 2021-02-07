@@ -358,17 +358,17 @@
     <message>
         <location filename="../src/engine.cpp" line="412"/>
         <source>Binary file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>A bináris fájl-előnézet le van vágva %1 kB-ra</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="431"/>
         <source>Text file preview clipped at %1 lines</source>
-        <translation type="unfinished"></translation>
+        <translation>A szöveges fájl-előnézet le van vágva %1 sornál</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="433"/>
         <source>Text file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>A szöveges fájl-előnézet le van vágva %1 kB-nál</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="446"/>
@@ -415,20 +415,23 @@
         <source>cut file(s)</source>
         <translation>
             <numerusform>fájl kivágása</numerusform>
+            <numerusform>fájlok kivágása</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="119"/>
         <source>%n file(s) cut</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n fájl kivágva</numerusform>
+            <numerusform>%n fájl kivágva</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="128"/>
         <source>copy file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>fájl másolása</numerusform>
+            <numerusform>fájlok másolása</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -441,43 +444,49 @@
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="141"/>
         <source>transfer file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>fájl áthelyezése</numerusform>
+            <numerusform>fájlok áthelyezése</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="160"/>
         <source>delete file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>fájl törlése</numerusform>
+            <numerusform>fájlok törlése</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="175"/>
         <source>rename file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>fájl átnevezése</numerusform>
+            <numerusform>fájlok átnevezése</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="194"/>
         <source>share file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>fájl megosztása</numerusform>
+            <numerusform>fájlok megosztása</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="214"/>
         <source>compress file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>fájl tömörítése</numerusform>
+            <numerusform>fájlok tömörítése</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="222"/>
         <source>edit file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>fájl szerkesztése</numerusform>
+            <numerusform>fájlok szerkesztése</numerusform>
         </translation>
     </message>
     <message>
@@ -601,7 +610,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="67"/>
         <source>xdg-open found no preferred application</source>
-        <translation type="unfinished"></translation>
+        <translation>Az xdg-open nem talált előnyben részesített alkalmazást</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="69"/>
@@ -611,17 +620,17 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="71"/>
         <source>xdg-open not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Az xdg-open nem található</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="73"/>
         <source>xdg-open crash?</source>
-        <translation type="unfinished"></translation>
+        <translation>Az xdg-open összeomlott?</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="75"/>
         <source>xdg-open error</source>
-        <translation type="unfinished"></translation>
+        <translation>xdg-open hiba</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="93"/>
@@ -687,7 +696,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="303"/>
         <source>Link to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Hivatkozás ide: %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="310"/>
@@ -707,7 +716,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="324"/>
         <source>Last modified</source>
-        <translation type="unfinished"></translation>
+        <translation>legutóbb módosítva</translation>
     </message>
 </context>
 <context>
@@ -807,7 +816,7 @@
     <message>
         <location filename="../src/fileworker.cpp" line="379"/>
         <source>Cannot create target folder %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nem lehet létrehozni a %1 célmappát</translation>
     </message>
 </context>
 <context>
@@ -886,13 +895,13 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="188"/>
         <source>Manual, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Kézi, visszaverődő fény nincs érzékelve</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="190"/>
         <source>Manual, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Kézi, visszaverődő fény érzékelve</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="192"/>
@@ -905,62 +914,62 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="194"/>
         <source>Auto, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Auto, visszaverődő fény nincs érzékelve</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="196"/>
         <source>Auto, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Auto, visszaverődő fény érzékelve</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="198"/>
         <source>Red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Vörösszem-effektus csökkentő mód</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="200"/>
         <source>Red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Vörösszem-effektus csökkentő mód, visszaverődő fény nincs érzékelve</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="202"/>
         <location filename="../src/jhead/jhead-api.cpp" line="208"/>
         <source>Red eye reduction mode, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Vörösszem-effektus csökkentő mód, visszaverődő fény érzékelve</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="204"/>
         <source>Manual, red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Kézi, vörösszem-effektus csökkentő mód</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="206"/>
         <source>Manual, red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Kézi, vörösszem-effektus csökkentő mód, visszaverődő fény nincs érzékelve</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="210"/>
         <source>Auto, red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Auto, vörösszem-effektus csökkentő mód</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="212"/>
         <source>Auto, red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Auto, vörösszem-effektus csökkentő mód, visszaverődő fény nincs érzékelve</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="214"/>
         <source>Auto, red eye reduction mode, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Auto, vörösszem-effektus csökkentő mód, visszaverődő fény érzékelve</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="218"/>
@@ -969,27 +978,27 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="226"/>
         <location filename="../src/jhead/jhead-api.cpp" line="321"/>
         <source>Flash</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaku</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="218"/>
         <source>Yes (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Igen (%1)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="220"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Igen</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="224"/>
         <source>No (Auto)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nem (automatikus)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="226"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Nem</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="235"/>
@@ -1001,69 +1010,69 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="240"/>
         <source>%1mm</source>
         <extracomment>size in millimeters</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1mm</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="243"/>
         <source>Focal Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Gyújtótávolság</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="248"/>
         <source>Digital Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Digitális zoom</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="250"/>
         <source>%1x</source>
         <extracomment>as in &quot;zoom: %1 times&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1x</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="256"/>
         <source>CCD Width</source>
         <extracomment>photographic sensor width; cf. https://en.wikipedia.org/wiki/Charge-coupled_device</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Szenzorméret</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="268"/>
         <source>%1 (1/%2)</source>
         <extracomment>exposure time as raw value (1) and as fraction (2)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1 (1/%2)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="270"/>
         <source>Exposure Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Záridő</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="273"/>
         <source>Aperture</source>
-        <translation type="unfinished"></translation>
+        <translation>Rekeszérték</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="275"/>
         <source>f/%1</source>
         <extracomment>aperture &quot;f&quot; number; cf. https://en.wikipedia.org/wiki/Aperture</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">f/%1</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="279"/>
         <location filename="../src/jhead/jhead-api.cpp" line="283"/>
         <source>Focus Distance</source>
-        <translation type="unfinished"></translation>
+        <translation>Fókusztávolság</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="281"/>
         <source>Infinite</source>
         <extracomment>focus distance</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Végtelen</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="285"/>
         <source>%1m</source>
         <extracomment>focus distance in meters</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1m</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="290"/>
@@ -1080,7 +1089,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="302"/>
         <location filename="../src/jhead/jhead-api.cpp" line="305"/>
         <source>White Balance</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehéregyensúly</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="312"/>
@@ -1090,32 +1099,32 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="324"/>
         <location filename="../src/jhead/jhead-api.cpp" line="327"/>
         <source>Light Source</source>
-        <translation type="unfinished"></translation>
+        <translation>Fényforrás</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="312"/>
         <source>Daylight</source>
-        <translation type="unfinished"></translation>
+        <translation>Nappali</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="315"/>
         <source>Fluorescent</source>
-        <translation type="unfinished"></translation>
+        <translation>Fluoreszcens</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="318"/>
         <source>Incandescent</source>
-        <translation type="unfinished"></translation>
+        <translation>Izzó</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="324"/>
         <source>Fine weather</source>
-        <translation type="unfinished"></translation>
+        <translation>Napos idő</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="327"/>
         <source>Shade</source>
-        <translation type="unfinished"></translation>
+        <translation>Árnyék</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="338"/>
@@ -1234,7 +1243,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="416"/>
         <source>Macro</source>
         <extracomment>focus range</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Makró</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="420"/>
@@ -1262,34 +1271,34 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="437"/>
         <source>Unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>Ismeretlen</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="448"/>
         <source>Latitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Szélesség</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="449"/>
         <source>Longitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Hosszúság</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="451"/>
         <source>Altitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Magasság</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="457"/>
         <source>JPEG Quality</source>
-        <translation type="unfinished"></translation>
+        <translation>JPEG minősége</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="474"/>
         <location filename="../src/jhead/jhead-api.cpp" line="485"/>
         <location filename="../src/jhead/jhead-api.cpp" line="488"/>
         <source>Comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Megjegyzés</translation>
     </message>
 </context>
 <context>
@@ -1297,7 +1306,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/LicensePage.qml" line="39"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Licenc</translation>
     </message>
 </context>
 <context>
@@ -1310,36 +1319,37 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="69"/>
         <source>The files have been moved.</source>
-        <translation type="unfinished"></translation>
+        <translation>A fájlok át lettek helyezve.</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/MultiFilePage.qml" line="93"/>
         <source>%n item(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n elem kijelölve</numerusform>
+            <numerusform>%n elem kijelölve</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="112"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="118"/>
         <source>Deleting</source>
-        <translation type="unfinished">Törlés</translation>
+        <translation>Törlés</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="140"/>
         <source>Directories</source>
-        <translation type="unfinished"></translation>
+        <translation>Mappák</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="150"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Fájlok</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="166"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="175"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation>semmi</translation>
     </message>
 </context>
 <context>
@@ -1347,22 +1357,22 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="49"/>
         <source>Replace?</source>
-        <translation type="unfinished"></translation>
+        <translation>Cserélsz?</translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="50"/>
         <source>Replace</source>
-        <translation type="unfinished"></translation>
+        <translation>Csere</translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="54"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ezek a fájlok vagy mappák már léteznek itt „%1“:</translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="55"/>
         <source>These files or folders already exist:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ezek a fájlok vagy mappák már léteznek:</translation>
     </message>
 </context>
 <context>
@@ -1370,34 +1380,36 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="129"/>
         <source>Path to a folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Útvonal egy mappához</translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="234"/>
         <source>Remove last part</source>
-        <translation type="unfinished"></translation>
+        <translation>Utolsó rész eltávolítása</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/PathEditDialog.qml" line="256"/>
         <source>%n file(s)</source>
         <extracomment>hidden if n=0</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n fájl</numerusform>
+            <numerusform>%n fájl</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/PathEditDialog.qml" line="259"/>
         <source>%n folder(s)</source>
         <extracomment>hidden if n=0</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n mappa</numerusform>
+            <numerusform>%n mappa</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="262"/>
         <source>empty</source>
         <extracomment>as in &apos;this folder is empty&apos;</extracomment>
-        <translation type="unfinished">üres</translation>
+        <translation>üres</translation>
     </message>
 </context>
 <context>
@@ -1405,43 +1417,44 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="78"/>
         <source>Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Változtat</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="84"/>
         <source>Change permissions for
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Engedélyek megváltoztatása ennek:
+%1</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="104"/>
         <source>Read</source>
-        <translation type="unfinished"></translation>
+        <translation>Olvasás</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="112"/>
         <source>Write</source>
-        <translation type="unfinished"></translation>
+        <translation>Írás</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="119"/>
         <source>Execute</source>
-        <translation type="unfinished"></translation>
+        <translation>Végrehajtás</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="140"/>
         <source>Owner</source>
-        <translation type="unfinished">Tulajdonos</translation>
+        <translation>Tulajdonos</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="178"/>
         <source>Group</source>
-        <translation type="unfinished">Csoport</translation>
+        <translation>Csoport</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="211"/>
         <source>Others</source>
-        <translation type="unfinished"></translation>
+        <translation>Mások</translation>
     </message>
 </context>
 <context>
@@ -1449,27 +1462,27 @@ exposure program</extracomment>
     <message>
         <location filename="../src/engine.cpp" line="244"/>
         <source>SD card</source>
-        <translation type="unfinished"></translation>
+        <translation>SD-kártya</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="246"/>
         <source>Removable Media</source>
-        <translation type="unfinished"></translation>
+        <translation>Eltávolítható háttértár</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="120"/>
         <source>hh:mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>hh:mm:ss</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="123"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
-        <translation type="unfinished"></translation>
+        <translation>yyyy. MMM. dd., hh:mm:ss t</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="125"/>
         <source>dd.MM.yy, hh:mm</source>
-        <translation type="unfinished"></translation>
+        <translation>yy.MM.dd, hh:mm</translation>
     </message>
 </context>
 <context>
@@ -1478,7 +1491,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/QuickSwitchDialog.qml" line="29"/>
         <source>Switch</source>
         <extracomment>as in &quot;Switch to this folder, please&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Váltás</translation>
     </message>
 </context>
 <context>
@@ -1486,24 +1499,25 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="66"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Átnevezés</translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="85"/>
         <source>Give a new name for
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Adj új nevet ennek:
+%1</translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="95"/>
         <location filename="../qml/pages/RenameDialog.qml" line="96"/>
         <source>New name</source>
-        <translation type="unfinished"></translation>
+        <translation>Új név</translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="97"/>
         <source>A file with this name already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Egy ilyen nevű fájl már létezik.</translation>
     </message>
 </context>
 <context>
@@ -1511,29 +1525,30 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="100"/>
         <source>Searching</source>
-        <translation type="unfinished"></translation>
+        <translation>Keresés</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="109"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Beállítások</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="120"/>
         <location filename="../qml/pages/SearchPage.qml" line="356"/>
         <source>Search</source>
-        <translation type="unfinished">Keresés</translation>
+        <translation>Keresés</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="134"/>
         <source>Search below “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Keresés itt: „%1“</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SearchPage.qml" line="188"/>
         <source>%n hit(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n találat</numerusform>
+            <numerusform>%n találat</numerusform>
         </translation>
     </message>
     <message>
@@ -1542,27 +1557,27 @@ exposure program</extracomment>
         <location filename="../qml/pages/SearchPage.qml" line="404"/>
         <location filename="../qml/pages/SearchPage.qml" line="406"/>
         <source>Deleting</source>
-        <translation type="unfinished">Törlés</translation>
+        <translation>Törlés</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="335"/>
         <source>Go to containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Tartalmazó mappához ugrás</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="339"/>
         <source>Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>Kivágás</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="343"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Másolás</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="347"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Törlés</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="413"/>
@@ -1572,7 +1587,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="413"/>
         <source>Please simply try again</source>
-        <translation type="unfinished">Kérlek próbáld újra</translation>
+        <translation>Egyszerűen próbáld újra</translation>
     </message>
 </context>
 <context>
@@ -1580,12 +1595,12 @@ exposure program</extracomment>
     <message>
         <location filename="../src/searchworker.cpp" line="41"/>
         <source>Search already in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>A keresés már folyamatban van</translation>
     </message>
     <message>
         <location filename="../src/searchworker.cpp" line="46"/>
         <source>Bad search parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>Rossz keresési paraméterek</translation>
     </message>
 </context>
 <context>
@@ -1593,7 +1608,8 @@ exposure program</extracomment>
     <message numerus="yes">
         <location filename="../qml/components/SelectionPanel.qml" line="54"/>
         <source>%n file(s) selected</source>
-        <translation type="unfinished">
+        <translation>
+            <numerusform>%n fájl kijelölve</numerusform>
             <numerusform>%n fájl kijelölve</numerusform>
         </translation>
     </message>
@@ -1604,12 +1620,12 @@ exposure program</extracomment>
         <location filename="../qml/pages/SettingsPage.qml" line="44"/>
         <location filename="../qml/pages/SettingsPage.qml" line="251"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Beállítások</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="49"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>Nézet</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="57"/>
@@ -1619,107 +1635,107 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="61"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">Rejtett fájlok megjelenítése</translation>
+        <translation>Rejtett fájlok megjelenítése</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="65"/>
         <source>Show preview images</source>
-        <translation type="unfinished"></translation>
+        <translation>Kép-előnézetek megjelenítése</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="70"/>
         <source>Thumbnail size</source>
-        <translation type="unfinished"></translation>
+        <translation>Indexkép mérete</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="73"/>
         <source>small</source>
-        <translation type="unfinished"></translation>
+        <translation>kicsi</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="74"/>
         <source>medium</source>
-        <translation type="unfinished"></translation>
+        <translation>közepes</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="75"/>
         <source>large</source>
-        <translation type="unfinished"></translation>
+        <translation>nagy</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="76"/>
         <source>huge</source>
-        <translation type="unfinished"></translation>
+        <translation>hatalmas</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="81"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Galériamód engedélyezése</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="82"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished"></translation>
+        <translation>Galériamódban a képek komfortosan nagy méretben jelennek meg, a képeken és videókon kívül minden bejegyzés és mappa, el lesz rejtve.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="91"/>
         <source>Sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>Rendezés</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="98"/>
         <source>Show folders first</source>
-        <translation type="unfinished"></translation>
+        <translation>Mappák megjelenítése elöl</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="102"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished"></translation>
+        <translation>Rendezés kis- és nagybetű-érzékenyen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="106"/>
         <source>Sort by</source>
-        <translation type="unfinished"></translation>
+        <translation>Rendezés alapja</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="110"/>
         <source>name</source>
-        <translation type="unfinished"></translation>
+        <translation>név</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="111"/>
         <source>size</source>
-        <translation type="unfinished"></translation>
+        <translation>méret</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="112"/>
         <source>modification time</source>
-        <translation type="unfinished"></translation>
+        <translation>módosítás ideje</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="113"/>
         <source>file type</source>
-        <translation type="unfinished"></translation>
+        <translation>fájltípus</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="117"/>
         <source>Sort order</source>
-        <translation type="unfinished"></translation>
+        <translation>Rendezési sorrend</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="121"/>
         <source>default</source>
-        <translation type="unfinished"></translation>
+        <translation>alapértelmezett</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="122"/>
         <source>reversed</source>
-        <translation type="unfinished"></translation>
+        <translation>fordított</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="130"/>
         <source>Behavior and View</source>
-        <translation type="unfinished"></translation>
+        <translation>Viselkedés és Nézet</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="140"/>
