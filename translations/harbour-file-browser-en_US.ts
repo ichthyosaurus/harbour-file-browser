@@ -134,17 +134,17 @@
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="108"/>
         <source>Czech</source>
-        <translation type="unfinished"></translation>
+        <translation>Czech</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="112"/>
         <source>Slovak</source>
-        <translation type="unfinished"></translation>
+        <translation>Slovak</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="116"/>
         <source>Hungarian</source>
-        <translation type="unfinished"></translation>
+        <translation>Hungarian</translation>
     </message>
 </context>
 <context>
@@ -173,7 +173,7 @@
         <source>... and %n more</source>
         <translation>
             <numerusform>... and %n more</numerusform>
-            <numerusform></numerusform>
+            <numerusform>... and %n more</numerusform>
         </translation>
     </message>
 </context>
