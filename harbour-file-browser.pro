@@ -11,22 +11,25 @@
 # list. Just copy the last line and modify it as needed.
 # Do not forget to modify the localized app name in the the .desktop file.
 TRANSLATIONS = \
-    translations/harbour-file-browser-de_CH.ts \
-    translations/harbour-file-browser-de_DE.ts \
-    translations/harbour-file-browser-el.ts \
-    translations/harbour-file-browser-en_US.ts \
-    translations/harbour-file-browser-es.ts \
-    translations/harbour-file-browser-fi.ts \
-    translations/harbour-file-browser-fr.ts \
-    translations/harbour-file-browser-it_IT.ts \
-    translations/harbour-file-browser-nb_NO.ts \
-    translations/harbour-file-browser-nl.ts \
-    translations/harbour-file-browser-ru_RU.ts \
-    translations/harbour-file-browser-sv.ts \
-    translations/harbour-file-browser-zh_CN.ts \
-    translations/harbour-file-browser-cs.ts \
-    translations/harbour-file-browser-hu.ts \
-    translations/harbour-file-browser-sk.ts \
+    translations/harbour-file-browser-ab.ts       \
+    translations/harbour-file-browser-cs.ts       \
+    translations/harbour-file-browser-de_CH.ts    \
+    translations/harbour-file-browser-de_DE.ts    \
+    translations/harbour-file-browser-el.ts       \
+    translations/harbour-file-browser-en_US.ts    \
+    translations/harbour-file-browser-es.ts       \
+    translations/harbour-file-browser-fi.ts       \
+    translations/harbour-file-browser-fr.ts       \
+    translations/harbour-file-browser-hu.ts       \
+    translations/harbour-file-browser-it_IT.ts    \
+    translations/harbour-file-browser-nb_NO.ts    \
+    translations/harbour-file-browser-nl_BE.ts    \
+    translations/harbour-file-browser-nl.ts       \
+    translations/harbour-file-browser-ru_RU.ts    \
+    translations/harbour-file-browser-sk.ts       \
+    translations/harbour-file-browser-sv.ts       \
+    translations/harbour-file-browser.ts          \
+    translations/harbour-file-browser-zh_CN.ts    \
 
 # ------------------------------------------------------------------------------
 
