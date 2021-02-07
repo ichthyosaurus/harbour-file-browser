@@ -119,7 +119,7 @@
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="96"/>
         <source>Dutch</source>
-        <translation>荷兰语</translation>
+        <translation>尼德兰语</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="100"/>
@@ -134,17 +134,17 @@
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="108"/>
         <source>Czech</source>
-        <translation type="unfinished"></translation>
+        <translation>捷克语</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="112"/>
         <source>Slovak</source>
-        <translation type="unfinished"></translation>
+        <translation>斯洛伐克语</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="116"/>
         <source>Hungarian</source>
-        <translation type="unfinished"></translation>
+        <translation>匈牙利语</translation>
     </message>
 </context>
 <context>
