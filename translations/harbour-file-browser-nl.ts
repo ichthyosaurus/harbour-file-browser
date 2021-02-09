@@ -7,7 +7,7 @@
         <location filename="../src/consolemodel.cpp" line="123"/>
         <location filename="../src/consolemodel.cpp" line="135"/>
         <source>** crashed</source>
-        <translation>** is gecrasht</translation>
+        <translation>** gecrasht</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="125"/>
@@ -589,7 +589,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="59"/>
         <source>Open successful</source>
-        <translation>Openen geslaagd</translation>
+        <translation>Geopend</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="60"/>
@@ -997,7 +997,7 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="224"/>
         <source>No (Auto)</source>
-        <translation>Nee (auto)</translation>
+        <translation>Nee (automatisch)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="226"/>
@@ -1047,7 +1047,7 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="270"/>
         <source>Exposure Time</source>
-        <translation>Belichtingstijd</translation>
+        <translation>Sluitertijd</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="273"/>
@@ -1188,19 +1188,19 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="367"/>
         <source>Program (auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation>Programma (auto)</translation>
+        <translation>Programma (automatisch)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="371"/>
         <source>Aperture priority (semi-auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation>Diafragmaprioriteit (semi-auto)</translation>
+        <translation>Diafragmaprioriteit (semi-automatisch)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="375"/>
         <source>Shutter priority (semi-auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation>Sluiterprioriteit (semi-auto)</translation>
+        <translation>Sluiterprioriteit (semi-automatisch)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="379"/>
@@ -2151,7 +2151,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="64"/>
         <source>Enter target path</source>
-        <translation>Doelpad invoeren</translation>
+        <translation>Voer het doelpad in</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="79"/>
