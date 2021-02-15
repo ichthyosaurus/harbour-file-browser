@@ -67,26 +67,19 @@ Page {
                 cache: false
                 asynchronous: true
                 smooth: !flickable.moving
+                opacity: status === Image.Ready ? 1.0 : 0.0
+
+                Behavior on opacity { FadeAnimator { duration: 250 } }
 
                 onStatusChanged: {
                     if (status === Image.Ready) {
                         fitToScreen()
-                        loadedAnimation.start()
                         statusLoader.sourceComponent = undefined
                     } else if (status === Image.Loading) {
                         statusLoader.sourceComponent = loadingIndicator
                     } else if (status === Image.Error) {
                         statusLoader.sourceComponent = failedLoading
                     }
-                }
-
-                NumberAnimation {
-                    id: loadedAnimation
-                    target: image
-                    property: "opacity"
-                    duration: 250
-                    from: 0; to: 1
-                    easing.type: Easing.InOutQuad
                 }
 
                 onScaleChanged: {
