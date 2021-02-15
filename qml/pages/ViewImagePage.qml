@@ -42,7 +42,6 @@ Page {
         anchors.fill: parent
         contentWidth: imageView.width
         contentHeight: imageView.height
-        clip: true
         onHeightChanged: if (image.status === Image.Ready) image.fitToScreen();
 
         Item {
