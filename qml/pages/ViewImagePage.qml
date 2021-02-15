@@ -26,7 +26,8 @@ Page {
     id: page
     allowedOrientations: Orientation.All
     property alias title: titleOverlay.title
-    property alias path: image.source
+    property alias path: image.source // deprecated
+    property alias source: image.source
     property bool editMode: false
 
     onStatusChanged: {
