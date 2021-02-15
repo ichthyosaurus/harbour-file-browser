@@ -134,17 +134,17 @@
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="108"/>
         <source>Czech</source>
-        <translation type="unfinished"></translation>
+        <translation>Checo</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="112"/>
         <source>Slovak</source>
-        <translation type="unfinished"></translation>
+        <translation>Eslovaco</translation>
     </message>
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="116"/>
         <source>Hungarian</source>
-        <translation type="unfinished"></translation>
+        <translation>Húngaro</translation>
     </message>
 </context>
 <context>
@@ -555,9 +555,9 @@
     <message numerus="yes">
         <location filename="../src/filemodel.cpp" line="116"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n elemento</numerusform>
+            <numerusform>%n elementos</numerusform>
         </translation>
     </message>
 </context>
