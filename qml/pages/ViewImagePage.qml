@@ -123,31 +123,40 @@ Page {
 
         PinchArea {
             id: pinchArea
-
             property real minScale: 1.0
             property real maxScale: 3.0
 
             MouseArea {
+                property bool pinchRequested: false
+
                 anchors.fill: parent
                 Timer { id: timer; interval: 200; onTriggered: parent.singleClick() }
                 onClicked: timer.start()
-                property bool pinchRequested: false
+
                 onDoubleClicked: {
                     pinchRequested = true
                     if (image.status !== Image.Ready) return;
 
                     var newScale = pinchArea.minScale;
-                    if (image.scale === pinchArea.minScale) {
-                        if (image.width > image.height) { // wide -> fit height
-                            newScale = (flickable.height-5)/image.height;
-                        } else { // high -> fit width
-                            newScale = (flickable.width-5)/image.width;
+                    if (Math.round(image.scale) === Math.round(pinchArea.minScale)) {
+                        // image.fitToScreen() is called when the image is loaded. This makes
+                        // sure that either height or width is fit to the flickable's corresponding
+                        // side. We check which side fits and scale to the other.
+                        if (Math.round(image.width*image.scale) === flickable.width &&
+                                Math.round(image.height*image.scale) === flickable.height) {
+                            newScale = pinchArea.maxScale // just zoom in if both sides fit exactly
+                        } else if (Math.round(image.width*image.scale) === flickable.width) {
+                            newScale = (flickable.height-5)/image.height
+                        } else if (Math.round(image.height*image.scale) === flickable.height) {
+                            newScale = (flickable.width-5)/image.width
                         }
                     } else {
                         newScale = pinchArea.minScale;
                     }
+
                     pinchArea.zoomToScale(newScale, true);
                 }
+
                 function singleClick() {
                     if (pinchRequested) {
                         pinchRequested = false;
@@ -163,8 +172,8 @@ Page {
             anchors.fill: parent
             enabled: image.status === Image.Ready
             pinch.target: image
-            pinch.minimumScale: minScale * 0.5 // This is to create "bounce back effect"
-            pinch.maximumScale: maxScale * 1.5 // when over zoomed
+            pinch.minimumScale: 0.5*minScale
+            pinch.maximumScale: 1.5*maxScale
 
             onPinchFinished: {
                 flickable.returnToBounds()
