@@ -1566,7 +1566,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="335"/>
         <source>Go to containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Ava kaust</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="339"/>
@@ -1586,7 +1586,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="413"/>
         <source>Internally not ready</source>
-        <translation type="unfinished"></translation>
+        <translation>Rakendus pole sisemiselt valmis</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="413"/>
@@ -1928,7 +1928,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="55"/>
         <source>Add “%1” to bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisa „%1“ järjehoidjaks</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="63"/>
@@ -1943,7 +1943,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="67"/>
         <source>Sometimes the application stays in the background</source>
-        <translation type="unfinished"></translation>
+        <translation>Mõnihord rakendus jääb tööle taustal</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="71"/>
