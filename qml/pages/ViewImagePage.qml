@@ -29,7 +29,9 @@ Page {
     property alias path: image.source // deprecated
     property alias source: image.source
 
+    readonly property Flickable flickable: flick
     readonly property bool editMode: false // not implemented
+
     onStatusChanged: {
         if (page.status === PageStatus.Inactive && image.status === Image.Ready) {
             image.fitToScreen()
@@ -39,7 +41,7 @@ Page {
     MediaTitleOverlay { id: titleOverlay }
 
     Flickable {
-        id: flickable
+        id: flick
         anchors.fill: parent
         contentWidth: imageView.width
         contentHeight: imageView.height
@@ -47,8 +49,8 @@ Page {
 
         Item {
             id: imageView
-            width: Math.max(image.width*image.scale, flickable.width)
-            height: Math.max(image.height*image.scale, flickable.height)
+            width: Math.max(image.width*image.scale, flick.width)
+            height: Math.max(image.height*image.scale, flick.height)
 
             AnimatedImage {
                 id: image
@@ -56,9 +58,9 @@ Page {
                 property alias imageRotation: imageRotation
 
                 function fitToScreen() {
-                    scale = Math.min(flickable.width / width, flickable.height / height)
+                    scale = Math.min(flick.width / width, flick.height / height)
                     pinchArea.minScale = scale
-                    pinchArea.maxScale = 4*Math.max(flickable.width / width, flickable.height / height)
+                    pinchArea.maxScale = 4*Math.max(flick.width / width, flick.height / height)
                     prevScale = scale
                 }
 
@@ -66,7 +68,7 @@ Page {
                 fillMode: Image.PreserveAspectFit
                 cache: false
                 asynchronous: true
-                smooth: !flickable.moving
+                smooth: !flick.moving
                 opacity: status === Image.Ready ? 1.0 : 0.0
 
                 Behavior on opacity { FadeAnimator { duration: 250 } }
@@ -83,16 +85,16 @@ Page {
                 }
 
                 onScaleChanged: {
-                    if ((width * scale) > flickable.width) {
-                        var xoff = (flickable.width / 2 + flickable.contentX) * scale / prevScale;
-                        flickable.contentX = xoff - flickable.width / 2
+                    if ((width * scale) > flick.width) {
+                        var xoff = (flick.width / 2 + flick.contentX) * scale / prevScale;
+                        flick.contentX = xoff - flick.width / 2
                     }
-                    if ((height * scale) > flickable.height) {
-                        var yoff = (flickable.height / 2 + flickable.contentY) * scale / prevScale;
-                        flickable.contentY = yoff - flickable.height / 2
+                    if ((height * scale) > flick.height) {
+                        var yoff = (flick.height / 2 + flick.contentY) * scale / prevScale;
+                        flick.contentY = yoff - flick.height / 2
                     }
                     prevScale = scale
-                    flickable.returnToBounds();
+                    flick.returnToBounds();
                 }
 
                 transform: [
@@ -142,13 +144,13 @@ Page {
                         // image.fitToScreen() is called when the image is loaded. This makes
                         // sure that either height or width is fit to the flickable's corresponding
                         // side. We check which side fits and scale to the other.
-                        if (Math.round(image.width*image.scale) === flickable.width &&
-                                Math.round(image.height*image.scale) === flickable.height) {
+                        if (Math.round(image.width*image.scale) === flick.width &&
+                                Math.round(image.height*image.scale) === flick.height) {
                             newScale = pinchArea.maxScale // just zoom in if both sides fit exactly
-                        } else if (Math.round(image.width*image.scale) === flickable.width) {
-                            newScale = (flickable.height-5)/image.height
-                        } else if (Math.round(image.height*image.scale) === flickable.height) {
-                            newScale = (flickable.width-5)/image.width
+                        } else if (Math.round(image.width*image.scale) === flick.width) {
+                            newScale = (flick.height-5)/image.height
+                        } else if (Math.round(image.height*image.scale) === flick.height) {
+                            newScale = (flick.width-5)/image.width
                         }
                     } else {
                         newScale = pinchArea.minScale;
@@ -176,7 +178,7 @@ Page {
             pinch.maximumScale: 1.5*maxScale
 
             onPinchFinished: {
-                flickable.returnToBounds()
+                flick.returnToBounds()
                 if (image.scale < pinchArea.minScale) {
                     zoomToScale(pinchArea.minScale, false)
                 }
