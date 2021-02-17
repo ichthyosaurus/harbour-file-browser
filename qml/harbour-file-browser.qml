@@ -29,7 +29,16 @@ import "js/bookmarks.js" as Bookmarks
 
 ApplicationWindow {
     id: main
-    allowedOrientations: defaultAllowedOrientations
+    allowedOrientations: Orientation.All
+
+    // We have to explicitly set the \c _defaultPageOrientations property
+    // to \c Orientation.All so the page stack's default placeholder page
+    // will be allowed to be in landscape mode. (The default value is
+    // \c Orientation.Portrait.) Without this setting, pushing multiple pages
+    // to the stack using \c animatorPush() while in landscape mode will cause
+    // the view to rotate back and forth between orientations.
+    // [as of 2021-02-17, SFOS 3.4.0.24, sailfishsilica-qt5 version 1.1.110.3-1.33.3.jolla]
+    _defaultPageOrientations: Orientation.All
 
     signal bookmarkAdded(var path)
     signal bookmarkRemoved(var path)
@@ -63,19 +72,55 @@ ApplicationWindow {
     property string coverText: "File Browser"
     cover: Qt.resolvedUrl("cover/FileBrowserCover.qml")
     initialPage: Component {
-        DirectoryPage {
-            dir: "";
-
-            property bool initial: true
+        Page {
+            // We start with an empty placeholder page that will be replaced
+            // by the actual array of pages for the directory in \c initialDirectory.
+            // (\c Navigation.goToFolder() will replace the whole page stack if
+            // the first page is not DirectoryPage { dir: '/' }.)
+            // Starting with a DirectoryPage will make the page stack go crazy in horizontal
+            // mode when the app is started in *portrait* mode and turned later.
             onStatusChanged: {
-                if (status === PageStatus.Activating && initial) {
-                    initial = false;
-                    pageStack.completeAnimation();
-                    Navigation.goToFolder(initialDirectory, true); // silent
+                if (status === PageStatus.Activating) {
+                    console.log("[startup] initial page is activating")
+                    // Setting this property will start the next step. This has to be
+                    // delayed in case the page stack is still in \c busy state when
+                    // the page is in \c Activating state (not yet \c Active).
+                    _initialPageReady = true
                 }
             }
         }
     }
+
+    function _doStartup() {
+        console.log("[startup] pushing initial stack")
+        Navigation.goToFolder(initialDirectory, true); // silent
+        _startupDone = true
+    }
+
+    property bool _startupDone: false
+    property bool _initialPageReady: false
+    property bool _delayStackInit: false
+    on_InitialPageReadyChanged: {
+        if (!_initialPageReady) return
+        if (pageStack.busy) {
+            console.warn("[startup] page stack is busy, delaying initialization")
+            console.warn("[startup] this stage should never be reached, please file a bug report")
+            _delayStackInit = true
+        } else {
+            _doStartup()
+        }
+    }
+
+    // Enable this if there are reports that startup failed because the page
+    // stack was busy. The code is disabled as it would be run on every page
+    // change, which may have a negative impact on performance.
+    /* pageStack.onBusyChanged: {
+        if (!_startupDone && _delayStackInit && !pageStack.busy) {
+            console.warn("[startup] delayed initialization started")
+            _delayStackInit = false
+            _doStartup()
+        }
+    } */
 
     Component.onCompleted: {
         console.log("running File Browser: " + versionString)
