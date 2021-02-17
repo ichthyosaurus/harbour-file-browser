@@ -146,6 +146,11 @@
         <source>Hungarian</source>
         <translation>ungari</translation>
     </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="120"/>
+        <source>Estonian</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CreateFolderDialog</name>
@@ -1076,7 +1081,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="285"/>
         <source>%1m</source>
         <extracomment>focus distance in meters</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1 (1/%2) {1m?}</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="290"/>
@@ -1540,7 +1545,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/SearchPage.qml" line="120"/>
         <location filename="../qml/pages/SearchPage.qml" line="356"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Otsi</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="134"/>
@@ -1948,7 +1953,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="71"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Otsi</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="87"/>
@@ -2305,12 +2310,12 @@ exposure program</extracomment>
 <context>
     <name>ViewImagePage</name>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="230"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="234"/>
         <source>Loading image... %1</source>
         <translation>Laadin pilti... %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="242"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="246"/>
         <source>Error loading image</source>
         <translation>Viga pildi laadimisel</translation>
     </message>
@@ -2341,7 +2346,7 @@ exposure program</extracomment>
 <context>
     <name>harbour-file-browser</name>
     <message>
-        <location filename="../qml/harbour-file-browser.qml" line="39"/>
+        <location filename="../qml/harbour-file-browser.qml" line="48"/>
         <source>Version %1 (%2)</source>
         <translation>Versioon %1 (%2)</translation>
     </message>

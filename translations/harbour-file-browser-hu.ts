@@ -146,6 +146,11 @@
         <source>Hungarian</source>
         <translation>Magyar</translation>
     </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="120"/>
+        <source>Estonian</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CreateFolderDialog</name>
@@ -1985,14 +1990,12 @@ exposure program</extracomment>
         <source>%n directories</source>
         <translation>
             <numerusform>%n mappa</numerusform>
-            <numerusform>%n mappa</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="86"/>
         <source>%n file(s)</source>
         <translation>
-            <numerusform>%n fájl</numerusform>
             <numerusform>%n fájl</numerusform>
         </translation>
     </message>
@@ -2186,14 +2189,12 @@ exposure program</extracomment>
         <source>Successfully copied</source>
         <translation>
             <numerusform>A másolás sikerült</numerusform>
-            <numerusform>A másolás sikerült</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="70"/>
         <source>Successfully moved</source>
         <translation>
-            <numerusform>Az áthelyezés sikerült</numerusform>
             <numerusform>Az áthelyezés sikerült</numerusform>
         </translation>
     </message>
@@ -2209,14 +2210,12 @@ exposure program</extracomment>
         <source>Failed to copy</source>
         <translation>
             <numerusform>A másolás nem sikerült</numerusform>
-            <numerusform>A másolás nem sikerült</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="78"/>
         <source>Failed to move</source>
         <translation>
-            <numerusform>Az áthelyezés nem sikerült</numerusform>
             <numerusform>Az áthelyezés nem sikerült</numerusform>
         </translation>
     </message>
@@ -2281,12 +2280,12 @@ exposure program</extracomment>
 <context>
     <name>ViewImagePage</name>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="230"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="234"/>
         <source>Loading image... %1</source>
         <translation>Kép betöltése... %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="242"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="246"/>
         <source>Error loading image</source>
         <translation>Hiba a kép betöltése közben</translation>
     </message>
@@ -2317,7 +2316,7 @@ exposure program</extracomment>
 <context>
     <name>harbour-file-browser</name>
     <message>
-        <location filename="../qml/harbour-file-browser.qml" line="39"/>
+        <location filename="../qml/harbour-file-browser.qml" line="48"/>
         <source>Version %1 (%2)</source>
         <translation>%1 (%2) verzió</translation>
     </message>

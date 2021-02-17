@@ -146,6 +146,11 @@
         <source>Hungarian</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="120"/>
+        <source>Estonian</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CreateFolderDialog</name>
@@ -2333,12 +2338,12 @@ exposure program</extracomment>
 <context>
     <name>ViewImagePage</name>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="230"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="234"/>
         <source>Loading image... %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="242"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="246"/>
         <source>Error loading image</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2369,7 +2374,7 @@ exposure program</extracomment>
 <context>
     <name>harbour-file-browser</name>
     <message>
-        <location filename="../qml/harbour-file-browser.qml" line="39"/>
+        <location filename="../qml/harbour-file-browser.qml" line="48"/>
         <source>Version %1 (%2)</source>
         <translation type="unfinished"></translation>
     </message>
