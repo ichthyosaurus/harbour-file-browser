@@ -8,6 +8,10 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 ## Unreleased
 
+ * Nothing so far
+
+## Version 2.4.3 (2021-02-17)
+
  * New translations: Dutch (Belgium), Estonian
  * Updated translations: Slovak, Hungarian, Norwegian Bokmål, Chinese (China), Swedish, Spanish
  * Fixed double tap to zoom images of square and almost square dimensions
