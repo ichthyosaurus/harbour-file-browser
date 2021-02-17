@@ -28,8 +28,8 @@ Page {
     property alias title: titleOverlay.title
     property alias path: image.source // deprecated
     property alias source: image.source
-    property bool editMode: false
 
+    readonly property bool editMode: false // not implemented
     onStatusChanged: {
         if (page.status === PageStatus.Inactive && image.status === Image.Ready) {
             image.fitToScreen()
