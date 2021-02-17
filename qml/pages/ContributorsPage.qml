@@ -116,6 +116,10 @@ Page {
                 label: qsTr("Hungarian")
                 values: ["Sz. G"]
             }
+            DetailList {
+                label: qsTr("Estonian")
+                values: ["Priit Jõerüüt"]
+            }
         }
     }
 }
