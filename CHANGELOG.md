@@ -8,7 +8,14 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 ## Unreleased
 
- * Nothing so far
+ * New translations: Dutch (Belgium), Estonian
+ * Updated translations: Slovak, Hungarian, Norwegian Bokmål, Chinese (China), Swedish, Spanish
+ * Fixed double tap to zoom images of square and almost square dimensions
+ * Fixed horizontal mode
+ *   - File Browser can now be used in all orientations
+ *   - Please file a bug report if startup fails and a note about "delaying initialization" appears in the log.
+ *   - Part of the fix uses a workaround for a system bug and may break unexpectedly.
+ * Improved image page animations
 
 ## Version 2.4.2 (2021-02-06)
 
