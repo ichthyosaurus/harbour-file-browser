@@ -149,7 +149,7 @@
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="120"/>
         <source>Estonian</source>
-        <translation type="unfinished"></translation>
+        <translation>爱沙尼亚语</translation>
     </message>
 </context>
 <context>
