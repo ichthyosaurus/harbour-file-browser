@@ -239,7 +239,7 @@ Page {
         BusyLabel {
             //: Full page placeholder shown while a large image is being loaded
             //% "Loading image"
-            text: qsTrId("whisperfish-view-image-page-loading")
+            text: qsTr("Loading image")
             running: true
         }
     }
@@ -249,7 +249,7 @@ Page {
         BusyLabel {
             //: Full page placeholder shown when an image failed to load
             //% "Failed to load"
-            text: qsTrId("whisperfish-view-image-page-error")
+            text: qsTr("Failed to load")
             running: false
         }
     }
