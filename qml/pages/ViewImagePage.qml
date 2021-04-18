@@ -7,6 +7,7 @@
 
 import QtQuick 2.2
 import Sailfish.Silica 1.0
+import harbour.file.browser.FileData 1.0
 import "../components"
 
 // TODO attached info page
@@ -16,8 +17,9 @@ Page {
     allowedOrientations: Orientation.All
     property alias title: titleOverlay.title
     property string path: ''
-    property bool isAnimated: false
     property bool enableDarkBackground: true
+    property bool isAnimated: fileData.isAnimatedImage // false
+    FileData { id: fileData; file: page.path }
 
     readonly property bool isImageReady: image.status === Image.Ready
     readonly property Flickable flickable: flick
