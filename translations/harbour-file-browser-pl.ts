@@ -151,6 +151,11 @@
         <source>Estonian</source>
         <translation>Estoński</translation>
     </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="124"/>
+        <source>Polish</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CreateFolderDialog</name>
@@ -531,32 +536,32 @@
         <translation>Plik nie istnieje</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="219"/>
+        <location filename="../src/filedata.cpp" line="224"/>
         <source>block device</source>
         <translation>urządzenie zablokowane</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="223"/>
+        <location filename="../src/filedata.cpp" line="228"/>
         <source>character device</source>
         <translation>urządzenie znakowe</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="227"/>
+        <location filename="../src/filedata.cpp" line="232"/>
         <source>pipe</source>
         <translation>rura</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="231"/>
+        <location filename="../src/filedata.cpp" line="236"/>
         <source>socket</source>
         <translation>soket</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="235"/>
+        <location filename="../src/filedata.cpp" line="240"/>
         <source>folder</source>
         <translation>Katalog</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="241"/>
+        <location filename="../src/filedata.cpp" line="246"/>
         <source>unknown</source>
         <translation>nieznany</translation>
     </message>
@@ -695,48 +700,48 @@
         <translation>‎Plik został przeniesiony.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="259"/>
-        <location filename="../qml/pages/FilePage.qml" line="265"/>
+        <location filename="../qml/pages/FilePage.qml" line="260"/>
+        <location filename="../qml/pages/FilePage.qml" line="266"/>
         <source>Deleting</source>
         <translation>Usuwanie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="297"/>
+        <location filename="../qml/pages/FilePage.qml" line="298"/>
         <source>Location</source>
         <translation>Lokalizacja</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="301"/>
+        <location filename="../qml/pages/FilePage.qml" line="302"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="303"/>
+        <location filename="../qml/pages/FilePage.qml" line="304"/>
         <source>Unknown (link target not found)</source>
         <translation>‎Nieznany (nie znaleziono obiektu docelowego łącza)‎</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="303"/>
+        <location filename="../qml/pages/FilePage.qml" line="304"/>
         <source>Link to %1</source>
         <translation>Link do %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="310"/>
+        <location filename="../qml/pages/FilePage.qml" line="311"/>
         <source>Permissions</source>
         <translation>Uprawnienia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="314"/>
+        <location filename="../qml/pages/FilePage.qml" line="315"/>
         <source>Owner</source>
         <translation>Właściciel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="319"/>
+        <location filename="../qml/pages/FilePage.qml" line="320"/>
         <source>Group</source>
         <translation>Grupa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="324"/>
+        <location filename="../qml/pages/FilePage.qml" line="325"/>
         <source>Last modified</source>
         <translation>Ostatnio modyfikowane</translation>
     </message>
@@ -844,18 +849,18 @@
 <context>
     <name>ImageMetaData</name>
     <message>
-        <location filename="../src/filedata.cpp" line="263"/>
+        <location filename="../src/filedata.cpp" line="272"/>
         <source>Image Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="269"/>
+        <location filename="../src/filedata.cpp" line="278"/>
         <source>%1 x %2</source>
         <extracomment>image size description without aspect ratio: 1=width, 2=height</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="273"/>
+        <location filename="../src/filedata.cpp" line="282"/>
         <source>%1 x %2 (%3)</source>
         <extracomment>image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9</extracomment>
         <translation type="unfinished"></translation>
@@ -1048,7 +1053,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="250"/>
         <source>%1x</source>
         <extracomment>as in &quot;zoom: %1 times&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1x</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="256"/>
@@ -1060,7 +1065,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="268"/>
         <source>%1 (1/%2)</source>
         <extracomment>exposure time as raw value (1) and as fraction (2)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1 (1/%2)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="270"/>
@@ -1094,7 +1099,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="285"/>
         <source>%1m</source>
         <extracomment>focus distance in meters</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1m</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="290"/>
@@ -1348,6 +1353,8 @@ exposure program</extracomment>
         <source>%n item(s) selected</source>
         <translation type="unfinished">
             <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -1414,6 +1421,8 @@ exposure program</extracomment>
         <extracomment>hidden if n=0</extracomment>
         <translation type="unfinished">
             <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -1422,13 +1431,15 @@ exposure program</extracomment>
         <extracomment>hidden if n=0</extracomment>
         <translation type="unfinished">
             <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="262"/>
         <source>empty</source>
         <extracomment>as in &apos;this folder is empty&apos;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">pusty</translation>
     </message>
 </context>
 <context>
@@ -1462,12 +1473,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="140"/>
         <source>Owner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Właściciel</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="178"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Grupa</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="211"/>
@@ -1553,7 +1564,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/SearchPage.qml" line="120"/>
         <location filename="../qml/pages/SearchPage.qml" line="356"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Szukaj</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="134"/>
@@ -1564,6 +1575,8 @@ exposure program</extracomment>
         <location filename="../qml/pages/SearchPage.qml" line="188"/>
         <source>%n hit(s)</source>
         <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -1598,12 +1611,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="413"/>
         <source>Internally not ready</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Jeszcze nie gotowe</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="413"/>
         <source>Please simply try again</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spróbuj ponownie</translation>
     </message>
 </context>
 <context>
@@ -1625,7 +1638,9 @@ exposure program</extracomment>
         <location filename="../qml/components/SelectionPanel.qml" line="54"/>
         <source>%n file(s) selected</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>Wybrano %n plik</numerusform>
+            <numerusform>Wybrano %n plików</numerusform>
+            <numerusform>Wybrano %n plik</numerusform>
         </translation>
     </message>
 </context>
@@ -1650,7 +1665,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="61"/>
         <source>Show hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pokaż ukryte pliki</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="65"/>
@@ -1954,12 +1969,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="67"/>
         <source>Sometimes the application stays in the background</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Czasami aplikacja pozostaje w tle</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="71"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Szukaj</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="87"/>
@@ -2014,12 +2029,16 @@ exposure program</extracomment>
         <source>%n directories</source>
         <translation type="unfinished">
             <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="86"/>
         <source>%n file(s)</source>
         <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -2104,7 +2123,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="120"/>
         <source>Show hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pokaż ukryte pliki</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="125"/>
@@ -2172,12 +2191,16 @@ exposure program</extracomment>
         <source>%n item(s) selected for transferring</source>
         <translation type="unfinished">
             <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="105"/>
         <source>%n destinations(s) selected</source>
         <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -2199,12 +2222,16 @@ exposure program</extracomment>
         <source>%n file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="63"/>
         <source>%n destination(s)</source>
         <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -2213,12 +2240,16 @@ exposure program</extracomment>
         <source>Successfully copied</source>
         <translation type="unfinished">
             <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="70"/>
         <source>Successfully moved</source>
         <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -2227,12 +2258,16 @@ exposure program</extracomment>
         <source>Successfully linked</source>
         <translation type="unfinished">
             <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="76"/>
         <source>Failed to copy</source>
         <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -2241,12 +2276,16 @@ exposure program</extracomment>
         <source>Failed to move</source>
         <translation type="unfinished">
             <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="80"/>
         <source>Failed to link</source>
         <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -2273,12 +2312,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="202"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Próbujesz przenieść pomiędzy telefonem a kartą SD?? To nie zadziała, spróbuj skopiować.</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="204"/>
         <source>Perhaps the storage is full?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Być może pamięć jest pełna??</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="286"/>
@@ -2304,21 +2343,24 @@ exposure program</extracomment>
 <context>
     <name>ViewImagePage</name>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="234"/>
-        <source>Loading image... %1</source>
+        <location filename="../qml/pages/ViewImagePage.qml" line="251"/>
+        <source>Loading image</source>
+        <extracomment>Full page placeholder shown while a large image is being loaded</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="246"/>
-        <source>Error loading image</source>
+        <location filename="../qml/pages/ViewImagePage.qml" line="261"/>
+        <source>Failed to load</source>
+        <extracomment>Full page placeholder shown when an image failed to load</extracomment>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ViewVideoPage</name>
     <message>
-        <location filename="../qml/pages/ViewVideoPage.qml" line="99"/>
-        <source>Error playing video</source>
+        <location filename="../qml/pages/ViewVideoPage.qml" line="105"/>
+        <source>Failed to play</source>
+        <extracomment>Full page placeholder shown when a video failed to load</extracomment>
         <translation type="unfinished"></translation>
     </message>
 </context>

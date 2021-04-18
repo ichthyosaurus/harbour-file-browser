@@ -151,6 +151,11 @@
         <source>Estonian</source>
         <translation>eesti</translation>
     </message>
+    <message>
+        <location filename="../qml/pages/ContributorsPage.qml" line="124"/>
+        <source>Polish</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CreateFolderDialog</name>
@@ -519,32 +524,32 @@
         <translation>Faili pole olemas</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="219"/>
+        <location filename="../src/filedata.cpp" line="224"/>
         <source>block device</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="223"/>
+        <location filename="../src/filedata.cpp" line="228"/>
         <source>character device</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="227"/>
+        <location filename="../src/filedata.cpp" line="232"/>
         <source>pipe</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="231"/>
+        <location filename="../src/filedata.cpp" line="236"/>
         <source>socket</source>
         <translation>sokkel</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="235"/>
+        <location filename="../src/filedata.cpp" line="240"/>
         <source>folder</source>
         <translation>kaust</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="241"/>
+        <location filename="../src/filedata.cpp" line="246"/>
         <source>unknown</source>
         <translation>teadmata</translation>
     </message>
@@ -682,48 +687,48 @@
         <translation>Faili asukoht on muutunud.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="259"/>
-        <location filename="../qml/pages/FilePage.qml" line="265"/>
+        <location filename="../qml/pages/FilePage.qml" line="260"/>
+        <location filename="../qml/pages/FilePage.qml" line="266"/>
         <source>Deleting</source>
         <translation>Kustutan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="297"/>
+        <location filename="../qml/pages/FilePage.qml" line="298"/>
         <source>Location</source>
         <translation>Asukoht</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="301"/>
+        <location filename="../qml/pages/FilePage.qml" line="302"/>
         <source>Type</source>
         <translation>Tüüp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="303"/>
+        <location filename="../qml/pages/FilePage.qml" line="304"/>
         <source>Unknown (link target not found)</source>
         <translation>Teadmata (nimeviida sihtfaili ei leidunud)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="303"/>
+        <location filename="../qml/pages/FilePage.qml" line="304"/>
         <source>Link to %1</source>
         <translation>Nimeviit %1 kohta</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="310"/>
+        <location filename="../qml/pages/FilePage.qml" line="311"/>
         <source>Permissions</source>
         <translation>Õigused</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="314"/>
+        <location filename="../qml/pages/FilePage.qml" line="315"/>
         <source>Owner</source>
         <translation>Omanik</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="319"/>
+        <location filename="../qml/pages/FilePage.qml" line="320"/>
         <source>Group</source>
         <translation>Grupp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="324"/>
+        <location filename="../qml/pages/FilePage.qml" line="325"/>
         <source>Last modified</source>
         <translation>Viimati muudetud</translation>
     </message>
@@ -831,18 +836,18 @@
 <context>
     <name>ImageMetaData</name>
     <message>
-        <location filename="../src/filedata.cpp" line="263"/>
+        <location filename="../src/filedata.cpp" line="272"/>
         <source>Image Size</source>
         <translation>Pildi suurus</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="269"/>
+        <location filename="../src/filedata.cpp" line="278"/>
         <source>%1 x %2</source>
         <extracomment>image size description without aspect ratio: 1=width, 2=height</extracomment>
         <translation>%1 x %2</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="273"/>
+        <location filename="../src/filedata.cpp" line="282"/>
         <source>%1 x %2 (%3)</source>
         <extracomment>image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9</extracomment>
         <translation>%1 x %2 (%3)</translation>
@@ -2310,22 +2315,25 @@ exposure program</extracomment>
 <context>
     <name>ViewImagePage</name>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="234"/>
-        <source>Loading image... %1</source>
-        <translation>Laadin pilti... %1</translation>
+        <location filename="../qml/pages/ViewImagePage.qml" line="251"/>
+        <source>Loading image</source>
+        <extracomment>Full page placeholder shown while a large image is being loaded</extracomment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="246"/>
-        <source>Error loading image</source>
-        <translation>Viga pildi laadimisel</translation>
+        <location filename="../qml/pages/ViewImagePage.qml" line="261"/>
+        <source>Failed to load</source>
+        <extracomment>Full page placeholder shown when an image failed to load</extracomment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ViewVideoPage</name>
     <message>
-        <location filename="../qml/pages/ViewVideoPage.qml" line="99"/>
-        <source>Error playing video</source>
-        <translation>Viga video esitamisel</translation>
+        <location filename="../qml/pages/ViewVideoPage.qml" line="105"/>
+        <source>Failed to play</source>
+        <extracomment>Full page placeholder shown when a video failed to load</extracomment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
