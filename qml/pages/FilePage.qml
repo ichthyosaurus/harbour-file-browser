@@ -21,7 +21,7 @@
  * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.0
+import QtQuick 2.5 // >= 2.5 required for Image::autoTransform
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileData 1.0
 import harbour.file.browser.ConsoleModel 1.0
@@ -199,6 +199,7 @@ Page {
                                     : 400*Theme.pixelRatio
                             fillMode: Image.PreserveAspectFit
                             asynchronous: true
+                            autoTransform: true
                         }
                         FileIcon {
                             visible: !imagePreview.visible && !playButton.visible
