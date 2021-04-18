@@ -205,6 +205,7 @@ void FileData::readInfo()
     emit metaDataChanged();
     emit mimeTypeChanged();
     emit mimeTypeCommentChanged();
+    emit isAnimatedImageChanged();
     emit dirsCountChanged();
     emit filesCountChanged();
     emit errorMessageChanged();
@@ -212,6 +213,8 @@ void FileData::readInfo()
 
 void FileData::readMetaData()
 {
+    m_isAnimatedImage = false; // updated below
+
     // special file types
     // do not sniff mimetype or metadata for these, because these can't really be read
 
@@ -257,6 +260,9 @@ void FileData::readMetaData()
     if (m_mimeTypeName.startsWith("image/")) {
         // open file without reading image data
         QImageReader reader(m_file);
+
+        // check if it is an animated image
+        m_isAnimatedImage = reader.supportsAnimation();
 
         // load size
         QSize s = reader.size();

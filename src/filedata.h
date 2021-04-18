@@ -54,6 +54,7 @@ class FileData : public QObject
     Q_PROPERTY(bool isSymLinkBroken READ isSymLinkBroken() NOTIFY isSymLinkBrokenChanged())
     Q_PROPERTY(QString mimeType READ mimeType() NOTIFY mimeTypeChanged())
     Q_PROPERTY(QString mimeTypeComment READ mimeTypeComment() NOTIFY mimeTypeCommentChanged())
+    Q_PROPERTY(bool isAnimatedImage READ isAnimatedImage() NOTIFY isAnimatedImageChanged())
     Q_PROPERTY(QStringList metaData READ metaData() NOTIFY metaDataChanged())
     Q_PROPERTY(int dirsCount READ dirsCount NOTIFY dirsCountChanged)
     Q_PROPERTY(int filesCount READ filesCount NOTIFY filesCountChanged)
@@ -88,6 +89,7 @@ public:
     bool isSymLinkBroken() const { return m_fileInfo.isSymLinkBroken(); }
     QString mimeType() const { return m_mimeTypeName; }
     QString mimeTypeComment() const { return m_mimeTypeComment; }
+    bool isAnimatedImage() const { return m_isAnimatedImage; }
     QStringList metaData() const { return m_metaData; }
     uint dirsCount() const;
     uint filesCount() const;
@@ -122,6 +124,7 @@ signals:
     void metaDataChanged();
     void mimeTypeChanged();
     void mimeTypeCommentChanged();
+    void isAnimatedImageChanged();
     void dirsCountChanged();
     void filesCountChanged();
     void errorMessageChanged();
@@ -141,6 +144,7 @@ private:
     QString m_mimeTypeComment;
     QStringList m_metaData;
     QString m_errorMessage;
+    bool m_isAnimatedImage = {false};
 };
 
 #endif // FILEDATA_H
