@@ -1,21 +1,8 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2020 Mirian Margiani
- *
- * SPDX-License-Identifier: GPL-3.0-or-later
- *
- * File Browser is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
- *
- * File Browser is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <https://www.gnu.org/licenses/>.
+ * SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
+ * SPDX-License-Identifier: GPL-3.0-or-later OR AGPL-3.0-or-later
  */
 
 import QtQuick 2.2
@@ -23,14 +10,31 @@ import Sailfish.Silica 1.0
 import QtMultimedia 5.0
 import "../components"
 
+// TODO video controls
+// TODO attached info page
+
 Page {
     id: page
     allowedOrientations: Orientation.All
     property alias title: titleOverlay.title
     property alias path: video.source
     property alias autoPlay: video.autoPlay
-    property bool _isPlaying: autoPlay
+    property bool enableDarkBackground: true
+    property bool _isPlaying: video.playbackState === MediaPlayer.PlayingState
     property string _errorString
+
+    Loader {
+        sourceComponent: enableDarkBackground ? backgroundComponent : null
+        anchors.fill: parent
+        Component {
+            id: backgroundComponent
+            Rectangle {
+                visible: enableDarkBackground
+                color: Theme.overlayBackgroundColor
+                opacity: Theme.opacityHigh
+            }
+        }
+    }
 
     MediaTitleOverlay {
         id: titleOverlay
@@ -58,21 +62,24 @@ Page {
         anchors.fill: parent
         onClicked: {
             if (_isPlaying === true) {
-                _isPlaying = false;
                 titleOverlay.show();
                 video.pause();
             } else {
                 titleOverlay.hide();
-                _isPlaying = true;
                 video.play();
             }
         }
     }
 
+    // Whisperfish related issue (works in File Browser):
+    // Video playback is partly broken. Showing anything only works if
+    // autoPlay is true, but play/pause does not work even though the
+    // media player changes its playbackState property correctly.
+    // Looping is not possible. (This may be related to WF#158.)
     Video {
         id: video
         anchors.fill: parent
-        autoPlay: false
+        autoPlay: true // TODO set to false once possible
         fillMode: VideoOutput.PreserveAspectFit
         muted: false
         onStopped: play() // we have to restart manually because
@@ -80,25 +87,24 @@ Page {
         onErrorChanged: {
             if (error === MediaPlayer.NoError) return;
             // we don't want to risk crashes by trying any further
+            console.log("playing video failed:", errorString)
             _errorString = errorString
             source = ""
-            loader.sourceComponent = failedLoading;
+            loader.sourceComponent = failedLoading
         }
     }
 
     Loader {
         id: loader
-        anchors.centerIn: parent
+        anchors.fill: parent
         Component {
             id: failedLoading
-            Text {
-                width: page.width - 2*Theme.horizontalPageMargin
-                wrapMode: Text.Wrap
-                textFormat: Text.PlainText
-                font.pixelSize: Theme.fontSizeMedium
-                text: qsTr("Error playing video") +
+            BusyLabel {
+                //: Full page placeholder shown when a video failed to load
+                //% "Failed to play"
+                text: qsTrId("whisperfish-view-video-page-error") +
                       "\n\n" + _errorString
-                color: Theme.highlightColor
+                running: false
             }
         }
     }
