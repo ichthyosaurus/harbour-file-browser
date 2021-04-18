@@ -70,7 +70,7 @@ Page {
             }
             DetailList {
                 label: qsTr("Chinese")
-                values: ["Tyler Temp", "dashinfantry"]
+                values: ["Tyler Temp", "dashinfantry", "玉堂白鹤"]
             }
             DetailList {
                 label: qsTr("Russian")
@@ -119,6 +119,10 @@ Page {
             DetailList {
                 label: qsTr("Estonian")
                 values: ["Priit Jõerüüt"]
+            }
+            DetailList {
+                label: qsTr("Polish")
+                values: ["Patryk Szkudlarek"]
             }
         }
     }
