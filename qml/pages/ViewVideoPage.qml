@@ -79,7 +79,7 @@ Page {
     Video {
         id: video
         anchors.fill: parent
-        autoPlay: true // TODO set to false once possible
+        autoPlay: false // TODO(WF): set to false once possible
         fillMode: VideoOutput.PreserveAspectFit
         muted: false
         onStopped: play() // we have to restart manually because
@@ -102,7 +102,7 @@ Page {
             BusyLabel {
                 //: Full page placeholder shown when a video failed to load
                 //% "Failed to play"
-                text: qsTrId("whisperfish-view-video-page-error") +
+                text: qsTr("Failed to play") +
                       "\n\n" + _errorString
                 running: false
             }
