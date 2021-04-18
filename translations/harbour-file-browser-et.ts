@@ -149,7 +149,7 @@
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="120"/>
         <source>Estonian</source>
-        <translation type="unfinished"></translation>
+        <translation>eesti</translation>
     </message>
 </context>
 <context>
@@ -243,7 +243,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="362"/>
         <source>This directory contains no files.</source>
-        <translation>Kaustas pole faile.</translation>
+        <translation>Selles kaustas pole faile.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="442"/>
@@ -508,7 +508,7 @@
     <message>
         <location filename="../qml/cover/FileBrowserCover.qml" line="47"/>
         <source>Root Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Jätka juurkasutaja õigustes</translation>
     </message>
 </context>
 <context>
@@ -674,7 +674,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="128"/>
         <source>Go to Target</source>
-        <translation type="unfinished"></translation>
+        <translation>Ava sihtkoht</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="148"/>
@@ -700,12 +700,12 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="303"/>
         <source>Unknown (link target not found)</source>
-        <translation type="unfinished"></translation>
+        <translation>Teadmata (nimeviida sihtfaili ei leidunud)</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="303"/>
         <source>Link to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nimeviit %1 kohta</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="310"/>
@@ -898,87 +898,87 @@
         <extracomment>description of camera flash mode
 ----------
 exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Käsitsi juhtud</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="188"/>
         <source>Manual, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Käsitsi juhtud, peegeldunud valgust ei tuvastatud</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="190"/>
         <source>Manual, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Käsitsi juhtud, peegeldunud valgus tuvastatud</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="192"/>
         <location filename="../src/jhead/jhead-api.cpp" line="305"/>
         <source>Auto</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Automaatne</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="194"/>
         <source>Auto, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Automaatne, peegeldunud valgust ei tuvastatud</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="196"/>
         <source>Auto, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Automaatne, peegeldunud valgus tuvastatud</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="198"/>
         <source>Red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Punasilmsuse vähendamise režiim</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="200"/>
         <source>Red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Punasilmsuse vähendamise režiim, peegeldunud valgust ei tuvastatud</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="202"/>
         <location filename="../src/jhead/jhead-api.cpp" line="208"/>
         <source>Red eye reduction mode, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Punasilmsuse vähendamise režiim, peegeldunud valgus tuvastatud</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="204"/>
         <source>Manual, red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Käsitsi juhitud punasilmsuse vähendamise režiim</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="206"/>
         <source>Manual, red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Käsitsi juhitud punasilmsuse vähendamise režiim, peegeldunud valgust ei tuvastatud</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="210"/>
         <source>Auto, red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Automaatne punasilmsuse vähendamise režiim</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="212"/>
         <source>Auto, red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Automaatne punasilmsuse vähendamise režiim, peegeldunud valgust ei tuvastatud</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="214"/>
         <source>Auto, red eye reduction mode, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Automaatne punasilmsuse vähendamise režiim, peegeldunud valgus tuvastatud</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="218"/>
@@ -987,27 +987,27 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="226"/>
         <location filename="../src/jhead/jhead-api.cpp" line="321"/>
         <source>Flash</source>
-        <translation type="unfinished"></translation>
+        <translation>Välk</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="218"/>
         <source>Yes (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasutusel (%1)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="220"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasutusel</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="224"/>
         <source>No (Auto)</source>
-        <translation type="unfinished"></translation>
+        <translation>Pole kasutusel (automaatsena)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="226"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Pole kasutusel</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="235"/>
@@ -1069,36 +1069,36 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="279"/>
         <location filename="../src/jhead/jhead-api.cpp" line="283"/>
         <source>Focus Distance</source>
-        <translation type="unfinished"></translation>
+        <translation>Fookuskaugus</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="281"/>
         <source>Infinite</source>
         <extracomment>focus distance</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Lõputu</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="285"/>
         <source>%1m</source>
         <extracomment>focus distance in meters</extracomment>
-        <translation type="unfinished">%1 (1/%2) {1m?}</translation>
+        <translation>%1m</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="290"/>
         <source>ISO Equivalent</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO-vaste</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="297"/>
         <source>Exposure Bias</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Exposure_compensation</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Särinihe</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="302"/>
         <location filename="../src/jhead/jhead-api.cpp" line="305"/>
         <source>White Balance</source>
-        <translation type="unfinished"></translation>
+        <translation>Värvustasakaal</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="312"/>
@@ -1108,38 +1108,38 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="324"/>
         <location filename="../src/jhead/jhead-api.cpp" line="327"/>
         <source>Light Source</source>
-        <translation type="unfinished"></translation>
+        <translation>Valgusallikas</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="312"/>
         <source>Daylight</source>
-        <translation type="unfinished"></translation>
+        <translation>Päevavalgus</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="315"/>
         <source>Fluorescent</source>
-        <translation type="unfinished"></translation>
+        <translation>Fluorestseeriv valgus</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="318"/>
         <source>Incandescent</source>
-        <translation type="unfinished"></translation>
+        <translation>Tehisvalgus (hõõglambi valgus)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="324"/>
         <source>Fine weather</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilus ilm</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="327"/>
         <source>Shade</source>
-        <translation type="unfinished"></translation>
+        <translation>Pilvine ilm</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="338"/>
         <source>Average</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Keskmine</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="340"/>
@@ -1252,30 +1252,30 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="416"/>
         <source>Macro</source>
         <extracomment>focus range</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Makrovõte</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="420"/>
         <source>Close</source>
         <extracomment>focus range</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Lähedal</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="424"/>
         <source>Distant</source>
         <extracomment>focus range</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Kaugel</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="427"/>
         <source>Focus Range</source>
-        <translation type="unfinished"></translation>
+        <translation>Teravustamiskaugus</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="437"/>
         <location filename="../src/jhead/jhead-api.cpp" line="441"/>
         <source>JPEG Process</source>
-        <translation type="unfinished"></translation>
+        <translation>JPEG-töötlus</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="437"/>
@@ -1389,7 +1389,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="129"/>
         <source>Path to a folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Kausta asukoht</translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="234"/>
@@ -1476,7 +1476,7 @@ exposure program</extracomment>
     <message>
         <location filename="../src/engine.cpp" line="246"/>
         <source>Removable Media</source>
-        <translation type="unfinished"></translation>
+        <translation>Eemaldatavad andmekandjad</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="120"/>
@@ -1486,12 +1486,12 @@ exposure program</extracomment>
     <message>
         <location filename="../src/globals.cpp" line="123"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
-        <translation type="unfinished"></translation>
+        <translation>dd MMM yyyy hh:mm:ss t</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="125"/>
         <source>dd.MM.yy, hh:mm</source>
-        <translation type="unfinished"></translation>
+        <translation>dd.MM.yy hh:mm</translation>
     </message>
 </context>
 <context>
@@ -1500,7 +1500,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/QuickSwitchDialog.qml" line="29"/>
         <source>Switch</source>
         <extracomment>as in &quot;Switch to this folder, please&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ava</translation>
     </message>
 </context>
 <context>
@@ -1545,7 +1545,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/SearchPage.qml" line="120"/>
         <location filename="../qml/pages/SearchPage.qml" line="356"/>
         <source>Search</source>
-        <translation type="unfinished">Otsi</translation>
+        <translation>Otsi</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="134"/>
@@ -1824,7 +1824,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="215"/>
         <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation type="unfinished"></translation>
+        <translation>Failihaldur on avaldatud GNU Üldise Avaliku Litsentsi versioon 3 või hilisema alusel. Tegemist on vaba tarkavaraga: sul on vaba voli seda muuta või levitada. Seaduses lubatud ulatuses puudub igasugune garantii.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="234"/>
@@ -1842,7 +1842,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="302"/>
         <source>Nothing to show here...</source>
-        <translation>Äi põle mette ühtegi faili...</translation>
+        <translation>Ei pole mitte ühtegi faili...</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="328"/>
@@ -1923,7 +1923,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ShortcutsPage.qml" line="43"/>
         <location filename="../qml/pages/ShortcutsPage.qml" line="120"/>
         <source>Places</source>
-        <translation type="unfinished"></translation>
+        <translation>Asukohad</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="54"/>
@@ -1953,7 +1953,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="71"/>
         <source>Search</source>
-        <translation type="unfinished">Otsi</translation>
+        <translation>Otsi</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="87"/>
@@ -1968,12 +1968,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="105"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Värskenda vaade</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="110"/>
         <source>Open storage settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ava salvestamise seadistused</translation>
     </message>
 </context>
 <context>
@@ -2174,9 +2174,9 @@ exposure program</extracomment>
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="105"/>
         <source>%n destinations(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n sihtkoht on valitud</numerusform>
+            <numerusform>%n sihtkohta on valitud</numerusform>
         </translation>
     </message>
     <message>
@@ -2187,7 +2187,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="161"/>
         <source>Nothing selected to transfer</source>
-        <translation type="unfinished"></translation>
+        <translation>Mitte midagi pole tõstmiseks valitud</translation>
     </message>
 </context>
 <context>
@@ -2203,9 +2203,9 @@ exposure program</extracomment>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="63"/>
         <source>%n destination(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n sihtkoht</numerusform>
+            <numerusform>%n sihtkohta</numerusform>
         </translation>
     </message>
     <message numerus="yes">
