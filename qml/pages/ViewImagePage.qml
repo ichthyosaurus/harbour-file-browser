@@ -1,40 +1,44 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
- *
- * SPDX-License-Identifier: GPL-3.0-or-later
- *
- * File Browser is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
- *
- * File Browser is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <https://www.gnu.org/licenses/>.
+ * SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
+ * SPDX-License-Identifier: GPL-3.0-or-later OR AGPL-3.0-or-later
  */
 
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 import "../components"
 
+// TODO attached info page
+
 Page {
     id: page
     allowedOrientations: Orientation.All
     property alias title: titleOverlay.title
-    property alias path: image.source // deprecated
-    property alias source: image.source
+    property string path: ''
+    property bool isAnimated: false
+    property bool enableDarkBackground: true
 
+    readonly property bool isImageReady: image.status === Image.Ready
     readonly property Flickable flickable: flick
     readonly property bool editMode: false // not implemented
 
     onStatusChanged: {
-        if (page.status === PageStatus.Inactive && image.status === Image.Ready) {
+        if (page.status === PageStatus.Inactive && isImageReady) {
             image.fitToScreen()
+        }
+    }
+
+    Loader {
+        sourceComponent: enableDarkBackground ? backgroundComponent : null
+        anchors.fill: parent
+        Component {
+            id: backgroundComponent
+            Rectangle {
+                visible: enableDarkBackground
+                color: Theme.overlayBackgroundColor
+                opacity: Theme.opacityHigh
+            }
         }
     }
 
@@ -45,14 +49,31 @@ Page {
         anchors.fill: parent
         contentWidth: imageView.width
         contentHeight: imageView.height
-        onHeightChanged: if (image.status === Image.Ready) image.fitToScreen();
+        onHeightChanged: if (isImageReady) image.fitToScreen()
 
         Item {
             id: imageView
             width: Math.max(image.width*image.scale, flick.width)
             height: Math.max(image.height*image.scale, flick.height)
 
-            AnimatedImage {
+            Loader {
+                // We have to use a separate loader if the image is animated
+                // because AnimatedImage doesn't support 'asynchronous: true'.
+                id: animationLoader
+                anchors.fill: image
+                asynchronous: true
+                sourceComponent: isAnimated ? animationComponent : null
+                Component {
+                    id: animationComponent
+                    AnimatedImage {
+                        scale: image.scale
+                        fillMode: image.fillMode
+                        source: page.path
+                    }
+                }
+            }
+
+            Image {
                 id: image
                 property real prevScale
                 property alias imageRotation: imageRotation
@@ -64,12 +85,14 @@ Page {
                     prevScale = scale
                 }
 
+                visible: !isAnimated
                 anchors.centerIn: parent
                 fillMode: Image.PreserveAspectFit
                 cache: false
                 asynchronous: true
                 smooth: !flick.moving
                 opacity: status === Image.Ready ? 1.0 : 0.0
+                source: page.path
 
                 Behavior on opacity { FadeAnimator { duration: 250 } }
 
@@ -137,7 +160,7 @@ Page {
 
                 onDoubleClicked: {
                     pinchRequested = true
-                    if (image.status !== Image.Ready) return;
+                    if (!isImageReady) return;
 
                     var newScale = pinchArea.minScale;
                     if (Math.round(image.scale) === Math.round(pinchArea.minScale)) {
@@ -172,7 +195,7 @@ Page {
             }
 
             anchors.fill: parent
-            enabled: image.status === Image.Ready
+            enabled: isImageReady
             pinch.target: image
             pinch.minimumScale: 0.5*minScale
             pinch.maximumScale: 1.5*maxScale
@@ -207,44 +230,27 @@ Page {
 
     Loader {
         id: statusLoader
-        anchors.centerIn: parent
+        anchors.fill: parent
         sourceComponent: undefined
     }
 
     Component {
         id: loadingIndicator
-
-        Item {
-            height: childrenRect.height
-            width: page.width
-
-            BusyIndicator {
-                id: imageLoadingIndicator
-                anchors.horizontalCenter: parent.horizontalCenter
-                running: true
-            }
-
-            Text {
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                    top: imageLoadingIndicator.bottom; topMargin: Theme.paddingLarge
-                }
-                font.pixelSize: Theme.fontSizeSmall;
-                color: Theme.highlightColor;
-                text: qsTr("Loading image... %1").arg(Math.round(image.progress*100) + "%")
-            }
+        BusyLabel {
+            //: Full page placeholder shown while a large image is being loaded
+            //% "Loading image"
+            text: qsTrId("whisperfish-view-image-page-loading")
+            running: true
         }
     }
 
     Component {
         id: failedLoading
-        Text {
-            width: page.width - 2*Theme.horizontalPageMargin
-            wrapMode: Text.Wrap
-            textFormat: Text.PlainText
-            font.pixelSize: Theme.fontSizeMedium
-            text: qsTr("Error loading image")
-            color: Theme.highlightColor
+        BusyLabel {
+            //: Full page placeholder shown when an image failed to load
+            //% "Failed to load"
+            text: qsTrId("whisperfish-view-image-page-error")
+            running: false
         }
     }
 }
