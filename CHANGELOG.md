@@ -8,7 +8,12 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 ## Unreleased
 
- * Nothing so far
+ * New translation: Polish
+ * Updated translations: English, German, Swedish, Norwegian Bokmål, Slovak, Estonian, Chinese (China)
+ * Updated list of contributors
+ * Improved image loading times and error messages
+ * Fixed image rotation for JPEG files
+ * Fixed zoom-by-double-tap for images with almost the same dimensions as the screen
 
 ## Version 2.4.3 (2021-02-17)
 
