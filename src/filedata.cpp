@@ -254,13 +254,14 @@ void FileData::readMetaData()
     m_mimeTypeComment = m_mimeType.comment();
 
     // read metadata for images
-    if (m_mimeTypeName == "image/jpeg" || m_mimeTypeName == "image/png" ||
-            m_mimeTypeName == "image/gif" || m_mimeTypeName == "image/tiff" ) {
-        // read size
+    if (m_mimeTypeName.startsWith("image/")) {
+        // open file without reading image data
         QImageReader reader(m_file);
+
+        // load size
         QSize s = reader.size();
         if (s.width() >= 0 && s.height() >= 0) {
-            // we put these string manually in the "ImageMetaData" context
+            // we put these strings manually in the "ImageMetaData" context
             // to reduce clutter in translation files
             QString label = QCoreApplication::translate("ImageMetaData", "Image Size");
 
@@ -276,19 +277,22 @@ void FileData::readMetaData()
             }
         }
 
-        // read exif data
-        QStringList exif = readExifData(filename);
-        foreach (QString e, exif) {
-            auto split = e.split(STRING_SEP);
-            QString label, value;
+        // read exif data for selected formats
+        if (m_mimeTypeName == "image/jpeg" || m_mimeTypeName == "image/png" ||
+                m_mimeTypeName == "image/gif" || m_mimeTypeName == "image/tiff" ) {
+            QStringList exif = readExifData(filename);
+            foreach (QString e, exif) {
+                auto split = e.split(STRING_SEP);
+                QString label, value;
 
-            if (split.length() >= 2) {
-                label = split[0];
-                split.removeFirst();
-                value = split.join(QChar(' '));
+                if (split.length() >= 2) {
+                    label = split[0];
+                    split.removeFirst();
+                    value = split.join(QChar(' '));
+                }
+
+                addMetaData(8, label, value);
             }
-
-            addMetaData(8, label, value);
         }
 
         // read comments
