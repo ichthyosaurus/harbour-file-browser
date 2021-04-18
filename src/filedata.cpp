@@ -205,6 +205,8 @@ void FileData::readInfo()
     emit metaDataChanged();
     emit mimeTypeChanged();
     emit mimeTypeCommentChanged();
+    emit dirsCountChanged();
+    emit filesCountChanged();
     emit errorMessageChanged();
 }
 
