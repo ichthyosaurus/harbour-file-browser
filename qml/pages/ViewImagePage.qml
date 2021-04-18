@@ -5,7 +5,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later OR AGPL-3.0-or-later
  */
 
-import QtQuick 2.2
+import QtQuick 2.5 // >= 2.5 required for Image::autoTransform
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileData 1.0
 import "../components"
@@ -71,6 +71,7 @@ Page {
                         scale: image.scale
                         fillMode: image.fillMode
                         source: page.path
+                        // does not support metadata transformations like rotation
                     }
                 }
             }
@@ -91,6 +92,7 @@ Page {
                 anchors.centerIn: parent
                 fillMode: Image.PreserveAspectFit
                 cache: false
+                autoTransform: true
                 asynchronous: true
                 smooth: !flick.moving
                 opacity: status === Image.Ready ? 1.0 : 0.0
