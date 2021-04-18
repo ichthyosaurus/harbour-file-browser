@@ -171,12 +171,17 @@ Page {
                         // image.fitToScreen() is called when the image is loaded. This makes
                         // sure that either height or width is fit to the flickable's corresponding
                         // side. We check which side fits and scale to the other.
-                        if (Math.round(image.width*image.scale) === flick.width &&
-                                Math.round(image.height*image.scale) === flick.height) {
-                            newScale = pinchArea.maxScale // just zoom in if both sides fit exactly
-                        } else if (Math.round(image.width*image.scale) === flick.width) {
+                        var scaledWidth = Math.round(image.width*image.scale)
+                        var scaledHeight = Math.round(image.height*image.scale)
+                        var buffer = Theme.horizontalPageMargin
+
+                        if (scaledWidth >= (flick.width-buffer) && scaledWidth <= (flick.width+buffer) &&
+                                scaledHeight >= (flick.height-buffer) && scaledHeight <= (flick.height+buffer)) {
+                            // just zoom in if both sides fit (almost) exactly
+                            newScale = pinchArea.maxScale
+                        } else if (scaledWidth === flick.width) {
                             newScale = (flick.height-5)/image.height
-                        } else if (Math.round(image.height*image.scale) === flick.height) {
+                        } else if (scaledHeight === flick.height) {
                             newScale = (flick.width-5)/image.width
                         }
                     } else {
