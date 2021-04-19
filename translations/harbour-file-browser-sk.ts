@@ -154,7 +154,7 @@
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="124"/>
         <source>Polish</source>
-        <translation type="unfinished"></translation>
+        <translation>Poľština</translation>
     </message>
 </context>
 <context>
@@ -2348,13 +2348,13 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewImagePage.qml" line="251"/>
         <source>Loading image</source>
         <extracomment>Full page placeholder shown while a large image is being loaded</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Načítavanie obrázka</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewImagePage.qml" line="261"/>
         <source>Failed to load</source>
         <extracomment>Full page placeholder shown when an image failed to load</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Načítanie zlyhalo</translation>
     </message>
 </context>
 <context>
@@ -2363,7 +2363,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewVideoPage.qml" line="105"/>
         <source>Failed to play</source>
         <extracomment>Full page placeholder shown when a video failed to load</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Prehrávanie zlyhalo</translation>
     </message>
 </context>
 <context>
