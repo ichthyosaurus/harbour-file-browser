@@ -52,7 +52,9 @@ Page {
             if (exitCode === 0) {
                 if (fileData.category === "rpm" || fileData.category === "apk") {
                     notificationPanel.showTextWithTimer(qsTr("Install launched"),
-                                                        qsTr("If nothing happens, then the package is probably faulty."));
+                                                        qsTr("If nothing happens, then the package is probably faulty.")+" "+
+                                                        //: "it" = "the package", i.e. an RPM or APK file
+                                                        qsTr("Swipe right to inspect its contents."));
                 } else {
                     notificationPanel.showTextWithTimer(qsTr("Open successful"),
                                                         qsTr("Sometimes the application stays in the background"));
