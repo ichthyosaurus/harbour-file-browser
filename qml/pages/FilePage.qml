@@ -50,14 +50,13 @@ Page {
         // called when open command exits
         onProcessExited: {
             if (exitCode === 0) {
-                if (fileData.category === "apk") {
+                if (fileData.category === "rpm" || fileData.category === "apk") {
                     notificationPanel.showTextWithTimer(qsTr("Install launched"),
                                                         qsTr("If nothing happens, then the package is probably faulty."));
-                    return;
-                }
-                if (!fileData.category !== "rpm")
+                } else {
                     notificationPanel.showTextWithTimer(qsTr("Open successful"),
                                                         qsTr("Sometimes the application stays in the background"));
+                }
             } else if (exitCode === 1) {
                 notificationPanel.showTextWithTimer(qsTr("Internal error"), "xdg-open exit code 1");
             } else if (exitCode === 2) {
