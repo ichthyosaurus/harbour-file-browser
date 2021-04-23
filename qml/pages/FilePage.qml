@@ -112,7 +112,7 @@ Page {
             // open/install tries to open the file and fileData.onProcessExited shows error
             // if it fails
             MenuItem {
-                text: fileData.category === "rpm" || fileData.category === "apk" ? qsTr("Install") : qsTr("Open")
+                text: (fileData.category === "rpm" || fileData.category === "apk") ? qsTr("Install") : qsTr("Open")
                 visible: !fileData.isDir
                 onClicked: {
                     if (!fileData.isSafeToOpen()) {
