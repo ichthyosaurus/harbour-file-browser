@@ -599,7 +599,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="57"/>
         <source>Swipe right to inspect its contents.</source>
-        <extracomment>it = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
+        <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
         <translation>Wischen Sie nach rechts, um den Dateiinhalt zu prüfen.</translation>
     </message>
     <message>
