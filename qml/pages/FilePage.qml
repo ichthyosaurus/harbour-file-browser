@@ -50,6 +50,8 @@ Page {
         // called when open command exits
         onProcessExited: {
             if (exitCode === 0) {
+                // note: we show the banner for all installable files because the install might
+                // otherwise silently fail.
                 if (fileData.category === "rpm" || fileData.category === "apk") {
                     notificationPanel.showTextWithTimer(qsTr("Install launched"),
                                                         qsTr("If nothing happens, then the package is probably faulty.")+" "+
