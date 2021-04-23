@@ -396,7 +396,7 @@ Page {
         if (forceRawView) {
             method(Qt.resolvedUrl("ViewPage.qml"), { path: page.file });
             return;
-        } else if (fileData.category === "zip") {
+        } else if (fileData.category === "zip" || fileData.category === "apk") {
             showConsolePage(method, "unzip", [ "-Z", "-2ht", fileData.file ]);
         } else if (fileData.category === "rpm") {
             showConsolePage(method, "rpm", [ "-qlp", "--info", fileData.file ]);
