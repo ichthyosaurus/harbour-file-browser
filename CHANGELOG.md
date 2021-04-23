@@ -14,6 +14,9 @@ SPDX-License-Identifier: GFDL-1.3-or-later
  * Improved image loading times and error messages
  * Fixed image rotation for JPEG files
  * Fixed zoom-by-double-tap for images with almost the same dimensions as the screen
+ * Fixed "Open" instead of "Install" showing for APK files
+ *   - Note: this has nothing to do with actually installing APK files, which appears to be broken in the system in SFOS 4.
+ *   - Cf. https://forum.sailfishos.org/t/4-0-1-45-regression-unable-to-update-android-apps-manually/5343/3
 
 ## Version 2.4.3 (2021-02-17)
 
