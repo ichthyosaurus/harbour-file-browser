@@ -155,8 +155,6 @@ QString FileData::typeCategory() const
         return "video";
     } else if (m_mimeTypeName == "application/pdf") {
         return "pdf";
-    } else if (mimeTypeInherits("application/zip")) {
-        return "zip";
     } else if (m_mimeTypeName == "application/vnd.sqlite3") {
         return "sqlite3";
     } else if (
@@ -168,6 +166,9 @@ QString FileData::typeCategory() const
         return "rpm";
     } else if (suffix() == "apk" && m_mimeTypeName == "application/vnd.android.package-archive") {
         return "apk";
+    } else if (mimeTypeInherits("application/zip")) {
+        // must stay below all zip compressed types with custom handling, e.g. apk
+        return "zip";
     }
 
     return "none";
