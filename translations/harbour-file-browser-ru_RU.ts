@@ -531,37 +531,37 @@
 <context>
     <name>FileData</name>
     <message>
-        <location filename="../src/filedata.cpp" line="185"/>
+        <location filename="../src/filedata.cpp" line="186"/>
         <source>File does not exist</source>
         <translation>Файл не существует</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="224"/>
+        <location filename="../src/filedata.cpp" line="225"/>
         <source>block device</source>
         <translation>блочное устройство</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="228"/>
+        <location filename="../src/filedata.cpp" line="229"/>
         <source>character device</source>
         <translation>символьное устройство</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="232"/>
+        <location filename="../src/filedata.cpp" line="233"/>
         <source>pipe</source>
         <translation>канал</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="236"/>
+        <location filename="../src/filedata.cpp" line="237"/>
         <source>socket</source>
         <translation>сокет</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="240"/>
+        <location filename="../src/filedata.cpp" line="241"/>
         <source>folder</source>
         <translation>каталог</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="246"/>
+        <location filename="../src/filedata.cpp" line="247"/>
         <source>unknown</source>
         <translation>неизвестный</translation>
     </message>
@@ -610,6 +610,12 @@
         <translation>Ничего не происходит? Возможно, пакет неисправен.</translation>
     </message>
     <message>
+        <location filename="../qml/pages/FilePage.qml" line="57"/>
+        <source>Swipe right to inspect its contents.</source>
+        <extracomment>it = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../qml/pages/FilePage.qml" line="59"/>
         <source>Open successful</source>
         <translation>Успешное открытие</translation>
@@ -620,128 +626,128 @@
         <translation>Иногда приложение продолжает работать в фоне</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="62"/>
+        <location filename="../qml/pages/FilePage.qml" line="63"/>
         <source>Internal error</source>
         <translation>Внутренняя ошибка</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="64"/>
+        <location filename="../qml/pages/FilePage.qml" line="65"/>
         <source>File not found</source>
         <translation>Файл не найден</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="66"/>
+        <location filename="../qml/pages/FilePage.qml" line="67"/>
         <source>No application to open the file</source>
         <translation>Нет приложения для открытия файла</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="67"/>
+        <location filename="../qml/pages/FilePage.qml" line="68"/>
         <source>xdg-open found no preferred application</source>
         <translation>предпочитаемое приложение не найдено</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="69"/>
+        <location filename="../qml/pages/FilePage.qml" line="70"/>
         <source>Action failed</source>
         <translation>Действие не удалось</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="71"/>
+        <location filename="../qml/pages/FilePage.qml" line="72"/>
         <source>xdg-open not found</source>
         <translation>Команда xdg-open не найдена</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="73"/>
+        <location filename="../qml/pages/FilePage.qml" line="74"/>
         <source>xdg-open crash?</source>
         <translation>Крах xdg-open?</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="75"/>
+        <location filename="../qml/pages/FilePage.qml" line="76"/>
         <source>xdg-open error</source>
         <translation>Ошибка xdg-open</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="93"/>
+        <location filename="../qml/pages/FilePage.qml" line="94"/>
         <source>Change Permissions</source>
         <translation>Изменить права</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="107"/>
+        <location filename="../qml/pages/FilePage.qml" line="108"/>
         <source>View Raw Contents</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="115"/>
+        <location filename="../qml/pages/FilePage.qml" line="116"/>
         <source>Install</source>
         <translation>Установить</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="115"/>
+        <location filename="../qml/pages/FilePage.qml" line="116"/>
         <source>Open</source>
         <translation>Открыть</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="119"/>
+        <location filename="../qml/pages/FilePage.qml" line="120"/>
         <source>File cannot be opened</source>
         <translation>Невозможно открыть файл</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="120"/>
+        <location filename="../qml/pages/FilePage.qml" line="121"/>
         <source>This type of file cannot be opened.</source>
         <translation>Невозможно открыть данный тип файла.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="128"/>
+        <location filename="../qml/pages/FilePage.qml" line="129"/>
         <source>Go to Target</source>
         <translation>Перейти к объекту</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="148"/>
+        <location filename="../qml/pages/FilePage.qml" line="149"/>
         <source>The file has been moved.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="260"/>
-        <location filename="../qml/pages/FilePage.qml" line="266"/>
+        <location filename="../qml/pages/FilePage.qml" line="261"/>
+        <location filename="../qml/pages/FilePage.qml" line="267"/>
         <source>Deleting</source>
         <translation>Удаление</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="298"/>
+        <location filename="../qml/pages/FilePage.qml" line="299"/>
         <source>Location</source>
         <translation>Расположение</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="302"/>
+        <location filename="../qml/pages/FilePage.qml" line="303"/>
         <source>Type</source>
         <translation>Тип</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="304"/>
+        <location filename="../qml/pages/FilePage.qml" line="305"/>
         <source>Link to %1</source>
         <translation>Ссылка на %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="304"/>
+        <location filename="../qml/pages/FilePage.qml" line="305"/>
         <source>Unknown (link target not found)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="311"/>
+        <location filename="../qml/pages/FilePage.qml" line="312"/>
         <source>Permissions</source>
         <translation>Права</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="315"/>
+        <location filename="../qml/pages/FilePage.qml" line="316"/>
         <source>Owner</source>
         <translation>Владелец</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="320"/>
+        <location filename="../qml/pages/FilePage.qml" line="321"/>
         <source>Group</source>
         <translation>Группа</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="325"/>
+        <location filename="../qml/pages/FilePage.qml" line="326"/>
         <source>Last modified</source>
         <translation>Последнее изменение</translation>
     </message>
@@ -849,18 +855,18 @@
 <context>
     <name>ImageMetaData</name>
     <message>
-        <location filename="../src/filedata.cpp" line="272"/>
+        <location filename="../src/filedata.cpp" line="273"/>
         <source>Image Size</source>
         <translation>Размер изображения</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="278"/>
+        <location filename="../src/filedata.cpp" line="279"/>
         <source>%1 x %2</source>
         <extracomment>image size description without aspect ratio: 1=width, 2=height</extracomment>
         <translation>%1 x %2</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="282"/>
+        <location filename="../src/filedata.cpp" line="283"/>
         <source>%1 x %2 (%3)</source>
         <extracomment>image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9</extracomment>
         <translation>%1 x %2 (%3)</translation>

@@ -519,37 +519,37 @@
 <context>
     <name>FileData</name>
     <message>
-        <location filename="../src/filedata.cpp" line="185"/>
+        <location filename="../src/filedata.cpp" line="186"/>
         <source>File does not exist</source>
         <translation>Bestand bestaat niet</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="224"/>
+        <location filename="../src/filedata.cpp" line="225"/>
         <source>block device</source>
         <translation>blokapparaat</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="228"/>
+        <location filename="../src/filedata.cpp" line="229"/>
         <source>character device</source>
         <translation>tekenapparaat</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="232"/>
+        <location filename="../src/filedata.cpp" line="233"/>
         <source>pipe</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="236"/>
+        <location filename="../src/filedata.cpp" line="237"/>
         <source>socket</source>
         <translation>socket</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="240"/>
+        <location filename="../src/filedata.cpp" line="241"/>
         <source>folder</source>
         <translation>map</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="246"/>
+        <location filename="../src/filedata.cpp" line="247"/>
         <source>unknown</source>
         <translation>onbekend</translation>
     </message>
@@ -597,6 +597,12 @@
         <translation>Als er niets gebeurt is het pakket waarschijnlijk defect.</translation>
     </message>
     <message>
+        <location filename="../qml/pages/FilePage.qml" line="57"/>
+        <source>Swipe right to inspect its contents.</source>
+        <extracomment>it = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../qml/pages/FilePage.qml" line="59"/>
         <source>Open successful</source>
         <translation>Geopend</translation>
@@ -607,128 +613,128 @@
         <translation>Soms blijft de applicatie op de achtergrond</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="62"/>
+        <location filename="../qml/pages/FilePage.qml" line="63"/>
         <source>Internal error</source>
         <translation>Interne fout</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="64"/>
+        <location filename="../qml/pages/FilePage.qml" line="65"/>
         <source>File not found</source>
         <translation>Bestand niet gevonden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="66"/>
+        <location filename="../qml/pages/FilePage.qml" line="67"/>
         <source>No application to open the file</source>
         <translation>Geen applicatie om het bestand mee te openen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="67"/>
+        <location filename="../qml/pages/FilePage.qml" line="68"/>
         <source>xdg-open found no preferred application</source>
         <translation>xdg-open heeft geen voorkeursapplicatie gevonden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="69"/>
+        <location filename="../qml/pages/FilePage.qml" line="70"/>
         <source>Action failed</source>
         <translation>Actie mislukt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="71"/>
+        <location filename="../qml/pages/FilePage.qml" line="72"/>
         <source>xdg-open not found</source>
         <translation>xdg-open niet gevonden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="73"/>
+        <location filename="../qml/pages/FilePage.qml" line="74"/>
         <source>xdg-open crash?</source>
         <translation>xdg-open gecrasht?</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="75"/>
+        <location filename="../qml/pages/FilePage.qml" line="76"/>
         <source>xdg-open error</source>
         <translation>xdg-open-fout</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="93"/>
+        <location filename="../qml/pages/FilePage.qml" line="94"/>
         <source>Change Permissions</source>
         <translation>Rechten wijzigen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="107"/>
+        <location filename="../qml/pages/FilePage.qml" line="108"/>
         <source>View Raw Contents</source>
         <translation>Inhoud weergeven</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="115"/>
+        <location filename="../qml/pages/FilePage.qml" line="116"/>
         <source>Install</source>
         <translation>Installeren</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="115"/>
+        <location filename="../qml/pages/FilePage.qml" line="116"/>
         <source>Open</source>
         <translation>Openen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="119"/>
+        <location filename="../qml/pages/FilePage.qml" line="120"/>
         <source>File cannot be opened</source>
         <translation>Bestand kan niet worden geopend</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="120"/>
+        <location filename="../qml/pages/FilePage.qml" line="121"/>
         <source>This type of file cannot be opened.</source>
         <translation>Dit bestandstype kan niet worden geopend.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="128"/>
+        <location filename="../qml/pages/FilePage.qml" line="129"/>
         <source>Go to Target</source>
         <translation>Ga naar bestemming</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="148"/>
+        <location filename="../qml/pages/FilePage.qml" line="149"/>
         <source>The file has been moved.</source>
         <translation>Het bestand is verplaatst.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="260"/>
-        <location filename="../qml/pages/FilePage.qml" line="266"/>
+        <location filename="../qml/pages/FilePage.qml" line="261"/>
+        <location filename="../qml/pages/FilePage.qml" line="267"/>
         <source>Deleting</source>
         <translation>Wordt verwijderd</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="298"/>
+        <location filename="../qml/pages/FilePage.qml" line="299"/>
         <source>Location</source>
         <translation>Locatie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="302"/>
+        <location filename="../qml/pages/FilePage.qml" line="303"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="304"/>
+        <location filename="../qml/pages/FilePage.qml" line="305"/>
         <source>Link to %1</source>
         <translation>Verwijzing naar %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="304"/>
+        <location filename="../qml/pages/FilePage.qml" line="305"/>
         <source>Unknown (link target not found)</source>
         <translation>Onbekend (verwijzingsbestemming niet gevonden)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="311"/>
+        <location filename="../qml/pages/FilePage.qml" line="312"/>
         <source>Permissions</source>
         <translation>Rechten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="315"/>
+        <location filename="../qml/pages/FilePage.qml" line="316"/>
         <source>Owner</source>
         <translation>Eigenaar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="320"/>
+        <location filename="../qml/pages/FilePage.qml" line="321"/>
         <source>Group</source>
         <translation>Groep</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="325"/>
+        <location filename="../qml/pages/FilePage.qml" line="326"/>
         <source>Last modified</source>
         <translation>Laatst gewijzigd</translation>
     </message>
@@ -836,18 +842,18 @@
 <context>
     <name>ImageMetaData</name>
     <message>
-        <location filename="../src/filedata.cpp" line="272"/>
+        <location filename="../src/filedata.cpp" line="273"/>
         <source>Image Size</source>
         <translation>Afbeeldingsgrootte</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="278"/>
+        <location filename="../src/filedata.cpp" line="279"/>
         <source>%1 x %2</source>
         <extracomment>image size description without aspect ratio: 1=width, 2=height</extracomment>
         <translation>%1 x %2</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="282"/>
+        <location filename="../src/filedata.cpp" line="283"/>
         <source>%1 x %2 (%3)</source>
         <extracomment>image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9</extracomment>
         <translation>%1 x %2 (%3)</translation>

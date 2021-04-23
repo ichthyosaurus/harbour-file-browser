@@ -531,37 +531,37 @@
 <context>
     <name>FileData</name>
     <message>
-        <location filename="../src/filedata.cpp" line="185"/>
+        <location filename="../src/filedata.cpp" line="186"/>
         <source>File does not exist</source>
         <translation>Soubor neexistuje</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="224"/>
+        <location filename="../src/filedata.cpp" line="225"/>
         <source>block device</source>
         <translation>blokové zařízení</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="228"/>
+        <location filename="../src/filedata.cpp" line="229"/>
         <source>character device</source>
         <translation>znakové zařízení</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="232"/>
+        <location filename="../src/filedata.cpp" line="233"/>
         <source>pipe</source>
         <translation>pipe</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="236"/>
+        <location filename="../src/filedata.cpp" line="237"/>
         <source>socket</source>
         <translation>socket</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="240"/>
+        <location filename="../src/filedata.cpp" line="241"/>
         <source>folder</source>
         <translation>složka</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="246"/>
+        <location filename="../src/filedata.cpp" line="247"/>
         <source>unknown</source>
         <translation>neznámý</translation>
     </message>
@@ -610,6 +610,12 @@
         <translation>Pokud se nic neděje, balíček je pravděpodobně vadný.</translation>
     </message>
     <message>
+        <location filename="../qml/pages/FilePage.qml" line="57"/>
+        <source>Swipe right to inspect its contents.</source>
+        <extracomment>it = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../qml/pages/FilePage.qml" line="59"/>
         <source>Open successful</source>
         <translation>Úspěšně otevřeno</translation>
@@ -620,128 +626,128 @@
         <translation>Aplikace může zůstat na pozadí</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="62"/>
+        <location filename="../qml/pages/FilePage.qml" line="63"/>
         <source>Internal error</source>
         <translation>Vnitřní chyba</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="64"/>
+        <location filename="../qml/pages/FilePage.qml" line="65"/>
         <source>File not found</source>
         <translation>Soubor nenalezen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="66"/>
+        <location filename="../qml/pages/FilePage.qml" line="67"/>
         <source>No application to open the file</source>
         <translation>Chybí aplikace k otevření souboru</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="67"/>
+        <location filename="../qml/pages/FilePage.qml" line="68"/>
         <source>xdg-open found no preferred application</source>
         <translation>xdg-open nenalezena výchozí aplikace</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="69"/>
+        <location filename="../qml/pages/FilePage.qml" line="70"/>
         <source>Action failed</source>
         <translation>Akce selhala</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="71"/>
+        <location filename="../qml/pages/FilePage.qml" line="72"/>
         <source>xdg-open not found</source>
         <translation>xdg-open nenalezeno</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="73"/>
+        <location filename="../qml/pages/FilePage.qml" line="74"/>
         <source>xdg-open crash?</source>
         <translation>xdg-open pád?</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="75"/>
+        <location filename="../qml/pages/FilePage.qml" line="76"/>
         <source>xdg-open error</source>
         <translation>xdg-open chyba</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="93"/>
+        <location filename="../qml/pages/FilePage.qml" line="94"/>
         <source>Change Permissions</source>
         <translation>Změnit oprávnění</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="107"/>
+        <location filename="../qml/pages/FilePage.qml" line="108"/>
         <source>View Raw Contents</source>
         <translation>Zobrazit obsah souboru</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="115"/>
+        <location filename="../qml/pages/FilePage.qml" line="116"/>
         <source>Install</source>
         <translation>Instalovat</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="115"/>
+        <location filename="../qml/pages/FilePage.qml" line="116"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="119"/>
+        <location filename="../qml/pages/FilePage.qml" line="120"/>
         <source>File cannot be opened</source>
         <translation>Soubor nelze otevřít</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="120"/>
+        <location filename="../qml/pages/FilePage.qml" line="121"/>
         <source>This type of file cannot be opened.</source>
         <translation>Tento typ souboru nelze otevřít.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="128"/>
+        <location filename="../qml/pages/FilePage.qml" line="129"/>
         <source>Go to Target</source>
         <translation>Přejít k cíli</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="148"/>
+        <location filename="../qml/pages/FilePage.qml" line="149"/>
         <source>The file has been moved.</source>
         <translation>Soubor byl přesunut.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="260"/>
-        <location filename="../qml/pages/FilePage.qml" line="266"/>
+        <location filename="../qml/pages/FilePage.qml" line="261"/>
+        <location filename="../qml/pages/FilePage.qml" line="267"/>
         <source>Deleting</source>
         <translation>Mažu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="298"/>
+        <location filename="../qml/pages/FilePage.qml" line="299"/>
         <source>Location</source>
         <translation>Umístění</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="302"/>
+        <location filename="../qml/pages/FilePage.qml" line="303"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="304"/>
+        <location filename="../qml/pages/FilePage.qml" line="305"/>
         <source>Unknown (link target not found)</source>
         <translation>Neznámý (cíl odkazu nenalezen)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="304"/>
+        <location filename="../qml/pages/FilePage.qml" line="305"/>
         <source>Link to %1</source>
         <translation>Odkázat do %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="311"/>
+        <location filename="../qml/pages/FilePage.qml" line="312"/>
         <source>Permissions</source>
         <translation>Oprávnění</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="315"/>
+        <location filename="../qml/pages/FilePage.qml" line="316"/>
         <source>Owner</source>
         <translation>Vlastník</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="320"/>
+        <location filename="../qml/pages/FilePage.qml" line="321"/>
         <source>Group</source>
         <translation>Skupina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="325"/>
+        <location filename="../qml/pages/FilePage.qml" line="326"/>
         <source>Last modified</source>
         <translation>Poslední změna</translation>
     </message>
@@ -849,18 +855,18 @@
 <context>
     <name>ImageMetaData</name>
     <message>
-        <location filename="../src/filedata.cpp" line="272"/>
+        <location filename="../src/filedata.cpp" line="273"/>
         <source>Image Size</source>
         <translation>Velikost obrázku</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="278"/>
+        <location filename="../src/filedata.cpp" line="279"/>
         <source>%1 x %2</source>
         <extracomment>image size description without aspect ratio: 1=width, 2=height</extracomment>
         <translation>%1 x %2</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="282"/>
+        <location filename="../src/filedata.cpp" line="283"/>
         <source>%1 x %2 (%3)</source>
         <extracomment>image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9</extracomment>
         <translation>%1 x %2 (%3)</translation>
