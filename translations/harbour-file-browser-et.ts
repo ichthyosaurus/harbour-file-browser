@@ -526,17 +526,17 @@
     <message>
         <location filename="../src/filedata.cpp" line="225"/>
         <source>block device</source>
-        <translation type="unfinished"></translation>
+        <translation>plokkseade</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="229"/>
         <source>character device</source>
-        <translation type="unfinished"></translation>
+        <translation>märkseade</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="233"/>
         <source>pipe</source>
-        <translation type="unfinished"></translation>
+        <translation>toru</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="237"/>
@@ -600,7 +600,7 @@
         <location filename="../qml/pages/FilePage.qml" line="57"/>
         <source>Swipe right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Faili sisu vaatamiseks viipa paremale.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="59"/>
@@ -892,13 +892,13 @@
         <location filename="../src/jhead/jhead-api.cpp" line="182"/>
         <source>Strobe light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Strobo-valgus on tuvastamata</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="184"/>
         <source>Strobe light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Strobo-valgus on tuvastatud</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="186"/>
@@ -1052,7 +1052,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="256"/>
         <source>CCD Width</source>
         <extracomment>photographic sensor width; cf. https://en.wikipedia.org/wiki/Charge-coupled_device</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>CCD laius</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="268"/>
@@ -1156,37 +1156,37 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="340"/>
         <source>Center weighted average</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>keskmestav särimõõtmine</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="342"/>
         <source>Spot</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>punkt-särimõõtmine</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="344"/>
         <source>Multi spot</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>mitmikpunkt-särimõõtmine</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="346"/>
         <source>Pattern</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>hindav särimõõtmine</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="348"/>
         <source>Partial</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>lokaalne särimõõtmine</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="350"/>
         <source>Other</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>muu särimõõtmine</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="352"/>
@@ -1198,37 +1198,37 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="355"/>
         <source>Metering Mode</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Särimõõtmine</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="367"/>
         <source>Program (auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>programmeeritud automaatne režiim</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="371"/>
         <source>Aperture priority (semi-auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>avaprioriteediga poolautomaatrežiim</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="375"/>
         <source>Shutter priority (semi-auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>katikuprioriteediga poolautomaatrežiim</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="379"/>
         <source>Creative Program (based towards depth of field)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Loominguline programm (pigem eelistab teravustamissügavust)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="383"/>
         <source>Action program (based towards fast shutter speed)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Mölluprogramm (pigem eelistab kiiret säriaega)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="387"/>
@@ -1245,19 +1245,19 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="396"/>
         <source>Exposure Program</source>
-        <translation type="unfinished"></translation>
+        <translation>Säriprogramm</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="402"/>
         <location filename="../src/jhead/jhead-api.cpp" line="405"/>
         <source>Exposure Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Särirežiim</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="407"/>
         <source>Auto bracketing</source>
         <extracomment>exposure mode; cf. https://en.wikipedia.org/wiki/Autobracketing#Exposure</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Automaatkahveldus</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="416"/>
