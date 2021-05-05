@@ -600,7 +600,7 @@
         <location filename="../qml/pages/FilePage.qml" line="57"/>
         <source>Swipe right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Svep åt höger för att inspektera innehållet.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="59"/>
