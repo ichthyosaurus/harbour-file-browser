@@ -124,6 +124,10 @@ Page {
                 label: qsTr("Polish")
                 values: ["Patryk Szkudlarek"]
             }
+            DetailList {
+                label: qsTr("Indonesian")
+                values: ["liimee"]
+            }
         }
     }
 }
