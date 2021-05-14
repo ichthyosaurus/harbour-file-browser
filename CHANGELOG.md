@@ -11,6 +11,7 @@ SPDX-License-Identifier: GFDL-1.3-or-later
  * New translation: Polish
  * Updated translations: English, German, Swedish, Norwegian Bokmål, Slovak, Estonian, Chinese (China)
  * Updated list of contributors
+ * Added support for backups using MyBackup
  * Improved image loading times and error messages
  * Fixed image rotation for JPEG files
  * Fixed zoom-by-double-tap for images with almost the same dimensions as the screen

@@ -19,3 +19,6 @@ Name[en]=File Browser
 Name[fi]=Tiedostoselain
 Name[de]=Dateiverwaltung
 Name[pl]=Pliki
+
+[X-HarbourBackup]
+BackupPathList=.local/share/harbour-file-browser/
