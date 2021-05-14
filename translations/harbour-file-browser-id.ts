@@ -7,7 +7,7 @@
         <location filename="../src/consolemodel.cpp" line="123"/>
         <location filename="../src/consolemodel.cpp" line="135"/>
         <source>** crashed</source>
-        <translation type="unfinished"></translation>
+        <translation>** galat</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="125"/>
@@ -17,7 +17,7 @@
     <message>
         <location filename="../src/consolemodel.cpp" line="133"/>
         <source>** command “%1” not found</source>
-        <translation type="unfinished"></translation>
+        <translation>** perintah &quot;%1&quot; tidak ditemukan</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="137"/>
@@ -40,7 +40,7 @@
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="87"/>
         <source>Swipe right to view raw contents.</source>
-        <translation type="unfinished">Geser ke kanan untuk melihat isi mentah.</translation>
+        <translation>Geser ke kanan untuk melihat konten mentah.</translation>
     </message>
 </context>
 <context>
@@ -181,8 +181,8 @@
     <message numerus="yes">
         <location filename="../qml/components/DetailList.qml" line="45"/>
         <source>... and %n more</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>... dan %n lainnya</numerusform>
         </translation>
     </message>
 </context>
@@ -217,17 +217,17 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="270"/>
         <source>Remove bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Hapus bookmark</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="270"/>
         <source>Add to bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Tambah ke bookmark</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="274"/>
         <source>Copy path to clipboard</source>
-        <translation type="unfinished">Salin path ke papan klip</translation>
+        <translation>Salin jalur ke papan klip</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="337"/>
