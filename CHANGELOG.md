@@ -8,7 +8,7 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 ## Unreleased
 
- * New translation: Polish
+ * New translations: Polish, Indonesian
  * Updated translations: English, German, Swedish, Norwegian Bokmål, Slovak, Estonian, Chinese (China)
  * Updated list of contributors
  * Added support for backups using MyBackup
