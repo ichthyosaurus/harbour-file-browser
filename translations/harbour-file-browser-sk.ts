@@ -613,7 +613,7 @@
         <location filename="../qml/pages/FilePage.qml" line="57"/>
         <source>Swipe right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Potiahnuť doprava na preskúmanie jeho obsahu.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="59"/>
@@ -1848,12 +1848,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="185"/>
         <source>About File Browser</source>
-        <translation>O aplikácii File Browser</translation>
+        <translation>O aplikácii Prehliadač súborov</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="215"/>
         <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation>Aplikácia File Browser je vydávaná za podmienok GNU GPL verzie 3 alebo novšej. Toto je slobodný softvér: môžete ho slobodne meniť a distribuovať. Bez záruky určenej zákonom.</translation>
+        <translation>Aplikácia Prehliadač súborov je vydávaná za podmienok GNU GPL verzie 3 alebo novšej. Toto je slobodný softvér: môžete ho slobodne meniť a distribuovať. Bez záruky určenej zákonom.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="234"/>
