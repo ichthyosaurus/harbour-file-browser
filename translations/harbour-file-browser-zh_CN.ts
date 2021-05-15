@@ -2292,7 +2292,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewImagePage.qml" line="251"/>
         <source>Loading image</source>
         <extracomment>Full page placeholder shown while a large image is being loaded</extracomment>
-        <translation 正在加载图像></translation>
+        <translation>正在加载图像</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewImagePage.qml" line="261"/>
