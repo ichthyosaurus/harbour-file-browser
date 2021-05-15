@@ -154,7 +154,7 @@
     <message>
         <location filename="../qml/pages/ContributorsPage.qml" line="124"/>
         <source>Polish</source>
-        <translation type="unfinished"></translation>
+        <translation>波兰语</translation>
     </message>
 </context>
 <context>
@@ -587,7 +587,7 @@
         <location filename="../qml/pages/FilePage.qml" line="57"/>
         <source>Swipe right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>向右滑动以查看内容</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="59"/>
@@ -2292,13 +2292,13 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewImagePage.qml" line="251"/>
         <source>Loading image</source>
         <extracomment>Full page placeholder shown while a large image is being loaded</extracomment>
-        <translation type="unfinished"></translation>
+        <translation 正在加载图像></translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewImagePage.qml" line="261"/>
         <source>Failed to load</source>
         <extracomment>Full page placeholder shown when an image failed to load</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>加载失败</translation>
     </message>
 </context>
 <context>
@@ -2307,7 +2307,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewVideoPage.qml" line="105"/>
         <source>Failed to play</source>
         <extracomment>Full page placeholder shown when a video failed to load</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>播放失败</translation>
     </message>
 </context>
 <context>
