@@ -2,6 +2,129 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="hu">
 <context>
+    <name>AboutPage</name>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="33"/>
+        <source>A fully-fledged file manager for Sailfish OS.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="43"/>
+        <source>adapted by karip</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="66"/>
+        <source>Development</source>
+        <translation>Fejlesztés</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="69"/>
+        <source>Programming</source>
+        <translation>Programozás</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="76"/>
+        <source>Icon Design</source>
+        <translation>Ikon design</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="82"/>
+        <source>Translations</source>
+        <translation>Fordítások</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="85"/>
+        <source>English</source>
+        <translation>Angol</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="89"/>
+        <source>German</source>
+        <translation>Német</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="93"/>
+        <source>Finnish</source>
+        <translation>Finn</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="97"/>
+        <source>Chinese</source>
+        <translation>Kínai</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="101"/>
+        <source>Russian</source>
+        <translation>Orosz</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="105"/>
+        <source>Swedish</source>
+        <translation>Svéd</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="109"/>
+        <source>Italian</source>
+        <translation>Olasz</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="113"/>
+        <source>Spanish</source>
+        <translation>Spanyol</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="117"/>
+        <source>French</source>
+        <translation>Francia</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="121"/>
+        <source>Dutch</source>
+        <translation>Holland</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="125"/>
+        <source>Greek</source>
+        <translation>Görög</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="129"/>
+        <source>Norwegian</source>
+        <translation>Norvég</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="133"/>
+        <source>Czech</source>
+        <translation>Cseh</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="137"/>
+        <source>Slovak</source>
+        <translation>Szlovák</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="141"/>
+        <source>Hungarian</source>
+        <translation>Magyar</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="145"/>
+        <source>Estonian</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="149"/>
+        <source>Polish</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="153"/>
+        <source>Indonesian</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ConsoleModel</name>
     <message>
         <location filename="../src/consolemodel.cpp" line="123"/>
@@ -46,115 +169,84 @@
 <context>
     <name>ContributorsPage</name>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="29"/>
-        <location filename="../qml/pages/ContributorsPage.qml" line="40"/>
         <source>Contributors</source>
-        <translation>Közreműködők</translation>
+        <translation type="vanished">Közreműködők</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="42"/>
         <source>Development</source>
-        <translation>Fejlesztés</translation>
+        <translation type="vanished">Fejlesztés</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="45"/>
         <source>Programming</source>
-        <translation>Programozás</translation>
+        <translation type="vanished">Programozás</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="53"/>
         <source>Icon Design</source>
-        <translation>Ikon design</translation>
+        <translation type="vanished">Ikon design</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="57"/>
         <source>Translations</source>
-        <translation>Fordítások</translation>
+        <translation type="vanished">Fordítások</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="60"/>
         <source>English</source>
-        <translation>Angol</translation>
+        <translation type="vanished">Angol</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="64"/>
         <source>German</source>
-        <translation>Német</translation>
+        <translation type="vanished">Német</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="68"/>
         <source>Finnish</source>
-        <translation>Finn</translation>
+        <translation type="vanished">Finn</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="72"/>
         <source>Chinese</source>
-        <translation>Kínai</translation>
+        <translation type="vanished">Kínai</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="76"/>
         <source>Russian</source>
-        <translation>Orosz</translation>
+        <translation type="vanished">Orosz</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="80"/>
         <source>Swedish</source>
-        <translation>Svéd</translation>
+        <translation type="vanished">Svéd</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="84"/>
         <source>Italian</source>
-        <translation>Olasz</translation>
+        <translation type="vanished">Olasz</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="88"/>
         <source>Spanish</source>
-        <translation>Spanyol</translation>
+        <translation type="vanished">Spanyol</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="92"/>
         <source>French</source>
-        <translation>Francia</translation>
+        <translation type="vanished">Francia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="96"/>
         <source>Dutch</source>
-        <translation>Holland</translation>
+        <translation type="vanished">Holland</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="100"/>
         <source>Greek</source>
-        <translation>Görög</translation>
+        <translation type="vanished">Görög</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="104"/>
         <source>Norwegian</source>
-        <translation>Norvég</translation>
+        <translation type="vanished">Norvég</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="108"/>
         <source>Czech</source>
-        <translation>Cseh</translation>
+        <translation type="vanished">Cseh</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="112"/>
         <source>Slovak</source>
-        <translation>Szlovák</translation>
+        <translation type="vanished">Szlovák</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="116"/>
         <source>Hungarian</source>
-        <translation>Magyar</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="120"/>
-        <source>Estonian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="124"/>
-        <source>Polish</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Magyar</translation>
     </message>
 </context>
 <context>
@@ -574,154 +666,154 @@
 <context>
     <name>FilePage</name>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="54"/>
+        <location filename="../qml/pages/FilePage.qml" line="56"/>
         <source>Install launched</source>
         <translation>Telepítés elindítva</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="55"/>
+        <location filename="../qml/pages/FilePage.qml" line="57"/>
         <source>If nothing happens, then the package is probably faulty.</source>
         <translation>Ha semmi nem történik, akkor a csomag valószínűleg hibás.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="57"/>
+        <location filename="../qml/pages/FilePage.qml" line="59"/>
         <source>Swipe right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="59"/>
+        <location filename="../qml/pages/FilePage.qml" line="61"/>
         <source>Open successful</source>
         <translation>A megnyitás sikeres</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="60"/>
+        <location filename="../qml/pages/FilePage.qml" line="62"/>
         <source>Sometimes the application stays in the background</source>
         <translation>Az alkalmazás néha a háttérben marad</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="63"/>
+        <location filename="../qml/pages/FilePage.qml" line="65"/>
         <source>Internal error</source>
         <translation>Belső hiba</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="65"/>
+        <location filename="../qml/pages/FilePage.qml" line="67"/>
         <source>File not found</source>
         <translation>A fájl nem található</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="67"/>
+        <location filename="../qml/pages/FilePage.qml" line="69"/>
         <source>No application to open the file</source>
         <translation>Nincs alkalmazás a fájl megnyitásához</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="68"/>
+        <location filename="../qml/pages/FilePage.qml" line="70"/>
         <source>xdg-open found no preferred application</source>
         <translation>Az xdg-open nem talált előnyben részesített alkalmazást</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="70"/>
+        <location filename="../qml/pages/FilePage.qml" line="72"/>
         <source>Action failed</source>
         <translation>A művelet nem sikerült</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="72"/>
+        <location filename="../qml/pages/FilePage.qml" line="74"/>
         <source>xdg-open not found</source>
         <translation>Az xdg-open nem található</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="74"/>
+        <location filename="../qml/pages/FilePage.qml" line="76"/>
         <source>xdg-open crash?</source>
         <translation>Az xdg-open összeomlott?</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="76"/>
+        <location filename="../qml/pages/FilePage.qml" line="78"/>
         <source>xdg-open error</source>
         <translation>xdg-open hiba</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="94"/>
+        <location filename="../qml/pages/FilePage.qml" line="96"/>
         <source>Change Permissions</source>
         <translation>Engedélyek megváltoztatása</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="108"/>
+        <location filename="../qml/pages/FilePage.qml" line="110"/>
         <source>View Raw Contents</source>
         <translation>Nyers tartalom megjelenítése</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="116"/>
+        <location filename="../qml/pages/FilePage.qml" line="118"/>
         <source>Install</source>
         <translation>Telepítés</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="116"/>
+        <location filename="../qml/pages/FilePage.qml" line="118"/>
         <source>Open</source>
         <translation>Megnyitás</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="120"/>
+        <location filename="../qml/pages/FilePage.qml" line="122"/>
         <source>File cannot be opened</source>
         <translation>A fájl nem nyitható meg</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="121"/>
+        <location filename="../qml/pages/FilePage.qml" line="123"/>
         <source>This type of file cannot be opened.</source>
         <translation>Ez a fájltípus nem nyitható meg.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="129"/>
+        <location filename="../qml/pages/FilePage.qml" line="131"/>
         <source>Go to Target</source>
         <translation>Ugrás a célhoz</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="149"/>
+        <location filename="../qml/pages/FilePage.qml" line="151"/>
         <source>The file has been moved.</source>
         <translation>A fájl át lett helyezve.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="261"/>
-        <location filename="../qml/pages/FilePage.qml" line="267"/>
+        <location filename="../qml/pages/FilePage.qml" line="263"/>
+        <location filename="../qml/pages/FilePage.qml" line="269"/>
         <source>Deleting</source>
         <translation>Törlés</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="299"/>
+        <location filename="../qml/pages/FilePage.qml" line="301"/>
         <source>Location</source>
         <translation>Hely</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="303"/>
+        <location filename="../qml/pages/FilePage.qml" line="305"/>
         <source>Type</source>
         <translation>Típus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="305"/>
+        <location filename="../qml/pages/FilePage.qml" line="307"/>
         <source>Unknown (link target not found)</source>
         <translation>Ismeretlen (a hivatkozás célja nem található)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="305"/>
+        <location filename="../qml/pages/FilePage.qml" line="307"/>
         <source>Link to %1</source>
         <translation>Hivatkozás ide: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="312"/>
+        <location filename="../qml/pages/FilePage.qml" line="314"/>
         <source>Permissions</source>
         <translation>Engedélyek</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="316"/>
+        <location filename="../qml/pages/FilePage.qml" line="318"/>
         <source>Owner</source>
         <translation>Tulajdonos</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="321"/>
+        <location filename="../qml/pages/FilePage.qml" line="323"/>
         <source>Group</source>
         <translation>Csoport</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="326"/>
+        <location filename="../qml/pages/FilePage.qml" line="328"/>
         <source>Last modified</source>
         <translation>legutóbb módosítva</translation>
     </message>
@@ -1311,9 +1403,8 @@ exposure program</extracomment>
 <context>
     <name>LicensePage</name>
     <message>
-        <location filename="../qml/pages/LicensePage.qml" line="39"/>
         <source>License</source>
-        <translation>Licenc</translation>
+        <translation type="vanished">Licenc</translation>
     </message>
 </context>
 <context>
@@ -1356,6 +1447,118 @@ exposure program</extracomment>
         <location filename="../qml/pages/MultiFilePage.qml" line="175"/>
         <source>none</source>
         <translation>semmi</translation>
+    </message>
+</context>
+<context>
+    <name>Opal.About</name>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="105"/>
+        <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="152"/>
+        <source>Version %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="177"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="32"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="53"/>
+        <source>Development</source>
+        <translation>Fejlesztés</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="180"/>
+        <source>show contributors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="201"/>
+        <source>Donations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="211"/>
+        <source>License</source>
+        <translation>Licenc</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="216"/>
+        <source>This is proprietary software. All rights reserved.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="220"/>
+        <source>show license(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="223"/>
+        <source>Translations</source>
+        <translation>Fordítások</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="228"/>
+        <source>Source Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/InfoSection.qml" line="26"/>
+        <source>show details</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="29"/>
+        <source>Contributors</source>
+        <translation>Közreműködők</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="71"/>
+        <source>Acknowledgements</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="81"/>
+        <source>Thank you!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="140"/>
+        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="32"/>
+        <source>License(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
+        <source>Note: please check the source code for most accurate information.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Opal.About.Common</name>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="12"/>
+        <source>If you want to support my work, you can buy me a cup of coffee.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="15"/>
+        <source>You can support this project by contributing, or by donating using any of these services.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="18"/>
+        <source>Your contributions to translations or code would be most welcome.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1620,209 +1823,221 @@ exposure program</extracomment>
     <name>SettingsPage</name>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="44"/>
-        <location filename="../qml/pages/SettingsPage.qml" line="251"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="227"/>
         <source>Settings</source>
         <translation>Beállítások</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="49"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="50"/>
+        <source>These are global preferences. If enabled in “&lt;a href=&apos;#&apos;&gt;View → Use per-directory view settings&lt;/a&gt;”, view preferences will be saved individually for all folders. Here, you can define the default values.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="66"/>
+        <source>Swipe right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="77"/>
         <source>View</source>
         <translation>Nézet</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="57"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="86"/>
         <source>Use per-directory view settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="61"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="90"/>
         <source>Show hidden files</source>
         <translation>Rejtett fájlok megjelenítése</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="65"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="94"/>
         <source>Show preview images</source>
         <translation>Kép-előnézetek megjelenítése</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="70"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="99"/>
         <source>Thumbnail size</source>
         <translation>Indexkép mérete</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="73"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="102"/>
         <source>small</source>
         <translation>kicsi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="74"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="103"/>
         <source>medium</source>
         <translation>közepes</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="75"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="104"/>
         <source>large</source>
         <translation>nagy</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="76"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="105"/>
         <source>huge</source>
         <translation>hatalmas</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="81"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="110"/>
         <source>Enable gallery mode</source>
         <translation>Galériamód engedélyezése</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="82"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="111"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
         <translation>Galériamódban a képek komfortosan nagy méretben jelennek meg, a képeken és videókon kívül minden bejegyzés és mappa, el lesz rejtve.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="91"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="120"/>
         <source>Sorting</source>
         <translation>Rendezés</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="98"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="127"/>
         <source>Show folders first</source>
         <translation>Mappák megjelenítése elöl</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="102"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="131"/>
         <source>Sort case-sensitively</source>
         <translation>Rendezés kis- és nagybetű-érzékenyen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="106"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="135"/>
         <source>Sort by</source>
         <translation>Rendezés alapja</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="110"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="139"/>
         <source>name</source>
         <translation>név</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="111"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="140"/>
         <source>size</source>
         <translation>méret</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="112"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="141"/>
         <source>modification time</source>
         <translation>módosítás ideje</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="113"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="142"/>
         <source>file type</source>
         <translation>fájltípus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="117"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="146"/>
         <source>Sort order</source>
         <translation>Rendezési sorrend</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="121"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="150"/>
         <source>default</source>
         <translation>alapértelmezett</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="122"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="151"/>
         <source>reversed</source>
         <translation>fordított</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="130"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="159"/>
         <source>Behavior and View</source>
         <translation>Viselkedés és Nézet</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="140"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="170"/>
         <source>Default transfer action</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="143"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="173"/>
         <source>copy</source>
         <translation>másolás</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="144"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="174"/>
         <source>move</source>
         <translation>áthelyezés</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="145"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="175"/>
         <source>link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="146"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="176"/>
         <source>none</source>
         <translation>semmi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="152"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="182"/>
         <source>Default filter line action</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="155"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="185"/>
         <source>return to directory view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="156"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="186"/>
         <source>start recursive search</source>
         <translation>rekurzív keresés indítása</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="162"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="192"/>
         <source>File name abbreviation</source>
         <translation>Fájlnév-rövidítés</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="165"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="195"/>
         <source>fade out</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="166"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="196"/>
         <source>elide end</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="167"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="197"/>
         <source>elide middle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="172"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="202"/>
         <source>Show full directory paths</source>
         <translation>Teljes mappa-útvonalak megjelenítése</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="176"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="206"/>
         <source>Show navigation menu icon</source>
         <translation>Navigációs menü ikonjának megjelenítése</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="185"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="210"/>
+        <source>Enable solid window background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>About File Browser</source>
-        <translation>A File Browser névjegye</translation>
+        <translation type="vanished">A File Browser névjegye</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="215"/>
         <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation>A File Browser a GNU GPL 3. vagy későbbi verziójának hatálya alatt jelent meg. Ez szabad szoftver: megváltoztathatod és forgalomba hozhatod. Nincs garancia, a törvény által megengedett mértékben.</translation>
+        <translation type="vanished">A File Browser a GNU GPL 3. vagy későbbi verziójának hatálya alatt jelent meg. Ez szabad szoftver: megváltoztathatod és forgalomba hozhatod. Nincs garancia, a törvény által megengedett mértékben.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="234"/>
         <source>The source code is available at</source>
-        <translation>A forráskód itt érhető el:</translation>
+        <translation type="vanished">A forráskód itt érhető el:</translation>
     </message>
 </context>
 <context>
@@ -2291,13 +2506,13 @@ exposure program</extracomment>
 <context>
     <name>ViewImagePage</name>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="251"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="253"/>
         <source>Loading image</source>
         <extracomment>Full page placeholder shown while a large image is being loaded</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="261"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="263"/>
         <source>Failed to load</source>
         <extracomment>Full page placeholder shown when an image failed to load</extracomment>
         <translation type="unfinished"></translation>
@@ -2306,7 +2521,7 @@ exposure program</extracomment>
 <context>
     <name>ViewVideoPage</name>
     <message>
-        <location filename="../qml/pages/ViewVideoPage.qml" line="105"/>
+        <location filename="../qml/pages/ViewVideoPage.qml" line="107"/>
         <source>Failed to play</source>
         <extracomment>Full page placeholder shown when a video failed to load</extracomment>
         <translation type="unfinished"></translation>

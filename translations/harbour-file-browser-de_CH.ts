@@ -2,6 +2,129 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="de_CH">
 <context>
+    <name>AboutPage</name>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="33"/>
+        <source>A fully-fledged file manager for Sailfish OS.</source>
+        <translation>Eine umfassende Dateiverwaltung für Sailfish OS.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="43"/>
+        <source>adapted by karip</source>
+        <translation>angepasst von karip</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="66"/>
+        <source>Development</source>
+        <translation>Entwicklung</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="69"/>
+        <source>Programming</source>
+        <translation>Programmierung</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="76"/>
+        <source>Icon Design</source>
+        <translation>Icon-Design</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="82"/>
+        <source>Translations</source>
+        <translation>Übersetzungen</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="85"/>
+        <source>English</source>
+        <translation>Englisch</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="89"/>
+        <source>German</source>
+        <translation>Deutsch</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="93"/>
+        <source>Finnish</source>
+        <translation>Finnisch</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="97"/>
+        <source>Chinese</source>
+        <translation>Chinesisch</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="101"/>
+        <source>Russian</source>
+        <translation>Russisch</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="105"/>
+        <source>Swedish</source>
+        <translation>Schwedisch</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="109"/>
+        <source>Italian</source>
+        <translation>Italienisch</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="113"/>
+        <source>Spanish</source>
+        <translation>Spanisch</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="117"/>
+        <source>French</source>
+        <translation>Französisch</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="121"/>
+        <source>Dutch</source>
+        <translation>Niederländisch</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="125"/>
+        <source>Greek</source>
+        <translation>Griechisch</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="129"/>
+        <source>Norwegian</source>
+        <translation>Norwegisch</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="133"/>
+        <source>Czech</source>
+        <translation>Tschechisch</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="137"/>
+        <source>Slovak</source>
+        <translation>Slowakisch</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="141"/>
+        <source>Hungarian</source>
+        <translation>Ungarisch</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="145"/>
+        <source>Estonian</source>
+        <translation>Estnisch</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="149"/>
+        <source>Polish</source>
+        <translation>Polnisch</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="153"/>
+        <source>Indonesian</source>
+        <translation>Indonesisch</translation>
+    </message>
+</context>
+<context>
     <name>ConsoleModel</name>
     <message>
         <location filename="../src/consolemodel.cpp" line="123"/>
@@ -46,115 +169,92 @@
 <context>
     <name>ContributorsPage</name>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="29"/>
-        <location filename="../qml/pages/ContributorsPage.qml" line="40"/>
         <source>Contributors</source>
-        <translation>Mitwirkende</translation>
+        <translation type="vanished">Mitwirkende</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="42"/>
         <source>Development</source>
-        <translation>Entwicklung</translation>
+        <translation type="vanished">Entwicklung</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="45"/>
         <source>Programming</source>
-        <translation>Programmierung</translation>
+        <translation type="vanished">Programmierung</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="53"/>
         <source>Icon Design</source>
-        <translation>Icon-Design</translation>
+        <translation type="vanished">Icon-Design</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="57"/>
         <source>Translations</source>
-        <translation>Übersetzungen</translation>
+        <translation type="vanished">Übersetzungen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="60"/>
         <source>English</source>
-        <translation>Englisch</translation>
+        <translation type="vanished">Englisch</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="64"/>
         <source>German</source>
-        <translation>Deutsch</translation>
+        <translation type="vanished">Deutsch</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="68"/>
         <source>Finnish</source>
-        <translation>Finnisch</translation>
+        <translation type="vanished">Finnisch</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="72"/>
         <source>Chinese</source>
-        <translation>Chinesisch</translation>
+        <translation type="vanished">Chinesisch</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="76"/>
         <source>Russian</source>
-        <translation>Russisch</translation>
+        <translation type="vanished">Russisch</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="80"/>
         <source>Swedish</source>
-        <translation>Schwedisch</translation>
+        <translation type="vanished">Schwedisch</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="84"/>
         <source>Italian</source>
-        <translation>Italienisch</translation>
+        <translation type="vanished">Italienisch</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="88"/>
         <source>Spanish</source>
-        <translation>Spanisch</translation>
+        <translation type="vanished">Spanisch</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="92"/>
         <source>French</source>
-        <translation>Französisch</translation>
+        <translation type="vanished">Französisch</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="96"/>
         <source>Dutch</source>
-        <translation>Niederländisch</translation>
+        <translation type="vanished">Niederländisch</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="100"/>
         <source>Greek</source>
-        <translation>Griechisch</translation>
+        <translation type="vanished">Griechisch</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="104"/>
         <source>Norwegian</source>
-        <translation>Norwegisch</translation>
+        <translation type="vanished">Norwegisch</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="108"/>
         <source>Czech</source>
-        <translation>Tschechisch</translation>
+        <translation type="vanished">Tschechisch</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="112"/>
         <source>Slovak</source>
-        <translation>Slowakisch</translation>
+        <translation type="vanished">Slowakisch</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="116"/>
         <source>Hungarian</source>
-        <translation>Ungarisch</translation>
+        <translation type="vanished">Ungarisch</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="120"/>
         <source>Estonian</source>
-        <translation>Estnisch</translation>
+        <translation type="vanished">Estnisch</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="124"/>
         <source>Polish</source>
-        <translation>Polnisch</translation>
+        <translation type="vanished">Polnisch</translation>
     </message>
 </context>
 <context>
@@ -587,154 +687,154 @@
 <context>
     <name>FilePage</name>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="54"/>
+        <location filename="../qml/pages/FilePage.qml" line="56"/>
         <source>Install launched</source>
         <translation>Installation gestartet</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="55"/>
+        <location filename="../qml/pages/FilePage.qml" line="57"/>
         <source>If nothing happens, then the package is probably faulty.</source>
         <translation>Wenn nichts passiert, ist das Paket vermutlich fehlerhaft.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="57"/>
+        <location filename="../qml/pages/FilePage.qml" line="59"/>
         <source>Swipe right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
         <translation>Wischen Sie nach rechts, um den Dateiinhalt zu prüfen.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="59"/>
+        <location filename="../qml/pages/FilePage.qml" line="61"/>
         <source>Open successful</source>
         <translation>Öffnen erfolgreich</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="60"/>
+        <location filename="../qml/pages/FilePage.qml" line="62"/>
         <source>Sometimes the application stays in the background</source>
         <translation>Manchmal bleibt die Anwendung im Hintergrund</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="63"/>
+        <location filename="../qml/pages/FilePage.qml" line="65"/>
         <source>Internal error</source>
         <translation>Interner Fehler</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="65"/>
+        <location filename="../qml/pages/FilePage.qml" line="67"/>
         <source>File not found</source>
         <translation>Datei nicht gefunden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="67"/>
+        <location filename="../qml/pages/FilePage.qml" line="69"/>
         <source>No application to open the file</source>
         <translation>Keine Anwendung zum Öffnen der Datei</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="68"/>
+        <location filename="../qml/pages/FilePage.qml" line="70"/>
         <source>xdg-open found no preferred application</source>
         <translation>xdg-open konnte keine bevorzugte Anwendung finden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="70"/>
+        <location filename="../qml/pages/FilePage.qml" line="72"/>
         <source>Action failed</source>
         <translation>Aktion fehlgeschlagen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="72"/>
+        <location filename="../qml/pages/FilePage.qml" line="74"/>
         <source>xdg-open not found</source>
         <translation>xdg-open nicht gefunden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="74"/>
+        <location filename="../qml/pages/FilePage.qml" line="76"/>
         <source>xdg-open crash?</source>
         <translation>xdg-open abgestürzt?</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="76"/>
+        <location filename="../qml/pages/FilePage.qml" line="78"/>
         <source>xdg-open error</source>
         <translation>xdg-open Fehler</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="94"/>
+        <location filename="../qml/pages/FilePage.qml" line="96"/>
         <source>Change Permissions</source>
         <translation>Berechtigungen ändern</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="108"/>
+        <location filename="../qml/pages/FilePage.qml" line="110"/>
         <source>View Raw Contents</source>
         <translation>Datei-Rohdaten anzeigen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="116"/>
+        <location filename="../qml/pages/FilePage.qml" line="118"/>
         <source>Install</source>
         <translation>Installieren</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="116"/>
+        <location filename="../qml/pages/FilePage.qml" line="118"/>
         <source>Open</source>
         <translation>Öffnen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="120"/>
+        <location filename="../qml/pages/FilePage.qml" line="122"/>
         <source>File cannot be opened</source>
         <translation>Datei kann nicht geöffnet werden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="121"/>
+        <location filename="../qml/pages/FilePage.qml" line="123"/>
         <source>This type of file cannot be opened.</source>
         <translation>Dieser Dateityp kann nicht geöffnet werden.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="129"/>
+        <location filename="../qml/pages/FilePage.qml" line="131"/>
         <source>Go to Target</source>
         <translation>Zu Ziel gehen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="149"/>
+        <location filename="../qml/pages/FilePage.qml" line="151"/>
         <source>The file has been moved.</source>
         <translation>Die Datei wurde verschoben.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="261"/>
-        <location filename="../qml/pages/FilePage.qml" line="267"/>
+        <location filename="../qml/pages/FilePage.qml" line="263"/>
+        <location filename="../qml/pages/FilePage.qml" line="269"/>
         <source>Deleting</source>
         <translation>Lösche</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="299"/>
+        <location filename="../qml/pages/FilePage.qml" line="301"/>
         <source>Location</source>
         <translation>Ort</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="303"/>
+        <location filename="../qml/pages/FilePage.qml" line="305"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="305"/>
+        <location filename="../qml/pages/FilePage.qml" line="307"/>
         <source>Link to %1</source>
         <translation>Link zu %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="305"/>
+        <location filename="../qml/pages/FilePage.qml" line="307"/>
         <source>Unknown (link target not found)</source>
         <translation>Unbekannt (Verknüfungsziel nicht gefunden)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="312"/>
+        <location filename="../qml/pages/FilePage.qml" line="314"/>
         <source>Permissions</source>
         <translation>Berechtigungen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="316"/>
+        <location filename="../qml/pages/FilePage.qml" line="318"/>
         <source>Owner</source>
         <translation>Besitzer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="321"/>
+        <location filename="../qml/pages/FilePage.qml" line="323"/>
         <source>Group</source>
         <translation>Gruppe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="326"/>
+        <location filename="../qml/pages/FilePage.qml" line="328"/>
         <source>Last modified</source>
         <translation>Zuletzt geändert</translation>
     </message>
@@ -1324,9 +1424,8 @@ exposure program</extracomment>
 <context>
     <name>LicensePage</name>
     <message>
-        <location filename="../qml/pages/LicensePage.qml" line="39"/>
         <source>License</source>
-        <translation>Lizenz</translation>
+        <translation type="vanished">Lizenz</translation>
     </message>
 </context>
 <context>
@@ -1370,6 +1469,233 @@ exposure program</extracomment>
         <location filename="../qml/pages/MultiFilePage.qml" line="175"/>
         <source>none</source>
         <translation>keine</translation>
+    </message>
+</context>
+<context>
+    <name>Opal.About</name>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="105"/>
+        <source>About</source>
+        <translation>Über</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="152"/>
+        <source>Version %1</source>
+        <translation>Version %1</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="177"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="32"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="53"/>
+        <source>Development</source>
+        <translation>Entwicklung</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="180"/>
+        <source>show contributors</source>
+        <translation>Mitwirkende zeigen</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="201"/>
+        <source>Donations</source>
+        <translation>Spenden</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="211"/>
+        <source>License</source>
+        <translation>Lizenz</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="216"/>
+        <source>This is proprietary software. All rights reserved.</source>
+        <translation>Dies ist geschützte Software. Alle Rechte vorbehalten.</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="220"/>
+        <source>show license(s)</source>
+        <translation>
+            <numerusform>Lizenz zeigen</numerusform>
+            <numerusform>Lizenzen zeigen</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="223"/>
+        <source>Translations</source>
+        <translation>Übersetzungen</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="228"/>
+        <source>Source Code</source>
+        <translation>Quellcode</translation>
+    </message>
+    <message>
+        <source>Author</source>
+        <translation type="vanished">Autor</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="29"/>
+        <source>Contributors</source>
+        <translation>Mitwirkende</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="71"/>
+        <source>Acknowledgements</source>
+        <translation>Danksagungen</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="81"/>
+        <source>Thank you!</source>
+        <translation>Vielen Dank!</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/InfoSection.qml" line="26"/>
+        <source>show details</source>
+        <translation>Details zeigen</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="32"/>
+        <source>License(s)</source>
+        <translation>
+            <numerusform>Lizenz</numerusform>
+            <numerusform>Lizenzen</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
+        <source>Note: please check the source code for most accurate information.</source>
+        <translation>Hinweis: Bitte prüfen Sie den Quellcode für alle Einzelheiten.</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="140"/>
+        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
+        <translation>Bitte beachten Sie &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
+    </message>
+</context>
+<context>
+    <name>Opal.About.Common</name>
+    <message>
+        <source>Author</source>
+        <translation type="vanished">Autor</translation>
+    </message>
+    <message numerus="yes">
+        <source>Author(s)</source>
+        <translation type="vanished">
+            <numerusform>Autor·in</numerusform>
+            <numerusform>Autor·innen</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Maintainer</source>
+        <translation type="vanished">Maintainer·in</translation>
+    </message>
+    <message numerus="yes">
+        <source>Maintainer(s)</source>
+        <translation type="vanished">
+            <numerusform>Maintainer·in</numerusform>
+            <numerusform>Maintainer·innen</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Development</source>
+        <translation type="vanished">Entwicklung</translation>
+    </message>
+    <message>
+        <source>Programming</source>
+        <translation type="vanished">Programmierung</translation>
+    </message>
+    <message>
+        <source>Translations</source>
+        <translation type="vanished">Übersetzungen</translation>
+    </message>
+    <message>
+        <source>Donations</source>
+        <translation type="vanished">Spenden</translation>
+    </message>
+    <message>
+        <source>Icon Design</source>
+        <translation type="vanished">Icon-Design</translation>
+    </message>
+    <message>
+        <source>Third-party libraries</source>
+        <translation type="vanished">Externe Bibliotheken</translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation type="vanished">Daten</translation>
+    </message>
+    <message>
+        <source>Data License</source>
+        <translation type="vanished">Daten-Lizenz</translation>
+    </message>
+    <message numerus="yes">
+        <source>Data License(s)</source>
+        <translation type="vanished">
+            <numerusform>Daten-Lizenz</numerusform>
+            <numerusform>Daten-Lizenzen</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Terms of Use</source>
+        <translation type="vanished">Nutzungsbedingungen</translation>
+    </message>
+    <message>
+        <source>Swedish</source>
+        <translation type="vanished">Schwedisch</translation>
+    </message>
+    <message>
+        <source>Polish</source>
+        <translation type="vanished">Polnisch</translation>
+    </message>
+    <message>
+        <source>German</source>
+        <translation type="vanished">Deutsch</translation>
+    </message>
+    <message>
+        <source>French</source>
+        <translation type="vanished">Französisch</translation>
+    </message>
+    <message>
+        <source>Chinese</source>
+        <translation type="vanished">Chinesisch</translation>
+    </message>
+    <message>
+        <source>English</source>
+        <translation type="vanished">Englisch</translation>
+    </message>
+    <message>
+        <source>Italian</source>
+        <translation type="vanished">Italienisch</translation>
+    </message>
+    <message>
+        <source>Finnish</source>
+        <translation type="vanished">Finnisch</translation>
+    </message>
+    <message>
+        <source>Norwegian</source>
+        <translation type="vanished">Norwegisch</translation>
+    </message>
+    <message>
+        <source>Latvian</source>
+        <translation type="vanished">Lettisch</translation>
+    </message>
+    <message>
+        <source>Estonian</source>
+        <translation type="vanished">Estnisch</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="12"/>
+        <source>If you want to support my work, you can buy me a cup of coffee.</source>
+        <translation>Sie können mir gerne einen Kaffee spendieren, wenn Sie meine Arbeit unterstützen möchten.</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="15"/>
+        <source>You can support this project by contributing, or by donating using any of these services.</source>
+        <translation>Sie können dieses Projekt durch Ihre Mitarbeit oder durch eine Spende über einen dieser Dienste unterstützen.</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="18"/>
+        <source>Your contributions to translations or code would be most welcome.</source>
+        <translation>Ihre Mitarbeit bei Übersetzungen oder der Programmierung wäre eine große Hilfe.</translation>
     </message>
 </context>
 <context>
@@ -1641,209 +1967,221 @@ exposure program</extracomment>
     <name>SettingsPage</name>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="44"/>
-        <location filename="../qml/pages/SettingsPage.qml" line="251"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="227"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="57"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="86"/>
         <source>Use per-directory view settings</source>
         <translation>Ordnerspezifische Ansichtseinstellungen verwenden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="98"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="127"/>
         <source>Show folders first</source>
         <translation>Ordner zuerst zeigen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="61"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="90"/>
         <source>Show hidden files</source>
         <translation>Versteckte Dateien anzeigen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="65"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="94"/>
         <source>Show preview images</source>
         <translation>Vorschaubilder anzeigen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="91"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="120"/>
         <source>Sorting</source>
         <translation>Sortierung</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="102"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="131"/>
         <source>Sort case-sensitively</source>
         <translation>Gross- und Kleinschreibung beim Sortieren beachten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="70"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="99"/>
         <source>Thumbnail size</source>
         <translation>Grösse der Vorschaubilder</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="49"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="50"/>
+        <source>These are global preferences. If enabled in “&lt;a href=&apos;#&apos;&gt;View → Use per-directory view settings&lt;/a&gt;”, view preferences will be saved individually for all folders. Here, you can define the default values.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="66"/>
+        <source>Swipe right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="77"/>
         <source>View</source>
         <translation>Ansicht</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="73"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="102"/>
         <source>small</source>
         <translation>klein</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="74"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="103"/>
         <source>medium</source>
         <translation>mittel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="75"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="104"/>
         <source>large</source>
         <translation>gross</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="76"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="105"/>
         <source>huge</source>
         <translation>sehr gross</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="81"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="110"/>
         <source>Enable gallery mode</source>
         <translation>Galerie-Modus aktivieren</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="82"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="111"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
         <translation>Im Galerie-Modus werden Bilder angenehm gross angezeigt und alle Einträge ausser Bildern, Videos und Ordnern werden versteckt.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="106"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="135"/>
         <source>Sort by</source>
         <translation>Sortieren nach</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="110"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="139"/>
         <source>name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="111"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="140"/>
         <source>size</source>
         <translation>Grösse</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="112"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="141"/>
         <source>modification time</source>
         <translation>Änderungszeitpunkt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="113"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="142"/>
         <source>file type</source>
         <translation>Dateityp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="117"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="146"/>
         <source>Sort order</source>
         <translation>Reihenfolge</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="121"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="150"/>
         <source>default</source>
         <translation>normal</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="122"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="151"/>
         <source>reversed</source>
         <translation>umgekehrt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="130"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="159"/>
         <source>Behavior and View</source>
         <translation>Verhalten und Anzeige</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="140"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="170"/>
         <source>Default transfer action</source>
         <translation>Standard-Aktion</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="143"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="173"/>
         <source>copy</source>
         <translation>kopieren</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="144"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="174"/>
         <source>move</source>
         <translation>verschieben</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="145"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="175"/>
         <source>link</source>
         <translation>verknüpfen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="146"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="176"/>
         <source>none</source>
         <translation>nichts</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="152"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="182"/>
         <source>Default filter line action</source>
         <translation>Standardaktion beim Filtern</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="155"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="185"/>
         <source>return to directory view</source>
         <translation>zur Ordneransicht zurückkehren</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="156"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="186"/>
         <source>start recursive search</source>
         <translation>rekursive Suche starten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="162"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="192"/>
         <source>File name abbreviation</source>
         <translation>Dateinamen abkürzen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="165"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="195"/>
         <source>fade out</source>
         <translation>ausblenden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="166"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="196"/>
         <source>elide end</source>
         <translation>am Ende</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="167"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="197"/>
         <source>elide middle</source>
         <translation>in der Mitte</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="172"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="202"/>
         <source>Show full directory paths</source>
         <translation>Vollständige Ordnerpfade anzeigen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="176"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="206"/>
         <source>Show navigation menu icon</source>
         <translation>Navigationsmenu-Icon anzeigen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="185"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="210"/>
+        <source>Enable solid window background</source>
+        <translation>Undurchsichtigen Fensterhintergrund verwenden</translation>
+    </message>
+    <message>
         <source>About File Browser</source>
-        <translation>Über File Browser</translation>
+        <translation type="vanished">Über File Browser</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="215"/>
         <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation>File Browser unterliegt den Bedingungen der GNU GPL in Version 3 oder höher. Dies ist freie Software: Sie können sie verändern und weitergeben. Soweit gesetzlich zulässig gibt es keinerlei Garantie.</translation>
+        <translation type="vanished">File Browser unterliegt den Bedingungen der GNU GPL in Version 3 oder höher. Dies ist freie Software: Sie können sie verändern und weitergeben. Soweit gesetzlich zulässig gibt es keinerlei Garantie.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="234"/>
         <source>The source code is available at</source>
-        <translation>Der Quelltext ist verfügbar unter</translation>
+        <translation type="vanished">Der Quelltext ist verfügbar unter</translation>
     </message>
 </context>
 <context>
@@ -2324,13 +2662,13 @@ exposure program</extracomment>
 <context>
     <name>ViewImagePage</name>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="251"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="253"/>
         <source>Loading image</source>
         <extracomment>Full page placeholder shown while a large image is being loaded</extracomment>
         <translation>Bild wird geladen ...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="261"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="263"/>
         <source>Failed to load</source>
         <extracomment>Full page placeholder shown when an image failed to load</extracomment>
         <translation>Laden fehlgeschlagen</translation>
@@ -2339,7 +2677,7 @@ exposure program</extracomment>
 <context>
     <name>ViewVideoPage</name>
     <message>
-        <location filename="../qml/pages/ViewVideoPage.qml" line="105"/>
+        <location filename="../qml/pages/ViewVideoPage.qml" line="107"/>
         <source>Failed to play</source>
         <extracomment>Full page placeholder shown when a video failed to load</extracomment>
         <translation>Abspielen fehlgeschlagen</translation>
@@ -2375,258 +2713,6 @@ exposure program</extracomment>
         <source>root</source>
         <extracomment>root directory (placeholder instead of &quot;/&quot; in search mask)</extracomment>
         <translation>Stammverzeichnis</translation>
-    </message>
-</context>
-<context>
-    <name>Opal.About</name>
-    <message>
-        <location filename="../Opal/About/AboutPageBase.qml" line="523"/>
-        <source>About</source>
-        <translation>Über</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/AboutPageBase.qml" line="570"/>
-        <source>Version %1</source>
-        <translation>Version %1</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/AboutPageBase.qml" line="595"/>
-        <location filename="../Opal/About/private/ContributorsPage.qml" line="32"/>
-        <location filename="../Opal/About/private/ContributorsPage.qml" line="53"/>
-        <source>Development</source>
-        <translation>Entwicklung</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/AboutPageBase.qml" line="598"/>
-        <source>show contributors</source>
-        <translation>Mitwirkende zeigen</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/AboutPageBase.qml" line="619"/>
-        <source>Donations</source>
-        <translation>Spenden</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/AboutPageBase.qml" line="629"/>
-        <source>License</source>
-        <translation>Lizenz</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/AboutPageBase.qml" line="634"/>
-        <source>This is proprietary software. All rights reserved.</source>
-        <translation>Dies ist geschützte Software. Alle Rechte vorbehalten.</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../Opal/About/AboutPageBase.qml" line="638"/>
-        <source>show license(s)</source>
-        <translation>
-            <numerusform>Lizenz zeigen</numerusform>
-            <numerusform>Lizenzen zeigen</numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/AboutPageBase.qml" line="641"/>
-        <source>Translations</source>
-        <translation>Übersetzungen</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/AboutPageBase.qml" line="646"/>
-        <source>Source Code</source>
-        <translation>Quellcode</translation>
-    </message>
-    <message>
-        <source>Author</source>
-        <translation type="vanished">Autor</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ContributorsPage.qml" line="29"/>
-        <source>Contributors</source>
-        <translation>Mitwirkende</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ContributorsPage.qml" line="71"/>
-        <source>Acknowledgements</source>
-        <translation>Danksagungen</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ContributorsPage.qml" line="81"/>
-        <source>Thank you!</source>
-        <translation>Vielen Dank!</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/InfoSection.qml" line="72"/>
-        <source>show details</source>
-        <translation>Details zeigen</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../Opal/About/private/LicensePage.qml" line="32"/>
-        <source>License(s)</source>
-        <translation>
-            <numerusform>Lizenz</numerusform>
-            <numerusform>Lizenzen</numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/LicensePage.qml" line="45"/>
-        <source>Note: please check the source code for most accurate information.</source>
-        <translation>Hinweis: Bitte prüfen Sie den Quellcode für alle Einzelheiten.</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/LicenseListPart.qml" line="140"/>
-        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation>Bitte beachten Sie &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
-    </message>
-</context>
-<context>
-    <name>Opal.About.Common</name>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="12"/>
-        <source>Author</source>
-        <translation>Autor</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="13"/>
-        <source>Author(s)</source>
-        <translation>
-            <numerusform>Autor·in</numerusform>
-            <numerusform>Autor·innen</numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="14"/>
-        <source>Maintainer</source>
-        <translation>Maintainer·in</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="15"/>
-        <source>Maintainer(s)</source>
-        <translation>
-            <numerusform>Maintainer·in</numerusform>
-            <numerusform>Maintainer·innen</numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="16"/>
-        <source>Development</source>
-        <translation>Entwicklung</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="17"/>
-        <source>Programming</source>
-        <translation>Programmierung</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="18"/>
-        <source>Translations</source>
-        <translation>Übersetzungen</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="19"/>
-        <source>Donations</source>
-        <translation>Spenden</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="20"/>
-        <source>Icon Design</source>
-        <translation>Icon-Design</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="21"/>
-        <source>Third-party libraries</source>
-        <translation>Externe Bibliotheken</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="22"/>
-        <source>Data</source>
-        <translation>Daten</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="23"/>
-        <source>Data License</source>
-        <translation>Daten-Lizenz</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="24"/>
-        <source>Data License(s)</source>
-        <translation>
-            <numerusform>Daten-Lizenz</numerusform>
-            <numerusform>Daten-Lizenzen</numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="25"/>
-        <source>Terms of Use</source>
-        <translation>Nutzungsbedingungen</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="28"/>
-        <source>Swedish</source>
-        <translation>Schwedisch</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="29"/>
-        <source>Polish</source>
-        <translation>Polnisch</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="30"/>
-        <source>German</source>
-        <translation>Deutsch</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="31"/>
-        <source>French</source>
-        <translation>Französisch</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="32"/>
-        <source>Chinese</source>
-        <translation>Chinesisch</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="33"/>
-        <source>English</source>
-        <translation>Englisch</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="34"/>
-        <source>Italian</source>
-        <translation>Italienisch</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="35"/>
-        <source>Finnish</source>
-        <translation>Finnisch</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="36"/>
-        <source>Norwegian</source>
-        <translation>Norwegisch</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="37"/>
-        <source>Latvian</source>
-        <translation>Lettisch</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/ExtraTranslations.qml" line="38"/>
-        <source>Estonian</source>
-        <translation>Estnisch</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/DonationsGroup.qml" line="40"/>
-        <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation>Sie können mir gerne einen Kaffee spendieren, wenn Sie meine Arbeit unterstützen möchten.</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/DonationsGroup.qml" line="53"/>
-        <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation>Sie können dieses Projekt durch Ihre Mitarbeit oder durch eine Spende über einen dieser Dienste unterstützen.</translation>
-    </message>
-    <message>
-        <location filename="../Opal/About/private/DonationsGroup.qml" line="65"/>
-        <source>Your contributions to translations or code would be most welcome.</source>
-        <translation>Ihre Mitarbeit bei Übersetzungen oder der Programmierung wäre eine große Hilfe.</translation>
     </message>
 </context>
 </TS>

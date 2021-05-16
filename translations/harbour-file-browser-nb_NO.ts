@@ -2,6 +2,129 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="nb_NO">
 <context>
+    <name>AboutPage</name>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="33"/>
+        <source>A fully-fledged file manager for Sailfish OS.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="43"/>
+        <source>adapted by karip</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="66"/>
+        <source>Development</source>
+        <translation>Utvikling</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="69"/>
+        <source>Programming</source>
+        <translation>Programmering</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="76"/>
+        <source>Icon Design</source>
+        <translation>Ikondesign</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="82"/>
+        <source>Translations</source>
+        <translation>Oversettelser</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="85"/>
+        <source>English</source>
+        <translation>Engelsk</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="89"/>
+        <source>German</source>
+        <translation>Tysk</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="93"/>
+        <source>Finnish</source>
+        <translation>Finsk</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="97"/>
+        <source>Chinese</source>
+        <translation>Kinesisk</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="101"/>
+        <source>Russian</source>
+        <translation>Russisk</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="105"/>
+        <source>Swedish</source>
+        <translation>Svensk</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="109"/>
+        <source>Italian</source>
+        <translation>Italiensk</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="113"/>
+        <source>Spanish</source>
+        <translation>Spansk</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="117"/>
+        <source>French</source>
+        <translation>Fransk</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="121"/>
+        <source>Dutch</source>
+        <translation>Hollandsk</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="125"/>
+        <source>Greek</source>
+        <translation>Gresk</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="129"/>
+        <source>Norwegian</source>
+        <translation>Norsk bokmål</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="133"/>
+        <source>Czech</source>
+        <translation>Tsjekkisk</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="137"/>
+        <source>Slovak</source>
+        <translation>Slovakisk</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="141"/>
+        <source>Hungarian</source>
+        <translation>Ungarsk</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="145"/>
+        <source>Estonian</source>
+        <translation>Estisk</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="149"/>
+        <source>Polish</source>
+        <translation>Polsk</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="153"/>
+        <source>Indonesian</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ConsoleModel</name>
     <message>
         <location filename="../src/consolemodel.cpp" line="123"/>
@@ -46,115 +169,92 @@
 <context>
     <name>ContributorsPage</name>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="29"/>
-        <location filename="../qml/pages/ContributorsPage.qml" line="40"/>
         <source>Contributors</source>
-        <translation>Bidragsytere</translation>
+        <translation type="vanished">Bidragsytere</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="42"/>
         <source>Development</source>
-        <translation>Utvikling</translation>
+        <translation type="vanished">Utvikling</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="45"/>
         <source>Programming</source>
-        <translation>Programmering</translation>
+        <translation type="vanished">Programmering</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="53"/>
         <source>Icon Design</source>
-        <translation>Ikondesign</translation>
+        <translation type="vanished">Ikondesign</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="57"/>
         <source>Translations</source>
-        <translation>Oversettelser</translation>
+        <translation type="vanished">Oversettelser</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="60"/>
         <source>English</source>
-        <translation>Engelsk</translation>
+        <translation type="vanished">Engelsk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="64"/>
         <source>German</source>
-        <translation>Tysk</translation>
+        <translation type="vanished">Tysk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="68"/>
         <source>Finnish</source>
-        <translation>Finsk</translation>
+        <translation type="vanished">Finsk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="72"/>
         <source>Chinese</source>
-        <translation>Kinesisk</translation>
+        <translation type="vanished">Kinesisk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="76"/>
         <source>Russian</source>
-        <translation>Russisk</translation>
+        <translation type="vanished">Russisk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="80"/>
         <source>Swedish</source>
-        <translation>Svensk</translation>
+        <translation type="vanished">Svensk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="84"/>
         <source>Italian</source>
-        <translation>Italiensk</translation>
+        <translation type="vanished">Italiensk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="88"/>
         <source>Spanish</source>
-        <translation>Spansk</translation>
+        <translation type="vanished">Spansk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="92"/>
         <source>French</source>
-        <translation>Fransk</translation>
+        <translation type="vanished">Fransk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="96"/>
         <source>Dutch</source>
-        <translation>Hollandsk</translation>
+        <translation type="vanished">Hollandsk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="100"/>
         <source>Greek</source>
-        <translation>Gresk</translation>
+        <translation type="vanished">Gresk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="104"/>
         <source>Norwegian</source>
-        <translation>Norsk bokmål</translation>
+        <translation type="vanished">Norsk bokmål</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="108"/>
         <source>Czech</source>
-        <translation>Tsjekkisk</translation>
+        <translation type="vanished">Tsjekkisk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="112"/>
         <source>Slovak</source>
-        <translation>Slovakisk</translation>
+        <translation type="vanished">Slovakisk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="116"/>
         <source>Hungarian</source>
-        <translation>Ungarsk</translation>
+        <translation type="vanished">Ungarsk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="120"/>
         <source>Estonian</source>
-        <translation>Estisk</translation>
+        <translation type="vanished">Estisk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="124"/>
         <source>Polish</source>
-        <translation>Polsk</translation>
+        <translation type="vanished">Polsk</translation>
     </message>
 </context>
 <context>
@@ -587,154 +687,154 @@
 <context>
     <name>FilePage</name>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="54"/>
+        <location filename="../qml/pages/FilePage.qml" line="56"/>
         <source>Install launched</source>
         <translation>Installasjonskandidat startet</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="55"/>
+        <location filename="../qml/pages/FilePage.qml" line="57"/>
         <source>If nothing happens, then the package is probably faulty.</source>
         <translation>Hvis ingenting skjer er pakken antagelig skadet.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="57"/>
+        <location filename="../qml/pages/FilePage.qml" line="59"/>
         <source>Swipe right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="59"/>
+        <location filename="../qml/pages/FilePage.qml" line="61"/>
         <source>Open successful</source>
         <translation>Åpnet</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="60"/>
+        <location filename="../qml/pages/FilePage.qml" line="62"/>
         <source>Sometimes the application stays in the background</source>
         <translation>Noen ganger forblir programmet i bakgrunnen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="63"/>
+        <location filename="../qml/pages/FilePage.qml" line="65"/>
         <source>Internal error</source>
         <translation>Intern feil</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="65"/>
+        <location filename="../qml/pages/FilePage.qml" line="67"/>
         <source>File not found</source>
         <translation>Fant ikke filen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="67"/>
+        <location filename="../qml/pages/FilePage.qml" line="69"/>
         <source>No application to open the file</source>
         <translation>Mangler program for åpning av fil</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="68"/>
+        <location filename="../qml/pages/FilePage.qml" line="70"/>
         <source>xdg-open found no preferred application</source>
         <translation>xdg-open fant ikke noe foretrukket program</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="70"/>
+        <location filename="../qml/pages/FilePage.qml" line="72"/>
         <source>Action failed</source>
         <translation>Handling mislyktes</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="72"/>
+        <location filename="../qml/pages/FilePage.qml" line="74"/>
         <source>xdg-open not found</source>
         <translation>Fant ikke xdg-open</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="74"/>
+        <location filename="../qml/pages/FilePage.qml" line="76"/>
         <source>xdg-open crash?</source>
         <translation>Krasjet xdg-open?</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="76"/>
+        <location filename="../qml/pages/FilePage.qml" line="78"/>
         <source>xdg-open error</source>
         <translation>Feil i xdg-open</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="94"/>
+        <location filename="../qml/pages/FilePage.qml" line="96"/>
         <source>Change Permissions</source>
         <translation>Endre tilganger</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="108"/>
+        <location filename="../qml/pages/FilePage.qml" line="110"/>
         <source>View Raw Contents</source>
         <translation>Vis rå-innhold</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="116"/>
+        <location filename="../qml/pages/FilePage.qml" line="118"/>
         <source>Install</source>
         <translation>Installer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="116"/>
+        <location filename="../qml/pages/FilePage.qml" line="118"/>
         <source>Open</source>
         <translation>Åpne</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="120"/>
+        <location filename="../qml/pages/FilePage.qml" line="122"/>
         <source>File cannot be opened</source>
         <translation>Filen kan ikke åpnes</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="121"/>
+        <location filename="../qml/pages/FilePage.qml" line="123"/>
         <source>This type of file cannot be opened.</source>
         <translation>Denne typen fil kan ikke åpnes.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="129"/>
+        <location filename="../qml/pages/FilePage.qml" line="131"/>
         <source>Go to Target</source>
         <translation>Gå til mål</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="149"/>
+        <location filename="../qml/pages/FilePage.qml" line="151"/>
         <source>The file has been moved.</source>
         <translation>Filen har blitt fjernet.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="261"/>
-        <location filename="../qml/pages/FilePage.qml" line="267"/>
+        <location filename="../qml/pages/FilePage.qml" line="263"/>
+        <location filename="../qml/pages/FilePage.qml" line="269"/>
         <source>Deleting</source>
         <translation>Sletter …</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="299"/>
+        <location filename="../qml/pages/FilePage.qml" line="301"/>
         <source>Location</source>
         <translation>Plassering</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="303"/>
+        <location filename="../qml/pages/FilePage.qml" line="305"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="305"/>
+        <location filename="../qml/pages/FilePage.qml" line="307"/>
         <source>Unknown (link target not found)</source>
         <translation>Ukjent (fant ikke lenkemål)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="305"/>
+        <location filename="../qml/pages/FilePage.qml" line="307"/>
         <source>Link to %1</source>
         <translation>Lenke til %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="312"/>
+        <location filename="../qml/pages/FilePage.qml" line="314"/>
         <source>Permissions</source>
         <translation>Tilganger</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="316"/>
+        <location filename="../qml/pages/FilePage.qml" line="318"/>
         <source>Owner</source>
         <translation>Eier</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="321"/>
+        <location filename="../qml/pages/FilePage.qml" line="323"/>
         <source>Group</source>
         <translation>Gruppe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="326"/>
+        <location filename="../qml/pages/FilePage.qml" line="328"/>
         <source>Last modified</source>
         <translation>Sist endret</translation>
     </message>
@@ -1324,9 +1424,8 @@ exposure program</extracomment>
 <context>
     <name>LicensePage</name>
     <message>
-        <location filename="../qml/pages/LicensePage.qml" line="39"/>
         <source>License</source>
-        <translation>Lisens</translation>
+        <translation type="vanished">Lisens</translation>
     </message>
 </context>
 <context>
@@ -1370,6 +1469,120 @@ exposure program</extracomment>
         <location filename="../qml/pages/MultiFilePage.qml" line="175"/>
         <source>none</source>
         <translation>ingen</translation>
+    </message>
+</context>
+<context>
+    <name>Opal.About</name>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="105"/>
+        <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="152"/>
+        <source>Version %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="177"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="32"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="53"/>
+        <source>Development</source>
+        <translation>Utvikling</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="180"/>
+        <source>show contributors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="201"/>
+        <source>Donations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="211"/>
+        <source>License</source>
+        <translation>Lisens</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="216"/>
+        <source>This is proprietary software. All rights reserved.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="220"/>
+        <source>show license(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="223"/>
+        <source>Translations</source>
+        <translation>Oversettelser</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="228"/>
+        <source>Source Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/InfoSection.qml" line="26"/>
+        <source>show details</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="29"/>
+        <source>Contributors</source>
+        <translation>Bidragsytere</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="71"/>
+        <source>Acknowledgements</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="81"/>
+        <source>Thank you!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="140"/>
+        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="32"/>
+        <source>License(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
+        <source>Note: please check the source code for most accurate information.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Opal.About.Common</name>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="12"/>
+        <source>If you want to support my work, you can buy me a cup of coffee.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="15"/>
+        <source>You can support this project by contributing, or by donating using any of these services.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="18"/>
+        <source>Your contributions to translations or code would be most welcome.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1638,209 +1851,221 @@ exposure program</extracomment>
     <name>SettingsPage</name>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="44"/>
-        <location filename="../qml/pages/SettingsPage.qml" line="251"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="227"/>
         <source>Settings</source>
         <translation>Innstillinger</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="49"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="50"/>
+        <source>These are global preferences. If enabled in “&lt;a href=&apos;#&apos;&gt;View → Use per-directory view settings&lt;/a&gt;”, view preferences will be saved individually for all folders. Here, you can define the default values.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="66"/>
+        <source>Swipe right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="77"/>
         <source>View</source>
         <translation>Vis</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="57"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="86"/>
         <source>Use per-directory view settings</source>
         <translation>Visningsinnstillinger per mappe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="61"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="90"/>
         <source>Show hidden files</source>
         <translation>Vis skjulte filer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="65"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="94"/>
         <source>Show preview images</source>
         <translation>Vis forhåndsvisningsbilder</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="70"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="99"/>
         <source>Thumbnail size</source>
         <translation>Miniatyrbildestørrelse</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="73"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="102"/>
         <source>small</source>
         <translation>liten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="74"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="103"/>
         <source>medium</source>
         <translation>middels</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="75"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="104"/>
         <source>large</source>
         <translation>stor</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="76"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="105"/>
         <source>huge</source>
         <translation>enorm</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="81"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="110"/>
         <source>Enable gallery mode</source>
         <translation>Skru på gallerimodus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="82"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="111"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
         <translation>Viser bilder i komfortabel størrelse, og alle andre oppføringer enn bilder, video og mapper er skjult.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="91"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="120"/>
         <source>Sorting</source>
         <translation>Sortering</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="98"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="127"/>
         <source>Show folders first</source>
         <translation>Mapper først</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="102"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="131"/>
         <source>Sort case-sensitively</source>
         <translation>Sorter versalsensitivt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="106"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="135"/>
         <source>Sort by</source>
         <translation>Sorter etter</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="110"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="139"/>
         <source>name</source>
         <translation>navn</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="111"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="140"/>
         <source>size</source>
         <translation>størrelse</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="112"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="141"/>
         <source>modification time</source>
         <translation>endringstidspunkt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="113"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="142"/>
         <source>file type</source>
         <translation>filtype</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="117"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="146"/>
         <source>Sort order</source>
         <translation>Sorteringsrekkefølge</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="121"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="150"/>
         <source>default</source>
         <translation>forvalg</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="122"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="151"/>
         <source>reversed</source>
         <translation>omvendt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="130"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="159"/>
         <source>Behavior and View</source>
         <translation>Oppførsel og visning</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="140"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="170"/>
         <source>Default transfer action</source>
         <translation>Forvalgt overføringshandling</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="143"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="173"/>
         <source>copy</source>
         <translation>kopier</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="144"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="174"/>
         <source>move</source>
         <translation>flytt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="145"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="175"/>
         <source>link</source>
         <translation>lenke</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="146"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="176"/>
         <source>none</source>
         <translation>ingen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="152"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="182"/>
         <source>Default filter line action</source>
         <translation>Forvalgt handling for filterlinje</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="155"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="185"/>
         <source>return to directory view</source>
         <translation>gå tilbake til mappevisning</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="156"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="186"/>
         <source>start recursive search</source>
         <translation>start rekursivt søk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="162"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="192"/>
         <source>File name abbreviation</source>
         <translation>Filnavnsforkortelse</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="165"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="195"/>
         <source>fade out</source>
         <translation>ton ut</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="166"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="196"/>
         <source>elide end</source>
         <translation>Elideringsslutt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="167"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="197"/>
         <source>elide middle</source>
         <translation>Elideringsmidt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="172"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="202"/>
         <source>Show full directory paths</source>
         <translation>Vis fullstendige mappestier</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="176"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="206"/>
         <source>Show navigation menu icon</source>
         <translation>Vis menyikon for navigering</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="185"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="210"/>
+        <source>Enable solid window background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>About File Browser</source>
-        <translation>Om File Browser</translation>
+        <translation type="vanished">Om File Browser</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="215"/>
         <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation>File Browser er gemenhetslig fri programvare lisensiert GPLv3+. Bruk, studer, endre, og distribuer etter evne; med alle. Det er ingen garanti, så-langt det er mulig i lovlig forstand.</translation>
+        <translation type="vanished">File Browser er gemenhetslig fri programvare lisensiert GPLv3+. Bruk, studer, endre, og distribuer etter evne; med alle. Det er ingen garanti, så-langt det er mulig i lovlig forstand.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="234"/>
         <source>The source code is available at</source>
-        <translation>Kildekoden er tilgjengelig på</translation>
+        <translation type="vanished">Kildekoden er tilgjengelig på</translation>
     </message>
 </context>
 <context>
@@ -2321,13 +2546,13 @@ exposure program</extracomment>
 <context>
     <name>ViewImagePage</name>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="251"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="253"/>
         <source>Loading image</source>
         <extracomment>Full page placeholder shown while a large image is being loaded</extracomment>
         <translation>Laster inn bilde …</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="261"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="263"/>
         <source>Failed to load</source>
         <extracomment>Full page placeholder shown when an image failed to load</extracomment>
         <translation>Klarte ikke å laste inn bilde</translation>
@@ -2336,7 +2561,7 @@ exposure program</extracomment>
 <context>
     <name>ViewVideoPage</name>
     <message>
-        <location filename="../qml/pages/ViewVideoPage.qml" line="105"/>
+        <location filename="../qml/pages/ViewVideoPage.qml" line="107"/>
         <source>Failed to play</source>
         <extracomment>Full page placeholder shown when a video failed to load</extracomment>
         <translation>Klarte ikke å spille video</translation>

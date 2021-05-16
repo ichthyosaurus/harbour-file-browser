@@ -2,6 +2,129 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
+    <name>AboutPage</name>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="33"/>
+        <source>A fully-fledged file manager for Sailfish OS.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="43"/>
+        <source>adapted by karip</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="66"/>
+        <source>Development</source>
+        <translation>Vývoj</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="69"/>
+        <source>Programming</source>
+        <translation>Programovanie</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="76"/>
+        <source>Icon Design</source>
+        <translation>Návrh ikon</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="82"/>
+        <source>Translations</source>
+        <translation>Preklady</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="85"/>
+        <source>English</source>
+        <translation>Angličtina</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="89"/>
+        <source>German</source>
+        <translation>Nemčina</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="93"/>
+        <source>Finnish</source>
+        <translation>Fínčina</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="97"/>
+        <source>Chinese</source>
+        <translation>Čínština</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="101"/>
+        <source>Russian</source>
+        <translation>Ruština</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="105"/>
+        <source>Swedish</source>
+        <translation>Švédčina</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="109"/>
+        <source>Italian</source>
+        <translation>Taliančina</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="113"/>
+        <source>Spanish</source>
+        <translation>Španielčina</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="117"/>
+        <source>French</source>
+        <translation>Francúzština</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="121"/>
+        <source>Dutch</source>
+        <translation>Holandčina</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="125"/>
+        <source>Greek</source>
+        <translation>Gréčtina</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="129"/>
+        <source>Norwegian</source>
+        <translation>Nórčina</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="133"/>
+        <source>Czech</source>
+        <translation>Čeština</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="137"/>
+        <source>Slovak</source>
+        <translation>Slovenčina</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="141"/>
+        <source>Hungarian</source>
+        <translation>Maďarčina</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="145"/>
+        <source>Estonian</source>
+        <translation>Estónčina</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="149"/>
+        <source>Polish</source>
+        <translation>Poľština</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="153"/>
+        <source>Indonesian</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ConsoleModel</name>
     <message>
         <location filename="../src/consolemodel.cpp" line="123"/>
@@ -46,115 +169,92 @@
 <context>
     <name>ContributorsPage</name>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="29"/>
-        <location filename="../qml/pages/ContributorsPage.qml" line="40"/>
         <source>Contributors</source>
-        <translation>Prispievatelia</translation>
+        <translation type="vanished">Prispievatelia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="42"/>
         <source>Development</source>
-        <translation>Vývoj</translation>
+        <translation type="vanished">Vývoj</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="45"/>
         <source>Programming</source>
-        <translation>Programovanie</translation>
+        <translation type="vanished">Programovanie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="53"/>
         <source>Icon Design</source>
-        <translation>Návrh ikon</translation>
+        <translation type="vanished">Návrh ikon</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="57"/>
         <source>Translations</source>
-        <translation>Preklady</translation>
+        <translation type="vanished">Preklady</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="60"/>
         <source>English</source>
-        <translation>Angličtina</translation>
+        <translation type="vanished">Angličtina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="64"/>
         <source>German</source>
-        <translation>Nemčina</translation>
+        <translation type="vanished">Nemčina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="68"/>
         <source>Finnish</source>
-        <translation>Fínčina</translation>
+        <translation type="vanished">Fínčina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="72"/>
         <source>Chinese</source>
-        <translation>Čínština</translation>
+        <translation type="vanished">Čínština</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="76"/>
         <source>Russian</source>
-        <translation>Ruština</translation>
+        <translation type="vanished">Ruština</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="80"/>
         <source>Swedish</source>
-        <translation>Švédčina</translation>
+        <translation type="vanished">Švédčina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="84"/>
         <source>Italian</source>
-        <translation>Taliančina</translation>
+        <translation type="vanished">Taliančina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="88"/>
         <source>Spanish</source>
-        <translation>Španielčina</translation>
+        <translation type="vanished">Španielčina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="92"/>
         <source>French</source>
-        <translation>Francúzština</translation>
+        <translation type="vanished">Francúzština</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="96"/>
         <source>Dutch</source>
-        <translation>Holandčina</translation>
+        <translation type="vanished">Holandčina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="100"/>
         <source>Greek</source>
-        <translation>Gréčtina</translation>
+        <translation type="vanished">Gréčtina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="104"/>
         <source>Norwegian</source>
-        <translation>Nórčina</translation>
+        <translation type="vanished">Nórčina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="108"/>
         <source>Czech</source>
-        <translation>Čeština</translation>
+        <translation type="vanished">Čeština</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="112"/>
         <source>Slovak</source>
-        <translation>Slovenčina</translation>
+        <translation type="vanished">Slovenčina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="116"/>
         <source>Hungarian</source>
-        <translation>Maďarčina</translation>
+        <translation type="vanished">Maďarčina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="120"/>
         <source>Estonian</source>
-        <translation>Estónčina</translation>
+        <translation type="vanished">Estónčina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContributorsPage.qml" line="124"/>
         <source>Polish</source>
-        <translation>Poľština</translation>
+        <translation type="vanished">Poľština</translation>
     </message>
 </context>
 <context>
@@ -600,154 +700,154 @@
 <context>
     <name>FilePage</name>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="54"/>
+        <location filename="../qml/pages/FilePage.qml" line="56"/>
         <source>Install launched</source>
         <translation>Inštalácia bola spustená</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="55"/>
+        <location filename="../qml/pages/FilePage.qml" line="57"/>
         <source>If nothing happens, then the package is probably faulty.</source>
         <translation>Ak sa nič nestalo, balík je pravdepodobne chybný.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="57"/>
+        <location filename="../qml/pages/FilePage.qml" line="59"/>
         <source>Swipe right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
         <translation>Potiahnuť doprava na preskúmanie jeho obsahu.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="59"/>
+        <location filename="../qml/pages/FilePage.qml" line="61"/>
         <source>Open successful</source>
         <translation>Úspešne otvorené</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="60"/>
+        <location filename="../qml/pages/FilePage.qml" line="62"/>
         <source>Sometimes the application stays in the background</source>
         <translation>Aplikácia niekedy zostáva na pozadí</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="63"/>
+        <location filename="../qml/pages/FilePage.qml" line="65"/>
         <source>Internal error</source>
         <translation>Vnútorná chyba</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="65"/>
+        <location filename="../qml/pages/FilePage.qml" line="67"/>
         <source>File not found</source>
         <translation>Súbor neexistuje</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="67"/>
+        <location filename="../qml/pages/FilePage.qml" line="69"/>
         <source>No application to open the file</source>
         <translation>Neexistuje aplikácia na otvorenie súboru</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="68"/>
+        <location filename="../qml/pages/FilePage.qml" line="70"/>
         <source>xdg-open found no preferred application</source>
         <translation>xdg-open nenašiel žiadnu preferovanú aplikáciu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="70"/>
+        <location filename="../qml/pages/FilePage.qml" line="72"/>
         <source>Action failed</source>
         <translation>Akcia zlyhala</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="72"/>
+        <location filename="../qml/pages/FilePage.qml" line="74"/>
         <source>xdg-open not found</source>
         <translation>xdg-open nenájdený</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="74"/>
+        <location filename="../qml/pages/FilePage.qml" line="76"/>
         <source>xdg-open crash?</source>
         <translation>xdg-open padol?</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="76"/>
+        <location filename="../qml/pages/FilePage.qml" line="78"/>
         <source>xdg-open error</source>
         <translation>xdg-open chyba</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="94"/>
+        <location filename="../qml/pages/FilePage.qml" line="96"/>
         <source>Change Permissions</source>
         <translation>Zmeniť oprávnenia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="108"/>
+        <location filename="../qml/pages/FilePage.qml" line="110"/>
         <source>View Raw Contents</source>
         <translation>Zobraziť nespracovaný obsah</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="116"/>
+        <location filename="../qml/pages/FilePage.qml" line="118"/>
         <source>Install</source>
         <translation>Inštalovať</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="116"/>
+        <location filename="../qml/pages/FilePage.qml" line="118"/>
         <source>Open</source>
         <translation>Otvoriť</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="120"/>
+        <location filename="../qml/pages/FilePage.qml" line="122"/>
         <source>File cannot be opened</source>
         <translation>Súbor nebolo možné otvoriť</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="121"/>
+        <location filename="../qml/pages/FilePage.qml" line="123"/>
         <source>This type of file cannot be opened.</source>
         <translation>Tento typ súboru nebolo možné otvoriť.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="129"/>
+        <location filename="../qml/pages/FilePage.qml" line="131"/>
         <source>Go to Target</source>
         <translation>Ísť do cieľa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="149"/>
+        <location filename="../qml/pages/FilePage.qml" line="151"/>
         <source>The file has been moved.</source>
         <translation>Súbor bol presunutý.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="261"/>
-        <location filename="../qml/pages/FilePage.qml" line="267"/>
+        <location filename="../qml/pages/FilePage.qml" line="263"/>
+        <location filename="../qml/pages/FilePage.qml" line="269"/>
         <source>Deleting</source>
         <translation>Zmazanie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="299"/>
+        <location filename="../qml/pages/FilePage.qml" line="301"/>
         <source>Location</source>
         <translation>Poloha</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="303"/>
+        <location filename="../qml/pages/FilePage.qml" line="305"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="305"/>
+        <location filename="../qml/pages/FilePage.qml" line="307"/>
         <source>Unknown (link target not found)</source>
         <translation>Neznámy (cieľový odkaz nebol nájdený)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="305"/>
+        <location filename="../qml/pages/FilePage.qml" line="307"/>
         <source>Link to %1</source>
         <translation>Odkaz na %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="312"/>
+        <location filename="../qml/pages/FilePage.qml" line="314"/>
         <source>Permissions</source>
         <translation>Oprávnenia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="316"/>
+        <location filename="../qml/pages/FilePage.qml" line="318"/>
         <source>Owner</source>
         <translation>Vlastník</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="321"/>
+        <location filename="../qml/pages/FilePage.qml" line="323"/>
         <source>Group</source>
         <translation>Skupina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="326"/>
+        <location filename="../qml/pages/FilePage.qml" line="328"/>
         <source>Last modified</source>
         <translation>Naposledy upravovaný</translation>
     </message>
@@ -1337,9 +1437,8 @@ exposure program</extracomment>
 <context>
     <name>LicensePage</name>
     <message>
-        <location filename="../qml/pages/LicensePage.qml" line="39"/>
         <source>License</source>
-        <translation>Licencia</translation>
+        <translation type="vanished">Licencia</translation>
     </message>
 </context>
 <context>
@@ -1384,6 +1483,122 @@ exposure program</extracomment>
         <location filename="../qml/pages/MultiFilePage.qml" line="175"/>
         <source>none</source>
         <translation>žiaden</translation>
+    </message>
+</context>
+<context>
+    <name>Opal.About</name>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="105"/>
+        <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="152"/>
+        <source>Version %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="177"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="32"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="53"/>
+        <source>Development</source>
+        <translation>Vývoj</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="180"/>
+        <source>show contributors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="201"/>
+        <source>Donations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="211"/>
+        <source>License</source>
+        <translation>Licencia</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="216"/>
+        <source>This is proprietary software. All rights reserved.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="220"/>
+        <source>show license(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="223"/>
+        <source>Translations</source>
+        <translation>Preklady</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="228"/>
+        <source>Source Code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/InfoSection.qml" line="26"/>
+        <source>show details</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="29"/>
+        <source>Contributors</source>
+        <translation>Prispievatelia</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="71"/>
+        <source>Acknowledgements</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="81"/>
+        <source>Thank you!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="140"/>
+        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="32"/>
+        <source>License(s)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
+        <source>Note: please check the source code for most accurate information.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Opal.About.Common</name>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="12"/>
+        <source>If you want to support my work, you can buy me a cup of coffee.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="15"/>
+        <source>You can support this project by contributing, or by donating using any of these services.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="18"/>
+        <source>Your contributions to translations or code would be most welcome.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1656,209 +1871,221 @@ exposure program</extracomment>
     <name>SettingsPage</name>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="44"/>
-        <location filename="../qml/pages/SettingsPage.qml" line="251"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="227"/>
         <source>Settings</source>
         <translation>Nastavenia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="49"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="50"/>
+        <source>These are global preferences. If enabled in “&lt;a href=&apos;#&apos;&gt;View → Use per-directory view settings&lt;/a&gt;”, view preferences will be saved individually for all folders. Here, you can define the default values.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="66"/>
+        <source>Swipe right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="77"/>
         <source>View</source>
         <translation>Zobrazenie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="57"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="86"/>
         <source>Use per-directory view settings</source>
         <translation>Použiť nastavenia zobrazenia podľa adresára</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="61"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="90"/>
         <source>Show hidden files</source>
         <translation>Zobraziť neviditeľné súbory</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="65"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="94"/>
         <source>Show preview images</source>
         <translation>Zobraziť náhľady obrázkov</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="70"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="99"/>
         <source>Thumbnail size</source>
         <translation>Veľkosť náhľadu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="73"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="102"/>
         <source>small</source>
         <translation>malý</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="74"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="103"/>
         <source>medium</source>
         <translation>stredný</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="75"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="104"/>
         <source>large</source>
         <translation>veľký</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="76"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="105"/>
         <source>huge</source>
         <translation>obrovský</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="81"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="110"/>
         <source>Enable gallery mode</source>
         <translation>Povoliť režim galéria</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="82"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="111"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
         <translation>V režime galéria sa obrázky zobrazia primerane veľké a všetky záznamy okrem obrázkov, videí a adresárov sa skryjú.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="91"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="120"/>
         <source>Sorting</source>
         <translation>Usporiadanie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="98"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="127"/>
         <source>Show folders first</source>
         <translation>Zložky zobraziť prvé</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="102"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="131"/>
         <source>Sort case-sensitively</source>
         <translation>Triediť podľa veľkých a malých písmen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="106"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="135"/>
         <source>Sort by</source>
         <translation>Usporiadať podľa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="110"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="139"/>
         <source>name</source>
         <translation>názov</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="111"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="140"/>
         <source>size</source>
         <translation>veľkosť</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="112"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="141"/>
         <source>modification time</source>
         <translation>čas zmeny</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="113"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="142"/>
         <source>file type</source>
         <translation>typ súboru</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="117"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="146"/>
         <source>Sort order</source>
         <translation>Zoradiť poradie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="121"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="150"/>
         <source>default</source>
         <translation>predvolené</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="122"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="151"/>
         <source>reversed</source>
         <translation>obrátené</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="130"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="159"/>
         <source>Behavior and View</source>
         <translation>Správanie a zobrazenie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="140"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="170"/>
         <source>Default transfer action</source>
         <translation>Predvolená akcia prenosu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="143"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="173"/>
         <source>copy</source>
         <translation>kopírovať</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="144"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="174"/>
         <source>move</source>
         <translation>presunúť</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="145"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="175"/>
         <source>link</source>
         <translation>odkaz</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="146"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="176"/>
         <source>none</source>
         <translation>žiaden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="152"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="182"/>
         <source>Default filter line action</source>
         <translation>Predvolená akcia riadku filtra</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="155"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="185"/>
         <source>return to directory view</source>
         <translation>návrat do adresára zobrazenia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="156"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="186"/>
         <source>start recursive search</source>
         <translation>spustiť rekurzívne hľadanie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="162"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="192"/>
         <source>File name abbreviation</source>
         <translation>Skratka názvu súboru</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="165"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="195"/>
         <source>fade out</source>
         <translation>stíšiť</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="166"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="196"/>
         <source>elide end</source>
         <translation>vynechať koniec</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="167"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="197"/>
         <source>elide middle</source>
         <translation>vynechať stred</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="172"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="202"/>
         <source>Show full directory paths</source>
         <translation>Zobraziť úplnú cestu adresára</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="176"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="206"/>
         <source>Show navigation menu icon</source>
         <translation>Zobraziť ikonu navigačnej ponuky</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="185"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="210"/>
+        <source>Enable solid window background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>About File Browser</source>
-        <translation>O aplikácii Prehliadač súborov</translation>
+        <translation type="vanished">O aplikácii Prehliadač súborov</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="215"/>
         <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation>Aplikácia Prehliadač súborov je vydávaná za podmienok GNU GPL verzie 3 alebo novšej. Toto je slobodný softvér: môžete ho slobodne meniť a distribuovať. Bez záruky určenej zákonom.</translation>
+        <translation type="vanished">Aplikácia Prehliadač súborov je vydávaná za podmienok GNU GPL verzie 3 alebo novšej. Toto je slobodný softvér: môžete ho slobodne meniť a distribuovať. Bez záruky určenej zákonom.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="234"/>
         <source>The source code is available at</source>
-        <translation>Zdrojový kód je dostupný na</translation>
+        <translation type="vanished">Zdrojový kód je dostupný na</translation>
     </message>
 </context>
 <context>
@@ -2351,13 +2578,13 @@ exposure program</extracomment>
 <context>
     <name>ViewImagePage</name>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="251"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="253"/>
         <source>Loading image</source>
         <extracomment>Full page placeholder shown while a large image is being loaded</extracomment>
         <translation>Načítavanie obrázka</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="261"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="263"/>
         <source>Failed to load</source>
         <extracomment>Full page placeholder shown when an image failed to load</extracomment>
         <translation>Načítanie zlyhalo</translation>
@@ -2366,7 +2593,7 @@ exposure program</extracomment>
 <context>
     <name>ViewVideoPage</name>
     <message>
-        <location filename="../qml/pages/ViewVideoPage.qml" line="105"/>
+        <location filename="../qml/pages/ViewVideoPage.qml" line="107"/>
         <source>Failed to play</source>
         <extracomment>Full page placeholder shown when a video failed to load</extracomment>
         <translation>Prehrávanie zlyhalo</translation>
