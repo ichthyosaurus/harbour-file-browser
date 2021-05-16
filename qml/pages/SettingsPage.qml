@@ -44,9 +44,38 @@ Page {
                 title: qsTr("Settings")
             }
 
+            Label {
+                x: Theme.horizontalPageMargin
+                width: parent.width - 2*x
+                text: qsTr("These are global preferences. If enabled " +
+                           "in “<a href='#'>View → Use per-directory view settings</a>”, " +
+                           "view preferences will be saved individually for all " +
+                           "folders. Here, you can define the default values.")
+                font.pixelSize: Theme.fontSizeSmall
+                color: Theme.highlightColor
+                linkColor: Theme.secondaryHighlightColor
+                wrapMode: Text.Wrap
+                onLinkActivated: viewGroup.open = true
+            }
+
+            Spacer { height: Theme.paddingMedium }
+
+            Label {
+                x: Theme.horizontalPageMargin
+                width: parent.width - 2*x
+                text: qsTr("Swipe right to view File Browser's source code, " +
+                           "license information, and a list of contributors.")
+                font.pixelSize: Theme.fontSizeSmall
+                color: Theme.secondaryHighlightColor
+                wrapMode: Text.Wrap
+            }
+
+            Spacer { height: Theme.paddingLarge }
+
             GroupedDrawer {
                 id: viewGroup
                 title: qsTr("View")
+                open: false
                 contents: Column {
                     property alias useLocalSettings: v1.checked
                     property alias showHiddenFiles: v2.checked
