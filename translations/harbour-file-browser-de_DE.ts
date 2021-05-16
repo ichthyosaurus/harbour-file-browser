@@ -1798,7 +1798,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="50"/>
         <source>These are global preferences. If enabled in “&lt;a href=&apos;#&apos;&gt;View → Use per-directory view settings&lt;/a&gt;”, view preferences will be saved individually for all folders. Here, you can define the default values.</source>
-        <translation>Dies sind die globalen Einstellungen. Wenn „&lt;a href=&apos;#&apos;&gt;Ansicht → Ordnerspezifische Ansichtseinstellungen verwenden“ gewählt ist, werden die Ansichtseinstellungen für jeden Ordner separat gespeichert. Hier werden die Standardwerte festgelegt.</translation>
+        <translation>Dies sind die globalen Einstellungen. Wenn „&lt;a href=&apos;#&apos;&gt;Ansicht → Ordnerspezifische Ansichtseinstellungen verwenden&lt;/a&gt;“ gewählt ist, werden die Ansichtseinstellungen für jeden Ordner separat gespeichert. Hier werden die Standardwerte festgelegt.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="66"/>
@@ -2442,7 +2442,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewImagePage.qml" line="253"/>
         <source>Loading image</source>
         <extracomment>Full page placeholder shown while a large image is being loaded</extracomment>
-        <translation>Bild wird geladen ...</translation>
+        <translation>Bild wird geladen</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewImagePage.qml" line="263"/>
