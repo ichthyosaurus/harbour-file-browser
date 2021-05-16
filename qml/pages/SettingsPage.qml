@@ -227,6 +227,7 @@ Page {
                         text: "\u2022 \u2022 \u2022" // three dots
                         onCheckedChanged: {
                             settings.write("General/SolidWindowBackground", checked.toString())
+                            main.showSolidBackground(checked)
                         }
                     }
                 }

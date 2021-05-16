@@ -122,6 +122,23 @@ ApplicationWindow {
         }
     } */
 
+    function showSolidBackground(show) {
+        if (show === true) solidBackground.opacity = 1.0
+        else solidBackground.opacity = 0.0
+    }
+
+    Rectangle {
+        id: solidBackground
+        anchors.fill: parent
+        visible: opacity > 0.0
+        z: -10000
+        color: Theme.colorScheme === Theme.LightOnDark ?
+                   Theme.highlightDimmerColor :
+                   Theme.overlayBackgroundColor
+        opacity: (settings.read("General/SolidWindowBackground", "false") === "true") ? 1.0 : 0.0
+        Behavior on opacity { FadeAnimator { duration: 100 } }
+    }
+
     Component.onCompleted: {
         console.log("running File Browser: " + versionString)
     }
