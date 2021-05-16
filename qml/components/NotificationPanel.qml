@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2014, 2019 Kari Pihkala
  * SPDX-FileCopyrightText: 2016 Joona Petrell
- * SPDX-FileCopyrightText: 2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -79,7 +79,7 @@ Item {
         Rectangle {
             anchors.fill: parent
             color: Theme.overlayBackgroundColor ? Theme.overlayBackgroundColor : "black"
-            opacity: 0.7
+            opacity: Theme.colorScheme === Theme.LightOnDark ? 0.7 : 1.0
         }
         MouseArea {
             anchors.fill: parent
