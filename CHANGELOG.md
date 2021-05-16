@@ -12,11 +12,14 @@ SPDX-License-Identifier: GFDL-1.3-or-later
  * Updated translations: English, German, Swedish, Norwegian Bokmål, Slovak, Estonian, Chinese (China)
  * Updated list of contributors
  * Added support for backups using MyBackup
+ * Added new setting to show/hide solid window background
+ * Added a proper "About" page
  * Improved image loading times and error messages
+ * Improved discoverability of global vs. local settings
  * Fixed image rotation for JPEG files
  * Fixed zoom-by-double-tap for images with almost the same dimensions as the screen
  * Fixed "Open" instead of "Install" showing for APK files
- *   - Note: this has nothing to do with actually installing APK files, which appears to be broken in the system in SFOS 4.
+ *   - Note: this has nothing to do with actually installing APK files, which appears to be broken in the system in SFOS 4.0 (possibly also 4.1).
  *   - Cf. https://forum.sailfishos.org/t/4-0-1-45-regression-unable-to-update-android-apps-manually/5343/3
 
 ## Version 2.4.3 (2021-02-17)
