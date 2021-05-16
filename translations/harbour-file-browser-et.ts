@@ -6,12 +6,12 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="33"/>
         <source>A fully-fledged file manager for Sailfish OS.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tervikliku funktsionaalsusega failihaldur Sailfish OS-i jaoks.</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="43"/>
         <source>adapted by karip</source>
-        <translation type="unfinished"></translation>
+        <translation>kohandanud karip</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="66"/>
