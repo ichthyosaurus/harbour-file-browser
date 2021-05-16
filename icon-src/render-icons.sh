@@ -47,13 +47,3 @@ cITEMS=(
 cRESOLUTIONS=(128+large- 32+small-)
 cTARGETS=(../qml/images)
 render_batch
-
-echo "crushing raster icons..."
-for img in ./file-icons-raster/*.png; do
-    out="../qml/images/$(basename "$img")"
-    if [[ "$img" -nt "$out" ]]; then
-        pngcrush "$img" "$out"
-    else
-        echo "nothing to be done for '$img'"
-    fi
-done
