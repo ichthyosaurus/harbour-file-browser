@@ -15,7 +15,9 @@ import "../components"
 Page {
     id: page
     allowedOrientations: Orientation.All
-    property alias title: titleOverlay.title
+    property alias title: _titleOverlayItem.title
+    property alias subtitle: _titleOverlayItem.subtitle
+    property MediaTitleOverlay titleOverlay: _titleOverlayItem
     property string path: ''
     property bool enableDarkBackground: true
     property bool isAnimated: fileData.isAnimatedImage // false
@@ -44,7 +46,7 @@ Page {
         }
     }
 
-    MediaTitleOverlay { id: titleOverlay }
+    MediaTitleOverlay { id: _titleOverlayItem }
 
     Flickable {
         id: flick
@@ -195,10 +197,10 @@ Page {
                     if (pinchRequested) {
                         pinchRequested = false;
                         return;
-                    } else if (titleOverlay.visible) {
-                        titleOverlay.hide();
+                    } else if (_titleOverlayItem.visible) {
+                        _titleOverlayItem.hide();
                     } else {
-                        titleOverlay.show();
+                        _titleOverlayItem.show();
                     }
                 }
             }

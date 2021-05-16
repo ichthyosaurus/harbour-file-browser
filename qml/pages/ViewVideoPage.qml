@@ -16,7 +16,9 @@ import "../components"
 Page {
     id: page
     allowedOrientations: Orientation.All
-    property alias title: titleOverlay.title
+    property alias title: _titleOverlayItem.title
+    property alias subtitle: _titleOverlayItem.subtitle
+    property MediaTitleOverlay titleOverlay: _titleOverlayItem
     property alias path: video.source
     property alias autoPlay: video.autoPlay
     property bool enableDarkBackground: true
@@ -37,7 +39,7 @@ Page {
     }
 
     MediaTitleOverlay {
-        id: titleOverlay
+        id: _titleOverlayItem
         shown: !autoPlay
 
         IconButton {
@@ -62,10 +64,10 @@ Page {
         anchors.fill: parent
         onClicked: {
             if (_isPlaying === true) {
-                titleOverlay.show();
+                _titleOverlayItem.show();
                 video.pause();
             } else {
-                titleOverlay.hide();
+                _titleOverlayItem.hide();
                 video.play();
             }
         }

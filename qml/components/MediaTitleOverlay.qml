@@ -1,21 +1,8 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2020 Mirian Margiani
- *
- * SPDX-License-Identifier: GPL-3.0-or-later
- *
- * File Browser is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
- *
- * File Browser is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <https://www.gnu.org/licenses/>.
+ * SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
+ * SPDX-License-Identifier: GPL-3.0-or-later OR AGPL-3.0-or-later
  */
 
 import QtQuick 2.0
@@ -25,7 +12,10 @@ Item {
     id: overlay
     z: 100
     anchors.fill: parent
-    property alias title: titleLabel.text
+    property alias title: _titleLabel.text
+    property alias subtitle: _subtitleLabel.text
+    property alias titleItem: _titleLabel
+    property alias subtitleItem: _subtitleLabel
 
     property bool shown: false
     opacity: shown ? 1.0 : 0.0; visible: opacity != 0.0
@@ -36,7 +26,10 @@ Item {
 
     Rectangle {
         anchors.top: parent.top
-        height: Theme.itemSizeLarge
+        height: Math.max(Theme.itemSizeLarge,
+                         _titleLabel.height+_subtitleLabel.height +
+                         2*Theme.horizontalPageMargin +
+                         Theme.paddingMedium)
         width: parent.width
 
         gradient: Gradient {
@@ -45,11 +38,32 @@ Item {
         }
 
         Label {
-            id: titleLabel
-            anchors.fill: parent
-            anchors.margins: Theme.horizontalPageMargin
+            id: _titleLabel
+            anchors {
+                top: parent.top
+                margins: Theme.horizontalPageMargin
+                left: parent.left
+                right: parent.right
+            }
             color: Theme.highlightColor
-            font.pixelSize: Theme.fontSizeLarge
+            font.pixelSize: subtitle === '' ? Theme.fontSizeLarge :
+                                              Theme.fontSizeMedium
+            elide: Text.ElideNone
+            truncationMode: TruncationMode.Fade
+            horizontalAlignment: Text.AlignRight
+        }
+
+        Label {
+            id: _subtitleLabel
+            anchors {
+                top: _titleLabel.baseline
+                topMargin: Theme.paddingMedium
+                left: _titleLabel.left
+                right: _titleLabel.right
+            }
+            color: _titleLabel.color
+            font.pixelSize: Theme.fontSizeSmall
+            elide: Text.ElideNone
             truncationMode: TruncationMode.Fade
             horizontalAlignment: Text.AlignRight
         }
