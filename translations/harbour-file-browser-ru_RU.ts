@@ -1975,14 +1975,6 @@ exposure program</extracomment>
         <source>Enable solid window background</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>About File Browser</source>
-        <translation type="vanished">О приложении</translation>
-    </message>
-    <message>
-        <source>The source code is available at</source>
-        <translation type="vanished">Исходный код доступен на</translation>
-    </message>
 </context>
 <context>
     <name>ShortcutsList</name>

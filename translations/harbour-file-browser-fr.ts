@@ -167,69 +167,6 @@
     </message>
 </context>
 <context>
-    <name>ContributorsPage</name>
-    <message>
-        <source>Development</source>
-        <translation type="vanished">Développement</translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Programmation</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Traductions</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">anglais</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">allemand</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">finnois</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">chinois</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation type="vanished">russe</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">suédois</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">italien</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation type="vanished">espagnol</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">français</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation type="vanished">néerlandais</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation type="vanished">grec</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">norvégien</translation>
-    </message>
-</context>
-<context>
     <name>CreateFolderDialog</name>
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="52"/>
@@ -2017,14 +1954,6 @@ exposure program</extracomment>
         <location filename="../qml/pages/SettingsPage.qml" line="210"/>
         <source>Enable solid window background</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>About File Browser</source>
-        <translation type="vanished">À propos de File Browser</translation>
-    </message>
-    <message>
-        <source>The source code is available at</source>
-        <translation type="vanished">Le code source est disponible sur</translation>
     </message>
 </context>
 <context>

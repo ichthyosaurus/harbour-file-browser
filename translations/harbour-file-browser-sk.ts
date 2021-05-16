@@ -167,97 +167,6 @@
     </message>
 </context>
 <context>
-    <name>ContributorsPage</name>
-    <message>
-        <source>Contributors</source>
-        <translation type="vanished">Prispievatelia</translation>
-    </message>
-    <message>
-        <source>Development</source>
-        <translation type="vanished">Vývoj</translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Programovanie</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Návrh ikon</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Preklady</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">Angličtina</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">Nemčina</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">Fínčina</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">Čínština</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation type="vanished">Ruština</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">Švédčina</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">Taliančina</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation type="vanished">Španielčina</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">Francúzština</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation type="vanished">Holandčina</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation type="vanished">Gréčtina</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">Nórčina</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation type="vanished">Čeština</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation type="vanished">Slovenčina</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation type="vanished">Maďarčina</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation type="vanished">Estónčina</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation type="vanished">Poľština</translation>
-    </message>
-</context>
-<context>
     <name>CreateFolderDialog</name>
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="52"/>
@@ -1435,13 +1344,6 @@ exposure program</extracomment>
     </message>
 </context>
 <context>
-    <name>LicensePage</name>
-    <message>
-        <source>License</source>
-        <translation type="vanished">Licencia</translation>
-    </message>
-</context>
-<context>
     <name>MultiFilePage</name>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="59"/>
@@ -2074,18 +1976,6 @@ exposure program</extracomment>
         <location filename="../qml/pages/SettingsPage.qml" line="210"/>
         <source>Enable solid window background</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>About File Browser</source>
-        <translation type="vanished">O aplikácii Prehliadač súborov</translation>
-    </message>
-    <message>
-        <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation type="vanished">Aplikácia Prehliadač súborov je vydávaná za podmienok GNU GPL verzie 3 alebo novšej. Toto je slobodný softvér: môžete ho slobodne meniť a distribuovať. Bez záruky určenej zákonom.</translation>
-    </message>
-    <message>
-        <source>The source code is available at</source>
-        <translation type="vanished">Zdrojový kód je dostupný na</translation>
     </message>
 </context>
 <context>

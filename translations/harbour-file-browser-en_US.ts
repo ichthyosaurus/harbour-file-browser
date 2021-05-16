@@ -167,97 +167,6 @@
     </message>
 </context>
 <context>
-    <name>ContributorsPage</name>
-    <message>
-        <source>Contributors</source>
-        <translation type="vanished">Contributors</translation>
-    </message>
-    <message>
-        <source>Development</source>
-        <translation type="vanished">Development</translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Programming</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Icon Design</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Translations</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">English</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">German</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">Finnish</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">Chinese</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation type="vanished">Russian</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">Swedish</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">Italian</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation type="vanished">Spanish</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">French</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation type="vanished">Dutch</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation type="vanished">Greek</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">Norwegian</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation type="vanished">Czech</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation type="vanished">Slovak</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation type="vanished">Hungarian</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation type="vanished">Estonian</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation type="vanished">Polish</translation>
-    </message>
-</context>
-<context>
     <name>CreateFolderDialog</name>
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="52"/>
@@ -1422,13 +1331,6 @@ exposure program</extracomment>
     </message>
 </context>
 <context>
-    <name>LicensePage</name>
-    <message>
-        <source>License</source>
-        <translation type="vanished">License</translation>
-    </message>
-</context>
-<context>
     <name>MultiFilePage</name>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="59"/>
@@ -1529,10 +1431,6 @@ exposure program</extracomment>
         <translation>Source Code</translation>
     </message>
     <message>
-        <source>Author</source>
-        <translation type="vanished">Author</translation>
-    </message>
-    <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="29"/>
         <source>Contributors</source>
         <translation>Contributors</translation>
@@ -1573,115 +1471,6 @@ exposure program</extracomment>
 </context>
 <context>
     <name>Opal.About.Common</name>
-    <message>
-        <source>Author</source>
-        <translation type="vanished">Author</translation>
-    </message>
-    <message numerus="yes">
-        <source>Author(s)</source>
-        <translation type="vanished">
-            <numerusform>Author</numerusform>
-            <numerusform>Authors</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Maintainer</source>
-        <translation type="vanished">Maintainer</translation>
-    </message>
-    <message numerus="yes">
-        <source>Maintainer(s)</source>
-        <translation type="vanished">
-            <numerusform>Maintainer</numerusform>
-            <numerusform>Maintainers</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Development</source>
-        <translation type="vanished">Development</translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Programming</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Translations</translation>
-    </message>
-    <message>
-        <source>Donations</source>
-        <translation type="vanished">Donations</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Icon Design</translation>
-    </message>
-    <message>
-        <source>Third-party libraries</source>
-        <translation type="vanished">Third-party libraries</translation>
-    </message>
-    <message>
-        <source>Data</source>
-        <translation type="vanished">Data</translation>
-    </message>
-    <message>
-        <source>Data License</source>
-        <translation type="vanished">Data License</translation>
-    </message>
-    <message numerus="yes">
-        <source>Data License(s)</source>
-        <translation type="vanished">
-            <numerusform>Data License</numerusform>
-            <numerusform>Data Licenses</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Terms of Use</source>
-        <translation type="vanished">Terms of Use</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">Swedish</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation type="vanished">Polish</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">German</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">French</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">Chinese</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">English</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">Italian</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">Finnish</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">Norwegian</translation>
-    </message>
-    <message>
-        <source>Latvian</source>
-        <translation type="vanished">Latvian</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation type="vanished">Estonian</translation>
-    </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="12"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
@@ -2167,18 +1956,6 @@ exposure program</extracomment>
         <location filename="../qml/pages/SettingsPage.qml" line="210"/>
         <source>Enable solid window background</source>
         <translation>Enable solid window background</translation>
-    </message>
-    <message>
-        <source>About File Browser</source>
-        <translation type="vanished">About File Browser</translation>
-    </message>
-    <message>
-        <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation type="vanished">File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</translation>
-    </message>
-    <message>
-        <source>The source code is available at</source>
-        <translation type="vanished">The source code is available at</translation>
     </message>
 </context>
 <context>

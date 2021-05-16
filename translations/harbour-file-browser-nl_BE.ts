@@ -167,89 +167,6 @@
     </message>
 </context>
 <context>
-    <name>ContributorsPage</name>
-    <message>
-        <source>Contributors</source>
-        <translation type="vanished">Bijdragers</translation>
-    </message>
-    <message>
-        <source>Development</source>
-        <translation type="vanished">Ontwikkeling</translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Programmering</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Pictogramontwèrp</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Vertalingen</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">Engels</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">Duits</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">Fins</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">Chinees</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation type="vanished">Russisch</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">Zweeds</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">Italiaans</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation type="vanished">Spaans</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">Frans</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation type="vanished">Hollands</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation type="vanished">Grieks</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">Noors</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation type="vanished">Tjechisch</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation type="vanished">Slovaaks</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation type="vanished">Hongaars</translation>
-    </message>
-</context>
-<context>
     <name>CreateFolderDialog</name>
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="52"/>
@@ -1414,13 +1331,6 @@ exposure program</extracomment>
     </message>
 </context>
 <context>
-    <name>LicensePage</name>
-    <message>
-        <source>License</source>
-        <translation type="vanished">Licentie</translation>
-    </message>
-</context>
-<context>
     <name>MultiFilePage</name>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="59"/>
@@ -2046,18 +1956,6 @@ exposure program</extracomment>
         <location filename="../qml/pages/SettingsPage.qml" line="210"/>
         <source>Enable solid window background</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>About File Browser</source>
-        <translation type="vanished">Over Bestanden</translation>
-    </message>
-    <message>
-        <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation type="vanished">Bestanden wordt uitgegeven onder de voôrwaarden van de GNU GPL versie 3 of later. ’t Is vrije software: ge kun et vrij wijzigne en herdistribueren. Der is gêne garantie, voôr zôvèr da’ da toegelaten is deur de wet.</translation>
-    </message>
-    <message>
-        <source>The source code is available at</source>
-        <translation type="vanished">De broncode is beschikbaar op</translation>
     </message>
 </context>
 <context>

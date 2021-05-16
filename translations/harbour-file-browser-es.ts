@@ -167,89 +167,6 @@
     </message>
 </context>
 <context>
-    <name>ContributorsPage</name>
-    <message>
-        <source>Contributors</source>
-        <translation type="vanished">Colaboradores</translation>
-    </message>
-    <message>
-        <source>Development</source>
-        <translation type="vanished">Desarrollo</translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Programación</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Diseño de icono</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Traducciones</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">Inglés</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">Alemán</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">Finés</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">Chino</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation type="vanished">Ruso</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">Sueco</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">Italiano</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation type="vanished">Español</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">Francés</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation type="vanished">Holandés</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation type="vanished">Griego</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">Noruego</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation type="vanished">Checo</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation type="vanished">Eslovaco</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation type="vanished">Húngaro</translation>
-    </message>
-</context>
-<context>
     <name>CreateFolderDialog</name>
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="52"/>
@@ -1414,13 +1331,6 @@ exposure program</extracomment>
     </message>
 </context>
 <context>
-    <name>LicensePage</name>
-    <message>
-        <source>License</source>
-        <translation type="vanished">Licencia</translation>
-    </message>
-</context>
-<context>
     <name>MultiFilePage</name>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="59"/>
@@ -2046,18 +1956,6 @@ exposure program</extracomment>
         <location filename="../qml/pages/SettingsPage.qml" line="210"/>
         <source>Enable solid window background</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>About File Browser</source>
-        <translation type="vanished">Acerca de File Browser</translation>
-    </message>
-    <message>
-        <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation type="vanished">File Browser se ha publicado bajo los términos de la versión 3 o posterior de GNU GPL. Este es un programa libre: eres libre de modificarlo y redistribuirlo. No se ofrece ninguna garantía, en la medida permitida por la ley.</translation>
-    </message>
-    <message>
-        <source>The source code is available at</source>
-        <translation type="vanished">El código fuente está disponible en</translation>
     </message>
 </context>
 <context>

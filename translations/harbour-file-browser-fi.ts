@@ -1955,14 +1955,6 @@ exposure program</extracomment>
         <source>Enable solid window background</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>About File Browser</source>
-        <translation type="vanished">Tietoja File Browserista</translation>
-    </message>
-    <message>
-        <source>The source code is available at</source>
-        <translation type="vanished">Lähdekoodi löytyy osoitteesta</translation>
-    </message>
 </context>
 <context>
     <name>ShortcutsList</name>

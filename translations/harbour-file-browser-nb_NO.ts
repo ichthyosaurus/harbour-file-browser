@@ -167,97 +167,6 @@
     </message>
 </context>
 <context>
-    <name>ContributorsPage</name>
-    <message>
-        <source>Contributors</source>
-        <translation type="vanished">Bidragsytere</translation>
-    </message>
-    <message>
-        <source>Development</source>
-        <translation type="vanished">Utvikling</translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Programmering</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Ikondesign</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Oversettelser</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">Engelsk</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">Tysk</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">Finsk</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">Kinesisk</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation type="vanished">Russisk</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">Svensk</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">Italiensk</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation type="vanished">Spansk</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">Fransk</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation type="vanished">Hollandsk</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation type="vanished">Gresk</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">Norsk bokmål</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation type="vanished">Tsjekkisk</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation type="vanished">Slovakisk</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation type="vanished">Ungarsk</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation type="vanished">Estisk</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation type="vanished">Polsk</translation>
-    </message>
-</context>
-<context>
     <name>CreateFolderDialog</name>
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="52"/>
@@ -1422,13 +1331,6 @@ exposure program</extracomment>
     </message>
 </context>
 <context>
-    <name>LicensePage</name>
-    <message>
-        <source>License</source>
-        <translation type="vanished">Lisens</translation>
-    </message>
-</context>
-<context>
     <name>MultiFilePage</name>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="59"/>
@@ -2054,18 +1956,6 @@ exposure program</extracomment>
         <location filename="../qml/pages/SettingsPage.qml" line="210"/>
         <source>Enable solid window background</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>About File Browser</source>
-        <translation type="vanished">Om File Browser</translation>
-    </message>
-    <message>
-        <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation type="vanished">File Browser er gemenhetslig fri programvare lisensiert GPLv3+. Bruk, studer, endre, og distribuer etter evne; med alle. Det er ingen garanti, så-langt det er mulig i lovlig forstand.</translation>
-    </message>
-    <message>
-        <source>The source code is available at</source>
-        <translation type="vanished">Kildekoden er tilgjengelig på</translation>
     </message>
 </context>
 <context>

@@ -167,77 +167,6 @@
     </message>
 </context>
 <context>
-    <name>ContributorsPage</name>
-    <message>
-        <source>Contributors</source>
-        <translation type="vanished">Přispěvatelé</translation>
-    </message>
-    <message>
-        <source>Development</source>
-        <translation type="vanished">Vývoj</translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Programování</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Design ikon</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Překlady</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">Angličtina</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">Němčina</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">Finština</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">Čínština</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation type="vanished">Ruština</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">Švédština</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">Italština</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation type="vanished">Španělština</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">Francouzština</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation type="vanished">Holandština</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation type="vanished">Řečtina</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">Norština</translation>
-    </message>
-</context>
-<context>
     <name>CreateFolderDialog</name>
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="52"/>
@@ -1415,13 +1344,6 @@ exposure program</extracomment>
     </message>
 </context>
 <context>
-    <name>LicensePage</name>
-    <message>
-        <source>License</source>
-        <translation type="vanished">Licence</translation>
-    </message>
-</context>
-<context>
     <name>MultiFilePage</name>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="59"/>
@@ -2054,18 +1976,6 @@ exposure program</extracomment>
         <location filename="../qml/pages/SettingsPage.qml" line="210"/>
         <source>Enable solid window background</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>About File Browser</source>
-        <translation type="vanished">O File Browseru</translation>
-    </message>
-    <message>
-        <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation type="vanished">File Browser je vydán v licenci GNU GPL verze 3 nebo novější. Toto je svobodný software, který můžete volně měnit a redistribuovat. Jeho použití je bez záruky.</translation>
-    </message>
-    <message>
-        <source>The source code is available at</source>
-        <translation type="vanished">Zdrojový kód k dispozici na</translation>
     </message>
 </context>
 <context>

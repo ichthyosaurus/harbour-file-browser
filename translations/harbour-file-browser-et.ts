@@ -167,97 +167,6 @@
     </message>
 </context>
 <context>
-    <name>ContributorsPage</name>
-    <message>
-        <source>Contributors</source>
-        <translation type="vanished">Kaasautorid</translation>
-    </message>
-    <message>
-        <source>Development</source>
-        <translation type="vanished">Arendus</translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Koodi kirjutamine</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Ikooni kujundus</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Tõlked</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">inglise</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">saksa</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">soome</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">hiina</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation type="vanished">vene</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">rootsi</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">itaalia</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation type="vanished">hispaania</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">prantsuse</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation type="vanished">hollandi</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation type="vanished">kreeka</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">norra</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation type="vanished">tšehhi</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation type="vanished">slovaki</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation type="vanished">ungari</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation type="vanished">eesti</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation type="vanished">poola</translation>
-    </message>
-</context>
-<context>
     <name>CreateFolderDialog</name>
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="52"/>
@@ -1422,13 +1331,6 @@ exposure program</extracomment>
     </message>
 </context>
 <context>
-    <name>LicensePage</name>
-    <message>
-        <source>License</source>
-        <translation type="vanished">Litsents</translation>
-    </message>
-</context>
-<context>
     <name>MultiFilePage</name>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="59"/>
@@ -2054,18 +1956,6 @@ exposure program</extracomment>
         <location filename="../qml/pages/SettingsPage.qml" line="210"/>
         <source>Enable solid window background</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>About File Browser</source>
-        <translation type="vanished">Failihalduri teave</translation>
-    </message>
-    <message>
-        <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation type="vanished">Failihaldur on avaldatud GNU Üldise Avaliku Litsentsi versioon 3 või hilisema alusel. Tegemist on vaba tarkavaraga: sul on vaba voli seda muuta või levitada. Seaduses lubatud ulatuses puudub igasugune garantii.</translation>
-    </message>
-    <message>
-        <source>The source code is available at</source>
-        <translation type="vanished">Lähtekood leidub aadressil</translation>
     </message>
 </context>
 <context>

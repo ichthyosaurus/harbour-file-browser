@@ -167,89 +167,6 @@
     </message>
 </context>
 <context>
-    <name>ContributorsPage</name>
-    <message>
-        <source>Contributors</source>
-        <translation type="vanished">Közreműködők</translation>
-    </message>
-    <message>
-        <source>Development</source>
-        <translation type="vanished">Fejlesztés</translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Programozás</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Ikon design</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Fordítások</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">Angol</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">Német</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">Finn</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">Kínai</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation type="vanished">Orosz</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">Svéd</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">Olasz</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation type="vanished">Spanyol</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">Francia</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation type="vanished">Holland</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation type="vanished">Görög</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">Norvég</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation type="vanished">Cseh</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation type="vanished">Szlovák</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation type="vanished">Magyar</translation>
-    </message>
-</context>
-<context>
     <name>CreateFolderDialog</name>
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="52"/>
@@ -1401,13 +1318,6 @@ exposure program</extracomment>
     </message>
 </context>
 <context>
-    <name>LicensePage</name>
-    <message>
-        <source>License</source>
-        <translation type="vanished">Licenc</translation>
-    </message>
-</context>
-<context>
     <name>MultiFilePage</name>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="59"/>
@@ -2026,18 +1936,6 @@ exposure program</extracomment>
         <location filename="../qml/pages/SettingsPage.qml" line="210"/>
         <source>Enable solid window background</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>About File Browser</source>
-        <translation type="vanished">A File Browser névjegye</translation>
-    </message>
-    <message>
-        <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation type="vanished">A File Browser a GNU GPL 3. vagy későbbi verziójának hatálya alatt jelent meg. Ez szabad szoftver: megváltoztathatod és forgalomba hozhatod. Nincs garancia, a törvény által megengedett mértékben.</translation>
-    </message>
-    <message>
-        <source>The source code is available at</source>
-        <translation type="vanished">A forráskód itt érhető el:</translation>
     </message>
 </context>
 <context>

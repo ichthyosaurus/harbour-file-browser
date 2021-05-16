@@ -167,97 +167,6 @@
     </message>
 </context>
 <context>
-    <name>ContributorsPage</name>
-    <message>
-        <source>Contributors</source>
-        <translation type="vanished">Medverkande</translation>
-    </message>
-    <message>
-        <source>Development</source>
-        <translation type="vanished">Utveckling</translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Programmering</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Ikondesign</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Översättningar</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">Engelska</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">Tyska</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">Finska</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">Kinesiska</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation type="vanished">Ryska</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">Svenska</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">Italienska</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation type="vanished">Spanska</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">Franska</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation type="vanished">Nederländska</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation type="vanished">Grekiska</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">Norska</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation type="vanished">Tjeckiska</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation type="vanished">Slovakiska</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation type="vanished">Ungerska</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation type="vanished">Estniska</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation type="vanished">Polska</translation>
-    </message>
-</context>
-<context>
     <name>CreateFolderDialog</name>
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="52"/>
@@ -1422,13 +1331,6 @@ exposure program</extracomment>
     </message>
 </context>
 <context>
-    <name>LicensePage</name>
-    <message>
-        <source>License</source>
-        <translation type="vanished">Licens</translation>
-    </message>
-</context>
-<context>
     <name>MultiFilePage</name>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="59"/>
@@ -1489,10 +1391,6 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="53"/>
         <source>Development</source>
         <translation>Utveckling</translation>
-    </message>
-    <message>
-        <source>Author</source>
-        <translation type="vanished">Utvecklare</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="180"/>
@@ -1574,58 +1472,6 @@ exposure program</extracomment>
 <context>
     <name>Opal.About.Common</name>
     <message>
-        <source>Development</source>
-        <translation type="vanished">Utveckling</translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Programmering</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Översättning</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Ikondesign</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">Svenska</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation type="vanished">Polska</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">Tyska</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">Franska</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">Kinesiska</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">Engelska</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">Italienska</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">Finska</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">Norska</translation>
-    </message>
-    <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="12"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
         <translation type="unfinished"></translation>
@@ -1639,17 +1485,6 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="18"/>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Author</source>
-        <translation type="vanished">Utvecklare</translation>
-    </message>
-    <message numerus="yes">
-        <source>Author(s)</source>
-        <translation type="obsolete">
-            <numerusform>Utvecklare</numerusform>
-            <numerusform></numerusform>
-        </translation>
     </message>
 </context>
 <context>
@@ -2121,18 +1956,6 @@ exposure program</extracomment>
         <location filename="../qml/pages/SettingsPage.qml" line="210"/>
         <source>Enable solid window background</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>About File Browser</source>
-        <translation type="vanished">Om File Browser</translation>
-    </message>
-    <message>
-        <source>File Browser is released under the terms of the GNU GPL version 3 or later. This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.</source>
-        <translation type="vanished">File Browser är släppt enligt villkoren i GNU GPL version 3 eller senare. Detta är fri programvara: Du är fri att ändra och omfördela den. Det finns ingen garanti, i den utsträckning som lagen tillåter.</translation>
-    </message>
-    <message>
-        <source>The source code is available at</source>
-        <translation type="vanished">Källkoden finns tillgänglig på</translation>
     </message>
 </context>
 <context>

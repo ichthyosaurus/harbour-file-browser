@@ -167,93 +167,6 @@
     </message>
 </context>
 <context>
-    <name>ContributorsPage</name>
-    <message>
-        <source>Contributors</source>
-        <translation type="vanished">Pomogli</translation>
-    </message>
-    <message>
-        <source>Development</source>
-        <translation type="vanished">Kod</translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Programiści</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Grafika ikon</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Tłumaczenia</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">Angielski</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">Niemiecki</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">Fiński</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">Chiński</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation type="vanished">Rosyjski</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">Szwedzki</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">Włoski</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation type="vanished">Hiszpański</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">Francuski</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation type="vanished">Holenderski</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation type="vanished">Grecki</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">Norweski</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation type="vanished">Czeski</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation type="vanished">Słowacki</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation type="vanished">Węgierski</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation type="vanished">Estoński</translation>
-    </message>
-</context>
-<context>
     <name>CreateFolderDialog</name>
     <message>
         <location filename="../qml/pages/CreateFolderDialog.qml" line="52"/>
@@ -1494,10 +1407,6 @@ exposure program</extracomment>
         <translation>Rozwój</translation>
     </message>
     <message>
-        <source>Author</source>
-        <translation type="vanished">Autor</translation>
-    </message>
-    <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="180"/>
         <source>show contributors</source>
         <translation>pokaż współtwórców</translation>
@@ -1579,58 +1488,6 @@ exposure program</extracomment>
 <context>
     <name>Opal.About.Common</name>
     <message>
-        <source>Development</source>
-        <translation type="vanished">Rozwój</translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Programowanie</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Tłumaczenia</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Projekt ikon</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">szwedzki</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation type="vanished">polski</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">niemiecki</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">francuski</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">chiński</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">angielski</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">włoski</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">fiński</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">norweski</translation>
-    </message>
-    <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="12"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
         <translation type="unfinished"></translation>
@@ -1644,18 +1501,6 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="18"/>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Author</source>
-        <translation type="vanished">Autor</translation>
-    </message>
-    <message numerus="yes">
-        <source>Author(s)</source>
-        <translation type="obsolete">
-            <numerusform>Autor</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
     </message>
 </context>
 <context>
