@@ -16,3 +16,6 @@ add-gpl.sh
 icon-src/raw
 root/build*
 root/RPMS
+
+libs/opal-translations
+libs/opal-docs

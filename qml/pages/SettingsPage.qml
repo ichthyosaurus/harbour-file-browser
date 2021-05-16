@@ -179,52 +179,6 @@ Page {
                     }
                     TextSwitch {
                         id: b6; text: qsTr("Enable solid window background")
-                }
-            }
-
-            Spacer { height: 2*Theme.paddingLarge }
-
-            Label {
-                text: qsTr("About File Browser")
-                anchors.left: parent.left
-                anchors.right: parent.right
-                anchors.rightMargin: Theme.paddingLarge
-                horizontalAlignment: Text.AlignRight
-                color: Theme.highlightColor
-            }
-            Spacer { height: Theme.paddingLarge }
-            Label {
-                id: version
-                x: Theme.horizontalPageMargin
-                width: parent.width - 2*x
-                text: main.versionString
-                font.pixelSize: Theme.fontSizeSmall
-                color: Theme.highlightColor
-            }
-            Spacer { height: Theme.paddingLarge }
-            BackgroundItem {
-                anchors.left: parent.left
-                anchors.right: parent.right
-                height: aboutColumn.height
-                onClicked: pageStack.push(Qt.resolvedUrl("LicensePage.qml"))
-
-                Column {
-                    id: aboutColumn
-                    x: Theme.horizontalPageMargin
-                    width: parent.width - 2*x
-                    Label {
-                        width: parent.width
-                        color: Theme.highlightColor
-                        text: qsTr("File Browser is released under the terms of the GNU GPL version 3 or later. "+
-                                   "This is free software: you are free to change and redistribute it. "+
-                                   "There is no warranty, to the extent permitted by law.")
-                        wrapMode: Text.Wrap
-                        font.pixelSize: Theme.fontSizeSmall
-                    }
-                    Label {
-                        anchors.right: parent.right
-                        color: Theme.primaryColor // interactive
-                        text: "\u2022 \u2022 \u2022" // three dots
                         onCheckedChanged: {
                             settings.write("General/SolidWindowBackground", checked.toString())
                             main.showSolidBackground(checked)
@@ -232,26 +186,12 @@ Page {
                     }
                 }
             }
-
-            Spacer { height: Theme.paddingLarge }
-            Label {
-                x: Theme.horizontalPageMargin
-                width: parent.width - 2*x
-                text: '<style type="text/css">A { color: "%1"; }</style><p>'.arg(Theme.primaryColor) +
-                      qsTr("The source code is available at") + "<br>" +
-                      '<a href="%1">%1</a></p>'.arg(sourceCodeLink)
-                wrapMode: Text.Wrap
-                onLinkActivated: Qt.openUrlExternally(link)
-                textFormat: Text.RichText
-                font.pixelSize: Theme.fontSizeExtraSmall
-                color: Theme.highlightColor
-            }
         }
     }
 
     onStatusChanged: {
         if (status === PageStatus.Active) {
-            if (!forwardNavigation) pageStack.pushAttached(Qt.resolvedUrl("ContributorsPage.qml"));
+            if (!forwardNavigation) pageStack.pushAttached(Qt.resolvedUrl("AboutPage.qml"));
         }
 
         // update cover
