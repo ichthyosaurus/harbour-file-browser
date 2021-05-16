@@ -5,8 +5,14 @@
 # SPDX-License-Identifier: CC-BY-SA-4.0
 # SPDX-FileCopyrightText: 2018-2021 Mirian Margiani
 #
-# See https://github.com/Pretty-SFOS/opal/blob/master/snippets/opal-render-icons.md
+# See https://github.com/Pretty-SFOS/opal/blob/main/snippets/opal-render-icons.md
 # for documentation.
+#
+# @@@ FILE VERSION $c__OPAL_RENDER_ICONS_VERSION__
+#
+
+c__OPAL_RENDER_ICONS_VERSION__="0.3.0"
+# c__FOR_RENDER_LIB__=version must be set in module release scripts
 
 shopt -s extglob
 
@@ -18,11 +24,64 @@ cDEPENDENCIES=(inkscape pngcrush)
 function check_dependencies() {
     for dep in "${cDEPENDENCIES[@]}"; do
         if ! which "$dep" 2> /dev/null >&2; then
-            printf "error: %s is required\n" "$dep"
+            printf "error: %s is required\n" "$dep" >&2
             exit 1
         fi
     done
 }
+
+function log() {
+    IFS=' ' printf -- "%s\n" "$*" >&2
+}
+
+function verify_version() {
+    # @@@ shared function version: 1.1.0
+    local user_version_var="c__FOR_RENDER_LIB__"
+    local opal_version_var="c__OPAL_RENDER_ICONS_VERSION__"
+
+    if [[ -z "${!user_version_var}" ]]; then
+        log "error: script compatibility cannot be verified"
+        log "       make sure $user_version_var is set"
+        exit 1
+    fi
+
+    if [[ ! "${!user_version_var}" =~ ^[0-9]+.[0-9]+.[0-9]+$ ]] && [[ ! "${!user_version_var}" =~ ^[0-9]+.[0-9]+.[0-9]+[-+] ]]; then
+        # we don't verify pre-release versions and build metadata (i.e. everything after "-" or "+")
+        log "error: variable $user_version_var='${!user_version_var}' does not contain a valid version number"
+        exit 1
+    fi
+
+    local major="${!user_version_var%%.*}"
+    local minor="${!user_version_var#*.}"; minor="${minor%.*}"
+    local patch="${!user_version_var##*.}"
+
+    local opal_major="${!opal_version_var%%.*}"
+    local opal_minor="${!opal_version_var#*.}"; opal_minor="${opal_minor%.*}"
+    local opal_patch="${!opal_version_var##*.}"
+
+    if [[ "$opal_major" == 0 && "$major" == "$opal_major" && "$minor" != "$opal_minor" ]]; then
+        log "module script: ${!user_version_var}, opal library script: ${!opal_version_var}"
+        log "warning: unstable API has changed, please check the script"
+        log "         if everything is fine, update $user_version_var"
+        exit 1
+    fi
+
+    if (( "$opal_major" > "$major" )); then
+        log "module script: ${!user_version_var}, opal library script: ${!opal_version_var}"
+        log "error: please update the script for the current major library version ($opal_major vs. $major)"
+        exit 1
+    fi
+
+    if (( "$opal_major" < "$major" || "$opal_minor" < "$minor" )); then
+        log "module script: ${!user_version_var}, opal library script: ${!opal_version_var}"
+        log "warning: the script expects a newer public API ($opal_major.$opal_minor vs. $major.$minor)"
+        log "         please update the library"
+        exit 1
+    fi
+}
+
+# make sure script and library are compatible
+verify_version
 
 # check dependencies immediately after loading the script
 # If the user changes cDEPENDENCIES later, they can re-run this command.
