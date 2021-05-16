@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2014-2016, 2018-2019 Kari Pihkala
  * SPDX-FileCopyrightText: 2016 Joona Petrell
- * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -134,6 +134,7 @@ Page {
                     property alias showFullPaths: b3.checked
                     property alias filenameElideMode: b4.currentIndex
                     property alias showNavigationMenuIcon: b5.checked
+                    property alias solidBackground: b6.checked
 
                     ComboBox {
                         id: b1; width: parent.width
@@ -176,6 +177,8 @@ Page {
                         id: b5; text: qsTr("Show navigation menu icon")
                         onCheckedChanged: settings.write("General/ShowNavigationMenuIcon", checked.toString())
                     }
+                    TextSwitch {
+                        id: b6; text: qsTr("Enable solid window background")
                 }
             }
 
@@ -222,6 +225,9 @@ Page {
                         anchors.right: parent.right
                         color: Theme.primaryColor // interactive
                         text: "\u2022 \u2022 \u2022" // three dots
+                        onCheckedChanged: {
+                            settings.write("General/SolidWindowBackground", checked.toString())
+                        }
                     }
                 }
             }
@@ -260,6 +266,7 @@ Page {
             viewGroup.contentItem.enableGallery = (settings.read("View/EnableGalleryMode", "false") === "true");
             behaviourGroup.contentItem.showFullPaths = (settings.read("General/ShowFullDirectoryPaths", "false") === "true");
             behaviourGroup.contentItem.showNavigationMenuIcon = (settings.read("General/ShowNavigationMenuIcon", "true") === "true");
+            behaviourGroup.contentItem.solidBackground = (settings.read("General/SolidWindowBackground", "false") === "true");
 
             var defTransfer = settings.read("Transfer/DefaultAction", "none");
             if (defTransfer === "copy") {

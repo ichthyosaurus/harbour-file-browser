@@ -8,13 +8,14 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 ## Global Settings
 
-| Key                                | Default value | Allowed values                                        | Legacy key (in `[General]`)
+| Key                                | Default value | Allowed values                                | Legacy key (in `[General]`)
 |------------------------------------|---------------|-----------------------------------------------|-------------------------
 | **`[General]`**                    |               |                                               |
 | `DefaultFilterAction`              | `filter`      | `filter`/`search`                             |
 | `ShowFullDirectoryPaths`           | `false`       | bool                                          |
 | `ShowNavigationMenuIcon`           | `true`        | bool                                          |
 | `FilenameElideMode`                | `fade`        | `fade`/`end`/`middle`                         |
+| `SolidWindowBackground`            | `false`       | bool                                          |
 | **`[Transfer]`**                   |               |                                               |
 | `DefaultAction`                    | `none`        | `copy`/`move`/`link`/`none`                   | `default-transfer-action`
 | **`[View]`**                       |               |                                               |
