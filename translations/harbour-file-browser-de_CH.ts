@@ -1798,12 +1798,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="50"/>
         <source>These are global preferences. If enabled in “&lt;a href=&apos;#&apos;&gt;View → Use per-directory view settings&lt;/a&gt;”, view preferences will be saved individually for all folders. Here, you can define the default values.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dies sind die globalen Einstellungen. Wenn „&lt;a href=&apos;#&apos;&gt;Ansicht → Ordnerspezifische Ansichtseinstellungen verwenden“ gewählt ist, werden die Ansichtseinstellungen für jeden Ordner separat gespeichert. Hier werden die Standardwerte festgelegt.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="66"/>
         <source>Swipe right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nach rechts wischen für Informationen zum Quellcode, zur Lizenz und zu den Mitwirkenden an dieser App.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="77"/>
