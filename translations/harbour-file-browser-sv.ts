@@ -6,12 +6,12 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="33"/>
         <source>A fully-fledged file manager for Sailfish OS.</source>
-        <translation type="unfinished"></translation>
+        <translation>En fullfjädrad filhanterare för Sailfish OS.</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="43"/>
         <source>adapted by karip</source>
-        <translation type="unfinished"></translation>
+        <translation>anpassad av karip</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="66"/>
@@ -121,7 +121,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="153"/>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation>Indonesiska</translation>
     </message>
 </context>
 <context>
@@ -1436,7 +1436,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="140"/>
         <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Se &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="223"/>
@@ -1446,27 +1446,27 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation type="unfinished"></translation>
+        <translation>OBS! Kontrollera källkoden för mest exakt information.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="71"/>
         <source>Acknowledgements</source>
-        <translation type="unfinished"></translation>
+        <translation>Erkännanden</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="81"/>
         <source>Thank you!</source>
-        <translation type="unfinished"></translation>
+        <translation>Tack!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="201"/>
         <source>Donations</source>
-        <translation type="unfinished"></translation>
+        <translation>Donationer</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="216"/>
         <source>This is proprietary software. All rights reserved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Detta är proprietär programvara. Alla rättigheter förbehållna.</translation>
     </message>
 </context>
 <context>
@@ -1474,17 +1474,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="12"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation type="unfinished"></translation>
+        <translation>Om du vill stödja mitt arbete, kan du bjuda mig på en kopp kaffe.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="15"/>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation type="unfinished"></translation>
+        <translation>Du kan stödja projektet genom att bidra eller genom att donera med någon av dessa tjänster.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="18"/>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dina bidrag till översättning eller kod är mycket välkommet.</translation>
     </message>
 </context>
 <context>
@@ -1795,12 +1795,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="50"/>
         <source>These are global preferences. If enabled in “&lt;a href=&apos;#&apos;&gt;View → Use per-directory view settings&lt;/a&gt;”, view preferences will be saved individually for all folders. Here, you can define the default values.</source>
-        <translation type="unfinished"></translation>
+        <translation>Detta är globala preferenser. Om de är aktiverade i &quot;&lt;a href=&apos;#&apos;&gt;Visa → Använd visningsinställningar per mapp&lt;/a&gt;&quot; sparas visningsinställningarna individuellt för alla mappar. Här kan du definiera standardvärdena.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="66"/>
         <source>Swipe right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Svep höger för att se File Browsers källkod, licensinformation och en lista över bidragsgivare.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="77"/>
@@ -1955,7 +1955,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="210"/>
         <source>Enable solid window background</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktivera solid fönsterbakgrund</translation>
     </message>
 </context>
 <context>
