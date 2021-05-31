@@ -6,12 +6,12 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="33"/>
         <source>A fully-fledged file manager for Sailfish OS.</source>
-        <translation type="unfinished"></translation>
+        <translation>Manajer file lengkap untuk Sailfish OS.</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="43"/>
         <source>adapted by karip</source>
-        <translation type="unfinished"></translation>
+        <translation>diadaptasi oleh karip</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="66"/>
@@ -121,7 +121,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="153"/>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation>Bahasa Indonesia</translation>
     </message>
 </context>
 <context>
@@ -251,7 +251,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="361"/>
         <source>No files matched the filter.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tidak ada berkas yang cocok.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="362"/>
@@ -295,12 +295,12 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="332"/>
         <source>Remove bookmark</source>
-        <translation type="unfinished">Hapus bookmark</translation>
+        <translation>Hapus bookmark</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="332"/>
         <source>Add to bookmarks</source>
-        <translation type="unfinished">Tambah ke bookmark</translation>
+        <translation>Tambah ke bookmark</translation>
     </message>
 </context>
 <context>
@@ -318,7 +318,7 @@
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="161"/>
         <source>Edit path</source>
-        <translation type="unfinished"></translation>
+        <translation>Ubah jalur</translation>
     </message>
 </context>
 <context>
@@ -326,7 +326,7 @@
     <message>
         <location filename="../src/engine.cpp" line="131"/>
         <source>No files to paste</source>
-        <translation type="unfinished">Tidak ada berkas untuk ditempel</translation>
+        <translation>Tidak ada berkas untuk ditempel</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="139"/>
@@ -336,7 +336,7 @@
     <message>
         <location filename="../src/engine.cpp" line="150"/>
         <source>Cannot overwrite itself</source>
-        <translation type="unfinished"></translation>
+        <translation>Tidak dapat menimpa dirinya sendiri</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="156"/>
@@ -351,7 +351,7 @@
     <message>
         <location filename="../src/engine.cpp" line="362"/>
         <source>Broken symbolic link</source>
-        <translation type="unfinished">Tautan simbolis yang rusak</translation>
+        <translation>Tautan symbolic rusak</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="367"/>
@@ -367,7 +367,7 @@
         <location filename="../src/engine.cpp" line="377"/>
         <location filename="../src/engine.cpp" line="383"/>
         <source>Error reading file</source>
-        <translation type="unfinished"></translation>
+        <translation>Galat saat membaca berkas</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="386"/>
@@ -377,17 +377,17 @@
     <message>
         <location filename="../src/engine.cpp" line="412"/>
         <source>Binary file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>Pratinjau berkas biner terpotong pada %1 kB</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="431"/>
         <source>Text file preview clipped at %1 lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Pratinjau file teks dipotong pada %1 baris</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="433"/>
         <source>Text file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>Pratinjau file teks dipotong pada %1 kB</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="446"/>
@@ -422,7 +422,7 @@
     <message>
         <location filename="../qml/components/FileActions.qml" line="105"/>
         <source>clear selection</source>
-        <translation type="unfinished"></translation>
+        <translation>bersihkan seleksi</translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="106"/>
@@ -488,8 +488,8 @@
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="214"/>
         <source>compress file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>kompres berkas</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -502,7 +502,7 @@
     <message>
         <location filename="../qml/components/FileActions.qml" line="231"/>
         <source>show file properties</source>
-        <translation type="unfinished"></translation>
+        <translation>tampilkan properti berkas</translation>
     </message>
 </context>
 <context>
@@ -510,7 +510,7 @@
     <message>
         <location filename="../qml/cover/FileBrowserCover.qml" line="47"/>
         <source>Root Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode Root</translation>
     </message>
 </context>
 <context>
@@ -528,17 +528,17 @@
     <message>
         <location filename="../src/filedata.cpp" line="229"/>
         <source>character device</source>
-        <translation type="unfinished"></translation>
+        <translation>perangkat karakter</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="233"/>
         <source>pipe</source>
-        <translation type="unfinished"></translation>
+        <translation>pipa</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="237"/>
         <source>socket</source>
-        <translation type="unfinished"></translation>
+        <translation>Soket</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="241"/>
@@ -585,7 +585,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="56"/>
         <source>Install launched</source>
-        <translation type="unfinished"></translation>
+        <translation>Penginstalan diluncurkan</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="57"/>
@@ -626,7 +626,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="70"/>
         <source>xdg-open found no preferred application</source>
-        <translation type="unfinished"></translation>
+        <translation>xdg-open tidak menemukan aplikasi pilihan</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="72"/>
@@ -641,7 +641,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="76"/>
         <source>xdg-open crash?</source>
-        <translation type="unfinished"></translation>
+        <translation>xdg-open jatuh?</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="78"/>
@@ -656,7 +656,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="110"/>
         <source>View Raw Contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Lihat Konten Raw</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="118"/>
@@ -707,12 +707,12 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="307"/>
         <source>Unknown (link target not found)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tidak diketahui (target tautan tidak ditemukan)</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="307"/>
         <source>Link to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Tautkan ke %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="314"/>
@@ -727,7 +727,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="323"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grup</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="328"/>
@@ -827,12 +827,12 @@
     <message>
         <location filename="../src/fileworker.cpp" line="372"/>
         <source>Source folder does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Folder sumber tidak ada</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="379"/>
         <source>Cannot create target folder %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Tak bisa membuat folder target %1</translation>
     </message>
 </context>
 <context>
@@ -857,7 +857,7 @@
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="157"/>
         <source>Make</source>
-        <translation type="unfinished">Pembuat</translation>
+        <translation>Membuat</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="158"/>
@@ -888,13 +888,13 @@
         <location filename="../src/jhead/jhead-api.cpp" line="182"/>
         <source>Strobe light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Cahaya strobo tidak terdeteksi</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="184"/>
         <source>Strobe light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Cahaya strobo terdeteksi</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="186"/>
@@ -911,13 +911,13 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="188"/>
         <source>Manual, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Manual, cahaya balik tidak terdeteksi</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="190"/>
         <source>Manual, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Manual, cahaya balik terdeteksi</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="192"/>
@@ -930,62 +930,62 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="194"/>
         <source>Auto, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Otomatis, cahaya balik tidak terdeteksi</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="196"/>
         <source>Auto, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Otomatis, cahaya balik terdeteksi</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="198"/>
         <source>Red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Mode reduksi mata merah</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="200"/>
         <source>Red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Mode reduksi mata merah, cahaya balik tidak terdeteksi</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="202"/>
         <location filename="../src/jhead/jhead-api.cpp" line="208"/>
         <source>Red eye reduction mode, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Mode reduksi mata merah, cahaya balik terdeteksi</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="204"/>
         <source>Manual, red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Manual, mode reduksi mata merah</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="206"/>
         <source>Manual, red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Manual, mode reduksi mata merah, cahaya balik tidak terdeteksi</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="210"/>
         <source>Auto, red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Otomatis, mode reduksi mata merah</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="212"/>
         <source>Auto, red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Otomatis, mode reduksi mata merah, cahaya balik tidak terdeteksi</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="214"/>
         <source>Auto, red eye reduction mode, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Otomatis, mode reduksi mata merah, cahaya balik terdeteksi</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="218"/>
@@ -994,7 +994,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="226"/>
         <location filename="../src/jhead/jhead-api.cpp" line="321"/>
         <source>Flash</source>
-        <translation type="unfinished"></translation>
+        <translation>Kilat</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="218"/>
@@ -1004,23 +1004,23 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="220"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ya</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="224"/>
         <source>No (Auto)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tidak (Otomatis)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="226"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Tidak</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="235"/>
         <source>%1mm (35mm equivalent: %2mm)</source>
         <extracomment>size in millimeters</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1mm (setara 35mm: %2mm)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="240"/>
@@ -1031,7 +1031,7 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="243"/>
         <source>Focal Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Panjang Fokus</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="248"/>
@@ -1042,29 +1042,29 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="250"/>
         <source>%1x</source>
         <extracomment>as in &quot;zoom: %1 times&quot;</extracomment>
-        <translation type="unfinished">%1x</translation>
+        <translation>%1x</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="256"/>
         <source>CCD Width</source>
         <extracomment>photographic sensor width; cf. https://en.wikipedia.org/wiki/Charge-coupled_device</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Lebar CCD</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="268"/>
         <source>%1 (1/%2)</source>
         <extracomment>exposure time as raw value (1) and as fraction (2)</extracomment>
-        <translation type="unfinished">%1 (1/%2)</translation>
+        <translation>%1 (1/%2)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="270"/>
         <source>Exposure Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Waktu Eksposur</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="273"/>
         <source>Aperture</source>
-        <translation type="unfinished"></translation>
+        <translation>Apertur</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="275"/>
@@ -1082,13 +1082,13 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="281"/>
         <source>Infinite</source>
         <extracomment>focus distance</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Tak terhingga</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="285"/>
         <source>%1m</source>
         <extracomment>focus distance in meters</extracomment>
-        <translation type="unfinished">%1m</translation>
+        <translation>%1m</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="290"/>
@@ -1099,13 +1099,13 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="297"/>
         <source>Exposure Bias</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Exposure_compensation</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Bias Pajanan</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="302"/>
         <location filename="../src/jhead/jhead-api.cpp" line="305"/>
         <source>White Balance</source>
-        <translation type="unfinished"></translation>
+        <translation>Keseimbangan Putih</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="312"/>
@@ -1120,17 +1120,17 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="312"/>
         <source>Daylight</source>
-        <translation type="unfinished"></translation>
+        <translation>Siang</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="315"/>
         <source>Fluorescent</source>
-        <translation type="unfinished"></translation>
+        <translation>Neon</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="318"/>
         <source>Incandescent</source>
-        <translation type="unfinished"></translation>
+        <translation>Pijar</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="324"/>
@@ -1140,55 +1140,55 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="327"/>
         <source>Shade</source>
-        <translation type="unfinished"></translation>
+        <translation>Bayangan</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="338"/>
         <source>Average</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Rata-rata</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="340"/>
         <source>Center weighted average</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Rata-rata tertimbang tengah</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="342"/>
         <source>Spot</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Tempat</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="344"/>
         <source>Multi spot</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Multi tempat</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="346"/>
         <source>Pattern</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Pola</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="348"/>
         <source>Partial</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Parsial</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="350"/>
         <source>Other</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Lainnya</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="352"/>
         <source>Unknown (%1)</source>
         <extracomment>inlcudes an unknown value (1); cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Tidak diketahui (%1)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="355"/>
@@ -1200,31 +1200,31 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="367"/>
         <source>Program (auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Program (otomatis)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="371"/>
         <source>Aperture priority (semi-auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Prioritas bukaan (semi-otomatis)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="375"/>
         <source>Shutter priority (semi-auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Prioritas rana (semi-otomatis)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="379"/>
         <source>Creative Program (based towards depth of field)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Program Kreatif (berdasarkan kedalaman bidang)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="383"/>
         <source>Action program (based towards fast shutter speed)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Program aksi (didasarkan pada kecepatan rana cepat)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="387"/>
@@ -1236,42 +1236,42 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="391"/>
         <source>Landscape mode</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Mode lanskap</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="396"/>
         <source>Exposure Program</source>
-        <translation type="unfinished"></translation>
+        <translation>Program Pajanan</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="402"/>
         <location filename="../src/jhead/jhead-api.cpp" line="405"/>
         <source>Exposure Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode Pajanan</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="407"/>
         <source>Auto bracketing</source>
         <extracomment>exposure mode; cf. https://en.wikipedia.org/wiki/Autobracketing#Exposure</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Bracketing otomatis</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="416"/>
         <source>Macro</source>
         <extracomment>focus range</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Makro</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="420"/>
         <source>Close</source>
         <extracomment>focus range</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Dekat</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="424"/>
         <source>Distant</source>
         <extracomment>focus range</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Jarak</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="427"/>
@@ -1287,22 +1287,22 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="437"/>
         <source>Unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>Tidak diketahui</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="448"/>
         <source>Latitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Garis Lintang</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="449"/>
         <source>Longitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Garis bujur</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="451"/>
         <source>Altitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Ketinggian</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="457"/>
@@ -1314,7 +1314,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="485"/>
         <location filename="../src/jhead/jhead-api.cpp" line="488"/>
         <source>Comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Komentar</translation>
     </message>
 </context>
 <context>
@@ -1322,41 +1322,41 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="59"/>
         <source>Selection Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Properti Pilihan</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="69"/>
         <source>The files have been moved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Berkas telah dipindahkan.</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/MultiFilePage.qml" line="93"/>
         <source>%n item(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n item dipilih</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="112"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="118"/>
         <source>Deleting</source>
-        <translation type="unfinished">Menghapus</translation>
+        <translation>Menghapus</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="140"/>
         <source>Directories</source>
-        <translation type="unfinished"></translation>
+        <translation>Direktori</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="150"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Berkas</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="166"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="175"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation>tidak ada</translation>
     </message>
 </context>
 <context>
@@ -1364,12 +1364,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="105"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Tentang</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="152"/>
         <source>Version %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Versi %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="177"/>
@@ -1381,28 +1381,28 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="180"/>
         <source>show contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>tampilkan kontributor</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="201"/>
         <source>Donations</source>
-        <translation type="unfinished"></translation>
+        <translation>Donasi</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="211"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisensi</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="216"/>
         <source>This is proprietary software. All rights reserved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ini adalah perangkat lunak proprietary. Semua hak dilindungi undang-undang.</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="220"/>
         <source>show license(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>tampilkan lisensi</numerusform>
         </translation>
     </message>
     <message>
@@ -1413,12 +1413,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="228"/>
         <source>Source Code</source>
-        <translation type="unfinished"></translation>
+        <translation>Kode Sumber</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/InfoSection.qml" line="26"/>
         <source>show details</source>
-        <translation type="unfinished"></translation>
+        <translation>Tampilkan rincian</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="29"/>
@@ -1428,29 +1428,29 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="71"/>
         <source>Acknowledgements</source>
-        <translation type="unfinished"></translation>
+        <translation>Pengakuan</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="81"/>
         <source>Thank you!</source>
-        <translation type="unfinished"></translation>
+        <translation>Terima kasih!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="140"/>
         <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Silakan merujuk &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="32"/>
         <source>License(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Lisensi</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation type="unfinished"></translation>
+        <translation>Catatan: silakan periksa kode sumber untuk informasi yang paling akurat.</translation>
     </message>
 </context>
 <context>
@@ -1458,17 +1458,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="12"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jika Anda ingin mendukung pekerjaan saya, Anda dapat mentraktir secangkir kopi.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="15"/>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation type="unfinished"></translation>
+        <translation>Anda dapat mendukung proyek ini dengan berkontribusi, atau dengan berdonasi menggunakan salah satu layanan ini.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="18"/>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontribusi Anda terhadap terjemahan atau kode akan sangat disambut baik.</translation>
     </message>
 </context>
 <context>
@@ -1476,22 +1476,22 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="49"/>
         <source>Replace?</source>
-        <translation type="unfinished"></translation>
+        <translation>Ganti?</translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="50"/>
         <source>Replace</source>
-        <translation type="unfinished"></translation>
+        <translation>Ganti</translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="54"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation type="unfinished"></translation>
+        <translation>Berkas atau folder ini sudah ada di &quot;%1&quot;:</translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="55"/>
         <source>These files or folders already exist:</source>
-        <translation type="unfinished"></translation>
+        <translation>Berkas atau folder ini sudah ada:</translation>
     </message>
 </context>
 <context>
@@ -1499,12 +1499,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="129"/>
         <source>Path to a folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Jalur ke folder</translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="234"/>
         <source>Remove last part</source>
-        <translation type="unfinished"></translation>
+        <translation>Hapus bagian terakhir</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/PathEditDialog.qml" line="256"/>
@@ -1526,7 +1526,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/PathEditDialog.qml" line="262"/>
         <source>empty</source>
         <extracomment>as in &apos;this folder is empty&apos;</extracomment>
-        <translation type="unfinished">kosong</translation>
+        <translation>kosong</translation>
     </message>
 </context>
 <context>
@@ -1534,43 +1534,44 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="78"/>
         <source>Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Ubah</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="84"/>
         <source>Change permissions for
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ubah izin untuk
+%1</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="104"/>
         <source>Read</source>
-        <translation type="unfinished"></translation>
+        <translation>Baca</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="112"/>
         <source>Write</source>
-        <translation type="unfinished"></translation>
+        <translation>Tulis</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="119"/>
         <source>Execute</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksekusi</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="140"/>
         <source>Owner</source>
-        <translation type="unfinished">Pemilik</translation>
+        <translation>Pemilik</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="178"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grup</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="211"/>
         <source>Others</source>
-        <translation type="unfinished"></translation>
+        <translation>Lainnya</translation>
     </message>
 </context>
 <context>
@@ -1578,12 +1579,12 @@ exposure program</extracomment>
     <message>
         <location filename="../src/engine.cpp" line="244"/>
         <source>SD card</source>
-        <translation type="unfinished"></translation>
+        <translation>Kartu SD</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="246"/>
         <source>Removable Media</source>
-        <translation type="unfinished"></translation>
+        <translation>Media yang Dapat Dilepas</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="120"/>
@@ -1593,12 +1594,12 @@ exposure program</extracomment>
     <message>
         <location filename="../src/globals.cpp" line="123"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
-        <translation type="unfinished"></translation>
+        <translation>dd MMM yyyy, hh:mm:ss t</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="125"/>
         <source>dd.MM.yy, hh:mm</source>
-        <translation type="unfinished"></translation>
+        <translation>dd.MM.yy, hh:mm</translation>
     </message>
 </context>
 <context>
@@ -1607,7 +1608,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/QuickSwitchDialog.qml" line="29"/>
         <source>Switch</source>
         <extracomment>as in &quot;Switch to this folder, please&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Beralih</translation>
     </message>
 </context>
 <context>
@@ -1615,24 +1616,25 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="66"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Ubah nama</translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="85"/>
         <source>Give a new name for
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Berikan nama baru untuk
+%1</translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="95"/>
         <location filename="../qml/pages/RenameDialog.qml" line="96"/>
         <source>New name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nama baru</translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="97"/>
         <source>A file with this name already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Berkas dengan nama ini sudah ada.</translation>
     </message>
 </context>
 <context>
@@ -1640,29 +1642,29 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="100"/>
         <source>Searching</source>
-        <translation type="unfinished"></translation>
+        <translation>Mencari</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="109"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Pengaturan</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="120"/>
         <location filename="../qml/pages/SearchPage.qml" line="356"/>
         <source>Search</source>
-        <translation type="unfinished">Cari</translation>
+        <translation>Cari</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="134"/>
         <source>Search below “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Cari di bawah &quot;%1&quot;</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SearchPage.qml" line="188"/>
         <source>%n hit(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n total</numerusform>
         </translation>
     </message>
     <message>
@@ -1671,37 +1673,37 @@ exposure program</extracomment>
         <location filename="../qml/pages/SearchPage.qml" line="404"/>
         <location filename="../qml/pages/SearchPage.qml" line="406"/>
         <source>Deleting</source>
-        <translation type="unfinished">Menghapus</translation>
+        <translation>Menghapus</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="335"/>
         <source>Go to containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Masuk ke folder yang berisi</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="339"/>
         <source>Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>Potong</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="343"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Salin</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="347"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Hapus</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="413"/>
         <source>Internally not ready</source>
-        <translation type="unfinished">Tidak siap secara internal</translation>
+        <translation>Tidak siap secara internal</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="413"/>
         <source>Please simply try again</source>
-        <translation type="unfinished">Silakan coba lagi</translation>
+        <translation>Silakan coba lagi</translation>
     </message>
 </context>
 <context>
@@ -1709,12 +1711,12 @@ exposure program</extracomment>
     <message>
         <location filename="../src/searchworker.cpp" line="41"/>
         <source>Search already in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Pencarian sudah berlangsung</translation>
     </message>
     <message>
         <location filename="../src/searchworker.cpp" line="46"/>
         <source>Bad search parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>Parameter pencarian yang buruk</translation>
     </message>
 </context>
 <context>
@@ -1722,7 +1724,7 @@ exposure program</extracomment>
     <message numerus="yes">
         <location filename="../qml/components/SelectionPanel.qml" line="54"/>
         <source>%n file(s) selected</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n berkas dipilih</numerusform>
         </translation>
     </message>
@@ -1733,207 +1735,207 @@ exposure program</extracomment>
         <location filename="../qml/pages/SettingsPage.qml" line="44"/>
         <location filename="../qml/pages/SettingsPage.qml" line="227"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Pengaturan</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="50"/>
         <source>These are global preferences. If enabled in “&lt;a href=&apos;#&apos;&gt;View → Use per-directory view settings&lt;/a&gt;”, view preferences will be saved individually for all folders. Here, you can define the default values.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ini adalah preferensi global. Jika diaktifkan dalam &quot;&lt;a href=&apos;#&apos;&gt; Tampilan → Gunakan pengaturan tampilan per direktori &lt;/a&gt;&quot;, preferensi tampilan akan disimpan secara individual untuk semua folder. Di sini, Anda dapat menentukan nilai default.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="66"/>
         <source>Swipe right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Geser ke kanan untuk melihat kode sumber, informasi lisensi, dan daftar kontributor File Browser.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="77"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>Tampilan</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="86"/>
         <source>Use per-directory view settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Gunakan setelan tampilan per direktori</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="90"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">Tampilkan berkas-berkas yang tersembunyi</translation>
+        <translation>Tampilkan berkas yang tersembunyi</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="94"/>
         <source>Show preview images</source>
-        <translation type="unfinished"></translation>
+        <translation>Perlihatkan gambar pratinjau</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="99"/>
         <source>Thumbnail size</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukuran thumbnail</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="102"/>
         <source>small</source>
-        <translation type="unfinished"></translation>
+        <translation>kecil</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="103"/>
         <source>medium</source>
-        <translation type="unfinished"></translation>
+        <translation>sedang</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="104"/>
         <source>large</source>
-        <translation type="unfinished"></translation>
+        <translation>besar</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="105"/>
         <source>huge</source>
-        <translation type="unfinished"></translation>
+        <translation>sangat besar</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="110"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktifkan mode galeri</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="111"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dalam mode galeri, gambar akan ditampilkan dengan besar, dan semua entri kecuali untuk gambar, video, dan direktori akan disembunyikan.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="120"/>
         <source>Sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>Menyortir</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="127"/>
         <source>Show folders first</source>
-        <translation type="unfinished"></translation>
+        <translation>Tampilkan folder terlebih dahulu</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="131"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished"></translation>
+        <translation>Mengurutkan huruf besar-kecil secara sensitif</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="135"/>
         <source>Sort by</source>
-        <translation type="unfinished"></translation>
+        <translation>Urutkan menurut</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="139"/>
         <source>name</source>
-        <translation type="unfinished"></translation>
+        <translation>nama</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="140"/>
         <source>size</source>
-        <translation type="unfinished"></translation>
+        <translation>ukuran</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="141"/>
         <source>modification time</source>
-        <translation type="unfinished"></translation>
+        <translation>tanggal diubah</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="142"/>
         <source>file type</source>
-        <translation type="unfinished"></translation>
+        <translation>tipe file</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="146"/>
         <source>Sort order</source>
-        <translation type="unfinished"></translation>
+        <translation>Sortir urutan</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="150"/>
         <source>default</source>
-        <translation type="unfinished"></translation>
+        <translation>default</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="151"/>
         <source>reversed</source>
-        <translation type="unfinished"></translation>
+        <translation>terbalik</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="159"/>
         <source>Behavior and View</source>
-        <translation type="unfinished"></translation>
+        <translation>Perilaku dan Tampilan</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="170"/>
         <source>Default transfer action</source>
-        <translation type="unfinished"></translation>
+        <translation>Tindakan transfer default</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="173"/>
         <source>copy</source>
-        <translation type="unfinished"></translation>
+        <translation>salin</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="174"/>
         <source>move</source>
-        <translation type="unfinished"></translation>
+        <translation>pindah</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="175"/>
         <source>link</source>
-        <translation type="unfinished"></translation>
+        <translation>tautkan</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="176"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation>tidak ada</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="182"/>
         <source>Default filter line action</source>
-        <translation type="unfinished"></translation>
+        <translation>Tindakan garis filter default</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="185"/>
         <source>return to directory view</source>
-        <translation type="unfinished"></translation>
+        <translation>kembali ke tampilan direktori</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="186"/>
         <source>start recursive search</source>
-        <translation type="unfinished"></translation>
+        <translation>mulai pencarian rekursif</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="192"/>
         <source>File name abbreviation</source>
-        <translation type="unfinished"></translation>
+        <translation>Singkatan nama file</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="195"/>
         <source>fade out</source>
-        <translation type="unfinished"></translation>
+        <translation>memudar</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="196"/>
         <source>elide end</source>
-        <translation type="unfinished"></translation>
+        <translation>elide akhir</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="197"/>
         <source>elide middle</source>
-        <translation type="unfinished"></translation>
+        <translation>elide tengah</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="202"/>
         <source>Show full directory paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Tampilkan jalur direktori lengkap</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="206"/>
         <source>Show navigation menu icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Tampilkan ikon menu navigasi</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="210"/>
         <source>Enable solid window background</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktifkan latar belakang jendela yang solid</translation>
     </message>
 </context>
 <context>
@@ -1941,17 +1943,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="292"/>
         <source>Open system settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Buka setelan sistem</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="302"/>
         <source>Nothing to show here...</source>
-        <translation type="unfinished"></translation>
+        <translation>Tidak ada sesuatu di sini ...</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="328"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>Kustom</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="335"/>
@@ -1963,62 +1965,62 @@ exposure program</extracomment>
         <location filename="../qml/components/ShortcutsList.qml" line="363"/>
         <location filename="../qml/components/ShortcutsList.qml" line="369"/>
         <source>Locations</source>
-        <translation type="unfinished"></translation>
+        <translation>Lokasi</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="336"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Beranda</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="341"/>
         <source>Documents</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokumen</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="345"/>
         <source>Downloads</source>
-        <translation type="unfinished"></translation>
+        <translation>Unduhan</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="349"/>
         <source>Music</source>
-        <translation type="unfinished"></translation>
+        <translation>Musik</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="353"/>
         <source>Pictures</source>
-        <translation type="unfinished"></translation>
+        <translation>Gambar</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="357"/>
         <source>Videos</source>
-        <translation type="unfinished"></translation>
+        <translation>Video</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="364"/>
         <source>Android storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Penyimpanan android</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="370"/>
         <source>Root</source>
-        <translation type="unfinished"></translation>
+        <translation>Root</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="378"/>
         <source>Storage devices</source>
-        <translation type="unfinished"></translation>
+        <translation>Perangkat penyimpanan</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="380"/>
         <source>SD card</source>
-        <translation type="unfinished"></translation>
+        <translation>Kartu SD</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="392"/>
         <source>Bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Bookmark</translation>
     </message>
 </context>
 <context>
@@ -2027,57 +2029,57 @@ exposure program</extracomment>
         <location filename="../qml/pages/ShortcutsPage.qml" line="43"/>
         <location filename="../qml/pages/ShortcutsPage.qml" line="120"/>
         <source>Places</source>
-        <translation type="unfinished"></translation>
+        <translation>Tempat</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="54"/>
         <source>Remove bookmark for “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Hapus bookmark untuk &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="55"/>
         <source>Add “%1” to bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Tambah &quot;%1&quot; ke bookmark</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="63"/>
         <source>Open new window</source>
-        <translation type="unfinished"></translation>
+        <translation>Buka jendela baru</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="66"/>
         <source>New window opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Jendela baru terbuka</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="67"/>
         <source>Sometimes the application stays in the background</source>
-        <translation type="unfinished">Kadang-kadang aplikasi ini tetap berjalan di belakang layar</translation>
+        <translation>Terkadang aplikasi ini tetap berjalan di belakang layar</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="71"/>
         <source>Search</source>
-        <translation type="unfinished">Cari</translation>
+        <translation>Cari</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="87"/>
         <source>Create a new bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Buat bookmark baru</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="99"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Simpan</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="105"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Segarkan</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="110"/>
         <source>Open storage settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Buka setelan penyimpanan</translation>
     </message>
 </context>
 <context>
@@ -2085,40 +2087,40 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="33"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukuran</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="54"/>
         <source>size</source>
-        <translation type="unfinished"></translation>
+        <translation>ukuran</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="61"/>
         <source>directories</source>
-        <translation type="unfinished"></translation>
+        <translation>direktori</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="68"/>
         <source>files</source>
-        <translation type="unfinished"></translation>
+        <translation>file</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="74"/>
         <source>unknown size</source>
-        <translation type="unfinished"></translation>
+        <translation>ukuran tidak diketahui</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="78"/>
         <source>%n directories</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n direktori</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="86"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n file</numerusform>
         </translation>
     </message>
 </context>
@@ -2127,112 +2129,112 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="46"/>
         <source>Sorting and View</source>
-        <translation type="unfinished"></translation>
+        <translation>Pengurutan dan Tampilan</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="55"/>
         <source>Sort by...</source>
-        <translation type="unfinished"></translation>
+        <translation>Urutkan berdasarkan...</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="58"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nama</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="59"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukuran</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="60"/>
         <source>Modification time</source>
-        <translation type="unfinished"></translation>
+        <translation>Waktu dimodifikasi</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="61"/>
         <source>File type</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipe berkas</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="77"/>
         <source>Order...</source>
-        <translation type="unfinished"></translation>
+        <translation>Urutan...</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="80"/>
         <source>default</source>
-        <translation type="unfinished"></translation>
+        <translation>default</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="81"/>
         <source>reversed</source>
-        <translation type="unfinished"></translation>
+        <translation>terbalik</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="97"/>
         <source>Preview images...</source>
-        <translation type="unfinished"></translation>
+        <translation>Pratinjau gambar...</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="100"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation>tidak ada</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="101"/>
         <source>small</source>
-        <translation type="unfinished"></translation>
+        <translation>kecil</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="102"/>
         <source>medium</source>
-        <translation type="unfinished"></translation>
+        <translation>sedang</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="103"/>
         <source>large</source>
-        <translation type="unfinished"></translation>
+        <translation>besar</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="104"/>
         <source>huge</source>
-        <translation type="unfinished"></translation>
+        <translation>besar sekali</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="120"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">Tampilkan berkas-berkas yang tersembunyi</translation>
+        <translation>Tampilkan berkas yang tersembunyi</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="125"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktifkan mode galeri</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="126"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pada mode galeri, gambar akan ditampilkan dengan ukuran besar, dan semua entri kecuali gambar, video, dan direktori akan disembunyikan.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="132"/>
         <source>Show folders first</source>
-        <translation type="unfinished"></translation>
+        <translation>Tampilkan folder terlebih dahulu</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="137"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished"></translation>
+        <translation>Urutkan huruf besar-kecil secara sensitif</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="153"/>
         <source>Local preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferensi Lokal</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="154"/>
         <source>Global preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferensi global</translation>
     </message>
 </context>
 <context>
@@ -2240,17 +2242,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="37"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Salin</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="48"/>
         <source>Move</source>
-        <translation type="unfinished"></translation>
+        <translation>Pindah</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="59"/>
         <source>Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Tautkan</translation>
     </message>
 </context>
 <context>
@@ -2258,36 +2260,36 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="64"/>
         <source>Enter target path</source>
-        <translation type="unfinished"></translation>
+        <translation>Masukkan jalur target</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="79"/>
         <source>Select</source>
-        <translation type="unfinished"></translation>
+        <translation>Pilih</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="104"/>
         <source>%n item(s) selected for transferring</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n item dipilih untuk ditransfer</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="105"/>
         <source>%n destinations(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n tujuan dipilih</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="128"/>
         <source>Switch to target directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Beralih ke direktori target</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="161"/>
         <source>Nothing selected to transfer</source>
-        <translation type="unfinished"></translation>
+        <translation>Tidak ada yang dipilih untuk ditransfer</translation>
     </message>
 </context>
 <context>
@@ -2295,108 +2297,108 @@ exposure program</extracomment>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="63"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n file</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="63"/>
         <source>%n destination(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n tujuan</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="68"/>
         <source>Successfully copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Berhasil disalin</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="70"/>
         <source>Successfully moved</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Berhasil dipindahkan</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="72"/>
         <source>Successfully linked</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Berhasil ditautkan</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="76"/>
         <source>Failed to copy</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Gagal menyalin</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="78"/>
         <source>Failed to move</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Gagal memindahkan</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="80"/>
         <source>Failed to link</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Gagal menautkan</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="125"/>
         <source>Replace?</source>
-        <translation type="unfinished"></translation>
+        <translation>Ganti?</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="141"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Batal</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="153"/>
         <source>Overwrite</source>
-        <translation type="unfinished"></translation>
+        <translation>Timpa</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="162"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation type="unfinished"></translation>
+        <translation>Berkas atau folder ini sudah ada di &quot;%1&quot;:</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="202"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation type="unfinished">Mencoba untuk memindahkan antara ponsel dengan Kartu SD? Itu tidak bekerja, coba menyalin.</translation>
+        <translation>Mencoba untuk memindahkan antara ponsel dengan Kartu SD? tapi tak berhasil, cobalah untuk menyalinnya.</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="204"/>
         <source>Perhaps the storage is full?</source>
-        <translation type="unfinished">Mungkin penyimpanan penuh?</translation>
+        <translation>Sepertinya penyimpanan penuh?</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="286"/>
         <source>Unable to overwrite existing file with symlink</source>
-        <translation type="unfinished"></translation>
+        <translation>Tidak dapat menimpa berkas yang ada dengan symlink</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="301"/>
         <source>Copying</source>
-        <translation type="unfinished"></translation>
+        <translation>Menyalin</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="302"/>
         <source>Moving</source>
-        <translation type="unfinished"></translation>
+        <translation>Memindahkan</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="303"/>
         <source>Linking</source>
-        <translation type="unfinished"></translation>
+        <translation>Menghubungkan</translation>
     </message>
 </context>
 <context>
@@ -2405,13 +2407,13 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewImagePage.qml" line="253"/>
         <source>Loading image</source>
         <extracomment>Full page placeholder shown while a large image is being loaded</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Memuat gambar</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewImagePage.qml" line="263"/>
         <source>Failed to load</source>
         <extracomment>Full page placeholder shown when an image failed to load</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Gagal memuat</translation>
     </message>
 </context>
 <context>
@@ -2420,7 +2422,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewVideoPage.qml" line="107"/>
         <source>Failed to play</source>
         <extracomment>Full page placeholder shown when a video failed to load</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Gagal memainkan</translation>
     </message>
 </context>
 <context>
@@ -2429,13 +2431,13 @@ exposure program</extracomment>
         <location filename="../qml/js/files.js" line="36"/>
         <location filename="../qml/js/files.js" line="45"/>
         <source>Copying</source>
-        <translation type="unfinished"></translation>
+        <translation>Menyalin</translation>
     </message>
     <message>
         <location filename="../qml/js/files.js" line="36"/>
         <location filename="../qml/js/files.js" line="45"/>
         <source>Moving</source>
-        <translation type="unfinished"></translation>
+        <translation>Memindahkan</translation>
     </message>
 </context>
 <context>
@@ -2443,7 +2445,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/harbour-file-browser.qml" line="48"/>
         <source>Version %1 (%2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Versi %1 (%2)</translation>
     </message>
 </context>
 <context>
@@ -2452,7 +2454,7 @@ exposure program</extracomment>
         <location filename="../qml/js/paths.js" line="50"/>
         <source>root</source>
         <extracomment>root directory (placeholder instead of &quot;/&quot; in search mask)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>root</translation>
     </message>
 </context>
 </TS>
