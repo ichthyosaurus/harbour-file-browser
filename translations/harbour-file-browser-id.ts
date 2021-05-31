@@ -601,7 +601,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="61"/>
         <source>Open successful</source>
-        <translation type="unfinished"></translation>
+        <translation>Syabas buka</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="62"/>
@@ -631,7 +631,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="72"/>
         <source>Action failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Gagal</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="74"/>
@@ -999,7 +999,7 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="218"/>
         <source>Yes (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ya (%1)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="220"/>
@@ -1026,7 +1026,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="240"/>
         <source>%1mm</source>
         <extracomment>size in millimeters</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1mm</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="243"/>
@@ -1036,7 +1036,7 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="248"/>
         <source>Digital Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoom Digital</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="250"/>
@@ -1070,13 +1070,13 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="275"/>
         <source>f/%1</source>
         <extracomment>aperture &quot;f&quot; number; cf. https://en.wikipedia.org/wiki/Aperture</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>f/%1</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="279"/>
         <location filename="../src/jhead/jhead-api.cpp" line="283"/>
         <source>Focus Distance</source>
-        <translation type="unfinished"></translation>
+        <translation>Jarak Fokus</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="281"/>
@@ -1093,7 +1093,7 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="290"/>
         <source>ISO Equivalent</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO Setara</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="297"/>
@@ -1115,7 +1115,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="324"/>
         <location filename="../src/jhead/jhead-api.cpp" line="327"/>
         <source>Light Source</source>
-        <translation type="unfinished"></translation>
+        <translation>Sumber Cahaya</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="312"/>
@@ -1135,7 +1135,7 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="324"/>
         <source>Fine weather</source>
-        <translation type="unfinished"></translation>
+        <translation>Cuaca cerah</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="327"/>
@@ -1194,7 +1194,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="355"/>
         <source>Metering Mode</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Mode pengukuran</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="367"/>
@@ -1230,7 +1230,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="387"/>
         <source>Portrait mode</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Mode potret</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="391"/>
@@ -1276,13 +1276,13 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="427"/>
         <source>Focus Range</source>
-        <translation type="unfinished"></translation>
+        <translation>Rentang Fokus</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="437"/>
         <location filename="../src/jhead/jhead-api.cpp" line="441"/>
         <source>JPEG Process</source>
-        <translation type="unfinished"></translation>
+        <translation>Proses JPEG</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="437"/>
@@ -1307,7 +1307,7 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="457"/>
         <source>JPEG Quality</source>
-        <translation type="unfinished"></translation>
+        <translation>Kualitas JPEG</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="474"/>
@@ -1510,16 +1510,16 @@ exposure program</extracomment>
         <location filename="../qml/pages/PathEditDialog.qml" line="256"/>
         <source>%n file(s)</source>
         <extracomment>hidden if n=0</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n berkas</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/PathEditDialog.qml" line="259"/>
         <source>%n folder(s)</source>
         <extracomment>hidden if n=0</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n folder</numerusform>
         </translation>
     </message>
     <message>
@@ -1588,7 +1588,7 @@ exposure program</extracomment>
     <message>
         <location filename="../src/globals.cpp" line="120"/>
         <source>hh:mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>hh:mm:ss</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="123"/>
