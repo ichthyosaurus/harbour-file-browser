@@ -6,12 +6,12 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="33"/>
         <source>A fully-fledged file manager for Sailfish OS.</source>
-        <translation type="unfinished"></translation>
+        <translation>Plnohodnotný správca súborov pre Sailfish OS.</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="43"/>
         <source>adapted by karip</source>
-        <translation type="unfinished"></translation>
+        <translation>prispôsobil karip</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="66"/>
@@ -121,7 +121,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="153"/>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation>Indonézština</translation>
     </message>
 </context>
 <context>
@@ -1392,12 +1392,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="105"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>O aplikácii</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="152"/>
         <source>Version %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Verzia %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="177"/>
@@ -1409,12 +1409,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="180"/>
         <source>show contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>zobraziť prispievateľov</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="201"/>
         <source>Donations</source>
-        <translation type="unfinished"></translation>
+        <translation>Dary</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="211"/>
@@ -1424,15 +1424,15 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="216"/>
         <source>This is proprietary software. All rights reserved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Toto je komerčný softvér. Všetky práva sú vyhradené.</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="220"/>
         <source>show license(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>zobraziť licenciu</numerusform>
+            <numerusform>zobraziť licencie</numerusform>
+            <numerusform>zobraziť licencií</numerusform>
         </translation>
     </message>
     <message>
@@ -1443,12 +1443,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="228"/>
         <source>Source Code</source>
-        <translation type="unfinished"></translation>
+        <translation>Zdrojový text</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/InfoSection.qml" line="26"/>
         <source>show details</source>
-        <translation type="unfinished"></translation>
+        <translation>zobraziť podrobnosti</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="29"/>
@@ -1458,31 +1458,31 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="71"/>
         <source>Acknowledgements</source>
-        <translation type="unfinished"></translation>
+        <translation>Poďakovania</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="81"/>
         <source>Thank you!</source>
-        <translation type="unfinished"></translation>
+        <translation>Ďakujeme!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="140"/>
         <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Prečítajte si prosím &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="32"/>
         <source>License(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Licencia</numerusform>
+            <numerusform>Licencie</numerusform>
+            <numerusform>Licencií</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation type="unfinished"></translation>
+        <translation>Poznámka: Najpresnejšie informácie nájdete v zdrojovom texte.</translation>
     </message>
 </context>
 <context>
@@ -1490,17 +1490,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="12"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ak chcete podporiť moju prácu, môžete mi kúpiť šálku kávy.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="15"/>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tento projekt môžete podporiť príspevkom alebo darom pomocou ktorejkoľvek z týchto služieb.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="18"/>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaša pomoc s prekladom alebo programovaním by bola veľmi vítaná.</translation>
     </message>
 </context>
 <context>
@@ -1780,12 +1780,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="50"/>
         <source>These are global preferences. If enabled in “&lt;a href=&apos;#&apos;&gt;View → Use per-directory view settings&lt;/a&gt;”, view preferences will be saved individually for all folders. Here, you can define the default values.</source>
-        <translation type="unfinished"></translation>
+        <translation>Toto sú celkové predvoľby. Ak to je povolené v “&lt;a href=&apos;#&apos;&gt;Zobraziť → Použiť nastavenia podľa adresárov&lt;/a&gt;”, predvoľby zobrazenia sa uložia jednotlivo pre všetky priečinky. Tu môžete definovať predvolené hodnoty.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="66"/>
         <source>Swipe right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Potiahnutím prstom doprava zobrazíte zdrojový text Prehliadača súborov, licenčné informácie a zoznam prispievateľov.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="77"/>
@@ -1975,7 +1975,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="210"/>
         <source>Enable solid window background</source>
-        <translation type="unfinished"></translation>
+        <translation>Povoliť vyplnené pozadie okna</translation>
     </message>
 </context>
 <context>
