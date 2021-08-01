@@ -121,7 +121,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="153"/>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation>indoneesia</translation>
     </message>
 </context>
 <context>
@@ -1378,12 +1378,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="105"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Rakenduse teave</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="152"/>
         <source>Version %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Versioon %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="177"/>
@@ -1395,12 +1395,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="180"/>
         <source>show contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>näita kaasautoreid</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="201"/>
         <source>Donations</source>
-        <translation type="unfinished"></translation>
+        <translation>Rahalised toetused</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="211"/>
@@ -1410,14 +1410,14 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="216"/>
         <source>This is proprietary software. All rights reserved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tegemist on patenteeritud tarkvaraga. Kõik õigused kaitstud.</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="220"/>
         <source>show license(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>näita litsentsi</numerusform>
+            <numerusform>näita litsentse</numerusform>
         </translation>
     </message>
     <message>
@@ -1428,12 +1428,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="228"/>
         <source>Source Code</source>
-        <translation type="unfinished"></translation>
+        <translation>Lähtekood</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/InfoSection.qml" line="26"/>
         <source>show details</source>
-        <translation type="unfinished"></translation>
+        <translation>näita üksikasju</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="29"/>
@@ -1443,30 +1443,30 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="71"/>
         <source>Acknowledgements</source>
-        <translation type="unfinished"></translation>
+        <translation>Tänuavaldused</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="81"/>
         <source>Thank you!</source>
-        <translation type="unfinished"></translation>
+        <translation>Täname!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="140"/>
         <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Palun vaata ka &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="32"/>
         <source>License(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Litsents</numerusform>
+            <numerusform>Litsentsid</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation type="unfinished"></translation>
+        <translation>Märkus: kõige täpsema teabe saamiseks kontrollige vaata lähtekoodi.</translation>
     </message>
 </context>
 <context>
@@ -1474,17 +1474,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="12"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kui sa soovid mu tööd toetada, võid mulle tassi kohvi osta.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="15"/>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sa võid seda arendusprojekti toetada kas kaastööd tehes või toetada rahaliselt järgmiste teenuste abil.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="18"/>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sinu panus tõlgete või rakenduse koodi näol oleks väga teretulnud.</translation>
     </message>
 </context>
 <context>
@@ -1760,12 +1760,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="50"/>
         <source>These are global preferences. If enabled in “&lt;a href=&apos;#&apos;&gt;View → Use per-directory view settings&lt;/a&gt;”, view preferences will be saved individually for all folders. Here, you can define the default values.</source>
-        <translation type="unfinished"></translation>
+        <translation>Need on üldised seadistused. Kui sa oled kasutusele võtnud „&lt;a href=&apos;#&apos;&gt;Vaata → Kasuta kaustakohaseid seadistusi&lt;/a&gt;“, siis salvestuvad eelistused iga kausta kohta. Siinmärgitud seadistused tähendavad sel juhul vaikimisi seadistusi.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="66"/>
         <source>Swipe right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Viipa paremale nägemaks selle failihalduri lähtekoodi, litsentsiteavet ja kaasautorite loendit.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="77"/>
@@ -1955,7 +1955,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="210"/>
         <source>Enable solid window background</source>
-        <translation type="unfinished"></translation>
+        <translation>Kasuta ühtlast akna tausta</translation>
     </message>
 </context>
 <context>
