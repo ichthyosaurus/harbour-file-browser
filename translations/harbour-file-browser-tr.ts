@@ -377,37 +377,37 @@
     <message>
         <location filename="../src/engine.cpp" line="412"/>
         <source>Binary file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 kB&apos;de kırpılmış ikili dosya önizlemesi</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="431"/>
         <source>Text file preview clipped at %1 lines</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 satırlarında kırpılmış metin dosyası önizlemesi</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="433"/>
         <source>Text file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 kB&apos;de kırpılmış metin dosyası önizlemesi</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="446"/>
         <source>No permissions to create %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 için oluşturma izni yok</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="448"/>
         <source>Cannot create folder %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 klasörü oluşturulamıyor</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="464"/>
         <source>Cannot rename %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 yeniden adlandırılamıyor</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="487"/>
         <source>Cannot change permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>İzinler değiştirilemiyor</translation>
     </message>
 </context>
 <context>
@@ -423,18 +423,19 @@
     <message>
         <location filename="../qml/components/FileActions.qml" line="105"/>
         <source>clear selection</source>
-        <translation type="unfinished"></translation>
+        <translation>seçimi temizle</translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="106"/>
         <source>select all</source>
-        <translation type="unfinished"></translation>
+        <translation>hepsini seç</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="115"/>
         <source>cut file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>dosyayı kes</numerusform>
+            <numerusform>dosyaları kes</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -448,8 +449,9 @@
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="128"/>
         <source>copy file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>dosyayı kopyala</numerusform>
+            <numerusform>dosyaları kopyala</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -463,49 +465,55 @@
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="141"/>
         <source>transfer file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>dosyayı aktar</numerusform>
+            <numerusform>dosyaları aktar</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="160"/>
         <source>delete file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>dosyayı sil</numerusform>
+            <numerusform>dosyaları sil</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="175"/>
         <source>rename file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>dosyayı yeniden adlandır</numerusform>
+            <numerusform>dosyaları yeniden adlandır</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="194"/>
         <source>share file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>dosyayı paylaş</numerusform>
+            <numerusform>dosyaları paylaş</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="214"/>
         <source>compress file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>dosyayı sıkıştır</numerusform>
+            <numerusform>dosyaları sıkıştır</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="222"/>
         <source>edit file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>dosyayı düzenle</numerusform>
+            <numerusform>dosyaları düzenle</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="231"/>
         <source>show file properties</source>
-        <translation type="unfinished"></translation>
+        <translation>dosya özelliklerini göster</translation>
     </message>
 </context>
 <context>
@@ -513,7 +521,7 @@
     <message>
         <location filename="../qml/cover/FileBrowserCover.qml" line="47"/>
         <source>Root Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Root Modu</translation>
     </message>
 </context>
 <context>
@@ -521,17 +529,17 @@
     <message>
         <location filename="../src/filedata.cpp" line="186"/>
         <source>File does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya yok</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="225"/>
         <source>block device</source>
-        <translation type="unfinished"></translation>
+        <translation>cihazı engelle</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="229"/>
         <source>character device</source>
-        <translation type="unfinished"></translation>
+        <translation>karakter cihazı</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="233"/>
@@ -541,17 +549,17 @@
     <message>
         <location filename="../src/filedata.cpp" line="237"/>
         <source>socket</source>
-        <translation type="unfinished"></translation>
+        <translation>soket</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="241"/>
         <source>folder</source>
-        <translation type="unfinished"></translation>
+        <translation>dosya</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="247"/>
         <source>unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>bilinmeyen</translation>
     </message>
 </context>
 <context>
@@ -560,13 +568,14 @@
         <location filename="../src/filemodel.cpp" line="115"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>boş</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/filemodel.cpp" line="116"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n öğesi</numerusform>
+            <numerusform>%n öğeleri</numerusform>
         </translation>
     </message>
 </context>
@@ -575,12 +584,12 @@
     <message>
         <location filename="../src/filemodelworker.cpp" line="216"/>
         <source>Folder does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Klasör yok</translation>
     </message>
     <message>
         <location filename="../src/filemodelworker.cpp" line="221"/>
         <source>No permission to read the folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Klasörü okuma izni yok</translation>
     </message>
 </context>
 <context>
@@ -588,43 +597,43 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="56"/>
         <source>Install launched</source>
-        <translation type="unfinished"></translation>
+        <translation>Yükleme başlatıldı</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="57"/>
         <source>If nothing happens, then the package is probably faulty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiçbir şey olmazsa, muhtemelen paket hatalıdır.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="59"/>
         <source>Swipe right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>İçeriğini incelemek için sağa kaydırın.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="61"/>
         <source>Open successful</source>
-        <translation type="unfinished"></translation>
+        <translation>Başarılı bir şekilde açıldı</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="62"/>
         <source>Sometimes the application stays in the background</source>
-        <translation type="unfinished"></translation>
+        <translation>Bazen uygulama arka planda kalıyor</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="65"/>
         <source>Internal error</source>
-        <translation type="unfinished"></translation>
+        <translation>İç hata</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="67"/>
         <source>File not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya bulunamadı</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="69"/>
         <source>No application to open the file</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosyayı açacak uygulama yok</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="70"/>
@@ -695,7 +704,7 @@
         <location filename="../qml/pages/FilePage.qml" line="263"/>
         <location filename="../qml/pages/FilePage.qml" line="269"/>
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Siliniyor</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="301"/>
@@ -715,7 +724,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="307"/>
         <source>Link to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 bağlantısı</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="314"/>
@@ -914,13 +923,13 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="188"/>
         <source>Manual, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Manuel, dönüş ışığı algılanmadı</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="190"/>
         <source>Manual, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Manuel, dönüş ışığı algılandı</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="192"/>
@@ -933,13 +942,13 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="194"/>
         <source>Auto, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Otomatik, dönüş ışığı algılanmadı</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="196"/>
         <source>Auto, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Otomatik, dönüş ışığı algılandı</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="198"/>
@@ -951,44 +960,44 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="200"/>
         <source>Red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Kırmızı göz azaltma modu, dönüş ışığı algılanmadı</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="202"/>
         <location filename="../src/jhead/jhead-api.cpp" line="208"/>
         <source>Red eye reduction mode, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Kırmızı göz azaltma modu, dönüş ışığı algılandı</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="204"/>
         <source>Manual, red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Manuel, kırmızı göz azaltma modu</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="206"/>
         <source>Manual, red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Manuel, kırmızı göz azaltma modu, dönüş ışığı algılanmadı</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="210"/>
         <source>Auto, red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Otomatik, kırmızı göz azaltma modu</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="212"/>
         <source>Auto, red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Otomatik, kırmızı göz azaltma modu, dönüş ışığı algılanmadı</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="214"/>
         <source>Auto, red eye reduction mode, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Otomatik, kırmızı göz azaltma modu, dönüş ışığı algılandı</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="218"/>
@@ -997,7 +1006,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="226"/>
         <location filename="../src/jhead/jhead-api.cpp" line="321"/>
         <source>Flash</source>
-        <translation type="unfinished"></translation>
+        <translation>Flaş</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="218"/>
@@ -1051,7 +1060,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="256"/>
         <source>CCD Width</source>
         <extracomment>photographic sensor width; cf. https://en.wikipedia.org/wiki/Charge-coupled_device</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>CCD Genişliği</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="268"/>
@@ -1062,12 +1071,12 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="270"/>
         <source>Exposure Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozlandırma Süresi</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="273"/>
         <source>Aperture</source>
-        <translation type="unfinished"></translation>
+        <translation>Diyafram</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="275"/>
@@ -1102,7 +1111,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="297"/>
         <source>Exposure Bias</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Exposure_compensation</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pozlandırma Yanı</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="302"/>
