@@ -81,7 +81,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="121"/>
         <source>Dutch</source>
-        <translation>Flemenkçe</translation>
+        <translation>Felemenkçe</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="125"/>
@@ -415,8 +415,9 @@
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="73"/>
         <source>%n file(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n dosya seçildi</numerusform>
+            <numerusform>%n dosya seçildi</numerusform>
         </translation>
     </message>
     <message>
@@ -439,8 +440,9 @@
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="119"/>
         <source>%n file(s) cut</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n dosya kesildi</numerusform>
+            <numerusform>%n dosya kesildi</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -453,8 +455,9 @@
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="132"/>
         <source>%n file(s) copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n dosya kopyalandı</numerusform>
+            <numerusform>%n dosya kopyalandı</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -626,67 +629,67 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="70"/>
         <source>xdg-open found no preferred application</source>
-        <translation type="unfinished"></translation>
+        <translation>xdg-open tercih edilen bir uygulama bulamadı</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="72"/>
         <source>Action failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Eylem başarısız oldu</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="74"/>
         <source>xdg-open not found</source>
-        <translation type="unfinished"></translation>
+        <translation>xdg-open bulunamadı</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="76"/>
         <source>xdg-open crash?</source>
-        <translation type="unfinished"></translation>
+        <translation>xdg-open çöktü mü?</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="78"/>
         <source>xdg-open error</source>
-        <translation type="unfinished"></translation>
+        <translation>xdg-open hatası</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="96"/>
         <source>Change Permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>İzinleri Değiştir</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="110"/>
         <source>View Raw Contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Saf İçeriği Görüntüle</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="118"/>
         <source>Install</source>
-        <translation type="unfinished"></translation>
+        <translation>Kur</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="118"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Aç</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="122"/>
         <source>File cannot be opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya açılamıyor</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="123"/>
         <source>This type of file cannot be opened.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu dosya türü açılamıyor.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="131"/>
         <source>Go to Target</source>
-        <translation type="unfinished"></translation>
+        <translation>Hedefe Git</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="151"/>
         <source>The file has been moved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya taşındı.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="263"/>
@@ -697,17 +700,17 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="301"/>
         <source>Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Konum</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="305"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Tür</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="307"/>
         <source>Unknown (link target not found)</source>
-        <translation type="unfinished"></translation>
+        <translation>Bilinmiyor (bağlantı hedefi bulunamadı)</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="307"/>
@@ -717,22 +720,22 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="314"/>
         <source>Permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>İzinler</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="318"/>
         <source>Owner</source>
-        <translation type="unfinished"></translation>
+        <translation>Sahip</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="323"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grup</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="328"/>
         <source>Last modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Son değiştirme</translation>
     </message>
 </context>
 <context>
@@ -740,54 +743,54 @@
     <message>
         <location filename="../src/globals.cpp" line="78"/>
         <source>B</source>
-        <translation type="unfinished"></translation>
+        <translation>B</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="79"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="80"/>
         <source>MiB</source>
-        <translation type="unfinished"></translation>
+        <translation>MiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="81"/>
         <source>GiB</source>
-        <translation type="unfinished"></translation>
+        <translation>GiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="82"/>
         <source>TiB</source>
-        <translation type="unfinished"></translation>
+        <translation>TiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="83"/>
         <source>PiB</source>
-        <translation type="unfinished"></translation>
+        <translation>PiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="84"/>
         <source>EiB</source>
-        <translation type="unfinished"></translation>
+        <translation>EiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="85"/>
         <source>ZiB</source>
-        <translation type="unfinished"></translation>
+        <translation>ZiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="86"/>
         <source>YiB</source>
-        <translation type="unfinished"></translation>
+        <translation>YiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="106"/>
         <location filename="../src/globals.cpp" line="110"/>
         <source>%1 %2</source>
         <extracomment>1=file size (number), 2=unit (e.g. KiB)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 %2</translation>
     </message>
 </context>
 <context>
@@ -798,12 +801,12 @@
         <location filename="../src/fileworker.cpp" line="109"/>
         <location filename="../src/fileworker.cpp" line="126"/>
         <source>File operation already in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya işlemi zaten devam ediyor</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="168"/>
         <source>Empty filename</source>
-        <translation type="unfinished"></translation>
+        <translation>Boş dosya adı</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="187"/>
@@ -812,27 +815,27 @@
         <location filename="../src/fileworker.cpp" line="387"/>
         <location filename="../src/fileworker.cpp" line="403"/>
         <source>Cancelled</source>
-        <translation type="unfinished"></translation>
+        <translation>İptal edildi</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="224"/>
         <source>File not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya bulunamadı</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="237"/>
         <source>Folder delete failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Klasör silme başarısız oldu</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="372"/>
         <source>Source folder does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaynak klasör mevcut değil</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="379"/>
         <source>Cannot create target folder %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 hedef klasörü oluşturulamıyor</translation>
     </message>
 </context>
 <context>
@@ -840,61 +843,61 @@
     <message>
         <location filename="../src/filedata.cpp" line="273"/>
         <source>Image Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Resim Boyutu</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="279"/>
         <source>%1 x %2</source>
         <extracomment>image size description without aspect ratio: 1=width, 2=height</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 x %2</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="283"/>
         <source>%1 x %2 (%3)</source>
         <extracomment>image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 x %2 (%3)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="157"/>
         <source>Make</source>
-        <translation type="unfinished"></translation>
+        <translation>Üretici</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="158"/>
         <source>Model</source>
-        <translation type="unfinished"></translation>
+        <translation>Model</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="161"/>
         <source>Date/Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarih/Saat</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="169"/>
         <source>Orientation</source>
-        <translation type="unfinished"></translation>
+        <translation>Yönlendirme</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="174"/>
         <source>Color/BW</source>
-        <translation type="unfinished"></translation>
+        <translation>Renk/SB</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="174"/>
         <source>Black and White</source>
-        <translation type="unfinished"></translation>
+        <translation>Siyah Beyaz</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="182"/>
         <source>Strobe light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Flaş ışığı algılanmadı</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="184"/>
         <source>Strobe light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Flaş ışığı algılandı</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="186"/>
@@ -905,7 +908,7 @@
         <extracomment>description of camera flash mode
 ----------
 exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>El ile</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="188"/>
@@ -924,7 +927,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="305"/>
         <source>Auto</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Otomatik</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="194"/>
@@ -942,7 +945,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="198"/>
         <source>Red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Kırmızı göz azaltma modu</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="200"/>
@@ -999,50 +1002,50 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="218"/>
         <source>Yes (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Evet (%1)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="220"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Evet</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="224"/>
         <source>No (Auto)</source>
-        <translation type="unfinished"></translation>
+        <translation>Hayır (Otomatik)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="226"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Hayır</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="235"/>
         <source>%1mm (35mm equivalent: %2mm)</source>
         <extracomment>size in millimeters</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1mm (35mm eş değeri: %2mm)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="240"/>
         <source>%1mm</source>
         <extracomment>size in millimeters</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1mm</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="243"/>
         <source>Focal Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Odak Uzaklığı</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="248"/>
         <source>Digital Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Dijital Yakınlaştırma</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="250"/>
         <source>%1x</source>
         <extracomment>as in &quot;zoom: %1 times&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1x</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="256"/>
@@ -1054,7 +1057,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="268"/>
         <source>%1 (1/%2)</source>
         <extracomment>exposure time as raw value (1) and as fraction (2)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 (1/%2)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="270"/>
@@ -1076,24 +1079,24 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="279"/>
         <location filename="../src/jhead/jhead-api.cpp" line="283"/>
         <source>Focus Distance</source>
-        <translation type="unfinished"></translation>
+        <translation>Odak Mesafesi</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="281"/>
         <source>Infinite</source>
         <extracomment>focus distance</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Sonsuz</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="285"/>
         <source>%1m</source>
         <extracomment>focus distance in meters</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1m</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="290"/>
         <source>ISO Equivalent</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO Eş Değeri</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="297"/>
@@ -1105,7 +1108,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="302"/>
         <location filename="../src/jhead/jhead-api.cpp" line="305"/>
         <source>White Balance</source>
-        <translation type="unfinished"></translation>
+        <translation>Beyaz Dengesi</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="312"/>
@@ -1115,27 +1118,27 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="324"/>
         <location filename="../src/jhead/jhead-api.cpp" line="327"/>
         <source>Light Source</source>
-        <translation type="unfinished"></translation>
+        <translation>Işık Kaynağı</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="312"/>
         <source>Daylight</source>
-        <translation type="unfinished"></translation>
+        <translation>Gün ışığı</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="315"/>
         <source>Fluorescent</source>
-        <translation type="unfinished"></translation>
+        <translation>Floresan</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="318"/>
         <source>Incandescent</source>
-        <translation type="unfinished"></translation>
+        <translation>Akkor</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="324"/>
         <source>Fine weather</source>
-        <translation type="unfinished"></translation>
+        <translation>Güzel hava</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="327"/>
@@ -1182,13 +1185,13 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="350"/>
         <source>Other</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Diğer</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="352"/>
         <source>Unknown (%1)</source>
         <extracomment>inlcudes an unknown value (1); cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Bilinmeyen (%1)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="355"/>
@@ -1230,13 +1233,13 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="387"/>
         <source>Portrait mode</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Dikey mod</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="391"/>
         <source>Landscape mode</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Yatay mod</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="396"/>
@@ -1265,18 +1268,18 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="420"/>
         <source>Close</source>
         <extracomment>focus range</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Yakın</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="424"/>
         <source>Distant</source>
         <extracomment>focus range</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Uzak</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="427"/>
         <source>Focus Range</source>
-        <translation type="unfinished"></translation>
+        <translation>Odak Aralığı</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="437"/>
@@ -1287,34 +1290,34 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="437"/>
         <source>Unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>Bilinmeyen</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="448"/>
         <source>Latitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlem</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="449"/>
         <source>Longitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Boylam</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="451"/>
         <source>Altitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Rakım</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="457"/>
         <source>JPEG Quality</source>
-        <translation type="unfinished"></translation>
+        <translation>JPEG Kalitesi</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="474"/>
         <location filename="../src/jhead/jhead-api.cpp" line="485"/>
         <location filename="../src/jhead/jhead-api.cpp" line="488"/>
         <source>Comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Yorum</translation>
     </message>
 </context>
 <context>
@@ -1322,35 +1325,36 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="59"/>
         <source>Selection Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Seçim Özellikleri</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="69"/>
         <source>The files have been moved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosyalar taşındı.</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/MultiFilePage.qml" line="93"/>
         <source>%n item(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n öge seçildi</numerusform>
+            <numerusform>%n öge seçildi</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="112"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="118"/>
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Siliniyor</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="140"/>
         <source>Directories</source>
-        <translation type="unfinished"></translation>
+        <translation>Dizinler</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="150"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosyalar</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="166"/>
@@ -1364,34 +1368,34 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="105"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Hakkında</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="152"/>
         <source>Version %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Sürüm %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="177"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="32"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="53"/>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Geliştirme</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="180"/>
         <source>show contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>katkıda bulunanları göster</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="201"/>
         <source>Donations</source>
-        <translation type="unfinished"></translation>
+        <translation>Bağışlar</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="211"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisans</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="216"/>
@@ -1401,56 +1405,58 @@ exposure program</extracomment>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="220"/>
         <source>show license(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>lisansı göster</numerusform>
+            <numerusform>lisansları göster</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="223"/>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Çeviriler</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="228"/>
         <source>Source Code</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaynak Kodları</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/InfoSection.qml" line="26"/>
         <source>show details</source>
-        <translation type="unfinished"></translation>
+        <translation>ayrıntıları göster</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="29"/>
         <source>Contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>Katkıda Bulunanlar</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="71"/>
         <source>Acknowledgements</source>
-        <translation type="unfinished"></translation>
+        <translation>Teşekkürler</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="81"/>
         <source>Thank you!</source>
-        <translation type="unfinished"></translation>
+        <translation>Teşekkürler!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="140"/>
         <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Lütfen &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt; adresine bakın</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="32"/>
         <source>License(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Lisans</numerusform>
+            <numerusform>Lisanslar</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation type="unfinished"></translation>
+        <translation>Not: En doğru bilgi için lütfen kaynak kodlarına bakın.</translation>
     </message>
 </context>
 <context>
@@ -1458,17 +1464,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="12"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation type="unfinished"></translation>
+        <translation>Çalışmalarımı desteklemek istiyorsanız bana bir fincan kahve ısmarlayabilirsiniz.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="15"/>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu projeye katkıda bulunarak veya bu hizmetlerden herhangi biri aracılığıyla bağışta bulunarak destek olabilirsiniz.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="18"/>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation type="unfinished"></translation>
+        <translation>Çevirilere veya kodlara katkılarınız memnuniyetle karşılanacaktır.</translation>
     </message>
 </context>
 <context>
@@ -1476,22 +1482,22 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="49"/>
         <source>Replace?</source>
-        <translation type="unfinished"></translation>
+        <translation>Değiştir?</translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="50"/>
         <source>Replace</source>
-        <translation type="unfinished"></translation>
+        <translation>Değiştir</translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="54"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu dosyalar veya klasörler “%1” içinde zaten var:</translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="55"/>
         <source>These files or folders already exist:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu dosyalar veya klasörler zaten var:</translation>
     </message>
 </context>
 <context>
@@ -1504,29 +1510,31 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="234"/>
         <source>Remove last part</source>
-        <translation type="unfinished"></translation>
+        <translation>Son kısmı kaldır</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/PathEditDialog.qml" line="256"/>
         <source>%n file(s)</source>
         <extracomment>hidden if n=0</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n dosya</numerusform>
+            <numerusform>%n dosya</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/PathEditDialog.qml" line="259"/>
         <source>%n folder(s)</source>
         <extracomment>hidden if n=0</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n dizin</numerusform>
+            <numerusform>%n dizin</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="262"/>
         <source>empty</source>
         <extracomment>as in &apos;this folder is empty&apos;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>boş</translation>
     </message>
 </context>
 <context>
@@ -1534,43 +1542,44 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="78"/>
         <source>Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Değiştir</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="84"/>
         <source>Change permissions for
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Şunun için izinleri değiştir:
+%1</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="104"/>
         <source>Read</source>
-        <translation type="unfinished"></translation>
+        <translation>Oku</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="112"/>
         <source>Write</source>
-        <translation type="unfinished"></translation>
+        <translation>Yaz</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="119"/>
         <source>Execute</source>
-        <translation type="unfinished"></translation>
+        <translation>Çalıştır</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="140"/>
         <source>Owner</source>
-        <translation type="unfinished"></translation>
+        <translation>Sahip</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="178"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grup</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="211"/>
         <source>Others</source>
-        <translation type="unfinished"></translation>
+        <translation>Diğer</translation>
     </message>
 </context>
 <context>
@@ -1578,27 +1587,27 @@ exposure program</extracomment>
     <message>
         <location filename="../src/engine.cpp" line="244"/>
         <source>SD card</source>
-        <translation type="unfinished"></translation>
+        <translation>SD kart</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="246"/>
         <source>Removable Media</source>
-        <translation type="unfinished"></translation>
+        <translation>Çıkarılabilir Ortam</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="120"/>
         <source>hh:mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>hh:mm:ss</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="123"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
-        <translation type="unfinished"></translation>
+        <translation>dd MMM yyyy, hh:mm:ss t</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="125"/>
         <source>dd.MM.yy, hh:mm</source>
-        <translation type="unfinished"></translation>
+        <translation>dd.MM.yy, hh:mm</translation>
     </message>
 </context>
 <context>
@@ -1615,24 +1624,25 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="66"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeniden adlandır</translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="85"/>
         <source>Give a new name for
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Şunun için yeni bir ad ver:
+%1</translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="95"/>
         <location filename="../qml/pages/RenameDialog.qml" line="96"/>
         <source>New name</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeni ad</translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="97"/>
         <source>A file with this name already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu ada sahip bir dosya zaten var.</translation>
     </message>
 </context>
 <context>
@@ -1640,29 +1650,30 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="100"/>
         <source>Searching</source>
-        <translation type="unfinished"></translation>
+        <translation>Aranıyor</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="109"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ayarlar</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="120"/>
         <location filename="../qml/pages/SearchPage.qml" line="356"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Ara</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="134"/>
         <source>Search below “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>“%1” altında ara</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SearchPage.qml" line="188"/>
         <source>%n hit(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n sonuç</numerusform>
+            <numerusform>%n sonuç</numerusform>
         </translation>
     </message>
     <message>
@@ -1671,37 +1682,37 @@ exposure program</extracomment>
         <location filename="../qml/pages/SearchPage.qml" line="404"/>
         <location filename="../qml/pages/SearchPage.qml" line="406"/>
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Siliniyor</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="335"/>
         <source>Go to containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>İçeren klasöre git</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="339"/>
         <source>Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>Kes</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="343"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopyala</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="347"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Sil</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="413"/>
         <source>Internally not ready</source>
-        <translation type="unfinished"></translation>
+        <translation>Dahili olarak hazır değil</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="413"/>
         <source>Please simply try again</source>
-        <translation type="unfinished"></translation>
+        <translation>Lütfen tekrar deneyin</translation>
     </message>
 </context>
 <context>
@@ -1709,12 +1720,12 @@ exposure program</extracomment>
     <message>
         <location filename="../src/searchworker.cpp" line="41"/>
         <source>Search already in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Arama zaten devam ediyor</translation>
     </message>
     <message>
         <location filename="../src/searchworker.cpp" line="46"/>
         <source>Bad search parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>Hatalı arama parametreleri</translation>
     </message>
 </context>
 <context>
@@ -1722,8 +1733,9 @@ exposure program</extracomment>
     <message numerus="yes">
         <location filename="../qml/components/SelectionPanel.qml" line="54"/>
         <source>%n file(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n dosya seçildi</numerusform>
+            <numerusform>%n dosya seçildi</numerusform>
         </translation>
     </message>
 </context>
@@ -1733,152 +1745,152 @@ exposure program</extracomment>
         <location filename="../qml/pages/SettingsPage.qml" line="44"/>
         <location filename="../qml/pages/SettingsPage.qml" line="227"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ayarlar</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="50"/>
         <source>These are global preferences. If enabled in “&lt;a href=&apos;#&apos;&gt;View → Use per-directory view settings&lt;/a&gt;”, view preferences will be saved individually for all folders. Here, you can define the default values.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bunlar genel tercihlerdir. “&lt;a href=&apos;#&apos;&gt;Görünüm → Dizin başına görünüm ayarlarını kullan&lt;/a&gt;” içinde etkinleştirilirse, görünüm tercihleri tüm klasörler için ayrı ayrı kaydedilecektir. Burada öntanımlı değerleri tanımlayabilirsiniz.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="66"/>
         <source>Swipe right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya Tarayıcısı&apos;nın kaynak kodlarını, lisans bilgilerini ve katkıda bulunanların listesini görüntülemek için sağa kaydırın.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="77"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>Görünüm</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="86"/>
         <source>Use per-directory view settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Dizin başına görünüm ayarlarını kullan</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="90"/>
         <source>Show hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation>Gizli dosyaları göster</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="94"/>
         <source>Show preview images</source>
-        <translation type="unfinished"></translation>
+        <translation>Ön izleme resimlerini göster</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="99"/>
         <source>Thumbnail size</source>
-        <translation type="unfinished"></translation>
+        <translation>Küçük resim boyutu</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="102"/>
         <source>small</source>
-        <translation type="unfinished"></translation>
+        <translation>küçük</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="103"/>
         <source>medium</source>
-        <translation type="unfinished"></translation>
+        <translation>orta</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="104"/>
         <source>large</source>
-        <translation type="unfinished"></translation>
+        <translation>büyük</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="105"/>
         <source>huge</source>
-        <translation type="unfinished"></translation>
+        <translation>çok büyük</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="110"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Galeri modunu etkinleştir</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="111"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished"></translation>
+        <translation>Galeri modunda, resimler oldukça büyük gösterilecek ve resimler, videolar ve dizinler dışındaki tüm girdiler gizlenecektir.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="120"/>
         <source>Sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>Sıralama</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="127"/>
         <source>Show folders first</source>
-        <translation type="unfinished"></translation>
+        <translation>Önce klasörleri göster</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="131"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished"></translation>
+        <translation>Büyük/küçük harfe duyarlı olarak sırala</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="135"/>
         <source>Sort by</source>
-        <translation type="unfinished"></translation>
+        <translation>Sıralama ölçütü</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="139"/>
         <source>name</source>
-        <translation type="unfinished"></translation>
+        <translation>ad</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="140"/>
         <source>size</source>
-        <translation type="unfinished"></translation>
+        <translation>boyut</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="141"/>
         <source>modification time</source>
-        <translation type="unfinished"></translation>
+        <translation>değiştirme zamanı</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="142"/>
         <source>file type</source>
-        <translation type="unfinished"></translation>
+        <translation>dosya türü</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="146"/>
         <source>Sort order</source>
-        <translation type="unfinished"></translation>
+        <translation>Sıralama düzeni</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="150"/>
         <source>default</source>
-        <translation type="unfinished"></translation>
+        <translation>öntanımlı</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="151"/>
         <source>reversed</source>
-        <translation type="unfinished"></translation>
+        <translation>ters</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="159"/>
         <source>Behavior and View</source>
-        <translation type="unfinished"></translation>
+        <translation>Davranış ve Görünüm</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="170"/>
         <source>Default transfer action</source>
-        <translation type="unfinished"></translation>
+        <translation>Öntanımlı aktarım eylemi</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="173"/>
         <source>copy</source>
-        <translation type="unfinished"></translation>
+        <translation>kopyala</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="174"/>
         <source>move</source>
-        <translation type="unfinished"></translation>
+        <translation>taşı</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="175"/>
         <source>link</source>
-        <translation type="unfinished"></translation>
+        <translation>bağlantı</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="176"/>
@@ -1888,22 +1900,22 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="182"/>
         <source>Default filter line action</source>
-        <translation type="unfinished"></translation>
+        <translation>Öntanımlı filtre satırı eylemi</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="185"/>
         <source>return to directory view</source>
-        <translation type="unfinished"></translation>
+        <translation>dizin görünümüne dön</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="186"/>
         <source>start recursive search</source>
-        <translation type="unfinished"></translation>
+        <translation>özyinelemeli arama başlat</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="192"/>
         <source>File name abbreviation</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya adı kısaltması</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="195"/>
@@ -1923,12 +1935,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="202"/>
         <source>Show full directory paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Tam dizin yollarını göster</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="206"/>
         <source>Show navigation menu icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Gezinme menüsü simgesini göster</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="210"/>
@@ -1941,12 +1953,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="292"/>
         <source>Open system settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Sistem ayarlarını aç</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="302"/>
         <source>Nothing to show here...</source>
-        <translation type="unfinished"></translation>
+        <translation>Burada gösterilecek bir şey yok...</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="328"/>
@@ -1963,7 +1975,7 @@ exposure program</extracomment>
         <location filename="../qml/components/ShortcutsList.qml" line="363"/>
         <location filename="../qml/components/ShortcutsList.qml" line="369"/>
         <source>Locations</source>
-        <translation type="unfinished"></translation>
+        <translation>Konumlar</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="336"/>
@@ -1973,27 +1985,27 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="341"/>
         <source>Documents</source>
-        <translation type="unfinished"></translation>
+        <translation>Belgeler</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="345"/>
         <source>Downloads</source>
-        <translation type="unfinished"></translation>
+        <translation>İndirilenler</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="349"/>
         <source>Music</source>
-        <translation type="unfinished"></translation>
+        <translation>Müzik</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="353"/>
         <source>Pictures</source>
-        <translation type="unfinished"></translation>
+        <translation>Resimler</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="357"/>
         <source>Videos</source>
-        <translation type="unfinished"></translation>
+        <translation>Videolar</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="364"/>
@@ -2003,22 +2015,22 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="370"/>
         <source>Root</source>
-        <translation type="unfinished"></translation>
+        <translation>Kök</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="378"/>
         <source>Storage devices</source>
-        <translation type="unfinished"></translation>
+        <translation>Depolama aygıtları</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="380"/>
         <source>SD card</source>
-        <translation type="unfinished"></translation>
+        <translation>SD kart</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="392"/>
         <source>Bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Yer imleri</translation>
     </message>
 </context>
 <context>
@@ -2027,12 +2039,12 @@ exposure program</extracomment>
         <location filename="../qml/pages/ShortcutsPage.qml" line="43"/>
         <location filename="../qml/pages/ShortcutsPage.qml" line="120"/>
         <source>Places</source>
-        <translation type="unfinished"></translation>
+        <translation>Yerler</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="54"/>
         <source>Remove bookmark for “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>“%1” için yer imini kaldır</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="55"/>
@@ -2042,42 +2054,42 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="63"/>
         <source>Open new window</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeni pencere aç</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="66"/>
         <source>New window opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeni pencere açıldı</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="67"/>
         <source>Sometimes the application stays in the background</source>
-        <translation type="unfinished"></translation>
+        <translation>Bazen uygulama arka planda kalıyor</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="71"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Ara</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="87"/>
         <source>Create a new bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeni bir yer imi oluştur</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="99"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaydet</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="105"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Yenile</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="110"/>
         <source>Open storage settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Depolama ayarlarını aç</translation>
     </message>
 </context>
 <context>
@@ -2085,40 +2097,42 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="33"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Boyut</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="54"/>
         <source>size</source>
-        <translation type="unfinished"></translation>
+        <translation>boyut</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="61"/>
         <source>directories</source>
-        <translation type="unfinished"></translation>
+        <translation>dizinler</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="68"/>
         <source>files</source>
-        <translation type="unfinished"></translation>
+        <translation>dosyalar</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="74"/>
         <source>unknown size</source>
-        <translation type="unfinished"></translation>
+        <translation>bilinmeyen boyut</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="78"/>
         <source>%n directories</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n dizin</numerusform>
+            <numerusform>%n dizin</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="86"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n dosya</numerusform>
+            <numerusform>%n dosya</numerusform>
         </translation>
     </message>
 </context>
@@ -2127,112 +2141,112 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="46"/>
         <source>Sorting and View</source>
-        <translation type="unfinished"></translation>
+        <translation>Sıralama ve Görünüm</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="55"/>
         <source>Sort by...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sıralama ölçütü...</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="58"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Ad</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="59"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Boyut</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="60"/>
         <source>Modification time</source>
-        <translation type="unfinished"></translation>
+        <translation>Değiştirme zamanı</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="61"/>
         <source>File type</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya türü</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="77"/>
         <source>Order...</source>
-        <translation type="unfinished"></translation>
+        <translation>Düzen...</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="80"/>
         <source>default</source>
-        <translation type="unfinished"></translation>
+        <translation>öntanımlı</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="81"/>
         <source>reversed</source>
-        <translation type="unfinished"></translation>
+        <translation>ters</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="97"/>
         <source>Preview images...</source>
-        <translation type="unfinished"></translation>
+        <translation>Resimleri ön izle...</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="100"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation>hiçbiri</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="101"/>
         <source>small</source>
-        <translation type="unfinished"></translation>
+        <translation>küçük</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="102"/>
         <source>medium</source>
-        <translation type="unfinished"></translation>
+        <translation>orta</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="103"/>
         <source>large</source>
-        <translation type="unfinished"></translation>
+        <translation>büyük</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="104"/>
         <source>huge</source>
-        <translation type="unfinished"></translation>
+        <translation>çok büyük</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="120"/>
         <source>Show hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation>Gizli dosyaları göster</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="125"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Galeri modunu etkinleştir</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="126"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished"></translation>
+        <translation>Galeri modunda, resimler oldukça büyük gösterilecek ve resimler, videolar ve dizinler dışındaki tüm girdiler gizlenecektir.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="132"/>
         <source>Show folders first</source>
-        <translation type="unfinished"></translation>
+        <translation>Önce klasörleri göster</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="137"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished"></translation>
+        <translation>Büyük/küçük harfe duyarlı olarak sırala</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="153"/>
         <source>Local preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Yerel tercihler</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="154"/>
         <source>Global preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Genel tercihler</translation>
     </message>
 </context>
 <context>
@@ -2240,17 +2254,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="37"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopyala</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="48"/>
         <source>Move</source>
-        <translation type="unfinished"></translation>
+        <translation>Taşı</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="59"/>
         <source>Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Bağlantı</translation>
     </message>
 </context>
 <context>
@@ -2258,36 +2272,38 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="64"/>
         <source>Enter target path</source>
-        <translation type="unfinished"></translation>
+        <translation>Hedef yolu gir</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="79"/>
         <source>Select</source>
-        <translation type="unfinished"></translation>
+        <translation>Seç</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="104"/>
         <source>%n item(s) selected for transferring</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Aktarmak için %n öge seçildi</numerusform>
+            <numerusform>Aktarmak için %n öge seçildi</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="105"/>
         <source>%n destinations(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n hedef seçildi</numerusform>
+            <numerusform>%n hedef seçildi</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="128"/>
         <source>Switch to target directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Hedef dizine geç</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="161"/>
         <source>Nothing selected to transfer</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktarmak için hiçbir şey seçilmedi</translation>
     </message>
 </context>
 <context>
@@ -2295,88 +2311,96 @@ exposure program</extracomment>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="63"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n dosya</numerusform>
+            <numerusform>%n dosya</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="63"/>
         <source>%n destination(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n hedef</numerusform>
+            <numerusform>%n hedef</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="68"/>
         <source>Successfully copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Başarılı bir şekilde kopyalandı</numerusform>
+            <numerusform>Başarılı bir şekilde kopyalandı</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="70"/>
         <source>Successfully moved</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Başarılı bir şekilde taşındı</numerusform>
+            <numerusform>Başarılı bir şekilde taşındı</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="72"/>
         <source>Successfully linked</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Başarılı bir şekilde bağlandı</numerusform>
+            <numerusform>Başarılı bir şekilde bağlandı</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="76"/>
         <source>Failed to copy</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Kopyalama başarısız oldu</numerusform>
+            <numerusform>Kopyalama başarısız oldu</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="78"/>
         <source>Failed to move</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Taşıma başarısız oldu</numerusform>
+            <numerusform>Taşıma başarısız oldu</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="80"/>
         <source>Failed to link</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Bağlama başarısız oldu</numerusform>
+            <numerusform>Bağlama başarısız oldu</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="125"/>
         <source>Replace?</source>
-        <translation type="unfinished"></translation>
+        <translation>Değiştir?</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="141"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>İptal</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="153"/>
         <source>Overwrite</source>
-        <translation type="unfinished"></translation>
+        <translation>Üzerine yaz</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="162"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu dosyalar veya klasörler “%1” içinde zaten var:</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="202"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation type="unfinished"></translation>
+        <translation>Telefonunuz ve SD Kartınız arasında mı taşımaya çalışıyorsunuz? Çalışmazsa, kopyalamayı deneyin.</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="204"/>
         <source>Perhaps the storage is full?</source>
-        <translation type="unfinished"></translation>
+        <translation>Belki de depolama alanı doludur?</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="286"/>
@@ -2386,17 +2410,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="301"/>
         <source>Copying</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopyalanıyor</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="302"/>
         <source>Moving</source>
-        <translation type="unfinished"></translation>
+        <translation>Taşınıyor</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="303"/>
         <source>Linking</source>
-        <translation type="unfinished"></translation>
+        <translation>Bağlantı oluşturuluyor</translation>
     </message>
 </context>
 <context>
@@ -2405,13 +2429,13 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewImagePage.qml" line="253"/>
         <source>Loading image</source>
         <extracomment>Full page placeholder shown while a large image is being loaded</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Resim yükleniyor</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewImagePage.qml" line="263"/>
         <source>Failed to load</source>
         <extracomment>Full page placeholder shown when an image failed to load</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Yükleme başarısız oldu</translation>
     </message>
 </context>
 <context>
@@ -2420,7 +2444,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewVideoPage.qml" line="107"/>
         <source>Failed to play</source>
         <extracomment>Full page placeholder shown when a video failed to load</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Oynatma başarısız oldu</translation>
     </message>
 </context>
 <context>
@@ -2429,13 +2453,13 @@ exposure program</extracomment>
         <location filename="../qml/js/files.js" line="36"/>
         <location filename="../qml/js/files.js" line="45"/>
         <source>Copying</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopyalanıyor</translation>
     </message>
     <message>
         <location filename="../qml/js/files.js" line="36"/>
         <location filename="../qml/js/files.js" line="45"/>
         <source>Moving</source>
-        <translation type="unfinished"></translation>
+        <translation>Taşınıyor</translation>
     </message>
 </context>
 <context>
@@ -2443,7 +2467,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/harbour-file-browser.qml" line="48"/>
         <source>Version %1 (%2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Sürüm %1 (%2)</translation>
     </message>
 </context>
 <context>
@@ -2452,7 +2476,7 @@ exposure program</extracomment>
         <location filename="../qml/js/paths.js" line="50"/>
         <source>root</source>
         <extracomment>root directory (placeholder instead of &quot;/&quot; in search mask)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>kök</translation>
     </message>
 </context>
 </TS>
