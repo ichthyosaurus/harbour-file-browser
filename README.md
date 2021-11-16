@@ -90,7 +90,7 @@ You can follow these steps to manually add or update a translation:
 1. *If it did not exist before*, create a new catalog for your language by copying the
    base file [translations/harbour-file-browser.ts](translations/harbour-file-browser.ts).
    Then add the new translation to [harbour-file-browser.pro](harbour-file-browser.pro).
-2. Add yourself to the list of contributors in [qml/pages/ContributorsPage.qml](qml/pages/ContributorsPage.qml).
+2. Add yourself to the list of contributors in [qml/pages/AboutPage.qml](qml/pages/AboutPage.qml).
 3. Translate the app's name in [harbour-file-browser.desktop](harbour-file-browser.desktop)
    if there is a (short) native term for "file manager" or "file browser" in your language.
 
@@ -108,7 +108,7 @@ details on how to translate date formats to your *local* format.
    the RPM packages will be in the RPMS folder
 
 Please do not forget to add yourself to the list of contributors in
-[qml/pages/ContributorsPage.qml](qml/pages/ContributorsPage.qml)!
+[qml/pages/AboutPage.qml](qml/pages/AboutPage.qml)!
 
 ## Acknowledgements
 
