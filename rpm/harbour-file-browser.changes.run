@@ -24,7 +24,7 @@ done
 
 if [[ -z "$cFILE" ]]; then
     echo "error: changelog source not found, searched:" >/dev/stderr
-    printf "\t- $(pwd)/%s\n" "${cALTERNATIVES[@]}"
+    printf "\t- $(pwd)/%s\n" "${cALTERNATIVES[@]}" >/dev/stderr
     exit 1
 fi
 
