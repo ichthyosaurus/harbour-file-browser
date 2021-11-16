@@ -16,13 +16,16 @@ Page {
     property string appName: ""
 
 
-    property string iconSource: ""
+    property string appIcon: ""
 
 
-    property string versionNumber: ""
+    property string appVersion: ""
 
 
-    property string releaseNumber: "1"
+    property string appRelease: "1"
+
+
+    property string appReleaseType: ""
 
 
     property string description: ""
@@ -41,6 +44,9 @@ Page {
 
 
     property string translationsUrl: ""
+
+
+    property string homepageUrl: ""
 
 
     property list<License> licenses
@@ -74,6 +80,11 @@ Page {
 
 
     property alias _donationsInfoSection: _donationsInfo
+
+
+    function openOrCopyUrl(externalUrl, title) {
+        pageStack.push("private/ExternalUrlPage.qml", {'externalUrl': externalUrl, 'title': title})
+    }
 
     allowedOrientations: Orientation.All
 
@@ -128,7 +139,7 @@ Page {
                 width: Theme.itemSizeExtraLarge
                 height: Theme.itemSizeExtraLarge
                 fillMode: Image.PreserveAspectFit
-                source: iconSource
+                source: appIcon
                 verticalAlignment: Image.AlignVCenter
             }
 
@@ -148,11 +159,18 @@ Page {
 
                 Label {
                     width: parent.width
-                    visible: String(versionNumber !== "")
-                    text: qsTranslate("Opal.About", "Version %1").arg(
-                              (String(releaseNumber) === "1") ?
-                                  versionNumber :
-                                  versionNumber+"-"+releaseNumber)
+                    visible: String(appVersion !== "")
+                    text: {
+                        var versionString = appVersion
+                        if (appRelease != "" && appRelease != "1") versionString += "-" + appRelease
+
+                        if (appReleaseType == "") {
+                            return qsTranslate("Opal.About", "Version %1").arg(versionString)
+                        } else {
+                            return qsTranslate("Opal.About", "Version %1 (%2)").arg(versionString).arg(appReleaseType)
+                        }
+                    }
+                    wrapMode: Text.Wrap
                     color: Theme.secondaryHighlightColor
                     font.pixelSize: Theme.fontSizeMedium
                     horizontalAlignment: Text.AlignHCenter
@@ -163,7 +181,7 @@ Page {
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: parent.width - 2*Theme.horizontalPageMargin
                 text: description
-                onLinkActivated: Qt.openUrlExternally(link)
+                onLinkActivated: openOrCopyUrl(link)
                 wrapMode: Text.Wrap
                 textFormat: Text.StyledText
                 horizontalAlignment: Text.AlignHCenter
@@ -186,6 +204,24 @@ Page {
                                                'mainAttributions': __effectiveMainAttribs
                                            })
                 }
+
+                buttons: [
+                    InfoButton {
+                        text: qsTranslate("Opal.About", "Homepage")
+                        onClicked: openOrCopyUrl(homepageUrl)
+                        enabled: homepageUrl !== ''
+                    },
+                    InfoButton {
+                        text: qsTranslate("Opal.About", "Translations")
+                        onClicked: openOrCopyUrl(translationsUrl)
+                        enabled: translationsUrl !== ''
+                    },
+                    InfoButton {
+                        text: qsTranslate("Opal.About", "Source Code")
+                        onClicked: openOrCopyUrl(sourcesUrl)
+                        enabled: sourcesUrl !== ''
+                    }
+                ]
             }
 
             Column {
@@ -211,26 +247,14 @@ Page {
                 title: qsTranslate("Opal.About", "License")
                 enabled: licenses.length > 0
                 onClicked: pageStack.animatorPush("private/LicensePage.qml", {
-                    'appName': appName, 'licenses': licenses, 'attributions': attributions })
+                    'appName': appName, 'licenses': licenses, 'attributions': attributions,
+                    'mainSources': sourcesUrl, 'mainHomepage': homepageUrl })
                 text: enabled === false ?
-                          qsTranslate("Opal.About", "This is proprietary software. All rights reserved.") :
+                          "This component has been improperly configured. Please report this bug." :
                           ((licenses[0].name !== "" && licenses[0].error !== true) ?
                                licenses[0].name : licenses[0].spdxId)
                 smallPrint: licenses[0].customShortText
                 showMoreLabel: qsTranslate("Opal.About", "show license(s)", "", licenses.length+attributions.length)
-                buttons: [
-                    InfoButton {
-                        text: qsTranslate("Opal.About", "Translations")
-                        onClicked: Qt.openUrlExternally(translationsUrl)
-                        enabled: translationsUrl !== ''
-                    },
-                    InfoButton {
-                        text: qsTranslate("Opal.About", "Source Code")
-                        onClicked: Qt.openUrlExternally(sourcesUrl)
-                        enabled: sourcesUrl !== ''
-                    }
-                ]
-
                 clip: true
                 Behavior on height { SmoothedAnimation { duration: 80 } }
             }

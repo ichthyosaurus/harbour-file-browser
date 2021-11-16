@@ -17,9 +17,6 @@ QtObject {
     property string customShortText: ""
 
 
-    property bool offline: false
-
-
     readonly property bool error: __error
 
 
@@ -27,6 +24,9 @@ QtObject {
 
 
     readonly property string fullText: __fullText
+
+
+    property bool __online: false
 
     property string __localUrl: "%1/%2.json".arg(StandardPaths.temporary).arg(spdxId)
     property string __remoteUrl: "https://spdx.org/licenses/%1.json".arg(spdxId)
@@ -55,6 +55,10 @@ QtObject {
         if (__initialized) _load(true)
     }
 
+    on__OnlineChanged: {
+        _load()
+    }
+
     function _load(force) {
         if (fullText !== "" && force !== true) return;
         if (spdxId === undefined || spdxId === "") {
@@ -69,7 +73,7 @@ QtObject {
             localUrl: __localUrl,
             remoteUrl: __remoteUrl,
             shortText: customShortText,
-            offline: root.offline
+            online: !!__online
         });
     }
 }

@@ -17,6 +17,12 @@ QtObject {
 
     property list<License> licenses
 
+
+    property string homepage
+
+
+    property string sources
+
     property var __effectiveEntries: Func.makeStringList(entries, false)
     property var _spdxList: null
 

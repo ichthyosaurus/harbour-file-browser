@@ -169,7 +169,7 @@ Column {
 
                 visible: modelData.name !== '' && modelData.url !== ''
                 text: modelData.name
-                onClicked: Qt.openUrlExternally(modelData.url)
+                onClicked: pageStack.push("private/ExternalUrlPage.qml", {'externalUrl': modelData.url})
             }
         }
     }

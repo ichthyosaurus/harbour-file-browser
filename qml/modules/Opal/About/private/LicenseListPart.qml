@@ -14,6 +14,9 @@ Column {
     property var extraTexts: []
     property bool initiallyExpanded: false
 
+    property string homepage: ''
+    property string sources: ''
+
 
 
     visible: licenses.length > 0
@@ -35,6 +38,22 @@ Column {
         font.pixelSize: Theme.fontSizeSmall
         color: Theme.highlightColor
         bottomPadding: Theme.paddingSmall
+    }
+
+    ButtonLayout {
+        visible: homepage !== '' || sources !== ''
+
+        Button {
+            visible: homepage !== ''
+            text: qsTranslate("Opal.About", "Homepage")
+            onClicked: pageStack.push("ExternalUrlPage.qml", {'externalUrl': homepage})
+        }
+
+        Button {
+            visible: sources !== ''
+            text: qsTranslate("Opal.About", "Source Code")
+            onClicked: pageStack.push("ExternalUrlPage.qml", {'externalUrl': sources})
+        }
     }
 
     Repeater {
@@ -124,7 +143,7 @@ Column {
                                 textFormat: Text.StyledText
                                 palette.primaryColor: Theme.highlightColor
                                 linkColor: Theme.primaryColor
-                                onLinkActivated: Qt.openUrlExternally(link)
+                                onLinkActivated: pageStack.push("ExternalUrlPage.qml", {'externalUrl': link})
                             }
 
                             Label {
@@ -136,7 +155,7 @@ Column {
                                 textFormat: error ? Text.StyledText : Text.PlainText
                                 palette.primaryColor: Theme.highlightColor
                                 linkColor: Theme.primaryColor
-                                onLinkActivated: Qt.openUrlExternally(link)
+                                onLinkActivated: pageStack.push("ExternalUrlPage.qml", {'externalUrl': link})
                                 text: error ? qsTranslate("Opal.About", "Please refer to <a href='%1'>%1</a>").arg(
                                                   "https://spdx.org/licenses/%1.html".arg(modelData.spdxId))
                                             : modelData.fullText

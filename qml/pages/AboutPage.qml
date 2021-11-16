@@ -27,9 +27,10 @@ A.AboutPageBase {
     allowedOrientations: S.Orientation.All
 
     appName: "File Browser"
-    iconSource: Qt.resolvedUrl("../images/harbour-file-browser.png")
-    versionNumber: APP_VERSION
-    releaseNumber: String(APP_RELEASE)+" ("+RELEASE_TYPE+")" // TODO implement support in Opal.About
+    appIcon: Qt.resolvedUrl("../images/harbour-file-browser.png")
+    appVersion: APP_VERSION
+    appRelease: APP_RELEASE
+    appReleaseType: RELEASE_TYPE
     description: qsTr("A fully-fledged file manager for Sailfish OS.")
 
     mainAttributions: ["Mirian Margiani", "karip"]

@@ -18,12 +18,12 @@ function getShortText(origShortText, spdxId) {
     return origShortText
 }
 
-function sendError(spdxId) {
+function sendError(spdxId, shortText) {
     WorkerScript.sendMessage({
         spdxId: spdxId,
         name: "",
         fullText: "",
-        shortText: "",
+        shortText: shortText,
         error: true
     });
 }
@@ -74,11 +74,11 @@ function loadRemote(spdxId, localUrl, remoteUrl, origShortText) {
             }, function(x){}, xhr.responseText);
         } catch (e) {
             console.log(LOG_SCOPE, "failed to load license remotely from", remoteUrl);
-            sendError(spdxId);
+            sendError(spdxId, getShortText(origShortText, spdxId));
         }
     }, function(xhr) {
         console.log(LOG_SCOPE, "failed to load license remotely from", remoteUrl);
-        sendError(spdxId);
+        sendError(spdxId, getShortText(origShortText, spdxId));
     });
 }
 
@@ -97,21 +97,21 @@ WorkerScript.onMessage = function(message) {
             sendSuccess(message.spdxId, o['name'], o['licenseText'],
                         getShortText(message.shortText, message.spdxId));
         } catch (e) {
-            if (!!message.offline) {
+            if (!!message.online) {
+                loadRemote(message.spdxId, message.localUrl, message.remoteUrl, message.shortText);
+            } else {
                 console.log(LOG_SCOPE, "license not cached at "+message.localUrl+
                             ", skipping download in offline mode");
-                sendError(message.spdxId);
-            } else {
-                loadRemote(message.spdxId, message.localUrl, message.remoteUrl, message.shortText);
+                sendError(message.spdxId, getShortText(message.shortText, message.spdxId));
             }
         }
     }, function(xhr) {
-        if (!!message.offline) {
+        if (!!message.online) {
+            loadRemote(message.spdxId, message.localUrl, message.remoteUrl, message.shortText);
+        } else {
             console.log(LOG_SCOPE, "license not cached at "+message.localUrl+
                         ", skipping download in offline mode");
-            sendError(message.spdxId);
-        } else {
-            loadRemote(message.spdxId, message.localUrl, message.remoteUrl, message.shortText);
+            sendError(message.spdxId, getShortText(message.shortText, message.spdxId));
         }
     });
 }

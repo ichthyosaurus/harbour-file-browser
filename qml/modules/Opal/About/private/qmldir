@@ -5,6 +5,7 @@ module Opal.About.private
 ContributorsPage 1.0 ContributorsPage.qml
 DetailList 1.0 DetailList.qml
 DonationsGroup 1.0 DonationsGroup.qml
+ExternalUrlPage 1.0 ExternalUrlPage.qml
 ExtraTranslations 1.0 ExtraTranslations.qml
 LicenseListPart 1.0 LicenseListPart.qml
 LicensePage 1.0 LicensePage.qml

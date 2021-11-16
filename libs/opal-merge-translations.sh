@@ -8,7 +8,7 @@
 # See https://github.com/Pretty-SFOS/opal/blob/main/snippets/opal-merge-translations.md
 # for documentation.
 #
-# @@@ FILE VERSION 0.1.0
+# @@@ FILE VERSION 0.1.1
 #
 
 shopt -s extglob
@@ -107,7 +107,8 @@ log "           changing many strings, so the same-text heuristic can pick up"
 log "           any strings that have moved."
 log
 log "           Typically, the command is:"
-log "               lupdate qml src -ts translations"
+log "               lupdate qml src -ts translations/*.ts"
 log
-log "           Otherwise, you may lose translations, e.g. after replacing an"
-log "           old 'About' page with Opal.About."
+log "           Otherwise, you may lose translations because the Sailfish SDK"
+log "           drops 'obsolete' translations by default (option '-no-obsolete')."
+log "           E.g. after replacing an old 'About' page with Opal.About."
