@@ -4,124 +4,129 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="33"/>
+        <location filename="../qml/pages/AboutPage.qml" line="34"/>
         <source>A fully-fledged file manager for Sailfish OS.</source>
         <translation>A fully-fledged file manager for Sailfish OS.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="43"/>
+        <location filename="../qml/pages/AboutPage.qml" line="45"/>
         <source>adapted by karip</source>
         <translation>adapted by karip</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="66"/>
+        <location filename="../qml/pages/AboutPage.qml" line="68"/>
         <source>Development</source>
         <translation>Development</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="69"/>
+        <location filename="../qml/pages/AboutPage.qml" line="71"/>
         <source>Programming</source>
         <translation>Programming</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="76"/>
+        <location filename="../qml/pages/AboutPage.qml" line="78"/>
         <source>Icon Design</source>
         <translation>Icon Design</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="82"/>
+        <location filename="../qml/pages/AboutPage.qml" line="84"/>
         <source>Translations</source>
         <translation>Translations</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="85"/>
+        <location filename="../qml/pages/AboutPage.qml" line="87"/>
         <source>English</source>
         <translation>English</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="89"/>
+        <location filename="../qml/pages/AboutPage.qml" line="91"/>
         <source>German</source>
         <translation>German</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="93"/>
+        <location filename="../qml/pages/AboutPage.qml" line="95"/>
         <source>Finnish</source>
         <translation>Finnish</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="97"/>
+        <location filename="../qml/pages/AboutPage.qml" line="99"/>
         <source>Chinese</source>
         <translation>Chinese</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="101"/>
+        <location filename="../qml/pages/AboutPage.qml" line="103"/>
         <source>Russian</source>
         <translation>Russian</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="105"/>
+        <location filename="../qml/pages/AboutPage.qml" line="107"/>
         <source>Swedish</source>
         <translation>Swedish</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="109"/>
+        <location filename="../qml/pages/AboutPage.qml" line="111"/>
         <source>Italian</source>
         <translation>Italian</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="113"/>
+        <location filename="../qml/pages/AboutPage.qml" line="115"/>
         <source>Spanish</source>
         <translation>Spanish</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="117"/>
+        <location filename="../qml/pages/AboutPage.qml" line="119"/>
         <source>French</source>
         <translation>French</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="121"/>
+        <location filename="../qml/pages/AboutPage.qml" line="123"/>
         <source>Dutch</source>
         <translation>Dutch</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="125"/>
+        <location filename="../qml/pages/AboutPage.qml" line="127"/>
         <source>Greek</source>
         <translation>Greek</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="129"/>
+        <location filename="../qml/pages/AboutPage.qml" line="131"/>
         <source>Norwegian</source>
         <translation>Norwegian</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="133"/>
+        <location filename="../qml/pages/AboutPage.qml" line="135"/>
         <source>Czech</source>
         <translation>Czech</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="137"/>
+        <location filename="../qml/pages/AboutPage.qml" line="139"/>
         <source>Slovak</source>
         <translation>Slovak</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="141"/>
+        <location filename="../qml/pages/AboutPage.qml" line="143"/>
         <source>Hungarian</source>
         <translation>Hungarian</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="145"/>
+        <location filename="../qml/pages/AboutPage.qml" line="147"/>
         <source>Estonian</source>
         <translation>Estonian</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="149"/>
+        <location filename="../qml/pages/AboutPage.qml" line="151"/>
         <source>Polish</source>
         <translation>Polish</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="153"/>
+        <location filename="../qml/pages/AboutPage.qml" line="155"/>
         <source>Indonesian</source>
         <translation>Indonesian</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="159"/>
+        <source>Turkish</source>
+        <translation>Turkish</translation>
     </message>
 </context>
 <context>
@@ -1376,44 +1381,52 @@ exposure program</extracomment>
 <context>
     <name>Opal.About</name>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="105"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="116"/>
         <source>About</source>
         <translation>About</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="152"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="168"/>
         <source>Version %1</source>
         <translation>Version %1</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="177"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="32"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="53"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="170"/>
+        <source>Version %1 (%2)</source>
+        <translation>Version %1 (%2)</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="195"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="36"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="57"/>
         <source>Development</source>
         <translation>Development</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="180"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="198"/>
         <source>show contributors</source>
         <translation>show contributors</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="201"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="210"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="103"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="122"/>
+        <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="48"/>
+        <source>Homepage</source>
+        <translation>Homepage</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="237"/>
         <source>Donations</source>
         <translation>Donations</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="211"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="247"/>
         <source>License</source>
         <translation>License</translation>
     </message>
-    <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="216"/>
-        <source>This is proprietary software. All rights reserved.</source>
-        <translation>This is proprietary software. All rights reserved.</translation>
-    </message>
     <message numerus="yes">
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="220"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="257"/>
         <source>show license(s)</source>
         <translation>
             <numerusform>show license</numerusform>
@@ -1421,37 +1434,50 @@ exposure program</extracomment>
         </translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="223"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="215"/>
         <source>Translations</source>
         <translation>Translations</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="228"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="220"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="101"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="125"/>
+        <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="54"/>
         <source>Source Code</source>
         <translation>Source Code</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="29"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="33"/>
         <source>Contributors</source>
         <translation>Contributors</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="71"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="75"/>
         <source>Acknowledgements</source>
         <translation>Acknowledgements</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="81"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="89"/>
         <source>Thank you!</source>
         <translation>Thank you!</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="99"/>
+        <source>Details</source>
+        <translation>Details</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/InfoSection.qml" line="26"/>
         <source>show details</source>
         <translation>show details</translation>
     </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="41"/>
+        <source>Download license texts</source>
+        <translation>Download license texts</translation>
+    </message>
     <message numerus="yes">
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="32"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="53"/>
         <source>License(s)</source>
         <translation>
             <numerusform>License</numerusform>
@@ -1459,14 +1485,34 @@ exposure program</extracomment>
         </translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="66"/>
         <source>Note: please check the source code for most accurate information.</source>
         <translation>Note: please check the source code for most accurate information.</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="140"/>
+        <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="159"/>
         <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
         <translation>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="27"/>
+        <source>External Link</source>
+        <translation>External Link</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="57"/>
+        <source>Open in browser</source>
+        <translation>Open in browser</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="67"/>
+        <source>Copied to clipboard: %1</source>
+        <translation>Copied to clipboard: %1</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="76"/>
+        <source>Copy to clipboard</source>
+        <translation>Copy to clipboard</translation>
     </message>
 </context>
 <context>

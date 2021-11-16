@@ -4,124 +4,129 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="33"/>
+        <location filename="../qml/pages/AboutPage.qml" line="34"/>
         <source>A fully-fledged file manager for Sailfish OS.</source>
         <translation>Sailfish OS için tam teşekküllü bir dosya yöneticisi.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="43"/>
+        <location filename="../qml/pages/AboutPage.qml" line="45"/>
         <source>adapted by karip</source>
         <translation>karip tarafından uyarlanmıştır</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="66"/>
+        <location filename="../qml/pages/AboutPage.qml" line="68"/>
         <source>Development</source>
         <translation>Geliştirme</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="69"/>
+        <location filename="../qml/pages/AboutPage.qml" line="71"/>
         <source>Programming</source>
         <translation>Programlama</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="76"/>
+        <location filename="../qml/pages/AboutPage.qml" line="78"/>
         <source>Icon Design</source>
         <translation>Simge Tasarımı</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="82"/>
+        <location filename="../qml/pages/AboutPage.qml" line="84"/>
         <source>Translations</source>
         <translation>Çeviriler</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="85"/>
+        <location filename="../qml/pages/AboutPage.qml" line="87"/>
         <source>English</source>
         <translation>İngilizce</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="89"/>
+        <location filename="../qml/pages/AboutPage.qml" line="91"/>
         <source>German</source>
         <translation>Almanca</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="93"/>
+        <location filename="../qml/pages/AboutPage.qml" line="95"/>
         <source>Finnish</source>
         <translation>Fince</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="97"/>
+        <location filename="../qml/pages/AboutPage.qml" line="99"/>
         <source>Chinese</source>
         <translation>Çince</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="101"/>
+        <location filename="../qml/pages/AboutPage.qml" line="103"/>
         <source>Russian</source>
         <translation>Rusça</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="105"/>
+        <location filename="../qml/pages/AboutPage.qml" line="107"/>
         <source>Swedish</source>
         <translation>İsveççe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="109"/>
+        <location filename="../qml/pages/AboutPage.qml" line="111"/>
         <source>Italian</source>
         <translation>İtalyanca</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="113"/>
+        <location filename="../qml/pages/AboutPage.qml" line="115"/>
         <source>Spanish</source>
         <translation>İspanyolca</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="117"/>
+        <location filename="../qml/pages/AboutPage.qml" line="119"/>
         <source>French</source>
         <translation>Fransızca</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="121"/>
+        <location filename="../qml/pages/AboutPage.qml" line="123"/>
         <source>Dutch</source>
         <translation>Felemenkçe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="125"/>
+        <location filename="../qml/pages/AboutPage.qml" line="127"/>
         <source>Greek</source>
         <translation>Yunanca</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="129"/>
+        <location filename="../qml/pages/AboutPage.qml" line="131"/>
         <source>Norwegian</source>
         <translation>Norveççe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="133"/>
+        <location filename="../qml/pages/AboutPage.qml" line="135"/>
         <source>Czech</source>
         <translation>Çekçe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="137"/>
+        <location filename="../qml/pages/AboutPage.qml" line="139"/>
         <source>Slovak</source>
         <translation>Slovakça</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="141"/>
+        <location filename="../qml/pages/AboutPage.qml" line="143"/>
         <source>Hungarian</source>
         <translation>Macarca</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="145"/>
+        <location filename="../qml/pages/AboutPage.qml" line="147"/>
         <source>Estonian</source>
         <translation>Estonca</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="149"/>
+        <location filename="../qml/pages/AboutPage.qml" line="151"/>
         <source>Polish</source>
         <translation>Lehçe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="153"/>
+        <location filename="../qml/pages/AboutPage.qml" line="155"/>
         <source>Indonesian</source>
         <translation>Endonezce</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="159"/>
+        <source>Turkish</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -417,7 +422,6 @@
         <source>%n file(s) selected</source>
         <translation>
             <numerusform>%n dosya seçildi</numerusform>
-            <numerusform>%n dosya seçildi</numerusform>
         </translation>
     </message>
     <message>
@@ -435,14 +439,12 @@
         <source>cut file(s)</source>
         <translation>
             <numerusform>dosyayı kes</numerusform>
-            <numerusform>dosyaları kes</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="119"/>
         <source>%n file(s) cut</source>
         <translation>
-            <numerusform>%n dosya kesildi</numerusform>
             <numerusform>%n dosya kesildi</numerusform>
         </translation>
     </message>
@@ -451,14 +453,12 @@
         <source>copy file(s)</source>
         <translation>
             <numerusform>dosyayı kopyala</numerusform>
-            <numerusform>dosyaları kopyala</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="132"/>
         <source>%n file(s) copied</source>
         <translation>
-            <numerusform>%n dosya kopyalandı</numerusform>
             <numerusform>%n dosya kopyalandı</numerusform>
         </translation>
     </message>
@@ -467,7 +467,6 @@
         <source>transfer file(s)</source>
         <translation>
             <numerusform>dosyayı aktar</numerusform>
-            <numerusform>dosyaları aktar</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -475,7 +474,6 @@
         <source>delete file(s)</source>
         <translation>
             <numerusform>dosyayı sil</numerusform>
-            <numerusform>dosyaları sil</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -483,7 +481,6 @@
         <source>rename file(s)</source>
         <translation>
             <numerusform>dosyayı yeniden adlandır</numerusform>
-            <numerusform>dosyaları yeniden adlandır</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -491,7 +488,6 @@
         <source>share file(s)</source>
         <translation>
             <numerusform>dosyayı paylaş</numerusform>
-            <numerusform>dosyaları paylaş</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -499,7 +495,6 @@
         <source>compress file(s)</source>
         <translation>
             <numerusform>dosyayı sıkıştır</numerusform>
-            <numerusform>dosyaları sıkıştır</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -507,7 +502,6 @@
         <source>edit file(s)</source>
         <translation>
             <numerusform>dosyayı düzenle</numerusform>
-            <numerusform>dosyaları düzenle</numerusform>
         </translation>
     </message>
     <message>
@@ -575,7 +569,6 @@
         <source>%n item(s)</source>
         <translation>
             <numerusform>%n öğesi</numerusform>
-            <numerusform>%n öğeleri</numerusform>
         </translation>
     </message>
 </context>
@@ -1346,7 +1339,6 @@ exposure program</extracomment>
         <source>%n item(s) selected</source>
         <translation>
             <numerusform>%n öge seçildi</numerusform>
-            <numerusform>%n öge seçildi</numerusform>
         </translation>
     </message>
     <message>
@@ -1369,63 +1361,73 @@ exposure program</extracomment>
         <location filename="../qml/pages/MultiFilePage.qml" line="166"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="175"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">hiçbiri</translation>
     </message>
 </context>
 <context>
     <name>Opal.About</name>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="105"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="116"/>
         <source>About</source>
         <translation>Hakkında</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="152"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="168"/>
         <source>Version %1</source>
         <translation>Sürüm %1</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="177"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="32"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="53"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="170"/>
+        <source>Version %1 (%2)</source>
+        <translation type="unfinished">Sürüm %1 (%2)</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="195"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="36"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="57"/>
         <source>Development</source>
         <translation>Geliştirme</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="180"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="198"/>
         <source>show contributors</source>
         <translation>katkıda bulunanları göster</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="201"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="210"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="103"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="122"/>
+        <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="48"/>
+        <source>Homepage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="237"/>
         <source>Donations</source>
         <translation>Bağışlar</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="211"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="247"/>
         <source>License</source>
         <translation>Lisans</translation>
     </message>
-    <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="216"/>
-        <source>This is proprietary software. All rights reserved.</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message numerus="yes">
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="220"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="257"/>
         <source>show license(s)</source>
         <translation>
             <numerusform>lisansı göster</numerusform>
-            <numerusform>lisansları göster</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="223"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="215"/>
         <source>Translations</source>
         <translation>Çeviriler</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="228"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="220"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="101"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="125"/>
+        <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="54"/>
         <source>Source Code</source>
         <translation>Kaynak Kodları</translation>
     </message>
@@ -1435,37 +1437,66 @@ exposure program</extracomment>
         <translation>ayrıntıları göster</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="29"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="33"/>
         <source>Contributors</source>
         <translation>Katkıda Bulunanlar</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="71"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="75"/>
         <source>Acknowledgements</source>
         <translation>Teşekkürler</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="81"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="89"/>
         <source>Thank you!</source>
         <translation>Teşekkürler!</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="140"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="99"/>
+        <source>Details</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="159"/>
         <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
         <translation>Lütfen &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt; adresine bakın</translation>
     </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="41"/>
+        <source>Download license texts</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message numerus="yes">
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="32"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="53"/>
         <source>License(s)</source>
         <translation>
             <numerusform>Lisans</numerusform>
-            <numerusform>Lisanslar</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="66"/>
         <source>Note: please check the source code for most accurate information.</source>
         <translation>Not: En doğru bilgi için lütfen kaynak kodlarına bakın.</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="27"/>
+        <source>External Link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="57"/>
+        <source>Open in browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="67"/>
+        <source>Copied to clipboard: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="76"/>
+        <source>Copy to clipboard</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1484,6 +1515,14 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="18"/>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Çevirilere veya kodlara katkılarınız memnuniyetle karşılanacaktır.</translation>
+    </message>
+    <message>
+        <source>Development</source>
+        <translation type="obsolete">Geliştirme</translation>
+    </message>
+    <message>
+        <source>Translations</source>
+        <translation type="obsolete">Çeviriler</translation>
     </message>
 </context>
 <context>
@@ -1527,7 +1566,6 @@ exposure program</extracomment>
         <extracomment>hidden if n=0</extracomment>
         <translation>
             <numerusform>%n dosya</numerusform>
-            <numerusform>%n dosya</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -1535,7 +1573,6 @@ exposure program</extracomment>
         <source>%n folder(s)</source>
         <extracomment>hidden if n=0</extracomment>
         <translation>
-            <numerusform>%n dizin</numerusform>
             <numerusform>%n dizin</numerusform>
         </translation>
     </message>
@@ -1682,7 +1719,6 @@ exposure program</extracomment>
         <source>%n hit(s)</source>
         <translation>
             <numerusform>%n sonuç</numerusform>
-            <numerusform>%n sonuç</numerusform>
         </translation>
     </message>
     <message>
@@ -1743,7 +1779,6 @@ exposure program</extracomment>
         <location filename="../qml/components/SelectionPanel.qml" line="54"/>
         <source>%n file(s) selected</source>
         <translation>
-            <numerusform>%n dosya seçildi</numerusform>
             <numerusform>%n dosya seçildi</numerusform>
         </translation>
     </message>
@@ -1904,7 +1939,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="176"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">hiçbiri</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="182"/>
@@ -2133,14 +2168,12 @@ exposure program</extracomment>
         <source>%n directories</source>
         <translation>
             <numerusform>%n dizin</numerusform>
-            <numerusform>%n dizin</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="86"/>
         <source>%n file(s)</source>
         <translation>
-            <numerusform>%n dosya</numerusform>
             <numerusform>%n dosya</numerusform>
         </translation>
     </message>
@@ -2293,14 +2326,12 @@ exposure program</extracomment>
         <source>%n item(s) selected for transferring</source>
         <translation>
             <numerusform>Aktarmak için %n öge seçildi</numerusform>
-            <numerusform>Aktarmak için %n öge seçildi</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="105"/>
         <source>%n destinations(s) selected</source>
         <translation>
-            <numerusform>%n hedef seçildi</numerusform>
             <numerusform>%n hedef seçildi</numerusform>
         </translation>
     </message>
@@ -2322,14 +2353,12 @@ exposure program</extracomment>
         <source>%n file(s)</source>
         <translation>
             <numerusform>%n dosya</numerusform>
-            <numerusform>%n dosya</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="63"/>
         <source>%n destination(s)</source>
         <translation>
-            <numerusform>%n hedef</numerusform>
             <numerusform>%n hedef</numerusform>
         </translation>
     </message>
@@ -2338,14 +2367,12 @@ exposure program</extracomment>
         <source>Successfully copied</source>
         <translation>
             <numerusform>Başarılı bir şekilde kopyalandı</numerusform>
-            <numerusform>Başarılı bir şekilde kopyalandı</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="70"/>
         <source>Successfully moved</source>
         <translation>
-            <numerusform>Başarılı bir şekilde taşındı</numerusform>
             <numerusform>Başarılı bir şekilde taşındı</numerusform>
         </translation>
     </message>
@@ -2354,14 +2381,12 @@ exposure program</extracomment>
         <source>Successfully linked</source>
         <translation>
             <numerusform>Başarılı bir şekilde bağlandı</numerusform>
-            <numerusform>Başarılı bir şekilde bağlandı</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="76"/>
         <source>Failed to copy</source>
         <translation>
-            <numerusform>Kopyalama başarısız oldu</numerusform>
             <numerusform>Kopyalama başarısız oldu</numerusform>
         </translation>
     </message>
@@ -2370,14 +2395,12 @@ exposure program</extracomment>
         <source>Failed to move</source>
         <translation>
             <numerusform>Taşıma başarısız oldu</numerusform>
-            <numerusform>Taşıma başarısız oldu</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="80"/>
         <source>Failed to link</source>
         <translation>
-            <numerusform>Bağlama başarısız oldu</numerusform>
             <numerusform>Bağlama başarısız oldu</numerusform>
         </translation>
     </message>
