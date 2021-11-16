@@ -11,7 +11,7 @@ Name=File Browser
 Icon=harbour-file-browser
 Exec=harbour-file-browser %f
 Categories=System;FileTools;FileManager
-MimeType=inode/directory;
+$$CONF_DESKTOP_MIME_TYPE
 
 # Translators: the name has to be short enough not to be abbreviated
 # by the system (launcher view).

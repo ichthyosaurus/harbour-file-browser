@@ -59,11 +59,17 @@ OLD_DEFINES = "$$cat($$OUT_PWD/requires_defines.h)"
     message("DEFINES changed..." $$DEFINES)
 }
 
+# configure Harbour compliance:
+# some features must be disabled for the official store
 equals(HARBOUR_COMPLIANCE, off) {
     DEFINES += NO_HARBOUR_COMPLIANCE
     message("Harbour compliance disabled")
+
+    CONF_DESKTOP_MIME_TYPE="MimeType=inode/directory;"
 } else {
     message("Harbour compliance enabled")
+
+    CONF_DESKTOP_MIME_TYPE=""
 }
 
 # copy change log file to build root;
@@ -74,6 +80,9 @@ changelog.files = CHANGELOG.md
 changelog.path = $$OUT_PWD
 
 CONFIG += sailfishapp
+
+# generate files based on build configuration
+QMAKE_SUBSTITUTES += harbour-file-browser.desktop.in \
 
 SOURCES += src/harbour-file-browser.cpp \
     src/filemodel.cpp \
