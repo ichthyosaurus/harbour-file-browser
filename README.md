@@ -87,7 +87,7 @@ over this.
 
 You can follow these steps to manually add or update a translation:
 
-1. *If it did not exists before*, create a new catalog for your language by copying the
+1. *If it did not exist before*, create a new catalog for your language by copying the
    base file [translations/harbour-file-browser.ts](translations/harbour-file-browser.ts).
    Then add the new translation to [harbour-file-browser.pro](harbour-file-browser.pro).
 2. Add yourself to the list of contributors in [qml/pages/ContributorsPage.qml](qml/pages/ContributorsPage.qml).
