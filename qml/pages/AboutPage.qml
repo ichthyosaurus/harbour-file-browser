@@ -33,8 +33,9 @@ A.AboutPageBase {
     appReleaseType: RELEASE_TYPE
     description: qsTr("A fully-fledged file manager for Sailfish OS.")
 
-    mainAttributions: ["Mirian Margiani", "karip"]
+    mainAttributions: ["2019-2021 Mirian Margiani", "2013-2019 karip"]
     sourcesUrl: "https://github.com/ichthyosaurus/harbour-file-browser"
+    homepageUrl: "https://forum.sailfishos.org/t/file-browser-support-and-feedback-thread/4566"
     translationsUrl: "https://hosted.weblate.org/projects/harbour-file-browser/main-translations/"
 
     licenses: A.License { spdxId: "GPL-3.0-or-later" }
@@ -112,7 +113,7 @@ A.AboutPageBase {
                 },
                 A.ContributionGroup {
                     title: qsTr("Spanish")
-                    entries: ["Carmen F. B."]
+                    entries: ["Carmen F. B.", "Lucas Peinado"]
                 },
                 A.ContributionGroup {
                     title: qsTr("French")
@@ -152,7 +153,11 @@ A.AboutPageBase {
                 },
                 A.ContributionGroup {
                     title: qsTr("Indonesian")
-                    entries: ["liimee"]
+                    entries: ["liimee", "Reza Almanda", "Jacque Fresco"]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Turkish")
+                    entries: ["ToldYouThat", "Oğuz Ersen"]
                 }
             ]
         }
