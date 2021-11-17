@@ -96,37 +96,37 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="135"/>
         <source>Czech</source>
-        <translation type="unfinished"></translation>
+        <translation>tchèque</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="139"/>
         <source>Slovak</source>
-        <translation type="unfinished"></translation>
+        <translation>slovaque</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="143"/>
         <source>Hungarian</source>
-        <translation type="unfinished"></translation>
+        <translation>hongrois</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="147"/>
         <source>Estonian</source>
-        <translation type="unfinished"></translation>
+        <translation>estonien</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="151"/>
         <source>Polish</source>
-        <translation type="unfinished"></translation>
+        <translation>polonais</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="155"/>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation>indonésien</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="159"/>
         <source>Turkish</source>
-        <translation type="unfinished"></translation>
+        <translation>turc</translation>
     </message>
 </context>
 <context>
@@ -160,7 +160,7 @@
     <message>
         <location filename="../src/consolemodel.cpp" line="141"/>
         <source>** an unknown error occurred</source>
-        <translation type="unfinished"></translation>
+        <translation>** une erreur inconnue s&apos;est produite</translation>
     </message>
 </context>
 <context>
