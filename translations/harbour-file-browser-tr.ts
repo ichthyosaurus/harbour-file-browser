@@ -126,7 +126,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="159"/>
         <source>Turkish</source>
-        <translation type="unfinished"></translation>
+        <translation>Türkçe</translation>
     </message>
 </context>
 <context>
@@ -1075,7 +1075,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="275"/>
         <source>f/%1</source>
         <extracomment>aperture &quot;f&quot; number; cf. https://en.wikipedia.org/wiki/Aperture</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>f/%1</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="279"/>
@@ -1379,7 +1379,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="170"/>
         <source>Version %1 (%2)</source>
-        <translation type="unfinished">Sürüm %1 (%2)</translation>
+        <translation>Sürüm %1 (%2)</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="195"/>
@@ -1454,7 +1454,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="99"/>
         <source>Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Ayrıntılar</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="159"/>
@@ -1464,7 +1464,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="41"/>
         <source>Download license texts</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisans metinlerini indir</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="53"/>
@@ -1481,22 +1481,22 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="27"/>
         <source>External Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Dış Bağlantı</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="57"/>
         <source>Open in browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarayıcıda aç</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="67"/>
         <source>Copied to clipboard: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Panoya kopyalandı: %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="76"/>
         <source>Copy to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Panoya kopyala</translation>
     </message>
 </context>
 <context>
