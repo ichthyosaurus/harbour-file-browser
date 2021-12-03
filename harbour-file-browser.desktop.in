@@ -21,4 +21,4 @@ Name[de]=Dateiverwaltung
 Name[pl]=Pliki
 
 [X-HarbourBackup]
-BackupPathList=.local/share/harbour-file-browser/
+BackupPathList=.local/share/harbour-file-browser/:.config/harbour-file-browser
