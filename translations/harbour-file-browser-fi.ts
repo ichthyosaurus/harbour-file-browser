@@ -6,127 +6,127 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="34"/>
         <source>A fully-fledged file manager for Sailfish OS.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kokonaisvaltainen tiedostonhallintasovellus Sailfish OS:lle.</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="45"/>
         <source>adapted by karip</source>
-        <translation type="unfinished"></translation>
+        <translation>mukauttanut karip</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="68"/>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation>Kehitys</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="71"/>
         <source>Programming</source>
-        <translation type="unfinished"></translation>
+        <translation>Ohjelmointi</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="78"/>
         <source>Icon Design</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuvakesuunnittelu</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="84"/>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Käännökset</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="87"/>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation>Englanti</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="91"/>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation>Saksa</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="95"/>
         <source>Finnish</source>
-        <translation type="unfinished"></translation>
+        <translation>Suomi</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="99"/>
         <source>Chinese</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiina</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="103"/>
         <source>Russian</source>
-        <translation type="unfinished"></translation>
+        <translation>Venäjä</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="107"/>
         <source>Swedish</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruotsi</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="111"/>
         <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <translation>Italia</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="115"/>
         <source>Spanish</source>
-        <translation type="unfinished"></translation>
+        <translation>Espanja</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="119"/>
         <source>French</source>
-        <translation type="unfinished"></translation>
+        <translation>Ranska</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="123"/>
         <source>Dutch</source>
-        <translation type="unfinished"></translation>
+        <translation>Hollanti</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="127"/>
         <source>Greek</source>
-        <translation type="unfinished"></translation>
+        <translation>Kreikka</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="131"/>
         <source>Norwegian</source>
-        <translation type="unfinished"></translation>
+        <translation>Norja</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="135"/>
         <source>Czech</source>
-        <translation type="unfinished"></translation>
+        <translation>Tsekki</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="139"/>
         <source>Slovak</source>
-        <translation type="unfinished"></translation>
+        <translation>Slovakia</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="143"/>
         <source>Hungarian</source>
-        <translation type="unfinished"></translation>
+        <translation>Unkari</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="147"/>
         <source>Estonian</source>
-        <translation type="unfinished"></translation>
+        <translation>Viro</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="151"/>
         <source>Polish</source>
-        <translation type="unfinished"></translation>
+        <translation>Puola</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="155"/>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation>Indonesia</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="159"/>
         <source>Turkish</source>
-        <translation type="unfinished"></translation>
+        <translation>Turkki</translation>
     </message>
 </context>
 <context>
@@ -145,22 +145,22 @@
     <message>
         <location filename="../src/consolemodel.cpp" line="133"/>
         <source>** command “%1” not found</source>
-        <translation type="unfinished"></translation>
+        <translation>** komentoa ”%1” ei löytynyt</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="137"/>
         <source>** timeout reached</source>
-        <translation type="unfinished"></translation>
+        <translation>** aikakatkaisu</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="139"/>
         <source>** internal communication failed</source>
-        <translation type="unfinished"></translation>
+        <translation>** sisäinen viestintä epäonnistui</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="141"/>
         <source>** an unknown error occurred</source>
-        <translation type="unfinished"></translation>
+        <translation>** tuntematon virhe</translation>
     </message>
 </context>
 <context>
@@ -232,17 +232,17 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="270"/>
         <source>Remove bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista kirjanmerkki</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="270"/>
         <source>Add to bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää kirjanmerkkeihin</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="274"/>
         <source>Copy path to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopioi polku leikepöydälle</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="337"/>
@@ -252,17 +252,17 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="358"/>
         <source>Empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Tyhjä</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="361"/>
         <source>No files matched the filter.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei täsmääviä tiedostoja.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="362"/>
         <source>This directory contains no files.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tässä hakemistossa ei ole tiedostoja.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="442"/>
@@ -273,12 +273,12 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="457"/>
         <source>Internally not ready</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei ole sisäisesti valmis</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="457"/>
         <source>Please simply try again</source>
-        <translation type="unfinished"></translation>
+        <translation>Yritä uudelleen</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="500"/>
@@ -301,12 +301,12 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="332"/>
         <source>Remove bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista kirjanmerkki</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="332"/>
         <source>Add to bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää kirjanmerkkeihin</translation>
     </message>
 </context>
 <context>
@@ -314,7 +314,7 @@
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="155"/>
         <source>Hide hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation>Piilota piilotetut tiedostot</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="156"/>
@@ -324,7 +324,7 @@
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="161"/>
         <source>Edit path</source>
-        <translation type="unfinished"></translation>
+        <translation>Muokkaa polkua</translation>
     </message>
 </context>
 <context>
