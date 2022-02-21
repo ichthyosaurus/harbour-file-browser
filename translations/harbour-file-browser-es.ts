@@ -11,7 +11,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="45"/>
         <source>adapted by karip</source>
-        <translation type="unfinished"></translation>
+        <translation>adaptado por karip</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="68"/>
@@ -1459,7 +1459,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="75"/>
         <source>Acknowledgements</source>
-        <translation type="unfinished"></translation>
+        <translation>Reconocimientos</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="89"/>
