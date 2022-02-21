@@ -538,7 +538,7 @@
     <message>
         <location filename="../src/filedata.cpp" line="233"/>
         <source>pipe</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">boru</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="237"/>
@@ -1104,7 +1104,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="297"/>
         <source>Exposure Bias</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Exposure_compensation</extracomment>
-        <translation type="unfinished">Pozlandırma Yanı</translation>
+        <translation>Pozlandırma Sapması</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="302"/>
@@ -1145,19 +1145,19 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="327"/>
         <source>Shade</source>
-        <translation type="unfinished"></translation>
+        <translation>Gölge</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="338"/>
         <source>Average</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ortalama</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="340"/>
         <source>Center weighted average</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Merkez ağırlıklı ortalama</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="342"/>
@@ -1175,13 +1175,13 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="346"/>
         <source>Pattern</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Desen</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="348"/>
         <source>Partial</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Kısmi</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="350"/>
@@ -1199,25 +1199,25 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="355"/>
         <source>Metering Mode</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ölçüm Kipi</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="367"/>
         <source>Program (auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Program (oto)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="371"/>
         <source>Aperture priority (semi-auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Diyafram açıklığı önceliği (yarı oto)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="375"/>
         <source>Shutter priority (semi-auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Perde önceliği (yarı oto)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="379"/>
@@ -1246,25 +1246,25 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="396"/>
         <source>Exposure Program</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozlama Programı</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="402"/>
         <location filename="../src/jhead/jhead-api.cpp" line="405"/>
         <source>Exposure Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozlama Kipi</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="407"/>
         <source>Auto bracketing</source>
         <extracomment>exposure mode; cf. https://en.wikipedia.org/wiki/Autobracketing#Exposure</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Oto basamaklama</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="416"/>
         <source>Macro</source>
         <extracomment>focus range</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Makro</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="420"/>
@@ -1287,7 +1287,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="437"/>
         <location filename="../src/jhead/jhead-api.cpp" line="441"/>
         <source>JPEG Process</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">JPEG İşleme</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="437"/>
@@ -1399,7 +1399,7 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="122"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="48"/>
         <source>Homepage</source>
-        <translation type="unfinished"></translation>
+        <translation>Ana sayfa</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="237"/>
@@ -2007,7 +2007,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="328"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>Özel</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="335"/>
@@ -2024,7 +2024,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="336"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Ev</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="341"/>
@@ -2054,7 +2054,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="364"/>
         <source>Android storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Android depolama</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="370"/>
@@ -2093,7 +2093,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="55"/>
         <source>Add “%1” to bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;%1&quot;i yer imlerine ekle</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="63"/>
