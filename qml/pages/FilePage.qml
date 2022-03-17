@@ -4,7 +4,7 @@
  * SPDX-FileCopyrightText: 2013-2016, 2018-2019 Kari Pihkala
  * SPDX-FileCopyrightText: 2013 Michael Faro-Tusino
  * SPDX-FileCopyrightText: 2016 Joona Petrell
- * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -24,7 +24,6 @@
 import QtQuick 2.5 // >= 2.5 required for Image::autoTransform
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileData 1.0
-import harbour.file.browser.ConsoleModel 1.0
 import QtMultimedia 5.0
 
 import "../components"
@@ -42,42 +41,6 @@ Page {
         file: page.file
         property string category
         Component.onCompleted: category = typeCategory()
-    }
-
-    ConsoleModel {
-        id: consoleModel
-
-        // called when open command exits
-        onProcessExited: {
-            if (exitCode === 0) {
-                // note: we show the banner for all installable files because the install might
-                // otherwise silently fail.
-                if (fileData.category === "rpm" || fileData.category === "apk") {
-                    notificationPanel.showTextWithTimer(qsTr("Install launched"),
-                                                        qsTr("If nothing happens, then the package is probably faulty.")+" "+
-                                                        //: "it" = "the package", i.e. an RPM or APK file
-                                                        qsTr("Swipe right to inspect its contents."));
-                } else {
-                    notificationPanel.showTextWithTimer(qsTr("Open successful"),
-                                                        qsTr("Sometimes the application stays in the background"));
-                }
-            } else if (exitCode === 1) {
-                notificationPanel.showTextWithTimer(qsTr("Internal error"), "xdg-open exit code 1");
-            } else if (exitCode === 2) {
-                notificationPanel.showTextWithTimer(qsTr("File not found"), page.file);
-            } else if (exitCode === 3) {
-                notificationPanel.showTextWithTimer(qsTr("No application to open the file"),
-                                                    qsTr("xdg-open found no preferred application"));
-            } else if (exitCode === 4) {
-                notificationPanel.showTextWithTimer(qsTr("Action failed"), "xdg-open exit code 4");
-            } else if (exitCode === -88888) {
-                notificationPanel.showTextWithTimer(qsTr("xdg-open not found"), "");
-            } else if (exitCode === -99999) {
-                notificationPanel.showTextWithTimer(qsTr("xdg-open crash?"), "");
-            } else {
-                notificationPanel.showTextWithTimer(qsTr("xdg-open error"), "exit code: "+exitCode);
-            }
-        }
     }
 
     SilicaFlickable {
@@ -123,7 +86,23 @@ Page {
                                                             qsTr("This type of file cannot be opened."));
                         return;
                     }
-                    consoleModel.executeCommand("xdg-open", [ page.file ])
+
+                    // note: we show the banner for all installable files because the install might
+                    // otherwise silently fail.
+                    if (Qt.openUrlExternally(page.file)) {
+                        if (fileData.category === "rpm" || fileData.category === "apk") {
+                            notificationPanel.showTextWithTimer(qsTr("Install launched"),
+                                                                qsTr("If nothing happens, then the package is probably faulty.")+" "+
+                                                                //: "it" = "the package", i.e. an RPM or APK file
+                                                                qsTr("Swipe right to inspect its contents."));
+                        } else {
+                            notificationPanel.showTextWithTimer(qsTr("Open successful"),
+                                                                qsTr("Sometimes the application stays in the background"));
+                        }
+                    } else {
+                        // TODO verify that this works properly with any file, especially APK and RPM
+                        notificationPanel.showTextWithTimer(qsTr("No application to open the file"), "");
+                    }
                 }
             }
 
