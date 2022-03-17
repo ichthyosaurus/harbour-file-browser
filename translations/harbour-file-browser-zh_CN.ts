@@ -1369,12 +1369,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="116"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>关于</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="168"/>
         <source>Version %1</source>
-        <translation type="unfinished"></translation>
+        <translation>V %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="170"/>
@@ -1399,7 +1399,7 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="122"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="48"/>
         <source>Homepage</source>
-        <translation type="unfinished"></translation>
+        <translation>主页</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="237"/>
@@ -1429,12 +1429,12 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="125"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="54"/>
         <source>Source Code</source>
-        <translation type="unfinished"></translation>
+        <translation>源代码</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/InfoSection.qml" line="26"/>
         <source>show details</source>
-        <translation type="unfinished"></translation>
+        <translation>显示日志</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="33"/>
@@ -1449,12 +1449,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="89"/>
         <source>Thank you!</source>
-        <translation type="unfinished"></translation>
+        <translation>谢谢！</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="99"/>
         <source>Details</source>
-        <translation type="unfinished"></translation>
+        <translation>日志</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="159"/>
@@ -1486,7 +1486,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="57"/>
         <source>Open in browser</source>
-        <translation type="unfinished"></translation>
+        <translation>用浏览器打开</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="67"/>
@@ -1496,7 +1496,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="76"/>
         <source>Copy to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>复制至剪贴板</translation>
     </message>
 </context>
 <context>

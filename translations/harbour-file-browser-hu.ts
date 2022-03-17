@@ -36,97 +36,97 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="87"/>
         <source>English</source>
-        <translation>Angol</translation>
+        <translation>angol</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="91"/>
         <source>German</source>
-        <translation>Német</translation>
+        <translation>német</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="95"/>
         <source>Finnish</source>
-        <translation>Finn</translation>
+        <translation>finn</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="99"/>
         <source>Chinese</source>
-        <translation>Kínai</translation>
+        <translation>kínai</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="103"/>
         <source>Russian</source>
-        <translation>Orosz</translation>
+        <translation>orosz</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="107"/>
         <source>Swedish</source>
-        <translation>Svéd</translation>
+        <translation>svéd</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="111"/>
         <source>Italian</source>
-        <translation>Olasz</translation>
+        <translation>olasz</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="115"/>
         <source>Spanish</source>
-        <translation>Spanyol</translation>
+        <translation>spanyol</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="119"/>
         <source>French</source>
-        <translation>Francia</translation>
+        <translation>francia</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="123"/>
         <source>Dutch</source>
-        <translation>Holland</translation>
+        <translation>holland</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="127"/>
         <source>Greek</source>
-        <translation>Görög</translation>
+        <translation>görög</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="131"/>
         <source>Norwegian</source>
-        <translation>Norvég</translation>
+        <translation>norvég</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="135"/>
         <source>Czech</source>
-        <translation>Cseh</translation>
+        <translation>cseh</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="139"/>
         <source>Slovak</source>
-        <translation>Szlovák</translation>
+        <translation>szlovák</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="143"/>
         <source>Hungarian</source>
-        <translation>Magyar</translation>
+        <translation>magyar</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="147"/>
         <source>Estonian</source>
-        <translation type="unfinished"></translation>
+        <translation>észt</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="151"/>
         <source>Polish</source>
-        <translation type="unfinished"></translation>
+        <translation>lengyel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="155"/>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation>indonéz</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="159"/>
         <source>Turkish</source>
-        <translation type="unfinished"></translation>
+        <translation>török</translation>
     </message>
 </context>
 <context>
