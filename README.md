@@ -53,6 +53,12 @@ responsibility if that happens. So, be careful.
  - Set per-folder view preferences
  - Save custom quick shortcuts for navigating and moving files
 
+### Permissions
+
+File Browser requires the following permissions since Sailfish OS 4.4:
+
+- TODO
+
 ## Help and support
 
 There is a [FAQ](https://github.com/ichthyosaurus/harbour-file-browser/blob/master/FAQ.md)
