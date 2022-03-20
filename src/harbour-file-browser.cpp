@@ -41,12 +41,63 @@
 #include "consolemodel.h"
 #include "settingshandler.h"
 
+namespace {
+    bool migrateItem(const QString& oldLocation, const QString& newLocation)
+    {
+        // Based on Migration.cpp from OSMScout for SFOS.
+        // GPL-2.0-or-later, 2021  Lukáš Karas
+        // https://github.com/Karry/osmscout-sailfish/blob/35c12584e7016fc3651b36ef7c2b6a0898fd4ce1/src/Migration.cpp
+
+        qDebug() << "Considering migration" << oldLocation << "to" << newLocation;
+        QFileInfo oldInfo(oldLocation);
+        QFileInfo newInfo(newLocation);
+
+        if (oldInfo.exists() && !newInfo.exists()) {
+            QDir parent = newInfo.dir();
+
+            if (!parent.mkpath(parent.absolutePath())) {
+                qWarning() << "Failed to create path" << parent.absolutePath();
+                return false;
+            }
+
+            if (!QFile::rename(oldLocation, newLocation)) {
+                qWarning() << "Failed to move" << oldLocation << "to" << newLocation;
+                return false;
+            }
+
+            qDebug() << "Migrated" << oldLocation << "to" << newLocation;
+            return true;
+        }
+
+        return false;
+    }
+
+    void runMigrations()
+    {
+        QString home = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
+        bool success = true;
+
+        // migration for Sailjail (SFOS 4.3)
+        QString oldLocalDir = home + "/.local/share/harbour-file-browser";
+        QString newLocalDir = QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation);
+
+        // vvv files
+        QString configFile = QCoreApplication::applicationName() + ".conf";
+        success = success && migrateItem(oldLocalDir + "/harbour-file-browser.conf", newLocalDir + "/" + configFile);
+        // ^^^ files
+
+        if (!success) {
+            QString message = QStringLiteral(
+                "Failed to migrate application data to new location.\n"
+                "The application will now start normally but some data or configuration will be missing.\n"
+                "Please close the app and move the files listed above manually.\n"
+            );
+        }
+    }
+}
+
 int main(int argc, char *argv[])
 {
-    // CONFIG += sailfishapp sets up QCoreApplication::OrganizationName and ApplicationName
-    // so that QSettings can access the app's config file at
-    // /home/USER/.config/harbour-file-browser/harbour-file-browser.conf
-
     qRegisterMetaType<FileModelWorker::Mode>("FileModelWorker::Mode");
     qRegisterMetaType<StatFileInfo>("StatFileInfo");
     qRegisterMetaType<QList<StatFileInfo>>("QList<StatFileInfo>");
@@ -56,6 +107,10 @@ int main(int argc, char *argv[])
     qmlRegisterType<ConsoleModel>("harbour.file.browser.ConsoleModel", 1, 0, "ConsoleModel");
 
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
+    app->setOrganizationName("harbour-file-browser"); // needed for Sailjail
+    app->setApplicationName("harbour-file-browser");
+    runMigrations();
+
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
     // setup global settings object

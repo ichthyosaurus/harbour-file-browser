@@ -51,6 +51,12 @@ A.AboutPageBase {
             licenses: A.License { spdxId: "MIT" }
         },
         A.Attribution {
+            name: "OSMScout Migration"
+            entries: ["2021 Lukáš Karas"]
+            licenses: License { spdxId: "GPL-2.0-or-later" }
+            sources: "https://github.com/Karry/osmscout-sailfish/blob/35c12584e7016fc3651b36ef7c2b6a0898fd4ce1/src/Migration.cpp"
+        },
+        A.Attribution {
             name: "Opal.About"
             entries: "2018-2021 Mirian Margiani"
             licenses: A.License { spdxId: "GPL-3.0-or-later" }
