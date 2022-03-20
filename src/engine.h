@@ -2,7 +2,7 @@
  * This file is part of File Browser.
  *
  * SPDX-FileCopyrightText: 2013-2014, 2019 Kari Pihkala
- * SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -70,6 +70,7 @@ public:
     Q_INVOKABLE QString androidDataPath() const;
     Q_INVOKABLE QVariantList externalDrives() const;
     Q_INVOKABLE QString storageSettingsPath() /*cached*/; // returns empty without NO_HARBOUR_COMPLIANCE
+    Q_INVOKABLE QString pdfViewerPath() /*cached*/; // returns empty without NO_HARBOUR_COMPLIANCE
 
     // synchronous methods
     Q_INVOKABLE bool runningAsRoot();
@@ -115,6 +116,7 @@ private:
 
     // cached paths that we assume won't change during runtime
     QString m_storageSettingsPath = {QStringLiteral("")};
+    QString m_pdfViewerPath = {QStringLiteral("")};
 
     // don't use these directly, use isUsingBusybox() instead
     QStringList m__isUsingBusybox;

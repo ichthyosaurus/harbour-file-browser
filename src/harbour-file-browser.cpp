@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2013-2014, 2016 Kari Pihkala
  * SPDX-FileCopyrightText: 2014 jklingen
- * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -87,6 +87,14 @@ int main(int argc, char *argv[])
 #ifdef NO_HARBOUR_COMPLIANCE
     view->rootContext()->setContextProperty("sharingEnabled", QVariant::fromValue(true));
     view->rootContext()->setContextProperty("pdfViewerEnabled", QVariant::fromValue(true));
+    if (!engine->pdfViewerPath().isEmpty()) {
+        // we enable PDF viewer integration only if sailfish-office is installed and accessible
+        view->rootContext()->setContextProperty("pdfViewerEnabled", QVariant::fromValue(true));
+    } else {
+        view->rootContext()->setContextProperty("pdfViewerEnabled", QVariant::fromValue(false));
+        qDebug() << "system documents viewer not available";
+    }
+
     if (!engine->storageSettingsPath().isEmpty()) {
         // we enable system (storage) settings only if the module is available
         view->rootContext()->setContextProperty("systemSettingsEnabled", QVariant::fromValue(true));

@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2013-2016, 2018-2019 Kari Pihkala
  * SPDX-FileCopyrightText: 2016 Malte Veerman
- * SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -263,6 +263,28 @@ QString Engine::storageSettingsPath()
                                                    QStandardPaths::LocateFile);
 #endif
     return m_storageSettingsPath;
+}
+
+QString Engine::pdfViewerPath()
+{
+    if (!m_pdfViewerPath.isEmpty()) return m_pdfViewerPath;
+
+#ifndef NO_HARBOUR_COMPLIANCE
+    m_pdfViewerPath = QStringLiteral("");
+#else
+    m_pdfViewerPath = QStringLiteral("Sailfish.Office.PDFDocumentPage");
+
+    if (!QFileInfo::exists(
+                QStringLiteral("/usr/lib/") +
+                QStringLiteral("qt5/qml/Sailfish/Office/PDFDocumentPage.qml"))) {
+        if (!QFileInfo::exists(
+                    QStringLiteral("/usr/lib64/") +
+                    QStringLiteral("qt5/qml/Sailfish/Office/PDFDocumentPage.qml"))) {
+            m_pdfViewerPath = QStringLiteral("");
+        }
+    }
+#endif
+    return m_pdfViewerPath;
 }
 
 bool Engine::runningAsRoot()
