@@ -2,7 +2,7 @@
 SPDX-FileCopyrightText: 2013 Michael Faro-Tusino
 SPDX-FileCopyrightText: 2013 karip
 SPDX-FileCopyrightText: 2013-2016 Kari Pihkala
-SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
+SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
 
 SPDX-License-Identifier: GFDL-1.3-or-later
 -->
@@ -33,7 +33,7 @@ responsibility if that happens. So, be careful.
 ### Features
 
  - Browse and search files and folders on the phone
- - Open files (if xdg-open finds a preferred application)
+ - Open files with an external app
  - View image files and pictures as thumbnails or in a gallery
  - Play back WAV, MP3, OGG, and FLAC audio
  - Install Android APK and Sailfish RPM packages
@@ -57,7 +57,13 @@ responsibility if that happens. So, be careful.
 
 File Browser requires the following permissions since Sailfish OS 4.4:
 
-- TODO
+- Audio: for playing audio files inline
+- MediaIndexing: to list all documents (not yet used)
+- RemovableMedia: for browsing USB sticks and SD cards
+- UserDirs and PublicDir: to show as many files as possible while restricted by Sailjail
+
+**Note:** Sandboxing is only enabled for builds in Jolla's Harbour store. This
+version cannot show all files. The version on OpenRepos will have no such restrictions.
 
 ## Help and support
 
