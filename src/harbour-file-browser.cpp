@@ -85,8 +85,28 @@ int main(int argc, char *argv[])
     view->rootContext()->setContextProperty("RELEASE_TYPE", QString(RELEASE_TYPE));
 
 #ifdef NO_HARBOUR_COMPLIANCE
-    view->rootContext()->setContextProperty("sharingEnabled", QVariant::fromValue(true));
-    view->rootContext()->setContextProperty("pdfViewerEnabled", QVariant::fromValue(true));
+    {
+        QString method = QStringLiteral("disabled");
+
+        if (QFileInfo(QStringLiteral("/usr/lib/") +
+                      QStringLiteral("qt5/qml/Sailfish/Share/qmldir")).exists()) {
+            method = QStringLiteral("Share");
+        } else if (QFileInfo::exists(
+                       QStringLiteral("/usr/lib/") +
+                       QStringLiteral("qt5/qml/Sailfish/TransferEngine/qmldir"))) {
+            method = QStringLiteral("TransferEngine");
+        }
+
+        view->rootContext()->setContextProperty("sharingMethod", QVariant::fromValue(method));
+
+        if (method == QStringLiteral("disabled")) {
+            view->rootContext()->setContextProperty("sharingEnabled", QVariant::fromValue(false));
+            qDebug() << "no supported sharing system found";
+        } else {
+            view->rootContext()->setContextProperty("sharingEnabled", QVariant::fromValue(true));
+        }
+    }
+
     if (!engine->pdfViewerPath().isEmpty()) {
         // we enable PDF viewer integration only if sailfish-office is installed and accessible
         view->rootContext()->setContextProperty("pdfViewerEnabled", QVariant::fromValue(true));
@@ -104,6 +124,7 @@ int main(int argc, char *argv[])
     }
 #else
     view->rootContext()->setContextProperty("sharingEnabled", QVariant::fromValue(false));
+    view->rootContext()->setContextProperty("sharingMethod", QVariant::fromValue(QStringLiteral("disabled")));
     view->rootContext()->setContextProperty("pdfViewerEnabled", QVariant::fromValue(false));
     view->rootContext()->setContextProperty("systemSettingsEnabled", QVariant::fromValue(false));
 #endif
