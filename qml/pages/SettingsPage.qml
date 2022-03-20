@@ -110,7 +110,10 @@ Page {
                         id: v5; text: qsTr("Enable gallery mode")
                         description: qsTr("In gallery mode, images will be shown comfortably large, "
                             + "and all entries except for images, videos, and directories will be hidden.")
-                        onCheckedChanged: settings.write("View/EnableGalleryMode", checked.toString())
+                        onCheckedChanged: {
+                            if (checked) settings.write("View/ViewMode", 'gallery')
+                            else settings.write("View/ViewMode", 'list')
+                        }
                     }
                 }
             }
@@ -233,7 +236,7 @@ Page {
             viewGroup.contentItem.showHiddenFiles = (settings.read("View/HiddenFilesShown", "false") === "true");
             viewGroup.contentItem.showThumbnails = (settings.read("View/PreviewsShown", "false") === "true");
             viewGroup.contentItem.useLocalSettings = (settings.read("View/UseLocalSettings", "true") === "true");
-            viewGroup.contentItem.enableGallery = (settings.read("View/EnableGalleryMode", "false") === "true");
+            viewGroup.contentItem.enableGallery = (settings.read("View/ViewMode", "list") === "gallery");
             behaviourGroup.contentItem.showFullPaths = (settings.read("General/ShowFullDirectoryPaths", "false") === "true");
             behaviourGroup.contentItem.showNavigationMenuIcon = (settings.read("General/ShowNavigationMenuIcon", "true") === "true");
             behaviourGroup.contentItem.solidBackground = (settings.read("General/SolidWindowBackground", "false") === "true");

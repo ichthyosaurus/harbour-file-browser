@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
+SPDX-FileCopyrightText: 2020-2022 Mirian Margiani
 
 SPDX-License-Identifier: GFDL-1.3-or-later
 -->
@@ -27,7 +27,7 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 | `PreviewsShown`                    | `false`       | bool                                          | `show-thumbnails`
 | `PreviewsSize`                     | `medium`      | `small`/`medium`/`large`/`huge`               | `thumbnails-size`
 | `UseLocalSettings`                 | `true`        | bool                                          | `use-local-view-settings`
-| `EnableGalleryMode`                | `false`       | bool                                          |
+| `ViewMode`                         | `list`        | `list`/`gallery`/`grid`                       |
 | **`[Bookmarks]`**                  |               |                                               |
 | `Entries="[\"...\"]"`              |               | ordered array of paths as JSON strings (this field saves only the order of elements, not the elements themselves) | `bookmark-entries`
 | `home#nemo#Devel=Devel`            |               | `path=bookmark name` for each bookmark (with all `/` replaced by `#` to distinguish them from settings groups) |
@@ -44,7 +44,7 @@ They use the same entries as [KDE](https://kde.org)'s file manager
 | **`[Sailfish]`**                   |               | not used by Dolphin
 | `ShowDirectoriesFirst`             | `true`        | bool
 | `SortCaseSensitively`              | `false`       | bool
-| `EnableGalleryMode`                | `false`       | bool
+| `ViewMode`                         | `list`        | `list`/`gallery`/`grid`
 | **`[Settings]`**                   |               |
 | `HiddenFilesShown`                 | `false`       | bool
 | **`[Dolphin]`**                    |               |
@@ -53,3 +53,13 @@ They use the same entries as [KDE](https://kde.org)'s file manager
 | `PreviewsShown`                    | `false`       | bool
 | `Version`                          | (`4`)         | (not used yet)
 | `Timestamp`                        | (`yyyy,mm,dd,hh,mm,ss`) | (not used yet)
+
+
+## Obsolete Settings
+
+The following settings keys are no longer in use. See also the "Legacy key"
+column in the global settings table for keys used prior to version 2.0.0 of the app.
+
+| Key                                | Default value | Values                   | Scope         | Replaced by
+|------------------------------------|---------------|--------------------------|---------------|-------------------------
+| `View/EnableGalleryMode`           | `false`       | bool                     | local, global | `View/ViewMode`

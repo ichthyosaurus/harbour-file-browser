@@ -552,14 +552,14 @@ Page {
 
     function updateThumbnailsState() {
         var showThumbs = settings.read("View/PreviewsShown", "false");
-        var galleryActive = settings.read("View/EnableGalleryMode", "false");
+        var viewMode = settings.read("View/ViewMode", "list");
 
         if (settings.read("View/UseLocalSettings", "true") === "true") {
             showThumbs = settings.read("Dolphin/PreviewsShown", showThumbs, dir+"/.directory");
-            galleryActive = settings.read("Sailfish/EnableGalleryMode", galleryActive, dir+"/.directory");
+            viewMode = settings.read("Sailfish/ViewMode", viewMode, dir+"/.directory");
         }
 
-        if (galleryActive === "true") {
+        if (viewMode === "true") {
             viewState = "gallery";
         } else if (showThumbs === "true") {
             viewState = "preview/" + settings.read("View/PreviewsSize", "medium");
