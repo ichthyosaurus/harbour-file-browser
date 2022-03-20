@@ -14,11 +14,11 @@ Column {
     property var extraTexts: []
     property bool initiallyExpanded: false
 
-    property string homepage: ''
-    property string sources: ''
+    property string homepage: ''  // optional
+    property string sources: ''  // optional
 
-
-
+    // Acknowledgements without licenses should be shown
+    // on the contributors page but not on the licenses page.
     visible: licenses.length > 0
     width: parent.width
     height: childrenRect.height

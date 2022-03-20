@@ -1,21 +1,21 @@
 # Store this file to keep track of packaged module versions.
 # It is not necessary to ship this in your app's final RPM package.
-# SPDX-FileCopyrightText: 2018-2021 Mirian Margiani
+# SPDX-FileCopyrightText: 2018-2022 Mirian Margiani
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # Attribution using Opal.About:
 #    Attribution {
 #        name: "Opal.About"
-#        entries: "2018-2021 Mirian Margiani"
+#        entries: "2018-2022 Mirian Margiani"
 #        licenses: License { spdxId: "GPL-3.0-or-later"}
 #        sources: "https://github.com/Pretty-SFOS/opal-about"
 #        homepage: "https://github.com/Pretty-SFOS/opal"
 #    }
 
 module: Opal.About (opal-about)
-version: 0.6.0 (git:3e51daa)
+version: 0.7.1 (git:9a1e74a)
 description: This module provides <i>AboutPageBase</i> for building customizable application information pages.
 maintainers: ichthyosaurus
-attribution: 2018-2021 Mirian Margiani
+attribution: 2018-2022 Mirian Margiani
 license: GPL-3.0-or-later
 sources: https://github.com/Pretty-SFOS/opal-about
