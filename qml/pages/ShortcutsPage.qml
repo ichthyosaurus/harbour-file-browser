@@ -109,7 +109,7 @@ Page {
                 visible: !runningAsRoot && systemSettingsEnabled
                 text: qsTr("Open storage settings");
                 onClicked: {
-                    pageStack.push(Qt.resolvedUrl("/usr/share/jolla-settings/pages/storage/storage.qml"));
+                    pageStack.push(Qt.resolvedUrl(engine.storageSettingsPath()));
                 }
             }
         }
