@@ -189,7 +189,7 @@ Item {
 
             visible: showShare && sharingEnabled
             enabled: {
-                if (sharingMethod == 'Share')
+                if (sharingMethod == 'Share') {
                     return selectedCount > 0
                 } else if (sharingMethod == 'TransferEngine') {
                     // TransferEngine's SharePage can breaks if the view is rotated
