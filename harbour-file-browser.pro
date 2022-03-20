@@ -72,23 +72,12 @@ equals(HARBOUR_COMPLIANCE, off) {
     #
     # Sailjail prevents most filesystem access. Thus, enabling the Sailjail
     # profile will break the app's core functionality.
-
-    CONF_SAILJAIL_DETAILS = "\
-Sandbox=Disabled
-OrganizationName=harbour-file-browser
-ApplicationName=harbour-file-browser
-"
-
+    CONF_SAILJAIL_DETAILS = "Sandbox=Disabled"
 } else {
     message("Harbour compliance enabled")
 
     CONF_DESKTOP_MIME_TYPE=""
-
-    CONF_SAILJAIL_DETAILS = "\
-Permissions=Audio;MediaIndexing;RemovableMedia;UserDirs;PublicDir
-OrganizationName=harbour-file-browser
-ApplicationName=harbour-file-browser
-"
+    CONF_SAILJAIL_DETAILS = "Permissions=Audio;MediaIndexing;RemovableMedia;UserDirs;PublicDir"
 }
 
 # copy change log file to build root;
