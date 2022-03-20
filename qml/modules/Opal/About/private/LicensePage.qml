@@ -13,7 +13,7 @@ property alias pageDescription:pageHeader.description
 property string appName
 property string mainSources
 property string mainHomepage
-property string allowDownloadingLicenses:false
+property bool allowDownloadingLicenses:false
 allowedOrientations:Orientation.All
 function _downloadLicenses(){for(var lic in licenses){licenses[lic].__online=true
 }for(var attr in attributions){for(var lic in attributions[attr].licenses){attributions[attr].licenses[lic].__online=true
