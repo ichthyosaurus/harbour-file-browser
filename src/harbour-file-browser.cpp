@@ -78,12 +78,12 @@ namespace {
         bool success = true;
 
         // migration for Sailjail (SFOS 4.3)
-        QString oldLocalDir = home + "/.local/share/harbour-file-browser";
-        QString newLocalDir = QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation);
+        QString oldConfigDir = home + "/.config/harbour-file-browser";
+        QString newConfigDir = QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation);
 
         // vvv files
         QString configFile = QCoreApplication::applicationName() + ".conf";
-        success = success && migrateItem(oldLocalDir + "/harbour-file-browser.conf", newLocalDir + "/" + configFile);
+        success = success && migrateItem(oldConfigDir + "/harbour-file-browser.conf", newConfigDir + "/" + configFile);
         // ^^^ files
 
         if (!success) {
