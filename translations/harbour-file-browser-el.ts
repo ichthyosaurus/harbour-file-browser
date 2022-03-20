@@ -14,117 +14,117 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="68"/>
+        <location filename="../qml/pages/AboutPage.qml" line="74"/>
         <source>Development</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="71"/>
+        <location filename="../qml/pages/AboutPage.qml" line="77"/>
         <source>Programming</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="78"/>
+        <location filename="../qml/pages/AboutPage.qml" line="84"/>
         <source>Icon Design</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="84"/>
+        <location filename="../qml/pages/AboutPage.qml" line="90"/>
         <source>Translations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="87"/>
+        <location filename="../qml/pages/AboutPage.qml" line="93"/>
         <source>English</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="91"/>
+        <location filename="../qml/pages/AboutPage.qml" line="97"/>
         <source>German</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="95"/>
+        <location filename="../qml/pages/AboutPage.qml" line="101"/>
         <source>Finnish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="99"/>
+        <location filename="../qml/pages/AboutPage.qml" line="105"/>
         <source>Chinese</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="103"/>
+        <location filename="../qml/pages/AboutPage.qml" line="109"/>
         <source>Russian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="107"/>
+        <location filename="../qml/pages/AboutPage.qml" line="113"/>
         <source>Swedish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="111"/>
+        <location filename="../qml/pages/AboutPage.qml" line="117"/>
         <source>Italian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="115"/>
+        <location filename="../qml/pages/AboutPage.qml" line="121"/>
         <source>Spanish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="119"/>
+        <location filename="../qml/pages/AboutPage.qml" line="125"/>
         <source>French</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="123"/>
+        <location filename="../qml/pages/AboutPage.qml" line="129"/>
         <source>Dutch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="127"/>
+        <location filename="../qml/pages/AboutPage.qml" line="133"/>
         <source>Greek</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="131"/>
+        <location filename="../qml/pages/AboutPage.qml" line="137"/>
         <source>Norwegian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="135"/>
+        <location filename="../qml/pages/AboutPage.qml" line="141"/>
         <source>Czech</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="139"/>
+        <location filename="../qml/pages/AboutPage.qml" line="145"/>
         <source>Slovak</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="143"/>
+        <location filename="../qml/pages/AboutPage.qml" line="149"/>
         <source>Hungarian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="147"/>
+        <location filename="../qml/pages/AboutPage.qml" line="153"/>
         <source>Estonian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="151"/>
+        <location filename="../qml/pages/AboutPage.qml" line="157"/>
         <source>Polish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="155"/>
+        <location filename="../qml/pages/AboutPage.qml" line="161"/>
         <source>Indonesian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="159"/>
+        <location filename="../qml/pages/AboutPage.qml" line="165"/>
         <source>Turkish</source>
         <translation type="unfinished"></translation>
     </message>
@@ -350,68 +350,68 @@
         <translation>Κανένα αρχείο προς επικόλληση</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="360"/>
+        <location filename="../src/engine.cpp" line="384"/>
         <source>File does not exist</source>
         <translation>Το αρχείο δεν υπάρχει</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="362"/>
+        <location filename="../src/engine.cpp" line="386"/>
         <source>Broken symbolic link</source>
         <translation>Σπασμένος συμβολικός δεσμός</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="367"/>
+        <location filename="../src/engine.cpp" line="391"/>
         <source>Cannot read this type of file</source>
         <translation>Αδύνατη η δημιουργία αυτιού του τύπου αρχείου</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="373"/>
+        <location filename="../src/engine.cpp" line="397"/>
         <source>No permission to read the file</source>
         <translation>Δεν έχετε άδεια ανάγνωσης του αρχείου</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="377"/>
-        <location filename="../src/engine.cpp" line="383"/>
+        <location filename="../src/engine.cpp" line="401"/>
+        <location filename="../src/engine.cpp" line="407"/>
         <source>Error reading file</source>
         <translation>Σφάλμα ανάγνωσης του αρχείου</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="386"/>
+        <location filename="../src/engine.cpp" line="410"/>
         <source>Empty file</source>
         <translation>Κενό αρχείο</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="412"/>
+        <location filename="../src/engine.cpp" line="436"/>
         <source>Binary file preview clipped at %1 kB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="431"/>
+        <location filename="../src/engine.cpp" line="455"/>
         <source>Text file preview clipped at %1 lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="433"/>
+        <location filename="../src/engine.cpp" line="457"/>
         <source>Text file preview clipped at %1 kB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="446"/>
+        <location filename="../src/engine.cpp" line="470"/>
         <source>No permissions to create %1</source>
         <translation>Δεν έχετε άδεια δημιουργίας του %1</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="464"/>
+        <location filename="../src/engine.cpp" line="488"/>
         <source>Cannot rename %1</source>
         <translation>Αδυναμία μετονομασίας του %1</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="487"/>
+        <location filename="../src/engine.cpp" line="511"/>
         <source>Cannot change permissions</source>
         <translation>Αδύνατη η αλλαγή των αδειών</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="448"/>
+        <location filename="../src/engine.cpp" line="472"/>
         <source>Cannot create folder %1</source>
         <translation>Αδυναμία δημιουργίας του φακέλου %1</translation>
     </message>
@@ -493,7 +493,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="194"/>
+        <location filename="../qml/components/FileActions.qml" line="205"/>
         <source>share file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -501,7 +501,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="214"/>
+        <location filename="../qml/components/FileActions.qml" line="248"/>
         <source>compress file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -509,7 +509,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="222"/>
+        <location filename="../qml/components/FileActions.qml" line="256"/>
         <source>edit file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -517,7 +517,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="231"/>
+        <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>show file properties</source>
         <translation type="unfinished"></translation>
     </message>
@@ -601,154 +601,119 @@
 <context>
     <name>FilePage</name>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="56"/>
+        <location filename="../qml/pages/FilePage.qml" line="94"/>
         <source>Install launched</source>
         <translation>Η εγκατάσταση ξεκίνησε</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="57"/>
+        <location filename="../qml/pages/FilePage.qml" line="95"/>
         <source>If nothing happens, then the package is probably faulty.</source>
         <translation>Αν δεν συνέβη τίποτα, τότε το πακέτο είναι προφανώς ελαττωματικό.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="59"/>
+        <location filename="../qml/pages/FilePage.qml" line="97"/>
         <source>Swipe right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="61"/>
+        <location filename="../qml/pages/FilePage.qml" line="99"/>
         <source>Open successful</source>
         <translation>Το άνοιγμα ήταν επιτυχές</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="62"/>
+        <location filename="../qml/pages/FilePage.qml" line="100"/>
         <source>Sometimes the application stays in the background</source>
         <translation>Σε ορισμένες περιπτώσεις η εφαρμογή παραμένει στο παρασκήνιο</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="65"/>
-        <source>Internal error</source>
-        <translation>Εσωτερικό σφάλμα</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/FilePage.qml" line="67"/>
-        <source>File not found</source>
-        <translation>Το αρχείο δεν βρέθηκε</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/FilePage.qml" line="69"/>
+        <location filename="../qml/pages/FilePage.qml" line="104"/>
         <source>No application to open the file</source>
         <translation>Καμιά κατάλληλη εφαρμογή για το άνοιγμα του αρχείου</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="70"/>
-        <source>xdg-open found no preferred application</source>
-        <translation>Το xdg-open δεν βρήκε μια προτιμώμενη εφαρμογή</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/FilePage.qml" line="72"/>
-        <source>Action failed</source>
-        <translation>Αποτυχία ενέργειας</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/FilePage.qml" line="74"/>
-        <source>xdg-open not found</source>
-        <translation>Το xdg-open δεν βρέθηκε</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/FilePage.qml" line="76"/>
-        <source>xdg-open crash?</source>
-        <translation>Το xdg-open κατέρρευσε;</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/FilePage.qml" line="78"/>
-        <source>xdg-open error</source>
-        <translation>Σφάλμα του xdg-open</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/FilePage.qml" line="96"/>
+        <location filename="../qml/pages/FilePage.qml" line="59"/>
         <source>Change Permissions</source>
         <translation>Αλλαγή αδειών</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="110"/>
+        <location filename="../qml/pages/FilePage.qml" line="73"/>
         <source>View Raw Contents</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="118"/>
+        <location filename="../qml/pages/FilePage.qml" line="81"/>
         <source>Install</source>
         <translation>Εγκατάσταση</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="118"/>
+        <location filename="../qml/pages/FilePage.qml" line="81"/>
         <source>Open</source>
         <translation>Άνοιγμα</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="122"/>
+        <location filename="../qml/pages/FilePage.qml" line="85"/>
         <source>File cannot be opened</source>
         <translation>Αδύνατο το άνοιγμα του αρχείου</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="123"/>
+        <location filename="../qml/pages/FilePage.qml" line="86"/>
         <source>This type of file cannot be opened.</source>
         <translation>Αδύνατο το άνοιγμα αυτού του τύπου του αρχείου.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="131"/>
+        <location filename="../qml/pages/FilePage.qml" line="110"/>
         <source>Go to Target</source>
         <translation>Μετάβαση στον προορισμό</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="151"/>
+        <location filename="../qml/pages/FilePage.qml" line="130"/>
         <source>The file has been moved.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="263"/>
-        <location filename="../qml/pages/FilePage.qml" line="269"/>
+        <location filename="../qml/pages/FilePage.qml" line="242"/>
+        <location filename="../qml/pages/FilePage.qml" line="248"/>
         <source>Deleting</source>
         <translation>Διαγραφή</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="301"/>
+        <location filename="../qml/pages/FilePage.qml" line="280"/>
         <source>Location</source>
         <translation>Τοποθεσία</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="305"/>
+        <location filename="../qml/pages/FilePage.qml" line="284"/>
         <source>Type</source>
         <translation>Τύπος</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="307"/>
+        <location filename="../qml/pages/FilePage.qml" line="286"/>
         <source>Link to %1</source>
         <translation>Σύνδεσμος στο %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="307"/>
+        <location filename="../qml/pages/FilePage.qml" line="286"/>
         <source>Unknown (link target not found)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="314"/>
+        <location filename="../qml/pages/FilePage.qml" line="293"/>
         <source>Permissions</source>
         <translation>Άδειες</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="318"/>
+        <location filename="../qml/pages/FilePage.qml" line="297"/>
         <source>Owner</source>
         <translation>Ιδιοκτήτης</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="323"/>
+        <location filename="../qml/pages/FilePage.qml" line="302"/>
         <source>Group</source>
         <translation>Ομάδα</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="328"/>
+        <location filename="../qml/pages/FilePage.qml" line="307"/>
         <source>Last modified</source>
         <translation>Τελευταία τροποποίηση</translation>
     </message>
@@ -1381,52 +1346,52 @@ exposure program</extracomment>
 <context>
     <name>Opal.About</name>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="116"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="47"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="168"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="78"/>
         <source>Version %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="170"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="79"/>
         <source>Version %1 (%2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="195"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="36"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="57"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="95"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="22"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="31"/>
         <source>Development</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="198"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="98"/>
         <source>show contributors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="210"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="103"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="122"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="100"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="49"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="53"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="48"/>
         <source>Homepage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="237"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="115"/>
         <source>Donations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="247"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="121"/>
         <source>License</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="257"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="126"/>
         <source>show license(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -1434,40 +1399,40 @@ exposure program</extracomment>
         </translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="215"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="103"/>
         <source>Translations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="220"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="101"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="125"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="106"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="48"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="54"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="54"/>
         <source>Source Code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/InfoSection.qml" line="26"/>
+        <location filename="../qml/modules/Opal/About/InfoSection.qml" line="15"/>
         <source>show details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="33"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="21"/>
         <source>Contributors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="75"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="37"/>
         <source>Acknowledgements</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="89"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="43"/>
         <source>Thank you!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="99"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="47"/>
         <source>Details</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1477,12 +1442,12 @@ exposure program</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="41"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="24"/>
         <source>Download license texts</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="53"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="30"/>
         <source>License(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -1490,27 +1455,27 @@ exposure program</extracomment>
         </translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="66"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="40"/>
         <source>Note: please check the source code for most accurate information.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="27"/>
+        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="15"/>
         <source>External Link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="57"/>
+        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="32"/>
         <source>Open in browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="67"/>
+        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="36"/>
         <source>Copied to clipboard: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="76"/>
+        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="41"/>
         <source>Copy to clipboard</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1518,17 +1483,17 @@ exposure program</extracomment>
 <context>
     <name>Opal.About.Common</name>
     <message>
-        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="12"/>
+        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="7"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="15"/>
+        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="8"/>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="18"/>
+        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="9"/>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1797,12 +1762,12 @@ exposure program</extracomment>
     <name>SettingsPage</name>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="44"/>
-        <location filename="../qml/pages/SettingsPage.qml" line="227"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="230"/>
         <source>Settings</source>
         <translation>Ρυθμίσεις</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="127"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="130"/>
         <source>Show folders first</source>
         <translation>Εμφάνιση των φακέλων πρώτα</translation>
     </message>
@@ -1872,132 +1837,132 @@ exposure program</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="120"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="123"/>
         <source>Sorting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="131"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="134"/>
         <source>Sort case-sensitively</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="135"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="138"/>
         <source>Sort by</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="139"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="142"/>
         <source>name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="140"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="143"/>
         <source>size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="141"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="144"/>
         <source>modification time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="142"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="145"/>
         <source>file type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="146"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="149"/>
         <source>Sort order</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="150"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="153"/>
         <source>default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="151"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="154"/>
         <source>reversed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="159"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="162"/>
         <source>Behavior and View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="170"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="173"/>
         <source>Default transfer action</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="173"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="176"/>
         <source>copy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="174"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="177"/>
         <source>move</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="175"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="178"/>
         <source>link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="176"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="179"/>
         <source>none</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="182"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="185"/>
         <source>Default filter line action</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="185"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="188"/>
         <source>return to directory view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="186"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="189"/>
         <source>start recursive search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="192"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="195"/>
         <source>File name abbreviation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="195"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="198"/>
         <source>fade out</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="196"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="199"/>
         <source>elide end</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="197"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="200"/>
         <source>elide middle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="202"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="205"/>
         <source>Show full directory paths</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="206"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="209"/>
         <source>Show navigation menu icon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="210"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="213"/>
         <source>Enable solid window background</source>
         <translation type="unfinished"></translation>
     </message>
