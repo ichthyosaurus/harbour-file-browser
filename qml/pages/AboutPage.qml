@@ -53,7 +53,7 @@ A.AboutPageBase {
         A.Attribution {
             name: "OSMScout Migration"
             entries: ["2021 Lukáš Karas"]
-            licenses: License { spdxId: "GPL-2.0-or-later" }
+            licenses: A.License { spdxId: "GPL-2.0-or-later" }
             sources: "https://github.com/Karry/osmscout-sailfish/blob/35c12584e7016fc3651b36ef7c2b6a0898fd4ce1/src/Migration.cpp"
         },
         A.Attribution {
