@@ -254,6 +254,8 @@ QVariantList Engine::externalDrives() const
 
 QString Engine::storageSettingsPath()
 {
+    if (!m_storageSettingsPath.isEmpty()) return m_storageSettingsPath;
+
 #ifndef NO_HARBOUR_COMPLIANCE
     m_storageSettingsPath = QStringLiteral("");
 #else
