@@ -185,23 +185,57 @@ Item {
             }
         }
         IconButton {
+            property QtObject _shareAction: null
+
             visible: showShare && sharingEnabled
-            // sadly, SharePage can only handle one sole single lone and lonely orientation
-            enabled: selectedCount === 1 && main.orientation === Orientation.Portrait
+            enabled: {
+                if (sharingMethod == 'Share')
+                    return selectedCount > 0
+                } else if (sharingMethod == 'TransferEngine') {
+                    // TransferEngine's SharePage can breaks if the view is rotated
+                    return selectedCount === 1 && main.orientation === Orientation.Portrait
+                } else {
+                    return false
+                }
+            }
+
             icon.width: _itemSize; icon.height: _itemSize
             icon.source: "image://theme/icon-m-share"
             icon.color: Theme.primaryColor
-            onPressAndHold: labelText = qsTr("share file(s)", "", selectedCount);
+            onPressAndHold: labelText = qsTr("share file(s)", "", selectedCount)
+
             onClicked: {
-                var files = selectedFiles();
-                fileData.file = files[0];
-                fileData.refresh();
-                pageStack.animatorPush("Sailfish.TransferEngine.SharePage", {
-                    source: Qt.resolvedUrl(files[0]),
-                    mimeType: fileData.mimeType,
-                    serviceFilter: ["sharing", "e-mail"]
-                })
-                shareTriggered();
+                var files = selectedFiles()
+
+                if (sharingMethod == 'Share') {
+                    if (!_shareAction) {
+                        _shareAction = Qt.createQmlObject("
+                            import QtQuick 2.2
+                            import %1 1.0
+                            ShareAction {
+                                resources: []
+                            }".arg("Sailfish.Share"), appWindow, 'ShareAction')
+                    }
+
+                    if (!!_shareAction) {
+                        _shareAction.resources = files
+                        _shareAction.trigger()
+                    } else {
+                        // TODO notify the user that sharing failed
+                        console.warn("'ShareAction' item not available even though sharing method is 'Share'")
+                        enabled = false  // forcibly disable sharing
+                    }
+                } else if (sharingMethod == 'TransferEngine') {
+                    fileData.file = files[0]  // TransferEngine can only handle one file at a time
+                    fileData.refresh()
+                    pageStack.animatorPush("Sailfish.TransferEngine.SharePage", {
+                        source: Qt.resolvedUrl(files[0]),
+                        mimeType: fileData.mimeType,
+                        serviceFilter: ["sharing", "e-mail"]
+                    })
+                }
+
+                shareTriggered()
             }
         }
         IconButton { // NOT IMPLEMENTED YET
