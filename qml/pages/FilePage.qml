@@ -391,7 +391,7 @@ Page {
         } else if (fileData.category === "video") {
             method(Qt.resolvedUrl("ViewVideoPage.qml"), { path: page.file, title: fileData.name, autoPlay: !asAttached });
         } else if (pdfViewerEnabled && fileData.category === "pdf") {
-            method("Sailfish.Office.PDFDocumentPage", {
+            method(engine.pdfViewerPath(), {
                 title: fileData.name, source: fileData.file, mimeType: fileData.mimeType
             })
         } else {
