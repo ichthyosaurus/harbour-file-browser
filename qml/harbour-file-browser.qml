@@ -141,6 +141,7 @@ ApplicationWindow {
 
     Component.onCompleted: {
         console.log("running File Browser: " + versionString)
+        console.log("details: " + buildMessage)
         console.log("enabled features: sharing = %1 (%2), PDF viewer = %3, storage settings = %4".arg(
             sharingEnabled).arg(sharingMethod).arg(pdfViewerEnabled).arg(systemSettingsEnabled))
     }

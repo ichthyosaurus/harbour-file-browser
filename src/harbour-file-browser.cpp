@@ -140,6 +140,8 @@ int main(int argc, char *argv[])
     view->rootContext()->setContextProperty("RELEASE_TYPE", QString(RELEASE_TYPE));
 
 #ifdef NO_HARBOUR_COMPLIANCE
+    view->rootContext()->setContextProperty("buildMessage", QVariant::fromValue(QStringLiteral("no explicit Harbour compliance")));
+
     {
         QString method = QStringLiteral("disabled");
 
@@ -178,6 +180,7 @@ int main(int argc, char *argv[])
         qDebug() << "system storage settings not available";
     }
 #else
+    view->rootContext()->setContextProperty("buildMessage", QVariant::fromValue(QStringLiteral("forced Harbour compliance")));
     view->rootContext()->setContextProperty("sharingEnabled", QVariant::fromValue(false));
     view->rootContext()->setContextProperty("sharingMethod", QVariant::fromValue(QStringLiteral("disabled")));
     view->rootContext()->setContextProperty("pdfViewerEnabled", QVariant::fromValue(false));
