@@ -22,3 +22,6 @@ Name[pl]=Pliki
 
 [X-HarbourBackup]
 BackupPathList=.local/share/harbour-file-browser/:.config/harbour-file-browser
+
+[X-Sailjail]
+$$CONF_SAILJAIL_DETAILS

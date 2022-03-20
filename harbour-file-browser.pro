@@ -65,11 +65,30 @@ equals(HARBOUR_COMPLIANCE, off) {
     DEFINES += NO_HARBOUR_COMPLIANCE
     message("Harbour compliance disabled")
 
-    CONF_DESKTOP_MIME_TYPE="MimeType=inode/directory;"
+    CONF_DESKTOP_MIME_TYPE = "MimeType=inode/directory;"
+
+    # some permissions:
+    # ApplicationInstallation;Audio;Calendar;Contacts;Email;Internet;MediaIndexing;RemovableMedia;UserDirs;Sharing
+    #
+    # Sailjail prevents most filesystem access. Thus, enabling the Sailjail
+    # profile will break the app's core functionality.
+
+    CONF_SAILJAIL_DETAILS = "\
+Sandbox=Disabled
+OrganizationName=harbour-file-browser
+ApplicationName=harbour-file-browser
+"
+
 } else {
     message("Harbour compliance enabled")
 
     CONF_DESKTOP_MIME_TYPE=""
+
+    CONF_SAILJAIL_DETAILS = "\
+Permissions=Audio;MediaIndexing;RemovableMedia;UserDirs;PublicDir
+OrganizationName=harbour-file-browser
+ApplicationName=harbour-file-browser
+"
 }
 
 # copy change log file to build root;
