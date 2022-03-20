@@ -214,7 +214,7 @@ Item {
                             import %1 1.0
                             ShareAction {
                                 resources: []
-                            }".arg("Sailfish.Share"), appWindow, 'ShareAction')
+                            }".arg("Sailfish.Share"), main, 'ShareAction')
                     }
 
                     if (!!_shareAction) {
