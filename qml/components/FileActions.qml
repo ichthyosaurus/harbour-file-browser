@@ -189,9 +189,9 @@ Item {
 
             visible: showShare && sharingEnabled
             enabled: {
-                if (sharingMethod == 'Share') {
+                if (sharingMethod == String('Share')) {
                     return selectedCount > 0
-                } else if (sharingMethod == 'TransferEngine') {
+                } else if (sharingMethod == String('TransferEngine')) {
                     // TransferEngine's SharePage can breaks if the view is rotated
                     return selectedCount === 1 && main.orientation === Orientation.Portrait
                 } else {
@@ -207,7 +207,7 @@ Item {
             onClicked: {
                 var files = selectedFiles()
 
-                if (sharingMethod == 'Share') {
+                if (sharingMethod == String('Share')) {
                     if (!_shareAction) {
                         _shareAction = Qt.createQmlObject("
                             import QtQuick 2.2
@@ -225,7 +225,7 @@ Item {
                         console.warn("'ShareAction' item not available even though sharing method is 'Share'")
                         enabled = false  // forcibly disable sharing
                     }
-                } else if (sharingMethod == 'TransferEngine') {
+                } else if (sharingMethod == String('TransferEngine')) {
                     fileData.file = files[0]  // TransferEngine can only handle one file at a time
                     fileData.refresh()
                     pageStack.animatorPush("Sailfish.TransferEngine.SharePage", {
