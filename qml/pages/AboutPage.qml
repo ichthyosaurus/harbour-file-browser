@@ -93,11 +93,11 @@ A.AboutPageBase {
                 },
                 A.ContributionGroup {
                     title: qsTr("Finnish")
-                    entries: ["karip", "Tathhu"]
+                    entries: ["karip", "Tathhu", "Jyri-Petteri Paloposki"]
                 },
                 A.ContributionGroup {
                     title: qsTr("Chinese")
-                    entries: ["Tyler Temp", "dashinfantry", "玉堂白鹤"]
+                    entries: ["Tyler Temp", "dashinfantry", "玉堂白鹤", "joe (ourmicroid)"]
                 },
                 A.ContributionGroup {
                     title: qsTr("Russian")
@@ -141,7 +141,7 @@ A.AboutPageBase {
                 },
                 A.ContributionGroup {
                     title: qsTr("Hungarian")
-                    entries: ["Sz. G"]
+                    entries: ["Sz. G", "f3rr31"]
                 },
                 A.ContributionGroup {
                     title: qsTr("Estonian")
@@ -157,7 +157,7 @@ A.AboutPageBase {
                 },
                 A.ContributionGroup {
                     title: qsTr("Turkish")
-                    entries: ["ToldYouThat", "Oğuz Ersen"]
+                    entries: ["ToldYouThat", "Oğuz Ersen", "E-Akcaer"]
                 }
             ]
         }
