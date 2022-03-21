@@ -53,6 +53,8 @@ responsibility if that happens. So, be careful.
  - Set per-folder view preferences
  - Save custom quick shortcuts for navigating and moving files
 
+... and much more.
+
 ### Permissions
 
 File Browser requires the following permissions since Sailfish OS 4.4:
@@ -64,6 +66,26 @@ File Browser requires the following permissions since Sailfish OS 4.4:
 
 **Note:** Sandboxing is only enabled for builds in Jolla's Harbour store. This
 version cannot show all files. The version on OpenRepos will have no such restrictions.
+
+### Limitations in Jolla Store (Harbour)
+
+**Note:** The OpenRepos version has no such restrictions.
+
+Starting with SailfishOS version 4.4, File Browser suffers from severe
+limitations due to sandboxing (Sailjail).
+
+- only the contents of the current user's data directories (Documents, Pictures,
+  ...) can be accessed, removable media might be accessible
+- disabled features: sharing, integrated access to storage settings, integrated
+  PDF viewer
+- file and directory info might be incomplete
+   - directory contents may not be counted correctly
+   - file and directory sizes might be calculated incorrectly or not at all
+- some file previews may be incomplete or unavailable
+   - archives: ZIP, TAR, RPM, APK
+   - databases: SQLite
+
+This list is probably incomplete and it will hopefully shrink again.
 
 ## Help and support
 
