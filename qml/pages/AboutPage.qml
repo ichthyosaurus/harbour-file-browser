@@ -58,7 +58,7 @@ A.AboutPageBase {
         },
         A.Attribution {
             name: "Opal.About"
-            entries: "2018-2021 Mirian Margiani"
+            entries: "2018-2022 Mirian Margiani"
             licenses: A.License { spdxId: "GPL-3.0-or-later" }
         }
     ]
