@@ -22,14 +22,17 @@
 #include <QSettings>
 #include <QDir>
 #include <QFileInfo>
+#include <QDebug>
 #include "settingshandler.h"
 
 Settings::Settings(QObject *parent) : QObject(parent) {
-    QSettings global;
+    QString newConfigDir = QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation);
+    QString configFile = QCoreApplication::applicationName() + ".conf";
+    QSettings global(newConfigDir + "/" + configFile, QSettings::IniFormat);
     m_globalConfigPath = global.fileName();
 
     if (pathIsProtected(m_globalConfigPath) || !QDir("/").mkpath(QFileInfo(m_globalConfigPath).absolutePath())) {
-        // TODO we should issue a warning that global settings cannot be saved
+        qWarning() << "[settings] cannot save global settings: path is protected or not writable";
     }
 }
 
