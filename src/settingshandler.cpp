@@ -23,6 +23,8 @@
 #include <QDir>
 #include <QFileInfo>
 #include <QDebug>
+#include <QStandardPaths>
+#include <QCoreApplication>
 #include "settingshandler.h"
 
 Settings::Settings(QObject *parent) : QObject(parent) {
