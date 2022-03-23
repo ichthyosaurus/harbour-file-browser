@@ -48,7 +48,7 @@ if(modelData.sources!==""&&modelData.homepage!==""){append=qsTranslate("Opal.Abo
 }else if(modelData.sources!==""){append=qsTranslate("Opal.About","Source Code")
 }else{append=qsTranslate("Opal.About","Homepage")
 }return[modelData.name,append+"  • • •"]
-}}onClicked:{if(values[values.length-1]===spdxString){pageStack.animatorPush("LicensePage.qml",{"attributions":[modelData],"enableSourceHint":true,"pageDescription":modelData.name,"mainSources":modelData.source,"mainHomepage":modelData.homepage,"allowDownloadingLicenses":allowDownloadingLicenses})
+}}onClicked:{if(values[values.length-1]===spdxString){pageStack.animatorPush("LicensePage.qml",{"mainAttribution":modelData,"attributions":[],"allowDownloadingLicenses":allowDownloadingLicenses,"enableSourceHint":true})
 }else{var pages=[]
 if(modelData.homepage!=="")pages.push({"page":Qt.resolvedUrl("ExternalUrlPage.qml"),"properties":{"externalUrl":modelData.homepage,"title":qsTranslate("Opal.About","Homepage")}})
 if(modelData.sources!=="")pages.push({"page":Qt.resolvedUrl("ExternalUrlPage.qml"),"properties":{"externalUrl":modelData.sources,"title":qsTranslate("Opal.About","Source Code")}})

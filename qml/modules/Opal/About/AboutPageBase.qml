@@ -31,6 +31,12 @@ property alias _iconItem:_icon
 property alias _develInfoSection:_develInfo
 property alias _licenseInfoSection:_licenseInfo
 property alias _donationsInfoSection:_donationsInfo
+readonly property Attribution _effectiveSelfAttribution:Attribution{name:appName
+entries:__effectiveMainAttribs
+licenses:page.licenses
+homepage:homepageUrl
+sources:sourcesUrl
+}
 function openOrCopyUrl(externalUrl,title){pageStack.push("private/ExternalUrlPage.qml",{"externalUrl":externalUrl,"title":title})
 }allowedOrientations:Orientation.All
 SilicaFlickable{id:_flickable
@@ -120,7 +126,7 @@ __donationButtons:donations.services
 width:parent.width
 title:qsTranslate("Opal.About","License")
 enabled:licenses.length>0
-onClicked:pageStack.animatorPush("private/LicensePage.qml",{"appName":appName,"licenses":licenses,"attributions":attributions,"mainSources":sourcesUrl,"mainHomepage":homepageUrl,"allowDownloadingLicenses":allowDownloadingLicenses})
+onClicked:pageStack.animatorPush("private/LicensePage.qml",{"mainAttribution":_effectiveSelfAttribution,"attributions":attributions,"allowDownloadingLicenses":allowDownloadingLicenses,"enableSourceHint":true})
 text:enabled===false?"This component has been improperly configured. Please report this bug.":((licenses[0].name!==""&&licenses[0].error!==true)?licenses[0].name:licenses[0].spdxId)
 smallPrint:licenses[0].customShortText
 showMoreLabel:qsTranslate("Opal.About","show license(s)","",licenses.length+attributions.length)
