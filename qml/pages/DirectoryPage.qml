@@ -559,8 +559,10 @@ Page {
             viewMode = settings.read("Sailfish/ViewMode", viewMode, dir+"/.directory");
         }
 
-        if (viewMode === "true") {
+        if (viewMode === "gallery") {
             viewState = "gallery";
+        // } else if (viewMode === "grid") {
+        //    //
         } else if (showThumbs === "true") {
             viewState = "preview/" + settings.read("View/PreviewsSize", "medium");
         } else {
