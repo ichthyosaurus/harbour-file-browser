@@ -125,7 +125,7 @@ Page {
                 text: qsTr("Enable gallery mode")
                 description: qsTr("In gallery mode, images will be shown comfortably large, "
                     + "and all entries except for images, videos, and directories will be hidden.")
-                onCheckedChanged: saveSetting("View/ViewMode", "Sailfish/ViewMode", "gallery", "list", enableGallery.checked ? "gallery" : "list")
+                onCheckedChanged: saveSetting("View/ViewMode", "Sailfish/ViewMode", "gallery", "list", enableGallery.checked ? "gallery" : "list", "gallery", "list")
             }
             TextSwitch {
                 id: showDirsFirst
@@ -190,11 +190,14 @@ Page {
         if (!_initialized) _initialized = true;
     }
 
-    function saveSetting(keyGlobal, keyLocal, trueLocal, falseLocal, valueStr) {
+    function saveSetting(keyGlobal, keyLocal, trueLocal, falseLocal, valueStr, trueGlobal, falseGlobal) {
         if (!_initialized) return;
 
+        if (!trueGlobal) trueGlobal = "true"
+        if (!falseGlobal) falseGlobal = "false"
+
         if (useLocalSettings()) {
-            var currentGlobal = settings.read(keyGlobal) === trueLocal ? "true" : "false";
+            var currentGlobal = settings.read(keyGlobal) === trueLocal ? trueGlobal : falseGlobal;
 
             if (valueStr === currentGlobal) {
                 // If the new value matches the currently set global setting,
@@ -210,7 +213,7 @@ Page {
                 // local settings again, which is counterintuitive.
                 settings.remove(keyLocal, getConfigPath());
             } else {
-                settings.write(keyLocal, (valueStr === "true" ? trueLocal : falseLocal), getConfigPath());
+                settings.write(keyLocal, (valueStr === trueGlobal ? trueLocal : falseLocal), getConfigPath());
             }
         } else {
             settings.write(keyGlobal, valueStr);
