@@ -128,6 +128,8 @@ void Settings::writeVariant(QString key, const QVariant &value, QString fileName
         usingLocalConfig = false;
     }
 
+    qDebug() << "[SettingsHandler] writing:" << key << "=" << value << "in" << fileName;
+
     QFileInfo fileInfo = QFileInfo(fileName);
 
     if (pathIsProtected(fileName) || !isWritable(fileInfo)) {
@@ -169,6 +171,8 @@ void Settings::remove(QString key, QString fileName) {
         fileName = m_globalConfigPath;
         usingLocalConfig = false;
     }
+
+    qDebug() << "[SettingsHandler] deleting:" << key << "in" << fileName;
 
     QFileInfo fileInfo = QFileInfo(fileName);
 
