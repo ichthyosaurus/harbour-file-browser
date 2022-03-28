@@ -121,12 +121,12 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="143"/>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">indonezyjski</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="147"/>
         <source>Turkish</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">turecki</translation>
     </message>
 </context>
 <context>
@@ -511,7 +511,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="248"/>
+        <location filename="../qml/components/FileActions.qml" line="249"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>skompresuj</numerusform>
@@ -520,7 +520,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="256"/>
+        <location filename="../qml/components/FileActions.qml" line="257"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>edytuj</numerusform>
@@ -529,7 +529,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="265"/>
+        <location filename="../qml/components/FileActions.qml" line="266"/>
         <source>show file properties</source>
         <translation>pokaż właściwości pliku</translation>
     </message>
@@ -1494,7 +1494,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="41"/>
         <source>Copy to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiuj do schowka</translation>
     </message>
 </context>
 <context>

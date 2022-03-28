@@ -4,127 +4,127 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="34"/>
+        <location filename="../qml/pages/AboutPage.qml" line="20"/>
         <source>A fully-fledged file manager for Sailfish OS.</source>
         <translation>Manajer file lengkap untuk Sailfish OS.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="45"/>
+        <location filename="../qml/pages/AboutPage.qml" line="31"/>
         <source>adapted by karip</source>
         <translation>diadaptasi oleh karip</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="68"/>
+        <location filename="../qml/pages/AboutPage.qml" line="56"/>
         <source>Development</source>
         <translation>Pengembangan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="71"/>
+        <location filename="../qml/pages/AboutPage.qml" line="59"/>
         <source>Programming</source>
         <translation>Pemrograman</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="78"/>
+        <location filename="../qml/pages/AboutPage.qml" line="66"/>
         <source>Icon Design</source>
         <translation>Desain Ikon</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="84"/>
+        <location filename="../qml/pages/AboutPage.qml" line="72"/>
         <source>Translations</source>
         <translation>Terjemahan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="87"/>
+        <location filename="../qml/pages/AboutPage.qml" line="75"/>
         <source>English</source>
         <translation>Bahasa Inggris</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="91"/>
+        <location filename="../qml/pages/AboutPage.qml" line="79"/>
         <source>German</source>
         <translation>Bahasa Jerman</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="95"/>
+        <location filename="../qml/pages/AboutPage.qml" line="83"/>
         <source>Finnish</source>
         <translation>Bahasa Finlandia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="99"/>
+        <location filename="../qml/pages/AboutPage.qml" line="87"/>
         <source>Chinese</source>
         <translation>Bahasa Cina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="103"/>
+        <location filename="../qml/pages/AboutPage.qml" line="91"/>
         <source>Russian</source>
         <translation>Bahasa Rusia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="107"/>
+        <location filename="../qml/pages/AboutPage.qml" line="95"/>
         <source>Swedish</source>
         <translation>Bahasa Swedia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="111"/>
+        <location filename="../qml/pages/AboutPage.qml" line="99"/>
         <source>Italian</source>
         <translation>Bahasa Italia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="115"/>
+        <location filename="../qml/pages/AboutPage.qml" line="103"/>
         <source>Spanish</source>
         <translation>Bahasa Spanyol</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="119"/>
+        <location filename="../qml/pages/AboutPage.qml" line="107"/>
         <source>French</source>
         <translation>Bahasa Prancis</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="123"/>
+        <location filename="../qml/pages/AboutPage.qml" line="111"/>
         <source>Dutch</source>
         <translation>Bahasa Belanda</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="127"/>
+        <location filename="../qml/pages/AboutPage.qml" line="115"/>
         <source>Greek</source>
         <translation>Bahasa Yunani</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="131"/>
+        <location filename="../qml/pages/AboutPage.qml" line="119"/>
         <source>Norwegian</source>
         <translation>Bahasa Norwegia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="135"/>
+        <location filename="../qml/pages/AboutPage.qml" line="123"/>
         <source>Czech</source>
         <translation>Bahasa Ceko</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="139"/>
+        <location filename="../qml/pages/AboutPage.qml" line="127"/>
         <source>Slovak</source>
         <translation>Bahasa Slovakia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="143"/>
+        <location filename="../qml/pages/AboutPage.qml" line="131"/>
         <source>Hungarian</source>
         <translation>Bahasa Hungaria</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="147"/>
+        <location filename="../qml/pages/AboutPage.qml" line="135"/>
         <source>Estonian</source>
         <translation>Bahasa Estonia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="151"/>
+        <location filename="../qml/pages/AboutPage.qml" line="139"/>
         <source>Polish</source>
         <translation>Bahasa Polandia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="155"/>
+        <location filename="../qml/pages/AboutPage.qml" line="143"/>
         <source>Indonesian</source>
         <translation>Bahasa Indonesia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="159"/>
+        <location filename="../qml/pages/AboutPage.qml" line="147"/>
         <source>Turkish</source>
         <translation type="unfinished"></translation>
     </message>
@@ -349,68 +349,68 @@
         <translation>Tidak dapat memindahkan/menyalin ke dirinya sendiri</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="360"/>
+        <location filename="../src/engine.cpp" line="384"/>
         <source>File does not exist</source>
         <translation>Berkas tidak ada</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="362"/>
+        <location filename="../src/engine.cpp" line="386"/>
         <source>Broken symbolic link</source>
         <translation>Tautan symbolic rusak</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="367"/>
+        <location filename="../src/engine.cpp" line="391"/>
         <source>Cannot read this type of file</source>
         <translation>Tidak dapat membaca berkas dengan jenis ini</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="373"/>
+        <location filename="../src/engine.cpp" line="397"/>
         <source>No permission to read the file</source>
         <translation>Tidak memiliki izin untuk membaca berkas</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="377"/>
-        <location filename="../src/engine.cpp" line="383"/>
+        <location filename="../src/engine.cpp" line="401"/>
+        <location filename="../src/engine.cpp" line="407"/>
         <source>Error reading file</source>
         <translation>Galat saat membaca berkas</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="386"/>
+        <location filename="../src/engine.cpp" line="410"/>
         <source>Empty file</source>
         <translation>Berkas kosong</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="412"/>
+        <location filename="../src/engine.cpp" line="436"/>
         <source>Binary file preview clipped at %1 kB</source>
         <translation>Pratinjau berkas biner terpotong pada %1 kB</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="431"/>
+        <location filename="../src/engine.cpp" line="455"/>
         <source>Text file preview clipped at %1 lines</source>
         <translation>Pratinjau file teks dipotong pada %1 baris</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="433"/>
+        <location filename="../src/engine.cpp" line="457"/>
         <source>Text file preview clipped at %1 kB</source>
         <translation>Pratinjau file teks dipotong pada %1 kB</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="446"/>
+        <location filename="../src/engine.cpp" line="470"/>
         <source>No permissions to create %1</source>
         <translation>Tidak memiliki izin untuk membuat %1</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="448"/>
+        <location filename="../src/engine.cpp" line="472"/>
         <source>Cannot create folder %1</source>
         <translation>Tidak dapat membuat folder %1</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="464"/>
+        <location filename="../src/engine.cpp" line="488"/>
         <source>Cannot rename %1</source>
         <translation>Tidak dapat mengubah nama %1</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="487"/>
+        <location filename="../src/engine.cpp" line="511"/>
         <source>Cannot change permissions</source>
         <translation>Tidak dapat mengubah izin</translation>
     </message>
@@ -484,28 +484,28 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="194"/>
+        <location filename="../qml/components/FileActions.qml" line="205"/>
         <source>share file(s)</source>
         <translation>
             <numerusform>bagikan berkas</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="214"/>
+        <location filename="../qml/components/FileActions.qml" line="249"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>kompres berkas</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="222"/>
+        <location filename="../qml/components/FileActions.qml" line="257"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>edit berkas</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="231"/>
+        <location filename="../qml/components/FileActions.qml" line="266"/>
         <source>show file properties</source>
         <translation>tampilkan properti berkas</translation>
     </message>
@@ -588,154 +588,119 @@
 <context>
     <name>FilePage</name>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="56"/>
+        <location filename="../qml/pages/FilePage.qml" line="94"/>
         <source>Install launched</source>
         <translation>Penginstalan diluncurkan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="57"/>
+        <location filename="../qml/pages/FilePage.qml" line="95"/>
         <source>If nothing happens, then the package is probably faulty.</source>
         <translation>Jika tidak ada yang terjadi, maka mungkin paketnya bermasalah.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="59"/>
+        <location filename="../qml/pages/FilePage.qml" line="97"/>
         <source>Swipe right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
         <translation>Geser ke kanan untuk memeriksa isinya.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="61"/>
+        <location filename="../qml/pages/FilePage.qml" line="99"/>
         <source>Open successful</source>
         <translation>Syabas buka</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="62"/>
+        <location filename="../qml/pages/FilePage.qml" line="100"/>
         <source>Sometimes the application stays in the background</source>
         <translation>Kadang-kadang aplikasi ini tetap berjalan di belakang layar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="65"/>
-        <source>Internal error</source>
-        <translation>Kesalahan internal</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/FilePage.qml" line="67"/>
-        <source>File not found</source>
-        <translation>Berkas tidak ditemukan</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/FilePage.qml" line="69"/>
+        <location filename="../qml/pages/FilePage.qml" line="104"/>
         <source>No application to open the file</source>
         <translation>Tidak ada aplikasi untuk membuka berkas ini</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="70"/>
-        <source>xdg-open found no preferred application</source>
-        <translation>xdg-open tidak menemukan aplikasi pilihan</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/FilePage.qml" line="72"/>
-        <source>Action failed</source>
-        <translation>Gagal</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/FilePage.qml" line="74"/>
-        <source>xdg-open not found</source>
-        <translation>xdg-open tidak ditemukan</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/FilePage.qml" line="76"/>
-        <source>xdg-open crash?</source>
-        <translation>xdg-open jatuh?</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/FilePage.qml" line="78"/>
-        <source>xdg-open error</source>
-        <translation>kesalahan xdg-open</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/FilePage.qml" line="96"/>
+        <location filename="../qml/pages/FilePage.qml" line="59"/>
         <source>Change Permissions</source>
         <translation>Ubah Perizinan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="110"/>
+        <location filename="../qml/pages/FilePage.qml" line="73"/>
         <source>View Raw Contents</source>
         <translation>Lihat Konten Raw</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="118"/>
+        <location filename="../qml/pages/FilePage.qml" line="81"/>
         <source>Install</source>
         <translation>Pasang</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="118"/>
+        <location filename="../qml/pages/FilePage.qml" line="81"/>
         <source>Open</source>
         <translation>Buka</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="122"/>
+        <location filename="../qml/pages/FilePage.qml" line="85"/>
         <source>File cannot be opened</source>
         <translation>Berkas tidak dapat dibuka</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="123"/>
+        <location filename="../qml/pages/FilePage.qml" line="86"/>
         <source>This type of file cannot be opened.</source>
         <translation>Berkas dengan jenis ini tidak dapat dibuka.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="131"/>
+        <location filename="../qml/pages/FilePage.qml" line="110"/>
         <source>Go to Target</source>
         <translation>Pergi ke Target</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="151"/>
+        <location filename="../qml/pages/FilePage.qml" line="130"/>
         <source>The file has been moved.</source>
         <translation>Berkas ini telah dipindahkan.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="263"/>
-        <location filename="../qml/pages/FilePage.qml" line="269"/>
+        <location filename="../qml/pages/FilePage.qml" line="242"/>
+        <location filename="../qml/pages/FilePage.qml" line="248"/>
         <source>Deleting</source>
         <translation>Menghapus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="301"/>
+        <location filename="../qml/pages/FilePage.qml" line="280"/>
         <source>Location</source>
         <translation>Lokasi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="305"/>
+        <location filename="../qml/pages/FilePage.qml" line="284"/>
         <source>Type</source>
         <translation>Jenis</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="307"/>
+        <location filename="../qml/pages/FilePage.qml" line="286"/>
         <source>Unknown (link target not found)</source>
         <translation>Tidak diketahui (target tautan tidak ditemukan)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="307"/>
+        <location filename="../qml/pages/FilePage.qml" line="286"/>
         <source>Link to %1</source>
         <translation>Tautkan ke %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="314"/>
+        <location filename="../qml/pages/FilePage.qml" line="293"/>
         <source>Permissions</source>
         <translation>Perizinan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="318"/>
+        <location filename="../qml/pages/FilePage.qml" line="297"/>
         <source>Owner</source>
         <translation>Pemilik</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="323"/>
+        <location filename="../qml/pages/FilePage.qml" line="302"/>
         <source>Group</source>
         <translation>Grup</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="328"/>
+        <location filename="../qml/pages/FilePage.qml" line="307"/>
         <source>Last modified</source>
         <translation>Terakhir dimodifikasi</translation>
     </message>
@@ -1367,138 +1332,135 @@ exposure program</extracomment>
 <context>
     <name>Opal.About</name>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="116"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="53"/>
         <source>About</source>
         <translation>Tentang</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="168"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="84"/>
         <source>Version %1</source>
         <translation>Versi %1</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="170"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="85"/>
         <source>Version %1 (%2)</source>
-        <translation type="unfinished">Versi %1 (%2)</translation>
+        <translation>Versi %1 (%2)</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="195"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="36"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="57"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="101"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="22"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="31"/>
         <source>Development</source>
         <translation>Pengembangan</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="198"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="104"/>
         <source>show contributors</source>
         <translation>tampilkan kontributor</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="210"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="103"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="122"/>
-        <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="48"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="106"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="51"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="57"/>
+        <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="70"/>
         <source>Homepage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="237"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="121"/>
         <source>Donations</source>
         <translation>Donasi</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="247"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="127"/>
         <source>License</source>
         <translation>Lisensi</translation>
     </message>
-    <message>
-        <source>This is proprietary software. All rights reserved.</source>
-        <translation type="vanished">Ini adalah perangkat lunak proprietary. Semua hak dilindungi undang-undang.</translation>
-    </message>
     <message numerus="yes">
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="257"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="132"/>
         <source>show license(s)</source>
         <translation>
             <numerusform>tampilkan lisensi</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="215"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="109"/>
         <source>Translations</source>
         <translation>Terjemahan</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="220"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="101"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="125"/>
-        <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="54"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="112"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="50"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="58"/>
+        <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="76"/>
         <source>Source Code</source>
         <translation>Kode Sumber</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/InfoSection.qml" line="26"/>
+        <location filename="../qml/modules/Opal/About/InfoSection.qml" line="15"/>
         <source>show details</source>
         <translation>Tampilkan rincian</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="33"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="21"/>
         <source>Contributors</source>
         <translation>Kontributor-kontributor</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="75"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="37"/>
         <source>Acknowledgements</source>
         <translation>Pengakuan</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="89"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="44"/>
         <source>Thank you!</source>
         <translation>Terima kasih!</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="99"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="48"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
         <source>Details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="159"/>
+        <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="181"/>
         <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
         <translation>Silakan merujuk &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="41"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="25"/>
         <source>Download license texts</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="53"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
         <source>License(s)</source>
         <translation>
             <numerusform>Lisensi</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="66"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="41"/>
         <source>Note: please check the source code for most accurate information.</source>
         <translation>Catatan: silakan periksa kode sumber untuk informasi yang paling akurat.</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="27"/>
+        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="15"/>
         <source>External Link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="57"/>
+        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="32"/>
         <source>Open in browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="67"/>
+        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="36"/>
         <source>Copied to clipboard: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="76"/>
+        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="41"/>
         <source>Copy to clipboard</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1506,27 +1468,19 @@ exposure program</extracomment>
 <context>
     <name>Opal.About.Common</name>
     <message>
-        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="12"/>
+        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="7"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
         <translation>Jika Anda ingin mendukung pekerjaan saya, Anda dapat mentraktir secangkir kopi.</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="15"/>
+        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="8"/>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
         <translation>Anda dapat mendukung proyek ini dengan berkontribusi, atau dengan berdonasi menggunakan salah satu layanan ini.</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="18"/>
+        <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="9"/>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Kontribusi Anda terhadap terjemahan atau kode akan sangat disambut baik.</translation>
-    </message>
-    <message>
-        <source>Development</source>
-        <translation type="obsolete">Pengembangan</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="obsolete">Terjemahan</translation>
     </message>
 </context>
 <context>
@@ -1791,7 +1745,7 @@ exposure program</extracomment>
     <name>SettingsPage</name>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="44"/>
-        <location filename="../qml/pages/SettingsPage.qml" line="227"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="230"/>
         <source>Settings</source>
         <translation>Pengaturan</translation>
     </message>
@@ -1861,137 +1815,137 @@ exposure program</extracomment>
         <translation>Dalam mode galeri, gambar akan ditampilkan dengan besar, dan semua entri kecuali untuk gambar, video, dan direktori akan disembunyikan.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="120"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="123"/>
         <source>Sorting</source>
         <translation>Menyortir</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="127"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="130"/>
         <source>Show folders first</source>
         <translation>Tampilkan folder terlebih dahulu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="131"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="134"/>
         <source>Sort case-sensitively</source>
         <translation>Mengurutkan huruf besar-kecil secara sensitif</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="135"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="138"/>
         <source>Sort by</source>
         <translation>Urutkan menurut</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="139"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="142"/>
         <source>name</source>
         <translation>nama</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="140"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="143"/>
         <source>size</source>
         <translation>ukuran</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="141"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="144"/>
         <source>modification time</source>
         <translation>tanggal diubah</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="142"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="145"/>
         <source>file type</source>
         <translation>tipe file</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="146"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="149"/>
         <source>Sort order</source>
         <translation>Sortir urutan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="150"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="153"/>
         <source>default</source>
         <translation>default</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="151"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="154"/>
         <source>reversed</source>
         <translation>terbalik</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="159"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="162"/>
         <source>Behavior and View</source>
         <translation>Perilaku dan Tampilan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="170"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="173"/>
         <source>Default transfer action</source>
         <translation>Tindakan transfer default</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="173"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="176"/>
         <source>copy</source>
         <translation>salin</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="174"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="177"/>
         <source>move</source>
         <translation>pindah</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="175"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="178"/>
         <source>link</source>
         <translation>tautkan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="176"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="179"/>
         <source>none</source>
         <translation>tidak ada</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="182"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="185"/>
         <source>Default filter line action</source>
         <translation>Tindakan garis filter default</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="185"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="188"/>
         <source>return to directory view</source>
         <translation>kembali ke tampilan direktori</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="186"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="189"/>
         <source>start recursive search</source>
         <translation>mulai pencarian rekursif</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="192"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="195"/>
         <source>File name abbreviation</source>
         <translation>Singkatan nama file</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="195"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="198"/>
         <source>fade out</source>
         <translation>memudar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="196"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="199"/>
         <source>elide end</source>
         <translation>elide akhir</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="197"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="200"/>
         <source>elide middle</source>
         <translation>elide tengah</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="202"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="205"/>
         <source>Show full directory paths</source>
         <translation>Tampilkan jalur direktori lengkap</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="206"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="209"/>
         <source>Show navigation menu icon</source>
         <translation>Tampilkan ikon menu navigasi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="210"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="213"/>
         <source>Enable solid window background</source>
         <translation>Aktifkan latar belakang jendela yang solid</translation>
     </message>
