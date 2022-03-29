@@ -31,6 +31,7 @@
 #include <QGuiApplication>
 #include <QTranslator>
 #include <QQmlContext>
+#include <QStandardPaths>
 #include <QtQuick/QQuickPaintedItem>
 
 #include "requires_defines.h"
