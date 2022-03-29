@@ -11,7 +11,6 @@
 # list. Just copy the last line and modify it as needed.
 # Do not forget to modify the localized app name in the the .desktop file.
 TRANSLATIONS = \
-    translations/harbour-file-browser-ab.ts       \
     translations/harbour-file-browser-cs.ts       \
     translations/harbour-file-browser-de_CH.ts    \
     translations/harbour-file-browser-de_DE.ts    \
