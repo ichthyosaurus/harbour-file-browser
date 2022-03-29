@@ -8,6 +8,10 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 ## Unreleased
 
+ * Nothing so far
+
+## Version 2.5.0 (2022-03-30)
+
  * Important note:
  *   - the Jolla store version cannot show all files in Sailfish 4.3 and later
  *   - sharing, PDF viewing, and storage settings are disabled in Jolla store
