@@ -501,7 +501,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="249"/>
+        <location filename="../qml/components/FileActions.qml" line="248"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>paki fail</numerusform>
@@ -509,7 +509,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="257"/>
+        <location filename="../qml/components/FileActions.qml" line="256"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>muuda faili</numerusform>
@@ -517,7 +517,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="266"/>
+        <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>show file properties</source>
         <translation>näita faili omadusi</translation>
     </message>
