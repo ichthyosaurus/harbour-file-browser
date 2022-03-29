@@ -6,8 +6,8 @@
 Name:       harbour-file-browser
 
 # >> macros
-%define __provides_exclude_from ^%{_datadir}/.*$
 # << macros
+%define __provides_exclude_from ^%{_datadir}/.*$
 
 Summary:    File Browser for Sailfish OS
 Version:    2.5.0
