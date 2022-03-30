@@ -73,7 +73,7 @@ equals(HARBOUR_COMPLIANCE, off) {
     #
     # Sailjail prevents most filesystem access. Thus, enabling the Sailjail
     # profile will break the app's core functionality.
-    CONF_SAILJAIL_DETAILS = "Sandbox=Disabled"
+    CONF_SAILJAIL_DETAILS = "Sandboxing=Disabled"
 } else {
     message("Harbour compliance enabled")
 
