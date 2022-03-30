@@ -10,6 +10,10 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
  * Nothing so far
 
+## Version 2.5.1 (2022-03-30)
+
+ * Hotfix for OpenRepos: fixed disabling sandboxing (Sailjail)
+
 ## Version 2.5.0 (2022-03-30)
 
  * Important note:
