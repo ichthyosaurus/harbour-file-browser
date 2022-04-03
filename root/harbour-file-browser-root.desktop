@@ -1,6 +1,6 @@
 # This file is part of File Browser.
 # SPDX-License-Identifier: GPL-3.0-or-later
-# SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
+# SPDX-FileCopyrightText: 2020-2022 Mirian Margiani
 [Desktop Entry]
 Type=Application
 Name=File Browser (Root)
@@ -14,3 +14,8 @@ X-Desktop-File-Install-Version=0.20
 # or make sure in any other way that this is to be used with caution.
 Name[en]=File Br. (Root)
 Name[de]=Dateiverw. (Root)
+
+[X-Sailjail]
+Sandboxing=Disabled
+OrganizationName=harbour-file-browser
+ApplicationName=harbour-file-browser
