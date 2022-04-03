@@ -40,6 +40,9 @@ File Browser for Sailfish OS. A fully-fledged file manager for your phone.
 %qmake5  \
     HARBOUR_COMPLIANCE=off \
     RELEASE_TYPE=stable \
+    FEATURE_PDF_VIEWER=on \
+    FEATURE_STORAGE_SETTINGS=on \
+    FEATURE_SHARING=on \
     VERSION=%{version} \
     RELEASE=%{release}
 

@@ -254,26 +254,33 @@ QVariantList Engine::externalDrives() const
 
 QString Engine::storageSettingsPath()
 {
+#ifdef NO_FEATURE_STORAGE_SETTINGS
+    return QStringLiteral("");
+#else
     if (!m_storageSettingsPath.isEmpty()) return m_storageSettingsPath;
 
-#ifndef NO_HARBOUR_COMPLIANCE
-    m_storageSettingsPath = QStringLiteral("");
-#else
-    // this should normally be </usr/share/>jolla-settings/pages/storage/storage.qml
+    // This should normally be </usr/share/>jolla-settings/pages/storage/storage.qml.
+    // The result will be empty if the file is missing or cannot be accessed, e.g
+    // due to sandboxing. Therefore, we don't need compile-time switches to turn it off.
     m_storageSettingsPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
                                                    "jolla-settings/pages/storage/storage.qml",
                                                    QStandardPaths::LocateFile);
-#endif
     return m_storageSettingsPath;
+#endif
 }
 
 QString Engine::pdfViewerPath()
 {
+#ifdef NO_FEATURE_PDF_VIEWER
+    return QStringLiteral("");
+#else
     if (!m_pdfViewerPath.isEmpty()) return m_pdfViewerPath;
 
-#ifndef NO_HARBOUR_COMPLIANCE
-    m_pdfViewerPath = QStringLiteral("");
-#else
+    // This requires access to the system documents viewer.
+    // The feature will be disabled if core QML files are missing or cannot be
+    // accessed, e.g due to sandboxing. Therefore, we don't need compile-time
+    // switches to turn it off.
+
     m_pdfViewerPath = QStringLiteral("Sailfish.Office.PDFDocumentPage");
 
     if (!QFileInfo::exists(
@@ -285,8 +292,9 @@ QString Engine::pdfViewerPath()
             m_pdfViewerPath = QStringLiteral("");
         }
     }
-#endif
+
     return m_pdfViewerPath;
+#endif
 }
 
 bool Engine::runningAsRoot()

@@ -47,12 +47,21 @@ Builder: qmake5
 
 # HARBOUR_COMPLIANCE: set to 'off' or 'on' to enable/disable features
 #      against Jolla Harbour's rules
+# FEATURE_*: set to 'off' to disable optional features individually
 # RELEASE_TYPE: set to a string shown on File Browser's About page
-#      This is planned to trigger different builds for stable/beta releases.
+#      This should indicate whether the current build is intended for OpenRepos
+#      or for Jolla's Harbour store.
 # VERSION and RELEASE: automatically set to the values defined above
+#
+# Note: HARBOUR_COMPLIANCE and RELEASE_TYPE must be updated before building
+#       for release.
+#
 QMakeOptions:
   - HARBOUR_COMPLIANCE=off
   - RELEASE_TYPE=stable
+  - FEATURE_PDF_VIEWER=on
+  - FEATURE_STORAGE_SETTINGS=on
+  - FEATURE_SHARING=on
   - VERSION=%{version}
   - RELEASE=%{release}
 

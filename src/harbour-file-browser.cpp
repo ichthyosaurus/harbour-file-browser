@@ -140,9 +140,55 @@ int main(int argc, char *argv[])
     view->rootContext()->setContextProperty("APP_RELEASE", QString(APP_RELEASE));
     view->rootContext()->setContextProperty("RELEASE_TYPE", QString(RELEASE_TYPE));
 
+    // BEGIN FEATURE CONFIGURATION
+
+    // Setting NO_HARBOUR_COMPLIANCE doesn't do much at the moment, as most
+    // features are allowed in Harbour by now - or they are at least not explicitly
+    // forbidden. By disabling features based on whether the required files exist, we
+    // can make sure nothing breaks more unexpectedly than to be expected.
+    //
+    // Sailjail magic happens in the desktop file which is generated based on the
+    // HARBOUR_COMPLIANCE flag in rpm/harbour-file-browser.yaml.
+
 #ifdef NO_HARBOUR_COMPLIANCE
     view->rootContext()->setContextProperty("buildMessage", QVariant::fromValue(QStringLiteral("no explicit Harbour compliance")));
+#else
+    view->rootContext()->setContextProperty("buildMessage", QVariant::fromValue(QStringLiteral("forced Harbour compliance")));
+#endif
 
+    // Some features can be disabled individually, making it impossible to enable
+    // them at runtime by modifying QML files. There is no reason to do that, though.
+    //
+    // Change these settings in rpm/harbour-file-browser.yaml.
+
+#ifdef NO_FEATURE_PDF_VIEWER
+    view->rootContext()->setContextProperty("pdfViewerEnabled", QVariant::fromValue(false));
+#else
+    if (!engine->pdfViewerPath().isEmpty()) {
+        // we enable PDF viewer integration only if sailfish-office is installed and accessible
+        view->rootContext()->setContextProperty("pdfViewerEnabled", QVariant::fromValue(true));
+    } else {
+        view->rootContext()->setContextProperty("pdfViewerEnabled", QVariant::fromValue(false));
+        qDebug() << "system documents viewer not available";
+    }
+#endif
+
+#ifdef NO_FEATURE_STORAGE_SETTINGS
+    view->rootContext()->setContextProperty("systemSettingsEnabled", QVariant::fromValue(false));
+#else
+    if (!engine->storageSettingsPath().isEmpty()) {
+        // we enable system (storage) settings only if the module is available
+        view->rootContext()->setContextProperty("systemSettingsEnabled", QVariant::fromValue(true));
+    } else {
+        view->rootContext()->setContextProperty("systemSettingsEnabled", QVariant::fromValue(false));
+        qDebug() << "system storage settings not available";
+    }
+#endif
+
+#ifdef NO_FEATURE_SHARING
+    view->rootContext()->setContextProperty("sharingEnabled", QVariant::fromValue(false));
+    view->rootContext()->setContextProperty("sharingMethod", QVariant::fromValue(QStringLiteral("disabled")));
+#else
     {
         QString method = QStringLiteral("disabled");
 
@@ -164,29 +210,9 @@ int main(int argc, char *argv[])
             view->rootContext()->setContextProperty("sharingEnabled", QVariant::fromValue(true));
         }
     }
-
-    if (!engine->pdfViewerPath().isEmpty()) {
-        // we enable PDF viewer integration only if sailfish-office is installed and accessible
-        view->rootContext()->setContextProperty("pdfViewerEnabled", QVariant::fromValue(true));
-    } else {
-        view->rootContext()->setContextProperty("pdfViewerEnabled", QVariant::fromValue(false));
-        qDebug() << "system documents viewer not available";
-    }
-
-    if (!engine->storageSettingsPath().isEmpty()) {
-        // we enable system (storage) settings only if the module is available
-        view->rootContext()->setContextProperty("systemSettingsEnabled", QVariant::fromValue(true));
-    } else {
-        view->rootContext()->setContextProperty("systemSettingsEnabled", QVariant::fromValue(false));
-        qDebug() << "system storage settings not available";
-    }
-#else
-    view->rootContext()->setContextProperty("buildMessage", QVariant::fromValue(QStringLiteral("forced Harbour compliance")));
-    view->rootContext()->setContextProperty("sharingEnabled", QVariant::fromValue(false));
-    view->rootContext()->setContextProperty("sharingMethod", QVariant::fromValue(QStringLiteral("disabled")));
-    view->rootContext()->setContextProperty("pdfViewerEnabled", QVariant::fromValue(false));
-    view->rootContext()->setContextProperty("systemSettingsEnabled", QVariant::fromValue(false));
 #endif
+
+    // END FEATURE CONFIGURATION
 
     view->setSource(SailfishApp::pathToMainQml());
     view->show();

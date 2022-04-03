@@ -46,39 +46,64 @@ TRANSLATIONS = \
 #   - translation filenames have to be changed
 TARGET = harbour-file-browser
 
-# Note: compile-time options can be configured in the yaml file.
-DEFINES += APP_VERSION=\\\"$$VERSION\\\"
-DEFINES += APP_RELEASE=\\\"$$RELEASE\\\"
-DEFINES += RELEASE_TYPE=\\\"$$RELEASE_TYPE\\\"
-DEFINES += HARBOUR_COMPLIANCE=\\\"$$HARBOUR_COMPLIANCE\\\"
-HARBOUR_COMPLIANCE=$$HARBOUR_COMPLIANCE
-
-OLD_DEFINES = "$$cat($$OUT_PWD/requires_defines.h)"
-!equals(OLD_DEFINES, $$join(DEFINES, ";", "//")) {
-    NEW_DEFINES = "$$join(DEFINES, ";", "//")"
-    write_file("$$OUT_PWD/requires_defines.h", NEW_DEFINES)
-    message("DEFINES changed..." $$DEFINES)
-}
-
 # configure Harbour compliance:
 # some features must be disabled for the official store
-equals(HARBOUR_COMPLIANCE, off) {
+equals($$HARBOUR_COMPLIANCE, off) {
     DEFINES += NO_HARBOUR_COMPLIANCE
     message("Harbour compliance disabled")
 
     CONF_DESKTOP_MIME_TYPE = "MimeType=inode/directory;"
 
-    # some permissions:
-    # ApplicationInstallation;Audio;Calendar;Contacts;Email;Internet;MediaIndexing;RemovableMedia;UserDirs;Sharing
+    # possibly required extra permissions (to be checked):
+    # ApplicationInstallation       for installing packages when opening them
+    # Calendar                      for importing ics calendar files
+    # Contacts                      for importing vcs contact files
+    # Email                         for sharing to email
+    # Internet                      for fetching license texts (and maybe for cloud integration)
+    # Sharing                       for sharing (implicitly allowed already?)
     #
     # Sailjail prevents most filesystem access. Thus, enabling the Sailjail
-    # profile will break the app's core functionality.
+    # profile will break the app's core functionality outside of a small subset
+    # of folders in $HOME.
     CONF_SAILJAIL_DETAILS = "Sandboxing=Disabled"
 } else {
     message("Harbour compliance enabled")
 
     CONF_DESKTOP_MIME_TYPE=""
     CONF_SAILJAIL_DETAILS = "Permissions=Audio;MediaIndexing;RemovableMedia;UserDirs;PublicDir"
+}
+
+equals($$FEATURE_PDF_VIEWER, off) {
+    DEFINES += NO_FEATURE_PDF_VIEWER
+    message("feature flags: Integrated PDF viewer disabled")
+} else {
+    message("feature flags: Integrated PDF viewer enabled")
+}
+
+equals($$FEATURE_STORAGE_SETTINGS, off) {
+    DEFINES += NO_FEATURE_STORAGE_SETTINGS
+    message("feature flags: Integrated system storage settings disabled")
+} else {
+    message("feature flags: Integrated system storage settings enabled")
+}
+
+equals($$FEATURE_SHARING, off) {
+    DEFINES += NO_FEATURE_SHARING
+    message("feature flags: File sharing disabled")
+} else {
+    message("feature flags: File sharing enabled")
+}
+
+# Note: compile-time options can be configured in the yaml file.
+DEFINES += APP_VERSION=\\\"$$VERSION\\\"
+DEFINES += APP_RELEASE=\\\"$$RELEASE\\\"
+DEFINES += RELEASE_TYPE=\\\"$$RELEASE_TYPE\\\"
+
+OLD_DEFINES = "$$cat($$OUT_PWD/requires_defines.h)"
+!equals(OLD_DEFINES, $$join(DEFINES, ";", "//")) {
+    NEW_DEFINES = "$$join(DEFINES, ";", "//")"
+    write_file("$$OUT_PWD/requires_defines.h", NEW_DEFINES)
+    message("DEFINES changed..." $$DEFINES)
 }
 
 # copy change log file to build root;

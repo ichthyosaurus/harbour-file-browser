@@ -69,8 +69,8 @@ public:
     // file paths
     Q_INVOKABLE QString androidDataPath() const;
     Q_INVOKABLE QVariantList externalDrives() const;
-    Q_INVOKABLE QString storageSettingsPath() /*cached*/; // returns empty without NO_HARBOUR_COMPLIANCE
-    Q_INVOKABLE QString pdfViewerPath() /*cached*/; // returns empty without NO_HARBOUR_COMPLIANCE
+    Q_INVOKABLE QString storageSettingsPath(); // caching, thus non-const
+    Q_INVOKABLE QString pdfViewerPath(); // caching, thus non-const
 
     // synchronous methods
     Q_INVOKABLE bool runningAsRoot();
