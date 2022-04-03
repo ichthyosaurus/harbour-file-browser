@@ -27,10 +27,10 @@
 #include <sailfishapp.h>
 #include <QScopedPointer>
 #include <QQuickView>
-#include <QQmlEngine>
-#include <QGuiApplication>
+#include <QtQml/QQmlEngine>
+#include <QtQml/QQmlContext>
+#include <QtGui/QGuiApplication>
 #include <QTranslator>
-#include <QQmlContext>
 #include <QStandardPaths>
 #include <QtQuick/QQuickPaintedItem>
 
@@ -116,13 +116,13 @@ int main(int argc, char *argv[])
 
     // setup global settings object
     QScopedPointer<Settings> settings(new Settings);
-    QVariant settingsVariant = qVariantFromValue(settings.data());
+    QVariant settingsVariant = QVariant::fromValue(settings.data());
     qApp->setProperty("settings", settingsVariant); // store as singleton
     view->rootContext()->setContextProperty("settings", settings.data()); // expose to QML
 
     // setup global engine object
     QScopedPointer<Engine> engine(new Engine);
-    QVariant engineVariant = qVariantFromValue(engine.data());
+    QVariant engineVariant = QVariant::fromValue(engine.data());
     qApp->setProperty("engine", engineVariant); // store as singleton
     view->rootContext()->setContextProperty("engine", engine.data()); // expose to QML
 
@@ -136,9 +136,9 @@ int main(int argc, char *argv[])
     }
 
     view->rootContext()->setContextProperty("initialDirectory", initialDirectory);
-    view->rootContext()->setContextProperty("APP_VERSION", QString(APP_VERSION));
-    view->rootContext()->setContextProperty("APP_RELEASE", QString(APP_RELEASE));
-    view->rootContext()->setContextProperty("RELEASE_TYPE", QString(RELEASE_TYPE));
+    view->rootContext()->setContextProperty("APP_VERSION", QStringLiteral(APP_VERSION));
+    view->rootContext()->setContextProperty("APP_RELEASE", QStringLiteral(APP_RELEASE));
+    view->rootContext()->setContextProperty("RELEASE_TYPE", QStringLiteral(RELEASE_TYPE));
 
     // BEGIN FEATURE CONFIGURATION
 
