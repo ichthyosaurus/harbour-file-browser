@@ -209,12 +209,17 @@ Item {
 
                 if (sharingMethod == String('Share')) {
                     if (!_shareAction) {
-                        _shareAction = Qt.createQmlObject("
-                            import QtQuick 2.2
-                            import %1 1.0
-                            ShareAction {
-                                resources: []
-                            }".arg("Sailfish.Share"), main, 'ShareAction')
+                        try {
+                            _shareAction = Qt.createQmlObject("
+                                import QtQuick 2.2
+                                import %1 1.0
+                                ShareAction {
+                                    resources: []
+                                }".arg("Sailfish.Share"), main, 'ShareAction')
+                        } catch (err) {
+                            console.error("[share] failed to create sharing action using method ", sharingMethod)
+                            console.error("[share] %1 [at %2:%3]".arg(err.message).arg(err.lineNumber).arg(err.columnNumber))
+                        }
                     }
 
                     if (!!_shareAction) {
