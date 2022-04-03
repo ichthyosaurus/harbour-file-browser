@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2016 Joona Petrell
  * SPDX-FileCopyrightText: 2016, 2018 Kari Pihkala
- * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -62,6 +62,8 @@ CoverBackground {
     }
 
     CoverActionList {
+        enabled: !runningAsRoot || authenticatedForRoot
+
         CoverAction {
             iconSource: "image://theme/icon-cover-search"
             onTriggered: {

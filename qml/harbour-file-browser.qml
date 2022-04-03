@@ -48,6 +48,7 @@ ApplicationWindow {
     readonly property string versionString: qsTr("Version %1 (%2)").arg(
                                                 APP_VERSION+"-"+APP_RELEASE).arg(RELEASE_TYPE)
     readonly property bool runningAsRoot: engine.runningAsRoot()
+    property bool authenticatedForRoot: false
     readonly property string sourceCodeLink: 'https://github.com/ichthyosaurus/harbour-file-browser'
 
     // Navigation history: see navigation.js for details
@@ -71,7 +72,36 @@ ApplicationWindow {
 
     property string coverText: "File Browser"
     cover: Qt.resolvedUrl("cover/FileBrowserCover.qml")
-    initialPage: Component {
+
+    initialPage: runningAsRoot ? initialPage_RootMode : initialPage_UserMode
+
+    Component {
+        id: initialPage_RootMode
+
+        Page {
+            id: page
+            allowedOrientations: Orientation.All
+
+            Loader {
+                id: rootLockLoader
+                anchors.fill: parent
+                source: runningAsRoot ? Qt.resolvedUrl('pages/RootModeLockPage.qml') : ''
+            }
+
+            Connections {
+                target: runningAsRoot ? rootLockLoader.item : null
+                onAuthenticated: {
+                    console.warn("[startup] root mode authenticated")
+                    _initialPageReady = true  // to continue with startup
+                    authenticatedForRoot = true
+                }
+            }
+        }
+    }
+
+    Component {
+        id: initialPage_UserMode
+
         Page {
             // We start with an empty placeholder page that will be replaced
             // by the actual array of pages for the directory in \c initialDirectory.
@@ -144,5 +174,9 @@ ApplicationWindow {
         console.log("details: " + buildMessage)
         console.log("enabled features: sharing = %1 (%2), PDF viewer = %3, storage settings = %4".arg(
             sharingEnabled).arg(sharingMethod).arg(pdfViewerEnabled).arg(systemSettingsEnabled))
+
+        if (runningAsRoot) {
+            console.log("warning: running as root")
+        }
     }
 }
