@@ -8,7 +8,12 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 ## Unreleased
 
- * Nothing so far
+ * Fixed root mode for Sailfish 4.3 and later
+ * Improved root mode:
+ *   - root mode should work again on Sailfish 4.x
+ *   - it now requires entering your device lock code to access
+ *   - note: unlocking is handled by the system, File Browser will never see the security code
+ * Internal: improved the build system to possibly enable more features in Jolla store
 
 ## Version 2.5.1 (2022-03-30)
 
