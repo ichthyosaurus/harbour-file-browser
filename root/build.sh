@@ -2,20 +2,22 @@
 #
 # This file is part of File Browser and has been released into the public domain.
 # SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
+# SPDX-FileCopyrightText: 2020-2022 Mirian Margiani
 
-SFDK=/opt/SailfishOS-SDK/bin/sfdk
+SFDK=/opt/sfos/bin/sfdk
 TARGETS=(
     # note: last field (/-.*?$/) has to be architecture
+    "SailfishOS-4.3.0.12-i486"
+    "SailfishOS-4.3.0.12-aarch64"
     "SailfishOS-3.4.0.24-armv7hl"
-    "SailfishOS-3.4.0.24-i486"
 )
 
 showhelp() {
     echo "** build harbour-file-browser-root **"
-    echo "usage: build.sh [-h]"
+    echo "usage: build.sh [-h|--help]"
     echo
-    echo "modify this script to set the correct paths for your setup"
+    echo "Modify this script to set the correct paths for your setup"
+    echo "by changing the SFDK and TARGETS variables."
 }
 
 if [[ "$1" =~ ^-?-h(elp)?$ ]]; then
@@ -34,6 +36,8 @@ fi
 
 echo "starting build engine..."
 "$SFDK" engine start
+
+mv -T --backup=t RPMS RPMS~
 
 for t in "${TARGETS[@]}"; do
     "$SFDK" engine exec sb2 -t "$t" make BUILDARCH="${t##*-}"

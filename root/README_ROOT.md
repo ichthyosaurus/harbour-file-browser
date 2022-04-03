@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
+SPDX-FileCopyrightText: 2020-2022 Mirian Margiani
 
 SPDX-License-Identifier: GFDL-1.3-or-later
 -->
@@ -43,12 +43,12 @@ Steps for manual builing:
 4. Results are in `RPMS/<target>/`
 5. Stop the Build Engine in the IDE or by running: `<path to SDK>/bin/sfdk engine stop`
 
-If you installed the IDE to `/opt/SailfishOS-SDK` you can build RPM packages for
+If you installed the IDE to `/opt/sfos` you can build RPM packages for
 both the emulator (`i486`) and your device (`armv7hl`) like this:
 
 ```
-/opt/SailfishOS-SDK/bin/sfdk engine exec sb2 -t SailfishOS-3.2.1.20-armv7hl make BUILDARCH=armv7hl &&\
-/opt/SailfishOS-SDK/bin/sfdk engine exec sb2 -t SailfishOS-3.2.1.20-i486 make BUILDARCH=i486
+/opt/sfos/bin/sfdk engine exec sb2 -t SailfishOS-3.2.1.20-armv7hl make BUILDARCH=armv7hl &&\
+/opt/sfos/bin/sfdk engine exec sb2 -t SailfishOS-3.2.1.20-i486 make BUILDARCH=i486
 ```
 
 
