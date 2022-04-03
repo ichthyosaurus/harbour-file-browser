@@ -351,68 +351,68 @@
         <translation>Zdrojová a cílová složka se shodují</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="384"/>
+        <location filename="../src/engine.cpp" line="392"/>
         <source>File does not exist</source>
         <translation>Soubor neexistuje</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="386"/>
+        <location filename="../src/engine.cpp" line="394"/>
         <source>Broken symbolic link</source>
         <translation>Vadný symlink</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="391"/>
+        <location filename="../src/engine.cpp" line="399"/>
         <source>Cannot read this type of file</source>
         <translation>Nelze přečíst tento typ souboru</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="397"/>
+        <location filename="../src/engine.cpp" line="405"/>
         <source>No permission to read the file</source>
         <translation>Chybí oprávnění ke čtení souboru</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="401"/>
-        <location filename="../src/engine.cpp" line="407"/>
+        <location filename="../src/engine.cpp" line="409"/>
+        <location filename="../src/engine.cpp" line="415"/>
         <source>Error reading file</source>
         <translation>Chyba při čtení souboru</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="410"/>
+        <location filename="../src/engine.cpp" line="418"/>
         <source>Empty file</source>
         <translation>Prázdný soubor</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="436"/>
+        <location filename="../src/engine.cpp" line="444"/>
         <source>Binary file preview clipped at %1 kB</source>
         <translation>Náhled souboru upraven na %1 Kb</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="455"/>
+        <location filename="../src/engine.cpp" line="463"/>
         <source>Text file preview clipped at %1 lines</source>
         <translation>Náhled souboru upraven na %1 řádků</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="457"/>
+        <location filename="../src/engine.cpp" line="465"/>
         <source>Text file preview clipped at %1 kB</source>
         <translation>Náhled souboru upraeven na %1 Kb</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="470"/>
+        <location filename="../src/engine.cpp" line="478"/>
         <source>No permissions to create %1</source>
         <translation>Chybí oprávnění vytvořit %1</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="472"/>
+        <location filename="../src/engine.cpp" line="480"/>
         <source>Cannot create folder %1</source>
         <translation>Nelze vytvořit složku %1</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="488"/>
+        <location filename="../src/engine.cpp" line="496"/>
         <source>Cannot rename %1</source>
         <translation>Nelze přejmenovat %1</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="511"/>
+        <location filename="../src/engine.cpp" line="519"/>
         <source>Cannot change permissions</source>
         <translation>Nelze změnit oprávnění</translation>
     </message>
@@ -511,7 +511,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="248"/>
+        <location filename="../qml/components/FileActions.qml" line="254"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>komprimovat soubor</numerusform>
@@ -520,7 +520,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="256"/>
+        <location filename="../qml/components/FileActions.qml" line="262"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>upravit soubor</numerusform>
@@ -529,7 +529,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="265"/>
+        <location filename="../qml/components/FileActions.qml" line="271"/>
         <source>show file properties</source>
         <translation>zobrazit vlastnosti souboru</translation>
     </message>
@@ -1683,6 +1683,44 @@ exposure program</extracomment>
         <location filename="../qml/pages/RenameDialog.qml" line="97"/>
         <source>A file with this name already exists.</source>
         <translation>Soubor tohoto názvu již existuje.</translation>
+    </message>
+</context>
+<context>
+    <name>RootModeLockPage</name>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="19"/>
+        <source>Unable to authenticate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="20"/>
+        <source>It is not possible to use File Browser in Root Mode without authentication.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="36"/>
+        <source>Root Mode: be careful, you could break your system.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="68"/>
+        <source>Understood!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="86"/>
+        <source>Root Mode</source>
+        <translation type="unfinished">Root mód</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="87"/>
+        <source>Be careful when using File Browser in Root Mode. Actions may unexpectedly break your system.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
+        <source>Start File Browser in Root Mode</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

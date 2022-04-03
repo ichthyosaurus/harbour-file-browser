@@ -350,68 +350,68 @@
         <translation>Ei voi siirtää/kopioida itsensä päälle</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="384"/>
+        <location filename="../src/engine.cpp" line="392"/>
         <source>File does not exist</source>
         <translation>Tiedostoa ei ole olemassa</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="386"/>
+        <location filename="../src/engine.cpp" line="394"/>
         <source>Broken symbolic link</source>
         <translation>Hajonnut symbolinen linkki</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="391"/>
+        <location filename="../src/engine.cpp" line="399"/>
         <source>Cannot read this type of file</source>
         <translation>Tätä tiedostotyyppiä ei voi lukea</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="397"/>
+        <location filename="../src/engine.cpp" line="405"/>
         <source>No permission to read the file</source>
         <translation>Ei oikeuksia lukea tiedostoa</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="401"/>
-        <location filename="../src/engine.cpp" line="407"/>
+        <location filename="../src/engine.cpp" line="409"/>
+        <location filename="../src/engine.cpp" line="415"/>
         <source>Error reading file</source>
         <translation>Virhe luettaessa tiedostoa</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="410"/>
+        <location filename="../src/engine.cpp" line="418"/>
         <source>Empty file</source>
         <translation>Tyhjä tiedosto</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="436"/>
+        <location filename="../src/engine.cpp" line="444"/>
         <source>Binary file preview clipped at %1 kB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="455"/>
+        <location filename="../src/engine.cpp" line="463"/>
         <source>Text file preview clipped at %1 lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="457"/>
+        <location filename="../src/engine.cpp" line="465"/>
         <source>Text file preview clipped at %1 kB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="470"/>
+        <location filename="../src/engine.cpp" line="478"/>
         <source>No permissions to create %1</source>
         <translation>Ei oikeuksia luoda kohdetta %1</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="488"/>
+        <location filename="../src/engine.cpp" line="496"/>
         <source>Cannot rename %1</source>
         <translation>Uudelleennimeäminen epäonnistui %1</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="511"/>
+        <location filename="../src/engine.cpp" line="519"/>
         <source>Cannot change permissions</source>
         <translation>Oikeuksia ei voi muuttaa</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="472"/>
+        <location filename="../src/engine.cpp" line="480"/>
         <source>Cannot create folder %1</source>
         <translation>Kansiota %1 ei voitu luoda</translation>
     </message>
@@ -501,7 +501,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="248"/>
+        <location filename="../qml/components/FileActions.qml" line="254"/>
         <source>compress file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -509,7 +509,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="256"/>
+        <location filename="../qml/components/FileActions.qml" line="262"/>
         <source>edit file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -517,7 +517,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="265"/>
+        <location filename="../qml/components/FileActions.qml" line="271"/>
         <source>show file properties</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1662,6 +1662,44 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="97"/>
         <source>A file with this name already exists.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>RootModeLockPage</name>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="19"/>
+        <source>Unable to authenticate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="20"/>
+        <source>It is not possible to use File Browser in Root Mode without authentication.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="36"/>
+        <source>Root Mode: be careful, you could break your system.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="68"/>
+        <source>Understood!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="86"/>
+        <source>Root Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="87"/>
+        <source>Be careful when using File Browser in Root Mode. Actions may unexpectedly break your system.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
+        <source>Start File Browser in Root Mode</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

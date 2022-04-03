@@ -350,68 +350,68 @@
         <translation>Keine Dateien zum Einfügen</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="384"/>
+        <location filename="../src/engine.cpp" line="392"/>
         <source>File does not exist</source>
         <translation>Datei existiert nicht</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="386"/>
+        <location filename="../src/engine.cpp" line="394"/>
         <source>Broken symbolic link</source>
         <translation>Symbolische Verknüpfung defekt</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="391"/>
+        <location filename="../src/engine.cpp" line="399"/>
         <source>Cannot read this type of file</source>
         <translation>Kann dieses Dateiformat nicht lesen</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="397"/>
+        <location filename="../src/engine.cpp" line="405"/>
         <source>No permission to read the file</source>
         <translation>Keine Berechtigung zum Lesen der Datei</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="401"/>
-        <location filename="../src/engine.cpp" line="407"/>
+        <location filename="../src/engine.cpp" line="409"/>
+        <location filename="../src/engine.cpp" line="415"/>
         <source>Error reading file</source>
         <translation>Fehler beim Lesen der Datei</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="410"/>
+        <location filename="../src/engine.cpp" line="418"/>
         <source>Empty file</source>
         <translation>Leere Datei</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="436"/>
+        <location filename="../src/engine.cpp" line="444"/>
         <source>Binary file preview clipped at %1 kB</source>
         <translation>Binärdatei-Vorschau auf %1 kB begrenzt</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="455"/>
+        <location filename="../src/engine.cpp" line="463"/>
         <source>Text file preview clipped at %1 lines</source>
         <translation>Textdatei-Vorschau auf %1 Zeilen begrenzt</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="457"/>
+        <location filename="../src/engine.cpp" line="465"/>
         <source>Text file preview clipped at %1 kB</source>
         <translation>Textdatei-Vorschau auf %1 kB begrenzt</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="470"/>
+        <location filename="../src/engine.cpp" line="478"/>
         <source>No permissions to create %1</source>
         <translation>Keine Berechtigung zum Erstellen von %1</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="488"/>
+        <location filename="../src/engine.cpp" line="496"/>
         <source>Cannot rename %1</source>
         <translation>Kann %1 nicht umbenennen</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="511"/>
+        <location filename="../src/engine.cpp" line="519"/>
         <source>Cannot change permissions</source>
         <translation>Kann Berechtigungen nicht anpassen</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="472"/>
+        <location filename="../src/engine.cpp" line="480"/>
         <source>Cannot create folder %1</source>
         <translation>Kann Verzeichnis %1 nicht erstellen</translation>
     </message>
@@ -501,7 +501,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="248"/>
+        <location filename="../qml/components/FileActions.qml" line="254"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>Datei komprimieren</numerusform>
@@ -509,7 +509,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="256"/>
+        <location filename="../qml/components/FileActions.qml" line="262"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>Datei bearbeiten</numerusform>
@@ -517,7 +517,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="265"/>
+        <location filename="../qml/components/FileActions.qml" line="271"/>
         <source>show file properties</source>
         <translation>Dateieigenschaften anzeigen</translation>
     </message>
@@ -1668,6 +1668,44 @@ exposure program</extracomment>
         <location filename="../qml/pages/RenameDialog.qml" line="97"/>
         <source>A file with this name already exists.</source>
         <translation>Eine Datei mit diesem Namen existiert bereits.</translation>
+    </message>
+</context>
+<context>
+    <name>RootModeLockPage</name>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="19"/>
+        <source>Unable to authenticate</source>
+        <translation>Authentifizierung nicht möglich</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="20"/>
+        <source>It is not possible to use File Browser in Root Mode without authentication.</source>
+        <translation>Die Dateiverwaltung kann ohne Authentifizierung nicht im Root-Modus verwendet werden.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="36"/>
+        <source>Root Mode: be careful, you could break your system.</source>
+        <translation>Root-Modus: Seien Sie vorsichtig, Sie könnten Ihr System beschädigen.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="68"/>
+        <source>Understood!</source>
+        <translation>Verstanden!</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="86"/>
+        <source>Root Mode</source>
+        <translation>Root-Modus</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="87"/>
+        <source>Be careful when using File Browser in Root Mode. Actions may unexpectedly break your system.</source>
+        <translation>Seien Sie vorsichtig, wenn Sie die Dateiverwaltung im Root-Modus verwenden. Sie könnten aus Versehen Ihr System beschädigen.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
+        <source>Start File Browser in Root Mode</source>
+        <translation>Dateiverwaltung im Root-Modus starten</translation>
     </message>
 </context>
 <context>
