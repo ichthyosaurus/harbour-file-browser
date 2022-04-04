@@ -71,7 +71,7 @@ ApplicationWindow {
     function bookmarks_removeBookmark(path) { return Bookmarks.removeBookmark(path); }
 
     property string coverText: "File Browser"
-    cover: Qt.resolvedUrl("cover/FileBrowserCover.qml")
+    cover: Qt.resolvedUrl("cover/CoverPage.qml")
 
     initialPage: runningAsRoot ? initialPage_RootMode : initialPage_UserMode
 
