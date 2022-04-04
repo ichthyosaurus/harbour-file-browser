@@ -48,7 +48,8 @@ TARGET = harbour-file-browser
 
 # configure Harbour compliance:
 # some features must be disabled for the official store
-equals($$HARBOUR_COMPLIANCE, off) {
+HARBOUR_COMPLIANCE=$$HARBOUR_COMPLIANCE
+equals(HARBOUR_COMPLIANCE, off) {
     DEFINES += NO_HARBOUR_COMPLIANCE
     message("Harbour compliance disabled")
 
@@ -73,21 +74,24 @@ equals($$HARBOUR_COMPLIANCE, off) {
     CONF_SAILJAIL_DETAILS = "Permissions=Audio;MediaIndexing;RemovableMedia;UserDirs;PublicDir"
 }
 
-equals($$FEATURE_PDF_VIEWER, off) {
+FEATURE_PDF_VIEWER=$$FEATURE_PDF_VIEWER
+equals(FEATURE_PDF_VIEWER, off) {
     DEFINES += NO_FEATURE_PDF_VIEWER
     message("feature flags: Integrated PDF viewer disabled")
 } else {
     message("feature flags: Integrated PDF viewer enabled")
 }
 
-equals($$FEATURE_STORAGE_SETTINGS, off) {
+FEATURE_STORAGE_SETTINGS=$$FEATURE_STORAGE_SETTINGS
+equals(FEATURE_STORAGE_SETTINGS, off) {
     DEFINES += NO_FEATURE_STORAGE_SETTINGS
     message("feature flags: Integrated system storage settings disabled")
 } else {
     message("feature flags: Integrated system storage settings enabled")
 }
 
-equals($$FEATURE_SHARING, off) {
+FEATURE_SHARING=$$FEATURE_SHARING
+equals(FEATURE_SHARING, off) {
     DEFINES += NO_FEATURE_SHARING
     message("feature flags: File sharing disabled")
 } else {
