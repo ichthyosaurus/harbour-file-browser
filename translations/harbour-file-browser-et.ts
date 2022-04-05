@@ -1672,37 +1672,37 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="19"/>
         <source>Unable to authenticate</source>
-        <translation type="unfinished"></translation>
+        <translation>Autentimine ei õnnestu</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="20"/>
         <source>It is not possible to use File Browser in Root Mode without authentication.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilma autentimiseta ei ole võimalik kasutada failihaldurit juurkasutaja õigustes.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="36"/>
         <source>Root Mode: be careful, you could break your system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sul on nüüd maksimaalsed õigused: palun ole hoolikas ja ära kahjusta oma nutiseadet.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="68"/>
         <source>Understood!</source>
-        <translation type="unfinished"></translation>
+        <translation>Sain aru!</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="86"/>
         <source>Root Mode</source>
-        <translation type="unfinished">Jätka juurkasutaja õigustes</translation>
+        <translation>Jätka juurkasutaja õigustes</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="87"/>
         <source>Be careful when using File Browser in Root Mode. Actions may unexpectedly break your system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kui kasutad failihaldurit juurkasutaja õigustes, siis ole ettevaatlik. Valed tegevused võivad ootamatult sinu nutiseadet kahjustada.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Käivita failihaldur juurkasutajana</translation>
     </message>
 </context>
 <context>

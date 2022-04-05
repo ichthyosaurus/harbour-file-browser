@@ -126,7 +126,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="147"/>
         <source>Turkish</source>
-        <translation type="unfinished">Turco</translation>
+        <translation>Turco</translation>
     </message>
 </context>
 <context>
@@ -1370,7 +1370,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="104"/>
         <source>show contributors</source>
-        <translation>Mostrar contribuidores</translation>
+        <translation>Mostrar colaboradores</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="106"/>
@@ -1378,7 +1378,7 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="57"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="70"/>
         <source>Homepage</source>
-        <translation type="unfinished"></translation>
+        <translation>Página de inicio</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="121"/>
@@ -1409,7 +1409,7 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="58"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="76"/>
         <source>Source Code</source>
-        <translation>Código Fuente</translation>
+        <translation>Código fuente</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/InfoSection.qml" line="15"/>
@@ -1435,17 +1435,17 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="48"/>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
         <source>Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Detalles</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="181"/>
         <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Consulta &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="25"/>
         <source>Download license texts</source>
-        <translation type="unfinished"></translation>
+        <translation>Descargar texto de licencias</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
@@ -1458,22 +1458,22 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="41"/>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nota: consulta el código fuente para más información.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="15"/>
         <source>External Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlace externo</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="32"/>
         <source>Open in browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir en el navegador</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="36"/>
         <source>Copied to clipboard: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiado al portapapeles: %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="41"/>
@@ -1845,12 +1845,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="50"/>
         <source>These are global preferences. If enabled in “&lt;a href=&apos;#&apos;&gt;View → Use per-directory view settings&lt;/a&gt;”, view preferences will be saved individually for all folders. Here, you can define the default values.</source>
-        <translation type="unfinished"></translation>
+        <translation>Estas preferencias son globales. Si la opción “&lt;a href=&apos;#&apos;&gt;Vista → Usar ajustes de vista para cada directorio&lt;/a&gt;” está activada, las preferencias de vista se guardarán individualmente para todas las carpetas. Aquí puedes definir los valores predeterminados.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="66"/>
         <source>Swipe right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Desliza a la derecha para ver el código fuente de File Browser, información de la licencia y una lista de colaboradores.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="77"/>
@@ -2005,7 +2005,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="213"/>
         <source>Enable solid window background</source>
-        <translation type="unfinished"></translation>
+        <translation>Activar fondo de ventana sólido</translation>
     </message>
 </context>
 <context>
@@ -2489,13 +2489,13 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewImagePage.qml" line="253"/>
         <source>Loading image</source>
         <extracomment>Full page placeholder shown while a large image is being loaded</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Cargando imagen</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewImagePage.qml" line="263"/>
         <source>Failed to load</source>
         <extracomment>Full page placeholder shown when an image failed to load</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Error al cargar</translation>
     </message>
 </context>
 <context>
@@ -2504,7 +2504,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewVideoPage.qml" line="107"/>
         <source>Failed to play</source>
         <extracomment>Full page placeholder shown when a video failed to load</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Error al reproducir</translation>
     </message>
 </context>
 <context>
