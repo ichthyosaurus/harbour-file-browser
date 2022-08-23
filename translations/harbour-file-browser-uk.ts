@@ -2420,7 +2420,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="162"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation>Ці файли/папки вже існують “%1”:</translation>
+        <translation>Ці файли/теки вже існують “%1”:</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="202"/>
