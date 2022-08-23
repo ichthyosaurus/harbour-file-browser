@@ -6,12 +6,12 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="20"/>
         <source>A fully-fledged file manager for Sailfish OS.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Un gestionnaire de fichier complet pour Sailfish OS.</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="31"/>
         <source>adapted by karip</source>
-        <translation type="unfinished"></translation>
+        <translation>adapté par karip</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="56"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="66"/>
         <source>Icon Design</source>
-        <translation type="unfinished"></translation>
+        <translation>Design de l&apos;icône</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="72"/>
@@ -155,7 +155,7 @@
     <message>
         <location filename="../src/consolemodel.cpp" line="139"/>
         <source>** internal communication failed</source>
-        <translation type="unfinished"></translation>
+        <translation>** échec de la communication interne</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="141"/>
@@ -168,7 +168,7 @@
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="87"/>
         <source>Swipe right to view raw contents.</source>
-        <translation type="unfinished"></translation>
+        <translation>Glisser vers la droite pour voir le contenu brut.</translation>
     </message>
 </context>
 <context>
@@ -232,22 +232,22 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="270"/>
         <source>Remove bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer le favoris</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="270"/>
         <source>Add to bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter aux favoris</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="274"/>
         <source>Copy path to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Copier le chemin dans le presse-papiers</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="337"/>
         <source>filtered by: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>filtré par : %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="358"/>
@@ -257,12 +257,12 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="361"/>
         <source>No files matched the filter.</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucun fichier ne correspond au filtre.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="362"/>
         <source>This directory contains no files.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cet dossier ne contient aucun fichier.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="442"/>
@@ -273,12 +273,12 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="457"/>
         <source>Internally not ready</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">N&apos;est pas prêt en interne</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="457"/>
         <source>Please simply try again</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez réessayer à nouveau</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="500"/>
@@ -301,12 +301,12 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="332"/>
         <source>Remove bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer le favoris</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="332"/>
         <source>Add to bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter aux favoris</translation>
     </message>
 </context>
 <context>
@@ -314,7 +314,7 @@
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="155"/>
         <source>Hide hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation>Masquer les fichiers cachés</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="156"/>
@@ -383,17 +383,17 @@
     <message>
         <location filename="../src/engine.cpp" line="444"/>
         <source>Binary file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;aperçu des fichiers binaires est limité à %1 ko</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="463"/>
         <source>Text file preview clipped at %1 lines</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;aperçu des fichiers textes est limité à %1 lignes</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="465"/>
         <source>Text file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;aperçu des fichiers textes est limité à %1 ko</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="478"/>
@@ -421,105 +421,105 @@
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="73"/>
         <source>%n file(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n fichier sélectionné</numerusform>
+            <numerusform>%n fichiers sélectionnés</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="105"/>
         <source>clear selection</source>
-        <translation type="unfinished"></translation>
+        <translation>effacer la sélection</translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="106"/>
         <source>select all</source>
-        <translation type="unfinished"></translation>
+        <translation>tout sélectionner</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="115"/>
         <source>cut file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>couper le fichier</numerusform>
+            <numerusform>couper les fichiers</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="119"/>
         <source>%n file(s) cut</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n fichier coupé</numerusform>
+            <numerusform>%n fichiers coupés</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="128"/>
         <source>copy file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>copier le fichier</numerusform>
+            <numerusform>copier les fichiers</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="132"/>
         <source>%n file(s) copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n fichier copié</numerusform>
+            <numerusform>%n fichiers copiés</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="141"/>
         <source>transfer file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>transférer le fichier</numerusform>
+            <numerusform>transférer les fichiers</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="160"/>
         <source>delete file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>supprimer le fichier</numerusform>
+            <numerusform>supprimer les fichiers</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="175"/>
         <source>rename file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>renommer le fichier</numerusform>
+            <numerusform>renommer les fichiers</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="205"/>
         <source>share file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>partager le fichier</numerusform>
+            <numerusform>partager les fichiers</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="254"/>
         <source>compress file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>compresser le fichier</numerusform>
+            <numerusform>compresser les fichiers</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="262"/>
         <source>edit file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>modifier le fichier</numerusform>
+            <numerusform>modifier les fichiers</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="271"/>
         <source>show file properties</source>
-        <translation type="unfinished"></translation>
+        <translation>afficher les propriétés du fichier</translation>
     </message>
 </context>
 <context>
@@ -527,7 +527,7 @@
     <message>
         <location filename="../qml/cover/FileBrowserCover.qml" line="47"/>
         <source>Root Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode root</translation>
     </message>
 </context>
 <context>
@@ -579,9 +579,9 @@
     <message numerus="yes">
         <location filename="../src/filemodel.cpp" line="116"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n élément</numerusform>
+            <numerusform>%n éléments</numerusform>
         </translation>
     </message>
 </context>
@@ -614,7 +614,7 @@
         <location filename="../qml/pages/FilePage.qml" line="97"/>
         <source>Swipe right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Glisser vers la droite pour inspecter son contenu.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="99"/>
@@ -639,7 +639,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="73"/>
         <source>View Raw Contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher le contenu brut</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="81"/>
@@ -669,7 +669,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="130"/>
         <source>The file has been moved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ce fichier a été déplacé.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="242"/>
@@ -695,7 +695,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="286"/>
         <source>Unknown (link target not found)</source>
-        <translation type="unfinished"></translation>
+        <translation>Inconnu (la cible lié n&apos;existe pas)</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="293"/>
@@ -1305,19 +1305,19 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="59"/>
         <source>Selection Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriétés de sélection</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="69"/>
         <source>The files have been moved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Les fichiers ont été déplacés.</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/MultiFilePage.qml" line="93"/>
         <source>%n item(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n élément sélectionné</numerusform>
+            <numerusform>%n éléments sélectionnés</numerusform>
         </translation>
     </message>
     <message>
@@ -1329,18 +1329,18 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="140"/>
         <source>Directories</source>
-        <translation type="unfinished"></translation>
+        <translation>Dossiers</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="150"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichiers</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="166"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="175"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation>aucun</translation>
     </message>
 </context>
 <context>
@@ -1370,7 +1370,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="104"/>
         <source>show contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>afficher les contributeurs</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="106"/>
@@ -1378,24 +1378,24 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="57"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="70"/>
         <source>Homepage</source>
-        <translation type="unfinished"></translation>
+        <translation>Page d&apos;accueil</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="121"/>
         <source>Donations</source>
-        <translation type="unfinished"></translation>
+        <translation>Dons</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="127"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Licence</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="132"/>
         <source>show license(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>afficher la licence</numerusform>
+            <numerusform>afficher les licences</numerusform>
         </translation>
     </message>
     <message>
@@ -1409,71 +1409,71 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="58"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="76"/>
         <source>Source Code</source>
-        <translation type="unfinished"></translation>
+        <translation>Code source</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/InfoSection.qml" line="15"/>
         <source>show details</source>
-        <translation type="unfinished"></translation>
+        <translation>afficher les détails</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="21"/>
         <source>Contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>Contributeurs</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="37"/>
         <source>Acknowledgements</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Connaissances</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="44"/>
         <source>Thank you!</source>
-        <translation type="unfinished"></translation>
+        <translation>Merci !</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="48"/>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
         <source>Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Détails</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="181"/>
         <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez vous référer à &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="25"/>
         <source>Download license texts</source>
-        <translation type="unfinished"></translation>
+        <translation>Télécharger les licences</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
         <source>License(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Licence</numerusform>
+            <numerusform>Licences</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="41"/>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation type="unfinished"></translation>
+        <translation>Note : Veuillez vérifier le code source pour plus d&apos;informations.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="15"/>
         <source>External Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Lien externe</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="32"/>
         <source>Open in browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouvrir dans le navigateur</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="36"/>
         <source>Copied to clipboard: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Copier dans le presse-papiers : %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="41"/>
@@ -1486,17 +1486,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="7"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation type="unfinished"></translation>
+        <translation>Si vous voulez supporter mon travail, vous pouvez m&apos;offrir une tasse de café.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="8"/>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vous pouvez supporter ce projet en contribuant, ou en donnant via un de ces services.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="9"/>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vos contributions aux traductions ou au code seront très appréciées.</translation>
     </message>
 </context>
 <context>
@@ -1514,7 +1514,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="54"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ces fichiers et dossiers existent déjà dans « %1 » :</translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="55"/>
@@ -1527,12 +1527,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="129"/>
         <source>Path to a folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Le chemin vers le dossier</translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="234"/>
         <source>Remove last part</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer la dernière partie</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/PathEditDialog.qml" line="256"/>
@@ -1547,9 +1547,9 @@ exposure program</extracomment>
         <location filename="../qml/pages/PathEditDialog.qml" line="259"/>
         <source>%n folder(s)</source>
         <extracomment>hidden if n=0</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n dossier</numerusform>
+            <numerusform>%n dossiers</numerusform>
         </translation>
     </message>
     <message>
@@ -1570,7 +1570,8 @@ exposure program</extracomment>
         <location filename="../qml/pages/PermissionsDialog.qml" line="84"/>
         <source>Change permissions for
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Changer les autorisations pour
+%1</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="104"/>
@@ -1608,27 +1609,27 @@ exposure program</extracomment>
     <message>
         <location filename="../src/globals.cpp" line="120"/>
         <source>hh:mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>hh:mm:ss</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="123"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
-        <translation type="unfinished"></translation>
+        <translation>dd MMM yyyy, hh:mm:ss t</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="125"/>
         <source>dd.MM.yy, hh:mm</source>
-        <translation type="unfinished"></translation>
+        <translation>dd.MM.yy, hh:mm</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="244"/>
         <source>SD card</source>
-        <translation type="unfinished"></translation>
+        <translation>Carte SD</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="246"/>
         <source>Removable Media</source>
-        <translation type="unfinished"></translation>
+        <translation>Média amovible</translation>
     </message>
 </context>
 <context>
@@ -1637,7 +1638,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/QuickSwitchDialog.qml" line="29"/>
         <source>Switch</source>
         <extracomment>as in &quot;Switch to this folder, please&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Basculer</translation>
     </message>
 </context>
 <context>
@@ -1651,7 +1652,8 @@ exposure program</extracomment>
         <location filename="../qml/pages/RenameDialog.qml" line="85"/>
         <source>Give a new name for
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Donner un nouveau nom pour
+%1</translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="95"/>
@@ -1662,7 +1664,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="97"/>
         <source>A file with this name already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Un fichier avec ce nom existe déjà.</translation>
     </message>
 </context>
 <context>
@@ -1670,37 +1672,37 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="19"/>
         <source>Unable to authenticate</source>
-        <translation type="unfinished"></translation>
+        <translation>Échec de l&apos;authentification</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="20"/>
         <source>It is not possible to use File Browser in Root Mode without authentication.</source>
-        <translation type="unfinished"></translation>
+        <translation>Il n&apos;est pas possible d&apos;utiliser le Navigateur de fichier en mode root sans s&apos;identifier.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="36"/>
         <source>Root Mode: be careful, you could break your system.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mode root : Soyez prudent, vous pouvez casser votre système.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="68"/>
         <source>Understood!</source>
-        <translation type="unfinished"></translation>
+        <translation>J&apos;ai compris !</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="86"/>
         <source>Root Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode root</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="87"/>
         <source>Be careful when using File Browser in Root Mode. Actions may unexpectedly break your system.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Soyez prudent en utilisant le Navigation de fichiers en mode root. Certaines actions pourraient casser votre système.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Démarrer le Navigation de fichier en mode root.</translation>
     </message>
 </context>
 <context>
@@ -1718,14 +1720,14 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="134"/>
         <source>Search below “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rechercher « %1 » en-dessous</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SearchPage.qml" line="188"/>
         <source>%n hit(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n résultat</numerusform>
+            <numerusform>%n résultats</numerusform>
         </translation>
     </message>
     <message>
@@ -1759,12 +1761,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="413"/>
         <source>Internally not ready</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">N&apos;est pas prêt en interne</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="413"/>
         <source>Please simply try again</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez réessayer</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="120"/>
@@ -1791,9 +1793,9 @@ exposure program</extracomment>
     <message numerus="yes">
         <location filename="../qml/components/SelectionPanel.qml" line="54"/>
         <source>%n file(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n fichier sélectionné</numerusform>
+            <numerusform>%n fichiers sélectionnés</numerusform>
         </translation>
     </message>
 </context>
@@ -1818,82 +1820,82 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="50"/>
         <source>These are global preferences. If enabled in “&lt;a href=&apos;#&apos;&gt;View → Use per-directory view settings&lt;/a&gt;”, view preferences will be saved individually for all folders. Here, you can define the default values.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ce sont les préférences globales. Si activées dans “&lt;a href=&apos;#&apos;&gt;Vue → Utiliser des préférences de vue par dossier&lt;/a&gt;”, les préférences de vue seront enregistrées pour chaque dossier. Ici, vous pouvez définir les valeurs par défaut.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="66"/>
         <source>Swipe right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Glissez vers la gauche pour voir le code source, les informations sur la licence, et la liste des contributeurs du Navigation de fichier.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="77"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>Vue</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="86"/>
         <source>Use per-directory view settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Utiliser des préférences de vue par dossier</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="94"/>
         <source>Show preview images</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher l&apos;aperçu des images</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="99"/>
         <source>Thumbnail size</source>
-        <translation type="unfinished"></translation>
+        <translation>Taille de l&apos;aperçu</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="102"/>
         <source>small</source>
-        <translation type="unfinished"></translation>
+        <translation>petit</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="103"/>
         <source>medium</source>
-        <translation type="unfinished"></translation>
+        <translation>moyen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="104"/>
         <source>large</source>
-        <translation type="unfinished"></translation>
+        <translation>grand</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="105"/>
         <source>huge</source>
-        <translation type="unfinished"></translation>
+        <translation>énorme</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="110"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Activer la gallerie</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="111"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished"></translation>
+        <translation>En mode galerie, les images seront affichées suffisamment grandes, et tous les éléments sauf les images, vidéos, et dossiers, seront cachés.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="123"/>
         <source>Sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>Tri</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="134"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished"></translation>
+        <translation>Trier insensiblement à la casse</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="138"/>
         <source>Sort by</source>
-        <translation type="unfinished"></translation>
+        <translation>Trier par</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="142"/>
         <source>name</source>
-        <translation type="unfinished"></translation>
+        <translation>nom</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="143"/>
@@ -1903,107 +1905,107 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="144"/>
         <source>modification time</source>
-        <translation type="unfinished"></translation>
+        <translation>date de modification</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="145"/>
         <source>file type</source>
-        <translation type="unfinished"></translation>
+        <translation>type de fichier</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="149"/>
         <source>Sort order</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordre de tri</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="153"/>
         <source>default</source>
-        <translation type="unfinished"></translation>
+        <translation>par défaut</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="154"/>
         <source>reversed</source>
-        <translation type="unfinished"></translation>
+        <translation>inversé</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="162"/>
         <source>Behavior and View</source>
-        <translation type="unfinished"></translation>
+        <translation>Comportement et vue</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="173"/>
         <source>Default transfer action</source>
-        <translation type="unfinished"></translation>
+        <translation>Action par défaut des transferts</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="176"/>
         <source>copy</source>
-        <translation type="unfinished"></translation>
+        <translation>copier</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="177"/>
         <source>move</source>
-        <translation type="unfinished"></translation>
+        <translation>déplacer</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="178"/>
         <source>link</source>
-        <translation type="unfinished"></translation>
+        <translation>lier</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="179"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation>aucun</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="185"/>
         <source>Default filter line action</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">L&apos;action par défaut pour le filtre</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="188"/>
         <source>return to directory view</source>
-        <translation type="unfinished"></translation>
+        <translation>retourner à la vue du dossier</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="189"/>
         <source>start recursive search</source>
-        <translation type="unfinished"></translation>
+        <translation>lancer la recherche récursive</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="195"/>
         <source>File name abbreviation</source>
-        <translation type="unfinished"></translation>
+        <translation>Abbréviation du nom de fichier</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="198"/>
         <source>fade out</source>
-        <translation type="unfinished"></translation>
+        <translation>foundu</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="199"/>
         <source>elide end</source>
-        <translation type="unfinished"></translation>
+        <translation>masquer la fin</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="200"/>
         <source>elide middle</source>
-        <translation type="unfinished"></translation>
+        <translation>masquer le milieu</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="205"/>
         <source>Show full directory paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher le chemin complet des dossiers</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="209"/>
         <source>Show navigation menu icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher l&apos;icône du menu de navigation</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="213"/>
         <source>Enable solid window background</source>
-        <translation type="unfinished"></translation>
+        <translation>Utiliser un arrière-plan uni pour les fenêtres</translation>
     </message>
 </context>
 <context>
@@ -2011,17 +2013,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="292"/>
         <source>Open system settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouvrir les préférences système</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="302"/>
         <source>Nothing to show here...</source>
-        <translation type="unfinished"></translation>
+        <translation>Rien n&apos;a afficher ici...</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="328"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>Personnalisé</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="335"/>
@@ -2033,7 +2035,7 @@ exposure program</extracomment>
         <location filename="../qml/components/ShortcutsList.qml" line="363"/>
         <location filename="../qml/components/ShortcutsList.qml" line="369"/>
         <source>Locations</source>
-        <translation type="unfinished"></translation>
+        <translation>Emplacements</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="336"/>
@@ -2043,32 +2045,32 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="341"/>
         <source>Documents</source>
-        <translation type="unfinished"></translation>
+        <translation>Documents</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="345"/>
         <source>Downloads</source>
-        <translation type="unfinished"></translation>
+        <translation>Téléchargements</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="349"/>
         <source>Music</source>
-        <translation type="unfinished"></translation>
+        <translation>Musique</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="353"/>
         <source>Pictures</source>
-        <translation type="unfinished"></translation>
+        <translation>Images</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="357"/>
         <source>Videos</source>
-        <translation type="unfinished"></translation>
+        <translation>Vidéos</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="364"/>
         <source>Android storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Stockage Android</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="370"/>
@@ -2078,17 +2080,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="378"/>
         <source>Storage devices</source>
-        <translation type="unfinished"></translation>
+        <translation>Appareils de stockage</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="380"/>
         <source>SD card</source>
-        <translation type="unfinished"></translation>
+        <translation>Carte SD</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="392"/>
         <source>Bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Favoris</translation>
     </message>
 </context>
 <context>
@@ -2097,27 +2099,27 @@ exposure program</extracomment>
         <location filename="../qml/pages/ShortcutsPage.qml" line="43"/>
         <location filename="../qml/pages/ShortcutsPage.qml" line="120"/>
         <source>Places</source>
-        <translation type="unfinished"></translation>
+        <translation>Emplacements</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="54"/>
         <source>Remove bookmark for “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Retirer « %1 » des favoris</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="55"/>
         <source>Add “%1” to bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter « %1 » aux favoris</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="63"/>
         <source>Open new window</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouvrir une nouvelle fenêtre</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="66"/>
         <source>New window opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle fenêtre ouverte</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="71"/>
@@ -2127,22 +2129,22 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="87"/>
         <source>Create a new bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Créer un nouveau favoris</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="99"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrer</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="105"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Rafraichir</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="110"/>
         <source>Open storage settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouvrir les préférences de stockage</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="67"/>
@@ -2165,7 +2167,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="61"/>
         <source>directories</source>
-        <translation type="unfinished"></translation>
+        <translation>dossiers</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="68"/>
@@ -2180,9 +2182,9 @@ exposure program</extracomment>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="78"/>
         <source>%n directories</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n dossier</numerusform>
+            <numerusform>%n dossiers</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -2199,17 +2201,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="46"/>
         <source>Sorting and View</source>
-        <translation type="unfinished"></translation>
+        <translation>Tri et vue</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="55"/>
         <source>Sort by...</source>
-        <translation type="unfinished"></translation>
+        <translation>Trier par...</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="58"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="59"/>
@@ -2219,67 +2221,67 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="60"/>
         <source>Modification time</source>
-        <translation type="unfinished"></translation>
+        <translation>Date de modification</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="61"/>
         <source>File type</source>
-        <translation type="unfinished"></translation>
+        <translation>Type de fichier</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="77"/>
         <source>Order...</source>
-        <translation type="unfinished"></translation>
+        <translation>Tri...</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="80"/>
         <source>default</source>
-        <translation type="unfinished"></translation>
+        <translation>par défaut</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="81"/>
         <source>reversed</source>
-        <translation type="unfinished"></translation>
+        <translation>inversé</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="97"/>
         <source>Preview images...</source>
-        <translation type="unfinished"></translation>
+        <translation>Aperçu des images...</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="100"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation>aucun</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="101"/>
         <source>small</source>
-        <translation type="unfinished"></translation>
+        <translation>petit</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="102"/>
         <source>medium</source>
-        <translation type="unfinished"></translation>
+        <translation>moyen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="103"/>
         <source>large</source>
-        <translation type="unfinished"></translation>
+        <translation>grand</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="104"/>
         <source>huge</source>
-        <translation type="unfinished"></translation>
+        <translation>énorme</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="125"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode gallerie</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="126"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished"></translation>
+        <translation>En mode galerie, les images seront affichées suffisamment grandes, et tous les éléments sauf les images, vidéos, et dossiers, seront cachés.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="132"/>
@@ -2289,17 +2291,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="137"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished"></translation>
+        <translation>Tri insensible à la casse</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="153"/>
         <source>Local preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Préférences locales</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="154"/>
         <source>Global preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Préférences globales</translation>
     </message>
     <message>
         <location filename="../qml/pages/SortingPage.qml" line="120"/>
@@ -2317,12 +2319,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="48"/>
         <source>Move</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferActionBar.qml" line="59"/>
         <source>Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Lier</translation>
     </message>
 </context>
 <context>
@@ -2330,38 +2332,38 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="64"/>
         <source>Enter target path</source>
-        <translation type="unfinished"></translation>
+        <translation>Entrez le chemin cible</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="79"/>
         <source>Select</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionné</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="104"/>
         <source>%n item(s) selected for transferring</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n élément sélectionné à transférer</numerusform>
+            <numerusform>%n éléments sélectionnés à transférer</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="105"/>
         <source>%n destinations(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n destination sélectionnée</numerusform>
+            <numerusform>%n destinations sélectionnées</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="128"/>
         <source>Switch to target directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Basculer vers le dossier cible</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="161"/>
         <source>Nothing selected to transfer</source>
-        <translation type="unfinished"></translation>
+        <translation>La sélection à transférer est vide</translation>
     </message>
 </context>
 <context>
@@ -2377,57 +2379,57 @@ exposure program</extracomment>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="63"/>
         <source>%n destination(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n destination</numerusform>
+            <numerusform>%n destinations</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="68"/>
         <source>Successfully copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Copié avec succès</numerusform>
+            <numerusform>Copiés avec succès</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="70"/>
         <source>Successfully moved</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Déplacé avec succès</numerusform>
+            <numerusform>Déplacés avec succès</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="72"/>
         <source>Successfully linked</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Lié avec succès</numerusform>
+            <numerusform>Liés avec succès</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="76"/>
         <source>Failed to copy</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Échec de la copie</numerusform>
+            <numerusform>Échec des copies</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="78"/>
         <source>Failed to move</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Échec du déplacement</numerusform>
+            <numerusform>Échec des déplacements</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="80"/>
         <source>Failed to link</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Échec du lien</numerusform>
+            <numerusform>Échec des liens</numerusform>
         </translation>
     </message>
     <message>
@@ -2438,17 +2440,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="141"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuler</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="153"/>
         <source>Overwrite</source>
-        <translation type="unfinished"></translation>
+        <translation>Écraser</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="162"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ces fichiers et dossiers existent déjà dans « %1 » :</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="202"/>
@@ -2463,7 +2465,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="286"/>
         <source>Unable to overwrite existing file with symlink</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible d&apos;écraser le fichier existant avec un lien symbolique</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="301"/>
@@ -2478,7 +2480,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="303"/>
         <source>Linking</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Liaison</translation>
     </message>
 </context>
 <context>
@@ -2487,13 +2489,13 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewImagePage.qml" line="253"/>
         <source>Loading image</source>
         <extracomment>Full page placeholder shown while a large image is being loaded</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Chargement de l&apos;image</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewImagePage.qml" line="263"/>
         <source>Failed to load</source>
         <extracomment>Full page placeholder shown when an image failed to load</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Échec du chargement</translation>
     </message>
 </context>
 <context>
@@ -2502,7 +2504,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewVideoPage.qml" line="107"/>
         <source>Failed to play</source>
         <extracomment>Full page placeholder shown when a video failed to load</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Échec de la lecture</translation>
     </message>
 </context>
 <context>
@@ -2525,7 +2527,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/harbour-file-browser.qml" line="48"/>
         <source>Version %1 (%2)</source>
-        <translation type="unfinished">Version %1 (%2)</translation>
+        <translation>Version %1 (%2)</translation>
     </message>
 </context>
 <context>
