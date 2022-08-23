@@ -31,32 +31,32 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="72"/>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Переклади</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="75"/>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation>Англійська</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="79"/>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation>Німецька</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="83"/>
         <source>Finnish</source>
-        <translation type="unfinished"></translation>
+        <translation>Фінська</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="87"/>
         <source>Chinese</source>
-        <translation type="unfinished"></translation>
+        <translation>Китайська</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="91"/>
         <source>Russian</source>
-        <translation type="unfinished"></translation>
+        <translation>Російська</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="95"/>
@@ -2387,61 +2387,65 @@ exposure program</extracomment>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="78"/>
         <source>Failed to move</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Не вдалося перемістити</numerusform>
+            <numerusform>Не вдалося перемістити</numerusform>
+            <numerusform>Не вдалося перемістити</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="80"/>
         <source>Failed to link</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Не вдалося створити посилання</numerusform>
+            <numerusform>Не вдалося створити посилання</numerusform>
+            <numerusform>Не вдалося створити посилання</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="125"/>
         <source>Replace?</source>
-        <translation type="unfinished"></translation>
+        <translation>Замінити?</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="141"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Відмінити</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="153"/>
         <source>Overwrite</source>
-        <translation type="unfinished"></translation>
+        <translation>Замінити</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="162"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ці файли/папки вже існують “%1”:</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="202"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation type="unfinished"></translation>
+        <translation>Намагаєтесь перемістити між телефоном і SD картою? Це не працює, спробуйте скопіювати.</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="204"/>
         <source>Perhaps the storage is full?</source>
-        <translation type="unfinished"></translation>
+        <translation>Переповнена пам&apos;ять?</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="286"/>
         <source>Unable to overwrite existing file with symlink</source>
-        <translation type="unfinished"></translation>
+        <translation>Не вдалося замінити існуючий файл посиланням</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="301"/>
         <source>Copying</source>
-        <translation type="unfinished"></translation>
+        <translation>Копіювання</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="302"/>
         <source>Moving</source>
-        <translation type="unfinished"></translation>
+        <translation>Переміщення</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="303"/>
@@ -2455,7 +2459,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewImagePage.qml" line="253"/>
         <source>Loading image</source>
         <extracomment>Full page placeholder shown while a large image is being loaded</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Зображення завантажуєтся</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewImagePage.qml" line="263"/>
