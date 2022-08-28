@@ -230,7 +230,9 @@ bool FileModelWorker::applySettings() {
     bool settingsChanged = false;
     QFlags<QDir::Filter> newFilters = (QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot | QDir::System);
     QFlags<QDir::SortFlag> newSorting;
+
     bool sortTime = false;
+    bool sortSize = false;
 
     // load settings, see SETTINGS.md for details
     if (m_settings) {
@@ -256,9 +258,10 @@ bool FileModelWorker::applySettings() {
         if (sortSetting == "name") {
             sortBy = QDir::Name;
         } else if (sortSetting == "size") {
-            sortBy = QDir::Size;
+            // sortBy = QDir::Size; -- sorting manually improves accuracy
+            sortSize = true;
         } else if (sortSetting == "modificationtime") {
-            // sortBy = QDir::Time; -- no, we sort manually for performance
+            // sortBy = QDir::Time; -- sorting manually improves performance
             sortTime = true;
         } else if (sortSetting == "type") {
             sortBy = QDir::Type;
@@ -323,9 +326,9 @@ bool FileModelWorker::applySettings() {
     }
 
     if (sortTime) {
-        sortByModTime(m_finalEntries,
-                      newSorting.testFlag(QDir::Reversed),
-                      dirsCount);
+        sortByModTime(m_finalEntries, newSorting.testFlag(QDir::Reversed), dirsCount);
+    } else if (sortSize) {
+        sortBySize(m_finalEntries, newSorting.testFlag(QDir::Reversed), dirsCount);
     }
 
     return true;
@@ -342,10 +345,24 @@ bool FileModelWorker::thresholdAbort(size_t currentChanges, const QList<StatFile
     return false;
 }
 
+void FileModelWorker::sortFileList(QList<StatFileInfo> &files, int dirsFirstCount,
+                                   std::function<bool (const StatFileInfo &, const StatFileInfo &)> sorter)
+{
+    if (dirsFirstCount > 0 && dirsFirstCount < files.length()) {
+        // QDir placed dirs already at the beginning, so we can just sort
+        // two ranges (dirs and files).
+        std::sort(files.begin(), files.begin()+dirsFirstCount, sorter);
+        std::sort(files.begin()+dirsFirstCount, files.end(), sorter);
+    } else {
+        // we sort everything at once without taking care of dirs
+        std::sort(files.begin(), files.end(), sorter);
+    }
+}
+
 void FileModelWorker::sortByModTime(QList<StatFileInfo> &files, bool reverse, int dirsFirstCount)
 {
-#define COMP_LAMBDA [&](const StatFileInfo& a, const StatFileInfo& b) -> bool
-    auto doSort = COMP_LAMBDA {
+    sortFileList(files, dirsFirstCount,
+                 [&](const StatFileInfo& a, const StatFileInfo& b) -> bool {
         // return true if a comes before b
         if (!reverse /* == default*/) {
             // STL sorts ascending (using operator<) by default.
@@ -354,18 +371,21 @@ void FileModelWorker::sortByModTime(QList<StatFileInfo> &files, bool reverse, in
         } else /* == reverse*/ {
             return a.lastModifiedStat() < b.lastModifiedStat();
         }
-    };
+    });
+}
 
-    if (dirsFirstCount > 0 && dirsFirstCount < files.length()) {
-        // QDir placed dirs already at the beginning, so we can just sort
-        // two ranges (dirs and files).
-        std::sort(files.begin(), files.begin()+dirsFirstCount, doSort);
-        std::sort(files.begin()+dirsFirstCount, files.end(), doSort);
-    } else {
-        // we sort everything at once without taking care of dirs
-        std::sort(files.begin(), files.end(), doSort);
-    }
-#undef COMP_LAMBDA
+void FileModelWorker::sortBySize(QList<StatFileInfo> &files, bool reverse, int dirsFirstCount)
+{
+    sortFileList(files, dirsFirstCount,
+                 [&](const StatFileInfo& a, const StatFileInfo& b) -> bool {
+        // return true if a comes before b
+        if (!reverse /* == default*/) {
+            // sort ascending (smallest files first) by default
+            return (a.isDirAtEnd() ? a.dirSize() : a.size()) < (b.isDirAtEnd() ? b.dirSize() : b.size());
+        } else /* == reverse*/ {
+            return (a.isDirAtEnd() ? a.dirSize() : a.size()) > (b.isDirAtEnd() ? b.dirSize() : b.size());
+        }
+    });
 }
 
 bool FileModelWorker::cancelIfCancelled()

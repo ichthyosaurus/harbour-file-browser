@@ -24,6 +24,7 @@
 #include <QThread>
 #include <QDir>
 #include <QList>
+#include <functional>
 #include "statfileinfo.h"
 
 class Settings;
@@ -77,7 +78,11 @@ private:
     bool verifyOrAbort();
     bool applySettings();
     bool thresholdAbort(size_t currentChanges, const QList<StatFileInfo> &fullFiles);
+
+    void sortFileList(QList<StatFileInfo>& files, int dirsFirstCount,
+                      std::function<bool(const StatFileInfo&, const StatFileInfo&)> sorter);
     void sortByModTime(QList<StatFileInfo>& files, bool reverse, int dirsFirstCount);
+    void sortBySize(QList<StatFileInfo>& files, bool reverse, int dirsFirstCount);
 
     // returns true if cancelled and emits an error
     bool cancelIfCancelled();
