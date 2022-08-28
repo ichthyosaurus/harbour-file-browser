@@ -43,13 +43,17 @@ Page {
     property alias hasBookmark: bookmarkEntry.hasBookmark
     property string currentFilter: ""
     // set to true when full dir path should be shown in page header
-    property bool fullPathShown: (settings.read("General/ShowFullDirectoryPaths", "false") === "true")
+    property bool fullPathShown: prefs.generalShowFullDirectoryPaths
     // set to true to enable starting deep search when pressing 'Enter' in filter input
-    property bool quickSearchEnabled: (settings.read("General/DefaultFilterAction", "filter") === "search")
-    property bool navMenuIconShown: (settings.read("General/ShowNavigationMenuIcon", "true") === "true")
-
-    property string viewState: updateThumbnailsState() // state for list delegates
+    property bool quickSearchEnabled: prefs.generalDefaultFilterAction === "search"
+    property bool navMenuIconShown: prefs.generalShowNavigationMenuIcon
     property bool sectionsEnabled: prefs.viewSortRole === "type"
+
+    property string viewState: {  // state for list delegates
+        if (prefs.viewViewMode === "gallery") return "gallery"
+        else if (prefs.viewPreviewsShown) return "preview/" + prefs.viewPreviewsSize
+        else return ""
+    }
     property int _baseIconSize: (viewState === '' || viewState === 'gallery') ? Theme.iconSizeSmall : _baseEntryHeight
     property bool _thumbnailsEnabled: viewState !== '' && viewState !== 'gallery'
     property int _baseEntryHeight: {
@@ -68,7 +72,7 @@ Page {
         }
     }
 
-    property string _fnElide: settings.read("General/FilenameElideMode", "fade")
+    property string _fnElide: prefs.generalFilenameElideMode
     property int _nameTruncMode: _fnElide === 'fade' ? TruncationMode.Fade : TruncationMode.Elide
     property int _nameElideMode: _nameTruncMode === TruncationMode.Fade ?
                                     Text.ElideNone : (_fnElide === 'middle' ?
@@ -536,25 +540,6 @@ Page {
     }
 
     Connections {
-        target: settings
-        onViewSettingsChanged: {
-            if (localPath !== "" && localPath !== dir) return;
-            updateThumbnailsState();
-        }
-        onSettingsChanged: {
-            if (key === 'General/FilenameElideMode') {
-                page._fnElide = settings.read("General/FilenameElideMode", "fade");
-            } else if (key === 'General/DefaultFilterAction') {
-                page.quickSearchEnabled = (settings.read("General/DefaultFilterAction", "filter") === "search");
-            } else if (key === 'General/ShowFullDirectoryPaths') {
-                page.fullPathShown = (settings.read("General/ShowFullDirectoryPaths", "false") === "true");
-            } else if (key === 'General/ShowNavigationMenuIcon') {
-                page.navMenuIconShown = (settings.read("General/ShowNavigationMenuIcon", "true") === "true")
-            }
-        }
-    }
-
-    Connections {
         target: main
         onBookmarkAdded: {
             if (path === dir) bookmarkEntry.hasBookmark = true;
@@ -576,26 +561,6 @@ Page {
             main.activePage = {type: "dir", path: dir};
             navigate_syncNavStack();
             console.log("page: activating done --", dir);
-        }
-    }
-
-    function updateThumbnailsState() {
-        var showThumbs = settings.read("View/PreviewsShown", "false");
-        var viewMode = settings.read("View/ViewMode", "list");
-
-        if (settings.read("View/UseLocalSettings", "true") === "true") {
-            showThumbs = settings.read("Dolphin/PreviewsShown", showThumbs, dir+"/.directory");
-            viewMode = settings.read("Sailfish/ViewMode", viewMode, dir+"/.directory");
-        }
-
-        if (viewMode === "gallery") {
-            viewState = "gallery";
-        // } else if (viewMode === "grid") {
-        //    //
-        } else if (showThumbs === "true") {
-            viewState = "preview/" + settings.read("View/PreviewsSize", "medium");
-        } else {
-            viewState = "";
         }
     }
 
