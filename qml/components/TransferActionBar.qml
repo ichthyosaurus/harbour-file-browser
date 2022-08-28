@@ -20,6 +20,7 @@
 
 import QtQuick 2.2
 import Sailfish.Silica 1.0
+import harbour.file.browser.DirectorySettings 1.0
 
 Item {
     id: action
@@ -63,9 +64,10 @@ Item {
         }
     }
 
+    DirectorySettings { id: prefs; path: "" }
+
     Component.onCompleted: {
-        var defTransfer = settings.read("Transfer/DefaultAction", "");
-        if (defTransfer === "none") defTransfer = "";
-        action.selection = defTransfer;
+        var defTransfer = prefs.transferDefaultAction
+        action.selection = (defTransfer === "none" ? "" : defTransfer)
     }
 }

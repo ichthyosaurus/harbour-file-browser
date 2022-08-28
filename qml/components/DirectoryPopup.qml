@@ -22,6 +22,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import harbour.file.browser.DirectorySettings 1.0
 
 // This component displays a list of options on top of a page.
 // It has to be placed in the page root.
@@ -37,23 +38,21 @@ Item {
     property string _selectedMenu: ""
     property Item _contextMenu
 
-    property bool _hiddenShown: false
+    property bool _hiddenShown: prefs.viewHiddenFilesShown
 
     function show() {
         if (!_contextMenu) _contextMenu = contextMenuComponent.createObject(rect);
         _selectedMenu = "";
         _contextMenu.open(rect);
-
-        var useLocal = (settings.read("View/UseLocalSettings", "true") === "true");
-        var configPath = directory+"/.directory";
-        var currentGlobal = (settings.read("View/HiddenFilesShown", "false") === "true");
-        var current = currentGlobal;
-        if (useLocal) current = (settings.read("Settings/HiddenFilesShown", currentGlobal, configPath) === "true");
-        _hiddenShown = current;
     }
 
     on_SelectedMenuChanged: {
         if (_selectedMenu != "" && _contextMenu) _contextMenu.close();
+    }
+
+    DirectorySettings {
+        id: prefs
+        path: directory
     }
 
     DirectoryPopupBackground {
@@ -93,29 +92,9 @@ Item {
                                        path: directory
                                    });
                 } else if (_selectedMenu === "showHidden") {
-                    // TODO manage global/local, directory, and default values in SettingsHandler
-                    var useLocal = (settings.read("View/UseLocalSettings", "true") === "true");
-                    var configPath = directory+"/.directory";
-                    var currentGlobal = (settings.read("View/HiddenFilesShown", "false") === "true");
-                    var current = currentGlobal
-                    if (useLocal) current = (settings.read("Settings/HiddenFilesShown", currentGlobal, configPath) === "true");
-                    var toggled = !current
-
-                    // we don't update this here so that the label is not updated unnecessarily
-                    // _hiddenShown = toggled;
-
-                    if (useLocal) {
-                        if (toggled === currentGlobal) {
-                            settings.remove("Settings/HiddenFilesShown", configPath);
-                            console.log("DirPopup: hidden reset")
-                        } else {
-                            settings.write("Settings/HiddenFilesShown", toggled ? "true" : "false", configPath);
-                            console.log("DirPopup: hidden locally set to", toggled)
-                        }
-                    } else {
-                        settings.write("View/HiddenFilesShown", toggled ? "true" : "false");
-                        console.log("DirPopup: hidden globally set to", toggled)
-                    }
+                    console.log("DirPopup: hidden before ->", prefs.viewHiddenFilesShown)
+                    prefs.viewHiddenFilesShown = !prefs.viewHiddenFilesShown
+                    console.log("DirPopup: hidden after ->", prefs.viewHiddenFilesShown)
                 }
                 _selectedMenu = "";
             }
