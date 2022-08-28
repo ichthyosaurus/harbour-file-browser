@@ -32,23 +32,24 @@ QString suffixToIconName(QString suffix)
     if (suffix == "txt") return "file-txt";
     if (suffix == "rpm") return "file-rpm";
     if (suffix == "apk") return "file-apk";
+    if (suffix == "pdf") return "file-pdf";
     if (   suffix == "png"
         || suffix == "jpeg"
         || suffix == "jpg"
         || suffix == "gif") return "file-image";
-    if (   suffix == "wav"
-        || suffix == "mp3"
-        || suffix == "flac"
-        || suffix == "aac"
+    // if (   suffix == "odt") return "file-document";
+    if (   suffix == "mp3"
         || suffix == "ogg"
         || suffix == "opus"
+        || suffix == "aac"
+        || suffix == "flac"
+        || suffix == "wav"
         || suffix == "m4a") return "file-audio";
     if (   suffix == "mp4"
         || suffix == "mkv"
         || suffix == "ogv"
         || suffix == "avi"
         || suffix == "m4v") return "file-video";
-    if (suffix == "pdf") return "file-pdf";
     if (   suffix == "zip"
         || suffix == "tar"
         || suffix == "gz"
