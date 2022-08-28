@@ -27,6 +27,8 @@
 #include <QCoreApplication>
 #include "settingshandler.h"
 
+Settings* Settings::m_globalInstance = nullptr;
+
 Settings::Settings(QObject *parent) : QObject(parent) {
     QString newConfigDir = QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation);
     QString configFile = QCoreApplication::applicationName() + ".conf";
@@ -142,10 +144,26 @@ void Settings::writeVariant(QString key, const QVariant &value, QString fileName
         settings.setValue(key, value);
     }
 
-    emit settingsChanged(key, usingLocalConfig);
+    emit settingsChanged(key, usingLocalConfig, usingLocalConfig ? fileInfo.absoluteFilePath() : "");
     if (fileName != m_globalConfigPath || key.startsWith("View/")) {
-        emit viewSettingsChanged(usingLocalConfig ? fileInfo.dir().absolutePath() : "");
+        emit viewSettingsChanged(usingLocalConfig ? fileInfo.absolutePath() : "");
     }
+}
+
+bool Settings::hasKey(QString key, QString fileName)
+{
+    sanitizeKey(key);
+    if (fileName.isEmpty()) fileName = m_globalConfigPath;
+    QFileInfo fileInfo = QFileInfo(fileName);
+
+    if (!fileInfo.exists() || !fileInfo.isReadable() || pathIsProtected(fileName)) {
+        QMutexLocker locker(&m_mutex);
+        return getRuntimeSettings(fileInfo).contains(key);
+    }
+
+    flushRuntimeSettings(fileName);
+    QSettings settings(fileName, QSettings::IniFormat);
+    return settings.contains(key);
 }
 
 void Settings::sanitizeKey(QString& key) const {
@@ -185,9 +203,9 @@ void Settings::remove(QString key, QString fileName) {
         settings.remove(key);
     }
 
-    emit settingsChanged(key, usingLocalConfig);
+    emit settingsChanged(key, usingLocalConfig, usingLocalConfig ? fileInfo.absoluteFilePath() : "");
     if (usingLocalConfig || key.startsWith("View/")) {
-        emit viewSettingsChanged(usingLocalConfig ? fileInfo.dir().absolutePath() : "");
+        emit viewSettingsChanged(usingLocalConfig ? fileInfo.absolutePath() : "");
     }
 }
 
@@ -212,4 +230,14 @@ QStringList Settings::keys(QString group, QString fileName) {
     }
 
     return keys;
+}
+
+DirectorySettings::DirectorySettings(QObject* parent) : QObject(parent) {}
+
+DirectorySettings::DirectorySettings(QString path, QObject *parent) :
+    QObject(parent), m_path(path) {}
+
+DirectorySettings::~DirectorySettings()
+{
+    //
 }
