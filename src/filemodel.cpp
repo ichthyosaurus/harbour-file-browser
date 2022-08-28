@@ -37,6 +37,7 @@
 enum {
     FilenameRole = Qt::UserRole + 1,
     FileKindRole = Qt::UserRole + 2,
+    FileTypeRole = Qt::UserRole + 13,
     FileIconRole = Qt::UserRole + 3,
     PermissionsRole = Qt::UserRole + 4,
     SizeRole = Qt::UserRole + 5,
@@ -46,7 +47,7 @@ enum {
     IsLinkRole = Qt::UserRole + 9,
     SymLinkTargetRole = Qt::UserRole + 10,
     IsSelectedRole = Qt::UserRole + 11,
-    IsDoomedRole = Qt::UserRole + 12
+    IsDoomedRole = Qt::UserRole + 12,
 };
 
 FileModel::FileModel(QObject *parent) :
@@ -102,6 +103,12 @@ QVariant FileModel::data(const QModelIndex &index, int role) const
     case FileKindRole:
         return info.kind();
 
+    case FileTypeRole:
+        if (info.isDir()) return tr("folder");
+        if (!info.suffix().isEmpty()) return info.suffix().toLower();
+        if (info.isSymLink()) return tr("link");
+        return tr("file");
+
     case FileIconRole:
         return infoToIconName(info);
 
@@ -149,6 +156,7 @@ QHash<int, QByteArray> FileModel::roleNames() const
     QHash<int, QByteArray> roles = QAbstractListModel::roleNames();
     roles.insert(FilenameRole, QByteArray("filename"));
     roles.insert(FileKindRole, QByteArray("filekind"));
+    roles.insert(FileTypeRole, QByteArray("fileType"));
     roles.insert(FileIconRole, QByteArray("fileIcon"));
     roles.insert(PermissionsRole, QByteArray("permissions"));
     roles.insert(SizeRole, QByteArray("size"));
