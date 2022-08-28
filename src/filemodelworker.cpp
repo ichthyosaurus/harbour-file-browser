@@ -295,13 +295,25 @@ bool FileModelWorker::applySettings() {
         if (cancelIfCancelled()) return false;
     }
 
-     QString nameFilter = "*"+m_nameFilter+"*";
-     if (m_cachedDir.nameFilters().first() != nameFilter) {
-         m_cachedDir.setNameFilters({nameFilter});
-         settingsChanged = true;
-         logMessage("note: applied name filter '"+nameFilter+"'");
-         if (cancelIfCancelled()) return false;
-     }
+    auto currentFilters = m_cachedDir.nameFilters();
+
+    if (m_nameFilter.isEmpty()) {
+        if (!currentFilters.isEmpty()) {
+            m_cachedDir.setNameFilters({QStringLiteral("*")});
+            settingsChanged = true;
+            logMessage("note: name filter cleared");
+        }
+    } else {
+        QString nameFilter = "*"+m_nameFilter+"*";
+
+        if (currentFilters.first() != nameFilter) {
+            m_cachedDir.setNameFilters({nameFilter});
+            settingsChanged = true;
+            logMessage("note: applied name filter '"+nameFilter+"'");
+        }
+    }
+
+    if (cancelIfCancelled()) return false;
 
     if (!settingsChanged) {
         // this happens e.g. when deleting or renaming files
