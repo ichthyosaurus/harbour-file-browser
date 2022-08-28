@@ -21,14 +21,19 @@
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
+import harbour.file.browser.DirectorySettings 1.0
 import "../components"
 
-// TODO manage global/local, directory, and default values in SettingsHandler
 Page {
     id: page
     allowedOrientations: Orientation.All
     property string dir
     property bool _initialized: false
+
+    DirectorySettings {
+        id: prefs
+        path: dir
+    }
 
     SilicaFlickable {
         id: flickable
@@ -53,20 +58,13 @@ Page {
             SelectableListView {
                 id: sortList
                 title: qsTr("Sort by...")
+                onSelectionChanged: prefs.viewSortRole = newValue.toString()
 
                 model: ListModel {
                     ListElement { label: qsTr("Name"); value: "name" }
                     ListElement { label: qsTr("Size"); value: "size" }
                     ListElement { label: qsTr("Modification time"); value: "modificationtime" }
                     ListElement { label: qsTr("File type"); value: "type" }
-                }
-
-                onSelectionChanged: {
-                    if (useLocalSettings()) {
-                        settings.write("Dolphin/SortRole", newValue.toString(), getConfigPath());
-                    } else {
-                        settings.write("View/SortRole", newValue.toString());
-                    }
                 }
             }
 
@@ -75,18 +73,11 @@ Page {
             SelectableListView {
                 id: orderList
                 title: qsTr("Order...")
+                onSelectionChanged: prefs.viewSortOrder = newValue.toString()
 
                 model: ListModel {
                     ListElement { label: qsTr("default"); value: "default" }
                     ListElement { label: qsTr("reversed"); value: "reversed" }
-                }
-
-                onSelectionChanged: {
-                    if (useLocalSettings()) {
-                        settings.write("Dolphin/SortOrder", newValue.toString() === "default" ? "0" : "1", getConfigPath());
-                    } else {
-                        settings.write("View/SortOrder", newValue.toString());
-                    }
                 }
             }
 
@@ -105,11 +96,9 @@ Page {
                 }
 
                 onSelectionChanged: {
-                    if (newValue.toString() === "none") saveSetting("View/PreviewsShown", "Dolphin/PreviewsShown", "true", "false", "false")
-                    else {
-                        saveSetting("View/PreviewsShown", "Dolphin/PreviewsShown", "true", "false", "true")
-                        settings.write("View/PreviewsSize", newValue.toString());
-                    }
+                    if (newValue.toString() === "none") prefs.viewPreviewsShown = false
+                    else prefs.viewPreviewsShown = true
+                    prefs.viewPreviewsSize = newValue.toString()
                 }
             }
 
@@ -118,106 +107,44 @@ Page {
             TextSwitch {
                 id: showHiddenFiles
                 text: qsTr("Show hidden files")
-                onCheckedChanged: saveSetting("View/HiddenFilesShown", "Settings/HiddenFilesShown", "true", "false", showHiddenFiles.checked.toString())
+                onCheckedChanged: prefs.viewHiddenFilesShown = checked
             }
             TextSwitch {
                 id: enableGallery
                 text: qsTr("Enable gallery mode")
                 description: qsTr("In gallery mode, images will be shown comfortably large, "
                     + "and all entries except for images, videos, and directories will be hidden.")
-                onCheckedChanged: saveSetting("View/ViewMode", "Sailfish/ViewMode", "gallery", "list", enableGallery.checked ? "gallery" : "list", "gallery", "list")
+                onCheckedChanged: prefs.viewViewMode = (checked ? "gallery" : "list")
             }
             TextSwitch {
                 id: showDirsFirst
                 text: qsTr("Show folders first")
-                onCheckedChanged: saveSetting("View/ShowDirectoriesFirst", "Sailfish/ShowDirectoriesFirst", "true", "false", showDirsFirst.checked.toString())
+                onCheckedChanged: prefs.viewShowDirectoriesFirst = checked
             }
             TextSwitch {
                 id: sortCaseSensitive
                 text: qsTr("Sort case-sensitively")
-                onCheckedChanged: saveSetting("View/SortCaseSensitively", "Sailfish/SortCaseSensitively", "true", "false", sortCaseSensitive.checked.toString())
+                onCheckedChanged: prefs.viewSortCaseSensitively = checked
             }
         }
-    }
-
-    function getConfigPath() {
-        return dir+"/.directory";
-    }
-
-    function useLocalSettings() {
-        return settings.read("View/UseLocalSettings", "true") === "true";
     }
 
     function updateShownSettings() {
-        var useLocal = useLocalSettings();
-        if (useLocal) header.description = qsTr("Local preferences");
+        if (prefs.viewUseLocalSettings) header.description = qsTr("Local preferences");
         else header.description = qsTr("Global preferences");
-        var conf = getConfigPath();
 
-        var sort = settings.read("View/SortRole", "name");
-        var order = settings.read("View/SortOrder", "default");
+        sortList.initial = prefs.viewSortRole
+        orderList.initial = prefs.viewSortOrder
 
-        if (useLocal) {
-            sortList.initial = settings.read("Dolphin/SortRole", sort, conf);
-            orderList.initial = settings.read("Dolphin/SortOrder", order === "default" ? "0" : "1", conf) === "0" ? "default" : "reversed";
-        } else {
-            sortList.initial = sort;
-            orderList.initial = order;
-        }
+        showDirsFirst.checked = prefs.viewShowDirectoriesFirst
+        enableGallery.checked = (prefs.viewViewMode === "gallery")
+        sortCaseSensitive.checked = prefs.viewSortCaseSensitively
+        showHiddenFiles.checked = prefs.viewHiddenFilesShown
 
-        var dirsFirst = settings.read("View/ShowDirectoriesFirst", "true");
-        var withGallery = settings.read("View/ViewMode", "list");
-        var caseSensitive = settings.read("View/SortCaseSensitively", "false");
-        var showHidden = settings.read("View/HiddenFilesShown", "false");
-        var showThumbs = settings.read("View/PreviewsShown", "false");
-
-        if (useLocal) {
-            showDirsFirst.checked = (settings.read("Sailfish/ShowDirectoriesFirst", dirsFirst, conf) === "true");
-            enableGallery.checked = (settings.read("Sailfish/ViewMode", withGallery, conf) === "gallery");
-            sortCaseSensitive.checked = (settings.read("Sailfish/SortCaseSensitively", caseSensitive, conf) === "true");
-            showHiddenFiles.checked = (settings.read("Settings/HiddenFilesShown", showHidden, conf) === "true");
-            showThumbs = settings.read("Dolphin/PreviewsShown", showThumbs, conf);
-        } else {
-            showDirsFirst.checked = (dirsFirst === "true");
-            enableGallery.checked = (withGallery === "gallery");
-            sortCaseSensitive.checked = (caseSensitive === "true");
-            showHiddenFiles.checked = (showHidden === "true");
-        }
-
-        if (showThumbs === "true") thumbList.initial = settings.read("View/PreviewsSize", "medium");
+        if (prefs.viewPreviewsShown) thumbList.initial = prefs.viewPreviewsSize
         else thumbList.initial = "none";
 
         if (!_initialized) _initialized = true;
-    }
-
-    function saveSetting(keyGlobal, keyLocal, trueLocal, falseLocal, valueStr, trueGlobal, falseGlobal) {
-        if (!_initialized) return;
-
-        if (!trueGlobal) trueGlobal = "true"
-        if (!falseGlobal) falseGlobal = "false"
-
-        if (useLocalSettings()) {
-            var currentGlobal = settings.read(keyGlobal) === trueLocal ? trueGlobal : falseGlobal;
-
-            if (valueStr === currentGlobal) {
-                // If the new value matches the currently set global setting,
-                // we remove the local setting. This makes sure that local settings
-                // are updated as expected when global setting change. We assume
-                // that users don't want to "set this setting locally to a fixed value",
-                // but instead want to "enable" or "disable" a setting. For example:
-                // hidden files are globally hidden; the user shows them explicitly
-                // via the local settings. The user hides them again but sets the
-                // global setting so they are shown. The user expects them now the
-                // be shown in all directories. If we would simply save "hidden
-                // file are hidden here", then the user would have to change the
-                // local settings again, which is counterintuitive.
-                settings.remove(keyLocal, getConfigPath());
-            } else {
-                settings.write(keyLocal, (valueStr === trueGlobal ? trueLocal : falseLocal), getConfigPath());
-            }
-        } else {
-            settings.write(keyGlobal, valueStr);
-        }
     }
 
     Component.onCompleted: {
