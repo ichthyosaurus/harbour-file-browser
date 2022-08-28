@@ -23,6 +23,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
+import harbour.file.browser.DirectorySettings 1.0
 
 import "../components"
 import "../js/bookmarks.js" as Bookmarks
@@ -48,6 +49,7 @@ Page {
     property bool navMenuIconShown: (settings.read("General/ShowNavigationMenuIcon", "true") === "true")
 
     property string viewState: updateThumbnailsState() // state for list delegates
+    property bool sectionsEnabled: prefs.viewSortRole === "type"
     property int _baseIconSize: (viewState === '' || viewState === 'gallery') ? Theme.iconSizeSmall : _baseEntryHeight
     property bool _thumbnailsEnabled: viewState !== '' && viewState !== 'gallery'
     property int _baseEntryHeight: {
@@ -81,6 +83,11 @@ Page {
     onMarkAsDoomed: {
         clearSelectedFiles()
         fileModel.markAsDoomed(files)
+    }
+
+    DirectorySettings {
+        id: prefs
+        path: dir
     }
 
     FileModel {
@@ -344,6 +351,28 @@ Page {
             }
 
             Spacer { id: footerSpacer }
+        }
+
+        section.property: sectionsEnabled ? "fileType" : ""
+        section.criteria: ViewSection.FullString
+        section.labelPositioning: ViewSection.InlineLabels
+        section.delegate: Component {
+            Column {
+                spacing: 0
+                x: Theme.horizontalPageMargin
+                width: fileList.width - 2*Theme.horizontalPageMargin
+
+                Spacer { height: Theme.paddingLarge }
+                Label {
+                    width: parent.width
+                    text: section
+                    font.pixelSize: Theme.fontSizeMedium
+                    horizontalAlignment: Text.AlignRight
+                    verticalAlignment: Text.AlignBottom
+                    color: Theme.secondaryHighlightColor
+                }
+                Spacer { height: Theme.paddingMedium }
+            }
         }
 
         delegate: Component {
