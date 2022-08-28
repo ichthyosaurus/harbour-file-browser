@@ -356,10 +356,10 @@ void FileModelWorker::sortByModTime(QList<StatFileInfo> &files, bool reverse, in
         }
     };
 
-    if (dirsFirstCount > 0) {
+    if (dirsFirstCount > 0 && dirsFirstCount < files.length()) {
         // QDir placed dirs already at the beginning, so we can just sort
         // two ranges (dirs and files).
-        std::sort(files.begin(), files.begin()+dirsFirstCount-1, doSort);
+        std::sort(files.begin(), files.begin()+dirsFirstCount, doSort);
         std::sort(files.begin()+dirsFirstCount, files.end(), doSort);
     } else {
         // we sort everything at once without taking care of dirs
