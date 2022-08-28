@@ -58,13 +58,13 @@ FileModel::FileModel(QObject *parent) :
     m_dir = "";
 
     m_watcher = new QFileSystemWatcher(this);
-    connect(m_watcher, SIGNAL(directoryChanged(const QString&)), this, SLOT(refresh()));
-    connect(m_watcher, SIGNAL(fileChanged(const QString&)), this, SLOT(refresh()));
+    connect(m_watcher, &QFileSystemWatcher::directoryChanged, this, &FileModel::refresh);
+    connect(m_watcher, &QFileSystemWatcher::fileChanged, this, &FileModel::refresh);
 
     // refresh model every time view settings are changed
     m_settings = qApp->property("settings").value<Settings*>();
-    connect(m_settings, SIGNAL(viewSettingsChanged(QString)), this, SLOT(refreshFull(QString)));
-    connect(this, SIGNAL(filterStringChanged()), this, SLOT(applyFilterString()));
+    connect(m_settings, &Settings::viewSettingsChanged, this, &FileModel::refreshFull);
+    connect(this, &FileModel::filterStringChanged, this, &FileModel::applyFilterString);
 
     // sync worker status
     connect(m_worker, &FileModelWorker::done, this, &FileModel::workerDone);
