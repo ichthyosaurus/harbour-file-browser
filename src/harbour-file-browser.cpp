@@ -118,8 +118,8 @@ int main(int argc, char *argv[])
     // setup global settings object
     QScopedPointer<Settings> settings(Settings::instance());
     QVariant settingsVariant = QVariant::fromValue(settings.data());
-    qApp->setProperty("settings", settingsVariant); // store as singleton
-    view->rootContext()->setContextProperty("settings", settings.data()); // expose to QML
+    qApp->setProperty("rawSettings", settingsVariant); // store as singleton
+    view->rootContext()->setContextProperty("rawSettings", settings.data()); // expose to QML
 
     // setup global engine object
     QScopedPointer<Engine> engine(new Engine);
