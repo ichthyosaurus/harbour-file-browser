@@ -88,7 +88,6 @@ Dialog {
                                  isSelected: false, mimeType: mimeType,
                                  excluded: excluded
                              });
-            console.log("match added:", filename);
         }
         onWorkerErrorOccurred: {
             // TODO is there anything worth showing?
@@ -111,11 +110,6 @@ Dialog {
             // given text as the search query
             function update(text) {
                 clear();
-                // placeholder entry: will be replaced by 'remove last part of path'
-                listModel.append({ fullname: '(dummy)', filename: '/', absoluteDir: '/',
-                                     fileIcon: '', fileKind: '', mimeType: '',
-                                     excluded: false, isSelected: false
-                                 });
                 searchEngine.filterDirectories(text);
                 console.log("dir filter started:", text);
             }
@@ -125,7 +119,7 @@ Dialog {
 
         header: Item {
             width: parent.width
-            height: head.height+Theme.itemSizeMedium+Theme.paddingSmall
+            height: head.height + Theme.itemSizeMedium + clearLastButton.contentHeight + Theme.paddingSmall
 
             DialogHeader {
                 id: head
@@ -201,54 +195,70 @@ Dialog {
                     }
                 }
             }
+
+            ListItem {
+                id: clearLastButton
+                anchors { top: pathField.bottom; topMargin: Theme.paddingSmall }
+                width: parent.width
+                contentHeight: Theme.itemSizeMedium * 0.9 // two line delegate
+
+                onClicked: {
+                    var newPath = path;
+                    newPath = newPath.replace(/\/$/, '')
+                    newPath = '/'+Paths.dirName(newPath)
+                    newPath = newPath.replace(/\/+/g, '/')
+                    pathReplaced(newPath)
+                }
+
+                Icon {
+                    source: "image://theme/icon-m-backspace"
+                    anchors {
+                        right: clearButtonLabel.left; rightMargin: Theme.paddingMedium
+                        verticalCenter: clearButtonLabel.verticalCenter
+                    }
+                }
+
+                Label {
+                    id: clearButtonLabel
+                    anchors {
+                        bottom: parent.bottom
+                        top: parent.top
+                        left: parent.left; leftMargin: _searchLeftMargin
+                        right: parent.right; rightMargin: Theme.horizontalPageMargin
+                    }
+                    verticalAlignment: Text.AlignVCenter
+                    text: qsTr("Remove last part")
+                    truncationMode: TruncationMode.Fade
+                }
+            }
         }
 
         delegate: Component {
             Loader {
+                height: Theme.itemSizeMedium * 0.9
+                asynchronous: true
+
                 sourceComponent: Component {
                     ListItem {
                         id: listItem
                         width: dialog.width
-                        // contentHeight: Theme.itemSizeMedium // two line delegate
-                        contentHeight: Theme.itemSizeSmall // single line delegate
+                        contentHeight: Theme.itemSizeMedium * 0.9 // two line delegate
                         enabled: !excluded
-                        onClicked: {
-                            if (index > 0) {
-                                dialog.suggestionSelected(filename)
-                            } else {
-                                var newPath = path;
-                                newPath = newPath.replace(/\/$/, '')
-                                newPath = '/'+Paths.dirName(newPath)
-                                newPath = newPath.replace(/\/+/g, '/')
-                                pathReplaced(newPath)
-                            }
-                        }
+                        onClicked: dialog.suggestionSelected(filename)
 
                         // we don't want this to be animated because the list changes to quickly
                         // ListView.onRemove: animateRemoval(listItem)
                         FileData { id: fileData }
-
-                        Icon {
-                            visible: index == 0
-                            source: "image://theme/icon-m-backspace"
-                            anchors {
-                                right: upper.left; rightMargin: Theme.paddingMedium
-                                verticalCenter: upper.verticalCenter
-                            }
-                        }
 
                         Label {
                             id: upper
                             anchors {
                                 left: parent.left; leftMargin: _searchLeftMargin
                                 right: parent.right; rightMargin: Theme.horizontalPageMargin
-                                bottom: index > 0 ? parent.verticalCenter : parent.bottom
-                                top: index > 0 ? undefined : parent.top
+                                bottom: parent.verticalCenter
                             }
-                            verticalAlignment: index > 0 ? Text.AlignBottom : Text.AlignVCenter
-                            text: index > 0 ?
-                                      Theme.highlightText(filename, dialog._pathRegex, Theme.highlightColor) :
-                                      qsTr("Remove last part")
+                            verticalAlignment: Text.AlignBottom
+                            text: Theme.highlightText(filename, dialog._pathRegex, Theme.highlightColor)
                             truncationMode: _nameTruncMode
                             elide: _nameElideMode
                             textFormat: Text.StyledText
@@ -260,7 +270,6 @@ Dialog {
 
                         Label {
                             id: infoLabel
-                            visible: index > 0
                             anchors {
                                 left: parent.left; leftMargin: _searchLeftMargin
                                 right: parent.right; rightMargin: Theme.horizontalPageMargin
