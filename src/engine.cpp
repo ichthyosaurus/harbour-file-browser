@@ -43,14 +43,12 @@ Engine::Engine(QObject *parent) :
     m_fileWorker = new FileWorker;
 
     // update progress property when worker progresses
-    connect(m_fileWorker, SIGNAL(progressChanged(int, QString)),
-            this, SLOT(setProgress(int, QString)));
+    connect(m_fileWorker, &FileWorker::progressChanged, this, &Engine::setProgress);
 
     // pass worker end signals to QML
-    connect(m_fileWorker, SIGNAL(done()), this, SIGNAL(workerDone()));
-    connect(m_fileWorker, SIGNAL(errorOccurred(QString, QString)),
-            this, SIGNAL(workerErrorOccurred(QString, QString)));
-    connect(m_fileWorker, SIGNAL(fileDeleted(QString)), this, SIGNAL(fileDeleted(QString)));
+    connect(m_fileWorker, &FileWorker::done, this, &Engine::workerDone);
+    connect(m_fileWorker, &FileWorker::errorOccurred, this, &Engine::workerErrorOccurred);
+    connect(m_fileWorker, &FileWorker::fileDeleted, this, &Engine::fileDeleted);
 }
 
 Engine::~Engine()
@@ -182,11 +180,13 @@ static QStringList subdirs(const QString &dirname, bool includeHidden = false)
     QDir::Filter hiddenFilter = includeHidden ? QDir::Hidden : static_cast<QDir::Filter>(0);
     dir.setFilter(QDir::AllDirs | QDir::NoDotAndDotDot | hiddenFilter);
 
-    QStringList list = dir.entryList();
+    const QStringList list = dir.entryList();
     QStringList abslist;
-    foreach (QString relpath, list) {
+
+    for (const auto& relpath : list) {
         abslist.append(dir.absoluteFilePath(relpath));
     }
+
     return abslist;
 }
 
@@ -234,7 +234,7 @@ QVariantList Engine::externalDrives() const
     // all candidates eliminated, abort
     if (candidates.isEmpty()) return QVariantList();
 
-    foreach (QString drive, candidates) {
+    for (const auto& drive : std::as_const(candidates)) {
         QVariantMap data;
         data.insert("path", drive);
 
@@ -287,7 +287,7 @@ QString Engine::pdfViewerPath()
         if (!QFileInfo::exists(
                     QStringLiteral("/usr/lib64/") +
                     QStringLiteral("qt5/qml/Sailfish/Office/PDFDocumentPage.qml"))) {
-            m_pdfViewerPath = QStringLiteral("");
+            m_pdfViewerPath = QLatin1String("");
         }
     }
 
@@ -561,11 +561,11 @@ QMap<QString, QString> Engine::mountPoints() const
     QString result = in.readAll();
 
     // split result to lines
-    QStringList lines = result.split(QRegExp("[\n\r]"));
+    const QStringList lines = result.split(QRegExp("[\n\r]"));
 
     // get columns
     QMap<QString, QString> paired;
-    foreach (QString line, lines) {
+    for (const auto& line : lines) {
         QStringList columns = line.split(QRegExp("\\s+"), QString::SkipEmptyParts);
         if (columns.count() < 6) continue; // sanity check
         paired[columns.at(1)] = columns.at(0);
