@@ -37,13 +37,13 @@ class QFileInfo;
 //
 // Values are non-notifyable.
 
-class Settings : public QObject
+class RawSettingsHandler : public QObject
 {
     Q_OBJECT
 
 public:
-    explicit Settings(QObject *parent = nullptr);
-    virtual ~Settings();
+    explicit RawSettingsHandler(QObject *parent = nullptr);
+    virtual ~RawSettingsHandler();
 
     Q_INVOKABLE bool pathIsProtected(QString path) const;
     Q_INVOKABLE QString read(QString key, QString defaultValue = QString(), QString fileName = QString());
@@ -55,8 +55,8 @@ public:
     void writeVariant(QString key, const QVariant& value, QString fileName = QString());
     bool hasKey(QString key, QString fileName = QString());
 
-    static Settings* instance(QObject* parent = nullptr) {
-        if (m_globalInstance == nullptr) m_globalInstance = new Settings(parent);
+    static RawSettingsHandler* instance(QObject* parent = nullptr) {
+        if (m_globalInstance == nullptr) m_globalInstance = new RawSettingsHandler(parent);
         return m_globalInstance;
     }
 
@@ -77,7 +77,7 @@ private:
     QString m_globalConfigPath;
     QMutex m_mutex;
 
-    static Settings* m_globalInstance;
+    static RawSettingsHandler* m_globalInstance;
 };
 
 
@@ -129,7 +129,7 @@ private:
             emit NAME##Changed(); \
         } \
     } \
-    private: QMetaObject::Connection conn_##NAME {connect(Settings::instance(), &Settings::settingsChanged, \
+    private: QMetaObject::Connection conn_##NAME {connect(RawSettingsHandler::instance(), &RawSettingsHandler::settingsChanged, \
         this, &DirectorySettings::handle_##NAME)};
 
     //
@@ -198,8 +198,8 @@ private:
         // a local settings file is specified. Otherwise write global settings.
         if (   !m_localFile.isEmpty()
             && !localKey.isEmpty()
-            && Settings::instance()->read(QSL("View/UseLocalSettings"), QSL("true")) == QSL("true")) {
-            if (newValue == globalMap.value(Settings::instance()->read(globalKey, globalMap.defaultValue.first), globalMap.defaultValue.second)) {
+            && RawSettingsHandler::instance()->read(QSL("View/UseLocalSettings"), QSL("true")) == QSL("true")) {
+            if (newValue == globalMap.value(RawSettingsHandler::instance()->read(globalKey, globalMap.defaultValue.first), globalMap.defaultValue.second)) {
                 // If the new value matches the currently set global setting,
                 // we remove the local setting. This makes sure that local settings
                 // are updated as expected when global settings change. We assume
@@ -211,12 +211,12 @@ private:
                 // be shown in all directories. If we would simply save "hidden
                 // files are hidden here", then the user would have to change the
                 // local settings again, which is counterintuitive and annoying.
-                Settings::instance()->remove(localKey, m_localFile);
+                RawSettingsHandler::instance()->remove(localKey, m_localFile);
             } else {
-                Settings::instance()->write(localKey, localMap.key(newValue), m_localFile);
+                RawSettingsHandler::instance()->write(localKey, localMap.key(newValue), m_localFile);
             }
         } else {
-            Settings::instance()->write(globalKey, globalMap.key(newValue));
+            RawSettingsHandler::instance()->write(globalKey, globalMap.key(newValue));
         }
     }
 
@@ -227,11 +227,11 @@ private:
         // Otherwise read global settings.
         if (   !m_localFile.isEmpty()
             && !localKey.isEmpty()
-            && Settings::instance()->read(QSL("View/UseLocalSettings"), QSL("true")) == QSL("true")
-            && Settings::instance()->hasKey(localKey, m_localFile)) {
-            return localMap.value(Settings::instance()->read(localKey, QSL(""), m_localFile), globalMap.defaultValue.second);
+            && RawSettingsHandler::instance()->read(QSL("View/UseLocalSettings"), QSL("true")) == QSL("true")
+            && RawSettingsHandler::instance()->hasKey(localKey, m_localFile)) {
+            return localMap.value(RawSettingsHandler::instance()->read(localKey, QSL(""), m_localFile), globalMap.defaultValue.second);
         } else {
-            return globalMap.value(Settings::instance()->read(globalKey, globalMap.defaultValue.first), globalMap.defaultValue.second);
+            return globalMap.value(RawSettingsHandler::instance()->read(globalKey, globalMap.defaultValue.first), globalMap.defaultValue.second);
         }
     }
 };

@@ -29,7 +29,7 @@
 #include "statfileinfo.h"
 #include "filemodelworker.h"
 
-class Settings;
+class RawSettingsHandler;
 
 /**
  * @brief The FileModel class can be used as a model in a ListView to display a list of files
@@ -142,7 +142,7 @@ private:
     QString m_errorMessage;
     bool m_active;
     QFileSystemWatcher *m_watcher;
-    Settings* m_settings;
+    RawSettingsHandler* m_settings;
     FileModelWorker* m_worker;
     FileModelWorker::Mode m_scheduledRefresh = {FileModelWorker::Mode::NoneMode};
     bool m_busy = {false};

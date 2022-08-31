@@ -116,7 +116,7 @@ int main(int argc, char *argv[])
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
     // setup global settings object
-    QScopedPointer<Settings> settings(Settings::instance());
+    QScopedPointer<RawSettingsHandler> settings(RawSettingsHandler::instance());
     QVariant settingsVariant = QVariant::fromValue(settings.data());
     qApp->setProperty("rawSettings", settingsVariant); // store as singleton
     view->rootContext()->setContextProperty("rawSettings", settings.data()); // expose to QML

@@ -27,9 +27,9 @@
 #include <QCoreApplication>
 #include "settingshandler.h"
 
-Settings* Settings::m_globalInstance = nullptr;
+RawSettingsHandler* RawSettingsHandler::m_globalInstance = nullptr;
 
-Settings::Settings(QObject *parent) : QObject(parent) {
+RawSettingsHandler::RawSettingsHandler(QObject *parent) : QObject(parent) {
     QString newConfigDir = QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation);
     QString configFile = QCoreApplication::applicationName() + ".conf";
     QSettings global(newConfigDir + "/" + configFile, QSettings::IniFormat);
@@ -40,11 +40,11 @@ Settings::Settings(QObject *parent) : QObject(parent) {
     }
 }
 
-Settings::~Settings() {
+RawSettingsHandler::~RawSettingsHandler() {
     //
 }
 
-bool Settings::pathIsProtected(QString path) const {
+bool RawSettingsHandler::pathIsProtected(QString path) const {
     QString absolutePath = QFileInfo(path).absoluteFilePath();
 
     if (   absolutePath.startsWith(QDir::home().absolutePath()) /* user's home directory */
@@ -57,7 +57,7 @@ bool Settings::pathIsProtected(QString path) const {
     return true; // protected
 }
 
-void Settings::flushRuntimeSettings(QString fileName) {
+void RawSettingsHandler::flushRuntimeSettings(QString fileName) {
     QFileInfo fileInfo = QFileInfo(fileName);
     QMutexLocker locker(&m_mutex);
 
@@ -79,15 +79,15 @@ void Settings::flushRuntimeSettings(QString fileName) {
     }
 }
 
-bool Settings::hasRuntimeSettings(QFileInfo file) const {
+bool RawSettingsHandler::hasRuntimeSettings(QFileInfo file) const {
     return m_runtimeSettings.contains(file.absoluteFilePath());
 }
 
-QMap<QString, QVariant>& Settings::getRuntimeSettings(QFileInfo file) {
+QMap<QString, QVariant>& RawSettingsHandler::getRuntimeSettings(QFileInfo file) {
     return m_runtimeSettings[file.absoluteFilePath()];
 }
 
-bool Settings::isWritable(QFileInfo fileInfo) const {
+bool RawSettingsHandler::isWritable(QFileInfo fileInfo) const {
     // Check whether the file is writable. If it does not exist, check if
     // its parent directory can be written to.
     // Use this method instead of plain QFileInfo::isWritable!
@@ -102,7 +102,7 @@ bool Settings::isWritable(QFileInfo fileInfo) const {
     }
 }
 
-QVariant Settings::readVariant(QString key, const QVariant &defaultValue, QString fileName) {
+QVariant RawSettingsHandler::readVariant(QString key, const QVariant &defaultValue, QString fileName) {
     sanitizeKey(key);
     if (fileName.isEmpty()) fileName = m_globalConfigPath;
     QFileInfo fileInfo = QFileInfo(fileName);
@@ -117,11 +117,11 @@ QVariant Settings::readVariant(QString key, const QVariant &defaultValue, QStrin
     return settings.value(key, defaultValue);
 }
 
-QString Settings::read(QString key, QString defaultValue, QString fileName) {
+QString RawSettingsHandler::read(QString key, QString defaultValue, QString fileName) {
     return readVariant(key, defaultValue, fileName).toString();
 }
 
-void Settings::writeVariant(QString key, const QVariant &value, QString fileName) {
+void RawSettingsHandler::writeVariant(QString key, const QVariant &value, QString fileName) {
     sanitizeKey(key);
     bool usingLocalConfig = true;
 
@@ -150,7 +150,7 @@ void Settings::writeVariant(QString key, const QVariant &value, QString fileName
     }
 }
 
-bool Settings::hasKey(QString key, QString fileName)
+bool RawSettingsHandler::hasKey(QString key, QString fileName)
 {
     sanitizeKey(key);
     if (fileName.isEmpty()) fileName = m_globalConfigPath;
@@ -166,7 +166,7 @@ bool Settings::hasKey(QString key, QString fileName)
     return settings.contains(key);
 }
 
-void Settings::sanitizeKey(QString& key) const {
+void RawSettingsHandler::sanitizeKey(QString& key) const {
     // Replace all but the first occurrence of '/' by '#',
     // so '/' can appear without being treated as divider for sub-groups.
     // This is needed for saving paths as keys (eg. for bookmarks).
@@ -178,11 +178,11 @@ void Settings::sanitizeKey(QString& key) const {
     key.replace(pos, 1, '/');
 }
 
-void Settings::write(QString key, QString value, QString fileName) {
+void RawSettingsHandler::write(QString key, QString value, QString fileName) {
     writeVariant(key, value, fileName);
 }
 
-void Settings::remove(QString key, QString fileName) {
+void RawSettingsHandler::remove(QString key, QString fileName) {
     sanitizeKey(key);
     bool usingLocalConfig = true;
     if (fileName.isEmpty()) {
@@ -209,7 +209,7 @@ void Settings::remove(QString key, QString fileName) {
     }
 }
 
-QStringList Settings::keys(QString group, QString fileName) {
+QStringList RawSettingsHandler::keys(QString group, QString fileName) {
     if (fileName.isEmpty()) fileName = m_globalConfigPath;
     QFileInfo fileInfo = QFileInfo(fileName);
     QStringList keys;
