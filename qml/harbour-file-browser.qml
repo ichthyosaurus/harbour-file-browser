@@ -22,6 +22,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import harbour.file.browser.DirectorySettings 1.0
 
 import "pages"
 import "js/navigation.js" as Navigation
@@ -39,6 +40,8 @@ ApplicationWindow {
     // the view to rotate back and forth between orientations.
     // [as of 2021-02-17, SFOS 3.4.0.24, sailfishsilica-qt5 version 1.1.110.3-1.33.3.jolla]
     _defaultPageOrientations: Orientation.All
+
+    readonly property DirectorySettings globalSettings: DirectorySettings {}
 
     signal bookmarkAdded(var path)
     signal bookmarkRemoved(var path)
@@ -165,7 +168,7 @@ ApplicationWindow {
         color: Theme.colorScheme === Theme.LightOnDark ?
                    Theme.highlightDimmerColor :
                    Theme.overlayBackgroundColor
-        opacity: (settings.read("General/SolidWindowBackground", "false") === "true") ? 1.0 : 0.0
+        opacity: globalSettings.generalSolidWindowBackground ? 1.0 : 0.0
         Behavior on opacity { FadeAnimator { duration: 100 } }
     }
 

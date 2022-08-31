@@ -38,7 +38,7 @@ Page {
     property bool startImmediately: false // if search text is given, start search as soon as page is ready
 
     property bool _initialSearchDone: false
-    property string _fnElide: settings.read("General/FilenameElideMode", "fade")
+    property string _fnElide: globalSettings.generalFilenameElideMode
     property int nameTruncMode: _fnElide === 'fade' ? TruncationMode.Fade : TruncationMode.Elide
     property int nameElideMode: nameTruncMode === TruncationMode.Fade ?
                                     Text.ElideNone : (_fnElide === 'middle' ?
@@ -411,15 +411,6 @@ Page {
                 if (remorsePopupActive) return;
                 if (transferPanel.status === Loader.Ready) transferPanel.item.startTransfer(toTransfer, targets, selectedAction, goToTarget);
                 else notificationPanel.showText(qsTr("Internally not ready"), qsTr("Please simply try again"));
-            }
-        }
-    }
-
-    Connections {
-        target: settings
-        onSettingsChanged: {
-            if (key === 'General/FilenameElideMode') {
-                page._fnElide = settings.read("General/FilenameElideMode", "fade");
             }
         }
     }
