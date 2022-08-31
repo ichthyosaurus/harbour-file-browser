@@ -104,7 +104,7 @@ int main(int argc, char *argv[])
     qRegisterMetaType<QList<StatFileInfo>>("QList<StatFileInfo>");
     qmlRegisterType<FileModel>("harbour.file.browser.FileModel", 1, 0, "FileModel");
     qmlRegisterType<FileData>("harbour.file.browser.FileData", 1, 0, "FileData");
-    qmlRegisterType<DirectorySettings>("harbour.file.browser.DirectorySettings", 1, 0, "DirectorySettings");
+    qmlRegisterType<DirectorySettings>("harbour.file.browser.Settings", 1, 0, "DirectorySettings");
     qmlRegisterType<SearchEngine>("harbour.file.browser.SearchEngine", 1, 0, "SearchEngine");
     qmlRegisterType<ConsoleModel>("harbour.file.browser.ConsoleModel", 1, 0, "ConsoleModel");
 

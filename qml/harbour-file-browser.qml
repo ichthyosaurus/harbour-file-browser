@@ -22,7 +22,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import harbour.file.browser.DirectorySettings 1.0
+import harbour.file.browser.Settings 1.0
 
 import "pages"
 import "js/navigation.js" as Navigation

@@ -22,7 +22,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import harbour.file.browser.DirectorySettings 1.0
+import harbour.file.browser.Settings 1.0
 
 // This component displays a list of options on top of a page.
 // It has to be placed in the page root.
