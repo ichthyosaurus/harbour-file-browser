@@ -46,6 +46,10 @@ TRANSLATIONS = \
 #   - translation filenames have to be changed
 TARGET = harbour-file-browser
 
+# require the C++17 standard to be able to use std::as_const
+# Note: old Qt only recognizes up to "c++14" as valid config options
+CONFIG += c++1z
+
 # configure Harbour compliance:
 # some features must be disabled for the official store
 HARBOUR_COMPLIANCE=$$HARBOUR_COMPLIANCE

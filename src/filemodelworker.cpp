@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2021 Mirian Margiani
+ * SPDX-FileCopyrightText: 2021-2022 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -154,14 +154,14 @@ void FileModelWorker::doReadDiff()
     // populate new hashes and lookup table
     // NOTE If necessary we could merge this in the loop
     // where we initially load the new file list.
-    for (const auto& info : newEntries) {
+    for (const auto& info : std::as_const(newEntries)) {
         newHashes.append(qHash(info));
         newLookup.insert(newHashes.last());
         if (cancelIfCancelled()) return;
     }
 
     // populate old hashes and lookup table
-    for (const auto& info : m_oldEntries) {
+    for (const auto& info : std::as_const(m_oldEntries)) {
         oldHashes.append(qHash(info));
         oldLookup.insert(oldHashes.last());
     }

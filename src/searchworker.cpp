@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2013-2014 Kari Pihkala
  * SPDX-FileCopyrightText: 2018 Marcin Mielniczuk
- * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -102,7 +102,7 @@ QString SearchWorker::searchFilesRecursive(QString directory, QString searchTerm
 
     // search dirs
     QStringList names = dir.entryList(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::System | hidden);
-    for (auto filename : names) {
+    for (const auto& filename : std::as_const(names)) {
         // stop if cancelled
         if (m_cancelled.loadAcquire() == Cancelled) {
             return QString();
@@ -124,7 +124,7 @@ QString SearchWorker::searchFilesRecursive(QString directory, QString searchTerm
 
     // search files
     names = dir.entryList(QDir::Files | hidden);
-    for (auto filename : names) {
+    for (const auto& filename : std::as_const(names)) {
         // stop if cancelled
         if (m_cancelled.loadAcquire() == Cancelled) {
             return QString();
@@ -162,8 +162,9 @@ QString SearchWorker::searchDirectoriesShallow(QString directory, QString search
 
     // search dirs
     int count = 0;
-    QStringList names = dir.entryList(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::System | hidden);
-    for (auto filename : names) {
+    const QStringList names = dir.entryList(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::System | hidden);
+
+    for (const auto& filename : names) {
         // stop if cancelled
         if (m_cancelled.loadAcquire() == Cancelled) {
             return QString();
