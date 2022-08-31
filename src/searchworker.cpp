@@ -22,7 +22,7 @@
 
 #include "searchworker.h"
 #include <QDateTime>
-#include <QSettings>
+#include "settingshandler.h"
 #include "globals.h"
 
 SearchWorker::SearchWorker(QObject *parent) :
@@ -92,8 +92,16 @@ QString SearchWorker::searchFilesRecursive(QString directory, QString searchTerm
     m_currentDirectory = directory;
     emit progressChanged(m_currentDirectory);
 
-    QSettings settings;
-    bool hiddenSetting = settings.value("View/HiddenFilesShown", false).toBool();
+    bool hiddenSetting = false;
+    if (searchTerm.startsWith('.')) {
+        // always include hidden directories if we (maybe) explicitly search for one
+        hiddenSetting = true;
+    } else {
+        QScopedPointer<DirectorySettings> settings(new DirectorySettings());
+        settings->setPath(directory);
+        hiddenSetting = settings->get_viewHiddenFilesShown();
+    }
+
     QDir::Filter hidden = hiddenSetting ? QDir::Hidden : static_cast<QDir::Filter>(0);
 
     int count = 0;
@@ -150,14 +158,16 @@ QString SearchWorker::searchDirectoriesShallow(QString directory, QString search
     m_currentDirectory = directory;
     emit progressChanged(m_currentDirectory);
 
-    bool hiddenSetting;
+    bool hiddenSetting = false;
     if (searchTerm.startsWith('.')) {
         // always include hidden directories if we explicitly search for one
         hiddenSetting = true;
     } else {
-        QSettings settings;
-        hiddenSetting = settings.value("View/HiddenFilesShown", false).toBool();
+        QScopedPointer<DirectorySettings> settings(new DirectorySettings());
+        settings->setPath(directory);
+        hiddenSetting = settings->get_viewHiddenFilesShown();
     }
+
     QDir::Filter hidden = hiddenSetting ? QDir::Hidden : static_cast<QDir::Filter>(0);
 
     // search dirs
