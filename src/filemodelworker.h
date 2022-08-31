@@ -27,7 +27,7 @@
 #include <functional>
 #include "statfileinfo.h"
 
-class Settings;
+class DirectorySettings;
 
 /**
  * @brief This class loads filtered and sorted directory listings.
@@ -49,9 +49,9 @@ public:
     void cancel();
 
     // call to start the thread
-    void startReadFull(QString dir, QString nameFilter, Settings* settings);
+    void startReadFull(QString dir, QString nameFilter);
     void startReadChanged(QList<StatFileInfo> oldEntries,
-                          QString dir, QString nameFilter, Settings* settings);
+                          QString dir, QString nameFilter);
 
 signals:
     // one of these is emitted when thread ends
@@ -71,13 +71,14 @@ private slots:
 
 private:
     void doStartThread(Mode mode, QList<StatFileInfo> oldEntries,
-                       QString dir, QString nameFilter, Settings* settings);
+                       QString dir, QString nameFilter);
     void doReadFull();
     void doReadDiff();
 
     bool verifyOrAbort();
     bool applySettings();
     bool thresholdAbort(size_t currentChanges, const QList<StatFileInfo> &fullFiles);
+    void initSettings();
 
     void sortFileList(QList<StatFileInfo>& files, int dirsFirstCount,
                       std::function<bool(const StatFileInfo&, const StatFileInfo&)> sorter);
@@ -89,7 +90,7 @@ private:
 
     QDir m_cachedDir = {""};
     bool m_cachedSortTime = {false};
-    Settings* m_settings = {nullptr};
+    DirectorySettings* m_settings = {nullptr};
     FileModelWorker::Mode m_mode = {FullMode};
     QList<StatFileInfo> m_finalEntries = {};
     QList<StatFileInfo> m_oldEntries;

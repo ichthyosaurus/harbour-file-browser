@@ -48,17 +48,17 @@ void FileModelWorker::cancel()
     m_cancelled.storeRelease(Cancelled);
 }
 
-void FileModelWorker::startReadFull(QString dir, QString nameFilter, Settings* settings)
+void FileModelWorker::startReadFull(QString dir, QString nameFilter)
 {
     logMessage("note: requested full directory listing");
-    doStartThread(FullMode, {}, dir, nameFilter, settings);
+    doStartThread(FullMode, {}, dir, nameFilter);
 }
 
 void FileModelWorker::startReadChanged(QList<StatFileInfo> oldEntries,
-                                       QString dir, QString nameFilter, Settings *settings)
+                                       QString dir, QString nameFilter)
 {
     logMessage("note: requested partial directory listing");
-    doStartThread(DiffMode, oldEntries, dir, nameFilter, settings);
+    doStartThread(DiffMode, oldEntries, dir, nameFilter);
 }
 
 void FileModelWorker::run()
@@ -94,20 +94,20 @@ void FileModelWorker::logError(QString message)
 }
 
 void FileModelWorker::doStartThread(FileModelWorker::Mode mode, QList<StatFileInfo> oldEntries,
-                                    QString dir, QString nameFilter, Settings* settings)
+                                    QString dir, QString nameFilter)
 {
     if (isRunning()) {
         emit alreadyRunning(); // we hope everything works out
         return;
     }
 
-    m_settings = settings;
     m_mode = mode;
     m_finalEntries = {};
     m_oldEntries = oldEntries;
     m_dir = dir;
     m_nameFilter = nameFilter;
     m_cancelled.storeRelease(KeepRunning);
+    initSettings();
     start();
 }
 
@@ -235,58 +235,45 @@ bool FileModelWorker::applySettings() {
     bool sortSize = false;
 
     // load settings, see SETTINGS.md for details
-    if (m_settings) {
-        QString localPath = m_cachedDir.absoluteFilePath(".directory");
-        bool useLocal = m_settings->readVariant("View/UseLocalSettings", true).toBool();
+    initSettings();
 
-        // filters: show hidden files and directories?
-        bool hidden = false;
+    // filters: show hidden files and directories?
+    bool hidden = false;
 
-        if (m_nameFilter.startsWith(QLatin1Char('.'))) {
-            hidden = true;
-        } else {
-            bool hidden = m_settings->readVariant("View/HiddenFilesShown", false).toBool();
-            if (useLocal) hidden = m_settings->readVariant("Settings/HiddenFilesShown", hidden, localPath).toBool();
-        }
-
-        QDir::Filter hiddenFilter = hidden ? QDir::Hidden : static_cast<QDir::Filter>(0);
-        newFilters |= hiddenFilter;
-
-        // sorting: dirs first?
-        bool dirsFirst = m_settings->readVariant("View/ShowDirectoriesFirst", true).toBool();
-        if (useLocal) dirsFirst = m_settings->readVariant("Sailfish/ShowDirectoriesFirst", dirsFirst, localPath).toBool();
-        if (dirsFirst) newSorting |= QDir::DirsFirst;
-
-        // sorting: sort by...?
-        QString sortSetting = m_settings->readVariant("View/SortRole", "name").toString();
-        if (useLocal) sortSetting = m_settings->readVariant("Dolphin/SortRole", sortSetting, localPath).toString();
-
-        QDir::SortFlag sortBy = QDir::Name;
-        if (sortSetting == "name") {
-            sortBy = QDir::Name;
-        } else if (sortSetting == "size") {
-            // sortBy = QDir::Size; -- sorting manually improves accuracy
-            sortSize = true;
-        } else if (sortSetting == "modificationtime") {
-            // sortBy = QDir::Time; -- sorting manually improves performance
-            sortTime = true;
-        } else if (sortSetting == "type") {
-            sortBy = QDir::Type;
-        }
-        newSorting |= sortBy;
-
-        // sorting: order reversed?
-        bool orderDefault = m_settings->readVariant("View/SortOrder", "default").toString() == "default";
-        if (useLocal) orderDefault = m_settings->readVariant("Dolphin/SortOrder", 0, localPath) == 0 ? true : false;
-        if (!orderDefault) newSorting |= QDir::Reversed;
-
-        // sorting: ignore case?
-        bool caseSensitive = m_settings->readVariant("View/SortCaseSensitively", false).toBool();
-        if (useLocal) caseSensitive = m_settings->readVariant("Sailfish/SortCaseSensitively", caseSensitive, localPath).toBool();
-        if (!caseSensitive) newSorting |= QDir::IgnoreCase;
+    if (m_nameFilter.startsWith(QLatin1Char('.'))) {
+        hidden = true;
     } else {
-        logMessage("error: invalid settings object");
+        hidden = m_settings->get_viewHiddenFilesShown();
     }
+
+    QDir::Filter hiddenFilter = hidden ? QDir::Hidden : static_cast<QDir::Filter>(0);
+    newFilters |= hiddenFilter;
+
+    // sorting: dirs first?
+    if (m_settings->get_viewShowDirectoriesFirst()) newSorting |= QDir::DirsFirst;
+
+    // sorting: sort by...?
+    QString sortSetting = m_settings->get_viewSortRole();
+
+    QDir::SortFlag sortBy = QDir::Name;
+    if (sortSetting == "name") {
+        sortBy = QDir::Name;
+    } else if (sortSetting == "size") {
+        // sortBy = QDir::Size; -- sorting manually improves accuracy
+        sortSize = true;
+    } else if (sortSetting == "modificationtime") {
+        // sortBy = QDir::Time; -- sorting manually improves performance
+        sortTime = true;
+    } else if (sortSetting == "type") {
+        sortBy = QDir::Type;
+    }
+    newSorting |= sortBy;
+
+    // sorting: order reversed?
+    if (m_settings->get_viewSortOrder() != QStringLiteral("default")) newSorting |= QDir::Reversed;
+
+    // sorting: ignore case?
+    if (!m_settings->get_viewSortCaseSensitively()) newSorting |= QDir::IgnoreCase;
 
     if (m_cachedDir.filter() != newFilters) {
         m_cachedDir.setFilter(newFilters);
@@ -362,6 +349,15 @@ bool FileModelWorker::thresholdAbort(size_t currentChanges, const QList<StatFile
         return true;
     }
     return false;
+}
+
+void FileModelWorker::initSettings()
+{
+    if (m_settings != nullptr) {
+        m_settings->setPath(m_dir);
+    } else {
+        m_settings = new DirectorySettings(m_dir, this);
+    }
 }
 
 void FileModelWorker::sortFileList(QList<StatFileInfo> &files, int dirsFirstCount,

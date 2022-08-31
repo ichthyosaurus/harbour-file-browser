@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2013-2015 Kari Pihkala
  * SPDX-FileCopyrightText: 2016 Malte Veerman
- * SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -503,20 +503,20 @@ void FileModel::workerRemovedEntry(int index, StatFileInfo file)
 void FileModel::doUpdateAllEntries()
 {
     setBusy(true);
-    m_worker->startReadFull(m_dir, m_filterString, m_settings);
+    m_worker->startReadFull(m_dir, m_filterString);
 }
 
 void FileModel::doUpdateChangedEntries()
 {
     setBusy(false, true);
-    m_worker->startReadChanged(m_files, m_dir, m_filterString, m_settings);
+    m_worker->startReadChanged(m_files, m_dir, m_filterString);
 }
 
 void FileModel::updateFileCounts()
 {
     int selectedCount = 0;
 
-    for (const auto& info : m_files) {
+    for (const auto& info : std::as_const(m_files)) {
         if (info.isSelected()) selectedCount++;
     }
 
