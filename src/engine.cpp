@@ -32,7 +32,6 @@
 #include "globals.h"
 #include "fileworker.h"
 #include "statfileinfo.h"
-#include "settingshandler.h"
 
 Engine::Engine(QObject *parent) :
     QObject(parent),
@@ -42,7 +41,6 @@ Engine::Engine(QObject *parent) :
     m__checkedBusybox(false)
 {
     m_fileWorker = new FileWorker;
-    m_settings = qApp->property("settings").value<Settings*>();
 
     // update progress property when worker progresses
     connect(m_fileWorker, SIGNAL(progressChanged(int, QString)),

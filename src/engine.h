@@ -26,7 +26,6 @@
 #include <QVariant>
 
 class FileWorker;
-class Settings;
 
 /**
  * @brief Engine to handle file operations, settings and other generic functionality.
@@ -106,7 +105,6 @@ private:
     QStringList makeStringList(QString msg, QString str = QString());
     bool isUsingBusybox(QString forCommand);
 
-    Settings* m_settings;
     QStringList m_clipboardFiles;
     bool m_clipboardContainsCopy;
     int m_progress;
