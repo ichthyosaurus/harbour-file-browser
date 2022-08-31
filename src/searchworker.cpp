@@ -169,8 +169,13 @@ QString SearchWorker::searchDirectoriesShallow(QString directory, QString search
         if (m_cancelled.loadAcquire() == Cancelled) {
             return QString();
         }
+
         QString fullpath = dir.absoluteFilePath(filename);
-        if (searchTerm.isEmpty() || filename.contains(searchTerm, Qt::CaseInsensitive)) {
+
+        // Note: we have to manually check if all entries are actually directories
+        // because QDir includes empty files as well.
+        if ((searchTerm.isEmpty() || filename.contains(searchTerm, Qt::CaseInsensitive))
+                && StatFileInfo(fullpath).isDir()) {
             count++;
             emit matchFound(fullpath);
             if (m_maxResults > 0 && count >= m_maxResults) break; // we're not recursive
