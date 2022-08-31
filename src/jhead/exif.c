@@ -3,6 +3,7 @@
  *
  * SPDX-FileCopyrightText: Matthias Wandel
  * SPDX-FileCopyrightText: 2014 Kari Pihkala
+ * SPDX-FileCopyrightText: 2020, 2022 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -862,6 +863,7 @@ static void ProcessExifDir(unsigned char * DirStart, unsigned char * OffsetBase,
 
             case TAG_EXIF_OFFSET:
                 if (ShowTags) xprintf("%s    Exif Dir:",IndentString);
+                __attribute__ ((fallthrough));  // gcc extension for explicit fallthrough
 
             case TAG_INTEROP_OFFSET:
                 if (Tag == TAG_INTEROP_OFFSET && ShowTags) xprintf("%s    Interop Dir:",IndentString);
