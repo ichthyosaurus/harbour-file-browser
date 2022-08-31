@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -43,6 +43,7 @@ Dialog {
 
     signal suggestionSelected(var filename)
     signal pathReplaced(var newPath)
+    signal forceSearchFieldFocus
 
     canAccept: path !== "" && _isReady
     property bool _isReady: false
@@ -53,6 +54,17 @@ Dialog {
     property int _nameElideMode: _nameTruncMode === TruncationMode.Fade ?
                                     Text.ElideNone : (_fnElide === 'middle' ?
                                                           Text.ElideMiddle : Text.ElideRight)
+
+    Timer {
+        id: delayedFocusTimer
+        interval: 100
+        running: false
+
+        // required to prevent the virtual keyboard from closing when
+        // a suggestion is selected; heavy directories still take too
+        // long to load and the keyboard closes
+        onTriggered: forceSearchFieldFocus()
+    }
 
     SearchEngine {
         id: searchEngine
@@ -176,10 +188,15 @@ Dialog {
                         newPath = newPath.replace(/\/+/g, '/')
                         pathField.text = newPath
                         pathField.forceActiveFocus()
+                        delayedFocusTimer.restart()
                     }
                     onPathReplaced: {
                         path = newPath
                         pathField.text = newPath
+                        pathField.forceActiveFocus()
+                        delayedFocusTimer.restart()
+                    }
+                    onForceSearchFieldFocus: {
                         pathField.forceActiveFocus()
                     }
                 }
