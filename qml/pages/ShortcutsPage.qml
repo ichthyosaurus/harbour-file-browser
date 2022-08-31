@@ -86,7 +86,7 @@ Page {
             MenuItem {
                 text: qsTr("Create a new bookmark")
                 onClicked: {
-                    pageStack.push(Qt.resolvedUrl("../pages/PathEditDialog.qml"),
+                    pageStack.animatorPush(Qt.resolvedUrl("../pages/PathEditDialog.qml"),
                                    { path: currentPath === "" ? StandardPaths.home : currentPath,
                                        acceptCallback: function(path) {
                                            if (!bookmarks_hasBookmark(path)) bookmarks_addBookmark(path)

@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2014, 2019 Kari Pihkala
  * SPDX-FileCopyrightText: 2016 Joona Petrell
- * SPDX-FileCopyrightText: 2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2022 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -88,9 +88,9 @@ Item {
                     navigate_goForward()
                 } else if (_selectedMenu === "editPath") {
                     console.log("DirPopup: edit path")
-                    pageStack.push(Qt.resolvedUrl("../pages/QuickSwitchDialog.qml"), {
-                                       path: directory
-                                   });
+                    pageStack.animatorPush(Qt.resolvedUrl("../pages/QuickSwitchDialog.qml"), {
+                        path: directory
+                    });
                 } else if (_selectedMenu === "showHidden") {
                     console.log("DirPopup: hidden before ->", prefs.viewHiddenFilesShown)
                     prefs.viewHiddenFilesShown = !prefs.viewHiddenFilesShown
