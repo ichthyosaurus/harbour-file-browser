@@ -239,9 +239,16 @@ bool FileModelWorker::applySettings() {
         QString localPath = m_cachedDir.absoluteFilePath(".directory");
         bool useLocal = m_settings->readVariant("View/UseLocalSettings", true).toBool();
 
-        // filters: show hidden?
-        bool hidden = m_settings->readVariant("View/HiddenFilesShown", false).toBool();
-        if (useLocal) hidden = m_settings->readVariant("Settings/HiddenFilesShown", hidden, localPath).toBool();
+        // filters: show hidden files and directories?
+        bool hidden = false;
+
+        if (m_nameFilter.startsWith(QLatin1Char('.'))) {
+            hidden = true;
+        } else {
+            bool hidden = m_settings->readVariant("View/HiddenFilesShown", false).toBool();
+            if (useLocal) hidden = m_settings->readVariant("Settings/HiddenFilesShown", hidden, localPath).toBool();
+        }
+
         QDir::Filter hiddenFilter = hidden ? QDir::Hidden : static_cast<QDir::Filter>(0);
         newFilters |= hiddenFilter;
 
