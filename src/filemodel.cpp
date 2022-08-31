@@ -63,7 +63,7 @@ FileModel::FileModel(QObject *parent) :
     connect(m_watcher, &QFileSystemWatcher::fileChanged, this, &FileModel::refresh);
 
     // refresh model every time view settings are changed
-    m_settings = qApp->property("settings").value<Settings*>();
+    m_settings = Settings::instance();
     connect(m_settings, &Settings::viewSettingsChanged, this, &FileModel::refreshFull);
     connect(this, &FileModel::filterStringChanged, this, &FileModel::applyFilterString);
 
