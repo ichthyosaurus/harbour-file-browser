@@ -75,7 +75,7 @@ QString permissionsToString(QFile::Permissions permissions)
 }
 
 namespace {
-static QStringList fileSizeNames({
+Q_GLOBAL_STATIC_WITH_ARGS(QStringList, fileSizeNames, ({
     QCoreApplication::translate("FileSize", "B"),
     QCoreApplication::translate("FileSize", "KiB"),
     QCoreApplication::translate("FileSize", "MiB"),
@@ -85,7 +85,7 @@ static QStringList fileSizeNames({
     QCoreApplication::translate("FileSize", "EiB"),
     QCoreApplication::translate("FileSize", "ZiB"),
     QCoreApplication::translate("FileSize", "YiB"),
-});
+}));
 }
 
 QString filesizeToString(qint64 filesize)
@@ -93,7 +93,7 @@ QString filesizeToString(qint64 filesize)
     // convert to KiB, MiB, GiB: we follow SI and use 1024 as divisor.
     // Values are called properly *bibyte instead of **byte, i.e. kibibyte.
     QLocale locale;
-    QStringListIterator i(fileSizeNames);
+    QStringListIterator i(*fileSizeNames);
     QString unit(i.next()); // = first
 
     uint power = 0;
@@ -105,11 +105,11 @@ QString filesizeToString(qint64 filesize)
     if (filesize < 1024LL) {
         //: 1=file size (number), 2=unit (e.g. KiB)
         return QCoreApplication::translate("FileSize", "%1 %2").
-                arg(locale.toString(filesize)).arg(unit);
+                arg(locale.toString(filesize), unit);
     } else {
         auto num = static_cast<double>(filesize)/pow(1024, power);
         return QCoreApplication::translate("FileSize", "%1 %2").
-                arg(locale.toString(num, 'f', 2)).arg(unit);
+                arg(locale.toString(num, 'f', 2), unit);
     }
 }
 
