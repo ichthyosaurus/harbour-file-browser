@@ -28,6 +28,7 @@ import "../components"
 Page {
     id: page
     allowedOrientations: Orientation.All
+
     property string currentPath: ""
 
     NotificationPanel {
@@ -118,7 +119,7 @@ Page {
     onStatusChanged: {
         if (status === PageStatus.Active) {
             main.coverText = qsTr("Places") // update cover
-            if (!forwardNavigation) pageStack.pushAttached(Qt.resolvedUrl("SettingsPage.qml"));
+            if (!forwardNavigation) pageStack.pushAttached(main.settingsPage);
         }
         if (status === PageStatus.Activating || status === PageStatus.Deactivating) {
             shortcutsView._isEditing = false;

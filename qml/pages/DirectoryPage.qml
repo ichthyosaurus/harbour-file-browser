@@ -547,13 +547,19 @@ Page {
         onBookmarkRemoved: {
             if (path === dir) bookmarkEntry.hasBookmark = false;
         }
+        onShortcutsPageChanged: {
+            if (main.shortcutsPage !== null && status === PageStatus.Active && !canNavigateForward) {
+                pageStack.completeAnimation();
+                pageStack.pushAttached(main.shortcutsPage, { currentPath: dir });
+            }
+        }
     }
 
     onStatusChanged: {
         if (status === PageStatus.Active) {
-            if (!canNavigateForward) {
+            if (!canNavigateForward && main.shortcutsPage !== null) {
                 pageStack.completeAnimation();
-                pageStack.pushAttached(Qt.resolvedUrl("ShortcutsPage.qml"), { currentPath: dir });
+                pageStack.pushAttached(main.shortcutsPage, { currentPath: dir });
             }
             coverText = Paths.lastPartOfPath(page.dir)+"/"; // update cover
         } else if (status === PageStatus.Activating) {

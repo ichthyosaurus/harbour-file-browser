@@ -124,6 +124,38 @@ ApplicationWindow {
         }
     }
 
+    property ShortcutsPage shortcutsPage: null
+    Loader {
+        id: shortcutsPageLoader
+        asynchronous: true
+        onStatusChanged: if (status === Loader.Ready) shortcutsPage = shortcutsPageLoader.item
+        sourceComponent: Component {
+            ShortcutsPage {
+                currentPath: StandardPaths.home
+            }
+        }
+    }
+
+    property SettingsPage settingsPage: null
+    Loader {
+        id: settingsPageLoader
+        asynchronous: true
+        onStatusChanged: if (status === Loader.Ready) settingsPage = settingsPageLoader.item
+        sourceComponent: Component {
+            SettingsPage { }
+        }
+    }
+
+    property AboutPage aboutPage: null
+    Loader {
+        id: aboutPageLoader
+        asynchronous: true
+        onStatusChanged: if (status === Loader.Ready) aboutPage = aboutPageLoader.item
+        sourceComponent: Component {
+            AboutPage { }
+        }
+    }
+
     function _doStartup() {
         console.log("[startup] pushing initial stack")
         Navigation.goToFolder(initialDirectory, true); // silent

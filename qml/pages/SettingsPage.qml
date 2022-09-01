@@ -214,7 +214,7 @@ Page {
 
     onStatusChanged: {
         if (status === PageStatus.Active && !forwardNavigation) {
-            pageStack.pushAttached(Qt.resolvedUrl("AboutPage.qml"));
+            pageStack.pushAttached(main.aboutPage);
         }
 
         if (status === PageStatus.Activating) {
