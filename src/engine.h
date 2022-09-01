@@ -26,6 +26,8 @@
 #include <QVariant>
 
 class FileWorker;
+template<typename T> class QFuture;
+template<typename T> class QFutureWatcher;
 
 /**
  * @brief Engine to handle file operations, settings and other generic functionality.
@@ -50,7 +52,7 @@ public:
 
     // methods accessible from QML
 
-    // asynch methods send signals when done or error occurs
+    // async methods send signals when done or error occurs
     Q_INVOKABLE void deleteFiles(QStringList filenames);
     Q_INVOKABLE void cutFiles(QStringList filenames);
     Q_INVOKABLE void copyFiles(QStringList filenames);
@@ -59,7 +61,11 @@ public:
     Q_INVOKABLE QStringList listExistingFiles(QString destDirectory);
     Q_INVOKABLE void pasteFiles(QString destDirectory, bool asSymlinks = false);
 
-    // cancel asynch methods
+    // calculate disk space ansynchronously, sends diskSpaceInfoReady on success
+    // use diskSpace(path) as a synchronous alternative
+    Q_INVOKABLE void requestDiskSpaceInfo(QString path);
+
+    // cancel async methods
     Q_INVOKABLE void cancel();
 
     // returns error msg
@@ -96,6 +102,8 @@ signals:
     void workerErrorOccurred(QString message, QString filename);
     void fileDeleted(QString fullname);
 
+    void diskSpaceInfoReady(QString path, QStringList info);
+
 private slots:
     void setProgress(int progress, QString filename);
 
@@ -111,6 +119,8 @@ private:
     QString m_progressFilename;
     QString m_errorMessage;
     FileWorker* m_fileWorker;
+
+    QList<QPair<QSharedPointer<QFutureWatcher<QStringList>>, QFuture<QStringList>>> m_diskSpaceWorkers;
 
     // cached paths that we assume won't change during runtime
     QString m_storageSettingsPath = {QStringLiteral("")};

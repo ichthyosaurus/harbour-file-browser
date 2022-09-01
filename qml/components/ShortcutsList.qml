@@ -193,23 +193,21 @@ SilicaListView {
                 visible: model.showsize
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                text: (visible ? "... \u2022 ... \u2022 " : "")
 
-                function updateText() {
-                    if (visible) {
-                        var space = engine.diskSpace(model.location);
-                        text = (space.length > 0 ? space[0] + " \u2022 " + space[1] + " \u2022 " : "");
-                    } else {
-                        text = "";
+                property string diskSpace: ""
+                text: visible ? (diskSpace === "" ? "... \u2022 ... \u2022 " : diskSpace) : ""
+
+                Connections {
+                    target: model.showsize ? engine : null
+                    onDiskSpaceInfoReady: {
+                        if (path === model.location) {
+                            sizeInfo.diskSpace = (info.length > 0 ? info[0] + " \u2022 " + info[1] + " \u2022 " : "")
+                        }
                     }
                 }
 
-                Component.onCompleted: {
-                    updateText();
-                }
-                onVisibleChanged: {
-                    updateText();
-                }
+                onVisibleChanged: if (visible) engine.requestDiskSpaceInfo(model.location)
+                Component.onCompleted: if (model.showsize) engine.requestDiskSpaceInfo(model.location)
             }
 
             Text {

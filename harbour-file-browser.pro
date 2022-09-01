@@ -50,6 +50,8 @@ TARGET = harbour-file-browser
 # Note: old Qt only recognizes up to "c++14" as valid config options
 CONFIG += c++1z
 
+QT += concurrent
+
 # configure Harbour compliance:
 # some features must be disabled for the official store
 HARBOUR_COMPLIANCE=$$HARBOUR_COMPLIANCE

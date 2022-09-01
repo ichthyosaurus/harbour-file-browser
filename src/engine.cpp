@@ -28,6 +28,9 @@
 #include <QDir>
 #include <QCoreApplication>
 #include <QProcess>
+#include <QtConcurrent/QtConcurrent>
+#include <QFuture>
+#include <QFutureWatcher>
 #include <unistd.h>
 #include "globals.h"
 #include "fileworker.h"
@@ -40,6 +43,7 @@ Engine::Engine(QObject *parent) :
     m__isUsingBusybox(QStringList()),
     m__checkedBusybox(false)
 {
+    m_diskSpaceWorkers.reserve(600);
     m_fileWorker = new FileWorker;
 
     // update progress property when worker progresses
@@ -165,6 +169,24 @@ void Engine::pasteFiles(QString destDirectory, bool asSymlinks)
     } else {
         m_fileWorker->startMoveFiles(files, destDirectory);
     }
+}
+
+void Engine::requestDiskSpaceInfo(QString path)
+{
+    m_diskSpaceWorkers.append({
+        QSharedPointer<QFutureWatcher<QStringList>>{new QFutureWatcher<QStringList>},
+        QtConcurrent::run(this, &Engine::diskSpace, path)
+    });
+
+    auto& future = m_diskSpaceWorkers.last().second;
+    int index = m_diskSpaceWorkers.length() - 1;
+
+    connect(m_diskSpaceWorkers.last().first.data(), &QFutureWatcherBase::finished, this, [=](){
+        emit diskSpaceInfoReady(path, future.result());
+        m_diskSpaceWorkers[index] = {};
+    });
+
+    m_diskSpaceWorkers.last().first->setFuture(future);
 }
 
 void Engine::cancel()
