@@ -8,12 +8,35 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 ## Unreleased
 
- * Fixed root mode for Sailfish 4.3 and later
+ * New translations: Ukrainian
+ * Updated translations: Spanish, Swedish, Estonian, French, Russian, Chinese, German, English
+ * Added donation info to the "About" page: it is now possible to buy me a cup of coffee :-) (swipe right multiple times until you reach the "About" page)
+ * Added a new page showing currently copied/cut files (swipe right to the shortcuts page, then select "Clipboard")
+ * Added quick access to overviews of all documents and multimedia files on the shortcuts page (this uses system components that sadly have terrible performance)
+ * Added section headers when sorting by file type, which makes it easier to find files of a specific type
+ * Greatly improved performance when switching between folders, checking bookmarks, editing settings, or reading the "About" page
+ * Greatly improved performance of the "edit this path" dialog
+ * Improved directory filtering: hidden files will be shown when the filter string starts with "."
  * Improved root mode:
  *   - root mode should work again on Sailfish 4.x
  *   - it now requires entering your device lock code to access
  *   - note: unlocking is handled by the system, File Browser will never see the security code
- * Internal: improved the build system to possibly enable more features in Jolla store
+ * Fixed sorting directories by modification date and by size
+ * Fixed root mode for Sailfish 4.3 and later
+ * Fixed keyboard randomly opening and closing when selecting suggestions while editing a path
+ * Fixed the path edit dialog misinterpreting empty files as directories
+ * Fixed searching for hidden files when they are locally configured to be shown
+ * Fixed an issue where trying to cut certain system files could possibly break the copying mechanism
+ * Modernized the code base under the hood
+
+ For developers:
+
+ * FileModel now exposes file extensions
+ * FileData now exposes directory sizes
+ * Engine now exposes clipboard contents
+ * Added a new settings handler which reduces complexity and should improve performance overall (global settings are now available through "main.globalSettings" and "rawSettings")
+ * Improved the build system to possibly enable more features in Jolla store
+ * Refactored the root mode helper build process
 
 ## Version 2.5.1 (2022-03-30)
 

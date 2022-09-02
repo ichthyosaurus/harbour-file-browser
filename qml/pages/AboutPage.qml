@@ -91,11 +91,11 @@ A.AboutPageBase {
                 },
                 A.ContributionGroup {
                     title: qsTr("Chinese")
-                    entries: ["Tyler Temp", "dashinfantry", "玉堂白鹤", "joe (ourmicroid)"]
+                    entries: ["Tyler Temp", "dashinfantry", "玉堂白鹤", "joe (ourmicroid)", "yangyangdaji"]
                 },
                 A.ContributionGroup {
-                    title: qsTr("Russian")
-                    entries: ["Petr Tsymbarovich"]
+                    title: qsTr("Ukrainian")
+                    entries: ["Tymofii Lytvynenko", "mihajlo0743", "Artem"]
                 },
                 A.ContributionGroup {
                     title: qsTr("Swedish")
@@ -111,7 +111,7 @@ A.AboutPageBase {
                 },
                 A.ContributionGroup {
                     title: qsTr("French")
-                    entries: ["Quent-in (Quentí)", "karip", "J. Lavoie", "K. Herbert"]
+                    entries: ["Quent-in (Quentí)", "karip", "J. Lavoie", "K. Herbert", "Maxime Leroy"]
                 },
                 A.ContributionGroup {
                     title: qsTr("Dutch")
@@ -152,6 +152,10 @@ A.AboutPageBase {
                 A.ContributionGroup {
                     title: qsTr("Turkish")
                     entries: ["ToldYouThat", "Oğuz Ersen", "E-Akcaer"]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Russian")
+                    entries: ["Petr Tsymbarovich", "Evgeniy Khramov"]
                 }
             ]
         }
