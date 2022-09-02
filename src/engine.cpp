@@ -71,6 +71,13 @@ void Engine::deleteFiles(QStringList filenames)
 
 void Engine::cutFiles(QStringList filenames)
 {
+    // don't copy special files (chr/blk/fifo/sock)
+    QMutableStringListIterator i(filenames);
+    while (i.hasNext()) {
+        StatFileInfo info(i.next());
+        if (info.isSystem()) i.remove();
+    }
+
     m_clipboardFiles = filenames;
     m_clipboardContainsCopy = false;
     emit clipboardCountChanged();
@@ -82,10 +89,8 @@ void Engine::copyFiles(QStringList filenames)
     // don't copy special files (chr/blk/fifo/sock)
     QMutableStringListIterator i(filenames);
     while (i.hasNext()) {
-        QString filename = i.next();
-        StatFileInfo info(filename);
-        if (info.isSystem())
-            i.remove();
+        StatFileInfo info(i.next());
+        if (info.isSystem()) i.remove();
     }
 
     m_clipboardFiles = filenames;
