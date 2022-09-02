@@ -86,6 +86,18 @@ QString FileData::size() const
     return filesizeToString(m_fileInfo.size());
 }
 
+QString FileData::dirSize() const
+{
+    if (isDir()) {
+        uint size = m_fileInfo.dirSize();
+        //: as in "this folder is empty", but as short as possible
+        if (size == 0) return tr("empty");
+        else return tr("%n item(s)", "", static_cast<int>(size));
+    } else {
+        return QLatin1Literal("");
+    }
+}
+
 QString FileData::modified(bool longFormat) const
 {
     return datetimeToString(m_fileInfo.lastModified(), longFormat);
@@ -196,6 +208,7 @@ void FileData::readInfo()
     emit ownerChanged();
     emit groupChanged();
     emit sizeChanged();
+    emit dirSizeChanged();
     emit modifiedChanged();
     emit createdChanged();
     emit absolutePathChanged();

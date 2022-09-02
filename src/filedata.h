@@ -44,6 +44,7 @@ class FileData : public QObject
     Q_PROPERTY(QString owner READ owner() NOTIFY ownerChanged())
     Q_PROPERTY(QString group READ group() NOTIFY groupChanged())
     Q_PROPERTY(QString size READ size() NOTIFY sizeChanged())
+    Q_PROPERTY(QString dirSize READ dirSize() NOTIFY dirSizeChanged())
     Q_PROPERTY(QString modified READ modified() NOTIFY modifiedChanged())
     Q_PROPERTY(QString modifiedLong READ modifiedLong() NOTIFY modifiedChanged())
     Q_PROPERTY(QString created READ created() NOTIFY createdChanged())
@@ -78,6 +79,7 @@ public:
     QString owner() const;
     QString group() const;
     QString size() const;
+    QString dirSize() const;
     QString modified(bool longFormat = false) const;
     QString modifiedLong() const;
     QString created(bool longFormat = false) const;
@@ -114,6 +116,7 @@ signals:
     void ownerChanged();
     void groupChanged();
     void sizeChanged();
+    void dirSizeChanged();
     void modifiedChanged();
     void createdChanged();
     void nameChanged();
