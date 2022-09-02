@@ -127,7 +127,7 @@ ApplicationWindow {
     property ShortcutsPage shortcutsPage: null
     Loader {
         id: shortcutsPageLoader
-        asynchronous: true
+        asynchronous: false
         onStatusChanged: if (status === Loader.Ready) shortcutsPage = shortcutsPageLoader.item
         sourceComponent: Component {
             ShortcutsPage {
