@@ -14,117 +14,117 @@
         <translation>anpassad av karip</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="56"/>
+        <location filename="../qml/pages/AboutPage.qml" line="62"/>
         <source>Development</source>
         <translation>Utveckling</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="59"/>
+        <location filename="../qml/pages/AboutPage.qml" line="65"/>
         <source>Programming</source>
         <translation>Programmering</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="66"/>
+        <location filename="../qml/pages/AboutPage.qml" line="72"/>
         <source>Icon Design</source>
         <translation>Ikondesign</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="72"/>
+        <location filename="../qml/pages/AboutPage.qml" line="78"/>
         <source>Translations</source>
         <translation>Översättningar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="75"/>
+        <location filename="../qml/pages/AboutPage.qml" line="81"/>
         <source>English</source>
         <translation>Engelska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="79"/>
+        <location filename="../qml/pages/AboutPage.qml" line="85"/>
         <source>German</source>
         <translation>Tyska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="83"/>
+        <location filename="../qml/pages/AboutPage.qml" line="89"/>
         <source>Finnish</source>
         <translation>Finska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="87"/>
+        <location filename="../qml/pages/AboutPage.qml" line="93"/>
         <source>Chinese</source>
         <translation>Kinesiska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="91"/>
+        <location filename="../qml/pages/AboutPage.qml" line="97"/>
         <source>Russian</source>
         <translation>Ryska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="95"/>
+        <location filename="../qml/pages/AboutPage.qml" line="101"/>
         <source>Swedish</source>
         <translation>Svenska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="99"/>
+        <location filename="../qml/pages/AboutPage.qml" line="105"/>
         <source>Italian</source>
         <translation>Italienska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="103"/>
+        <location filename="../qml/pages/AboutPage.qml" line="109"/>
         <source>Spanish</source>
         <translation>Spanska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="107"/>
+        <location filename="../qml/pages/AboutPage.qml" line="113"/>
         <source>French</source>
         <translation>Franska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="111"/>
+        <location filename="../qml/pages/AboutPage.qml" line="117"/>
         <source>Dutch</source>
         <translation>Nederländska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="115"/>
+        <location filename="../qml/pages/AboutPage.qml" line="121"/>
         <source>Greek</source>
         <translation>Grekiska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="119"/>
+        <location filename="../qml/pages/AboutPage.qml" line="125"/>
         <source>Norwegian</source>
         <translation>Norska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="123"/>
+        <location filename="../qml/pages/AboutPage.qml" line="129"/>
         <source>Czech</source>
         <translation>Tjeckiska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="127"/>
+        <location filename="../qml/pages/AboutPage.qml" line="133"/>
         <source>Slovak</source>
         <translation>Slovakiska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="131"/>
+        <location filename="../qml/pages/AboutPage.qml" line="137"/>
         <source>Hungarian</source>
         <translation>Ungerska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="135"/>
+        <location filename="../qml/pages/AboutPage.qml" line="141"/>
         <source>Estonian</source>
         <translation>Estniska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="139"/>
+        <location filename="../qml/pages/AboutPage.qml" line="145"/>
         <source>Polish</source>
         <translation>Polska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="143"/>
+        <location filename="../qml/pages/AboutPage.qml" line="149"/>
         <source>Indonesian</source>
         <translation>Indonesiska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="147"/>
+        <location filename="../qml/pages/AboutPage.qml" line="153"/>
         <source>Turkish</source>
         <translation>Turkiska</translation>
     </message>
@@ -132,12 +132,12 @@
 <context>
     <name>ClipboardPage</name>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="53"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="54"/>
         <source>Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/ClipboardPage.qml" line="56"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="57"/>
         <source>%n item(s) to be copied</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -145,7 +145,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/ClipboardPage.qml" line="57"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="58"/>
         <source>%n item(s) to be moved</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -153,51 +153,51 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="65"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="66"/>
         <source>Current selection</source>
         <comment>as in &apos;currently selected files&apos;</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="76"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
         <source>copy</source>
         <comment>as in &apos;please copy these files&apos;</comment>
         <translation type="unfinished">Kopiera</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="80"/>
         <source>cut</source>
         <comment>as in &apos;please cut these files&apos;</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="94"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="95"/>
         <source>Clear</source>
         <comment>as in &apos;clear the current clipboard contents&apos;</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="214"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="215"/>
         <source>Remove from clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="219"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="220"/>
         <source>Open this folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="223"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="224"/>
         <source>Open containing folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="232"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="233"/>
         <source>Empty</source>
         <translation type="unfinished">Tom</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="233"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="234"/>
         <source>Cut or copied files will be shown here.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2203,83 +2203,83 @@ exposure program</extracomment>
 <context>
     <name>ShortcutsPage</name>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="223"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="225"/>
         <source>Search</source>
         <translation>Sök</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="215"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="217"/>
         <source>Open new window</source>
         <translation>Öppna nytt fönster</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="95"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="97"/>
         <source>Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="100"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="102"/>
         <source>Documents</source>
         <translation type="unfinished">Dokument</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="105"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="107"/>
         <source>Pictures</source>
         <translation type="unfinished">Foton</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="110"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="112"/>
         <source>Videos</source>
         <translation type="unfinished">Videor</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="115"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="117"/>
         <source>Music</source>
         <translation type="unfinished">Musik</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="206"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="208"/>
         <source>Remove bookmark for “%1”</source>
         <translation>Ta bort bokmärket för &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="207"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="209"/>
         <source>Add “%1” to bookmarks</source>
         <translation>Lägg till &quot;%1&quot; i bokmärken</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="218"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="220"/>
         <source>New window opened</source>
         <translation>Nytt fönster öppnat</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="219"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="221"/>
         <source>Sometimes the application stays in the background</source>
         <translation>Ibland stannar programmet i bakgrunden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="239"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="241"/>
         <source>Create a new bookmark</source>
         <translation>Skapa ett nytt bokmärke</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="251"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="253"/>
         <source>Save</source>
         <translation>Spara</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="257"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="259"/>
         <source>Refresh</source>
         <translation>Uppdatera</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="262"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="264"/>
         <source>Open storage settings</source>
         <translation>Öppna lagringsinställningar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="63"/>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="272"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="65"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="274"/>
         <source>Places</source>
         <translation>Platser</translation>
     </message>
