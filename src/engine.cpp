@@ -80,6 +80,7 @@ void Engine::cutFiles(QStringList filenames)
 
     m_clipboardFiles = filenames;
     m_clipboardContainsCopy = false;
+    emit clipboardContentsChanged();
     emit clipboardCountChanged();
     emit clipboardContainsCopyChanged();
 }
@@ -95,8 +96,36 @@ void Engine::copyFiles(QStringList filenames)
 
     m_clipboardFiles = filenames;
     m_clipboardContainsCopy = true;
+    emit clipboardContentsChanged();
     emit clipboardCountChanged();
     emit clipboardContainsCopyChanged();
+}
+
+void Engine::clearClipboard()
+{
+    m_clipboardFiles = QStringList{};
+    m_clipboardContainsCopy = false;
+    emit clipboardContentsChanged();
+    emit clipboardCountChanged();
+    emit clipboardContainsCopyChanged();
+}
+
+void Engine::forgetClipboardEntry(QString entry)
+{
+    bool changed = false;
+
+    QMutableStringListIterator i(m_clipboardFiles);
+    while (i.hasNext()) {
+        if (i.next() == entry) {
+            i.remove();
+            changed = true;
+        }
+    }
+
+    if (changed) {
+        emit clipboardContentsChanged();
+        emit clipboardCountChanged();
+    }
 }
 
 QStringList Engine::listExistingFiles(QString destDirectory)
