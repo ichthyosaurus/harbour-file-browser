@@ -18,7 +18,7 @@
  * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.2
+import QtQuick 2.6
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
 
@@ -31,6 +31,21 @@ Page {
 
     property string currentPath: ""
 
+    function _showSailfishPicker(pickerType, title) {
+        // note: we cannot use "animatorPush" because we need a proper
+        // object to create connections below
+        var picker = pageStack.push("Sailfish.Pickers.%1PickerPage".arg(pickerType), {
+            'title': title
+        })
+        picker.selectedContentPropertiesChanged.connect(function() {
+            pageStack.animatorPush(Qt.resolvedUrl("FilePage.qml"), {
+                'file': picker.selectedContentProperties.filePath,
+                'allowMoveDelete': false,
+                'enableOpenFolder': true,
+            })
+        })
+    }
+
     NotificationPanel {
         id: notificationPanel
         page: page
@@ -41,8 +56,146 @@ Page {
         anchors.fill: parent
         onItemClicked: navigate_goToFolder(path)
 
-        header: PageHeader { title: qsTr("Places") }
+        header: Item {
+            width: parent.width
+            height: head.height + row.height
+
+            PageHeader {
+                id: head
+                title: qsTr("Places")
+            }
+
+            SilicaFlickable {
+                id: flick
+                flickableDirection: Flickable.HorizontalFlick
+                width: parent.width
+                height: row.height
+                contentHeight: row.height
+                contentWidth: row.width + Theme.horizontalPageMargin
+                anchors.top: head.bottom
+
+                HorizontalScrollDecorator { flickable: flick }
+
+                Row {
+                    Item {
+                        width: Theme.horizontalPageMargin
+                        height: 1
+                    }
+
+                    Row {
+                        id: row
+                        property real itemWidth: Theme.iconSizeMedium + 2*Theme.paddingLarge
+
+                        width: childrenRect.width
+                        height: childrenRect.height
+                        spacing: (itemWidth * 5 + 2*Theme.horizontalPageMargin) < page.width ?
+                                     (((page.width - 2*Theme.horizontalPageMargin) / 5) - itemWidth) : Theme.paddingMedium
+
+                        Repeater {
+                            model: ListModel {
+                                ListElement {
+                                    name: qsTr("Clipboard")
+                                    icon: "image://theme/icon-m-clipboard"
+                                    type: "clipboard"
+                                }
+                                ListElement {
+                                    name: qsTr("Documents")
+                                    icon: "image://theme/icon-m-file-document"
+                                    type: "documents"
+                                }
+                                ListElement {
+                                    name: qsTr("Pictures")
+                                    icon: "image://theme/icon-m-file-image"
+                                    type: "pictures"
+                                }
+                                ListElement {
+                                    name: qsTr("Videos")
+                                    icon: "image://theme/icon-m-media"
+                                    type: "videos"
+                                }
+                                ListElement {
+                                    name: qsTr("Music")
+                                    icon: "image://theme/icon-m-file-audio"
+                                    type: "music"
+                                }
+                            }
+
+                            delegate: IconButton {
+                                width: row.itemWidth
+                                height: childrenRect.height
+
+                                onClicked: {
+                                    if (model.type === "clipboard") {
+                                        pageStack.animatorPush(Qt.resolvedUrl("ClipboardPage.qml"))
+                                    } else if (model.type === "documents") {
+                                        _showSailfishPicker('Document', model.name)
+                                    } else if (model.type === "pictures") {
+                                        _showSailfishPicker('Image', model.name)
+                                    } else if (model.type === "videos") {
+                                        _showSailfishPicker('Video', model.name)
+                                    } else if (model.type === "music") {
+                                        _showSailfishPicker('Music', model.name)
+                                    } else {
+                                        model.icon = Qt.resolvedUrl("../images/places-warning.png")
+                                        console.warn("bug: unknown shortcut type '", model.type, "' cannot be handled")
+                                    }
+                                }
+
+                                Icon {
+                                    id: image
+                                    anchors.centerIn: circle
+                                    highlighted: parent._showPress
+                                    opacity: parent.enabled ? 1.0 : Theme.opacityLow
+                                    source: model.icon
+                                    width: Theme.iconSizeMedium
+                                    height: width
+                                }
+
+                                Rectangle {
+                                    id: circle
+                                    radius: width
+                                    width: parent.width - Theme.paddingLarge
+                                    height: width
+                                    anchors {
+                                        top: parent.top
+                                        horizontalCenter: parent.horizontalCenter
+                                    }
+                                    color: "transparent"
+                                    border.color: parent.highlighted ? Theme.highlightColor : Theme.primaryColor
+                                }
+
+                                TextMetrics {
+                                    id: metrics
+                                    font.family: Theme.fontFamily
+                                    font.pixelSize: Theme.fontSizeTiny
+                                    text: model.name
+                                }
+
+                                Label {
+                                    width: parent.width
+                                    text: model.name
+                                    verticalAlignment: Text.AlignVCenter
+                                    horizontalAlignment: metrics.width > width ? Text.AlignLeft : Text.AlignHCenter
+                                    truncationMode: metrics.width > width ? TruncationMode.Fade : TruncationMode.None
+                                    font.pixelSize: Theme.fontSizeExtraSmall
+                                    fontSizeMode: Text.Fit
+                                    minimumPixelSize: /*metrics.width > width ? Theme.fontSizeExtraSmall :*/ Theme.fontSizeTiny
+
+                                    anchors {
+                                        top: circle.bottom
+                                        topMargin: Theme.paddingSmall
+                                        horizontalCenter: parent.horizontalCenter
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         footer: Spacer { id: footerSpacer }
+
         VerticalScrollDecorator { flickable: shortcutsView; }
 
         PullDownMenu {

@@ -13,6 +13,17 @@ c__FOR_RENDER_LIB__="0.3.0"
 source ../libs/opal-render-icons.sh
 cFORCE=false
 
+echo "scrubbing svg sources..."
+for dir in file toolbar; do
+    pushd "$dir"
+    for i in raw/*.svg; do
+        if [[ "$i" -nt "${i#raw/}" ]]; then
+            scour "$i" > "${i#raw/}"
+        fi
+    done
+    popd
+done
+
 cNAME="app icons"
 cITEMS=(
     harbour-file-browser@../icons/RESXxRESY
@@ -26,6 +37,7 @@ cNAME="toolbar icons"
 cITEMS=(
     toolbar/toolbar-{rename,copy,cut,select-all}@112
     toolbar/icon-btn-search@112
+    toolbar/places-warning@112
 )
 cRESOLUTIONS=(F1)
 cTARGETS=(../qml/images)

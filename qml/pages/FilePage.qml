@@ -33,6 +33,9 @@ Page {
     id: page
     allowedOrientations: Orientation.All
     property string file: "/"
+    property bool allowMoveDelete: true
+    property bool enableOpenFolder: false
+
     property alias notificationPanel: notificationPanel
     property bool _hasMoved: false
 
@@ -110,6 +113,15 @@ Page {
                 text: qsTr("Go to Target")
                 visible: fileData.isSymLink && fileData.isDir
                 onClicked: navigate_goToFolder(fileData.symLinkTarget);
+            }
+        }
+
+        PushUpMenu {
+            visible: enableOpenFolder
+
+            MenuItem {
+                text: qsTr("Open containing folder")
+                onClicked: navigate_goToFolder(fileData.absolutePath)
             }
         }
 
@@ -233,6 +245,9 @@ Page {
                     showSelection: false
                     showShare: !fileData.isSymLink
                     showEdit: !fileData.isDir
+
+                    showDelete: allowMoveDelete
+                    showTransfer: allowMoveDelete
 
                     onRenameTriggered: {
                         page.file = newFiles[0]
