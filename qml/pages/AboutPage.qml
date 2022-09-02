@@ -45,11 +45,17 @@ A.AboutPageBase {
         A.OpalAboutAttribution {}
     ]
 
-    /* donations.text: donations.defaultTextCoffee
-    donations.services: A.DonationService {
-        name: "LiberaPay"
-        url: "https://liberapay.com/ichthyosaurus/"
-    } */
+    donations.text: donations.defaultTextCoffee
+    donations.services: [
+        A.DonationService {
+            name: "LiberaPay"
+            url: "https://liberapay.com/ichthyosaurus/"
+        },
+        A.DonationService {
+            name: "PayPal"
+            url: "https://www.paypal.com/donate/?hosted_button_id=RVP8YHSGKA2E4"
+        }
+    ]
 
     contributionSections: [
         A.ContributionSection {
