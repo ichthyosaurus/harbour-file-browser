@@ -582,7 +582,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="254"/>
+        <location filename="../qml/components/FileActions.qml" line="253"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>compress file</numerusform>
@@ -590,7 +590,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="262"/>
+        <location filename="../qml/components/FileActions.qml" line="261"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>edit file</numerusform>
@@ -598,16 +598,9 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="271"/>
+        <location filename="../qml/components/FileActions.qml" line="270"/>
         <source>show file properties</source>
         <translation>show file properties</translation>
-    </message>
-</context>
-<context>
-    <name>FileBrowserCover</name>
-    <message>
-        <source>Root Mode</source>
-        <translation type="vanished">Root Mode</translation>
     </message>
 </context>
 <context>
@@ -1814,7 +1807,7 @@ exposure program</extracomment>
         <translation>Be careful when using File Browser in Root Mode. Actions may unexpectedly break your system.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Start File Browser in Root Mode</translation>
     </message>

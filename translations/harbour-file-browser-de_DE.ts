@@ -582,7 +582,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="254"/>
+        <location filename="../qml/components/FileActions.qml" line="253"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>Datei komprimieren</numerusform>
@@ -590,7 +590,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="262"/>
+        <location filename="../qml/components/FileActions.qml" line="261"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>Datei bearbeiten</numerusform>
@@ -598,16 +598,9 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="271"/>
+        <location filename="../qml/components/FileActions.qml" line="270"/>
         <source>show file properties</source>
         <translation>Dateieigenschaften anzeigen</translation>
-    </message>
-</context>
-<context>
-    <name>FileBrowserCover</name>
-    <message>
-        <source>Root Mode</source>
-        <translation type="vanished">Root-Modus</translation>
     </message>
 </context>
 <context>
@@ -1817,7 +1810,7 @@ exposure program</extracomment>
         <translation>Seien Sie vorsichtig, wenn Sie die Dateiverwaltung im Root-Modus verwenden. Sie könnten aus Versehen Ihr System beschädigen.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Dateiverwaltung im Root-Modus starten</translation>
     </message>
@@ -1950,12 +1943,12 @@ exposure program</extracomment>
         <translation>Sortierung</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="134"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="128"/>
         <source>Sort case-sensitively</source>
         <translation>Groß- und Kleinschreibung beim Sortieren beachten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="99"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="93"/>
         <source>Thumbnail size</source>
         <translation>Größe der Vorschaubilder</translation>
     </message>
