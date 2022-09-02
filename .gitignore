@@ -14,6 +14,7 @@ TODO*
 add-gpl.sh
 
 icon-src/raw
+icon-src/*/raw
 root/build*
 root/RPMS
 
