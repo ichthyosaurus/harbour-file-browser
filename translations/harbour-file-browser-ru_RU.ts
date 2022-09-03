@@ -54,7 +54,7 @@
         <translation>Китайский</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="97"/>
+        <location filename="../qml/pages/AboutPage.qml" line="157"/>
         <source>Russian</source>
         <translation>Русский</translation>
     </message>
@@ -62,6 +62,11 @@
         <location filename="../qml/pages/AboutPage.qml" line="101"/>
         <source>Swedish</source>
         <translation>Шведский</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="97"/>
+        <source>Ukrainian</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="105"/>
