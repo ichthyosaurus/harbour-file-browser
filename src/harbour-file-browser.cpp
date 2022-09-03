@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2013-2014, 2016 Kari Pihkala
+ * SPDX-FileCopyrightText: 2013-2016 Kari Pihkala
  * SPDX-FileCopyrightText: 2014 jklingen
  * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
  *

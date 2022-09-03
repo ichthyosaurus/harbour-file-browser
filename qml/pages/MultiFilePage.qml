@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
