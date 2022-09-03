@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2022 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -116,12 +116,12 @@ function goToFolder(folder, silent, startSearchQuery) {
     folder = folder.replace(/\/$/, '')
     if (folder === '') folder = '/'
 
-    if (pageStack.currentPage.objectName === "directoryPage") {
+    if (pageStack.currentPage.objectName === "DirectoryPage") {
         console.log("- starting at directory")
         sourceDir = pageStack.currentPage.dir;
     } else {
         var prevPage = pageStack.previousPage();
-        while (prevPage && prevPage.objectName !== "directoryPage") {
+        while (prevPage && prevPage.objectName !== "DirectoryPage") {
             // search for the top-most directory page
             prevPage = pageStack.previousPage(prevPage);
         }
@@ -150,7 +150,7 @@ function goToFolder(folder, silent, startSearchQuery) {
     console.log("- searching...")
     var existingTarget = null;
     existingTarget = pageStack.find(function(page) {
-        if (page.objectName === "directoryPage" &&
+        if (page.objectName === "DirectoryPage" &&
                 page.dir === shared) return true;
         return false;
     })

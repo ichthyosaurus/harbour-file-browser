@@ -29,7 +29,7 @@ import "../js/paths.js" as Paths
 
 Page {
     id: page
-    objectName: "searchPage"
+    objectName: "SearchPage"
     allowedOrientations: Orientation.All
 
     property string dir: "/" // holds the top directory where all searches will be made

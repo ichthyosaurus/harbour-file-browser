@@ -27,6 +27,7 @@ import "../components"
 
 Page {
     id: page
+    objectName: "ShortcutsPage"
     allowedOrientations: Orientation.All
 
     property string currentPath: ""

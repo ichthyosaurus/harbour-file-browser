@@ -32,7 +32,7 @@ import "../js/files.js" as Files
 
 Page {
     id: page
-    objectName: "directoryPage"
+    objectName: "DirectoryPage"
     allowedOrientations: Orientation.All
     property string dir: "/"
 

@@ -26,6 +26,61 @@ import Sailfish.Silica 1.0
 CoverBackground {
     anchors.fill: parent
 
+    // Drop all pages above the last directory page and push another
+    // page instead, then activate the app.
+    //
+    // newPage: new page to push on the stack, can be a URL or anything accepted by pageStack.push
+    // pathKey: property name using which the current directory will be passed to the new page
+    // stayAtPage: object name of a page that will be activated if it is found (instead of pushing)
+    //
+    // If any page has a property called __critical_process_page, then nothing will
+    // be pushed and the app will be activated. This can be used to avoid accidentally
+    // closing an important dialog.
+    function activatePage(newPage, pathKey, stayAtPage) {
+        var checkPage = pageStack.currentPage
+
+        console.log("page A:", pageStack.currentPage.objectName)
+
+        do {
+            if (!!stayAtPage && checkPage.objectName === stayAtPage) {
+                console.log("staying at", stayAtPage, checkPage.objectName, pageStack.currentPage.objectName)
+                main.activate()
+                return
+            } else if (checkPage.objectName === 'DirectoryPage') {
+                console.log("found dir", checkPage.dir)
+                break
+            } else if (checkPage.hasOwnProperty('__critical_process_page')) {
+                console.log("critical")
+                main.activate()
+                return
+            } else {
+                checkPage = pageStack.previousPage(checkPage)
+            }
+        } while (checkPage !== null)
+
+        if (checkPage === null) {
+            console.log("is null")
+            // this should never happen as the root page should always be
+            // the root directory page
+            main.activate()
+            return
+        }
+
+        var props = {}
+        props[pathKey] = checkPage.dir
+
+        console.log("page B:", pageStack.currentPage.objectName)
+        if (checkPage === pageStack.currentPage) {
+            console.log("pushing")
+            pageStack.animatorPush(newPage, props, PageStackAction.Immediate)
+        } else {
+            console.log("replacing")
+            pageStack.replaceAbove(checkPage, newPage, props, PageStackAction.Immediate)
+        }
+
+        main.activate()
+    }
+
     Image {
         id: bgIcon
         y: Theme.paddingLarge
@@ -66,49 +121,17 @@ CoverBackground {
 
         CoverAction {
             iconSource: "image://theme/icon-cover-search"
-            onTriggered: {
-                var current = pageStack.currentPage;
-
-                if (current && current.currentDirectory && current.dir) {
-                    // we assume it's already the search page
-                    main.activate();
-                    return;
-                }
-
-                var path = StandardPaths.home;
-                var next = pageStack.nextPage();
-
-                if (current && (current.dir || current.currentPath)) {
-                    path = current.dir ? current.dir : current.currentPath;
-                } else if (next && next.currentPath) {
-                    path = next.currentPath;
-                }
-
-                pageStack.push(Qt.resolvedUrl("../pages/SearchPage.qml"),
-                               { dir: path }, PageStackAction.Immediate);
-                main.activate();
-            }
+            onTriggered: activatePage(Qt.resolvedUrl("../pages/SearchPage.qml"), 'dir', 'SearchPage')
         }
-
         CoverAction {
             iconSource: "image://theme/icon-cover-favorite"
-            onTriggered: {
-                var current = pageStack.currentPage;
-                var next = pageStack.nextPage();
-
-                if (current && current.currentPath) {
-                    main.activate();
-                    return;
-                } else if (next && next.currentPath) {
-                    pageStack.navigateForward(PageStackAction.Immediate);
-                } else {
-                    pageStack.push(Qt.resolvedUrl("../pages/ShortcutsPage.qml"),
-                                   { currentPath: StandardPaths.home },
-                                   PageStackAction.Immediate);
-                }
-
-                main.activate();
-            }
+            // Note: the "current page" stays the same on the page stack when an attached
+            // page is being shown. That means we cannot stay when 'ShortcutsPage' is the
+            // current page. Instead, we have to push a new instance of the shortcuts page
+            // that will be destroyed once the user navigates back. We cannot use main.shortcutsPage
+            // either, because that would mean pushing the same page twice onto the stack
+            // when it is actually being shown currently.
+            onTriggered: activatePage(Qt.resolvedUrl("../pages/ShortcutsPage.qml"), 'currentPath', null)
         }
     }
 }
