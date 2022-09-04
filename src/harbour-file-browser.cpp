@@ -94,6 +94,7 @@ namespace {
                 "The application will now start normally but some data or configuration will be missing.\n"
                 "Please close the app and move the files listed above manually.\n"
             );
+            qWarning() << message;
         }
     }
 }
