@@ -52,7 +52,7 @@ Item {
     property bool showShare: true
     property bool showTransfer: true
     property bool showCompress: true
-    property bool showEdit: true
+    property bool showEdit: false
 
     property int _itemSize: Theme.iconSizeMedium
 
@@ -68,6 +68,16 @@ Item {
     signal transferTriggered(var toTransfer, var targets, var selectedAction, var goToTarget)
     signal compressTriggered
     signal editTriggered
+
+    function isEditable(file) {
+        fileData.file = file
+
+        if (fileData.isSymLink || !fileData.mimeTypeInherits("text/plain") || !fileData.isSafeToOpen()) {
+            return false
+        }
+
+        return true
+    }
 
     onSelectedCountChanged: {
         labelText = qsTr("%n file(s) selected", "", selectedCount);
@@ -245,7 +255,8 @@ Item {
         }
         IconButton { // NOT IMPLEMENTED YET
             visible: showCompress && false
-            enabled: false && selectedCount > 0; icon.width: _itemSize; icon.height: _itemSize
+            enabled: false && selectedCount > 0
+            icon.width: _itemSize; icon.height: _itemSize
             icon.source: "image://theme/icon-m-file-archive-folder"
             icon.color: Theme.primaryColor
             onClicked: { compressTriggered(); }
@@ -253,13 +264,30 @@ Item {
                 labelText = qsTr("compress file(s)", "", selectedCount);
             }
         }
-        IconButton { // NOT IMPLEMENTED YET
-            visible: showEdit && false
-            enabled: false && selectedCount > 0; icon.width: _itemSize; icon.height: _itemSize
+        IconButton {
+            visible: showEdit
+            enabled: base.enabled && selectedCount == 1
+            icon.width: _itemSize; icon.height: _itemSize
             icon.source: "image://theme/icon-m-edit"
             icon.color: Theme.primaryColor
             onPressAndHold: labelText = qsTr("edit file(s)", "", selectedCount);
-            onClicked: { editTriggered(); }
+            onClicked: {
+                var files = selectedFiles()
+                fileData.file = files[0]
+
+                if (!isEditable(fileData.file)) {
+                    console.warn("bug: cannot edit", files)
+                    console.warn("This is a programming error. See FileActions.qml for details.")
+                    return
+
+                    // Pages that enable editing files should make sure that
+                    // showEdit is only set to 'true' when editable (i.e. plain text)
+                    // files are selected. Use isEditable(file) for checking.
+                }
+
+                pageStack.animatorPush(Qt.resolvedUrl("../pages/TextEditorPage.qml"), { file: files[0] })
+                editTriggered()
+            }
         }
         IconButton {
             visible: showProperties

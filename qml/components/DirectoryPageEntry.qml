@@ -312,7 +312,9 @@ ListItem {
                 selectedFiles: function() { return [fileModel.fileNameAt(index)]; }
                 selectedCount: 1
                 showShare: !model.isLink
-                showSelection: false; showEdit: false; showCompress: false
+                showEdit: isEditable(fileModel.fileNameAt(index))
+                showSelection: false
+                showCompress: false
                 onDeleteTriggered: {
                     menu._triggerDelete = true;
                     menu.close();

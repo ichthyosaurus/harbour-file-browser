@@ -244,7 +244,7 @@ Page {
                     showProperties: false
                     showSelection: false
                     showShare: !fileData.isSymLink
-                    showEdit: !fileData.isDir
+                    showEdit: isEditable(fileData.file)
 
                     showDelete: allowMoveDelete
                     showTransfer: allowMoveDelete
