@@ -156,7 +156,7 @@ Page {
                 text: qsTr("Create New...")
                 onClicked: {
                     pullDownMenu._filterBlocked = true;
-                    var dialog = pageStack.push(Qt.resolvedUrl("CreateFolderDialog.qml"),
+                    var dialog = pageStack.push(Qt.resolvedUrl("CreateNewDialog.qml"),
                                           { path: page.dir })
                     dialog.accepted.connect(function() {
                         if (dialog.errorMessage !== "")
