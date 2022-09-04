@@ -522,7 +522,7 @@ QStringList Engine::readFile(QString filename)
     return makeStringList(msg, lines.join("\n"));
 }
 
-QString Engine::mkdir(QString path, QString name)
+QString Engine::createDirectory(QString path, QString name)
 {
     QDir dir(path);
 
