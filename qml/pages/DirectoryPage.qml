@@ -153,7 +153,7 @@ Page {
                 }
             }
             MenuItem {
-                text: qsTr("Create Folder")
+                text: qsTr("Create New...")
                 onClicked: {
                     pullDownMenu._filterBlocked = true;
                     var dialog = pageStack.push(Qt.resolvedUrl("CreateFolderDialog.qml"),

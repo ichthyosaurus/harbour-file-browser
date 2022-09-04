@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2014, 2019 Kari Pihkala
  * SPDX-FileCopyrightText: 2016 Joona Petrell
- * SPDX-FileCopyrightText: 2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2022 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -22,42 +22,82 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import harbour.file.browser.FileData 1.0
 import "../components"
 
 Dialog {
-    property string path: ""
+    id: root
 
-    // return value
-    property string errorMessage: ""
+    property string path: "/"  // parent directory of the new entry
+    property string errorMessage: ""  // return value
 
-    id: dialog
     allowedOrientations: Orientation.All
-    canAccept: folderName.text !== ""
+    canAccept: parentData.isWritable && folderName.text !== "" && !folderName.errorHighlight
 
-    onAccepted: errorMessage = engine.mkdir(path, folderName.text);
+    onAccepted: {
+        errorMessage = _createFolder ?
+                    engine.createDirectory(path, folderName.text) :
+                    engine.createFile(path, folderName.text)
+    }
+
+    property bool _createFolder: typeCombo.currentIndex == 0
+
+    FileData {
+        id: parentData
+        file: root.path
+    }
+
+    FileData {
+        id: fileData
+        file: root.path + '/' + folderName.text
+    }
+
+    DialogHeader {
+        id: dialogHeader
+        acceptText: qsTr("Create")
+    }
 
     SilicaFlickable {
         id: flickable
-        anchors.fill: parent
+        anchors {
+            top: dialogHeader.bottom
+            left: parent.left; right: parent.right
+            bottom: parent.bottom
+        }
+        clip: true
         contentHeight: column.height
         VerticalScrollDecorator { flickable: flickable }
 
+        ViewPlaceholder {
+            enabled: !parentData.isWritable
+            text: qsTr("Not permitted")
+            hintText: qsTr("You don't have permission to change the contents of this directory.")
+        }
+
         Column {
             id: column
-            anchors.left: parent.left
-            anchors.right: parent.right
-
-            DialogHeader {
-                id: dialogHeader
-                acceptText: qsTr("Create")
+            visible: parentData.isWritable
+            anchors {
+                left: parent.left
+                right: parent.right
             }
 
-            Label {
-                x: Theme.horizontalPageMargin
-                width: parent.width - 2*x
-                text: qsTr("Create a new folder under") + "\n" + path + (path != "/" ? "/" : "");
-                color: Theme.highlightColor
-                wrapMode: Text.Wrap
+            ComboBox {
+                id: typeCombo
+                label: qsTr("Create new")
+                description: (currentIndex == 0 ?
+                                 qsTr("The new folder will be created under “%1”") :
+                                 qsTr("The new text file will be created under “%1” and can be edited later.")
+                              ).arg(path + (path != "/" ? "/" : ""))
+                onCurrentItemChanged: folderName.forceActiveFocus()
+                menu: ContextMenu {
+                    MenuItem {
+                        text: qsTr("folder")
+                    }
+                    MenuItem {
+                        text: qsTr("empty text file")
+                    }
+                }
             }
 
             Spacer {
@@ -67,14 +107,59 @@ Dialog {
             TextField {
                 id: folderName
                 width: parent.width
-                placeholderText: qsTr("Folder name")
-                label: qsTr("Folder name")
+                label: _createFolder ? qsTr("Folder name") : qsTr("File name")
+                placeholderText: label
                 focus: true
-
-                // return key on virtual keyboard accepts the dialog
+                text: ""
+                errorHighlight: text !== "" && (engine.exists(path + "/" + text) || (!_createFolder && text.indexOf('/') >= 0))
                 EnterKey.enabled: folderName.text.length > 0
                 EnterKey.iconSource: "image://theme/icon-m-enter-accept"
-                EnterKey.onClicked: dialog.accept()
+                EnterKey.onClicked: root.accept()
+            }
+
+            Label {
+                anchors {
+                    left: parent.left; leftMargin: folderName.textLeftMargin
+                    right: parent.right; rightMargin: folderName.textRightMargin
+                }
+
+                text: {
+                    if (folderName.errorHighlight) {
+                        if (!_createFolder && folderName.text.indexOf('/') >= 0) {
+                            return qsTr("File names must not contain slashes. " +
+                                        "To create a new file in a folder below “%1”, " +
+                                        "first create a folder and then create the file.").arg(parentData.file)
+                        } else {
+                            return qsTr("A file or folder with this name already exists.")
+                        }
+                    } else if (folderName.text.indexOf('/') >= 0){
+                        var a = qsTr("Using slashes in folder names will create sub-folders, like so:")
+                        var b = '\t' + parentData.file + '/\n'
+                        var split = fileData.file.slice(path.length + 1).split('/')
+
+                        for (var i in split) {
+                            if (split[i] === '') continue
+
+                            b += '\t└'
+                            for (var j = 1; j <= i; j++) {
+                                b += '─'
+                            }
+                            b += ' ' + split[i] + '/\n'
+                        }
+
+                        return a + '\n\n' + b.slice(0, b.length-2)
+                    } else {
+                        return ''
+                    }
+                }
+                color: /*folderName.errorHighlight ? palette.errorColor : */palette.secondaryColor
+                font.pixelSize: Theme.fontSizeExtraSmall
+                wrapMode: Text.Wrap
+                opacity: text.length > 0 ? 1.0 : 0.0
+                height: text.length > 0 ? implicitHeight : 0
+
+                Behavior on opacity { FadeAnimator {}}
+                Behavior on height { NumberAnimation { duration: 200; easing.type: Easing.InOutQuad } }
             }
         }
     }

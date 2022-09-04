@@ -524,6 +524,11 @@ QStringList Engine::readFile(QString filename)
 
 QString Engine::createDirectory(QString path, QString name)
 {
+    if (path.isEmpty() || name.isEmpty()) {
+        qWarning() << "bug: Engine::createDirectory: path or name is empty --" << path << name;
+        return QLatin1Literal("");
+    }
+
     QDir dir(path);
 
     if (!dir.mkpath(name)) {
@@ -535,7 +540,38 @@ QString Engine::createDirectory(QString path, QString name)
         return tr("Cannot create folder %1").arg(name);
     }
 
-    return QString();
+    return QLatin1Literal("");
+}
+
+QString Engine::createFile(QString path, QString name)
+{
+    if (path.isEmpty() || name.isEmpty()) {
+        qWarning() << "bug: Engine::createFile: path or name is empty --" << path << name;
+        return QLatin1Literal("");
+    }
+
+    QFileInfo info(path);
+
+    if (!info.isWritable()) {
+        return tr("No permissions to create “%1” in “%2”").arg(name, path);
+    }
+
+    QFile file(path + QStringLiteral("/") + name);
+
+    if (file.exists()) {
+        qWarning() << "bug: Engine::createFile: file already exists --" << path << name;
+        return QLatin1Literal("");
+    }
+
+    if (!file.open(QFile::WriteOnly | QFile::Truncate)) {
+        return tr("Cannot create file “%1” in “%2”").arg(name, path);
+    }
+
+    QTextStream out(&file);
+    out << QStringLiteral("\n");
+    file.close();
+
+    return QLatin1Literal("");
 }
 
 QStringList Engine::rename(QString fullOldFilename, QString newName)

@@ -89,6 +89,7 @@ public:
     Q_INVOKABLE QStringList diskSpace(QString path);
     Q_INVOKABLE QStringList readFile(QString filename);
     Q_INVOKABLE QString createDirectory(QString path, QString name);
+    Q_INVOKABLE QString createFile(QString path, QString name);
     Q_INVOKABLE QStringList rename(QString fullOldFilename, QString newName);
     Q_INVOKABLE QString chmod(QString path,
                               bool ownerRead, bool ownerWrite, bool ownerExecute,
