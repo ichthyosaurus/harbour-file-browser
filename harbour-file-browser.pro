@@ -134,6 +134,7 @@ SOURCES += src/harbour-file-browser.cpp \
     src/filedata.cpp \
     src/engine.cpp \
     src/fileworker.cpp \
+    src/texteditor.cpp \
     src/searchengine.cpp \
     src/searchworker.cpp \
     src/consolemodel.cpp \
@@ -146,6 +147,7 @@ HEADERS += src/filemodel.h \
     src/filedata.h \
     src/engine.h \
     src/fileworker.h \
+    src/texteditor.h \
     src/searchengine.h \
     src/searchworker.h \
     src/consolemodel.h \
