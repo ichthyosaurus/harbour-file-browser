@@ -526,11 +526,12 @@ QString Engine::createDirectory(QString path, QString name)
 {
     QDir dir(path);
 
-    if (!dir.mkdir(name)) {
+    if (!dir.mkpath(name)) {
         QFileInfo info(path);
-        if (!info.isWritable())
-            return tr("No permissions to create %1").arg(name);
 
+        if (!info.isWritable()) {
+            return tr("No permissions to create %1").arg(name);
+        }
         return tr("Cannot create folder %1").arg(name);
     }
 
