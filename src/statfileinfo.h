@@ -2,7 +2,7 @@
  * This file is part of File Browser.
  *
  * SPDX-FileCopyrightText: 2014 Kari Pihkala
- * SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -81,6 +81,9 @@ public:
 
     QString kind() const;
     QFile::Permissions permissions() const { return m_fileInfo.permissions(); }
+    bool isWritable() const { return m_fileInfo.isWritable(); }
+    bool isReadable() const { return m_fileInfo.isReadable(); }
+    bool isExecutable() const { return m_fileInfo.isExecutable(); }
     QString group() const { return m_fileInfo.group(); }
     uint groupId() const { return m_fileInfo.groupId(); }
     QString owner() const { return m_fileInfo.owner(); }

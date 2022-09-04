@@ -36,11 +36,15 @@ class FileData : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString file READ file() WRITE setFile(QString) NOTIFY fileChanged())
+    Q_PROPERTY(bool exists READ exists() NOTIFY existsChanged())
     Q_PROPERTY(bool isDir READ isDir() NOTIFY isDirChanged())
     Q_PROPERTY(bool isSymLink READ isSymLink() NOTIFY isSymLinkChanged())
     Q_PROPERTY(QString kind READ kind() NOTIFY kindChanged())
     Q_PROPERTY(QString icon READ icon() NOTIFY iconChanged())
     Q_PROPERTY(QString permissions READ permissions() NOTIFY permissionsChanged())
+    Q_PROPERTY(bool isWritable READ isWritable() NOTIFY isWritableChanged())
+    Q_PROPERTY(bool isReadable READ isReadable() NOTIFY isReadableChanged())
+    Q_PROPERTY(bool isExecutable READ isExecutable() NOTIFY isExecutableChanged())
     Q_PROPERTY(QString owner READ owner() NOTIFY ownerChanged())
     Q_PROPERTY(QString group READ group() NOTIFY groupChanged())
     Q_PROPERTY(QString size READ size() NOTIFY sizeChanged())
@@ -71,11 +75,15 @@ public:
     QString file() const { return m_file; }
     void setFile(QString file);
 
+    bool exists() const { return m_fileInfo.exists(); }
     bool isDir() const { return m_fileInfo.isDirAtEnd(); }
     bool isSymLink() const { return m_fileInfo.isSymLink(); }
     QString kind() const { return m_fileInfo.kind(); }
     QString icon() const;
     QString permissions() const;
+    bool isWritable() const { return m_fileInfo.isWritable(); }
+    bool isReadable() const { return m_fileInfo.isReadable(); }
+    bool isExecutable() const { return m_fileInfo.isExecutable(); }
     QString owner() const;
     QString group() const;
     QString size() const;
@@ -108,11 +116,15 @@ public:
 
 signals:
     void fileChanged();
+    void existsChanged();
     void isDirChanged();
     void isSymLinkChanged();
     void kindChanged();
     void iconChanged();
     void permissionsChanged();
+    void isWritableChanged();
+    void isReadableChanged();
+    void isExecutableChanged();
     void ownerChanged();
     void groupChanged();
     void sizeChanged();

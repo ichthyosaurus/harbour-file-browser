@@ -2,7 +2,7 @@
  * This file is part of File Browser.
  *
  * SPDX-FileCopyrightText: 2014 Kari Pihkala
- * SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -120,6 +120,4 @@ void StatFileInfo::refresh()
     if (res != 0) { // if error, then set to undefined
         m_stat.st_mode = 0;
     }
-
 }
-

@@ -192,19 +192,25 @@ void FileData::readInfo()
     m_metaData.clear();
 
     m_fileInfo.setFile(m_file);
+    m_file = m_fileInfo.absoluteFilePath();
 
     // exists() checks for target existence in symlinks, so ignore it for symlinks
-    if (!m_fileInfo.exists() && !m_fileInfo.isSymLink())
+    if (!m_fileInfo.exists() && !m_fileInfo.isSymLink()) {
         m_errorMessage = tr("File does not exist");
+    }
 
     readMetaData();
 
     emit fileChanged();
+    emit existsChanged();
     emit isDirChanged();
     emit isSymLinkChanged();
     emit kindChanged();
     emit iconChanged();
     emit permissionsChanged();
+    emit isWritableChanged();
+    emit isReadableChanged();
+    emit isExecutableChanged();
     emit ownerChanged();
     emit groupChanged();
     emit sizeChanged();
