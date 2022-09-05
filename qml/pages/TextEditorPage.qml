@@ -26,12 +26,24 @@ import harbour.file.browser.TextEditor 1.0
 
 import "../components"
 
-Page {
+Dialog {
     id: root
     allowedOrientations: Orientation.All
 
     property alias file: editor.file
     property bool _changed: false
+
+    function save() {
+        console.log("[text editor] saving to", fileData.file)
+        editor.contents = editorArea.text
+        editor.save()
+        _changed = false
+    }
+
+    canAccept: !editor.isReadOnly && _changed
+    onAccepted: {
+        save()
+    }
 
     onStatusChanged: {
         if (status === PageStatus.Active) {
@@ -94,25 +106,46 @@ Page {
             }
             MenuItem {
                 text: qsTr("Save")
-                enabled: !editor.isReadOnly && _changed
-                onClicked: {
-                    console.log("[text editor] saving to", fileData.file)
-                    editor.contents = editorArea.text
-                    editor.save()
-                    _changed = false
-                }
+                visible: canAccept
+                onClicked: save()
             }
         }
 
-        PageHeader {
+        DialogHeader {
             id: header
-            title: (_changed ? "* " : "") + fileData.name
-            description: fileData.absolutePath
+            acceptText: qsTr("Save")
+        }
+
+        Column {
+            id: titleColumn
+            anchors.top: header.bottom
+            x: Theme.horizontalPageMargin
+            width: parent.width - 2*x
+
+            Label {
+                text: (_changed ? "* " : "") + fileData.name
+                width: parent.width
+                font.pixelSize: Theme.fontSizeLarge
+                color: palette.highlightColor
+                truncationMode: TruncationMode.Fade
+            }
+
+            Label {
+                text: fileData.absolutePath
+                width: parent.width
+                wrapMode: Text.Wrap
+                elide: Text.ElideMiddle
+                maximumLineCount: 2
+                color: palette.highlightColor
+                font.pixelSize: Theme.fontSizeExtraSmall
+            }
+
+            Spacer { height: Theme.paddingLarge }
         }
 
         Column {
             id: editorColumn
-            anchors.top: header.bottom
+            anchors.top: titleColumn.bottom
             width: parent.width
             clip: true
 
