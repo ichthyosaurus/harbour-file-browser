@@ -285,7 +285,7 @@ Item {
                     // files are selected. Use isEditable(file) for checking.
                 }
 
-                pageStack.animatorPush(Qt.resolvedUrl("../pages/TextEditorPage.qml"), { file: files[0] })
+                pageStack.animatorPush(Qt.resolvedUrl("../pages/TextEditorDialog.qml"), { file: files[0] })
                 editTriggered()
             }
         }
