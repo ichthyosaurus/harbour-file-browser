@@ -32,6 +32,7 @@ Dialog {
 
     property alias file: editor.file
     property bool _changed: false
+    property bool _predictiveHintsEnabled: true
 
     function save() {
         console.log("[text editor] saving to", fileData.file)
@@ -105,6 +106,14 @@ Dialog {
                 }
             }
             MenuItem {
+                text: _predictiveHintsEnabled ?
+                          qsTr("Disable predictive text input") :
+                          qsTr("Enable predictive text input")
+                onDelayedClick: {
+                    _predictiveHintsEnabled = !_predictiveHintsEnabled
+                }
+            }
+            MenuItem {
                 text: qsTr("Save")
                 visible: canAccept
                 onClicked: save()
@@ -161,6 +170,7 @@ Dialog {
                 font.pixelSize: Theme.fontSizeExtraSmall
                 font.family: "monospace"
                 wrapMode: Text.Wrap
+                inputMethodHints: _predictiveHintsEnabled ? Qt.ImhNone : Qt.ImhNoPredictiveText
 
                 onTextChanged: {
                     if (editor.isReadOnly) return
