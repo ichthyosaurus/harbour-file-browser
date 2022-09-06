@@ -23,6 +23,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.file.browser.ConsoleModel 1.0
+import harbour.file.browser.FileData 1.0
 import "../components"
 
 Page {
@@ -71,21 +72,7 @@ Page {
     PageHeader {
         id: header
         title: page.title
-    }
-
-    Label {
-        visible: _commandFailed
-        anchors {
-            bottom: parent.bottom; bottomMargin: 2*Theme.horizontalPageMargin
-            left: parent.left; leftMargin: Theme.horizontalPageMargin
-            right: parent.right; rightMargin: Theme.horizontalPageMargin
-        }
-        height: Theme.itemSizeLarge
-        verticalAlignment: Text.AlignBottom
-        truncationMode: TruncationMode.None
-        wrapMode: Text.WordWrap
-        text: qsTr("Swipe right to view raw contents.")
-        color: Theme.secondaryHighlightColor
+        description: qsTr("Preview", "as in 'incomplete/aggregated preview of the contents of a file'")
     }
 
     // display console text as a list, it is much faster compared to a Text item
@@ -98,7 +85,8 @@ Page {
         anchors {
             left: parent.left; right: parent.right
             top: parent.top; topMargin: header.height+Theme.paddingMedium
-            bottom: parent.bottom
+            bottom: failedHintLabel.top
+            bottomMargin: failedHintLabel.visible ? 2*Theme.horizontalPageMargin : 0
         }
 
         SilicaListView {
@@ -138,5 +126,32 @@ Page {
                 }
             }
         }
+    }
+
+    Label {
+        id: failedHintLabel
+        visible: _commandFailed
+
+        FileData {
+            id: fallbackFileData
+            file: fallbackFile
+        }
+
+        anchors {
+            bottom: parent.bottom; bottomMargin: visible ? 2*Theme.horizontalPageMargin : 0
+            left: parent.left; leftMargin: Theme.horizontalPageMargin
+            right: parent.right; rightMargin: Theme.horizontalPageMargin
+        }
+        height: visible ? implicitHeight : 0
+        verticalAlignment: Text.AlignBottom
+        truncationMode: TruncationMode.None
+        wrapMode: Text.WordWrap
+        text: visible ?
+                  (fallbackFileData.category === "rpm" || fallbackFileData.category === "apk" ?
+                       qsTr("This file appears to be a software package. " +
+                            "To install, swipe back and select the “Install” option from the menu.") + "\n\n" :
+                       "") + qsTr("Swipe right to view raw contents.") :
+                  ""
+        color: Theme.secondaryHighlightColor
     }
 }
