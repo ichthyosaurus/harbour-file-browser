@@ -42,8 +42,6 @@ Page {
     FileData {
         id: fileData
         file: page.file
-        property string category
-        Component.onCompleted: category = typeCategory()
     }
 
     SilicaFlickable {

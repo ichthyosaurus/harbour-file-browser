@@ -206,6 +206,7 @@ void FileData::readInfo()
     emit isDirChanged();
     emit isSymLinkChanged();
     emit kindChanged();
+    emit categoryChanged();
     emit iconChanged();
     emit permissionsChanged();
     emit isWritableChanged();

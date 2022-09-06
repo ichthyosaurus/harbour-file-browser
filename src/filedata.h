@@ -40,6 +40,7 @@ class FileData : public QObject
     Q_PROPERTY(bool isDir READ isDir() NOTIFY isDirChanged())
     Q_PROPERTY(bool isSymLink READ isSymLink() NOTIFY isSymLinkChanged())
     Q_PROPERTY(QString kind READ kind() NOTIFY kindChanged())
+    Q_PROPERTY(QString category READ typeCategory NOTIFY categoryChanged)
     Q_PROPERTY(QString icon READ icon() NOTIFY iconChanged())
     Q_PROPERTY(QString permissions READ permissions() NOTIFY permissionsChanged())
     Q_PROPERTY(bool isWritable READ isWritable() NOTIFY isWritableChanged())
@@ -120,6 +121,7 @@ signals:
     void isDirChanged();
     void isSymLinkChanged();
     void kindChanged();
+    void categoryChanged();
     void iconChanged();
     void permissionsChanged();
     void isWritableChanged();
