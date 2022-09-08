@@ -91,6 +91,9 @@ Page {
         }
 
         PullDownMenu {
+            enabled: visible
+            visible: engine.clipboardCount > 0
+
             MenuItem {
                 text: qsTr("Clear", "as in 'clear the current clipboard contents'")
                 onClicked: engine.clearClipboard()
