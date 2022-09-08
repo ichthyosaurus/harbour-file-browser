@@ -152,7 +152,7 @@ Dialog {
                         return ''
                     }
                 }
-                color: /*folderName.errorHighlight ? palette.errorColor : */palette.secondaryColor
+                color: palette.secondaryHighlightColor
                 font.pixelSize: Theme.fontSizeExtraSmall
                 wrapMode: Text.Wrap
                 opacity: text.length > 0 ? 1.0 : 0.0
