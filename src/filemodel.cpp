@@ -359,7 +359,7 @@ QStringList FileModel::selectedFiles() const
         return QStringList();
 
     QStringList filenames;
-    foreach (const StatFileInfo &info, m_files) {
+    for (const StatFileInfo& info : std::as_const(m_files)) {
         if (info.isSelected())
             filenames.append(info.absoluteFilePath());
     }

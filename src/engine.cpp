@@ -139,7 +139,7 @@ QStringList Engine::listExistingFiles(QString destDirectory)
     }
 
     QStringList existingFiles;
-    foreach (QString filename, m_clipboardFiles) {
+    for (const auto& filename : std::as_const(m_clipboardFiles)) {
         QFileInfo fileInfo(filename);
         QString newname = dest.absoluteFilePath(fileInfo.fileName());
 
@@ -175,7 +175,7 @@ void Engine::pasteFiles(QString destDirectory, bool asSymlinks)
     }
 
     // validate that the files can be pasted
-    foreach (QString filename, m_clipboardFiles) {
+    for (const auto& filename : std::as_const(m_clipboardFiles)) {
         QFileInfo fileInfo(filename);
         QString newname = dest.absoluteFilePath(fileInfo.fileName());
 

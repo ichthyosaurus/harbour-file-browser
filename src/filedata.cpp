@@ -132,7 +132,7 @@ uint FileData::dirsCount() const
     if (QSettings().value("View/HiddenFilesShown", false).toBool()) {
         filters |= QDir::Hidden;
     }
-    QDir dir(m_file, QStringLiteral(""), QDir::NoSort, filters);
+    QDir dir(m_file, QLatin1String(), QDir::NoSort, filters);
     return dir.count();
 }
 
@@ -143,7 +143,7 @@ uint FileData::filesCount() const
     if (QSettings().value("View/HiddenFilesShown", false).toBool()) {
         filters |= QDir::Hidden;
     }
-    QDir dir(m_file, QStringLiteral(""), QDir::NoSort, filters);
+    QDir dir(m_file, QLatin1String(), QDir::NoSort, filters);
     return dir.count();
 }
 
@@ -307,8 +307,8 @@ void FileData::readMetaData()
         // read exif data for selected formats
         if (m_mimeTypeName == "image/jpeg" || m_mimeTypeName == "image/png" ||
                 m_mimeTypeName == "image/gif" || m_mimeTypeName == "image/tiff" ) {
-            QStringList exif = readExifData(filename);
-            foreach (QString e, exif) {
+            const QStringList exif = readExifData(filename);
+            for (const auto& e : exif) {
                 auto split = e.split(STRING_SEP);
                 QString label, value;
 
@@ -323,8 +323,8 @@ void FileData::readMetaData()
         }
 
         // read comments
-        QStringList textKeys = reader.textKeys();
-        foreach (QString key, textKeys) {
+        const QStringList textKeys = reader.textKeys();
+        for (const auto& key : textKeys) {
             QString value = reader.text(key);
             addMetaData(9, key, value);
         }

@@ -154,6 +154,7 @@ HEADERS += src/filemodel.h \
     src/statfileinfo.h \
     src/globals.h \
     src/settingshandler.h \
+    src/overload_of.h \
 
 SOURCES += src/jhead/jhead-api.cpp \
     src/jhead/exif.c \

@@ -22,6 +22,7 @@
 
 #include "consolemodel.h"
 #include "globals.h"
+#include "overload_of.h"
 
 enum {
     ModelDataRole = Qt::UserRole + 1
@@ -98,9 +99,9 @@ bool ConsoleModel::executeCommand(QString command, QStringList arguments)
     m_process = new QProcess(this);
     m_process->setReadChannel(QProcess::StandardOutput);
     m_process->setProcessChannelMode(QProcess::MergedChannels); // merged stderr channel with stdout channel
-    connect(m_process, SIGNAL(readyReadStandardOutput()), this, SLOT(readProcessChannels()));
-    connect(m_process, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(handleProcessFinish(int, QProcess::ExitStatus)));
-    connect(m_process, SIGNAL(error(QProcess::ProcessError)), this, SLOT(handleProcessError(QProcess::ProcessError)));
+    connect(m_process, &QProcess::readyReadStandardOutput, this, &ConsoleModel::readProcessChannels);
+    connect(m_process, choose<int, QProcess::ExitStatus>::overload_of(&QProcess::finished), this, &ConsoleModel::handleProcessFinish);
+    connect(m_process, choose<QProcess::ProcessError>::overload_of(&QProcess::error), this, &ConsoleModel::handleProcessError);
     m_process->start(command, arguments);
     // the process is killed when ConsoleModel is destroyed (usually when Page is closed)
     // should we run the process in bg thread to allow the command to finish(?)

@@ -116,16 +116,16 @@ static void ProcessCanonMakerNoteDir(unsigned char * DirStart, unsigned char * O
                 if (ShowTags){
                     xprintf("\"");
                     for (a=0;a<ByteCount;a++){
-                        int ZeroSkipped = 0;
+                        // int ZeroSkipped = 0;
                         if (ValuePtr[a] >= 32){
-                            if (ZeroSkipped){
+                            // if (ZeroSkipped){
                                 xprintf("?");
-                                ZeroSkipped = 0;
-                            }
+                                // ZeroSkipped = 0;
+                            // }
                             putchar(ValuePtr[a]);
                         }else{
                             if (ValuePtr[a] == 0){
-                                ZeroSkipped = 1;
+                                // ZeroSkipped = 1;
                             }
                         }
                     }

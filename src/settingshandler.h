@@ -137,7 +137,7 @@ private:
     //
 
     // common value mappings
-    Mapping<QString> map_invalid {QSL(""), {}};
+    Mapping<QString> map_invalid {QLatin1String(), {}};
     Mapping<bool> map_bool_true{{QSL("true"), true}, {{QSL("false"), false}}};
     Mapping<bool> map_bool_false{{QSL("false"), false}, {{QSL("true"), true}}};
 
@@ -229,7 +229,7 @@ private:
             && !localKey.isEmpty()
             && RawSettingsHandler::instance()->read(QSL("View/UseLocalSettings"), QSL("true")) == QSL("true")
             && RawSettingsHandler::instance()->hasKey(localKey, m_localFile)) {
-            return localMap.value(RawSettingsHandler::instance()->read(localKey, QSL(""), m_localFile), globalMap.defaultValue.second);
+            return localMap.value(RawSettingsHandler::instance()->read(localKey, QLatin1String(), m_localFile), globalMap.defaultValue.second);
         } else {
             return globalMap.value(RawSettingsHandler::instance()->read(globalKey, globalMap.defaultValue.first), globalMap.defaultValue.second);
         }

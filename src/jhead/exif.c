@@ -1214,15 +1214,16 @@ void create_EXIF(void)
         // we now know how big it needs to be allocated.
         unsigned char * NewBuf = malloc(DataWriteIndex);
         if (NewBuf == NULL){
-            ErrFatal("Could not allocate memory");
+            ErrFatal("Could not allocate memory for exif section");
+        } else {
+            memcpy(NewBuf, Buffer, DataWriteIndex);
+
+            CreateSection(M_EXIF, NewBuf, DataWriteIndex);
+
+            // Re-parse new exif section, now that its in place
+            // otherwise, we risk touching data that has already been freed.
+            process_EXIF(NewBuf, DataWriteIndex);
         }
-        memcpy(NewBuf, Buffer, DataWriteIndex);
-
-        CreateSection(M_EXIF, NewBuf, DataWriteIndex);
-
-        // Re-parse new exif section, now that its in place
-        // otherwise, we risk touching data that has already been freed.
-        process_EXIF(NewBuf, DataWriteIndex);
     }
 }
 

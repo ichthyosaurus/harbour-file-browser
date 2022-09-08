@@ -31,17 +31,15 @@ SearchEngine::SearchEngine(QObject *parent) :
 {
     m_dir = "";
     m_searchWorker = new SearchWorker;
-    connect(m_searchWorker, SIGNAL(matchFound(QString)), this, SLOT(emitMatchFound(QString)));
+    connect(m_searchWorker, &SearchWorker::matchFound, this, &SearchEngine::emitMatchFound);
 
     // pass worker end signals to QML
-    connect(m_searchWorker, SIGNAL(progressChanged(QString)),
-            this, SIGNAL(progressChanged(QString)));
-    connect(m_searchWorker, SIGNAL(done()), this, SIGNAL(workerDone()));
-    connect(m_searchWorker, SIGNAL(errorOccurred(QString, QString)),
-            this, SIGNAL(workerErrorOccurred(QString, QString)));
+    connect(m_searchWorker, &SearchWorker::progressChanged, this, &SearchEngine::progressChanged);
+    connect(m_searchWorker, &SearchWorker::done, this, &SearchEngine::workerDone);
+    connect(m_searchWorker, &SearchWorker::errorOccurred, this, &SearchEngine::workerErrorOccurred);
 
-    connect(m_searchWorker, SIGNAL(started()), this, SIGNAL(runningChanged()));
-    connect(m_searchWorker, SIGNAL(finished()), this, SIGNAL(runningChanged()));
+    connect(m_searchWorker, &QThread::started, this, &SearchEngine::runningChanged);
+    connect(m_searchWorker, &QThread::finished, this, &SearchEngine::runningChanged);
 }
 
 SearchEngine::~SearchEngine()

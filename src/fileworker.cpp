@@ -163,7 +163,7 @@ void FileWorker::run()
 bool FileWorker::validateFilenames(const QStringList &filenames)
 {
     // basic validity check
-    foreach (QString filename, filenames) {
+    for (const auto& filename : filenames) {
         if (filename.isEmpty()) {
             emit errorOccurred(tr("Empty filename"), "");
             return false;
@@ -178,7 +178,7 @@ void FileWorker::symlinkFiles()
     int fileCount = m_filenames.count();
 
     QDir dest(m_destDirectory);
-    foreach (QString filename, m_filenames) {
+    for (const auto& filename : std::as_const(m_filenames)) {
         m_progress = 100 * fileIndex / fileCount;
         emit progressChanged(m_progress, filename);
 
@@ -250,7 +250,7 @@ void FileWorker::deleteFiles()
     int fileIndex = 0;
     int fileCount = m_filenames.count();
 
-    foreach (QString filename, m_filenames) {
+    for (const auto& filename : std::as_const(m_filenames)) {
         m_progress = 100 * fileIndex / fileCount;
         emit progressChanged(m_progress, filename);
 
@@ -282,7 +282,7 @@ void FileWorker::copyOrMoveFiles()
     int fileCount = m_filenames.count();
 
     QDir dest(m_destDirectory);
-    foreach (QString filename, m_filenames) {
+    for (const auto& filename : std::as_const(m_filenames)) {
         m_progress = 100 * fileIndex / fileCount;
         emit progressChanged(m_progress, filename);
 

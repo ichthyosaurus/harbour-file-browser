@@ -70,8 +70,9 @@ void RawSettingsHandler::flushRuntimeSettings(QString fileName) {
     locker.unlock();
 
     QSettings settings(fileName, QSettings::IniFormat);
+    const QStringList keys = data.keys();
 
-    for (QString key : data.keys()) {
+    for (const QString &key : keys) {
         QVariant value = data[key];
 
         if (settings.value(key) == value) continue;

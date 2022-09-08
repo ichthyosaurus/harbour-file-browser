@@ -196,8 +196,9 @@ int main(int argc, char *argv[])
     {
         QString method = QStringLiteral("disabled");
 
-        if (QFileInfo(QStringLiteral("/usr/lib/") +
-                      QStringLiteral("qt5/qml/Sailfish/Share/qmldir")).exists()) {
+        if (QFileInfo::exists(
+                    QStringLiteral("/usr/lib/") +
+                    QStringLiteral("qt5/qml/Sailfish/Share/qmldir"))) {
             method = QStringLiteral("Share");
         } else if (QFileInfo::exists(
                        QStringLiteral("/usr/lib/") +

@@ -130,8 +130,8 @@ private:
     QList<QPair<QSharedPointer<QFutureWatcher<QStringList>>, QFuture<QStringList>>> m_diskSpaceWorkers;
 
     // cached paths that we assume won't change during runtime
-    QString m_storageSettingsPath = {QStringLiteral("")};
-    QString m_pdfViewerPath = {QStringLiteral("")};
+    QString m_storageSettingsPath = {QLatin1String()};
+    QString m_pdfViewerPath = {QLatin1String()};
 
     // don't use these directly, use isUsingBusybox() instead
     QStringList m__isUsingBusybox;
