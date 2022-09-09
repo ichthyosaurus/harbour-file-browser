@@ -42,6 +42,7 @@
 #include "consolemodel.h"
 #include "settingshandler.h"
 #include "texteditor.h"
+#include "fileoperations.h"
 
 namespace {
     bool migrateItem(const QString& oldLocation, const QString& newLocation)
@@ -112,10 +113,12 @@ int main(int argc, char *argv[])
     qRegisterMetaType<QList<StatFileInfo>>("QList<StatFileInfo>");
     qmlRegisterType<FileModel>("harbour.file.browser.FileModel", 1, 0, "FileModel");
     qmlRegisterType<FileData>("harbour.file.browser.FileData", 1, 0, "FileData");
+    qmlRegisterType<FileOperationsModel>("harbour.file.browser.FileOperations", 1, 0, "FileOperationsModel");
     qmlRegisterType<DirectorySettings>("harbour.file.browser.Settings", 1, 0, "DirectorySettings");
     qmlRegisterType<SearchEngine>("harbour.file.browser.SearchEngine", 1, 0, "SearchEngine");
     qmlRegisterType<ConsoleModel>("harbour.file.browser.ConsoleModel", 1, 0, "ConsoleModel");
     qmlRegisterType<TextEditor>("harbour.file.browser.TextEditor", 1, 0, "TextEditor");
+    FileWorker2::registerMetaTypes();
 
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
     app->setOrganizationName("harbour-file-browser"); // needed for Sailjail

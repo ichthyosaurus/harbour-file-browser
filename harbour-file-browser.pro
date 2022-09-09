@@ -128,10 +128,12 @@ CONFIG += sailfishapp
 # generate files based on build configuration
 QMAKE_SUBSTITUTES += harbour-file-browser.desktop.in \
 
-SOURCES += src/harbour-file-browser.cpp \
+SOURCES += \
+    src/harbour-file-browser.cpp \
     src/filemodel.cpp \
     src/filemodelworker.cpp \
     src/filedata.cpp \
+    src/fileoperations.cpp \
     src/engine.cpp \
     src/fileworker.cpp \
     src/texteditor.cpp \
@@ -142,9 +144,11 @@ SOURCES += src/harbour-file-browser.cpp \
     src/globals.cpp \
     src/settingshandler.cpp \
 
-HEADERS += src/filemodel.h \
+HEADERS += \
+    src/filemodel.h \
     src/filemodelworker.h \
     src/filedata.h \
+    src/fileoperations.h \
     src/engine.h \
     src/fileworker.h \
     src/texteditor.h \
