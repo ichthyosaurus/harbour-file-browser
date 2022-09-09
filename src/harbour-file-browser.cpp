@@ -69,9 +69,15 @@ namespace {
 
             qDebug() << "Migrated" << oldLocation << "to" << newLocation;
             return true;
+        } else {
+            qDebug() << "No migration required.";
         }
 
-        return false;
+        if (newInfo.exists()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     void runMigrations()
