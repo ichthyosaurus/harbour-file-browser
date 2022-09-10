@@ -136,6 +136,8 @@ details on how to translate date formats to your *local* format.
 *Bug reports, and contributions for translations, bug fixes, or new features are always welcome!*
 
 1. Clone the repository: `https://github.com/ichthyosaurus/harbour-file-browser.git`
+2. Pull submodules: `git submodule update --init --recursive --progress`
+3. Apply necessary patches: `git apply libs/SortFilterProxyModel.patch`
 2. Open `harbour-file-browser.pro` in Sailfish OS IDE (Qt Creator for Sailfish)
 3. To run on emulator, select the `i486` target and press the run button
 4. To build for the device, select the `armv7hl` target and deploy all,
