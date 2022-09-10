@@ -74,6 +74,7 @@ Page {
                 contentHeight: row.height
                 contentWidth: row.width + Theme.horizontalPageMargin
                 anchors.top: head.bottom
+                clip: true  // don't leak into page to the right
 
                 HorizontalScrollDecorator { flickable: flick }
 
