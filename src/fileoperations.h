@@ -145,6 +145,7 @@ private:
 class FileOperationsModel : public QAbstractListModel
 {
     Q_OBJECT
+    Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
 
 public:
     explicit FileOperationsModel(QObject *parent = nullptr);
@@ -166,6 +167,9 @@ public:
     Q_INVOKABLE void pauseTask(int handle);
     Q_INVOKABLE void continueTask(int handle, FileOpErrorAction::ErrorAction errorAction = FileOpErrorAction::Ask);
     Q_INVOKABLE void dismissTask(int handle); // to remove finished tasks from the list
+
+signals:
+    void countChanged();
 
 private:
     int addTask(FileOpMode::Mode mode, QStringList files, QStringList targets);

@@ -361,6 +361,7 @@ void FileOperationsModel::dismissTask(int handle)
     beginRemoveRows(QModelIndex(), index, index);
     m_handler->forgetTask(handle);
     endRemoveRows();
+    emit countChanged();
 }
 
 int FileOperationsModel::addTask(FileOpMode::Mode mode, QStringList files, QStringList targets)
@@ -399,6 +400,8 @@ int FileOperationsModel::addTask(FileOpMode::Mode mode, QStringList files, QStri
     });
 
     endInsertRows();
+    emit countChanged();
+
     task.run();
     return task.handle();
 }
