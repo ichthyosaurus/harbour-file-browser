@@ -164,6 +164,7 @@ Page {
                                     }
                                     color: "transparent"
                                     border.color: parent.highlighted ? Theme.highlightColor : Theme.primaryColor
+                                    opacity: parent.enabled ? 1.0 : Theme.opacityLow
                                 }
 
                                 TextMetrics {
@@ -182,6 +183,7 @@ Page {
                                     font.pixelSize: Theme.fontSizeExtraSmall
                                     fontSizeMode: Text.Fit
                                     minimumPixelSize: /*metrics.width > width ? Theme.fontSizeExtraSmall :*/ Theme.fontSizeTiny
+                                    opacity: parent.enabled ? 1.0 : Theme.opacityLow
 
                                     anchors {
                                         top: circle.bottom
