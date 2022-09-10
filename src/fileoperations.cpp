@@ -23,62 +23,67 @@
 
 #include "fileoperations.h"
 
-FileWorker2::~FileWorker2() {
-    if (m_status.load() != Status::Finished) emit finished(false);
+void FileOperations::registerTypes(const char *qmlUrl, int major, int minor) {
+#define REGISTER_ENUM_CONTAINER(NAME) \
+    qRegisterMetaType<FileOp##NAME::NAME>("FileOp" #NAME "::" #NAME); \
+    FileOp##NAME::registerToQml(qmlUrl, major, minor);
+
+    REGISTER_ENUM_CONTAINER(Mode)
+    REGISTER_ENUM_CONTAINER(ErrorType)
+    REGISTER_ENUM_CONTAINER(ErrorAction)
+    REGISTER_ENUM_CONTAINER(Status)
+
+#undef REGISTER_ENUM_CONTAINER
 }
 
-void FileWorker2::registerMetaTypes()
-{
-    qRegisterMetaType<FileWorker2::Mode>("FileWorker2::Mode");
-    qRegisterMetaType<FileWorker2::ErrorType>("FileWorker2::ErrorType");
-    qRegisterMetaType<FileWorker2::ErrorAction>("FileWorker2::ErrorAction");
-    qRegisterMetaType<FileWorker2::Status>("FileWorker2::Status");
+FileWorker2::~FileWorker2() {
+    if (m_status.load() != FileOpStatus::Finished) emit finished(false);
 }
 
 void FileWorker2::cancel()
 {
-    if (m_status.loadAcquire() == Status::Finished) return;
+    if (m_status.loadAcquire() == FileOpStatus::Finished) return;
 
     qDebug() << "File operation cancelled in thread" << QThread::currentThreadId();
-    m_status.storeRelease(Status::Cancelled);
-    emit statusChanged(FileWorker2::Status::Cancelled);
+    m_status.storeRelease(FileOpStatus::Cancelled);
+    emit statusChanged(FileOpStatus::Cancelled);
 }
 
 void FileWorker2::pause() {
-    if (m_status.loadAcquire() == Status::Finished) return;
+    if (m_status.loadAcquire() == FileOpStatus::Finished) return;
 
     qDebug() << "File operation paused in thread" << QThread::currentThreadId();
-    m_status.storeRelease(Status::Paused);
-    emit statusChanged(FileWorker2::Status::Paused);
+    m_status.storeRelease(FileOpStatus::Paused);
+    emit statusChanged(FileOpStatus::Paused);
 }
 
-void FileWorker2::carryOn(ErrorAction feedback) {
+void FileWorker2::carryOn(FileOpErrorAction::ErrorAction feedback) {
     int status = m_status.loadAcquire();
 
-    if (status != Status::WaitingForFeedback && status != Status::Paused) {
+    if (status != FileOpStatus::WaitingForFeedback && status != FileOpStatus::Paused) {
         qDebug() << "Cannot continue file operation: neither paused nor waiting for feedback in thread" << QThread::currentThreadId();
         return;
     }
 
-    if (status == Status::WaitingForFeedback) {
+    if (status == FileOpStatus::WaitingForFeedback) {
         m_errorAction.storeRelease(feedback);
     }
 
     qDebug() << "Continuing file operation in thread" << QThread::currentThreadId() << "with feedback" << feedback;
-    m_status.storeRelease(Status::Running);
-    emit statusChanged(FileWorker2::Status::Running);
+    m_status.storeRelease(FileOpStatus::Running);
+    emit statusChanged(FileOpStatus::Running);
 }
 
 void FileWorker2::process() {
     // TODO Implement.
 
-    if (m_status.loadAcquire() == Status::Finished) {
+    if (m_status.loadAcquire() == FileOpStatus::Finished) {
         qDebug() << "Bug: finished file operation asked to run again - request ignored";
         return;
     }
 
-    m_status.storeRelease(Status::Running);
-    emit statusChanged(FileWorker2::Status::Running);
+    m_status.storeRelease(FileOpStatus::Running);
+    emit statusChanged(FileOpStatus::Running);
 
     emit progressChanged(0, 0);
     emit progressChanged(0, m_files.size());
@@ -95,52 +100,52 @@ void FileWorker2::process() {
         if (!checkContinue()) break;
     }
 
-    if (m_status.loadAcquire() == Status::Cancelled) {
+    if (m_status.loadAcquire() == FileOpStatus::Cancelled) {
         emit finished(false);
     } else {
-        m_status.storeRelease(Status::Finished);
-        emit statusChanged(Status::Finished);
+        m_status.storeRelease(FileOpStatus::Finished);
+        emit statusChanged(FileOpStatus::Finished);
         emit finished(true);
     }
 }
 
 bool FileWorker2::checkContinue() {
-    Status status = static_cast<Status>(m_status.loadAcquire());
+    FileOpStatus::Status status = static_cast<FileOpStatus::Status>(m_status.loadAcquire());
 
     switch (status) {
-    case Running:
+    case FileOpStatus::Running:
         return true;
 
-    case Enqueued:
-    case WaitingForFeedback:
-    case Paused:
+    case FileOpStatus::Enqueued:
+    case FileOpStatus::WaitingForFeedback:
+    case FileOpStatus::Paused:
         while (true) {
             qDebug() << "DEBUG Waiting to continue file operation in thread" << QThread::currentThreadId();
             QThread::msleep(500);
             QCoreApplication::processEvents();
-            status = static_cast<Status>(m_status.loadAcquire());
+            status = static_cast<FileOpStatus::Status>(m_status.loadAcquire());
 
             switch (status) {
-            case Running:
+            case FileOpStatus::Running:
                 return true;
 
-            case Finished:
-            case Cancelled:
+            case FileOpStatus::Finished:
+            case FileOpStatus::Cancelled:
                 return false;
 
             default:
                 continue;
             }
         }
-    case Finished:
-    case Cancelled:
+    case FileOpStatus::Finished:
+    case FileOpStatus::Cancelled:
         return false;
     }
 
     return true; // should not be reachable
 }
 
-FileWorker2::FileWorker2(Mode mode, QStringList files, QStringList targets) :
+FileWorker2::FileWorker2(FileOpMode::Mode mode, QStringList files, QStringList targets) :
     m_mode(mode), m_files(files), m_targets(targets) {}
 
 FileOperationsHandler::FileOperationsHandler(QObject *parent) : QObject(parent)
@@ -153,7 +158,7 @@ FileOperationsHandler::~FileOperationsHandler()
     //
 }
 
-FileOperationsHandler::Task &FileOperationsHandler::makeTask(FileWorker2::Mode mode, QStringList files, QStringList targets, bool autoDelete) {
+FileOperationsHandler::Task &FileOperationsHandler::makeTask(FileOpMode::Mode mode, QStringList files, QStringList targets, bool autoDelete) {
     QSharedPointer<QThread> thread(new QThread());
     QSharedPointer<FileWorker2> worker(new FileWorker2(mode, files, targets));
     worker->moveToThread(thread.data());
@@ -302,27 +307,27 @@ QHash<int, QByteArray> FileOperationsModel::roleNames() const
 
 int FileOperationsModel::deleteFiles(QStringList files)
 {
-    return addTask(FileWorker2::Mode::Delete, files, {});
+    return addTask(FileOpMode::Delete, files, {});
 }
 
 int FileOperationsModel::copyFiles(QStringList files, QStringList targetDirs)
 {
-    return addTask(FileWorker2::Mode::Copy, files, targetDirs);
+    return addTask(FileOpMode::Copy, files, targetDirs);
 }
 
 int FileOperationsModel::moveFiles(QStringList files, QString targetDir)
 {
-    return addTask(FileWorker2::Mode::Move, files, {targetDir});
+    return addTask(FileOpMode::Move, files, {targetDir});
 }
 
 int FileOperationsModel::symlinkFiles(QStringList files, QStringList targetDirs)
 {
-    return addTask(FileWorker2::Mode::Symlink, files, targetDirs);
+    return addTask(FileOpMode::Symlink, files, targetDirs);
 }
 
 int FileOperationsModel::compressFiles(QStringList files, QString targetFile)
 {
-    return addTask(FileWorker2::Mode::Compress, files, {targetFile});
+    return addTask(FileOpMode::Compress, files, {targetFile});
 }
 
 void FileOperationsModel::cancelTask(int handle)
@@ -337,7 +342,7 @@ void FileOperationsModel::pauseTask(int handle)
     m_handler->getTask(handle).get()->pause();
 }
 
-void FileOperationsModel::continueTask(int handle, FileWorker2::ErrorAction errorAction)
+void FileOperationsModel::continueTask(int handle, FileOpErrorAction::ErrorAction errorAction)
 {
     if (!m_handler->haveTask(handle)) return;
     m_handler->getTask(handle).get()->carryOn(errorAction);
@@ -346,8 +351,8 @@ void FileOperationsModel::continueTask(int handle, FileWorker2::ErrorAction erro
 void FileOperationsModel::dismissTask(int handle)
 {
     if (!m_handler->haveTask(handle)) return;
-    if (m_handler->getTask(handle).status() != FileWorker2::Status::Finished &&
-            m_handler->getTask(handle).status() != FileWorker2::Status::Cancelled) {
+    if (m_handler->getTask(handle).status() != FileOpStatus::Finished &&
+            m_handler->getTask(handle).status() != FileOpStatus::Cancelled) {
         return;
     }
 
@@ -358,14 +363,14 @@ void FileOperationsModel::dismissTask(int handle)
     endRemoveRows();
 }
 
-int FileOperationsModel::addTask(FileWorker2::Mode mode, QStringList files, QStringList targets)
+int FileOperationsModel::addTask(FileOpMode::Mode mode, QStringList files, QStringList targets)
 {
     int lastRow = rowCount();
     beginInsertRows(QModelIndex(), lastRow, lastRow);
 
     auto& task = m_handler->makeTask(mode, files, targets, false);
 
-    task.get()->connect(task.get(), &FileWorker2::statusChanged, this, [=](FileWorker2::Status status){
+    task.get()->connect(task.get(), &FileWorker2::statusChanged, this, [=](FileOpStatus::Status status){
         qDebug() << "File operation status changed:" << status << lastRow;
         QModelIndex topLeft = index(lastRow, 0);
         QModelIndex bottomRight = index(lastRow, 0);
@@ -381,7 +386,7 @@ int FileOperationsModel::addTask(FileWorker2::Mode mode, QStringList files, QStr
         QModelIndex bottomRight = index(lastRow, 0);
         emit dataChanged(topLeft, bottomRight, {ProgressCurrentRole, ProgressOfRole});
     });
-    connect(task.get(), &FileWorker2::errorOccurred, this, [=](FileWorker2::ErrorType type, QString message, QString file){
+    connect(task.get(), &FileWorker2::errorOccurred, this, [=](FileOpErrorType::ErrorType type, QString message, QString file){
         auto& t = m_handler->getTask(task.handle());
         t.errorType = type;
         t.errorMessage = message;

@@ -114,11 +114,17 @@ int main(int argc, char *argv[])
     qmlRegisterType<FileModel>("harbour.file.browser.FileModel", 1, 0, "FileModel");
     qmlRegisterType<FileData>("harbour.file.browser.FileData", 1, 0, "FileData");
     qmlRegisterType<FileOperationsModel>("harbour.file.browser.FileOperations", 1, 0, "FileOperationsModel");
+    FileOperations::registerTypes("harbour.file.browser.FileOperations", 1, 0);
     qmlRegisterType<DirectorySettings>("harbour.file.browser.Settings", 1, 0, "DirectorySettings");
     qmlRegisterType<SearchEngine>("harbour.file.browser.SearchEngine", 1, 0, "SearchEngine");
     qmlRegisterType<ConsoleModel>("harbour.file.browser.ConsoleModel", 1, 0, "ConsoleModel");
     qmlRegisterType<TextEditor>("harbour.file.browser.TextEditor", 1, 0, "TextEditor");
-    FileWorker2::registerMetaTypes();
+
+    // duplicated here so it gets picked up by QtCreator's completion system
+    qmlRegisterUncreatableType<FileOpMode>("harbour.file.browser.FileOperations", 1, 0, "FileOpMode", "This is only a container for an enumeration.");
+    qmlRegisterUncreatableType<FileOpErrorType>("harbour.file.browser.FileOperations", 1, 0, "FileOpErrorType", "This is only a container for an enumeration.");
+    qmlRegisterUncreatableType<FileOpErrorAction>("harbour.file.browser.FileOperations", 1, 0, "FileOpErrorAction", "This is only a container for an enumeration.");
+    qmlRegisterUncreatableType<FileOpStatus>("harbour.file.browser.FileOperations", 1, 0, "FileOpStatus", "This is only a container for an enumeration.");
 
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
     app->setOrganizationName("harbour-file-browser"); // needed for Sailjail
