@@ -70,7 +70,7 @@ Page {
                 id: flick
                 flickableDirection: Flickable.HorizontalFlick
                 width: parent.width
-                height: row.height
+                height: row.height + Theme.paddingSmall
                 contentHeight: row.height
                 contentWidth: row.width + Theme.horizontalPageMargin
                 anchors.top: head.bottom
