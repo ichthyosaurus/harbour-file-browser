@@ -23,6 +23,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.file.browser.Settings 1.0
+import harbour.file.browser.FileOperations 1.0
 
 import "pages"
 import "js/navigation.js" as Navigation
@@ -42,6 +43,7 @@ ApplicationWindow {
     _defaultPageOrientations: Orientation.All
 
     readonly property DirectorySettings globalSettings: DirectorySettings {}
+    readonly property FileOperationsModel fileOps: FileOperationsModel {}
 
     signal bookmarkAdded(var path)
     signal bookmarkRemoved(var path)
