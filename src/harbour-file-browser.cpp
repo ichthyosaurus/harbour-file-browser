@@ -127,7 +127,6 @@ int main(int argc, char *argv[])
         return RawSettingsHandler::instance();
     });
 
-    // qmlRegisterType<FileOperationsModel>("harbour.file.browser.FileOperations", 1, 0, "FileOperationsModel");
     FileOperationsEnums::registerTypes("harbour.file.browser.FileOperations", 1, 0);
     qmlRegisterSingletonType<FileOperationsModel>("harbour.file.browser.FileOperations", 1, 0, "FileOperations", [](QQmlEngine* engine, QJSEngine* scriptEngine) -> QObject* {
         Q_UNUSED(engine); Q_UNUSED(scriptEngine);
