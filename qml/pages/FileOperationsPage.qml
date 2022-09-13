@@ -47,7 +47,6 @@ Page {
                 roleName: "handle"
                 ascendingOrder: false
             }
-
         ]
     }
 
