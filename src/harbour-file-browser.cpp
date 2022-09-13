@@ -133,6 +133,12 @@ int main(int argc, char *argv[])
         return new FileOperationsModel();;
     });
 
+    // TODO replace "engine" context property by a singleton type
+    // qmlRegisterSingletonType<Engine>("harbour.file.browser.Engine", 1, 0, "Engine", [](QQmlEngine* engine, QJSEngine* scriptEngine) -> QObject* {
+    //     Q_UNUSED(engine); Q_UNUSED(scriptEngine);
+    //     return new Engine();
+    // });
+
     // duplicated here so they get picked up by QtCreator's completion system
     qmlRegisterUncreatableType<FileOpMode>("harbour.file.browser.FileOperations", 1, 0, "FileOpMode", "This is only a container for an enumeration.");
     qmlRegisterUncreatableType<FileOpErrorType>("harbour.file.browser.FileOperations", 1, 0, "FileOpErrorType", "This is only a container for an enumeration.");
@@ -147,6 +153,7 @@ int main(int argc, char *argv[])
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
     // setup global engine object
+    // TODO use QML singleton instead
     QScopedPointer<Engine> engine(new Engine);
     QVariant engineVariant = QVariant::fromValue(engine.data());
     qApp->setProperty("engine", engineVariant); // store as singleton
