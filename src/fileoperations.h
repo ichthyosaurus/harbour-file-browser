@@ -39,7 +39,7 @@
         } \
     };
 
-namespace FileOperations { void registerTypes(const char* qmlUrl, int major, int minor); }
+namespace FileOperationsEnums { void registerTypes(const char* qmlUrl, int major, int minor); }
 ENUM_CONTAINER(Mode, Delete, Copy, Move, Symlink, Compress)
 ENUM_CONTAINER(ErrorType, None, FileExists, FileNotFound, Unknown)
 ENUM_CONTAINER(ErrorAction, Ask, Abort, Overwrite, Skip, OverwriteAll, SkipAll)

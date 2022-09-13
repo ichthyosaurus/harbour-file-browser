@@ -113,8 +113,6 @@ int main(int argc, char *argv[])
     qRegisterMetaType<QList<StatFileInfo>>("QList<StatFileInfo>");
     qmlRegisterType<FileModel>("harbour.file.browser.FileModel", 1, 0, "FileModel");
     qmlRegisterType<FileData>("harbour.file.browser.FileData", 1, 0, "FileData");
-    qmlRegisterType<FileOperationsModel>("harbour.file.browser.FileOperations", 1, 0, "FileOperationsModel");
-    FileOperations::registerTypes("harbour.file.browser.FileOperations", 1, 0);
     qmlRegisterType<SearchEngine>("harbour.file.browser.SearchEngine", 1, 0, "SearchEngine");
     qmlRegisterType<ConsoleModel>("harbour.file.browser.ConsoleModel", 1, 0, "ConsoleModel");
     qmlRegisterType<TextEditor>("harbour.file.browser.TextEditor", 1, 0, "TextEditor");
@@ -127,6 +125,13 @@ int main(int argc, char *argv[])
     qmlRegisterSingletonType<RawSettingsHandler>("harbour.file.browser.Settings", 1, 0, "RawSettings", [](QQmlEngine* engine, QJSEngine* scriptEngine) -> QObject* {
         Q_UNUSED(engine); Q_UNUSED(scriptEngine);
         return RawSettingsHandler::instance();
+    });
+
+    // qmlRegisterType<FileOperationsModel>("harbour.file.browser.FileOperations", 1, 0, "FileOperationsModel");
+    FileOperationsEnums::registerTypes("harbour.file.browser.FileOperations", 1, 0);
+    qmlRegisterSingletonType<FileOperationsModel>("harbour.file.browser.FileOperations", 1, 0, "FileOperations", [](QQmlEngine* engine, QJSEngine* scriptEngine) -> QObject* {
+        Q_UNUSED(engine); Q_UNUSED(scriptEngine);
+        return new FileOperationsModel();;
     });
 
     // duplicated here so they get picked up by QtCreator's completion system

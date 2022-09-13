@@ -23,7 +23,7 @@
 
 #include "fileoperations.h"
 
-void FileOperations::registerTypes(const char *qmlUrl, int major, int minor) {
+void FileOperationsEnums::registerTypes(const char *qmlUrl, int major, int minor) {
 #define REGISTER_ENUM_CONTAINER(NAME) \
     qRegisterMetaType<FileOp##NAME::NAME>("FileOp" #NAME "::" #NAME); \
     FileOp##NAME::registerToQml(qmlUrl, major, minor);

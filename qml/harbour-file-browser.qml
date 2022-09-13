@@ -23,7 +23,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.file.browser.Settings 1.0
-import harbour.file.browser.FileOperations 1.0
 
 import "pages"
 import "js/navigation.js" as Navigation
@@ -41,8 +40,6 @@ ApplicationWindow {
     // the view to rotate back and forth between orientations.
     // [as of 2021-02-17, SFOS 3.4.0.24, sailfishsilica-qt5 version 1.1.110.3-1.33.3.jolla]
     _defaultPageOrientations: Orientation.All
-
-    readonly property FileOperationsModel fileOps: FileOperationsModel {}
 
     signal bookmarkAdded(var path)
     signal bookmarkRemoved(var path)
