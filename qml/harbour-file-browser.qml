@@ -42,7 +42,6 @@ ApplicationWindow {
     // [as of 2021-02-17, SFOS 3.4.0.24, sailfishsilica-qt5 version 1.1.110.3-1.33.3.jolla]
     _defaultPageOrientations: Orientation.All
 
-    readonly property DirectorySettings globalSettings: DirectorySettings {}
     readonly property FileOperationsModel fileOps: FileOperationsModel {}
 
     signal bookmarkAdded(var path)
@@ -202,7 +201,7 @@ ApplicationWindow {
         color: Theme.colorScheme === Theme.LightOnDark ?
                    Theme.highlightDimmerColor :
                    Theme.overlayBackgroundColor
-        opacity: globalSettings.generalSolidWindowBackground ? 1.0 : 0.0
+        opacity: GlobalSettings.generalSolidWindowBackground ? 1.0 : 0.0
         Behavior on opacity { FadeAnimator { duration: 100 } }
     }
 

@@ -25,11 +25,21 @@
 #include <QDebug>
 #include <QStandardPaths>
 #include <QCoreApplication>
+#include <QQmlEngine>
+
 #include "settingshandler.h"
 
-RawSettingsHandler* RawSettingsHandler::m_globalInstance = nullptr;
+QSharedPointer<RawSettingsHandler> RawSettingsHandler::m_globalInstance = QSharedPointer<RawSettingsHandler>(nullptr);
 
-RawSettingsHandler::RawSettingsHandler(QObject *parent) : QObject(parent) {
+RawSettingsHandler::RawSettingsHandler(QObject *parent)
+    : QObject(parent)
+{
+    // Explicitly set the QML ownership so we can use the same singleton
+    // instance in C++ and in QML.
+    // - https://doc.qt.io/qt-5/qqmlengine.html#qmlRegisterSingletonType-1
+    // - https://stackoverflow.com/a/68873634
+    QQmlEngine::setObjectOwnership(this, QQmlEngine::CppOwnership);
+
     QString newConfigDir = QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation);
     QString configFile = QCoreApplication::applicationName() + ".conf";
     QSettings global(newConfigDir + "/" + configFile, QSettings::IniFormat);

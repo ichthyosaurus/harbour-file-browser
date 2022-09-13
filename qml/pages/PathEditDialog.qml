@@ -21,6 +21,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.file.browser.SearchEngine 1.0
+import harbour.file.browser.Settings 1.0
 import harbour.file.browser.FileData 1.0
 
 import "../js/paths.js" as Paths
@@ -49,7 +50,7 @@ Dialog {
     property bool _isReady: false
     property var _pathRegex: new RegExp('', 'i')
     property real _searchLeftMargin: Theme.itemSizeSmall+Theme.paddingMedium // = SearchField::textLeftMargin
-    property string _fnElide: globalSettings.generalFilenameElideMode
+    property string _fnElide: GlobalSettings.generalFilenameElideMode
     property int _nameTruncMode: _fnElide === 'fade' ? TruncationMode.Fade : TruncationMode.Elide
     property int _nameElideMode: _nameTruncMode === TruncationMode.Fade ?
                                     Text.ElideNone : (_fnElide === 'middle' ?

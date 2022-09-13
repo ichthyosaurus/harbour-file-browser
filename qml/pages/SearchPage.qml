@@ -23,6 +23,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.file.browser.SearchEngine 1.0
+import harbour.file.browser.Settings 1.0
 
 import "../components"
 import "../js/paths.js" as Paths
@@ -38,7 +39,7 @@ Page {
     property bool startImmediately: false // if search text is given, start search as soon as page is ready
 
     property bool _initialSearchDone: false
-    property string _fnElide: globalSettings.generalFilenameElideMode
+    property string _fnElide: GlobalSettings.generalFilenameElideMode
     property int nameTruncMode: _fnElide === 'fade' ? TruncationMode.Fade : TruncationMode.Elide
     property int nameElideMode: nameTruncMode === TruncationMode.Fade ?
                                     Text.ElideNone : (_fnElide === 'middle' ?

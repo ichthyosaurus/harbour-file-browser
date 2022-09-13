@@ -115,12 +115,21 @@ int main(int argc, char *argv[])
     qmlRegisterType<FileData>("harbour.file.browser.FileData", 1, 0, "FileData");
     qmlRegisterType<FileOperationsModel>("harbour.file.browser.FileOperations", 1, 0, "FileOperationsModel");
     FileOperations::registerTypes("harbour.file.browser.FileOperations", 1, 0);
-    qmlRegisterType<DirectorySettings>("harbour.file.browser.Settings", 1, 0, "DirectorySettings");
     qmlRegisterType<SearchEngine>("harbour.file.browser.SearchEngine", 1, 0, "SearchEngine");
     qmlRegisterType<ConsoleModel>("harbour.file.browser.ConsoleModel", 1, 0, "ConsoleModel");
     qmlRegisterType<TextEditor>("harbour.file.browser.TextEditor", 1, 0, "TextEditor");
 
-    // duplicated here so it gets picked up by QtCreator's completion system
+    qmlRegisterType<DirectorySettings>("harbour.file.browser.Settings", 1, 0, "DirectorySettings");
+    qmlRegisterSingletonType<DirectorySettings>("harbour.file.browser.Settings", 1, 0, "GlobalSettings", [](QQmlEngine* engine, QJSEngine* scriptEngine) -> QObject* {
+        Q_UNUSED(engine); Q_UNUSED(scriptEngine);
+        return new DirectorySettings();
+    });
+    qmlRegisterSingletonType<RawSettingsHandler>("harbour.file.browser.Settings", 1, 0, "RawSettings", [](QQmlEngine* engine, QJSEngine* scriptEngine) -> QObject* {
+        Q_UNUSED(engine); Q_UNUSED(scriptEngine);
+        return RawSettingsHandler::instance();
+    });
+
+    // duplicated here so they get picked up by QtCreator's completion system
     qmlRegisterUncreatableType<FileOpMode>("harbour.file.browser.FileOperations", 1, 0, "FileOpMode", "This is only a container for an enumeration.");
     qmlRegisterUncreatableType<FileOpErrorType>("harbour.file.browser.FileOperations", 1, 0, "FileOpErrorType", "This is only a container for an enumeration.");
     qmlRegisterUncreatableType<FileOpErrorAction>("harbour.file.browser.FileOperations", 1, 0, "FileOpErrorAction", "This is only a container for an enumeration.");
@@ -132,12 +141,6 @@ int main(int argc, char *argv[])
     runMigrations();
 
     QScopedPointer<QQuickView> view(SailfishApp::createView());
-
-    // setup global settings object
-    QScopedPointer<RawSettingsHandler> settings(RawSettingsHandler::instance());
-    QVariant settingsVariant = QVariant::fromValue(settings.data());
-    qApp->setProperty("rawSettings", settingsVariant); // store as singleton
-    view->rootContext()->setContextProperty("rawSettings", settings.data()); // expose to QML
 
     // setup global engine object
     QScopedPointer<Engine> engine(new Engine);

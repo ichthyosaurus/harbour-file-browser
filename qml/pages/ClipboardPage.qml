@@ -21,6 +21,7 @@
 import QtQuick 2.6
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileData 1.0
+import harbour.file.browser.Settings 1.0
 
 import "../components"
 import "../js/paths.js" as Paths
@@ -34,7 +35,7 @@ Page {
     // - store clipboard contents somewhere and share the clipboard with
     //   other windows of File Browser (through dconf?)
 
-    property string _fnElide: main.globalSettings.generalFilenameElideMode
+    property string _fnElide: GlobalSettings.generalFilenameElideMode
     property int _nameTruncMode: _fnElide === 'fade' ? TruncationMode.Fade : TruncationMode.Elide
     property int _nameElideMode: _nameTruncMode === TruncationMode.Fade ?
                                     Text.ElideNone : (_fnElide === 'middle' ?

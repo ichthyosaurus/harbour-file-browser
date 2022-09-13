@@ -20,6 +20,7 @@
 
 import QtQuick 2.6
 import Sailfish.Silica 1.0
+import harbour.file.browser.Settings 1.0
 
 TextSwitch {
     id: root
@@ -30,15 +31,14 @@ TextSwitch {
     property string key: ''
 
     // advanced config
-    property var settings: globalSettings
     property var extraCallback: function() {}
 
     // internal
     automaticCheck: false
-    checked: settings[key]
+    checked: GlobalSettings[key]
 
     onClicked: {
-        settings[key] = !checked
+        GlobalSettings[key] = !checked
         extraCallback()
     }
 }

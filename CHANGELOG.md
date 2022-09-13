@@ -34,7 +34,9 @@ SPDX-License-Identifier: GFDL-1.3-or-later
  * FileModel now exposes file extensions
  * FileData now exposes directory sizes
  * Engine now exposes clipboard contents
- * Added a new settings handler which reduces complexity and should improve performance overall (global settings are now available through "main.globalSettings" and "rawSettings")
+ * Added a new settings handler which reduces complexity and should improve performance overall
+ *   - import module "harbour.file.browser.Settings"
+ *   - use singleton types "GlobalSettings" and "RawSettings" or instantiate "DirectorySettings"
  * Improved the build system to possibly enable more features in Jolla store
  * Refactored the root mode helper build process
 

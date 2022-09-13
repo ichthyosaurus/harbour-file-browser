@@ -27,6 +27,7 @@
 #include <QPair>
 #include <QString>
 #include <QMutex>
+#include <QSharedPointer>
 
 class QFileInfo;
 
@@ -55,9 +56,9 @@ public:
     void writeVariant(QString key, const QVariant& value, QString fileName = QString());
     bool hasKey(QString key, QString fileName = QString());
 
-    static RawSettingsHandler* instance(QObject* parent = nullptr) {
-        if (m_globalInstance == nullptr) m_globalInstance = new RawSettingsHandler(parent);
-        return m_globalInstance;
+    static RawSettingsHandler* instance() {
+        if (m_globalInstance.isNull()) m_globalInstance.reset(new RawSettingsHandler());
+        return m_globalInstance.data();
     }
 
 signals:
@@ -77,7 +78,7 @@ private:
     QString m_globalConfigPath;
     QMutex m_mutex;
 
-    static RawSettingsHandler* m_globalInstance;
+    static QSharedPointer<RawSettingsHandler> m_globalInstance;
 };
 
 

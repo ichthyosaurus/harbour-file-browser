@@ -22,6 +22,7 @@
 
 import QtQuick 2.6
 import Sailfish.Silica 1.0
+import harbour.file.browser.Settings 1.0
 
 import "../components"
 
@@ -92,8 +93,8 @@ Page {
                     ComboBox {
                         label: qsTr("Thumbnail size")
                         property var indices: ({'small': 0, 'medium': 1, 'large': 2, 'huge': 3})
-                        currentIndex: indices[globalSettings.viewPreviewsSize]
-                        onValueChanged: globalSettings.viewPreviewsSize = currentItem.action
+                        currentIndex: indices[GlobalSettings.viewPreviewsSize]
+                        onValueChanged: GlobalSettings.viewPreviewsSize = currentItem.action
 
                         menu: ContextMenu {
                             MenuItem { text: qsTr("small");  property string action: "small"; }
@@ -107,11 +108,11 @@ Page {
                         description: qsTr("In gallery mode, images will be shown comfortably large, " +
                                           "and all entries except for images, videos, and directories will be hidden.")
                         automaticCheck: false
-                        checked: globalSettings.viewViewMode === "gallery"
+                        checked: GlobalSettings.viewViewMode === "gallery"
                         onClicked: {
                             // writing the new value will update "checked"
-                            if (checked) globalSettings.viewViewMode = 'list'
-                            else globalSettings.viewViewMode = 'gallery'
+                            if (checked) GlobalSettings.viewViewMode = 'list'
+                            else GlobalSettings.viewViewMode = 'gallery'
                         }
                     }
                 }
@@ -131,8 +132,8 @@ Page {
                     ComboBox {
                         label: qsTr("Sort by")
                         property var indices: ({'name': 0, 'size': 1, 'modificationtime': 2, 'type': 3})
-                        currentIndex: indices[globalSettings.viewSortRole]
-                        onValueChanged: globalSettings.viewSortRole = currentItem.value
+                        currentIndex: indices[GlobalSettings.viewSortRole]
+                        onValueChanged: GlobalSettings.viewSortRole = currentItem.value
 
                         menu: ContextMenu {
                             MenuItem { text: qsTr("name");              property string value: "name" }
@@ -144,8 +145,8 @@ Page {
                     ComboBox {
                         label: qsTr("Sort order")
                         property var indices: ({'default': 0, 'reversed': 1})
-                        currentIndex: indices[globalSettings.viewSortOrder]
-                        onValueChanged: globalSettings.viewSortOrder = currentItem.value
+                        currentIndex: indices[GlobalSettings.viewSortOrder]
+                        onValueChanged: GlobalSettings.viewSortOrder = currentItem.value
 
                         menu: ContextMenu {
                             MenuItem { text: qsTr("default");  property string value: "default" }
@@ -162,8 +163,8 @@ Page {
                     ComboBox {
                         label: qsTr("Default transfer action")
                         property var indices: ({'copy': 0, 'move': 1, 'link': 2, 'none': 3})
-                        currentIndex: indices[globalSettings.transferDefaultAction]
-                        onValueChanged: globalSettings.transferDefaultAction = currentItem.action
+                        currentIndex: indices[GlobalSettings.transferDefaultAction]
+                        onValueChanged: GlobalSettings.transferDefaultAction = currentItem.action
 
                         menu: ContextMenu {
                             MenuItem { text: qsTr("copy"); property string action: "copy"; }
@@ -175,8 +176,8 @@ Page {
                     ComboBox {
                         label: qsTr("Default filter line action")
                         property var indices: ({'filter': 0, 'search': 1})
-                        currentIndex: indices[globalSettings.generalDefaultFilterAction]
-                        onValueChanged: globalSettings.generalDefaultFilterAction = currentItem.action
+                        currentIndex: indices[GlobalSettings.generalDefaultFilterAction]
+                        onValueChanged: GlobalSettings.generalDefaultFilterAction = currentItem.action
 
                         menu: ContextMenu {
                             MenuItem { text: qsTr("return to directory view"); property string action: "filter"; }
@@ -186,8 +187,8 @@ Page {
                     ComboBox {
                         label: qsTr("File name abbreviation")
                         property var indices: ({'fade': 0, 'end': 1, 'middle': 2})
-                        currentIndex: indices[globalSettings.generalFilenameElideMode]
-                        onValueChanged: globalSettings.generalFilenameElideMode = currentItem.action
+                        currentIndex: indices[GlobalSettings.generalFilenameElideMode]
+                        onValueChanged: GlobalSettings.generalFilenameElideMode = currentItem.action
 
                         menu: ContextMenu {
                             MenuItem { text: qsTr("fade out");     property string action: "fade"; }
