@@ -134,6 +134,7 @@ SOURCES += \
     src/filemodelworker.cpp \
     src/filedata.cpp \
     src/fileoperations.cpp \
+    src/fileclipboardmodel.cpp \
     src/engine.cpp \
     src/fileworker.cpp \
     src/texteditor.cpp \
@@ -149,6 +150,7 @@ HEADERS += \
     src/filemodelworker.h \
     src/filedata.h \
     src/fileoperations.h \
+    src/fileclipboardmodel.h \
     src/engine.h \
     src/fileworker.h \
     src/texteditor.h \

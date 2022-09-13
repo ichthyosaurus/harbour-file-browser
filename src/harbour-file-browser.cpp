@@ -43,6 +43,7 @@
 #include "settingshandler.h"
 #include "texteditor.h"
 #include "fileoperations.h"
+#include "fileclipboardmodel.h"
 
 namespace {
     bool migrateItem(const QString& oldLocation, const QString& newLocation)
@@ -131,6 +132,12 @@ int main(int argc, char *argv[])
     qmlRegisterSingletonType<FileOperationsModel>("harbour.file.browser.FileOperations", 1, 0, "FileOperations", [](QQmlEngine* engine, QJSEngine* scriptEngine) -> QObject* {
         Q_UNUSED(engine); Q_UNUSED(scriptEngine);
         return new FileOperationsModel();;
+    });
+
+    qmlRegisterUncreatableType<FileClipMode>("harbour.file.browser.FileClipboard", 1, 0, "FileClipMode", "This is only a container for an enumeration.");
+    qmlRegisterSingletonType<FileClipboard>("harbour.file.browser.FileClipboard", 1, 0, "FileClipboard", [](QQmlEngine* engine, QJSEngine* scriptEngine) -> QObject* {
+        Q_UNUSED(engine); Q_UNUSED(scriptEngine);
+        return new FileClipboard();
     });
 
     // TODO replace "engine" context property by a singleton type
