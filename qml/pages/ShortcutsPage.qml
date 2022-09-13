@@ -21,6 +21,7 @@
 import QtQuick 2.6
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
+import harbour.file.browser.FileOperations 1.0
 
 import "../js/paths.js" as Paths
 import "../components"
@@ -50,6 +51,41 @@ Page {
     NotificationPanel {
         id: notificationPanel
         page: page
+    }
+
+    ListModel {
+        id: pickersModel
+
+        ListElement {
+            name: qsTr("Clipboard")
+            icon: "image://theme/icon-m-clipboard"
+            type: "clipboard"
+        }
+        ListElement {
+            name: qsTr("Transfers")
+            icon: "image://theme/icon-m-transfer"
+            type: "fileops"
+        }
+        ListElement {
+            name: qsTr("Documents")
+            icon: "image://theme/icon-m-file-document"
+            type: "documents"
+        }
+        ListElement {
+            name: qsTr("Pictures")
+            icon: "image://theme/icon-m-file-image"
+            type: "pictures"
+        }
+        ListElement {
+            name: qsTr("Videos")
+            icon: "image://theme/icon-m-media"
+            type: "videos"
+        }
+        ListElement {
+            name: qsTr("Music")
+            icon: "image://theme/icon-m-file-audio"
+            type: "music"
+        }
     }
 
     ShortcutsList {
@@ -86,49 +122,35 @@ Page {
 
                     Row {
                         id: row
-                        property real itemWidth: Theme.iconSizeMedium + 2*Theme.paddingLarge
+                        readonly property real itemWidth: Theme.iconSizeMedium + 2*Theme.paddingLarge
+                        readonly property int itemsPerScreen: 5  // how many items we try to fit in without scrolling
 
                         width: childrenRect.width
                         height: childrenRect.height
-                        spacing: (itemWidth * 5 + 2*Theme.horizontalPageMargin) < page.width ?
-                                     (((page.width - 2*Theme.horizontalPageMargin) / 5) - itemWidth) : Theme.paddingMedium
+                        spacing: (itemWidth * itemsPerScreen + 2*Theme.horizontalPageMargin) < page.width ?
+                                     (((page.width - 2*Theme.horizontalPageMargin) / itemsPerScreen) - itemWidth) : Theme.paddingMedium
 
                         Repeater {
-                            model: ListModel {
-                                ListElement {
-                                    name: qsTr("Clipboard")
-                                    icon: "image://theme/icon-m-clipboard"
-                                    type: "clipboard"
-                                }
-                                ListElement {
-                                    name: qsTr("Documents")
-                                    icon: "image://theme/icon-m-file-document"
-                                    type: "documents"
-                                }
-                                ListElement {
-                                    name: qsTr("Pictures")
-                                    icon: "image://theme/icon-m-file-image"
-                                    type: "pictures"
-                                }
-                                ListElement {
-                                    name: qsTr("Videos")
-                                    icon: "image://theme/icon-m-media"
-                                    type: "videos"
-                                }
-                                ListElement {
-                                    name: qsTr("Music")
-                                    icon: "image://theme/icon-m-file-audio"
-                                    type: "music"
-                                }
-                            }
-
+                            model: pickersModel
                             delegate: IconButton {
+                                visible: enabled
+                                enabled: {
+                                    // Hide fileops when there is nothing to show. We still show
+                                    // the clipboard even if it is empty to improve discoverability.
+                                    // Maybe it would be less confusing to always show all entries?
+                                    if (model.type === "fileops" && FileOperations.count === 0) false
+                                    // else if (model.type === "clipboard" && engine.clipboardCount === 0) false
+                                    else true
+                                }
+
                                 width: row.itemWidth
                                 height: childrenRect.height
 
                                 onClicked: {
                                     if (model.type === "clipboard") {
                                         pageStack.animatorPush(Qt.resolvedUrl("ClipboardPage.qml"))
+                                    } else if (model.type === "fileops") {
+                                        pageStack.animatorPush(Qt.resolvedUrl("FileOperationsPage.qml"))
                                     } else if (model.type === "documents") {
                                         _showSailfishPicker('Document', model.name)
                                     } else if (model.type === "pictures") {
