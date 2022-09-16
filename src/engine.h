@@ -25,6 +25,8 @@
 #include <QDir>
 #include <QVariant>
 
+#include "fileclipboardmodel.h"
+
 class FileWorker;
 template<typename T> class QFuture;
 template<typename T> class QFutureWatcher;
@@ -35,9 +37,6 @@ template<typename T> class QFutureWatcher;
 class Engine : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(int clipboardCount READ clipboardCount() NOTIFY clipboardCountChanged())
-    Q_PROPERTY(int clipboardContainsCopy READ clipboardContainsCopy WRITE setClipboardContainsCopy NOTIFY clipboardContainsCopyChanged)
-    Q_PROPERTY(QStringList clipboardContents READ clipboardContents NOTIFY clipboardContentsChanged)
     Q_PROPERTY(int progress READ progress() NOTIFY progressChanged())
     Q_PROPERTY(QString progressFilename READ progressFilename() NOTIFY progressFilenameChanged())
 
@@ -46,10 +45,6 @@ public:
     ~Engine();
 
     // properties
-    int clipboardCount() const { return m_clipboardFiles.count(); }
-    bool clipboardContainsCopy() const { return m_clipboardContainsCopy; }
-    void setClipboardContainsCopy(bool newValue) { m_clipboardContainsCopy = newValue; emit clipboardContainsCopyChanged(); }
-    QStringList clipboardContents() const { return m_clipboardFiles; }
     int progress() const { return m_progress; }
     QString progressFilename() const { return m_progressFilename; }
 
@@ -57,14 +52,7 @@ public:
 
     // async methods send signals when done or error occurs
     Q_INVOKABLE void deleteFiles(QStringList filenames);
-    Q_INVOKABLE void cutFiles(QStringList filenames);
-    Q_INVOKABLE void copyFiles(QStringList filenames);
-    Q_INVOKABLE void clearClipboard();
-    Q_INVOKABLE void forgetClipboardEntry(QString entry);
-    // returns a list of existing files if clipboard files already exist
-    // or an empty list if no existing files
-    Q_INVOKABLE QStringList listExistingFiles(QString destDirectory);
-    Q_INVOKABLE void pasteFiles(QString destDirectory, bool asSymlinks = false);
+    Q_INVOKABLE void pasteFiles(QStringList files, QString destDirectory, FileClipMode::Mode mode);
 
     // calculate disk space ansynchronously, sends diskSpaceInfoReady on success
     // use diskSpace(path) as a synchronous alternative
@@ -100,9 +88,6 @@ public:
     Q_INVOKABLE bool pathIsFile(QString path) const;
 
 signals:
-    void clipboardCountChanged();
-    void clipboardContainsCopyChanged();
-    void clipboardContentsChanged();
     void progressChanged();
     void progressFilenameChanged();
     void workerDone();
@@ -120,8 +105,6 @@ private:
     QStringList makeStringList(QString msg, QString str = QString());
     bool isUsingBusybox(QString forCommand);
 
-    QStringList m_clipboardFiles;
-    bool m_clipboardContainsCopy;
     int m_progress;
     QString m_progressFilename;
     QString m_errorMessage;

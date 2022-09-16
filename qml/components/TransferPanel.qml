@@ -20,6 +20,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import harbour.file.browser.FileClipboard 1.0
 
 Rectangle {
     id: panel
@@ -265,22 +266,22 @@ Rectangle {
         engineConnection.target = null;
 
         if (action === "copy") {
-            engine.copyFiles(files);
+            FileClipboard.setPaths(files, FileClipMode.Copy)
         } else if (action === "move") {
             if (_toGo > 1) {
                 // Copy! We don't want to remove the source files yet!
-                engine.copyFiles(files);
+                FileClipboard.setPaths(files, FileClipMode.Copy)
             } else {
-                engine.cutFiles(files);
+                FileClipboard.setPaths(files, FileClipMode.Cut)
             }
         } else if (action === "link") {
-            engine.copyFiles(files);
+            FileClipboard.setPaths(files, FileClipMode.Link)
         }
 
         _currentDir = targets[_current]
         _toGo -= 1; _current += 1;
 
-        var existingFiles = engine.listExistingFiles(_currentDir);
+        var existingFiles = FileClipboard.listExistingFiles(_currentDir, true, true);
         if (existingFiles.length > 0) { // ask for permission to overwrite
             if (action === "link") {
                 notificationPanel.showText(qsTr("Unable to overwrite existing file with symlink"), "");
@@ -298,14 +299,24 @@ Rectangle {
 
     function _doPaste() {
         var panelText = ""
-        if (action === "copy") panelText = qsTr("Copying");
-        else if (action === "move") panelText = qsTr("Moving");
-        else if (action === "link") panelText = qsTr("Linking");
+        var mode = -1
+
+        if (action === "copy") {
+            mode = FileClipMode.Copy
+            panelText = qsTr("Copying");
+        } else if (action === "move") {
+            mode = FileClipMode.Cut
+            panelText = qsTr("Moving");
+        } else if (action === "link") {
+            mode = FileClipMode.Link
+            panelText = qsTr("Linking");
+        }
+
         progressPanel.showText(panelText);
 
         engineConnection.target = engine;
         if (_toGo > 0) _finished = false;
         else _finished = true;
-        engine.pasteFiles(_currentDir, (action === "link" ? true : false));
+        engine.pasteFiles(FileClipboard.paths, _currentDir, mode);
     }
 }

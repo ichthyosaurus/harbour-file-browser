@@ -22,6 +22,7 @@ import QtQuick 2.6
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileData 1.0
 import harbour.file.browser.Settings 1.0
+import harbour.file.browser.FileClipboard 1.0
 
 import "../components"
 import "../js/paths.js" as Paths
@@ -44,7 +45,7 @@ Page {
     SilicaListView {
         id: list
         anchors.fill: parent
-        model: engine.clipboardContents
+        model: FileClipboard.paths
 
         header: Item {
             width: list.width
@@ -53,29 +54,54 @@ Page {
             PageHeader {
                 id: head
                 title: qsTr("Clipboard")
-                description: engine.clipboardCount > 0 ?
-                                 (engine.clipboardContainsCopy ?
-                                      qsTr("%n item(s) to be copied", "", engine.clipboardCount) :
-                                      qsTr("%n item(s) to be moved", "", engine.clipboardCount)) : ""
+                description: {
+                    if (FileClipboard.count == 0) {
+                        return ""
+                    } else if (FileClipboard.mode === FileClipMode.Copy) {
+                        return qsTr("%n item(s) to be copied", "", FileClipboard.count)
+                    } else if (FileClipboard.mode === FileClipMode.Cut) {
+                        return qsTr("%n item(s) to be moved", "", FileClipboard.count)
+                    } else if (FileClipboard.mode === FileClipMode.Link) {
+                        return qsTr("%n item(s) to be linked", "", FileClipboard.count)
+                    } else {
+                        return ""
+                    }
+                }
             }
 
             ComboBox {
                 id: combo
-                visible: engine.clipboardCount > 0
+                visible: FileClipboard.count > 0
                 width: parent.width
                 anchors.top: head.bottom
                 label: qsTr("Current selection", "as in 'currently selected files'")
 
                 onCurrentIndexChanged: {
-                    engine.clipboardContainsCopy = (currentIndex == 0)
+                    if (currentIndex === 0) {
+                        FileClipboard.mode = FileClipMode.Copy
+                    } else if (currentIndex === 1) {
+                        FileClipboard.mode = FileClipMode.Link
+                    } else {
+                        FileClipboard.mode = FileClipMode.Cut
+                    }
                 }
+
                 Component.onCompleted: {
-                    currentIndex = (engine.clipboardContainsCopy ? 0 : 1)
+                    if (FileClipboard.mode === FileClipMode.Copy) {
+                        currentIndex = 0
+                    } else if (FileClipboard.mode === FileClipMode.Link) {
+                        currentIndex = 1
+                    } else {
+                        currentIndex = 2
+                    }
                 }
 
                 menu: ContextMenu {
                     MenuItem {
                         text: qsTr("copy", "as in 'please copy these files'")
+                    }
+                    MenuItem {
+                        text: qsTr("link", "as in 'please create symlinks of these files'")
                     }
                     MenuItem {
                         text: qsTr("cut", "as in 'please cut these files'")
@@ -87,17 +113,17 @@ Page {
                 id: dirName
                 anchors.top: combo.bottom
                 visible: text !== ""
-                text: engine.clipboardCount > 0 ? Paths.dirName(engine.clipboardContents[0]) : ""
+                text: FileClipboard.count > 0 ? Paths.dirName(FileClipboard.paths[0]) : ""
             }
         }
 
         PullDownMenu {
             enabled: visible
-            visible: engine.clipboardCount > 0
+            visible: FileClipboard.count > 0
 
             MenuItem {
                 text: qsTr("Clear", "as in 'clear the current clipboard contents'")
-                onClicked: engine.clearClipboard()
+                onClicked: FileClipboard.clear()
             }
         }
 
@@ -217,7 +243,7 @@ Page {
                 ContextMenu {
                     MenuItem {
                         text: qsTr("Remove from clipboard")
-                        onClicked: engine.forgetClipboardEntry(modelData)
+                        onClicked: FileClipboard.forgetPath(modelData)
                     }
                     MenuItem {
                         visible: fileData.isDir
@@ -233,7 +259,7 @@ Page {
         }
 
         ViewPlaceholder {
-            enabled: engine.clipboardCount === 0
+            enabled: FileClipboard.count === 0
             text: qsTr("Empty")
             hintText: qsTr("Cut or copied files will be shown here.")
         }

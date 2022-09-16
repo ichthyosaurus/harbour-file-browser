@@ -22,6 +22,7 @@ import QtQuick 2.6
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
 import harbour.file.browser.FileOperations 1.0
+// import harbour.file.browser.FileClipboard 1.0
 
 import "../js/paths.js" as Paths
 import "../components"
@@ -139,7 +140,7 @@ Page {
                                     // the clipboard even if it is empty to improve discoverability.
                                     // Maybe it would be less confusing to always show all entries?
                                     if (model.type === "fileops" && FileOperations.count === 0) false
-                                    // else if (model.type === "clipboard" && engine.clipboardCount === 0) false
+                                    // else if (model.type === "clipboard" && FileClipboard.count === 0) false
                                     else true
                                 }
 

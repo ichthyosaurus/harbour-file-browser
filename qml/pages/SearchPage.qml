@@ -23,6 +23,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.file.browser.SearchEngine 1.0
+import harbour.file.browser.FileClipboard 1.0
 import harbour.file.browser.Settings 1.0
 
 import "../components"
@@ -337,12 +338,14 @@ Page {
                          onClicked: navigate_goToFolder(model.absoluteDir)
                      }
                      MenuItem {
-                         text: qsTr("Cut")
-                         onClicked: engine.cutFiles([ model.fullname ]);
+                        text: qsTr("Cut")
+                        onClicked: FileClipboard.setPaths([model.fullname], FileClipMode.Cut)
                      }
                      MenuItem {
                          text: qsTr("Copy")
-                         onClicked: engine.copyFiles([ model.fullname ]);
+                         onClicked: {
+                             FileClipboard.setPaths([model.fullname], FileClipMode.Copy)
+                         }
                      }
                      MenuItem {
                          text: qsTr("Delete")

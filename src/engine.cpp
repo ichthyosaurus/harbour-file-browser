@@ -69,99 +69,15 @@ void Engine::deleteFiles(QStringList filenames)
     m_fileWorker->startDeleteFiles(filenames);
 }
 
-void Engine::cutFiles(QStringList filenames)
+void Engine::pasteFiles(QStringList files, QString destDirectory, FileClipMode::Mode mode)
 {
-    // don't copy special files (chr/blk/fifo/sock)
-    QMutableStringListIterator i(filenames);
-    while (i.hasNext()) {
-        StatFileInfo info(i.next());
-        if (info.isSystem()) i.remove();
-    }
+    // TODO use FileOperations directly from QML instead
 
-    m_clipboardFiles = filenames;
-    m_clipboardContainsCopy = false;
-    emit clipboardContentsChanged();
-    emit clipboardCountChanged();
-    emit clipboardContainsCopyChanged();
-}
+    bool isCopy = (mode == FileClipMode::Copy);
+    bool isCut = (mode == FileClipMode::Cut);
+    bool isLink = (mode == FileClipMode::Link);
 
-void Engine::copyFiles(QStringList filenames)
-{
-    // don't copy special files (chr/blk/fifo/sock)
-    QMutableStringListIterator i(filenames);
-    while (i.hasNext()) {
-        StatFileInfo info(i.next());
-        if (info.isSystem()) i.remove();
-    }
-
-    m_clipboardFiles = filenames;
-    m_clipboardContainsCopy = true;
-    emit clipboardContentsChanged();
-    emit clipboardCountChanged();
-    emit clipboardContainsCopyChanged();
-}
-
-void Engine::clearClipboard()
-{
-    m_clipboardFiles = QStringList{};
-    m_clipboardContainsCopy = false;
-    emit clipboardContentsChanged();
-    emit clipboardCountChanged();
-    emit clipboardContainsCopyChanged();
-}
-
-void Engine::forgetClipboardEntry(QString entry)
-{
-    bool changed = false;
-
-    QMutableStringListIterator i(m_clipboardFiles);
-    while (i.hasNext()) {
-        if (i.next() == entry) {
-            i.remove();
-            changed = true;
-        }
-    }
-
-    if (changed) {
-        emit clipboardContentsChanged();
-        emit clipboardCountChanged();
-    }
-}
-
-QStringList Engine::listExistingFiles(QString destDirectory)
-{
-    if (m_clipboardFiles.isEmpty()) {
-        return QStringList();
-    }
-    QDir dest(destDirectory);
-    if (!dest.exists()) {
-        return QStringList();
-    }
-
-    QStringList existingFiles;
-    for (const auto& filename : std::as_const(m_clipboardFiles)) {
-        QFileInfo fileInfo(filename);
-        QString newname = dest.absoluteFilePath(fileInfo.fileName());
-
-        // source and dest filenames are the same? let pasteFiles() create a numbered copy for it.
-        if (filename == newname) {
-            continue;
-        }
-
-        // dest is under source? (directory) let pasteFiles() return an error.
-        if (newname.startsWith(filename)) {
-            return QStringList();
-        }
-        if (QFile::exists(newname)) {
-            existingFiles.append(fileInfo.fileName());
-        }
-    }
-    return existingFiles;
-}
-
-void Engine::pasteFiles(QString destDirectory, bool asSymlinks)
-{
-    if (m_clipboardFiles.isEmpty()) {
+    if (files.isEmpty()) {
         emit workerErrorOccurred(tr("No files to paste"), "");
         return;
     }
@@ -175,12 +91,12 @@ void Engine::pasteFiles(QString destDirectory, bool asSymlinks)
     }
 
     // validate that the files can be pasted
-    for (const auto& filename : std::as_const(m_clipboardFiles)) {
+    for (const auto& filename : std::as_const(files)) {
         QFileInfo fileInfo(filename);
         QString newname = dest.absoluteFilePath(fileInfo.fileName());
 
         // moving and source and dest filenames are the same?
-        if (!m_clipboardContainsCopy && filename == newname) {
+        if (!(isCopy || isLink) && filename == newname) {
             emit workerErrorOccurred(tr("Cannot overwrite itself"), newname);
             return;
         }
@@ -192,16 +108,14 @@ void Engine::pasteFiles(QString destDirectory, bool asSymlinks)
         }
     }
 
-    QStringList files = m_clipboardFiles;
-    m_clipboardFiles.clear();
-    emit clipboardCountChanged();
-
-    if (asSymlinks) {
+    if (isLink) {
         m_fileWorker->startSymlinkFiles(files, destDirectory);
-    } else if (m_clipboardContainsCopy) {
+    } else if (isCopy) {
         m_fileWorker->startCopyFiles(files, destDirectory);
-    } else {
+    } else if (isCut) {
         m_fileWorker->startMoveFiles(files, destDirectory);
+    } else {
+        emit workerErrorOccurred(QStringLiteral("Bug: unknown file operation mode requested: %1").arg(mode))
     }
 }
 

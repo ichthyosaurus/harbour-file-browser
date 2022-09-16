@@ -21,6 +21,7 @@
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileData 1.0
+import harbour.file.browser.FileClipboard 1.0
 
 Item {
     id: base
@@ -125,8 +126,9 @@ Item {
             onPressAndHold: labelText = qsTr("cut file(s)", "", selectedCount);
             onClicked: {
                 var files = selectedFiles();
-                engine.cutFiles(files);
-                labelText = qsTr("%n file(s) cut", "", engine.clipboardCount);
+                FileClipboard.setPaths(files, FileClipMode.Cut)
+
+                labelText = qsTr("%n file(s) cut", "", FileClipboard.count);
                 cutTriggered();
             }
         }
@@ -138,8 +140,9 @@ Item {
             onPressAndHold: labelText = qsTr("copy file(s)", "", selectedCount);
             onClicked: {
                 var files = selectedFiles();
-                engine.copyFiles(files);
-                labelText = qsTr("%n file(s) copied", "", engine.clipboardCount);
+                FileClipboard.setPaths(files, FileClipMode.Copy)
+
+                labelText = qsTr("%n file(s) copied", "", FileClipboard.count);
                 copyTriggered();
             }
         }

@@ -24,6 +24,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
 import harbour.file.browser.Settings 1.0
+import harbour.file.browser.FileClipboard 1.0
 
 import "../components"
 import "../js/bookmarks.js" as Bookmarks
@@ -165,9 +166,9 @@ Page {
                 }
             }
             MenuItem {
-                visible: engine.clipboardCount > 0
+                visible: FileClipboard.count > 0
                 text: qsTr("Paste") +
-                      (engine.clipboardCount > 0 ? " ("+engine.clipboardCount+")" : "")
+                      (FileClipboard.count > 0 ? (" (" + FileClipboard.count + ")") : "")
                 onClicked: {
                     if (remorsePopupActive) return;
                     Files.pasteFiles(page.dir, progressPanel, clearSelectedFiles);

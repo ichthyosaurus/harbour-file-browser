@@ -28,7 +28,7 @@
 class FileClipMode {
     Q_GADGET
 public:
-    enum Mode { Copy, Cut };
+    enum Mode { Copy, Link, Cut };
     Q_ENUM(Mode) // using "FileClipMode::Mode" would make it "undefined" in QML
 };
 
@@ -111,6 +111,11 @@ public:
     Q_INVOKABLE void forgetPath(QString path);
     Q_INVOKABLE void clear();
     Q_INVOKABLE QStringList listExistingFiles(QString destDirectory, bool ignoreInCurrentDir = true, bool getNamesOnly = true);
+
+    Q_INVOKABLE void setPaths(const QStringList& paths, FileClipMode::Mode mode) {
+        setPaths(paths);
+        setMode(mode);
+    }
 
     FileClipboardModel* model() const;
     int count() const;

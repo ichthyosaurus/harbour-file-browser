@@ -21,30 +21,44 @@
 // functions for handling files
 // (no library because variables from the environment are needed)
 
+.import harbour.file.browser.FileClipboard 1.0 as Clip
+
+function _getPanelText() {
+    if (Clip.FileClipboard.mode === Clip.FileClipMode.Copy) {
+        return qsTr("Copying")
+    } else if (Clip.FileClipboard.mode === Clip.FileClipMode.Cut) {
+        return qsTr("Moving")
+    } else if (Clip.FileClipboard.mode === Clip.FileClipMode.Link) {
+        return qsTr("Linking")
+    }
+}
+
 function pasteFiles(targetDir, progressPanel, runBefore) {
-    if (engine.clipboardCount === 0) return;
+    if (Clip.FileClipboard.count === 0) return;
     if (targetDir === undefined) return;
 
-    var existingFiles = engine.listExistingFiles(targetDir);
+    var existingFiles = Clip.FileClipboard.listExistingFiles(targetDir, true, true);
+
     if (existingFiles.length > 0) {
-      // show overwrite dialog
-      var dialog = pageStack.push(Qt.resolvedUrl("../pages/OverwriteDialog.qml"),
-                                  { "files": existingFiles })
-      dialog.accepted.connect(function() {
-          if (progressPanel !== undefined) {
-            progressPanel.showText(engine.clipboardContainsCopy ?
-                                       qsTr("Copying") : qsTr("Moving"))
-          }
-          if (runBefore !== undefined) runBefore();
-          engine.pasteFiles(targetDir);
-      })
+        // show overwrite dialog
+        var dialog = pageStack.push(Qt.resolvedUrl("../pages/OverwriteDialog.qml"),
+                                    { "files": existingFiles })
+
+        dialog.accepted.connect(function() {
+            if (progressPanel !== undefined) {
+                progressPanel.showText(_getPanelText())
+            }
+
+            if (runBefore !== undefined) runBefore();
+            engine.pasteFiles(Clip.FileClipboard.paths, targetDir, Clip.FileClipboard.mode);
+        })
     } else {
-      // no overwrite dialog
-      if (progressPanel !== undefined) {
-          progressPanel.showText(engine.clipboardContainsCopy ?
-                                     qsTr("Copying") : qsTr("Moving"))
-      }
-      if (runBefore !== undefined) runBefore();
-      engine.pasteFiles(targetDir);
+        // no overwrite dialog
+        if (progressPanel !== undefined) {
+            progressPanel.showText(_getPanelText())
+        }
+
+        if (runBefore !== undefined) runBefore();
+        engine.pasteFiles(Clip.FileClipboard.paths, targetDir, Clip.FileClipboard.mode);
     }
 }
