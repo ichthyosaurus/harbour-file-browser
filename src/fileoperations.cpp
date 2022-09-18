@@ -85,8 +85,8 @@ void FileWorker2::process() {
     m_status.storeRelease(FileOpStatus::Running);
     emit statusChanged(FileOpStatus::Running);
 
-    emit progressChanged(0, 0);
-    emit progressChanged(0, m_files.size());
+    emit progressChanged(0, 0, {}, 0, 0);
+    emit progressChanged(0, m_files.size(), {}, 0, 0);
 
     qDebug() << "Processing file operation in thread" << QThread::currentThreadId();
 
@@ -94,7 +94,7 @@ void FileWorker2::process() {
         QThread::sleep(1);
         qDebug() << "DEBUG TURN:" << i << "in" << QThread::currentThreadId() << "status:" << m_status << m_files[i];
 
-        emit progressChanged(i, m_files.size());
+        emit progressChanged(i, m_files.size(), {}, 0, 0);
         QCoreApplication::processEvents();
 
         if (!checkContinue()) break;
@@ -179,9 +179,13 @@ FileOperationsHandler::Task &FileOperationsHandler::makeTask(FileOpMode::Mode mo
     m_tasks.insert(handle, Task(handle, thread, worker, mode, files, targets));
     Task& task = m_tasks[handle];
 
-    connect(worker.data(), &FileWorker2::progressChanged, [&](int current, int of){
+    connect(worker.data(), &FileWorker2::progressChanged,
+            [&](int current, int of, QString file, int fileCurrent, int fileOf) {
         task.progressCurrent = current;
         task.progressOf = of;
+        task.progressFilename = file;
+        task.progressFileCurrent = fileCurrent;
+        task.progressFileOf = fileOf;
     });
 
     return task;
@@ -219,6 +223,9 @@ enum {
     StatusRole =          Qt::UserRole +  5,
     ProgressCurrentRole = Qt::UserRole +  6,
     ProgressOfRole =      Qt::UserRole +  7,
+    ProgressFilenameRole =    Qt::UserRole + 11,
+    ProgressFileCurrentRole = Qt::UserRole + 12,
+    ProgressFileOfRole =  Qt::UserRole + 13,
     ErrorTypeRole =       Qt::UserRole +  8,
     ErrorMessageRole =    Qt::UserRole +  9,
     ErrorFileRole =       Qt::UserRole + 10,
@@ -275,6 +282,15 @@ QVariant FileOperationsModel::data(const QModelIndex &index, int role) const
     case ProgressOfRole:
         return task.progressOf;
 
+    case ProgressFilenameRole:
+        return task.progressFilename;
+
+    case ProgressFileCurrentRole:
+        return task.progressFileCurrent;
+
+    case ProgressFileOfRole:
+        return task.progressFileOf;
+
     case ErrorTypeRole:
         return task.errorType;
 
@@ -299,6 +315,9 @@ QHash<int, QByteArray> FileOperationsModel::roleNames() const
     roles.insert(StatusRole, QByteArray("status"));
     roles.insert(ProgressCurrentRole, QByteArray("progressCurrent"));
     roles.insert(ProgressOfRole, QByteArray("progressOf"));
+    roles.insert(ProgressFilenameRole, QByteArray("progressFilename"));
+    roles.insert(ProgressFileCurrentRole, QByteArray("progressFileCurrent"));
+    roles.insert(ProgressFileOfRole, QByteArray("progressFileOf"));
     roles.insert(ErrorTypeRole, QByteArray("errorType"));
     roles.insert(ErrorMessageRole, QByteArray("errorMessage"));
     roles.insert(ErrorFileRole, QByteArray("errorFile"));
@@ -377,15 +396,20 @@ int FileOperationsModel::addTask(FileOpMode::Mode mode, QStringList files, QStri
         QModelIndex bottomRight = index(lastRow, 0);
         emit dataChanged(topLeft, bottomRight, {StatusRole});
     });
-    connect(task.get(), &FileWorker2::progressChanged, this, [=](int current, int of){
+    connect(task.get(), &FileWorker2::progressChanged, this,
+            [=](int current, int of, QString file, int fileCurrent, int fileOf) {
         auto& t = m_handler->getTask(task.handle());
         t.progressCurrent = current;
         t.progressOf = of;
 
-        qDebug() << "File operation progress changed:" << current << of << lastRow << t.handle();
+        qDebug() << "File operation progress changed:" << file << current
+                 << of << lastRow << t.handle() << filesCount << fileOf;
         QModelIndex topLeft = index(lastRow, 0);
         QModelIndex bottomRight = index(lastRow, 0);
-        emit dataChanged(topLeft, bottomRight, {ProgressCurrentRole, ProgressOfRole});
+        emit dataChanged(topLeft, bottomRight, {
+            ProgressCurrentRole, ProgressOfRole,
+            ProgressFilenameRole, ProgressFileCurrentRole, ProgressFileOfRole
+        });
     });
     connect(task.get(), &FileWorker2::errorOccurred, this, [=](FileOpErrorType::ErrorType type, QString message, QString file){
         auto& t = m_handler->getTask(task.handle());

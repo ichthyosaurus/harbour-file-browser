@@ -56,7 +56,7 @@ public:
 
 signals:
     void statusChanged(FileOpStatus::Status status);
-    void progressChanged(int current, int of);
+    void progressChanged(int current, int of, QString file, int fileCurrent, int fileOf);
     void errorOccurred(FileOpErrorType::ErrorType type, QString message, QString file = QLatin1String(""));
     void finished(bool success);
 
@@ -112,6 +112,9 @@ public:
         // must be handled outside of this class using connections!
         int progressCurrent {0};
         int progressOf {0};
+        QString progressFilename {};
+        int progressFileCurrent {0};
+        int progressFileOf {0};
         FileOpErrorType::ErrorType errorType {FileOpErrorType::None};
         QString errorMessage {};
         QString errorFile {};
