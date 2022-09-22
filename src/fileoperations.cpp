@@ -403,7 +403,7 @@ int FileOperationsModel::addTask(FileOpMode::Mode mode, QStringList files, QStri
         t.progressOf = of;
 
         qDebug() << "File operation progress changed:" << file << current
-                 << of << lastRow << t.handle() << filesCount << fileOf;
+                 << of << lastRow << t.handle() << fileCurrent << fileOf;
         QModelIndex topLeft = index(lastRow, 0);
         QModelIndex bottomRight = index(lastRow, 0);
         emit dataChanged(topLeft, bottomRight, {

@@ -38,7 +38,6 @@
 
 Engine::Engine(QObject *parent) :
     QObject(parent),
-    m_clipboardContainsCopy(false),
     m_progress(0),
     m__isUsingBusybox(QStringList()),
     m__checkedBusybox(false)
@@ -115,7 +114,7 @@ void Engine::pasteFiles(QStringList files, QString destDirectory, FileClipMode::
     } else if (isCut) {
         m_fileWorker->startMoveFiles(files, destDirectory);
     } else {
-        emit workerErrorOccurred(QStringLiteral("Bug: unknown file operation mode requested: %1").arg(mode))
+        emit workerErrorOccurred(QStringLiteral("Bug: unknown file operation mode requested: %1").arg(mode), destDirectory);
     }
 }
 
