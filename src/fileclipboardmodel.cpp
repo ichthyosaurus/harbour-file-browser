@@ -286,6 +286,8 @@ QStringList FileClipboardModel::listExistingFiles(QString destDirectory, bool ig
 void FileClipboardModel::clearAll()
 {
     beginResetModel();
+    m_historyCount = 0;
+    emit historyCountChanged();
     m_entries.clear();
     endResetModel();
 }

@@ -135,6 +135,7 @@ int main(int argc, char *argv[])
     });
 
     qmlRegisterUncreatableType<FileClipMode>("harbour.file.browser.FileClipboard", 1, 0, "FileClipMode", "This is only a container for an enumeration.");
+    qRegisterMetaType<FileClipMode::Mode>("FileModelWorker::Mode");
     qmlRegisterSingletonType<FileClipboard>("harbour.file.browser.FileClipboard", 1, 0, "FileClipboard", [](QQmlEngine* engine, QJSEngine* scriptEngine) -> QObject* {
         Q_UNUSED(engine); Q_UNUSED(scriptEngine);
         return new FileClipboard();
