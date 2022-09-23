@@ -39,17 +39,17 @@ Page {
     property string _fnElide: GlobalSettings.generalFilenameElideMode
     property int _nameTruncMode: _fnElide === 'fade' ? TruncationMode.Fade : TruncationMode.Elide
     property int _nameElideMode: _nameTruncMode === TruncationMode.Fade ?
-                                    Text.ElideNone : (_fnElide === 'middle' ?
-                                                          Text.ElideMiddle : Text.ElideRight)
+                                     Text.ElideNone : (_fnElide === 'middle' ?
+                                                           Text.ElideMiddle : Text.ElideRight)
 
     SilicaListView {
         id: list
         anchors.fill: parent
-        model: FileClipboard.paths
+        model: FileClipboard.model
 
         header: Item {
             width: list.width
-            height: head.height + combo.height + dirName.height + Theme.paddingLarge
+            height: head.height + combo.height + Theme.paddingLarge
 
             PageHeader {
                 id: head
@@ -108,151 +108,176 @@ Page {
                     }
                 }
             }
-
-            SectionHeader {
-                id: dirName
-                anchors.top: combo.bottom
-                visible: text !== ""
-                text: FileClipboard.count > 0 ? Paths.dirName(FileClipboard.paths[0]) : ""
-            }
         }
 
         PullDownMenu {
             enabled: visible
-            visible: FileClipboard.count > 0
+            visible: FileClipboard.count > 0 || FileClipboard.model.historyCount > 0
 
             MenuItem {
-                text: qsTr("Clear", "as in 'clear the current clipboard contents'")
-                onClicked: FileClipboard.clear()
+                visible: FileClipboard.model.historyCount > 0
+                text: qsTr("Clear all", "as in 'clear all clipboard contents, including history'")
+                onClicked: FileClipboard.model.clearAll()
+            }
+            MenuItem {
+                visible: FileClipboard.count > 0
+                text: qsTr("Clear current", "as in 'clear the current clipboard contents'")
+                onClicked: FileClipboard.model.clearCurrent()
             }
         }
 
         VerticalScrollDecorator { flickable: list }
 
-        delegate: ListItem {
-            id: item
-            width: ListView.view.width
-            contentHeight: Theme.itemSizeMedium
-            menu: contextMenu
+        delegate: Item {
+            property var paths: model.paths
+            property var pathsCount: model.count
 
-            property color _detailsColor: highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
-            property alias _listLabelWidth: listLabel.width
+            width: parent.width
+            height: sublist.height + dirName.height
 
-            FileData {
-                id: fileData
-                file: modelData
-                property string category
-                Component.onCompleted: category = typeCategory()
+            SectionHeader {
+                id: dirName
+                anchors.top: parent.top
+                visible: text !== ""
+                text: parent.pathsCount > 0 ? Paths.dirName(parent.paths[0]) : ""
             }
 
-            onClicked: {
-                pageStack.animatorPush(Qt.resolvedUrl("FilePage.qml"), {
-                    'file': modelData,
-                    'allowMoveDelete': false,
-                    'enableOpenFolder': true,
-                })
-            }
+            SilicaListView {
+                id: sublist
 
-            Loader {
-                id: listIcon
-                x: Theme.paddingLarge
-                width: Theme.itemSizeMedium
-                height: width
-                anchors.verticalCenter: parent.verticalCenter
-                sourceComponent: Component {
-                    id: listIconComponent
-                    FileIcon {
-                        showThumbnail: true
-                        highlighted: item.highlighted
+                anchors.top: dirName.bottom
+                model: parent.paths
+                width: parent.width
+                height: contentHeight
+
+                Component.onCompleted: console.log("PATHS:", paths)
+
+                delegate: ListItem {
+                    id: item
+                    width: ListView.view.width
+                    contentHeight: Theme.itemSizeMedium
+                    menu: contextMenu
+
+                    property color _detailsColor: highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                    property alias _listLabelWidth: listLabel.width
+
+                    FileData {
+                        id: fileData
                         file: modelData
-                        isDirectory: fileData.isDir
-                        mimeTypeCallback: function() { return fileData.mimeType; }
-                        fileIconCallback: function() { return fileData.icon; }
+                        property string category
+                        Component.onCompleted: category = typeCategory()
                     }
-                }
-                asynchronous: index > 20
-            }
 
-            Label {
-                id: listLabel
-                y: Theme.paddingSmall
-                anchors {
-                    left: listIcon.right; leftMargin: Theme.paddingMedium
-                    right: parent.right; rightMargin: Theme.paddingLarge
-                    top: parent.top; topMargin: Theme.paddingSmall
-                }
-                text: fileData.name
-                textFormat: Text.PlainText
-                truncationMode: _nameTruncMode
-                elide: _nameElideMode
-            }
-
-            Flow {
-                anchors {
-                    left: listIcon.right; leftMargin: Theme.paddingMedium
-                    right: parent.right; rightMargin: Theme.paddingLarge
-                    top: listLabel.bottom; bottom: parent.bottom
-                }
-
-                Label {
-                    id: sizeLabel
-                    property string size: fileData.isDir ? fileData.dirSize : fileData.size
-
-                    text: fileData.isSymLink ? (size + " " + Paths.unicodeArrow() + " " + fileData.symLinkTarget) : size
-                    color: _detailsColor
-                    truncationMode: TruncationMode.Fade
-                    elide: Text.ElideMiddle
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                }
-                Label {
-                    id: permsLabel
-                    visible: !fileData.isSymLink
-                    text: fileData.kind + fileData.permissions
-                    color: _detailsColor
-                    truncationMode: TruncationMode.Fade
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                }
-                Label {
-                    id: datesLabel
-                    text: fileData.modified
-                    color: _detailsColor
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                    wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-                }
-
-                states: [
-                    State {
-                        when: _listLabelWidth >= 2*item.width/3
-                        PropertyChanges { target: listLabel; wrapMode: Text.NoWrap; maximumLineCount: 1 }
-                        PropertyChanges { target: sizeLabel; width: (fileData.isSymLink ? _listLabelWidth/3*2 : _listLabelWidth/3); horizontalAlignment: Text.AlignLeft }
-                        PropertyChanges { target: permsLabel; width: _listLabelWidth/3; horizontalAlignment: Text.AlignHCenter }
-                        PropertyChanges { target: datesLabel; width: _listLabelWidth/3; horizontalAlignment: Text.AlignRight }
-                    },
-                    State {
-                        when: _listLabelWidth < 2*item.width/3
-                        PropertyChanges { target: listLabel; wrapMode: Text.WrapAtWordBoundaryOrAnywhere; maximumLineCount: 2 }
-                        PropertyChanges { target: sizeLabel; width: _listLabelWidth; horizontalAlignment: Text.AlignLeft }
-                        PropertyChanges { target: permsLabel; width: _listLabelWidth; horizontalAlignment: Text.AlignLeft }
-                        PropertyChanges { target: datesLabel; width: _listLabelWidth; horizontalAlignment: Text.AlignLeft }
+                    onClicked: {
+                        pageStack.animatorPush(Qt.resolvedUrl("FilePage.qml"), {
+                                                   'file': modelData,
+                                                   'allowMoveDelete': false,
+                                                   'enableOpenFolder': true,
+                                               })
                     }
-                ]
-            }
 
-            Component {
-                id: contextMenu
-                ContextMenu {
-                    MenuItem {
-                        text: qsTr("Remove from clipboard")
-                        onClicked: FileClipboard.forgetPath(modelData)
+                    Loader {
+                        id: listIcon
+                        x: Theme.paddingLarge
+                        width: Theme.itemSizeMedium
+                        height: width
+                        anchors.verticalCenter: parent.verticalCenter
+                        sourceComponent: Component {
+                            id: listIconComponent
+                            FileIcon {
+                                showThumbnail: true
+                                highlighted: item.highlighted
+                                file: modelData
+                                isDirectory: fileData.isDir
+                                mimeTypeCallback: function() { return fileData.mimeType; }
+                                fileIconCallback: function() { return fileData.icon; }
+                            }
+                        }
+                        asynchronous: index > 20
                     }
-                    MenuItem {
-                        visible: fileData.isDir
-                        text: qsTr("Open this folder")
-                        onClicked: navigate_goToFolder(modelData)
+
+                    Label {
+                        id: listLabel
+                        y: Theme.paddingSmall
+                        anchors {
+                            left: listIcon.right; leftMargin: Theme.paddingMedium
+                            right: parent.right; rightMargin: Theme.paddingLarge
+                            top: parent.top; topMargin: Theme.paddingSmall
+                        }
+                        text: fileData.name
+                        textFormat: Text.PlainText
+                        truncationMode: _nameTruncMode
+                        elide: _nameElideMode
                     }
-                    MenuItem {
-                        text: qsTr("Open containing folder")
-                        onClicked: navigate_goToFolder(fileData.absolutePath)
+
+                    Flow {
+                        anchors {
+                            left: listIcon.right; leftMargin: Theme.paddingMedium
+                            right: parent.right; rightMargin: Theme.paddingLarge
+                            top: listLabel.bottom; bottom: parent.bottom
+                        }
+
+                        Label {
+                            id: sizeLabel
+                            property string size: fileData.isDir ? fileData.dirSize : fileData.size
+
+                            text: fileData.isSymLink ? (size + " " + Paths.unicodeArrow() + " " + fileData.symLinkTarget) : size
+                            color: _detailsColor
+                            truncationMode: TruncationMode.Fade
+                            elide: Text.ElideMiddle
+                            font.pixelSize: Theme.fontSizeExtraSmall
+                        }
+                        Label {
+                            id: permsLabel
+                            visible: !fileData.isSymLink
+                            text: fileData.kind + fileData.permissions
+                            color: _detailsColor
+                            truncationMode: TruncationMode.Fade
+                            font.pixelSize: Theme.fontSizeExtraSmall
+                        }
+                        Label {
+                            id: datesLabel
+                            text: fileData.modified
+                            color: _detailsColor
+                            font.pixelSize: Theme.fontSizeExtraSmall
+                            wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                        }
+
+                        states: [
+                            State {
+                                when: _listLabelWidth >= 2*item.width/3
+                                PropertyChanges { target: listLabel; wrapMode: Text.NoWrap; maximumLineCount: 1 }
+                                PropertyChanges { target: sizeLabel; width: (fileData.isSymLink ? _listLabelWidth/3*2 : _listLabelWidth/3); horizontalAlignment: Text.AlignLeft }
+                                PropertyChanges { target: permsLabel; width: _listLabelWidth/3; horizontalAlignment: Text.AlignHCenter }
+                                PropertyChanges { target: datesLabel; width: _listLabelWidth/3; horizontalAlignment: Text.AlignRight }
+                            },
+                            State {
+                                when: _listLabelWidth < 2*item.width/3
+                                PropertyChanges { target: listLabel; wrapMode: Text.WrapAtWordBoundaryOrAnywhere; maximumLineCount: 2 }
+                                PropertyChanges { target: sizeLabel; width: _listLabelWidth; horizontalAlignment: Text.AlignLeft }
+                                PropertyChanges { target: permsLabel; width: _listLabelWidth; horizontalAlignment: Text.AlignLeft }
+                                PropertyChanges { target: datesLabel; width: _listLabelWidth; horizontalAlignment: Text.AlignLeft }
+                            }
+                        ]
+                    }
+
+                    Component {
+                        id: contextMenu
+                        ContextMenu {
+                            MenuItem {
+                                text: qsTr("Remove from clipboard")
+                                onClicked: FileClipboard.forgetPath(modelData)
+                            }
+                            MenuItem {
+                                visible: fileData.isDir
+                                text: qsTr("Open this folder")
+                                onClicked: navigate_goToFolder(modelData)
+                            }
+                            MenuItem {
+                                text: qsTr("Open containing folder")
+                                onClicked: navigate_goToFolder(fileData.absolutePath)
+                            }
+                        }
                     }
                 }
             }
