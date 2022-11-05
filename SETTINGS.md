@@ -16,6 +16,8 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 | `ShowNavigationMenuIcon`           | `true`        | bool                                          |
 | `FilenameElideMode`                | `fade`        | `fade`/`end`/`middle`                         |
 | `SolidWindowBackground`            | `false`       | bool                                          |
+| `InitialDirectoryMode`             | `home`        | `home`/`last`/`custom`                        |
+| `CustomInitialDirectoryPath`       | home dir      | any string                                    |
 | `LastDirectoryPath`                | home dir      | any string                                    |
 | **`[Transfer]`**                   |               |                                               |
 | `DefaultAction`                    | `none`        | `copy`/`move`/`link`/`none`                   | `default-transfer-action`

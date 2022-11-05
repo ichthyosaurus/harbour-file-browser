@@ -167,13 +167,28 @@ int main(int argc, char *argv[])
     qApp->setProperty("engine", engineVariant); // store as singleton
     view->rootContext()->setContextProperty("engine", engine.data()); // expose to QML
 
-    QString initialDirectory = QDir::homePath();
+    QScopedPointer<DirectorySettings> initialDirSettings(new DirectorySettings);
+    QString initialDirectory = initialDirSettings->getDefault_generalCustomInitialDirectoryPath();
+    QString initialDirectoryMode = initialDirSettings->get_generalInitialDirectoryMode();
+
+    if (initialDirectoryMode == QStringLiteral("home")) {
+        initialDirectory = QDir::homePath();
+    } else if (initialDirectoryMode == QStringLiteral("last")) {
+        initialDirectory = initialDirSettings->get_generalLastDirectoryPath();
+    } else if (initialDirectoryMode == QStringLiteral("custom")) {
+        initialDirectory = initialDirSettings->get_generalCustomInitialDirectoryPath();
+    }
+
     if (argc >= 2) {
         QFileInfo info(QString::fromUtf8(argv[1]));
+        initialDirectoryMode = QStringLiteral("command line");
+        initialDirectory = info.absoluteFilePath();
+    }
 
-        if (info.exists() && info.isDir()) {
-            initialDirectory = info.absoluteFilePath();
-        }
+    if (!QFileInfo::exists(initialDirectory) || !QFileInfo(initialDirectory).isDir()) {
+        qDebug() << "initial directory" << initialDirectory <<
+                    "does not exist, starting in home directory | mode:" << initialDirectoryMode;
+        initialDirectory = QDir::homePath();
     }
 
     view->rootContext()->setContextProperty("initialDirectory", initialDirectory);

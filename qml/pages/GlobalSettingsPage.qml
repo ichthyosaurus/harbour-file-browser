@@ -161,6 +161,44 @@ Page {
                 title: qsTr("Behavior and View")
                 contents: Column {
                     ComboBox {
+                        id: initialDirMode
+                        label: qsTr("Initial directory")
+                        property var indices: ({'home': 0, 'last': 1, 'custom': 2})
+                        currentIndex: indices[GlobalSettings.generalInitialDirectoryMode]
+                        onValueChanged: GlobalSettings.generalInitialDirectoryMode = currentItem.value
+                        description: qsTr("The directory that is shown when the app starts.")
+
+                        menu: ContextMenu {
+                            MenuItem { text: qsTr("user's home"); property string value: "home"; }
+                            MenuItem { text: qsTr("last visited"); property string value: "last"; }
+                            MenuItem { text: qsTr("custom path"); property string value: "custom"; }
+                        }
+                    }
+                    TextField {
+                        property bool isCustom: GlobalSettings.generalInitialDirectoryMode == "custom"
+                        width: parent.width
+                        label: qsTr("Initial directory")
+                        text: {
+                            if (isCustom) GlobalSettings.generalCustomInitialDirectoryPath
+                            else if (GlobalSettings.generalInitialDirectoryMode == "last") GlobalSettings.generalLastDirectoryPath
+                            else if (GlobalSettings.generalInitialDirectoryMode == "home") StandardPaths.home
+                        }
+                        placeholderText: GlobalSettings.default_generalCustomInitialDirectoryPath
+                        enabled: isCustom
+
+                        onClicked: {
+                            if (!isCustom) return
+                            pageStack.animatorPush(Qt.resolvedUrl("PathEditDialog.qml"), {
+                                                       path: GlobalSettings.generalCustomInitialDirectoryPath,
+                                                       acceptCallback: function(path) {
+                                                           GlobalSettings.generalCustomInitialDirectoryPath = path
+                                                       },
+                                                       acceptText: qsTr("Choose")
+                                                   })
+                            focus = false // don't show the keyboard after the dialog has been closed
+                        }
+                    }
+                    ComboBox {
                         label: qsTr("Default transfer action")
                         property var indices: ({'copy': 0, 'move': 1, 'link': 2, 'none': 3})
                         currentIndex: indices[GlobalSettings.transferDefaultAction]
