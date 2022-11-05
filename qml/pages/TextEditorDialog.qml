@@ -90,7 +90,7 @@ Dialog {
     SilicaFlickable {
         id: flick
         anchors.fill: parent
-        contentHeight: header.height + editorColumn.height + Theme.paddingMedium
+        contentHeight: header.height + titleColumn.height + editorColumn.height + Theme.paddingMedium
 
         VerticalScrollDecorator { flickable: flick }
 
