@@ -45,12 +45,12 @@ They use the same entries as [KDE](https://kde.org)'s file manager
 | Key                                | Default value | Values
 |------------------------------------|---------------|-----------------------------------------------
 | **`[Sailfish]`**                   |               | not used by Dolphin
-| `ShowDirectoriesFirst`             | `true`        | bool
 | `SortCaseSensitively`              | `false`       | bool
 | `ViewMode`                         | `list`        | `list`/`gallery`/`grid`
 | **`[Settings]`**                   |               |
 | `HiddenFilesShown`                 | `false`       | bool
 | **`[Dolphin]`**                    |               |
+| `SortFoldersFirst`                 | `true`        | bool
 | `SortOrder`                        | `0`           | `0`/`1` (`1` = reversed)
 | `SortRole`                         | `name`        | `name`/`size`/`modificationtime`/`type`
 | `PreviewsShown`                    | `false`       | bool
@@ -65,4 +65,5 @@ column in the global settings table for keys used prior to version 2.0.0 of the 
 
 | Key                                | Default value | Values                   | Scope         | Replaced by (version)
 |------------------------------------|---------------|--------------------------|---------------|-------------------------
-| `View/EnableGalleryMode`           | `false`       | bool                     | local, global | `View/ViewMode` (2.5.0)
+| `View/EnableGalleryMode`           | `false`       | bool                     | local, global | `View/ViewMode` (>= 2.5.0)
+| `ShowDirectoriesFirst`             | `true`        | bool                     | locale        | `Dolphin/SortFoldersFirst` (> 2.5.1)

@@ -225,7 +225,7 @@ private:
     Mapping<QString> map_sortOrder_local{{QSL("0"), QSL("default")}, {{QSL("1"), QSL("reversed")}}}; // local to generic
     PROP(QString, viewSortOrder, "View/SortOrder", "Dolphin/SortOrder", map_sortOrder_global, map_sortOrder_local)
     PROP(bool, viewSortCaseSensitively, "View/SortCaseSensitively", "Sailfish/SortCaseSensitively", map_bool_false, map_bool_false)
-    PROP(bool, viewShowDirectoriesFirst, "View/ShowDirectoriesFirst", "Sailfish/ShowDirectoriesFirst", map_bool_true, map_bool_true)
+    PROP(bool, viewShowDirectoriesFirst, "View/ShowDirectoriesFirst", "Dolphin/SortFoldersFirst", map_bool_true, map_bool_true)
     PROP(bool, viewHiddenFilesShown, "View/HiddenFilesShown", "Settings/HiddenFilesShown", map_bool_false, map_bool_false)
     PROP(bool, viewPreviewsShown, "View/PreviewsShown", "Dolphin/PreviewsShown", map_bool_false, map_bool_false)
     Mapping<QString> map_previewSize{QSL("medium"), {QSL("small"), QSL("large"), QSL("huge")}};
