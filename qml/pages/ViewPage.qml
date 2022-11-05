@@ -22,6 +22,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import harbour.file.browser.FileData 1.0
 
 import "../components"
 import "../js/paths.js" as Paths
@@ -31,11 +32,26 @@ Page {
     allowedOrientations: Orientation.All
     property string path: ""
 
+    FileData {
+        id: fileData
+        file: path
+    }
+
     SilicaFlickable {
         id: flickable
         anchors.fill: parent
         contentHeight: column.height
         VerticalScrollDecorator { flickable: flickable }
+
+        PullDownMenu {
+            visible: fileData.isSafeToEdit
+            MenuItem {
+                text: qsTr("Edit", "verb as in 'edit this file'")
+                onClicked: {
+                    pageStack.animatorPush(Qt.resolvedUrl("TextEditorDialog.qml"), { file: path })
+                }
+            }
+        }
 
         Column {
             id: column
