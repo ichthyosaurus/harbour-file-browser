@@ -60,6 +60,6 @@ They use the same entries as [KDE](https://kde.org)'s file manager
 The following settings keys are no longer in use. See also the "Legacy key"
 column in the global settings table for keys used prior to version 2.0.0 of the app.
 
-| Key                                | Default value | Values                   | Scope         | Replaced by
+| Key                                | Default value | Values                   | Scope         | Replaced by (version)
 |------------------------------------|---------------|--------------------------|---------------|-------------------------
-| `View/EnableGalleryMode`           | `false`       | bool                     | local, global | `View/ViewMode`
+| `View/EnableGalleryMode`           | `false`       | bool                     | local, global | `View/ViewMode` (2.5.0)
