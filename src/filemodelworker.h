@@ -80,10 +80,14 @@ private:
     bool thresholdAbort(size_t currentChanges, const QList<StatFileInfo> &fullFiles);
     void initSettings();
 
+    typedef std::function<bool(const StatFileInfo&, const StatFileInfo&)> SorterFunction;
+    typedef std::function<bool(const StatFileInfo&)> PartitionerFunction;
+
     void sortFileList(QList<StatFileInfo>& files, int dirsFirstCount,
-                      std::function<bool(const StatFileInfo&, const StatFileInfo&)> sorter);
+                      SorterFunction sorter, PartitionerFunction partitioner = nullptr);
     void sortByModTime(QList<StatFileInfo>& files, bool reverse, int dirsFirstCount);
     void sortBySize(QList<StatFileInfo>& files, bool reverse, int dirsFirstCount);
+    void sortHiddenLast(QList<StatFileInfo>& files, int dirsFirstCount);
 
     // returns true if cancelled and emits an error
     bool cancelIfCancelled();

@@ -26,6 +26,7 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 | `SortOrder`                        | `default`     | `default`/`reversed`                          | `listing-order`
 | `SortCaseSensitively`              | `false`       | bool                                          | `sort-case-sensitive`
 | `ShowDirectoriesFirst`             | `true`        | bool                                          | `show-dirs-first`
+| `ShowHiddenLast`                   | `false`       | bool                                          |
 | `HiddenFilesShown`                 | `false`       | bool                                          | `show-hidden-files`
 | `PreviewsShown`                    | `false`       | bool                                          | `show-thumbnails`
 | `PreviewsSize`                     | `medium`      | `small`/`medium`/`large`/`huge`               | `thumbnails-size`
@@ -51,6 +52,7 @@ They use the same entries as [KDE](https://kde.org)'s file manager
 | `HiddenFilesShown`                 | `false`       | bool
 | **`[Dolphin]`**                    |               |
 | `SortFoldersFirst`                 | `true`        | bool
+| `SortHiddenLast`                   | `false`       | bool
 | `SortOrder`                        | `0`           | `0`/`1` (`1` = reversed)
 | `SortRole`                         | `name`        | `name`/`size`/`modificationtime`/`type`
 | `PreviewsShown`                    | `false`       | bool

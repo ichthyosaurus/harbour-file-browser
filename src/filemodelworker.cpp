@@ -337,6 +337,10 @@ bool FileModelWorker::applySettings() {
         sortBySize(m_finalEntries, newSorting.testFlag(QDir::Reversed), dirsCount);
     }
 
+    if (m_settings->get_viewShowHiddenLast()) {
+        sortHiddenLast(m_finalEntries, dirsCount);
+    }
+
     return true;
 }
 
@@ -361,16 +365,19 @@ void FileModelWorker::initSettings()
 }
 
 void FileModelWorker::sortFileList(QList<StatFileInfo> &files, int dirsFirstCount,
-                                   std::function<bool (const StatFileInfo &, const StatFileInfo &)> sorter)
+                                   SorterFunction sorter, PartitionerFunction partitioner)
 {
     if (dirsFirstCount > 0 && dirsFirstCount < files.length()) {
         // QDir placed dirs already at the beginning, so we can just sort
         // two ranges (dirs and files).
-        std::sort(files.begin(), files.begin()+dirsFirstCount, sorter);
-        std::sort(files.begin()+dirsFirstCount, files.end(), sorter);
+        if (sorter != nullptr) std::sort(files.begin(), files.begin()+dirsFirstCount, sorter);
+        if (partitioner != nullptr) std::stable_partition(files.begin(), files.begin()+dirsFirstCount, partitioner);
+        if (sorter != nullptr) std::sort(files.begin()+dirsFirstCount, files.end(), sorter);
+        if (partitioner != nullptr) std::stable_partition(files.begin()+dirsFirstCount, files.end(), partitioner);
     } else {
         // we sort everything at once without taking care of dirs
-        std::sort(files.begin(), files.end(), sorter);
+        if (sorter != nullptr) std::sort(files.begin(), files.end(), sorter);
+        if (partitioner != nullptr) std::stable_partition(files.begin(), files.end(), partitioner);
     }
 }
 
@@ -400,6 +407,14 @@ void FileModelWorker::sortBySize(QList<StatFileInfo> &files, bool reverse, int d
         } else /* == reverse*/ {
             return (a.isDirAtEnd() ? a.dirSize() : a.size()) > (b.isDirAtEnd() ? b.dirSize() : b.size());
         }
+    });
+}
+
+void FileModelWorker::sortHiddenLast(QList<StatFileInfo> &files, int dirsFirstCount)
+{
+    sortFileList(files, dirsFirstCount, nullptr,
+                 [&](const StatFileInfo& a) -> bool {
+        return !a.getQFileInfo().isHidden();
     });
 }
 

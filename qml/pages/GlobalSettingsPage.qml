@@ -118,6 +118,11 @@ Page {
                         key: "viewShowDirectoriesFirst"
                         description: qsTr("Always show folders at the top of the file list.")
                     }
+                    SettingsSwitch {
+                        text: qsTr("Show hidden files last")
+                        key: "viewShowHiddenLast"
+                        description: qsTr("Always show files starting with a full stop (“.”) at the end of the file list.")
+                    }
                     ComboBox {
                         label: qsTr("Sort by")
                         property var indices: ({'name': 0, 'size': 1, 'modificationtime': 2, 'type': 3})
@@ -135,7 +140,7 @@ Page {
                         text: qsTr("Sort case-sensitively")
                         key: "viewSortCaseSensitively"
                         description: qsTr("Show files with names starting with a capital letter first.")
-                        visible: GlobalSettings.viewSortRole == "name"
+                        visible: settingsContainer.viewSortRole == "name"
                     }
                     ComboBox {
                         label: qsTr("Sort order")

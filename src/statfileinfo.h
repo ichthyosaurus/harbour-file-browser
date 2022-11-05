@@ -39,6 +39,9 @@ public:
 
     void setFile(QString filename);
     QString fileName() const { return m_fileInfo.fileName(); }
+    const QString& rawFileName() const { return m_filename; }
+
+    const QFileInfo& getQFileInfo() const { return m_fileInfo; }
 
     // these inspect the file itself without following symlinks
 

@@ -29,16 +29,17 @@ TextSwitch {
     text: ""
     description: ""
     property string key: ''
+    property var settingsContainer: GlobalSettings
 
     // advanced config
     property var extraCallback: function() {}
 
     // internal
     automaticCheck: false
-    checked: GlobalSettings[key]
+    checked: settingsContainer[key]
 
     onClicked: {
-        GlobalSettings[key] = !checked
+        settingsContainer[key] = !checked
         extraCallback()
     }
 }
