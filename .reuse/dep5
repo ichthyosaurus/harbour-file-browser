@@ -21,3 +21,8 @@ Files: icon-src/*
 Copyright: Mirian Margiani
 License: CC-BY-SA-4.0
 Comment: These files contain proper Dublin Core licensing metadata.
+
+Files: .gitmodules libs/SortFilterProxyModel.patch
+Copyright: Mirian Margiani
+License: CC0-1.0
+Comment: These files are part of File Browser and have been released into the public domain.
