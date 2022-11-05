@@ -139,72 +139,72 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="54"/>
         <source>Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Presse-papiers</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="57"/>
         <source>%n item(s) to be copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n élément à copier</numerusform>
+            <numerusform>%n éléments à copier</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="58"/>
         <source>%n item(s) to be moved</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n élément à déplacer</numerusform>
+            <numerusform>%n éléments à déplacer</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="66"/>
         <source>Current selection</source>
         <comment>as in &apos;currently selected files&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>La sélection actuelle</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
         <source>copy</source>
         <comment>as in &apos;please copy these files&apos;</comment>
-        <translation type="unfinished">copier</translation>
+        <translation>copier</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="80"/>
         <source>cut</source>
         <comment>as in &apos;please cut these files&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>couper</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="95"/>
         <source>Clear</source>
         <comment>as in &apos;clear the current clipboard contents&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Vider</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="215"/>
         <source>Remove from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Retirer du presse-papiers</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="220"/>
         <source>Open this folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouvrir ce dossier</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="224"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ouvrir le dossier parent</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="233"/>
         <source>Empty</source>
-        <translation type="unfinished">Vide</translation>
+        <translation>Vide</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="234"/>
         <source>Cut or copied files will be shown here.</source>
-        <translation type="unfinished"></translation>
+        <translation>Les fichiers coupés ou copiés seront affichés ici.</translation>
     </message>
 </context>
 <context>
@@ -614,12 +614,12 @@
         <location filename="../src/filedata.cpp" line="94"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation type="unfinished">vide</translation>
+        <translation>vide</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/filedata.cpp" line="95"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n élément</numerusform>
             <numerusform>%n éléments</numerusform>
         </translation>
@@ -665,17 +665,17 @@
     <message>
         <location filename="../src/filemodel.cpp" line="107"/>
         <source>folder</source>
-        <translation type="unfinished">dossier</translation>
+        <translation>dossier</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="109"/>
         <source>link</source>
-        <translation type="unfinished">lier</translation>
+        <translation>lien</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="110"/>
         <source>file</source>
-        <translation type="unfinished"></translation>
+        <translation>fichier</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="122"/>
@@ -776,7 +776,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="123"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ouvrir le dossier parent</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="142"/>
@@ -2216,27 +2216,27 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="97"/>
         <source>Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Presse-papiers</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="102"/>
         <source>Documents</source>
-        <translation type="unfinished">Documents</translation>
+        <translation>Documents</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="107"/>
         <source>Pictures</source>
-        <translation type="unfinished">Images</translation>
+        <translation>Images</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="112"/>
         <source>Videos</source>
-        <translation type="unfinished">Vidéos</translation>
+        <translation>Vidéos</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="117"/>
         <source>Music</source>
-        <translation type="unfinished">Musique</translation>
+        <translation>Musique</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="208"/>

@@ -66,7 +66,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="97"/>
         <source>Ukrainian</source>
-        <translation type="unfinished"></translation>
+        <translation>Украинский</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="105"/>
@@ -139,74 +139,74 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="54"/>
         <source>Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Буфер обмена</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="57"/>
         <source>%n item(s) to be copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n копируемый элемент</numerusform>
+            <numerusform>%n копируемых элементов</numerusform>
+            <numerusform>%n копируемых элементов</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="58"/>
         <source>%n item(s) to be moved</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n перемещаемый предмет</numerusform>
+            <numerusform>%n перемещаемых предметов</numerusform>
+            <numerusform>%n перемещаемых предметов</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="66"/>
         <source>Current selection</source>
         <comment>as in &apos;currently selected files&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Текущий выбор</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
         <source>copy</source>
         <comment>as in &apos;please copy these files&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>копировать</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="80"/>
         <source>cut</source>
         <comment>as in &apos;please cut these files&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>вырезать</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="95"/>
         <source>Clear</source>
         <comment>as in &apos;clear the current clipboard contents&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Очистить</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="215"/>
         <source>Remove from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить из буфера обмена</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="220"/>
         <source>Open this folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Открыть эту папку</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="224"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Открыть содержащую папку</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="233"/>
         <source>Empty</source>
-        <translation type="unfinished">Пусто</translation>
+        <translation>Пусто</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="234"/>
         <source>Cut or copied files will be shown here.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вырезанные или скопированные файлы будут показаны здесь.</translation>
     </message>
 </context>
 <context>
@@ -256,7 +256,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="47"/>
         <source>Root Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Root режим</translation>
     </message>
 </context>
 <context>
@@ -283,10 +283,10 @@
     <message numerus="yes">
         <location filename="../qml/components/DetailList.qml" line="45"/>
         <source>... and %n more</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>... %n и больше</numerusform>
+            <numerusform>... %n и больше</numerusform>
+            <numerusform>... %n и больше</numerusform>
         </translation>
     </message>
 </context>

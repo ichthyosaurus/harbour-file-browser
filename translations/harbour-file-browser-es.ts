@@ -66,7 +66,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="97"/>
         <source>Ukrainian</source>
-        <translation type="unfinished"></translation>
+        <translation>Ucranio</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="105"/>
@@ -139,72 +139,72 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="54"/>
         <source>Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Portapapeles</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="57"/>
         <source>%n item(s) to be copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n elemento a copiar</numerusform>
+            <numerusform>%n elementos a copiar</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="58"/>
         <source>%n item(s) to be moved</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n elemento a mover</numerusform>
+            <numerusform>%n elementos a mover</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="66"/>
         <source>Current selection</source>
         <comment>as in &apos;currently selected files&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Selección actual</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
         <source>copy</source>
         <comment>as in &apos;please copy these files&apos;</comment>
-        <translation type="unfinished">copiar</translation>
+        <translation>Copiar</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="80"/>
         <source>cut</source>
         <comment>as in &apos;please cut these files&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Cortar</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="95"/>
         <source>Clear</source>
         <comment>as in &apos;clear the current clipboard contents&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Borrar</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="215"/>
         <source>Remove from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar del portapapeles</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="220"/>
         <source>Open this folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Abre esta carpeta</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="224"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir la carpeta que contiene</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="233"/>
         <source>Empty</source>
-        <translation type="unfinished">Vacío</translation>
+        <translation>Vaciar</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="234"/>
         <source>Cut or copied files will be shown here.</source>
-        <translation type="unfinished"></translation>
+        <translation>Los archivos cortados o copiados se mostrarán aquí.</translation>
     </message>
 </context>
 <context>
@@ -254,7 +254,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="47"/>
         <source>Root Mode</source>
-        <translation type="unfinished">Modo root</translation>
+        <translation>Modo Root</translation>
     </message>
 </context>
 <context>
@@ -283,7 +283,7 @@
         <source>... and %n more</source>
         <translation>
             <numerusform>... y %n más</numerusform>
-            <numerusform>... y %n más</numerusform>
+            <numerusform>... y %n mucho más</numerusform>
         </translation>
     </message>
 </context>
@@ -614,12 +614,12 @@
         <location filename="../src/filedata.cpp" line="94"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation type="unfinished">vacío</translation>
+        <translation>Vacía</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/filedata.cpp" line="95"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n elemento</numerusform>
             <numerusform>%n elementos</numerusform>
         </translation>
@@ -642,7 +642,7 @@
     <message>
         <location filename="../src/filedata.cpp" line="246"/>
         <source>pipe</source>
-        <translation>pipe</translation>
+        <translation>tubo</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="250"/>
@@ -665,17 +665,17 @@
     <message>
         <location filename="../src/filemodel.cpp" line="107"/>
         <source>folder</source>
-        <translation type="unfinished">carpeta</translation>
+        <translation>carpeta</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="109"/>
         <source>link</source>
-        <translation type="unfinished">enlace</translation>
+        <translation>enlace</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="110"/>
         <source>file</source>
-        <translation type="unfinished"></translation>
+        <translation>archivo</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="122"/>
@@ -776,7 +776,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="123"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir la carpeta de contenido</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="142"/>
@@ -870,7 +870,7 @@
     <message>
         <location filename="../src/globals.cpp" line="86"/>
         <source>ZiB</source>
-        <translation>ZiB</translation>
+        <translation>Zebibyte (ZiB)</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="87"/>
@@ -1784,37 +1784,37 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="19"/>
         <source>Unable to authenticate</source>
-        <translation type="unfinished"></translation>
+        <translation>No se puede autentificar</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="20"/>
         <source>It is not possible to use File Browser in Root Mode without authentication.</source>
-        <translation type="unfinished"></translation>
+        <translation>No es posible usar el Explorador de archivos en modo raíz sin autenticación.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="36"/>
         <source>Root Mode: be careful, you could break your system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo Root: ten cuidado, podrías romper tu sistema.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="68"/>
         <source>Understood!</source>
-        <translation type="unfinished"></translation>
+        <translation>¡Entendido!</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="86"/>
         <source>Root Mode</source>
-        <translation type="unfinished">Modo root</translation>
+        <translation>Modo Root</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="87"/>
         <source>Be careful when using File Browser in Root Mode. Actions may unexpectedly break your system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tenga cuidado al usar el Explorador de archivos en el Modo Root. Las acciones pueden romper inesperadamente su sistema.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
         <source>Start File Browser in Root Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Inicie el Explorador de archivos en Modo Root</translation>
     </message>
 </context>
 <context>
@@ -2220,27 +2220,27 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="97"/>
         <source>Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Portapapeles</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="102"/>
         <source>Documents</source>
-        <translation type="unfinished">Documentos</translation>
+        <translation>Documentos</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="107"/>
         <source>Pictures</source>
-        <translation type="unfinished">Imágenes</translation>
+        <translation>Fotos</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="112"/>
         <source>Videos</source>
-        <translation type="unfinished">Vídeos</translation>
+        <translation>Vídeos</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="117"/>
         <source>Music</source>
-        <translation type="unfinished">Música</translation>
+        <translation>Música</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="208"/>
@@ -2550,7 +2550,7 @@ exposure program</extracomment>
         <source>Failed to copy</source>
         <translation>
             <numerusform>Error al copiar</numerusform>
-            <numerusform>Error al copiar</numerusform>
+            <numerusform>Errores al copiar</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -2558,7 +2558,7 @@ exposure program</extracomment>
         <source>Failed to move</source>
         <translation>
             <numerusform>Error al mover</numerusform>
-            <numerusform>Error al mover</numerusform>
+            <numerusform>Errores al mover</numerusform>
         </translation>
     </message>
     <message numerus="yes">

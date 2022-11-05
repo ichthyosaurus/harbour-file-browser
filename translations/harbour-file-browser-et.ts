@@ -66,7 +66,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="97"/>
         <source>Ukrainian</source>
-        <translation type="unfinished"></translation>
+        <translation>ukraina</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="105"/>
@@ -139,72 +139,72 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="54"/>
         <source>Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Lõikelaud</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="57"/>
         <source>%n item(s) to be copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n kopeeritav ese</numerusform>
+            <numerusform>%n kopeeritavat eset</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="58"/>
         <source>%n item(s) to be moved</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n uude kohta tõstetav ese</numerusform>
+            <numerusform>%n uude kohta tõstetavat eset</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="66"/>
         <source>Current selection</source>
         <comment>as in &apos;currently selected files&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Praegune valik</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
         <source>copy</source>
         <comment>as in &apos;please copy these files&apos;</comment>
-        <translation type="unfinished">kopeeri</translation>
+        <translation>kopeeri</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="80"/>
         <source>cut</source>
         <comment>as in &apos;please cut these files&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>lõika</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="95"/>
         <source>Clear</source>
         <comment>as in &apos;clear the current clipboard contents&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Kustuta</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="215"/>
         <source>Remove from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Kustuta lõikelaualt</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="220"/>
         <source>Open this folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Ava see kaust</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="224"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Ava sisalduv kaust</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="233"/>
         <source>Empty</source>
-        <translation type="unfinished">Kirjed puuduvad</translation>
+        <translation>Kirjed puuduvad</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="234"/>
         <source>Cut or copied files will be shown here.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lõigatud või kopeeritud failid on näha siin.</translation>
     </message>
 </context>
 <context>
@@ -254,7 +254,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="47"/>
         <source>Root Mode</source>
-        <translation type="unfinished">Jätka juurkasutaja õigustes</translation>
+        <translation>Jätka juurkasutaja õigustes</translation>
     </message>
 </context>
 <context>
@@ -614,12 +614,12 @@
         <location filename="../src/filedata.cpp" line="94"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation type="unfinished">tühi</translation>
+        <translation>tühi</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/filedata.cpp" line="95"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n ese</numerusform>
             <numerusform>%n eset</numerusform>
         </translation>
@@ -665,17 +665,17 @@
     <message>
         <location filename="../src/filemodel.cpp" line="107"/>
         <source>folder</source>
-        <translation type="unfinished">kaust</translation>
+        <translation>kaust</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="109"/>
         <source>link</source>
-        <translation type="unfinished">tee viide</translation>
+        <translation>tee viide</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="110"/>
         <source>file</source>
-        <translation type="unfinished"></translation>
+        <translation>fail</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="122"/>
@@ -776,7 +776,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="123"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Ava sisalduv kaust</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="142"/>
@@ -2216,27 +2216,27 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="97"/>
         <source>Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Lõikelaud</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="102"/>
         <source>Documents</source>
-        <translation type="unfinished">Dokumendid</translation>
+        <translation>Dokumendid</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="107"/>
         <source>Pictures</source>
-        <translation type="unfinished">Pildid</translation>
+        <translation>Pildid</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="112"/>
         <source>Videos</source>
-        <translation type="unfinished">Videod</translation>
+        <translation>Videod</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="117"/>
         <source>Music</source>
-        <translation type="unfinished">Muusika</translation>
+        <translation>Muusika</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="208"/>

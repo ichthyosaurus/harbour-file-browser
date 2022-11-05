@@ -6,12 +6,12 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="20"/>
         <source>A fully-fledged file manager for Sailfish OS.</source>
-        <translation type="unfinished"></translation>
+        <translation>Egy teljes értékű fájlkezelő Sailfish operációs rendszerre.</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="31"/>
         <source>adapted by karip</source>
-        <translation type="unfinished"></translation>
+        <translation>karip által átdolgozva</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="62"/>
@@ -139,70 +139,72 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="54"/>
         <source>Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Vágólap</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="57"/>
         <source>%n item(s) to be copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n másolandó elem</numerusform>
+            <numerusform>%n másolandó elem</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="58"/>
         <source>%n item(s) to be moved</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n áthelyezendő elem</numerusform>
+            <numerusform>%n áthelyezendő elem</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="66"/>
         <source>Current selection</source>
         <comment>as in &apos;currently selected files&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Jelenlegi kiválasztás</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
         <source>copy</source>
         <comment>as in &apos;please copy these files&apos;</comment>
-        <translation type="unfinished">másolás</translation>
+        <translation>másolás</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="80"/>
         <source>cut</source>
         <comment>as in &apos;please cut these files&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>kivágás</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="95"/>
         <source>Clear</source>
         <comment>as in &apos;clear the current clipboard contents&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Törlés</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="215"/>
         <source>Remove from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Eltávolítás a vágólapról</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="220"/>
         <source>Open this folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Nyisd meg ezt a mappát</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="224"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Tartalmazó mappa megnyitása</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="233"/>
         <source>Empty</source>
-        <translation type="unfinished">Üres</translation>
+        <translation>Üres</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="234"/>
         <source>Cut or copied files will be shown here.</source>
-        <translation type="unfinished"></translation>
+        <translation>A kivágott, vagy másolt fájlok fognak megjelenni itt.</translation>
     </message>
 </context>
 <context>
@@ -356,7 +358,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="490"/>
         <source>Internally not ready</source>
-        <translation type="unfinished"></translation>
+        <translation>Belsőleg nem kész</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="490"/>
@@ -600,12 +602,13 @@
         <location filename="../src/filedata.cpp" line="94"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation type="unfinished">üres</translation>
+        <translation>üres</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/filedata.cpp" line="95"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
+        <translation>
+            <numerusform>%n elem</numerusform>
             <numerusform>%n elem</numerusform>
         </translation>
     </message>
@@ -650,17 +653,17 @@
     <message>
         <location filename="../src/filemodel.cpp" line="107"/>
         <source>folder</source>
-        <translation type="unfinished">mappa</translation>
+        <translation>mappa</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="109"/>
         <source>link</source>
-        <translation type="unfinished"></translation>
+        <translation>hivatkozás</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="110"/>
         <source>file</source>
-        <translation type="unfinished"></translation>
+        <translation>fájl</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="122"/>
@@ -705,7 +708,7 @@
         <location filename="../qml/pages/FilePage.qml" line="100"/>
         <source>Swipe right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Lapozz jobbra a tartalmának megtekintéséhez.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="102"/>
@@ -760,7 +763,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="123"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Tartalmazó mappa megnyitása</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="142"/>
@@ -891,7 +894,7 @@
         <location filename="../src/fileworker.cpp" line="387"/>
         <location filename="../src/fileworker.cpp" line="403"/>
         <source>Cancelled</source>
-        <translation type="unfinished"></translation>
+        <translation>Megszakítva</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="224"/>
@@ -1099,7 +1102,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="235"/>
         <source>%1mm (35mm equivalent: %2mm)</source>
         <extracomment>size in millimeters</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1mm(35mm ekvivalens: %2mm)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="240"/>
@@ -1178,7 +1181,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="297"/>
         <source>Exposure Bias</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Exposure_compensation</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Apertúra</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="302"/>
@@ -1249,25 +1252,25 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="346"/>
         <source>Pattern</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Minta</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="348"/>
         <source>Partial</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Részleges</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="350"/>
         <source>Other</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Más</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="352"/>
         <source>Unknown (%1)</source>
         <extracomment>inlcudes an unknown value (1); cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ismeretlen (%1)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="355"/>
@@ -1465,7 +1468,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="104"/>
         <source>show contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>közreműködők megjelenítése</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="106"/>
@@ -1473,12 +1476,12 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="57"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="70"/>
         <source>Homepage</source>
-        <translation type="unfinished"></translation>
+        <translation>Honlap</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="121"/>
         <source>Donations</source>
-        <translation type="unfinished"></translation>
+        <translation>Adományok</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="127"/>
@@ -1488,8 +1491,9 @@ exposure program</extracomment>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="132"/>
         <source>show license(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Licenc megjelenítése</numerusform>
+            <numerusform>Licencek megjelenítése</numerusform>
         </translation>
     </message>
     <message>
@@ -1508,7 +1512,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/InfoSection.qml" line="15"/>
         <source>show details</source>
-        <translation type="unfinished"></translation>
+        <translation>részletek megjelenítése</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="21"/>
@@ -1523,50 +1527,51 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="44"/>
         <source>Thank you!</source>
-        <translation type="unfinished"></translation>
+        <translation>Köszönöm!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="48"/>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
         <source>Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Részletek</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="181"/>
         <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Kérlek hivatkozz erre &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="25"/>
         <source>Download license texts</source>
-        <translation type="unfinished"></translation>
+        <translation>Licencszövegek letöltése</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
         <source>License(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Licenc</numerusform>
+            <numerusform>Licencek</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="41"/>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation type="unfinished"></translation>
+        <translation>Megjegyzés: Kérlek ellenőrizd a forráskódot a legpontosabb információért.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="15"/>
         <source>External Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Külső hivatkozás</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="32"/>
         <source>Open in browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Megnyitás böngészőben</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="36"/>
         <source>Copied to clipboard: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>A vágólapra másolva: %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="41"/>
@@ -1579,17 +1584,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="7"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ha támogatni szeretnéd a munkámat, vehetsz nekem egy csésze kávét.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="8"/>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation type="unfinished"></translation>
+        <translation>Támogathatod ezt a projektet közreműködéssel, vagy ezen szolgáltatásokon keresztüli adományozással.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="9"/>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation type="unfinished"></translation>
+        <translation>A hozzájárulásaid a fordításokhoz, vagy a kódhoz nagyon szívesen fogadjuk.</translation>
     </message>
 </context>
 <context>
@@ -1763,22 +1768,22 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="19"/>
         <source>Unable to authenticate</source>
-        <translation type="unfinished"></translation>
+        <translation>Nem sikerült a hitelesítés</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="20"/>
         <source>It is not possible to use File Browser in Root Mode without authentication.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hitelesítés nélkül nem lehetséges a File Browser használata Root módban.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="36"/>
         <source>Root Mode: be careful, you could break your system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Root mód: vigyázz, elronthatod a rendszered.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="68"/>
         <source>Understood!</source>
-        <translation type="unfinished"></translation>
+        <translation>Megértettem!</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="86"/>
@@ -1788,12 +1793,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="87"/>
         <source>Be careful when using File Browser in Root Mode. Actions may unexpectedly break your system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Légy óvatos, ha a File Browser-t root módban használod. A műveletek váratlanul tönkretehetik a rendszered.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
         <source>Start File Browser in Root Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>A File Browser indítása root módban</translation>
     </message>
 </context>
 <context>
@@ -1857,7 +1862,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="413"/>
         <source>Internally not ready</source>
-        <translation type="unfinished"></translation>
+        <translation>Belsőleg nem kész</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="413"/>
@@ -1904,7 +1909,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="66"/>
         <source>Swipe right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lapozz jobbra a File Browser forráskódjának, valamint a licencinformációk és a közreműködők listájának megtekintéséhez.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="77"/>
@@ -1914,7 +1919,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="81"/>
         <source>Use per-directory view settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Könyvtárankénti nézetbeállítások használata</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="85"/>
@@ -2039,7 +2044,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="171"/>
         <source>link</source>
-        <translation type="unfinished"></translation>
+        <translation>hivatkozás</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="172"/>
@@ -2054,7 +2059,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="182"/>
         <source>return to directory view</source>
-        <translation type="unfinished"></translation>
+        <translation>visszatérés a mappanézethez</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="183"/>
@@ -2069,7 +2074,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="193"/>
         <source>fade out</source>
-        <translation type="unfinished"></translation>
+        <translation>elhalványítás</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="194"/>
@@ -2591,13 +2596,13 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewImagePage.qml" line="253"/>
         <source>Loading image</source>
         <extracomment>Full page placeholder shown while a large image is being loaded</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Kép betöltése</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewImagePage.qml" line="263"/>
         <source>Failed to load</source>
         <extracomment>Full page placeholder shown when an image failed to load</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Nem sikerült betölteni</translation>
     </message>
 </context>
 <context>
@@ -2606,7 +2611,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewVideoPage.qml" line="107"/>
         <source>Failed to play</source>
         <extracomment>Full page placeholder shown when a video failed to load</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Nem sikerült lejátszani</translation>
     </message>
 </context>
 <context>

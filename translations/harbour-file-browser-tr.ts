@@ -66,7 +66,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="97"/>
         <source>Ukrainian</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukraynaca</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="105"/>
@@ -139,70 +139,72 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="54"/>
         <source>Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Pano</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="57"/>
         <source>%n item(s) to be copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n öge kopyalanacak</numerusform>
+            <numerusform>%n öge kopyalanacak</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="58"/>
         <source>%n item(s) to be moved</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n öge taşınacak</numerusform>
+            <numerusform>%n öge taşınacak</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="66"/>
         <source>Current selection</source>
         <comment>as in &apos;currently selected files&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Geçerli seçim</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
         <source>copy</source>
         <comment>as in &apos;please copy these files&apos;</comment>
-        <translation type="unfinished">kopyala</translation>
+        <translation>kopyala</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="80"/>
         <source>cut</source>
         <comment>as in &apos;please cut these files&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>kes</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="95"/>
         <source>Clear</source>
         <comment>as in &apos;clear the current clipboard contents&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Temizle</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="215"/>
         <source>Remove from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Panodan kaldır</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="220"/>
         <source>Open this folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu klasörü aç</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="224"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>İçeren klasörü aç</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="233"/>
         <source>Empty</source>
-        <translation type="unfinished">Boş</translation>
+        <translation>Boş</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="234"/>
         <source>Cut or copied files will be shown here.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kesilen veya kopyalanan dosyalar burada gösterilecek.</translation>
     </message>
 </context>
 <context>
@@ -252,7 +254,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="47"/>
         <source>Root Mode</source>
-        <translation type="unfinished">Root Modu</translation>
+        <translation>Root Modu</translation>
     </message>
 </context>
 <context>
@@ -279,8 +281,9 @@
     <message numerus="yes">
         <location filename="../qml/components/DetailList.qml" line="45"/>
         <source>... and %n more</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>... ve %n daha</numerusform>
+            <numerusform>... ve %n daha</numerusform>
         </translation>
     </message>
 </context>
@@ -600,13 +603,14 @@
         <location filename="../src/filedata.cpp" line="94"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation type="unfinished">boş</translation>
+        <translation>boş</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/filedata.cpp" line="95"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
-            <numerusform>%n öğesi</numerusform>
+        <translation>
+            <numerusform>%n öge</numerusform>
+            <numerusform>%n öge</numerusform>
         </translation>
     </message>
     <message>
@@ -627,7 +631,7 @@
     <message>
         <location filename="../src/filedata.cpp" line="246"/>
         <source>pipe</source>
-        <translation type="unfinished">boru</translation>
+        <translation>boru</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="250"/>
@@ -637,7 +641,7 @@
     <message>
         <location filename="../src/filedata.cpp" line="254"/>
         <source>folder</source>
-        <translation>dosya</translation>
+        <translation>klasör</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="260"/>
@@ -650,17 +654,17 @@
     <message>
         <location filename="../src/filemodel.cpp" line="107"/>
         <source>folder</source>
-        <translation type="unfinished">dosya</translation>
+        <translation>klasör</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="109"/>
         <source>link</source>
-        <translation type="unfinished">bağlantı</translation>
+        <translation>bağlantı</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="110"/>
         <source>file</source>
-        <translation type="unfinished"></translation>
+        <translation>dosya</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="122"/>
@@ -672,7 +676,8 @@
         <location filename="../src/filemodel.cpp" line="123"/>
         <source>%n item(s)</source>
         <translation>
-            <numerusform>%n öğesi</numerusform>
+            <numerusform>%n öge</numerusform>
+            <numerusform>%n öge</numerusform>
         </translation>
     </message>
 </context>
@@ -760,7 +765,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="123"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>İçeren klasörü aç</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="142"/>
@@ -1237,13 +1242,13 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="342"/>
         <source>Spot</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Nokta</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="344"/>
         <source>Multi spot</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Çoklu nokta</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="346"/>
@@ -1297,13 +1302,13 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="379"/>
         <source>Creative Program (based towards depth of field)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Yaratıcı Program (alan derinliğine dayalı)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="383"/>
         <source>Action program (based towards fast shutter speed)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Eylem programı (hızlı deklanşör hızına dayalı)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="387"/>
@@ -1361,7 +1366,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="437"/>
         <location filename="../src/jhead/jhead-api.cpp" line="441"/>
         <source>JPEG Process</source>
-        <translation type="unfinished">JPEG İşleme</translation>
+        <translation>JPEG İşleme</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="437"/>
@@ -1435,7 +1440,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/MultiFilePage.qml" line="166"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="175"/>
         <source>none</source>
-        <translation type="unfinished">hiçbiri</translation>
+        <translation>hiçbiri</translation>
     </message>
 </context>
 <context>
@@ -1620,7 +1625,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="135"/>
         <source>Path to a folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Klasör yolu</translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="230"/>
@@ -1729,7 +1734,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/QuickSwitchDialog.qml" line="29"/>
         <source>Switch</source>
         <extracomment>as in &quot;Switch to this folder, please&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Değiştir</translation>
     </message>
 </context>
 <context>
@@ -1763,37 +1768,37 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="19"/>
         <source>Unable to authenticate</source>
-        <translation type="unfinished"></translation>
+        <translation>Kimlik doğrulaması yapılamıyor</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="20"/>
         <source>It is not possible to use File Browser in Root Mode without authentication.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kimlik doğrulama olmadan Dosya Tarayıcısı Root Modunda kullanılamaz.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="36"/>
         <source>Root Mode: be careful, you could break your system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Root Modu: dikkatli olun, sisteminizi bozabilirsiniz.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="68"/>
         <source>Understood!</source>
-        <translation type="unfinished"></translation>
+        <translation>Anladım!</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="86"/>
         <source>Root Mode</source>
-        <translation type="unfinished">Root Modu</translation>
+        <translation>Root Modu</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="87"/>
         <source>Be careful when using File Browser in Root Mode. Actions may unexpectedly break your system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya Tarayıcısını Root Modunda kullanırken dikkatli olun. Eylemler beklenmedik bir şekilde sisteminizi bozabilir.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
         <source>Start File Browser in Root Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya Tarayıcısını Root Modunda Başlat</translation>
     </message>
 </context>
 <context>
@@ -2044,7 +2049,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="172"/>
         <source>none</source>
-        <translation type="unfinished">hiçbiri</translation>
+        <translation>hiçbiri</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="176"/>
@@ -2069,17 +2074,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="193"/>
         <source>fade out</source>
-        <translation type="unfinished"></translation>
+        <translation>söndür</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="194"/>
         <source>elide end</source>
-        <translation type="unfinished"></translation>
+        <translation>sondan çıkar</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="195"/>
         <source>elide middle</source>
-        <translation type="unfinished"></translation>
+        <translation>ortadan çıkar</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="199"/>
@@ -2094,7 +2099,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="207"/>
         <source>Enable solid window background</source>
-        <translation type="unfinished"></translation>
+        <translation>Düz pencere arka planını etkinleştir</translation>
     </message>
 </context>
 <context>
@@ -2193,27 +2198,27 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="97"/>
         <source>Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Pano</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="102"/>
         <source>Documents</source>
-        <translation type="unfinished">Belgeler</translation>
+        <translation>Belgeler</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="107"/>
         <source>Pictures</source>
-        <translation type="unfinished">Resimler</translation>
+        <translation>Resimler</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="112"/>
         <source>Videos</source>
-        <translation type="unfinished">Videolar</translation>
+        <translation>Videolar</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="117"/>
         <source>Music</source>
-        <translation type="unfinished">Müzik</translation>
+        <translation>Müzik</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="208"/>
@@ -2567,7 +2572,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="286"/>
         <source>Unable to overwrite existing file with symlink</source>
-        <translation type="unfinished"></translation>
+        <translation>Sembolik bağlantıyla mevcut dosyanın üzerine yazılamıyor</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="301"/>
