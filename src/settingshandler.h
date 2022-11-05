@@ -136,13 +136,18 @@ private:
 
 #define PROP(TYPE, NAME, GLOBAL_KEY, LOCAL_KEY, GLOBAL_MAP, LOCAL_MAP) \
     Q_PROPERTY(TYPE NAME READ get_##NAME WRITE set_##NAME NOTIFY NAME##Changed) \
+    Q_PROPERTY(TYPE default_##NAME READ getDefault_##NAME NOTIFY NAME##DefaultChanged) \
     public: Q_SIGNAL void NAME##Changed(); \
+    public: Q_SIGNAL void NAME##DefaultChanged(); \
     public: Q_SLOT void set_##NAME(TYPE newValue) { \
         setValue<TYPE>(QSL(GLOBAL_KEY), QSL(LOCAL_KEY), GLOBAL_MAP, LOCAL_MAP, newValue); \
         /* no "emit NAME##Changed();" to avoid signalling the change twice: once here, and once via Settings::settingsChanged */ \
     } \
     public: TYPE get_##NAME() const { \
         return getValue<TYPE>(QSL(GLOBAL_KEY), QSL(LOCAL_KEY), GLOBAL_MAP, LOCAL_MAP); \
+    } \
+    public: TYPE getDefault_##NAME() const { \
+        return GLOBAL_MAP.defaultValue.second; \
     } \
     private: Q_SLOT void handle_##NAME(QString key, bool locally, QString localPath) { \
         if (locally && key == QSL(LOCAL_KEY) && localPath == m_localFile) { \
