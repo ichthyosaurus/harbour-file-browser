@@ -57,6 +57,7 @@ ApplicationWindow {
     property var forwardStack: ([])
     property var currentPage: ({type: "dir", path: initialDirectory})
     property var activePage: ({type: "dir", path: initialDirectory})
+    onCurrentPageChanged: GlobalSettings.generalLastDirectoryPath = currentPage.path
 
     // Proxy functions for heavy libraries
     // The basic functions are proxied here. If more functions

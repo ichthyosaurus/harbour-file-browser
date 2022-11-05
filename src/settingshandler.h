@@ -207,6 +207,8 @@ private:
     Mapping<QString> map_elideMode{QSL("fade"), {QSL("end"), QSL("middle")}};
     PROP(QString, generalFilenameElideMode, "General/FilenameElideMode", "", map_elideMode, map_invalid)
     PROP(bool, generalSolidWindowBackground, "General/SolidWindowBackground", "", map_bool_false, map_bool_false)
+    Mapping<QString> map_initialDirPath{QDir::homePath(), true};
+    PROP(QString, generalLastDirectoryPath, "General/LastDirectoryPath", "", map_initialDirPath, map_invalid);
 
     // [Transfer] section
     Mapping<QString> map_transferAction{QSL("none"), {QSL("copy"), QSL("move"), QSL("link")}};
