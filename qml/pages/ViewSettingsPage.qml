@@ -33,6 +33,7 @@ Page {
     DirectorySettings {
         id: prefs
         path: dir
+        onViewUseLocalSettingsChanged: updateShownSettings()
     }
 
     SilicaFlickable {
@@ -49,9 +50,13 @@ Page {
             PageHeader {
                 id: header
                 title: qsTr("Sorting and View")
+                description: prefs.viewUseLocalSettings ?
+                                 qsTr("Settings apply only to the current folder. Swipe right to change default values.") :
+                                 qsTr("Settings apply to all folders.")
+                descriptionWrapMode: Text.Wrap
                 MouseArea {
                     anchors.fill: parent
-                    onClicked: pageStack.pop();
+                    onClicked: pageStack.pop()
                 }
             }
 
@@ -108,12 +113,13 @@ Page {
                 id: showHiddenFiles
                 text: qsTr("Show hidden files")
                 onCheckedChanged: prefs.viewHiddenFilesShown = checked
+                description: qsTr('Show files with names starting with a full stop (“.”).')
             }
             TextSwitch {
                 id: enableGallery
                 text: qsTr("Enable gallery mode")
                 description: qsTr("In gallery mode, images will be shown comfortably large, "
-                    + "and all entries except for images, videos, and directories will be hidden.")
+                                  + "and all entries except for images, videos, and directories will be hidden.")
                 onCheckedChanged: prefs.viewViewMode = (checked ? "gallery" : "list")
             }
             TextSwitch {
@@ -130,9 +136,6 @@ Page {
     }
 
     function updateShownSettings() {
-        if (prefs.viewUseLocalSettings) header.description = qsTr("Local preferences");
-        else header.description = qsTr("Global preferences");
-
         sortList.initial = prefs.viewSortRole
         orderList.initial = prefs.viewSortOrder
 

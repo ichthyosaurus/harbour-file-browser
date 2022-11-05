@@ -42,7 +42,7 @@ Page {
             anchors.right: parent.right
 
             PageHeader {
-                title: qsTr("Settings")
+                title: qsTr("App Settings")
             }
 
             Label {
@@ -75,20 +75,24 @@ Page {
 
             GroupedDrawer {
                 id: viewGroup
-                title: qsTr("View")
+                title: qsTr("Directory View")
                 open: false
                 contents: Column {
                     SettingsSwitch {
                         text: qsTr("Use per-directory view settings")
                         key: "viewUseLocalSettings"
+                        description: qsTr("Save view preferences individually for all folders " +
+                                          "in your home directory. The options below are used by default.")
                     }
                     SettingsSwitch {
                         text: qsTr("Show hidden files")
                         key: "viewHiddenFilesShown"
+                        description: qsTr('Show files with names starting with a full stop (“.”).')
                     }
                     SettingsSwitch {
                         text: qsTr("Show preview images")
                         key: "viewPreviewsShown"
+                        description: qsTr("Preview contents of supported file types.")
                     }
                     ComboBox {
                         label: qsTr("Thumbnail size")
@@ -203,6 +207,9 @@ Page {
                         property var indices: ({'copy': 0, 'move': 1, 'link': 2, 'none': 3})
                         currentIndex: indices[GlobalSettings.transferDefaultAction]
                         onValueChanged: GlobalSettings.transferDefaultAction = currentItem.action
+                        description: qsTr("The action that is selected by default when " +
+                                          "using the bulk file management feature (available " +
+                                          'through the “shuffle” icon after selecting files).')
 
                         menu: ContextMenu {
                             MenuItem { text: qsTr("copy"); property string action: "copy"; }
@@ -216,6 +223,8 @@ Page {
                         property var indices: ({'filter': 0, 'search': 1})
                         currentIndex: indices[GlobalSettings.generalDefaultFilterAction]
                         onValueChanged: GlobalSettings.generalDefaultFilterAction = currentItem.action
+                        description: qsTr("Which action to take when the Enter key is pressed in the " +
+                                          "filter line in a directory's pull-down menu.")
 
                         menu: ContextMenu {
                             MenuItem { text: qsTr("return to directory view"); property string action: "filter"; }
@@ -227,6 +236,7 @@ Page {
                         property var indices: ({'fade': 0, 'end': 1, 'middle': 2})
                         currentIndex: indices[GlobalSettings.generalFilenameElideMode]
                         onValueChanged: GlobalSettings.generalFilenameElideMode = currentItem.action
+                        description: qsTr("How very long filenames are abbreviated in the directory view.")
 
                         menu: ContextMenu {
                             MenuItem { text: qsTr("fade out");     property string action: "fade"; }
@@ -237,14 +247,19 @@ Page {
                     SettingsSwitch {
                         text: qsTr("Show full directory paths")
                         key: "generalShowFullDirectoryPaths"
+                        description: qsTr("Show the full path in the page header of the directory view.")
                     }
                     SettingsSwitch {
                         text: qsTr("Show navigation menu icon")
                         key: "generalShowNavigationMenuIcon"
+                        description: qsTr("Show a visual hint that the navigation menu is available by " +
+                                          "tapping the page header of the directory view.")
                     }
                     SettingsSwitch {
                         text: qsTr("Enable solid window background")
                         key: "generalSolidWindowBackground"
+                        description: qsTr("Use a solid color instead of your wallpaper as the " +
+                                          "background of this app.")
                     }
                 }
             }
