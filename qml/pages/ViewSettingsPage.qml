@@ -28,12 +28,10 @@ Page {
     id: page
     allowedOrientations: Orientation.All
     property string dir
-    property bool _initialized: false
 
     DirectorySettings {
         id: prefs
         path: dir
-        onViewUseLocalSettingsChanged: updateShownSettings()
     }
 
     SilicaFlickable {
@@ -109,28 +107,41 @@ Page {
 
             Spacer { height: 2*Theme.paddingLarge }
 
-            TextSwitch {
-                id: showHiddenFiles
+            SettingsSwitch {
                 text: qsTr("Show hidden files")
-                onCheckedChanged: prefs.viewHiddenFilesShown = checked
+                key: "viewHiddenFilesShown"
                 description: qsTr('Show files with names starting with a full stop (“.”).')
+                settingsContainer: prefs
             }
             TextSwitch {
-                id: enableGallery
                 text: qsTr("Enable gallery mode")
-                description: qsTr("In gallery mode, images will be shown comfortably large, "
-                                  + "and all entries except for images, videos, and directories will be hidden.")
-                onCheckedChanged: prefs.viewViewMode = (checked ? "gallery" : "list")
+                description: qsTr("In gallery mode, images will be shown comfortably large, " +
+                                  "and all entries except for images, videos, and directories will be hidden.")
+                automaticCheck: false
+                checked: prefs.viewViewMode === "gallery"
+                onClicked: {
+                    // writing the new value will update "checked"
+                    prefs.viewViewMode = (checked ? "gallery" : "list")
+                }
             }
-            TextSwitch {
-                id: showDirsFirst
-                text: qsTr("Show folders first")
-                onCheckedChanged: prefs.viewShowDirectoriesFirst = checked
-            }
-            TextSwitch {
-                id: sortCaseSensitive
+            SettingsSwitch {
                 text: qsTr("Sort case-sensitively")
-                onCheckedChanged: prefs.viewSortCaseSensitively = checked
+                key: "viewSortCaseSensitively"
+                description: qsTr("Show files with names starting with a capital letter first.")
+                visible: settingsContainer.viewSortRole == "name"
+                settingsContainer: prefs
+            }
+            SettingsSwitch {
+                text: qsTr("Show folders first")
+                key: "viewShowDirectoriesFirst"
+                description: qsTr("Always show folders at the top of the file list.")
+                settingsContainer: prefs
+            }
+            SettingsSwitch {
+                text: qsTr("Show hidden files last")
+                key: "viewShowHiddenLast"
+                description: qsTr("Always show files starting with a full stop (“.”) at the end of the file list.")
+                settingsContainer: prefs
             }
         }
     }
@@ -139,15 +150,8 @@ Page {
         sortList.initial = prefs.viewSortRole
         orderList.initial = prefs.viewSortOrder
 
-        showDirsFirst.checked = prefs.viewShowDirectoriesFirst
-        enableGallery.checked = (prefs.viewViewMode === "gallery")
-        sortCaseSensitive.checked = prefs.viewSortCaseSensitively
-        showHiddenFiles.checked = prefs.viewHiddenFilesShown
-
         if (prefs.viewPreviewsShown) thumbList.initial = prefs.viewPreviewsSize
         else thumbList.initial = "none";
-
-        if (!_initialized) _initialized = true;
     }
 
     Component.onCompleted: {

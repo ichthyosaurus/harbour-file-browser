@@ -45,38 +45,18 @@ Page {
                 title: qsTr("App Settings")
             }
 
-            Label {
-                x: Theme.horizontalPageMargin
-                width: parent.width - 2*x
-                text: qsTr("These are global preferences. If enabled " +
-                           "in “<a href='#'>View → Use per-directory view settings</a>”, " +
-                           "view preferences will be saved individually for all " +
-                           "folders. Here, you can define the default values.")
-                font.pixelSize: Theme.fontSizeSmall
-                color: Theme.highlightColor
-                linkColor: Theme.secondaryHighlightColor
-                wrapMode: Text.Wrap
-                onLinkActivated: viewGroup.open = true
-            }
-
-            Spacer { height: Theme.paddingMedium }
-
-            Label {
-                x: Theme.horizontalPageMargin
-                width: parent.width - 2*x
-                text: qsTr("Swipe right to view File Browser's source code, " +
-                           "license information, and a list of contributors.")
-                font.pixelSize: Theme.fontSizeSmall
-                color: Theme.secondaryHighlightColor
-                wrapMode: Text.Wrap
-            }
-
-            Spacer { height: Theme.paddingLarge }
-
             GroupedDrawer {
                 id: viewGroup
                 title: qsTr("Directory View")
-                open: false
+                open: true
+
+                onOpenChanged: {
+                    if (open) {
+                        sortingGroup.open = false
+                        behaviourGroup.open = false
+                    }
+                }
+
                 contents: Column {
                     SettingsSwitch {
                         text: qsTr("Use per-directory view settings")
@@ -111,7 +91,16 @@ Page {
             }
 
             GroupedDrawer {
+                id: sortingGroup
                 title: qsTr("Sorting")
+
+                onOpenChanged: {
+                    if (open) {
+                        viewGroup.open = false
+                        behaviourGroup.open = false
+                    }
+                }
+
                 contents: Column {
                     SettingsSwitch {
                         text: qsTr("Show folders first")
@@ -186,6 +175,14 @@ Page {
             GroupedDrawer {
                 id: behaviourGroup
                 title: qsTr("Behavior and View")
+
+                onOpenChanged: {
+                    if (open) {
+                        viewGroup.open = false
+                        sortingGroup.open = false
+                    }
+                }
+
                 contents: Column {
                     ComboBox {
                         id: initialDirMode
@@ -285,6 +282,18 @@ Page {
                                           "background of this app.")
                     }
                 }
+            }
+
+            Spacer { height: 2*Theme.paddingLarge }
+
+            Label {
+                x: Theme.horizontalPageMargin
+                width: parent.width - 2*x
+                text: qsTr("Swipe right to view File Browser's source code, " +
+                           "license information, and a list of contributors.")
+                font.pixelSize: Theme.fontSizeSmall
+                color: Theme.secondaryHighlightColor
+                wrapMode: Text.Wrap
             }
         }
     }

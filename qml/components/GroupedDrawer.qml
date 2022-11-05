@@ -50,18 +50,18 @@ Item {
                 verticalCenter: parent.verticalCenter
             }
             text: "View"
-            color: Theme.highlightColor
             font.pixelSize: Theme.fontSizeLarge
         }
 
-        Image {
+        HighlightImage {
             id: moreImage
             anchors {
                 right: parent.right
                 rightMargin: Screen.sizeCategory > Screen.Medium ? Theme.horizontalPageMargin : Theme.paddingMedium
                 verticalCenter: parent.verticalCenter
             }
-            source: "image://theme/icon-m-right?" + Theme.highlightColor
+            source: "image://theme/icon-m-right"
+            color: Theme.primaryColor
             transformOrigin: Item.Center
             rotation: viewGroup.open ? 90 : 0
             Behavior on rotation { NumberAnimation { duration: 100 } }
