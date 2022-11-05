@@ -68,7 +68,7 @@ Page {
                 model: ListModel {
                     ListElement { label: qsTr("Name"); value: "name" }
                     ListElement { label: qsTr("Size"); value: "size" }
-                    ListElement { label: qsTr("Modification time"); value: "modificationtime" }
+                    ListElement { label: qsTr("File age"); value: "modificationtime" }
                     ListElement { label: qsTr("File type"); value: "type" }
                 }
             }
@@ -81,8 +81,8 @@ Page {
                 onSelectionChanged: prefs.viewSortOrder = newValue.toString()
 
                 model: ListModel {
-                    ListElement { label: qsTr("default"); value: "default" }
-                    ListElement { label: qsTr("reversed"); value: "reversed" }
+                    ListElement { label: qsTr("ascending"); value: "default" }
+                    ListElement { label: qsTr("descending"); value: "reversed" }
                 }
             }
 

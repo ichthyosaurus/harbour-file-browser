@@ -116,10 +116,7 @@ Page {
                     SettingsSwitch {
                         text: qsTr("Show folders first")
                         key: "viewShowDirectoriesFirst"
-                    }
-                    SettingsSwitch {
-                        text: qsTr("Sort case-sensitively")
-                        key: "viewSortCaseSensitively"
+                        description: qsTr("Always show folders at the top of the file list.")
                     }
                     ComboBox {
                         label: qsTr("Sort by")
@@ -128,21 +125,54 @@ Page {
                         onValueChanged: GlobalSettings.viewSortRole = currentItem.value
 
                         menu: ContextMenu {
-                            MenuItem { text: qsTr("name");              property string value: "name" }
-                            MenuItem { text: qsTr("size");              property string value: "size" }
-                            MenuItem { text: qsTr("modification time"); property string value: "modificationtime" }
-                            MenuItem { text: qsTr("file type");         property string value: "type" }
+                            MenuItem { text: qsTr("name");      property string value: "name" }
+                            MenuItem { text: qsTr("size");      property string value: "size" }
+                            MenuItem { text: qsTr("file age");  property string value: "modificationtime" }
+                            MenuItem { text: qsTr("file type"); property string value: "type" }
                         }
+                    }
+                    SettingsSwitch {
+                        text: qsTr("Sort case-sensitively")
+                        key: "viewSortCaseSensitively"
+                        description: qsTr("Show files with names starting with a capital letter first.")
+                        visible: GlobalSettings.viewSortRole == "name"
                     }
                     ComboBox {
                         label: qsTr("Sort order")
                         property var indices: ({'default': 0, 'reversed': 1})
                         currentIndex: indices[GlobalSettings.viewSortOrder]
                         onValueChanged: GlobalSettings.viewSortOrder = currentItem.value
+                        description: {
+                            var role = GlobalSettings.viewSortRole
+                            if (GlobalSettings.viewSortOrder == "default") {
+                                if (role == "name" || role == "type") {
+                                    return qsTr("Sort names starting with the beginning of the alphabet first.")
+                                } else if (role == "size") {
+                                    return qsTr("Show smaller files first.")
+                                } else if (role == "modificationtime") {
+                                    return qsTr("Show more recent files first.")
+                                }
+                            } else {
+                                if (role == "name" || role == "type") {
+                                    return qsTr("Sort names starting with the end of the alphabet first.")
+                                } else if (role == "size") {
+                                    return qsTr("Show larger files first.")
+                                } else if (role == "modificationtime") {
+                                    return qsTr("Show older files first.")
+                                }
+                            }
+                            return ""
+                        }
 
                         menu: ContextMenu {
-                            MenuItem { text: qsTr("default");  property string value: "default" }
-                            MenuItem { text: qsTr("reversed"); property string value: "reversed" }
+                            MenuItem {
+                                property string value: "default"
+                                text: qsTr("ascending")
+                            }
+                            MenuItem {
+                                property string value: "reversed"
+                                text: qsTr("descending")
+                            }
                         }
                     }
                 }
