@@ -150,7 +150,7 @@ Page {
                 text: qsTr("View Preferences")
                 onClicked: {
                     pullDownMenu._filterBlocked = true;
-                    pageStack.push(Qt.resolvedUrl("SortingPage.qml"), { "dir": dir })
+                    pageStack.push(Qt.resolvedUrl("LocalSettingsPage.qml"), { "dir": dir })
                 }
             }
             MenuItem {

@@ -134,13 +134,13 @@ ApplicationWindow {
         }
     }
 
-    property SettingsPage settingsPage: null
+    property GlobalSettingsPage settingsPage: null
     Loader {
         id: settingsPageLoader
         asynchronous: true
         onStatusChanged: if (status === Loader.Ready) settingsPage = settingsPageLoader.item
         sourceComponent: Component {
-            SettingsPage { }
+            GlobalSettingsPage { }
         }
     }
 

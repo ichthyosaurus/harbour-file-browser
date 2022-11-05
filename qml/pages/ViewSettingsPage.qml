@@ -153,7 +153,7 @@ Page {
 
     onStatusChanged: {
         if (status === PageStatus.Active) {
-            pageStack.pushAttached(Qt.resolvedUrl("SettingsPage.qml"));
+            pageStack.pushAttached(main.settingsPage);
         }
     }
 }
