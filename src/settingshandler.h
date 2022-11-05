@@ -108,7 +108,30 @@ private:
             this->insert(defaultValue.first, defaultValue.second);
         }
 
+        template<typename U = T>
+        Mapping(QString defaultValue, bool allowAnyString, typename std::enable_if<std::is_same_v<U, QString>>::type* = 0)
+            : defaultValue({defaultValue, defaultValue}), allowAnyString(allowAnyString) { }
+
+        virtual T value(const QString& key, const T& fallback) {
+            if constexpr (std::is_same_v<T, QString>) { if (allowAnyString) return key; }
+            return QHash<QString, T>::value(key, fallback);
+        }
+        virtual T value(const QString& key) {
+            if constexpr (std::is_same_v<T, QString>) { if (allowAnyString) return key; }
+            return QHash<QString, T>::value(key);
+        }
+
+        virtual QString key(const T& value, const QString& fallback) {
+            if constexpr (std::is_same_v<T, QString>) { if (allowAnyString) return value; }
+            return QHash<QString, T>::key(value, fallback);
+        }
+        virtual QString key(const T& value) {
+            if constexpr (std::is_same_v<T, QString>) { if (allowAnyString) return value; }
+            return QHash<QString, T>::key(value);
+        }
+
         QPair<QString, T> defaultValue;
+        const bool allowAnyString {false};
     };
 
 #define PROP(TYPE, NAME, GLOBAL_KEY, LOCAL_KEY, GLOBAL_MAP, LOCAL_MAP) \
@@ -156,17 +179,20 @@ private:
     // 3. setup mappings if needed
     //    Mapping<TYPE> map_propertyName{{QSL("string-representation"), valueInCode}, {{{...}, {...}}, ...}};
     //    Mapping<TYPE> map_propertyName{QSL("valid-string"), {QSL("further-valid-string"), ...};
+    //    Mapping<TYPE> map_propertyName{"", true}; -- allow any string without checking
     //    - TYPE: must be the same type as declared in the PROP macro
     //    - mappings map a string representation to an actual C++ value
     //    - the first entry in the mappings list is the default value for this setting
     //      (must be documented in SETTINGS.md)
     //    - use the predefined mappings "map_bool_true" for boolean values that are true by default,
     //      and "map_bool_false" for boolean values that are false by default
+    //    - use "map_any_string" if the key is allowed to store an arbitrary string
 
     // common value mappings
-    Mapping<QString> map_invalid {QLatin1String(), {}};
+    Mapping<QString> map_invalid {QLatin1Literal(), {}};
     Mapping<bool> map_bool_true{{QSL("true"), true}, {{QSL("false"), false}}};
     Mapping<bool> map_bool_false{{QSL("false"), false}, {{QSL("true"), true}}};
+    Mapping<QString> map_any_string{QLatin1Literal(), true};
 
     // [General] section
     Mapping<QString> map_filterAction{QSL("filter"), {QSL("search")}};
