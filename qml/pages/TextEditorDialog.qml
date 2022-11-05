@@ -71,7 +71,6 @@ Dialog {
         id: editor
         onContentsChanged: {
             editorArea.text = contents
-            editorArea.forceActiveFocus()
         }
         onErrorMessageChanged: {
             if (errorCategory === "read") {
@@ -165,7 +164,6 @@ Dialog {
                     right: parent.right
                 }
 
-                focus: true
                 text: editor.contents
                 font.pixelSize: Theme.fontSizeExtraSmall
                 font.family: "monospace"
