@@ -54,7 +54,7 @@ DockedPanel {
         labelText: dockPanel.overrideText === "" ? qsTr("%n file(s) selected", "", dockPanel.selectedCount)
                                                  : dockPanel.overrideText
         errorCallback: function(errorMsg) { notificationPanel.showTextWithTimer(errorMsg, ""); }
-        showEdit: selectedCount == 1 && isEditable(selectedFiles()[0])
+        showEdit: selectedCount == 1 && fileData.checkSafeToEdit(selectedFiles()[0])
         enabled: enabled
     }
 }

@@ -29,6 +29,15 @@ Item {
     height: isUpright ? (showLabel ? label.height : 0)+groupA.height+groupB.height :
                         _itemSize+Theme.paddingLarge
 
+    readonly property FileData fileData: FileData {
+        // This FileData object can be used by implementations where it is inconvenient
+        // to create a separate FileData object. For example, it can be used to
+        // access the checkSafeToRead(file) function.
+        //
+        // The file represented in this object will change, so make sure to always
+        // set the file before any action.
+    }
+
     property var selectedFiles: function() {
         // function returning a list of selected files (has to be provided)
         console.log("error: missing implementation of FileActions::selectedFiles()!")
@@ -70,22 +79,8 @@ Item {
     signal compressTriggered
     signal editTriggered
 
-    function isEditable(file) {
-        fileData.file = file
-
-        if (fileData.isSymLink || !fileData.mimeTypeInherits("text/plain") || !fileData.isSafeToOpen()) {
-            return false
-        }
-
-        return true
-    }
-
     onSelectedCountChanged: {
         labelText = qsTr("%n file(s) selected", "", selectedCount);
-    }
-
-    FileData {
-        id: fileData
     }
 
     Label {
@@ -245,7 +240,6 @@ Item {
                     }
                 } else if (sharingMethod == String('TransferEngine')) {
                     fileData.file = files[0]  // TransferEngine can only handle one file at a time
-                    fileData.refresh()
                     pageStack.animatorPush("Sailfish.TransferEngine.SharePage", {
                         source: Qt.resolvedUrl(files[0]),
                         mimeType: fileData.mimeType,
@@ -278,14 +272,14 @@ Item {
                 var files = selectedFiles()
                 fileData.file = files[0]
 
-                if (!isEditable(fileData.file)) {
+                if (!fileData.isSafeToEdit) {
                     console.warn("bug: cannot edit", files)
                     console.warn("This is a programming error. See FileActions.qml for details.")
                     return
 
                     // Pages that enable editing files should make sure that
                     // showEdit is only set to 'true' when editable (i.e. plain text)
-                    // files are selected. Use isEditable(file) for checking.
+                    // files are selected. Use fileData.checkSafeToEdit(file) for checking.
                 }
 
                 pageStack.animatorPush(Qt.resolvedUrl("../pages/TextEditorDialog.qml"), { file: files[0] })

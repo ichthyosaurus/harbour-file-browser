@@ -157,6 +157,15 @@ bool FileData::mimeTypeInherits(QString parentMimeType) const
     return m_mimeType.inherits(parentMimeType);
 }
 
+bool FileData::isSafeToEdit() const
+{
+    if (isSafeToOpen() && mimeTypeInherits("text/plain")) {
+        return true;
+    }
+
+    return false;
+}
+
 QString FileData::typeCategory() const
 {
     if (m_mimeTypeName.startsWith("image/")) {
@@ -186,6 +195,12 @@ QString FileData::typeCategory() const
     return "none";
 }
 
+bool FileData::checkSafeToEdit(QString file) const {
+    FileData f;
+    f.setFile(file);
+    return f.isSafeToEdit();
+}
+
 void FileData::readInfo()
 {
     m_errorMessage = "";
@@ -212,6 +227,8 @@ void FileData::readInfo()
     emit isWritableChanged();
     emit isReadableChanged();
     emit isExecutableChanged();
+    emit isSafeToOpenChanged();
+    emit isSafeToEditChanged();
     emit ownerChanged();
     emit groupChanged();
     emit sizeChanged();

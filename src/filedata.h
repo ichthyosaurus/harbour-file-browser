@@ -46,6 +46,8 @@ class FileData : public QObject
     Q_PROPERTY(bool isWritable READ isWritable() NOTIFY isWritableChanged())
     Q_PROPERTY(bool isReadable READ isReadable() NOTIFY isReadableChanged())
     Q_PROPERTY(bool isExecutable READ isExecutable() NOTIFY isExecutableChanged())
+    Q_PROPERTY(bool isSafeToOpen READ isSafeToOpen() NOTIFY isSafeToOpenChanged())
+    Q_PROPERTY(bool isSafeToEdit READ isSafeToEdit() NOTIFY isSafeToEditChanged())
     Q_PROPERTY(QString owner READ owner() NOTIFY ownerChanged())
     Q_PROPERTY(QString group READ group() NOTIFY groupChanged())
     Q_PROPERTY(QString size READ size() NOTIFY sizeChanged())
@@ -85,6 +87,8 @@ public:
     bool isWritable() const { return m_fileInfo.isWritable(); }
     bool isReadable() const { return m_fileInfo.isReadable(); }
     bool isExecutable() const { return m_fileInfo.isExecutable(); }
+    bool isSafeToOpen() const { return m_fileInfo.isSafeToRead(); }
+    bool isSafeToEdit() const;
     QString owner() const;
     QString group() const;
     QString size() const;
@@ -112,8 +116,8 @@ public:
     // methods accessible from QML
     Q_INVOKABLE void refresh();
     Q_INVOKABLE bool mimeTypeInherits(QString parentMimeType) const;
-    Q_INVOKABLE bool isSafeToOpen() const { return m_fileInfo.isSafeToRead(); }
     Q_INVOKABLE QString typeCategory() const;
+    Q_INVOKABLE bool checkSafeToEdit(QString file) const;
 
 signals:
     void fileChanged();
@@ -127,6 +131,8 @@ signals:
     void isWritableChanged();
     void isReadableChanged();
     void isExecutableChanged();
+    void isSafeToOpenChanged();
+    void isSafeToEditChanged();
     void ownerChanged();
     void groupChanged();
     void sizeChanged();

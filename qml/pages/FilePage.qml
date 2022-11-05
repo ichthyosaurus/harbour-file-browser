@@ -82,7 +82,7 @@ Page {
                 text: (fileData.category === "rpm" || fileData.category === "apk") ? qsTr("Install") : qsTr("Open")
                 visible: !fileData.isDir
                 onClicked: {
-                    if (!fileData.isSafeToOpen()) {
+                    if (!fileData.isSafeToOpen) {
                         notificationPanel.showTextWithTimer(qsTr("File cannot be opened"),
                                                             qsTr("This type of file cannot be opened."));
                         return;
@@ -242,7 +242,7 @@ Page {
                     showProperties: false
                     showSelection: false
                     showShare: !fileData.isSymLink
-                    showEdit: isEditable(fileData.file)
+                    showEdit: fileData.isSafeToEdit
 
                     showDelete: allowMoveDelete
                     showTransfer: allowMoveDelete

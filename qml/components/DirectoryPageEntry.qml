@@ -312,7 +312,7 @@ ListItem {
                 selectedFiles: function() { return [fileModel.fileNameAt(index)]; }
                 selectedCount: 1
                 showShare: !model.isLink
-                showEdit: isEditable(fileModel.fileNameAt(index))
+                showEdit: fileData.checkSafeToEdit(fileModel.fileNameAt(index))
                 showSelection: false
                 showCompress: false
                 onDeleteTriggered: {
