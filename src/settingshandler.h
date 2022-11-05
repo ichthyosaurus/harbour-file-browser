@@ -136,6 +136,32 @@ private:
     //
     // vvv SETTINGS vvv
     //
+    // Below is the definition of all documented settings.
+    //
+    // - values are verified automatically, invalid values will revert to the default
+    // - each setting must define a global key with valid values
+    // - optionally, a local key with (possibly different values) can be defined
+    // - local-only settings are not possible
+    //
+    // How to define a setting:
+    // 1. document the new setting in SETTINGS.md
+    // 2. create a property:
+    //    PROP(TYPE, NAME, GLOBAL_KEY, LOCAL_KEY, GLOBAL_MAP, LOCAL_MAP)
+    //    - TYPE: should generally be bool or QString, other types are not really supported
+    //    - NAME: property name to be used in QML; should follow the pattern "sectionGlobalKey", e.g. "generalEnableFoo"
+    //    - GLOBAL_KEY: global key as documented in SETTINGS.md; pattern: "Section/PropertyName", e.g. "General/EnableFoo"
+    //    - LOCAL_KEY: analogous to GLOBAL_KEY, empty string if the setting is global-only
+    //    - GLOBAL_MAP: mapping defining valid values for the global key
+    //    - LOCAL_MAP: analogous to GLOBAL_MAP; use the predefined "map_invalid" for global-only settings
+    // 3. setup mappings if needed
+    //    Mapping<TYPE> map_propertyName{{QSL("string-representation"), valueInCode}, {{{...}, {...}}, ...}};
+    //    Mapping<TYPE> map_propertyName{QSL("valid-string"), {QSL("further-valid-string"), ...};
+    //    - TYPE: must be the same type as declared in the PROP macro
+    //    - mappings map a string representation to an actual C++ value
+    //    - the first entry in the mappings list is the default value for this setting
+    //      (must be documented in SETTINGS.md)
+    //    - use the predefined mappings "map_bool_true" for boolean values that are true by default,
+    //      and "map_bool_false" for boolean values that are false by default
 
     // common value mappings
     Mapping<QString> map_invalid {QLatin1String(), {}};
