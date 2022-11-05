@@ -107,18 +107,6 @@ Page {
                             MenuItem { text: qsTr("huge");   property string action: "huge"; }
                         }
                     }
-                    TextSwitch {
-                        text: qsTr("Enable gallery mode")
-                        description: qsTr("In gallery mode, images will be shown comfortably large, " +
-                                          "and all entries except for images, videos, and directories will be hidden.")
-                        automaticCheck: false
-                        checked: GlobalSettings.viewViewMode === "gallery"
-                        onClicked: {
-                            // writing the new value will update "checked"
-                            if (checked) GlobalSettings.viewViewMode = 'list'
-                            else GlobalSettings.viewViewMode = 'gallery'
-                        }
-                    }
                 }
             }
 
