@@ -26,7 +26,6 @@ import harbour.file.browser.Settings 1.0
 
 import "pages"
 import "js/navigation.js" as Navigation
-import "js/bookmarks.js" as Bookmarks
 
 ApplicationWindow {
     id: main
@@ -40,10 +39,6 @@ ApplicationWindow {
     // the view to rotate back and forth between orientations.
     // [as of 2021-02-17, SFOS 3.4.0.24, sailfishsilica-qt5 version 1.1.110.3-1.33.3.jolla]
     _defaultPageOrientations: Orientation.All
-
-    signal bookmarkAdded(var path)
-    signal bookmarkRemoved(var path)
-    signal bookmarkMoved(var path)
 
     // note: version number has to be updated only in harbour-file-browser.yaml!
     readonly property string versionString: qsTr("Version %1 (%2)").arg(
@@ -68,9 +63,6 @@ ApplicationWindow {
     function navigate_canGoBack() { return Navigation.canGoBack(); }
     function navigate_canGoForward() { return Navigation.canGoForward(); }
     function navigate_syncNavStack() { return Navigation.syncNavStack(); }
-    function bookmarks_hasBookmark(path) { return Bookmarks.hasBookmark(path); }
-    function bookmarks_addBookmark(path, name) { return Bookmarks.addBookmark(path, name); }
-    function bookmarks_removeBookmark(path) { return Bookmarks.removeBookmark(path); }
 
     property string coverText: "File Browser"
     cover: Qt.resolvedUrl("cover/CoverPage.qml")

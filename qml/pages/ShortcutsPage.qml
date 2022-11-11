@@ -22,6 +22,7 @@ import QtQuick 2.6
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
 import harbour.file.browser.FileOperations 1.0
+import harbour.file.browser.Settings 1.0
 // import harbour.file.browser.FileClipboard 1.0
 
 import "../js/paths.js" as Paths
@@ -227,17 +228,15 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                property bool hasPrevious: pageStack.previousPage() ? true : false
-                property var hasBookmark: hasPrevious ? pageStack.previousPage().hasBookmark : undefined
-                visible: currentPath !== "" && hasPrevious
-                text: (hasBookmark !== undefined) ?
-                          (hasBookmark ?
-                               qsTr("Remove bookmark for “%1”").arg(Paths.lastPartOfPath(currentPath)) :
-                               qsTr("Add “%1” to bookmarks").arg(currentPath === "/" ? "/" : Paths.lastPartOfPath(currentPath))) : ""
-                onClicked: {
-                    if (hasBookmark !== undefined) {
-                        pageStack.previousPage().toggleBookmark();
-                    }
+                visible: currentPath !== ""
+                text: bookmark.marked ?
+                          qsTr("Remove bookmark for “%1”").arg(Paths.lastPartOfPath(currentPath)) :
+                          qsTr("Add “%1” to bookmarks").arg(currentPath === "/" ? "/" : Paths.lastPartOfPath(currentPath))
+                onDelayedClick: bookmark.toggle()
+
+                Bookmark {
+                    id: bookmark
+                    path: currentPath
                 }
             }
             MenuItem {
@@ -267,18 +266,18 @@ Page {
             MenuItem {
                 text: qsTr("Create a new bookmark")
                 onClicked: {
-                    pageStack.animatorPush(Qt.resolvedUrl("../pages/PathEditDialog.qml"),
-                                   { path: currentPath === "" ? StandardPaths.home : currentPath,
-                                       acceptCallback: function(path) {
-                                           if (!bookmarks_hasBookmark(path)) bookmarks_addBookmark(path)
-                                       },
-                                       customFilter: function(path) {
-                                           // exclude dirs that already have a bookmark
-                                           return !bookmarks_hasBookmark(path);
-                                       },
-                                       hideExcluded: false,
-                                       acceptText: qsTr("Save")
-                                   })
+                    pageStack.animatorPush(Qt.resolvedUrl("../pages/PathEditDialog.qml"), {
+                        path: currentPath === "" ? StandardPaths.home : currentPath,
+                        acceptCallback: function(path) {
+                            if (!GlobalSettings.bookmarks.hasBookmark(path)) GlobalSettings.bookmarks.add(path)
+                        },
+                        customFilter: function(path) {
+                            // exclude dirs that already have a bookmark
+                            return !GlobalSettings.bookmarks.hasBookmark(path);
+                         },
+                         hideExcluded: false,
+                         acceptText: qsTr("Save")
+                    })
                 }
             }
 

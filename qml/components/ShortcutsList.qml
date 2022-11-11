@@ -21,8 +21,8 @@
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
+import harbour.file.browser.Settings 1.0
 
-import "../js/bookmarks.js" as Bookmarks
 import "../js/paths.js" as Paths
 
 SilicaListView {
@@ -120,7 +120,7 @@ SilicaListView {
 
                 onClicked: {
                     if (!model.bookmark || !model.location) return;
-                    Bookmarks.moveBookmark(model.location);
+                    GlobalSettings.bookmarks.moveUp(model.location);
                 }
             }
         }
@@ -246,7 +246,7 @@ SilicaListView {
 
             onClicked: {
                 if (!model.bookmark || !model.location) return;
-                Bookmarks.removeBookmark(model.location);
+                GlobalSettings.bookmarks.remove(model.location);
             }
         }
 
@@ -278,7 +278,7 @@ SilicaListView {
             }
 
             model.name = newText;
-            Bookmarks.addBookmark(model.location, newText);
+            GlobalSettings.bookmarks.rename(model.location, newText);
         }
     }
 
@@ -382,10 +382,10 @@ SilicaListView {
                 }
             } else if (s === "bookmarks") {
                 // Add bookmarks if there are any
-                var bookmarks = Bookmarks.getBookmarks();
+                var bookmarks = GlobalSettings.bookmarks.getBookmarks();
 
                 for (var key in bookmarks) {
-                    var name = Bookmarks.getBookmarkName(bookmarks[key]);
+                    var name = GlobalSettings.bookmarks.getBookmarkName(bookmarks[key]);
                     if (name === "") continue;
                     listModel.append({ "section": qsTr("Bookmarks"),
                                        "name": name,
@@ -393,38 +393,6 @@ SilicaListView {
                                        "location": bookmarks[key],
                                        "bookmark": true })
                 }
-            }
-        }
-    }
-
-    Connections {
-        target: main
-        onBookmarkAdded: {
-            view.updateModel();
-        }
-        onBookmarkRemoved: {
-            for (var i = 0; i < listModel.count; i++) {
-                if (listModel.get(i).bookmark === true && listModel.get(i).location === path) {
-                    listModel.remove(i);
-                }
-            }
-        }
-        onBookmarkMoved: {
-            var topMostBookmark = undefined;
-            var index = undefined;
-            for (var i = 0; i < listModel.count; i++) {
-                if (listModel.get(i).bookmark !== true) continue;
-                if (topMostBookmark === undefined) topMostBookmark = i;
-                if (listModel.get(i).location === path) {
-                    index = i;
-                    break;
-                }
-            }
-
-            if (index === undefined) {
-                console.warn("failed to move bookmark: no index found", path);
-            } else {
-                listModel.move(index, index-1 < topMostBookmark ? listModel.count-1 : index-1, 1);
             }
         }
     }

@@ -21,8 +21,8 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
+import harbour.file.browser.Settings 1.0
 
-import "../js/bookmarks.js" as Bookmarks
 import "../js/paths.js" as Paths
 
 ListItem {
@@ -280,9 +280,7 @@ ListItem {
         id: contextMenu
         ContextMenu {
             id: menu
-            property bool _toggleBookmark: false
             property bool _triggerDelete: false
-            property bool _hasBookmark: isDir ? Bookmarks.hasBookmark(fileModel.fileNameAt(index)) : false
             onActiveChanged: {
                 if (!active) return;
                 remorsePopup.cancel(); // cancel delete if context menu is opened
@@ -291,16 +289,6 @@ ListItem {
             }
             onClosed: {
                 // delayed action so that menu has already closed when it is re-arranged
-                if (_toggleBookmark) {
-                    if (hasBookmark) {
-                        Bookmarks.removeBookmark(fileModel.fileNameAt(index));
-                        hasBookmark = false; visibleChanged();
-                    } else {
-                        Bookmarks.addBookmark(fileModel.fileNameAt(index));
-                        hasBookmark = true; visibleChanged();
-                    }
-                }
-
                 if (_triggerDelete) {
                     listItem.deleteMe();
                 }
@@ -329,10 +317,16 @@ ListItem {
                 // Cut, copy, delete, info, and share work fine, though.
                 showTransfer: false
             }
+
             MenuItem {
                 visible: model.isDir
-                text: hasBookmark ? qsTr("Remove bookmark") : qsTr("Add to bookmarks")
-                onClicked: _toggleBookmark = true // delayed action
+                text: bookmark.marked ? qsTr("Remove bookmark") : qsTr("Add to bookmarks")
+                onDelayedClick: bookmark.toggle()
+
+                Bookmark {
+                    id: bookmark
+                    path: fileModel.fileNameAt(index)
+                }
             }
         }
     }

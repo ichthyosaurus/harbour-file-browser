@@ -28,7 +28,9 @@
 #include <QString>
 #include <QMutex>
 #include <QSharedPointer>
+#include <QPointer>
 #include <QDir>
+#include <QAbstractListModel>
 
 class QFileInfo;
 
@@ -80,6 +82,97 @@ private:
     QMutex m_mutex;
 
     static QSharedPointer<RawSettingsHandler> m_globalInstance;
+};
+
+
+// Allows watching a single path, notifying when a bookmark
+// is added, removed, or renamed.
+//
+// Changing the status manually is possible only through setMarked()
+// and rename(), to avoid accidents.
+class BookmarkWatcher : public QObject {
+    Q_OBJECT
+    Q_PROPERTY(QString path READ path WRITE setPath NOTIFY pathChanged)
+    Q_PROPERTY(bool marked READ marked NOTIFY markedChanged)
+    Q_PROPERTY(QString name READ name NOTIFY nameChanged)
+
+public:
+    explicit BookmarkWatcher(QObject* parent = nullptr);
+    ~BookmarkWatcher();
+
+    bool marked();
+    QString path() const { return m_path; }
+    void setPath(QString path);
+    QString name();
+    void refresh();
+
+    Q_INVOKABLE void setMarked(bool active) const;
+    Q_INVOKABLE void toggle();
+    Q_INVOKABLE void rename(QString newName) const;
+
+signals:
+    void markedChanged();
+    void pathChanged();
+    void nameChanged();
+
+private:
+    QString m_path;
+};
+
+// Provides a list of all currently configured bookmarks.
+// Changes are synced back to the config file automatically,
+// but the config file is only read once. That means changes
+// on disk while the app is running are not reflected in this
+// model.
+//
+// This class should not be used directly. Instead, use the
+// "bookmarks" property on the GlobalSettings singleton in QML.
+class BookmarksModel : public QAbstractListModel
+{
+    Q_OBJECT
+
+public:
+    explicit BookmarksModel(QObject *parent = nullptr);
+    ~BookmarksModel();
+
+    // methods needed by ListView
+    Q_INVOKABLE int rowCount(const QModelIndex& parent = QModelIndex()) const;
+    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const;
+    QHash<int, QByteArray> roleNames() const;
+
+    // methods callable from QML
+    Q_INVOKABLE void add(QString path, QString name = QStringLiteral());
+    Q_INVOKABLE void remove(QString path);
+    // Q_INVOKABLE void moveUp(int fromIndex);
+    // Q_INVOKABLE void moveDown(int fromIndex);
+    Q_INVOKABLE void moveUp(QString path);
+    Q_INVOKABLE void moveDown(QString path);
+    // Q_INVOKABLE void rename(int idx, QString newName);
+    Q_INVOKABLE void rename(QString path, QString newName);
+    Q_INVOKABLE bool hasBookmark(QString path);
+
+    Q_INVOKABLE QString getBookmarkName(QString path);
+    Q_INVOKABLE QStringList getBookmarks();
+
+    void registerWatcher(QString path, QPointer<BookmarkWatcher> mark);
+    void unregisterWatcher(QString path, QPointer<BookmarkWatcher> mark);
+
+    static BookmarksModel* instance() {
+        if (m_globalInstance.isNull()) m_globalInstance.reset(new BookmarksModel());
+        return m_globalInstance.data();
+    }
+
+private:
+    void reload();
+    void saveOrder();
+    void saveItem(QString path, QString name);
+    void removeItem(QString path);
+
+    QMap<QString, int> m_indexLookup;         // maps paths to indices
+    QList<QPair<QString, QString>> m_entries; // holds path and name
+    QMap<QString, QList<QPointer<BookmarkWatcher>>> m_watchers;
+
+    static QSharedPointer<BookmarksModel> m_globalInstance;
 };
 
 
@@ -236,16 +329,22 @@ private:
     PROP(QString, viewViewMode, "View/ViewMode", "Sailfish/ViewMode", map_viewMode, map_viewMode);
 
     // [Bookmarks] section
-    // TODO
+    Q_PROPERTY(BookmarksModel* bookmarks READ bookmarks CONSTANT)
+    public: BookmarksModel* bookmarks() { return BookmarksModel::instance(); }
 
     //
     // ^^^ SETTINGS ^^^
     //
 
-    Q_PROPERTY(QString path READ path WRITE setPath NOTIFY pathChanged)
-    public: Q_SIGNAL void pathChanged(QString newValue);
-    public: Q_SLOT void setPath(QString newValue) { m_path = newValue; m_localFile = m_path + QSL("/.directory"); emit pathChanged(newValue); }
-    public: QString path() const { return m_path; }
+    private: Q_PROPERTY(QString path READ path WRITE setPath NOTIFY pathChanged)
+    public:
+    QString path() const { return m_path; }
+    Q_SIGNAL void pathChanged(QString newValue);
+    Q_SLOT void setPath(QString newValue) {
+        m_path = newValue;
+        m_localFile = m_path + QSL("/.directory");
+        emit pathChanged(newValue);
+    }
 
 public:
     // Specify a path to handle local settings. Leave the path empty to handle global settings only.
@@ -264,7 +363,9 @@ private:
         if (   !m_localFile.isEmpty()
             && !localKey.isEmpty()
             && RawSettingsHandler::instance()->read(QSL("View/UseLocalSettings"), QSL("true")) == QSL("true")) {
-            if (newValue == globalMap.value(RawSettingsHandler::instance()->read(globalKey, globalMap.defaultValue.first), globalMap.defaultValue.second)) {
+            if (newValue == globalMap.value(
+                        RawSettingsHandler::instance()->read(globalKey, globalMap.defaultValue.first),
+                        globalMap.defaultValue.second)) {
                 // If the new value matches the currently set global setting,
                 // we remove the local setting. This makes sure that local settings
                 // are updated as expected when global settings change. We assume
@@ -294,9 +395,13 @@ private:
             && !localKey.isEmpty()
             && RawSettingsHandler::instance()->read(QSL("View/UseLocalSettings"), QSL("true")) == QSL("true")
             && RawSettingsHandler::instance()->hasKey(localKey, m_localFile)) {
-            return localMap.value(RawSettingsHandler::instance()->read(localKey, QLatin1String(), m_localFile), globalMap.defaultValue.second);
+            return localMap.value(
+                        RawSettingsHandler::instance()->read(localKey, QLatin1String(), m_localFile),
+                        globalMap.defaultValue.second);
         } else {
-            return globalMap.value(RawSettingsHandler::instance()->read(globalKey, globalMap.defaultValue.first), globalMap.defaultValue.second);
+            return globalMap.value(
+                        RawSettingsHandler::instance()->read(globalKey, globalMap.defaultValue.first),
+                        globalMap.defaultValue.second);
         }
     }
 };

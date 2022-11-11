@@ -27,7 +27,6 @@ import harbour.file.browser.Settings 1.0
 import harbour.file.browser.FileClipboard 1.0
 
 import "../components"
-import "../js/bookmarks.js" as Bookmarks
 import "../js/paths.js" as Paths
 import "../js/files.js" as Files
 
@@ -41,7 +40,6 @@ Page {
     property bool remorseItemActive: false // set to true when remorseItem is active (item level)
     property alias progressPanel: progressPanel
     property alias notificationPanel: notificationPanel
-    property alias hasBookmark: bookmarkEntry.hasBookmark
     property string currentFilter: ""
     // set to true when full dir path should be shown in page header
     property bool fullPathShown: prefs.generalShowFullDirectoryPaths
@@ -264,23 +262,21 @@ Page {
         }
 
         PushUpMenu {
-            id: bottomPulley
             busy: pullDownMenu.busy
-            property bool _toggleBookmark: false
-            onActiveChanged: { // delay action until menu is closed
-                if (!active && _toggleBookmark) toggleBookmark()
-                else _toggleBookmark = false
-            }
+
             MenuItem {
                 text: qsTr("Search")
                 onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"),
                                           { dir: page.dir })
             }
             MenuItem {
-                id: bookmarkEntry
-                property bool hasBookmark: Bookmarks.hasBookmark(dir)
-                text: hasBookmark ? qsTr("Remove bookmark") : qsTr("Add to bookmarks")
-                onClicked: bottomPulley._toggleBookmark = true
+                text: bookmark.marked ? qsTr("Remove bookmark") : qsTr("Add to bookmarks")
+                onDelayedClick: bookmark.toggle()
+
+                Bookmark {
+                    id: bookmark
+                    path: dir
+                }
             }
             MenuItem {
                 text: qsTr("Copy path to clipboard")
@@ -542,12 +538,6 @@ Page {
 
     Connections {
         target: main
-        onBookmarkAdded: {
-            if (path === dir) bookmarkEntry.hasBookmark = true;
-        }
-        onBookmarkRemoved: {
-            if (path === dir) bookmarkEntry.hasBookmark = false;
-        }
         onShortcutsPageChanged: {
             if (main.shortcutsPage !== null && status === PageStatus.Active && !canNavigateForward) {
                 pageStack.completeAnimation();
@@ -571,13 +561,4 @@ Page {
         }
     }
 
-    function toggleBookmark() {
-        if (hasBookmark) {
-            Bookmarks.removeBookmark(dir);
-            hasBookmark = false;
-        } else {
-            Bookmarks.addBookmark(dir);
-            hasBookmark = true;
-        }
-    }
 }
