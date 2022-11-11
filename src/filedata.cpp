@@ -159,7 +159,8 @@ bool FileData::mimeTypeInherits(QString parentMimeType) const
 
 bool FileData::isSafeToEdit() const
 {
-    if (isSafeToOpen() && mimeTypeInherits("text/plain")) {
+    if (isSafeToOpen() && (mimeTypeInherits("text/plain")
+                           || m_fileInfo.size() == 0)) {
         return true;
     }
 
