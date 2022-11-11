@@ -168,8 +168,20 @@ private:
     void saveItem(QString path, QString name);
     void removeItem(QString path);
 
+    struct BookmarkItem {
+        BookmarkItem(QString group, QString name, QString icon, QString path, bool showSize, bool userDefined) :
+            group(group), name(name), icon(icon), path(path), showSize(showSize), userDefined(userDefined) {};
+
+        QString group {QStringLiteral("temporary")};
+        QString name {QLatin1Literal()};
+        QString icon {QStringLiteral("icon-m-favorite")};
+        QString path {QLatin1Literal()};
+        bool showSize {false};
+        bool userDefined {false};
+    };
+
     QMap<QString, int> m_indexLookup;         // maps paths to indices
-    QList<QPair<QString, QString>> m_entries; // holds path and name
+    QList<BookmarkItem> m_entries; // holds path and name
     QMap<QString, QList<QPointer<BookmarkWatcher>>> m_watchers;
 
     static QSharedPointer<BookmarksModel> m_globalInstance;

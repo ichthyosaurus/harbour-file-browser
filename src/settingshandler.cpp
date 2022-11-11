@@ -327,8 +327,12 @@ void BookmarkWatcher::refresh() {
 
 
 enum {
-    PathRole = Qt::UserRole +  1,
-    NameRole = Qt::UserRole +  2,
+    GroupRole =         Qt::UserRole +  1,
+    NameRole =          Qt::UserRole +  2,
+    IconRole =          Qt::UserRole +  3,
+    PathRole =          Qt::UserRole +  4,
+    ShowSizeRole =      Qt::UserRole +  5,
+    UserDefinedRole =   Qt::UserRole +  6
 };
 
 BookmarksModel::BookmarksModel(QObject *parent) :
@@ -357,12 +361,15 @@ QVariant BookmarksModel::data(const QModelIndex &index, int role) const
     const auto& entry = m_entries.at(index.row());
 
     switch (role) {
-    case PathRole:
-        return entry.first;
-
     case Qt::DisplayRole:
     case NameRole:
-        return entry.second;
+        return entry.name;
+
+    case GroupRole: return entry.group;
+    case IconRole: return entry.icon;
+    case PathRole: return entry.path;
+    case ShowSizeRole: return entry.showSize;
+    case UserDefinedRole: return entry.userDefined;
 
     default:
         return QVariant();
@@ -372,8 +379,12 @@ QVariant BookmarksModel::data(const QModelIndex &index, int role) const
 QHash<int, QByteArray> BookmarksModel::roleNames() const
 {
     QHash<int, QByteArray> roles = QAbstractListModel::roleNames();
-    roles.insert(PathRole, QByteArray("path"));
+    roles.insert(GroupRole, QByteArray("group"));
     roles.insert(NameRole, QByteArray("name"));
+    roles.insert(IconRole, QByteArray("icon"));
+    roles.insert(PathRole, QByteArray("path"));
+    roles.insert(ShowSizeRole, QByteArray("showSize"));
+    roles.insert(UserDefinedRole, QByteArray("userDefined"));
     return roles;
 }
 
@@ -390,7 +401,7 @@ void BookmarksModel::add(QString path, QString name)
 
     auto last = rowCount();
     beginInsertRows(QModelIndex(), last, last);
-    m_entries.append({path, name});
+    m_entries.append(BookmarkItem(QStringLiteral("bookmark"), name, QStringLiteral("icon-m-favorite"), path, false, true));
     m_indexLookup.insert(path, last);
     endInsertRows();
 
@@ -435,7 +446,9 @@ void BookmarksModel::moveUp(QString path)
 
     m_indexLookup.clear();
     for (int i = 0; i < m_entries.count(); ++i) {
-        m_indexLookup.insert(m_entries.at(i).first, i);
+        if (m_entries.at(i).userDefined) {
+            m_indexLookup.insert(m_entries.at(i).path, i);
+        }
     }
 
     endMoveRows();
@@ -464,7 +477,9 @@ void BookmarksModel::moveDown(QString path)
 
     m_indexLookup.clear();
     for (int i = 0; i < m_entries.count(); ++i) {
-        m_indexLookup.insert(m_entries.at(i).first, i);
+        if (m_entries.at(i).userDefined) {
+            m_indexLookup.insert(m_entries.at(i).path, i);
+        }
     }
 
     endMoveRows();
@@ -484,13 +499,13 @@ void BookmarksModel::rename(QString path, QString newName)
 
     int idx = m_indexLookup.value(path);
 
-    m_entries[idx].second = newName;
+    m_entries[idx].name = newName;
 
     QModelIndex topLeft = index(idx, 0);
     QModelIndex bottomRight = index(idx, 0);
     emit dataChanged(topLeft, bottomRight, {NameRole});
 
-    saveItem(m_entries.at(idx).first, newName);
+    saveItem(m_entries.at(idx).path, newName);
 }
 
 bool BookmarksModel::hasBookmark(QString path)
@@ -508,7 +523,7 @@ QString BookmarksModel::getBookmarkName(QString path)
         return QLatin1Literal();
     }
 
-    return m_entries.at(m_indexLookup.value(path)).second;
+    return m_entries.at(m_indexLookup.value(path)).name;
 }
 
 QStringList BookmarksModel::getBookmarks()
@@ -516,7 +531,9 @@ QStringList BookmarksModel::getBookmarks()
     QStringList ret;
 
     for (const auto& i : std::as_const(m_entries)) {
-        ret << i.first;
+        if (i.userDefined) {
+            ret << i.path;
+        }
     }
 
     ret.removeDuplicates();
@@ -553,7 +570,7 @@ void BookmarksModel::reload()
         for (const auto& i : array) {
             QString path = i.toString();
             QString name = RawSettingsHandler::instance()->read(QStringLiteral("Bookmarks/") + path, path.split("/").last());
-            m_entries.append({path, name});
+            m_entries.append(BookmarkItem(QStringLiteral("bookmark"), name, QStringLiteral("icon-m-favorite"), path, false, true));
             m_indexLookup.insert(path, idx);
             idx++;
         }
@@ -566,7 +583,9 @@ void BookmarksModel::saveOrder()
     QVariantList list;
 
     for (int i = 0; i < m_entries.length(); ++i) {
-        list.append(m_entries.at(i).first);
+        if (m_entries.at(i).userDefined) {
+            list.append(m_entries.at(i).path);
+        }
     }
 
     doc.setArray(QJsonArray::fromVariantList(list));
