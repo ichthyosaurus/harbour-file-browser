@@ -40,12 +40,8 @@ ApplicationWindow {
     // [as of 2021-02-17, SFOS 3.4.0.24, sailfishsilica-qt5 version 1.1.110.3-1.33.3.jolla]
     _defaultPageOrientations: Orientation.All
 
-    // note: version number has to be updated only in harbour-file-browser.yaml!
-    readonly property string versionString: qsTr("Version %1 (%2)").arg(
-                                                APP_VERSION+"-"+APP_RELEASE).arg(RELEASE_TYPE)
     readonly property bool runningAsRoot: engine.runningAsRoot()
     property bool authenticatedForRoot: false
-    readonly property string sourceCodeLink: 'https://github.com/ichthyosaurus/harbour-file-browser'
 
     // Navigation history: see navigation.js for details
     property var backStack: ([])
@@ -178,11 +174,6 @@ ApplicationWindow {
         }
     } */
 
-    function showSolidBackground(show) {
-        if (show === true) solidBackground.opacity = 1.0
-        else solidBackground.opacity = 0.0
-    }
-
     Rectangle {
         id: solidBackground
         anchors.fill: parent
@@ -196,7 +187,8 @@ ApplicationWindow {
     }
 
     Component.onCompleted: {
-        console.log("running File Browser: " + versionString)
+        console.log("running File Browser: version %1 (%2)".arg(
+                        APP_VERSION+"-"+APP_RELEASE).arg(RELEASE_TYPE))
         console.log("details: " + buildMessage)
         console.log("enabled features: sharing = %1 (%2), PDF viewer = %3, storage settings = %4".arg(
             sharingEnabled).arg(sharingMethod).arg(pdfViewerEnabled).arg(systemSettingsEnabled))

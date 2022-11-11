@@ -14,7 +14,7 @@ A.AboutPageBase {
 
     appName: "File Browser"
     appIcon: Qt.resolvedUrl("../images/harbour-file-browser.png")
-    appVersion: APP_VERSION
+    appVersion: APP_VERSION  // defined in rpm/harbour-file-browser.yaml
     appRelease: APP_RELEASE
     appReleaseType: RELEASE_TYPE
     description: qsTr("A fully-fledged file manager for Sailfish OS.")
