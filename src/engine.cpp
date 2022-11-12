@@ -141,84 +141,6 @@ void Engine::cancel()
     m_fileWorker->cancel();
 }
 
-static QStringList subdirs(const QString &dirname, bool includeHidden = false)
-{
-    QDir dir(dirname);
-    if (!dir.exists()) return QStringList();
-
-    QDir::Filter hiddenFilter = includeHidden ? QDir::Hidden : static_cast<QDir::Filter>(0);
-    dir.setFilter(QDir::AllDirs | QDir::NoDotAndDotDot | hiddenFilter);
-
-    const QStringList list = dir.entryList();
-    QStringList abslist;
-
-    for (const auto& relpath : list) {
-        abslist.append(dir.absoluteFilePath(relpath));
-    }
-
-    return abslist;
-}
-
-QString Engine::androidDataPath() const
-{
-    QString path = QStandardPaths::writableLocation(QStandardPaths::HomeLocation)+"/android_storage";
-    QDir dir(path);
-    if (!dir.exists()) return QString();
-    return path;
-}
-
-QVariantList Engine::externalDrives() const
-{
-    QVariantList devices;
-
-    // from SailfishOS 2.2.0 onwards, "/media/sdcard" is
-    // a symbolic link instead of a folder. In that case, follow the link
-    // to the actual folder.
-    QString sdcardFolder = "/media/sdcard";
-    QFileInfo fileinfo(sdcardFolder);
-    if (fileinfo.isSymLink()) sdcardFolder = fileinfo.symLinkTarget();
-
-    // get sdcard dir candidates for "/media/sdcard" (or its symlink target)
-    QStringList candidates = subdirs(sdcardFolder);
-
-    // If the base folder is not already /run/media/USER, we add it too. This
-    // is where OTG devices will be mounted.
-    // Also, some users may have a symlink from "/media/sdcard/USER"
-    // (not from "/media/sdcard"), which means no SD cards would be found before,
-    // so we also get candidates for those users.
-    QString expectedUserFolder = QString("/run/media/") + QDir::home().dirName();
-    if (sdcardFolder != expectedUserFolder) candidates.append(subdirs(expectedUserFolder));
-
-    // no candidates found, abort
-    if (candidates.isEmpty()) return QVariantList();
-
-    // remove all directories which are not mount points
-    QMap<QString, QString> mps = mountPoints();
-    QMutableStringListIterator i(candidates);
-    while (i.hasNext()) {
-        QString dirname = i.next();
-        if (!mps.contains(dirname)) i.remove();
-    }
-
-    // all candidates eliminated, abort
-    if (candidates.isEmpty()) return QVariantList();
-
-    for (const auto& drive : std::as_const(candidates)) {
-        QVariantMap data;
-        data.insert("path", drive);
-
-        if (mps[drive].startsWith("/dev/mmc")) {
-            data.insert("title", QObject::tr("SD card"));
-        } else {
-            data.insert("title", QObject::tr("Removable Media"));
-        }
-
-        devices << data;
-    }
-
-    return devices;
-}
-
 QString Engine::storageSettingsPath()
 {
 #ifdef NO_FEATURE_STORAGE_SETTINGS
@@ -554,30 +476,6 @@ void Engine::setProgress(int progress, QString filename)
     m_progressFilename = filename;
     emit progressChanged();
     emit progressFilenameChanged();
-}
-
-QMap<QString, QString> Engine::mountPoints() const
-{
-    // read /proc/mounts and return all mount points for the filesystem
-    QFile file("/proc/mounts");
-    if (!file.open(QFile::ReadOnly | QFile::Text))
-        return QMap<QString, QString>();
-
-    QTextStream in(&file);
-    QString result = in.readAll();
-
-    // split result to lines
-    const QStringList lines = result.split(QRegExp("[\n\r]"));
-
-    // get columns
-    QMap<QString, QString> paired;
-    for (const auto& line : lines) {
-        QStringList columns = line.split(QRegExp("\\s+"), QString::SkipEmptyParts);
-        if (columns.count() < 6) continue; // sanity check
-        paired[columns.at(1)] = columns.at(0);
-    }
-
-    return paired;
 }
 
 QString Engine::createHexDump(char *buffer, int size, int bytesPerLine)

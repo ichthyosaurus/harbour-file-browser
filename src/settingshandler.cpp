@@ -28,6 +28,7 @@
 #include <QQmlEngine>
 #include <QJsonArray>
 #include <QJsonDocument>
+#include <QtQml>
 
 #include "settingshandler.h"
 
@@ -39,6 +40,10 @@ QSharedPointer<BookmarksModel> \
     BookmarksModel::m_globalInstance = \
         QSharedPointer<BookmarksModel>(nullptr);
 
+void SettingsHandlerEnums::registerTypes(const char *qmlUrl, int major, int minor) {
+    qRegisterMetaType<BookmarkGroup::Group>("BookmarkGroup::Group"); \
+    BookmarkGroup::registerToQml(qmlUrl, major, minor);
+}
 
 RawSettingsHandler::RawSettingsHandler(QObject *parent)
     : QObject(parent)
@@ -329,16 +334,17 @@ void BookmarkWatcher::refresh() {
 enum {
     GroupRole =         Qt::UserRole +  1,
     NameRole =          Qt::UserRole +  2,
-    IconRole =          Qt::UserRole +  3,
+    ThumbnailRole =     Qt::UserRole +  3,
     PathRole =          Qt::UserRole +  4,
     ShowSizeRole =      Qt::UserRole +  5,
     UserDefinedRole =   Qt::UserRole +  6
 };
 
 BookmarksModel::BookmarksModel(QObject *parent) :
-    QAbstractListModel(parent)
+    QAbstractListModel(parent), m_mountWatcher({QStringLiteral("/proc/mounts")}, this)
 {
     reload();
+    connect(&m_mountWatcher, &QFileSystemWatcher::fileChanged, this, &BookmarksModel::updateExternalDevices);
 }
 
 BookmarksModel::~BookmarksModel()
@@ -366,7 +372,7 @@ QVariant BookmarksModel::data(const QModelIndex &index, int role) const
         return entry.name;
 
     case GroupRole: return entry.group;
-    case IconRole: return entry.icon;
+    case ThumbnailRole: return entry.thumbnail;
     case PathRole: return entry.path;
     case ShowSizeRole: return entry.showSize;
     case UserDefinedRole: return entry.userDefined;
@@ -381,7 +387,7 @@ QHash<int, QByteArray> BookmarksModel::roleNames() const
     QHash<int, QByteArray> roles = QAbstractListModel::roleNames();
     roles.insert(GroupRole, QByteArray("group"));
     roles.insert(NameRole, QByteArray("name"));
-    roles.insert(IconRole, QByteArray("icon"));
+    roles.insert(ThumbnailRole, QByteArray("thumbnail"));
     roles.insert(PathRole, QByteArray("path"));
     roles.insert(ShowSizeRole, QByteArray("showSize"));
     roles.insert(UserDefinedRole, QByteArray("userDefined"));
@@ -390,39 +396,40 @@ QHash<int, QByteArray> BookmarksModel::roleNames() const
 
 void BookmarksModel::add(QString path, QString name)
 {
-    if (name.isEmpty()) {
-        QDir dir(path);
-        name = dir.dirName();
+    appendItem(path, name, true);
+}
 
-        if (name.isEmpty()) {
-            name = QStringLiteral("/");
-        }
-    }
-
-    auto last = rowCount();
-    beginInsertRows(QModelIndex(), last, last);
-    m_entries.append(BookmarkItem(QStringLiteral("bookmark"), name, QStringLiteral("icon-m-favorite"), path, false, true));
-    m_indexLookup.insert(path, last);
-    endInsertRows();
-
-    saveItem(path, name);
-    saveOrder();
+void BookmarksModel::addTemporary(QString path, QString name)
+{
+    appendItem(path, name, false);
 }
 
 void BookmarksModel::remove(QString path)
 {
-    if (!m_indexLookup.contains(path)) {
-        return;
+    removeItem(path, true);
+}
+
+void BookmarksModel::removeTemporary(QString path)
+{
+    removeItem(path, false);
+}
+
+void BookmarksModel::clearTemporary()
+{
+    QList<int> toRemove;
+    toRemove.reserve(m_entries.size());
+
+    for (int i = m_entries.length()-1; i >= 0; --i) {
+        if (m_entries.at(i).group == BookmarkGroup::Temporary) {
+            toRemove.append(i);
+        }
     }
 
-    auto index = m_indexLookup.value(path);
-    beginRemoveRows(QModelIndex(), index, index);
-    m_entries.removeAt(index);
-    m_indexLookup.remove(path);
-    endRemoveRows();
-
-    removeItem(path);
-    saveOrder();
+    for (auto i : toRemove) {
+        beginRemoveRows(QModelIndex(), i, i);
+        m_entries.removeAt(i);
+        endRemoveRows();
+    }
 }
 
 void BookmarksModel::moveUp(QString path)
@@ -432,28 +439,18 @@ void BookmarksModel::moveUp(QString path)
     }
 
     int fromIndex = m_indexLookup.value(path);
+    int toIndex = 0;
 
     if (fromIndex < 0 || fromIndex > rowCount()) {
         return;
-    } else if (fromIndex-1 < 0) {
+    } else if (fromIndex - 1 < 0) {
         // already at the top? cycle to the bottom
-        beginMoveRows(QModelIndex(), fromIndex, fromIndex, QModelIndex(), rowCount()-1);
-        m_entries.move(fromIndex, rowCount()-1);
+        toIndex = rowCount();
     } else {
-        beginMoveRows(QModelIndex(), fromIndex, fromIndex, QModelIndex(), fromIndex-1);
-        m_entries.move(fromIndex, fromIndex-1);
+        toIndex = fromIndex - 1;
     }
 
-    m_indexLookup.clear();
-    for (int i = 0; i < m_entries.count(); ++i) {
-        if (m_entries.at(i).userDefined) {
-            m_indexLookup.insert(m_entries.at(i).path, i);
-        }
-    }
-
-    endMoveRows();
-
-    saveOrder();
+    moveItem(fromIndex, toIndex);
 }
 
 void BookmarksModel::moveDown(QString path)
@@ -463,28 +460,18 @@ void BookmarksModel::moveDown(QString path)
     }
 
     int fromIndex = m_indexLookup.value(path);
+    int toIndex = 0;
 
     if (fromIndex < 0 || fromIndex > rowCount()) {
         return;
     } else if (fromIndex+1 >= rowCount()) {
         // already at the bottom? cycle to the top
-        beginMoveRows(QModelIndex(), fromIndex, fromIndex, QModelIndex(), 0);
-        m_entries.move(fromIndex, 0);
+        toIndex = 0;
     } else {
-        beginMoveRows(QModelIndex(), fromIndex, fromIndex, QModelIndex(), fromIndex+1);
-        m_entries.move(fromIndex, fromIndex+1);
+        toIndex = fromIndex + 1;
     }
 
-    m_indexLookup.clear();
-    for (int i = 0; i < m_entries.count(); ++i) {
-        if (m_entries.at(i).userDefined) {
-            m_indexLookup.insert(m_entries.at(i).path, i);
-        }
-    }
-
-    endMoveRows();
-
-    saveOrder();
+    moveItem(fromIndex, toIndex);
 }
 
 void BookmarksModel::rename(QString path, QString newName)
@@ -526,20 +513,6 @@ QString BookmarksModel::getBookmarkName(QString path)
     return m_entries.at(m_indexLookup.value(path)).name;
 }
 
-QStringList BookmarksModel::getBookmarks()
-{
-    QStringList ret;
-
-    for (const auto& i : std::as_const(m_entries)) {
-        if (i.userDefined) {
-            ret << i.path;
-        }
-    }
-
-    ret.removeDuplicates();
-    return ret;
-}
-
 void BookmarksModel::registerWatcher(QString path, QPointer<BookmarkWatcher> mark)
 {
     if (m_watchers.contains(path)) {
@@ -558,8 +531,122 @@ void BookmarksModel::unregisterWatcher(QString path, QPointer<BookmarkWatcher> m
     }
 }
 
+void BookmarksModel::updateExternalDevices()
+{
+    QList<int> toRemove;
+    toRemove.reserve(m_entries.size());
+
+    for (int i = 0; i < m_entries.size(); ++i) {
+        if (m_entries.at(i).group == BookmarkGroup::Group::External) {
+            toRemove.append(i);
+        }
+    }
+
+    auto emptyIndex = QModelIndex();
+    for (auto i : toRemove) {
+        beginRemoveRows(emptyIndex, i, i);
+        endRemoveRows();
+    }
+
+    int firstEntry = toRemove.first();
+    const auto drives = externalDrives();
+
+    beginInsertRows(QModelIndex(), firstEntry, firstEntry+drives.size());
+    for (const auto& i : std::as_const(drives)) {
+        m_entries.insert(firstEntry, i);
+        firstEntry++;
+    }
+    endInsertRows();
+}
+
 void BookmarksModel::reload()
 {
+    QList<BookmarkItem> newEntries;
+    QMap<QString, int> newIndexLookup;
+
+    // populate model with default locations shortcuts
+
+    newEntries.append(BookmarkItem(
+        BookmarkGroup::Group::Location,
+        tr("Home"),
+        QStringLiteral("icon-m-home"),
+        QStandardPaths::writableLocation(QStandardPaths::HomeLocation),
+        true,
+        false)
+    );
+
+    newEntries.append(BookmarkItem(
+        BookmarkGroup::Group::Location,
+        tr("Documents"),
+        QStringLiteral("icon-m-file-document-light"),
+        QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation),
+        false,
+        false)
+    );
+
+    newEntries.append(BookmarkItem(
+        BookmarkGroup::Group::Location,
+        tr("Downloads"),
+        QStringLiteral("icon-m-cloud-download"),
+        QStandardPaths::writableLocation(QStandardPaths::DownloadLocation),
+        false,
+        false)
+    );
+
+    newEntries.append(BookmarkItem(
+        BookmarkGroup::Group::Location,
+        tr("Music"),
+        QStringLiteral("icon-m-file-audio"),
+        QStandardPaths::writableLocation(QStandardPaths::MusicLocation),
+        false,
+        false)
+    );
+
+    newEntries.append(BookmarkItem(
+        BookmarkGroup::Group::Location,
+        tr("Pictures"),
+        QStringLiteral("icon-m-file-image"),
+        QStandardPaths::writableLocation(QStandardPaths::PicturesLocation),
+        false,
+        false)
+    );
+
+    newEntries.append(BookmarkItem(
+        BookmarkGroup::Group::Location,
+        tr("Videos"),
+        QStringLiteral("icon-m-file-video"),
+        QStandardPaths::writableLocation(QStandardPaths::MoviesLocation),
+        false,
+        false)
+    );
+
+    QString androidPath = QStandardPaths::writableLocation(QStandardPaths::HomeLocation) + "/android_storage";
+    QFileInfo androidInfo(androidPath);
+
+    if (androidInfo.exists() && androidInfo.isDir()) {
+        newEntries.append(BookmarkItem(
+            BookmarkGroup::Group::Location,
+            tr("Android storage"),
+            QStringLiteral("icon-m-file-apk"),
+            androidPath,
+            false,
+            false)
+        );
+    }
+
+    newEntries.append(BookmarkItem(
+        BookmarkGroup::Group::Location,
+        tr("Root"),
+        QStringLiteral("icon-m-file-rpm"),
+        QStringLiteral("/"),
+        true,
+        false)
+    );
+
+    newEntries.append(externalDrives());
+
+    // load user defined bookmarks
+
     QString order = RawSettingsHandler::instance()->read(QStringLiteral("Bookmarks/Entries"), QStringLiteral("[]"));
     auto doc = QJsonDocument::fromJson(QByteArray::fromStdString(order.toStdString()));
 
@@ -569,12 +656,23 @@ void BookmarksModel::reload()
 
         for (const auto& i : array) {
             QString path = i.toString();
-            QString name = RawSettingsHandler::instance()->read(QStringLiteral("Bookmarks/") + path, path.split("/").last());
-            m_entries.append(BookmarkItem(QStringLiteral("bookmark"), name, QStringLiteral("icon-m-favorite"), path, false, true));
-            m_indexLookup.insert(path, idx);
+            QString name = RawSettingsHandler::instance()->read(
+                QStringLiteral("Bookmarks/") + path, path.split("/").last());
+            newEntries.append(BookmarkItem(
+                BookmarkGroup::Group::Bookmark,
+                name,
+                QStringLiteral("icon-m-favorite"),
+                path,
+                false, true));
+            newIndexLookup.insert(path, idx);
             idx++;
         }
     }
+
+    beginResetModel();
+    m_entries = newEntries;
+    m_indexLookup = newIndexLookup;
+    endResetModel();
 }
 
 void BookmarksModel::saveOrder()
@@ -605,15 +703,192 @@ void BookmarksModel::saveItem(QString path, QString name)
     }
 }
 
-void BookmarksModel::removeItem(QString path)
+void BookmarksModel::moveItem(int fromIndex, int toIndex)
 {
-    RawSettingsHandler::instance()->remove(QStringLiteral("Bookmarks/") + path);
+    if (fromIndex < 0 || fromIndex > rowCount()) {
+        return;
+    }
 
-    if (m_watchers.contains(path)) {
-        for (auto& i : m_watchers.value(path)) {
-            if (i) {
-                i->refresh();
-            }
+    // Moving rows using the beginMoveRows()/endMoveRows()/m_entries.move()
+    // functions is incredibly slow for some reason.
+    // Removing the row and adding it again has good performance.
+
+    beginRemoveRows(QModelIndex(), fromIndex, fromIndex);
+    auto item = m_entries.takeAt(fromIndex);
+    endRemoveRows();
+
+    beginInsertRows(QModelIndex(), toIndex, toIndex);
+    m_entries.insert(toIndex, item);
+    endInsertRows();
+
+    m_indexLookup.clear();
+    for (int i = 0; i < m_entries.count(); ++i) {
+        if (m_entries.at(i).userDefined) {
+            m_indexLookup.insert(m_entries.at(i).path, i);
         }
     }
+
+    saveOrder();
+}
+
+void BookmarksModel::appendItem(QString path, QString name, bool save)
+{
+    if (name.isEmpty()) {
+        QDir dir(path);
+        name = dir.dirName();
+
+        if (name.isEmpty()) {
+            name = QStringLiteral("/");
+        }
+    }
+
+    auto last = rowCount();
+    beginInsertRows(QModelIndex(), last, last);
+    m_entries.append(BookmarkItem(
+        save ? BookmarkGroup::Group::Bookmark : BookmarkGroup::Group::Temporary,
+        name,
+        save ? QStringLiteral("icon-m-favorite") : QStringLiteral("icon-m-file-folder"),
+        path, false, true));
+    m_indexLookup.insert(path, last);
+    endInsertRows();
+
+    if (save) {
+        saveItem(path, name);
+        saveOrder();
+    }
+}
+
+void BookmarksModel::removeItem(QString path, bool save)
+{
+    if (!m_indexLookup.contains(path)) {
+        return;
+    }
+
+    auto index = m_indexLookup.value(path);
+    beginRemoveRows(QModelIndex(), index, index);
+    m_entries.removeAt(index);
+    m_indexLookup.remove(path);
+    endRemoveRows();
+
+    if (save) {
+        RawSettingsHandler::instance()->remove(QStringLiteral("Bookmarks/") + path);
+
+        if (m_watchers.contains(path)) {
+            for (auto& i : m_watchers.value(path)) {
+                if (i) {
+                    i->refresh();
+                }
+            }
+        }
+
+        saveOrder();
+    }
+}
+
+QStringList BookmarksModel::subdirs(const QString &dirname, bool includeHidden)
+{
+    QDir dir(dirname);
+    if (!dir.exists()) return QStringList();
+
+    QDir::Filter hiddenFilter = includeHidden ? QDir::Hidden : static_cast<QDir::Filter>(0);
+    dir.setFilter(QDir::AllDirs | QDir::NoDotAndDotDot | hiddenFilter);
+
+    const QStringList list = dir.entryList();
+    QStringList abslist;
+
+    for (const auto& relpath : list) {
+        abslist.append(dir.absoluteFilePath(relpath));
+    }
+
+    return abslist;
+}
+
+QList<BookmarksModel::BookmarkItem> BookmarksModel::externalDrives()
+{
+    // from SailfishOS 2.2.0 onwards, "/media/sdcard" is
+    // a symbolic link instead of a folder. In that case, follow the link
+    // to the actual folder.
+    QString sdcardFolder = "/media/sdcard";
+    QFileInfo fileinfo(sdcardFolder);
+    if (fileinfo.isSymLink()) sdcardFolder = fileinfo.symLinkTarget();
+
+    // get sdcard dir candidates for "/media/sdcard" (or its symlink target)
+    QStringList candidates = subdirs(sdcardFolder);
+
+    // If the base folder is not already /run/media/USER, we add it too. This
+    // is where OTG devices will be mounted.
+    // Also, some users may have a symlink from "/media/sdcard/USER"
+    // (not from "/media/sdcard"), which means no SD cards would be found before,
+    // so we also get candidates for those users.
+    QString expectedUserFolder = QString("/run/media/") + QDir::home().dirName();
+    if (sdcardFolder != expectedUserFolder) candidates.append(subdirs(expectedUserFolder));
+
+    // no candidates found, abort
+    if (candidates.isEmpty()) return {};
+
+    // remove all directories which are not mount points
+    QMap<QString, QString> mps = mountPoints();
+    QMutableStringListIterator i(candidates);
+    while (i.hasNext()) {
+        QString dirname = i.next();
+        if (!mps.contains(dirname)) i.remove();
+    }
+
+    // all candidates eliminated, abort
+    if (candidates.isEmpty()) return {};
+
+    QList<BookmarkItem> ret;
+    for (const auto& drive : std::as_const(candidates)) {
+        QString title;
+        bool isSdCard;
+
+        if (mps[drive].startsWith("/dev/mmc")) {
+            title = tr("SD card");
+            isSdCard = true;
+        } else {
+            title = tr("Removable Media");
+            isSdCard = false;
+        }
+
+        ret.append(BookmarkItem(
+            BookmarkGroup::Group::External,
+            title,
+            isSdCard ? QStringLiteral("icon-m-sd-card")
+                     : QStringLiteral("icon-m-usb"),
+            drive,
+            true,
+            false)
+        );
+    }
+
+    return ret;
+}
+
+QMap<QString, QString> BookmarksModel::mountPoints()
+{
+    // read /proc/mounts and return all mount points for the filesystem
+    QFile file("/proc/mounts");
+    if (!file.open(QFile::ReadOnly | QFile::Text))
+        return QMap<QString, QString>();
+
+    QTextStream in(&file);
+    QString result = in.readAll();
+
+    // split result to lines
+    const QStringList lines = result.split(QRegExp("[\n\r]"));
+
+    // get columns
+    QMap<QString, QString> paired;
+    for (const auto& line : lines) {
+        QStringList columns = line.split(QRegExp("\\s+"), QString::SkipEmptyParts);
+        if (columns.count() < 6) continue; // sanity check
+        paired[columns.at(1)] = columns.at(0);
+    }
+
+    return paired;
+}
+
+void BookmarkGroup::registerToQml(const char *url, int major, int minor) {
+    static const char* qmlName = "BookmarkGroup";
+    qmlRegisterUncreatableType<BookmarkGroup>(url, major, minor, qmlName, "This is only a container for an enumeration.");
 }

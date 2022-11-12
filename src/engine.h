@@ -65,8 +65,6 @@ public:
     Q_INVOKABLE QString errorMessage() const { return m_errorMessage; }
 
     // file paths
-    Q_INVOKABLE QString androidDataPath() const;
-    Q_INVOKABLE QVariantList externalDrives() const;
     Q_INVOKABLE QString storageSettingsPath(); // caching, thus non-const
     Q_INVOKABLE QString pdfViewerPath(); // caching, thus non-const
 
@@ -100,7 +98,6 @@ private slots:
     void setProgress(int progress, QString filename);
 
 private:
-    QMap<QString, QString> mountPoints() const;
     QString createHexDump(char *buffer, int size, int bytesPerLine);
     QStringList makeStringList(QString msg, QString str = QString());
     bool isUsingBusybox(QString forCommand);

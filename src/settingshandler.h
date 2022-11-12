@@ -31,8 +31,13 @@
 #include <QPointer>
 #include <QDir>
 #include <QAbstractListModel>
+#include <QFileSystemWatcher>
 
 class QFileInfo;
+
+// Call this in the main function to make exported
+// types available in QML.
+namespace SettingsHandlerEnums { void registerTypes(const char* qmlUrl, int major, int minor); }
 
 
 // Generic settings handler class.
@@ -119,6 +124,20 @@ private:
     QString m_path;
 };
 
+class BookmarkGroup {
+    Q_GADGET
+
+public:
+    enum Group {
+        Temporary,
+        Location,
+        External,
+        Bookmark
+    };
+    Q_ENUM(Group) /* using "BookmarkGroup::Group" would make it "undefined" in QML */
+    static void registerToQml(const char* url, int major, int minor);
+};
+
 // Provides a list of all currently configured bookmarks.
 // Changes are synced back to the config file automatically,
 // but the config file is only read once. That means changes
@@ -142,7 +161,13 @@ public:
 
     // methods callable from QML
     Q_INVOKABLE void add(QString path, QString name = QStringLiteral());
+    Q_INVOKABLE void addTemporary(QString path, QString name = QStringLiteral());
+
     Q_INVOKABLE void remove(QString path);
+    Q_INVOKABLE void removeTemporary(QString path);
+
+    Q_INVOKABLE void clearTemporary();
+
     // Q_INVOKABLE void moveUp(int fromIndex);
     // Q_INVOKABLE void moveDown(int fromIndex);
     Q_INVOKABLE void moveUp(QString path);
@@ -152,7 +177,6 @@ public:
     Q_INVOKABLE bool hasBookmark(QString path);
 
     Q_INVOKABLE QString getBookmarkName(QString path);
-    Q_INVOKABLE QStringList getBookmarks();
 
     void registerWatcher(QString path, QPointer<BookmarkWatcher> mark);
     void unregisterWatcher(QString path, QPointer<BookmarkWatcher> mark);
@@ -162,27 +186,48 @@ public:
         return m_globalInstance.data();
     }
 
+private slots:
+    void updateExternalDevices();
+
 private:
     void reload();
     void saveOrder();
     void saveItem(QString path, QString name);
-    void removeItem(QString path);
+    void moveItem(int fromIndex, int toIndex);
+
+    void appendItem(QString path, QString name, bool save);
+    void removeItem(QString path, bool save);
 
     struct BookmarkItem {
-        BookmarkItem(QString group, QString name, QString icon, QString path, bool showSize, bool userDefined) :
-            group(group), name(name), icon(icon), path(path), showSize(showSize), userDefined(userDefined) {};
+        BookmarkItem(BookmarkGroup::Group group, QString name, QString icon, QString path, bool showSize, bool userDefined) :
+            group(group), name(name), thumbnail(icon), path(path), showSize(showSize), userDefined(userDefined) {};
 
-        QString group {QStringLiteral("temporary")};
+        BookmarkGroup::Group group {BookmarkGroup::Group::Temporary};
         QString name {QLatin1Literal()};
-        QString icon {QStringLiteral("icon-m-favorite")};
+        QString thumbnail {QStringLiteral("icon-m-favorite")};
         QString path {QLatin1Literal()};
         bool showSize {false};
         bool userDefined {false};
     };
 
-    QMap<QString, int> m_indexLookup;         // maps paths to indices
-    QList<BookmarkItem> m_entries; // holds path and name
+    QList<BookmarkItem> m_entries;
+
+    // maps paths of custom bookmarks to indices in the entries list
+    QMap<QString, int> m_indexLookup;
+
+    // holds registered bookmark watchers
+    // Bookmark watchers can be created from QML to monitor a single
+    // path. They are registered here so that they can be directly notified of
+    // any changes, without having to handle change signals for all paths
+    // every time in all watchers.
     QMap<QString, QList<QPointer<BookmarkWatcher>>> m_watchers;
+
+    // We monitor /proc/mounts for changes so we can automatically
+    // update the list of external devices.
+    QFileSystemWatcher m_mountWatcher;
+    QList<BookmarkItem> externalDrives();
+    QMap<QString, QString> mountPoints();
+    QStringList subdirs(const QString& dirname, bool includeHidden = false);
 
     static QSharedPointer<BookmarksModel> m_globalInstance;
 };

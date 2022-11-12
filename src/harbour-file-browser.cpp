@@ -118,8 +118,10 @@ int main(int argc, char *argv[])
     qmlRegisterType<ConsoleModel>("harbour.file.browser.ConsoleModel", 1, 0, "ConsoleModel");
     qmlRegisterType<TextEditor>("harbour.file.browser.TextEditor", 1, 0, "TextEditor");
 
+    SettingsHandlerEnums::registerTypes("harbour.file.browser.Settings", 1, 0);
     qmlRegisterType<DirectorySettings>("harbour.file.browser.Settings", 1, 0, "DirectorySettings");
     qmlRegisterType<BookmarkWatcher>("harbour.file.browser.Settings", 1, 0, "Bookmark");
+    qmlRegisterUncreatableType<BookmarkGroup>("harbour.file.browser.Settings", 1, 0, "BookmarkGroup", "This is only a container for an enumeration.");
     qmlRegisterSingletonType<DirectorySettings>("harbour.file.browser.Settings", 1, 0, "GlobalSettings", [](QQmlEngine* engine, QJSEngine* scriptEngine) -> QObject* {
         Q_UNUSED(engine); Q_UNUSED(scriptEngine);
         return new DirectorySettings();

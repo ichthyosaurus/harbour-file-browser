@@ -34,6 +34,7 @@ SPDX-License-Identifier: GFDL-1.3-or-later
  * FileModel now exposes file extensions
  * FileData now exposes directory sizes
  * Engine now exposes clipboard contents
+ * Engine no longer exposes paths of external devices and Android data
  * Added a new settings handler which reduces complexity and should improve performance overall
  *   - import module "harbour.file.browser.Settings"
  *   - use singleton types "GlobalSettings" and "RawSettings" or instantiate "DirectorySettings"

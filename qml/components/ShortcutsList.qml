@@ -18,76 +18,120 @@
  * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.2
+import QtQuick 2.6
+import QtQml.Models 2.2
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
 import harbour.file.browser.Settings 1.0
+import SortFilterProxyModel 0.2
 
 import "../js/paths.js" as Paths
 
 SilicaListView {
-    id: view
+    id: root
 
     property bool selectable: false
     property bool multiSelect: false
+    property bool preselectTemporary: false
     property bool allowDeleteBookmarks: true
     property bool editable: true
-    property var initialSelection
-    property var sections: ["locations", "external", "bookmarks"]
-    property var customEntries: ([]) // changing this will _not_ automatically trigger a refresh
+
+    property var sections: [
+        BookmarkGroup.Temporary,
+        BookmarkGroup.Location,
+        BookmarkGroup.External,
+        BookmarkGroup.Bookmark
+    ]
+
+    readonly property var selectedLocations: {
+        if (!selectionModel.hasSelection) return []
+
+        var ret = []
+        for (var i in selectionModel.selectedIndexes) {
+            ret.push(sortedModel.data(selectionModel.selectedIndexes[i],
+                                      sortedModel.roleForName("path")))
+        }
+        return ret
+    }
 
     signal itemClicked(var clickedIndex, var path)
-    signal itemSelected(var clickedIndex, var path)
-    signal itemDeselected(var clickedIndex, var path) // only for multiSelect
 
-    property var _selectedIndex: []
     property bool _isEditing: false
     function _editBookmarks() { if (editable) _isEditing = true; }
     function _finishEditing() { _isEditing = false; }
 
-    model: listModel
+    onSectionsChanged: _updateOrderMap()
+    property var _orderMap: ({})
+    function _updateOrderMap() {
+        var order = {}
+
+        for (var i = 0; i < sections.length; ++i) {
+            order[sections[i]] = i
+        }
+
+        _orderMap = order
+    }
+
+    model: SortFilterProxyModel {
+        id: sortedModel
+        sourceModel: GlobalSettings.bookmarks
+
+        filters: ExpressionFilter {
+            expression: _orderMap.hasOwnProperty(model.group)
+        }
+
+        sorters: ExpressionSorter {
+            expression: _orderMap[modelLeft.group] < _orderMap[modelRight.group]
+        }
+
+        onRowsInserted: {
+            if (!preselectTemporary) return
+
+            for (var i = first; i <= last; i++) {
+                var modelIndex = index(i, 0)
+                if (data(modelIndex, roleForName("group")) === BookmarkGroup.Temporary) {
+                    selectionModel.select(modelIndex, ItemSelectionModel.Select)
+                }
+            }
+        }
+    }
+
+    ItemSelectionModel {
+        id: selectionModel
+        model: sortedModel
+    }
 
     delegate: ListItem {
         id: listItem
-        property bool selected: view._selectedIndex.indexOf(index) !== -1
+        property var modelIndex: sortedModel.index(index, 0)
+        property bool selected: selectionModel.hasSelection && selectionModel.isSelected(modelIndex)
+
         ListView.onRemove: animateRemoval(listItem) // enable animated list item removals
-        menu: model.contextMenu
+        menu: model.group === BookmarkGroup.External ? settingsContextMenu : null
 
-        width: view.width
-        height: Theme.itemSizeSmall + (_menuItem ? _menuItem.height : 0)
+        width: root.width
+        contentHeight: Theme.itemSizeSmall
 
-        enabled: !_isEditing || !model.bookmark
+        enabled: !_isEditing || !model.userDefined
         onClicked: {
-                if (!_isEditing) itemClicked(index, model.location);
-                else _finishEditing();
+            if (!_isEditing) {
+                itemClicked(index, model.path)
+
+                if (selectable) {
+                    if (multiSelect) {
+                        selectionModel.select(modelIndex, ItemSelectionModel.Toggle)
+                    } else {
+                        selectionModel.select(modelIndex, ItemSelectionModel.ClearAndSelect)
+                    }
+                }
+            } else {
+                _finishEditing()
+            }
         }
 
         Binding on highlighted {
             when: selected || down
             value: true
-        }
-
-        Connections {
-            target: view
-            onItemClicked: {
-                if (!selectable) return;
-                if (index === clickedIndex) { // toggle
-                    if (view._selectedIndex.indexOf(index) == -1) { // select
-                        if (multiSelect) view._selectedIndex.push(index);
-                        else view._selectedIndex = [index];
-                        selected = true;
-                        itemSelected(index, model.location);
-                    } else if (multiSelect) { // deselect
-                        view._selectedIndex = view._selectedIndex.filter(function(item) {
-                            return item !== index
-                        })
-                        selected = false;
-                        itemDeselected(index, model.location);
-                    }
-                } else if (!multiSelect) {
-                    selected = false;
-                }
-            }
         }
 
         Item {
@@ -105,7 +149,7 @@ SilicaListView {
                 source: "image://theme/" + model.thumbnail + "?" + (
                             listItem.highlighted ? Theme.highlightColor : Theme.primaryColor)
 
-                property bool shown: !_isEditing || !model.bookmark
+                property bool shown: !_isEditing || !model.userDefined
                 opacity: shown ? 1.0 : 0.0; visible: opacity != 0.0
                 Behavior on opacity { NumberAnimation { duration: 100 } }
             }
@@ -114,13 +158,13 @@ SilicaListView {
                 anchors.fill: parent
                 icon.source: "image://theme/icon-m-up"
 
-                property bool shown: _isEditing && model.bookmark
+                property bool shown: _isEditing && model.userDefined
                 opacity: shown ? 1.0 : 0.0; visible: opacity != 0.0
                 Behavior on opacity { NumberAnimation { duration: 100 } }
 
                 onClicked: {
-                    if (!model.bookmark || !model.location) return;
-                    GlobalSettings.bookmarks.moveUp(model.location);
+                    if (!model.userDefined || !model.path) return;
+                    GlobalSettings.bookmarks.moveUp(model.path);
                 }
             }
         }
@@ -135,13 +179,13 @@ SilicaListView {
                 left: icon.right
                 leftMargin: Theme.paddingMedium
                 top: parent.top
-                topMargin: model.location === model.name ? (parent.height / 2) - (height / 2) : 5
+                topMargin: model.path === model.name ? (parent.height / 2) - (height / 2) : 5
             }
 
             // waiting for deleteBookmarkBtn.opacity === 1.0, ie. waiting for the
             // transition to finish, makes sure we don't see graphical glitches
             // when changing from/to edit mode
-            width: view.width - x -
+            width: root.width - x -
                    (deleteBookmarkBtn.opacity === 1.0 ? deleteBookmarkBtn.width : Theme.horizontalPageMargin)
 
             property bool shown: true
@@ -166,9 +210,9 @@ SilicaListView {
                 left: icon.right
                 leftMargin: Theme.paddingMedium
                 top: parent.top
-                topMargin: model.location === model.name ? (parent.height / 2) - (height / 2) : 5
+                topMargin: model.path === model.name ? (parent.height / 2) - (height / 2) : 5
             }
-            width: view.width - x -
+            width: root.width - x -
                    (deleteBookmarkBtn.visible ? deleteBookmarkBtn.width : Theme.horizontalPageMargin)
             Connections { target: editLabel._editor; onAccepted: _finishEditing(); }
         }
@@ -190,7 +234,7 @@ SilicaListView {
 
             Text {
                 id: sizeInfo
-                visible: model.showsize
+                visible: model.showSize
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
 
@@ -198,16 +242,16 @@ SilicaListView {
                 text: visible ? (diskSpace === "" ? "... \u2022 ... \u2022 " : diskSpace) : ""
 
                 Connections {
-                    target: model.showsize ? engine : null
+                    target: model.showSize ? engine : null
                     onDiskSpaceInfoReady: {
-                        if (path === model.location) {
+                        if (path === model.path) {
                             sizeInfo.diskSpace = (info.length > 0 ? info[0] + " \u2022 " + info[1] + " \u2022 " : "")
                         }
                     }
                 }
 
-                onVisibleChanged: if (visible) engine.requestDiskSpaceInfo(model.location)
-                Component.onCompleted: if (model.showsize) engine.requestDiskSpaceInfo(model.location)
+                onVisibleChanged: if (visible) engine.requestDiskSpaceInfo(model.path)
+                Component.onCompleted: if (model.showSize) engine.requestDiskSpaceInfo(model.path)
             }
 
             Text {
@@ -215,14 +259,14 @@ SilicaListView {
                 width: parent.width - (sizeInfo.visible ? sizeInfo.width : 0)
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                text: Paths.unicodeArrow() + " " + model.location
-                visible: model.location === model.name ? false : true
+                text: Paths.unicodeArrow() + " " + model.path
+                visible: model.path === model.name ? false : true
                 elide: Text.ElideMiddle
             }
         }
 
         onPressAndHold: {
-            if (model.bookmark ? true : false) {
+            if (model.userDefined ? true : false) {
                 _editBookmarks();
             }
         }
@@ -245,8 +289,8 @@ SilicaListView {
             }
 
             onClicked: {
-                if (!model.bookmark || !model.location) return;
-                GlobalSettings.bookmarks.remove(model.location);
+                if (!model.userDefined || !model.path) return;
+                GlobalSettings.bookmarks.remove(model.path);
             }
         }
 
@@ -260,7 +304,7 @@ SilicaListView {
             },
             State {
                 name: "editing"
-                when: _isEditing && model.bookmark === true;
+                when: _isEditing && model.userDefined === true;
                 PropertyChanges { target: infoRow; shown: false; }
                 PropertyChanges { target: shortcutLabel; shown: false; }
                 PropertyChanges { target: deleteBookmarkBtn; shown: allowDeleteBookmarks; }
@@ -273,12 +317,12 @@ SilicaListView {
             var oldText = model.name;
             var newText = editLabel.text;
 
-            if (newText === "" || oldText === newText || model.location === "" || !model.location) {
+            if (newText === "" || oldText === newText || model.path === "" || !model.path) {
                 return;
             }
 
             model.name = newText;
-            GlobalSettings.bookmarks.rename(model.location, newText);
+            GlobalSettings.bookmarks.rename(model.path, newText);
         }
     }
 
@@ -295,115 +339,20 @@ SilicaListView {
         }
     }
 
-    ViewPlaceholder {
-         enabled: view.count === 0
-         text: qsTr("Nothing to show here...")
-     }
-
     section {
-        property: 'section'
+        property: 'group'
         delegate: SectionHeader {
-            text: section
             height: Theme.itemSizeExtraSmall
+            text: {
+                if (section == BookmarkGroup.Bookmark) qsTr("Bookmarks")
+                else if (section == BookmarkGroup.External) qsTr("Storage devices")
+                else if (section == BookmarkGroup.Location) qsTr("Locations")
+                else if (section == BookmarkGroup.Temporary) qsTr("Custom")
+            }
         }
-    }
-
-    ListModel {
-        id: listModel
     }
 
     Component.onCompleted: {
-        updateModel()
-    }
-
-    function updateModel() {
-        listModel.clear()
-
-        for (var i = 0; i < sections.length; i++) {
-            var s = sections[i];
-            if (s === "custom") {
-                for (var entry in customEntries) {
-                    listModel.append({ "section": qsTr("Custom"),
-                                       "name": Paths.lastPartOfPath(customEntries[entry]),
-                                       "thumbnail": "icon-m-file-folder",
-                                       "location": customEntries[entry]
-                                     })
-                }
-            } else if (s === "locations") {
-                listModel.append({ "section": qsTr("Locations"),
-                                   "name": qsTr("Home"),
-                                   "thumbnail": "icon-m-home",
-                                   "location": StandardPaths.home,
-                                   "showsize": true })
-                listModel.append({ "section": qsTr("Locations"),
-                                   "name": qsTr("Documents"),
-                                   "thumbnail": "icon-m-file-document-light",
-                                   "location": StandardPaths.documents })
-                listModel.append({ "section": qsTr("Locations"),
-                                   "name": qsTr("Downloads"),
-                                   "thumbnail": "icon-m-cloud-download",
-                                   "location": StandardPaths.download })
-                listModel.append({ "section": qsTr("Locations"),
-                                   "name": qsTr("Music"),
-                                   "thumbnail": "icon-m-file-audio",
-                                   "location": StandardPaths.music })
-                listModel.append({ "section": qsTr("Locations"),
-                                   "name": qsTr("Pictures"),
-                                   "thumbnail": "icon-m-file-image",
-                                   "location": StandardPaths.pictures })
-                listModel.append({ "section": qsTr("Locations"),
-                                   "name": qsTr("Videos"),
-                                   "thumbnail": "icon-m-file-video",
-                                   "location": StandardPaths.videos })
-
-                var androidPath = engine.androidDataPath();
-                if (androidPath !== "") {
-                    listModel.append({ "section": qsTr("Locations"),
-                                       "name": qsTr("Android storage"),
-                                       "thumbnail": "icon-m-file-apk",
-                                       "location": androidPath })
-                }
-
-                listModel.append({ "section": qsTr("Locations"),
-                                   "name": qsTr("Root"),
-                                   "thumbnail": "icon-m-file-rpm",
-                                   "location": "/",
-                                   "showsize": true })
-            } else if (s === "external") {
-                var drives = engine.externalDrives();
-
-                for (var d in drives) {
-                    listModel.append({ "section": qsTr("Storage devices"),
-                                       "name": drives[d].title,
-                                       "thumbnail": drives[d].title === qsTr("SD card") ? "icon-m-sd-card" : "icon-m-usb",
-                                       "location": drives[d].path,
-                                       "showsize": true,
-                                       "contextMenu": (!runningAsRoot && systemSettingsEnabled) ? settingsContextMenu : null, })
-                }
-            } else if (s === "bookmarks") {
-                // Add bookmarks if there are any
-                var bookmarks = GlobalSettings.bookmarks.getBookmarks();
-
-                for (var key in bookmarks) {
-                    var name = GlobalSettings.bookmarks.getBookmarkName(bookmarks[key]);
-                    if (name === "") continue;
-                    listModel.append({ "section": qsTr("Bookmarks"),
-                                       "name": name,
-                                       "thumbnail": "icon-m-favorite",
-                                       "location": bookmarks[key],
-                                       "bookmark": true })
-                }
-            }
-        }
-    }
-
-    function getSelectedLocations() {
-        var ret = []
-        for (var i = 0; i < listModel.count; i++) {
-            if (view._selectedIndex.indexOf(i) != -1) {
-                ret.push(listModel.get(i).location);
-            }
-        }
-        return ret;
+        _updateOrderMap()
     }
 }

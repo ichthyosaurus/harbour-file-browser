@@ -21,6 +21,7 @@
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
+import harbour.file.browser.Settings 1.0
 import "../js/paths.js" as Paths
 
 import "../components"
@@ -34,7 +35,7 @@ Dialog {
     property string errorMessage: ""
 
     allowedOrientations: Orientation.All
-    canAccept: false
+    canAccept: selectedAction !== "" && shortcutsView.selectedLocations.length > 0
 
     NotificationPanel {
         id: notificationPanel
@@ -43,21 +44,24 @@ Dialog {
     }
 
     SilicaFlickable {
-        id: flickable
+        id: flick
         anchors.fill: parent
-        VerticalScrollDecorator { }
+        VerticalScrollDecorator { flickable: flick }
 
         ShortcutsList {
             id: shortcutsView
-            width: flickable.width
-            height: flickable.height - 2*Theme.horizontalPageMargin
-            sections: ["custom", "bookmarks", "locations", "external"]
-            customEntries: ([])
+            width: flick.width
+            height: flick.height - 2*Theme.horizontalPageMargin
+            sections: [
+                BookmarkGroup.Temporary,
+                BookmarkGroup.Bookmark,
+                BookmarkGroup.Location,
+                BookmarkGroup.External
+            ]
             editable: false
             selectable: true
             multiSelect: true
-            onItemSelected: dialog.updateStatus()
-            onItemDeselected: dialog.updateStatus()
+            preselectTemporary: true
 
             PullDownMenu {
                 MenuItem {
@@ -72,8 +76,7 @@ Dialog {
                                            acceptCallback: function(path) {
                                                path = path.replace(/\/+/g, '/')
                                                path = path.replace(/\/$/, '')
-                                               shortcutsView.customEntries.push(path)
-                                               shortcutsView.updateModel()
+                                               GlobalSettings.bookmarks.addTemporary(path)
                                                // TODO find a way to immediately select the new entry
                                            },
                                            acceptText: qsTr("Select")
@@ -96,63 +99,42 @@ Dialog {
 
                     Label {
                         id: statusLabel
-                        text: updateText()
+                        text: qsTr("%n item(s) selected for transferring", "", toTransfer.length) +
+                              "\n" + qsTr("%n destinations(s) selected", "",
+                                          shortcutsView.selectedLocations.length)
                         x: Theme.horizontalPageMargin
                         color: Theme.secondaryHighlightColor
-
-                        function updateText() {
-                            text = qsTr("%n item(s) selected for transferring", "", toTransfer.length) +
-                                   "\n" + qsTr("%n destinations(s) selected", "",
-                                               shortcutsView._selectedIndex.length)
-                        }
-
-                        Connections {
-                            target: shortcutsView;
-                            onItemSelected: statusLabel.updateText()
-                            onItemDeselected: statusLabel.updateText()
-                        }
                     }
 
                     TransferActionBar {
                         id: action
                         width: parent.width
                         height: Theme.itemSizeMedium
-                        onSelectionChanged: {
-                            dialog.selectedAction = selection
-                            dialog.updateStatus();
-                        }
+                        onSelectionChanged: dialog.selectedAction = selection
                     }
 
                     TextSwitch {
                         id: goToTargetSwitch
                         text: qsTr("Switch to target directory")
-                        enabled: shortcutsView._selectedIndex.length <= 1
-                        onCheckedChanged: goToTarget = checked;
-                        Connections {
-                            target: shortcutsView;
-                            onItemSelected: goToTargetSwitch.enabled = (shortcutsView._selectedIndex.length <= 1)
-                            onItemDeselected: goToTargetSwitch.enabled = (shortcutsView._selectedIndex.length <= 1)
-                        }
+                        enabled: shortcutsView.selectedLocations.length <= 1
+                        onCheckedChanged: goToTarget = checked
                     }
                 }
             }
         }
     }
 
-    function updateStatus() {
-        if (selectedAction !== "" && shortcutsView._selectedIndex.length > 0) {
-            canAccept = true;
-        } else {
-            canAccept = false;
-        }
-    }
-
     onAccepted: {
-        targets = shortcutsView.getSelectedLocations();
-        goToTarget = (goToTarget && targets.length <= 1);
+        targets = shortcutsView.selectedLocations.slice()
+        GlobalSettings.bookmarks.clearTemporary()
+        goToTarget = (goToTarget && targets.length <= 1)
 
         // the transfer has to be completed on the destination page
         // (e.g. using TransferPanel)
+    }
+
+    onRejected: {
+        GlobalSettings.bookmarks.clearTemporary()
     }
 
     Component.onCompleted: {
