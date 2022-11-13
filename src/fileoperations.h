@@ -25,26 +25,14 @@
 #include <QHash>
 #include <QSharedPointer>
 #include <QAbstractListModel>
-#include <QtQml>
 
-#define ENUM_CONTAINER(NAME, VALUES...) \
-    class FileOp##NAME { \
-        Q_GADGET \
-    public: \
-        enum NAME { VALUES }; \
-        Q_ENUM(NAME) /* using "FileOp##NAME::NAME" would make it "undefined" in QML */ \
-        static void registerToQml(const char* url, int major, int minor) { \
-            static const char* qmlName = "FileOp" #NAME; \
-            qmlRegisterUncreatableType<FileOp##NAME>(url, major, minor, qmlName, "This is only a container for an enumeration."); \
-        } \
-    };
+#include "enumcontainer.h"
 
-namespace FileOperationsEnums { void registerTypes(const char* qmlUrl, int major, int minor); }
-ENUM_CONTAINER(Mode, Delete, Copy, Move, Symlink, Compress)
-ENUM_CONTAINER(ErrorType, None, FileExists, FileNotFound, Unknown)
-ENUM_CONTAINER(ErrorAction, Ask, Abort, Overwrite, Skip, OverwriteAll, SkipAll)
-ENUM_CONTAINER(Status, Enqueued = 0, Running, WaitingForFeedback, Paused, Cancelled, Finished)
-#undef ENUM_CONTAINER
+CREATE_ENUM(FileOp, Mode, Delete, Copy, Move, Symlink, Compress)
+CREATE_ENUM(FileOp, ErrorType, None, FileExists, FileNotFound, Unknown)
+CREATE_ENUM(FileOp, ErrorAction, Ask, Abort, Overwrite, Skip, OverwriteAll, SkipAll)
+CREATE_ENUM(FileOp, Status, Enqueued = 0, Running, WaitingForFeedback, Paused, Cancelled, Finished)
+DECLARE_ENUM_REGISTRATION_FUNCTION(FileOperations)
 
 class FileOperationsHandler;
 class FileWorker2 : public QObject {

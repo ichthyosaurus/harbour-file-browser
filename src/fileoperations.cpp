@@ -23,17 +23,11 @@
 
 #include "fileoperations.h"
 
-void FileOperationsEnums::registerTypes(const char *qmlUrl, int major, int minor) {
-#define REGISTER_ENUM_CONTAINER(NAME) \
-    qRegisterMetaType<FileOp##NAME::NAME>("FileOp" #NAME "::" #NAME); \
-    FileOp##NAME::registerToQml(qmlUrl, major, minor);
-
-    REGISTER_ENUM_CONTAINER(Mode)
-    REGISTER_ENUM_CONTAINER(ErrorType)
-    REGISTER_ENUM_CONTAINER(ErrorAction)
-    REGISTER_ENUM_CONTAINER(Status)
-
-#undef REGISTER_ENUM_CONTAINER
+DEFINE_ENUM_REGISTRATION_FUNCTION(FileOperations) {
+    REGISTER_ENUM_CONTAINER(FileOp, Mode)
+    REGISTER_ENUM_CONTAINER(FileOp, ErrorType)
+    REGISTER_ENUM_CONTAINER(FileOp, ErrorAction)
+    REGISTER_ENUM_CONTAINER(FileOp, Status)
 }
 
 FileWorker2::~FileWorker2() {
