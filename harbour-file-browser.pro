@@ -152,6 +152,7 @@ HEADERS += \
     src/fileoperations.h \
     src/fileclipboardmodel.h \
     src/engine.h \
+    src/enumcontainer.h \
     src/fileworker.h \
     src/texteditor.h \
     src/searchengine.h \
