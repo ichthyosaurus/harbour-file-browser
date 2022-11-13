@@ -21,7 +21,6 @@
 import QtQuick 2.6
 import QtQml.Models 2.2
 import Sailfish.Silica 1.0
-import harbour.file.browser.FileModel 1.0
 import harbour.file.browser.Settings 1.0
 import SortFilterProxyModel 0.2
 
