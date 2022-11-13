@@ -157,7 +157,7 @@ void RawSettingsHandler::writeVariant(QString key, const QVariant &value, QStrin
         usingLocalConfig = false;
     }
 
-    qDebug() << "[SettingsHandler] writing:" << key << "=" << value << "in" << fileName;
+    qDebug() << "writing:" << key << "=" << value << "in" << fileName;
 
     QFileInfo fileInfo = QFileInfo(fileName);
 
@@ -217,7 +217,7 @@ void RawSettingsHandler::remove(QString key, QString fileName) {
         usingLocalConfig = false;
     }
 
-    qDebug() << "[SettingsHandler] deleting:" << key << "in" << fileName;
+    qDebug() << "deleting:" << key << "in" << fileName;
 
     QFileInfo fileInfo = QFileInfo(fileName);
 
