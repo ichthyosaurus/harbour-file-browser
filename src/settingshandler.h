@@ -65,8 +65,8 @@ public:
     bool hasKey(QString key, QString fileName = QString());
 
     static RawSettingsHandler* instance() {
-        if (m_globalInstance.isNull()) m_globalInstance.reset(new RawSettingsHandler());
-        return m_globalInstance.data();
+        if (s_globalInstance.isNull()) s_globalInstance.reset(new RawSettingsHandler());
+        return s_globalInstance.data();
     }
 
 signals:
@@ -86,7 +86,7 @@ private:
     QString m_globalConfigPath;
     QMutex m_mutex;
 
-    static QSharedPointer<RawSettingsHandler> m_globalInstance;
+    static QSharedPointer<RawSettingsHandler> s_globalInstance;
 };
 
 
@@ -182,8 +182,8 @@ public:
     void unregisterWatcher(QString path, QPointer<BookmarkWatcher> mark);
 
     static BookmarksModel* instance() {
-        if (m_globalInstance.isNull()) m_globalInstance.reset(new BookmarksModel());
-        return m_globalInstance.data();
+        if (s_globalInstance.isNull()) s_globalInstance.reset(new BookmarksModel());
+        return s_globalInstance.data();
     }
 
 private slots:
@@ -229,7 +229,7 @@ private:
     QMap<QString, QString> mountPoints();
     QStringList subdirs(const QString& dirname, bool includeHidden = false);
 
-    static QSharedPointer<BookmarksModel> m_globalInstance;
+    static QSharedPointer<BookmarksModel> s_globalInstance;
 };
 
 

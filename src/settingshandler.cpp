@@ -33,11 +33,11 @@
 #include "settingshandler.h"
 
 QSharedPointer<RawSettingsHandler> \
-    RawSettingsHandler::m_globalInstance = \
+    RawSettingsHandler::s_globalInstance = \
         QSharedPointer<RawSettingsHandler>(nullptr);
 
 QSharedPointer<BookmarksModel> \
-    BookmarksModel::m_globalInstance = \
+    BookmarksModel::s_globalInstance = \
         QSharedPointer<BookmarksModel>(nullptr);
 
 void SettingsHandlerEnums::registerTypes(const char *qmlUrl, int major, int minor) {
