@@ -33,7 +33,7 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 | `UseLocalSettings`                 | `true`        | bool                                          | `use-local-view-settings`
 | `ViewMode`                         | `list`        | `list`/`gallery`/`grid`                       |
 | **`[Bookmarks]`**                  |               |                                               |
-| `Entries="[\"...\"]"`              |               | ordered array of paths as JSON strings (this field saves only the order of elements, not the elements themselves) | `bookmark-entries`
+| `Entries="[\"...\"]"`              |               | ordered array of paths as JSON strings (this field holds only the order of elements, not the elements themselves) | `bookmark-entries`
 | `home#nemo#Devel=Devel`            |               | `path=bookmark name` for each bookmark (with all `/` replaced by `#` to distinguish them from settings groups) |
 
 

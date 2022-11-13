@@ -238,6 +238,14 @@ private:
 // These values are available as read-write properties and support signals.
 //
 // Prefer this class over reading and writing raw key-value pairs.
+//
+// Usage:
+// import harbour.file.browser.Settings 1.0
+// DirectorySettings { path: "/path/to/dir" }
+//
+// Specify a path to handle local settings. Leave the path empty to
+// handle global settings only. A global object exposing global settings
+// is available as "GlobalSettings" when importing the Settings module.
 
 #define QSL QStringLiteral
 #include <QDebug>
@@ -302,10 +310,10 @@ private:
     } \
     private: Q_SLOT void handle_##NAME(QString key, bool locally, QString localPath) { \
         if (locally && key == QSL(LOCAL_KEY) && localPath == m_localFile) { \
-            qDebug() << "[local setting changed]" << key << locally << localPath << m_localFile << #NAME; \
+            /* qDebug() << "local setting changed:" << key << locally << localPath << m_localFile << #NAME; */ \
             emit NAME##Changed(); \
         } else if (!locally && key == QSL(GLOBAL_KEY)) { \
-            qDebug() << "[global settings changed]" << key << locally << localPath << m_localFile << #NAME; \
+            /* qDebug() << "global settings changed: "#NAME << "from" << localPath; */ \
             emit NAME##Changed(); \
         } \
     } \
@@ -343,6 +351,12 @@ private:
     //    - use the predefined mappings "map_bool_true" for boolean values that are true by default,
     //      and "map_bool_false" for boolean values that are false by default
     //    - use "map_any_string" if the key is allowed to store an arbitrary string
+    //
+    // How to define settings with a custom API:
+    // 1. document the setting in SETTINGS.md
+    // 2. implement the API
+    // 3. make sure the API exposes properties instead of methods where possible
+    //
 
     // common value mappings
     Mapping<QString> map_invalid {QLatin1Literal(), {}};
@@ -385,8 +399,8 @@ private:
     Mapping<QString> map_viewMode{QSL("list"), {QSL("gallery"), QSL("grid")}};
     PROP(QString, viewViewMode, "View/ViewMode", "Sailfish/ViewMode", map_viewMode, map_viewMode);
 
-    // [Bookmarks] section
-    Q_PROPERTY(BookmarksModel* bookmarks READ bookmarks CONSTANT)
+    // [Bookmarks] section with custom API
+    private: Q_PROPERTY(BookmarksModel* bookmarks READ bookmarks CONSTANT)
     public: BookmarksModel* bookmarks() { return BookmarksModel::instance(); }
 
     //
