@@ -23,21 +23,19 @@
 
 #include <QAbstractListModel>
 #include <QHash>
+
+#include "enumcontainer.h"
 #include "filedata.h"
 
-class FileClipMode {
-    Q_GADGET
-public:
-    enum Mode { Copy, Link, Cut };
-    Q_ENUM(Mode) // using "FileClipMode::Mode" would make it "undefined" in QML
-};
+CREATE_ENUM(FileClipMode, Copy, Link, Cut)
+DECLARE_ENUM_REGISTRATION_FUNCTION(FileClipboard)
 
 class FileClipboardModel : public QAbstractListModel
 {
     Q_OBJECT
     Q_PROPERTY(int historyCount READ rowCount NOTIFY historyCountChanged)
     Q_PROPERTY(int currentCount READ currentCount NOTIFY currentCountChanged)
-    Q_PROPERTY(FileClipMode::Mode currentMode READ currentMode WRITE setCurrentMode NOTIFY currentModeChanged)
+    Q_PROPERTY(FileClipMode::Enum currentMode READ currentMode WRITE setCurrentMode NOTIFY currentModeChanged)
     Q_PROPERTY(QStringList currentPaths READ currentPaths WRITE setCurrentPaths NOTIFY currentPathsChanged)
 
 public:
@@ -50,8 +48,8 @@ public:
     QHash<int, QByteArray> roleNames() const;
 
     int currentCount() const;
-    FileClipMode::Mode currentMode() const;
-    void setCurrentMode(FileClipMode::Mode newCurrentMode);
+    FileClipMode::Enum currentMode() const;
+    void setCurrentMode(FileClipMode::Enum newCurrentMode);
     const QStringList& currentPaths() const;
     void setCurrentPaths(QStringList newPaths);
 
@@ -80,13 +78,13 @@ private:
         const QStringList& paths() const { return m_paths; }
         int count() const { return m_count; }
 
-        FileClipMode::Mode mode() const;
-        bool setMode(FileClipMode::Mode newMode); // return true if changed
+        FileClipMode::Enum mode() const;
+        bool setMode(FileClipMode::Enum newMode); // return true if changed
 
     private:
         int m_count {0};
         QStringList m_paths {};
-        FileClipMode::Mode m_mode {FileClipMode::Copy};
+        FileClipMode::Enum m_mode {FileClipMode::Copy};
     };
 
     int m_historyCount {};
@@ -99,7 +97,7 @@ class FileClipboard : public QObject
     Q_OBJECT
     Q_PROPERTY(FileClipboardModel* model READ model CONSTANT)
     Q_PROPERTY(int count READ count NOTIFY countChanged)
-    Q_PROPERTY(FileClipMode::Mode mode READ mode WRITE setMode NOTIFY modeChanged)
+    Q_PROPERTY(FileClipMode::Enum mode READ mode WRITE setMode NOTIFY modeChanged)
     Q_PROPERTY(QStringList paths READ paths WRITE setPaths NOTIFY pathsChanged)
     Q_DISABLE_COPY(FileClipboard)
 
@@ -112,15 +110,15 @@ public:
     Q_INVOKABLE void clear();
     Q_INVOKABLE QStringList listExistingFiles(QString destDirectory, bool ignoreInCurrentDir = true, bool getNamesOnly = true);
 
-    Q_INVOKABLE void setPaths(const QStringList& paths, FileClipMode::Mode mode) {
+    Q_INVOKABLE void setPaths(const QStringList& paths, FileClipMode::Enum mode) {
         setPaths(paths);
         setMode(mode);
     }
 
     FileClipboardModel* model() const;
     int count() const;
-    FileClipMode::Mode mode() const;
-    void setMode(FileClipMode::Mode newMode);
+    FileClipMode::Enum mode() const;
+    void setMode(FileClipMode::Enum newMode);
     const QStringList &paths() const;
     void setPaths(const QStringList &newPaths);
 

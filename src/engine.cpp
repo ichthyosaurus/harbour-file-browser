@@ -68,7 +68,7 @@ void Engine::deleteFiles(QStringList filenames)
     m_fileWorker->startDeleteFiles(filenames);
 }
 
-void Engine::pasteFiles(QStringList files, QString destDirectory, FileClipMode::Mode mode)
+void Engine::pasteFiles(QStringList files, QString destDirectory, FileClipMode::Enum mode)
 {
     // TODO use FileOperations directly from QML instead
 
@@ -139,57 +139,6 @@ void Engine::requestDiskSpaceInfo(QString path)
 void Engine::cancel()
 {
     m_fileWorker->cancel();
-}
-
-QString Engine::storageSettingsPath()
-{
-#ifdef NO_FEATURE_STORAGE_SETTINGS
-    return QStringLiteral("");
-#else
-    if (!m_storageSettingsPath.isEmpty()) return m_storageSettingsPath;
-
-    // This should normally be </usr/share/>jolla-settings/pages/storage/storage.qml.
-    // The result will be empty if the file is missing or cannot be accessed, e.g
-    // due to sandboxing. Therefore, we don't need compile-time switches to turn it off.
-    m_storageSettingsPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-                                                   "jolla-settings/pages/storage/storage.qml",
-                                                   QStandardPaths::LocateFile);
-    return m_storageSettingsPath;
-#endif
-}
-
-QString Engine::pdfViewerPath()
-{
-#ifdef NO_FEATURE_PDF_VIEWER
-    return QStringLiteral("");
-#else
-    if (!m_pdfViewerPath.isEmpty()) return m_pdfViewerPath;
-
-    // This requires access to the system documents viewer.
-    // The feature will be disabled if core QML files are missing or cannot be
-    // accessed, e.g due to sandboxing. Therefore, we don't need compile-time
-    // switches to turn it off.
-
-    m_pdfViewerPath = QStringLiteral("Sailfish.Office.PDFDocumentPage");
-
-    if (!QFileInfo::exists(
-                QStringLiteral("/usr/lib/") +
-                QStringLiteral("qt5/qml/Sailfish/Office/PDFDocumentPage.qml"))) {
-        if (!QFileInfo::exists(
-                    QStringLiteral("/usr/lib64/") +
-                    QStringLiteral("qt5/qml/Sailfish/Office/PDFDocumentPage.qml"))) {
-            m_pdfViewerPath = QLatin1String("");
-        }
-    }
-
-    return m_pdfViewerPath;
-#endif
-}
-
-bool Engine::runningAsRoot()
-{
-    if (geteuid() == 0) return true;
-    return false;
 }
 
 bool Engine::exists(QString filename)

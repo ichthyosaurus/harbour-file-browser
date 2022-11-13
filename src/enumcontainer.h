@@ -34,18 +34,18 @@
 //    enums get picked up by QtCreator's completion system
 //      qmlRegisterUncreatableType<BookmarkGroup>("harbour.file.browser.Settings", 1, 0, "BookmarkGroup", "This is only a container for an enumeration.");
 
-#define CREATE_ENUM(BASE, NAME, VALUES...) \
-    class BASE##NAME { \
+#define CREATE_ENUM(NAME, VALUES...) \
+    class NAME { \
         Q_GADGET \
     \
     public: \
-        enum NAME { VALUES }; \
+        enum Enum { VALUES }; \
         \
-        Q_ENUM(NAME) /* using "BASE##NAME::NAME" would make it "undefined" in QML */ \
+        Q_ENUM(Enum) /* using "NAME::Enum" here would make it "undefined" in QML */ \
         \
         static void registerToQml(const char* url, int major, int minor) { \
-            static const char* qmlName = #BASE#NAME; \
-            qmlRegisterUncreatableType<BASE##NAME>(url, major, minor, qmlName, "This is only a container for an enumeration."); \
+            static const char* qmlName = #NAME; \
+            qmlRegisterUncreatableType<NAME>(url, major, minor, qmlName, "This is only a container for an enumeration."); \
         } \
     };
 
@@ -55,9 +55,9 @@
 #define DEFINE_ENUM_REGISTRATION_FUNCTION(NAMESPACE) \
     void NAMESPACE##Enums::registerEnumTypes(const char *qmlUrl, int major, int minor)
 
-#define REGISTER_ENUM_CONTAINER(BASE, NAME) \
-    qRegisterMetaType<BASE##NAME::NAME>(#BASE#NAME "::" #NAME); \
-    BASE##NAME::registerToQml(qmlUrl, major, minor);
+#define REGISTER_ENUM_CONTAINER(NAME) \
+    qRegisterMetaType<NAME::Enum>(#NAME "::Enum"); \
+    NAME::registerToQml(qmlUrl, major, minor);
 
 #define REGISTER_ENUMS(NAMESPACE, URI, MAJOR, MINOR) \
     NAMESPACE##Enums::registerEnumTypes(URI, MAJOR, MINOR);

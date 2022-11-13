@@ -52,7 +52,7 @@ public:
 
     // async methods send signals when done or error occurs
     Q_INVOKABLE void deleteFiles(QStringList filenames);
-    Q_INVOKABLE void pasteFiles(QStringList files, QString destDirectory, FileClipMode::Mode mode);
+    Q_INVOKABLE void pasteFiles(QStringList files, QString destDirectory, FileClipMode::Enum mode);
 
     // calculate disk space ansynchronously, sends diskSpaceInfoReady on success
     // use diskSpace(path) as a synchronous alternative
@@ -64,12 +64,7 @@ public:
     // returns error msg
     Q_INVOKABLE QString errorMessage() const { return m_errorMessage; }
 
-    // file paths
-    Q_INVOKABLE QString storageSettingsPath(); // caching, thus non-const
-    Q_INVOKABLE QString pdfViewerPath(); // caching, thus non-const
-
     // synchronous methods
-    Q_INVOKABLE bool runningAsRoot();
     Q_INVOKABLE bool exists(QString filename);
     Q_INVOKABLE QStringList fileSizeInfo(QStringList paths);
     Q_INVOKABLE QStringList diskSpace(QString path);
@@ -108,10 +103,6 @@ private:
     FileWorker* m_fileWorker;
 
     QList<QPair<QSharedPointer<QFutureWatcher<QStringList>>, QFuture<QStringList>>> m_diskSpaceWorkers;
-
-    // cached paths that we assume won't change during runtime
-    QString m_storageSettingsPath = {QLatin1String()};
-    QString m_pdfViewerPath = {QLatin1String()};
 
     // don't use these directly, use isUsingBusybox() instead
     QStringList m__isUsingBusybox;

@@ -24,10 +24,10 @@
 #include "fileoperations.h"
 
 DEFINE_ENUM_REGISTRATION_FUNCTION(FileOperations) {
-    REGISTER_ENUM_CONTAINER(FileOp, Mode)
-    REGISTER_ENUM_CONTAINER(FileOp, ErrorType)
-    REGISTER_ENUM_CONTAINER(FileOp, ErrorAction)
-    REGISTER_ENUM_CONTAINER(FileOp, Status)
+    REGISTER_ENUM_CONTAINER(FileOpMode)
+    REGISTER_ENUM_CONTAINER(FileOpErrorType)
+    REGISTER_ENUM_CONTAINER(FileOpErrorAction)
+    REGISTER_ENUM_CONTAINER(FileOpStatus)
 }
 
 FileWorker2::~FileWorker2() {
@@ -51,7 +51,7 @@ void FileWorker2::pause() {
     emit statusChanged(FileOpStatus::Paused);
 }
 
-void FileWorker2::carryOn(FileOpErrorAction::ErrorAction feedback) {
+void FileWorker2::carryOn(FileOpErrorAction::Enum feedback) {
     int status = m_status.loadAcquire();
 
     if (status != FileOpStatus::WaitingForFeedback && status != FileOpStatus::Paused) {
@@ -104,7 +104,7 @@ void FileWorker2::process() {
 }
 
 bool FileWorker2::checkContinue() {
-    FileOpStatus::Status status = static_cast<FileOpStatus::Status>(m_status.loadAcquire());
+    FileOpStatus::Enum status = static_cast<FileOpStatus::Enum>(m_status.loadAcquire());
 
     switch (status) {
     case FileOpStatus::Running:
@@ -117,7 +117,7 @@ bool FileWorker2::checkContinue() {
             qDebug() << "DEBUG Waiting to continue file operation in thread" << QThread::currentThreadId();
             QThread::msleep(500);
             QCoreApplication::processEvents();
-            status = static_cast<FileOpStatus::Status>(m_status.loadAcquire());
+            status = static_cast<FileOpStatus::Enum>(m_status.loadAcquire());
 
             switch (status) {
             case FileOpStatus::Running:
@@ -139,7 +139,7 @@ bool FileWorker2::checkContinue() {
     return true; // should not be reachable
 }
 
-FileWorker2::FileWorker2(FileOpMode::Mode mode, QStringList files, QStringList targets) :
+FileWorker2::FileWorker2(FileOpMode::Enum mode, QStringList files, QStringList targets) :
     m_mode(mode), m_files(files), m_targets(targets) {}
 
 FileOperationsHandler::FileOperationsHandler(QObject *parent) : QObject(parent)
@@ -152,7 +152,7 @@ FileOperationsHandler::~FileOperationsHandler()
     //
 }
 
-FileOperationsHandler::Task &FileOperationsHandler::makeTask(FileOpMode::Mode mode, QStringList files, QStringList targets, bool autoDelete) {
+FileOperationsHandler::Task &FileOperationsHandler::makeTask(FileOpMode::Enum mode, QStringList files, QStringList targets, bool autoDelete) {
     QSharedPointer<QThread> thread(new QThread());
     QSharedPointer<FileWorker2> worker(new FileWorker2(mode, files, targets));
     worker->moveToThread(thread.data());
@@ -355,7 +355,7 @@ void FileOperationsModel::pauseTask(int handle)
     m_handler->getTask(handle).get()->pause();
 }
 
-void FileOperationsModel::continueTask(int handle, FileOpErrorAction::ErrorAction errorAction)
+void FileOperationsModel::continueTask(int handle, FileOpErrorAction::Enum errorAction)
 {
     if (!m_handler->haveTask(handle)) return;
     m_handler->getTask(handle).get()->carryOn(errorAction);
@@ -377,14 +377,14 @@ void FileOperationsModel::dismissTask(int handle)
     emit countChanged();
 }
 
-int FileOperationsModel::addTask(FileOpMode::Mode mode, QStringList files, QStringList targets)
+int FileOperationsModel::addTask(FileOpMode::Enum mode, QStringList files, QStringList targets)
 {
     int lastRow = rowCount();
     beginInsertRows(QModelIndex(), lastRow, lastRow);
 
     auto& task = m_handler->makeTask(mode, files, targets, false);
 
-    task.get()->connect(task.get(), &FileWorker2::statusChanged, this, [=](FileOpStatus::Status status){
+    task.get()->connect(task.get(), &FileWorker2::statusChanged, this, [=](FileOpStatus::Enum status){
         qDebug() << "File operation status changed:" << status << lastRow;
         QModelIndex topLeft = index(lastRow, 0);
         QModelIndex bottomRight = index(lastRow, 0);
@@ -405,7 +405,7 @@ int FileOperationsModel::addTask(FileOpMode::Mode mode, QStringList files, QStri
             ProgressFilenameRole, ProgressFileCurrentRole, ProgressFileOfRole
         });
     });
-    connect(task.get(), &FileWorker2::errorOccurred, this, [=](FileOpErrorType::ErrorType type, QString message, QString file){
+    connect(task.get(), &FileWorker2::errorOccurred, this, [=](FileOpErrorType::Enum type, QString message, QString file){
         auto& t = m_handler->getTask(task.handle());
         t.errorType = type;
         t.errorMessage = message;

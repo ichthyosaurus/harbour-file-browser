@@ -106,7 +106,10 @@ SilicaListView {
         property bool selected: selectionModel.hasSelection && selectionModel.isSelected(modelIndex)
 
         ListView.onRemove: animateRemoval(listItem) // enable animated list item removals
-        menu: model.group === BookmarkGroup.External ? settingsContextMenu : null
+        menu: (model.group === BookmarkGroup.External &&
+               !GlobalSettings.runningAsRoot &&
+               GlobalSettings.systemSettingsEnabled) ?
+                  settingsContextMenu : null
 
         width: root.width
         contentHeight: Theme.itemSizeSmall
@@ -329,10 +332,9 @@ SilicaListView {
         id: settingsContextMenu
         ContextMenu {
             MenuItem {
-                visible: !runningAsRoot && systemSettingsEnabled
                 text: qsTr("Open system settings");
                 onClicked: {
-                    pageStack.push(Qt.resolvedUrl(engine.storageSettingsPath()));
+                    pageStack.push(Qt.resolvedUrl(GlobalSettings.storageSettingsPath));
                 }
             }
         }

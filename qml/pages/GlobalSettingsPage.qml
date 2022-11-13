@@ -187,25 +187,26 @@ Page {
                     ComboBox {
                         id: initialDirMode
                         label: qsTr("Initial directory")
-                        property var indices: ({'home': 0, 'last': 1, 'custom': 2})
+                        property var indices: { var x = {}; x[InitialDirectoryMode.Home] = 0;
+                            x[InitialDirectoryMode.Last] = 1; x[InitialDirectoryMode.Custom] = 2; return x }
                         currentIndex: indices[GlobalSettings.generalInitialDirectoryMode]
                         onValueChanged: GlobalSettings.generalInitialDirectoryMode = currentItem.value
                         description: qsTr("The directory that is shown when the app starts.")
 
                         menu: ContextMenu {
-                            MenuItem { text: qsTr("user's home"); property string value: "home"; }
-                            MenuItem { text: qsTr("last visited"); property string value: "last"; }
-                            MenuItem { text: qsTr("custom path"); property string value: "custom"; }
+                            MenuItem { text: qsTr("user's home"); property int value: InitialDirectoryMode.Home; }
+                            MenuItem { text: qsTr("last visited"); property int value: InitialDirectoryMode.Last; }
+                            MenuItem { text: qsTr("custom path"); property int value: InitialDirectoryMode.Custom; }
                         }
                     }
                     TextField {
-                        property bool isCustom: GlobalSettings.generalInitialDirectoryMode == "custom"
+                        property bool isCustom: GlobalSettings.generalInitialDirectoryMode == InitialDirectoryMode.Custom
                         width: parent.width
                         label: qsTr("Initial directory")
                         text: {
                             if (isCustom) GlobalSettings.generalCustomInitialDirectoryPath
-                            else if (GlobalSettings.generalInitialDirectoryMode == "last") GlobalSettings.generalLastDirectoryPath
-                            else if (GlobalSettings.generalInitialDirectoryMode == "home") StandardPaths.home
+                            else if (GlobalSettings.generalInitialDirectoryMode == InitialDirectoryMode.Last) GlobalSettings.generalLastDirectoryPath
+                            else if (GlobalSettings.generalInitialDirectoryMode == InitialDirectoryMode.Home) StandardPaths.home
                         }
                         placeholderText: GlobalSettings.default_generalCustomInitialDirectoryPath
                         enabled: isCustom

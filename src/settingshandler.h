@@ -33,12 +33,14 @@
 #include <QAbstractListModel>
 #include <QFileSystemWatcher>
 
+#include "enumcontainer.h"
+
 class QFileInfo;
 
-// Call this in the main function to make exported
-// types available in QML.
-namespace SettingsHandlerEnums { void registerTypes(const char* qmlUrl, int major, int minor); }
-
+CREATE_ENUM(BookmarkGroup, Temporary, Location, External, Bookmark)
+CREATE_ENUM(SharingMethod, Share, TransferEngine, Disabled)
+CREATE_ENUM(InitialDirectoryMode, Home = 0, Last = 1, Custom = 2)
+DECLARE_ENUM_REGISTRATION_FUNCTION(SettingsHandler)
 
 // Generic settings handler class.
 // This class provides access to "global" and "local" key-value pairs.
@@ -124,20 +126,6 @@ private:
     QString m_path;
 };
 
-class BookmarkGroup {
-    Q_GADGET
-
-public:
-    enum Group {
-        Temporary,
-        Location,
-        External,
-        Bookmark
-    };
-    Q_ENUM(Group) /* using "BookmarkGroup::Group" would make it "undefined" in QML */
-    static void registerToQml(const char* url, int major, int minor);
-};
-
 // Provides a list of all currently configured bookmarks.
 // Changes are synced back to the config file automatically,
 // but the config file is only read once. That means changes
@@ -199,10 +187,10 @@ private:
     void removeItem(QString path, bool save);
 
     struct BookmarkItem {
-        BookmarkItem(BookmarkGroup::Group group, QString name, QString icon, QString path, bool showSize, bool userDefined) :
+        BookmarkItem(BookmarkGroup::Enum group, QString name, QString icon, QString path, bool showSize, bool userDefined) :
             group(group), name(name), thumbnail(icon), path(path), showSize(showSize), userDefined(userDefined) {};
 
-        BookmarkGroup::Group group {BookmarkGroup::Group::Temporary};
+        BookmarkGroup::Enum group {BookmarkGroup::Temporary};
         QString name {QLatin1Literal()};
         QString thumbnail {QStringLiteral("icon-m-favorite")};
         QString path {QLatin1Literal()};
@@ -257,17 +245,19 @@ private:
     template<typename T>
     class Mapping : public QHash<QString, T> {
     public:
-        Mapping(QString defaultValue, QStringList passthroughValues)
+        template<typename U = T> // only available if T is QString
+        Mapping(QString defaultValue, QStringList passthroughValues, typename std::enable_if<std::is_same_v<U, QString>>::type* = 0)
             : defaultValue({defaultValue, defaultValue}) {
             this->insert(defaultValue, defaultValue);
             for (auto& i : passthroughValues) this->insert(i, i);
         }
+
         Mapping(QPair<QString, T> defaultValue, QHash<QString, T> pairs)
             : QHash<QString, T>(pairs), defaultValue(defaultValue) {
             this->insert(defaultValue.first, defaultValue.second);
         }
 
-        template<typename U = T>
+        template<typename U = T> // only available if T is QString
         Mapping(QString defaultValue, bool allowAnyString, typename std::enable_if<std::is_same_v<U, QString>>::type* = 0)
             : defaultValue({defaultValue, defaultValue}), allowAnyString(allowAnyString) { }
 
@@ -372,8 +362,10 @@ private:
     Mapping<QString> map_elideMode{QSL("fade"), {QSL("end"), QSL("middle")}};
     PROP(QString, generalFilenameElideMode, "General/FilenameElideMode", "", map_elideMode, map_invalid)
     PROP(bool, generalSolidWindowBackground, "General/SolidWindowBackground", "", map_bool_false, map_bool_false)
-    Mapping<QString> map_initialDirMode{QSL("home"), {QSL("last"), QSL("custom")}};
-    PROP(QString, generalInitialDirectoryMode, "General/InitialDirectoryMode", "", map_initialDirMode, map_invalid)
+    Mapping<InitialDirectoryMode::Enum> map_initialDirMode{{QSL("home"), InitialDirectoryMode::Home}, {
+            {QSL("last"), InitialDirectoryMode::Last}, {QSL("custom"), InitialDirectoryMode::Custom}}};
+    Mapping<InitialDirectoryMode::Enum> map_initialDirInvalid{{QLatin1Literal(), {}}, {}};
+    PROP(InitialDirectoryMode::Enum, generalInitialDirectoryMode, "General/InitialDirectoryMode", "", map_initialDirMode, map_initialDirInvalid)
     Mapping<QString> map_initialDirPath{QDir::homePath(), true};
     PROP(QString, generalCustomInitialDirectoryPath, "General/CustomInitialDirectoryPath", "", map_initialDirPath, map_invalid);
     PROP(QString, generalLastDirectoryPath, "General/LastDirectoryPath", "", map_initialDirPath, map_invalid);
@@ -407,6 +399,45 @@ private:
     // ^^^ SETTINGS ^^^
     //
 
+    //
+    // vvv CONSTANTS vvv
+    //
+
+    private: Q_PROPERTY(QString initialDirectory READ initialDirectory CONSTANT)
+    public: QString initialDirectory();
+
+    private: Q_PROPERTY(bool systemSettingsEnabled READ systemSettingsEnabled CONSTANT)
+    private: Q_PROPERTY(QString storageSettingsPath READ storageSettingsPath CONSTANT)
+    public: bool systemSettingsEnabled();
+    public: QString storageSettingsPath();
+
+    private: Q_PROPERTY(bool pdfViewerEnabled READ pdfViewerEnabled CONSTANT)
+    private: Q_PROPERTY(QString pdfViewerPath READ pdfViewerPath CONSTANT)
+    public: bool pdfViewerEnabled();
+    public: QString pdfViewerPath();
+
+    private: Q_PROPERTY(bool sharingEnabled READ sharingEnabled CONSTANT)
+    private: Q_PROPERTY(SharingMethod::Enum sharingMethod READ sharingMethod CONSTANT)
+    public: bool sharingEnabled();
+    public: SharingMethod::Enum sharingMethod();
+
+    private: Q_PROPERTY(bool runningAsRoot READ runningAsRoot CONSTANT)
+    public: bool runningAsRoot() const;
+
+    private: Q_PROPERTY(bool authenticatedForRoot READ authenticatedForRoot WRITE setAuthenticatedForRoot NOTIFY authenticatedForRootChanged)
+    public: // if changing this is possible
+        bool authenticatedForRoot() const { return s_authenticatedForRoot; }
+        void setAuthenticatedForRoot(bool isOk);
+        Q_SIGNAL void authenticatedForRootChanged();
+
+    //
+    // ^^^ CONSTANTS ^^^
+    //
+
+    //
+    // vvv QML CONFIG vvv
+    //
+
     private: Q_PROPERTY(QString path READ path WRITE setPath NOTIFY pathChanged)
     public:
     QString path() const { return m_path; }
@@ -417,15 +448,30 @@ private:
         emit pathChanged(newValue);
     }
 
+    //
+    // ^^^ QML CONFIG ^^^
+    //
+
 public:
     // Specify a path to handle local settings. Leave the path empty to handle global settings only.
     explicit DirectorySettings(QObject* parent = nullptr);
-    explicit DirectorySettings(QString path, QObject* parent = nullptr);
+    explicit DirectorySettings(QString path, QObject* parent);
+    explicit DirectorySettings(bool, QString initialDir);
     ~DirectorySettings();
 
 private:
-    QString m_path;
-    QString m_localFile;
+    QString m_path {};
+    QString m_localFile {};
+
+    static QString s_cachedInitialDirectory;
+    static QString s_forcedInitialDirectory;
+    static bool s_haveForcedInitialDirectory;
+
+    static QString s_cachedStorageSettingsPath;
+    static QString s_cachedPdfViewerPath;
+    static SharingMethod::Enum s_cachedSharingMethod;
+    static bool s_cachedSharingMethodDetermined;
+    static bool s_authenticatedForRoot;
 
     template<typename T>
     void setValue(QString globalKey, QString localKey, Mapping<T> globalMap, Mapping<T> localMap, T newValue) {

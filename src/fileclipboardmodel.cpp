@@ -22,6 +22,10 @@
 #include "fileclipboardmodel.h"
 #include "statfileinfo.h"
 
+DEFINE_ENUM_REGISTRATION_FUNCTION(FileClipboard) {
+    REGISTER_ENUM_CONTAINER(FileClipMode)
+}
+
 enum {
     ModeRole =            Qt::UserRole +  1,
     PathsRole =           Qt::UserRole +  2,
@@ -84,13 +88,13 @@ int FileClipboardModel::currentCount() const
     else return 0;
 }
 
-FileClipMode::Mode FileClipboardModel::currentMode() const
+FileClipMode::Enum FileClipboardModel::currentMode() const
 {
     if (m_historyCount > 0) return m_entries.at(0).mode();
     else return FileClipMode::Copy;
 }
 
-void FileClipboardModel::setCurrentMode(FileClipMode::Mode newCurrentMode)
+void FileClipboardModel::setCurrentMode(FileClipMode::Enum newCurrentMode)
 {
     if (m_historyCount == 0) return;
     auto& current = m_entries[0];
@@ -318,12 +322,12 @@ bool FileClipboardModel::ClipboardGroup::setEntries(const QStringList &paths)
     return false;
 }
 
-FileClipMode::Mode FileClipboardModel::ClipboardGroup::mode() const
+FileClipMode::Enum FileClipboardModel::ClipboardGroup::mode() const
 {
     return m_mode;
 }
 
-bool FileClipboardModel::ClipboardGroup::setMode(FileClipMode::Mode newMode)
+bool FileClipboardModel::ClipboardGroup::setMode(FileClipMode::Enum newMode)
 {
     if (newMode != m_mode) {
         m_mode = newMode;
@@ -370,12 +374,12 @@ int FileClipboard::count() const
     return m_model->currentCount();
 }
 
-FileClipMode::Mode FileClipboard::mode() const
+FileClipMode::Enum FileClipboard::mode() const
 {
     return m_model->currentMode();
 }
 
-void FileClipboard::setMode(FileClipMode::Mode newMode)
+void FileClipboard::setMode(FileClipMode::Enum newMode)
 {
     m_model->setCurrentMode(newMode);
 }

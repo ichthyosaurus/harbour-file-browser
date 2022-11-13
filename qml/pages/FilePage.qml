@@ -24,6 +24,7 @@
 import QtQuick 2.5 // >= 2.5 required for Image::autoTransform
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileData 1.0
+import harbour.file.browser.Settings 1.0
 import QtMultimedia 5.0
 
 import "../components"
@@ -403,8 +404,8 @@ Page {
             method(Qt.resolvedUrl("ViewImagePage.qml"), { path: page.file, title: fileData.name });
         } else if (fileData.category === "video") {
             method(Qt.resolvedUrl("ViewVideoPage.qml"), { path: page.file, title: fileData.name, autoPlay: !asAttached });
-        } else if (pdfViewerEnabled && fileData.category === "pdf") {
-            method(engine.pdfViewerPath(), {
+        } else if (GlobalSettings.pdfViewerEnabled && fileData.category === "pdf") {
+            method(GlobalSettings.pdfViewerPath, {
                 title: fileData.name, source: fileData.file, mimeType: fileData.mimeType
             })
         } else {

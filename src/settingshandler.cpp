@@ -18,6 +18,8 @@
  * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
+#include <unistd.h>
+
 #include <QMutexLocker>
 #include <QSettings>
 #include <QDir>
@@ -40,9 +42,19 @@ QSharedPointer<BookmarksModel> \
     BookmarksModel::s_globalInstance = \
         QSharedPointer<BookmarksModel>(nullptr);
 
-void SettingsHandlerEnums::registerTypes(const char *qmlUrl, int major, int minor) {
-    qRegisterMetaType<BookmarkGroup::Group>("BookmarkGroup::Group"); \
-    BookmarkGroup::registerToQml(qmlUrl, major, minor);
+QString DirectorySettings::s_cachedInitialDirectory = QLatin1Literal();
+QString DirectorySettings::s_forcedInitialDirectory = QLatin1Literal();
+bool DirectorySettings::s_haveForcedInitialDirectory = false;
+QString DirectorySettings::s_cachedStorageSettingsPath = QLatin1Literal();
+QString DirectorySettings::s_cachedPdfViewerPath = QLatin1Literal();
+SharingMethod::Enum DirectorySettings::s_cachedSharingMethod = SharingMethod::Disabled;
+bool DirectorySettings::s_cachedSharingMethodDetermined = false;
+bool DirectorySettings::s_authenticatedForRoot = false;
+
+DEFINE_ENUM_REGISTRATION_FUNCTION(SettingsHandler) {
+    REGISTER_ENUM_CONTAINER(BookmarkGroup)
+    REGISTER_ENUM_CONTAINER(SharingMethod)
+    REGISTER_ENUM_CONTAINER(InitialDirectoryMode)
 }
 
 RawSettingsHandler::RawSettingsHandler(QObject *parent)
@@ -259,10 +271,203 @@ QStringList RawSettingsHandler::keys(QString group, QString fileName) {
     return keys;
 }
 
+QString DirectorySettings::initialDirectory()
+{
+    // Static member variables are used to make sure that the initial
+    // directory can be defined from the command line (in the main function)
+    // and is still available in all instances of this class.
+    //
+    // IMPORTANT: when initializing the main app window, the initial directory
+    // must be read from the global settings object. Otherwise, the value
+    // from the command line will not be stored here.
+    //
+    // Tl;dr: us this code in QML:
+    //     import harbour.file.browser.Settings 1.0
+    //     ... = GlobalSettings.initialDirectory
+    //
+    // Rationale: this is disgusting and complicated but it avoids the
+    // need to create a DirectorySettings object on startup, and it provides
+    // a clearer API. It makes more sense to access the initial directory
+    // through the settings API than as a global context property.
+
+    if (!s_cachedInitialDirectory.isEmpty()) {
+        return s_cachedInitialDirectory;
+    }
+
+    QString initialDirectory;
+    int initialDirectoryMode;
+
+    if (s_haveForcedInitialDirectory) {
+        QFileInfo info(s_forcedInitialDirectory);
+        initialDirectoryMode = -1;
+        initialDirectory = info.absoluteFilePath();
+    } else {
+        initialDirectoryMode = get_generalInitialDirectoryMode();
+
+        if (initialDirectoryMode == InitialDirectoryMode::Home) {
+            initialDirectory = QDir::homePath();
+        } else if (initialDirectoryMode == InitialDirectoryMode::Last) {
+            initialDirectory = get_generalLastDirectoryPath();
+        } else if (initialDirectoryMode == InitialDirectoryMode::Custom) {
+            initialDirectory = get_generalCustomInitialDirectoryPath();
+        } else {
+            initialDirectory = getDefault_generalCustomInitialDirectoryPath();
+        }
+    }
+
+    if (!QFileInfo::exists(initialDirectory) || !QFileInfo(initialDirectory).isDir()) {
+        qDebug() << "initial directory" << initialDirectory <<
+                    "does not exist, resetting to home directory | mode:" << initialDirectoryMode;
+        initialDirectory = QDir::homePath();
+    } else {
+        qDebug() << "using initial directory" << initialDirectory << "| mode:" << initialDirectoryMode;
+    }
+
+    s_cachedInitialDirectory = initialDirectory;
+    return s_cachedInitialDirectory;
+}
+
+bool DirectorySettings::systemSettingsEnabled()
+{
+#ifdef NO_FEATURE_STORAGE_SETTINGS
+    return false;
+#else
+    return !storageSettingsPath().isEmpty();
+#endif
+}
+
+QString DirectorySettings::storageSettingsPath()
+{
+#ifdef NO_FEATURE_STORAGE_SETTINGS
+    return QStringLiteral("");
+#else
+    if (!s_cachedStorageSettingsPath.isEmpty()) return s_cachedStorageSettingsPath;
+
+    // This should normally be </usr/share/>jolla-settings/pages/storage/storage.qml.
+    // The result will be empty if the file is missing or cannot be accessed, e.g
+    // due to sandboxing. Therefore, we don't need compile-time switches to turn it off.
+    s_cachedStorageSettingsPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                                   "jolla-settings/pages/storage/storage.qml",
+                                                   QStandardPaths::LocateFile);
+    return s_cachedStorageSettingsPath;
+#endif
+}
+
+bool DirectorySettings::pdfViewerEnabled()
+{
+#ifdef NO_FEATURE_PDF_VIEWER
+    return false;
+#else
+    return !pdfViewerPath().isEmpty();
+#endif
+}
+
+QString DirectorySettings::pdfViewerPath()
+{
+#ifdef NO_FEATURE_PDF_VIEWER
+    return QStringLiteral("");
+#else
+    if (!s_cachedPdfViewerPath.isEmpty()) {
+        return s_cachedPdfViewerPath;
+    }
+
+    // This requires access to the system documents viewer.
+    // The feature will be disabled if core QML files are missing or cannot be
+    // accessed, e.g due to sandboxing. Therefore, we don't need compile-time
+    // switches to turn it off.
+
+    s_cachedPdfViewerPath = QStringLiteral("Sailfish.Office.PDFDocumentPage");
+
+    if (!QFileInfo::exists(
+                QStringLiteral("/usr/lib/") +
+                QStringLiteral("qt5/qml/Sailfish/Office/PDFDocumentPage.qml"))) {
+        if (!QFileInfo::exists(
+                    QStringLiteral("/usr/lib64/") +
+                    QStringLiteral("qt5/qml/Sailfish/Office/PDFDocumentPage.qml"))) {
+            s_cachedPdfViewerPath = QLatin1String("");
+        }
+    }
+
+    return s_cachedPdfViewerPath;
+#endif
+}
+
+bool DirectorySettings::sharingEnabled()
+{
+#ifdef NO_FEATURE_SHARING
+    return false;
+#else
+    return sharingMethod() != SharingMethod::Disabled;
+#endif
+}
+
+SharingMethod::Enum DirectorySettings::sharingMethod()
+{
+#ifdef NO_FEATURE_SHARING
+    return SharingMethod::Disabled;
+#else
+    if (s_cachedSharingMethodDetermined) {
+        return s_cachedSharingMethod;
+    }
+
+    SharingMethod::Enum method = SharingMethod::Disabled;
+
+    if (QFileInfo::exists(
+                QStringLiteral("/usr/lib/") +
+                QStringLiteral("qt5/qml/Sailfish/Share/qmldir"))) {
+        method = SharingMethod::Share;
+    } else if (QFileInfo::exists(
+                   QStringLiteral("/usr/lib/") +
+                   QStringLiteral("qt5/qml/Sailfish/TransferEngine/qmldir"))) {
+        method = SharingMethod::TransferEngine;
+    }
+
+    if (method == SharingMethod::Disabled) {
+        qDebug() << "no supported sharing system found";
+    }
+
+    s_cachedSharingMethod = method;
+    return s_cachedSharingMethod;
+#endif
+}
+
+bool DirectorySettings::runningAsRoot() const
+{
+    if (geteuid() == 0) return true;
+    return false;
+}
+
+void DirectorySettings::setAuthenticatedForRoot(bool isOk)
+{
+    if (isOk == s_authenticatedForRoot) return;
+
+    if (runningAsRoot()) {
+        s_authenticatedForRoot = isOk;
+        emit authenticatedForRootChanged();
+    } else {
+        qDebug() << "not running as root, so ignoring request to change 'authenticatedForRoot'";
+        s_authenticatedForRoot = false;
+        emit authenticatedForRootChanged();
+    }
+}
+
 DirectorySettings::DirectorySettings(QObject* parent) : QObject(parent) {}
 
 DirectorySettings::DirectorySettings(QString path, QObject *parent) :
     QObject(parent), m_path(path) {}
+
+DirectorySettings::DirectorySettings(bool, QString initialDir)
+    : QObject(nullptr)
+{
+    if (s_haveForcedInitialDirectory && initialDir != s_forcedInitialDirectory) {
+        qDebug() << "cannot reset forced initial directory from" <<
+                    s_forcedInitialDirectory << "to" << initialDir;
+    } else if (!initialDir.isEmpty()) {
+        qDebug() << "using forced initial directory" << initialDir;
+        s_haveForcedInitialDirectory = true;
+        s_forcedInitialDirectory = initialDir;
+    }
+}
 
 DirectorySettings::~DirectorySettings()
 {
@@ -537,7 +742,7 @@ void BookmarksModel::updateExternalDevices()
     toRemove.reserve(m_entries.size());
 
     for (int i = 0; i < m_entries.size(); ++i) {
-        if (m_entries.at(i).group == BookmarkGroup::Group::External) {
+        if (m_entries.at(i).group == BookmarkGroup::External) {
             toRemove.append(i);
         }
     }
@@ -567,7 +772,7 @@ void BookmarksModel::reload()
     // populate model with default locations shortcuts
 
     newEntries.append(BookmarkItem(
-        BookmarkGroup::Group::Location,
+        BookmarkGroup::Location,
         tr("Home"),
         QStringLiteral("icon-m-home"),
         QStandardPaths::writableLocation(QStandardPaths::HomeLocation),
@@ -576,7 +781,7 @@ void BookmarksModel::reload()
     );
 
     newEntries.append(BookmarkItem(
-        BookmarkGroup::Group::Location,
+        BookmarkGroup::Location,
         tr("Documents"),
         QStringLiteral("icon-m-file-document-light"),
         QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation),
@@ -585,7 +790,7 @@ void BookmarksModel::reload()
     );
 
     newEntries.append(BookmarkItem(
-        BookmarkGroup::Group::Location,
+        BookmarkGroup::Location,
         tr("Downloads"),
         QStringLiteral("icon-m-cloud-download"),
         QStandardPaths::writableLocation(QStandardPaths::DownloadLocation),
@@ -594,7 +799,7 @@ void BookmarksModel::reload()
     );
 
     newEntries.append(BookmarkItem(
-        BookmarkGroup::Group::Location,
+        BookmarkGroup::Location,
         tr("Music"),
         QStringLiteral("icon-m-file-audio"),
         QStandardPaths::writableLocation(QStandardPaths::MusicLocation),
@@ -603,7 +808,7 @@ void BookmarksModel::reload()
     );
 
     newEntries.append(BookmarkItem(
-        BookmarkGroup::Group::Location,
+        BookmarkGroup::Location,
         tr("Pictures"),
         QStringLiteral("icon-m-file-image"),
         QStandardPaths::writableLocation(QStandardPaths::PicturesLocation),
@@ -612,7 +817,7 @@ void BookmarksModel::reload()
     );
 
     newEntries.append(BookmarkItem(
-        BookmarkGroup::Group::Location,
+        BookmarkGroup::Location,
         tr("Videos"),
         QStringLiteral("icon-m-file-video"),
         QStandardPaths::writableLocation(QStandardPaths::MoviesLocation),
@@ -625,7 +830,7 @@ void BookmarksModel::reload()
 
     if (androidInfo.exists() && androidInfo.isDir()) {
         newEntries.append(BookmarkItem(
-            BookmarkGroup::Group::Location,
+            BookmarkGroup::Location,
             tr("Android storage"),
             QStringLiteral("icon-m-file-apk"),
             androidPath,
@@ -635,7 +840,7 @@ void BookmarksModel::reload()
     }
 
     newEntries.append(BookmarkItem(
-        BookmarkGroup::Group::Location,
+        BookmarkGroup::Location,
         tr("Root"),
         QStringLiteral("icon-m-file-rpm"),
         QStringLiteral("/"),
@@ -659,7 +864,7 @@ void BookmarksModel::reload()
             QString name = RawSettingsHandler::instance()->read(
                 QStringLiteral("Bookmarks/") + path, path.split("/").last());
             newEntries.append(BookmarkItem(
-                BookmarkGroup::Group::Bookmark,
+                BookmarkGroup::Bookmark,
                 name,
                 QStringLiteral("icon-m-favorite"),
                 path,
@@ -745,7 +950,7 @@ void BookmarksModel::appendItem(QString path, QString name, bool save)
     auto last = rowCount();
     beginInsertRows(QModelIndex(), last, last);
     m_entries.append(BookmarkItem(
-        save ? BookmarkGroup::Group::Bookmark : BookmarkGroup::Group::Temporary,
+        save ? BookmarkGroup::Bookmark : BookmarkGroup::Temporary,
         name,
         save ? QStringLiteral("icon-m-favorite") : QStringLiteral("icon-m-file-folder"),
         path, false, true));
@@ -851,7 +1056,7 @@ QList<BookmarksModel::BookmarkItem> BookmarksModel::externalDrives()
         }
 
         ret.append(BookmarkItem(
-            BookmarkGroup::Group::External,
+            BookmarkGroup::External,
             title,
             isSdCard ? QStringLiteral("icon-m-sd-card")
                      : QStringLiteral("icon-m-usb"),
@@ -886,9 +1091,4 @@ QMap<QString, QString> BookmarksModel::mountPoints()
     }
 
     return paired;
-}
-
-void BookmarkGroup::registerToQml(const char *url, int major, int minor) {
-    static const char* qmlName = "BookmarkGroup";
-    qmlRegisterUncreatableType<BookmarkGroup>(url, major, minor, qmlName, "This is only a container for an enumeration.");
 }

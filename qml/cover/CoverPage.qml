@@ -22,6 +22,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import harbour.file.browser.Settings 1.0
 
 CoverBackground {
     anchors.fill: parent
@@ -46,13 +47,13 @@ CoverBackground {
                 console.log("staying at", stayAtPage, checkPage.objectName, pageStack.currentPage.objectName)
                 main.activate()
                 return
-            } else if (checkPage.objectName === 'DirectoryPage') {
-                console.log("found dir", checkPage.dir)
-                break
             } else if (checkPage.hasOwnProperty('__critical_process_page')) {
                 console.log("critical")
                 main.activate()
                 return
+            } else if (checkPage.objectName === 'DirectoryPage') {
+                console.log("found dir", checkPage.dir)
+                break
             } else {
                 checkPage = pageStack.previousPage(checkPage)
             }
@@ -88,12 +89,13 @@ CoverBackground {
         opacity: 0.4
         width: Theme.iconSizeLarge
         height: width
-        source: runningAsRoot ? "../images/harbour-file-browser-root.png"
-                              : "../images/harbour-file-browser.png"
+        source: GlobalSettings.runningAsRoot ?
+                    "../images/harbour-file-browser-root.png" :
+                    "../images/harbour-file-browser.png"
     }
 
     Label {
-        visible: runningAsRoot
+        visible: GlobalSettings.runningAsRoot
         anchors.centerIn: bgIcon
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -117,7 +119,7 @@ CoverBackground {
     }
 
     CoverActionList {
-        enabled: !runningAsRoot || authenticatedForRoot
+        enabled: !GlobalSettings.runningAsRoot || GlobalSettings.authenticatedForRoot
 
         CoverAction {
             iconSource: "image://theme/icon-cover-search"

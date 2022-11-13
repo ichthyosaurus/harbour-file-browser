@@ -35,6 +35,7 @@
 #include <QtQuick/QQuickPaintedItem>
 
 #include "requires_defines.h"
+#include "enumcontainer.h"
 #include "filemodel.h"
 #include "filedata.h"
 #include "searchengine.h"
@@ -118,27 +119,36 @@ int main(int argc, char *argv[])
     qmlRegisterType<ConsoleModel>("harbour.file.browser.ConsoleModel", 1, 0, "ConsoleModel");
     qmlRegisterType<TextEditor>("harbour.file.browser.TextEditor", 1, 0, "TextEditor");
 
-    SettingsHandlerEnums::registerTypes("harbour.file.browser.Settings", 1, 0);
+    REGISTER_ENUMS(SettingsHandler, "harbour.file.browser.Settings", 1, 0)
+    qmlRegisterUncreatableType<BookmarkGroup>("harbour.file.browser.Settings", 1, 0, "BookmarkGroup", "This is only a container for an enumeration.");
+    qmlRegisterUncreatableType<SharingMethod>("harbour.file.browser.Settings", 1, 0, "SharingMethod", "This is only a container for an enumeration.");
+    qmlRegisterUncreatableType<InitialDirectoryMode>("harbour.file.browser.Settings", 1, 0, "InitialDirectoryMode", "This is only a container for an enumeration.");
+
     qmlRegisterType<DirectorySettings>("harbour.file.browser.Settings", 1, 0, "DirectorySettings");
     qmlRegisterType<BookmarkWatcher>("harbour.file.browser.Settings", 1, 0, "Bookmark");
-    qmlRegisterUncreatableType<BookmarkGroup>("harbour.file.browser.Settings", 1, 0, "BookmarkGroup", "This is only a container for an enumeration.");
     qmlRegisterSingletonType<DirectorySettings>("harbour.file.browser.Settings", 1, 0, "GlobalSettings", [](QQmlEngine* engine, QJSEngine* scriptEngine) -> QObject* {
-        Q_UNUSED(engine); Q_UNUSED(scriptEngine);
-        return new DirectorySettings();
+        Q_UNUSED(scriptEngine);
+        return new DirectorySettings(true, engine->property("cliForcedInitialDirectory").toString());
     });
     qmlRegisterSingletonType<RawSettingsHandler>("harbour.file.browser.Settings", 1, 0, "RawSettings", [](QQmlEngine* engine, QJSEngine* scriptEngine) -> QObject* {
         Q_UNUSED(engine); Q_UNUSED(scriptEngine);
         return RawSettingsHandler::instance();
     });
 
-    FileOperationsEnums::registerTypes("harbour.file.browser.FileOperations", 1, 0);
+    REGISTER_ENUMS(FileOperations, "harbour.file.browser.FileOperations", 1, 0)
+    qmlRegisterUncreatableType<FileOpMode>("harbour.file.browser.FileOperations", 1, 0, "FileOpMode", "This is only a container for an enumeration.");
+    qmlRegisterUncreatableType<FileOpErrorType>("harbour.file.browser.FileOperations", 1, 0, "FileOpErrorType", "This is only a container for an enumeration.");
+    qmlRegisterUncreatableType<FileOpErrorAction>("harbour.file.browser.FileOperations", 1, 0, "FileOpErrorAction", "This is only a container for an enumeration.");
+    qmlRegisterUncreatableType<FileOpStatus>("harbour.file.browser.FileOperations", 1, 0, "FileOpStatus", "This is only a container for an enumeration.");
+
     qmlRegisterSingletonType<FileOperationsModel>("harbour.file.browser.FileOperations", 1, 0, "FileOperations", [](QQmlEngine* engine, QJSEngine* scriptEngine) -> QObject* {
         Q_UNUSED(engine); Q_UNUSED(scriptEngine);
         return new FileOperationsModel();;
     });
 
+    REGISTER_ENUMS(FileClipboard, "harbour.file.browser.FileClipboard", 1, 0)
     qmlRegisterUncreatableType<FileClipMode>("harbour.file.browser.FileClipboard", 1, 0, "FileClipMode", "This is only a container for an enumeration.");
-    qRegisterMetaType<FileClipMode::Mode>("FileClipMode::Mode");
+
     qmlRegisterSingletonType<FileClipboard>("harbour.file.browser.FileClipboard", 1, 0, "FileClipboard", [](QQmlEngine* engine, QJSEngine* scriptEngine) -> QObject* {
         Q_UNUSED(engine); Q_UNUSED(scriptEngine);
         return new FileClipboard();
@@ -150,18 +160,19 @@ int main(int argc, char *argv[])
     //     return new Engine();
     // });
 
-    // duplicated here so they get picked up by QtCreator's completion system
-    qmlRegisterUncreatableType<FileOpMode>("harbour.file.browser.FileOperations", 1, 0, "FileOpMode", "This is only a container for an enumeration.");
-    qmlRegisterUncreatableType<FileOpErrorType>("harbour.file.browser.FileOperations", 1, 0, "FileOpErrorType", "This is only a container for an enumeration.");
-    qmlRegisterUncreatableType<FileOpErrorAction>("harbour.file.browser.FileOperations", 1, 0, "FileOpErrorAction", "This is only a container for an enumeration.");
-    qmlRegisterUncreatableType<FileOpStatus>("harbour.file.browser.FileOperations", 1, 0, "FileOpStatus", "This is only a container for an enumeration.");
-
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
     app->setOrganizationName("harbour-file-browser"); // needed for Sailjail
     app->setApplicationName("harbour-file-browser");
     runMigrations();
 
     QScopedPointer<QQuickView> view(SailfishApp::createView());
+
+    if (argc >= 2) {
+        view->engine()->setProperty("cliForcedInitialDirectory", QString::fromUtf8(argv[1]));
+        qDebug() << "initial directory set from command line:" << argv[1];
+    } else {
+        view->engine()->setProperty("cliForcedInitialDirectory", QLatin1Literal(""));
+    }
 
     // setup global engine object
     // TODO use QML singleton instead
@@ -170,36 +181,9 @@ int main(int argc, char *argv[])
     qApp->setProperty("engine", engineVariant); // store as singleton
     view->rootContext()->setContextProperty("engine", engine.data()); // expose to QML
 
-    QScopedPointer<DirectorySettings> initialDirSettings(new DirectorySettings);
-    QString initialDirectory = initialDirSettings->getDefault_generalCustomInitialDirectoryPath();
-    QString initialDirectoryMode = initialDirSettings->get_generalInitialDirectoryMode();
-
-    if (initialDirectoryMode == QStringLiteral("home")) {
-        initialDirectory = QDir::homePath();
-    } else if (initialDirectoryMode == QStringLiteral("last")) {
-        initialDirectory = initialDirSettings->get_generalLastDirectoryPath();
-    } else if (initialDirectoryMode == QStringLiteral("custom")) {
-        initialDirectory = initialDirSettings->get_generalCustomInitialDirectoryPath();
-    }
-
-    if (argc >= 2) {
-        QFileInfo info(QString::fromUtf8(argv[1]));
-        initialDirectoryMode = QStringLiteral("command line");
-        initialDirectory = info.absoluteFilePath();
-    }
-
-    if (!QFileInfo::exists(initialDirectory) || !QFileInfo(initialDirectory).isDir()) {
-        qDebug() << "initial directory" << initialDirectory <<
-                    "does not exist, starting in home directory | mode:" << initialDirectoryMode;
-        initialDirectory = QDir::homePath();
-    }
-
-    view->rootContext()->setContextProperty("initialDirectory", initialDirectory);
     view->rootContext()->setContextProperty("APP_VERSION", QStringLiteral(APP_VERSION));
     view->rootContext()->setContextProperty("APP_RELEASE", QStringLiteral(APP_RELEASE));
     view->rootContext()->setContextProperty("RELEASE_TYPE", QStringLiteral(RELEASE_TYPE));
-
-    // BEGIN FEATURE CONFIGURATION
 
     // Setting NO_HARBOUR_COMPLIANCE doesn't do much at the moment, as most
     // features are allowed in Harbour by now - or they are at least not explicitly
@@ -208,71 +192,19 @@ int main(int argc, char *argv[])
     //
     // Sailjail magic happens in the desktop file which is generated based on the
     // HARBOUR_COMPLIANCE flag in rpm/harbour-file-browser.yaml.
-
-#ifdef NO_HARBOUR_COMPLIANCE
-    view->rootContext()->setContextProperty("buildMessage", QVariant::fromValue(QStringLiteral("no explicit Harbour compliance")));
-#else
-    view->rootContext()->setContextProperty("buildMessage", QVariant::fromValue(QStringLiteral("forced Harbour compliance")));
-#endif
-
+    //
     // Some features can be disabled individually, making it impossible to enable
-    // them at runtime by modifying QML files. There is no reason to do that, though.
+    // them at runtime by modifying QML files. If the capabilities they rely on
+    // are not available (e.g. QML modules are not installed), then they will be
+    // disabled dynamically anyways.
     //
     // Change these settings in rpm/harbour-file-browser.yaml.
 
-#ifdef NO_FEATURE_PDF_VIEWER
-    view->rootContext()->setContextProperty("pdfViewerEnabled", QVariant::fromValue(false));
+#ifdef NO_HARBOUR_COMPLIANCE
+    view->rootContext()->setContextProperty("BUILD_MESSAGE", QVariant::fromValue(QStringLiteral("no explicit Harbour compliance")));
 #else
-    if (!engine->pdfViewerPath().isEmpty()) {
-        // we enable PDF viewer integration only if sailfish-office is installed and accessible
-        view->rootContext()->setContextProperty("pdfViewerEnabled", QVariant::fromValue(true));
-    } else {
-        view->rootContext()->setContextProperty("pdfViewerEnabled", QVariant::fromValue(false));
-        qDebug() << "system documents viewer not available";
-    }
+    view->rootContext()->setContextProperty("BUILD_MESSAGE", QVariant::fromValue(QStringLiteral("forced Harbour compliance")));
 #endif
-
-#ifdef NO_FEATURE_STORAGE_SETTINGS
-    view->rootContext()->setContextProperty("systemSettingsEnabled", QVariant::fromValue(false));
-#else
-    if (!engine->storageSettingsPath().isEmpty()) {
-        // we enable system (storage) settings only if the module is available
-        view->rootContext()->setContextProperty("systemSettingsEnabled", QVariant::fromValue(true));
-    } else {
-        view->rootContext()->setContextProperty("systemSettingsEnabled", QVariant::fromValue(false));
-        qDebug() << "system storage settings not available";
-    }
-#endif
-
-#ifdef NO_FEATURE_SHARING
-    view->rootContext()->setContextProperty("sharingEnabled", QVariant::fromValue(false));
-    view->rootContext()->setContextProperty("sharingMethod", QVariant::fromValue(QStringLiteral("disabled")));
-#else
-    {
-        QString method = QStringLiteral("disabled");
-
-        if (QFileInfo::exists(
-                    QStringLiteral("/usr/lib/") +
-                    QStringLiteral("qt5/qml/Sailfish/Share/qmldir"))) {
-            method = QStringLiteral("Share");
-        } else if (QFileInfo::exists(
-                       QStringLiteral("/usr/lib/") +
-                       QStringLiteral("qt5/qml/Sailfish/TransferEngine/qmldir"))) {
-            method = QStringLiteral("TransferEngine");
-        }
-
-        view->rootContext()->setContextProperty("sharingMethod", QVariant::fromValue(method));
-
-        if (method == QStringLiteral("disabled")) {
-            view->rootContext()->setContextProperty("sharingEnabled", QVariant::fromValue(false));
-            qDebug() << "no supported sharing system found";
-        } else {
-            view->rootContext()->setContextProperty("sharingEnabled", QVariant::fromValue(true));
-        }
-    }
-#endif
-
-    // END FEATURE CONFIGURATION
 
     view->setSource(SailfishApp::pathToMainQml());
     view->show();

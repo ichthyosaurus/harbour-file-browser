@@ -28,10 +28,10 @@
 
 #include "enumcontainer.h"
 
-CREATE_ENUM(FileOp, Mode, Delete, Copy, Move, Symlink, Compress)
-CREATE_ENUM(FileOp, ErrorType, None, FileExists, FileNotFound, Unknown)
-CREATE_ENUM(FileOp, ErrorAction, Ask, Abort, Overwrite, Skip, OverwriteAll, SkipAll)
-CREATE_ENUM(FileOp, Status, Enqueued = 0, Running, WaitingForFeedback, Paused, Cancelled, Finished)
+CREATE_ENUM(FileOpMode, Delete, Copy, Move, Symlink, Compress)
+CREATE_ENUM(FileOpErrorType, None, FileExists, FileNotFound, Unknown)
+CREATE_ENUM(FileOpErrorAction, Ask, Abort, Overwrite, Skip, OverwriteAll, SkipAll)
+CREATE_ENUM(FileOpStatus, Enqueued = 0, Running, WaitingForFeedback, Paused, Cancelled, Finished)
 DECLARE_ENUM_REGISTRATION_FUNCTION(FileOperations)
 
 class FileOperationsHandler;
@@ -39,19 +39,19 @@ class FileWorker2 : public QObject {
     Q_OBJECT
 
 public:
-    explicit FileWorker2(FileOpMode::Mode mode, QStringList files, QStringList targets);
+    explicit FileWorker2(FileOpMode::Enum mode, QStringList files, QStringList targets);
     ~FileWorker2();
 
 signals:
-    void statusChanged(FileOpStatus::Status status);
+    void statusChanged(FileOpStatus::Enum status);
     void progressChanged(int current, int of, QString file, int fileCurrent, int fileOf);
-    void errorOccurred(FileOpErrorType::ErrorType type, QString message, QString file = QLatin1String(""));
+    void errorOccurred(FileOpErrorType::Enum type, QString message, QString file = QLatin1String(""));
     void finished(bool success);
 
 public slots:
     void cancel();
     void pause();
-    void carryOn(FileOpErrorAction::ErrorAction feedback = FileOpErrorAction::Abort);
+    void carryOn(FileOpErrorAction::Enum feedback = FileOpErrorAction::Abort);
 
 private slots:
     void process();
@@ -62,7 +62,7 @@ private:
     QAtomicInt m_status {FileOpStatus::Enqueued};
     QAtomicInt m_errorAction {FileOpErrorAction::Ask};
 
-    FileOpMode::Mode m_mode;
+    FileOpMode::Enum m_mode;
     QStringList m_files;
     QStringList m_targets;
 
@@ -79,17 +79,17 @@ public:
     class Task {
     public:
         explicit Task(int handle, QSharedPointer<QThread> thread, QSharedPointer<FileWorker2> worker,
-                      FileOpMode::Mode mode, QStringList files, QStringList targets) :
+                      FileOpMode::Enum mode, QStringList files, QStringList targets) :
             m_handle(handle), m_thread(thread), m_worker(worker),
             m_mode(mode), m_files(files), m_targets(targets) {}
         Task() : m_handle(-1), m_thread(nullptr), m_worker(nullptr),
             m_mode(FileOpMode::Copy), m_files({}), m_targets({}) {}
 
         int handle() const { return m_handle; }
-        FileOpMode::Mode mode() const { return m_mode; }
+        FileOpMode::Enum mode() const { return m_mode; }
         const QStringList& files() const { return m_files; }
         const QStringList& targets() const { return m_targets; }
-        FileOpStatus::Status status() const { return static_cast<FileOpStatus::Status>(m_worker->m_status.loadAcquire()); }
+        FileOpStatus::Enum status() const { return static_cast<FileOpStatus::Enum>(m_worker->m_status.loadAcquire()); }
 
         FileWorker2* get() { return m_worker.data(); }
         void run() {
@@ -103,7 +103,7 @@ public:
         QString progressFilename {};
         int progressFileCurrent {0};
         int progressFileOf {0};
-        FileOpErrorType::ErrorType errorType {FileOpErrorType::None};
+        FileOpErrorType::Enum errorType {FileOpErrorType::None};
         QString errorMessage {};
         QString errorFile {};
 
@@ -112,14 +112,14 @@ public:
         QSharedPointer<QThread> m_thread;
         QSharedPointer<FileWorker2> m_worker;
 
-        FileOpMode::Mode m_mode;
+        FileOpMode::Enum m_mode;
         QStringList m_files;
         QStringList m_targets;
 
         friend FileOperationsHandler;
     };
 
-    Task& makeTask(FileOpMode::Mode mode, QStringList files, QStringList targets, bool autoDelete);
+    Task& makeTask(FileOpMode::Enum mode, QStringList files, QStringList targets, bool autoDelete);
     void forgetTask(int handle);
     const QList<int>& getTasks() const;
 
@@ -156,14 +156,14 @@ public:
 
     Q_INVOKABLE void cancelTask(int handle);
     Q_INVOKABLE void pauseTask(int handle);
-    Q_INVOKABLE void continueTask(int handle, FileOpErrorAction::ErrorAction errorAction = FileOpErrorAction::Ask);
+    Q_INVOKABLE void continueTask(int handle, FileOpErrorAction::Enum errorAction = FileOpErrorAction::Ask);
     Q_INVOKABLE void dismissTask(int handle); // to remove finished tasks from the list
 
 signals:
     void countChanged();
 
 private:
-    int addTask(FileOpMode::Mode mode, QStringList files, QStringList targets);
+    int addTask(FileOpMode::Enum mode, QStringList files, QStringList targets);
 
     FileOperationsHandler* m_handler;
 };

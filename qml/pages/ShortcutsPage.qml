@@ -285,10 +285,10 @@ Page {
                 onClicked: pulley._refresh = true
             }
             MenuItem {
-                visible: !runningAsRoot && systemSettingsEnabled
+                visible: !GlobalSettings.runningAsRoot && GlobalSettings.systemSettingsEnabled
                 text: qsTr("Open storage settings");
                 onClicked: {
-                    pageStack.push(Qt.resolvedUrl(engine.storageSettingsPath()));
+                    pageStack.push(Qt.resolvedUrl(GlobalSettings.storageSettingsPath));
                 }
             }
         }

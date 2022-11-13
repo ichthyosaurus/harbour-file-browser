@@ -40,14 +40,11 @@ ApplicationWindow {
     // [as of 2021-02-17, SFOS 3.4.0.24, sailfishsilica-qt5 version 1.1.110.3-1.33.3.jolla]
     _defaultPageOrientations: Orientation.All
 
-    readonly property bool runningAsRoot: engine.runningAsRoot()
-    property bool authenticatedForRoot: false
-
     // Navigation history: see navigation.js for details
     property var backStack: ([])
     property var forwardStack: ([])
-    property var currentPage: ({type: "dir", path: initialDirectory})
-    property var activePage: ({type: "dir", path: initialDirectory})
+    property var currentPage: ({type: "dir", path: GlobalSettings.initialDirectory})
+    property var activePage: ({type: "dir", path: GlobalSettings.initialDirectory})
     onCurrentPageChanged: GlobalSettings.generalLastDirectoryPath = currentPage.path
 
     // Proxy functions for heavy libraries
@@ -63,7 +60,7 @@ ApplicationWindow {
     property string coverText: "File Browser"
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
 
-    initialPage: runningAsRoot ? initialPage_RootMode : initialPage_UserMode
+    initialPage: GlobalSettings.runningAsRoot ? initialPage_RootMode : initialPage_UserMode
 
     Component {
         id: initialPage_RootMode
@@ -75,15 +72,15 @@ ApplicationWindow {
             Loader {
                 id: rootLockLoader
                 anchors.fill: parent
-                source: runningAsRoot ? Qt.resolvedUrl('pages/RootModeLockPage.qml') : ''
+                source: GlobalSettings.runningAsRoot ? Qt.resolvedUrl('pages/RootModeLockPage.qml') : ''
             }
 
             Connections {
-                target: runningAsRoot ? rootLockLoader.item : null
+                target: GlobalSettings.runningAsRoot ? rootLockLoader.item : null
                 onAuthenticated: {
                     console.warn("[startup] root mode authenticated")
                     _initialPageReady = true  // to continue with startup
-                    authenticatedForRoot = true
+                    GlobalSettings.authenticatedForRoot = true
                 }
             }
         }
@@ -94,7 +91,7 @@ ApplicationWindow {
 
         Page {
             // We start with an empty placeholder page that will be replaced
-            // by the actual array of pages for the directory in \c initialDirectory.
+            // by the actual array of pages for the directory in \c GlobalSettings.initialDirectory.
             // (\c Navigation.goToFolder() will replace the whole page stack if
             // the first page is not DirectoryPage { dir: '/' }.)
             // Starting with a DirectoryPage will make the page stack go crazy in horizontal
@@ -145,7 +142,7 @@ ApplicationWindow {
 
     function _doStartup() {
         console.log("[startup] pushing initial stack")
-        Navigation.goToFolder(initialDirectory, true); // silent
+        Navigation.goToFolder(GlobalSettings.initialDirectory, true); // silent
         _startupDone = true
     }
 
@@ -189,11 +186,12 @@ ApplicationWindow {
     Component.onCompleted: {
         console.log("running File Browser: version %1 (%2)".arg(
                         APP_VERSION+"-"+APP_RELEASE).arg(RELEASE_TYPE))
-        console.log("details: " + buildMessage)
+        console.log("info: " + BUILD_MESSAGE)
         console.log("enabled features: sharing = %1 (%2), PDF viewer = %3, storage settings = %4".arg(
-            sharingEnabled).arg(sharingMethod).arg(pdfViewerEnabled).arg(systemSettingsEnabled))
+            GlobalSettings.sharingEnabled).arg(GlobalSettings.sharingMethod).arg(
+            GlobalSettings.pdfViewerEnabled).arg(GlobalSettings.systemSettingsEnabled))
 
-        if (runningAsRoot) {
+        if (GlobalSettings.runningAsRoot) {
             console.log("warning: running as root")
         }
     }

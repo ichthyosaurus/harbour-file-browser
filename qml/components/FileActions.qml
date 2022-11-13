@@ -22,6 +22,7 @@ import QtQuick 2.2
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileData 1.0
 import harbour.file.browser.FileClipboard 1.0
+import harbour.file.browser.Settings 1.0
 
 Item {
     id: base
@@ -195,11 +196,11 @@ Item {
         IconButton {
             property QtObject _shareAction: null
 
-            visible: showShare && sharingEnabled
+            visible: showShare && GlobalSettings.sharingEnabled
             enabled: {
-                if (sharingMethod == String('Share')) {
+                if (GlobalSettings.sharingMethod == SharingMethod.Share) {
                     return selectedCount > 0
-                } else if (sharingMethod == String('TransferEngine')) {
+                } else if (GlobalSettings.sharingMethod === SharingMethod.TransferEngine) {
                     // TransferEngine's SharePage can breaks if the view is rotated
                     return selectedCount === 1 && main.orientation === Orientation.Portrait
                 } else {
@@ -215,7 +216,7 @@ Item {
             onClicked: {
                 var files = selectedFiles()
 
-                if (sharingMethod == String('Share')) {
+                if (GlobalSettings.sharingMethod == SharingMethod.Share) {
                     if (!_shareAction) {
                         try {
                             _shareAction = Qt.createQmlObject("
@@ -238,7 +239,7 @@ Item {
                         console.warn("'ShareAction' item not available even though sharing method is 'Share'")
                         enabled = false  // forcibly disable sharing
                     }
-                } else if (sharingMethod == String('TransferEngine')) {
+                } else if (GlobalSettings.sharingMethod == SharingMethod.TransferEngine) {
                     fileData.file = files[0]  // TransferEngine can only handle one file at a time
                     pageStack.animatorPush("Sailfish.TransferEngine.SharePage", {
                         source: Qt.resolvedUrl(files[0]),
