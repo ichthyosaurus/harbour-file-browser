@@ -52,13 +52,9 @@ enum {
     IsDoomedRole = Qt::UserRole + 12,
 };
 
-FileModel::FileModel(QObject *parent) :
-    QAbstractListModel(parent),
-    m_selectedFileCount(0),
-    m_active(false)
+FileModel::FileModel(QObject *parent) : QAbstractListModel(parent)
 {
     m_worker = new FileModelWorker;
-    m_dir = "";
     updateLastRefreshedTimestamp();
 
     m_watcher = new QFileSystemWatcher(this);

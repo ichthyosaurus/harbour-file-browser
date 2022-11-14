@@ -136,21 +136,26 @@ private:
     void setBusy(bool busy, bool partlyBusy);
     void setBusy(bool busy);
 
-    QString m_dir;
-    QString m_filterString = {""};
-    QString m_oldFilterString = {""};
+    // accessible as properties
+    QString m_dir {};
+    QString m_errorMessage {};
+    bool m_active {false};
+    int m_selectedFileCount {0};
+    QString m_filterString {};
+    bool m_busy {false};
+    bool m_partlyBusy {false};
+
+    // internal state
     QList<StatFileInfo> m_files;
-    int m_selectedFileCount;
-    QString m_errorMessage;
+    QString m_oldFilterString {};
     qint64 m_lastRefreshedTimestamp {-1};
-    bool m_active;
-    QFileSystemWatcher *m_watcher;
-    RawSettingsHandler* m_settings;
+
+    QFileSystemWatcher* m_watcher;
     FileModelWorker* m_worker;
+    RawSettingsHandler* m_settings;
+
     FileModelWorker::Mode m_scheduledRefresh = {FileModelWorker::Mode::NoneMode};
     bool m_initialFullRefreshDone {false};
-    bool m_busy = {false};
-    bool m_partlyBusy = {false};
 };
 
 #endif // FILEMODEL_H
