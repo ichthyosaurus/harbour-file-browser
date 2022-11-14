@@ -131,30 +131,25 @@ private:
 
 inline bool operator==(const StatFileInfo& f1, const StatFileInfo& f2)
 {
+    // Don't compare other properties like size or modification time,
+    // as they are are not really indicators for the represented
+    // file's identity. If they differ, then it is time to call "refresh()".
     return (f1.fileName() == f2.fileName() &&
-            f1.size() == f2.size() &&
-            f1.permissions() == f2.permissions() &&
-            f1.lastModifiedStat() == f2.lastModifiedStat() &&
             f1.isSymLink() == f2.isSymLink() &&
             f1.isDirAtEnd() == f2.isDirAtEnd());
 }
 
+// #include <QDebug>
 inline uint qHash(const StatFileInfo& key, uint seed=10)
 {
     QByteArray result;
-    result.reserve(45);
-    result.append(QByteArray::number(qHash(key.fileName(), seed)));
-    result.append('#');
-    result.append(QByteArray::number(key.size()));
-    result.append('#');
-    result.append(QByteArray::number(qHash(key.permissions(), seed)));
-    result.append('#');
-    result.append(QByteArray::number(key.lastModifiedStat()));
+    result.reserve(15);
+    result.append(QByteArray::number(qHash(key.getQFileInfo().filePath(), seed)));
     result.append('#');
     result.append(key.isSymLink());
     result.append('#');
     result.append(key.isDirAtEnd());
-    // qDebug() << "hashed" << f.fileName() << "to" << result << "(" << result.size() << ")";
+    // qDebug() << (result.size() > 15) << "hashed" << key.getQFileInfo().filePath() << "to" << result << "(" << result.size() << ")";
     return qHash(result, seed);
 }
 
