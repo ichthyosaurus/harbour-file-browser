@@ -52,17 +52,24 @@ enum {
     IsDoomedRole = Qt::UserRole + 12,
 };
 
-FileModel::FileModel(QObject *parent) : QAbstractListModel(parent)
+FileModel::FileModel(QObject *parent) :
+    QAbstractListModel(parent),
+    m_settings(RawSettingsHandler::instance()),
+    m_watcher(new QFileSystemWatcher(this)),
+    m_pollingTimer(new QTimer(this))
 {
-    m_worker = new FileModelWorker;
+    m_worker = new FileModelWorker; // manually deleted in the destructor
     updateLastRefreshedTimestamp();
 
-    m_watcher = new QFileSystemWatcher(this);
     connect(m_watcher, &QFileSystemWatcher::directoryChanged, this, &FileModel::refresh);
     connect(m_watcher, &QFileSystemWatcher::fileChanged, this, &FileModel::refresh);
 
+    m_pollingTimer->setInterval(c_pollingIntervalSecs * 1000);
+    m_pollingTimer->setTimerType(Qt::VeryCoarseTimer);
+    switchToWatching(); // don't run the timer just yet
+    connect(m_pollingTimer, &QTimer::timeout, this, &FileModel::refresh);
+
     // refresh model every time view settings are changed
-    m_settings = RawSettingsHandler::instance();
     connect(m_settings, &RawSettingsHandler::viewSettingsChanged, this, &FileModel::refreshFull);
     connect(this, &FileModel::filterStringChanged, this, &FileModel::applyFilterString);
 
@@ -217,6 +224,12 @@ void FileModel::setActive(bool active)
 
     m_active = active;
     emit activeChanged();
+
+    if (active && m_currentWatcherMode == WatcherMode::Polling) {
+        m_pollingTimer->start();
+    } else {
+        m_pollingTimer->stop();
+    }
 
     if (active) {
         switch (m_scheduledRefresh) {
@@ -437,6 +450,23 @@ void FileModel::refreshFull(QString localPath)
     doUpdateAllEntries();
 }
 
+void FileModel::refreshChangedItem(const QString& path)
+{
+    if (QFileInfo::exists(path) && m_filesIndex.contains(path)) {
+        int entryIndex = m_filesIndex.value(path);
+
+        if (entryIndex < 0 || entryIndex >= m_files.length()) {
+            return;
+        }
+
+        qDebug() << "refreshing changed file:" << path;
+
+        auto i = index(entryIndex, 0);
+        m_files[entryIndex].refresh();
+        emit dataChanged(i, i, {PermissionsRole, SizeRole, LastModifiedRole});
+    }
+}
+
 void FileModel::applyFilterString()
 {
     if (m_oldFilterString != m_filterString &&
@@ -456,6 +486,32 @@ void FileModel::workerDone(FileModelWorker::Mode mode, QList<StatFileInfo> files
         m_files = files;
         endResetModel();
         emit fileCountChanged();
+
+        int filesCount = m_files.count();
+        m_filesIndex.clear();
+        m_filesIndex.reserve(filesCount);
+
+        if (filesCount < c_switchToPollingThreshold) {
+            switchToWatching();
+        } else {
+            switchToPolling();
+        }
+
+        for (int i = 0; i < filesCount; ++i) {
+            const auto& path = m_files.at(i).absoluteFilePath();
+            m_filesIndex.insert(path, i);
+
+            if (m_currentWatcherMode == WatcherMode::Watching) {
+                // Watching non-existant files (e.g. broken symlinks) always fails,
+                // so we don't add them in the first place. We switch to polling
+                // only if watching a proper file fails (e.g. lacking permissions).
+                if (QFileInfo::exists(path)) {
+                    if (!m_contentsWatcher->addPath(path)) {
+                        switchToPolling();
+                    }
+                }
+            }
+        }
 
         m_initialFullRefreshDone = true;
     }
@@ -483,6 +539,10 @@ void FileModel::workerAddedEntry(int index, StatFileInfo file)
 
     emit fileCountChanged();
     updateFileCounts();
+
+    const auto& path = file.absoluteFilePath();
+    m_filesIndex.insert(path, index);
+    updateWatchedPath(path);
 }
 
 void FileModel::workerRemovedEntry(int index, StatFileInfo file)
@@ -507,6 +567,10 @@ void FileModel::workerRemovedEntry(int index, StatFileInfo file)
             qDebug() << "warning: worker removed entry with shifted index";
         }
     }
+
+    const auto& path = m_files.at(index).absoluteFilePath();
+    m_filesIndex.remove(path);
+    updateWatchedPath(path);
 
     beginRemoveRows(QModelIndex(), index, index);
     m_files.removeAt(index);
@@ -572,12 +636,57 @@ void FileModel::updateLastRefreshedTimestamp()
     m_lastRefreshedTimestamp = ts.tv_sec;
 }
 
+void FileModel::updateWatchedPath(const QString &path)
+{
+    if (m_currentWatcherMode == WatcherMode::Polling) {
+        return;
+    }
+
+    if (QFileInfo::exists(path)) {
+        m_contentsWatcher->addPath(path);
+    } else {
+        m_contentsWatcher->removePath(path);
+    }
+}
+
 void FileModel::clearModel()
 {
     beginResetModel();
     m_files.clear();
     endResetModel();
     emit fileCountChanged();
+
+    m_filesIndex.clear();
+    switchToWatching();
+}
+
+void FileModel::resetContentsWatcher()
+{
+    if (m_contentsWatcher != nullptr) {
+        delete m_contentsWatcher;
+    }
+
+    m_contentsWatcher = new QFileSystemWatcher(this);
+    connect(m_contentsWatcher, &QFileSystemWatcher::directoryChanged, this, &FileModel::refreshChangedItem);
+    connect(m_contentsWatcher, &QFileSystemWatcher::fileChanged, this, &FileModel::refreshChangedItem);
+}
+
+void FileModel::switchToWatching()
+{
+    qDebug() << "switching to watching for file system updates in" << m_dir;
+    m_pollingTimer->stop();
+    resetContentsWatcher();
+    m_currentWatcherMode = WatcherMode::Watching;
+}
+
+void FileModel::switchToPolling()
+{
+    qDebug() << "switching to polling every" << c_pollingIntervalSecs <<
+                "seconds for file system updates in" << m_dir <<
+                "| entries:" << m_files.length();
+    resetContentsWatcher();
+    m_currentWatcherMode = WatcherMode::Polling;
+    m_pollingTimer->start();
 }
 
 void FileModel::setBusy(bool busy, bool partlyBusy)

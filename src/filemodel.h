@@ -26,6 +26,7 @@
 #include <QAbstractListModel>
 #include <QDir>
 #include <QFileSystemWatcher>
+#include <QTimer>
 #include "statfileinfo.h"
 #include "filemodelworker.h"
 
@@ -94,6 +95,8 @@ public slots:
     // reads the directory and sets all model items
     Q_INVOKABLE void refreshFull(QString localPath = QStringLiteral(""));
 
+    void refreshChangedItem(const QString &path);
+
 signals:
     void dirChanged();
     void fileCountChanged();
@@ -136,6 +139,11 @@ private:
     void setBusy(bool busy, bool partlyBusy);
     void setBusy(bool busy);
 
+    void updateWatchedPath(const QString& path);
+    void resetContentsWatcher();
+    void switchToWatching();
+    void switchToPolling();
+
     // accessible as properties
     QString m_dir {};
     QString m_errorMessage {};
@@ -146,16 +154,40 @@ private:
     bool m_partlyBusy {false};
 
     // internal state
-    QList<StatFileInfo> m_files;
+    QList<StatFileInfo> m_files {};
+    QHash<QString, int> m_filesIndex {};
     QString m_oldFilterString {};
     qint64 m_lastRefreshedTimestamp {-1};
 
-    QFileSystemWatcher* m_watcher;
-    FileModelWorker* m_worker;
-    RawSettingsHandler* m_settings;
+    FileModelWorker* m_worker {nullptr};
+    RawSettingsHandler* m_settings {nullptr};
 
     FileModelWorker::Mode m_scheduledRefresh = {FileModelWorker::Mode::NoneMode};
     bool m_initialFullRefreshDone {false};
+
+    // Refreshing the model on file system changes:
+    //
+    // The current directory (m_dir) is monitered by the main file system
+    // watcher (m_watcher) using inotify. It will trigger a partial refresh
+    // when the directory changes, i.e. when files are added or removed.
+    // However, it does not detect changes to individual files inside the directory.
+    //
+    // We use a second watcher to refresh the file list when an entry changes.
+    // If this fails due to hardware restrictions or lacking permissions,
+    // we fall back to dumb polling, i.e. we refresh the file list every few
+    // seconds (c_pollingIntervalSecs).
+    QFileSystemWatcher* m_watcher {nullptr};
+    QFileSystemWatcher* m_contentsWatcher {nullptr};
+    enum WatcherMode { Watching, Polling };
+    WatcherMode m_currentWatcherMode {WatcherMode::Watching};
+    QTimer* m_pollingTimer {nullptr};
+
+    // TODO: find the interval that strikes the best balance between
+    //       energy efficiency and perceived performance, i.e.
+    //       don't burn the battery but still make it feel like
+    //       changes are properly reflected
+    const int c_pollingIntervalSecs {5}; // seconds
+    const int c_switchToPollingThreshold {1000};
 };
 
 #endif // FILEMODEL_H
