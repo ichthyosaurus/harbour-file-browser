@@ -9,6 +9,7 @@
 #define ENUMCONTAINER_H
 
 #include <QtQml>
+#include <QObject>
 
 // Use the following macros to expose an enumeration to QML.
 //
@@ -47,6 +48,9 @@
             static const char* qmlName = #NAME; \
             qmlRegisterUncreatableType<NAME>(url, major, minor, qmlName, "This is only a container for an enumeration."); \
         } \
+    \
+    private: \
+        explicit NAME(); \
     };
 
 #define DECLARE_ENUM_REGISTRATION_FUNCTION(NAMESPACE) \
