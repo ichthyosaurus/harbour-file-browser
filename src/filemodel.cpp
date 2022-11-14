@@ -485,10 +485,10 @@ void FileModel::workerRemovedEntry(int index, StatFileInfo file)
             }
         }
         if (!found) {
-            qDebug() << "[FileModel] error: worker removed entry with invalid index";
+            qDebug() << "error: worker removed entry with invalid index";
             return;
         } else {
-            qDebug() << "[FileModel] warning: worker removed entry with shifted index";
+            qDebug() << "warning: worker removed entry with shifted index";
         }
     }
 

@@ -84,8 +84,8 @@ void FileModelWorker::run()
 
 void FileModelWorker::logMessage(QString message, bool markSilent)
 {
-    qDebug() << "[FileModelWorker]" << message << (markSilent ? "[silent]" : "");
-    qDebug() << "[FileModelWorker] state:" << m_dir << m_mode << FILEMODEL_SIGNAL_THRESHOLD;
+    qDebug() << message << (markSilent ? "[silent]" : "") << "| in:" << m_dir
+             << "mode:" << m_mode << FILEMODEL_SIGNAL_THRESHOLD;
 }
 
 void FileModelWorker::logError(QString message)
