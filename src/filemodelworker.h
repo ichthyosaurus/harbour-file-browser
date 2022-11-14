@@ -51,7 +51,8 @@ public:
     // call to start the thread
     void startReadFull(QString dir, QString nameFilter);
     void startReadChanged(QList<StatFileInfo> oldEntries,
-                          QString dir, QString nameFilter);
+                          QString dir, QString nameFilter,
+                          qint64 lastRefreshed);
 
 signals:
     // one of these is emitted when thread ends
@@ -61,6 +62,7 @@ signals:
 
     void entryAdded(int index, StatFileInfo file);
     void entryRemoved(int index, StatFileInfo file);
+    void entryChanged(int index, StatFileInfo file);
 
 protected:
     void run() override;
@@ -71,7 +73,8 @@ private slots:
 
 private:
     void doStartThread(Mode mode, QList<StatFileInfo> oldEntries,
-                       QString dir, QString nameFilter);
+                       QString dir, QString nameFilter,
+                       qint64 lastRefreshed = -1);
     void doReadFull();
     void doReadDiff();
 
@@ -100,6 +103,7 @@ private:
     QList<StatFileInfo> m_oldEntries;
     QString m_dir = {""};
     QString m_nameFilter = {""};
+    qint64 m_lastRefreshed {-1};
     QAtomicInt m_cancelled = {KeepRunning}; // atomic so no locks needed
 };
 

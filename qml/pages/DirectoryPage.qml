@@ -101,6 +101,24 @@ Page {
                 page.status === PageStatus.Activating
     }
 
+    Timer {
+        // Automatically refresh the directory listing every few seconds.
+        // This will pick up changed, added, and removed files.
+        //
+        // TODO: find the interval that strikes the best balance between
+        //       energy efficiency and perceived performance, i.e.
+        //       don't burn the battery but still make it feel like
+        //       changes are properly reflected
+        //
+        // TODO: maybe move this into the file model implementation.
+        //       We cannot let the watcher watch all files in the directory
+        //       because of resource limitations (memory, file descriptors, ...).
+        interval: 5000
+        repeat: true
+        running: fileModel.active
+        onTriggered: fileModel.refresh()
+    }
+
     RemorsePopup {
         id: remorsePopup
         onCanceled: remorsePopupActive = false

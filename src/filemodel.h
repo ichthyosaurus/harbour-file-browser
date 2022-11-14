@@ -92,7 +92,7 @@ public slots:
     // reads the directory and inserts/removes model items as needed
     Q_INVOKABLE void refresh();
     // reads the directory and sets all model items
-    Q_INVOKABLE void refreshFull(QString localPath = QString());
+    Q_INVOKABLE void refreshFull(QString localPath = QStringLiteral(""));
 
 signals:
     void dirChanged();
@@ -110,6 +110,7 @@ private slots:
     void workerErrorOccurred(QString message);
     void workerAddedEntry(int index, StatFileInfo file);
     void workerRemovedEntry(int index, StatFileInfo file);
+    void workerChangedEntry(int entryIndex, StatFileInfo file);
 
 private:
     /**
@@ -130,6 +131,7 @@ private:
     void doMarkAsDoomed(QList<StatFileInfo>& files, std::function<bool(StatFileInfo&)> checker);
 
     void updateFileCounts();
+    void updateLastRefreshedTimestamp();
     void clearModel();
     void setBusy(bool busy, bool partlyBusy);
     void setBusy(bool busy);
@@ -140,11 +142,13 @@ private:
     QList<StatFileInfo> m_files;
     int m_selectedFileCount;
     QString m_errorMessage;
+    qint64 m_lastRefreshedTimestamp {-1};
     bool m_active;
     QFileSystemWatcher *m_watcher;
     RawSettingsHandler* m_settings;
     FileModelWorker* m_worker;
     FileModelWorker::Mode m_scheduledRefresh = {FileModelWorker::Mode::NoneMode};
+    bool m_initialFullRefreshDone {false};
     bool m_busy = {false};
     bool m_partlyBusy = {false};
 };

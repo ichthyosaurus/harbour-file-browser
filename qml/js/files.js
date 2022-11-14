@@ -24,12 +24,15 @@
 .import harbour.file.browser.FileClipboard 1.0 as Clip
 
 function _getPanelText() {
-    if (Clip.FileClipboard.mode === Clip.FileClipMode.Copy) {
+    if (Clip.FileClipboard.mode == Clip.FileClipMode.Copy) {
         return qsTr("Copying")
-    } else if (Clip.FileClipboard.mode === Clip.FileClipMode.Cut) {
+    } else if (Clip.FileClipboard.mode == Clip.FileClipMode.Cut) {
         return qsTr("Moving")
-    } else if (Clip.FileClipboard.mode === Clip.FileClipMode.Link) {
+    } else if (Clip.FileClipboard.mode == Clip.FileClipMode.Link) {
         return qsTr("Linking")
+    } else {
+        console.log("error: unknown file clip mode:", Clip.FileClipboard.mode)
+        return qsTr("Unknown")
     }
 }
 

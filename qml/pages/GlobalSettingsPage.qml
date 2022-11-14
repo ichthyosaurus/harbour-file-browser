@@ -52,8 +52,8 @@ Page {
 
                 onOpenChanged: {
                     if (open) {
-                        sortingGroup.open = false
-                        behaviourGroup.open = false
+                        if (!!sortingGroup) sortingGroup.open = false
+                        if (!!behaviourGroup) behaviourGroup.open = false
                     }
                 }
 

@@ -55,10 +55,11 @@ void FileModelWorker::startReadFull(QString dir, QString nameFilter)
 }
 
 void FileModelWorker::startReadChanged(QList<StatFileInfo> oldEntries,
-                                       QString dir, QString nameFilter)
+                                       QString dir, QString nameFilter,
+                                       qint64 lastRefreshed)
 {
     logMessage("note: requested partial directory listing");
-    doStartThread(DiffMode, oldEntries, dir, nameFilter);
+    doStartThread(DiffMode, oldEntries, dir, nameFilter, lastRefreshed);
 }
 
 void FileModelWorker::run()
@@ -94,7 +95,8 @@ void FileModelWorker::logError(QString message)
 }
 
 void FileModelWorker::doStartThread(FileModelWorker::Mode mode, QList<StatFileInfo> oldEntries,
-                                    QString dir, QString nameFilter)
+                                    QString dir, QString nameFilter,
+                                    qint64 lastRefreshed)
 {
     if (isRunning()) {
         emit alreadyRunning(); // we hope everything works out
@@ -106,6 +108,7 @@ void FileModelWorker::doStartThread(FileModelWorker::Mode mode, QList<StatFileIn
     m_oldEntries = oldEntries;
     m_dir = dir;
     m_nameFilter = nameFilter;
+    m_lastRefreshed = lastRefreshed;
     m_cancelled.storeRelease(KeepRunning);
     initSettings();
     start();
@@ -200,6 +203,19 @@ void FileModelWorker::doReadDiff()
             emit entryAdded(i, data);
             signalledChanges++;
             m_finalEntries.insert(i, data);
+
+            if (cancelIfCancelled()) return;
+        } else if (m_lastRefreshed > 0 &&
+                   data.lastModifiedStat() > m_lastRefreshed) {
+            if (thresholdAbort(signalledChanges, newEntries)) return;
+
+            logMessage(QStringLiteral("entry changed: ") + data.fileName() + QStringLiteral(" timestamp: ") +
+                       QString::number(data.lastModifiedStat()) + QStringLiteral(" -> ") +
+                       QString::number(m_lastRefreshed));
+
+            emit entryChanged(i, data);
+            signalledChanges++;
+
             if (cancelIfCancelled()) return;
         }
     }

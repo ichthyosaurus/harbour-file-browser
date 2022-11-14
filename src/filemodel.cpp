@@ -21,6 +21,8 @@
  */
 
 #include <unistd.h>
+#include <time.h>
+
 #include <QDateTime>
 #include <QMimeType>
 #include <QMimeDatabase>
@@ -57,6 +59,7 @@ FileModel::FileModel(QObject *parent) :
 {
     m_worker = new FileModelWorker;
     m_dir = "";
+    updateLastRefreshedTimestamp();
 
     m_watcher = new QFileSystemWatcher(this);
     connect(m_watcher, &QFileSystemWatcher::directoryChanged, this, &FileModel::refresh);
@@ -72,6 +75,7 @@ FileModel::FileModel(QObject *parent) :
     connect(m_worker, &FileModelWorker::error, this, &FileModel::workerErrorOccurred);
     connect(m_worker, &FileModelWorker::entryAdded, this, &FileModel::workerAddedEntry);
     connect(m_worker, &FileModelWorker::entryRemoved, this, &FileModel::workerRemovedEntry);
+    connect(m_worker, &FileModelWorker::entryChanged, this, &FileModel::workerChangedEntry);
 }
 
 FileModel::~FileModel()
@@ -182,15 +186,20 @@ QString FileModel::errorMessage() const
 
 void FileModel::setDir(QString dir)
 {
-    if (m_dir == dir)
+    if (m_dir == dir) {
         return;
+    }
 
     // update watcher to watch the new directory
-    if (!m_dir.isEmpty())
+    if (!m_dir.isEmpty()) {
         m_watcher->removePath(m_dir);
-    if (!dir.isEmpty())
-        m_watcher->addPath(dir);
+    }
 
+    if (!dir.isEmpty()) {
+        m_watcher->addPath(dir);
+    }
+
+    m_initialFullRefreshDone = false;
     m_dir = dir;
 
     if (m_worker->isRunning()) m_worker->cancel();
@@ -213,18 +222,24 @@ void FileModel::setActive(bool active)
     m_active = active;
     emit activeChanged();
 
-    switch (m_scheduledRefresh) {
-    case FileModelWorker::Mode::NoneMode:
-        break; // nothing to refresh
-    case FileModelWorker::Mode::DiffMode:
-        doUpdateChangedEntries();
-        break;
-    case FileModelWorker::Mode::FullMode:
-        doUpdateAllEntries();
-        break;
-    }
+    if (active) {
+        switch (m_scheduledRefresh) {
+        case FileModelWorker::Mode::NoneMode:
+            // Always do a refresh after the model has been reactivated,
+            // even if no refresh was requested by the file system watcher.
+            // We do this to find changed files, as the watcher only picks
+            // up if files were added/removed in the watched directory.
+            [[fallthrough]];
+        case FileModelWorker::Mode::DiffMode:
+            doUpdateChangedEntries();
+            break;
+        case FileModelWorker::Mode::FullMode:
+            doUpdateAllEntries();
+            break;
+        }
 
-    m_scheduledRefresh = FileModelWorker::Mode::NoneMode;
+        m_scheduledRefresh = FileModelWorker::Mode::NoneMode;
+    }
 }
 
 void FileModel::setFilterString(QString newFilter)
@@ -445,6 +460,8 @@ void FileModel::workerDone(FileModelWorker::Mode mode, QList<StatFileInfo> files
         m_files = files;
         endResetModel();
         emit fileCountChanged();
+
+        m_initialFullRefreshDone = true;
     }
 
     updateFileCounts();
@@ -474,6 +491,8 @@ void FileModel::workerAddedEntry(int index, StatFileInfo file)
 
 void FileModel::workerRemovedEntry(int index, StatFileInfo file)
 {
+    if (index < 0 || index >= m_files.length()) return; // fail silently
+
     if (m_files.at(index).absoluteFilePath() != file.absoluteFilePath()) {
         // this case should not be possible
         auto path = file.absoluteFilePath();
@@ -501,6 +520,26 @@ void FileModel::workerRemovedEntry(int index, StatFileInfo file)
     updateFileCounts();
 }
 
+void FileModel::workerChangedEntry(int entryIndex, StatFileInfo file)
+{
+    if (entryIndex < 0 || entryIndex >= m_files.length()) {
+        return; // fail silently
+    }
+
+    auto i = index(entryIndex, 0);
+
+    if (!i.isValid() || m_files.at(entryIndex).absoluteFilePath() != file.absoluteFilePath()) {
+        // this case should not be possible but if it happens, we can safely ignore it
+        qDebug() << "warning: worker reported changed entry at invalid index:" <<
+                    entryIndex << m_files.at(entryIndex).absoluteFilePath() <<
+                    "vs." << file.absoluteFilePath();
+        return;
+    } else {
+        m_files[entryIndex].refresh();
+        emit dataChanged(i, i, {PermissionsRole, SizeRole, LastModifiedRole});
+    }
+}
+
 void FileModel::doUpdateAllEntries()
 {
     setBusy(true);
@@ -509,8 +548,11 @@ void FileModel::doUpdateAllEntries()
 
 void FileModel::doUpdateChangedEntries()
 {
+    if (!m_initialFullRefreshDone) return;
+
     setBusy(false, true);
-    m_worker->startReadChanged(m_files, m_dir, m_filterString);
+    m_worker->startReadChanged(m_files, m_dir, m_filterString, m_lastRefreshedTimestamp);
+    updateLastRefreshedTimestamp();
 }
 
 void FileModel::updateFileCounts()
@@ -525,6 +567,13 @@ void FileModel::updateFileCounts()
         m_selectedFileCount = selectedCount;
         emit selectedFileCountChanged();
     }
+}
+
+void FileModel::updateLastRefreshedTimestamp()
+{
+    struct timespec ts;
+    clock_gettime(CLOCK_REALTIME_COARSE, &ts);
+    m_lastRefreshedTimestamp = ts.tv_sec;
 }
 
 void FileModel::clearModel()
