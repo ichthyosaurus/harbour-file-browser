@@ -206,8 +206,9 @@ QString FileModel::appendPath(QString dirName)
 
 void FileModel::setActive(bool active)
 {
-    if (m_active == active)
+    if (m_active == active) {
         return;
+    }
 
     m_active = active;
     emit activeChanged();

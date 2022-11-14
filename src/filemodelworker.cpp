@@ -173,11 +173,14 @@ void FileModelWorker::doReadDiff()
     // current one will become invalid.
     for (int i = m_oldEntries.count()-1; i >= 0; --i) {
         const StatFileInfo& data = m_oldEntries.at(i);
+
         if (!newLookup.contains(oldHashes.at(i))) {
             if (thresholdAbort(signalledChanges, newEntries)) return;
+
             emit entryRemoved(i, data);
             signalledChanges++;
             m_finalEntries.removeAt(i);
+
             if (cancelIfCancelled()) return;
         }
     }
@@ -190,8 +193,10 @@ void FileModelWorker::doReadDiff()
     // invalid until we checked them.
     for (int i = 0; i < newEntries.count(); ++i) {
         const StatFileInfo& data = newEntries.at(i);
+
         if (!oldLookup.contains(newHashes.at(i))) {
             if (thresholdAbort(signalledChanges, newEntries)) return;
+
             emit entryAdded(i, data);
             signalledChanges++;
             m_finalEntries.insert(i, data);
@@ -200,6 +205,7 @@ void FileModelWorker::doReadDiff()
     }
 
     if (cancelIfCancelled()) return;
+
     emit done(m_mode, m_finalEntries);
 }
 
