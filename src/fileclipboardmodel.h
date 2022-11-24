@@ -56,7 +56,7 @@ public:
     // methods callable from QML
     Q_INVOKABLE void forgetPath(int groupIndex, QString path);
     Q_INVOKABLE void forgetGroup(int groupIndex);
-    Q_INVOKABLE void selectGroup(int groupIndex);
+    Q_INVOKABLE void selectGroup(int groupIndex, FileClipMode::Enum mode);
     Q_INVOKABLE void clearAll();
     Q_INVOKABLE void clearCurrent();
 

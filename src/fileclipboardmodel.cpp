@@ -196,7 +196,7 @@ void FileClipboardModel::forgetGroup(int groupIndex)
     }
 }
 
-void FileClipboardModel::selectGroup(int groupIndex)
+void FileClipboardModel::selectGroup(int groupIndex, FileClipMode::Enum mode)
 {
     if (groupIndex >= m_historyCount) return;
 
@@ -205,7 +205,7 @@ void FileClipboardModel::selectGroup(int groupIndex)
     if (m_historyCount > 0 && m_entries[0].count() == 0) {
         // current selection is empty - copy everything into the current selection
         m_entries[0].setEntries(oldGroup.paths());
-        m_entries[0].setMode(oldGroup.mode());
+        m_entries[0].setMode(mode);
 
         QModelIndex topLeft = index(0, 0);
         QModelIndex bottomRight = index(0, 0);
@@ -215,7 +215,7 @@ void FileClipboardModel::selectGroup(int groupIndex)
         beginInsertRows(QModelIndex(), 0, 0);
         m_entries.prepend(ClipboardGroup());
         m_entries[0].setEntries(oldGroup.paths());
-        m_entries[0].setMode(oldGroup.mode());
+        m_entries[0].setMode(mode);
         groupIndex++; // we added an entry at the front, so the old group gets pushed to the back
         m_historyCount++;
         endInsertRows();
