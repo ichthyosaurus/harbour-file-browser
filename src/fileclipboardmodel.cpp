@@ -170,6 +170,11 @@ void FileClipboardModel::forgetPath(int groupIndex, QString path)
         QModelIndex topLeft = index(groupIndex, 0);
         QModelIndex bottomRight = index(groupIndex, 0);
         emit dataChanged(topLeft, bottomRight, {PathsRole, CountRole});
+
+        if (groupIndex == 0) {
+            emit currentCountChanged();
+            emit currentPathsChanged();
+        }
     }
 }
 
