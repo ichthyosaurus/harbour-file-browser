@@ -20,54 +20,39 @@
 
 import QtQuick 2.2
 import Sailfish.Silica 1.0
+import harbour.file.browser.FileClipboard 1.0
 import harbour.file.browser.Settings 1.0
 
-Item {
-    id: action
-    property string selection: ""
+// TODO refactor to use FileClipMode instead of strings
 
-    Row {
+Item {
+    id: root
+    property string selection: (picker.selectedMode >= 0 ? GlobalSettings.transferDefaultAction : "")
+
+    height: Theme.itemSizeMedium
+    width: parent.width
+
+    FileClipModePicker {
+        id: picker
         anchors.fill: parent
 
-        BackgroundItem {
-            id: first
-            width: parent.width / 3
-            contentHeight: parent.height
-            _backgroundColor: Theme.rgba(highlighted ? Theme.highlightBackgroundColor : Theme.highlightDimmerColor, Theme.highlightBackgroundOpacity)
+        selectedMode: {
+            var defTransfer = GlobalSettings.transferDefaultAction
 
-            Label { text: qsTr("Copy");  anchors.centerIn: parent; color: first.highlighted ? Theme.highlightColor : Theme.primaryColor }
-
-            onClicked: action.selection = "copy"
-            highlighted: action.selection === "copy"
+            if (defTransfer == "copy") return FileClipMode.Copy
+            else if (defTransfer == "move") return FileClipMode.Cut
+            else if (defTransfer == "link") return FileClipMode.Link
+            else return -1
         }
-        BackgroundItem {
-            id: second
-            width: parent.width / 3
-            contentHeight: parent.height
-            _backgroundColor: Theme.rgba(highlighted ? Theme.highlightBackgroundColor : Theme.highlightDimmerColor, Theme.highlightBackgroundOpacity)
 
-            Label { text: qsTr("Move");  anchors.centerIn: parent; color: second.highlighted ? Theme.highlightColor : Theme.primaryColor }
-
-            onClicked: action.selection = "move"
-            highlighted: action.selection === "move"
+        onSelectedModeChanged: {
+            if (selectedMode == FileClipMode.Copy) {
+                selection = "copy"
+            } else if (selectedMode == FileClipMode.Cut) {
+                selection = "move"
+            } else if (selectedMode == FileClipMode.Link) {
+                selection = "link"
+            }
         }
-        BackgroundItem {
-            id: third
-            width: parent.width / 3
-            contentHeight: parent.height
-            _backgroundColor: Theme.rgba(highlighted ? Theme.highlightBackgroundColor : Theme.highlightDimmerColor, Theme.highlightBackgroundOpacity)
-
-            Label { text: qsTr("Link");  anchors.centerIn: parent; color: third.highlighted ? Theme.highlightColor : Theme.primaryColor }
-
-            onClicked: action.selection = "link"
-            highlighted: action.selection === "link"
-        }
-    }
-
-    DirectorySettings { id: prefs; path: "" }
-
-    Component.onCompleted: {
-        var defTransfer = prefs.transferDefaultAction
-        action.selection = (defTransfer === "none" ? "" : defTransfer)
     }
 }
