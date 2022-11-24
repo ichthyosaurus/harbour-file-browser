@@ -76,7 +76,6 @@ Dialog {
                                                path = path.replace(/\/+/g, '/')
                                                path = path.replace(/\/$/, '')
                                                GlobalSettings.bookmarks.addTemporary(path)
-                                               // TODO find a way to immediately select the new entry
                                            },
                                            acceptText: qsTr("Select")
                                        })
