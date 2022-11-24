@@ -53,6 +53,7 @@ Item {
             }
             text: "View"
             font.pixelSize: Theme.fontSizeLarge
+            truncationMode: TruncationMode.Fade
         }
 
         HighlightImage {
