@@ -33,6 +33,8 @@ Item {
     Behavior on height { NumberAnimation { duration: 100 } }
     clip: true
 
+    opacity: enabled ? 1.0 : Theme.opacityLow
+
     BackgroundItem {
         id: viewGroup
         width: parent.width
