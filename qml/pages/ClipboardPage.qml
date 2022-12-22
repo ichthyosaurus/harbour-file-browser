@@ -343,8 +343,9 @@ Page {
                         id: contextMenu
                         ContextMenu {
                             MenuItem {
-                                text: qsTr("Remove from clipboard")
-                                onClicked: FileClipboard.forgetPath(modelData)
+                                visible: !FileClipboard.isInCurrentSelection(modelData)
+                                text: qsTr("Add to current selection")
+                                onClicked: FileClipboard.appendPath(modelData)
                             }
                             MenuItem {
                                 visible: fileData.isDir
@@ -354,6 +355,16 @@ Page {
                             MenuItem {
                                 text: qsTr("Open containing folder")
                                 onClicked: navigate_goToFolder(fileData.absolutePath)
+                            }
+                            MenuItem {
+                                text: qsTr("Remove from clipboard")
+                                onClicked: {
+                                    if (item.pathsCount > 1) {
+                                        FileClipboard.model.forgetPath(item.index, modelData)
+                                    } else {
+                                        FileClipboard.model.forgetGroup(item.index)
+                                    }
+                                }
                             }
                         }
                     }
