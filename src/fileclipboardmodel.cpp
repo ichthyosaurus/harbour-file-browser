@@ -120,25 +120,6 @@ const QStringList &FileClipboardModel::currentPaths() const
 
 void FileClipboardModel::setCurrentPaths(QStringList newPaths)
 {
-    // - never allow special files (char/block/fifo/socket) in the clipboard
-    // - never allow non-existent files
-    // - make sure all paths are absolute
-    QMutableStringListIterator iter(newPaths);
-
-    while (iter.hasNext()) {
-        StatFileInfo info(iter.next());
-
-        if (info.isSystem()) {
-            qDebug() << "cannot put special files in the clipboard:" << iter.value();
-            iter.remove();
-        } else if (!info.exists()) {
-            qDebug() << "cannot put non-existent files in the clipboard:" << iter.value();
-            iter.remove();
-        } else {
-            iter.setValue(info.absoluteFilePath());
-        }
-    }
-
     // - if the current clipboard is empty, insert paths there
     // - otherwise, create a new group and push it onto the stack
     if (m_historyCount > 0 && m_entries[0].count() == 0) {
@@ -176,6 +157,28 @@ void FileClipboardModel::forgetPath(int groupIndex, QString path)
             emit currentPathsChanged();
         }
     }
+}
+
+void FileClipboardModel::appendPath(int groupIndex, QString path)
+{
+    if (groupIndex >= m_historyCount) return;
+
+    if (m_entries[groupIndex].appendEntry(path)) {
+        QModelIndex topLeft = index(groupIndex, 0);
+        QModelIndex bottomRight = index(groupIndex, 0);
+        emit dataChanged(topLeft, bottomRight, {PathsRole, CountRole});
+
+        if (groupIndex == 0) {
+            emit currentCountChanged();
+            emit currentPathsChanged();
+        }
+    }
+}
+
+bool FileClipboardModel::isPathInGroup(int groupIndex, QString path)
+{
+    if (groupIndex >= m_historyCount) return false;
+    return m_entries[groupIndex].paths().contains(path);
 }
 
 void FileClipboardModel::forgetGroup(int groupIndex)
@@ -317,11 +320,37 @@ bool FileClipboardModel::ClipboardGroup::forgetEntry(QString path)
     return (removed > 0) ? true : false;
 }
 
-bool FileClipboardModel::ClipboardGroup::setEntries(const QStringList &paths)
+bool FileClipboardModel::ClipboardGroup::appendEntry(QString path)
 {
-    if (m_count != m_paths.length() || m_paths != paths) {
-        m_paths = paths;
-        m_count = m_paths.length();
+    QString validated = validatePath(path);
+
+    if (validated.isEmpty() || m_paths.contains(validated)) {
+        return false;
+    }
+
+    m_paths.append(validated);
+    m_count++;
+    return true;
+}
+
+bool FileClipboardModel::ClipboardGroup::setEntries(const QStringList& paths)
+{
+    QStringList newPaths;
+    newPaths.reserve(paths.length());
+
+    for (auto& i : paths) {
+        auto validated = validatePath(i);
+
+        if (!validated.isEmpty()) {
+            newPaths.append(i);
+        }
+    }
+
+    newPaths.removeDuplicates();
+
+    if (m_count != newPaths.length() || m_paths != newPaths) {
+        m_paths = newPaths;
+        m_count = newPaths.length();
         return true;
     }
     return false;
@@ -341,6 +370,26 @@ bool FileClipboardModel::ClipboardGroup::setMode(FileClipMode::Enum newMode)
     return false;
 }
 
+QString FileClipboardModel::ClipboardGroup::validatePath(QString path)
+{
+    // - never allow special files (char/block/fifo/socket) in the clipboard
+    // - never allow non-existent files
+    // - make sure all paths are absolute
+    // - note: duplicates are not allowed but are not checked by this method
+
+    StatFileInfo info(path);
+
+    if (info.isSystem()) {
+        qDebug() << "cannot put special files in the clipboard:" << path;
+        return QLatin1Literal();
+    } else if (!info.exists()) {
+        qDebug() << "cannot put non-existent files in the clipboard:" << path;
+        return QLatin1Literal();
+    } else {
+        return info.absoluteFilePath();
+    }
+}
+
 FileClipboard::FileClipboard(QObject* parent)
     : QObject(parent), m_model(new FileClipboardModel(this))
 {
@@ -357,6 +406,16 @@ FileClipboard::~FileClipboard()
 void FileClipboard::forgetPath(QString path)
 {
     m_model->forgetPath(0, path);
+}
+
+void FileClipboard::appendPath(QString path)
+{
+    m_model->appendPath(0, path);
+}
+
+bool FileClipboard::isInCurrentSelection(QString path)
+{
+    return m_model->isPathInGroup(0, path);
 }
 
 void FileClipboard::clear()

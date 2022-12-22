@@ -55,6 +55,8 @@ public:
 
     // methods callable from QML
     Q_INVOKABLE void forgetPath(int groupIndex, QString path);
+    Q_INVOKABLE void appendPath(int groupIndex, QString path);
+    Q_INVOKABLE bool isPathInGroup(int groupIndex, QString path);
     Q_INVOKABLE void forgetGroup(int groupIndex);
     Q_INVOKABLE void selectGroup(int groupIndex, FileClipMode::Enum mode);
     Q_INVOKABLE void clearAll();
@@ -73,6 +75,7 @@ private:
     public:
         bool forgetEntry(int index);
         bool forgetEntry(QString path);
+        bool appendEntry(QString path);
 
         bool setEntries(const QStringList& paths);
         const QStringList& paths() const { return m_paths; }
@@ -82,6 +85,8 @@ private:
         bool setMode(FileClipMode::Enum newMode); // return true if changed
 
     private:
+        QString validatePath(QString path);
+
         int m_count {0};
         QStringList m_paths {};
         FileClipMode::Enum m_mode {FileClipMode::Copy};
@@ -107,6 +112,8 @@ public:
 
     // methods callable from QML
     Q_INVOKABLE void forgetPath(QString path);
+    Q_INVOKABLE void appendPath(QString path);
+    Q_INVOKABLE bool isInCurrentSelection(QString path);
     Q_INVOKABLE void clear();
     Q_INVOKABLE QStringList listExistingFiles(QString destDirectory, bool ignoreInCurrentDir = true, bool getNamesOnly = true);
 
