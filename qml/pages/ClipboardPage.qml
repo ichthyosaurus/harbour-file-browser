@@ -226,8 +226,12 @@ Page {
                 height: item.index === 0 ? (_showCurrent ? contentHeight : 0) : contentHeight
                 visible: height > 0
 
+                // Required to make sure the page scrolls properly when opening
+                // a context menu at the very bottom of the page.
+                property var __silica_hidden_flickable: null
+
                 delegate: ListItem {
-                    id: item
+                    id: sublistItem
                     width: ListView.view.width
                     contentHeight: Theme.itemSizeMedium
                     menu: contextMenu
@@ -260,7 +264,7 @@ Page {
                             id: listIconComponent
                             FileIcon {
                                 showThumbnail: true
-                                highlighted: item.highlighted
+                                highlighted: sublistItem.highlighted
                                 file: modelData
                                 isDirectory: fileData.isDir
                                 mimeTypeCallback: function() { return fileData.mimeType; }
@@ -319,14 +323,14 @@ Page {
 
                         states: [
                             State {
-                                when: _listLabelWidth >= 2*item.width/3
+                                when: _listLabelWidth >= 2*sublistItem.width/3
                                 PropertyChanges { target: listLabel; wrapMode: Text.NoWrap; maximumLineCount: 1 }
                                 PropertyChanges { target: sizeLabel; width: (fileData.isSymLink ? _listLabelWidth/3*2 : _listLabelWidth/3); horizontalAlignment: Text.AlignLeft }
                                 PropertyChanges { target: permsLabel; width: _listLabelWidth/3; horizontalAlignment: Text.AlignHCenter }
                                 PropertyChanges { target: datesLabel; width: _listLabelWidth/3; horizontalAlignment: Text.AlignRight }
                             },
                             State {
-                                when: _listLabelWidth < 2*item.width/3
+                                when: _listLabelWidth < 2*sublistItem.width/3
                                 PropertyChanges { target: listLabel; wrapMode: Text.WrapAtWordBoundaryOrAnywhere; maximumLineCount: 2 }
                                 PropertyChanges { target: sizeLabel; width: _listLabelWidth; horizontalAlignment: Text.AlignLeft }
                                 PropertyChanges { target: permsLabel; width: _listLabelWidth; horizontalAlignment: Text.AlignLeft }
