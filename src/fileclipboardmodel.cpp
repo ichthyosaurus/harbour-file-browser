@@ -30,12 +30,21 @@ enum {
     ModeRole =            Qt::UserRole +  1,
     PathsRole =           Qt::UserRole +  2,
     CountRole =           Qt::UserRole +  3,
+    PathsModelRole =      Qt::UserRole +  4,
+};
+
+enum {
+    FullPathRole =        Qt::DisplayRole,
+    DirRole =             Qt::UserRole + 10,
 };
 
 FileClipboardModel::FileClipboardModel(QObject *parent) :
-    QAbstractListModel(parent)
+    QAbstractListModel(parent), m_currentPathsModel(new PathsModel(this))
 {
-    //
+    connect(this, &FileClipboardModel::currentPathsChanged, this, [&](){
+        m_currentPathsModel->setStringList(currentPaths());
+        emit currentPathsModelChanged();
+    });
 }
 
 FileClipboardModel::~FileClipboardModel()
@@ -68,6 +77,9 @@ QVariant FileClipboardModel::data(const QModelIndex &index, int role) const
     case PathsRole:
         return entry.paths();
 
+    case PathsModelRole:
+        return QVariant::fromValue(entry.pathsModel().data());
+
     default:
         return QVariant();
     }
@@ -79,6 +91,7 @@ QHash<int, QByteArray> FileClipboardModel::roleNames() const
     roles.insert(CountRole, QByteArray("count"));
     roles.insert(ModeRole, QByteArray("mode"));
     roles.insert(PathsRole, QByteArray("paths"));
+    roles.insert(PathsModelRole, QByteArray("pathsModel"));
     return roles;
 }
 
@@ -123,17 +136,17 @@ void FileClipboardModel::setCurrentPaths(QStringList newPaths)
     // - if the current clipboard is empty, insert paths there
     // - otherwise, create a new group and push it onto the stack
     if (m_historyCount > 0 && m_entries[0].count() == 0) {
+        qDebug() << "updating current group" << newPaths;
         m_entries[0].setEntries(newPaths);
-
         QModelIndex topLeft = index(0, 0);
         QModelIndex bottomRight = index(0, 0);
         emit dataChanged(topLeft, bottomRight, {PathsRole, CountRole});
     } else {
         beginInsertRows(QModelIndex(), 0, 0);
+        qDebug() << "adding new group" << newPaths;
         m_entries.prepend(ClipboardGroup());
         m_entries[0].setEntries(newPaths);
         m_historyCount++;
-        qDebug() << "added new group" << newPaths;
         endInsertRows();
 
         emit historyCountChanged();
@@ -309,6 +322,7 @@ bool FileClipboardModel::ClipboardGroup::forgetEntry(int index)
     if (index >= m_count) return false;
 
     m_paths.removeAt(index);
+    m_pathsModel->removeRow(index);
     m_count--;
     return true;
 }
@@ -317,7 +331,13 @@ bool FileClipboardModel::ClipboardGroup::forgetEntry(QString path)
 {
     int removed = m_paths.removeAll(path);
     m_count -= removed;
-    return (removed > 0) ? true : false;
+
+    if (removed > 0) {
+        m_pathsModel->setStringList(m_paths);
+        return true;
+    }
+
+    return false;
 }
 
 bool FileClipboardModel::ClipboardGroup::appendEntry(QString path)
@@ -329,6 +349,7 @@ bool FileClipboardModel::ClipboardGroup::appendEntry(QString path)
     }
 
     m_paths.append(validated);
+    m_pathsModel->setStringList(m_paths);
     m_count++;
     return true;
 }
@@ -351,6 +372,7 @@ bool FileClipboardModel::ClipboardGroup::setEntries(const QStringList& paths)
     if (m_count != newPaths.length() || m_paths != newPaths) {
         m_paths = newPaths;
         m_count = newPaths.length();
+        m_pathsModel->setStringList(m_paths);
         return true;
     }
     return false;
@@ -456,4 +478,39 @@ const QStringList &FileClipboard::paths() const
 void FileClipboard::setPaths(const QStringList &newPaths)
 {
     m_model->setCurrentPaths(newPaths);
+}
+
+PathsModel::PathsModel(QObject* parent) : QStringListModel(parent)
+{
+    connect(this, &PathsModel::dataChanged, this, [&](const QModelIndex& topLeft,
+                                                      const QModelIndex& bottomRight,
+                                                      const QVector<int>& roles){
+        Q_UNUSED(roles)
+        emit dataChanged(topLeft, bottomRight, {DirRole});
+    });
+}
+
+QVariant PathsModel::data(const QModelIndex &index, int role) const
+{
+    const auto& entry = QStringListModel::data(index, Qt::DisplayRole);
+    if (!entry.isValid()) return entry;
+
+    switch (role) {
+    case Qt::DisplayRole:
+        return entry.toString();
+
+    case DirRole:
+        return QFileInfo(entry.toString()).path();
+
+    default:
+        return QVariant();
+    }
+}
+
+QHash<int, QByteArray> PathsModel::roleNames() const
+{
+    QHash<int, QByteArray> roles = QAbstractListModel::roleNames();
+    roles.insert(FullPathRole, QByteArray("path"));
+    roles.insert(DirRole, QByteArray("directory"));
+    return roles;
 }

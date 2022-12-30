@@ -22,6 +22,7 @@
 #define FILECLIPBOARDMODEL_H
 
 #include <QAbstractListModel>
+#include <QStringListModel>
 #include <QHash>
 
 #include "enumcontainer.h"
@@ -30,6 +31,17 @@
 CREATE_ENUM(FileClipMode, Copy, Link, Cut)
 DECLARE_ENUM_REGISTRATION_FUNCTION(FileClipboard)
 
+class PathsModel : public QStringListModel {
+    Q_OBJECT
+
+public:
+    explicit PathsModel(QObject *parent = nullptr);
+    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const;
+    QHash<int, QByteArray> roleNames() const;
+};
+
+Q_DECLARE_METATYPE(QSharedPointer<PathsModel>)
+
 class FileClipboardModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -37,6 +49,7 @@ class FileClipboardModel : public QAbstractListModel
     Q_PROPERTY(int currentCount READ currentCount NOTIFY currentCountChanged)
     Q_PROPERTY(FileClipMode::Enum currentMode READ currentMode WRITE setCurrentMode NOTIFY currentModeChanged)
     Q_PROPERTY(QStringList currentPaths READ currentPaths WRITE setCurrentPaths NOTIFY currentPathsChanged)
+    Q_PROPERTY(PathsModel* currentPathsModel READ currentPathsModel NOTIFY currentPathsModelChanged)
 
 public:
     explicit FileClipboardModel(QObject *parent = nullptr);
@@ -52,6 +65,7 @@ public:
     void setCurrentMode(FileClipMode::Enum newCurrentMode);
     const QStringList& currentPaths() const;
     void setCurrentPaths(QStringList newPaths);
+    PathsModel* currentPathsModel() const { return m_currentPathsModel; }
 
     // methods callable from QML
     Q_INVOKABLE void forgetPath(int groupIndex, QString path);
@@ -69,10 +83,13 @@ signals:
     void currentCountChanged();
     void currentModeChanged();
     void currentPathsChanged();
+    void currentPathsModelChanged();
 
 private:
     class ClipboardGroup {
     public:
+        explicit ClipboardGroup() : m_pathsModel(new PathsModel()) {};
+
         bool forgetEntry(int index);
         bool forgetEntry(QString path);
         bool appendEntry(QString path);
@@ -80,6 +97,7 @@ private:
         bool setEntries(const QStringList& paths);
         const QStringList& paths() const { return m_paths; }
         int count() const { return m_count; }
+        QSharedPointer<PathsModel> pathsModel() const { return m_pathsModel; }
 
         FileClipMode::Enum mode() const;
         bool setMode(FileClipMode::Enum newMode); // return true if changed
@@ -90,11 +108,14 @@ private:
         int m_count {0};
         QStringList m_paths {};
         FileClipMode::Enum m_mode {FileClipMode::Copy};
+        QSharedPointer<PathsModel> m_pathsModel;
     };
 
     int m_historyCount {};
     QList<ClipboardGroup> m_entries {};
     const QStringList m_emptyList {};
+
+    PathsModel* m_currentPathsModel;
 };
 
 class FileClipboard : public QObject
