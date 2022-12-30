@@ -14,7 +14,7 @@ source ../libs/opal-render-icons.sh
 cFORCE=false
 
 echo "scrubbing svg sources..."
-for dir in file toolbar; do
+for dir in file toolbar clipboard; do
     pushd "$dir"
     for i in raw/*.svg; do
         if [[ "$i" -nt "${i#raw/}" ]]; then
@@ -38,6 +38,14 @@ cITEMS=(
     toolbar/toolbar-{rename,copy,cut,select-all}@112
     toolbar/icon-btn-search@112
     toolbar/places-warning@112
+)
+cRESOLUTIONS=(F1)
+cTARGETS=(../qml/images)
+render_batch
+
+cNAME="clipboard action icons"
+cITEMS=(
+    clipboard/clipboard-{copy,link,move,compress}@112
 )
 cRESOLUTIONS=(F1)
 cTARGETS=(../qml/images)
