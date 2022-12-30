@@ -32,10 +32,9 @@ Page {
     id: root
 
     // TODO
-    // - show clipboard history and allow copying files again
-    // - simplify the layout and merge it back into DirectoryPageEntry{}
     // - store clipboard contents somewhere and share the clipboard with
     //   other windows of File Browser (through dconf?)
+    // - drawers break when clearing the current selection
 
     readonly property string _fnElide: GlobalSettings.generalFilenameElideMode
     readonly property int _nameTruncMode: _fnElide === 'fade' ? TruncationMode.Fade : TruncationMode.Elide
@@ -44,7 +43,24 @@ Page {
                                                                     Text.ElideMiddle : Text.ElideRight)
 
     property bool _showCurrent: true
-    property bool _showHistory: false
+    property bool _showHistory: true // false
+
+    Button {
+        z: 100000
+        anchors {
+            top: parent.top
+            left: parent.left
+            margins: Theme.horizontalPageMargin
+        }
+
+        text: "DEBUG!"
+
+        onClicked: {
+            FileClipboard.setPaths(["/home/nemo/Documents", "/home/nemo/Videos", "/home/nemo/Downloads"], FileClipMode.Copy)
+            FileClipboard.setPaths(["/usr", "/etc", "/bin"], FileClipMode.Link)
+            FileClipboard.setPaths(["/usr/lib", "/usr/share", "/usr/lib/qt5"], FileClipMode.Cut)
+        }
+    }
 
     SortFilterProxyModel {
         id: filteredModel
@@ -76,15 +92,14 @@ Page {
                 }
             }
 
-            contents: FileClipModePicker {
-                selectedMode: FileClipboard.mode
-                height: Theme.itemSizeMedium
-                width: parent.width
+//            contents: FileClipModePicker {
+//                selectedMode: FileClipboard.mode
+//                width: parent.width
 
-                onSelectedModeChanged: {
-                    FileClipboard.mode = selectedMode
-                }
-            }
+//                onSelectedModeChanged: {
+//                    FileClipboard.mode = selectedMode
+//                }
+//            }
         }
     }
 
@@ -94,7 +109,7 @@ Page {
         GroupedDrawer {
             width: list.width
             title: qsTr("History", "as in 'list of elements that once were activated but are disabled now'")
-            open: FileClipboard.count == 0
+            open: _showHistory || FileClipboard.count == 0
             onOpenChanged: _showHistory = open
         }
     }
@@ -142,6 +157,7 @@ Page {
         delegate: Column {
             id: item
             property var paths: model.paths
+            property var pathsModel: model.pathsModel
             property var pathsCount: model.count
             property int index: model.index
 
@@ -155,73 +171,50 @@ Page {
                 sourceComponent: enabled ? currentDrawerComp : null
             }
 
-            ListItem {
+            Item {
                 width: parent.width
-                contentHeight: visible ? Theme.itemSizeMedium : 0
-                visible: item.index === 0 ? _showCurrent : true
-                showMenuOnPressAndHold: true
-                onClicked: openMenu()
+//                visible: item.index > 0
+                height: historyPicker.height
 
-                enabled: item.index > 0
-
-                HighlightImage {
-                    id: menuIcon
-                    visible: item.index > 0
-
+                FileClipModePicker {
+                    id: historyPicker
+                    selectedMode: item.index === 0 ? FileClipboard.mode : -1
                     anchors {
                         left: parent.left
-                        leftMargin: Theme.horizontalPageMargin
-                        rightMargin: Theme.paddingMedium
-                        verticalCenter: parent.verticalCenter
-                    }
-                    opacity: Theme.opacityHigh
-                    source: "image://theme/icon-m-menu"
-                }
-
-                Label {
-                    anchors {
-                        left: menuIcon.right
-                        leftMargin: Theme.paddingMedium
-                        right: parent.right
+                        right: clearIcon.left
                         rightMargin: Theme.horizontalPageMargin
-                        top: parent.top
-                        bottom: parent.bottom
                     }
 
-                    verticalAlignment: Text.AlignVCenter
-                    horizontalAlignment: Text.AlignRight
-                    font.pixelSize: Theme.fontSizeSmall
-                    maximumLineCount: 2
-                    elide: _nameElideMode
-
-                    visible: text !== ""
-                    text: item.pathsCount > 0 ? Paths.dirName(item.paths[0]) : ""
+                    onSelectedModeChanged: {
+                        if (item.index === 0) {
+                            if (selectedMode == FileClipboard.mode) return
+                            FileClipboard.mode = selectedMode
+                        } else {
+                            FileClipboard.model.selectGroup(item.index, selectedMode)
+                            list.scrollToTop()
+                        }
+                    }
                 }
 
-                menu: ContextMenu {
-                    MenuItem {
-                        text: qsTr("Copy")
-                        onDelayedClick: FileClipboard.model.selectGroup(item.index, FileClipMode.Copy)
-                    }
-                    MenuItem {
-                        text: qsTr("Link")
-                        onDelayedClick: FileClipboard.model.selectGroup(item.index, FileClipMode.Link)
-                    }
-                    MenuItem {
-                        text: qsTr("Move")
-                        onDelayedClick: FileClipboard.model.selectGroup(item.index, FileClipMode.Cut)
-                    }
-                    MenuItem {
-                        text: qsTr("Remove from history")
-                        onDelayedClick: FileClipboard.model.forgetGroup(item.index)
-                    }
-                }
+//                IconButton {
+//                    id: clearIcon
+//                    visible: item.index > 0
+//                    onClicked: FileClipboard.model.forgetGroup(item.index)
+
+//                    anchors {
+//                        right: parent.right
+//                        rightMargin: Theme.horizontalPageMargin
+//                        verticalCenter: parent.verticalCenter
+//                    }
+//                    opacity: Theme.opacityHigh
+//                    icon.source: "image://theme/icon-m-clear"
+//                }
             }
 
             SilicaListView {
                 id: sublist
 
-                model: parent.paths
+                model: parent.pathsModel
                 width: parent.width
                 height: item.index === 0 ? (_showCurrent ? contentHeight : 0) : contentHeight
                 visible: height > 0
@@ -230,8 +223,20 @@ Page {
                 // a context menu at the very bottom of the page.
                 property var __silica_hidden_flickable: null
 
+                section {
+                    property: "directory"
+                    criteria: ViewSection.FullString
+                    labelPositioning: ViewSection.InlineLabels
+                    delegate: SectionHeader {
+                        text: section
+                    }
+                }
+
                 delegate: ListItem {
                     id: sublistItem
+                    property string path: model.path
+                    property string directory: model.directory
+
                     width: ListView.view.width
                     contentHeight: Theme.itemSizeMedium
                     menu: contextMenu
@@ -241,14 +246,14 @@ Page {
 
                     FileData {
                         id: fileData
-                        file: modelData
+                        file: path
                         property string category
                         Component.onCompleted: category = typeCategory()
                     }
 
                     onClicked: {
                         pageStack.animatorPush(Qt.resolvedUrl("FilePage.qml"), {
-                                                   'file': modelData,
+                                                   'file': path,
                                                    'allowMoveDelete': false,
                                                    'enableOpenFolder': true,
                                                })
@@ -265,7 +270,7 @@ Page {
                             FileIcon {
                                 showThumbnail: true
                                 highlighted: sublistItem.highlighted
-                                file: modelData
+                                file: sublistItem.path
                                 isDirectory: fileData.isDir
                                 mimeTypeCallback: function() { return fileData.mimeType; }
                                 fileIconCallback: function() { return fileData.icon; }
@@ -343,24 +348,24 @@ Page {
                         id: contextMenu
                         ContextMenu {
                             MenuItem {
-                                visible: !FileClipboard.isInCurrentSelection(modelData)
+                                visible: !FileClipboard.isInCurrentSelection(sublistItem.path)
                                 text: qsTr("Add to current selection")
-                                onClicked: FileClipboard.appendPath(modelData)
+                                onClicked: FileClipboard.appendPath(sublistItem.path)
                             }
                             MenuItem {
                                 visible: fileData.isDir
                                 text: qsTr("Open this folder")
-                                onClicked: navigate_goToFolder(modelData)
+                                onClicked: navigate_goToFolder(sublistItem.path)
                             }
                             MenuItem {
                                 text: qsTr("Open containing folder")
-                                onClicked: navigate_goToFolder(fileData.absolutePath)
+                                onClicked: navigate_goToFolder(sublistItem.directory)
                             }
                             MenuItem {
                                 text: qsTr("Remove from clipboard")
                                 onClicked: {
                                     if (item.pathsCount > 1) {
-                                        FileClipboard.model.forgetPath(item.index, modelData)
+                                        FileClipboard.model.forgetPath(item.index, sublistItem.path)
                                     } else {
                                         FileClipboard.model.forgetGroup(item.index)
                                     }
