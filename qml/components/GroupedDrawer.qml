@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -29,7 +29,7 @@ Item {
     property alias contentItem: loader.item
 
     width: parent.width
-    height: viewGroup.height + contentItem.height
+    height: viewGroup.height + container.height
     Behavior on height { NumberAnimation { duration: 100 } }
     clip: true
 
@@ -81,9 +81,9 @@ Item {
     }
 
     Item {
-        id: contentItem
+        id: container
         width: parent.width
-        height: visible ? loader.height : 0
+        height: visible && loader.status === Loader.Ready ? loader.item.height : 0
         visible: viewGroup.open
         anchors.top: viewGroup.bottom
 
