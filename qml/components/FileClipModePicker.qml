@@ -23,21 +23,34 @@ import Sailfish.Silica 1.0
 import harbour.file.browser.FileClipboard 1.0
 
 Row {
-    property int selectedMode: -1
+    property int selectedMode: -1  // used by FileClipModePickerElement
 
-    height: Theme.itemSizeMedium
+    height: childrenRect.height
     width: parent.width
+
+    // important: you must update the "numberOfElements"
+    // property in FileClipModePickerElement when adding more
+    // elements here!
 
     FileClipModePickerElement {
         elementMode: FileClipMode.Copy
         text: qsTr("Copy")
-    }
-    FileClipModePickerElement {
-        elementMode: FileClipMode.Link
-        text: qsTr("Link")
+        icon: "../images/clipboard-copy.png"
     }
     FileClipModePickerElement {
         elementMode: FileClipMode.Cut
         text: qsTr("Move")
+        icon: "../images/clipboard-move.png"
     }
+    FileClipModePickerElement {
+        elementMode: FileClipMode.Link
+        text: qsTr("Link")
+        icon: "../images/clipboard-link.png"
+    }
+
+//     FileClipModePickerElement {
+//         elementMode: FileClipMode.Compress
+//         text: qsTr("Compress")
+//         icon: "../images/clipboard-compress.png"
+//     }
 }

@@ -29,12 +29,11 @@ Item {
     id: root
     property string selection: (picker.selectedMode >= 0 ? GlobalSettings.transferDefaultAction : "")
 
-    height: Theme.itemSizeMedium
+    height: picker.height
     width: parent.width
 
     FileClipModePicker {
         id: picker
-        anchors.fill: parent
 
         selectedMode: {
             var defTransfer = GlobalSettings.transferDefaultAction

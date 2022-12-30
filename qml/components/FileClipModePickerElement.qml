@@ -25,29 +25,63 @@ import harbour.file.browser.FileClipboard 1.0
 BackgroundItem {
     id: root
 
-    // requires in parent context:
-    // - property int selectedMode
+    // important: this item is intended to be used *only*
+    // in FileClipModePicker. It requires these properties
+    // from the parent context:
+    //     1. property int selectedMode
 
     property int elementMode: -1000
     property alias text: label.text
 
+    // icons are optional but must include
+    // proper top and bottom margins if used
+    property alias icon: icon.source
+
     readonly property int numberOfElements: 3 // number of elements in the FileClipMode enum
+//     readonly property int numberOfElements: 4
+    readonly property bool isSelected: parent.selectedMode === elementMode
 
     width: parent.width / numberOfElements
-    contentHeight: parent.height
-    _backgroundColor: Theme.rgba(highlighted ? Theme.highlightBackgroundColor :
-                                               Theme.highlightDimmerColor,
-                                 Theme.highlightBackgroundOpacity)
+    height: contentHeight
+    contentHeight: Math.max(Theme.itemSizeMedium, contentColumn.height)
+    _backgroundColor: Theme.rgba(highlighted ? Theme.highlightBackgroundColor : Theme.highlightDimmerColor,
+                                 ((highlighted && !isSelected) ? 0.8 : 1.0) * Theme.highlightBackgroundOpacity)
 
-    Label {
-        id: label
-        text: "NO LABEL"
-        anchors.fill: parent
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignVCenter
-        truncationMode: TruncationMode.Fade
+    Column {
+        id: contentColumn
+        width: parent.width - 2*Theme.paddingMedium
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            verticalCenter: parent.verticalCenter
+        }
+
+        HighlightImage {
+            id: icon
+            anchors.horizontalCenter: parent.horizontalCenter
+            fillMode: Image.PreserveAspectFit
+            source: ""
+            highlighted: parent.highlighted
+            visible: true
+        }
+
+        Label {
+            id: label
+            width: parent.width
+            text: "NO LABEL"
+            font.pixelSize: Theme.fontSizeSmall
+            fontSizeMode: Text.Fit
+            minimumPixelSize: Theme.fontSizeExtraSmall
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            truncationMode: TruncationMode.Fade
+        }
+
+        Item { // spacer
+            width: 1
+            height: Theme.paddingMedium
+        }
     }
 
     onClicked: parent.selectedMode = elementMode
-    highlighted: parent.selectedMode === elementMode
+    highlighted: down || isSelected
 }
