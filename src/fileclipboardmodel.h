@@ -21,8 +21,8 @@
 #ifndef FILECLIPBOARDMODEL_H
 #define FILECLIPBOARDMODEL_H
 
-#include <QAbstractListModel>
 #include <QStringListModel>
+#include <QByteArray>
 #include <QHash>
 
 #include "enumcontainer.h"
@@ -40,91 +40,13 @@ public:
     QHash<int, QByteArray> roleNames() const;
 };
 
-Q_DECLARE_METATYPE(QSharedPointer<PathsModel>)
-
-class FileClipboardModel : public QAbstractListModel
-{
-    Q_OBJECT
-    Q_PROPERTY(int historyCount READ rowCount NOTIFY historyCountChanged)
-    Q_PROPERTY(int currentCount READ currentCount NOTIFY currentCountChanged)
-    Q_PROPERTY(FileClipMode::Enum currentMode READ currentMode WRITE setCurrentMode NOTIFY currentModeChanged)
-    Q_PROPERTY(QStringList currentPaths READ currentPaths WRITE setCurrentPaths NOTIFY currentPathsChanged)
-    Q_PROPERTY(PathsModel* currentPathsModel READ currentPathsModel NOTIFY currentPathsModelChanged)
-
-public:
-    explicit FileClipboardModel(QObject *parent = nullptr);
-    ~FileClipboardModel();
-
-    // methods needed by ListView
-    int rowCount(const QModelIndex& parent = QModelIndex()) const;
-    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const;
-    QHash<int, QByteArray> roleNames() const;
-
-    int currentCount() const;
-    FileClipMode::Enum currentMode() const;
-    void setCurrentMode(FileClipMode::Enum newCurrentMode);
-    const QStringList& currentPaths() const;
-    void setCurrentPaths(QStringList newPaths);
-    PathsModel* currentPathsModel() const { return m_currentPathsModel; }
-
-    // methods callable from QML
-    Q_INVOKABLE void forgetPath(int groupIndex, QString path);
-    Q_INVOKABLE void appendPath(int groupIndex, QString path);
-    Q_INVOKABLE bool isPathInGroup(int groupIndex, QString path);
-    Q_INVOKABLE void forgetGroup(int groupIndex);
-    Q_INVOKABLE void selectGroup(int groupIndex, FileClipMode::Enum mode);
-    Q_INVOKABLE void clearAll();
-    Q_INVOKABLE void clearCurrent();
-
-    Q_INVOKABLE QStringList listExistingFiles(QString destDirectory, bool ignoreInCurrentDir = true, bool getNamesOnly = true);
-
-signals:
-    void historyCountChanged();
-    void currentCountChanged();
-    void currentModeChanged();
-    void currentPathsChanged();
-    void currentPathsModelChanged();
-
-private:
-    class ClipboardGroup {
-    public:
-        explicit ClipboardGroup() : m_pathsModel(new PathsModel()) {};
-
-        bool forgetEntry(int index);
-        bool forgetEntry(QString path);
-        bool appendEntry(QString path);
-
-        bool setEntries(const QStringList& paths);
-        const QStringList& paths() const { return m_paths; }
-        int count() const { return m_count; }
-        QSharedPointer<PathsModel> pathsModel() const { return m_pathsModel; }
-
-        FileClipMode::Enum mode() const;
-        bool setMode(FileClipMode::Enum newMode); // return true if changed
-
-    private:
-        QString validatePath(QString path);
-
-        int m_count {0};
-        QStringList m_paths {};
-        FileClipMode::Enum m_mode {FileClipMode::Copy};
-        QSharedPointer<PathsModel> m_pathsModel;
-    };
-
-    int m_historyCount {};
-    QList<ClipboardGroup> m_entries {};
-    const QStringList m_emptyList {};
-
-    PathsModel* m_currentPathsModel;
-};
-
 class FileClipboard : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(FileClipboardModel* model READ model CONSTANT)
     Q_PROPERTY(int count READ count NOTIFY countChanged)
     Q_PROPERTY(FileClipMode::Enum mode READ mode WRITE setMode NOTIFY modeChanged)
     Q_PROPERTY(QStringList paths READ paths WRITE setPaths NOTIFY pathsChanged)
+    Q_PROPERTY(PathsModel* pathsModel READ pathsModel CONSTANT)
     Q_DISABLE_COPY(FileClipboard)
 
 public:
@@ -132,23 +54,22 @@ public:
     ~FileClipboard();
 
     // methods callable from QML
+    Q_INVOKABLE void setPaths(const QStringList& paths, FileClipMode::Enum mode);
+    void setPaths(const QStringList &newPaths);
     Q_INVOKABLE void forgetPath(QString path);
+    Q_INVOKABLE void forgetIndex(int index);
     Q_INVOKABLE void appendPath(QString path);
-    Q_INVOKABLE bool isInCurrentSelection(QString path);
+    Q_INVOKABLE bool hasPath(QString path);
     Q_INVOKABLE void clear();
-    Q_INVOKABLE QStringList listExistingFiles(QString destDirectory, bool ignoreInCurrentDir = true, bool getNamesOnly = true);
+    Q_INVOKABLE QStringList listExistingFiles(
+            QString destDirectory, bool ignoreInCurrentDir = true, bool getNamesOnly = true);
 
-    Q_INVOKABLE void setPaths(const QStringList& paths, FileClipMode::Enum mode) {
-        setPaths(paths);
-        setMode(mode);
-    }
 
-    FileClipboardModel* model() const;
     int count() const;
     FileClipMode::Enum mode() const;
     void setMode(FileClipMode::Enum newMode);
-    const QStringList &paths() const;
-    void setPaths(const QStringList &newPaths);
+    const QStringList& paths() const;
+    PathsModel* pathsModel() const;
 
 signals:
     void countChanged();
@@ -156,7 +77,12 @@ signals:
     void pathsChanged();
 
 private:
-    FileClipboardModel* m_model;
+    QString validatePath(QString path);
+
+    int m_count {0};
+    QStringList m_paths {};
+    FileClipMode::Enum m_mode {FileClipMode::Copy};
+    PathsModel* m_pathsModel;
 };
 
 #endif // FILECLIPBOARDMODEL_H

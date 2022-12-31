@@ -27,246 +27,122 @@ DEFINE_ENUM_REGISTRATION_FUNCTION(FileClipboard) {
 }
 
 enum {
-    ModeRole =            Qt::UserRole +  1,
-    PathsRole =           Qt::UserRole +  2,
-    CountRole =           Qt::UserRole +  3,
-    PathsModelRole =      Qt::UserRole +  4,
-};
-
-enum {
     FullPathRole =        Qt::DisplayRole,
     DirRole =             Qt::UserRole + 10,
 };
 
-FileClipboardModel::FileClipboardModel(QObject *parent) :
-    QAbstractListModel(parent), m_currentPathsModel(new PathsModel(this))
+QVariant PathsModel::data(const QModelIndex &index, int role) const
 {
-    connect(this, &FileClipboardModel::currentPathsChanged, this, [&](){
-        m_currentPathsModel->setStringList(currentPaths());
-        emit currentPathsModelChanged();
-    });
-}
-
-FileClipboardModel::~FileClipboardModel()
-{
-    //
-}
-
-int FileClipboardModel::rowCount(const QModelIndex &parent) const
-{
-    Q_UNUSED(parent)
-    return m_historyCount;
-}
-
-QVariant FileClipboardModel::data(const QModelIndex &index, int role) const
-{
-    if (!index.isValid() || index.row() >= rowCount()) {
-        return QVariant();
-    }
-
-    const auto& entry = m_entries.at(index.row());
+    const auto& entry = QStringListModel::data(index, Qt::DisplayRole);
+    if (!entry.isValid()) return entry;
 
     switch (role) {
     case Qt::DisplayRole:
-    case CountRole:
-        return entry.count();
+        return entry.toString();
 
-    case ModeRole:
-        return entry.mode();
-
-    case PathsRole:
-        return entry.paths();
-
-    case PathsModelRole:
-        return QVariant::fromValue(entry.pathsModel().data());
+    case DirRole:
+        return QFileInfo(entry.toString()).path();
 
     default:
         return QVariant();
     }
 }
 
-QHash<int, QByteArray> FileClipboardModel::roleNames() const
+QHash<int, QByteArray> PathsModel::roleNames() const
 {
     QHash<int, QByteArray> roles = QAbstractListModel::roleNames();
-    roles.insert(CountRole, QByteArray("count"));
-    roles.insert(ModeRole, QByteArray("mode"));
-    roles.insert(PathsRole, QByteArray("paths"));
-    roles.insert(PathsModelRole, QByteArray("pathsModel"));
+    roles.insert(FullPathRole, QByteArray("path"));
+    roles.insert(DirRole, QByteArray("directory"));
     return roles;
 }
 
-int FileClipboardModel::currentCount() const
+FileClipboard::FileClipboard(QObject* parent)
+    : QObject(parent), m_pathsModel(new PathsModel(this))
 {
-    if (m_historyCount > 0) return m_entries.at(0).count();
-    else return 0;
+    connect(this, &FileClipboard::pathsChanged, this, [&](){
+        m_count = m_paths.count();
+        m_pathsModel->setStringList(m_paths);
+        emit countChanged();
+    });
 }
 
-FileClipMode::Enum FileClipboardModel::currentMode() const
+FileClipboard::~FileClipboard()
 {
-    if (m_historyCount > 0) return m_entries.at(0).mode();
-    else return FileClipMode::Copy;
+    //
 }
 
-void FileClipboardModel::setCurrentMode(FileClipMode::Enum newCurrentMode)
+void FileClipboard::setPaths(const QStringList& paths, FileClipMode::Enum mode)
 {
-    if (m_historyCount == 0) return;
-    auto& current = m_entries[0];
+    setPaths(paths);
+    setMode(mode);
+}
 
-    if (current.mode() == newCurrentMode) {
+void FileClipboard::forgetPath(QString path)
+{
+    QString validated = validatePath(path);
+    if (validated.isEmpty()) return;
+
+    int removed = m_paths.removeAll(validated);
+//    m_count -= removed;
+
+    if (removed > 0) {
+        emit pathsChanged();
+//        emit countChanged();
+    }
+}
+
+void FileClipboard::forgetIndex(int index)
+{
+    if (index < 0 || index > m_count) {
         return;
+    }
+
+    m_paths.removeAt(index);
+    emit pathsChanged();
+}
+
+void FileClipboard::appendPath(QString path)
+{
+    QString validated = validatePath(path);
+
+    if (validated.isEmpty()) {
+        qDebug() << "cannot add invalid path to clipboard:" << path;
+        return;
+    } else if (m_paths.contains(validated)) {
+        qDebug() << "path already in clipboard:" << validated;
+        return;
+    }
+
+    m_paths.append(validated);
+//    m_count++;
+
+    emit pathsChanged();
+//    emit countChanged();
+}
+
+bool FileClipboard::hasPath(QString path)
+{
+    auto validated = validatePath(path);
+
+    if (validated.isEmpty()) {
+        return false;
     } else {
-        if (current.setMode(newCurrentMode)) {
-            QModelIndex topLeft = index(0, 0);
-            QModelIndex bottomRight = index(0, 0);
-            emit dataChanged(topLeft, bottomRight, {ModeRole});
-        }
-
-        emit currentModeChanged();
+        return m_paths.contains(validated);
     }
 }
 
-const QStringList &FileClipboardModel::currentPaths() const
+void FileClipboard::clear()
 {
-    if (m_historyCount > 0) return m_entries.at(0).paths();
-    else return m_emptyList;
+    m_paths.clear();
+//    m_count = 0;
+
+    emit pathsChanged();
+//    emit countChanged();
 }
 
-void FileClipboardModel::setCurrentPaths(QStringList newPaths)
+QStringList FileClipboard::listExistingFiles(QString destDirectory, bool ignoreInCurrentDir, bool getNamesOnly)
 {
-    // - if the current clipboard is empty, insert paths there
-    // - otherwise, create a new group and push it onto the stack
-    if (m_historyCount > 0 && m_entries[0].count() == 0) {
-        qDebug() << "updating current group" << newPaths;
-        m_entries[0].setEntries(newPaths);
-        QModelIndex topLeft = index(0, 0);
-        QModelIndex bottomRight = index(0, 0);
-        emit dataChanged(topLeft, bottomRight, {PathsRole, CountRole});
-    } else {
-        beginInsertRows(QModelIndex(), 0, 0);
-        qDebug() << "adding new group" << newPaths;
-        m_entries.prepend(ClipboardGroup());
-        m_entries[0].setEntries(newPaths);
-        m_historyCount++;
-        endInsertRows();
-
-        emit historyCountChanged();
-    }
-
-    emit currentCountChanged();
-    emit currentPathsChanged();
-}
-
-void FileClipboardModel::forgetPath(int groupIndex, QString path)
-{
-    if (groupIndex >= m_historyCount) return;
-
-    if (m_entries[groupIndex].forgetEntry(path)) {
-        QModelIndex topLeft = index(groupIndex, 0);
-        QModelIndex bottomRight = index(groupIndex, 0);
-        emit dataChanged(topLeft, bottomRight, {PathsRole, CountRole});
-
-        if (groupIndex == 0) {
-            emit currentCountChanged();
-            emit currentPathsChanged();
-        }
-    }
-}
-
-void FileClipboardModel::appendPath(int groupIndex, QString path)
-{
-    if (groupIndex >= m_historyCount) return;
-
-    if (m_entries[groupIndex].appendEntry(path)) {
-        QModelIndex topLeft = index(groupIndex, 0);
-        QModelIndex bottomRight = index(groupIndex, 0);
-        emit dataChanged(topLeft, bottomRight, {PathsRole, CountRole});
-
-        if (groupIndex == 0) {
-            emit currentCountChanged();
-            emit currentPathsChanged();
-        }
-    }
-}
-
-bool FileClipboardModel::isPathInGroup(int groupIndex, QString path)
-{
-    if (groupIndex >= m_historyCount) return false;
-    return m_entries[groupIndex].paths().contains(path);
-}
-
-void FileClipboardModel::forgetGroup(int groupIndex)
-{
-    if (groupIndex >= m_historyCount) return;
-
-    beginRemoveRows(QModelIndex(), groupIndex, groupIndex);
-    m_entries.removeAt(groupIndex);
-    m_historyCount--;
-    endRemoveRows();
-
-    emit historyCountChanged();
-
-    if (groupIndex == 0) {
-        emit currentCountChanged();
-        emit currentModeChanged();
-        emit currentPathsChanged();
-    }
-}
-
-void FileClipboardModel::selectGroup(int groupIndex, FileClipMode::Enum mode)
-{
-    if (groupIndex >= m_historyCount) return;
-
-    const auto& oldGroup = m_entries.at(groupIndex);
-
-    if (m_historyCount > 0 && m_entries[0].count() == 0) {
-        // current selection is empty - copy everything into the current selection
-        m_entries[0].setEntries(oldGroup.paths());
-        m_entries[0].setMode(mode);
-
-        QModelIndex topLeft = index(0, 0);
-        QModelIndex bottomRight = index(0, 0);
-        emit dataChanged(topLeft, bottomRight, {PathsRole, CountRole, ModeRole});
-    } else {
-        // current selection is not empty - push a new group onto the stack
-        beginInsertRows(QModelIndex(), 0, 0);
-        m_entries.prepend(ClipboardGroup());
-        m_entries[0].setEntries(oldGroup.paths());
-        m_entries[0].setMode(mode);
-        groupIndex++; // we added an entry at the front, so the old group gets pushed to the back
-        m_historyCount++;
-        endInsertRows();
-    }
-
-    beginRemoveRows(QModelIndex(), groupIndex, groupIndex);
-    m_entries.removeAt(groupIndex);
-    m_historyCount--;
-    endRemoveRows();
-
-    emit historyCountChanged();
-    emit currentCountChanged();
-    emit currentModeChanged();
-    emit currentPathsChanged();
-}
-
-void FileClipboardModel::clearCurrent()
-{
-    // Instead of actually clearing the contents of the current group,
-    // we insert an emtpy group that becomes the current selection,
-    // thus pushing the previously selected group into the history list.
-    beginInsertRows(QModelIndex(), 0, 0);
-    m_entries.prepend(ClipboardGroup());
-    m_historyCount++;
-    endInsertRows();
-
-    emit historyCountChanged();
-    emit currentCountChanged();
-    emit currentModeChanged();
-    emit currentPathsChanged();
-}
-
-QStringList FileClipboardModel::listExistingFiles(QString destDirectory, bool ignoreInCurrentDir, bool getNamesOnly)
-{
-    const QStringList& currentFiles = currentPaths();
+    const QStringList& currentFiles = m_paths;
 
     if (currentFiles.isEmpty()) {
         return QStringList();
@@ -308,96 +184,58 @@ QStringList FileClipboardModel::listExistingFiles(QString destDirectory, bool ig
     return existingFiles;
 }
 
-void FileClipboardModel::clearAll()
+int FileClipboard::count() const
 {
-    beginResetModel();
-    m_historyCount = 0;
-    emit historyCountChanged();
-    m_entries.clear();
-    endResetModel();
+    return m_count;
 }
 
-bool FileClipboardModel::ClipboardGroup::forgetEntry(int index)
-{
-    if (index >= m_count) return false;
-
-    m_paths.removeAt(index);
-    m_pathsModel->removeRow(index);
-    m_count--;
-    return true;
-}
-
-bool FileClipboardModel::ClipboardGroup::forgetEntry(QString path)
-{
-    int removed = m_paths.removeAll(path);
-    m_count -= removed;
-
-    if (removed > 0) {
-        m_pathsModel->setStringList(m_paths);
-        return true;
-    }
-
-    return false;
-}
-
-bool FileClipboardModel::ClipboardGroup::appendEntry(QString path)
-{
-    QString validated = validatePath(path);
-
-    if (validated.isEmpty() || m_paths.contains(validated)) {
-        return false;
-    }
-
-    m_paths.append(validated);
-    m_pathsModel->setStringList(m_paths);
-    m_count++;
-    return true;
-}
-
-bool FileClipboardModel::ClipboardGroup::setEntries(const QStringList& paths)
-{
-    QStringList newPaths;
-    newPaths.reserve(paths.length());
-
-    for (auto& i : paths) {
-        auto validated = validatePath(i);
-
-        if (!validated.isEmpty()) {
-            newPaths.append(i);
-        }
-    }
-
-    newPaths.removeDuplicates();
-
-    if (m_count != newPaths.length() || m_paths != newPaths) {
-        m_paths = newPaths;
-        m_count = newPaths.length();
-        m_pathsModel->setStringList(m_paths);
-        return true;
-    }
-    return false;
-}
-
-FileClipMode::Enum FileClipboardModel::ClipboardGroup::mode() const
+FileClipMode::Enum FileClipboard::mode() const
 {
     return m_mode;
 }
 
-bool FileClipboardModel::ClipboardGroup::setMode(FileClipMode::Enum newMode)
+void FileClipboard::setMode(FileClipMode::Enum newMode)
 {
-    if (newMode != m_mode) {
-        m_mode = newMode;
-        return true;
-    }
-    return false;
+    m_mode = newMode;
+    emit modeChanged();
 }
 
-QString FileClipboardModel::ClipboardGroup::validatePath(QString path)
+const QStringList& FileClipboard::paths() const
+{
+    return m_paths;
+}
+
+PathsModel* FileClipboard::pathsModel() const
+{
+    return m_pathsModel;
+}
+
+void FileClipboard::setPaths(const QStringList &newPaths)
+{
+    QStringList toAdd;
+    toAdd.reserve(newPaths.length());
+
+    for (auto& i : newPaths) {
+        auto validated = validatePath(i);
+
+        if (!validated.isEmpty()) {
+            toAdd.append(i);
+        }
+    }
+
+    toAdd.removeDuplicates();
+    m_paths = toAdd;
+    emit pathsChanged();
+}
+
+QString FileClipboard::validatePath(QString path)
 {
     // - never allow special files (char/block/fifo/socket) in the clipboard
     // - never allow non-existent files
     // - make sure all paths are absolute
     // - note: duplicates are not allowed but are not checked by this method
+
+    if (path.isEmpty()) return path;
 
     StatFileInfo info(path);
 
@@ -412,74 +250,6 @@ QString FileClipboardModel::ClipboardGroup::validatePath(QString path)
     }
 }
 
-FileClipboard::FileClipboard(QObject* parent)
-    : QObject(parent), m_model(new FileClipboardModel(this))
-{
-    connect(m_model, &FileClipboardModel::currentCountChanged, this, &FileClipboard::countChanged);
-    connect(m_model, &FileClipboardModel::currentModeChanged, this, &FileClipboard::modeChanged);
-    connect(m_model, &FileClipboardModel::currentPathsChanged, this, &FileClipboard::pathsChanged);
-}
-
-FileClipboard::~FileClipboard()
-{
-    //
-}
-
-void FileClipboard::forgetPath(QString path)
-{
-    m_model->forgetPath(0, path);
-}
-
-void FileClipboard::appendPath(QString path)
-{
-    m_model->appendPath(0, path);
-}
-
-bool FileClipboard::isInCurrentSelection(QString path)
-{
-    return m_model->isPathInGroup(0, path);
-}
-
-void FileClipboard::clear()
-{
-    m_model->clearCurrent();
-}
-
-QStringList FileClipboard::listExistingFiles(QString destDirectory, bool ignoreInCurrentDir, bool getNamesOnly)
-{
-    return m_model->listExistingFiles(destDirectory, ignoreInCurrentDir, getNamesOnly);
-}
-
-FileClipboardModel* FileClipboard::model() const
-{
-    return m_model;
-}
-
-int FileClipboard::count() const
-{
-    return m_model->currentCount();
-}
-
-FileClipMode::Enum FileClipboard::mode() const
-{
-    return m_model->currentMode();
-}
-
-void FileClipboard::setMode(FileClipMode::Enum newMode)
-{
-    m_model->setCurrentMode(newMode);
-}
-
-const QStringList &FileClipboard::paths() const
-{
-    return m_model->currentPaths();
-}
-
-void FileClipboard::setPaths(const QStringList &newPaths)
-{
-    m_model->setCurrentPaths(newPaths);
-}
-
 PathsModel::PathsModel(QObject* parent) : QStringListModel(parent)
 {
     connect(this, &PathsModel::dataChanged, this, [&](const QModelIndex& topLeft,
@@ -488,29 +258,4 @@ PathsModel::PathsModel(QObject* parent) : QStringListModel(parent)
         Q_UNUSED(roles)
         emit dataChanged(topLeft, bottomRight, {DirRole});
     });
-}
-
-QVariant PathsModel::data(const QModelIndex &index, int role) const
-{
-    const auto& entry = QStringListModel::data(index, Qt::DisplayRole);
-    if (!entry.isValid()) return entry;
-
-    switch (role) {
-    case Qt::DisplayRole:
-        return entry.toString();
-
-    case DirRole:
-        return QFileInfo(entry.toString()).path();
-
-    default:
-        return QVariant();
-    }
-}
-
-QHash<int, QByteArray> PathsModel::roleNames() const
-{
-    QHash<int, QByteArray> roles = QAbstractListModel::roleNames();
-    roles.insert(FullPathRole, QByteArray("path"));
-    roles.insert(DirRole, QByteArray("directory"));
-    return roles;
 }
