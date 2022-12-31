@@ -41,7 +41,7 @@ Page {
                                               Text.ElideNone : (_fnElide === 'middle' ?
                                                                     Text.ElideMiddle : Text.ElideRight)
 
-    Button {
+    /* Button {
         z: 100000
         anchors {
             top: parent.top
@@ -56,7 +56,7 @@ Page {
             FileClipboard.setPaths(["/usr", "/etc", "/bin"], FileClipMode.Link)
             FileClipboard.setPaths(["/usr/lib", "/usr/share", "/usr/lib/qt5"], FileClipMode.Cut)
         }
-    }
+    } */
 
     SilicaListView {
         id: list
