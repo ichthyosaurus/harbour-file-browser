@@ -4,7 +4,7 @@
  * SPDX-FileCopyrightText: 2013-2019 Kari Pihkala
  * SPDX-FileCopyrightText: 2013 Michael Faro-Tusino
  * SPDX-FileCopyrightText: 2016 Joona Petrell
- * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2023 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -39,6 +39,13 @@ Page {
 
     property alias notificationPanel: notificationPanel
     property bool _hasMoved: false
+
+    // Setting this to 'true' will cause the attached page to be
+    // reloaded every time the file page is activated. This is
+    // for example required to make sure PDF annotations are saved
+    // when using the embedded PDF viewer.
+    // TODO check if the PDF viewer still has this bug on SFOS 4.x
+    property bool _forceReloadAttachedPage: false
 
     FileData {
         id: fileData
@@ -352,7 +359,29 @@ Page {
         } else if (status === PageStatus.Active) {
             if (!canNavigateForward) {
                 viewContents(true);
+            } else if (_forceReloadAttachedPage === true) {
+                console.log("reloading attached page")
+                pageStack.popAttached(null, PageStackAction.Immediate)
+                delayedRefreshAttachedTimer.restart()
             }
+        }
+    }
+
+    Timer {
+        id: delayedRefreshAttachedTimer
+        running: false
+        repeat: false
+
+        // FIXME Hack: when adding annotations to a PDF using the embedded viewer,
+        // it takes some time to save the changes. Sailfish-office saves to
+        // a temporary file, then overwrites the original file with it. There
+        // is no way of knowing when sailfish-office is done saving, so we have
+        // to wait some time before reloading the document to actually catch
+        // the new contents. Let's hope 800ms is enough even for large documents.
+        interval: 800
+
+        onTriggered: {
+            viewContents(true)
         }
     }
 
@@ -405,6 +434,7 @@ Page {
         } else if (fileData.category === "video") {
             method(Qt.resolvedUrl("ViewVideoPage.qml"), { path: page.file, title: fileData.name, autoPlay: !asAttached });
         } else if (GlobalSettings.pdfViewerEnabled && fileData.category === "pdf") {
+            _forceReloadAttachedPage = true
             method(GlobalSettings.pdfViewerPath, {
                 title: fileData.name, source: fileData.file, mimeType: fileData.mimeType
             })
