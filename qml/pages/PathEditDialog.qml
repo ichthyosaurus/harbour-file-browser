@@ -48,6 +48,7 @@ Dialog {
 
     canAccept: path !== "" && _isReady
     property bool _isReady: false
+    property string _firstSuggestion: ""
     property var _pathRegex: new RegExp('', 'i')
     property real _searchLeftMargin: Theme.itemSizeSmall+Theme.paddingMedium // = SearchField::textLeftMargin
     property string _fnElide: GlobalSettings.generalFilenameElideMode
@@ -91,6 +92,10 @@ Dialog {
                 }
             }
 
+            if (listModel.count == 0) {
+                _firstSuggestion = filename
+            }
+
             listModel.append({ fullname: fullname, filename: filename,
                                  absoluteDir: absoluteDir,
                                  fileIcon: fileIcon, fileKind: fileKind,
@@ -119,6 +124,7 @@ Dialog {
             // given text as the search query
             function update(text) {
                 clear();
+                _firstSuggestion = ""
                 searchEngine.filterDirectories(text);
                 console.log("dir filter started:", text);
             }
@@ -159,9 +165,16 @@ Dialog {
                                   Qt.ImhUrlCharactersOnly
 
                 EnterKey.enabled: pathField.text.length > 0
-                EnterKey.iconSource: canAccept ? "image://theme/icon-m-enter-accept" :
-                                                        "image://theme/icon-m-enter-close"
-                EnterKey.onClicked: if (canAccept) accept()
+                EnterKey.iconSource: {
+                    if (canAccept) "image://theme/icon-m-enter-accept"
+                    else if (listModel.count == 1 && _firstSuggestion !== "") "image://theme/icon-m-enter-next"
+                    else "image://theme/icon-m-enter-close"
+                }
+                EnterKey.onClicked: {
+                    if (canAccept) accept()
+                    else if (listModel.count == 1 && _firstSuggestion !== "") suggestionSelected(_firstSuggestion)
+                    else pathField.focus = false // force focus away so the keyboard closes
+                }
 
                 Component.onCompleted: {
                     forceActiveFocus() // grab focus when the page is openend
