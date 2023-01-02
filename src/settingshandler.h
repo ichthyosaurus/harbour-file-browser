@@ -369,6 +369,8 @@ private:
     Mapping<QString> map_initialDirPath{QDir::homePath(), true};
     PROP(QString, generalCustomInitialDirectoryPath, "General/CustomInitialDirectoryPath", "", map_initialDirPath, map_invalid);
     PROP(QString, generalLastDirectoryPath, "General/LastDirectoryPath", "", map_initialDirPath, map_invalid);
+    // PROP(bool, generalShareClipboard, "General/ShareClipboard", "", map_bool_true, map_bool_true)
+    // PROP(bool, generalUseTrashCan, "General/UseTrashCan", "", map_bool_true, map_bool_true)
 
     // [Transfer] section
     Mapping<QString> map_transferAction{QSL("none"), {QSL("copy"), QSL("move"), QSL("link")}};
