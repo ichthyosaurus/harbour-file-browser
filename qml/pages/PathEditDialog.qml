@@ -171,6 +171,11 @@ Dialog {
                 }
 
                 onTextChanged: {
+                    if (text === "") {
+                        text = "/"
+                        return
+                    }
+
                     path = text
                     var dir = Paths.dirName(path)
                     if (searchEngine.dir !== dir) {
