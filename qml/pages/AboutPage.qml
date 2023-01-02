@@ -35,6 +35,7 @@ A.AboutPageBase {
             name: "SortFilterProxyModel"
             entries: ["2016 Pierre-Yves Siret"]
             licenses: A.License { spdxId: "MIT" }
+            sources: "https://github.com/oKcerG/SortFilterProxyModel"
         },
         A.Attribution {
             name: "OSMScout Migration"
