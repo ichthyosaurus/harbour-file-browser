@@ -69,4 +69,4 @@ column in the global settings table for keys used prior to version 2.0.0 of the 
 | Key                                | Default value | Values                   | Scope         | Replaced by                 | Introduced in
 |------------------------------------|---------------|--------------------------|---------------|-----------------------------|--------------
 | `View/EnableGalleryMode`           | `false`       | bool                     | local, global | `View/ViewMode`             | 2.5.0
-| `ShowDirectoriesFirst`             | `true`        | bool                     | locale        | `Dolphin/SortFoldersFirst`  | 2.5.2
+| `Sailfish/ShowDirectoriesFirst`    | `true`        | bool                     | local         | `Dolphin/SortFoldersFirst`  | 2.5.2
