@@ -227,13 +227,9 @@ Dialog {
                 width: parent.width
                 contentHeight: Theme.itemSizeMedium * 0.9 // two line delegate
 
-                onClicked: {
-                    var newPath = path;
-                    newPath = newPath.replace(/\/$/, '')
-                    newPath = '/'+Paths.dirName(newPath)
-                    newPath = newPath.replace(/\/+/g, '/')
-                    pathReplaced(newPath)
-                }
+                enabled: path != "/"
+                opacity: enabled ? 1.0 : Theme.opacityLow
+                onClicked: removeLastPartOfPath(dialog.path)
 
                 Icon {
                     source: "image://theme/icon-m-backspace"
