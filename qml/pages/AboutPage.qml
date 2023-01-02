@@ -27,9 +27,10 @@ A.AboutPageBase {
     licenses: A.License { spdxId: "GPL-3.0-or-later" }
     attributions: [
         A.Attribution {
-            name: "JHead"
-            entries: ["Matthias Wandel", qsTr("adapted by karip")]
+            name: "JHead (2.97)"
+            entries: ["Matthias Wandel", qsTr("2014 adapted by karip"), qsTr("2021 adapted by ichthyosaurus")]
             licenses: A.License { spdxId: "GPL-3.0-or-later" }
+            sources: "https://www.sentex.net/~mwandel/jhead/"
         },
         A.Attribution {
             name: "SortFilterProxyModel"

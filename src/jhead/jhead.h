@@ -23,7 +23,7 @@
 // This is a modified version of jhead 2.97, which is a
 // public domain Exif manipulation tool.
 //
-// The original files can be found at http://www.sentex.net/~mwandel/jhead/
+// The original files can be found at https://www.sentex.net/~mwandel/jhead/
 //
 
 
