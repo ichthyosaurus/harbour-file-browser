@@ -290,7 +290,7 @@ Page {
             Label {
                 x: Theme.horizontalPageMargin
                 width: parent.width - 2*x
-                text: qsTr("Swipe right to view File Browser's source code, " +
+                text: qsTr("Swipe from the right to view File Browser's source code, " +
                            "license information, and a list of contributors.")
                 font.pixelSize: Theme.fontSizeSmall
                 color: Theme.secondaryHighlightColor
