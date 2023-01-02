@@ -56,6 +56,14 @@ Dialog {
                                     Text.ElideNone : (_fnElide === 'middle' ?
                                                           Text.ElideMiddle : Text.ElideRight)
 
+    function removeLastPartOfPath(path) {
+        var newPath = path
+        newPath = newPath.replace(/\/$/, '')
+        newPath = '/' + Paths.dirName(newPath)
+        newPath = newPath.replace(/\/+/g, '/')
+        pathReplaced(newPath)
+    }
+
     Timer {
         id: delayedFocusTimer
         interval: 100
@@ -113,6 +121,17 @@ Dialog {
                 clear();
                 searchEngine.filterDirectories(text);
                 console.log("dir filter started:", text);
+            }
+        }
+
+        PullDownMenu {
+            flickable: hintList
+            quickSelect: true
+            visible: path != "/"
+
+            MenuItem {
+                text: qsTr("Remove last part")
+                onClicked: removeLastPartOfPath(dialog.path)
             }
         }
 
