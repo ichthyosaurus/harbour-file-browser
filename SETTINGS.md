@@ -8,34 +8,35 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 ## Global Settings
 
-| Key                                | Default value | Allowed values                                | Legacy key (in `[General]`)
-|------------------------------------|---------------|-----------------------------------------------|-------------------------
-| **`[General]`**                    |               |                                               |
-| `DefaultFilterAction`              | `filter`      | `filter`/`search`                             |
-| `ShowFullDirectoryPaths`           | `false`       | bool                                          |
-| `ShowNavigationMenuIcon`           | `true`        | bool                                          |
-| `FilenameElideMode`                | `fade`        | `fade`/`end`/`middle`                         |
-| `SolidWindowBackground`            | `false`       | bool                                          |
-| `InitialDirectoryMode`             | `home`        | `home`/`last`/`custom`                        |
-| `CustomInitialDirectoryPath`       | home dir      | any string                                    |
-| `LastDirectoryPath`                | home dir      | any string                                    |
-| **`[Transfer]`**                   |               |                                               |
-| `DefaultAction`                    | `none`        | `copy`/`move`/`link`/`none`                   | `default-transfer-action`
-| **`[View]`**                       |               |                                               |
-| `SortRole`                         | `name`        | `name`/`size`/`modificationtime`/`type`       | `listing-sort-by`
-| `SortOrder`                        | `default`     | `default`/`reversed`                          | `listing-order`
-| `SortCaseSensitively`              | `false`       | bool                                          | `sort-case-sensitive`
-| `ShowDirectoriesFirst`             | `true`        | bool                                          | `show-dirs-first`
-| `ShowHiddenLast`                   | `false`       | bool                                          |
-| `HiddenFilesShown`                 | `false`       | bool                                          | `show-hidden-files`
-| `PreviewsShown`                    | `false`       | bool                                          | `show-thumbnails`
-| `PreviewsSize`                     | `medium`      | `small`/`medium`/`large`/`huge`               | `thumbnails-size`
-| `UseLocalSettings`                 | `true`        | bool                                          | `use-local-view-settings`
-| `ViewMode`                         | `list`        | `list`/`gallery`/`grid`                       |
-| **`[Bookmarks]`**                  |               |                                               |
-| `Entries="[\"...\"]"`              |               | ordered array of paths as JSON strings (this field holds only the order of elements, not the elements themselves) | `bookmark-entries`
-| `home#nemo#Devel=Devel`            |               | `path=bookmark name` for each bookmark (with all `/` replaced by `#` to distinguish them from settings groups) |
+| Key                                | Default value | Allowed values                                | Legacy key (in `[General]`)  | Introduced in
+|------------------------------------|---------------|-----------------------------------------------|------------------------------|--------------
+| **`[General]`**                    |               |                                               |                              |
+| `DefaultFilterAction`              | `filter`      | `filter`/`search`                             |                              |
+| `ShowFullDirectoryPaths`           | `false`       | bool                                          |                              |
+| `ShowNavigationMenuIcon`           | `true`        | bool                                          |                              |
+| `FilenameElideMode`                | `fade`        | `fade`/`end`/`middle`                         |                              |
+| `SolidWindowBackground`            | `false`       | bool                                          |                              |
+| `InitialDirectoryMode`             | `home`        | `home`/`last`/`custom`                        |                              |
+| `CustomInitialDirectoryPath`       | home dir      | any string                                    |                              |
+| `LastDirectoryPath`                | home dir      | any string                                    |                              |
+| **`[Transfer]`**                   |               |                                               |                              |
+| `DefaultAction`                    | `none`        | `copy`/`move`/`link`/`none`                   | `default-transfer-action`    |
+| **`[View]`**                       |               |                                               |                              |
+| `SortRole`                         | `name`        | `name`/`size`/`modificationtime`/`type`       | `listing-sort-by`            |
+| `SortOrder`                        | `default`     | `default`/`reversed`                          | `listing-order`              |
+| `SortCaseSensitively`              | `false`       | bool                                          | `sort-case-sensitive`        |
+| `ShowDirectoriesFirst`             | `true`        | bool                                          | `show-dirs-first`            |
+| `ShowHiddenLast`                   | `false`       | bool                                          |                              |
+| `HiddenFilesShown`                 | `false`       | bool                                          | `show-hidden-files`          |
+| `PreviewsShown`                    | `false`       | bool                                          | `show-thumbnails`            |
+| `PreviewsSize`                     | `medium`      | `small`/`medium`/`large`/`huge`               | `thumbnails-size`            |
+| `UseLocalSettings`                 | `true`        | bool                                          | `use-local-view-settings`    |
+| `ViewMode`                         | `list`        | `list`/`gallery`/`grid`                       |                              | 2.5.0*
+| **`[Bookmarks]`**                  |               |                                               |                              |
+| `Entries="[\"...\"]"`              |               | ordered array of paths as JSON strings (this field holds only the order of elements, not the elements themselves) | `bookmark-entries` |
+| `home#nemo#Devel=Devel`            |               | `path=bookmark name` for each bookmark (with all `/` replaced by `#` to distinguish them from settings groups) | |
 
+**\*** changed from an earlier version, see section *"Obsolete Settings"* below
 
 ## Local Settings
 
@@ -65,7 +66,7 @@ They use the same entries as [KDE](https://kde.org)'s file manager
 The following settings keys are no longer in use. See also the "Legacy key"
 column in the global settings table for keys used prior to version 2.0.0 of the app.
 
-| Key                                | Default value | Values                   | Scope         | Replaced by (version)
-|------------------------------------|---------------|--------------------------|---------------|-------------------------
-| `View/EnableGalleryMode`           | `false`       | bool                     | local, global | `View/ViewMode` (>= 2.5.0)
-| `ShowDirectoriesFirst`             | `true`        | bool                     | locale        | `Dolphin/SortFoldersFirst` (> 2.5.1)
+| Key                                | Default value | Values                   | Scope         | Replaced by                 | Introduced in
+|------------------------------------|---------------|--------------------------|---------------|-----------------------------|--------------
+| `View/EnableGalleryMode`           | `false`       | bool                     | local, global | `View/ViewMode`             | 2.5.0
+| `ShowDirectoriesFirst`             | `true`        | bool                     | locale        | `Dolphin/SortFoldersFirst`  | 2.5.2
