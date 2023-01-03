@@ -643,15 +643,18 @@ void BookmarksModel::moveUp(QString path)
         return;
     }
 
-    int fromIndex = m_indexLookup.value(path);
+    int fromIndex = m_indexLookup.value(path, -1);
     int toIndex = 0;
 
     if (fromIndex < 0 || fromIndex > rowCount()) {
+        qDebug() << "moving bookmark up: no" << fromIndex << rowCount();
         return;
-    } else if (fromIndex - 1 < 0) {
+    } else if (fromIndex == std::max(0, m_firstUserDefinedIndex)) {
         // already at the top? cycle to the bottom
+        qDebug() << "moving bookmark up: already at the top" << fromIndex << m_firstUserDefinedIndex;
         toIndex = rowCount();
     } else {
+        qDebug() << "moving bookmark up: normal" << fromIndex << fromIndex - 1;
         toIndex = fromIndex - 1;
     }
 
@@ -664,14 +667,14 @@ void BookmarksModel::moveDown(QString path)
         return;
     }
 
-    int fromIndex = m_indexLookup.value(path);
+    int fromIndex = m_indexLookup.value(path, -1);
     int toIndex = 0;
 
     if (fromIndex < 0 || fromIndex > rowCount()) {
         return;
-    } else if (fromIndex+1 >= rowCount()) {
+    } else if (fromIndex + 1 >= rowCount()) {
         // already at the bottom? cycle to the top
-        toIndex = 0;
+        toIndex = std::max(0, m_firstUserDefinedIndex);
     } else {
         toIndex = fromIndex + 1;
     }
@@ -856,8 +859,12 @@ void BookmarksModel::reload()
     auto doc = QJsonDocument::fromJson(QByteArray::fromStdString(order.toStdString()));
 
     if (doc.isArray()) {
-        int idx = 0;
+        int idx = newEntries.length();
         const auto array = doc.array();
+
+        if (!array.isEmpty()) {
+            m_firstUserDefinedIndex = idx;
+        }
 
         for (const auto& i : array) {
             QString path = i.toString();
@@ -914,24 +921,37 @@ void BookmarksModel::moveItem(int fromIndex, int toIndex)
         return;
     }
 
+    qDebug() << "moving bookmark:" << fromIndex << toIndex;
+
     // Moving rows using the beginMoveRows()/endMoveRows()/m_entries.move()
     // functions is incredibly slow for some reason.
     // Removing the row and adding it again has good performance.
 
+    int lastIndex = rowCount();
+    if (toIndex > lastIndex) {
+        toIndex = lastIndex;
+    }
+
     beginRemoveRows(QModelIndex(), fromIndex, fromIndex);
     auto item = m_entries.takeAt(fromIndex);
+    m_indexLookup.remove(item.path);
     endRemoveRows();
+
+    // the position we want to move to just moved one place
+    // up because we removed the old entry
+    if (toIndex > fromIndex) {
+        toIndex -= 1;
+    }
 
     beginInsertRows(QModelIndex(), toIndex, toIndex);
     m_entries.insert(toIndex, item);
-    endInsertRows();
-
     m_indexLookup.clear();
     for (int i = 0; i < m_entries.count(); ++i) {
         if (m_entries.at(i).userDefined) {
             m_indexLookup.insert(m_entries.at(i).path, i);
         }
     }
+    endInsertRows();
 
     saveOrder();
 }

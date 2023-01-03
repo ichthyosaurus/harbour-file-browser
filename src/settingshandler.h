@@ -156,6 +156,7 @@ public:
 
     Q_INVOKABLE void clearTemporary();
 
+    // methods for handling user defined bookmarks
     // Q_INVOKABLE void moveUp(int fromIndex);
     // Q_INVOKABLE void moveDown(int fromIndex);
     Q_INVOKABLE void moveUp(QString path);
@@ -199,6 +200,7 @@ private:
     };
 
     QList<BookmarkItem> m_entries;
+    int m_firstUserDefinedIndex = -1;
 
     // maps paths of custom bookmarks to indices in the entries list
     QMap<QString, int> m_indexLookup;
