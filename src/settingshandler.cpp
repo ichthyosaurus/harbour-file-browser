@@ -489,7 +489,10 @@ BookmarkWatcher::BookmarkWatcher(QObject *parent) : QObject(parent)
 
 BookmarkWatcher::~BookmarkWatcher()
 {
-//    BookmarksModel::instance()->unregisterWatcher(m_path, QSharedPointer(this));
+    // We don't have to unregister destroyed watchers from the model
+    // because the model handles this already. (Pointers are stored
+    // using QPointer, which sets itself to 0 if the pointed-to QObject
+    // is destroyed.)
 }
 
 bool BookmarkWatcher::marked() {
