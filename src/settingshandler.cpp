@@ -934,6 +934,7 @@ void BookmarksModel::reload()
     newEntries.append(externalDrives());
 
     // load user defined bookmarks
+    m_firstUserDefinedIndex = newEntries.length();
 
     std::string bookmarksString = loadBookmarksFile().toStdString();
     auto doc = QJsonDocument::fromJson(QByteArray::fromStdString(bookmarksString));
@@ -941,10 +942,6 @@ void BookmarksModel::reload()
     if (doc.isArray()) {
         int idx = newEntries.length();
         const auto array = doc.array();
-
-        if (!array.isEmpty()) {
-            m_firstUserDefinedIndex = idx;
-        }
 
         for (const auto& i : array) {
             if (!i.isObject()) {
@@ -966,6 +963,8 @@ void BookmarksModel::reload()
             idx++;
         }
     }
+
+    m_lastUserDefinedIndex = newEntries.length();
 
     beginResetModel();
     m_entries = newEntries;

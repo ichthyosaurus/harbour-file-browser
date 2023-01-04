@@ -205,7 +205,8 @@ private:
     };
 
     QList<BookmarkItem> m_entries;
-    int m_firstUserDefinedIndex = -1;
+    int m_firstUserDefinedIndex {-1};
+    int m_lastUserDefinedIndex {-1};
 
     // maps paths of custom bookmarks to indices in the entries list
     QMap<QString, int> m_indexLookup;
