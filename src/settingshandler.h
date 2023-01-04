@@ -33,6 +33,7 @@
 #include <QAbstractListModel>
 #include <QFileSystemWatcher>
 
+#include "configfilemonitor.h"
 #include "enumcontainer.h"
 
 class QFileInfo;
@@ -128,6 +129,7 @@ private:
     QString m_path;
 };
 
+
 // Provides a list of all currently configured bookmarks.
 // Changes to the model are immediately stored on disk. The
 // model re-reads the file automatically if the file changes.
@@ -178,7 +180,6 @@ public:
 private slots:
     void updateExternalDevices();
     void reload();
-    void reloadFromWatcher();
 
 private:
     void save();
@@ -189,7 +190,6 @@ private:
     void removeItem(QString path, bool doSave);
 
     QString loadBookmarksFile();
-    void resetWatcherPaths(QFileSystemWatcher& watcher);
     void rebuildIndexLookup();
 
     struct BookmarkItem {
@@ -225,11 +225,7 @@ private:
     QStringList subdirs(const QString& dirname, bool includeHidden = false);
 
     // We monitor the bookmarks file except while saving entries.
-    const QString m_bookmarksFileName {QStringLiteral("bookmarks.json")};
-    const int m_maximumFileSize {200*1024} /* 200 KiB */;
-    QString m_bookmarksFile;
-    QString m_configDir;
-    QFileSystemWatcher m_bookmarksWatcher;
+    ConfigFileMonitor* m_bookmarksMonitor;
 
     QMutex m_mutex;
     static QSharedPointer<BookmarksModel> s_globalInstance;
