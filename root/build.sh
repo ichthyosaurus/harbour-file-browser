@@ -2,13 +2,13 @@
 #
 # This file is part of File Browser and has been released into the public domain.
 # SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2020-2022 Mirian Margiani
+# SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
 
 SFDK=/opt/sfos/bin/sfdk
 TARGETS=(
     # note: last field (/-.*?$/) has to be architecture
-    "SailfishOS-4.3.0.12-i486"
-    "SailfishOS-4.3.0.12-aarch64"
+    "SailfishOS-4.4.0.58-i486"
+    "SailfishOS-4.4.0.58-aarch64"
     "SailfishOS-3.4.0.24-armv7hl"
 )
 
