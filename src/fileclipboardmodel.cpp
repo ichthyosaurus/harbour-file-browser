@@ -215,15 +215,14 @@ PathsModel* FileClipboard::pathsModel() const
 
 void FileClipboard::reload()
 {
-    std::string read = m_monitor->readFile().toStdString();
-    auto doc = QJsonDocument::fromJson(QByteArray::fromStdString(read));
+    const auto data = m_monitor->readJson(QStringLiteral("1"));
 
-    if (!doc.isObject()) {
+    if (!data.isObject()) {
         qDebug() << "clipboard file is invalid:" << m_monitor->readFile();
         return;
     }
 
-    const auto obj = doc.object();
+    const auto obj = data.toObject();
     const auto array = obj.value(QStringLiteral("paths")).toArray();
     QString savedModeString = obj.value(QStringLiteral("mode")).toString(QLatin1Literal());
     int savedMode = FileClipMode::Copy;
@@ -246,36 +245,13 @@ void FileClipboard::reload()
 
 void FileClipboard::saveToDisk()
 {
-    ConfigFileMonitorBlocker blocker(m_monitor);
-
-    qDebug() << "saving clipboard";
-    QSaveFile outFile(m_monitor->file());
-
-    if (!outFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Unbuffered)) {
-        qWarning() << "failed to open a temporary file for saving clipboard";
-        qWarning() << "clipboard contents will not be available in other app windows";
-        return;
-    }
-
     QMetaEnum metaEnum = QMetaEnum::fromType<FileClipMode::Enum>();
     QString modeString = metaEnum.valueToKey(m_mode);
 
-    QJsonDocument doc;
     QJsonObject obj;
-
     obj.insert(QStringLiteral("mode"), m_paths.isEmpty() ? QLatin1Literal() : modeString);
     obj.insert(QStringLiteral("paths"), QJsonArray::fromStringList(m_paths));
-    doc.setObject(obj);
-
-    outFile.write(doc.toJson(QJsonDocument::Indented));
-
-    if (!outFile.commit()) {
-        qWarning() << "failed to save clipboard to" << m_monitor->file();
-        qWarning() << "clipboard contents will not be available in other app windows";
-        return;
-    }
-
-    qDebug() << "clipboard saved, start monitoring again";
+    m_monitor->writeJson(obj, QStringLiteral("1"));
 }
 
 void FileClipboard::setPaths(const QStringList& newPaths, FileClipMode::Enum mode, bool doSave)
