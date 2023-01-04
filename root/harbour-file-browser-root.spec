@@ -36,12 +36,16 @@ A setuid helper binary is used to start the app. The source file is included
 in this package:
     /usr/share/%appname/start-root-helper.c
 
-Follow these steps to rebuild the start helper:
+The start helper is built using these steps in the Sailfish SDK:
     $ gcc "/usr/share/%appname/start-root-helper.c" -o "/usr/share/%appname/start-root"
     $ chmod 4755 "/usr/share/%appname/start-root"
 
-Sources and documentation can be found online:
+Sources and documentation can be found online at:
     https://github.com/ichthyosaurus/harbour-file-browser/
+
+The repository contains a helper script for cross-compiling the root starter
+using the Sailfish SDK. Prefer this over trying to build it on your phone.
+
 
 %prep
 %setup -q -n %{name}-%{version}

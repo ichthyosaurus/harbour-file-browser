@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2020-2022 Mirian Margiani
+SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
 
 SPDX-License-Identifier: GFDL-1.3-or-later
 -->
@@ -34,10 +34,10 @@ Use this to get a list of installed targets (or use the SDK maintenance tool):
 `<sfdk> tools list`
 
 
-Steps for manual builing:
+### Steps for building manually
 
 1. Checkout this repository to get the source code
-2. Open the Sailfish OS IDE and start the Build Engine or run: `<path to SDK>/bin/sfdk engine start`
+2. Open the Sailfish OS IDE and start the Build Engine, or run: `<path to SDK>/bin/sfdk engine start`
 3. Run the following in the directory where this README file is located to
    build the package: `<path to SDK>/bin/sfdk engine exec sb2 -t <target> make`
 4. Results are in `RPMS/<target>/`

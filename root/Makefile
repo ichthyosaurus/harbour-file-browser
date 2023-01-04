@@ -2,11 +2,11 @@
 #
 # This file is part of File Browser and has been released into the public domain.
 # SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2020-2022 Mirian Margiani
+# SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
 
 .PHONY: default clean
 
-# NOTE Change SUFFIX when creating stable/dev builds. There is not need to
+# NOTE Change SUFFIX when creating stable/dev builds. There is no need to
 #      use the same suffix as File Browser because this helper is not allowed
 #      in Jolla's Harbour store anyway.
 SUFFIX=

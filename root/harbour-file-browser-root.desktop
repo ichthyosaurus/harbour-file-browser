@@ -1,6 +1,7 @@
 # This file is part of File Browser.
 # SPDX-License-Identifier: GPL-3.0-or-later
-# SPDX-FileCopyrightText: 2020-2022 Mirian Margiani
+# SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
+# < this line must not be empty, otherwise the app won't show up in the launcher >
 [Desktop Entry]
 Type=Application
 Name=File Browser (Root)
@@ -11,7 +12,7 @@ X-Desktop-File-Install-Version=0.20
 
 # Translators: the name has to be short enough not to be abbreviated
 # by the system (in the launcher view). Make sure "root" is always visible,
-# or make sure in any other way that this is to be used with caution.
+# or make sure in any other way that this app is to be used with caution.
 Name[en]=File Br. (Root)
 Name[de]=Dateiverw. (Root)
 
