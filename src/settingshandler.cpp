@@ -569,6 +569,7 @@ namespace {
 
         QStringList keys;
         QJsonDocument outDoc;
+        QJsonObject outObj;
         QJsonArray outArray;
 
         if (inDoc.isArray()) {
@@ -586,7 +587,9 @@ namespace {
             }
         }
 
-        outDoc.setArray(outArray);
+        outObj.insert(QStringLiteral("version"), QStringLiteral("1"));
+        outObj.insert(QStringLiteral("data"), outArray);
+        outDoc.setObject(outObj);
 
         QSaveFile outFile(bookmarksFile);
 
@@ -939,28 +942,35 @@ void BookmarksModel::reload()
     std::string bookmarksString = loadBookmarksFile().toStdString();
     auto doc = QJsonDocument::fromJson(QByteArray::fromStdString(bookmarksString));
 
-    if (doc.isArray()) {
-        int idx = newEntries.length();
-        const auto array = doc.array();
+    if (doc.isObject()) {
+        const auto obj = doc.object();
+        QString version = obj.value(QStringLiteral("version")).toString(QStringLiteral("0"));
+        const auto array = obj.value(QStringLiteral("data")).toArray();
 
-        for (const auto& i : array) {
-            if (!i.isObject()) {
-                qWarning() << "invalid bookmarks entry in" << m_bookmarksMonitor->file() << i;
-                continue;
+        if (version == QStringLiteral("1")) {
+            int idx = m_firstUserDefinedIndex;
+
+            for (const auto& i : array) {
+                if (!i.isObject()) {
+                    qWarning() << "invalid bookmarks entry in" << m_bookmarksMonitor->file() << i;
+                    continue;
+                }
+
+                auto obj = i.toObject();
+                QString path = obj.value(QStringLiteral("path")).toString(QStringLiteral("/home"));
+                QString name = obj.value(QStringLiteral("name")).toString(path.split("/").last());
+
+                newEntries.append(BookmarkItem(
+                    BookmarkGroup::Bookmark,
+                    name,
+                    QStringLiteral("icon-m-favorite"),
+                    path,
+                    false, true));
+                newIndexLookup.insert(path, idx);
+                ++idx;
             }
-
-            auto obj = i.toObject();
-            QString path = obj.value(QStringLiteral("path")).toString(QStringLiteral("/home"));
-            QString name = obj.value(QStringLiteral("name")).toString(path.split("/").last());
-
-            newEntries.append(BookmarkItem(
-                BookmarkGroup::Bookmark,
-                name,
-                QStringLiteral("icon-m-favorite"),
-                path,
-                false, true));
-            newIndexLookup.insert(path, idx);
-            idx++;
+        } else {
+            qWarning() << "unsupported bookmarks file version in" << m_bookmarksMonitor->file() << version;
         }
     }
 
@@ -994,18 +1004,22 @@ void BookmarksModel::save()
     }
 
     QJsonDocument doc;
+    QJsonObject obj;
     QJsonArray array;
 
     for (const auto& i : std::as_const(m_entries)) {
         if (!i.userDefined) continue;
 
-        QJsonObject obj;
-        obj.insert(QStringLiteral("name"), i.name);
-        obj.insert(QStringLiteral("path"), i.path);
-        array.append(obj);
+        QJsonObject item;
+        item.insert(QStringLiteral("name"), i.name);
+        item.insert(QStringLiteral("path"), i.path);
+        array.append(item);
     }
 
-    doc.setArray(array);
+    obj.insert(QStringLiteral("version"), QStringLiteral("1"));
+    obj.insert(QStringLiteral("data"), array);
+
+    doc.setObject(obj);
     outFile.write(doc.toJson(QJsonDocument::Indented));
 
     if (!outFile.commit()) {
