@@ -23,8 +23,6 @@
 #include "statfileinfo.h"
 #include "configfilemonitor.h"
 
-#include "settingshandler.h"
-
 DEFINE_ENUM_REGISTRATION_FUNCTION(FileClipboard) {
     REGISTER_ENUM_CONTAINER(FileClipMode)
 }
@@ -68,7 +66,8 @@ FileClipboard::FileClipboard(QObject* parent)
         emit countChanged();
     });
 
-    m_monitor->reset(RawSettingsHandler::instance()->configDirectory() + "/clipboard.json");
+    // TODO writableLocation can be empty, or the path might not exist!
+    m_monitor->reset(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/clipboard.json");
     connect(m_monitor, &ConfigFileMonitor::configChanged, this, &FileClipboard::reload);
     reload();  // must be called after m_moniter->reset(...) because it relies on m_monitor->file()
 }
