@@ -21,6 +21,9 @@
 #include <QDebug>
 #include "fileclipboardmodel.h"
 #include "statfileinfo.h"
+#include "configfilemonitor.h"
+
+#include "settingshandler.h"
 
 DEFINE_ENUM_REGISTRATION_FUNCTION(FileClipboard) {
     REGISTER_ENUM_CONTAINER(FileClipMode)
@@ -57,13 +60,17 @@ QHash<int, QByteArray> PathsModel::roleNames() const
 }
 
 FileClipboard::FileClipboard(QObject* parent)
-    : QObject(parent), m_pathsModel(new PathsModel(this))
+    : QObject(parent), m_pathsModel(new PathsModel(this)), m_monitor(new ConfigFileMonitor(this))
 {
     connect(this, &FileClipboard::pathsChanged, this, [&](){
         m_count = m_paths.count();
         m_pathsModel->setStringList(m_paths);
         emit countChanged();
     });
+
+    m_monitor->reset(RawSettingsHandler::instance()->configDirectory() + "/clipboard.json");
+    connect(m_monitor, &ConfigFileMonitor::configChanged, this, &FileClipboard::reload);
+    reload();  // must be called after m_moniter->reset(...) because it relies on m_monitor->file()
 }
 
 FileClipboard::~FileClipboard()
@@ -73,8 +80,7 @@ FileClipboard::~FileClipboard()
 
 void FileClipboard::setPaths(const QStringList& paths, FileClipMode::Enum mode)
 {
-    setPaths(paths);
-    setMode(mode);
+    setPaths(paths, mode, true);
 }
 
 void FileClipboard::forgetPath(QString path)
@@ -83,11 +89,10 @@ void FileClipboard::forgetPath(QString path)
     if (validated.isEmpty()) return;
 
     int removed = m_paths.removeAll(validated);
-//    m_count -= removed;
 
     if (removed > 0) {
         emit pathsChanged();
-//        emit countChanged();
+        saveToDisk();
     }
 }
 
@@ -99,6 +104,7 @@ void FileClipboard::forgetIndex(int index)
 
     m_paths.removeAt(index);
     emit pathsChanged();
+    saveToDisk();
 }
 
 void FileClipboard::appendPath(QString path)
@@ -114,10 +120,8 @@ void FileClipboard::appendPath(QString path)
     }
 
     m_paths.append(validated);
-//    m_count++;
-
     emit pathsChanged();
-//    emit countChanged();
+    saveToDisk();
 }
 
 bool FileClipboard::hasPath(QString path)
@@ -134,10 +138,8 @@ bool FileClipboard::hasPath(QString path)
 void FileClipboard::clear()
 {
     m_paths.clear();
-//    m_count = 0;
-
     emit pathsChanged();
-//    emit countChanged();
+    saveToDisk();
 }
 
 QStringList FileClipboard::listExistingFiles(QString destDirectory, bool ignoreInCurrentDir, bool getNamesOnly)
@@ -198,6 +200,7 @@ void FileClipboard::setMode(FileClipMode::Enum newMode)
 {
     m_mode = newMode;
     emit modeChanged();
+    saveToDisk();
 }
 
 const QStringList& FileClipboard::paths() const
@@ -210,8 +213,77 @@ PathsModel* FileClipboard::pathsModel() const
     return m_pathsModel;
 }
 
-void FileClipboard::setPaths(const QStringList &newPaths)
+void FileClipboard::reload()
 {
+    std::string read = m_monitor->readFile().toStdString();
+    auto doc = QJsonDocument::fromJson(QByteArray::fromStdString(read));
+
+    if (!doc.isObject()) {
+        qDebug() << "clipboard file is invalid:" << m_monitor->readFile();
+        return;
+    }
+
+    const auto obj = doc.object();
+    const auto array = obj.value(QStringLiteral("paths")).toArray();
+    QString savedModeString = obj.value(QStringLiteral("mode")).toString(QLatin1Literal());
+    int savedMode = FileClipMode::Copy;
+
+    if (!savedModeString.isEmpty()) {
+        QMetaEnum metaEnum = QMetaEnum::fromType<FileClipMode::Enum>();
+        savedMode = metaEnum.keyToValue(savedModeString.toStdString().c_str());
+        if (savedMode < 0) savedMode = FileClipMode::Copy;
+    }
+
+    auto newMode = static_cast<FileClipMode::Enum>(savedMode);
+
+    QStringList newPaths;
+    for (const auto& i : array) {
+        if (i.isString()) newPaths << i.toString();
+    }
+
+    setPaths(newPaths, newMode, false);
+}
+
+void FileClipboard::saveToDisk()
+{
+    ConfigFileMonitorBlocker blocker(m_monitor);
+
+    qDebug() << "saving clipboard";
+    QSaveFile outFile(m_monitor->file());
+
+    if (!outFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Unbuffered)) {
+        qWarning() << "failed to open a temporary file for saving clipboard";
+        qWarning() << "clipboard contents will not be available in other app windows";
+        return;
+    }
+
+    QMetaEnum metaEnum = QMetaEnum::fromType<FileClipMode::Enum>();
+    QString modeString = metaEnum.valueToKey(m_mode);
+
+    QJsonDocument doc;
+    QJsonObject obj;
+
+    obj.insert(QStringLiteral("mode"), m_paths.isEmpty() ? QLatin1Literal() : modeString);
+    obj.insert(QStringLiteral("paths"), QJsonArray::fromStringList(m_paths));
+    doc.setObject(obj);
+
+    outFile.write(doc.toJson(QJsonDocument::Indented));
+
+    if (!outFile.commit()) {
+        qWarning() << "failed to save clipboard to" << m_monitor->file();
+        qWarning() << "clipboard contents will not be available in other app windows";
+        return;
+    }
+
+    qDebug() << "clipboard saved, start monitoring again";
+}
+
+void FileClipboard::setPaths(const QStringList& newPaths, FileClipMode::Enum mode, bool doSave)
+{
+    // don't use setMode(mode) here so we can emit both
+    // signals at the same time and save only once
+    m_mode = mode;
+
     QStringList toAdd;
     toAdd.reserve(newPaths.length());
 
@@ -225,7 +297,18 @@ void FileClipboard::setPaths(const QStringList &newPaths)
 
     toAdd.removeDuplicates();
     m_paths = toAdd;
+
     emit pathsChanged();
+    emit modeChanged();
+
+    if (doSave) {
+        saveToDisk();
+    }
+}
+
+void FileClipboard::setPaths(const QStringList &newPaths)
+{
+    setPaths(newPaths, m_mode, true);
 }
 
 QString FileClipboard::validatePath(QString path)

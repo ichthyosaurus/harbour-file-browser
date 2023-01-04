@@ -31,6 +31,8 @@
 CREATE_ENUM(FileClipMode, Copy, Link, Cut)
 DECLARE_ENUM_REGISTRATION_FUNCTION(FileClipboard)
 
+class ConfigFileMonitor;
+
 class PathsModel : public QStringListModel {
     Q_OBJECT
 
@@ -76,13 +78,19 @@ signals:
     void modeChanged();
     void pathsChanged();
 
+private slots:
+    void reload();
+    void saveToDisk();
+
 private:
+    void setPaths(const QStringList &newPaths, FileClipMode::Enum mode, bool doSave);
     QString validatePath(QString path);
 
     int m_count {0};
     QStringList m_paths {};
     FileClipMode::Enum m_mode {FileClipMode::Copy};
     PathsModel* m_pathsModel;
+    ConfigFileMonitor* m_monitor;
 };
 
 #endif // FILECLIPBOARDMODEL_H
