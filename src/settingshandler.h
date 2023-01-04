@@ -129,10 +129,8 @@ private:
 };
 
 // Provides a list of all currently configured bookmarks.
-// Changes are synced back to the config file automatically,
-// but the config file is only read once. That means changes
-// on disk while the app is running are not reflected in this
-// model.
+// Changes to the model are immediately stored on disk. The
+// model re-reads the file automatically if the file changes.
 //
 // This class should not be used directly. Instead, use the
 // "bookmarks" property on the GlobalSettings singleton in QML.
@@ -179,15 +177,19 @@ public:
 
 private slots:
     void updateExternalDevices();
+    void reload();
+    void reloadFromWatcher();
 
 private:
-    void reload();
-    void saveOrder();
-    void saveItem(QString path, QString name);
-    void moveItem(int fromIndex, int toIndex);
+    void save();
+    void notifyWatchers(const QString& path);
 
-    void appendItem(QString path, QString name, bool save);
-    void removeItem(QString path, bool save);
+    void moveItem(int fromIndex, int toIndex);
+    void appendItem(QString path, QString name, bool doSave);
+    void removeItem(QString path, bool doSave);
+
+    QString loadBookmarksFile();
+    void resetWatcherPaths(QFileSystemWatcher& watcher);
     void rebuildIndexLookup();
 
     struct BookmarkItem {
@@ -222,6 +224,14 @@ private:
     QMap<QString, QString> mountPoints();
     QStringList subdirs(const QString& dirname, bool includeHidden = false);
 
+    // We monitor the bookmarks file except while saving entries.
+    const QString m_bookmarksFileName {QStringLiteral("bookmarks.json")};
+    const int m_maximumFileSize {200*1024} /* 200 KiB */;
+    QString m_bookmarksFile;
+    QString m_configDir;
+    QFileSystemWatcher m_bookmarksWatcher;
+
+    QMutex m_mutex;
     static QSharedPointer<BookmarksModel> s_globalInstance;
 };
 

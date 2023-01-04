@@ -27,6 +27,7 @@
 #include <QDebug>
 #include <QStandardPaths>
 #include <QCoreApplication>
+#include <QtConcurrent/QtConcurrentRun>
 #include <QQmlEngine>
 #include <QJsonArray>
 #include <QJsonDocument>
@@ -553,11 +554,81 @@ enum {
     UserDefinedRole =   Qt::UserRole +  6
 };
 
+namespace {
+    void migrateBookmarks(QString bookmarksFile)
+    {
+        if (QFile::exists(bookmarksFile)) {
+            return;
+        }
+
+        qDebug() << "migrating bookmarks from old config location to" << bookmarksFile;
+
+        std::string order = RawSettingsHandler::instance()->read(
+                    QStringLiteral("Bookmarks/Entries"), QStringLiteral("[]")).toStdString();
+        auto inDoc = QJsonDocument::fromJson(QByteArray::fromStdString(order));
+
+        QStringList keys;
+        QJsonDocument outDoc;
+        QJsonArray outArray;
+
+        if (inDoc.isArray()) {
+            const auto inArray = inDoc.array();
+            for (const auto& i : inArray) {
+                QString path = i.toString();
+                QString name = RawSettingsHandler::instance()->read(
+                            QStringLiteral("Bookmarks/") + path, path.split("/").last());
+
+                QJsonObject obj;
+                obj.insert(QStringLiteral("name"), name);
+                obj.insert(QStringLiteral("path"), path);
+                outArray.append(obj);
+                keys.append(path);
+            }
+        }
+
+        outDoc.setArray(outArray);
+
+        QSaveFile outFile(bookmarksFile);
+
+        if (!outFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Unbuffered)) {
+            qWarning() << "failed to open file to save migrated bookmarks";
+            return;
+        }
+
+        outFile.write(outDoc.toJson(QJsonDocument::Indented));
+
+        if (!outFile.commit()) {
+            qWarning() << "failed to save migrated bookmarks";
+            return;
+        }
+
+        qDebug() << "removing bookmarks from old location";
+
+        for (const auto& i : std::as_const(keys)) {
+            RawSettingsHandler::instance()->remove(QStringLiteral("Bookmarks/") + i);
+        }
+        RawSettingsHandler::instance()->remove(QStringLiteral("Bookmarks/Entries"));
+
+        qDebug() << "bookmarks successfully migrated";
+    }
+}
+
 BookmarksModel::BookmarksModel(QObject *parent) :
-    QAbstractListModel(parent), m_mountWatcher({QStringLiteral("/proc/mounts")}, this)
+    QAbstractListModel(parent),
+    m_mountWatcher({QStringLiteral("/proc/mounts")}, this),
+    m_bookmarksWatcher(this)
 {
-    reload();
+    m_configDir = RawSettingsHandler::instance()->configDirectory();
+    m_bookmarksFile = m_configDir + "/" + m_bookmarksFileName;
+
+    if (!QFile::exists(m_bookmarksFile)) {
+        QtConcurrent::run([=](){ migrateBookmarks(m_bookmarksFile); });
+    }
+
     connect(&m_mountWatcher, &QFileSystemWatcher::fileChanged, this, &BookmarksModel::updateExternalDevices);
+    connect(&m_bookmarksWatcher, &QFileSystemWatcher::fileChanged, this, &BookmarksModel::reloadFromWatcher);
+    connect(&m_bookmarksWatcher, &QFileSystemWatcher::directoryChanged, this, &BookmarksModel::reloadFromWatcher);
+    reloadFromWatcher();
 }
 
 BookmarksModel::~BookmarksModel()
@@ -708,7 +779,8 @@ void BookmarksModel::rename(QString path, QString newName)
     QModelIndex bottomRight = index(idx, 0);
     emit dataChanged(topLeft, bottomRight, {NameRole});
 
-    saveItem(m_entries.at(idx).path, newName);
+    save();
+    notifyWatchers(m_entries.at(idx).path);
 }
 
 bool BookmarksModel::hasBookmark(QString path) const
@@ -863,8 +935,8 @@ void BookmarksModel::reload()
 
     // load user defined bookmarks
 
-    QString order = RawSettingsHandler::instance()->read(QStringLiteral("Bookmarks/Entries"), QStringLiteral("[]"));
-    auto doc = QJsonDocument::fromJson(QByteArray::fromStdString(order.toStdString()));
+    std::string bookmarksString = loadBookmarksFile().toStdString();
+    auto doc = QJsonDocument::fromJson(QByteArray::fromStdString(bookmarksString));
 
     if (doc.isArray()) {
         int idx = newEntries.length();
@@ -875,9 +947,15 @@ void BookmarksModel::reload()
         }
 
         for (const auto& i : array) {
-            QString path = i.toString();
-            QString name = RawSettingsHandler::instance()->read(
-                QStringLiteral("Bookmarks/") + path, path.split("/").last());
+            if (!i.isObject()) {
+                qWarning() << "invalid bookmarks entry in" << m_bookmarksFile << i;
+                continue;
+            }
+
+            auto obj = i.toObject();
+            QString path = obj.value(QStringLiteral("path")).toString(QStringLiteral("/home"));
+            QString name = obj.value(QStringLiteral("name")).toString(path.split("/").last());
+
             newEntries.append(BookmarkItem(
                 BookmarkGroup::Bookmark,
                 name,
@@ -895,25 +973,100 @@ void BookmarksModel::reload()
     endResetModel();
 }
 
-void BookmarksModel::saveOrder()
+void BookmarksModel::reloadFromWatcher()
 {
-    QJsonDocument doc;
-    QVariantList list;
+    qDebug() << "watcher requested reloading bookmarks" << m_bookmarksWatcher.signalsBlocked()
+             << m_bookmarksWatcher.files() << m_bookmarksWatcher.directories();
 
-    for (int i = 0; i < m_entries.length(); ++i) {
-        if (m_entries.at(i).userDefined) {
-            list.append(m_entries.at(i).path);
+    if (QFile::exists(m_bookmarksFile)) {
+        // bookmarks file exists
+        // -> watch it for changes
+        // -> reload the model
+
+        if (!m_bookmarksWatcher.files().contains(m_bookmarksFile)) {
+            resetWatcherPaths(m_bookmarksWatcher);
+            qDebug() << "-> switching to watch file";
+
+            if (!m_bookmarksWatcher.addPath(m_bookmarksFile)) {
+                qWarning() << "failed to watch bookmarks file for changes at" << m_bookmarksFile;
+                qWarning() << "bookmarks might be lost when using multiple app windows";
+            }
         }
-    }
 
-    doc.setArray(QJsonArray::fromVariantList(list));
-    RawSettingsHandler::instance()->write(QStringLiteral("Bookmarks/Entries"), doc.toJson(QJsonDocument::Compact));
+        // reload the model now, then wait for changes
+        reload();
+    } else {
+        // bookmarks file does not exist:
+        // -> watch directory to catch when the file is created
+        // -> then watch it for changes when this method gets called again
+
+        if (!m_bookmarksWatcher.directories().contains(m_configDir)) {
+            resetWatcherPaths(m_bookmarksWatcher);
+            qDebug() << "-> switching to watch directory";
+
+            if (!m_bookmarksWatcher.addPath(m_configDir)) {
+                qWarning() << "failed to watch config directory for changes at" << m_configDir;
+                qWarning() << "bookmarks might be lost when using multiple app windows";
+            }
+        }
+
+        // abort and wait for changes, there is nothing to reload yet
+        return;
+    }
 }
 
-void BookmarksModel::saveItem(QString path, QString name)
+void BookmarksModel::save()
 {
-    RawSettingsHandler::instance()->write(QStringLiteral("Bookmarks/") + path, name);
+    // Assumptions:
+    // 1. generating the file is a very quick operation
+    // 2. users use File Browser to change the file, which means
+    //    there can be multiple windows but there cannot be
+    //    simultaneous changes
+    // 3. we can write the bookmarks file if we can delete it
 
+    QMutexLocker locker(&m_mutex);
+    m_bookmarksWatcher.blockSignals(true);
+
+    qDebug() << "saving bookmarks";
+    QSaveFile outFile(m_bookmarksFile);
+
+    if (!outFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Unbuffered)) {
+        qWarning() << "failed to open a temporary file for saving bookmarks";
+        qWarning() << "user-defined bookmarks cannot be saved";
+        m_bookmarksWatcher.blockSignals(false);
+        return;
+    }
+
+    QJsonDocument doc;
+    QJsonArray array;
+
+    for (const auto& i : std::as_const(m_entries)) {
+        if (!i.userDefined) continue;
+
+        QJsonObject obj;
+        obj.insert(QStringLiteral("name"), i.name);
+        obj.insert(QStringLiteral("path"), i.path);
+        array.append(obj);
+    }
+
+    doc.setArray(array);
+    outFile.write(doc.toJson(QJsonDocument::Indented));
+
+    if (!outFile.commit()) {
+        qWarning() << "failed to save bookmarks to" << m_bookmarksFile;
+        qWarning() << "dataloss is possible!";
+        m_bookmarksWatcher.blockSignals(false);
+        return;
+    }
+
+    qDebug() << "bookmarks saved, start monitoring again";
+    resetWatcherPaths(m_bookmarksWatcher);
+    m_bookmarksWatcher.addPath(m_bookmarksFile);
+    m_bookmarksWatcher.blockSignals(false);
+}
+
+void BookmarksModel::notifyWatchers(const QString& path)
+{
     if (m_watchers.contains(path)) {
         for (auto& i : m_watchers.value(path)) {
             if (i) {
@@ -956,10 +1109,10 @@ void BookmarksModel::moveItem(int fromIndex, int toIndex)
     rebuildIndexLookup();
     endInsertRows();
 
-    saveOrder();
+    save();
 }
 
-void BookmarksModel::appendItem(QString path, QString name, bool save)
+void BookmarksModel::appendItem(QString path, QString name, bool doSave)
 {
     if (name.isEmpty()) {
         QDir dir(path);
@@ -973,20 +1126,20 @@ void BookmarksModel::appendItem(QString path, QString name, bool save)
     auto last = rowCount();
     beginInsertRows(QModelIndex(), last, last);
     m_entries.append(BookmarkItem(
-        save ? BookmarkGroup::Bookmark : BookmarkGroup::Temporary,
+        doSave ? BookmarkGroup::Bookmark : BookmarkGroup::Temporary,
         name,
-        save ? QStringLiteral("icon-m-favorite") : QStringLiteral("icon-m-file-folder"),
+        doSave ? QStringLiteral("icon-m-favorite") : QStringLiteral("icon-m-file-folder"),
         path, false, true));
     m_indexLookup.insert(path, last);
     endInsertRows();
 
-    if (save) {
-        saveItem(path, name);
-        saveOrder();
+    if (doSave) {
+        save();
+        notifyWatchers(path);
     }
 }
 
-void BookmarksModel::removeItem(QString path, bool save)
+void BookmarksModel::removeItem(QString path, bool doSave)
 {
     if (!m_indexLookup.contains(path)) {
         return;
@@ -998,18 +1151,55 @@ void BookmarksModel::removeItem(QString path, bool save)
     rebuildIndexLookup();
     endRemoveRows();
 
-    if (save) {
-        RawSettingsHandler::instance()->remove(QStringLiteral("Bookmarks/") + path);
+    if (doSave) {
+        notifyWatchers(path);
+        save();
+    }
+}
 
-        if (m_watchers.contains(path)) {
-            for (auto& i : m_watchers.value(path)) {
-                if (i) {
-                    i->refresh();
-                }
-            }
-        }
+QString BookmarksModel::loadBookmarksFile()
+{
+    QFile file(m_bookmarksFile);
 
-        saveOrder();
+    if (!file.exists()) {
+        // No bookmarks file found. This is not a problem
+        // as it will be created when saving user defined bookmarks.
+        return {};
+    }
+
+    if (!file.open(QFile::ReadOnly)) {
+        qWarning() << "cannot open bookmarks file at" << m_bookmarksFile;
+        qWarning() << "user-defined bookmarks cannot be loaded";
+        return {};
+    }
+
+    if (file.size() > m_maximumFileSize) {
+        qWarning() << "bookmarks file at" << m_bookmarksFile << "is unreasonably large:" <<
+                      file.size() / 1024 << "KiB, maximum is" << m_maximumFileSize / 1024 << "KiB";
+        qWarning() << "user-defined bookmarks cannot be loaded";
+        return {};
+    }
+
+    QTextStream stream(&file);
+    QString read = file.readAll();
+    file.close();
+
+    return read;
+}
+
+void BookmarksModel::resetWatcherPaths(QFileSystemWatcher& watcher)
+{
+    const auto& dirs = watcher.directories();
+    if (!dirs.isEmpty()) {
+        watcher.removePaths(dirs);
+    }
+
+    const auto& files = watcher.files();
+    if (!files.isEmpty()) {
+        watcher.removePaths(files);
+    }
+}
+
 void BookmarksModel::rebuildIndexLookup()
 {
     m_indexLookup.clear();
