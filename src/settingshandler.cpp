@@ -939,39 +939,33 @@ void BookmarksModel::reload()
     // load user defined bookmarks
     m_firstUserDefinedIndex = newEntries.length();
 
-    std::string bookmarksString = loadBookmarksFile().toStdString();
-    auto doc = QJsonDocument::fromJson(QByteArray::fromStdString(bookmarksString));
+    const auto value = m_bookmarksMonitor->readJson(QStringLiteral("1"));
 
-    if (doc.isObject()) {
-        const auto obj = doc.object();
-        QString version = obj.value(QStringLiteral("version")).toString(QStringLiteral("0"));
-        const auto array = obj.value(QStringLiteral("data")).toArray();
+    if (value.isArray()) {
+        const auto array = value.toArray();
+        int idx = m_firstUserDefinedIndex;
 
-        if (version == QStringLiteral("1")) {
-            int idx = m_firstUserDefinedIndex;
-
-            for (const auto& i : array) {
-                if (!i.isObject()) {
-                    qWarning() << "invalid bookmarks entry in" << m_bookmarksMonitor->file() << i;
-                    continue;
-                }
-
-                auto obj = i.toObject();
-                QString path = obj.value(QStringLiteral("path")).toString(QStringLiteral("/home"));
-                QString name = obj.value(QStringLiteral("name")).toString(path.split("/").last());
-
-                newEntries.append(BookmarkItem(
-                    BookmarkGroup::Bookmark,
-                    name,
-                    QStringLiteral("icon-m-favorite"),
-                    path,
-                    false, true));
-                newIndexLookup.insert(path, idx);
-                ++idx;
+        for (const auto& i : array) {
+            if (!i.isObject()) {
+                qWarning() << "invalid bookmarks entry in" << m_bookmarksMonitor->file() << i;
+                continue;
             }
-        } else {
-            qWarning() << "unsupported bookmarks file version in" << m_bookmarksMonitor->file() << version;
+
+            auto obj = i.toObject();
+            QString path = obj.value(QStringLiteral("path")).toString(QStringLiteral("/home"));
+            QString name = obj.value(QStringLiteral("name")).toString(path.split("/").last());
+
+            newEntries.append(BookmarkItem(
+                BookmarkGroup::Bookmark,
+                name,
+                QStringLiteral("icon-m-favorite"),
+                path,
+                false, true));
+            newIndexLookup.insert(path, idx);
+            ++idx;
         }
+    } else {
+        qWarning() << "invalid bookmarks data in" << m_bookmarksMonitor->file() << value;
     }
 
     m_lastUserDefinedIndex = newEntries.length();
@@ -984,27 +978,7 @@ void BookmarksModel::reload()
 
 void BookmarksModel::save()
 {
-    // Assumptions:
-    // 1. generating the file is a very quick operation
-    // 2. users use File Browser to change the file, which means
-    //    there can be multiple windows but there cannot be
-    //    simultaneous changes
-    // 3. we can write the bookmarks file if we can delete it
-
     QMutexLocker locker(&m_mutex);
-    ConfigFileMonitorBlocker blocker(m_bookmarksMonitor);
-
-    qDebug() << "saving bookmarks";
-    QSaveFile outFile(m_bookmarksMonitor->file());
-
-    if (!outFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Unbuffered)) {
-        qWarning() << "failed to open a temporary file for saving bookmarks";
-        qWarning() << "user-defined bookmarks cannot be saved";
-        return;
-    }
-
-    QJsonDocument doc;
-    QJsonObject obj;
     QJsonArray array;
 
     for (const auto& i : std::as_const(m_entries)) {
@@ -1016,19 +990,7 @@ void BookmarksModel::save()
         array.append(item);
     }
 
-    obj.insert(QStringLiteral("version"), QStringLiteral("1"));
-    obj.insert(QStringLiteral("data"), array);
-
-    doc.setObject(obj);
-    outFile.write(doc.toJson(QJsonDocument::Indented));
-
-    if (!outFile.commit()) {
-        qWarning() << "failed to save bookmarks to" << m_bookmarksMonitor->file();
-        qWarning() << "dataloss is possible!";
-        return;
-    }
-
-    qDebug() << "bookmarks saved, start monitoring again";
+    m_bookmarksMonitor->writeJson(array, QStringLiteral("1"));
 }
 
 void BookmarksModel::notifyWatchers(const QString& path)
