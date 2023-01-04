@@ -144,6 +144,8 @@ SOURCES += \
     src/statfileinfo.cpp \
     src/globals.cpp \
     src/settingshandler.cpp \
+    \
+    src/configfilemonitor.cpp \
 
 HEADERS += \
     src/filemodel.h \
@@ -162,6 +164,8 @@ HEADERS += \
     src/globals.h \
     src/settingshandler.h \
     src/overload_of.h \
+    \
+    src/configfilemonitor.h \
 
 SOURCES += src/jhead/jhead-api.cpp \
     src/jhead/exif.c \
