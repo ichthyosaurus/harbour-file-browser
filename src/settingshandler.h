@@ -61,6 +61,7 @@ public:
     Q_INVOKABLE void write(QString key, QString value, QString fileName = QString());
     Q_INVOKABLE void remove(QString key, QString fileName = QString());
     Q_INVOKABLE QStringList keys(QString group = QString(), QString fileName = QString());
+    Q_INVOKABLE QString configDirectory() const;
 
     QVariant readVariant(QString key, const QVariant& defaultValue = QVariant(), QString fileName = QString());
     void writeVariant(QString key, const QVariant& value, QString fileName = QString());
@@ -86,6 +87,7 @@ private:
     // It is a QMap of QMap, combining file paths with their local settings QMaps.
     QMap<QString, QMap<QString, QVariant>> m_runtimeSettings;
     QString m_globalConfigPath;
+    QString m_globalConfigDir;
     QMutex m_mutex;
 
     static QSharedPointer<RawSettingsHandler> s_globalInstance;

@@ -66,9 +66,9 @@ RawSettingsHandler::RawSettingsHandler(QObject *parent)
     // - https://stackoverflow.com/a/68873634
     QQmlEngine::setObjectOwnership(this, QQmlEngine::CppOwnership);
 
-    QString newConfigDir = QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation);
+    m_globalConfigDir = QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation);
     QString configFile = QCoreApplication::applicationName() + ".conf";
-    QSettings global(newConfigDir + "/" + configFile, QSettings::IniFormat);
+    QSettings global(m_globalConfigDir + "/" + configFile, QSettings::IniFormat);
     m_globalConfigPath = global.fileName();
 
     if (   pathIsProtected(m_globalConfigPath)
@@ -269,6 +269,11 @@ QStringList RawSettingsHandler::keys(QString group, QString fileName) {
     }
 
     return keys;
+}
+
+QString RawSettingsHandler::configDirectory() const
+{
+    return m_globalConfigDir;
 }
 
 QString DirectorySettings::initialDirectory()
