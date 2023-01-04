@@ -20,6 +20,7 @@
 
 import QtQuick 2.6
 import Sailfish.Silica 1.0
+import Nemo.Notifications 1.0
 import harbour.file.browser.FileOperations 1.0
 import harbour.file.browser.Settings 1.0
 // import harbour.file.browser.FileClipboard 1.0
@@ -239,11 +240,18 @@ Page {
                 }
             }
             MenuItem {
+                Notification{
+                    id: windowNotification
+                    previewSummary: qsTr("New window opened. Sometimes the application stays in the background.")
+                    isTransient: true
+                    appIcon: "icon-lock-information"
+                    icon: "icon-lock-information"
+                }
+
                 text: qsTr("Open new window")
                 onClicked: {
-                    engine.openNewWindow(currentPath);
-                    notificationPanel.showTextWithTimer(qsTr("New window opened"),
-                        qsTr("Sometimes the application stays in the background"));
+                    engine.openNewWindow(currentPath)
+                    windowNotification.publish()
                 }
             }
             MenuItem {
