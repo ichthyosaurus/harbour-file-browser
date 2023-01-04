@@ -711,7 +711,7 @@ void BookmarksModel::rename(QString path, QString newName)
     saveItem(m_entries.at(idx).path, newName);
 }
 
-bool BookmarksModel::hasBookmark(QString path)
+bool BookmarksModel::hasBookmark(QString path) const
 {
     if (m_indexLookup.contains(path)) {
         return true;
@@ -720,7 +720,7 @@ bool BookmarksModel::hasBookmark(QString path)
     return false;
 }
 
-QString BookmarksModel::getBookmarkName(QString path)
+QString BookmarksModel::getBookmarkName(QString path) const
 {
     if (path.isEmpty() || !m_indexLookup.contains(path)) {
         return QLatin1Literal();

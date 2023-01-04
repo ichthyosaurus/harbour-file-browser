@@ -165,9 +165,9 @@ public:
     Q_INVOKABLE void moveDown(QString path);
     // Q_INVOKABLE void rename(int idx, QString newName);
     Q_INVOKABLE void rename(QString path, QString newName);
-    Q_INVOKABLE bool hasBookmark(QString path);
+    Q_INVOKABLE bool hasBookmark(QString path) const;
 
-    Q_INVOKABLE QString getBookmarkName(QString path);
+    Q_INVOKABLE QString getBookmarkName(QString path) const;
 
     void registerWatcher(QString path, QPointer<BookmarkWatcher> mark);
     void unregisterWatcher(QString path, QPointer<BookmarkWatcher> mark);
