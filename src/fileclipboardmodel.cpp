@@ -69,7 +69,7 @@ FileClipboard::FileClipboard(QObject* parent)
     // TODO writableLocation can be empty, or the path might not exist!
     m_monitor->reset(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/clipboard.json");
     connect(m_monitor, &ConfigFileMonitor::configChanged, this, &FileClipboard::reload);
-    reload();  // must be called after m_moniter->reset(...) because it relies on m_monitor->file()
+    reload();  // must be called after m_monitor->reset(...) because it relies on m_monitor->file()
 }
 
 FileClipboard::~FileClipboard()
