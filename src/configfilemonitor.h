@@ -9,6 +9,7 @@
 
 #include <QObject>
 #include <QPointer>
+#include <QJsonValue>
 
 class ConfigFileMonitorPrivate;
 
@@ -33,6 +34,12 @@ class ConfigFileMonitorPrivate;
  * save operation, and resume it afterwards using \c resume. To
  * simplify this, you can use a \c ConfigFileMonitorBlocker
  * that automatically resumes monitoring when it is destroyed.
+ *
+ * @section JSON
+ *
+ * Two shortcut methods are available for reading and writing JSON
+ * configuration files. These methods automatically check versions
+ * and handle pause/resume: \c readJson, \c writeJson.
  */
 class ConfigFileMonitor : public QObject {
     Q_OBJECT
@@ -59,6 +66,9 @@ public:  // interface
 
     QString readFile() const;
     int maximumFileSize() const;
+
+    QJsonValue readJson(QString expectedVersion, QJsonValue fallback = {}) const;
+    bool writeJson(QJsonValue data, QString version);
 
 public slots:
     void pause();

@@ -11,6 +11,10 @@
 #include <QFile>
 #include <QFileInfo>
 
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QSaveFile>
+
 
 /***********************************************************************
  * Private class
@@ -235,6 +239,64 @@ int ConfigFileMonitor::maximumFileSize() const
 {
     Q_D(const ConfigFileMonitor);
     return d->m_maximumFileSize;
+}
+
+QJsonValue ConfigFileMonitor::readJson(QString expectedVersion, QJsonValue fallback) const
+{
+    Q_D(const ConfigFileMonitor);
+
+    std::string configString = readFile().toStdString();
+    auto doc = QJsonDocument::fromJson(QByteArray::fromStdString(configString));
+
+    if (!doc.isObject()) {
+        qDebug() << "failed to load config file: not a JSON object" << d->m_file;
+        return fallback;
+    }
+
+    const auto obj = doc.object();
+    QString version = obj.value(QStringLiteral("version")).toString(QLatin1Literal(""));
+    const auto data = obj.value(QStringLiteral("data"));
+
+    if (version != expectedVersion) {
+        qWarning() << "unsupported config file version in" << d->m_file << version;
+        return fallback;
+    }
+
+    return data;
+}
+
+bool ConfigFileMonitor::writeJson(QJsonValue data, QString version)
+{
+    Q_D(ConfigFileMonitor);
+
+    ConfigFileMonitorBlocker blocker(this);
+
+    qDebug() << "saving config file" << d->m_file;
+    QSaveFile outFile(d->m_file);
+
+    if (!outFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Unbuffered)) {
+        qWarning() << "failed to open a temporary file for saving configuration to" << d->m_file;
+        qWarning() << "dataloss is possible!";
+        return false;
+    }
+
+    QJsonDocument doc;
+    QJsonObject obj;
+
+    obj.insert(QStringLiteral("version"), version);
+    obj.insert(QStringLiteral("data"), data);
+
+    doc.setObject(obj);
+    outFile.write(doc.toJson(QJsonDocument::Indented));
+
+    if (!outFile.commit()) {
+        qWarning() << "failed to save config to" << d->m_file;
+        qWarning() << "dataloss is possible!";
+        return false;
+    }
+
+    qDebug() << "config saved to" << d->m_file;
+    return true;
 }
 
 void ConfigFileMonitor::pause()
