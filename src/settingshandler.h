@@ -188,6 +188,7 @@ private:
 
     void appendItem(QString path, QString name, bool save);
     void removeItem(QString path, bool save);
+    void rebuildIndexLookup();
 
     struct BookmarkItem {
         BookmarkItem(BookmarkGroup::Enum group, QString name, QString icon, QString path, bool showSize, bool userDefined) :

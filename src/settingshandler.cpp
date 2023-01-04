@@ -953,12 +953,7 @@ void BookmarksModel::moveItem(int fromIndex, int toIndex)
 
     beginInsertRows(QModelIndex(), toIndex, toIndex);
     m_entries.insert(toIndex, item);
-    m_indexLookup.clear();
-    for (int i = 0; i < m_entries.count(); ++i) {
-        if (m_entries.at(i).userDefined) {
-            m_indexLookup.insert(m_entries.at(i).path, i);
-        }
-    }
+    rebuildIndexLookup();
     endInsertRows();
 
     saveOrder();
@@ -1000,7 +995,7 @@ void BookmarksModel::removeItem(QString path, bool save)
     auto index = m_indexLookup.value(path);
     beginRemoveRows(QModelIndex(), index, index);
     m_entries.removeAt(index);
-    m_indexLookup.remove(path);
+    rebuildIndexLookup();
     endRemoveRows();
 
     if (save) {
@@ -1015,6 +1010,14 @@ void BookmarksModel::removeItem(QString path, bool save)
         }
 
         saveOrder();
+void BookmarksModel::rebuildIndexLookup()
+{
+    m_indexLookup.clear();
+
+    for (int i = 0; i < m_entries.count(); ++i) {
+        if (m_entries.at(i).userDefined) {
+            m_indexLookup.insert(m_entries.at(i).path, i);
+        }
     }
 }
 
