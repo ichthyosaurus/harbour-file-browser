@@ -568,8 +568,6 @@ namespace {
         auto inDoc = QJsonDocument::fromJson(QByteArray::fromStdString(order));
 
         QStringList keys;
-        QJsonDocument outDoc;
-        QJsonObject outObj;
         QJsonArray outArray;
 
         if (inDoc.isArray()) {
@@ -587,22 +585,14 @@ namespace {
             }
         }
 
-        outObj.insert(QStringLiteral("version"), QStringLiteral("1"));
-        outObj.insert(QStringLiteral("data"), outArray);
-        outDoc.setObject(outObj);
+        {
+            ConfigFileMonitor out;
+            out.reset(bookmarksFile, ConfigFileMonitor::InitiallyPaused);
 
-        QSaveFile outFile(bookmarksFile);
-
-        if (!outFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Unbuffered)) {
-            qWarning() << "failed to open file to save migrated bookmarks";
-            return;
-        }
-
-        outFile.write(outDoc.toJson(QJsonDocument::Indented));
-
-        if (!outFile.commit()) {
-            qWarning() << "failed to save migrated bookmarks";
-            return;
+            if (!out.writeJson(outArray, QStringLiteral("1"))) {
+                qWarning() << "failed to migrate bookmarks to new location at" << bookmarksFile;
+                return;
+            }
         }
 
         qDebug() << "removing bookmarks from old location";
