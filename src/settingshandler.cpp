@@ -766,9 +766,6 @@ void BookmarksModel::moveDown(QString path)
 
 void BookmarksModel::rename(QString path, QString newName)
 {
-//    if (idx < 0 || idx > rowCount() || newName.isEmpty()) {
-//        return;
-//    }
 
     if (!m_indexLookup.contains(path) || newName.isEmpty()) {
         return;
