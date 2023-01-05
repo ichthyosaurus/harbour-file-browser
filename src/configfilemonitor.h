@@ -48,7 +48,15 @@ class ConfigFileMonitor : public QObject {
 
 public:  // flags
     enum ConfigFileMonitorOption {
-        NotifyWhenRemoved = 0x01
+        /**
+         * @brief Emit a signal when the config file is removed.
+         *
+         * By default, only modifications will be signalled. Don't
+         * enable this unless you have a way to prevent loaded models
+         * from being cleared while another process is saving etc.
+         */
+        NotifyWhenRemoved = 0x01,
+
     };
     Q_DECLARE_FLAGS(ConfigFileMonitorOptions, ConfigFileMonitorOption)
 
@@ -56,6 +64,16 @@ public:  // interface
     explicit ConfigFileMonitor(QObject* parent = nullptr);
     virtual ~ConfigFileMonitor();
 
+    /**
+     * @brief Start monitoring a file.
+     *
+     * Monitoring will start immediately unless \c InitiallyPaused is passed.
+     *
+     * @param configFile File to monitor (may not exist yet).
+     * @param options Optional options.
+     * @param maximumSize Maximum file size in bytes for \c readFile and
+     *    \c readJson, must not exceed an absolute maximum of 1 MiB.
+     */
     void reset(const QString& configFile,
                const ConfigFileMonitorOptions& options = 0,
                int maximumSize = -1);
@@ -64,6 +82,10 @@ public:  // interface
     ConfigFileMonitorOptions options() const;
     bool isRunning() const;
 
+    /**
+     * @brief Read config file contents.
+     * @return Data, or empty string in case of errors.
+     */
     QString readFile() const;
     int maximumFileSize() const;
 
@@ -108,6 +130,10 @@ Q_DECLARE_OPERATORS_FOR_FLAGS(ConfigFileMonitor::ConfigFileMonitorOptions)
  *     // ... more stuff ...
  * }
  * \endcode
+ *
+ * @note this helper does \em not restore the previous state. It always
+ * calls \c resume when it goes out of scope. This is different from
+ * e.g. \l QSignalBlocker.
  *
  * Without the blocker, you would have to manually pause and resume
  * the monitor. This causes issues when exceptions occur during saving.
