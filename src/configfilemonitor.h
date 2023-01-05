@@ -57,6 +57,14 @@ public:  // flags
          */
         NotifyWhenRemoved = 0x01,
 
+        /**
+         * @brief Do not start monitoring until \c resume is called.
+         *
+         * By default, monitoring starts immediately when \c reset is
+         * called. With this option, you have to call \c resume after
+         * \c reset to start monitoring.
+         */
+        InitiallyPaused = 0x02,
     };
     Q_DECLARE_FLAGS(ConfigFileMonitorOptions, ConfigFileMonitorOption)
 

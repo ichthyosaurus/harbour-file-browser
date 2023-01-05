@@ -159,7 +159,12 @@ void ConfigFileMonitor::reset(const QString& configFile, const ConfigFileMonitor
     d->m_file = info.absoluteFilePath();
     d->m_parentDir = info.absolutePath();
     d->m_options = options;
-    d->m_watcher.blockSignals(false);
+
+    if (options.testFlag(ConfigFileMonitor::InitiallyPaused)) {
+        pause();
+    } else {
+        d->m_watcher.blockSignals(false);
+    }
 
     d->m_watcher.disconnect();
     connect(&d->m_watcher, &QFileSystemWatcher::fileChanged,
@@ -173,7 +178,9 @@ void ConfigFileMonitor::reset(const QString& configFile, const ConfigFileMonitor
         d->handleFilesystemEvent();
     });
 
-    d->handleFilesystemEvent();
+    if (!options.testFlag(ConfigFileMonitor::InitiallyPaused)) {
+        d->handleFilesystemEvent();
+    }
 }
 
 QString ConfigFileMonitor::file() const
