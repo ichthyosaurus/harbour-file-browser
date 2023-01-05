@@ -955,7 +955,7 @@ void BookmarksModel::reload()
         qWarning() << "invalid bookmarks data in" << m_bookmarksMonitor->file() << value;
     }
 
-    m_lastUserDefinedIndex = newEntries.length();
+    m_lastUserDefinedIndex = std::max(m_firstUserDefinedIndex, newEntries.length() - 1);
 
     beginResetModel();
     m_entries = newEntries;
