@@ -116,10 +116,6 @@ public slots:
     void resume();
     void setRunning(bool running);
 
-    /*void lock();
-    void unlock();
-    void setLocked(bool locked);*/
-
 signals:
     void configChanged();
 };
