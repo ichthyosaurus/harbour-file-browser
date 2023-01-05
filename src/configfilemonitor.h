@@ -68,6 +68,15 @@ public:  // flags
     };
     Q_DECLARE_FLAGS(ConfigFileMonitorOptions, ConfigFileMonitorOption)
 
+    enum ReadErrorState {
+        NoError = 0,
+        FileNotDefined,
+        FileNotFound,
+        FailedToOpen,
+        FileTooLarge,
+    };
+    Q_ENUM(ReadErrorState)
+
 public:  // interface
     explicit ConfigFileMonitor(QObject* parent = nullptr);
     virtual ~ConfigFileMonitor();
@@ -92,8 +101,10 @@ public:  // interface
 
     /**
      * @brief Read config file contents.
+     * @param state
      * @return Data, or empty string in case of errors.
      */
+    QString readFile(ConfigFileMonitor::ReadErrorState& state) const;
     QString readFile() const;
     int maximumFileSize() const;
 

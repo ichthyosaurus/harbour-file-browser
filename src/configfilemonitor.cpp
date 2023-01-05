@@ -201,38 +201,49 @@ bool ConfigFileMonitor::isRunning() const
     return d->m_watcher.signalsBlocked();
 }
 
-QString ConfigFileMonitor::readFile() const
+QString ConfigFileMonitor::readFile(ReadErrorState& state) const
 {
     Q_D(const ConfigFileMonitor);
 
     if (d->m_file.isEmpty()) {
+        state = ReadErrorState::FileNotDefined;
         qDebug() << "cannot read file without filename";
-        return {};  // cannot read an invalid file
+        return {};
     }
 
     QFile file(d->m_file);
 
     if (!file.exists()) {
+        state = ReadErrorState::FileNotFound;
         qDebug() << "config file" << d->m_file << "not found";
-        return {};  // no config file found
+        return {};
     }
 
     if (!file.open(QFile::ReadOnly)) {
         qWarning() << "cannot open config file at" << d->m_file;
-        return {};  // FIXME report, as this might actually be a problem
+        state = ReadErrorState::FailedToOpen;
+        return {};
     }
 
     if (file.size() > d->m_maximumFileSize) {
         qWarning() << "config file at" << d->m_file << "is unreasonably large:" <<
                       file.size() / 1024 << "KiB, maximum is" << d->m_maximumFileSize / 1024 << "KiB";
-        return {};  // FIXME report, as this might actually be a problem
+        state = ReadErrorState::FileTooLarge;
+        return {};
     }
 
     QTextStream stream(&file);
     QString read = file.readAll();
     file.close();
 
+    state = ReadErrorState::NoError;
     return read;
+}
+
+QString ConfigFileMonitor::readFile() const
+{
+    ReadErrorState state;
+    return readFile(state);
 }
 
 int ConfigFileMonitor::maximumFileSize() const
