@@ -138,14 +138,8 @@ public:
         ConfigFileMonitorBlocker(&monitor) {}
     ~ConfigFileMonitorBlocker();
 
-    // void suspendBlocking() noexcept;
-    // void resumeBlocking() noexcept;
-
 private:
     QPointer<ConfigFileMonitor> m_monitor;
-    // bool m_wasRunning {true};
-    // bool m_wasLocked {false};
-    // bool m_blockingSuspended {false};
 };
 
 #endif  // CONFIGFILEMONITOR_H

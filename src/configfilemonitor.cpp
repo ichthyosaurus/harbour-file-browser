@@ -68,11 +68,6 @@ void ConfigFileMonitorPrivate::handleFilesystemEvent(bool notify)
              << ", dirs:" << m_watcher.directories()
              << ", notify:" << notify;
 
-    /* if (QFile::exists(m_lockFile)) {
-        qDebug() << "-> locked, skipping event";
-        return;
-    } */
-
     if (QFile::exists(m_file)) {
         // config file exists
         // -> watch it for changes
@@ -163,7 +158,6 @@ void ConfigFileMonitor::reset(const QString& configFile, const ConfigFileMonitor
 
     d->m_file = info.absoluteFilePath();
     d->m_parentDir = info.absolutePath();
-    // d->m_lockFile = info.absoluteFilePath() + ".lock";
     d->m_options = options;
     d->m_watcher.blockSignals(false);
 
@@ -330,23 +324,6 @@ void ConfigFileMonitor::setRunning(bool running)
     else pause();
 }
 
-/*void ConfigFileMonitor::lock()
-{
-    // TODO
-}
-
-void ConfigFileMonitor::unlock()
-{
-    // TODO
-}
-
-void ConfigFileMonitor::setLocked(bool locked)
-{
-    if (locked) lock();
-    else unlock();
-}*/
-
-
 /***********************************************************************
  * Blocker implementation
  ***********************************************************************/
@@ -355,8 +332,6 @@ ConfigFileMonitorBlocker::ConfigFileMonitorBlocker(ConfigFileMonitor* monitor) n
     m_monitor(monitor)
 {
     if (m_monitor) {
-        // m_wasRunning = m_monitor->isRunning();
-        // m_monitor->lock();
         m_monitor->pause();
         qDebug() << "blocker started for" << m_monitor->file();
     } else {
@@ -367,29 +342,9 @@ ConfigFileMonitorBlocker::ConfigFileMonitorBlocker(ConfigFileMonitor* monitor) n
 ConfigFileMonitorBlocker::~ConfigFileMonitorBlocker()
 {
     if (m_monitor) {
-        // m_monitor->setLocked(m_wasLocked);
-        // m_monitor->setRunning(m_wasRunning);
-        // qDebug() << "blocker finished for" << m_monitor->file() << "| resuming, was running:" << m_wasRunning;
-
         m_monitor->resume();
         qDebug() << "blocker finished for" << m_monitor->file() << ", resuming";
     } else {
         qDebug() << "blocker finished for invalid monitor";
     }
 }
-
-/*
-void ConfigFileMonitorBlocker::suspendBlocking() noexcept
-{
-    if (m_monitor && m_wasRunning) m_monitor->resume();
-    m_blockingSuspended = true;
-    qDebug() << "blocker suspended";
-}
-
-void ConfigFileMonitorBlocker::resumeBlocking() noexcept
-{
-    if (m_monitor) m_monitor->pause();
-    m_blockingSuspended = false;
-    qDebug() << "blocker resumed";
-}
-*/
