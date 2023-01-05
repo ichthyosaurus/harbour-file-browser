@@ -39,9 +39,8 @@ public:
     ConfigFileMonitor::ConfigFileMonitorOptions m_options {0};
     QFileSystemWatcher m_watcher;
 
-    // QString m_lockFile {};
-    const int m_defaultMaximumFileSize {200*1024}; /* 200 KiB */;
-    const int m_absoluteMaximumFileSize {1*1024*1024}; /* 1 MiB */
+    const int m_defaultMaximumFileSize {200*1024};     // 200 KiB: no noticable delay when loading
+    const int m_absoluteMaximumFileSize {1*1024*1024}; //   1 MiB: annoying delay when loading
     int m_maximumFileSize {m_defaultMaximumFileSize};
 };
 
