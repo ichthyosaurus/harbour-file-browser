@@ -122,6 +122,8 @@ void FileModelWorker::doReadFull()
 
 void FileModelWorker::doReadDiff()
 {
+    // Load current directory contents, apply filters, and sort entries.
+    // The final listing is stored in m_finalEntries.
     if (!applySettings()) return; // cancelled
 
     // To reduce load on the main UI thread, we abort the process and
