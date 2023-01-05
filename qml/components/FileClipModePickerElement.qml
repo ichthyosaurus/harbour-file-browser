@@ -82,6 +82,9 @@ BackgroundItem {
         }
     }
 
-    onClicked: parent.selectedMode = elementMode
+    onClicked: {
+        parent.selectedMode = elementMode
+        parent.modeSelected(elementMode)
+    }
     highlighted: down || isSelected
 }

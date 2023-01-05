@@ -24,6 +24,7 @@ import harbour.file.browser.FileClipboard 1.0
 
 Row {
     property int selectedMode: -1  // used by FileClipModePickerElement
+    signal modeSelected(var mode)
 
     height: childrenRect.height
     width: parent.width

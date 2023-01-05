@@ -84,9 +84,19 @@ Page {
             }
 
             FileClipModePicker {
+                id: modePicker
                 visible: FileClipboard.count > 0
                 selectedMode: FileClipboard.mode
                 width: parent.width
+
+                Connections {
+                    // TODO selecting a mode breaks the binding between
+                    // selectedMode and FileClipboard.mode. This means clipboard
+                    // changes are not properly synchronised. Refactoring this
+                    // in FileClipModePicker requires changes in TransferActionBar though.
+                    target: FileClipboard
+                    onModeChanged: modePicker.selectedMode = FileClipboard.mode
+                }
 
                 onSelectedModeChanged: {
                     if (selectedMode != FileClipboard.mode) {
