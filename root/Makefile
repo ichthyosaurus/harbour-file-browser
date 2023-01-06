@@ -1,5 +1,3 @@
-#!/bin/bash
-#
 # This file is part of File Browser and has been released into the public domain.
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
