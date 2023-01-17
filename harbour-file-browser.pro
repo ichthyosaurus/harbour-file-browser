@@ -143,7 +143,7 @@ SOURCES += \
     src/consolemodel.cpp \
     src/statfileinfo.cpp \
     src/globals.cpp \
-    src/settingshandler.cpp \
+    src/settings.cpp \
     \
     src/configfilemonitor.cpp \
 
@@ -162,7 +162,7 @@ HEADERS += \
     src/consolemodel.h \
     src/statfileinfo.h \
     src/globals.h \
-    src/settingshandler.h \
+    src/settings.h \
     src/overload_of.h \
     \
     src/configfilemonitor.h \

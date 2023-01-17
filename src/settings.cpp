@@ -33,7 +33,7 @@
 #include <QJsonDocument>
 #include <QtQml>
 
-#include "settingshandler.h"
+#include "settings.h"
 
 QSharedPointer<RawSettingsHandler> \
     RawSettingsHandler::s_globalInstance = \
@@ -625,8 +625,10 @@ BookmarksModel::BookmarksModel(QObject *parent) :
         qWarning() << "new external devices will not be auto-detected when mounted";
     }
 
+    qDebug() << "MOUNT FILES:" << m_mountWatcher.files();
     connect(m_bookmarksMonitor, &ConfigFileMonitor::configChanged, this, &BookmarksModel::reload);
     connect(&m_mountWatcher, &QFileSystemWatcher::fileChanged, this, &BookmarksModel::updateExternalDevices);
+    qDebug() << "MOUNT FILES 2:" << m_mountWatcher.files();
 }
 
 BookmarksModel::~BookmarksModel()
@@ -816,6 +818,8 @@ void BookmarksModel::unregisterWatcher(QString path, QPointer<BookmarkWatcher> m
 
 void BookmarksModel::updateExternalDevices()
 {
+    qDebug() << "mounts changed!" << m_mountWatcher.files();
+
     QList<int> toRemove;
     toRemove.reserve(m_entries.size());
 

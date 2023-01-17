@@ -22,7 +22,7 @@
 
 #include "searchworker.h"
 #include <QDateTime>
-#include "settingshandler.h"
+#include "settings.h"
 #include "globals.h"
 
 SearchWorker::SearchWorker(QObject *parent) :

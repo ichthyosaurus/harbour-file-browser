@@ -24,7 +24,7 @@
 #include <QDebug>
 #include "filemodelworker.h"
 #include "statfileinfo.h"
-#include "settingshandler.h"
+#include "settings.h"
 
 #ifndef FILEMODEL_SIGNAL_THRESHOLD
 #define FILEMODEL_SIGNAL_THRESHOLD 200

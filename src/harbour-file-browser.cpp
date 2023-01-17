@@ -41,7 +41,7 @@
 #include "searchengine.h"
 #include "engine.h"
 #include "consolemodel.h"
-#include "settingshandler.h"
+#include "settings.h"
 #include "texteditor.h"
 #include "fileoperations.h"
 #include "fileclipboardmodel.h"

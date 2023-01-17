@@ -18,8 +18,8 @@
  * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-#ifndef SETTINGSHANDLER_H
-#define SETTINGSHANDLER_H
+#ifndef SETTINGS_H
+#define SETTINGS_H
 
 #include <QVariant>
 #include <QMap>
@@ -554,4 +554,4 @@ private:
 
 #undef QSL
 #undef PROP
-#endif // SETTINGSHANDLER_H
+#endif // SETTINGS_H

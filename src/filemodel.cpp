@@ -33,7 +33,7 @@
 
 #include "filemodel.h"
 #include "filemodelworker.h"
-#include "settingshandler.h"
+#include "settings.h"
 #include "globals.h"
 
 enum {
