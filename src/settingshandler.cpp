@@ -608,7 +608,7 @@ namespace {
 
 BookmarksModel::BookmarksModel(QObject *parent) :
     QAbstractListModel(parent),
-    m_mountWatcher({QStringLiteral("/proc/mounts")}, this),
+    m_mountWatcher(this),
     m_bookmarksMonitor(new ConfigFileMonitor(this))
 {
     QString bookmarksFile = RawSettingsHandler::instance()->configDirectory() + "/bookmarks.json";
@@ -619,6 +619,11 @@ BookmarksModel::BookmarksModel(QObject *parent) :
 
     m_bookmarksMonitor->reset(bookmarksFile);
     reload();
+
+    if (!m_mountWatcher.addPath(QStringLiteral("/proc/mounts"))) {
+        qWarning() << "failed to monitor mounts";
+        qWarning() << "new external devices will not be auto-detected when mounted";
+    }
 
     connect(m_bookmarksMonitor, &ConfigFileMonitor::configChanged, this, &BookmarksModel::reload);
     connect(&m_mountWatcher, &QFileSystemWatcher::fileChanged, this, &BookmarksModel::updateExternalDevices);
