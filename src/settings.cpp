@@ -18,6 +18,8 @@
  * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
+#include "settings.h"
+
 #include <unistd.h>
 
 #include <QMutexLocker>
@@ -32,8 +34,8 @@
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QtQml>
-
-#include "settings.h"
+#include <QTimer>
+#include <QStorageInfo>
 
 QSharedPointer<RawSettingsHandler> \
     RawSettingsHandler::s_globalInstance = \
@@ -608,9 +610,15 @@ namespace {
 
 BookmarksModel::BookmarksModel(QObject *parent) :
     QAbstractListModel(parent),
-    m_mountWatcher(this),
+    m_mountsPollingTimer(new QTimer(this)),
     m_bookmarksMonitor(new ConfigFileMonitor(this))
 {
+    m_ignoredMounts.insert(qHash(QStringLiteral("/persist")));
+    m_ignoredMounts.insert(qHash(QStringLiteral("/dsp")));
+    m_ignoredMounts.insert(qHash(QStringLiteral("/odm")));
+    m_ignoredMounts.insert(qHash(QStringLiteral("/home")));
+    m_ignoredMounts.insert(qHash(QStringLiteral("/firmware")));
+
     QString bookmarksFile = RawSettingsHandler::instance()->configDirectory() + "/bookmarks.json";
 
     if (!QFile::exists(bookmarksFile)) {
@@ -619,16 +627,13 @@ BookmarksModel::BookmarksModel(QObject *parent) :
 
     m_bookmarksMonitor->reset(bookmarksFile);
     reload();
-
-    if (!m_mountWatcher.addPath(QStringLiteral("/proc/mounts"))) {
-        qWarning() << "failed to monitor mounts";
-        qWarning() << "new external devices will not be auto-detected when mounted";
-    }
-
-    qDebug() << "MOUNT FILES:" << m_mountWatcher.files();
     connect(m_bookmarksMonitor, &ConfigFileMonitor::configChanged, this, &BookmarksModel::reload);
-    connect(&m_mountWatcher, &QFileSystemWatcher::fileChanged, this, &BookmarksModel::updateExternalDevices);
-    qDebug() << "MOUNT FILES 2:" << m_mountWatcher.files();
+
+    m_mountsPollingTimer->setInterval(5 * 1000);
+    m_mountsPollingTimer->setTimerType(Qt::VeryCoarseTimer);
+    m_mountsPollingTimer->setSingleShot(false);
+    m_mountsPollingTimer->start();
+    connect(m_mountsPollingTimer, &QTimer::timeout, this, &BookmarksModel::updateExternalDevices);
 }
 
 BookmarksModel::~BookmarksModel()
@@ -816,34 +821,93 @@ void BookmarksModel::unregisterWatcher(QString path, QPointer<BookmarkWatcher> m
     }
 }
 
+enum DeviceType {
+    SdCard, BindMount, Remote, Any
+};
+
 void BookmarksModel::updateExternalDevices()
 {
-    qDebug() << "mounts changed!" << m_mountWatcher.files();
+    // qDebug() << "checking mounts...";
 
-    QList<int> toRemove;
-    toRemove.reserve(m_entries.size());
+    // currently visible list of mounts
+    QSet<int> knownMounts;
+    for (const auto& i : std::as_const(m_entries)) {
+        if (i.group != BookmarkGroup::External) continue;
+        knownMounts.insert(qHash(i.path));
+    }
 
-    for (int i = 0; i < m_entries.size(); ++i) {
-        if (m_entries.at(i).group == BookmarkGroup::External) {
-            toRemove.append(i);
+    // currently active mounts reported by the system
+    const auto activeMounts = QStorageInfo::mountedVolumes();
+    QSet<int> activeHashes;
+    for (const auto& i : activeMounts) {
+        if (i.isValid() && i.isReady()
+                && !i.isRoot()
+                && i.fileSystemType() != QStringLiteral("tmpfs")
+                && !i.rootPath().startsWith(QStringLiteral("/opt/alien/"))) {
+
+            int pathHash = qHash(i.rootPath());
+            if (!m_ignoredMounts.contains(pathHash)) activeHashes.insert(pathHash);
+            if (m_ignoredMounts.contains(pathHash) || knownMounts.contains(pathHash)) continue;
+            qDebug() << "new mount detected:" << i.displayName() << i.device() << i.fileSystemType() << i.rootPath();
+
+            DeviceType type = Any;
+            QString icon;
+            if (i.device().startsWith(QByteArray("/dev/mmc"))) {
+                type = SdCard;
+                icon = QStringLiteral("icon-m-sd-card");
+            } else if (i.device().startsWith(QByteArray("/dev/mapper/sailfish-"))) {
+                // Bind mounts have device == /dev/mapper/sailfish-{home,root}
+                // but only /dev/mapper/sailfish-home is visible through QStorageInfo.
+                // TODO: test what happens when running as root.
+                type = BindMount;
+                icon = QStringLiteral("icon-m-attach");
+            } else if (i.fileSystemType() == QStringLiteral("cifs")) {
+                type = Remote;
+                icon = QStringLiteral("icon-m-website");
+            } else {
+                type = Any;
+                icon = QStringLiteral("icon-m-usb");
+            }
+
+            QString title = i.displayName();
+            if (title == i.rootPath()) {
+                // TODO: find better, more informative titles.
+                switch (type) {
+                case SdCard:
+                    title = tr("Memory card"); break;
+                case BindMount:
+                    title = tr("Attached folder"); break;
+                case Remote:
+                    title = tr("Remote folder"); break;
+                case Any:
+                default:
+                    title = tr("Removable media");
+                }
+            }
+
+            auto newEntry = BookmarkItem(
+                BookmarkGroup::External,
+                title, icon, i.rootPath(),
+                true, false);
+
+            beginInsertRows(QModelIndex(), m_entries.size(), m_entries.size());
+            m_entries.append(newEntry);
+            rebuildIndexLookup();
+            endInsertRows();
         }
     }
 
-    auto emptyIndex = QModelIndex();
-    for (auto i : toRemove) {
-        beginRemoveRows(emptyIndex, i, i);
+    // remove currently visible mounts that are no longer active
+    int currentCount = m_entries.length();
+    for (int i = currentCount-1; i >= 0; --i) {
+        if (m_entries.at(i).group != BookmarkGroup::External) continue;
+        if (activeHashes.contains(qHash(m_entries.at(i).path))) continue;
+
+        beginRemoveRows(QModelIndex(), i, i);
+        m_entries.removeAt(i);
+        rebuildIndexLookup();
         endRemoveRows();
     }
-
-    int firstEntry = toRemove.first();
-    const auto drives = externalDrives();
-
-    beginInsertRows(QModelIndex(), firstEntry, firstEntry+drives.size());
-    for (const auto& i : std::as_const(drives)) {
-        m_entries.insert(firstEntry, i);
-        firstEntry++;
-    }
-    endInsertRows();
 }
 
 void BookmarksModel::reload()
@@ -930,7 +994,9 @@ void BookmarksModel::reload()
         false)
     );
 
-    newEntries.append(externalDrives());
+    // Do not load external devices just yet.
+    // They will be loaded automatically once the refresh timer
+    // is triggered.
 
     // load user defined bookmarks
     m_firstUserDefinedIndex = newEntries.length();
@@ -1095,107 +1161,4 @@ void BookmarksModel::rebuildIndexLookup()
             m_indexLookup.insert(m_entries.at(i).path, i);
         }
     }
-}
-
-QStringList BookmarksModel::subdirs(const QString &dirname, bool includeHidden)
-{
-    QDir dir(dirname);
-    if (!dir.exists()) return QStringList();
-
-    QDir::Filter hiddenFilter = includeHidden ? QDir::Hidden : static_cast<QDir::Filter>(0);
-    dir.setFilter(QDir::AllDirs | QDir::NoDotAndDotDot | hiddenFilter);
-
-    const QStringList list = dir.entryList();
-    QStringList abslist;
-
-    for (const auto& relpath : list) {
-        abslist.append(dir.absoluteFilePath(relpath));
-    }
-
-    return abslist;
-}
-
-QList<BookmarksModel::BookmarkItem> BookmarksModel::externalDrives()
-{
-    // from SailfishOS 2.2.0 onwards, "/media/sdcard" is
-    // a symbolic link instead of a folder. In that case, follow the link
-    // to the actual folder.
-    QString sdcardFolder = "/media/sdcard";
-    QFileInfo fileinfo(sdcardFolder);
-    if (fileinfo.isSymLink()) sdcardFolder = fileinfo.symLinkTarget();
-
-    // get sdcard dir candidates for "/media/sdcard" (or its symlink target)
-    QStringList candidates = subdirs(sdcardFolder);
-
-    // If the base folder is not already /run/media/USER, we add it too. This
-    // is where OTG devices will be mounted.
-    // Also, some users may have a symlink from "/media/sdcard/USER"
-    // (not from "/media/sdcard"), which means no SD cards would be found before,
-    // so we also get candidates for those users.
-    QString expectedUserFolder = QString("/run/media/") + QDir::home().dirName();
-    if (sdcardFolder != expectedUserFolder) candidates.append(subdirs(expectedUserFolder));
-
-    // no candidates found, abort
-    if (candidates.isEmpty()) return {};
-
-    // remove all directories which are not mount points
-    QMap<QString, QString> mps = mountPoints();
-    QMutableStringListIterator i(candidates);
-    while (i.hasNext()) {
-        QString dirname = i.next();
-        if (!mps.contains(dirname)) i.remove();
-    }
-
-    // all candidates eliminated, abort
-    if (candidates.isEmpty()) return {};
-
-    QList<BookmarkItem> ret;
-    for (const auto& drive : std::as_const(candidates)) {
-        QString title;
-        bool isSdCard;
-
-        if (mps[drive].startsWith("/dev/mmc")) {
-            title = tr("SD card");
-            isSdCard = true;
-        } else {
-            title = tr("Removable Media");
-            isSdCard = false;
-        }
-
-        ret.append(BookmarkItem(
-            BookmarkGroup::External,
-            title,
-            isSdCard ? QStringLiteral("icon-m-sd-card")
-                     : QStringLiteral("icon-m-usb"),
-            drive,
-            true,
-            false)
-        );
-    }
-
-    return ret;
-}
-
-QMap<QString, QString> BookmarksModel::mountPoints()
-{
-    // read /proc/mounts and return all mount points for the filesystem
-    QFile file("/proc/mounts");
-    if (!file.open(QFile::ReadOnly | QFile::Text))
-        return QMap<QString, QString>();
-
-    QTextStream in(&file);
-    QString result = in.readAll();
-
-    // split result to lines
-    const QStringList lines = result.split(QRegExp("[\n\r]"));
-
-    // get columns
-    QMap<QString, QString> paired;
-    for (const auto& line : lines) {
-        QStringList columns = line.split(QRegExp("\\s+"), QString::SkipEmptyParts);
-        if (columns.count() < 6) continue; // sanity check
-        paired[columns.at(1)] = columns.at(0);
-    }
-
-    return paired;
 }

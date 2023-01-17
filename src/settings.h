@@ -218,12 +218,8 @@ private:
     // every time in all watchers.
     QMap<QString, QList<QPointer<BookmarkWatcher>>> m_watchers;
 
-    // We monitor /proc/mounts for changes so we can automatically
-    // update the list of external devices.
-    QFileSystemWatcher m_mountWatcher;
-    QList<BookmarkItem> externalDrives();
-    QMap<QString, QString> mountPoints();
-    QStringList subdirs(const QString& dirname, bool includeHidden = false);
+    QTimer* m_mountsPollingTimer {nullptr};
+    QSet<int> m_ignoredMounts {};
 
     // We monitor the bookmarks file except while saving entries.
     ConfigFileMonitor* m_bookmarksMonitor;
