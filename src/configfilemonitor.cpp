@@ -63,10 +63,10 @@ ConfigFileMonitorPrivate::~ConfigFileMonitorPrivate()
 void ConfigFileMonitorPrivate::handleFilesystemEvent(bool notify)
 {
     qDebug() << "checking monitored config file:" << m_file
-             << ", signals:" << m_watcher.signalsBlocked()
+             << ", blocked:" << m_watcher.signalsBlocked()
+             << ", notify:" << notify
              << ", files:" << m_watcher.files()
-             << ", dirs:" << m_watcher.directories()
-             << ", notify:" << notify;
+             << ", dirs:" << m_watcher.directories();
 
     if (QFile::exists(m_file)) {
         // config file exists
