@@ -230,7 +230,22 @@ private:
 
     QMutex m_mutex;
     static QSharedPointer<BookmarksModel> s_globalInstance;
+
+    friend uint qHash(const BookmarksModel::BookmarkItem& key, uint seed);
 };
+
+inline uint qHash(const BookmarksModel::BookmarkItem& key, uint seed=10)
+{
+    QByteArray result;
+    result.reserve(24);
+    result.append(QByteArray::number(qHash(key.path, seed)));
+    result.append('#');
+    result.append(QByteArray::number(qHash(key.name, seed)));
+    result.append('#');
+    result.append(QByteArray::number(qHash(key.userDefined, seed)));
+    // qDebug() << (result.size() > 24) << "hashed" << key.path << "to" << result << "(" << result.size() << ")";
+    return qHash(result, seed);
+}
 
 
 // Settings specific to File Browser.
