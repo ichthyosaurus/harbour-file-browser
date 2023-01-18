@@ -42,15 +42,9 @@ Dialog {
         page: page
     }
 
-    SilicaFlickable {
-        id: flick
-        anchors.fill: parent
-        VerticalScrollDecorator { flickable: flick }
-
         ShortcutsList {
             id: shortcutsView
-            width: flick.width
-            height: flick.height - 2*Theme.horizontalPageMargin
+            anchors.fill: parent
             sections: [
                 BookmarkGroup.Temporary,
                 BookmarkGroup.Bookmark,
@@ -61,6 +55,8 @@ Dialog {
             selectable: true
             multiSelect: true
             preselectTemporary: true
+
+            VerticalScrollDecorator { flickable: shortcutsView }
 
             PullDownMenu {
                 MenuItem {
@@ -119,8 +115,9 @@ Dialog {
                     }
                 }
             }
+
+            footer: Spacer { height: Theme.horizontalPageMargin }
         }
-    }
 
     onAccepted: {
         targets = shortcutsView.selectedLocations.slice()
