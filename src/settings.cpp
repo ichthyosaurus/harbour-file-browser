@@ -1011,6 +1011,12 @@ void BookmarksModel::addUserDefined(QString path, QString name, bool permanent)
     }
 
     int at = m_lastUserDefinedIndex + 1;
+    if (!permanent) {
+        // TODO actually handle BookmarkGroup::Bookmark and BookmarkGroup::Temporary
+        // as separate groups that can be arbitrarily ordered.
+        // For now, we simply always insert temporary entries before regular entries.
+        at = m_firstUserDefinedIndex;
+    }
 
     beginInsertRows(QModelIndex(), at, at);
     m_entries.insert(at, BookmarkItem(
