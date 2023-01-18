@@ -968,8 +968,6 @@ QStringList BookmarksModel::pathsForIndexes(const QModelIndexList& indexes)
     QStringList ret;
     ret.reserve(indexes.length());
 
-    qDebug() << "ind:" << indexes;
-
     int count = m_entries.length();
     for (const auto& i : std::as_const(indexes)) {
         if (!i.isValid()) continue;
@@ -979,8 +977,6 @@ QStringList BookmarksModel::pathsForIndexes(const QModelIndexList& indexes)
             ret.append(m_entries.at(row).path);
         }
     }
-
-    qDebug() << "ret:" << ret;
 
     return ret;
 }
