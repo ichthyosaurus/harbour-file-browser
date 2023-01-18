@@ -148,7 +148,6 @@ private slots:
 private:
     QString createHexDump(char *buffer, int size, int bytesPerLine);
     QStringList makeStringList(QString msg, QString str = QString());
-    bool isUsingBusybox(QString forCommand);
 
     int m_progress;
     QString m_progressFilename;
@@ -158,10 +157,6 @@ private:
     int runDiskSpaceWorker(std::function<void(int, QStringList)> signal,
                            std::function<QStringList(void)> function);
     QList<QPair<QSharedPointer<QFutureWatcher<QStringList>>, QFuture<QStringList>>> m_diskSpaceWorkers;
-
-    // don't use these directly, use isUsingBusybox() instead
-    QStringList m__isUsingBusybox;
-    bool m__checkedBusybox;
 };
 
 #endif // ENGINE_H

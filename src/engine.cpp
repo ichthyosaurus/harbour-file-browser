@@ -41,9 +41,7 @@
 
 Engine::Engine(QObject *parent) :
     QObject(parent),
-    m_progress(0),
-    m__isUsingBusybox(QStringList()),
-    m__checkedBusybox(false)
+    m_progress(0)
 {
     m_diskSpaceWorkers.reserve(600);
     m_fileWorker = new FileWorker;
@@ -479,27 +477,4 @@ QStringList Engine::makeStringList(QString msg, QString str)
     QStringList list;
     list << msg << str << str;
     return list;
-}
-
-bool Engine::isUsingBusybox(QString forCommand)
-{
-    // from SailfishOS 3.3.x.x onwards, GNU coreutils have been replaced
-    // by BusyBox. This means e.g. 'du' no longer recognizes the options we need...
-
-    if (m__checkedBusybox) return m__isUsingBusybox.contains(forCommand);
-
-    if (!QFile::exists("/bin/busybox")) {
-        m__isUsingBusybox = QStringList();
-    } else {
-        QString result = execute("/bin/busybox", QStringList() << "--list", false);
-        if (result.isEmpty()) {
-            m__isUsingBusybox = QStringList();
-        } else {
-            // split result to lines
-            m__isUsingBusybox = result.split(QRegExp("[\n\r]"));
-        }
-    }
-
-    m__checkedBusybox = true;
-    return isUsingBusybox(forCommand);
 }

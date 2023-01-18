@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2013-2014 Kari Pihkala
  * SPDX-FileCopyrightText: 2016 Malte Veerman
- * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2023 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -142,6 +142,9 @@ QString infoToIconName(const StatFileInfo &info)
 
 QString execute(QString command, QStringList arguments, bool mergeErrorStream)
 {
+    // Always make sure to use the correct APIs!
+    // Since SailfishOS 3.3.x.x, GNU coreutils has been replaced by BusyBox.
+
     QProcess process;
     process.setReadChannel(QProcess::StandardOutput);
     if (mergeErrorStream)
