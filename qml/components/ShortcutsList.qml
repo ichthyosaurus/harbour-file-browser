@@ -43,6 +43,7 @@ SilicaListView {
 
     readonly property var selectedLocations: selectionModel.hasSelection ?
         GlobalSettings.bookmarks.pathsForIndexes(selectionModel.selectedIndexes) : []
+    function resetSelectedLocations() { selectionModel.clearSelection() }
 
     signal itemClicked(var clickedIndex, var path)
 

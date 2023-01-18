@@ -28,6 +28,7 @@ import harbour.file.browser.Settings 1.0
 Item {
     id: root
     property string selection: (picker.selectedMode >= 0 ? GlobalSettings.transferDefaultAction : "")
+    property string selectionLabel: picker.labelForMode[picker.selectedMode]
 
     height: picker.height
     width: parent.width

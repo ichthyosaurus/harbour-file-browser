@@ -24,7 +24,18 @@ import harbour.file.browser.FileClipboard 1.0
 
 Row {
     property int selectedMode: -1  // used by FileClipModePickerElement
+
     signal modeSelected(var mode)
+
+    readonly property var labelForMode: {
+        var map = {}
+        map[FileClipMode.Copy] = qsTr("Copy")
+        map[FileClipMode.Cut] = qsTr("Move")
+        map[FileClipMode.Link] = qsTr("Link")
+        // map[FileClipMode.Compress] = qsTr("Compress")
+        map[-1] = ""
+        return map
+    }
 
     height: childrenRect.height
     width: parent.width
@@ -35,23 +46,23 @@ Row {
 
     FileClipModePickerElement {
         elementMode: FileClipMode.Copy
-        text: qsTr("Copy")
+        text: labelForMode[elementMode]
         icon: "../images/clipboard-copy.png"
     }
     FileClipModePickerElement {
         elementMode: FileClipMode.Cut
-        text: qsTr("Move")
+        text: labelForMode[elementMode]
         icon: "../images/clipboard-move.png"
     }
     FileClipModePickerElement {
         elementMode: FileClipMode.Link
-        text: qsTr("Link")
+        text: labelForMode[elementMode]
         icon: "../images/clipboard-link.png"
     }
 
 //     FileClipModePickerElement {
 //         elementMode: FileClipMode.Compress
-//         text: qsTr("Compress")
+//         text: labelForMode[elementMode]
 //         icon: "../images/clipboard-compress.png"
 //     }
 }

@@ -60,6 +60,27 @@ Dialog {
 
         PullDownMenu {
             MenuItem {
+                text: qsTr("Clear selection")
+                onDelayedClick: shortcutsView.resetSelectedLocations()
+                visible: shortcutsView.selectedLocations.length > 0
+            }
+
+            MenuItem {
+                TextSwitch {
+                    checked: goToTarget
+                    text: " "
+                    highlighted: parent.highlighted
+                    height: Theme.itemSizeSmall
+                    width: height
+                    anchors.verticalCenter: parent.verticalCenter
+                }
+
+                visible: shortcutsView.selectedLocations.length <= 1
+                text: qsTr("Switch to target directory")
+                onClicked: goToTarget = !goToTarget
+            }
+
+            MenuItem {
                 text: qsTr("Enter target path")
                 onClicked: {
                     var start = Paths.dirName(toTransfer[0])
@@ -82,7 +103,20 @@ Dialog {
             width: dialog.width
             height: head.height + col.height + Theme.paddingLarge
 
-            DialogHeader { id: head }
+            DialogHeader {
+                id: head
+                acceptText: action.selectionLabel
+
+                Label {
+                    parent: head.extraContent
+                    anchors.centerIn: parent
+                    text: qsTr("%n item(s)", "", toTransfer.length) + "\n" +
+                          qsTr("%n target(s)", "", shortcutsView.selectedLocations.length)
+                    font.pixelSize: Theme.fontSizeSmall
+                    color: Theme.highlightColor
+                    horizontalAlignment: Text.AlignVCenter
+                }
+            }
 
             Column {
                 id: col
@@ -90,27 +124,11 @@ Dialog {
                 width: parent.width
                 spacing: Theme.paddingLarge
 
-                Label {
-                    id: statusLabel
-                    text: qsTr("%n item(s) selected for transferring", "", toTransfer.length) +
-                          "\n" + qsTr("%n destinations(s) selected", "",
-                                      shortcutsView.selectedLocations.length)
-                    x: Theme.horizontalPageMargin
-                    color: Theme.secondaryHighlightColor
-                }
-
                 TransferActionBar {
                     id: action
                     width: parent.width
                     height: Theme.itemSizeMedium
                     onSelectionChanged: dialog.selectedAction = selection
-                }
-
-                TextSwitch {
-                    id: goToTargetSwitch
-                    text: qsTr("Switch to target directory")
-                    enabled: shortcutsView.selectedLocations.length <= 1
-                    onCheckedChanged: goToTarget = checked
                 }
             }
         }
