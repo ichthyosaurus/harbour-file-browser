@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2013-2019 Kari Pihkala
  * SPDX-FileCopyrightText: 2016 Malte Veerman
- * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2023 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -21,6 +21,8 @@
  */
 
 #include "engine.h"
+
+#include <unistd.h>
 #include <QDateTime>
 #include <QTextStream>
 #include <QSettings>
@@ -31,7 +33,8 @@
 #include <QtConcurrent/QtConcurrent>
 #include <QFuture>
 #include <QFutureWatcher>
-#include <unistd.h>
+#include <QStorageInfo>
+
 #include "globals.h"
 #include "fileworker.h"
 #include "statfileinfo.h"
@@ -118,22 +121,103 @@ void Engine::pasteFiles(QStringList files, QString destDirectory, FileClipMode::
     }
 }
 
-void Engine::requestDiskSpaceInfo(QString path)
+int Engine::runDiskSpaceWorker(std::function<void (int, QStringList)> signal,
+                               std::function<QStringList (void)> function)
 {
     m_diskSpaceWorkers.append({
         QSharedPointer<QFutureWatcher<QStringList>>{new QFutureWatcher<QStringList>},
-        QtConcurrent::run(this, &Engine::diskSpace, path)
+        QtConcurrent::run(function)
     });
 
-    auto& future = m_diskSpaceWorkers.last().second;
+    auto& worker = m_diskSpaceWorkers.last();
+    auto& future = worker.second;
     int index = m_diskSpaceWorkers.length() - 1;
 
-    connect(m_diskSpaceWorkers.last().first.data(), &QFutureWatcherBase::finished, this, [=](){
-        emit diskSpaceInfoReady(path, future.result());
+    connect(worker.first.data(), &QFutureWatcherBase::finished, this, [=](){
+        emit signal(index, future.result());
         m_diskSpaceWorkers[index] = {};
     });
 
-    m_diskSpaceWorkers.last().first->setFuture(future);
+    worker.first->setFuture(future);
+    return index;
+}
+
+int Engine::requestDiskSpaceInfo(const QString& path)
+{
+    return runDiskSpaceWorker([&](int handle, QStringList result){
+        emit diskSpaceInfoReady(handle, result);
+    }, [path]() -> QStringList {
+        QStorageInfo info(path);
+
+        if (!info.isValid()) {
+            return {{}, {}, {}, {}};
+        }
+
+        while (!info.isReady()) {
+            qDebug() << "waiting for device to become ready..." << path;
+            sleep(2);
+        }
+
+        info.refresh();
+        info.bytesAvailable();
+
+        auto total = info.bytesTotal();
+        auto free = info.bytesAvailable();
+        auto used = total - free;
+        auto usedPercent = used / (total / 100);
+
+        return {
+            QStringLiteral("ok"),
+            QStringLiteral("%1%%").arg(usedPercent),
+            QStringLiteral("%1/%2").arg(filesizeToString(used), filesizeToString(total)),
+            filesizeToString(free)
+        };
+    });
+}
+
+int Engine::requestFileSizeInfo(const QStringList& paths)
+{
+    return runDiskSpaceWorker([&](int handle, QStringList result){
+        emit fileSizeInfoReady(handle, result);
+    }, [paths]() -> QStringList {
+        if (paths.isEmpty()) {
+            return {{}, {}, {}, {}};
+        }
+
+        int files = 0;
+        int dirs = 0;
+        qint64 bytes = 0;
+
+        auto process = [&files, &dirs, &bytes](const QString& dir){
+            QDirIterator it(dir, QDir::AllEntries | QDir::System | QDir::NoDotAndDotDot | QDir::Hidden,
+                            QDirIterator::Subdirectories | QDirIterator::FollowSymlinks);
+            while (!it.next().isEmpty()) {
+                const auto& info = it.fileInfo();
+                bytes += info.size();
+                if (info.isDir()) ++dirs;
+                else ++files;
+            }
+        };
+
+        for (const auto& i : paths) {
+            auto info = QFileInfo(i);
+            bytes += info.size();
+
+            if (info.isDir()) {
+                ++dirs;
+                process(i);
+            } else {
+                ++files;
+            }
+        }
+
+        return {
+            QStringLiteral("ok"),
+            filesizeToString(bytes),
+            QString::number(dirs),
+            QString::number(files)
+        };
+    });
 }
 
 void Engine::cancel()
@@ -147,74 +231,6 @@ bool Engine::exists(QString filename)
         return false;
 
     return QFile::exists(filename);
-}
-
-QStringList Engine::fileSizeInfo(QStringList paths)
-{
-    if (paths.isEmpty()) return QStringList() << "-" << "0" << "0";
-
-    QStringList result;
-
-    // determine disk usage
-    // cf. docs on Engine::isUsingBusybox
-    QString diskusage = execute("/usr/bin/du", QStringList() << paths <<
-                                (isUsingBusybox("du") ? "-k" : "--bytes") <<
-                                "-x" << "-s" << "-c" << "-L", false);
-    QStringList duLines = diskusage.split(QRegExp("[\n\r]"));
-
-    if (duLines.length() < 2) {
-        result << "-"; // got an invalid result
-    } else {
-        QString duTotalStr = duLines.at(duLines.count()-2).split(QRegExp("[\\s]+"))[0].trimmed();
-        qint64 duTotal = duTotalStr.toLongLong() * (isUsingBusybox("du") ? 1024LL : 1LL); // BusyBox cannot show the real byte count
-        result << (duTotal > 0 ? filesizeToString(duTotal) : "-");
-    }
-
-    // count dirs
-    QString dirs = execute("/bin/find", QStringList() << "-L" << paths << "-type" << "d", false); // same for BusyBox
-    result << QString::number(dirs.split(QRegExp("[\n\r]")).count()-1);
-
-    // count files
-    QString files = execute("/bin/find", QStringList() << "-L" << paths << "(" << "-type" << "f" << "-or" << "-type" << "l" << ")", false); // same for BusyBox
-    result << QString::number(files.split(QRegExp("[\n\r]")).count()-1);
-
-    return result;
-}
-
-QStringList Engine::diskSpace(QString path)
-{
-    if (path.isEmpty())
-        return QStringList();
-
-    // return no disk space for sdcard parent directory
-    if (path == "/media/sdcard")
-        return QStringList();
-
-    // run df in POSIX mode for the given path to get disk space
-    // cf. docs on Engine::isUsingBusybox
-    QString blockSize = isUsingBusybox("df") ? "-k" : "--block-size=1024";
-    QString result = execute("/bin/df", QStringList() << "-P" << blockSize << path, false);
-    if (result.isEmpty())
-        return QStringList();
-
-    // split result to lines
-    QStringList lines = result.split(QRegExp("[\n\r]"));
-    if (lines.count() < 2)
-        return QStringList();
-
-    // get second line and its columns
-    QString line = lines.at(1);
-    QStringList columns = line.split(QRegExp("\\s+"), QString::SkipEmptyParts);
-    if (columns.count() < 5)
-        return QStringList();
-
-    QString totalString = columns.at(1);
-    QString usedString = columns.at(2);
-    QString percentageString = columns.at(4);
-    qint64 total = totalString.toLongLong() * 1024LL;
-    qint64 used = usedString.toLongLong() * 1024LL;
-
-    return QStringList() << percentageString << filesizeToString(used)+"/"+filesizeToString(total);
 }
 
 QStringList Engine::readFile(QString filename)

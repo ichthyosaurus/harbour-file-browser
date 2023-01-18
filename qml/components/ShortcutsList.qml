@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2023 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -240,20 +240,31 @@ SilicaListView {
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
 
+                property int diskSpaceHandle: -1
                 property string diskSpace: ""
                 text: visible ? (diskSpace === "" ? "... \u2022 ... \u2022 " : diskSpace) : ""
 
                 Connections {
                     target: model.showSize ? engine : null
                     onDiskSpaceInfoReady: {
-                        if (path === model.path) {
-                            sizeInfo.diskSpace = (info.length > 0 ? info[0] + " \u2022 " + info[1] + " \u2022 " : "")
+                        if (sizeInfo.diskSpaceHandle == handle) {
+                            sizeInfo.diskSpaceHandle = -1
+                            sizeInfo.diskSpace = (info[0] === '' ? "" : info[1] + " \u2022 " + info[2] + " \u2022 ")
                         }
                     }
                 }
 
-                onVisibleChanged: if (visible) engine.requestDiskSpaceInfo(model.path)
-                Component.onCompleted: if (model.showSize) engine.requestDiskSpaceInfo(model.path)
+                onVisibleChanged: {
+                    if (visible) {
+                        sizeInfo.diskSpaceHandle = engine.requestDiskSpaceInfo(model.path)
+                    }
+                }
+
+                Component.onCompleted: {
+                    if (model.showSize) {
+                        sizeInfo.diskSpaceHandle = engine.requestDiskSpaceInfo(model.path)
+                    }
+                }
             }
 
             Text {

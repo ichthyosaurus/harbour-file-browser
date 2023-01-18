@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2019-2020 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2023 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -27,6 +27,7 @@ Item {
     height: sizeLabel.height+dirCountLabel.height+fileCountLabel.height
 
     property var files: []
+    property int _workerHandle: engine.requestFileSizeInfo(files)
 
     Label {
         id: title
@@ -68,25 +69,31 @@ Item {
         placeholderText: qsTr("files")
     }
 
-    // TODO load size info asynchronously
-    Component.onCompleted: {
-        var sizes = engine.fileSizeInfo(files);
-        sizeLabel.text = (sizes[0] === "-" ? qsTr("unknown size") : sizes[0]);
+    Connections {
+        target: engine
+        onFileSizeInfoReady: {
+            if (_workerHandle == handle) {
+                _workerHandle = -1
+                target = null
 
-        var dirsCnt = parseInt(sizes[1], 10);
-        if (dirsCnt > 0) {
-            dirCountLabel.text = qsTr("%n directories", "", dirsCnt);
-        } else {
-            dirCountLabel.visible = false;
-            dirCountLabel.height = 0;
-        }
+                sizeLabel.text = (info[1] === '' ? qsTr("unknown size") : info[1])
 
-        var filesCnt = parseInt(sizes[2], 10);
-        if (filesCnt > 0) {
-            fileCountLabel.text = qsTr("%n file(s)", "", filesCnt);
-        } else {
-            fileCountLabel.visible = false;
-            fileCountLabel.height = 0;
+                var dirsCnt = parseInt(info[2], 10);
+                if (dirsCnt > 0) {
+                    dirCountLabel.text = qsTr("%n directories", "", dirsCnt);
+                } else {
+                    dirCountLabel.visible = false;
+                    dirCountLabel.height = 0;
+                }
+
+                var filesCnt = parseInt(info[3], 10);
+                if (filesCnt > 0) {
+                    fileCountLabel.text = qsTr("%n file(s)", "", filesCnt);
+                } else {
+                    fileCountLabel.visible = false;
+                    fileCountLabel.height = 0;
+                }
+            }
         }
     }
 }
