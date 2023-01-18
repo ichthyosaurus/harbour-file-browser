@@ -22,7 +22,6 @@ import QtQuick 2.6
 import QtQml.Models 2.2
 import Sailfish.Silica 1.0
 import harbour.file.browser.Settings 1.0
-import SortFilterProxyModel 0.2
 
 import "../js/paths.js" as Paths
 
@@ -42,16 +41,8 @@ SilicaListView {
         BookmarkGroup.Bookmark
     ]
 
-    readonly property var selectedLocations: {
-        if (!selectionModel.hasSelection) return []
-
-        var ret = []
-        for (var i in selectionModel.selectedIndexes) {
-            ret.push(sortedModel.data(selectionModel.selectedIndexes[i],
-                                      sortedModel.roleForName("path")))
-        }
-        return ret
-    }
+    readonly property var selectedLocations: selectionModel.hasSelection ?
+        GlobalSettings.bookmarks.pathsForIndexes(selectionModel.selectedIndexes) : []
 
     signal itemClicked(var clickedIndex, var path)
 
@@ -59,50 +50,26 @@ SilicaListView {
     function _editBookmarks() { if (editable) _isEditing = true; }
     function _finishEditing() { _isEditing = false; }
 
-    onSectionsChanged: _updateOrderMap()
-    property var _orderMap: ({})
-    function _updateOrderMap() {
-        var order = {}
+    onSectionsChanged: GlobalSettings.bookmarks.sortFilter(sections)
 
-        for (var i = 0; i < sections.length; ++i) {
-            order[sections[i]] = i
-        }
-
-        _orderMap = order
-    }
-
-    model: SortFilterProxyModel {
-        id: sortedModel
-        sourceModel: GlobalSettings.bookmarks
-
-        filters: ExpressionFilter {
-            expression: _orderMap.hasOwnProperty(model.group)
-        }
-
-        sorters: ExpressionSorter {
-            expression: _orderMap[modelLeft.group] < _orderMap[modelRight.group]
-        }
-
-        onRowsInserted: {
-            if (!preselectTemporary) return
-
-            for (var i = first; i <= last; i++) {
-                var modelIndex = index(i, 0)
-                if (data(modelIndex, roleForName("group")) === BookmarkGroup.Temporary) {
-                    selectionModel.select(modelIndex, ItemSelectionModel.Select)
-                }
-            }
-        }
-    }
+    model: GlobalSettings.bookmarks
 
     ItemSelectionModel {
         id: selectionModel
-        model: sortedModel
+        model: GlobalSettings.bookmarks
+    }
+
+    Connections {
+        target: GlobalSettings.bookmarks
+        onTemporaryAdded: {
+            if (!preselectTemporary) return
+            selectionModel.select(modelIndex, ItemSelectionModel.Select)
+        }
     }
 
     delegate: ListItem {
         id: listItem
-        property var modelIndex: sortedModel.index(index, 0)
+        property var modelIndex: GlobalSettings.bookmarks.index(index, 0)
         property bool selected: selectionModel.hasSelection && selectionModel.isSelected(modelIndex)
         property string shortcutPath: Paths.unicodeArrow() + " " + model.path
 
@@ -419,7 +386,9 @@ SilicaListView {
         }
     }
 
-    Component.onCompleted: {
-        _updateOrderMap()
+    onVisibleChanged: {
+        if (visible) {
+            GlobalSettings.bookmarks.sortFilter(sections)
+        }
     }
 }

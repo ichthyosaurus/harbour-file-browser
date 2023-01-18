@@ -56,6 +56,7 @@ bool DirectorySettings::s_authenticatedForRoot = false;
 
 DEFINE_ENUM_REGISTRATION_FUNCTION(SettingsHandler) {
     REGISTER_ENUM_CONTAINER(BookmarkGroup)
+    qRegisterMetaType<QList<BookmarkGroup::Enum>>("QList<BookmarkGroup::Enum>");
     REGISTER_ENUM_CONTAINER(SharingMethod)
     REGISTER_ENUM_CONTAINER(InitialDirectoryMode)
 }
@@ -547,13 +548,13 @@ void BookmarkWatcher::refresh() {
 }
 
 
-enum {
-    GroupRole =         Qt::UserRole +  1,
-    NameRole =          Qt::UserRole +  2,
-    ThumbnailRole =     Qt::UserRole +  3,
-    PathRole =          Qt::UserRole +  4,
-    ShowSizeRole =      Qt::UserRole +  5,
-    UserDefinedRole =   Qt::UserRole +  6
+enum BookmarkRole {
+    groupRole =         Qt::UserRole +  1,
+    nameRole =          Qt::UserRole +  2,
+    thumbnailRole =     Qt::UserRole +  3,
+    pathRole =          Qt::UserRole +  4,
+    showSizeRole =      Qt::UserRole +  5,
+    userDefinedRole =   Qt::UserRole +  6
 };
 
 namespace {
@@ -626,7 +627,6 @@ BookmarksModel::BookmarksModel(QObject *parent) :
     }
 
     m_bookmarksMonitor->reset(bookmarksFile);
-    reload();
     connect(m_bookmarksMonitor, &ConfigFileMonitor::configChanged, this, &BookmarksModel::reload);
 
     m_mountsPollingTimer->setInterval(5 * 1000);
@@ -634,6 +634,8 @@ BookmarksModel::BookmarksModel(QObject *parent) :
     m_mountsPollingTimer->setSingleShot(false);
     m_mountsPollingTimer->start();
     connect(m_mountsPollingTimer, &QTimer::timeout, this, &BookmarksModel::updateExternalDevices);
+
+    reload();
 }
 
 BookmarksModel::~BookmarksModel()
@@ -657,14 +659,14 @@ QVariant BookmarksModel::data(const QModelIndex &index, int role) const
 
     switch (role) {
     case Qt::DisplayRole:
-    case NameRole:
+    case BookmarkRole::nameRole:
         return entry.name;
 
-    case GroupRole: return entry.group;
-    case ThumbnailRole: return entry.thumbnail;
-    case PathRole: return entry.path;
-    case ShowSizeRole: return entry.showSize;
-    case UserDefinedRole: return entry.userDefined;
+    case BookmarkRole::groupRole: return entry.group;
+    case BookmarkRole::thumbnailRole: return entry.thumbnail;
+    case BookmarkRole::pathRole: return entry.path;
+    case BookmarkRole::showSizeRole: return entry.showSize;
+    case BookmarkRole::userDefinedRole: return entry.userDefined;
 
     default:
         return QVariant();
@@ -673,34 +675,38 @@ QVariant BookmarksModel::data(const QModelIndex &index, int role) const
 
 QHash<int, QByteArray> BookmarksModel::roleNames() const
 {
-    QHash<int, QByteArray> roles = QAbstractListModel::roleNames();
-    roles.insert(GroupRole, QByteArray("group"));
-    roles.insert(NameRole, QByteArray("name"));
-    roles.insert(ThumbnailRole, QByteArray("thumbnail"));
-    roles.insert(PathRole, QByteArray("path"));
-    roles.insert(ShowSizeRole, QByteArray("showSize"));
-    roles.insert(UserDefinedRole, QByteArray("userDefined"));
+#define ROLE(ENUM, NAME) { ENUM##Role::NAME##Role, QByteArrayLiteral(#NAME) },
+    static const QHash<int, QByteArray> roles = {
+        // QAbstractListModel::roleNames()
+        ROLE(Bookmark, group)
+        ROLE(Bookmark, name)
+        ROLE(Bookmark, thumbnail)
+        ROLE(Bookmark, path)
+        ROLE(Bookmark, showSize)
+        ROLE(Bookmark, userDefined)
+    };
     return roles;
+#undef ROLE
 }
 
 void BookmarksModel::add(QString path, QString name)
 {
-    appendItem(path, name, true);
+    addUserDefined(path, name, true);
 }
 
 void BookmarksModel::addTemporary(QString path, QString name)
 {
-    appendItem(path, name, false);
+    addUserDefined(path, name, false);
 }
 
 void BookmarksModel::remove(QString path)
 {
-    removeItem(path, true);
+    removeUserDefined(path, true);
 }
 
 void BookmarksModel::removeTemporary(QString path)
 {
-    removeItem(path, false);
+    removeUserDefined(path, false);
 }
 
 void BookmarksModel::clearTemporary()
@@ -721,86 +727,40 @@ void BookmarksModel::clearTemporary()
     }
 }
 
-void BookmarksModel::moveUp(QString path)
+void BookmarksModel::sortFilter(QVariantList order)
 {
-    if (!m_indexLookup.contains(path)) {
-        return;
+    QList<BookmarkGroup::Enum> newOrder;
+    for (const auto& i : std::as_const(order)) {
+        if (i.isValid()) newOrder.append(i.value<BookmarkGroup::Enum>());
     }
 
-    int fromIndex = m_indexLookup.value(path, -1);
-    int toIndex = 0;
-
-    if (fromIndex < 0 || fromIndex > rowCount()) {
-        qDebug() << "moving bookmark up: no" << fromIndex << rowCount();
-        return;
-    } else if (fromIndex == std::max(0, m_firstUserDefinedIndex)) {
-        // already at the top? cycle to the bottom
-        qDebug() << "moving bookmark up: already at the top" << fromIndex << m_firstUserDefinedIndex;
-        toIndex = rowCount();
-    } else {
-        qDebug() << "moving bookmark up: normal" << fromIndex << fromIndex - 1;
-        toIndex = fromIndex - 1;
-    }
-
-    moveItem(fromIndex, toIndex);
-}
-
-void BookmarksModel::moveDown(QString path)
-{
-    if (!m_indexLookup.contains(path)) {
-        return;
-    }
-
-    int fromIndex = m_indexLookup.value(path, -1);
-    int toIndex = 0;
-
-    if (fromIndex < 0 || fromIndex > rowCount()) {
-        return;
-    } else if (fromIndex + 1 >= rowCount()) {
-        // already at the bottom? cycle to the top
-        toIndex = std::max(0, m_firstUserDefinedIndex);
-    } else {
-        toIndex = fromIndex + 1;
-    }
-
-    moveItem(fromIndex, toIndex);
+    if (newOrder == m_groupsOrder) return;
+    m_groupsOrder = newOrder;
+    reload();
 }
 
 void BookmarksModel::rename(QString path, QString newName)
 {
-
-    if (!m_indexLookup.contains(path) || newName.isEmpty()) {
-        return;
-    }
-
-    int idx = m_indexLookup.value(path);
+    if (newName.isEmpty()) return;
+    int idx = findUserDefinedIndex(path);
+    if (idx < 0) return;
 
     m_entries[idx].name = newName;
-
     QModelIndex topLeft = index(idx, 0);
     QModelIndex bottomRight = index(idx, 0);
-    emit dataChanged(topLeft, bottomRight, {NameRole});
+    emit dataChanged(topLeft, bottomRight, {BookmarkRole::nameRole});
 
     save();
-    notifyWatchers(m_entries.at(idx).path);
+    notifyWatchers(path);
 }
 
 bool BookmarksModel::hasBookmark(QString path) const
 {
-    if (m_indexLookup.contains(path)) {
+    if (m_userDefinedLookup.contains(path)) {
         return true;
     }
 
     return false;
-}
-
-QString BookmarksModel::getBookmarkName(QString path) const
-{
-    if (path.isEmpty() || !m_indexLookup.contains(path)) {
-        return QLatin1Literal();
-    }
-
-    return m_entries.at(m_indexLookup.value(path)).name;
 }
 
 void BookmarksModel::registerWatcher(QString path, QPointer<BookmarkWatcher> mark)
@@ -821,6 +781,15 @@ void BookmarksModel::unregisterWatcher(QString path, QPointer<BookmarkWatcher> m
     }
 }
 
+QString BookmarksModel::getBookmarkName(QString path) const
+{
+    if (path.isEmpty() || !m_userDefinedLookup.contains(path)) {
+        return QLatin1Literal();
+    }
+
+    return m_userDefinedLookup.value(path)->name;
+}
+
 enum DeviceType {
     SdCard, BindMount, Remote, Any
 };
@@ -829,12 +798,22 @@ void BookmarksModel::updateExternalDevices()
 {
     // qDebug() << "checking mounts...";
 
+    if (!m_groupsOrder.contains(BookmarkGroup::External)) return;
+
     // currently visible list of mounts
     QSet<int> knownMounts;
-    for (const auto& i : std::as_const(m_entries)) {
-        if (i.group != BookmarkGroup::External) continue;
-        knownMounts.insert(qHash(i.path));
+    int nextExternalIndex = -1;
+    int knownCount = m_entries.length();
+
+    for (int i = m_firstExternalIndex; i < knownCount; ++i) {
+        const auto& item = m_entries.at(i);
+        if (item.group != BookmarkGroup::External) continue;
+        knownMounts.insert(qHash(item.path));
+        nextExternalIndex = i;
     }
+
+    if (nextExternalIndex < 0) nextExternalIndex = m_firstExternalIndex;
+    else ++nextExternalIndex;
 
     // currently active mounts reported by the system
     const auto activeMounts = QStorageInfo::mountedVolumes();
@@ -858,7 +837,8 @@ void BookmarksModel::updateExternalDevices()
             } else if (i.device().startsWith(QByteArray("/dev/mapper/sailfish-"))) {
                 // Bind mounts have device == /dev/mapper/sailfish-{home,root}
                 // but only /dev/mapper/sailfish-home is visible through QStorageInfo.
-                // TODO: test what happens when running as root.
+                // Note: bind mounts in /dev/mapper/sailfish-root don't show up
+                // even if the app is running as root.
                 type = BindMount;
                 icon = QStringLiteral("icon-m-attach");
             } else if (i.fileSystemType() == QStringLiteral("cifs")) {
@@ -890,9 +870,9 @@ void BookmarksModel::updateExternalDevices()
                 title, icon, i.rootPath(),
                 true, false);
 
-            beginInsertRows(QModelIndex(), m_entries.size(), m_entries.size());
-            m_entries.append(newEntry);
-            rebuildIndexLookup();
+            beginInsertRows(QModelIndex(), nextExternalIndex, nextExternalIndex);
+            m_entries.insert(nextExternalIndex, newEntry);
+            if (nextExternalIndex >= m_firstUserDefinedIndex) m_firstUserDefinedIndex = nextExternalIndex - 1;
             endInsertRows();
         }
     }
@@ -905,107 +885,27 @@ void BookmarksModel::updateExternalDevices()
 
         beginRemoveRows(QModelIndex(), i, i);
         m_entries.removeAt(i);
-        rebuildIndexLookup();
+        if (nextExternalIndex < m_firstUserDefinedIndex) --m_firstUserDefinedIndex;
         endRemoveRows();
     }
 }
 
 void BookmarksModel::reload()
 {
-    QList<BookmarkItem> newEntries;
-    QMap<QString, int> newIndexLookup;
+    m_mountsPollingTimer->stop();
 
-    // populate model with default locations shortcuts
-
-    newEntries.append(BookmarkItem(
-        BookmarkGroup::Location,
-        tr("Home"),
-        QStringLiteral("icon-m-home"),
-        QStandardPaths::writableLocation(QStandardPaths::HomeLocation),
-        true,
-        false)
-    );
-
-    newEntries.append(BookmarkItem(
-        BookmarkGroup::Location,
-        tr("Documents"),
-        QStringLiteral("icon-m-file-document-light"),
-        QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation),
-        false,
-        false)
-    );
-
-    newEntries.append(BookmarkItem(
-        BookmarkGroup::Location,
-        tr("Downloads"),
-        QStringLiteral("icon-m-cloud-download"),
-        QStandardPaths::writableLocation(QStandardPaths::DownloadLocation),
-        false,
-        false)
-    );
-
-    newEntries.append(BookmarkItem(
-        BookmarkGroup::Location,
-        tr("Music"),
-        QStringLiteral("icon-m-file-audio"),
-        QStandardPaths::writableLocation(QStandardPaths::MusicLocation),
-        false,
-        false)
-    );
-
-    newEntries.append(BookmarkItem(
-        BookmarkGroup::Location,
-        tr("Pictures"),
-        QStringLiteral("icon-m-file-image"),
-        QStandardPaths::writableLocation(QStandardPaths::PicturesLocation),
-        false,
-        false)
-    );
-
-    newEntries.append(BookmarkItem(
-        BookmarkGroup::Location,
-        tr("Videos"),
-        QStringLiteral("icon-m-file-video"),
-        QStandardPaths::writableLocation(QStandardPaths::MoviesLocation),
-        false,
-        false)
-    );
-
-    QString androidPath = QStandardPaths::writableLocation(QStandardPaths::HomeLocation) + "/android_storage";
-    QFileInfo androidInfo(androidPath);
-
-    if (androidInfo.exists() && androidInfo.isDir()) {
-        newEntries.append(BookmarkItem(
-            BookmarkGroup::Location,
-            tr("Android storage"),
-            QStringLiteral("icon-m-file-apk"),
-            androidPath,
-            false,
-            false)
-        );
-    }
-
-    newEntries.append(BookmarkItem(
-        BookmarkGroup::Location,
-        tr("Root"),
-        QStringLiteral("icon-m-file-rpm"),
-        QStringLiteral("/"),
-        true,
-        false)
-    );
-
-    // Do not load external devices just yet.
-    // They will be loaded automatically once the refresh timer
-    // is triggered.
+    QHash<QString, BookmarkItem*> newUserDefinedLookup;
+    QMap<BookmarkGroup::Enum, QList<BookmarkItem>> newEntries;
+    newEntries.insert(BookmarkGroup::Location, getStandardLocations());
+    newEntries.insert(BookmarkGroup::External, {}); // loaded when m_mountsPollingTimer triggers
+    newEntries.insert(BookmarkGroup::Bookmark, {}); // loaded below
+    newEntries.insert(BookmarkGroup::Temporary, {}); // reset on reload
 
     // load user defined bookmarks
-    m_firstUserDefinedIndex = newEntries.length();
-
     const auto value = m_bookmarksMonitor->readJson(QStringLiteral("1"));
 
     if (value.isArray()) {
         const auto array = value.toArray();
-        int idx = m_firstUserDefinedIndex;
 
         for (const auto& i : array) {
             if (!i.isObject()) {
@@ -1017,25 +917,33 @@ void BookmarksModel::reload()
             QString path = obj.value(QStringLiteral("path")).toString(QStringLiteral("/home"));
             QString name = obj.value(QStringLiteral("name")).toString(path.split("/").last());
 
-            newEntries.append(BookmarkItem(
+            newEntries[BookmarkGroup::Bookmark].append(BookmarkItem(
                 BookmarkGroup::Bookmark,
                 name,
                 QStringLiteral("icon-m-favorite"),
                 path,
                 false, true));
-            newIndexLookup.insert(path, idx);
-            ++idx;
+            newUserDefinedLookup.insert(path, &newEntries[BookmarkGroup::Bookmark].last());
         }
     } else {
         qWarning() << "invalid bookmarks data in" << m_bookmarksMonitor->file() << value;
     }
 
-    m_lastUserDefinedIndex = std::max(m_firstUserDefinedIndex, newEntries.length() - 1);
-
     beginResetModel();
-    m_entries = newEntries;
-    m_indexLookup = newIndexLookup;
+    m_entries.clear();
+    for (const auto& i : std::as_const(m_groupsOrder)) {
+        if (i == BookmarkGroup::Bookmark) m_firstUserDefinedIndex = m_entries.length();
+        else if (i == BookmarkGroup::External) m_firstExternalIndex = m_entries.length();
+
+        m_entries.append(newEntries[i]);
+
+        if (i == BookmarkGroup::Bookmark) m_lastUserDefinedIndex = m_entries.length() - 1;
+    }
+    m_userDefinedLookup = newUserDefinedLookup;
     endResetModel();
+
+    updateExternalDevices();
+    m_mountsPollingTimer->start();
 }
 
 void BookmarksModel::save()
@@ -1055,6 +963,28 @@ void BookmarksModel::save()
     m_bookmarksMonitor->writeJson(array, QStringLiteral("1"));
 }
 
+QStringList BookmarksModel::pathsForIndexes(const QModelIndexList& indexes)
+{
+    QStringList ret;
+    ret.reserve(indexes.length());
+
+    qDebug() << "ind:" << indexes;
+
+    int count = m_entries.length();
+    for (const auto& i : std::as_const(indexes)) {
+        if (!i.isValid()) continue;
+
+        int row = i.row();
+        if (row >= 0 && row < count) {
+            ret.append(m_entries.at(row).path);
+        }
+    }
+
+    qDebug() << "ret:" << ret;
+
+    return ret;
+}
+
 void BookmarksModel::notifyWatchers(const QString& path)
 {
     if (m_watchers.contains(path)) {
@@ -1066,44 +996,11 @@ void BookmarksModel::notifyWatchers(const QString& path)
     }
 }
 
-void BookmarksModel::moveItem(int fromIndex, int toIndex)
+void BookmarksModel::addUserDefined(QString path, QString name, bool permanent)
 {
-    if (fromIndex < 0 || fromIndex > rowCount()) {
-        return;
-    }
+    if (path.isEmpty()) return;
+    if (m_userDefinedLookup.contains(path)) return;
 
-    qDebug() << "moving bookmark:" << fromIndex << toIndex;
-
-    // Moving rows using the beginMoveRows()/endMoveRows()/m_entries.move()
-    // functions is incredibly slow for some reason.
-    // Removing the row and adding it again has good performance.
-
-    int lastIndex = rowCount();
-    if (toIndex > lastIndex) {
-        toIndex = lastIndex;
-    }
-
-    beginRemoveRows(QModelIndex(), fromIndex, fromIndex);
-    auto item = m_entries.takeAt(fromIndex);
-    m_indexLookup.remove(item.path);
-    endRemoveRows();
-
-    // the position we want to move to just moved one place
-    // up because we removed the old entry
-    if (toIndex > fromIndex) {
-        toIndex -= 1;
-    }
-
-    beginInsertRows(QModelIndex(), toIndex, toIndex);
-    m_entries.insert(toIndex, item);
-    rebuildIndexLookup();
-    endInsertRows();
-
-    save();
-}
-
-void BookmarksModel::appendItem(QString path, QString name, bool doSave)
-{
     if (name.isEmpty()) {
         QDir dir(path);
         name = dir.dirName();
@@ -1113,36 +1010,75 @@ void BookmarksModel::appendItem(QString path, QString name, bool doSave)
         }
     }
 
-    auto last = rowCount();
-    beginInsertRows(QModelIndex(), last, last);
-    m_entries.append(BookmarkItem(
-        doSave ? BookmarkGroup::Bookmark : BookmarkGroup::Temporary,
+    int at = m_lastUserDefinedIndex + 1;
+
+    beginInsertRows(QModelIndex(), at, at);
+    m_entries.insert(at, BookmarkItem(
+        permanent ? BookmarkGroup::Bookmark : BookmarkGroup::Temporary,
         name,
-        doSave ? QStringLiteral("icon-m-favorite") : QStringLiteral("icon-m-file-folder"),
-        path, false, true));
-    m_indexLookup.insert(path, last);
+        permanent ? QStringLiteral("icon-m-favorite") : QStringLiteral("icon-m-file-folder"),
+        path, false, true)
+    );
+    ++m_lastUserDefinedIndex;
+    m_userDefinedLookup.insert(path, &m_entries[at]);
     endInsertRows();
 
-    if (doSave) {
+    if (permanent) {
         save();
         notifyWatchers(path);
+    } else {
+        emit temporaryAdded(index(at), at);
     }
 }
 
-void BookmarksModel::removeItem(QString path, bool doSave)
+void BookmarksModel::removeUserDefined(QString path, bool permanent)
 {
-    if (!m_indexLookup.contains(path)) {
+    int idx = findUserDefinedIndex(path);
+    if (idx < 0) return;
+
+    beginRemoveRows(QModelIndex(), idx, idx);
+    m_entries.removeAt(idx);
+    m_userDefinedLookup.remove(path);
+    --m_lastUserDefinedIndex;
+    endRemoveRows();
+
+    if (permanent) {
+        notifyWatchers(path);
+        save();
+    }
+}
+
+int BookmarksModel::findUserDefinedIndex(QString path)
+{
+    if (path.isEmpty() || !m_userDefinedLookup.contains(path)) return -1;
+
+    int count = m_entries.length();
+    for (int i = 0; i < count; ++i) {
+        const auto& item = m_entries.at(i);
+
+        if (item.userDefined && item.path == path) {
+            return i;
+        }
+    }
+
+    return -1;
+}
+
+void BookmarksModel::move(int fromIndex, int toIndex, bool saveImmediately)
+{
+    if (fromIndex < 0 || fromIndex > rowCount() || fromIndex == toIndex
+            || fromIndex < m_firstUserDefinedIndex || toIndex > m_lastUserDefinedIndex) {
         return;
     }
 
-    auto index = m_indexLookup.value(path);
-    beginRemoveRows(QModelIndex(), index, index);
-    m_entries.removeAt(index);
-    rebuildIndexLookup();
-    endRemoveRows();
+    qDebug() << "moving bookmark:" << fromIndex << toIndex;
 
-    if (doSave) {
-        notifyWatchers(path);
+    beginMoveRows(QModelIndex(), fromIndex, fromIndex,
+                  QModelIndex(), toIndex < fromIndex ? toIndex : (toIndex + 1));
+    m_entries.move(fromIndex, toIndex);
+    endMoveRows();
+
+    if (saveImmediately) {
         save();
     }
 }
@@ -1152,13 +1088,81 @@ QString BookmarksModel::loadBookmarksFile()
     return m_bookmarksMonitor->readFile();
 }
 
-void BookmarksModel::rebuildIndexLookup()
+QList<BookmarksModel::BookmarkItem> BookmarksModel::getStandardLocations()
 {
-    m_indexLookup.clear();
+    const static QList<BookmarkItem> ret {
+        {
+            BookmarkGroup::Location,
+            tr("Home"),
+            QStringLiteral("icon-m-home"),
+            QStandardPaths::writableLocation(QStandardPaths::HomeLocation),
+            true,
+            false
+        },
+        {
+            BookmarkGroup::Location,
+            tr("Documents"),
+            QStringLiteral("icon-m-file-document-light"),
+            QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation),
+            false,
+            false
+        },
+        {
+            BookmarkGroup::Location,
+            tr("Downloads"),
+            QStringLiteral("icon-m-cloud-download"),
+            QStandardPaths::writableLocation(QStandardPaths::DownloadLocation),
+            false,
+            false
+        },
+        {
+            BookmarkGroup::Location,
+            tr("Music"),
+            QStringLiteral("icon-m-file-audio"),
+            QStandardPaths::writableLocation(QStandardPaths::MusicLocation),
+            false,
+            false
+        },
+        {
+            BookmarkGroup::Location,
+            tr("Pictures"),
+            QStringLiteral("icon-m-file-image"),
+            QStandardPaths::writableLocation(QStandardPaths::PicturesLocation),
+            false,
+            false
+        },
+        {
+            BookmarkGroup::Location,
+            tr("Videos"),
+            QStringLiteral("icon-m-file-video"),
+            QStandardPaths::writableLocation(QStandardPaths::MoviesLocation),
+            false,
+            false
+        },
+    };
 
-    for (int i = 0; i < m_entries.count(); ++i) {
-        if (m_entries.at(i).userDefined) {
-            m_indexLookup.insert(m_entries.at(i).path, i);
-        }
+    const static QList<BookmarkItem> androidStorage {{
+        BookmarkGroup::Location,
+        tr("Android storage"),
+        QStringLiteral("icon-m-file-apk"),
+        QStandardPaths::writableLocation(QStandardPaths::HomeLocation) + "/android_storage",
+        false,
+        false
+    }};
+
+    const static QList<BookmarkItem> root {{
+        BookmarkGroup::Location,
+        tr("Root"),
+        QStringLiteral("icon-m-file-rpm"),
+        QStringLiteral("/"),
+        true,
+        false
+    }};
+
+    QFileInfo androidInfo(androidStorage[0].path);
+    if (androidInfo.exists() && androidInfo.isDir()) {
+        return ret + androidStorage + root;
+    } else {
+        return ret + root;
     }
 }

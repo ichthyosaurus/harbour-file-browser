@@ -130,12 +130,15 @@ private:
 };
 
 
-// Provides a list of all currently configured bookmarks.
-// Changes to the model are immediately stored on disk. The
-// model re-reads the file automatically if the file changes.
-//
-// This class should not be used directly. Instead, use the
-// "bookmarks" property on the GlobalSettings singleton in QML.
+/**
+ * @brief The BookmarksModel class provides a list of all currently configured bookmarks.
+ *
+ * Changes to the model are immediately stored on disk. The
+ * model re-reads the file automatically if the file changes.
+ *
+ * This class should not be used directly. Instead, use the
+ * "bookmarks" property on the GlobalSettings singleton in QML.
+ */
 class BookmarksModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -149,7 +152,7 @@ public:
     QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const;
     QHash<int, QByteArray> roleNames() const;
 
-    // methods callable from QML
+    // methods for handling user defined bookmarks from QML
     Q_INVOKABLE void add(QString path, QString name = QStringLiteral());
     Q_INVOKABLE void addTemporary(QString path, QString name = QStringLiteral());
 
@@ -157,40 +160,39 @@ public:
     Q_INVOKABLE void removeTemporary(QString path);
 
     Q_INVOKABLE void clearTemporary();
+    Q_INVOKABLE void sortFilter(QVariantList order); // list of BookmarkGroup::Enum
 
-    // methods for handling user defined bookmarks
-    // Q_INVOKABLE void moveUp(int fromIndex);
-    // Q_INVOKABLE void moveDown(int fromIndex);
-    Q_INVOKABLE void moveUp(QString path);
-    Q_INVOKABLE void moveDown(QString path);
-    // Q_INVOKABLE void rename(int idx, QString newName);
+    Q_INVOKABLE void move(int fromIndex, int toIndex, bool saveImmediately = true);
     Q_INVOKABLE void rename(QString path, QString newName);
     Q_INVOKABLE bool hasBookmark(QString path) const;
+    Q_INVOKABLE void save();
 
-    Q_INVOKABLE QString getBookmarkName(QString path) const;
+    Q_INVOKABLE QStringList pathsForIndexes(const QModelIndexList& indexes);
 
     void registerWatcher(QString path, QPointer<BookmarkWatcher> mark);
     void unregisterWatcher(QString path, QPointer<BookmarkWatcher> mark);
+    QString getBookmarkName(QString path) const;
 
     static BookmarksModel* instance() {
         if (s_globalInstance.isNull()) s_globalInstance.reset(new BookmarksModel());
         return s_globalInstance.data();
     }
 
+signals:
+    void temporaryAdded(QModelIndex modelIndex, int row);
+
 private slots:
     void updateExternalDevices();
     void reload();
 
 private:
-    void save();
     void notifyWatchers(const QString& path);
 
-    void moveItem(int fromIndex, int toIndex);
-    void appendItem(QString path, QString name, bool doSave);
-    void removeItem(QString path, bool doSave);
+    void addUserDefined(QString path, QString name, bool permanent);
+    void removeUserDefined(QString path, bool permanent);
+    int findUserDefinedIndex(QString path);
 
     QString loadBookmarksFile();
-    void rebuildIndexLookup();
 
     struct BookmarkItem {
         BookmarkItem(BookmarkGroup::Enum group, QString name, QString icon, QString path, bool showSize, bool userDefined) :
@@ -205,11 +207,15 @@ private:
     };
 
     QList<BookmarkItem> m_entries;
+    QList<BookmarkGroup::Enum> m_groupsOrder;
+    QList<BookmarkItem> getStandardLocations();
+
     int m_firstUserDefinedIndex {-1};
     int m_lastUserDefinedIndex {-1};
+    int m_firstExternalIndex {-1};
 
     // maps paths of custom bookmarks to indices in the entries list
-    QMap<QString, int> m_indexLookup;
+    QHash<QString, BookmarkItem*> m_userDefinedLookup;
 
     // holds registered bookmark watchers
     // Bookmark watchers can be created from QML to monitor a single
