@@ -132,12 +132,27 @@ Dialog {
 
         PullDownMenu {
             flickable: hintList
-            quickSelect: true
-            visible: path != "/"
 
             MenuItem {
+                visible: path != "/"
+                text: qsTr("Root")
+                onDelayedClick: pathReplaced("/")
+            }
+
+            MenuItem {
+                text: qsTr("Places")
+                onClicked: {
+                    var dialog = pageStack.push(Qt.resolvedUrl("ShortcutsDialog.qml"))
+                    dialog.accepted.connect(function() {
+                        pathReplaced(dialog.selectedPath + "/")
+                    })
+                }
+            }
+
+            MenuItem {
+                visible: path != "/"
                 text: qsTr("Remove last part")
-                onClicked: removeLastPartOfPath(dialog.path)
+                onDelayedClick: removeLastPartOfPath(dialog.path)
             }
         }
 
