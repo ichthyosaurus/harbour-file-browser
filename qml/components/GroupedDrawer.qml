@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2023 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -21,26 +21,51 @@
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 
-Item {
+// TODO Refactor.
+// - animation should *never* run while isOpen is being initially set
+// - animations should never stutter
+// - height should work even if a Column is used as content item
+// - -> also: isn't there a Silica component that does exactly this?
+
+Column {
+    id: root
     property alias title: titleLabel.text
-    property alias open: viewGroup.open
-    property alias titleHeight: viewGroup.height
-    property Component contents
-    property alias contentItem: loader.item
+    property bool isOpen: false
+
+    readonly property alias titleHeight: viewGroup.height
+    default property alias contentItem: container.data
+
+    function open() {
+        if (isOpen) return
+        openCloseAnimation.enabled = true
+        isOpen = true
+        openCloseAnimation.enabled = false
+    }
+
+    function close() {
+        if (!isOpen) return
+        openCloseAnimation.enabled = true
+        isOpen = false
+        openCloseAnimation.enabled = false
+    }
 
     width: parent.width
-    height: viewGroup.height + container.height
-    Behavior on height { NumberAnimation { duration: 100 } }
+    height: isOpen ? (titleHeight + container.height) : titleHeight
     clip: true
 
     opacity: enabled ? 1.0 : Theme.opacityLow
+
+    Behavior on height {
+        id: openCloseAnimation
+        enabled: false
+        NumberAnimation { duration: 100 }
+    }
 
     BackgroundItem {
         id: viewGroup
         width: parent.width
         height: Theme.itemSizeSmall
-        property bool open: false
-        onClicked: open = !open
+        onClicked: isOpen ? close() : open()
 
         Label {
             id: titleLabel
@@ -66,7 +91,7 @@ Item {
             source: "image://theme/icon-m-right"
             color: Theme.primaryColor
             transformOrigin: Item.Center
-            rotation: viewGroup.open ? 90 : 0
+            rotation: isOpen ? 90 : 0
             Behavior on rotation { NumberAnimation { duration: 100 } }
         }
 
@@ -80,17 +105,12 @@ Item {
         }
     }
 
-    Item {
+    Column {
         id: container
         width: parent.width
-        height: visible && loader.status === Loader.Ready ? loader.item.height : 0
-        visible: viewGroup.open
-        anchors.top: viewGroup.bottom
+        height: childrenRect.height
+        opacity: isOpen ? 1.0 : 0.0
 
-        Loader {
-            id: loader
-            width: parent.width
-            sourceComponent: contents
-        }
+        Behavior on opacity { FadeAnimator { } }
     }
 }

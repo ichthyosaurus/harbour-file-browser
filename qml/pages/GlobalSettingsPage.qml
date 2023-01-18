@@ -48,16 +48,15 @@ Page {
             GroupedDrawer {
                 id: viewGroup
                 title: qsTr("Directory View")
-                open: true
+                isOpen: true
 
-                onOpenChanged: {
-                    if (open) {
-                        if (!!sortingGroup) sortingGroup.open = false
-                        if (!!behaviourGroup) behaviourGroup.open = false
+                onIsOpenChanged: {
+                    if (isOpen) {
+                        if (!!sortingGroup) sortingGroup.close()
+                        if (!!behaviourGroup) behaviourGroup.close()
                     }
                 }
 
-                contents: Column {
                     SettingsSwitch {
                         text: qsTr("Use per-directory view settings")
                         key: "viewUseLocalSettings"
@@ -87,21 +86,19 @@ Page {
                             MenuItem { text: qsTr("huge");   property string action: "huge"; }
                         }
                     }
-                }
             }
 
             GroupedDrawer {
                 id: sortingGroup
                 title: qsTr("Sorting")
 
-                onOpenChanged: {
-                    if (open) {
-                        viewGroup.open = false
-                        behaviourGroup.open = false
+                onIsOpenChanged: {
+                    if (isOpen) {
+                        viewGroup.close()
+                        behaviourGroup.close()
                     }
                 }
 
-                contents: Column {
                     SettingsSwitch {
                         text: qsTr("Show folders first")
                         key: "viewShowDirectoriesFirst"
@@ -168,7 +165,6 @@ Page {
                                 text: qsTr("descending")
                             }
                         }
-                    }
                 }
             }
 
@@ -176,14 +172,13 @@ Page {
                 id: behaviourGroup
                 title: qsTr("Behavior and View")
 
-                onOpenChanged: {
-                    if (open) {
-                        viewGroup.open = false
-                        sortingGroup.open = false
+                onIsOpenChanged: {
+                    if (isOpen) {
+                        viewGroup.close()
+                        sortingGroup.close()
                     }
                 }
 
-                contents: Column {
                     ComboBox {
                         id: initialDirMode
                         label: qsTr("Initial directory")
@@ -299,7 +294,6 @@ Page {
                         description: qsTr("Use a solid color instead of your wallpaper as the " +
                                           "background of this app.")
                     }
-                }
             }
 
             Spacer { height: 2*Theme.paddingLarge }
