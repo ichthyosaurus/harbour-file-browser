@@ -872,7 +872,10 @@ void BookmarksModel::updateExternalDevices()
 
             beginInsertRows(QModelIndex(), nextExternalIndex, nextExternalIndex);
             m_entries.insert(nextExternalIndex, newEntry);
-            if (nextExternalIndex >= m_firstUserDefinedIndex) m_firstUserDefinedIndex = nextExternalIndex - 1;
+            if (m_firstExternalIndex <= m_firstUserDefinedIndex) {
+                ++m_firstUserDefinedIndex;
+                ++m_lastUserDefinedIndex;
+            }
             endInsertRows();
         }
     }
@@ -885,7 +888,11 @@ void BookmarksModel::updateExternalDevices()
 
         beginRemoveRows(QModelIndex(), i, i);
         m_entries.removeAt(i);
-        if (nextExternalIndex < m_firstUserDefinedIndex) --m_firstUserDefinedIndex;
+        if (m_firstExternalIndex <= m_firstUserDefinedIndex) {
+            --m_firstUserDefinedIndex;
+            --m_lastUserDefinedIndex;
+            qDebug() << "changingB:" << nextExternalIndex << m_firstExternalIndex << m_lastUserDefinedIndex;
+        }
         endRemoveRows();
     }
 }
