@@ -42,82 +42,81 @@ Dialog {
         page: page
     }
 
-        ShortcutsList {
-            id: shortcutsView
-            anchors.fill: parent
-            sections: [
-                BookmarkGroup.Temporary,
-                BookmarkGroup.Bookmark,
-                BookmarkGroup.Location,
-                BookmarkGroup.External
-            ]
-            editable: false
-            selectable: true
-            multiSelect: true
-            preselectTemporary: true
+    ShortcutsList {
+        id: shortcutsView
+        anchors.fill: parent
+        sections: [
+            BookmarkGroup.Temporary,
+            BookmarkGroup.Bookmark,
+            BookmarkGroup.Location,
+            BookmarkGroup.External
+        ]
+        editable: false
+        selectable: true
+        multiSelect: true
+        preselectTemporary: true
 
-            VerticalScrollDecorator { flickable: shortcutsView }
+        VerticalScrollDecorator { flickable: shortcutsView }
 
-            PullDownMenu {
-                MenuItem {
-                    text: qsTr("Enter target path")
-                    onClicked: {
-                        var start = Paths.dirName(toTransfer[0])
-                        start = start.replace(/\/+/g, '/')
-                        start = start.replace(/\/$/, '')
-                        pageStack.animatorPush(Qt.resolvedUrl("../pages/PathEditDialog.qml"),
-                                       { path: toTransfer.length === 0 ? StandardPaths.home :
-                                                                         start,
-                                           acceptCallback: function(path) {
-                                               path = path.replace(/\/+/g, '/')
-                                               path = path.replace(/\/$/, '')
-                                               GlobalSettings.bookmarks.addTemporary(path)
-                                           },
-                                           acceptText: qsTr("Select")
-                                       })
-                    }
+        PullDownMenu {
+            MenuItem {
+                text: qsTr("Enter target path")
+                onClicked: {
+                    var start = Paths.dirName(toTransfer[0])
+                    start = start.replace(/\/+/g, '/')
+                    start = start.replace(/\/$/, '')
+                    pageStack.animatorPush(Qt.resolvedUrl("../pages/PathEditDialog.qml"), {
+                        path: toTransfer.length === 0 ? StandardPaths.home : start,
+                        acceptCallback: function(path) {
+                            path = path.replace(/\/+/g, '/')
+                            path = path.replace(/\/$/, '')
+                            GlobalSettings.bookmarks.addTemporary(path)
+                        },
+                        acceptText: qsTr("Select")
+                    })
                 }
             }
-
-            header: Item {
-                width: dialog.width
-                height: head.height + col.height + Theme.paddingLarge
-
-                DialogHeader { id: head }
-
-                Column {
-                    id: col
-                    anchors.top: head.bottom
-                    width: parent.width
-                    spacing: Theme.paddingLarge
-
-                    Label {
-                        id: statusLabel
-                        text: qsTr("%n item(s) selected for transferring", "", toTransfer.length) +
-                              "\n" + qsTr("%n destinations(s) selected", "",
-                                          shortcutsView.selectedLocations.length)
-                        x: Theme.horizontalPageMargin
-                        color: Theme.secondaryHighlightColor
-                    }
-
-                    TransferActionBar {
-                        id: action
-                        width: parent.width
-                        height: Theme.itemSizeMedium
-                        onSelectionChanged: dialog.selectedAction = selection
-                    }
-
-                    TextSwitch {
-                        id: goToTargetSwitch
-                        text: qsTr("Switch to target directory")
-                        enabled: shortcutsView.selectedLocations.length <= 1
-                        onCheckedChanged: goToTarget = checked
-                    }
-                }
-            }
-
-            footer: Spacer { height: Theme.horizontalPageMargin }
         }
+
+        header: Item {
+            width: dialog.width
+            height: head.height + col.height + Theme.paddingLarge
+
+            DialogHeader { id: head }
+
+            Column {
+                id: col
+                anchors.top: head.bottom
+                width: parent.width
+                spacing: Theme.paddingLarge
+
+                Label {
+                    id: statusLabel
+                    text: qsTr("%n item(s) selected for transferring", "", toTransfer.length) +
+                          "\n" + qsTr("%n destinations(s) selected", "",
+                                      shortcutsView.selectedLocations.length)
+                    x: Theme.horizontalPageMargin
+                    color: Theme.secondaryHighlightColor
+                }
+
+                TransferActionBar {
+                    id: action
+                    width: parent.width
+                    height: Theme.itemSizeMedium
+                    onSelectionChanged: dialog.selectedAction = selection
+                }
+
+                TextSwitch {
+                    id: goToTargetSwitch
+                    text: qsTr("Switch to target directory")
+                    enabled: shortcutsView.selectedLocations.length <= 1
+                    onCheckedChanged: goToTarget = checked
+                }
+            }
+        }
+
+        footer: Spacer { height: Theme.horizontalPageMargin }
+    }
 
     onAccepted: {
         targets = shortcutsView.selectedLocations.slice()
