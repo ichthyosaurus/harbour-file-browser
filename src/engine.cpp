@@ -166,7 +166,7 @@ int Engine::requestDiskSpaceInfo(const QString& path)
 
         return {
             QStringLiteral("ok"),
-            QStringLiteral("%1%").arg(usedPercent),
+            QString::number(usedPercent),
             QStringLiteral("%1/%2").arg(filesizeToString(used), filesizeToString(total)),
             filesizeToString(free)
         };

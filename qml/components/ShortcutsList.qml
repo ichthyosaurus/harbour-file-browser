@@ -104,12 +104,14 @@ SilicaListView {
         id: listItem
         property var modelIndex: sortedModel.index(index, 0)
         property bool selected: selectionModel.hasSelection && selectionModel.isSelected(modelIndex)
+        property string shortcutPath: Paths.unicodeArrow() + " " + model.path
 
         ListView.onRemove: animateRemoval(listItem) // enable animated list item removals
         menu: (model.group === BookmarkGroup.External &&
                !GlobalSettings.runningAsRoot &&
                GlobalSettings.systemSettingsEnabled) ?
                   settingsContextMenu : null
+        openMenuOnPressAndHold: false
 
         width: root.width
         contentHeight: Theme.itemSizeSmall
@@ -234,46 +236,90 @@ SilicaListView {
             opacity: shown ? 1.0 : 0.0; visible: opacity != 0.0
             Behavior on opacity { NumberAnimation { duration: 100 } }
 
-            Text {
+            Row {
                 id: sizeInfo
                 visible: model.showSize
-                font.pixelSize: Theme.fontSizeExtraSmall
-                color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                width: parent.width
+                spacing: Theme.paddingMedium
 
                 property int diskSpaceHandle: -1
-                property string diskSpace: ""
-                text: visible ? (diskSpace === "" ? "... \u2022 ... \u2022 " : diskSpace) : ""
+                property var diskSpaceInfo: ['']
+
+                onVisibleChanged: {
+                    if (visible) {
+                        diskSpaceHandle = engine.requestDiskSpaceInfo(model.path)
+                    }
+                }
+
+                Component.onCompleted: {
+                    if (model.showSize) {
+                        diskSpaceHandle = engine.requestDiskSpaceInfo(model.path)
+                    }
+                }
 
                 Connections {
                     target: model.showSize ? engine : null
                     onDiskSpaceInfoReady: {
                         if (sizeInfo.diskSpaceHandle == handle) {
                             sizeInfo.diskSpaceHandle = -1
-                            sizeInfo.diskSpace = (info[0] === '' ? "" : info[1] + " \u2022 " + info[2] + " \u2022 ")
+
+                            /* debugDelayer.info = info
+                            debugDelayer.start() */
+                            sizeInfo.diskSpaceInfo = info
                         }
                     }
                 }
 
-                onVisibleChanged: {
-                    if (visible) {
-                        sizeInfo.diskSpaceHandle = engine.requestDiskSpaceInfo(model.path)
+                /* Timer {
+                    id: debugDelayer
+                    property var info
+                    onTriggered: sizeInfo.diskSpaceInfo = info
+                    interval: 2000
+                } */
+
+                Rectangle {
+                    width: parent.width - calculating.width
+                    height: Theme.paddingSmall
+                    anchors.verticalCenter: calculating.verticalCenter
+                    color: Theme.rgba(highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor,
+                                      Theme.opacityLow)
+                    radius: 50
+
+                    Rectangle {
+                        anchors.left: parent.left
+                        width: parent.width / 100 * parseInt(sizeInfo.diskSpaceInfo[1], 10)
+                        Behavior on width { NumberAnimation { duration: 200 } }
+                        height: parent.height
+                        color: highlighted ? Theme.highlightColor : Theme.primaryColor
+                        radius: 50
                     }
                 }
 
-                Component.onCompleted: {
-                    if (model.showSize) {
-                        sizeInfo.diskSpaceHandle = engine.requestDiskSpaceInfo(model.path)
+                Row {
+                    id: calculating
+
+                    BusyIndicator {
+                        size: BusyIndicatorSize.ExtraSmall
+                        visible: sizeInfo.diskSpaceInfo[0] === ''
+                        running: visible
+                    }
+
+                    Label {
+                        visible: sizeInfo.diskSpaceInfo[0] !== ''
+                        text: qsTr("%1 free").arg(sizeInfo.diskSpaceInfo[3])
+                        font.pixelSize: Theme.fontSizeExtraSmall
+                        color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
                     }
                 }
             }
 
             Text {
-                id: shortcutPath
+                id: shortcutPathLabel
                 width: parent.width - (sizeInfo.visible ? sizeInfo.width : 0)
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
                 text: Paths.unicodeArrow() + " " + model.path
-                visible: model.path === model.name ? false : true
+                visible: (model.path === model.name || model.showSize) ? false : true
                 elide: Text.ElideMiddle
             }
         }
@@ -281,6 +327,8 @@ SilicaListView {
         onPressAndHold: {
             if (model.userDefined ? true : false) {
                 _editBookmarks();
+            } else if (menu !== null && menu !== undefined) {
+                openMenu({'shortcutPath': shortcutPath})
             }
         }
 
@@ -341,7 +389,14 @@ SilicaListView {
 
     Component {
         id: settingsContextMenu
+
         ContextMenu {
+            property string shortcutPath
+
+            MenuLabel {
+                text: shortcutPath
+            }
+
             MenuItem {
                 text: qsTr("Open system settings");
                 onClicked: {

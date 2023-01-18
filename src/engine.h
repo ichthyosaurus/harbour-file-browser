@@ -113,7 +113,7 @@ signals:
      *
      * Info fields:
      *   1. success marker: not empty on success, empty on failure
-     *   2. used percentage (e.g. "80%" if the drive is 80% full)
+     *   2. used percentage (e.g. "80" if the drive is 80% full)
      *   3. used to total ratio (e.g. "3.2 GiB/4 GiB")
      *   4. free space (e.g. "0.8 GiB")
      *
