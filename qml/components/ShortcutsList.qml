@@ -293,7 +293,8 @@ SilicaListView {
 
         onPressAndHold: {
             if (model.userDefined ? true : false) {
-                _editBookmarks();
+                // _editBookmarks();
+                pageStack.push(Qt.resolvedUrl("../pages/BookmarksSortPage.qml"))
             } else if (menu !== null && menu !== undefined) {
                 openMenu({'shortcutPath': shortcutPath})
             }
