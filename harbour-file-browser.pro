@@ -181,6 +181,7 @@ HEADERS += src/jhead/jhead-api.h \
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 
 DISTFILES += qml/*.qml \
+    qml/components/StorageSizeInfo.qml \
     qml/cover/*.qml \
     qml/pages/*.qml \
     qml/components/*.qml \
