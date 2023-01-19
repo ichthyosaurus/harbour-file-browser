@@ -11,43 +11,46 @@ import harbour.file.browser.Settings 1.0
 import "../js/paths.js" as Paths
 
 Row {
-    id: sizeInfo
+    id: root
     spacing: Theme.paddingMedium
 
-    property int diskSpaceHandle: -1
-    property var diskSpaceInfo: ['']
+    property string path
+    property bool active: visible
 
-    onVisibleChanged: {
-        if (visible) {
-            diskSpaceHandle = engine.requestDiskSpaceInfo(model.path)
+    property int _diskSpaceHandle: -1
+    property var _diskSpaceInfo: ['']
+
+    onActiveChanged: {
+        if (active) {
+            _diskSpaceHandle = engine.requestDiskSpaceInfo(path)
         }
     }
 
     Component.onCompleted: {
-        if (model.showSize) {
-            diskSpaceHandle = engine.requestDiskSpaceInfo(model.path)
+        if (active) {
+            _diskSpaceHandle = engine.requestDiskSpaceInfo(path)
         }
     }
 
     Connections {
-        target: model.showSize ? engine : null
+        target: active ? engine : null
         onDiskSpaceInfoReady: {
-            if (sizeInfo.diskSpaceHandle == handle) {
-                sizeInfo.diskSpaceHandle = -1
+            if (_diskSpaceHandle == handle) {
+                _diskSpaceHandle = -1
 
                 /* debugDelayer.info = info
-                            debugDelayer.start() */
-                sizeInfo.diskSpaceInfo = info
+                debugDelayer.start() */
+                _diskSpaceInfo = info
             }
         }
     }
 
     /* Timer {
-                    id: debugDelayer
-                    property var info
-                    onTriggered: sizeInfo.diskSpaceInfo = info
-                    interval: 2000
-                } */
+        id: debugDelayer
+        property var info
+        onTriggered: _diskSpaceInfo = info
+        interval: 2000
+    } */
 
     Rectangle {
         width: parent.width - calculating.width
@@ -59,7 +62,7 @@ Row {
 
         Rectangle {
             anchors.left: parent.left
-            width: parent.width / 100 * parseInt(sizeInfo.diskSpaceInfo[1], 10)
+            width: parent.width / 100 * parseInt(_diskSpaceInfo[1], 10)
             Behavior on width { NumberAnimation { duration: 200 } }
             height: parent.height
             color: highlighted ? Theme.highlightColor : Theme.primaryColor
@@ -72,13 +75,13 @@ Row {
 
         BusyIndicator {
             size: BusyIndicatorSize.ExtraSmall
-            visible: sizeInfo.diskSpaceInfo[0] === ''
+            visible: _diskSpaceInfo[0] === ''
             running: visible
         }
 
         Label {
-            visible: sizeInfo.diskSpaceInfo[0] !== ''
-            text: qsTr("%1 free").arg(sizeInfo.diskSpaceInfo[3])
+            visible: _diskSpaceInfo[0] !== ''
+            text: qsTr("%1 free").arg(_diskSpaceInfo[3])
             font.pixelSize: Theme.fontSizeExtraSmall
             color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
         }

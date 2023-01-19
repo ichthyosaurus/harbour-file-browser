@@ -149,6 +149,7 @@ SilicaListView {
             StorageSizeBar {
                 id: sizeInfo
                 visible: model.showSize
+                path: model.path
                 width: parent.width
             }
 
