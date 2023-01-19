@@ -14,7 +14,7 @@ source ../libs/opal-render-icons.sh
 cFORCE=false
 
 echo "scrubbing svg sources..."
-for dir in file toolbar clipboard; do
+for dir in . file toolbar clipboard; do
     pushd "$dir"
     for i in raw/*.svg; do
         if [[ "$i" -nt "${i#raw/}" ]]; then
@@ -65,5 +65,13 @@ cITEMS=(
     file/file
 )
 cRESOLUTIONS=(128+large- 32+small-)
+cTARGETS=(../qml/images)
+render_batch
+
+cNAME="misc icons"
+cITEMS=(
+    drag-background
+)
+cRESOLUTIONS=(42)
 cTARGETS=(../qml/images)
 render_batch
