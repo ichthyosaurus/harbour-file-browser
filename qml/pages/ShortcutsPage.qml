@@ -295,8 +295,5 @@ Page {
             main.coverText = qsTr("Places") // update cover
             if (!forwardNavigation) pageStack.pushAttached(main.settingsPage);
         }
-        if (status === PageStatus.Activating || status === PageStatus.Deactivating) {
-            shortcutsView._isEditing = false;
-        }
     }
 }

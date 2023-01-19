@@ -47,10 +47,6 @@ SilicaListView {
 
     signal itemClicked(var clickedIndex, var path)
 
-    property bool _isEditing: false
-    function _editBookmarks() { if (editable) _isEditing = true; }
-    function _finishEditing() { _isEditing = false; }
-
     onSectionsChanged: GlobalSettings.bookmarks.sortFilter(sections)
 
     model: GlobalSettings.bookmarks
@@ -93,20 +89,15 @@ SilicaListView {
         width: root.width
         contentHeight: Theme.itemSizeSmall
 
-        enabled: !_isEditing || !model.userDefined
         onClicked: {
-            if (!_isEditing) {
-                itemClicked(index, model.path)
+            itemClicked(index, model.path)
 
-                if (selectable) {
-                    if (multiSelect) {
-                        selectionModel.select(modelIndex, ItemSelectionModel.Toggle)
-                    } else {
-                        selectionModel.select(modelIndex, ItemSelectionModel.ClearAndSelect)
-                    }
+            if (selectable) {
+                if (multiSelect) {
+                    selectionModel.select(modelIndex, ItemSelectionModel.Toggle)
+                } else {
+                    selectionModel.select(modelIndex, ItemSelectionModel.ClearAndSelect)
                 }
-            } else {
-                _finishEditing()
             }
         }
 
@@ -115,7 +106,7 @@ SilicaListView {
             value: true
         }
 
-        Item {
+        HighlightImage {
             id: icon
             width: height
             anchors {
@@ -125,35 +116,14 @@ SilicaListView {
                 margins: Theme.paddingMedium
             }
 
-            Image {
-                anchors.fill: parent
-                source: "image://theme/" + model.thumbnail + "?" + (
-                            listItem.highlighted ? Theme.highlightColor : Theme.primaryColor)
-
-                property bool shown: !_isEditing || !model.userDefined
-                opacity: shown ? 1.0 : 0.0; visible: opacity != 0.0
-                Behavior on opacity { NumberAnimation { duration: 100 } }
-            }
-
-            IconButton {
-                anchors.fill: parent
-                icon.source: "image://theme/icon-m-up"
-
-                property bool shown: _isEditing && model.userDefined
-                opacity: shown ? 1.0 : 0.0; visible: opacity != 0.0
-                Behavior on opacity { NumberAnimation { duration: 100 } }
-
-                onClicked: {
-                    if (!model.userDefined || !model.path) return;
-                    GlobalSettings.bookmarks.moveUp(model.path);
-                }
-            }
+            source: "image://theme/" + model.thumbnail
+            color: highlighted ? Theme.highlightColor : Theme.primaryColor
         }
 
         Label {
             id: shortcutLabel
             font.pixelSize: Theme.fontSizeMedium
-            color: listItem.highlighted ? Theme.highlightColor : Theme.primaryColor
+            color: highlighted ? Theme.highlightColor : Theme.primaryColor
             text: model.name
             truncationMode: TruncationMode.Fade
             anchors {
@@ -162,40 +132,7 @@ SilicaListView {
                 top: parent.top
                 topMargin: model.path === model.name ? (parent.height / 2) - (height / 2) : 5
             }
-
-            // waiting for deleteBookmarkBtn.opacity === 1.0, ie. waiting for the
-            // transition to finish, makes sure we don't see graphical glitches
-            // when changing from/to edit mode
-            width: root.width - x -
-                   (deleteBookmarkBtn.opacity === 1.0 ? deleteBookmarkBtn.width : Theme.horizontalPageMargin)
-
-            property bool shown: true
-            opacity: shown ? 1.0 : 0.0; visible: opacity != 0.0
-            Behavior on opacity { NumberAnimation { duration: 100 } }
-        }
-
-        TextField {
-            id: editLabel
-
-            property bool shown: !shortcutLabel.shown
-            opacity: shown ? 1.0 : 0.0; visible: opacity != 0.0
-            Behavior on opacity { NumberAnimation { duration: 100 } }
-
-            z: infoRow.z-1
-            placeholderText: model.name
-            text: model.name
-            labelVisible: false
-            textTopMargin: 0
-            textMargin: 0
-            anchors {
-                left: icon.right
-                leftMargin: Theme.paddingMedium
-                top: parent.top
-                topMargin: model.path === model.name ? (parent.height / 2) - (height / 2) : 5
-            }
-            width: root.width - x -
-                   (deleteBookmarkBtn.visible ? deleteBookmarkBtn.width : Theme.horizontalPageMargin)
-            Connections { target: editLabel._editor; onAccepted: _finishEditing(); }
+            width: root.width - x - Theme.horizontalPageMargin
         }
 
         Row {
@@ -208,10 +145,6 @@ SilicaListView {
                 topMargin: 2
                 right: shortcutLabel.right
             }
-
-            property bool shown: true
-            opacity: shown ? 1.0 : 0.0; visible: opacity != 0.0
-            Behavior on opacity { NumberAnimation { duration: 100 } }
 
             Row {
                 id: sizeInfo
@@ -305,60 +238,6 @@ SilicaListView {
             if (menu != null && menu != undefined) {
                 openMenu({'pathLabel': shortcutPath, 'path': model.path, 'listItem': listItem})
             }
-        }
-
-        IconButton {
-            id: deleteBookmarkBtn
-            width: Theme.itemSizeSmall
-            height: Theme.itemSizeSmall
-            icon.source: "image://theme/icon-m-remove"
-
-            property bool shown: false
-            opacity: shown ? 1.0 : 0.0; visible: opacity != 0.0
-            Behavior on opacity { NumberAnimation { duration: 100 } }
-
-            anchors {
-                top: parent.top
-                right: parent.right
-                rightMargin: Theme.paddingSmall
-                leftMargin: Theme.paddingSmall
-            }
-
-            onClicked: {
-                if (!model.userDefined || !model.path) return;
-                GlobalSettings.bookmarks.remove(model.path);
-            }
-        }
-
-        states: [
-            State {
-                name: "" // default state
-                PropertyChanges { target: infoRow; shown: true; }
-                PropertyChanges { target: shortcutLabel; shown: true; }
-                PropertyChanges { target: deleteBookmarkBtn; shown: false; }
-                PropertyChanges { target: editLabel; readOnly: true; }
-            },
-            State {
-                name: "editing"
-                when: _isEditing && model.userDefined === true;
-                PropertyChanges { target: infoRow; shown: false; }
-                PropertyChanges { target: shortcutLabel; shown: false; }
-                PropertyChanges { target: deleteBookmarkBtn; shown: allowDeleteBookmarks; }
-                PropertyChanges { target: editLabel; readOnly: false; text: model.name; }
-            }
-        ]
-
-        onStateChanged: {
-            if (state !== "") return;
-            var oldText = model.name;
-            var newText = editLabel.text;
-
-            if (newText === "" || oldText === newText || model.path === "" || !model.path) {
-                return;
-            }
-
-            model.name = newText;
-            GlobalSettings.bookmarks.rename(model.path, newText);
         }
     }
 
