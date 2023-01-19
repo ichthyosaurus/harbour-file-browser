@@ -75,10 +75,17 @@ SilicaListView {
         property string shortcutPath: Paths.unicodeArrow() + " " + model.path
 
         ListView.onRemove: animateRemoval(listItem) // enable animated list item removals
-        menu: (model.group === BookmarkGroup.External &&
-               !GlobalSettings.runningAsRoot &&
-               GlobalSettings.systemSettingsEnabled) ?
-                  settingsContextMenu : null
+        menu: {
+            if (model.group === BookmarkGroup.External &&
+                    !GlobalSettings.runningAsRoot &&
+                    GlobalSettings.systemSettingsEnabled) {
+                return settingsContextMenu
+            } else if (model.group === BookmarkGroup.Bookmark) {
+                return bookmarkContextMenu
+            } else {
+                return null
+            }
+        }
         openMenuOnPressAndHold: false
 
         width: root.width
@@ -293,11 +300,8 @@ SilicaListView {
         }
 
         onPressAndHold: {
-            if (model.userDefined ? true : false) {
-                // _editBookmarks();
-                pageStack.push(Qt.resolvedUrl("../pages/BookmarksSortPage.qml"))
-            } else if (menu !== null && menu !== undefined) {
-                openMenu({'shortcutPath': shortcutPath})
+            if (menu != null && menu != undefined) {
+                openMenu({'pathLabel': shortcutPath, 'path': model.path, 'listItem': listItem})
             }
         }
 
@@ -360,10 +364,11 @@ SilicaListView {
         id: settingsContextMenu
 
         ContextMenu {
-            property string shortcutPath
+            id: menu
+            property string pathLabel
 
             MenuLabel {
-                text: shortcutPath
+                text: pathLabel
             }
 
             MenuItem {
@@ -371,6 +376,42 @@ SilicaListView {
                 onClicked: {
                     pageStack.push(Qt.resolvedUrl(GlobalSettings.storageSettingsPath));
                 }
+            }
+        }
+    }
+
+    Component {
+        id: bookmarkContextMenu
+
+        ContextMenu {
+            id: menu
+            property ListItem listItem
+            property string pathLabel
+            property string path
+
+            MenuItem {
+                text: qsTr("Rename")
+                onClicked: {
+                    pageStack.push(Qt.resolvedUrl("../pages/BookmarksRenameDialog.qml"),
+                                   {'startAt': menu.path})
+                }
+            }
+            MenuItem {
+                text: qsTr("Sort")
+                onClicked: {
+                    pageStack.push(Qt.resolvedUrl("../pages/BookmarksSortPage.qml"))
+                }
+            }
+            MenuItem {
+                text: qsTr("Remove")
+                onClicked: {
+                    var path = menu.path
+                    var forget = GlobalSettings.bookmarks.remove
+                    listItem.remorseDelete(function() { forget(path) })
+                }
+            }
+            MenuLabel {
+                text: pathLabel
             }
         }
     }
