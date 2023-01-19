@@ -29,8 +29,8 @@ Page {
         id: view
         anchors.fill: parent
 
-        readonly property int topmostY: -view.headerItem.height
-        readonly property int bottommostY: view.contentHeight - view.height - view.headerItem.height
+        readonly property int topMostY: -view.headerItem.height
+        readonly property int bottomMostY: view.contentHeight - view.height - view.headerItem.height
 
         header: PageHeader {
             title: qsTr("Sort Bookmarks")
@@ -49,6 +49,7 @@ Page {
                 NumberAnimation { properties: "opacity"; from: 0.0; to: 1.0; duration: 100 }
             }
         }
+
         remove: Transition {
             ParallelAnimation {
                 NumberAnimation { properties: "z"; to: -1; duration: 1 }
@@ -56,6 +57,7 @@ Page {
                 NumberAnimation { properties: "opacity"; to: 0.0; duration: 100 }
             }
         }
+
         displaced: Transition {
             NumberAnimation { properties: "x,y"; duration: 200 }
         }
@@ -82,9 +84,10 @@ Page {
                 content.x = 0
             }
 
-            readonly property bool isBelowBottom: drag.target ? (content.y + content.height -
-                                                                 view.contentY) > view.height : false
-            readonly property bool isAboveTop: drag.target ? content.y < view.contentY : false
+            readonly property bool isBelowBottom: drag.target ?
+                (content.y + content.height - view.contentY) > view.height : false
+            readonly property bool isAboveTop: drag.target ?
+                content.y < view.contentY : false
 
             onPositionChanged: {
                 if (menuOpen) {
@@ -92,16 +95,17 @@ Page {
                 }
 
                 var deltaX = pressPosition.x - mouse.x
+
                 if (drag.target) {
                     if (isAboveTop) {
-                        sctollTopTimer.start()
-                        sctollBottomTimer.stop()
+                        scrollTopTimer.start()
+                        scrollBottomTimer.stop()
                     } else if (isBelowBottom) {
-                        sctollBottomTimer.start()
-                        sctollTopTimer.stop()
+                        scrollBottomTimer.start()
+                        scrollTopTimer.stop()
                     } else {
-                        sctollBottomTimer.stop()
-                        sctollTopTimer.stop()
+                        scrollBottomTimer.stop()
+                        scrollTopTimer.stop()
                     }
                 } else {
                     if (deltaX > dragThreshold) {
@@ -119,31 +123,31 @@ Page {
             }
 
             Timer {
-                id: sctollTopTimer
+                id: scrollTopTimer
                 repeat: true
                 interval: 1
                 onTriggered: {
-                    if (view.contentY > view.topmostY) {
+                    if (view.contentY > view.topMostY) {
                         view.contentY -= 5
                         content.y -= 5
                     } else {
-                        view.contentY = view.topmostY
+                        view.contentY = view.topMostY
                         // content.y = 0
                     }
                 }
             }
 
             Timer {
-                id: sctollBottomTimer
+                id: scrollBottomTimer
                 repeat: true
                 interval: 1
                 onTriggered: {
                     // c.y: 1195.81005859375 c.h: 100 cY: 220 cH: 1638 vH: 1280 hH: 138
-                    if (view.contentY < view.bottommostY) {
+                    if (view.contentY < view.bottomMostY) {
                         view.contentY += 5
                         content.y += 5
                     } else {
-                        view.contentY = view.bottommostY
+                        view.contentY = view.bottomMostY
                         // content.y = view.contentHeight - view.height
                     }
                 }
@@ -155,10 +159,10 @@ Page {
                     return
                 } else {
                     GlobalSettings.bookmarks.save()
-                    //                view.model.saveLayout()
                 }
-                sctollTopTimer.stop()
-                sctollBottomTimer.stop()
+
+                scrollTopTimer.stop()
+                scrollBottomTimer.stop()
                 drag.target = null
                 var ctod = content.mapToItem(background, content.x, content.y)
                 ctod.x = ctod.x - content.x
