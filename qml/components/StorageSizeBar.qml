@@ -57,7 +57,7 @@ Row {
         height: Theme.paddingSmall
         anchors.verticalCenter: calculating.verticalCenter
         color: Theme.rgba(highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor,
-                          Theme.opacityLow)
+                          Theme.opacityFaint)
         radius: 50
 
         Rectangle {
@@ -65,7 +65,8 @@ Row {
             width: parent.width / 100 * parseInt(_diskSpaceInfo[1], 10)
             Behavior on width { NumberAnimation { duration: 200 } }
             height: parent.height
-            color: highlighted ? Theme.highlightColor : Theme.primaryColor
+            color: Theme.rgba(highlighted ? Theme.highlightColor : Theme.primaryColor,
+                              Theme.opacityLow)
             radius: 50
         }
     }
