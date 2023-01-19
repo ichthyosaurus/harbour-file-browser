@@ -76,6 +76,8 @@ SilicaListView {
 
         ListView.onRemove: animateRemoval(listItem) // enable animated list item removals
         menu: {
+            if (!editable) return
+
             if (model.group === BookmarkGroup.External &&
                     !GlobalSettings.runningAsRoot &&
                     GlobalSettings.systemSettingsEnabled) {
