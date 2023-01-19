@@ -1,40 +1,14 @@
 diff --git a/libs/SortFilterProxyModel/SortFilterProxyModel.pri b/libs/SortFilterProxyModel/SortFilterProxyModel.pri
-index 5a93088..5a93088 100644
+index 22f7a83..9922b9e 100644
 --- a/libs/SortFilterProxyModel/SortFilterProxyModel.pri
 +++ b/libs/SortFilterProxyModel/SortFilterProxyModel.pri
-@@ -1,4 +1,4 @@
+@@ -1,4 +1,8 @@
 -!contains( CONFIG, c\+\+1[14] ): warning("SortFilterProxyModel needs at least c++11, add CONFIG += c++11 to your .pro")
 +!contains( CONFIG, c\+\+1[14z] ): warning("SortFilterProxyModel needs at least c++11, add CONFIG += c++11 to your .pro")
++
++equals(QT_MAJOR_VERSION, 5):lessThan(QT_MINOR_VERSION, 9) {
++    DEFINES += qmlWarning=qmlInfo
++}
  
  INCLUDEPATH += $$PWD
  
-diff --git a/libs/SortFilterProxyModel/filters/filtercontainer.cpp b/libs/SortFilterProxyModel/filters/filtercontainer.cpp
-index 5a93088..5a93088 100644
---- a/libs/SortFilterProxyModel/filters/filtercontainer.cpp
-+++ b/libs/SortFilterProxyModel/filters/filtercontainer.cpp
-@@ -2,6 +2,10 @@
- #include "filter.h"
- #include <QtQml>
- 
-+#if (QT_VERSION < QT_VERSION_CHECK(5, 9, 0))
-+#define qmlWarning(me) qmlInfo(me)
-+#endif
-+
- namespace qqsfpm {
- 
- /*!
-diff --git a/libs/SortFilterProxyModel/sorters/sortercontainer.cpp b/libs/SortFilterProxyModel/sorters/sortercontainer.cpp
-index 5a93088..5a93088 100644
---- a/libs/SortFilterProxyModel/sorters/sortercontainer.cpp
-+++ b/libs/SortFilterProxyModel/sorters/sortercontainer.cpp
-@@ -2,6 +2,10 @@
- #include "sorter.h"
- #include <QtQml>
- 
-+#if (QT_VERSION < QT_VERSION_CHECK(5, 9, 0))
-+#define qmlWarning(me) qmlInfo(me)
-+#endif
-+
- namespace qqsfpm {
- 
- /*!
