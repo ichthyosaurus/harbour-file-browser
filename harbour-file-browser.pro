@@ -12,7 +12,6 @@
 # Do not forget to modify the localized app name in the the .desktop file.
 TRANSLATIONS = \
     translations/harbour-file-browser-cs.ts       \
-    translations/harbour-file-browser-de_CH.ts    \
     translations/harbour-file-browser-de_DE.ts    \
     translations/harbour-file-browser-el.ts       \
     translations/harbour-file-browser-en_US.ts    \
