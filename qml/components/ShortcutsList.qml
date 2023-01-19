@@ -146,20 +146,25 @@ SilicaListView {
                 right: shortcutLabel.right
             }
 
-            StorageSizeBar {
-                id: sizeInfo
-                visible: model.showSize
-                path: model.path
+            Loader {
+                id: loader_sizeInfo
                 width: parent.width
+                asynchronous: true
+                Component.onCompleted: {
+                    if (model.showSize) {
+                        // WARNING does not react to changes in model.showSize
+                        setSource(Qt.resolvedUrl("StorageSizeBar.qml"), {'path': model.path})
+                    }
+                }
             }
 
             Text {
                 id: shortcutPathLabel
-                width: parent.width - (sizeInfo.visible ? sizeInfo.width : 0)
+                width: parent.width
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
                 text: Paths.unicodeArrow() + " " + model.path
-                visible: (model.path === model.name || model.showSize) ? false : true
+                visible: model.path !== model.name && !model.showSize
                 elide: Text.ElideMiddle
             }
         }
