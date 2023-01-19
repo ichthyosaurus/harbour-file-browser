@@ -10,6 +10,7 @@
 
 import QtQuick 2.6
 import Sailfish.Silica 1.0
+import QtGraphicalEffects 1.0
 import harbour.file.browser.Settings 1.0
 import SortFilterProxyModel 0.2
 
@@ -33,7 +34,8 @@ Page {
         readonly property int bottomMostY: view.contentHeight - view.height - view.headerItem.height
 
         header: PageHeader {
-            title: qsTr("Sort Bookmarks")
+            title: qsTr("Sort bookmarks")
+            description: qsTr("Arrange entries by dragging them to the left.")
         }
 
         footer: Spacer { height: Theme.horizontalPageMargin }
@@ -69,6 +71,9 @@ Page {
             property int dragThreshold: width / 8
             property var pressPosition
             property int dragIndex: index
+
+            highlighted: containsPress && !drag.target
+            Behavior on _backgroundColor { ColorAnimation { } }
 
             onDragIndexChanged: {
                 if (drag.target) {
@@ -164,12 +169,15 @@ Page {
                 scrollTopTimer.stop()
                 scrollBottomTimer.stop()
                 drag.target = null
+                content.highlighted = Qt.binding(function() { return background.highlighted })
+
                 var ctod = content.mapToItem(background, content.x, content.y)
                 ctod.x = ctod.x - content.x
                 ctod.y = ctod.y - content.y
                 content.parent = background
                 content.x = ctod.x
                 content.y = ctod.y
+
                 backAnimation.start()
             }
 
@@ -177,11 +185,21 @@ Page {
             onCanceled: reset()
 
             Image {
+                id: dragPlaceholder
                 anchors.fill: parent
                 fillMode: Image.Tile
-                source: "image://theme/icon-status-invalid"
-                opacity: background.drag.target ? 0.33 : Math.abs(content.x) / dragThreshold / 3
+                source: "../images/drag-background.png"
                 smooth: false
+                visible: false
+            }
+
+            ColorOverlay {
+                // Manually tint the image because HighlightImage
+                // does not support tiling.
+                anchors.fill: dragPlaceholder
+                source: dragPlaceholder
+                opacity: background.drag.target ? 0.5 : Math.abs(content.x) / dragThreshold / 2
+                color: Theme.highlightBackgroundColor
             }
 
             // ^^ support for drag-and-drop sorting ^^
@@ -189,15 +207,23 @@ Page {
             width: root.width
             contentHeight: visible ? Theme.itemSizeSmall : 0
 
-            Rectangle {
+            SilicaItem {
                 id: content
                 width: root.width
                 height: Theme.itemSizeSmall
-                color: background.drag.target ? Theme.rgba(Theme.highlightBackgroundColor, Theme.highlightBackgroundOpacity / 2)
-                                              : "transparent"
-                border.width: background.drag.target ? 2 : 0
-                border.color: background.drag.target ? Theme.rgba(Theme.highlightdColor, Theme.highlightBackgroundOpacity)
-                                                     : "transparent"
+
+                Binding on highlighted {
+                    when: !!background.drag.target
+                    value: true
+                }
+
+                Rectangle {
+                    anchors.fill: parent
+                    color: background.drag.target ? background.highlightedColor : "transparent"
+                    border.width: background.drag.target ? 2 : 0
+                    border.color: background.drag.target ?
+                                      Theme.rgba(Theme.highlightColor, Theme.opacityLow) : "transparent"
+                }
 
                 onYChanged: {
                     if (!background.drag.target) {
@@ -230,6 +256,7 @@ Page {
 
                     source: "image://theme/" + model.thumbnail
                     color: highlighted ? Theme.highlightColor : Theme.primaryColor
+                    highlighted: parent.highlighted
                 }
 
                 Label {
@@ -245,11 +272,11 @@ Page {
                         topMargin: model.path === model.name ? (parent.height / 2) - (height / 2) : 5
                     }
                     width: root.width - x - Theme.horizontalPageMargin
+                    highlighted: parent.highlighted
                 }
 
-                Row {
-                    id: infoRow
-                    spacing: 0
+                Label {
+                    id: shortcutPathLabel
                     anchors {
                         left: icon.right
                         leftMargin: Theme.paddingMedium
@@ -258,19 +285,12 @@ Page {
                         right: shortcutLabel.right
                     }
 
-                    property bool shown: true
-                    opacity: shown ? 1.0 : 0.0; visible: opacity != 0.0
-                    Behavior on opacity { NumberAnimation { duration: 100 } }
-
-                    Text {
-                        id: shortcutPathLabel
-                        width: parent.width
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                        color: highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                        text: Paths.unicodeArrow() + " " + model.path
-                        visible: model.path !== model.name
-                        elide: Text.ElideMiddle
-                    }
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                    color: highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
+                    text: Paths.unicodeArrow() + " " + model.path
+                    visible: model.path !== model.name
+                    elide: Text.ElideMiddle
+                    highlighted: parent.highlighted
                 }
             }
         }
