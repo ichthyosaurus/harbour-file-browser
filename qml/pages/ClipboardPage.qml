@@ -259,9 +259,9 @@ Page {
                     MenuItem {
                         text: qsTr("Remove from clipboard")
                         onClicked: {
-                            var index = item.index
-                            var forget = FileClipboard.forgetIndex
-                            item.remorseDelete(function() { forget(index) })
+                            var path = item.path
+                            var forget = FileClipboard.forgetPath
+                            item.remorseDelete(function() { forget(path) })
                         }
                     }
                 }
