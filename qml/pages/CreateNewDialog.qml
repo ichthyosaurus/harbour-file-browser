@@ -86,8 +86,10 @@ Dialog {
                 id: typeCombo
                 label: qsTr("Create new")
                 description: (currentIndex == 0 ?
-                                 qsTr("The new folder will be created under “%1”") :
-                                 qsTr("The new text file will be created under “%1” and can be edited later.")
+                                 qsTr("The new folder will be created under “%1”.",
+                                      "placeholder is the parent directory of the new element") :
+                                 qsTr("The new text file will be created under “%1” and can be edited later.",
+                                      "placeholder is the parent directory of the new element")
                               ).arg(path + (path != "/" ? "/" : ""))
                 onCurrentItemChanged: folderName.forceActiveFocus()
                 menu: ContextMenu {
