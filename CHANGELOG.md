@@ -18,9 +18,9 @@ SPDX-License-Identifier: GFDL-1.3-or-later
  * Greatly improved performance of the "edit this path" dialog
  * Improved directory filtering: hidden files will be shown when the filter string starts with "."
  * Improved root mode:
- *   - root mode should work again on Sailfish 4.x
  *   - it now requires entering your device lock code to access
- *   - note: unlocking is handled by the system, File Browser will never see the security code
+ *   - note: root mode appears to be broken on Sailfish 4.x
+ *   - note: unlocking is handled by the system, File Browser will never see the lock code
  * Fixed sorting directories by modification date and by size
  * Fixed root mode for Sailfish 4.3 and later
  * Fixed keyboard randomly opening and closing when selecting suggestions while editing a path
