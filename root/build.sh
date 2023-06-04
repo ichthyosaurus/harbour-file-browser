@@ -7,9 +7,9 @@
 SFDK=/opt/sfos/bin/sfdk
 TARGETS=(
     # note: last field (/-.*?$/) has to be architecture
-    "SailfishOS-4.4.0.58-i486"
-    "SailfishOS-4.4.0.58-aarch64"
-    "SailfishOS-3.4.0.24-armv7hl"
+    "SailfishOS-4.5.0.18-i486"
+    "SailfishOS-4.5.0.18-aarch64"
+    "SailfishOS-4.5.0.18-armv7hl"
 )
 
 log-n() { echo -ne "\e[1m"; printf -- "%s " "$@" | sed 's/ $//g'; echo -ne "\e[0m"; }
