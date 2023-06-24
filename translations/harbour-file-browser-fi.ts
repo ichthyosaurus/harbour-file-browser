@@ -2887,22 +2887,6 @@ exposure program</extracomment>
         <source>Select</source>
         <translation type="unfinished">Valitse</translation>
     </message>
-    <message numerus="yes">
-        <location filename="../qml/pages/TransferDialog.qml" line="104"/>
-        <source>%n item(s) selected for transferring</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../qml/pages/TransferDialog.qml" line="105"/>
-        <source>%n destinations(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="79"/>
         <source>Switch to target directory</source>
