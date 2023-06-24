@@ -875,7 +875,7 @@
     <message>
         <location filename="../src/globals.cpp" line="87"/>
         <source>YiB</source>
-        <translation>YiB</translation>
+        <translation>Yobibyte (YiB)</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="107"/>
@@ -1354,7 +1354,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="416"/>
         <source>Macro</source>
         <extracomment>focus range</extracomment>
-        <translation>Macro</translation>
+        <translation>Tomas macro</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="420"/>
