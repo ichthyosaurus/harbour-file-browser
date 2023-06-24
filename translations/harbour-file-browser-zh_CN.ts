@@ -3046,7 +3046,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/TextEditorDialog.qml" line="116"/>
         <location filename="../qml/pages/TextEditorDialog.qml" line="124"/>
         <source>Save</source>
-        <translation type="unfinished">保存</translation>
+        <translation type="unfinished">储存</translation>
     </message>
 </context>
 <context>
@@ -3248,7 +3248,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewPage.qml" line="49"/>
         <source>Edit</source>
         <comment>verb as in &apos;edit this file&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">编辑</translation>
     </message>
 </context>
 <context>

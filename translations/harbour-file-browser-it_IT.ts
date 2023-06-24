@@ -11,52 +11,52 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="66"/>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sviluppo</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="69"/>
         <source>Programming</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Programmazione</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="76"/>
         <source>Icon Design</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stile Icone</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="82"/>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Traduzioni</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="85"/>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inglese</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="89"/>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tedesco</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="93"/>
         <source>Finnish</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Finlandese</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="97"/>
         <source>Chinese</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cinese</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="161"/>
         <source>Russian</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Russo</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="105"/>
         <source>Swedish</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Svedese</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="101"/>
@@ -66,67 +66,67 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="109"/>
         <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Italiano</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="113"/>
         <source>Spanish</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spagnolo</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="117"/>
         <source>French</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Francese</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="121"/>
         <source>Dutch</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Olandese</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="125"/>
         <source>Greek</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Greco</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="129"/>
         <source>Norwegian</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Norvegese</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="133"/>
         <source>Czech</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ceco</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="137"/>
         <source>Slovak</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Slovacco</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="141"/>
         <source>Hungarian</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ungherese</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="145"/>
         <source>Estonian</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Estone</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="149"/>
         <source>Polish</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Polacco</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="153"/>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Indonesiano</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="157"/>
         <source>Turkish</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Turco</translation>
     </message>
 </context>
 <context>
@@ -2011,7 +2011,7 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="22"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="31"/>
         <source>Development</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sviluppo</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="103"/>
@@ -2053,7 +2053,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="111"/>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Traduzioni</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="114"/>
@@ -2125,7 +2125,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="41"/>
         <source>Copy to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Copia negli appunti</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="60"/>
@@ -2480,7 +2480,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsDialog.qml" line="32"/>
         <source>Select</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seleziona</translation>
     </message>
 </context>
 <context>
@@ -2785,7 +2785,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="96"/>
         <source>Select</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seleziona</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="79"/>
@@ -2952,7 +2952,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewPage.qml" line="49"/>
         <source>Edit</source>
         <comment>verb as in &apos;edit this file&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Modifica</translation>
     </message>
 </context>
 <context>
