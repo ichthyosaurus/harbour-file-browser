@@ -2166,6 +2166,11 @@ exposure program</extracomment>
         <translation type="unfinished">Подробиці</translation>
     </message>
     <message>
+        <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="181"/>
+        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="25"/>
         <source>Download license texts</source>
         <translation type="unfinished">Завантажити тексти ліцензій</translation>
@@ -3041,6 +3046,24 @@ exposure program</extracomment>
         <location filename="../qml/pages/TransferDialog.qml" line="96"/>
         <source>Select</source>
         <translation type="unfinished">Вибрати</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/pages/TransferDialog.qml" line="104"/>
+        <source>%n item(s) selected for transferring</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/pages/TransferDialog.qml" line="105"/>
+        <source>%n destinations(s) selected</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="79"/>
