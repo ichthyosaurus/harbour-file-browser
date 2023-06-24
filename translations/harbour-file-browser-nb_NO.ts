@@ -2037,7 +2037,7 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="57"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="47"/>
         <source>Homepage</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hjemmeside</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="108"/>
@@ -2089,56 +2089,56 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="37"/>
         <source>Acknowledgements</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kunngjøringer</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="44"/>
         <source>Thank you!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Takk.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="48"/>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
         <source>Details</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Detaljer</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="25"/>
         <source>Download license texts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Last ned lisenstekstene</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
         <source>License(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Lisens</numerusform>
+            <numerusform>Lisenser</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="41"/>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Merk: Kildekoden er den mest nøyaktige kilden til info.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="15"/>
         <source>External Link</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ekstern lenke</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="32"/>
         <source>Open in browser</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Åpne i nettleser</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="36"/>
         <source>Copied to clipboard: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopiert til utklippstavlen: %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="41"/>
         <source>Copy to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopier til utklippstavlen</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="60"/>
@@ -2161,17 +2161,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="7"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spander en kopp kaffe hvis du vil støtte arbeidet mitt.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="8"/>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Du kan støtte dette prosjektet ved å bidra, eller ved å donere ved bruk av disse tjenestene.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="9"/>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bistå gjerne oversettelsen eller bidra til kildekoden.</translation>
     </message>
 </context>
 <context>
