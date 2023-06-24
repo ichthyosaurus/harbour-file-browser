@@ -1,6 +1,6 @@
 //@ This file is part of opal-about.
 //@ https://github.com/Pretty-SFOS/opal-about
-//@ SPDX-FileCopyrightText: 2020-2022 Mirian Margiani
+//@ SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
 //@ SPDX-License-Identifier: GPL-3.0-or-later
 import QtQuick 2.0
 import Sailfish.Silica 1.0
@@ -8,7 +8,7 @@ Column{id:root
 spacing:0
 width:parent.width
 height:childrenRect.height
-function openOrCopyUrl(externalUrl,title){pageStack.push("private/ExternalUrlPage.qml",{"externalUrl":externalUrl,"title":title})
+function openOrCopyUrl(externalUrl,title){pageStack.push(Qt.resolvedUrl("private/ExternalUrlPage.qml"),{"externalUrl":externalUrl,"title":!!title?title:""})
 }property alias title:_titleLabel.text
 property string text:""
 property string smallPrint:""
