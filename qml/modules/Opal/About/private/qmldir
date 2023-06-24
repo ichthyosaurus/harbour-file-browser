@@ -1,6 +1,6 @@
 module Opal.About.private
 # This file is part of Opal.About.
-# SPDX-FileCopyrightText: 2020-2021 Mirian Margiani
+# SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
 # SPDX-License-Identifier: GPL-3.0-or-later
 ContributorsPage 1.0 ContributorsPage.qml
 DetailList 1.0 DetailList.qml
@@ -9,3 +9,7 @@ ExternalUrlPage 1.0 ExternalUrlPage.qml
 ExtraTranslations 1.0 ExtraTranslations.qml
 LicenseListPart 1.0 LicenseListPart.qml
 LicensePage 1.0 LicensePage.qml
+ChangelogPage 1.0 ChangelogPage.qml
+ChangelogView 1.0 ChangelogView.qml
+ChangelogItemsLoader 1.0 ChangelogItemsLoader.qml
+singleton ScrollbarType 1.0 ScrollbarType.qml
