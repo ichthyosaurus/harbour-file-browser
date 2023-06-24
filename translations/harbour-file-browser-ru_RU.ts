@@ -2041,12 +2041,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="55"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">О программе</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="84"/>
         <source>Version %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Версия %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="100"/>
@@ -2058,7 +2058,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="103"/>
         <source>show contributors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показать участников</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="105"/>
@@ -2082,7 +2082,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="129"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Лицензия</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="134"/>
@@ -2096,7 +2096,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="111"/>
         <source>Translations</source>
-        <translation type="unfinished">Переводы</translation>
+        <translation type="unfinished">Перевод</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="114"/>
@@ -2104,7 +2104,7 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="58"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="50"/>
         <source>Source Code</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Исходный код</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/InfoSection.qml" line="15"/>
@@ -2114,12 +2114,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="21"/>
         <source>Contributors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Участники</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="37"/>
         <source>Acknowledgements</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Благодарности</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="44"/>
