@@ -553,7 +553,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="487"/>
         <source>Internally not ready</source>
-        <translation type="unfinished"></translation>
+        <translation>Внутренняя неготовность</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="487"/>
@@ -711,10 +711,10 @@
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="84"/>
         <source>%n file(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n выбранный файл</numerusform>
+            <numerusform>%n выбранных файла</numerusform>
+            <numerusform>%n выбранных файлов</numerusform>
         </translation>
     </message>
     <message>
@@ -730,37 +730,37 @@
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="122"/>
         <source>cut file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>вырезать файл</numerusform>
+            <numerusform>вырезать файла</numerusform>
+            <numerusform>вырезать файлов</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="127"/>
         <source>%n file(s) cut</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n вырезанный файл</numerusform>
+            <numerusform>%n вырезанных файла</numerusform>
+            <numerusform>%n вырезанных файлов</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="136"/>
         <source>copy file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>копировать файл</numerusform>
+            <numerusform>копировать файла</numerusform>
+            <numerusform>копировать файлов</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="141"/>
         <source>%n file(s) copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n скопированный файл</numerusform>
+            <numerusform>%n скопированных файла</numerusform>
+            <numerusform>%n скопированных файлов</numerusform>
         </translation>
     </message>
     <message numerus="yes">

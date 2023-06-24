@@ -65,7 +65,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="101"/>
         <source>Ukrainian</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukrajinčina</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="109"/>
@@ -233,29 +233,30 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="70"/>
         <source>Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Schránka</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="75"/>
         <source>%n item(s) to be copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n položka bude kopírovaná</numerusform>
+            <numerusform>%n položky budú kopírované</numerusform>
+            <numerusform>%n položiek bude kopírovaných</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
         <source>%n item(s) to be moved</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n položka bude presunutá</numerusform>
+            <numerusform>%n položky budú presunuté</numerusform>
+            <numerusform>%n položiek bude presunutých</numerusform>
         </translation>
     </message>
     <message>
         <source>copy</source>
-        <comment>as in &apos;please copy these files&apos;</comment>
+        <comment>as in &apos;
+          these files&apos;</comment>
         <translation type="obsolete">kopírovať</translation>
     </message>
     <message>
@@ -291,17 +292,17 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="256"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Otvoriť zložku obsahujúcu</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="274"/>
         <source>Empty</source>
-        <translation type="unfinished">Prázdny</translation>
+        <translation>Prázdny</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="275"/>
         <source>Cut or copied files will be shown here.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vystrihnuté alebo kopírované súbory budú zobrazené tu.</translation>
     </message>
 </context>
 <context>
@@ -310,7 +311,7 @@
         <location filename="../src/consolemodel.cpp" line="124"/>
         <location filename="../src/consolemodel.cpp" line="136"/>
         <source>** crashed</source>
-        <translation>** padnuté</translation>
+        <translation>** havaroval</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="126"/>
@@ -362,7 +363,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="104"/>
         <source>Root Mode</source>
-        <translation type="unfinished">Režim koreň (root)</translation>
+        <translation>Režim koreň (root)</translation>
     </message>
 </context>
 <context>
@@ -832,12 +833,12 @@
         <location filename="../src/filedata.cpp" line="94"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation type="unfinished">prázdny</translation>
+        <translation>prázdna</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/filedata.cpp" line="95"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n položka</numerusform>
             <numerusform>%n položky</numerusform>
             <numerusform>%n položiek</numerusform>
@@ -884,17 +885,17 @@
     <message>
         <location filename="../src/filemodel.cpp" line="114"/>
         <source>folder</source>
-        <translation type="unfinished">zložka</translation>
+        <translation>zložka</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="116"/>
         <source>link</source>
-        <translation type="unfinished">odkaz</translation>
+        <translation>odkaz</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="117"/>
         <source>file</source>
-        <translation type="unfinished"></translation>
+        <translation>súbor</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="129"/>
@@ -1009,7 +1010,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="129"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Otvoriť zložku obsahujúcu</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="148"/>
@@ -2470,37 +2471,37 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="19"/>
         <source>Unable to authenticate</source>
-        <translation type="unfinished"></translation>
+        <translation>Nedá sa overiť</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="20"/>
         <source>It is not possible to use File Browser in Root Mode without authentication.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie je možné použiť File Browser v režime root bez overenia.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="36"/>
         <source>Root Mode: be careful, you could break your system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Režim root: buďte opatrní, mohli by ste poškodiť Váš systém.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="68"/>
         <source>Understood!</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozumiem!</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="86"/>
         <source>Root Mode</source>
-        <translation type="unfinished">Režim koreň (root)</translation>
+        <translation>Režim koreň (root)</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="87"/>
         <source>Be careful when using File Browser in Root Mode. Actions may unexpectedly break your system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Buďte opatrní pri používaní File Browsera v režime root. Akcie môžu neočakávane poškodiť Váš systém.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Spustiť File Browser v režime root</translation>
     </message>
 </context>
 <context>
@@ -2868,7 +2869,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="62"/>
         <source>Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Schránka</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="67"/>
@@ -2878,22 +2879,22 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="72"/>
         <source>Documents</source>
-        <translation type="unfinished">Dokumenty</translation>
+        <translation>Dokumenty</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="77"/>
         <source>Pictures</source>
-        <translation type="unfinished">Obrázky</translation>
+        <translation>Obrázky</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="82"/>
         <source>Videos</source>
-        <translation type="unfinished">Videá</translation>
+        <translation>Videá</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="87"/>
         <source>Music</source>
-        <translation type="unfinished">Hudba</translation>
+        <translation>Hudba</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="233"/>
