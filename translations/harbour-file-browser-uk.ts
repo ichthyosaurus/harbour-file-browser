@@ -238,30 +238,54 @@
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="75"/>
         <source>%n item(s) to be copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n елемент для копіювання</numerusform>
+            <numerusform>%n елементи для копіювання</numerusform>
+            <numerusform>%n елементів для копіювання</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
         <source>%n item(s) to be moved</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n елемент для переміщення</numerusform>
+            <numerusform>%n елементи для переміщення</numerusform>
+            <numerusform>%n елементів для переміщення</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="260"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="65"/>
+        <source>Current selection</source>
+        <comment>as in &apos;currently selected files&apos;</comment>
+        <translation>Поточний вибір</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ClipboardPage.qml" line="76"/>
+        <source>copy</source>
+        <comment>as in &apos;please copy these files&apos;</comment>
+        <translation>копіювати</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
+        <source>cut</source>
+        <comment>as in &apos;please cut these files&apos;</comment>
+        <translation>вирізати</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ClipboardPage.qml" line="94"/>
+        <source>Clear</source>
+        <comment>as in &apos;clear the current clipboard contents&apos;</comment>
+        <translation>Очистити</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ClipboardPage.qml" line="214"/>
         <source>Remove from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Видалити з буфера обміну</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="252"/>
         <source>Open this folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Відкрити цю теку</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
@@ -286,17 +310,17 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="256"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Відкрити вміст теки</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="274"/>
         <source>Empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Порожньо</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="275"/>
         <source>Cut or copied files will be shown here.</source>
-        <translation type="unfinished"></translation>
+        <translation>Тут будуть показані вирізані або скопійовані файли.</translation>
     </message>
 </context>
 <context>
@@ -305,32 +329,32 @@
         <location filename="../src/consolemodel.cpp" line="124"/>
         <location filename="../src/consolemodel.cpp" line="136"/>
         <source>** crashed</source>
-        <translation type="unfinished"></translation>
+        <translation>** аварійно завершився</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="126"/>
         <source>** error: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>** помилка: %1</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="134"/>
         <source>** command “%1” not found</source>
-        <translation type="unfinished"></translation>
+        <translation>** команду &quot;%1&quot; не знайдено</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="138"/>
         <source>** timeout reached</source>
-        <translation type="unfinished"></translation>
+        <translation>** досягнуто ліміт часу</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="140"/>
         <source>** internal communication failed</source>
-        <translation type="unfinished"></translation>
+        <translation>** Не вдалося встановити внутрішній зв&apos;язок</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="142"/>
         <source>** an unknown error occurred</source>
-        <translation type="unfinished"></translation>
+        <translation>** сталася невідома помилка</translation>
     </message>
 </context>
 <context>
@@ -349,7 +373,7 @@
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="153"/>
         <source>Swipe right to view raw contents.</source>
-        <translation type="unfinished"></translation>
+        <translation>Проведіть праворуч, щоб переглянути raw вміст.</translation>
     </message>
 </context>
 <context>
@@ -357,7 +381,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="104"/>
         <source>Root Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Root режим</translation>
     </message>
 </context>
 <context>
@@ -365,12 +389,12 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="57"/>
         <source>Create</source>
-        <translation type="unfinished"></translation>
+        <translation>Створити</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="73"/>
-        <source>Not permitted</source>
-        <translation type="unfinished"></translation>
+        <location filename="../qml/pages/CreateFolderDialog.qml" line="58"/>
+        <source>Create a new folder under</source>
+        <translation>Створити нову теку в</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="74"/>
@@ -407,7 +431,7 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="112"/>
         <source>Folder name</source>
-        <translation type="unfinished"></translation>
+        <translation>Назва теки</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="112"/>
@@ -435,10 +459,10 @@
     <message numerus="yes">
         <location filename="../qml/components/DetailList.qml" line="45"/>
         <source>... and %n more</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>... та %n більше</numerusform>
+            <numerusform>... та %n більше</numerusform>
+            <numerusform>... та %n більше</numerusform>
         </translation>
     </message>
 </context>
@@ -448,88 +472,88 @@
         <location filename="../qml/pages/DirectoryPage.qml" line="148"/>
         <source>View Preferences</source>
         <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Переглянути Параметри</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="155"/>
-        <source>Create New...</source>
-        <translation type="unfinished"></translation>
+        <location filename="../qml/pages/DirectoryPage.qml" line="156"/>
+        <source>Create Folder</source>
+        <translation>Створити теку</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="168"/>
         <source>Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>Вставити</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="186"/>
         <source>Filter directory contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Фільтрувати вміст каталогу</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="268"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Пошук</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="273"/>
         <source>Remove bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Видалити закладку</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="273"/>
         <source>Add to bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Додати закладку</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="282"/>
         <source>Copy path to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Скопіювати шлях до буфера обміну</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="345"/>
         <source>filtered by: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Відфільтровано за: %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="388"/>
         <source>Empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Порожньо</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="391"/>
         <source>No files matched the filter.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не знайдено жодного файлу, який би відповідав фільтру.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="392"/>
         <source>This directory contains no files.</source>
-        <translation type="unfinished"></translation>
+        <translation>Цей каталог не містить файлів.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="472"/>
         <location filename="../qml/pages/DirectoryPage.qml" line="475"/>
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Видалення</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="487"/>
         <source>Internally not ready</source>
-        <translation type="unfinished"></translation>
+        <translation>Внутрішньо не готовий</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="487"/>
         <source>Please simply try again</source>
-        <translation type="unfinished"></translation>
+        <translation>Просто спробуйте ще раз</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="530"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation type="unfinished">Намагаєтесь перемістити між телефоном і SD картою? Це не працює, спробуйте скопіювати.</translation>
+        <translation>Намагаєтесь перемістити між телефоном і SD картою? Це не працює, спробуйте скопіювати.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="532"/>
         <source>Perhaps the storage is full?</source>
-        <translation type="unfinished">Переповнена пам&apos;ять?</translation>
+        <translation>Переповнена сховище?</translation>
     </message>
 </context>
 <context>
@@ -537,17 +561,17 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="46"/>
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Видалення</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="323"/>
         <source>Remove bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Видалити закладку</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="323"/>
         <source>Add to bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Додати в закладки</translation>
     </message>
 </context>
 <context>
@@ -555,17 +579,17 @@
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="134"/>
         <source>Hide hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation>Приховати приховані файли</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="135"/>
         <source>Show hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation>Показати приховані файли</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="140"/>
         <source>Edit path</source>
-        <translation type="unfinished"></translation>
+        <translation>Редагувати шлях</translation>
     </message>
 </context>
 <context>
@@ -573,78 +597,78 @@
     <message>
         <location filename="../src/engine.cpp" line="81"/>
         <source>No files to paste</source>
-        <translation type="unfinished"></translation>
+        <translation>Немає файлів для вставки</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="89"/>
         <source>Destination does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Пункту призначення не існує</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="100"/>
         <source>Cannot overwrite itself</source>
-        <translation type="unfinished"></translation>
+        <translation>Неможливо перезаписати себе</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="106"/>
         <source>Cannot move/copy to itself</source>
-        <translation type="unfinished"></translation>
+        <translation>Неможливо перемістити/скопіювати до себе</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="244"/>
         <source>File does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлу не існує</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="246"/>
         <source>Broken symbolic link</source>
-        <translation type="unfinished"></translation>
+        <translation>Зламане символічне посилання</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="251"/>
         <source>Cannot read this type of file</source>
-        <translation type="unfinished"></translation>
+        <translation>Не вдається прочитати цей тип файлів</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="257"/>
         <source>No permission to read the file</source>
-        <translation type="unfinished"></translation>
+        <translation>Немає дозволу на читання файлу</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="261"/>
         <location filename="../src/engine.cpp" line="267"/>
         <source>Error reading file</source>
-        <translation type="unfinished"></translation>
+        <translation>Помилка читання файлу</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="270"/>
         <source>Empty file</source>
-        <translation type="unfinished"></translation>
+        <translation>Порожній файл</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="296"/>
         <source>Binary file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>Попередній перегляд бінарного файлу за посиланням %1 кб</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="315"/>
         <source>Text file preview clipped at %1 lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Попередній перегляд текстового файлу обрізано на %1 рядків</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="317"/>
         <source>Text file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>Попередній перегляд текстового файлу за посиланням %1 кб</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="336"/>
         <source>No permissions to create %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Немає дозволів на створення %1</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="338"/>
         <source>Cannot create folder %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Не вдається створити теку %1</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="354"/>
@@ -659,12 +683,12 @@
     <message>
         <location filename="../src/engine.cpp" line="385"/>
         <source>Cannot rename %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Неможливо перейменувати %1</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="408"/>
         <source>Cannot change permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>Неможливо змінити дозволи</translation>
     </message>
 </context>
 <context>
@@ -672,116 +696,116 @@
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="84"/>
         <source>%n file(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Вибрано %n файл</numerusform>
+            <numerusform>Вибрано %n файли</numerusform>
+            <numerusform>Вибрано %n файлів</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="112"/>
         <source>clear selection</source>
-        <translation type="unfinished"></translation>
+        <translation>очистити виділення</translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="113"/>
         <source>select all</source>
-        <translation type="unfinished"></translation>
+        <translation>вибрати все</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="122"/>
         <source>cut file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>вирізати файл</numerusform>
+            <numerusform>вирізати файли</numerusform>
+            <numerusform>вирізати файлів</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="127"/>
         <source>%n file(s) cut</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n файл вирізано</numerusform>
+            <numerusform>%n файли вирізано</numerusform>
+            <numerusform>%n файлів вирізано</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="136"/>
         <source>copy file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>копіювати файл</numerusform>
+            <numerusform>копіювати файли</numerusform>
+            <numerusform>копіювати файлів</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="141"/>
         <source>%n file(s) copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n файл скопійовано</numerusform>
+            <numerusform>%n файли скопійовано</numerusform>
+            <numerusform>%n файлів скопійовано</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="150"/>
         <source>transfer file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>передавати файл</numerusform>
+            <numerusform>передавати файли</numerusform>
+            <numerusform>передавати файлів</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="169"/>
         <source>delete file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>видалити файл</numerusform>
+            <numerusform>видалити файли</numerusform>
+            <numerusform>видалити файлів</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="184"/>
         <source>rename file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>перейменувати файл</numerusform>
+            <numerusform>перейменувати файли</numerusform>
+            <numerusform>перейменувати файлів</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="214"/>
         <source>share file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>поділитися файлом</numerusform>
+            <numerusform>поділитися файлами</numerusform>
+            <numerusform>поділитися файлами</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="263"/>
         <source>compress file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>стиснути файл</numerusform>
+            <numerusform>стиснути файли</numerusform>
+            <numerusform>стиснути файлів</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="272"/>
         <source>edit file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>редагувати файл</numerusform>
+            <numerusform>редагувати файли</numerusform>
+            <numerusform>редагувати файлів</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="297"/>
         <source>show file properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Показати властивості файлу</translation>
     </message>
 </context>
 <context>
@@ -808,51 +832,51 @@
         <location filename="../src/filedata.cpp" line="94"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>порожньо</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/filedata.cpp" line="95"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n елемент</numerusform>
+            <numerusform>%n елементи</numerusform>
+            <numerusform>%n елементів</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="215"/>
         <source>File does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлу не існує</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="263"/>
         <source>block device</source>
-        <translation type="unfinished"></translation>
+        <translation>Блокувати пристрій</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="267"/>
         <source>character device</source>
-        <translation type="unfinished"></translation>
+        <translation>символьний пристрій</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="271"/>
         <source>pipe</source>
-        <translation type="unfinished"></translation>
+        <translation>труба</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="275"/>
         <source>socket</source>
-        <translation type="unfinished"></translation>
+        <translation>розетка</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="279"/>
         <source>folder</source>
-        <translation type="unfinished"></translation>
+        <translation>тека</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="285"/>
         <source>unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>невідомо</translation>
     </message>
 </context>
 <context>
@@ -860,31 +884,31 @@
     <message>
         <location filename="../src/filemodel.cpp" line="114"/>
         <source>folder</source>
-        <translation type="unfinished"></translation>
+        <translation>тека</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="116"/>
         <source>link</source>
-        <translation type="unfinished"></translation>
+        <translation>посилання</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="117"/>
         <source>file</source>
-        <translation type="unfinished"></translation>
+        <translation>файл</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="129"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>порожньо</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/filemodel.cpp" line="130"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n елемент</numerusform>
+            <numerusform>%n елементи</numerusform>
+            <numerusform>%n елементів</numerusform>
         </translation>
     </message>
 </context>
@@ -893,12 +917,12 @@
     <message>
         <location filename="../src/filemodelworker.cpp" line="240"/>
         <source>Folder does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Теки не існує</translation>
     </message>
     <message>
         <location filename="../src/filemodelworker.cpp" line="245"/>
         <source>No permission to read the folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Немає дозволу на читання теки</translation>
     </message>
 </context>
 <context>
@@ -919,124 +943,124 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="103"/>
         <source>Install launched</source>
-        <translation type="unfinished"></translation>
+        <translation>Запущено встановлення</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="104"/>
         <source>If nothing happens, then the package is probably faulty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Якщо нічого не відбувається, то, ймовірно, пакунок несправний.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="106"/>
         <source>Swipe right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Проведіть праворуч, щоб переглянути його вміст.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="108"/>
         <source>Open successful</source>
-        <translation type="unfinished"></translation>
+        <translation>Відкрито успішно</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="109"/>
         <source>Sometimes the application stays in the background</source>
-        <translation type="unfinished"></translation>
+        <translation>Іноді застосунок залишається у фоновому режимі</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="113"/>
         <source>No application to open the file</source>
-        <translation type="unfinished"></translation>
+        <translation>Немає застосунку для відкриття файлу</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="68"/>
         <source>Change Permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>Змінити дозволи</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="82"/>
         <source>View Raw Contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Перегляд Raw вмісту</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="90"/>
         <source>Install</source>
-        <translation type="unfinished"></translation>
+        <translation>Встановити</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="90"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Відкрити</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="94"/>
         <source>File cannot be opened</source>
-        <translation type="unfinished"></translation>
+        <translation>Неможливо відкрити файл</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="95"/>
         <source>This type of file cannot be opened.</source>
-        <translation type="unfinished"></translation>
+        <translation>Цей тип файлів неможливо відкрити.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="119"/>
         <source>Go to Target</source>
-        <translation type="unfinished"></translation>
+        <translation>Перейти до Цілі</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="129"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Відкрити вміст теки</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="148"/>
         <source>The file has been moved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл переміщено.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="263"/>
         <location filename="../qml/pages/FilePage.qml" line="269"/>
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Видалення</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="301"/>
         <source>Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Розташування</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="305"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="307"/>
         <source>Unknown (link target not found)</source>
-        <translation type="unfinished"></translation>
+        <translation>Невідомо (цільове посилання не знайдено)</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="307"/>
         <source>Link to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Посилання на %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="314"/>
         <source>Permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>Дозволи</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="318"/>
         <source>Owner</source>
-        <translation type="unfinished"></translation>
+        <translation>Власник</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="323"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Група</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="328"/>
         <source>Last modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Остання зміна</translation>
     </message>
 </context>
 <context>
@@ -1044,54 +1068,54 @@
     <message>
         <location filename="../src/globals.cpp" line="79"/>
         <source>B</source>
-        <translation type="unfinished"></translation>
+        <translation>Б</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="80"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>КБ</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="81"/>
         <source>MiB</source>
-        <translation type="unfinished"></translation>
+        <translation>МБ</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="82"/>
         <source>GiB</source>
-        <translation type="unfinished"></translation>
+        <translation>ГБ</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="83"/>
         <source>TiB</source>
-        <translation type="unfinished"></translation>
+        <translation>ТБ</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="84"/>
         <source>PiB</source>
-        <translation type="unfinished"></translation>
+        <translation>ПБ</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="85"/>
         <source>EiB</source>
-        <translation type="unfinished"></translation>
+        <translation>ЕБ</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="86"/>
         <source>ZiB</source>
-        <translation type="unfinished"></translation>
+        <translation>ЗБ</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="87"/>
         <source>YiB</source>
-        <translation type="unfinished"></translation>
+        <translation>ЙБ</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="107"/>
         <location filename="../src/globals.cpp" line="111"/>
         <source>%1 %2</source>
         <extracomment>1=file size (number), 2=unit (e.g. KiB)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 %2</translation>
     </message>
 </context>
 <context>
@@ -1102,12 +1126,12 @@
         <location filename="../src/fileworker.cpp" line="109"/>
         <location filename="../src/fileworker.cpp" line="126"/>
         <source>File operation already in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Операція з файлом вже виконується</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="168"/>
         <source>Empty filename</source>
-        <translation type="unfinished"></translation>
+        <translation>Порожня назва файлу</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="187"/>
@@ -1116,27 +1140,27 @@
         <location filename="../src/fileworker.cpp" line="387"/>
         <location filename="../src/fileworker.cpp" line="403"/>
         <source>Cancelled</source>
-        <translation type="unfinished"></translation>
+        <translation>Скасовано</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="224"/>
         <source>File not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл не знайдено</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="237"/>
         <source>Folder delete failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Не вдалося видалити папку</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="372"/>
         <source>Source folder does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Вихідна теки не існує</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="379"/>
         <source>Cannot create target folder %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Неможливо створити цільову теку %1</translation>
     </message>
 </context>
 <context>
@@ -1468,61 +1492,61 @@
     <message>
         <location filename="../src/filedata.cpp" line="311"/>
         <source>Image Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Розмір зображення</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="317"/>
         <source>%1 x %2</source>
         <extracomment>image size description without aspect ratio: 1=width, 2=height</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 x %2</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="321"/>
         <source>%1 x %2 (%3)</source>
         <extracomment>image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 x %2 (%3)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="156"/>
         <source>Make</source>
-        <translation type="unfinished"></translation>
+        <translation>Виробник</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="157"/>
         <source>Model</source>
-        <translation type="unfinished"></translation>
+        <translation>Модель</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="160"/>
         <source>Date/Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Дата/час</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="168"/>
         <source>Orientation</source>
-        <translation type="unfinished"></translation>
+        <translation>Орієнтація</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="173"/>
         <source>Color/BW</source>
-        <translation type="unfinished"></translation>
+        <translation>Кольоровий/ЧБ</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="173"/>
         <source>Black and White</source>
-        <translation type="unfinished"></translation>
+        <translation>Чорний і Білий</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="181"/>
         <source>Strobe light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Спалаху не виявлено</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="183"/>
         <source>Strobe light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Виявлено спалах</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="185"/>
@@ -1533,87 +1557,87 @@
         <extracomment>description of camera flash mode
 ----------
 exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ручний</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="187"/>
         <source>Manual, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ручний, спалаху не виявлено</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="189"/>
         <source>Manual, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ручний, спалах виявлено</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="191"/>
         <location filename="../src/jhead/jhead-api.cpp" line="304"/>
         <source>Auto</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Авто</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="193"/>
         <source>Auto, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Авто, спалаху не виявлено</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="195"/>
         <source>Auto, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Авто, спалах виявлено</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="197"/>
         <source>Red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Режим зменшення ефекту &quot;червоних очей&quot;</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="199"/>
         <source>Red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Режим зменшення ефекту &quot;червоних очей&quot;, спалаху не виявлено</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="201"/>
         <location filename="../src/jhead/jhead-api.cpp" line="207"/>
         <source>Red eye reduction mode, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Режим зменшення ефекту &quot;червоних очей&quot;, спалах виявлено</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="203"/>
         <source>Manual, red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ручний, режим зменшення &quot;червоних очей&quot;</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="205"/>
         <source>Manual, red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ручний, режим зменшення ефекту &quot;червоних очей&quot;, спалаху не виявлено</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="209"/>
         <source>Auto, red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Авто, режим зменшення &quot;червоних очей&quot;</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="211"/>
         <source>Auto, red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Авто, режим зменшення &quot;червоних очей&quot;, спалаху не виявлено</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="213"/>
         <source>Auto, red eye reduction mode, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Авто, режим зменшення ефекту &quot;червоних очей&quot;, спалах виявлено</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="217"/>
@@ -1622,118 +1646,118 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="225"/>
         <location filename="../src/jhead/jhead-api.cpp" line="320"/>
         <source>Flash</source>
-        <translation type="unfinished"></translation>
+        <translation>Спалах</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="217"/>
         <source>Yes (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Так (%1)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="219"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Так</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="223"/>
         <source>No (Auto)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ні (Авто)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="225"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Ні</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="234"/>
         <source>%1mm (35mm equivalent: %2mm)</source>
         <extracomment>size in millimeters</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1мм (еквівалент 35 мм: %2мм)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="239"/>
         <source>%1mm</source>
         <extracomment>size in millimeters</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1мм</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="242"/>
         <source>Focal Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Фокусна відстань</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="247"/>
         <source>Digital Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Цифровий зум</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="249"/>
         <source>%1x</source>
         <extracomment>as in &quot;zoom: %1 times&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1x</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="255"/>
         <source>CCD Width</source>
         <extracomment>photographic sensor width; cf. https://en.wikipedia.org/wiki/Charge-coupled_device</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ширина ПЗЗ</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="267"/>
         <source>%1 (1/%2)</source>
         <extracomment>exposure time as raw value (1) and as fraction (2)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 (1/%2)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="269"/>
         <source>Exposure Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Час експозиції</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="272"/>
         <source>Aperture</source>
-        <translation type="unfinished"></translation>
+        <translation>Діафрагма</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="274"/>
         <source>f/%1</source>
         <extracomment>aperture &quot;f&quot; number; cf. https://en.wikipedia.org/wiki/Aperture</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>f/%1</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="278"/>
         <location filename="../src/jhead/jhead-api.cpp" line="282"/>
         <source>Focus Distance</source>
-        <translation type="unfinished"></translation>
+        <translation>Відстань фокусування</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="280"/>
         <source>Infinite</source>
         <extracomment>focus distance</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Безкінечна</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="284"/>
         <source>%1m</source>
         <extracomment>focus distance in meters</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1м</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="289"/>
         <source>ISO Equivalent</source>
-        <translation type="unfinished"></translation>
+        <translation>Еквівалент ISO</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="296"/>
         <source>Exposure Bias</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Exposure_compensation</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Зміна експозиції</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="301"/>
         <location filename="../src/jhead/jhead-api.cpp" line="304"/>
         <source>White Balance</source>
-        <translation type="unfinished"></translation>
+        <translation>Баланс білого</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="311"/>
@@ -1743,206 +1767,206 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="323"/>
         <location filename="../src/jhead/jhead-api.cpp" line="326"/>
         <source>Light Source</source>
-        <translation type="unfinished"></translation>
+        <translation>Джерело світла</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="311"/>
         <source>Daylight</source>
-        <translation type="unfinished"></translation>
+        <translation>Денне світло</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="314"/>
         <source>Fluorescent</source>
-        <translation type="unfinished"></translation>
+        <translation>Флуоресцентна</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="317"/>
         <source>Incandescent</source>
-        <translation type="unfinished"></translation>
+        <translation>Лампа розжарювання</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="323"/>
         <source>Fine weather</source>
-        <translation type="unfinished"></translation>
+        <translation>Гарна погода</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="326"/>
         <source>Shade</source>
-        <translation type="unfinished"></translation>
+        <translation>Тінь</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="337"/>
         <source>Average</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Середнє</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="339"/>
         <source>Center weighted average</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Середньозважене по центру</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="341"/>
         <source>Spot</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Точковий</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="343"/>
         <source>Multi spot</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Багатоточкове</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="345"/>
         <source>Pattern</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Шаблон</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="347"/>
         <source>Partial</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Часткове</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="349"/>
         <source>Other</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Інше</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="351"/>
         <source>Unknown (%1)</source>
         <extracomment>inlcudes an unknown value (1); cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Невідомо (%1)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="354"/>
         <source>Metering Mode</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Режим вимірювання</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="366"/>
         <source>Program (auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Програмно (авто)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="370"/>
         <source>Aperture priority (semi-auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Пріоритет діафрагми (напівавтоматичний)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="374"/>
         <source>Shutter priority (semi-auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Пріоритет затвора (напівавтоматичний)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="378"/>
         <source>Creative Program (based towards depth of field)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Творчий (на основі глибини різкості)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="382"/>
         <source>Action program (based towards fast shutter speed)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Рухливий (на основі короткої витримки)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="386"/>
         <source>Portrait mode</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Портретний режим</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="390"/>
         <source>Landscape mode</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Альбомний режим</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="395"/>
         <source>Exposure Program</source>
-        <translation type="unfinished"></translation>
+        <translation>Програма експозиції</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="401"/>
         <location filename="../src/jhead/jhead-api.cpp" line="404"/>
         <source>Exposure Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим експозиції</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="406"/>
         <source>Auto bracketing</source>
         <extracomment>exposure mode; cf. https://en.wikipedia.org/wiki/Autobracketing#Exposure</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Автобрикетинг</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="415"/>
         <source>Macro</source>
         <extracomment>focus range</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Макро</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="419"/>
         <source>Close</source>
         <extracomment>focus range</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Близько</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="423"/>
         <source>Distant</source>
         <extracomment>focus range</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Далеко</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="426"/>
         <source>Focus Range</source>
-        <translation type="unfinished"></translation>
+        <translation>Діапазон фокусування</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="436"/>
         <location filename="../src/jhead/jhead-api.cpp" line="440"/>
         <source>JPEG Process</source>
-        <translation type="unfinished"></translation>
+        <translation>Процес JPEG</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="436"/>
         <source>Unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>Невідомо</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="447"/>
         <source>Latitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Широта</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="448"/>
         <source>Longitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Довгота</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="450"/>
         <source>Altitude</source>
-        <translation type="unfinished"></translation>
+        <translation>Висота</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="456"/>
         <source>JPEG Quality</source>
-        <translation type="unfinished"></translation>
+        <translation>Якість JPEG</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="473"/>
         <location filename="../src/jhead/jhead-api.cpp" line="484"/>
         <location filename="../src/jhead/jhead-api.cpp" line="487"/>
         <source>Comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Коментар</translation>
     </message>
 </context>
 <context>
@@ -1958,37 +1982,37 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="59"/>
         <source>Selection Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Властивості виділення</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="69"/>
         <source>The files have been moved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл переміщено.</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/MultiFilePage.qml" line="93"/>
         <source>%n item(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Вибрано %n елемент</numerusform>
+            <numerusform>Вибрано %n елементи</numerusform>
+            <numerusform>Вибрано %n елементів</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="112"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="118"/>
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Видалення</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="140"/>
         <source>Directories</source>
-        <translation type="unfinished"></translation>
+        <translation>Каталоги</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="150"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Файли</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="166"/>
@@ -2860,12 +2884,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="142"/>
         <source>Cancel</source>
-        <translation>Відмінити</translation>
+        <translation>Скасувати</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="154"/>
         <source>Overwrite</source>
-        <translation>Замінити</translation>
+        <translation>Перезаписати</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="163"/>
