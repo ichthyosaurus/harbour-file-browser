@@ -65,7 +65,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="101"/>
         <source>Ukrainian</source>
-        <translation type="unfinished"></translation>
+        <translation>乌克兰语</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="109"/>
@@ -233,36 +233,55 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="70"/>
         <source>Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>剪贴板</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="75"/>
         <source>%n item(s) to be copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n 要复制的项目</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
         <source>%n item(s) to be moved</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n 要移动的项目</numerusform>
         </translation>
     </message>
     <message>
-        <source>copy</source>
-        <comment>as in &apos;please copy these files&apos;</comment>
-        <translation type="obsolete">复制</translation>
+        <location filename="../qml/pages/ClipboardPage.qml" line="66"/>
+        <source>Current selection</source>
+        <comment>as in &apos;currently selected files&apos;</comment>
+        <translation>当前选择</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="260"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
+        <source>copy</source>
+        <comment>as in &apos;please copy these files&apos;</comment>
+        <translation>复制</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ClipboardPage.qml" line="80"/>
+        <source>cut</source>
+        <comment>as in &apos;please cut these files&apos;</comment>
+        <translation>剪切</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ClipboardPage.qml" line="95"/>
+        <source>Clear</source>
+        <comment>as in &apos;clear the current clipboard contents&apos;</comment>
+        <translation>清除</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ClipboardPage.qml" line="215"/>
         <source>Remove from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>从剪贴板中删除</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="252"/>
         <source>Open this folder</source>
-        <translation type="unfinished"></translation>
+        <translation>打开此文件夹</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
@@ -285,17 +304,17 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="256"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>打开子文件夹</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="274"/>
         <source>Empty</source>
-        <translation type="unfinished">空</translation>
+        <translation>空</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="275"/>
         <source>Cut or copied files will be shown here.</source>
-        <translation type="unfinished"></translation>
+        <translation>剪切或复制的文件将显示在此处。</translation>
     </message>
 </context>
 <context>
@@ -356,7 +375,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="104"/>
         <source>Root Mode</source>
-        <translation type="unfinished">ROOT 模式</translation>
+        <translation>ROOT 模式</translation>
     </message>
 </context>
 <context>
@@ -802,12 +821,12 @@
         <location filename="../src/filedata.cpp" line="94"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation type="unfinished">空</translation>
+        <translation>空</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/filedata.cpp" line="95"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n 个项目</numerusform>
         </translation>
     </message>
@@ -852,17 +871,17 @@
     <message>
         <location filename="../src/filemodel.cpp" line="114"/>
         <source>folder</source>
-        <translation type="unfinished">目录</translation>
+        <translation>目录</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="116"/>
         <source>link</source>
-        <translation type="unfinished">链接</translation>
+        <translation>链接</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="117"/>
         <source>file</source>
-        <translation type="unfinished"></translation>
+        <translation>文件</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="129"/>
@@ -975,7 +994,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="129"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>打开子文件夹</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="148"/>
@@ -2734,7 +2753,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="62"/>
         <source>Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>剪贴板</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="67"/>
@@ -2744,22 +2763,22 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="72"/>
         <source>Documents</source>
-        <translation type="unfinished">文档</translation>
+        <translation>文档</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="77"/>
         <source>Pictures</source>
-        <translation type="unfinished">图片</translation>
+        <translation>图片</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="82"/>
         <source>Videos</source>
-        <translation type="unfinished">视频</translation>
+        <translation>视频</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="87"/>
         <source>Music</source>
-        <translation type="unfinished">音乐</translation>
+        <translation>音乐</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="233"/>
