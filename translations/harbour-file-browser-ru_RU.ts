@@ -2469,7 +2469,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="417"/>
         <source>Internally not ready</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Внутренняя неготовность</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="417"/>
@@ -2502,9 +2502,9 @@ exposure program</extracomment>
         <location filename="../qml/components/SelectionPanel.qml" line="54"/>
         <source>%n file(s) selected</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n выбранный файл</numerusform>
+            <numerusform>%n выбранных файла</numerusform>
+            <numerusform>%n выбранных файлов</numerusform>
         </translation>
     </message>
 </context>

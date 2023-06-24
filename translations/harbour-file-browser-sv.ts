@@ -2675,7 +2675,7 @@ exposure program</extracomment>
     </message>
     <message>
         <source>These are global preferences. If enabled in “&lt;a href=&apos;#&apos;&gt;View → Use per-directory view settings&lt;/a&gt;”, view preferences will be saved individually for all folders. Here, you can define the default values.</source>
-        <translation>Detta är globala preferenser. Om de är aktiverade i &quot;&lt;a href=&quot;#&quot;&gt;Visa → Använd visningsinställningar per mapp&lt;/a&gt;&quot; sparas visningsinställningarna individuellt för alla mappar. Här kan du definiera standardvärdena.</translation>
+        <translation type="vanished">Detta är globala preferenser. Om de är aktiverade i &quot;&lt;a href=&quot;#&quot;&gt;Visa → Använd visningsinställningar per mapp&lt;/a&gt;&quot; sparas visningsinställningarna individuellt för alla mappar. Här kan du definiera standardvärdena.</translation>
     </message>
     <message>
         <source>Swipe right to view File Browser&apos;s source code, license information, and a list of contributors.</source>

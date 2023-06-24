@@ -1390,7 +1390,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="243"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">brak</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="247"/>
@@ -2617,7 +2617,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="209"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zmień nazwę</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="216"/>
@@ -2996,7 +2996,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="126"/>
         <source>Replace?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zamienić?</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="142"/>
@@ -3133,7 +3133,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="93"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">brak</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="94"/>
@@ -3235,7 +3235,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/js/files.js" line="35"/>
         <source>Unknown</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nieznane</translation>
     </message>
 </context>
 <context>
