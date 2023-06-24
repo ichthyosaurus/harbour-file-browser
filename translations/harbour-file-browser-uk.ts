@@ -360,10 +360,9 @@
 <context>
     <name>ConsolePage</name>
     <message>
-        <location filename="../qml/pages/ConsolePage.qml" line="75"/>
-        <source>Preview</source>
-        <comment>as in &apos;incomplete/aggregated preview of the contents of a file&apos;</comment>
-        <translation type="unfinished"></translation>
+        <location filename="../qml/pages/ConsolePage.qml" line="87"/>
+        <source>Swipe right to view raw contents.</source>
+        <translation>Проведіть праворуч, щоб переглянути raw вміст.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="151"/>
@@ -515,12 +514,12 @@
         <translation>Відфільтровано за: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="388"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="391"/>
         <source>Empty</source>
         <translation>Порожньо</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="391"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="394"/>
         <source>No files matched the filter.</source>
         <translation>Не знайдено жодного файлу, який би відповідав фільтру.</translation>
     </message>
@@ -740,6 +739,15 @@
         </translation>
     </message>
     <message numerus="yes">
+        <location filename="../qml/components/FileActions.qml" line="132"/>
+        <source>%n file(s) copied</source>
+        <translation>
+            <numerusform>%n файл скопійовано</numerusform>
+            <numerusform>%n файли скопійовано</numerusform>
+            <numerusform>%n файлів скопійовано</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="141"/>
         <source>%n file(s) copied</source>
         <translation>
@@ -937,6 +945,11 @@
         <source>Empty</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../src/filemodelworker.cpp" line="221"/>
+        <source>No permission to read the folder</source>
+        <translation>Немає дозволу на читання теки</translation>
+    </message>
 </context>
 <context>
     <name>FilePage</name>
@@ -965,6 +978,41 @@
         <location filename="../qml/pages/FilePage.qml" line="109"/>
         <source>Sometimes the application stays in the background</source>
         <translation>Іноді застосунок залишається у фоновому режимі</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FilePage.qml" line="107"/>
+        <source>No application to open the file</source>
+        <translation>Немає застосунку для відкриття файлу</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FilePage.qml" line="62"/>
+        <source>Change Permissions</source>
+        <translation>Змінити дозволи</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FilePage.qml" line="76"/>
+        <source>View Raw Contents</source>
+        <translation>Перегляд Raw вмісту</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FilePage.qml" line="84"/>
+        <source>Install</source>
+        <translation>Встановити</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FilePage.qml" line="84"/>
+        <source>Open</source>
+        <translation>Відкрити</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FilePage.qml" line="88"/>
+        <source>File cannot be opened</source>
+        <translation>Неможливо відкрити файл</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FilePage.qml" line="89"/>
+        <source>This type of file cannot be opened.</source>
+        <translation>Цей тип файлів неможливо відкрити.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="113"/>
@@ -1507,12 +1555,12 @@
         <translation>%1 x %2 (%3)</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="156"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="157"/>
         <source>Make</source>
         <translation>Виробник</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="157"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="158"/>
         <source>Model</source>
         <translation>Модель</translation>
     </message>
@@ -1942,12 +1990,12 @@ exposure program</extracomment>
         <translation>Невідомо</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="447"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="448"/>
         <source>Latitude</source>
         <translation>Широта</translation>
     </message>
     <message>
-        <location filename="../src/jhead/jhead-api.cpp" line="448"/>
+        <location filename="../src/jhead/jhead-api.cpp" line="449"/>
         <source>Longitude</source>
         <translation>Довгота</translation>
     </message>
