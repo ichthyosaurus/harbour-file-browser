@@ -136,9 +136,9 @@
 <context>
     <name>BookmarksModel</name>
     <message>
-        <location filename="../src/settings.cpp" line="857"/>
-        <source>Memory card</source>
-        <translation type="unfinished"></translation>
+        <location filename="../qml/pages/ClipboardPage.qml" line="54"/>
+        <source>Clipboard</source>
+        <translation>剪贴板</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="859"/>
