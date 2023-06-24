@@ -225,7 +225,7 @@
     <message>
         <location filename="../qml/pages/BookmarksSortPage.qml" line="38"/>
         <source>Arrange entries by dragging them to the left.</source>
-        <translation>Einträge nach links ziehen, um sie neu anzuordnen</translation>
+        <translation>Einträge nach links ziehen, um sie neu anzuordnen.</translation>
     </message>
 </context>
 <context>
