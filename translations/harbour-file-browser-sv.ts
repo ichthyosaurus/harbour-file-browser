@@ -1539,7 +1539,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="181"/>
         <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation>Se &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
+        <translation>Se &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="109"/>
@@ -1957,7 +1957,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="50"/>
         <source>These are global preferences. If enabled in “&lt;a href=&apos;#&apos;&gt;View → Use per-directory view settings&lt;/a&gt;”, view preferences will be saved individually for all folders. Here, you can define the default values.</source>
-        <translation>Detta är globala preferenser. Om de är aktiverade i &quot;&lt;a href=&apos;#&apos;&gt;Visa → Använd visningsinställningar per mapp&lt;/a&gt;&quot; sparas visningsinställningarna individuellt för alla mappar. Här kan du definiera standardvärdena.</translation>
+        <translation>Detta är globala preferenser. Om de är aktiverade i &quot;&lt;a href=&quot;#&quot;&gt;Visa → Använd visningsinställningar per mapp&lt;/a&gt;&quot; sparas visningsinställningarna individuellt för alla mappar. Här kan du definiera standardvärdena.</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="66"/>
