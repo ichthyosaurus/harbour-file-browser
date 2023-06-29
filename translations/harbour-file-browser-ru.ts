@@ -368,8 +368,12 @@
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="153"/>
+        <source>Swipe from the right to view raw contents.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Swipe right to view raw contents.</source>
-        <translation>Свайп вправо для просмотра исходного контента</translation>
+        <translation type="vanished">Свайп вправо для просмотра исходного контента</translation>
     </message>
 </context>
 <context>
@@ -966,12 +970,6 @@
         <translation>Ничего не происходит? Возможно, пакет неисправен.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="106"/>
-        <source>Swipe right to inspect its contents.</source>
-        <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../qml/pages/FilePage.qml" line="108"/>
         <source>Open successful</source>
         <translation>Успешное открытие</translation>
@@ -1015,6 +1013,12 @@
         <location filename="../qml/pages/FilePage.qml" line="95"/>
         <source>This type of file cannot be opened.</source>
         <translation>Невозможно открыть данный тип файла.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FilePage.qml" line="106"/>
+        <source>Swipe from the right to inspect its contents.</source>
+        <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="119"/>
@@ -3024,7 +3028,7 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="51"/>
-        <source>Settings apply only to the current folder. Swipe right to change default values.</source>
+        <source>Settings apply only to the current folder. Swipe from the right to change default values.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

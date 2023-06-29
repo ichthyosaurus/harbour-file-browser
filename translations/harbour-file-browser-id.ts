@@ -347,8 +347,12 @@
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="153"/>
+        <source>Swipe from the right to view raw contents.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Swipe right to view raw contents.</source>
-        <translation>Geser ke kanan untuk melihat konten mentah.</translation>
+        <translation type="vanished">Geser ke kanan untuk melihat konten mentah.</translation>
     </message>
 </context>
 <context>
@@ -917,10 +921,9 @@
         <translation>Jika tidak ada yang terjadi, maka mungkin paketnya bermasalah.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="106"/>
         <source>Swipe right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation>Geser ke kanan untuk memeriksa isinya.</translation>
+        <translation type="vanished">Geser ke kanan untuk memeriksa isinya.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="108"/>
@@ -966,6 +969,12 @@
         <location filename="../qml/pages/FilePage.qml" line="95"/>
         <source>This type of file cannot be opened.</source>
         <translation>Berkas dengan jenis ini tidak dapat dibuka.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FilePage.qml" line="106"/>
+        <source>Swipe from the right to inspect its contents.</source>
+        <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="119"/>
@@ -3331,7 +3340,7 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="51"/>
-        <source>Settings apply only to the current folder. Swipe right to change default values.</source>
+        <source>Settings apply only to the current folder. Swipe from the right to change default values.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

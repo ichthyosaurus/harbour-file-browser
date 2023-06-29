@@ -150,7 +150,7 @@ Page {
                   (fallbackFileData.category === "rpm" || fallbackFileData.category === "apk" ?
                        qsTr("This file appears to be a software package. " +
                             "To install, swipe back and select the “Install” option from the menu.") + "\n\n" :
-                       "") + qsTr("Swipe right to view raw contents.") :
+                       "") + qsTr("Swipe from the right to view raw contents.") :
                   ""
         color: Theme.secondaryHighlightColor
     }
