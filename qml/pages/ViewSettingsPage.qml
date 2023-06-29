@@ -48,7 +48,7 @@ Page {
                 id: header
                 title: qsTr("Sorting and View")
                 description: prefs.viewUseLocalSettings ?
-                                 qsTr("Settings apply only to the current folder. Swipe right to change default values.") :
+                                 qsTr("Settings apply only to the current folder. Swipe from the right to change default values.") :
                                  qsTr("Settings apply to all folders.")
                 descriptionWrapMode: Text.Wrap
                 MouseArea {
