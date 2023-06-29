@@ -138,52 +138,52 @@
     <message>
         <location filename="../src/settings.cpp" line="857"/>
         <source>Memory card</source>
-        <translation type="unfinished"></translation>
+        <translation>Minneskort</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="859"/>
         <source>Attached folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Bifogad mapp</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="861"/>
         <source>Remote folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Fjärrmapp</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="864"/>
         <source>Removable media</source>
-        <translation type="unfinished"></translation>
+        <translation>Flyttbar media</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1105"/>
         <source>Home</source>
-        <translation type="unfinished">Hem</translation>
+        <translation>Hem</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1113"/>
         <source>Documents</source>
-        <translation type="unfinished">Dokument</translation>
+        <translation>Dokument</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1121"/>
         <source>Downloads</source>
-        <translation type="unfinished">Nedladdningar</translation>
+        <translation>Nedladdningar</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1129"/>
         <source>Music</source>
-        <translation type="unfinished">Musik</translation>
+        <translation>Musik</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1137"/>
         <source>Pictures</source>
-        <translation type="unfinished"></translation>
+        <translation>Bilder</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1145"/>
         <source>Videos</source>
-        <translation type="unfinished">Videor</translation>
+        <translation>Videor</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1155"/>
