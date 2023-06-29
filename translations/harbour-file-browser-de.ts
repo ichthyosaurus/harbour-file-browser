@@ -365,8 +365,12 @@
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="153"/>
+        <source>Swipe from the right to view raw contents.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Swipe right to view raw contents.</source>
-        <translation>Nach rechts wischen, um Rohdaten anzuzeigen.</translation>
+        <translation type="vanished">Nach rechts wischen, um Rohdaten anzuzeigen.</translation>
     </message>
 </context>
 <context>
@@ -953,10 +957,9 @@
         <translation>Wenn nichts passiert, ist das Paket vermutlich fehlerhaft.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="106"/>
         <source>Swipe right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation>Wischen Sie nach rechts, um den Dateiinhalt zu prüfen.</translation>
+        <translation type="vanished">Wischen Sie nach rechts, um den Dateiinhalt zu prüfen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="108"/>
@@ -1002,6 +1005,12 @@
         <location filename="../qml/pages/FilePage.qml" line="95"/>
         <source>This type of file cannot be opened.</source>
         <translation>Dieser Dateityp kann nicht geöffnet werden.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FilePage.qml" line="106"/>
+        <source>Swipe from the right to inspect its contents.</source>
+        <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="119"/>
@@ -3439,9 +3448,13 @@ exposure program</extracomment>
         <translation>Sortierung und Ansicht</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="51"/>
         <source>Settings apply only to the current folder. Swipe right to change default values.</source>
-        <translation>Einstellungen betreffen den aktuellen Ordner. Für Standardeinstellungen von rechts wischen.</translation>
+        <translation type="vanished">Einstellungen betreffen den aktuellen Ordner. Für Standardeinstellungen von rechts wischen.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="51"/>
+        <source>Settings apply only to the current folder. Swipe from the right to change default values.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="52"/>
