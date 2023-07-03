@@ -364,7 +364,7 @@
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="153"/>
         <source>Swipe from the right to view raw contents.</source>
-        <translation type="unfinished"></translation>
+        <translation>Проведіть праворуч, щоб переглянути raw вміст.</translation>
     </message>
     <message>
         <source>Swipe right to view raw contents.</source>
@@ -1016,7 +1016,7 @@
         <location filename="../qml/pages/FilePage.qml" line="106"/>
         <source>Swipe from the right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Проведіть праворуч, щоб переглянути його вміст.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="119"/>
