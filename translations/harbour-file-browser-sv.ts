@@ -518,7 +518,7 @@
         <location filename="../qml/pages/DirectoryPage.qml" line="148"/>
         <source>View Preferences</source>
         <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
-        <translation>Inställningar</translation>
+        <translation>Visa inställningar</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="155"/>
@@ -683,12 +683,12 @@
     <message>
         <location filename="../src/engine.cpp" line="354"/>
         <source>No permissions to create “%1” in “%2”</source>
-        <translation>Inga behörigheter att skapa &quot;%1&quot; i &quot;%2&quot;</translation>
+        <translation>Behörighet saknas för att skapa “%1” i “%2”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="365"/>
         <source>Cannot create file “%1” in “%2”</source>
-        <translation>Kan inte skapa fil &quot;%1&quot; i &quot;%2&quot;</translation>
+        <translation>Kan inte skapa filen “%1” i “%2”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="385"/>
@@ -827,7 +827,7 @@
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="34"/>
         <source>Link</source>
-        <translation>Länk</translation>
+        <translation>Länka</translation>
     </message>
 </context>
 <context>
@@ -1006,7 +1006,7 @@
         <location filename="../qml/pages/FilePage.qml" line="106"/>
         <source>Swipe from the right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation>Svep från höger för att inspektera dess innehåll.</translation>
+        <translation>Svep från höger för att kolla innehållet.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="119"/>
@@ -1175,22 +1175,22 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="45"/>
         <source>App Settings</source>
-        <translation>App inställningar</translation>
+        <translation>App-inställningar</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="50"/>
         <source>Directory View</source>
-        <translation>Katalogvy</translation>
+        <translation>Mappvy</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="61"/>
         <source>Use per-directory view settings</source>
-        <translation>Använd per mapp vyinställningar</translation>
+        <translation>Använd vyinställningar per mapp</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="63"/>
         <source>Save view preferences individually for all folders in your home directory. The options below are used by default.</source>
-        <translation>Spara vyinställningar individuellt för alla mappar i din hemkatalog. Alternativen nedan används som standard.</translation>
+        <translation>Spara visningsinställningar individuellt för alla mappar i din hemkatalog. Alternativen nedan används som standard.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="67"/>
@@ -1200,7 +1200,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="69"/>
         <source>Show files with names starting with a full stop (“.”).</source>
-        <translation>Visa filer med namn som börjar med punkt (“.”).</translation>
+        <translation>Visa filer med namn som börjar med punkt (&quot;.&quot;).</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="72"/>
@@ -1210,7 +1210,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="74"/>
         <source>Preview contents of supported file types.</source>
-        <translation>Förhandsgranska innehåll i filtyper som stöds.</translation>
+        <translation>Förhandsvisa innehåll i filtyper som stöds.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="77"/>
@@ -1225,7 +1225,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="84"/>
         <source>medium</source>
-        <translation>mellan</translation>
+        <translation>medium</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="85"/>
@@ -1245,12 +1245,12 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="103"/>
         <source>Show folders first</source>
-        <translation>Visa mappar först</translation>
+        <translation>Visa mappar överst</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="105"/>
         <source>Always show folders at the top of the file list.</source>
-        <translation>Visa alltid mappar högst upp i fillistan.</translation>
+        <translation>Visa alltid mappar överst i fillistan.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="108"/>
@@ -1260,7 +1260,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="110"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
-        <translation>Visa alltid filer som börjar med punkt (“.”) i slutet av fillistan.</translation>
+        <translation>Visa alltid filer som börjar med en punkt (“.”), sist i fillistan.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="113"/>
@@ -1280,7 +1280,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="121"/>
         <source>file age</source>
-        <translation>fil ålder</translation>
+        <translation>filålder</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="122"/>
@@ -1340,7 +1340,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="165"/>
         <source>descending</source>
-        <translation>nedåtgående</translation>
+        <translation>sjunkande</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="173"/>
@@ -1351,22 +1351,22 @@
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="184"/>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="200"/>
         <source>Initial directory</source>
-        <translation>Inledande katalog</translation>
+        <translation>Startkatalog</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="189"/>
         <source>The directory that is shown when the app starts.</source>
-        <translation>Katalogen som visas när appen startar.</translation>
+        <translation>Den mapp som visas när appen startas.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="192"/>
         <source>user&apos;s home</source>
-        <translation>användarens hem</translation>
+        <translation>användarens hemkatalog</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="193"/>
         <source>last visited</source>
-        <translation>senast besökt</translation>
+        <translation>senast använd</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="194"/>
@@ -1386,7 +1386,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="235"/>
         <source>The action that is selected by default when using the bulk file management feature (available through the “shuffle” icon after selecting files).</source>
-        <translation>Åtgärden som väljs som standard när du använder funktionen för masshantering av filer (tillgänglig via ikonen &quot;blanda&quot; efter att ha valt filer).</translation>
+        <translation>Den åtgärd som väljs som standard när du använder funktionen för masshantering av filer (tillgänglig via ikonen &quot;Blanda&quot; efter att du har valt filer).</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="240"/>
@@ -1401,27 +1401,27 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="242"/>
         <source>link</source>
-        <translation>länk</translation>
+        <translation>länka</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="243"/>
         <source>none</source>
-        <translation>ingen</translation>
+        <translation>inget</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="247"/>
         <source>Default filter line action</source>
-        <translation>Standardfilterlinjeåtgärd</translation>
+        <translation>Standardåtgärd för filterrad</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="251"/>
         <source>Which action to take when the Enter key is pressed in the filter line in a directory&apos;s pull-down menu.</source>
-        <translation>Vilken åtgärd du ska vidta när Enter-tangenten trycks ned i filterraden i en katalogs rullgardinsmeny.</translation>
+        <translation>Vilken åtgärd som ska vidtas när returtangenten trycks ned på filterraden i en katalogs rullgardinsmeny.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="255"/>
         <source>return to directory view</source>
-        <translation>återgå till katalogvy</translation>
+        <translation>återgå till mappvy</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="256"/>
@@ -1436,7 +1436,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="264"/>
         <source>How very long filenames are abbreviated in the directory view.</source>
-        <translation>Hur mycket långa filnamn förkortas i katalogvyn.</translation>
+        <translation>Hur långa filnamn förkortas i mappvyn.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="267"/>
@@ -1456,22 +1456,22 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="273"/>
         <source>Show full directory paths</source>
-        <translation>Visa fullständiga katalogsökvägar</translation>
+        <translation>Visa fullständiga mappsökvägar</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="275"/>
         <source>Show the full path in the page header of the directory view.</source>
-        <translation>Visa hela sökvägen i sidhuvudet i katalogvyn.</translation>
+        <translation>Visa fullständig sökväg i sidhuvudet i mappvyn.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="278"/>
         <source>Show navigation menu icon</source>
-        <translation>Visa navigeringsmenyikon</translation>
+        <translation>Visa ikon för navigationsmeny</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="280"/>
         <source>Show a visual hint that the navigation menu is available by tapping the page header of the directory view.</source>
-        <translation>Visa en visuell hint om att navigeringsmenyn är tillgänglig genom att trycka på sidhuvudet i katalogvyn.</translation>
+        <translation>Visa en visuell ledtråd om att navigeringsmenyn är tillgänglig genom att trycka på sidhuvudet i mappvyn.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="292"/>
@@ -1481,12 +1481,12 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="294"/>
         <source>Use a solid color instead of your wallpaper as the background of this app.</source>
-        <translation>Använd en solid färg istället för din bakgrundsbild som bakgrund för denna app.</translation>
+        <translation>Använd en solid färg istället för din bakgrundsbild, som bakgrund i den här appen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="304"/>
         <source>Swipe from the right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
-        <translation>Svep från höger för att visa filhanterarens källkod, licensinformation och en lista över bidragsgivare.</translation>
+        <translation>Svep från höger för att visa File Browsers källkod, licensinformation och en lista över bidragsgivare.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="319"/>
@@ -2961,7 +2961,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="245"/>
         <source>New window opened. Sometimes the application stays in the background.</source>
-        <translation>Nytt fönster öppnades. Ibland stannar applikationen i bakgrunden.</translation>
+        <translation>Nytt fönster öppnat. Ibland stannar programmet i bakgrunden.</translation>
     </message>
     <message>
         <source>New window opened</source>
@@ -3007,17 +3007,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="55"/>
         <source>size</source>
-        <translation>Storlek</translation>
+        <translation>storlek</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="62"/>
         <source>directories</source>
-        <translation>Mappar</translation>
+        <translation>mappar</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="69"/>
         <source>files</source>
-        <translation>Filer</translation>
+        <translation>filer</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="79"/>
@@ -3137,7 +3137,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/StorageSizeBar.qml" line="85"/>
         <source>%1 free</source>
-        <translation>%1 fritt</translation>
+        <translation>%1 ledigt</translation>
     </message>
 </context>
 <context>
@@ -3145,12 +3145,12 @@ exposure program</extracomment>
     <message>
         <location filename="../src/texteditor.cpp" line="61"/>
         <source>Cannot open “%1”</source>
-        <translation>Kan inte öppna “%1“</translation>
+        <translation>Kan inte öppna “%1”</translation>
     </message>
     <message>
         <location filename="../src/texteditor.cpp" line="67"/>
         <source>File “%1” is too large to be edited</source>
-        <translation>Fil &quot;%1&quot; är för stor för att kunna redigeras</translation>
+        <translation>Filen “%1” är för stor för att redigeras</translation>
     </message>
     <message>
         <location filename="../src/texteditor.cpp" line="81"/>
@@ -3160,12 +3160,12 @@ exposure program</extracomment>
     <message>
         <location filename="../src/texteditor.cpp" line="86"/>
         <source>No permission to write to “%1”</source>
-        <translation>Ingen behörighet att skriva till &quot;%1&quot;</translation>
+        <translation>Ingen behörighet att skriva till “%1”</translation>
     </message>
     <message>
         <location filename="../src/texteditor.cpp" line="92"/>
         <source>Cannot open “%1” for writing</source>
-        <translation>Kan inte öppna &quot;%1&quot; för skrivning</translation>
+        <translation>Kan inte öppna “%1” för skrivning</translation>
     </message>
 </context>
 <context>
@@ -3180,17 +3180,17 @@ exposure program</extracomment>
         <location filename="../qml/pages/TextEditorDialog.qml" line="77"/>
         <location filename="../qml/pages/TextEditorDialog.qml" line="101"/>
         <source>Failed to open “%1”</source>
-        <translation>Misslyckades att öppna “%1“</translation>
+        <translation>Kunde inte öppna “%1”</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="79"/>
         <source>Failed to save “%1”</source>
-        <translation>Misslyckades att spara “%1“</translation>
+        <translation>Kunde inte spara “%1”</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="81"/>
         <source>Failed to edit “%1”</source>
-        <translation>Misslyckades att redigera “%1“</translation>
+        <translation>Kunde inte redigera “%1”</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="98"/>
@@ -3200,17 +3200,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="102"/>
         <source>No application to open the file</source>
-        <translation>Ingen app för att öppna filen</translation>
+        <translation>Det finns inget program att öppna filen med</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="109"/>
         <source>Disable predictive text input</source>
-        <translation>Inaktivera automatisk textinmatning</translation>
+        <translation>Inaktivera automatisk textigenkänning</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="110"/>
         <source>Enable predictive text input</source>
-        <translation>Aktivera automatisk textinmatning</translation>
+        <translation>Aktivera automatisk textigenkänning</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="116"/>
@@ -3239,7 +3239,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="63"/>
         <source>Clear selection</source>
-        <translation>Rensa val</translation>
+        <translation>Avmarkera alla</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="84"/>
@@ -3443,12 +3443,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="51"/>
         <source>Settings apply only to the current folder. Swipe from the right to change default values.</source>
-        <translation>Inställningarna gäller endast den aktuella katalogen. Svep från höger för att ändra standardvärden.</translation>
+        <translation>Inställningarna gäller endast för den aktuella mappen. Svep från höger för att ändra standardvärdena.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="52"/>
         <source>Settings apply to all folders.</source>
-        <translation>Inställningarna gäller alla kataloger.</translation>
+        <translation>Inställningarna gäller för alla mappar.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="62"/>
@@ -3468,7 +3468,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="68"/>
         <source>File age</source>
-        <translation>Fil ålder</translation>
+        <translation>Filålder</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="69"/>
@@ -3488,7 +3488,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="82"/>
         <source>descending</source>
-        <translation>nedåtgående</translation>
+        <translation>fallande</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="90"/>
@@ -3508,7 +3508,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="95"/>
         <source>medium</source>
-        <translation>mellan</translation>
+        <translation>medium</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="96"/>
@@ -3528,7 +3528,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="112"/>
         <source>Show files with names starting with a full stop (“.”).</source>
-        <translation>Visa filer med namn som börjar med punkt (“.”).</translation>
+        <translation>Visa filer med namn som börjar med punkt (&quot;.&quot;).</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="116"/>
@@ -3553,12 +3553,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="134"/>
         <source>Show folders first</source>
-        <translation>Visa kataloger först</translation>
+        <translation>Visa mappar överst</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="136"/>
         <source>Always show folders at the top of the file list.</source>
-        <translation>Visa alltid kataloger högst upp i fillistan.</translation>
+        <translation>Visa alltid mappar överst i fillistan.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="140"/>
@@ -3568,7 +3568,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="142"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
-        <translation>Visa alltid filer som börjar med punkt (“.”) i slutet av fillistan.</translation>
+        <translation>Visa alltid filer som börjar med punkt (&quot;.&quot;) i slutet av fillistan.</translation>
     </message>
 </context>
 <context>
@@ -3595,7 +3595,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/js/files.js" line="32"/>
         <source>Linking</source>
-        <translation>Länkning</translation>
+        <translation>Länkar</translation>
     </message>
     <message>
         <location filename="../qml/js/files.js" line="35"/>
