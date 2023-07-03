@@ -188,12 +188,12 @@
     <message>
         <location filename="../src/settings.cpp" line="1155"/>
         <source>Android storage</source>
-        <translation type="unfinished">Android-lagring</translation>
+        <translation>Android-lagring</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1164"/>
         <source>Root</source>
-        <translation type="unfinished">Root</translation>
+        <translation>Root</translation>
     </message>
 </context>
 <context>
@@ -202,17 +202,17 @@
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="54"/>
         <source>Apply</source>
         <comment>as in &apos;apply these changes&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Tillämpa</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="55"/>
         <source>Rename bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Byt namn på bokmärken</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="89"/>
         <source>Name must not be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Namnet får inte saknas</translation>
     </message>
 </context>
 <context>
@@ -220,12 +220,12 @@
     <message>
         <location filename="../qml/pages/BookmarksSortPage.qml" line="37"/>
         <source>Sort bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Sortera bokmärken</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksSortPage.qml" line="38"/>
         <source>Arrange entries by dragging them to the left.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordna poster genom att dra dem åt vänster.</translation>
     </message>
 </context>
 <context>
@@ -284,21 +284,21 @@
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
         <source>%n item(s) to be linked</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n objekt som skall länkas</numerusform>
+            <numerusform>%n objekt som skall länkas</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="115"/>
         <source>Clear</source>
         <comment>verb as in &apos;clear all contents from the clipboard&apos;</comment>
-        <translation type="unfinished">Rensa</translation>
+        <translation>Rensa</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="117"/>
         <source>Clipboard cleared</source>
-        <translation type="unfinished"></translation>
+        <translation>Urklipp rensat</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="256"/>
@@ -356,17 +356,17 @@
         <location filename="../qml/pages/ConsolePage.qml" line="75"/>
         <source>Preview</source>
         <comment>as in &apos;incomplete/aggregated preview of the contents of a file&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Förhandsgranskning</translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="151"/>
         <source>This file appears to be a software package. To install, swipe back and select the “Install” option from the menu.</source>
-        <translation type="unfinished"></translation>
+        <translation>Denna fil ser ut att vara ett mjukvarupaket. För att installera, svep tillbaka och välj alternativet &quot;Installera&quot; från menyn.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="153"/>
         <source>Swipe from the right to view raw contents.</source>
-        <translation type="unfinished"></translation>
+        <translation>Svep från höger för att visa raw-innehåll.</translation>
     </message>
     <message>
         <source>Swipe right to view raw contents.</source>
@@ -401,69 +401,69 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="57"/>
         <source>Create</source>
-        <translation type="unfinished">Skapa</translation>
+        <translation>Skapa</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="73"/>
         <source>Not permitted</source>
-        <translation type="unfinished"></translation>
+        <translation>Ej tillåtet</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="74"/>
         <source>You don&apos;t have permission to change the contents of this directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>Du har inte behörighet att ändra innehållet i denna katalog.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="87"/>
         <source>Create new</source>
-        <translation type="unfinished"></translation>
+        <translation>Skapa ny</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="89"/>
         <source>The new folder will be created under “%1”.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation type="unfinished"></translation>
+        <translation>Den nya mappen kommer att skapas under &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="91"/>
         <source>The new text file will be created under “%1” and can be edited later.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation type="unfinished"></translation>
+        <translation>Den nya textfilen kommer att skapas under &quot;%1&quot; och kan redigeras senare.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="97"/>
         <source>folder</source>
-        <translation type="unfinished">mapp</translation>
+        <translation>mapp</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="100"/>
         <source>empty text file</source>
-        <translation type="unfinished"></translation>
+        <translation>tom textfil</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="112"/>
         <source>Folder name</source>
-        <translation type="unfinished">Mappnamn</translation>
+        <translation>Mappnamn</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="112"/>
         <source>File name</source>
-        <translation type="unfinished"></translation>
+        <translation>Filnamn</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="131"/>
         <source>File names must not contain slashes. To create a new file in a folder below “%1”, first create a folder and then create the file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Filnamn får inte innehålla snedstreck. För att skapa en ny fil i en mapp under &quot;%1&quot;, skapa först en mapp och sedan filen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="135"/>
         <source>A file or folder with this name already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Det finns redan en fil eller mapp med det här namnet.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="138"/>
         <source>Using slashes in folder names will create sub-folders, like so:</source>
-        <translation type="unfinished"></translation>
+        <translation>Om du använder snedstreck i mappnamn, kommer undermappar att skapas, som t.ex:</translation>
     </message>
 </context>
 <context>
@@ -523,7 +523,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="155"/>
         <source>Create New...</source>
-        <translation type="unfinished"></translation>
+        <translation>Skapa ny...</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="186"/>
