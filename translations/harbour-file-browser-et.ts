@@ -366,7 +366,7 @@
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="153"/>
         <source>Swipe from the right to view raw contents.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tegeliku sisu vaatamiseks viipa paremalt vasakule.</translation>
     </message>
     <message>
         <source>Swipe right to view raw contents.</source>
@@ -1006,7 +1006,7 @@
         <location filename="../qml/pages/FilePage.qml" line="106"/>
         <source>Swipe from the right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Paigalduspaki sisu vaatamiseks viipa paremalt vasakule.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="119"/>
@@ -3398,7 +3398,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="51"/>
         <source>Settings apply only to the current folder. Swipe from the right to change default values.</source>
-        <translation type="unfinished"></translation>
+        <translation>Seadistused kehtivad vaid sellele kaustale. Vaikimisi väärtuste muutmiseks viipa paremalt vasakule.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="52"/>

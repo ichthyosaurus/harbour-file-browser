@@ -138,62 +138,62 @@
     <message>
         <location filename="../src/settings.cpp" line="857"/>
         <source>Memory card</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarjeta de memoria</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="859"/>
         <source>Attached folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Carpeta adjunta</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="861"/>
         <source>Remote folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Carpeta remota</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="864"/>
         <source>Removable media</source>
-        <translation type="unfinished"></translation>
+        <translation>Medios extraíbles</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1105"/>
         <source>Home</source>
-        <translation type="unfinished">Carpeta de usuario</translation>
+        <translation>Inicio</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1113"/>
         <source>Documents</source>
-        <translation type="unfinished">Documentos</translation>
+        <translation>Documentos</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1121"/>
         <source>Downloads</source>
-        <translation type="unfinished">Descargas</translation>
+        <translation>Descargas</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1129"/>
         <source>Music</source>
-        <translation type="unfinished">Música</translation>
+        <translation>Música</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1137"/>
         <source>Pictures</source>
-        <translation type="unfinished"></translation>
+        <translation>Imágenes</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1145"/>
         <source>Videos</source>
-        <translation type="unfinished">Vídeos</translation>
+        <translation>Vídeos</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1155"/>
         <source>Android storage</source>
-        <translation type="unfinished">Almacenamiento Android</translation>
+        <translation>Almacenamiento en Android</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1164"/>
         <source>Root</source>
-        <translation type="unfinished">Raíz</translation>
+        <translation>Root</translation>
     </message>
 </context>
 <context>
@@ -202,17 +202,17 @@
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="54"/>
         <source>Apply</source>
         <comment>as in &apos;apply these changes&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Aplicar</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="55"/>
         <source>Rename bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambiar el nombre de los favoritos</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="89"/>
         <source>Name must not be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>El nombre no puede estar vacío</translation>
     </message>
 </context>
 <context>
@@ -220,12 +220,12 @@
     <message>
         <location filename="../qml/pages/BookmarksSortPage.qml" line="37"/>
         <source>Sort bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordenar los favoritos</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksSortPage.qml" line="38"/>
         <source>Arrange entries by dragging them to the left.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordena las entradas arrastrándolas hacia la izquierda.</translation>
     </message>
 </context>
 <context>
@@ -284,21 +284,22 @@
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
         <source>%n item(s) to be linked</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n elemento a vincular</numerusform>
+            <numerusform>%n elementos a vincular</numerusform>
+            <numerusform>%n elementos a vincular</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="115"/>
         <source>Clear</source>
         <comment>verb as in &apos;clear all contents from the clipboard&apos;</comment>
-        <translation type="unfinished">Borrar</translation>
+        <translation>Borrar</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="117"/>
         <source>Clipboard cleared</source>
-        <translation type="unfinished"></translation>
+        <translation>Portapapeles borrado</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="256"/>
@@ -356,17 +357,17 @@
         <location filename="../qml/pages/ConsolePage.qml" line="75"/>
         <source>Preview</source>
         <comment>as in &apos;incomplete/aggregated preview of the contents of a file&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Vista previa</translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="151"/>
         <source>This file appears to be a software package. To install, swipe back and select the “Install” option from the menu.</source>
-        <translation type="unfinished"></translation>
+        <translation>Este archivo parece ser un paquete de software. Para instalarlo, desliza el dedo hacia atrás y selecciona la opción &quot;Instalar&quot; en el menú.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="153"/>
         <source>Swipe from the right to view raw contents.</source>
-        <translation type="unfinished"></translation>
+        <translation>Desliza el dedo desde la derecha para ver los contenidos sin procesar.</translation>
     </message>
     <message>
         <source>Swipe right to view raw contents.</source>
@@ -401,69 +402,69 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="57"/>
         <source>Create</source>
-        <translation type="unfinished">Crear</translation>
+        <translation>Crear</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="73"/>
         <source>Not permitted</source>
-        <translation type="unfinished"></translation>
+        <translation>No está permitido</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="74"/>
         <source>You don&apos;t have permission to change the contents of this directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>No tienes permiso para cambiar el contenido de este directorio.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="87"/>
         <source>Create new</source>
-        <translation type="unfinished"></translation>
+        <translation>Crear un nuevo</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="89"/>
         <source>The new folder will be created under “%1”.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation type="unfinished"></translation>
+        <translation>La nueva carpeta se creará en &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="91"/>
         <source>The new text file will be created under “%1” and can be edited later.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation type="unfinished"></translation>
+        <translation>El nuevo archivo de texto se creará en &quot;%1&quot; y se podrá editar más tarde.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="97"/>
         <source>folder</source>
-        <translation type="unfinished">carpeta</translation>
+        <translation>carpeta</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="100"/>
         <source>empty text file</source>
-        <translation type="unfinished"></translation>
+        <translation>archivo de texto vacío</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="112"/>
         <source>Folder name</source>
-        <translation type="unfinished">Nombre de la carpeta</translation>
+        <translation>Nombre de la carpeta</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="112"/>
         <source>File name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre del archivo</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="131"/>
         <source>File names must not contain slashes. To create a new file in a folder below “%1”, first create a folder and then create the file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Los nombres de archivo no deben contener barras inclinadas. Para crear un nuevo archivo en una carpeta debajo de &quot;%1&quot;, primero crea una carpeta y luego crea el archivo.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="135"/>
         <source>A file or folder with this name already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ya existe un archivo o carpeta con este nombre.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="138"/>
         <source>Using slashes in folder names will create sub-folders, like so:</source>
-        <translation type="unfinished"></translation>
+        <translation>Al usar una barra inclinada en el nombre de la carpeta, puede crear subcarpetas como esta:</translation>
     </message>
 </context>
 <context>
@@ -523,7 +524,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="155"/>
         <source>Create New...</source>
-        <translation type="unfinished"></translation>
+        <translation>Crear un nuevo...</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="186"/>
@@ -683,12 +684,12 @@
     <message>
         <location filename="../src/engine.cpp" line="354"/>
         <source>No permissions to create “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>No hay permisos para crear &quot;%1&quot; en &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="365"/>
         <source>Cannot create file “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>No se puede crear el archivo &quot;%1&quot; en &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="385"/>
@@ -817,17 +818,17 @@
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="32"/>
         <source>Copy</source>
-        <translation type="unfinished">Copiar</translation>
+        <translation>Copiar</translation>
     </message>
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="33"/>
         <source>Move</source>
-        <translation type="unfinished">Mover</translation>
+        <translation>Mover</translation>
     </message>
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="34"/>
         <source>Link</source>
-        <translation type="unfinished">Crear enlace</translation>
+        <translation>Enlace</translation>
     </message>
 </context>
 <context>
@@ -932,12 +933,12 @@
     <message>
         <location filename="../qml/pages/FileOperationsPage.qml" line="60"/>
         <source>Tasks</source>
-        <translation type="unfinished"></translation>
+        <translation>Tareas</translation>
     </message>
     <message>
         <location filename="../qml/pages/FileOperationsPage.qml" line="81"/>
         <source>Empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Vacío</translation>
     </message>
 </context>
 <context>
@@ -1006,7 +1007,7 @@
         <location filename="../qml/pages/FilePage.qml" line="106"/>
         <source>Swipe from the right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Desliza el dedo desde la derecha para ver su contenido.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="119"/>
@@ -1175,17 +1176,17 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="45"/>
         <source>App Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajustes de la aplicación</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="50"/>
         <source>Directory View</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista del directorio</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="61"/>
         <source>Use per-directory view settings</source>
-        <translation type="unfinished">Usar ajustes de vista para cada directorio</translation>
+        <translation>Usar la configuración de vista por directorio</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="63"/>
