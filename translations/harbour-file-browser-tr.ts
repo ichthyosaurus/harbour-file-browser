@@ -138,62 +138,62 @@
     <message>
         <location filename="../src/settings.cpp" line="857"/>
         <source>Memory card</source>
-        <translation type="unfinished"></translation>
+        <translation>Hafıza kardı</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="859"/>
         <source>Attached folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekteki klasör</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="861"/>
         <source>Remote folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Uzaktaki klasör</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="864"/>
         <source>Removable media</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaldırılabilir medya</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1105"/>
         <source>Home</source>
-        <translation type="unfinished">Ev</translation>
+        <translation>Ev</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1113"/>
         <source>Documents</source>
-        <translation type="unfinished">Belgeler</translation>
+        <translation>Belgeler</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1121"/>
         <source>Downloads</source>
-        <translation type="unfinished">İndirilenler</translation>
+        <translation>İndirilenler</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1129"/>
         <source>Music</source>
-        <translation type="unfinished">Müzik</translation>
+        <translation>Müzik</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1137"/>
         <source>Pictures</source>
-        <translation type="unfinished">Resimler</translation>
+        <translation>Resimler</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1145"/>
         <source>Videos</source>
-        <translation type="unfinished">Videolar</translation>
+        <translation>Videolar</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1155"/>
         <source>Android storage</source>
-        <translation type="unfinished">Android depolama</translation>
+        <translation>Android depolaması</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1164"/>
         <source>Root</source>
-        <translation type="unfinished">Kök</translation>
+        <translation>Root</translation>
     </message>
 </context>
 <context>
@@ -202,17 +202,17 @@
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="54"/>
         <source>Apply</source>
         <comment>as in &apos;apply these changes&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Uygula</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="55"/>
         <source>Rename bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Yer işaretlerini yeniden adlandır</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="89"/>
         <source>Name must not be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>İsim boş olmamalıdır</translation>
     </message>
 </context>
 <context>
@@ -220,12 +220,12 @@
     <message>
         <location filename="../qml/pages/BookmarksSortPage.qml" line="37"/>
         <source>Sort bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Yer işaretlerini sırala</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksSortPage.qml" line="38"/>
         <source>Arrange entries by dragging them to the left.</source>
-        <translation type="unfinished"></translation>
+        <translation>Girişleri sola sürükleyerek diz.</translation>
     </message>
 </context>
 <context>
@@ -282,20 +282,21 @@
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
         <source>%n item(s) to be linked</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n eşyası bağlanacak</numerusform>
+            <numerusform>%n eşyaları bağlanacak</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="115"/>
         <source>Clear</source>
         <comment>verb as in &apos;clear all contents from the clipboard&apos;</comment>
-        <translation type="unfinished">Temizle</translation>
+        <translation>Temizle</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="117"/>
         <source>Clipboard cleared</source>
-        <translation type="unfinished"></translation>
+        <translation>Pano temizlendi</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="256"/>
@@ -353,17 +354,17 @@
         <location filename="../qml/pages/ConsolePage.qml" line="75"/>
         <source>Preview</source>
         <comment>as in &apos;incomplete/aggregated preview of the contents of a file&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Önizle</translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="151"/>
         <source>This file appears to be a software package. To install, swipe back and select the “Install” option from the menu.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu dosya bir yazılım paketi gibi görünüyor. İndirmek için, geri tuşuna basıp menüden &quot;indir&quot; seçeneğini seçiniz.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="153"/>
         <source>Swipe from the right to view raw contents.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ham içerikleri görmek için sağa kaydırınız.</translation>
     </message>
     <message>
         <source>Swipe right to view raw contents.</source>
@@ -398,69 +399,69 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="57"/>
         <source>Create</source>
-        <translation type="unfinished">Oluştur</translation>
+        <translation>Oluştur</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="73"/>
         <source>Not permitted</source>
-        <translation type="unfinished"></translation>
+        <translation>Yetkisiz</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="74"/>
         <source>You don&apos;t have permission to change the contents of this directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu dizinin içeriklerini değiştirmek için yetkiniz yok.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="87"/>
         <source>Create new</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeni oluştur</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="89"/>
         <source>The new folder will be created under “%1”.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation type="unfinished"></translation>
+        <translation>Yeni klasör &quot;%1&quot;in altında oluşturulacaktır.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="91"/>
         <source>The new text file will be created under “%1” and can be edited later.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation type="unfinished"></translation>
+        <translation>Yeni metin belgesi &quot;%1&quot;in altında oluşturulacaktır.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="97"/>
         <source>folder</source>
-        <translation type="unfinished">klasör</translation>
+        <translation>klasör</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="100"/>
         <source>empty text file</source>
-        <translation type="unfinished"></translation>
+        <translation>boş metin belgesi</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="112"/>
         <source>Folder name</source>
-        <translation type="unfinished">Klasör adı</translation>
+        <translation>Klasör adı</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="112"/>
         <source>File name</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya adı</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="131"/>
         <source>File names must not contain slashes. To create a new file in a folder below “%1”, first create a folder and then create the file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya adları eğik çizgi içermek zorundadır. &quot;%1&quot;in altındaki bir klasörde yeni bir dosya oluşturmak için ilk olarak bir klasör oluşturun ve sonrasında dosyayı oluşturun.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="135"/>
         <source>A file or folder with this name already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu isimde halihazırda bir dosya veya klasör mevcut.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="138"/>
         <source>Using slashes in folder names will create sub-folders, like so:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya adlarında eğik çizgi kullanmak şu şekilde alt klasörler oluşturacaktır:</translation>
     </message>
 </context>
 <context>
@@ -488,7 +489,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="155"/>
         <source>Create New...</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeni Oluştur...</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="168"/>
@@ -684,12 +685,12 @@
     <message>
         <location filename="../src/engine.cpp" line="354"/>
         <source>No permissions to create “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>“%2”nin içerisinde “%1”i oluşturmak için yetkiniz yok</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="365"/>
         <source>Cannot create file “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>“%2”nin içerisinde “%1” oluşturulamıyor</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="385"/>
@@ -802,17 +803,17 @@
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="32"/>
         <source>Copy</source>
-        <translation type="unfinished">Kopyala</translation>
+        <translation>Kopyala</translation>
     </message>
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="33"/>
         <source>Move</source>
-        <translation type="unfinished">Taşı</translation>
+        <translation>Taşı</translation>
     </message>
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="34"/>
         <source>Link</source>
-        <translation type="unfinished">Bağlantı</translation>
+        <translation>Bağlantı</translation>
     </message>
 </context>
 <context>
@@ -915,12 +916,12 @@
     <message>
         <location filename="../qml/pages/FileOperationsPage.qml" line="60"/>
         <source>Tasks</source>
-        <translation type="unfinished"></translation>
+        <translation>Görevler</translation>
     </message>
     <message>
         <location filename="../qml/pages/FileOperationsPage.qml" line="81"/>
         <source>Empty</source>
-        <translation type="unfinished">Boş</translation>
+        <translation>Boş</translation>
     </message>
 </context>
 <context>
@@ -989,7 +990,7 @@
         <location filename="../qml/pages/FilePage.qml" line="106"/>
         <source>Swipe from the right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Sağa kaydırarak içeriklerini inceleyebilirsiniz.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="119"/>
@@ -1158,208 +1159,208 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="45"/>
         <source>App Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Uygulama Ayarları</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="50"/>
         <source>Directory View</source>
-        <translation type="unfinished"></translation>
+        <translation>Dizin Görünümü</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="61"/>
         <source>Use per-directory view settings</source>
-        <translation type="unfinished">Dizin başına görünüm ayarlarını kullan</translation>
+        <translation>Dizin başına görünüm ayarlarını kullan</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="63"/>
         <source>Save view preferences individually for all folders in your home directory. The options below are used by default.</source>
-        <translation type="unfinished"></translation>
+        <translation>Görünüm tercihlerini ev dizininizdeki tüm klasörler için ayrı ayrı kaydedin. Aşağıdaki seçenekler varsayılan olarak kullanılır.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="67"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">Gizli dosyaları göster</translation>
+        <translation>Gizli dosyaları göster</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="69"/>
         <source>Show files with names starting with a full stop (“.”).</source>
-        <translation type="unfinished"></translation>
+        <translation>Nokta (&quot;.&quot;) ile başlayan isimlere sahip dosyaları göster.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="72"/>
         <source>Show preview images</source>
-        <translation type="unfinished">Ön izleme resimlerini göster</translation>
+        <translation>Önizleme resimlerini göster</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="74"/>
         <source>Preview contents of supported file types.</source>
-        <translation type="unfinished"></translation>
+        <translation>Desteklenen dosya türlerinin içeriklerini önizle.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="77"/>
         <source>Thumbnail size</source>
-        <translation type="unfinished">Küçük resim boyutu</translation>
+        <translation>Küçük resim boyutu</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="83"/>
         <source>small</source>
-        <translation type="unfinished">küçük</translation>
+        <translation>küçük</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="84"/>
         <source>medium</source>
-        <translation type="unfinished">orta</translation>
+        <translation>orta</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="85"/>
         <source>large</source>
-        <translation type="unfinished">büyük</translation>
+        <translation>büyük</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="86"/>
         <source>huge</source>
-        <translation type="unfinished">çok büyük</translation>
+        <translation>çok büyük</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="93"/>
         <source>Sorting</source>
-        <translation type="unfinished">Sıralama</translation>
+        <translation>Sıralama</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="103"/>
         <source>Show folders first</source>
-        <translation type="unfinished">Önce klasörleri göster</translation>
+        <translation>Önce klasörleri göster</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="105"/>
         <source>Always show folders at the top of the file list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Klasörleri her zaman dosya listesinin en üstünde göster.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="108"/>
         <source>Show hidden files last</source>
-        <translation type="unfinished"></translation>
+        <translation>Gizli dosyaları en son göster</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="110"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nokta (&quot;.&quot;) ile başlayan dosyaları her zaman dosya listesinin sonunda göster.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="113"/>
         <source>Sort by</source>
-        <translation type="unfinished">Sıralama ölçütü</translation>
+        <translation type="unfinished">Şuna göre sırala</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="119"/>
         <source>name</source>
-        <translation type="unfinished">ad</translation>
+        <translation>isim</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="120"/>
         <source>size</source>
-        <translation type="unfinished">boyut</translation>
+        <translation>boyut</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="121"/>
         <source>file age</source>
-        <translation type="unfinished"></translation>
+        <translation>dosya yaşı</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="122"/>
         <source>file type</source>
-        <translation type="unfinished">dosya türü</translation>
+        <translation>dosya türü</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="126"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished">Büyük/küçük harfe duyarlı olarak sırala</translation>
+        <translation>Büyük harfe duyarlı olarak sırala</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="128"/>
         <source>Show files with names starting with a capital letter first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Önce büyük harfle başlayan adlara sahip dosyaları göster.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="132"/>
         <source>Sort order</source>
-        <translation type="unfinished">Sıralama düzeni</translation>
+        <translation>Sıralama düzeni</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="140"/>
         <source>Sort names starting with the beginning of the alphabet first.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Önce alfabenin başından başlayarak isimleri sıralayın.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="142"/>
         <source>Show smaller files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Önce küçük boyutlu dosyaları göster.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="144"/>
         <source>Show more recent files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Önce daha yeni dosyaları gösterin.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="148"/>
         <source>Sort names starting with the end of the alphabet first.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Önce alfabenin sonundan başlayarak isimleri sıralayın.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="150"/>
         <source>Show larger files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Önce büyük boyutlu dosyaları göster.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="152"/>
         <source>Show older files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Önce daha eski dosyaları göster.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="161"/>
         <source>ascending</source>
-        <translation type="unfinished"></translation>
+        <translation>artan</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="165"/>
         <source>descending</source>
-        <translation type="unfinished"></translation>
+        <translation>azalan</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="173"/>
         <source>Behavior and View</source>
-        <translation type="unfinished">Davranış ve Görünüm</translation>
+        <translation>Davranış ve Görünüm</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="184"/>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="200"/>
         <source>Initial directory</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İlk dizin</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="189"/>
         <source>The directory that is shown when the app starts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Uygulama başlatıldığında gösterilen dizin.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="192"/>
         <source>user&apos;s home</source>
-        <translation type="unfinished"></translation>
+        <translation>kullanıcı&apos;nın evi</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="193"/>
         <source>last visited</source>
-        <translation type="unfinished"></translation>
+        <translation>son ziyaret edilen</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="194"/>
         <source>custom path</source>
-        <translation type="unfinished"></translation>
+        <translation>özel yol</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="216"/>
         <source>Choose</source>
-        <translation type="unfinished"></translation>
+        <translation>Seç</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="231"/>
