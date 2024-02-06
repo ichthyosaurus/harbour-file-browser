@@ -163,27 +163,27 @@
     <message>
         <location filename="../src/settings.cpp" line="1113"/>
         <source>Documents</source>
-        <translation type="unfinished"></translation>
+        <translation>Документы</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1121"/>
         <source>Downloads</source>
-        <translation type="unfinished"></translation>
+        <translation>Загрузки</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1129"/>
         <source>Music</source>
-        <translation type="unfinished"></translation>
+        <translation>Музыка</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1137"/>
         <source>Pictures</source>
-        <translation type="unfinished"></translation>
+        <translation>Изображения</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1145"/>
         <source>Videos</source>
-        <translation type="unfinished"></translation>
+        <translation>Видео</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1155"/>
@@ -202,7 +202,7 @@
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="54"/>
         <source>Apply</source>
         <comment>as in &apos;apply these changes&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Применить</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="55"/>
@@ -325,7 +325,7 @@
         <location filename="../src/consolemodel.cpp" line="124"/>
         <location filename="../src/consolemodel.cpp" line="136"/>
         <source>** crashed</source>
-        <translation>** разбился</translation>
+        <translation>** упал</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="126"/>
@@ -409,7 +409,7 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="73"/>
         <source>Not permitted</source>
-        <translation type="unfinished"></translation>
+        <translation>Не разрешено</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="74"/>
@@ -419,7 +419,7 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="87"/>
         <source>Create new</source>
-        <translation type="unfinished"></translation>
+        <translation>Создать новый</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="89"/>
@@ -441,7 +441,7 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="100"/>
         <source>empty text file</source>
-        <translation type="unfinished"></translation>
+        <translation>пустой текстовый файл</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="112"/>
@@ -451,7 +451,7 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="112"/>
         <source>File name</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя файла</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="131"/>
@@ -461,7 +461,7 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="135"/>
         <source>A file or folder with this name already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл или папка с таким именем уже есть.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="138"/>
@@ -506,7 +506,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="155"/>
         <source>Create New...</source>
-        <translation type="unfinished"></translation>
+        <translation>Создать новый...</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="186"/>
