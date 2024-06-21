@@ -202,8 +202,10 @@ int main(int argc, char *argv[])
 
 #ifdef NO_HARBOUR_COMPLIANCE
     view->rootContext()->setContextProperty("BUILD_MESSAGE", QVariant::fromValue(QStringLiteral("no explicit Harbour compliance")));
+    view->rootContext()->setContextProperty("HAVE_SAILJAIL", QVariant::fromValue(false));
 #else
     view->rootContext()->setContextProperty("BUILD_MESSAGE", QVariant::fromValue(QStringLiteral("forced Harbour compliance")));
+    view->rootContext()->setContextProperty("HAVE_SAILJAIL", QVariant::fromValue(true));
 #endif
 
     view->setSource(SailfishApp::pathToMainQml());
