@@ -3,7 +3,7 @@
 # This file is part of Opal and has been released under the Creative Commons
 # Attribution-ShareAlike 4.0 International License.
 # SPDX-License-Identifier: CC-BY-SA-4.0
-# SPDX-FileCopyrightText: 2018-2021 Mirian Margiani
+# SPDX-FileCopyrightText: 2018-2023 Mirian Margiani
 #
 # See https://github.com/Pretty-SFOS/opal/blob/main/snippets/opal-render-icons.md
 # for documentation.
@@ -11,7 +11,7 @@
 # @@@ FILE VERSION $c__OPAL_RENDER_ICONS_VERSION__
 #
 
-c__OPAL_RENDER_ICONS_VERSION__="0.3.0"
+c__OPAL_RENDER_ICONS_VERSION__="1.0.0"
 # c__FOR_RENDER_LIB__=version must be set in module release scripts
 
 shopt -s extglob
@@ -148,9 +148,9 @@ function render_batch() { # 1: keep or unset config after rendering?
             local res_x="${res_split[0]}"
             local res_y="${res_split[0]}"
 
-            if [[ "$res" == *x* ]]; then
-                res_x="${res%%x*}"
-                res_y="${res##*x}"
+            if [[ "${res_split[0]}" == *x* ]]; then
+                res_x="${res_split[0]%%x*}"
+                res_y="${res_split[0]##*x}"
             fi
 
             if [[ ! "$res_x" =~ $cRESOLUTION_CHECK ]]; then
