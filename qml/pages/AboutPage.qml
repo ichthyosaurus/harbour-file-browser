@@ -79,6 +79,8 @@ A.AboutPageBase {
             sources: "https://github.com/sailfishos-patches/patchmanager"
         },
         OpalAboutAttribution {},
+        OpalInfoComboAttribution {},
+        OpalComboDataAttribution {}
     ]
 
     contributionSections: [

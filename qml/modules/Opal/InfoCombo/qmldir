@@ -1,0 +1,7 @@
+module Opal.InfoCombo
+# This file is part of Opal.InfoCombo.
+# SPDX-FileCopyrightText: 2023 Mirian Margiani
+# SPDX-License-Identifier: GPL-3.0-or-later
+InfoCombo 1.0 InfoCombo.qml
+InfoComboSection 1.0 InfoComboSection.qml
+InfoMenuItem 1.0 InfoMenuItem.qml
