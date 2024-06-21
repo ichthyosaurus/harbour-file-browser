@@ -4,9 +4,12 @@
 # SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
+# See https://github.com/Pretty-SFOS/opal/blob/main/snippets/opal-render-icons.md
+# for documentation.
+#
 # @@@ keep this line: based on template v0.3.0
 #
-c__FOR_RENDER_LIB__="0.3.0"
+c__FOR_RENDER_LIB__="1.0.0"
 
 # Run this script from the same directory where your icon sources are located,
 # e.g. <app>/icon-src.
@@ -24,10 +27,12 @@ for dir in . file toolbar clipboard; do
     popd
 done
 
+cMY_APP=harbour-file-browser
+
 cNAME="app icons"
 cITEMS=(
-    harbour-file-browser@../icons/RESXxRESY
-    harbour-file-browser-root@../root/icons/RESXxRESY
+    "$cMY_APP@../icons/RESXxRESY"
+    "$cMY_APP-root@../root/icons/RESXxRESY"
 )
 cRESOLUTIONS=(86 108 128 172)
 cTARGETS=(F1)
@@ -51,8 +56,8 @@ cRESOLUTIONS=(F1)
 cTARGETS=(../qml/images)
 render_batch
 
-cNAME="cover art"
-cITEMS=(harbour-file-browser{,-root})
+cNAME="cover background"
+cITEMS=($cMY_APP{,-root})
 cRESOLUTIONS=(86)
 cTARGETS=(../qml/images)
 render_batch
