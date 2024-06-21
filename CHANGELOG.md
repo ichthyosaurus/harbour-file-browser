@@ -10,7 +10,7 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
  * This update finally brings over two years worth of new and refined features, bug fixes, and translation updates!
  * New translations: Ukrainian
- * Updated translations: Spanish, Swedish, Estonian, French, Russian, Chinese, German, English
+ * Updated translations: Spanish, Swedish, Estonian, French, Russian, Chinese, German, English, Polish, Turkish
  * Removed translations: Swiss German (not available in Sailfish)
  * Removed Paypal donations link, please use Liberapay and avoid Paypal wherever possible
  * Added donation info to the "About" page: it is now possible to buy me a cup of coffee :-) (swipe right-to-left multiple times until you reach the "About" page)
