@@ -8,7 +8,7 @@
 # See https://github.com/Pretty-SFOS/opal/blob/main/snippets/opal-merge-translations.md
 # for documentation.
 #
-# @@@ FILE VERSION 0.1.1
+# @@@ FILE VERSION 0.1.2
 #
 
 shopt -s extglob
@@ -65,7 +65,7 @@ for tr in "${app_tr[@]}"; do
     have_extra=false
 
     set -o pipefail
-    lang="$(sed -Ee 's/.*?[-_]([a-z]{2}([-_][A-Z]{2})?)\.[Tt][Ss]/\1/g; T fail; t ok; :ok; q 0; :fail; q 100' <<<"$tr" | tr '_' '-')" || {
+    lang="$(sed -re 's/.*?[-_]([a-z]{2}([-_][A-Z]{2})?)\.[Tt][Ss]/\1/g; T fail; t ok; :ok; q 0; :fail; q 100' <<<"$tr" | tr '_' '-')" || {
         log "skipping '$tr': no language"
         continue
     }
