@@ -26,7 +26,7 @@ horizontalAlignment:Text.AlignHCenter
 color:Theme.highlightColor
 font.pixelSize:Theme.fontSizeMedium
 wrapMode:Text.Wrap
-}}ButtonLayout{preferredWidth:Theme.buttonWidthMedium
+}}ButtonLayout{preferredWidth:Theme.buttonWidthLarge
 anchors{bottom:parent.bottom
 bottomMargin:(root.orientation&Orientation.LandscapeMask&&Screen.sizeCategory<=Screen.Medium)?Theme.itemSizeExtraSmall:Theme.itemSizeMedium
 }Button{text:qsTranslate("Opal.About","Open in browser")

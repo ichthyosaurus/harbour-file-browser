@@ -1,30 +1,58 @@
 /*
  * This file is part of harbour-file-browser.
- * SPDX-FileCopyrightText: 2021-2023 Mirian Margiani
+ * SPDX-FileCopyrightText: 2021-2024 Mirian Margiani
  * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
+/*
+ * Translators:
+ * Please add yourself to the list of contributors below. If your language is already
+ * in the list, add your name to the 'entries' field. If you added a new translation,
+ * create a new section at the top of the list.
+ *
+ * Other contributors:
+ * Please add yourself to the relevant list of contributors.
+ *
+ * <...>
+ *  ContributionGroup {
+ *      title: qsTr("Your language")
+ *      entries: ["Existing contributor", "YOUR NAME HERE"]
+ *  },
+ * <...>
+ *
  */
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0 as S
 import "../modules/Opal/About" as A
+import "../modules/Opal/Attributions"
 
 A.AboutPageBase {
-    id: page
-    allowedOrientations: S.Orientation.All
+    id: root
 
     appName: "File Browser"
-    appIcon: Qt.resolvedUrl("../images/harbour-file-browser.png")
-    appVersion: APP_VERSION  // defined in rpm/harbour-file-browser.yaml
+    appIcon: Qt.resolvedUrl("../images/%1.png".arg(Qt.application.name))
+    appVersion: APP_VERSION
     appRelease: APP_RELEASE
     appReleaseType: RELEASE_TYPE
-    description: qsTr("A fully-fledged file manager for Sailfish OS.")
 
-    mainAttributions: ["2019-2023 Mirian Margiani", "2013-2019 karip"]
-    sourcesUrl: "https://github.com/ichthyosaurus/harbour-file-browser"
+    allowDownloadingLicenses: false
+    sourcesUrl: "https://github.com/ichthyosaurus/%1".arg(Qt.application.name)
     homepageUrl: "https://forum.sailfishos.org/t/file-browser-support-and-feedback-thread/4566"
-    translationsUrl: "https://hosted.weblate.org/projects/harbour-file-browser/main-translations/"
-
+    translationsUrl: "https://hosted.weblate.org/projects/%1".arg(Qt.application.name)
     licenses: A.License { spdxId: "GPL-3.0-or-later" }
+
+    donations.text: donations.defaultTextCoffee
+    donations.services: [
+        A.DonationService {
+            name: "Liberapay"
+            url: "https://liberapay.com/ichthyosaurus"
+        }
+    ]
+
+    description: qsTr("A fully-fledged file manager for Sailfish OS.")
+    mainAttributions: ["2019-2024 Mirian Margiani", "2013-2019 karip"]
+
     attributions: [
         A.Attribution {
             name: "JHead (2.97)"
@@ -50,15 +78,7 @@ A.AboutPageBase {
             licenses: A.License { spdxId: "BSD-3-Clause" }
             sources: "https://github.com/sailfishos-patches/patchmanager"
         },
-        A.OpalAboutAttribution {}
-    ]
-
-    donations.text: donations.defaultTextCoffee
-    donations.services: [
-        A.DonationService {
-            name: "LiberaPay"
-            url: "https://liberapay.com/ichthyosaurus/"
-        }
+        OpalAboutAttribution {},
     ]
 
     contributionSections: [
