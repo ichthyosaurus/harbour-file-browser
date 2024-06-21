@@ -1,11 +1,11 @@
 # This file is part of File Browser.
 # SPDX-License-Identifier: GPL-3.0-or-later
-# SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
+# SPDX-FileCopyrightText: 2020-2024 Mirian Margiani
 
 %define appname harbour-file-browser-root
 Name: %{appname}
 Summary: File Browser with root privileges
-Version: 1.2.2
+Version: 1.3.0
 Release: 1
 Group: System/Tools
 License: GPL-3.0-or-later
@@ -69,6 +69,9 @@ cp %appname.desktop %{buildroot}/usr/share/applications/
 cp start-root start-root-helper.c %{buildroot}/usr/share/%appname/
 
 %changelog
+
+* Sat Jan 06 2024 Mirian Margiani <mixosaurus+ichthyo@pm.me> 1.3.0-1
+- Fixed root mode for SFOS 4.x
 
 * Sun Apr 03 2022 Mirian Margiani <mixosaurus+ichthyo@pm.me> 1.2.1-1
 - Added a Sailjail profile so root mode can be used on SFOS 4.x

@@ -1,6 +1,6 @@
 /*
  * This file is part of File Browser.
- * SPDX-FileCopyrightText: 2020-2022 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2024 Mirian Margiani
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Repository: https://github.com/ichthyosaurus/harbour-file-browser
@@ -14,6 +14,9 @@
 
 int main() {
     setuid(0);
-    system("su -c 'mkdir -p /run/user/0/dconf' && su -c 'invoker --type=silica-qt5 -n /usr/bin/harbour-file-browser'");
+    system("su -c 'mkdir -p /run/user/0/dconf' && \
+            su -c 'env XDG_RUNTIME_DIR=/run/user/100000 \
+                   WAYLAND_DISPLAY=../../display/wayland-0 \
+                   /usr/bin/harbour-file-browser'");
     exit(0);
 }
