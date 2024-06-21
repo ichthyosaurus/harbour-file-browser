@@ -8,13 +8,13 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 ## Unreleased
 
- * This update finally brings over a years worth of new and refined features, bug fixes, and translation updates!
+ * This update finally brings over two years worth of new and refined features, bug fixes, and translation updates!
  * New translations: Ukrainian
  * Updated translations: Spanish, Swedish, Estonian, French, Russian, Chinese, German, English
- * Removed translations: Swiss German (not used by Sailfish)
+ * Removed translations: Swiss German (not available in Sailfish)
  * Removed Paypal donations link, please use Liberapay and avoid Paypal wherever possible
- * Added donation info to the "About" page: it is now possible to buy me a cup of coffee :-) (swipe right multiple times until you reach the "About" page)
- * Added a new page showing currently copied/cut files (swipe right to the shortcuts page, then select "Clipboard")
+ * Added donation info to the "About" page: it is now possible to buy me a cup of coffee :-) (swipe right-to-left multiple times until you reach the "About" page)
+ * Added a new page showing currently copied/cut files (swipe right-to-left to the shortcuts page, then select "Clipboard")
  * Added quick access to overviews of all documents and multimedia files on the shortcuts page (this uses system components that sadly have terrible performance)
  * Added section headers when sorting by file type, which makes it easier to find files of a specific type
  * Added support for creating folders with subfolders and for creating empty files
@@ -30,11 +30,10 @@ SPDX-License-Identifier: GFDL-1.3-or-later
  * Improved directory filtering: hidden files will be shown when the filter string starts with "."
  * Improved root mode:
  *   - it now requires entering your device lock code to access
- *   - note: root mode appears to be broken on Sailfish 4.x
- *   - note: unlocking is handled by the system, File Browser will never see the lock code
+ *   - note: unlocking is handled by the system, File Browser will never see your lock code
  * Improved feedback in case of errors or unexpected events
  * Improved bookmarks handling and removed no longer needed "refresh" pulley option on the shortcuts page
- * Improved manual sorting of renaming of bookmarks: press and hold, then drag and drop to sort them
+ * Improved manual sorting and renaming of bookmarks: press and hold, then drag and drop to sort them
  * Fixed synchronization of bookmarks among multiple app windows
  * Fixed sorting directories by modification date and by size
  * Fixed root mode for Sailfish 4.3 and later
@@ -43,10 +42,10 @@ SPDX-License-Identifier: GFDL-1.3-or-later
  * Fixed searching for hidden files when they are locally configured to be shown
  * Fixed an issue where trying to cut certain system files could possibly break the copying mechanism
  * Fixed showing search/shortcuts from cover
- * Fixed logging when config migration fails
+ * Fixed logging when config migration fails (for Sailjail)
  * Fixed PDF annotations not being saved (not thoroughly tested yet)
  * Fixed many visual glitches, added minor quality-of-life features, and added various new icons
- * Fixed dependency on Busybox by removing all dependencies on it
+ * Removed all dependencies on Busybox
  * Modernized the code base under the hood
  * and much, much more...
 
