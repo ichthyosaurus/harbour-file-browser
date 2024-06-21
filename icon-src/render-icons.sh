@@ -80,3 +80,18 @@ cITEMS=(
 cRESOLUTIONS=(42)
 cTARGETS=(../qml/images)
 render_batch
+
+cNAME="banner image"
+cITEMS=(../dist/banner)
+cRESOLUTIONS=(
+    1080x540++-large
+    540x270++-small
+)
+cTARGETS=(../dist)
+render_batch
+
+cNAME="store icon"
+cITEMS=("$cMY_APP")
+cRESOLUTIONS=(172)
+cTARGETS=(../dist)
+render_batch
