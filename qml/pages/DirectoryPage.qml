@@ -385,7 +385,12 @@ Page {
             id: statusMessage
             enabled: !busyIndicator.enabled &&
                      (fileModel.fileCount === 0 || fileModel.errorMessage !== "")
-            text: fileModel.errorMessage !== "" ? fileModel.errorMessage : qsTr("Empty")
+            text: (fileModel.errorMessage !== "" ?
+                       fileModel.errorMessage :
+                       (currentFilter !== "" ?
+                            qsTr("No match", "as in “no files matched " +
+                                 "the current filter”") :
+                            qsTr("Empty", "as in “this folder is empty”")))
             hintText: (fileModel.errorMessage !== "") ?
                           "" : (currentFilter !== "" ?
                                     qsTr("No files matched the filter.") :
@@ -560,5 +565,4 @@ Page {
             console.log("page: activating done --", dir);
         }
     }
-
 }
