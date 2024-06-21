@@ -142,62 +142,62 @@
     <message>
         <location filename="../src/settings.cpp" line="857"/>
         <source>Memory card</source>
-        <translation type="unfinished"></translation>
+        <translation>记忆卡</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="859"/>
         <source>Attached folder</source>
-        <translation type="unfinished"></translation>
+        <translation>已附加目录</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="861"/>
         <source>Remote folder</source>
-        <translation type="unfinished"></translation>
+        <translation>远程目录</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="864"/>
         <source>Removable media</source>
-        <translation type="unfinished"></translation>
+        <translation>可移动媒介</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1105"/>
         <source>Home</source>
-        <translation type="unfinished">主目录</translation>
+        <translation>主目录</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1113"/>
         <source>Documents</source>
-        <translation type="unfinished">文档</translation>
+        <translation>文档</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1121"/>
         <source>Downloads</source>
-        <translation type="unfinished">下载</translation>
+        <translation>下载</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1129"/>
         <source>Music</source>
-        <translation type="unfinished">音乐</translation>
+        <translation>音乐</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1137"/>
         <source>Pictures</source>
-        <translation type="unfinished">图片</translation>
+        <translation>图片</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1145"/>
         <source>Videos</source>
-        <translation type="unfinished">视频</translation>
+        <translation>视频</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1155"/>
         <source>Android storage</source>
-        <translation type="unfinished">Android 存储</translation>
+        <translation>Android 存储</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1164"/>
         <source>Root</source>
-        <translation type="unfinished">ROOT</translation>
+        <translation>根目录</translation>
     </message>
 </context>
 <context>
@@ -206,17 +206,17 @@
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="54"/>
         <source>Apply</source>
         <comment>as in &apos;apply these changes&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>确定</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="55"/>
         <source>Rename bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>重命名书签</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="89"/>
         <source>Name must not be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>名称不可为空</translation>
     </message>
 </context>
 <context>
@@ -224,12 +224,12 @@
     <message>
         <location filename="../qml/pages/BookmarksSortPage.qml" line="37"/>
         <source>Sort bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>排序书签</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksSortPage.qml" line="38"/>
         <source>Arrange entries by dragging them to the left.</source>
-        <translation type="unfinished"></translation>
+        <translation>将条目拖动到左侧进行调整。</translation>
     </message>
 </context>
 <context>
@@ -281,25 +281,25 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="252"/>
         <source>Open this folder</source>
-        <translation>打开此文件夹</translation>
+        <translation>打开此目录</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
         <source>%n item(s) to be linked</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>将合并 %n 个项目</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="115"/>
         <source>Clear</source>
         <comment>verb as in &apos;clear all contents from the clipboard&apos;</comment>
-        <translation type="unfinished">清除</translation>
+        <translation>清空</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="117"/>
         <source>Clipboard cleared</source>
-        <translation type="unfinished"></translation>
+        <translation>剪贴板已清空</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="256"/>
@@ -357,17 +357,17 @@
         <location filename="../qml/pages/ConsolePage.qml" line="75"/>
         <source>Preview</source>
         <comment>as in &apos;incomplete/aggregated preview of the contents of a file&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>预览</translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="151"/>
         <source>This file appears to be a software package. To install, swipe back and select the “Install” option from the menu.</source>
-        <translation type="unfinished"></translation>
+        <translation>此文件似乎是软件包。要安装软件，请往回滑动，选中菜单中的“安装”选项。</translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="153"/>
         <source>Swipe from the right to view raw contents.</source>
-        <translation type="unfinished"></translation>
+        <translation>从右侧滑动查看原始内容。</translation>
     </message>
     <message>
         <source>Swipe right to view raw contents.</source>
@@ -402,69 +402,69 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="57"/>
         <source>Create</source>
-        <translation type="unfinished">新建</translation>
+        <translation>新建</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="73"/>
         <source>Not permitted</source>
-        <translation type="unfinished"></translation>
+        <translation>权限不足</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="74"/>
         <source>You don&apos;t have permission to change the contents of this directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>你没有更改此目录内容的权限。</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="87"/>
         <source>Create new</source>
-        <translation type="unfinished"></translation>
+        <translation>新建</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="89"/>
         <source>The new folder will be created under “%1”.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation type="unfinished"></translation>
+        <translation>将在“%1”中创建新目录。</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="91"/>
         <source>The new text file will be created under “%1” and can be edited later.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation type="unfinished"></translation>
+        <translation>将在“%1”中新建文本文件，稍后可进行编辑。</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="97"/>
         <source>folder</source>
-        <translation type="unfinished">目录</translation>
+        <translation>文件夹</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="100"/>
         <source>empty text file</source>
-        <translation type="unfinished"></translation>
+        <translation>空文本文件</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="112"/>
         <source>Folder name</source>
-        <translation type="unfinished">目录名</translation>
+        <translation>目录名</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="112"/>
         <source>File name</source>
-        <translation type="unfinished"></translation>
+        <translation>文件名</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="131"/>
         <source>File names must not contain slashes. To create a new file in a folder below “%1”, first create a folder and then create the file.</source>
-        <translation type="unfinished"></translation>
+        <translation>文件名不可包含斜杠。要在“%1”下的子目录中创建新文件，请先新建目录再创建文件。</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="135"/>
         <source>A file or folder with this name already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>已存在同名文件或文件夹。</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="138"/>
         <source>Using slashes in folder names will create sub-folders, like so:</source>
-        <translation type="unfinished"></translation>
+        <translation>在目录名中使用斜杠会建立子目录，比如：</translation>
     </message>
 </context>
 <context>
@@ -473,7 +473,7 @@
         <location filename="../qml/components/DetailList.qml" line="45"/>
         <source>... and %n more</source>
         <translation>
-            <numerusform>…再多显示 %n 个。</numerusform>
+            <numerusform>…再多显示 %n 个</numerusform>
         </translation>
     </message>
 </context>
@@ -523,7 +523,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="155"/>
         <source>Create New...</source>
-        <translation type="unfinished"></translation>
+        <translation>新建…</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="186"/>
@@ -663,7 +663,7 @@
     <message>
         <location filename="../src/engine.cpp" line="296"/>
         <source>Binary file preview clipped at %1 kB</source>
-        <translation>二进制文件预览剪切 %1 KB。</translation>
+        <translation>二进制文件预览已在 %1 KB 处截断</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="315"/>
@@ -683,12 +683,12 @@
     <message>
         <location filename="../src/engine.cpp" line="354"/>
         <source>No permissions to create “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>没有在“%2”中创建“%1”的权限</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="365"/>
         <source>Cannot create file “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>无法在“%2”中创建文件“%1”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="385"/>
@@ -806,17 +806,17 @@
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="32"/>
         <source>Copy</source>
-        <translation type="unfinished">复制</translation>
+        <translation>复制</translation>
     </message>
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="33"/>
         <source>Move</source>
-        <translation type="unfinished">移动</translation>
+        <translation>移动</translation>
     </message>
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="34"/>
         <source>Link</source>
-        <translation type="unfinished">链接</translation>
+        <translation>链接</translation>
     </message>
 </context>
 <context>
@@ -919,12 +919,12 @@
     <message>
         <location filename="../qml/pages/FileOperationsPage.qml" line="60"/>
         <source>Tasks</source>
-        <translation type="unfinished"></translation>
+        <translation>任务</translation>
     </message>
     <message>
         <location filename="../qml/pages/FileOperationsPage.qml" line="81"/>
         <source>Empty</source>
-        <translation type="unfinished">空</translation>
+        <translation>空</translation>
     </message>
 </context>
 <context>
@@ -993,7 +993,7 @@
         <location filename="../qml/pages/FilePage.qml" line="106"/>
         <source>Swipe from the right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>从右向左滑动查看其内容。</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="119"/>
@@ -1162,323 +1162,323 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="45"/>
         <source>App Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>应用设置</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="50"/>
         <source>Directory View</source>
-        <translation type="unfinished"></translation>
+        <translation>目录视图</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="61"/>
         <source>Use per-directory view settings</source>
-        <translation type="unfinished">使用目录视图设置</translation>
+        <translation>使用目录单独的视图设置</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="63"/>
         <source>Save view preferences individually for all folders in your home directory. The options below are used by default.</source>
-        <translation type="unfinished"></translation>
+        <translation>为主目录中所有文件夹单独保存视图设置。默认使用下面的设置。</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="67"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">显示隐藏文件</translation>
+        <translation>显示隐藏文件</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="69"/>
         <source>Show files with names starting with a full stop (“.”).</source>
-        <translation type="unfinished"></translation>
+        <translation>显示名称开头为半角句号（“.”）的文件。</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="72"/>
         <source>Show preview images</source>
-        <translation type="unfinished">显示预览图</translation>
+        <translation>显示预览图</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="74"/>
         <source>Preview contents of supported file types.</source>
-        <translation type="unfinished"></translation>
+        <translation>预览受支持文件的内容。</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="77"/>
         <source>Thumbnail size</source>
-        <translation type="unfinished">缩略图大小</translation>
+        <translation>缩略图大小</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="83"/>
         <source>small</source>
-        <translation type="unfinished">小</translation>
+        <translation>小</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="84"/>
         <source>medium</source>
-        <translation type="unfinished">中</translation>
+        <translation>中</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="85"/>
         <source>large</source>
-        <translation type="unfinished">大</translation>
+        <translation>大</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="86"/>
         <source>huge</source>
-        <translation type="unfinished">巨大</translation>
+        <translation>巨大</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="93"/>
         <source>Sorting</source>
-        <translation type="unfinished">分类</translation>
+        <translation>分类</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="103"/>
         <source>Show folders first</source>
-        <translation type="unfinished">先显示目录</translation>
+        <translation>先显示目录</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="105"/>
         <source>Always show folders at the top of the file list.</source>
-        <translation type="unfinished"></translation>
+        <translation>文件夹总在文件列表顶部显示。</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="108"/>
         <source>Show hidden files last</source>
-        <translation type="unfinished"></translation>
+        <translation>最后显示隐藏文件</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="110"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
-        <translation type="unfinished"></translation>
+        <translation>名称开头带句点（“.”）的文件总在文件列表末尾显示。</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="113"/>
         <source>Sort by</source>
-        <translation type="unfinished">分类方式</translation>
+        <translation>分类方式</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="119"/>
         <source>name</source>
-        <translation type="unfinished">名称</translation>
+        <translation>名称</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="120"/>
         <source>size</source>
-        <translation type="unfinished">大小</translation>
+        <translation>大小</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="121"/>
         <source>file age</source>
-        <translation type="unfinished"></translation>
+        <translation>创建时间</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="122"/>
         <source>file type</source>
-        <translation type="unfinished">文件类型</translation>
+        <translation>文件类型</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="126"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished">区分大小写</translation>
+        <translation>区分大小写</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="128"/>
         <source>Show files with names starting with a capital letter first.</source>
-        <translation type="unfinished"></translation>
+        <translation>先显示名称开头字母大写的文件。</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="132"/>
         <source>Sort order</source>
-        <translation type="unfinished">排序</translation>
+        <translation>排序</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="140"/>
         <source>Sort names starting with the beginning of the alphabet first.</source>
-        <translation type="unfinished"></translation>
+        <translation>首字母在靠前的文件名排在前面。</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="142"/>
         <source>Show smaller files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>较小文件排在前面。</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="144"/>
         <source>Show more recent files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>最近文件排在前面。</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="148"/>
         <source>Sort names starting with the end of the alphabet first.</source>
-        <translation type="unfinished"></translation>
+        <translation>首字母靠后的文件排在前面。</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="150"/>
         <source>Show larger files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>较大文件排在前面。</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="152"/>
         <source>Show older files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>较旧文件排在前面。</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="161"/>
         <source>ascending</source>
-        <translation type="unfinished"></translation>
+        <translation>升序</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="165"/>
         <source>descending</source>
-        <translation type="unfinished"></translation>
+        <translation>降序</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="173"/>
         <source>Behavior and View</source>
-        <translation type="unfinished">行为及视图</translation>
+        <translation>行为及视图</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="184"/>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="200"/>
         <source>Initial directory</source>
-        <translation type="unfinished"></translation>
+        <translation>初始目录</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="189"/>
         <source>The directory that is shown when the app starts.</source>
-        <translation type="unfinished"></translation>
+        <translation>应用启动时显示的目录。</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="192"/>
         <source>user&apos;s home</source>
-        <translation type="unfinished"></translation>
+        <translation>用户主目录</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="193"/>
         <source>last visited</source>
-        <translation type="unfinished"></translation>
+        <translation>最近访问</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="194"/>
         <source>custom path</source>
-        <translation type="unfinished"></translation>
+        <translation>自定义路径</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="216"/>
         <source>Choose</source>
-        <translation type="unfinished"></translation>
+        <translation>选择</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="231"/>
         <source>Default transfer action</source>
-        <translation type="unfinished">默认传输操作</translation>
+        <translation>默认传输操作</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="235"/>
         <source>The action that is selected by default when using the bulk file management feature (available through the “shuffle” icon after selecting files).</source>
-        <translation type="unfinished"></translation>
+        <translation>使用批量管理功能（选择文件后可通过“重排”图标使用）时，默认选中的操作。</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="240"/>
         <source>copy</source>
-        <translation type="unfinished">复制</translation>
+        <translation>复制</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="241"/>
         <source>move</source>
-        <translation type="unfinished">移动</translation>
+        <translation>移动</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="242"/>
         <source>link</source>
-        <translation type="unfinished">链接</translation>
+        <translation>链接</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="243"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation>无</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="247"/>
         <source>Default filter line action</source>
-        <translation type="unfinished">默认筛选操作</translation>
+        <translation>默认筛选操作</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="251"/>
         <source>Which action to take when the Enter key is pressed in the filter line in a directory&apos;s pull-down menu.</source>
-        <translation type="unfinished"></translation>
+        <translation>在目录下拉菜单中的筛选框按下回车时，要进行的操作。</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="255"/>
         <source>return to directory view</source>
-        <translation type="unfinished">返回目录视图</translation>
+        <translation>返回目录视图</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="256"/>
         <source>start recursive search</source>
-        <translation type="unfinished">打开循环搜索</translation>
+        <translation>开始递归搜索</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="260"/>
         <source>File name abbreviation</source>
-        <translation type="unfinished">文件名称缩写</translation>
+        <translation>文件名称缩写</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="264"/>
         <source>How very long filenames are abbreviated in the directory view.</source>
-        <translation type="unfinished"></translation>
+        <translation>目录视图中较长文件名的缩写方式。</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="267"/>
         <source>fade out</source>
-        <translation type="unfinished">淡出</translation>
+        <translation>淡出</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="268"/>
         <source>elide end</source>
-        <translation type="unfinished">缩写后端</translation>
+        <translation>缩写末尾</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="269"/>
         <source>elide middle</source>
-        <translation type="unfinished">缩写中端</translation>
+        <translation>缩写中间</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="273"/>
         <source>Show full directory paths</source>
-        <translation type="unfinished">显示完整目录路径</translation>
+        <translation>显示完整目录路径</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="275"/>
         <source>Show the full path in the page header of the directory view.</source>
-        <translation type="unfinished"></translation>
+        <translation>在目录视图页面头部显示完整路径。</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="278"/>
         <source>Show navigation menu icon</source>
-        <translation type="unfinished">显示导航菜单图标</translation>
+        <translation>显示导航菜单图标</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="280"/>
         <source>Show a visual hint that the navigation menu is available by tapping the page header of the directory view.</source>
-        <translation type="unfinished"></translation>
+        <translation>显示视觉提示，说明可以通过点击目录视图页面头部使用导航菜单。</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="292"/>
         <source>Enable solid window background</source>
-        <translation type="unfinished">启用纯色窗口背景</translation>
+        <translation>启用纯色窗口背景</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="294"/>
         <source>Use a solid color instead of your wallpaper as the background of this app.</source>
-        <translation type="unfinished"></translation>
+        <translation>使用纯色而不是壁纸作为应用背景。</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="304"/>
         <source>Swipe from the right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
-        <translation type="unfinished"></translation>
+        <translation>从右向左滑动来查看文件浏览器的源代码、许可证信息与贡献者列表。</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="319"/>
         <source>Settings</source>
-        <translation type="unfinished">设置</translation>
+        <translation>设置</translation>
     </message>
 </context>
 <context>
@@ -1968,7 +1968,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="119"/>
         <source>License text</source>
-        <translation type="unfinished"></translation>
+        <translation>许可证文本</translation>
     </message>
 </context>
 <context>
@@ -2053,7 +2053,7 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="108"/>
         <location filename="../qml/modules/Opal/About/private/ChangelogPage.qml" line="16"/>
         <source>Changelog</source>
-        <translation type="unfinished"></translation>
+        <translation>更新日志</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="123"/>
@@ -2155,17 +2155,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="60"/>
         <source>News</source>
-        <translation type="unfinished"></translation>
+        <translation>新闻</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="61"/>
         <source>Changes since version %1</source>
-        <translation type="unfinished"></translation>
+        <translation>自 %1 版本以来的更改</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="120"/>
         <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>请参见 &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
 </context>
 <context>
@@ -2225,12 +2225,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="138"/>
         <source>Root</source>
-        <translation type="unfinished">ROOT</translation>
+        <translation>根目录</translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="143"/>
         <source>Places</source>
-        <translation type="unfinished">位置</translation>
+        <translation>位置</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/PathEditDialog.qml" line="331"/>
@@ -2266,7 +2266,8 @@ exposure program</extracomment>
         <location filename="../qml/pages/PermissionsDialog.qml" line="84"/>
         <source>Change permissions for
 %1</source>
-        <translation>修改 %1 权限</translation>
+        <translation>修改下列文件权限：
+%1</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="104"/>
@@ -2345,7 +2346,8 @@ exposure program</extracomment>
         <location filename="../qml/pages/RenameDialog.qml" line="85"/>
         <source>Give a new name for
 %1</source>
-        <translation>重命名 %1</translation>
+        <translation>为下列文件重命名：
+%1</translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="95"/>
@@ -2661,7 +2663,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsDialog.qml" line="32"/>
         <source>Select</source>
-        <translation type="unfinished">选择</translation>
+        <translation>选择</translation>
     </message>
 </context>
 <context>
@@ -2674,17 +2676,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="209"/>
         <source>Rename</source>
-        <translation type="unfinished">重命名</translation>
+        <translation>重命名</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="216"/>
         <source>Sort</source>
-        <translation type="unfinished"></translation>
+        <translation>排序</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="222"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>删除</translation>
     </message>
     <message>
         <source>Nothing to show here...</source>
@@ -2767,7 +2769,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="67"/>
         <source>Transfers</source>
-        <translation type="unfinished"></translation>
+        <translation>传输</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="72"/>
@@ -2802,7 +2804,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="245"/>
         <source>New window opened. Sometimes the application stays in the background.</source>
-        <translation type="unfinished"></translation>
+        <translation>已打开新窗口。应用有时会在后台继续运行。</translation>
     </message>
     <message>
         <source>New window opened</source>
@@ -2976,7 +2978,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/StorageSizeBar.qml" line="85"/>
         <source>%1 free</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 空闲</translation>
     </message>
 </context>
 <context>
@@ -2984,27 +2986,27 @@ exposure program</extracomment>
     <message>
         <location filename="../src/texteditor.cpp" line="61"/>
         <source>Cannot open “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>无法打开 “%1”</translation>
     </message>
     <message>
         <location filename="../src/texteditor.cpp" line="67"/>
         <source>File “%1” is too large to be edited</source>
-        <translation type="unfinished"></translation>
+        <translation>文件 “%1” 太大，无法编辑</translation>
     </message>
     <message>
         <location filename="../src/texteditor.cpp" line="81"/>
         <source>No file name specified</source>
-        <translation type="unfinished"></translation>
+        <translation>未指定文件名</translation>
     </message>
     <message>
         <location filename="../src/texteditor.cpp" line="86"/>
         <source>No permission to write to “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>没有写入 “%1” 的权限</translation>
     </message>
     <message>
         <location filename="../src/texteditor.cpp" line="92"/>
         <source>Cannot open “%1” for writing</source>
-        <translation type="unfinished"></translation>
+        <translation>无法打开 “%1” 用于写入</translation>
     </message>
 </context>
 <context>
@@ -3013,49 +3015,49 @@ exposure program</extracomment>
         <location filename="../qml/pages/TextEditorDialog.qml" line="60"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation type="unfinished"></translation>
+        <translation>文件浏览器</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="77"/>
         <location filename="../qml/pages/TextEditorDialog.qml" line="101"/>
         <source>Failed to open “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>无法打开 “%1”</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="79"/>
         <source>Failed to save “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>无法保存 “%1”</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="81"/>
         <source>Failed to edit “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>无法编辑 “%1”</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="98"/>
         <source>Open externally</source>
-        <translation type="unfinished"></translation>
+        <translation>用外部应用打开</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="102"/>
         <source>No application to open the file</source>
-        <translation type="unfinished">没有可以打开该文件的软件</translation>
+        <translation>没有可以打开该文件的程序</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="109"/>
         <source>Disable predictive text input</source>
-        <translation type="unfinished"></translation>
+        <translation>禁用输入预测</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="110"/>
         <source>Enable predictive text input</source>
-        <translation type="unfinished"></translation>
+        <translation>启用输入预测</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="116"/>
         <location filename="../qml/pages/TextEditorDialog.qml" line="124"/>
         <source>Save</source>
-        <translation type="unfinished">储存</translation>
+        <translation>保存</translation>
     </message>
 </context>
 <context>
@@ -3078,7 +3080,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="63"/>
         <source>Clear selection</source>
-        <translation type="unfinished"></translation>
+        <translation>清除选区</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="84"/>
@@ -3110,15 +3112,15 @@ exposure program</extracomment>
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="113"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n 个项目</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="114"/>
         <source>%n target(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n 个目标</numerusform>
         </translation>
     </message>
     <message>
@@ -3257,7 +3259,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewPage.qml" line="49"/>
         <source>Edit</source>
         <comment>verb as in &apos;edit this file&apos;</comment>
-        <translation type="unfinished">编辑</translation>
+        <translation>编辑</translation>
     </message>
 </context>
 <context>
@@ -3265,137 +3267,137 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="49"/>
         <source>Sorting and View</source>
-        <translation type="unfinished">分类及视图</translation>
+        <translation>分类及视图</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="51"/>
         <source>Settings apply only to the current folder. Swipe from the right to change default values.</source>
-        <translation type="unfinished"></translation>
+        <translation>设置只对当前目录生效。从右向左滑动来改变默认值。</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="52"/>
         <source>Settings apply to all folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>设置对所有目录生效。</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="62"/>
         <source>Sort by...</source>
-        <translation type="unfinished">分类方式...</translation>
+        <translation>分类方式...</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="66"/>
         <source>Name</source>
-        <translation type="unfinished">名称</translation>
+        <translation>名称</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="67"/>
         <source>Size</source>
-        <translation type="unfinished">大小</translation>
+        <translation>大小</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="68"/>
         <source>File age</source>
-        <translation type="unfinished"></translation>
+        <translation>创建时间</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="69"/>
         <source>File type</source>
-        <translation type="unfinished">文件类型</translation>
+        <translation>文件类型</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="77"/>
         <source>Order...</source>
-        <translation type="unfinished">顺序...</translation>
+        <translation>顺序...</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="81"/>
         <source>ascending</source>
-        <translation type="unfinished"></translation>
+        <translation>升序</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="82"/>
         <source>descending</source>
-        <translation type="unfinished"></translation>
+        <translation>降序</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="90"/>
         <source>Preview images...</source>
-        <translation type="unfinished">预览图片...</translation>
+        <translation>预览图片...</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="93"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation>无</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="94"/>
         <source>small</source>
-        <translation type="unfinished">小</translation>
+        <translation>小</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="95"/>
         <source>medium</source>
-        <translation type="unfinished">中</translation>
+        <translation>中</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="96"/>
         <source>large</source>
-        <translation type="unfinished">大</translation>
+        <translation>大</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="97"/>
         <source>huge</source>
-        <translation type="unfinished">巨大</translation>
+        <translation>巨大</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="110"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">显示隐藏文件</translation>
+        <translation>显示隐藏文件</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="112"/>
         <source>Show files with names starting with a full stop (“.”).</source>
-        <translation type="unfinished"></translation>
+        <translation>显示文件名开头为句点（“.”）的文件。</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="116"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished"></translation>
+        <translation>启用图库模式</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="117"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished">在图库模式下，图片将显示为舒适的大图片，除图片、视频和目录外的所有条目将被隐藏。</translation>
+        <translation>在图库模式下，将显示舒适的大图片，除图片、视频和目录外的所有条目将被隐藏。</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="127"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished">区分大小写</translation>
+        <translation>区分大小写</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="129"/>
         <source>Show files with names starting with a capital letter first.</source>
-        <translation type="unfinished"></translation>
+        <translation>先显示名称开头字母大写的文件。</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="134"/>
         <source>Show folders first</source>
-        <translation type="unfinished">先显示目录</translation>
+        <translation>先显示目录</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="136"/>
         <source>Always show folders at the top of the file list.</source>
-        <translation type="unfinished"></translation>
+        <translation>文件夹总在文件列表顶部显示。</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="140"/>
         <source>Show hidden files last</source>
-        <translation type="unfinished"></translation>
+        <translation>最后显示隐藏文件</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="142"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
-        <translation type="unfinished"></translation>
+        <translation>名称开头带句点（“.”）的文件总在文件列表末尾显示。</translation>
     </message>
 </context>
 <context>
@@ -3422,12 +3424,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/js/files.js" line="32"/>
         <source>Linking</source>
-        <translation type="unfinished">链接</translation>
+        <translation>链接</translation>
     </message>
     <message>
         <location filename="../qml/js/files.js" line="35"/>
         <source>Unknown</source>
-        <translation type="unfinished">未知</translation>
+        <translation>未知</translation>
     </message>
 </context>
 <context>

@@ -1191,308 +1191,308 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="63"/>
         <source>Save view preferences individually for all folders in your home directory. The options below are used by default.</source>
-        <translation type="unfinished"></translation>
+        <translation>Guarda las preferencias de la visualización individualmente para todas las carpetas de tu directorio inicial. Las siguientes opciones se utilizan por defecto.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="67"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">Mostrar archivos ocultos</translation>
+        <translation>Mostrar los archivos ocultos</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="69"/>
         <source>Show files with names starting with a full stop (“.”).</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar los archivos cuyos nombres empiecen por un punto (&quot;.&quot;).</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="72"/>
         <source>Show preview images</source>
-        <translation type="unfinished">Mostrar vista previa de imágenes</translation>
+        <translation>Mostrar las vistas previas de las imágenes</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="74"/>
         <source>Preview contents of supported file types.</source>
-        <translation type="unfinished"></translation>
+        <translation>Previsualiza el contenido de los tipos de los archivos compatibles.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="77"/>
         <source>Thumbnail size</source>
-        <translation type="unfinished">Tamaño de miniaturas</translation>
+        <translation>Tamaño de la miniatura</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="83"/>
         <source>small</source>
-        <translation type="unfinished">pequeño</translation>
+        <translation>pequeña</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="84"/>
         <source>medium</source>
-        <translation type="unfinished">mediano</translation>
+        <translation>mediana</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="85"/>
         <source>large</source>
-        <translation type="unfinished">grande</translation>
+        <translation>grande</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="86"/>
         <source>huge</source>
-        <translation type="unfinished">enorme</translation>
+        <translation>enorme</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="93"/>
         <source>Sorting</source>
-        <translation type="unfinished">Orden</translation>
+        <translation>Clasificar</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="103"/>
         <source>Show folders first</source>
-        <translation type="unfinished">Mostrar carpetas primero</translation>
+        <translation>Mostrar primero las carpetas</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="105"/>
         <source>Always show folders at the top of the file list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar siempre las carpetas en la parte superior de la lista de los archivos.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="108"/>
         <source>Show hidden files last</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar los archivos ocultos al final</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="110"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar siempre los archivos que empiezan por un punto (&quot;.&quot;) al final de la lista de los archivos.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="113"/>
         <source>Sort by</source>
-        <translation type="unfinished">Ordenar por</translation>
+        <translation>Clasificar por</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="119"/>
         <source>name</source>
-        <translation type="unfinished">nombre</translation>
+        <translation>nombre</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="120"/>
         <source>size</source>
-        <translation type="unfinished">tamaño</translation>
+        <translation>tamaño</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="121"/>
         <source>file age</source>
-        <translation type="unfinished"></translation>
+        <translation>antigüedad</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="122"/>
         <source>file type</source>
-        <translation type="unfinished">tipo de archivo</translation>
+        <translation>tipo del archivo</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="126"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished">Ordenar distinguiendo mayúsculas y minúsculas</translation>
+        <translation>Ordenar distinguiendo entre mayúsculas y minúsculas</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="128"/>
         <source>Show files with names starting with a capital letter first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar primero los archivos cuyos nombres empiezan por una mayúscula.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="132"/>
         <source>Sort order</source>
-        <translation type="unfinished">Orden de ordenación</translation>
+        <translation>Orden de la clasificación</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="140"/>
         <source>Sort names starting with the beginning of the alphabet first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordenar los archivos por orden alfabético.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="142"/>
         <source>Show smaller files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar primero los archivos más pequeños.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="144"/>
         <source>Show more recent files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar primero los archivos más recientes.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="148"/>
         <source>Sort names starting with the end of the alphabet first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordenar los nombres alfabéticamente en orden descendente.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="150"/>
         <source>Show larger files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar primero los archivos más grandes.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="152"/>
         <source>Show older files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar primero los archivos más antiguos.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="161"/>
         <source>ascending</source>
-        <translation type="unfinished"></translation>
+        <translation>ascendente</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="165"/>
         <source>descending</source>
-        <translation type="unfinished"></translation>
+        <translation>descendente</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="173"/>
         <source>Behavior and View</source>
-        <translation type="unfinished">Comportamiento y vista</translation>
+        <translation>Comportamiento y opinión</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="184"/>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="200"/>
         <source>Initial directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Directorio inicial</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="189"/>
         <source>The directory that is shown when the app starts.</source>
-        <translation type="unfinished"></translation>
+        <translation>El directorio que se muestra cuando se inicia la aplicación.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="192"/>
         <source>user&apos;s home</source>
-        <translation type="unfinished"></translation>
+        <translation>Directorio de usuarios</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="193"/>
         <source>last visited</source>
-        <translation type="unfinished"></translation>
+        <translation>último visitado</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="194"/>
         <source>custom path</source>
-        <translation type="unfinished"></translation>
+        <translation>ruta personalizada</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="216"/>
         <source>Choose</source>
-        <translation type="unfinished"></translation>
+        <translation>Elegir</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="231"/>
         <source>Default transfer action</source>
-        <translation type="unfinished">Acción de transferir por defecto</translation>
+        <translation>Acción de transferencia por defecto</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="235"/>
         <source>The action that is selected by default when using the bulk file management feature (available through the “shuffle” icon after selecting files).</source>
-        <translation type="unfinished"></translation>
+        <translation>La acción que se selecciona por defecto cuando se utiliza la función de gestión masiva de archivos (disponible a través del icono &quot;aleatorio&quot; después de seleccionar los archivos).</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="240"/>
         <source>copy</source>
-        <translation type="unfinished"></translation>
+        <translation>copiar</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="241"/>
         <source>move</source>
-        <translation type="unfinished">mover</translation>
+        <translation>mover</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="242"/>
         <source>link</source>
-        <translation type="unfinished">enlace</translation>
+        <translation>enlace</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="243"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation>ninguno</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="247"/>
         <source>Default filter line action</source>
-        <translation type="unfinished">Acción de línea de filtro por defecto</translation>
+        <translation>Acción predeterminada de la línea del filtro</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="251"/>
         <source>Which action to take when the Enter key is pressed in the filter line in a directory&apos;s pull-down menu.</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Qué sucede cuando se presiona la tecla Intro en la fila del filtro en el menú de la vista de la carpeta?</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="255"/>
         <source>return to directory view</source>
-        <translation type="unfinished">volver a vista de directorio</translation>
+        <translation>volver a la vista del directorio</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="256"/>
         <source>start recursive search</source>
-        <translation type="unfinished">iniciar búsqueda recursiva</translation>
+        <translation>ejecutar una búsqueda recursiva</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="260"/>
         <source>File name abbreviation</source>
-        <translation type="unfinished">Nombre de archivo abreviado</translation>
+        <translation>Abreviatura del nombre del archivo</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="264"/>
         <source>How very long filenames are abbreviated in the directory view.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cómo se abrevian los nombres de los archivos muy largos en la vista de los directorios.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="267"/>
         <source>fade out</source>
-        <translation type="unfinished">difuminar</translation>
+        <translation>desvanecer</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="268"/>
         <source>elide end</source>
-        <translation type="unfinished">omitir final</translation>
+        <translation>omitir el final</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="269"/>
         <source>elide middle</source>
-        <translation type="unfinished">omitir mitad</translation>
+        <translation>reemplazar lo del medio</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="273"/>
         <source>Show full directory paths</source>
-        <translation type="unfinished">Mostrar rutas de directorio completas</translation>
+        <translation>Mostrar las rutas completas de los directorios</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="275"/>
         <source>Show the full path in the page header of the directory view.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar la ruta completa en la cabecera de la página de la vista del directorio.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="278"/>
         <source>Show navigation menu icon</source>
-        <translation type="unfinished">Mostrar icono de menú de navegación</translation>
+        <translation>Mostrar el icono del menú de navegación</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="280"/>
         <source>Show a visual hint that the navigation menu is available by tapping the page header of the directory view.</source>
-        <translation type="unfinished"></translation>
+        <translation>Muestra una sugerencia visual de que el menú de navegación está disponible tocando la cabecera de la página de la vista del directorio.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="292"/>
         <source>Enable solid window background</source>
-        <translation type="unfinished">Activar fondo de ventana sólido</translation>
+        <translation>Activar el fondo de la ventana sólido</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="294"/>
         <source>Use a solid color instead of your wallpaper as the background of this app.</source>
-        <translation type="unfinished"></translation>
+        <translation>Utiliza un color sólido en lugar de tu fondo de pantalla como fondo de esta aplicación.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="304"/>
         <source>Swipe from the right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Desliza el dedo desde la derecha para ver el código fuente del Navegador de los archivos, la información sobre la licencia y una lista de los colaboradores.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="319"/>
         <source>Settings</source>
-        <translation type="unfinished">Ajustes</translation>
+        <translation>Ajustes</translation>
     </message>
 </context>
 <context>
@@ -2379,12 +2379,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="138"/>
         <source>Root</source>
-        <translation type="unfinished">Raíz</translation>
+        <translation>Root</translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="143"/>
         <source>Places</source>
-        <translation type="unfinished">Lugares</translation>
+        <translation>Sitios</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/PathEditDialog.qml" line="331"/>
@@ -2821,7 +2821,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsDialog.qml" line="32"/>
         <source>Select</source>
-        <translation type="unfinished">Seleccionar</translation>
+        <translation>Seleccionar</translation>
     </message>
 </context>
 <context>
@@ -2834,17 +2834,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="209"/>
         <source>Rename</source>
-        <translation type="unfinished">Renombrar</translation>
+        <translation>Cambie el nombre</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="216"/>
         <source>Sort</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordenar</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="222"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Quitar</translation>
     </message>
     <message>
         <source>Nothing to show here...</source>
@@ -2927,7 +2927,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="67"/>
         <source>Transfers</source>
-        <translation type="unfinished"></translation>
+        <translation>Transferencias</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="72"/>
@@ -2962,7 +2962,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="245"/>
         <source>New window opened. Sometimes the application stays in the background.</source>
-        <translation type="unfinished"></translation>
+        <translation>Se abre una nueva ventana. A veces la aplicación permanece en segundo plano.</translation>
     </message>
     <message>
         <source>New window opened</source>
@@ -3138,7 +3138,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/StorageSizeBar.qml" line="85"/>
         <source>%1 free</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 libre</translation>
     </message>
 </context>
 <context>
@@ -3146,27 +3146,27 @@ exposure program</extracomment>
     <message>
         <location filename="../src/texteditor.cpp" line="61"/>
         <source>Cannot open “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>No se puede abrir &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../src/texteditor.cpp" line="67"/>
         <source>File “%1” is too large to be edited</source>
-        <translation type="unfinished"></translation>
+        <translation>El fichero &quot;%1&quot; es demasiado grande para ser editado</translation>
     </message>
     <message>
         <location filename="../src/texteditor.cpp" line="81"/>
         <source>No file name specified</source>
-        <translation type="unfinished"></translation>
+        <translation>No se ha especificado ningún nombre para el archivo</translation>
     </message>
     <message>
         <location filename="../src/texteditor.cpp" line="86"/>
         <source>No permission to write to “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>No hay permisos para escribir en &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../src/texteditor.cpp" line="92"/>
         <source>Cannot open “%1” for writing</source>
-        <translation type="unfinished"></translation>
+        <translation>No se puede abrir &quot;%1&quot; para modificarlo</translation>
     </message>
 </context>
 <context>
@@ -3175,49 +3175,49 @@ exposure program</extracomment>
         <location filename="../qml/pages/TextEditorDialog.qml" line="60"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation type="unfinished"></translation>
+        <translation>Navegador de archivos</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="77"/>
         <location filename="../qml/pages/TextEditorDialog.qml" line="101"/>
         <source>Failed to open “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Error al abrir &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="79"/>
         <source>Failed to save “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Error al guardar &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="81"/>
         <source>Failed to edit “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Error al editar &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="98"/>
         <source>Open externally</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir externamente</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="102"/>
         <source>No application to open the file</source>
-        <translation type="unfinished">No hay ninguna aplicación para abrir el archivo</translation>
+        <translation>No hay aplicaciónes para abrir el archivo</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="109"/>
         <source>Disable predictive text input</source>
-        <translation type="unfinished"></translation>
+        <translation>Desactivar el texto predictivo</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="110"/>
         <source>Enable predictive text input</source>
-        <translation type="unfinished"></translation>
+        <translation>Activar el texto predictivo</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="116"/>
         <location filename="../qml/pages/TextEditorDialog.qml" line="124"/>
         <source>Save</source>
-        <translation type="unfinished">Guardar</translation>
+        <translation>Guardar</translation>
     </message>
 </context>
 <context>
@@ -3240,7 +3240,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="63"/>
         <source>Clear selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar la selección</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="84"/>
@@ -3274,17 +3274,19 @@ exposure program</extracomment>
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="113"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n elemento</numerusform>
+            <numerusform>%n elementos</numerusform>
             <numerusform>%n elementos</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="114"/>
         <source>%n target(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n objetivo</numerusform>
+            <numerusform>%n objetivos</numerusform>
+            <numerusform>%n objetivos</numerusform>
         </translation>
     </message>
     <message>
@@ -3431,7 +3433,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewPage.qml" line="49"/>
         <source>Edit</source>
         <comment>verb as in &apos;edit this file&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Modificar</translation>
     </message>
 </context>
 <context>
@@ -3439,137 +3441,137 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="49"/>
         <source>Sorting and View</source>
-        <translation type="unfinished">Orden y visualización</translation>
+        <translation>Clasificación y visualización</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="51"/>
         <source>Settings apply only to the current folder. Swipe from the right to change default values.</source>
-        <translation type="unfinished"></translation>
+        <translation>Los ajustes sólo se aplican a la carpeta actual. Desliza el dedo desde la derecha para cambiar los valores predeterminados.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="52"/>
         <source>Settings apply to all folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>La configuración se aplica a todas las carpetas.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="62"/>
         <source>Sort by...</source>
-        <translation type="unfinished">Ordenar por...</translation>
+        <translation>Ordenar por...</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="66"/>
         <source>Name</source>
-        <translation type="unfinished">Nombre</translation>
+        <translation>Nombre</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="67"/>
         <source>Size</source>
-        <translation type="unfinished">Tamaño</translation>
+        <translation>Tamaño</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="68"/>
         <source>File age</source>
-        <translation type="unfinished"></translation>
+        <translation>Antigüedad del archivo</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="69"/>
         <source>File type</source>
-        <translation type="unfinished">Tipo de archivo</translation>
+        <translation>Tipo de fichero</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="77"/>
         <source>Order...</source>
-        <translation type="unfinished">Orden...</translation>
+        <translation>Orden...</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="81"/>
         <source>ascending</source>
-        <translation type="unfinished"></translation>
+        <translation>ascendente</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="82"/>
         <source>descending</source>
-        <translation type="unfinished"></translation>
+        <translation>descendente</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="90"/>
         <source>Preview images...</source>
-        <translation type="unfinished">Vista previa de imágenes...</translation>
+        <translation>Vista previa de las imágenes...</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="93"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation>ninguna</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="94"/>
         <source>small</source>
-        <translation type="unfinished">pequeño</translation>
+        <translation>pequeño</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="95"/>
         <source>medium</source>
-        <translation type="unfinished">mediano</translation>
+        <translation>medio</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="96"/>
         <source>large</source>
-        <translation type="unfinished">grande</translation>
+        <translation>grande</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="97"/>
         <source>huge</source>
-        <translation type="unfinished">enorme</translation>
+        <translation>enorme</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="110"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">Mostrar archivos ocultos</translation>
+        <translation>Mostrar los archivos ocultos</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="112"/>
         <source>Show files with names starting with a full stop (“.”).</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar los archivos cuyos nombres empiecen por un punto (&quot;.&quot;).</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="116"/>
         <source>Enable gallery mode</source>
-        <translation type="unfinished">Habilitar modo galería</translation>
+        <translation>Activar el modo galería</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="117"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="unfinished">Con el modo galería, las imágenes se mostrarán holgadamente grandes, y todas las entradas, salvo imágenes, vídeos y directorios estarán ocultos.</translation>
+        <translation>En el modo galería, las imágenes se mostrarán en un tamaño cómodo y se ocultarán todas las entradas, excepto las imágenes, los vídeos y los directorios.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="127"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished">Ordenar distinguiendo mayúsculas y minúsculas</translation>
+        <translation>Ordenar según los casos</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="129"/>
         <source>Show files with names starting with a capital letter first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar primero los archivos cuyos nombres empiezan por una mayúscula.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="134"/>
         <source>Show folders first</source>
-        <translation type="unfinished">Mostrar carpetas primero</translation>
+        <translation>Mostrar las carpetas primero</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="136"/>
         <source>Always show folders at the top of the file list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar siempre las carpetas en la parte superior de la lista de los archivos.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="140"/>
         <source>Show hidden files last</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar los archivos ocultos en último lugar</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="142"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar siempre los archivos que empiezan por un punto (&quot;.&quot;) al final de la lista de archivos.</translation>
     </message>
 </context>
 <context>
@@ -3596,12 +3598,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/js/files.js" line="32"/>
         <source>Linking</source>
-        <translation type="unfinished">Creando enlace</translation>
+        <translation>Vinculando</translation>
     </message>
     <message>
         <location filename="../qml/js/files.js" line="35"/>
         <source>Unknown</source>
-        <translation type="unfinished">Desconocido</translation>
+        <translation>Desconocido</translation>
     </message>
 </context>
 <context>
