@@ -23,6 +23,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.file.browser.Settings 1.0
+import Opal.About 1.0 as A
 
 import "pages"
 import "js/navigation.js" as Navigation
@@ -181,6 +182,10 @@ ApplicationWindow {
                    Theme.overlayBackgroundColor
         opacity: GlobalSettings.generalSolidWindowBackground ? 1.0 : 0.0
         Behavior on opacity { FadeAnimator { duration: 100 } }
+    }
+
+    A.ChangelogNews {
+        changelogList: Qt.resolvedUrl("Changelog.qml")
     }
 
     Component.onCompleted: {
