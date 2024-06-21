@@ -5,7 +5,7 @@ SPDX-FileCopyrightText: 2013 Michael Faro-Tusino
 SPDX-License-Identifier: GFDL-1.3-or-later
 -->
 
-![File Browser banner](icon-src/banner.png)
+![File Browser banner](dist/banner-small.png)
 
 # File Browser for Sailfish OS
 
