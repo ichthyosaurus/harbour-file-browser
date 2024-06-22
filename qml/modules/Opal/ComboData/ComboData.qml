@@ -14,6 +14,9 @@ for(var i in children){var child=children[i]
 if(!!child&&child.hasOwnProperty("__silica_menuitem")){menuIndex+=1
 if(child[dataRole]===data){return menuIndex
 }}}return-1
+}function reset(data){if(!_menu||!comboBox){console.error("[Opal.ComboData] Cannot reset current index because "+"no menu or ComboBox is available.")
+return
+}comboBox.currentIndex=indexOfData(data)
 }readonly property var _menu:!!comboBox?comboBox.menu:null
 readonly property var _currentItem:!!comboBox&&!!comboBox.currentItem?comboBox.currentItem:null
 function _checkCombo(){if(!comboBox||!comboBox.hasOwnProperty("menu")||!comboBox.hasOwnProperty("currentItem")){console.error("[Opal.ComboData] ComboData must be a direct child "+"of a ComboBox (or derived type), or you must set the "+"“comboBox” property to a valid value.")
