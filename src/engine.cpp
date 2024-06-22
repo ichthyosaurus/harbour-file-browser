@@ -188,7 +188,7 @@ int Engine::requestFileSizeInfo(const QStringList& paths)
 
         auto process = [&files, &dirs, &bytes](const QString& dir){
             QDirIterator it(dir, QDir::AllEntries | QDir::System | QDir::NoDotAndDotDot | QDir::Hidden,
-                            QDirIterator::Subdirectories | QDirIterator::FollowSymlinks);
+                            QDirIterator::Subdirectories);
             while (!it.next().isEmpty()) {
                 const auto& info = it.fileInfo();
                 bytes += info.size();
