@@ -209,6 +209,20 @@ int Engine::requestFileSizeInfo(const QStringList& paths)
             }
         }
 
+        if (paths.length() == 1 && QFileInfo(paths[0]).isDir()) {
+            // When calculating the size of a selection, the selected
+            // paths themselves are also included in the calculation.
+            // If the user wants to see the size of the content of a
+            // single folder, it is unexpected to see the folder
+            // itself being included.
+            //
+            // my-dir       <-- not counted
+            // ├── file1    <-- counted
+            // ├── file2    <-- counted
+            // └── subdir   <-- counted
+            --dirs;
+        }
+
         return {
             QStringLiteral("ok"),
             filesizeToString(bytes),
