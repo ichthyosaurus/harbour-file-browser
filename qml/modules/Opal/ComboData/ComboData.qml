@@ -1,10 +1,11 @@
 //@ This file is part of opal-combodata.
 //@ https://github.com/Pretty-SFOS/opal-combodata
-//@ SPDX-FileCopyrightText: 2023 Mirian Margiani
+//@ SPDX-FileCopyrightText: 2023-2024 Mirian Margiani
 //@ SPDX-License-Identifier: GPL-3.0-or-later
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-Item{property var comboBox:!!parent&&!!parent.parent?parent.parent:null
+Item{id:root
+property var comboBox:!!parent&&!!parent.parent?parent.parent:null
 property string dataRole:"text"
 readonly property var currentData:!!_currentItem?_currentItem[dataRole]:null
 function indexOfData(data){if(!_menu){return-1
@@ -26,6 +27,7 @@ return
 })
 }if(comboBox.hasOwnProperty("indexOfData")){comboBox.indexOfData=Qt.binding(function(){return indexOfData
 })
+}if(comboBox.hasOwnProperty("cdata")){comboBox.cdata=root
 }}onComboBoxChanged:_checkCombo()
 onParentChanged:_checkCombo()
 Component.onCompleted:_checkCombo()

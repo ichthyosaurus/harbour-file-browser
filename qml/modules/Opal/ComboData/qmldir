@@ -1,5 +1,5 @@
 module Opal.ComboData
 # This file is part of Opal.ComboData.
-# SPDX-FileCopyrightText: 2023 Mirian Margiani
+# SPDX-FileCopyrightText: 2023-2024 Mirian Margiani
 # SPDX-License-Identifier: GPL-3.0-or-later
 ComboData 1.0 ComboData.qml
