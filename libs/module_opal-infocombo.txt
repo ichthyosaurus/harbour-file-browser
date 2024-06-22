@@ -1,6 +1,6 @@
 # Store this file to keep track of packaged module versions.
 # It is not necessary to ship this in your app's final RPM package.
-# SPDX-FileCopyrightText: 2023 Mirian Margiani
+# SPDX-FileCopyrightText: 2023-2024 Mirian Margiani
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # Attribution using Opal.About:
@@ -9,9 +9,9 @@
 #       to the "attributions" list property of the “About” page.
 
 module: Opal.InfoCombo (opal-infocombo)
-version: 2.0.0 (git:3903f0f)
+version: 2.1.0 (git:d750392)
 description: This module provides a combo box that can show details for each selectable option.
 maintainers: ichthyosaurus
-attribution: 2023 Mirian Margiani
+attribution: 2023-2024 Mirian Margiani
 license: GPL-3.0-or-later
 sources: https://github.com/Pretty-SFOS/opal-infocombo

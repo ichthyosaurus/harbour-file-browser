@@ -1,5 +1,7 @@
 module Opal.InfoCombo.private
 # This file is part of Opal.InfoCombo.
-# SPDX-FileCopyrightText: 2023 Mirian Margiani
+# SPDX-FileCopyrightText: 2023-2024 Mirian Margiani
 # SPDX-License-Identifier: GPL-3.0-or-later
 InfoComboPage 1.0 InfoComboPage.qml
+NoteDelegate 1.0 NoteDelegate.qml
+OptionDelegate 1.0 OptionDelegate.qml
