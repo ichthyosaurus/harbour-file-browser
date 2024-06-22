@@ -171,7 +171,7 @@ Page {
                         text: qsTr("Sort case-sensitively")
                         key: "viewSortCaseSensitively"
                         description: qsTr("Show files with names starting with a capital letter first.")
-                        visible: settingsContainer.viewSortRole == "name"
+                        enabled: settingsContainer.viewSortRole == "name"
                     }
                     ComboBox {
                         label: qsTr("Sort order")
