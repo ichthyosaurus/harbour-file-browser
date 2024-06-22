@@ -119,7 +119,45 @@ Page {
 
         model: fileModel
 
-        VerticalScrollDecorator { flickable: fileList }
+        property bool useSmartScrollbar: fileList.count > 40
+        onUseSmartScrollbarChanged: refreshSmartScrollbar()
+
+        property Item _scrollbar: null
+        quickScroll: !useSmartScrollbar || !_scrollbar || fileList.count > 1000
+
+        VerticalScrollDecorator {
+            flickable: fileList
+            visible: !fileList.useSmartScrollbar || !fileList._scrollbar
+        }
+
+        function refreshSmartScrollbar() {
+            if (!useSmartScrollbar) {
+                if (!!_scrollbar) _scrollbar.deleteLater()
+                return
+            }
+
+            try {
+                _scrollbar = Qt.createQmlObject("
+                    import QtQuick 2.0
+                    import %1 1.0 as Private
+                    Private.Scrollbar {
+                        property int currentIndex: fileList.indexAt(fileList.contentX, fileList.contentY) + 2
+                        text: fileList.currentSection
+                        description: '%2'.arg(currentIndex).arg(fileList.count)
+                        headerHeight: root.headerItem ? root.headerItem.height : 0
+                    }".arg("Sailfish.Silica.private").arg("%1 / %2"), fileList, 'Scrollbar')
+            } catch (e) {
+                if (!_scrollbar) {
+                    console.warn(e)
+                    console.warn('[BUG] failed to load customized scrollbar')
+                    console.warn('[BUG] this probably means the private API has changed')
+                }
+            }
+        }
+
+        Component.onCompleted: {
+            refreshSmartScrollbar()
+        }
 
         PullDownMenu {
             id: pullDownMenu
@@ -354,10 +392,22 @@ Page {
             Spacer { id: footerSpacer }
         }
 
-        section.property: sectionsEnabled ? "fileType" : ""
-        section.criteria: ViewSection.FullString
+        section.property: {
+            console.error(prefs.viewSortRole, dir)
+            if (prefs.viewSortRole === "type") return "fileType"
+            // else if (prefs.viewSortRole === "modificationtime") return "lastModified"
+            // else if (prefs.viewSortRole === "name") return "filename"
+            else return ""
+        }
+        section.criteria: prefs.viewSortRole === "name" ?
+                              ViewSection.FirstCharacter :
+                              ViewSection.FullString
         section.labelPositioning: ViewSection.InlineLabels
-        section.delegate: Component {
+        section.delegate: sectionsEnabled ? sectionDelegate : sectionDelegateDummy
+
+        Component {
+            id: sectionDelegate
+
             Column {
                 spacing: 0
                 x: Theme.horizontalPageMargin
@@ -374,6 +424,11 @@ Page {
                 }
                 Spacer { height: Theme.paddingMedium }
             }
+        }
+
+        Component {
+            id: sectionDelegateDummy
+            Item {}
         }
 
         delegate: Component {
