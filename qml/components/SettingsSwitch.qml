@@ -39,6 +39,11 @@ TextSwitch {
     property var checkedValue: true
 
     // internal
+    Component.onCompleted: {
+        checked = Qt.binding(function(){
+            return settingsContainer[key] === checkedValue
+        })
+    }
 
     automaticCheck: false
     checked: settingsContainer[key] === checkedValue
