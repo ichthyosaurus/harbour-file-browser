@@ -199,3 +199,5 @@ CONFIG += sailfishapp_i18n
 
 # Build submodules
 include(libs/SortFilterProxyModel/SortFilterProxyModel.pri)
+
+QML_IMPORT_PATH += qml/modules
