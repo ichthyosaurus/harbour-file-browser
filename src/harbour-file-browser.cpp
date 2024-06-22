@@ -181,6 +181,9 @@ int main(int argc, char *argv[])
     qApp->setProperty("engine", engineVariant); // store as singleton
     view->rootContext()->setContextProperty("engine", engine.data()); // expose to QML
 
+    // add module search path so Opal modules can be found
+    view->engine()->addImportPath(SailfishApp::pathTo("qml/modules").toString());
+
     view->rootContext()->setContextProperty("APP_VERSION", QStringLiteral(APP_VERSION));
     view->rootContext()->setContextProperty("APP_RELEASE", QStringLiteral(APP_RELEASE));
     view->rootContext()->setContextProperty("RELEASE_TYPE", QStringLiteral(RELEASE_TYPE));
