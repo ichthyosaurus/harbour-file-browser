@@ -100,6 +100,9 @@ Page {
                 opacity: status === Image.Ready ? 1.0 : 0.0
                 source: page.path
 
+                sourceSize.width: Math.max(Screen.width, Screen.height)
+                sourceSize.height: sourceSize.width
+
                 Behavior on opacity { FadeAnimator { duration: 250 } }
 
                 onStatusChanged: {
