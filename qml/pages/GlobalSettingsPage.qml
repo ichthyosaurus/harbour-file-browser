@@ -167,42 +167,30 @@ Page {
                         description: qsTr("Show files with names starting with a capital letter first.")
                         enabled: settingsContainer.viewSortRole == "name"
                     }
-                    ComboBox {
+                    InfoCombo {
                         label: qsTr("Sort order")
-
-                        property var indices: ({'default': 0, 'reversed': 1})
-                        currentIndex: indices[GlobalSettings.viewSortOrder]
-                        onValueChanged: GlobalSettings.viewSortOrder = currentItem.value
-                        description: {
-                            var role = GlobalSettings.viewSortRole
-                            if (GlobalSettings.viewSortOrder == "default") {
-                                if (role == "name" || role == "type") {
-                                    return qsTr("Sort names starting with the beginning of the alphabet first.")
-                                } else if (role == "size") {
-                                    return qsTr("Show smaller files first.")
-                                } else if (role == "modificationtime") {
-                                    return qsTr("Show more recent files first.")
-                                }
-                            } else {
-                                if (role == "name" || role == "type") {
-                                    return qsTr("Sort names starting with the end of the alphabet first.")
-                                } else if (role == "size") {
-                                    return qsTr("Show larger files first.")
-                                } else if (role == "modificationtime") {
-                                    return qsTr("Show older files first.")
-                                }
-                            }
-                            return ""
-                        }
+                        property ComboData cdata; ComboData { dataRole: "value" }
+                        onValueChanged: GlobalSettings.viewSortOrder = cdata.currentData
+                        Component.onCompleted: cdata.reset(GlobalSettings.viewSortOrder)
 
                         menu: ContextMenu {
-                            MenuItem {
+                            InfoMenuItem {
                                 property string value: "default"
                                 text: qsTr("ascending")
+                                info: "<ul>" +
+                                      "<li>%1</li>".arg(qsTr("Sort names starting with the beginning of the alphabet first.")) +
+                                      "<li>%1</li>".arg(qsTr("Show smaller files first.")) +
+                                      "<li>%1</li>".arg(qsTr("Show more recently changed files first.")) +
+                                      "</ul>"
                             }
-                            MenuItem {
+                            InfoMenuItem {
                                 property string value: "reversed"
                                 text: qsTr("descending")
+                                info: "<ul>" +
+                                      "<li>%1</li>".arg(qsTr("Sort names starting with the end of the alphabet first.")) +
+                                      "<li>%1</li>".arg(qsTr("Show larger files first.")) +
+                                      "<li>%1</li>".arg(qsTr("Show older files first.")) +
+                                      "</ul>"
                             }
                         }
                 }
