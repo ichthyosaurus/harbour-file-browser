@@ -23,6 +23,8 @@
 import QtQuick 2.6
 import Sailfish.Silica 1.0
 import harbour.file.browser.Settings 1.0
+import Opal.ComboData 1.0
+import Opal.InfoCombo 1.0
 
 import "../components"
 
@@ -62,6 +64,49 @@ Page {
                         key: "viewUseLocalSettings"
                         description: qsTr("Save view preferences individually for all folders " +
                                           "in your home directory. The options below are used by default.")
+                    }
+                    InfoCombo {
+                        label: qsTr("View mode")
+
+                        property string currentData
+                        property var indexOfData
+                        ComboData { dataRole: "value" }
+
+                        onCurrentDataChanged: GlobalSettings.viewViewMode = currentData
+                        Component.onCompleted: {
+                            currentIndex = indexOfData(GlobalSettings.viewViewMode)
+                        }
+
+                        menu: ContextMenu {
+                            MenuItem {
+                                text: qsTr("list")
+                                property string value: "list"
+                                property string info: qsTr("Show files in a list. " +
+                                                           "Optionally enable preview thumbnails " +
+                                                           "using the separate setting below.")
+                            }
+                            /*MenuItem {
+                                text: qsTr("Grid")
+                                property string value: "grid"
+                                property string info: qsTr("TODO")
+                            }*/
+                            MenuItem {
+                                text: qsTr("gallery")
+                                property string value: "gallery"
+                                property string info: qsTr("In gallery mode, images will be shown " +
+                                                           "comfortably large, and all entries except " +
+                                                           "for images, videos, and directories will be hidden.")
+                            }
+                        }
+
+                        InfoComboSection {
+                            placeAtTop: false
+                            title: qsTr("Note")
+                            text: qsTr("It is recommended to use “list” as default mode.") +
+                                  qsTr("Note that non-media files are hidden in “gallery” mode. " +
+                                       "If per-directory settings are enabled, you can change " +
+                                       "the view mode for individual folders.")
+                        }
                     }
                     SettingsSwitch {
                         text: qsTr("Show hidden files")
