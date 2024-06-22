@@ -4,131 +4,127 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="20"/>
+        <location filename="../qml/pages/AboutPage.qml" line="54"/>
         <source>A fully-fledged file manager for Sailfish OS.</source>
         <translation>Un gestor de archivos totalmente equipado para Sailfish OS.</translation>
     </message>
     <message>
-        <source>adapted by karip</source>
-        <translation type="vanished">adaptado por karip</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AboutPage.qml" line="66"/>
+        <location filename="../qml/pages/AboutPage.qml" line="89"/>
         <source>Development</source>
         <translation>Desarrollo</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="69"/>
+        <location filename="../qml/pages/AboutPage.qml" line="92"/>
         <source>Programming</source>
         <translation>Programación</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="76"/>
+        <location filename="../qml/pages/AboutPage.qml" line="99"/>
         <source>Icon Design</source>
         <translation>Diseño de icono</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="82"/>
+        <location filename="../qml/pages/AboutPage.qml" line="105"/>
         <source>Translations</source>
         <translation>Traducciones</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="85"/>
+        <location filename="../qml/pages/AboutPage.qml" line="108"/>
         <source>English</source>
         <translation>Inglés</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="89"/>
+        <location filename="../qml/pages/AboutPage.qml" line="112"/>
         <source>German</source>
         <translation>Alemán</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="93"/>
+        <location filename="../qml/pages/AboutPage.qml" line="116"/>
         <source>Finnish</source>
         <translation>Finés</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="97"/>
+        <location filename="../qml/pages/AboutPage.qml" line="120"/>
         <source>Chinese</source>
         <translation>Chino</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="161"/>
+        <location filename="../qml/pages/AboutPage.qml" line="184"/>
         <source>Russian</source>
         <translation>Ruso</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="105"/>
+        <location filename="../qml/pages/AboutPage.qml" line="128"/>
         <source>Swedish</source>
         <translation>Sueco</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="101"/>
+        <location filename="../qml/pages/AboutPage.qml" line="124"/>
         <source>Ukrainian</source>
         <translation>Ucranio</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="109"/>
+        <location filename="../qml/pages/AboutPage.qml" line="132"/>
         <source>Italian</source>
         <translation>Italiano</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="113"/>
+        <location filename="../qml/pages/AboutPage.qml" line="136"/>
         <source>Spanish</source>
         <translation>Español</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="117"/>
+        <location filename="../qml/pages/AboutPage.qml" line="140"/>
         <source>French</source>
         <translation>Francés</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="121"/>
+        <location filename="../qml/pages/AboutPage.qml" line="144"/>
         <source>Dutch</source>
         <translation>Holandés</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="125"/>
+        <location filename="../qml/pages/AboutPage.qml" line="148"/>
         <source>Greek</source>
         <translation>Griego</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="129"/>
+        <location filename="../qml/pages/AboutPage.qml" line="152"/>
         <source>Norwegian</source>
         <translation>Noruego</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="133"/>
+        <location filename="../qml/pages/AboutPage.qml" line="156"/>
         <source>Czech</source>
         <translation>Checo</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="137"/>
+        <location filename="../qml/pages/AboutPage.qml" line="160"/>
         <source>Slovak</source>
         <translation>Eslovaco</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="141"/>
+        <location filename="../qml/pages/AboutPage.qml" line="164"/>
         <source>Hungarian</source>
         <translation>Húngaro</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="145"/>
+        <location filename="../qml/pages/AboutPage.qml" line="168"/>
         <source>Estonian</source>
         <translation>Estonio</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="149"/>
+        <location filename="../qml/pages/AboutPage.qml" line="172"/>
         <source>Polish</source>
         <translation>Polaco</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="153"/>
+        <location filename="../qml/pages/AboutPage.qml" line="176"/>
         <source>Indonesian</source>
         <translation>Indonesio</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="157"/>
+        <location filename="../qml/pages/AboutPage.qml" line="180"/>
         <source>Turkish</source>
         <translation>Turco</translation>
     </message>
@@ -252,26 +248,6 @@
         </translation>
     </message>
     <message>
-        <source>Current selection</source>
-        <comment>as in &apos;currently selected files&apos;</comment>
-        <translation type="vanished">Selección actual</translation>
-    </message>
-    <message>
-        <source>copy</source>
-        <comment>as in &apos;please copy these files&apos;</comment>
-        <translation type="vanished">Copiar</translation>
-    </message>
-    <message>
-        <source>cut</source>
-        <comment>as in &apos;please cut these files&apos;</comment>
-        <translation type="vanished">Cortar</translation>
-    </message>
-    <message>
-        <source>Clear</source>
-        <comment>as in &apos;clear the current clipboard contents&apos;</comment>
-        <translation type="vanished">Borrar</translation>
-    </message>
-    <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="260"/>
         <source>Remove from clipboard</source>
         <translation>Eliminar del portapapeles</translation>
@@ -286,7 +262,6 @@
         <source>%n item(s) to be linked</source>
         <translation>
             <numerusform>%n elemento a vincular</numerusform>
-            <numerusform>%n elementos a vincular</numerusform>
             <numerusform>%n elementos a vincular</numerusform>
         </translation>
     </message>
@@ -369,10 +344,6 @@
         <source>Swipe from the right to view raw contents.</source>
         <translation>Desliza el dedo desde la derecha para ver los contenidos sin procesar.</translation>
     </message>
-    <message>
-        <source>Swipe right to view raw contents.</source>
-        <translation type="vanished">Desliza a la derecha para ver contenido bruto.</translation>
-    </message>
 </context>
 <context>
     <name>CoverPage</name>
@@ -380,21 +351,6 @@
         <location filename="../qml/cover/CoverPage.qml" line="104"/>
         <source>Root Mode</source>
         <translation>Modo Root</translation>
-    </message>
-</context>
-<context>
-    <name>CreateFolderDialog</name>
-    <message>
-        <source>Create</source>
-        <translation type="vanished">Crear</translation>
-    </message>
-    <message>
-        <source>Create a new folder under</source>
-        <translation type="vanished">Crear una nueva carpeta dentro de</translation>
-    </message>
-    <message>
-        <source>Folder name</source>
-        <translation type="vanished">Nombre de la carpeta</translation>
     </message>
 </context>
 <context>
@@ -481,93 +437,96 @@
 <context>
     <name>DirectoryPage</name>
     <message>
-        <source>Create Folder</source>
-        <translation type="vanished">Crear carpeta</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="268"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="306"/>
         <source>Search</source>
         <translation>Buscar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="168"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="206"/>
         <source>Paste</source>
         <translation>Pegar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="273"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
         <source>Remove bookmark</source>
         <translation>Borrar marcador</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="273"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
         <source>Add to bookmarks</source>
         <translation>Añadir a marcadores</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="282"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="320"/>
         <source>Copy path to clipboard</source>
         <translation>Copiar ruta al portapapeles</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="472"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="475"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="446"/>
+        <source>No match</source>
+        <comment>as in “no files matched the current filter”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/DirectoryPage.qml" line="448"/>
+        <source>Empty</source>
+        <comment>as in “this folder is empty”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/DirectoryPage.qml" line="532"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="535"/>
         <source>Deleting</source>
         <translation>Borrando</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="148"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="186"/>
         <source>View Preferences</source>
         <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
         <translation>Preferencias de visualización</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="155"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="193"/>
         <source>Create New...</source>
         <translation>Crear un nuevo...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="186"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="224"/>
         <source>Filter directory contents</source>
         <translation>Filtrar en directorio</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="345"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="383"/>
         <source>filtered by: %1</source>
         <translation>filtrado por: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="388"/>
-        <source>Empty</source>
-        <translation>Vacío</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="391"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="451"/>
         <source>No files matched the filter.</source>
         <translation>Ningún archivo coincide con el filtro.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="392"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="452"/>
         <source>This directory contains no files.</source>
         <translation>Este directorio no contiene archivos.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="487"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="547"/>
         <source>Internally not ready</source>
         <translation>Internamente no está listo</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="487"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="547"/>
         <source>Please simply try again</source>
         <translation>Inténtalo de nuevo</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="530"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="590"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>¿Estás intentado mover archivos entre el teléfono y la tarjeta SD? Si no funciona, intenta copiarlos.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="532"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="592"/>
         <source>Perhaps the storage is full?</source>
         <translation>¿Es posible que el almacenamiento esté lleno?</translation>
     </message>
@@ -631,78 +590,78 @@
         <translation>No hay archivos que pegar</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="244"/>
+        <location filename="../src/engine.cpp" line="258"/>
         <source>File does not exist</source>
         <translation>El archivo no existe</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="246"/>
+        <location filename="../src/engine.cpp" line="260"/>
         <source>Broken symbolic link</source>
         <translation>Enlace simbólico roto</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="251"/>
+        <location filename="../src/engine.cpp" line="265"/>
         <source>Cannot read this type of file</source>
         <translation>No es posible leer este tipo de archivo</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="257"/>
+        <location filename="../src/engine.cpp" line="271"/>
         <source>No permission to read the file</source>
         <translation>No tienes permiso para leer el archivo</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="261"/>
-        <location filename="../src/engine.cpp" line="267"/>
+        <location filename="../src/engine.cpp" line="275"/>
+        <location filename="../src/engine.cpp" line="281"/>
         <source>Error reading file</source>
         <translation>Error de lectura del archivo</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="270"/>
+        <location filename="../src/engine.cpp" line="284"/>
         <source>Empty file</source>
         <translation>Archivo vacío</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="296"/>
+        <location filename="../src/engine.cpp" line="310"/>
         <source>Binary file preview clipped at %1 kB</source>
         <translation>Vista previa de archivo binario recortado en %1 kB</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="315"/>
+        <location filename="../src/engine.cpp" line="329"/>
         <source>Text file preview clipped at %1 lines</source>
         <translation>Vista previa de archivo de texto recortado en %1 líneas</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="317"/>
+        <location filename="../src/engine.cpp" line="331"/>
         <source>Text file preview clipped at %1 kB</source>
         <translation>Vista previa de archivo de texto recortado en %1 kB</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="336"/>
+        <location filename="../src/engine.cpp" line="350"/>
         <source>No permissions to create %1</source>
         <translation>No tienes permisos para crear %1</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="354"/>
+        <location filename="../src/engine.cpp" line="368"/>
         <source>No permissions to create “%1” in “%2”</source>
         <translation>No hay permisos para crear &quot;%1&quot; en &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="365"/>
+        <location filename="../src/engine.cpp" line="379"/>
         <source>Cannot create file “%1” in “%2”</source>
         <translation>No se puede crear el archivo &quot;%1&quot; en &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="385"/>
+        <location filename="../src/engine.cpp" line="399"/>
         <source>Cannot rename %1</source>
         <translation>No es posible renombrar %1</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="408"/>
+        <location filename="../src/engine.cpp" line="422"/>
         <source>Cannot change permissions</source>
         <translation>No es posible cambiar permisos</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="338"/>
+        <location filename="../src/engine.cpp" line="352"/>
         <source>Cannot create folder %1</source>
         <translation>No es posible crear carpeta %1</translation>
     </message>
@@ -792,7 +751,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="263"/>
+        <location filename="../qml/components/FileActions.qml" line="262"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>comprimir archivo</numerusform>
@@ -800,7 +759,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="272"/>
+        <location filename="../qml/components/FileActions.qml" line="271"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>editar archivo</numerusform>
@@ -808,7 +767,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="297"/>
+        <location filename="../qml/components/FileActions.qml" line="296"/>
         <source>show file properties</source>
         <translation>mostrar propiedades de archivo</translation>
     </message>
@@ -952,11 +911,6 @@
         <location filename="../qml/pages/FilePage.qml" line="104"/>
         <source>If nothing happens, then the package is probably faulty.</source>
         <translation>Si no ocurre nada, entonces seguramente el paquete es defectuoso.</translation>
-    </message>
-    <message>
-        <source>Swipe right to inspect its contents.</source>
-        <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation type="vanished">Desliza a la derecha para inspeccionar los contenidos del paquete.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="108"/>
@@ -1174,323 +1128,363 @@
 <context>
     <name>GlobalSettingsPage</name>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="45"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="47"/>
         <source>App Settings</source>
         <translation>Ajustes de la aplicación</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="50"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="52"/>
         <source>Directory View</source>
         <translation>Vista del directorio</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="61"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="63"/>
         <source>Use per-directory view settings</source>
         <translation>Usar la configuración de vista por directorio</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="63"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="65"/>
         <source>Save view preferences individually for all folders in your home directory. The options below are used by default.</source>
         <translation>Guarda las preferencias de la visualización individualmente para todas las carpetas de tu directorio inicial. Las siguientes opciones se utilizan por defecto.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="67"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="106"/>
         <source>Show hidden files</source>
         <translation>Mostrar los archivos ocultos</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="69"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="108"/>
         <source>Show files with names starting with a full stop (“.”).</source>
         <translation>Mostrar los archivos cuyos nombres empiecen por un punto (&quot;.&quot;).</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="72"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="111"/>
         <source>Show preview images</source>
         <translation>Mostrar las vistas previas de las imágenes</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="74"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="113"/>
         <source>Preview contents of supported file types.</source>
         <translation>Previsualiza el contenido de los tipos de los archivos compatibles.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="77"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="116"/>
         <source>Thumbnail size</source>
         <translation>Tamaño de la miniatura</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="83"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="122"/>
         <source>small</source>
         <translation>pequeña</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="84"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="123"/>
         <source>medium</source>
         <translation>mediana</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="85"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="124"/>
         <source>large</source>
         <translation>grande</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="86"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="125"/>
         <source>huge</source>
         <translation>enorme</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="93"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="132"/>
         <source>Sorting</source>
         <translation>Clasificar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="103"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="142"/>
         <source>Show folders first</source>
         <translation>Mostrar primero las carpetas</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="105"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="144"/>
         <source>Always show folders at the top of the file list.</source>
         <translation>Mostrar siempre las carpetas en la parte superior de la lista de los archivos.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="108"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="147"/>
         <source>Show hidden files last</source>
         <translation>Mostrar los archivos ocultos al final</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="110"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="149"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
         <translation>Mostrar siempre los archivos que empiezan por un punto (&quot;.&quot;) al final de la lista de los archivos.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="113"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="152"/>
         <source>Sort by</source>
         <translation>Clasificar por</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="119"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="158"/>
         <source>name</source>
         <translation>nombre</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="120"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="159"/>
         <source>size</source>
         <translation>tamaño</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="121"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="160"/>
         <source>file age</source>
         <translation>antigüedad</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="122"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="161"/>
         <source>file type</source>
         <translation>tipo del archivo</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="126"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="165"/>
         <source>Sort case-sensitively</source>
         <translation>Ordenar distinguiendo entre mayúsculas y minúsculas</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="128"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="167"/>
         <source>Show files with names starting with a capital letter first.</source>
         <translation>Mostrar primero los archivos cuyos nombres empiezan por una mayúscula.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="132"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="171"/>
         <source>Sort order</source>
         <translation>Orden de la clasificación</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="140"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="181"/>
         <source>Sort names starting with the beginning of the alphabet first.</source>
         <translation>Ordenar los archivos por orden alfabético.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="142"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="182"/>
         <source>Show smaller files first.</source>
         <translation>Mostrar primero los archivos más pequeños.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="144"/>
-        <source>Show more recent files first.</source>
-        <translation>Mostrar primero los archivos más recientes.</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="148"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="190"/>
         <source>Sort names starting with the end of the alphabet first.</source>
         <translation>Ordenar los nombres alfabéticamente en orden descendente.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="150"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="191"/>
         <source>Show larger files first.</source>
         <translation>Mostrar primero los archivos más grandes.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="152"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="192"/>
         <source>Show older files first.</source>
         <translation>Mostrar primero los archivos más antiguos.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="161"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="179"/>
         <source>ascending</source>
         <translation>ascendente</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="165"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="69"/>
+        <source>View mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="76"/>
+        <source>list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="78"/>
+        <source>Show files in a list. Optionally enable preview thumbnails using the separate setting below.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="88"/>
+        <source>gallery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="90"/>
+        <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
+        <translation type="unfinished">En el modo galería, las imágenes se mostrarán en un tamaño cómodo y se ocultarán todas las entradas, excepto las imágenes, los vídeos y los directorios.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="98"/>
+        <source>Note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="99"/>
+        <source>It is recommended to use “list” as default mode.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="100"/>
+        <source>Note that non-media files are hidden in “gallery” mode. If per-directory settings are enabled, you can change the view mode for individual folders.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="183"/>
+        <source>Show more recently changed files first.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="188"/>
         <source>descending</source>
         <translation>descendente</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="173"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="201"/>
         <source>Behavior and View</source>
         <translation>Comportamiento y opinión</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="184"/>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="200"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="212"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="228"/>
         <source>Initial directory</source>
         <translation>Directorio inicial</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="189"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="217"/>
         <source>The directory that is shown when the app starts.</source>
         <translation>El directorio que se muestra cuando se inicia la aplicación.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="192"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="220"/>
         <source>user&apos;s home</source>
         <translation>Directorio de usuarios</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="193"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="221"/>
         <source>last visited</source>
         <translation>último visitado</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="194"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="222"/>
         <source>custom path</source>
         <translation>ruta personalizada</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="216"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="244"/>
         <source>Choose</source>
         <translation>Elegir</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="231"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="259"/>
         <source>Default transfer action</source>
         <translation>Acción de transferencia por defecto</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="235"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="263"/>
         <source>The action that is selected by default when using the bulk file management feature (available through the “shuffle” icon after selecting files).</source>
         <translation>La acción que se selecciona por defecto cuando se utiliza la función de gestión masiva de archivos (disponible a través del icono &quot;aleatorio&quot; después de seleccionar los archivos).</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="240"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="268"/>
         <source>copy</source>
         <translation>copiar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="241"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="269"/>
         <source>move</source>
         <translation>mover</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="242"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="270"/>
         <source>link</source>
         <translation>enlace</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="243"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="271"/>
         <source>none</source>
         <translation>ninguno</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="247"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="275"/>
         <source>Default filter line action</source>
         <translation>Acción predeterminada de la línea del filtro</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="251"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="279"/>
         <source>Which action to take when the Enter key is pressed in the filter line in a directory&apos;s pull-down menu.</source>
         <translation>¿Qué sucede cuando se presiona la tecla Intro en la fila del filtro en el menú de la vista de la carpeta?</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="255"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="283"/>
         <source>return to directory view</source>
         <translation>volver a la vista del directorio</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="256"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="284"/>
         <source>start recursive search</source>
         <translation>ejecutar una búsqueda recursiva</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="260"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="288"/>
         <source>File name abbreviation</source>
         <translation>Abreviatura del nombre del archivo</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="264"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="292"/>
         <source>How very long filenames are abbreviated in the directory view.</source>
         <translation>Cómo se abrevian los nombres de los archivos muy largos en la vista de los directorios.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="267"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="295"/>
         <source>fade out</source>
         <translation>desvanecer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="268"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="296"/>
         <source>elide end</source>
         <translation>omitir el final</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="269"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="297"/>
         <source>elide middle</source>
         <translation>reemplazar lo del medio</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="273"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="301"/>
         <source>Show full directory paths</source>
         <translation>Mostrar las rutas completas de los directorios</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="275"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="303"/>
         <source>Show the full path in the page header of the directory view.</source>
         <translation>Mostrar la ruta completa en la cabecera de la página de la vista del directorio.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="278"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="306"/>
         <source>Show navigation menu icon</source>
         <translation>Mostrar el icono del menú de navegación</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="280"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="308"/>
         <source>Show a visual hint that the navigation menu is available by tapping the page header of the directory view.</source>
         <translation>Muestra una sugerencia visual de que el menú de navegación está disponible tocando la cabecera de la página de la vista del directorio.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="292"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="320"/>
         <source>Enable solid window background</source>
         <translation>Activar el fondo de la ventana sólido</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="294"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="322"/>
         <source>Use a solid color instead of your wallpaper as the background of this app.</source>
         <translation>Utiliza un color sólido en lugar de tu fondo de pantalla como fondo de esta aplicación.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="304"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="332"/>
         <source>Swipe from the right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
         <translation>Desliza el dedo desde la derecha para ver el código fuente del Navegador de los archivos, la información sobre la licencia y una lista de los colaboradores.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="319"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="347"/>
         <source>Settings</source>
         <translation>Ajustes</translation>
     </message>
@@ -2041,10 +2035,6 @@ exposure program</extracomment>
         <translation>Versión %1</translation>
     </message>
     <message>
-        <source>Version %1 (%2)</source>
-        <translation type="vanished">Versión %1 (%2)</translation>
-    </message>
-    <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="100"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="22"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="31"/>
@@ -2128,10 +2118,6 @@ exposure program</extracomment>
         <translation>Detalles</translation>
     </message>
     <message>
-        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
-        <translation type="vanished">Consulta &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
-    </message>
-    <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="25"/>
         <source>Download license texts</source>
         <translation>Descargar los textos de las licencias</translation>
@@ -2202,142 +2188,13 @@ exposure program</extracomment>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Tus contribuciones a traducir o escribir código serán bien recibidas.</translation>
     </message>
+</context>
+<context>
+    <name>Opal.InfoCombo</name>
     <message>
-        <source>Author</source>
-        <translation type="vanished">Autor</translation>
-    </message>
-    <message numerus="yes">
-        <source>Author(s)</source>
-        <translation type="vanished">
-            <numerusform>Autor</numerusform>
-            <numerusform>Autores</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Maintainer</source>
-        <translation type="vanished">Mantenedor</translation>
-    </message>
-    <message numerus="yes">
-        <source>Maintainer(s)</source>
-        <translation type="vanished">
-            <numerusform>Mantenedor</numerusform>
-            <numerusform>Mantenedores</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Programming</source>
-        <translation type="vanished">Programación</translation>
-    </message>
-    <message>
-        <source>Translations</source>
-        <translation type="vanished">Traducciones</translation>
-    </message>
-    <message>
-        <source>Icon Design</source>
-        <translation type="vanished">Diseño de icono</translation>
-    </message>
-    <message>
-        <source>Third-party libraries</source>
-        <translation type="vanished">Bibliotecas de terceros</translation>
-    </message>
-    <message>
-        <source>Data</source>
-        <translation type="vanished">Datos</translation>
-    </message>
-    <message>
-        <source>Data License</source>
-        <translation type="vanished">Licencia de los datos</translation>
-    </message>
-    <message numerus="yes">
-        <source>Data License(s)</source>
-        <translation type="vanished">
-            <numerusform>Licencia de los datos</numerusform>
-            <numerusform>Licencias de los datos</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>Terms of Use</source>
-        <translation type="vanished">Términos de uso</translation>
-    </message>
-    <message>
-        <source>Swedish</source>
-        <translation type="vanished">Sueco</translation>
-    </message>
-    <message>
-        <source>Polish</source>
-        <translation type="vanished">Polaco</translation>
-    </message>
-    <message>
-        <source>German</source>
-        <translation type="vanished">Alemán</translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="vanished">Francés</translation>
-    </message>
-    <message>
-        <source>Chinese</source>
-        <translation type="vanished">Chino</translation>
-    </message>
-    <message>
-        <source>English</source>
-        <translation type="vanished">Inglés</translation>
-    </message>
-    <message>
-        <source>Italian</source>
-        <translation type="vanished">Italiano</translation>
-    </message>
-    <message>
-        <source>Finnish</source>
-        <translation type="vanished">Finlandés</translation>
-    </message>
-    <message>
-        <source>Norwegian</source>
-        <translation type="vanished">Noruego</translation>
-    </message>
-    <message>
-        <source>Latvian</source>
-        <translation type="vanished">Letón</translation>
-    </message>
-    <message>
-        <source>Estonian</source>
-        <translation type="vanished">Estonio</translation>
-    </message>
-    <message>
-        <source>Czech</source>
-        <translation type="vanished">Checo</translation>
-    </message>
-    <message>
-        <source>Greek</source>
-        <translation type="vanished">Griego</translation>
-    </message>
-    <message>
-        <source>Spanish</source>
-        <translation type="vanished">Español</translation>
-    </message>
-    <message>
-        <source>Hungarian</source>
-        <translation type="vanished">Húngaro</translation>
-    </message>
-    <message>
-        <source>Indonesian</source>
-        <translation type="vanished">Indonesio</translation>
-    </message>
-    <message>
-        <source>Russian</source>
-        <translation type="vanished">Ruso</translation>
-    </message>
-    <message>
-        <source>Dutch</source>
-        <translation type="vanished">Holandés</translation>
-    </message>
-    <message>
-        <source>Slovak</source>
-        <translation type="vanished">Eslovaco</translation>
-    </message>
-    <message>
-        <source>Turkish</source>
-        <translation type="vanished">Turco</translation>
+        <location filename="../qml/modules/Opal/InfoCombo/private/InfoComboPage.qml" line="26"/>
+        <source>Details</source>
+        <translation type="unfinished">Detalles</translation>
     </message>
 </context>
 <context>
@@ -2473,14 +2330,6 @@ exposure program</extracomment>
         <source>dd.MM.yy, hh:mm</source>
         <translation>dd.MM.yy, hh:mm</translation>
     </message>
-    <message>
-        <source>SD card</source>
-        <translation type="vanished">Tarjeta SD</translation>
-    </message>
-    <message>
-        <source>Removable Media</source>
-        <translation type="vanished">Medio extraíble</translation>
-    </message>
 </context>
 <context>
     <name>QuickSwitchDialog</name>
@@ -2550,7 +2399,7 @@ exposure program</extracomment>
         <translation>Tenga cuidado al usar el Explorador de archivos en el Modo Root. Las acciones pueden romper inesperadamente su sistema.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Inicie el Explorador de archivos en Modo Root</translation>
     </message>
@@ -2650,173 +2499,6 @@ exposure program</extracomment>
     </message>
 </context>
 <context>
-    <name>SettingsPage</name>
-    <message>
-        <source>Settings</source>
-        <translation type="vanished">Ajustes</translation>
-    </message>
-    <message>
-        <source>Use per-directory view settings</source>
-        <translation type="vanished">Usar ajustes de vista para cada directorio</translation>
-    </message>
-    <message>
-        <source>Show folders first</source>
-        <translation type="vanished">Mostrar carpetas primero</translation>
-    </message>
-    <message>
-        <source>Show hidden files</source>
-        <translation type="vanished">Mostrar archivos ocultos</translation>
-    </message>
-    <message>
-        <source>Show preview images</source>
-        <translation type="vanished">Mostrar vista previa de imágenes</translation>
-    </message>
-    <message>
-        <source>Sorting</source>
-        <translation type="vanished">Orden</translation>
-    </message>
-    <message>
-        <source>Sort case-sensitively</source>
-        <translation type="vanished">Ordenar distinguiendo mayúsculas y minúsculas</translation>
-    </message>
-    <message>
-        <source>Thumbnail size</source>
-        <translation type="vanished">Tamaño de miniaturas</translation>
-    </message>
-    <message>
-        <source>These are global preferences. If enabled in “&lt;a href=&apos;#&apos;&gt;View → Use per-directory view settings&lt;/a&gt;”, view preferences will be saved individually for all folders. Here, you can define the default values.</source>
-        <translation type="vanished">Estas preferencias son globales. Si la opción “&lt;a href=&apos;#&apos;&gt;Vista → Usar ajustes de vista para cada directorio&lt;/a&gt;” está activada, las preferencias de vista se guardarán individualmente para todas las carpetas. Aquí puedes definir los valores predeterminados.</translation>
-    </message>
-    <message>
-        <source>Swipe right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
-        <translation type="vanished">Desliza a la derecha para ver el código fuente de File Browser, información de la licencia y una lista de colaboradores.</translation>
-    </message>
-    <message>
-        <source>View</source>
-        <translation type="vanished">Vista</translation>
-    </message>
-    <message>
-        <source>small</source>
-        <translation type="vanished">pequeño</translation>
-    </message>
-    <message>
-        <source>medium</source>
-        <translation type="vanished">mediano</translation>
-    </message>
-    <message>
-        <source>large</source>
-        <translation type="vanished">grande</translation>
-    </message>
-    <message>
-        <source>huge</source>
-        <translation type="vanished">enorme</translation>
-    </message>
-    <message>
-        <source>Enable gallery mode</source>
-        <translation type="vanished">Habilitar modo galería</translation>
-    </message>
-    <message>
-        <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="vanished">Con el modo galería, las imágenes se mostrarán holgadamente grandes, y todas las entradas, salvo imágenes, vídeos y directorios estarán ocultos.</translation>
-    </message>
-    <message>
-        <source>Sort by</source>
-        <translation type="vanished">Ordenar por</translation>
-    </message>
-    <message>
-        <source>name</source>
-        <translation type="vanished">nombre</translation>
-    </message>
-    <message>
-        <source>size</source>
-        <translation type="vanished">tamaño</translation>
-    </message>
-    <message>
-        <source>modification time</source>
-        <translation type="vanished">hora de actualización</translation>
-    </message>
-    <message>
-        <source>file type</source>
-        <translation type="vanished">tipo de archivo</translation>
-    </message>
-    <message>
-        <source>Sort order</source>
-        <translation type="vanished">Orden de ordenación</translation>
-    </message>
-    <message>
-        <source>default</source>
-        <translation type="vanished">por defecto</translation>
-    </message>
-    <message>
-        <source>reversed</source>
-        <translation type="vanished">invertido</translation>
-    </message>
-    <message>
-        <source>Behavior and View</source>
-        <translation type="vanished">Comportamiento y vista</translation>
-    </message>
-    <message>
-        <source>Default transfer action</source>
-        <translation type="vanished">Acción de transferir por defecto</translation>
-    </message>
-    <message>
-        <source>copy</source>
-        <translation type="vanished">copiar</translation>
-    </message>
-    <message>
-        <source>move</source>
-        <translation type="vanished">mover</translation>
-    </message>
-    <message>
-        <source>link</source>
-        <translation type="vanished">enlace</translation>
-    </message>
-    <message>
-        <source>none</source>
-        <translation type="vanished">ninguno</translation>
-    </message>
-    <message>
-        <source>Default filter line action</source>
-        <translation type="vanished">Acción de línea de filtro por defecto</translation>
-    </message>
-    <message>
-        <source>return to directory view</source>
-        <translation type="vanished">volver a vista de directorio</translation>
-    </message>
-    <message>
-        <source>start recursive search</source>
-        <translation type="vanished">iniciar búsqueda recursiva</translation>
-    </message>
-    <message>
-        <source>File name abbreviation</source>
-        <translation type="vanished">Nombre de archivo abreviado</translation>
-    </message>
-    <message>
-        <source>fade out</source>
-        <translation type="vanished">difuminar</translation>
-    </message>
-    <message>
-        <source>elide end</source>
-        <translation type="vanished">omitir final</translation>
-    </message>
-    <message>
-        <source>elide middle</source>
-        <translation type="vanished">omitir mitad</translation>
-    </message>
-    <message>
-        <source>Show full directory paths</source>
-        <translation type="vanished">Mostrar rutas de directorio completas</translation>
-    </message>
-    <message>
-        <source>Show navigation menu icon</source>
-        <translation type="vanished">Mostrar icono de menú de navegación</translation>
-    </message>
-    <message>
-        <source>Enable solid window background</source>
-        <translation type="vanished">Activar fondo de ventana sólido</translation>
-    </message>
-</context>
-<context>
     <name>ShortcutsDialog</name>
     <message>
         <location filename="../qml/pages/ShortcutsDialog.qml" line="32"/>
@@ -2847,10 +2529,6 @@ exposure program</extracomment>
         <translation>Quitar</translation>
     </message>
     <message>
-        <source>Nothing to show here...</source>
-        <translation type="vanished">No hay nada que mostrar...</translation>
-    </message>
-    <message>
         <location filename="../qml/components/ShortcutsList.qml" line="243"/>
         <source>Custom</source>
         <translation>Personalizado</translation>
@@ -2861,45 +2539,9 @@ exposure program</extracomment>
         <translation>Ubicaciones</translation>
     </message>
     <message>
-        <source>Home</source>
-        <translation type="vanished">Carpeta de usuario</translation>
-    </message>
-    <message>
-        <source>Documents</source>
-        <translation type="vanished">Documentos</translation>
-    </message>
-    <message>
-        <source>Downloads</source>
-        <translation type="vanished">Descargas</translation>
-    </message>
-    <message>
-        <source>Music</source>
-        <translation type="vanished">Música</translation>
-    </message>
-    <message>
-        <source>Pictures</source>
-        <translation type="vanished">Imágenes</translation>
-    </message>
-    <message>
-        <source>Videos</source>
-        <translation type="vanished">Vídeos</translation>
-    </message>
-    <message>
-        <source>Root</source>
-        <translation type="vanished">Raíz</translation>
-    </message>
-    <message>
-        <source>Android storage</source>
-        <translation type="vanished">Almacenamiento Android</translation>
-    </message>
-    <message>
         <location filename="../qml/components/ShortcutsList.qml" line="241"/>
         <source>Storage devices</source>
         <translation>Dispositivos de almacenamiento</translation>
-    </message>
-    <message>
-        <source>SD card</source>
-        <translation type="vanished">Tarjeta SD</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="240"/>
@@ -2965,14 +2607,6 @@ exposure program</extracomment>
         <translation>Se abre una nueva ventana. A veces la aplicación permanece en segundo plano.</translation>
     </message>
     <message>
-        <source>New window opened</source>
-        <translation type="vanished">Nueva ventana abierta</translation>
-    </message>
-    <message>
-        <source>Sometimes the application stays in the background</source>
-        <translation type="vanished">A veces la aplicación está en segundo plano</translation>
-    </message>
-    <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="267"/>
         <source>Create a new bookmark</source>
         <translation>Crear un nuevo marcador</translation>
@@ -2981,10 +2615,6 @@ exposure program</extracomment>
         <location filename="../qml/pages/ShortcutsPage.qml" line="279"/>
         <source>Save</source>
         <translation>Guardar</translation>
-    </message>
-    <message>
-        <source>Refresh</source>
-        <translation type="vanished">Actualizar</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="285"/>
@@ -3040,97 +2670,6 @@ exposure program</extracomment>
             <numerusform>%n archivo</numerusform>
             <numerusform>%n archivos</numerusform>
         </translation>
-    </message>
-</context>
-<context>
-    <name>SortingPage</name>
-    <message>
-        <source>Sort by...</source>
-        <translation type="vanished">Ordenar por...</translation>
-    </message>
-    <message>
-        <source>Name</source>
-        <translation type="vanished">Nombre</translation>
-    </message>
-    <message>
-        <source>Size</source>
-        <translation type="vanished">Tamaño</translation>
-    </message>
-    <message>
-        <source>Modification time</source>
-        <translation type="vanished">Hora de actualización</translation>
-    </message>
-    <message>
-        <source>File type</source>
-        <translation type="vanished">Tipo de archivo</translation>
-    </message>
-    <message>
-        <source>Order...</source>
-        <translation type="vanished">Orden...</translation>
-    </message>
-    <message>
-        <source>default</source>
-        <translation type="vanished">defecto</translation>
-    </message>
-    <message>
-        <source>reversed</source>
-        <translation type="vanished">invertido</translation>
-    </message>
-    <message>
-        <source>none</source>
-        <translation type="vanished">ninguna</translation>
-    </message>
-    <message>
-        <source>Enable gallery mode</source>
-        <translation type="vanished">Habilitar modo galería</translation>
-    </message>
-    <message>
-        <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
-        <translation type="vanished">Con el modo galería, las imágenes se mostrarán holgadamente grandes, y todas las entradas, salvo imágenes, vídeos y directorios estarán ocultos.</translation>
-    </message>
-    <message>
-        <source>Show folders first</source>
-        <translation type="vanished">Mostrar carpetas primero</translation>
-    </message>
-    <message>
-        <source>Local preferences</source>
-        <translation type="vanished">Preferencias locales</translation>
-    </message>
-    <message>
-        <source>Global preferences</source>
-        <translation type="vanished">Preferencias globales</translation>
-    </message>
-    <message>
-        <source>Show hidden files</source>
-        <translation type="vanished">Mostrar archivos ocultos</translation>
-    </message>
-    <message>
-        <source>Sort case-sensitively</source>
-        <translation type="vanished">Ordenar distinguiendo mayúsculas y minúsculas</translation>
-    </message>
-    <message>
-        <source>small</source>
-        <translation type="vanished">pequeño</translation>
-    </message>
-    <message>
-        <source>Sorting and View</source>
-        <translation type="vanished">Orden y visualización</translation>
-    </message>
-    <message>
-        <source>Preview images...</source>
-        <translation type="vanished">Vista previa de imágenes...</translation>
-    </message>
-    <message>
-        <source>medium</source>
-        <translation type="vanished">mediano</translation>
-    </message>
-    <message>
-        <source>large</source>
-        <translation type="vanished">grande</translation>
-    </message>
-    <message>
-        <source>huge</source>
-        <translation type="vanished">enorme</translation>
     </message>
 </context>
 <context>
@@ -3221,21 +2760,6 @@ exposure program</extracomment>
     </message>
 </context>
 <context>
-    <name>TransferActionBar</name>
-    <message>
-        <source>Copy</source>
-        <translation type="vanished">Copiar</translation>
-    </message>
-    <message>
-        <source>Move</source>
-        <translation type="vanished">Mover</translation>
-    </message>
-    <message>
-        <source>Link</source>
-        <translation type="vanished">Crear enlace</translation>
-    </message>
-</context>
-<context>
     <name>TransferDialog</name>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="63"/>
@@ -3252,20 +2776,6 @@ exposure program</extracomment>
         <source>Select</source>
         <translation>Seleccionar</translation>
     </message>
-    <message numerus="yes">
-        <source>%n item(s) selected for transferring</source>
-        <translation type="vanished">
-            <numerusform>%n elemento seleccionado para transferir</numerusform>
-            <numerusform>%n elementos seleccionados para transferir</numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <source>%n destinations(s) selected</source>
-        <translation type="vanished">
-            <numerusform>%n destino seleccionado</numerusform>
-            <numerusform>%n destinos seleccionados</numerusform>
-        </translation>
-    </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="79"/>
         <source>Switch to target directory</source>
@@ -3277,7 +2787,6 @@ exposure program</extracomment>
         <translation>
             <numerusform>%n elemento</numerusform>
             <numerusform>%n elementos</numerusform>
-            <numerusform>%n elementos</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -3285,7 +2794,6 @@ exposure program</extracomment>
         <source>%n target(s)</source>
         <translation>
             <numerusform>%n objetivo</numerusform>
-            <numerusform>%n objetivos</numerusform>
             <numerusform>%n objetivos</numerusform>
         </translation>
     </message>
@@ -3415,13 +2923,13 @@ exposure program</extracomment>
 <context>
     <name>ViewImagePage</name>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="253"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="256"/>
         <source>Loading image</source>
         <extracomment>Full page placeholder shown while a large image is being loaded</extracomment>
         <translation>Cargando imagen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="263"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="266"/>
         <source>Failed to load</source>
         <extracomment>Full page placeholder shown when an image failed to load</extracomment>
         <translation>Error al cargar</translation>
@@ -3539,37 +3047,37 @@ exposure program</extracomment>
         <translation>Activar el modo galería</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="117"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="118"/>
         <source>In gallery mode, images will be shown comfortably large, and all entries except for images, videos, and directories will be hidden.</source>
         <translation>En el modo galería, las imágenes se mostrarán en un tamaño cómodo y se ocultarán todas las entradas, excepto las imágenes, los vídeos y los directorios.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="127"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="131"/>
         <source>Sort case-sensitively</source>
         <translation>Ordenar según los casos</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="129"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="133"/>
         <source>Show files with names starting with a capital letter first.</source>
         <translation>Mostrar primero los archivos cuyos nombres empiezan por una mayúscula.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="134"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="138"/>
         <source>Show folders first</source>
         <translation>Mostrar las carpetas primero</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="136"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="140"/>
         <source>Always show folders at the top of the file list.</source>
         <translation>Mostrar siempre las carpetas en la parte superior de la lista de los archivos.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="140"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="144"/>
         <source>Show hidden files last</source>
         <translation>Mostrar los archivos ocultos en último lugar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="142"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="146"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
         <translation>Mostrar siempre los archivos que empiezan por un punto (&quot;.&quot;) al final de la lista de archivos.</translation>
     </message>
@@ -3604,13 +3112,6 @@ exposure program</extracomment>
         <location filename="../qml/js/files.js" line="35"/>
         <source>Unknown</source>
         <translation>Desconocido</translation>
-    </message>
-</context>
-<context>
-    <name>harbour-file-browser</name>
-    <message>
-        <source>Version %1 (%2)</source>
-        <translation type="vanished">Versión %1 (%2)</translation>
     </message>
 </context>
 <context>
