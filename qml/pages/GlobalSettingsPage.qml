@@ -67,35 +67,29 @@ Page {
                     }
                     InfoCombo {
                         label: qsTr("View mode")
-
-                        property string currentData
-                        property var indexOfData
-                        ComboData { dataRole: "value" }
-
-                        onCurrentDataChanged: GlobalSettings.viewViewMode = currentData
-                        Component.onCompleted: {
-                            currentIndex = indexOfData(GlobalSettings.viewViewMode)
-                        }
+                        property ComboData cdata; ComboData { dataRole: "value" }
+                        onValueChanged: GlobalSettings.viewViewMode = cdata.currentData
+                        Component.onCompleted: cdata.reset(GlobalSettings.viewViewMode)
 
                         menu: ContextMenu {
-                            MenuItem {
+                            InfoMenuItem {
                                 text: qsTr("list")
                                 property string value: "list"
-                                property string info: qsTr("Show files in a list. " +
-                                                           "Optionally enable preview thumbnails " +
-                                                           "using the separate setting below.")
+                                info: qsTr("Show files in a list. " +
+                                           "Optionally enable preview thumbnails " +
+                                           "using the separate setting below.")
                             }
-                            /*MenuItem {
+                            /*InfoMenuItem {
                                 text: qsTr("Grid")
                                 property string value: "grid"
-                                property string info: qsTr("TODO")
+                                info: qsTr("TODO")
                             }*/
-                            MenuItem {
+                            InfoMenuItem {
                                 text: qsTr("gallery")
                                 property string value: "gallery"
-                                property string info: qsTr("In gallery mode, images will be shown " +
-                                                           "comfortably large, and all entries except " +
-                                                           "for images, videos, and directories will be hidden.")
+                                info: qsTr("In gallery mode, images will be shown " +
+                                           "comfortably large, and all entries except " +
+                                           "for images, videos, and directories will be hidden.")
                             }
                         }
 
@@ -120,15 +114,15 @@ Page {
                     }
                     ComboBox {
                         label: qsTr("Thumbnail size")
-                        property var indices: ({'small': 0, 'medium': 1, 'large': 2, 'huge': 3})
-                        currentIndex: indices[GlobalSettings.viewPreviewsSize]
-                        onValueChanged: GlobalSettings.viewPreviewsSize = currentItem.action
+                        property ComboData cdata; ComboData { dataRole: "value" }
+                        onValueChanged: GlobalSettings.viewPreviewsSize = cdata.currentData
+                        Component.onCompleted: cdata.reset(GlobalSettings.viewPreviewsSize)
 
                         menu: ContextMenu {
-                            MenuItem { text: qsTr("small");  property string action: "small"; }
-                            MenuItem { text: qsTr("medium"); property string action: "medium"; }
-                            MenuItem { text: qsTr("large");  property string action: "large"; }
-                            MenuItem { text: qsTr("huge");   property string action: "huge"; }
+                            MenuItem { text: qsTr("small");  property string value: "small"; }
+                            MenuItem { text: qsTr("medium"); property string value: "medium"; }
+                            MenuItem { text: qsTr("large");  property string value: "large"; }
+                            MenuItem { text: qsTr("huge");   property string value: "huge"; }
                         }
                     }
             }
@@ -156,9 +150,9 @@ Page {
                     }
                     ComboBox {
                         label: qsTr("Sort by")
-                        property var indices: ({'name': 0, 'size': 1, 'modificationtime': 2, 'type': 3})
-                        currentIndex: indices[GlobalSettings.viewSortRole]
-                        onValueChanged: GlobalSettings.viewSortRole = currentItem.value
+                        property ComboData cdata; ComboData { dataRole: "value" }
+                        onValueChanged: GlobalSettings.viewSortRole = cdata.currentData
+                        Component.onCompleted: cdata.reset(GlobalSettings.viewSortRole)
 
                         menu: ContextMenu {
                             MenuItem { text: qsTr("name");      property string value: "name" }
@@ -175,6 +169,7 @@ Page {
                     }
                     ComboBox {
                         label: qsTr("Sort order")
+
                         property var indices: ({'default': 0, 'reversed': 1})
                         currentIndex: indices[GlobalSettings.viewSortOrder]
                         onValueChanged: GlobalSettings.viewSortOrder = currentItem.value
