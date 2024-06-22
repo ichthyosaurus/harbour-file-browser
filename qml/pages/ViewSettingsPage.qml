@@ -112,15 +112,19 @@ Page {
                 description: qsTr('Show files with names starting with a full stop (“.”).')
                 settingsContainer: prefs
             }
-            TextSwitch {
+            SettingsSwitch {
                 text: qsTr("Enable gallery mode")
+                key: "viewViewMode"
                 description: qsTr("In gallery mode, images will be shown comfortably large, " +
                                   "and all entries except for images, videos, and directories will be hidden.")
-                automaticCheck: false
-                checked: prefs.viewViewMode === "gallery"
-                onClicked: {
-                    // writing the new value will update "checked"
-                    prefs.viewViewMode = (checked ? "gallery" : "list")
+                settingsContainer: prefs
+                checkedValue: "gallery"
+                clickHandler: function() {
+                    if (settingsContainer[key] === "gallery") {
+                        settingsContainer[key] = "list"
+                    } else {
+                        settingsContainer[key] = "gallery"
+                    }
                 }
             }
             SettingsSwitch {

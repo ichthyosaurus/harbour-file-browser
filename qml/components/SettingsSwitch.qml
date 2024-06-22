@@ -32,14 +32,23 @@ TextSwitch {
     property var settingsContainer: GlobalSettings
 
     // advanced config
-    property var extraCallback: function() {}
+    property var clickHandler: defaultClickHandler
+    property var defaultClickHandler: function() {
+        settingsContainer[key] = !checked
+    }
+    property var checkedValue: true
 
     // internal
-    automaticCheck: false
-    checked: settingsContainer[key]
 
+    automaticCheck: false
+    checked: settingsContainer[key] === checkedValue
     onClicked: {
-        settingsContainer[key] = !checked
-        extraCallback()
+        clickHandler()
+
+        // this is to make sure the binding is re-evaluated
+        // when the value has changed
+        checked = Qt.binding(function(){
+            return settingsContainer[key] === checkedValue
+        })
     }
 }
