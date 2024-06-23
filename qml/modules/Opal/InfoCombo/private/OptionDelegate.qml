@@ -8,9 +8,10 @@ TextSwitch{property bool allowChanges
 property ComboBox comboBox
 property int modelIndex
 checked:!!comboBox&&comboBox.currentIndex==modelIndex
-highlighted:!allowChanges
 automaticCheck:false
-text:modelData.title
+Binding on highlighted{when:!allowChanges
+value:true
+}text:modelData.title
 description:modelData.text
 onClicked:{if(!allowChanges||!comboBox||comboBox.currentIndex==modelIndex){return
 }comboBox.currentIndex=modelIndex
