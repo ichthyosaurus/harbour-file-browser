@@ -115,8 +115,8 @@ Page {
             SettingsSwitch {
                 text: qsTr("Enable gallery mode")
                 key: "viewViewMode"
-                description: qsTr("In gallery mode, images will be shown comfortably large, " +
-                                  "and all entries except for images, videos, and directories will be hidden.")
+                description: qsTr("In gallery mode, images will be shown to fit the screen. " +
+                                  "Other files are shown without preview thumbnails.")
                 settingsContainer: prefs
                 checkedValue: "gallery"
                 clickHandler: function() {

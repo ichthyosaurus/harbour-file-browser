@@ -360,9 +360,10 @@ ListItem {
             PropertyChanges { target: gallery; sourceComponent: galleryVideoComponent }
         },
         State {
-            name: "galleryUnavailable"; extend: "hiddenImmediately"
-            // hide everything except directories, images, and videos
+            name: "galleryUnavailable"
+            // hide gallery view for non-media files (entry is still shown)
             when: viewState === "gallery" && fileIcon !== "file-image" && fileIcon !== "file-video" && !isDir
+            PropertyChanges { target: gallery; sourceComponent: undefined }
         }
     ]
 }

@@ -87,19 +87,16 @@ Page {
                             InfoMenuItem {
                                 text: qsTr("gallery")
                                 property string value: "gallery"
-                                info: qsTr("In gallery mode, images will be shown " +
-                                           "comfortably large, and all entries except " +
-                                           "for images, videos, and directories will be hidden.")
+                                info: qsTr("In gallery mode, images will be shown to fit the screen. " +
+                                           "Other files are shown without preview thumbnails.")
                             }
                         }
 
                         InfoComboSection {
                             placeAtTop: false
-                            title: qsTr("Note")
-                            text: qsTr("It is recommended to use “list” as default mode.") +
-                                  qsTr("Note that non-media files are hidden in “gallery” mode. " +
-                                       "If per-directory settings are enabled, you can change " +
-                                       "the view mode for individual folders.")
+                            title: qsTr("Hint")
+                            text: qsTr("You can enable per-directory settings to configure your " +
+                                       "preferences for individual folders.")
                         }
                     }
                     SettingsSwitch {
