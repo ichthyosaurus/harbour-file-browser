@@ -2046,7 +2046,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="119"/>
         <source>License text</source>
-        <translation>Текст ліцензії</translation>
+        <translation type="unfinished">Текст ліцензії</translation>
     </message>
 </context>
 <context>
@@ -2098,24 +2098,24 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="55"/>
         <source>About</source>
-        <translation>Про застосунок</translation>
+        <translation type="unfinished">Про застосунок</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="84"/>
         <source>Version %1</source>
-        <translation>Версія %1</translation>
+        <translation type="unfinished">Версія %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="100"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="22"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="31"/>
         <source>Development</source>
-        <translation>Розробка</translation>
+        <translation type="unfinished">Розробка</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="103"/>
         <source>show contributors</source>
-        <translation>показати учасників</translation>
+        <translation type="unfinished">Показати учасників</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="105"/>
@@ -2123,28 +2123,28 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="57"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="47"/>
         <source>Homepage</source>
-        <translation>Головна</translation>
+        <translation type="unfinished">Головна</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="108"/>
         <location filename="../qml/modules/Opal/About/private/ChangelogPage.qml" line="16"/>
         <source>Changelog</source>
-        <translation>Список змін</translation>
+        <translation type="unfinished">Список змін</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="123"/>
         <source>Donations</source>
-        <translation>Пожертви</translation>
+        <translation type="unfinished">Пожертви</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="129"/>
         <source>License</source>
-        <translation>Ліцензія</translation>
+        <translation type="unfinished">Ліцензія</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="134"/>
         <source>show license(s)</source>
-        <translation>
+        <translation type="unfinished">
             <numerusform>Показати ліцензію</numerusform>
             <numerusform>Показати ліцензії</numerusform>
             <numerusform>Показати ліцензій</numerusform>
@@ -2153,7 +2153,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="111"/>
         <source>Translations</source>
-        <translation>Переклади</translation>
+        <translation type="unfinished">Переклади</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="114"/>
@@ -2161,43 +2161,43 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="58"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="50"/>
         <source>Source Code</source>
-        <translation>Вихідний код</translation>
+        <translation type="unfinished">Вихідний код</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/InfoSection.qml" line="15"/>
         <source>show details</source>
-        <translation>показати подробиці</translation>
+        <translation type="unfinished">показати подробиці</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="21"/>
         <source>Contributors</source>
-        <translation>Учасники</translation>
+        <translation type="unfinished">Учасники</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="37"/>
         <source>Acknowledgements</source>
-        <translation>Подяки</translation>
+        <translation type="unfinished">Подяки</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="44"/>
         <source>Thank you!</source>
-        <translation>Дякую!</translation>
+        <translation type="unfinished">Дякую!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="48"/>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
         <source>Details</source>
-        <translation>Подробиці</translation>
+        <translation type="unfinished">Подробиці</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="25"/>
         <source>Download license texts</source>
-        <translation>Завантажити тексти ліцензій</translation>
+        <translation type="unfinished">Завантажити тексти ліцензій</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
         <source>License(s)</source>
-        <translation>
+        <translation type="unfinished">
             <numerusform>Ліцензія</numerusform>
             <numerusform>Ліцензії</numerusform>
             <numerusform>Ліцензій</numerusform>
@@ -2206,7 +2206,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="41"/>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation>Примітка: будь ласка, перевірте вихідний код для отримання найбільш точної інформації.</translation>
+        <translation type="unfinished">Примітка: будь ласка, перевірте вихідний код для отримання найбільш точної інформації.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="15"/>
@@ -2231,17 +2231,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="60"/>
         <source>News</source>
-        <translation>Новини</translation>
+        <translation type="unfinished">Новини</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="61"/>
         <source>Changes since version %1</source>
-        <translation>Зміни з попередньої версії %1</translation>
+        <translation type="unfinished">Зміни з попередньої версії %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="120"/>
         <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
-        <translation>Будь ласка, зверніться до &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
+        <translation type="unfinished">Будь ласка, зверніться до &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
 </context>
 <context>
@@ -2249,17 +2249,105 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="7"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation>Якщо ви хочете підтримати мою роботу, ви можете пригостити мене чашкою кави.</translation>
+        <translation type="unfinished">Якщо ви хочете підтримати мою роботу, ви можете пригостити мене чашкою кави.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="8"/>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation>Ви можете підтримати цей проєкт, зробивши свій внесок або пожертвувавши за допомогою будь-якого з цих сервісів.</translation>
+        <translation type="unfinished">Ви можете підтримати цей прожкт, зробивши свій внесок або пожертвувавши за допомогою будь-якого з цих сервісів.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="9"/>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation>Ваш внесок у переклади або код буде дуже доречним.</translation>
+        <translation type="unfinished">Ваш внесок у переклади або код буде дуже доречним.</translation>
+    </message>
+    <message>
+        <source>Programming</source>
+        <translation type="obsolete">Програмування</translation>
+    </message>
+    <message>
+        <source>Translations</source>
+        <translation type="obsolete">Переклади</translation>
+    </message>
+    <message>
+        <source>Icon Design</source>
+        <translation type="obsolete">Дизайн іконок</translation>
+    </message>
+    <message>
+        <source>Swedish</source>
+        <translation type="obsolete">Шведська</translation>
+    </message>
+    <message>
+        <source>Polish</source>
+        <translation type="obsolete">Польська</translation>
+    </message>
+    <message>
+        <source>German</source>
+        <translation type="obsolete">Німецька</translation>
+    </message>
+    <message>
+        <source>French</source>
+        <translation type="obsolete">Французька</translation>
+    </message>
+    <message>
+        <source>Chinese</source>
+        <translation type="obsolete">Китайська</translation>
+    </message>
+    <message>
+        <source>English</source>
+        <translation type="obsolete">Англійська</translation>
+    </message>
+    <message>
+        <source>Italian</source>
+        <translation type="obsolete">Італійська</translation>
+    </message>
+    <message>
+        <source>Finnish</source>
+        <translation type="obsolete">Фінська</translation>
+    </message>
+    <message>
+        <source>Norwegian</source>
+        <translation type="obsolete">Норвезька</translation>
+    </message>
+    <message>
+        <source>Estonian</source>
+        <translation type="obsolete">Естонська</translation>
+    </message>
+    <message>
+        <source>Czech</source>
+        <translation type="obsolete">Чеська</translation>
+    </message>
+    <message>
+        <source>Greek</source>
+        <translation type="obsolete">Грецька</translation>
+    </message>
+    <message>
+        <source>Spanish</source>
+        <translation type="obsolete">Іспанська</translation>
+    </message>
+    <message>
+        <source>Hungarian</source>
+        <translation type="obsolete">Угорська</translation>
+    </message>
+    <message>
+        <source>Indonesian</source>
+        <translation type="obsolete">Індонезійська</translation>
+    </message>
+    <message>
+        <source>Russian</source>
+        <translation type="obsolete">Російська</translation>
+    </message>
+    <message>
+        <source>Dutch</source>
+        <translation type="obsolete">Нідерландська</translation>
+    </message>
+    <message>
+        <source>Slovak</source>
+        <translation type="obsolete">Словацька</translation>
+    </message>
+    <message>
+        <source>Turkish</source>
+        <translation type="obsolete">Турецька</translation>
     </message>
 </context>
 <context>
@@ -2267,7 +2355,11 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/InfoCombo/private/InfoComboPage.qml" line="26"/>
         <source>Details</source>
-        <translation type="unfinished">Подробиці</translation>
+        <translation>Подробиці</translation>
+    </message>
+    <message>
+        <source>Option</source>
+        <translation type="vanished">Параметри</translation>
     </message>
 </context>
 <context>
@@ -3016,13 +3108,13 @@ exposure program</extracomment>
 <context>
     <name>ViewImagePage</name>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="253"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="256"/>
         <source>Loading image</source>
         <extracomment>Full page placeholder shown while a large image is being loaded</extracomment>
         <translation>Зображення завантажуєтся</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="263"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="266"/>
         <source>Failed to load</source>
         <extracomment>Full page placeholder shown when an image failed to load</extracomment>
         <translation>Не вдалося завантажити</translation>

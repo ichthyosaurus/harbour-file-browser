@@ -437,96 +437,96 @@
 <context>
     <name>DirectoryPage</name>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="306"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="307"/>
         <source>Search</source>
         <translation>Recherche</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="206"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="207"/>
         <source>Paste</source>
         <translation>Coller</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="186"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="187"/>
         <source>View Preferences</source>
         <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
         <translation>Voir les préférences</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="193"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="194"/>
         <source>Create New...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="224"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="225"/>
         <source>Filter directory contents</source>
         <translation>Filtrer le contenu du répertoire</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Remove bookmark</source>
         <translation>Supprimer le favoris</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Add to bookmarks</source>
         <translation>Ajouter aux favoris</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="320"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="321"/>
         <source>Copy path to clipboard</source>
         <translation>Copier le chemin dans le presse-papiers</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="383"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="384"/>
         <source>filtered by: %1</source>
         <translation>filtré par : %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="446"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="447"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="448"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="449"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation type="unfinished">Vide</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="451"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="452"/>
         <source>No files matched the filter.</source>
         <translation>Aucun fichier ne correspond au filtre.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="452"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="453"/>
         <source>This directory contains no files.</source>
         <translation>Cet dossier ne contient aucun fichier.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="532"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="535"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="533"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="536"/>
         <source>Deleting</source>
         <translation>Suppression</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="547"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="548"/>
         <source>Internally not ready</source>
         <translation type="unfinished">N&apos;est pas prêt en interne</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="547"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="548"/>
         <source>Please simply try again</source>
         <translation>Veuillez réessayer à nouveau</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="590"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="591"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>Souhaitez-vous basculer entre le téléphone et le carte SD ? Si cela échoue essayez de copier les fichiers.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="592"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="593"/>
         <source>Perhaps the storage is full?</source>
         <translation>L&apos;espace de stockage est peut-être plein ?</translation>
     </message>
@@ -751,7 +751,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="262"/>
+        <location filename="../qml/components/FileActions.qml" line="263"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>compresser le fichier</numerusform>
@@ -759,7 +759,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="271"/>
+        <location filename="../qml/components/FileActions.qml" line="272"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>modifier le fichier</numerusform>
@@ -767,7 +767,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="296"/>
+        <location filename="../qml/components/FileActions.qml" line="297"/>
         <source>show file properties</source>
         <translation>afficher les propriétés du fichier</translation>
     </message>
@@ -2170,6 +2170,10 @@ exposure program</extracomment>
         <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
         <translation>Veuillez vous référer à &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
+    <message>
+        <source>Version %1 (%2)</source>
+        <translation type="vanished">Version %1 (%2)</translation>
+    </message>
 </context>
 <context>
     <name>Opal.About.Common</name>
@@ -2188,13 +2192,154 @@ exposure program</extracomment>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Vos contributions aux traductions ou au code seront les bienvenues.</translation>
     </message>
+    <message>
+        <source>Author</source>
+        <translation type="vanished">Auteur</translation>
+    </message>
+    <message numerus="yes">
+        <source>Author(s)</source>
+        <translation type="vanished">
+            <numerusform>Auteur</numerusform>
+            <numerusform>Auteurs</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Maintainer</source>
+        <translation type="vanished">Mainteneur/mainteneuse</translation>
+    </message>
+    <message numerus="yes">
+        <source>Maintainer(s)</source>
+        <translation type="vanished">
+            <numerusform>Mainteneur</numerusform>
+            <numerusform>Mainteneurs</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Programming</source>
+        <translation type="vanished">Programmation</translation>
+    </message>
+    <message>
+        <source>Translations</source>
+        <translation type="vanished">Traductions</translation>
+    </message>
+    <message>
+        <source>Icon Design</source>
+        <translation type="vanished">Design de l&apos;icône</translation>
+    </message>
+    <message>
+        <source>Third-party libraries</source>
+        <translation type="vanished">Bibliothèques tierces</translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation type="vanished">Données</translation>
+    </message>
+    <message>
+        <source>Data License</source>
+        <translation type="vanished">Licence de données</translation>
+    </message>
+    <message numerus="yes">
+        <source>Data License(s)</source>
+        <translation type="vanished">
+            <numerusform>Licence de données</numerusform>
+            <numerusform>Licences de données</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Terms of Use</source>
+        <translation type="vanished">Conditions d&apos;utilisation</translation>
+    </message>
+    <message>
+        <source>Swedish</source>
+        <translation type="vanished">suédois</translation>
+    </message>
+    <message>
+        <source>Polish</source>
+        <translation type="vanished">polonais</translation>
+    </message>
+    <message>
+        <source>German</source>
+        <translation type="vanished">allemand</translation>
+    </message>
+    <message>
+        <source>French</source>
+        <translation type="vanished">français</translation>
+    </message>
+    <message>
+        <source>Chinese</source>
+        <translation type="vanished">chinois</translation>
+    </message>
+    <message>
+        <source>English</source>
+        <translation type="vanished">anglais</translation>
+    </message>
+    <message>
+        <source>Italian</source>
+        <translation type="vanished">italien</translation>
+    </message>
+    <message>
+        <source>Finnish</source>
+        <translation type="vanished">finnois</translation>
+    </message>
+    <message>
+        <source>Norwegian</source>
+        <translation type="vanished">norvégien</translation>
+    </message>
+    <message>
+        <source>Latvian</source>
+        <translation type="vanished">letton</translation>
+    </message>
+    <message>
+        <source>Estonian</source>
+        <translation type="vanished">estonien</translation>
+    </message>
+    <message>
+        <source>Czech</source>
+        <translation type="vanished">tchèque</translation>
+    </message>
+    <message>
+        <source>Greek</source>
+        <translation type="vanished">grec</translation>
+    </message>
+    <message>
+        <source>Spanish</source>
+        <translation type="vanished">espagnol</translation>
+    </message>
+    <message>
+        <source>Hungarian</source>
+        <translation type="vanished">hongrois</translation>
+    </message>
+    <message>
+        <source>Indonesian</source>
+        <translation type="vanished">indonésien</translation>
+    </message>
+    <message>
+        <source>Russian</source>
+        <translation type="vanished">russe</translation>
+    </message>
+    <message>
+        <source>Dutch</source>
+        <translation type="vanished">néerlandais</translation>
+    </message>
+    <message>
+        <source>Slovak</source>
+        <translation type="vanished">slovaque</translation>
+    </message>
+    <message>
+        <source>Turkish</source>
+        <translation type="vanished">turc</translation>
+    </message>
 </context>
 <context>
     <name>Opal.InfoCombo</name>
     <message>
         <location filename="../qml/modules/Opal/InfoCombo/private/InfoComboPage.qml" line="26"/>
         <source>Details</source>
-        <translation type="unfinished">Détails</translation>
+        <translation>Détails</translation>
+    </message>
+    <message>
+        <source>Option</source>
+        <translation type="vanished">Option</translation>
     </message>
 </context>
 <context>
@@ -2399,7 +2544,7 @@ exposure program</extracomment>
         <translation type="unfinished">Soyez prudent en utilisant le Navigation de fichiers en mode root. Certaines actions pourraient casser votre système.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Démarrer le Navigation de fichier en mode root.</translation>
     </message>

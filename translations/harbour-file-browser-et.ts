@@ -437,96 +437,96 @@
 <context>
     <name>DirectoryPage</name>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="186"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="187"/>
         <source>View Preferences</source>
         <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
         <translation>Vaata eelistusi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="193"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="194"/>
         <source>Create New...</source>
         <translation>Loo uus...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="206"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="207"/>
         <source>Paste</source>
         <translation>Aseta</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="224"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="225"/>
         <source>Filter directory contents</source>
         <translation>Filtreeri kausta sisu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="306"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="307"/>
         <source>Search</source>
         <translation>Otsi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Remove bookmark</source>
         <translation>Kustuta järjehoidja</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Add to bookmarks</source>
         <translation>Lisa järjehoidjaks</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="320"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="321"/>
         <source>Copy path to clipboard</source>
         <translation>Kopeeri otsitee lõikelauale</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="383"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="384"/>
         <source>filtered by: %1</source>
         <translation>filtreeritud %1 alusel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="446"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="447"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="448"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="449"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation type="unfinished">Kirjed puuduvad</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="451"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="452"/>
         <source>No files matched the filter.</source>
         <translation>Ükski fail ei vasta filtrile.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="452"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="453"/>
         <source>This directory contains no files.</source>
         <translation>Selles kaustas pole faile.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="532"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="535"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="533"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="536"/>
         <source>Deleting</source>
         <translation>Kustutan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="547"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="548"/>
         <source>Internally not ready</source>
         <translation>Rakendus pole sisemiselt valmis</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="547"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="548"/>
         <source>Please simply try again</source>
         <translation>Lihtsalt palun proovi uuesti</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="590"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="591"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>Kas sa üritad tõsta andmeid telefoni mälu ja SD-kaardi vahel? Nii see ei toimi, proovi kopeerimist.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="592"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="593"/>
         <source>Perhaps the storage is full?</source>
         <translation>Võib-olla andmekandja on triiki täis?</translation>
     </message>
@@ -751,7 +751,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="262"/>
+        <location filename="../qml/components/FileActions.qml" line="263"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>paki fail</numerusform>
@@ -759,7 +759,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="271"/>
+        <location filename="../qml/components/FileActions.qml" line="272"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>muuda faili</numerusform>
@@ -767,7 +767,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="296"/>
+        <location filename="../qml/components/FileActions.qml" line="297"/>
         <source>show file properties</source>
         <translation>näita faili omadusi</translation>
     </message>
@@ -2170,6 +2170,14 @@ exposure program</extracomment>
         <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
         <translation>Palun vaata siia: &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
+    <message>
+        <source>Version %1 (%2)</source>
+        <translation type="vanished">Versioon %1 (%2)</translation>
+    </message>
+    <message>
+        <source>Please refer to &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</source>
+        <translation type="vanished">Palun vaata ka &lt;a href=&apos;%1&apos;&gt;%1&lt;/a&gt;</translation>
+    </message>
 </context>
 <context>
     <name>Opal.About.Common</name>
@@ -2188,13 +2196,154 @@ exposure program</extracomment>
         <source>Your contributions to translations or code would be most welcome.</source>
         <translation>Sinu panus tõlgete või rakenduse koodi näol oleks väga teretulnud.</translation>
     </message>
+    <message>
+        <source>Author</source>
+        <translation type="vanished">Autor</translation>
+    </message>
+    <message numerus="yes">
+        <source>Author(s)</source>
+        <translation type="vanished">
+            <numerusform>Autor</numerusform>
+            <numerusform>Autorid</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Maintainer</source>
+        <translation type="vanished">Jätkuarendaja</translation>
+    </message>
+    <message numerus="yes">
+        <source>Maintainer(s)</source>
+        <translation type="vanished">
+            <numerusform>Jätkuarendaja</numerusform>
+            <numerusform>Jätkuarendajad</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Programming</source>
+        <translation type="vanished">Koodi kirjutamine</translation>
+    </message>
+    <message>
+        <source>Translations</source>
+        <translation type="vanished">Tõlked</translation>
+    </message>
+    <message>
+        <source>Icon Design</source>
+        <translation type="vanished">Ikooni kujundus</translation>
+    </message>
+    <message>
+        <source>Third-party libraries</source>
+        <translation type="vanished">Kolmandate osapoolte teegid</translation>
+    </message>
+    <message>
+        <source>Data</source>
+        <translation type="vanished">Andmed</translation>
+    </message>
+    <message>
+        <source>Data License</source>
+        <translation type="vanished">Andmete litsents</translation>
+    </message>
+    <message numerus="yes">
+        <source>Data License(s)</source>
+        <translation type="vanished">
+            <numerusform>Andmete litsents</numerusform>
+            <numerusform>Andmete litsentsid</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>Terms of Use</source>
+        <translation type="vanished">Kasutustingimused</translation>
+    </message>
+    <message>
+        <source>Swedish</source>
+        <translation type="vanished">rootsi</translation>
+    </message>
+    <message>
+        <source>Polish</source>
+        <translation type="vanished">poola</translation>
+    </message>
+    <message>
+        <source>German</source>
+        <translation type="vanished">saksa</translation>
+    </message>
+    <message>
+        <source>French</source>
+        <translation type="vanished">prantsuse</translation>
+    </message>
+    <message>
+        <source>Chinese</source>
+        <translation type="vanished">hiina</translation>
+    </message>
+    <message>
+        <source>English</source>
+        <translation type="vanished">inglise</translation>
+    </message>
+    <message>
+        <source>Italian</source>
+        <translation type="vanished">itaalia</translation>
+    </message>
+    <message>
+        <source>Finnish</source>
+        <translation type="vanished">soome</translation>
+    </message>
+    <message>
+        <source>Norwegian</source>
+        <translation type="vanished">norra</translation>
+    </message>
+    <message>
+        <source>Latvian</source>
+        <translation type="vanished">läti</translation>
+    </message>
+    <message>
+        <source>Estonian</source>
+        <translation type="vanished">eesti</translation>
+    </message>
+    <message>
+        <source>Czech</source>
+        <translation type="vanished">tšehhi</translation>
+    </message>
+    <message>
+        <source>Greek</source>
+        <translation type="vanished">kreeka</translation>
+    </message>
+    <message>
+        <source>Spanish</source>
+        <translation type="vanished">hispaania</translation>
+    </message>
+    <message>
+        <source>Hungarian</source>
+        <translation type="vanished">ungari</translation>
+    </message>
+    <message>
+        <source>Indonesian</source>
+        <translation type="vanished">indoneesia</translation>
+    </message>
+    <message>
+        <source>Russian</source>
+        <translation type="vanished">vene</translation>
+    </message>
+    <message>
+        <source>Dutch</source>
+        <translation type="vanished">hollandi</translation>
+    </message>
+    <message>
+        <source>Slovak</source>
+        <translation type="vanished">slovaki</translation>
+    </message>
+    <message>
+        <source>Turkish</source>
+        <translation type="vanished">türgi</translation>
+    </message>
 </context>
 <context>
     <name>Opal.InfoCombo</name>
     <message>
         <location filename="../qml/modules/Opal/InfoCombo/private/InfoComboPage.qml" line="26"/>
         <source>Details</source>
-        <translation type="unfinished">Lisateave</translation>
+        <translation>Lisateave</translation>
+    </message>
+    <message>
+        <source>Option</source>
+        <translation type="vanished">Valikud</translation>
     </message>
 </context>
 <context>
@@ -2399,7 +2548,7 @@ exposure program</extracomment>
         <translation>Kui kasutad failihaldurit juurkasutaja õigustes, siis ole ettevaatlik. Valed tegevused võivad ootamatult sinu nutiseadet kahjustada.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Käivita failihaldur juurkasutajana</translation>
     </message>

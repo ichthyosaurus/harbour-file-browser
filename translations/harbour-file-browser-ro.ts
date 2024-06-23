@@ -2957,13 +2957,13 @@ exposure program</extracomment>
 <context>
     <name>ViewImagePage</name>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="253"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="256"/>
         <source>Loading image</source>
         <extracomment>Full page placeholder shown while a large image is being loaded</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewImagePage.qml" line="263"/>
+        <location filename="../qml/pages/ViewImagePage.qml" line="266"/>
         <source>Failed to load</source>
         <extracomment>Full page placeholder shown when an image failed to load</extracomment>
         <translation type="unfinished"></translation>

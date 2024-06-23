@@ -433,96 +433,96 @@
 <context>
     <name>DirectoryPage</name>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="186"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="187"/>
         <source>View Preferences</source>
         <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
         <translation>Beállítások megtekintése</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="193"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="194"/>
         <source>Create New...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="206"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="207"/>
         <source>Paste</source>
         <translation>Beillesztés</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="224"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="225"/>
         <source>Filter directory contents</source>
         <translation>Mappatartalom szűrése</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="306"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="307"/>
         <source>Search</source>
         <translation>Keresés</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Remove bookmark</source>
         <translation>Könyvjelző eltávolítása</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Add to bookmarks</source>
         <translation>Hozzáadás könyvjelzőkhöz</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="320"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="321"/>
         <source>Copy path to clipboard</source>
         <translation>Útvonal vágólapra másolása</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="383"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="384"/>
         <source>filtered by: %1</source>
         <translation>szűrő: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="446"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="447"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="448"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="449"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation type="unfinished">Üres</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="451"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="452"/>
         <source>No files matched the filter.</source>
         <translation>Nincs a szűrőnek megfelelő fájl.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="452"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="453"/>
         <source>This directory contains no files.</source>
         <translation>Ez a mappa nem tartalmaz fájlokat.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="532"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="535"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="533"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="536"/>
         <source>Deleting</source>
         <translation>Törlés</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="547"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="548"/>
         <source>Internally not ready</source>
         <translation>Belsőleg nem kész</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="547"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="548"/>
         <source>Please simply try again</source>
         <translation>Kérlek próbáld újra</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="590"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="591"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>A telefon és az SD-kártya között helyeznél át? Nem működik, próbálkozz másolással.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="592"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="593"/>
         <source>Perhaps the storage is full?</source>
         <translation>Talán tele a tárhely?</translation>
     </message>
@@ -738,21 +738,21 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="262"/>
+        <location filename="../qml/components/FileActions.qml" line="263"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>fájl tömörítése</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="271"/>
+        <location filename="../qml/components/FileActions.qml" line="272"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>fájl szerkesztése</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="296"/>
+        <location filename="../qml/components/FileActions.qml" line="297"/>
         <source>show file properties</source>
         <translation>Fájl tulajdonságainak megjelenítése</translation>
     </message>
@@ -2026,7 +2026,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="103"/>
         <source>show contributors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">közreműködők megjelenítése</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="105"/>
@@ -2034,7 +2034,7 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="57"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="47"/>
         <source>Homepage</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Honlap</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="108"/>
@@ -2045,7 +2045,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="123"/>
         <source>Donations</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Adományok</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="129"/>
@@ -2056,7 +2056,7 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="134"/>
         <source>show license(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>Licenc megjelenítése</numerusform>
         </translation>
     </message>
     <message>
@@ -2075,7 +2075,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/InfoSection.qml" line="15"/>
         <source>show details</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">részletek megjelenítése</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="21"/>
@@ -2090,45 +2090,45 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="44"/>
         <source>Thank you!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Köszönöm!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="48"/>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
         <source>Details</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Részletek</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="25"/>
         <source>Download license texts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Licencszövegek letöltése</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
         <source>License(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>Licenc</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="41"/>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Megjegyzés: Kérlek ellenőrizd a forráskódot a legpontosabb információért.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="15"/>
         <source>External Link</source>
-        <translation type="unfinished">Külső hivatkozás</translation>
+        <translation>Külső hivatkozás</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="32"/>
         <source>Open in browser</source>
-        <translation type="unfinished">Megnyitás böngészőben</translation>
+        <translation>Megnyitás böngészőben</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="36"/>
         <source>Copied to clipboard: %1</source>
-        <translation type="unfinished">A vágólapra másolva: %1</translation>
+        <translation>A vágólapra másolva: %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="41"/>
@@ -2150,23 +2150,119 @@ exposure program</extracomment>
         <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Version %1 (%2)</source>
+        <translation type="vanished">%1 (%2) verzió</translation>
+    </message>
 </context>
 <context>
     <name>Opal.About.Common</name>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="7"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ha támogatni szeretnéd a munkámat, vehetsz nekem egy csésze kávét.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="8"/>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Támogathatod ezt a projektet közreműködéssel, vagy ezen szolgáltatásokon keresztüli adományozással.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="9"/>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">A hozzájárulásaid a fordításokhoz, vagy a kódhoz nagyon szívesen fogadjuk.</translation>
+    </message>
+    <message>
+        <source>Programming</source>
+        <translation type="vanished">Programozás</translation>
+    </message>
+    <message>
+        <source>Translations</source>
+        <translation type="vanished">Fordítások</translation>
+    </message>
+    <message>
+        <source>Icon Design</source>
+        <translation type="vanished">Ikon design</translation>
+    </message>
+    <message>
+        <source>Swedish</source>
+        <translation type="vanished">Svéd</translation>
+    </message>
+    <message>
+        <source>Polish</source>
+        <translation type="vanished">Lengyel</translation>
+    </message>
+    <message>
+        <source>German</source>
+        <translation type="vanished">Német</translation>
+    </message>
+    <message>
+        <source>French</source>
+        <translation type="vanished">Francia</translation>
+    </message>
+    <message>
+        <source>Chinese</source>
+        <translation type="vanished">kínai</translation>
+    </message>
+    <message>
+        <source>English</source>
+        <translation type="vanished">Angol</translation>
+    </message>
+    <message>
+        <source>Italian</source>
+        <translation type="vanished">Olasz</translation>
+    </message>
+    <message>
+        <source>Finnish</source>
+        <translation type="vanished">Finn</translation>
+    </message>
+    <message>
+        <source>Norwegian</source>
+        <translation type="vanished">Norvég</translation>
+    </message>
+    <message>
+        <source>Latvian</source>
+        <translation type="vanished">Lett</translation>
+    </message>
+    <message>
+        <source>Estonian</source>
+        <translation type="vanished">Észt</translation>
+    </message>
+    <message>
+        <source>Czech</source>
+        <translation type="vanished">Cseh</translation>
+    </message>
+    <message>
+        <source>Greek</source>
+        <translation type="vanished">Görög</translation>
+    </message>
+    <message>
+        <source>Spanish</source>
+        <translation type="vanished">Spanyol</translation>
+    </message>
+    <message>
+        <source>Hungarian</source>
+        <translation type="vanished">Magyar</translation>
+    </message>
+    <message>
+        <source>Indonesian</source>
+        <translation type="vanished">Indonéz</translation>
+    </message>
+    <message>
+        <source>Russian</source>
+        <translation type="vanished">Orosz</translation>
+    </message>
+    <message>
+        <source>Dutch</source>
+        <translation type="vanished">Holland</translation>
+    </message>
+    <message>
+        <source>Slovak</source>
+        <translation type="vanished">Szlovák</translation>
+    </message>
+    <message>
+        <source>Turkish</source>
+        <translation type="vanished">Török</translation>
     </message>
 </context>
 <context>
@@ -2174,7 +2270,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/InfoCombo/private/InfoComboPage.qml" line="26"/>
         <source>Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Részletek</translation>
     </message>
 </context>
 <context>
@@ -2377,7 +2473,7 @@ exposure program</extracomment>
         <translation>Légy óvatos, ha a File Browser-t root módban használod. A műveletek váratlanul tönkretehetik a rendszered.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
         <translation>A File Browser indítása root módban</translation>
     </message>
