@@ -3,6 +3,7 @@
  *
  * SPDX-FileCopyrightText: Matthias Wandel
  * SPDX-FileCopyrightText: 2014 Kari Pihkala
+ * SPDX-FileCopyrightText: 2024 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -397,7 +398,9 @@ int ReadJpegFile(const char * FileName, ReadMode_t ReadMode)
     infile = fopen(FileName, "rb"); // Unix ignores 'b', windows needs it.
 
     if (infile == NULL) {
-        fprintf(stderr, "can't open '%s'\n", FileName);
+        // WARNING the next line is commented to reduce log spam
+        //         uncomment if debugging is necessary
+        // fprintf(stderr, "can't open '%s'\n", FileName);
         return FALSE;
     }
 
@@ -410,7 +413,9 @@ int ReadJpegFile(const char * FileName, ReadMode_t ReadMode)
             // a jpeg file.
             ret = TRUE;
         }else{
-            fprintf(stderr,"Not JPEG: %s\n",FileName);
+            // WARNING the next line is commented to reduce log spam
+            //         uncomment if debugging is necessary
+            // fprintf(stderr,"Not JPEG: %s\n",FileName);
         }
     }
 
