@@ -24,6 +24,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.file.browser.Settings 1.0
 import Opal.About 1.0 as A
+import Opal.SupportMe 1.0 as M
 
 import "pages"
 import "js/navigation.js" as Navigation
@@ -186,6 +187,12 @@ ApplicationWindow {
 
     A.ChangelogNews {
         changelogList: Qt.resolvedUrl("Changelog.qml")
+    }
+
+    M.AskForSupport {
+        contents: Component {
+            MySupportDialog {}
+        }
     }
 
     Component.onCompleted: {
