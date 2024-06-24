@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2024 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -316,6 +316,12 @@ ListItem {
                 // plus that we cannot notify errors when renaming.
                 // Cut, copy, delete, info, and share work fine, though.
                 showTransfer: false
+            }
+
+            MenuItem {
+                visible: model.isLink && !!model.symLinkTargetFolder
+                text: qsTr("Open containing folder")
+                onDelayedClick: navigate_goToFolder(symLinkTargetFolder)
             }
 
             MenuItem {

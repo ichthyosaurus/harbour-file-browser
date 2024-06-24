@@ -106,6 +106,7 @@ public:
     QString absoluteFilePath() const { return m_fileInfo.absoluteFilePath(); }
     QString suffix() const { return m_fileInfo.suffix(); }
     QString symLinkTarget() const { return m_fileInfo.symLinkTarget(); }
+    QString symLinkTargetFolder() const;
     bool isSymLinkBroken() const;
 
     // Doomed paths will become invalid soon because the file

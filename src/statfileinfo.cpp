@@ -79,6 +79,19 @@ bool StatFileInfo::isSafeToRead() const
     return isFileAtEnd();
 }
 
+QString StatFileInfo::symLinkTargetFolder() const
+{
+    if (!m_fileInfo.isSymLink()) return QStringLiteral("");
+
+    auto target = QFileInfo(QFileInfo(m_fileInfo.symLinkTarget()).absolutePath());
+
+    if (target.exists()) {
+        return target.absoluteFilePath();
+    }
+
+    return QStringLiteral("");
+}
+
 bool StatFileInfo::isSymLinkBroken() const
 {
     // if it is a symlink but it doesn't exist, then it is broken

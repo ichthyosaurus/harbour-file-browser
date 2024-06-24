@@ -48,6 +48,7 @@ enum {
     IsDirRole = Qt::UserRole + 8,
     IsLinkRole = Qt::UserRole + 9,
     SymLinkTargetRole = Qt::UserRole + 10,
+    SymLinkTargetFolderRole = Qt::UserRole + 14,
     IsSelectedRole = Qt::UserRole + 11,
     IsDoomedRole = Qt::UserRole + 12,
 };
@@ -147,6 +148,9 @@ QVariant FileModel::data(const QModelIndex &index, int role) const
     case SymLinkTargetRole:
         return info.symLinkTarget();
 
+    case SymLinkTargetFolderRole:
+        return info.symLinkTargetFolder();
+
     case IsSelectedRole:
         return info.isSelected();
 
@@ -172,6 +176,7 @@ QHash<int, QByteArray> FileModel::roleNames() const
     roles.insert(IsDirRole, QByteArray("isDir"));
     roles.insert(IsLinkRole, QByteArray("isLink"));
     roles.insert(SymLinkTargetRole, QByteArray("symLinkTarget"));
+    roles.insert(SymLinkTargetFolderRole, QByteArray("symLinkTargetFolder"));
     roles.insert(IsSelectedRole, QByteArray("isSelected"));
     roles.insert(IsDoomedRole, QByteArray("isDoomed"));
     return roles;
