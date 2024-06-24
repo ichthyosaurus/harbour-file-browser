@@ -55,6 +55,10 @@ A.AboutPageBase {
     mainAttributions: ["2019-2024 Mirian Margiani", "2013-2019 karip"]
 
     attributions: [
+        OpalAboutAttribution {},
+        OpalInfoComboAttribution {},
+        OpalComboDataAttribution {},
+        OpalSupportMeAttribution {},
         A.Attribution {
             name: "JHead (2.97)"
             entries: ["Matthias Wandel", /*qsTr*/("2014 adapted by karip"), /*qsTr*/("2021 adapted by ichthyosaurus")]
@@ -78,10 +82,7 @@ A.AboutPageBase {
             entries: ["2018 Coderus"]
             licenses: A.License { spdxId: "BSD-3-Clause" }
             sources: "https://github.com/sailfishos-patches/patchmanager"
-        },
-        OpalAboutAttribution {},
-        OpalInfoComboAttribution {},
-        OpalComboDataAttribution {}
+        }
     ]
 
     contributionSections: [

@@ -1,0 +1,10 @@
+module Opal.SupportMe
+# This file is part of Opal.SupportMe.
+# SPDX-FileCopyrightText: 2024 Mirian Margiani
+# SPDX-License-Identifier: GPL-3.0-or-later
+AskForSupport 1.0 AskForSupport.qml
+SupportDialog 1.0 SupportDialog.qml
+SupportAction 1.0 SupportAction.qml
+SupportIcon 1.0 SupportIcon.js
+DetailsDrawer 1.0 DetailsDrawer.qml
+DetailsParagraph 1.0 DetailsParagraph.qml
