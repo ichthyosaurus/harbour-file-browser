@@ -31,6 +31,7 @@ Dialog {
     allowedOrientations: Orientation.All
     property string path
     property string acceptText
+    property bool pickFolder: true // set to false to allow selecting a file
 
     // set this to a function(var newPath) that is
     // called when the dialog is accepted
@@ -125,8 +126,15 @@ Dialog {
             function update(text) {
                 clear();
                 _firstSuggestion = ""
-                searchEngine.filterDirectories(text);
-                console.log("dir filter started:", text);
+
+                if (pickFolder) {
+                    searchEngine.filterDirectories(text);
+                } else {
+                    searchEngine.filterEntries(text);
+                }
+
+                console.log("dir filter started (%1 files):".arg(
+                                pickFolder ? "excluding" : "including"), text);
             }
         }
 
@@ -173,7 +181,9 @@ Dialog {
                 id: pathField
                 anchors { top: head.bottom; topMargin: Theme.paddingSmall }
                 width: parent.width
-                placeholderText: qsTr("Path to a folder")
+                placeholderText: pickFolder ?
+                    qsTr("Path to a folder") :
+                    qsTr("Path to a target")
                 // label: canAccept ? qsTr("Path to a folder") :
                 //                    qsTr("This path does not lead to a folder.")
                 inputMethodHints: Qt.ImhNoPredictiveText |
@@ -218,7 +228,8 @@ Dialog {
 
                     var search = Paths.lastPartOfPath(path).replace(/([-.[\](){}\\*?*^$|])/g, "\\$1")
                     dialog._pathRegex = new RegExp(search, 'i')
-                    if (text === "" || !engine.pathIsDirectory(text)) {
+                    if (text === "" || (pickFolder && !engine.pathIsDirectory(text)) ||
+                            (!pickFolder && !engine.pathIsFileOrDirectory(text))) {
                         // Theme.errorColor looks too harsh
                         color = Theme.secondaryHighlightColor
                         _isReady = false
@@ -326,15 +337,22 @@ Dialog {
                             }
                             property int files: fileData.filesCount
                             property int folders: fileData.dirsCount
-                            text: (files > 0 || folders > 0) ?
-                                      //: hidden if n=0
-                                      (files > 0 ? qsTr("%n file(s)", "", files) : "") +
-                                      (files > 0 && folders > 0 ? ", " : "") +
-                                      //: hidden if n=0
-                                      (folders > 0 ? qsTr("%n folder(s)", "", folders) : "")
-                                    :
-                                      //: as in 'this folder is empty'
-                                      qsTr("empty")
+                            text: {
+                                if (fileData.isDir) {
+                                    if (files > 0 || folders > 0) {
+                                        //: hidden if n=0
+                                        return (files > 0 ? qsTr("%n file(s)", "", files) : "") +
+                                            (files > 0 && folders > 0 ? ", " : "") +
+                                            //: hidden if n=0
+                                            (folders > 0 ? qsTr("%n folder(s)", "", folders) : "")
+                                    } else {
+                                        //: as in 'this folder is empty'
+                                        return qsTr("empty")
+                                    }
+                                } else {
+                                    return fileData.size
+                                }
+                            }
                             color: highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
                             truncationMode: TruncationMode.Fade
                             opacity: excluded ? Theme.opacityLow : 1.0
