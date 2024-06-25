@@ -75,6 +75,11 @@ void SearchEngine::filterDirectories(QString searchTerm)
     startSearch(searchTerm, SearchType::DirectoriesShallow);
 }
 
+void SearchEngine::filterEntries(QString searchTerm)
+{
+    startSearch(searchTerm, SearchType::EntriesShallow);
+}
+
 void SearchEngine::cancel()
 {
     m_searchWorker->cancel();
@@ -92,8 +97,10 @@ void SearchEngine::emitMatchFound(QString fullpath)
 void SearchEngine::startSearch(QString searchTerm, SearchType type)
 {
     // if search term is not empty or we are only filtering
-    // directories, then restart search
-    if (type == SearchType::DirectoriesShallow || !searchTerm.isEmpty()) {
+    // entries, then restart search
+    if (   type == SearchType::DirectoriesShallow
+        || type == SearchType::EntriesShallow
+        || !searchTerm.isEmpty()) {
         m_searchWorker->cancel();
         m_searchWorker->wait();
         m_searchWorker->startSearch(m_dir, searchTerm, type, m_maxResults);

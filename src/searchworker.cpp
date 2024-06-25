@@ -41,6 +41,7 @@ void SearchWorker::startSearch(QString directory, QString searchTerm, SearchType
         emit errorOccurred(tr("Search already in progress"), "");
         return;
     }
+
     if (directory.isEmpty() ||
             (type == SearchType::FilesRecursive && searchTerm.isEmpty())) {
         emit errorOccurred(tr("Bad search parameters"), "");
@@ -70,6 +71,9 @@ void SearchWorker::run()
         break;
     case SearchType::DirectoriesShallow:
         errMsg = searchDirectoriesShallow(m_directory, m_searchTerm.toLower());
+        break;
+    case SearchType::EntriesShallow:
+        errMsg = searchEntriesShallow(m_directory, m_searchTerm.toLower());
         break;
     }
 
@@ -151,6 +155,16 @@ QString SearchWorker::searchFilesRecursive(QString directory, QString searchTerm
 
 QString SearchWorker::searchDirectoriesShallow(QString directory, QString searchTerm)
 {
+    return searchShallow(directory, searchTerm, true);
+}
+
+QString SearchWorker::searchEntriesShallow(QString directory, QString searchTerm)
+{
+    return searchShallow(directory, searchTerm, false);
+}
+
+QString SearchWorker::searchShallow(QString directory, QString searchTerm, bool dirsOnly)
+{
     QDir dir(directory);
     if (!dir.exists()) return QString(); // skip "non-existent" directories (found in /dev)
 
@@ -169,10 +183,12 @@ QString SearchWorker::searchDirectoriesShallow(QString directory, QString search
     }
 
     QDir::Filter hidden = hiddenSetting ? QDir::Hidden : static_cast<QDir::Filter>(0);
+    QDir::Filter types = dirsOnly ? QDir::AllDirs : QDir::AllEntries;
 
     // search dirs
     int count = 0;
-    const QStringList names = dir.entryList(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::System | hidden);
+    const QStringList names = dir.entryList(
+        QDir::NoDotAndDotDot | QDir::System | types | hidden);
 
     for (const auto& filename : names) {
         // stop if cancelled
@@ -185,7 +201,7 @@ QString SearchWorker::searchDirectoriesShallow(QString directory, QString search
         // Note: we have to manually check if all entries are actually directories
         // because QDir includes empty files as well.
         if ((searchTerm.isEmpty() || filename.contains(searchTerm, Qt::CaseInsensitive))
-                && StatFileInfo(fullpath).isDir()) {
+                && (dirsOnly ? StatFileInfo(fullpath).isDir() : true)) {
             count++;
             emit matchFound(fullpath);
             if (m_maxResults > 0 && count >= m_maxResults) break; // we're not recursive

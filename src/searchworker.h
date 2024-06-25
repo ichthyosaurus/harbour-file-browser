@@ -31,9 +31,10 @@
  *
  * @li FilesRecursive: search recursively for all files and folders
  * @li DirectoriesShallow: search for matching folders in the current directory
+ * @li EntriesShallow: search for matching files and folders in the current directory
  */
 enum class SearchType {
-    FilesRecursive = 0, DirectoriesShallow
+    FilesRecursive = 0, DirectoriesShallow, EntriesShallow
 };
 
 /**
@@ -69,6 +70,9 @@ private:
 
     QString searchFilesRecursive(QString directory, QString searchTerm, int lastCount = 0);
     QString searchDirectoriesShallow(QString directory, QString searchTerm);
+    QString searchEntriesShallow(QString directory, QString searchTerm);
+
+    QString searchShallow(QString directory, QString searchTerm, bool dirsOnly);
 
     int m_maxResults = {0}; // <= 0 for no restriction
     SearchType m_type;

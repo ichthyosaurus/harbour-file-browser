@@ -51,6 +51,7 @@ public:
     // callable from QML
     Q_INVOKABLE void search(QString searchTerm);
     Q_INVOKABLE void filterDirectories(QString searchTerm);
+    Q_INVOKABLE void filterEntries(QString searchTerm);
     Q_INVOKABLE void cancel();
 
 signals:
