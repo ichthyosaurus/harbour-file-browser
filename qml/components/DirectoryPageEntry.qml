@@ -321,8 +321,16 @@ ListItem {
 
             MenuItem {
                 visible: model.isLink && !!model.symLinkTargetFolder
-                text: qsTr("Open containing folder")
-                onDelayedClick: navigate_goToFolder(symLinkTargetFolder)
+                text: model.isDir ?
+                          qsTr("Open target folder") :
+                          qsTr("Open containing folder")
+                onDelayedClick: {
+                    if (model.isDir) {
+                        navigate_goToFolder(symLinkTarget)
+                    } else {
+                        navigate_goToFolder(symLinkTargetFolder)
+                    }
+                }
             }
 
             MenuItem {
