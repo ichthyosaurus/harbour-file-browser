@@ -273,8 +273,9 @@ Item {
             onPressAndHold: labelText = qsTr("edit link target")
             onClicked: {
                 var files = selectedFiles()
+                fileData.file = files[0]
                 var dialog = pageStack.push(Qt.resolvedUrl("../pages/PathEditDialog.qml"),
-                    { path: files[0], pickFolder: false, acceptText: qsTr("Apply") });
+                    { path: fileData.symLinkTarget, pickFolder: false, acceptText: qsTr("Apply") });
                 dialog.accepted.connect(function() {
                     var oldPath = files[0]
                     var newTarget = dialog.path
