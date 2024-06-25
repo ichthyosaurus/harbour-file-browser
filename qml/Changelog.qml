@@ -9,6 +9,77 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: "3.0.0"
+        date: "2024-06-25"
+        author: "Mirian Margiani"
+        paragraphs: [
+            "- This update finally brings over two years worth of new and refined features, bug fixes, and translation updates!<br>" +
+            "- This is a major update with significant improvements above and under the hood!<br>" +
+            "- New translations: Ukrainian<br>" +
+            "- Updated translations: Finnish, Norwegian, Spanish, Slovak, Swedish, Estonian, French, Russian, Chinese, German, English, Polish, Turkish<br>" +
+            "- Removed translations: Swiss German (not available in Sailfish)<br>" +
+            "- Removed Paypal donations link, please use Liberapay and avoid Paypal if at all possible<br>" +
+            "- Added a smart scrollbar that lets you easily jump to specific files in the middle of long folder listings<br>" +
+            "- Added donation info to the \"About\" page: it is now possible to buy me a cup of coffee :-) (swipe right-to-left multiple times until you reach the \"About\" page)<br>" +
+            "- Added a call-for-support popup that shows up automatically when the app is used frequently<br>" +
+            "- Added a new page showing currently copied/cut files (swipe right-to-left to the shortcuts page, then select \"Clipboard\")<br>" +
+            "- Added quick access to overviews of all documents and multimedia files on the shortcuts page (this uses system components that sadly have terrible performance)<br>" +
+            "- Added section headers when sorting by file type, which makes it easier to find files of a specific type<br>" +
+            "- Added support for creating folders with subfolders and for creating empty files<br>" +
+            "- Added support for changing a link's target path<br>" +
+            "- Added a very basic text editor, e.g. for quickly editing config files in root mode<br>" +
+            "- Added option to set a custom directory to be opened when the app starts<br>" +
+            "- Added descriptions for all config options and improved documentation<br>" +
+            "- Added option to show hidden files last in the file list<br>" +
+            "- Added automatic refreshing of the folder view when file properties change, e.g. when the size changes while copying files<br>" +
+            "- Added support for showing shortcuts for all kinds of mounted devices (previously, only folders in /run/media/USER were shown)<br>" +
+            "- Added proper support for calculating disk and file sizes (no longer relies on external commands and finally works without causing the app to hang)<br>" +
+            "- Added option to configure standard view mode globally<br>" +
+            "-   - current options: list and gallery<br>" +
+            "-   - planned: grid view<br>" +
+            "- Added context menu option to switch to a link's target folder<br>" +
+            "- Greatly improved performance when switching between folders, checking bookmarks, editing settings, or reading the \"About\" page<br>" +
+            "- Greatly improved performance of the \"edit this path\" dialog<br>" +
+            "- Improved directory filtering: hidden files will be shown when the filter string starts with "."<br>" +
+            "- Improved root mode:<br>" +
+            "-   - it now requires entering your device lock code to access<br>" +
+            "-   - note: unlocking is handled by the system, File Browser will never see your lock code<br>" +
+            "- Improved feedback in case of errors or unexpected events<br>" +
+            "- Improved bookmarks handling and removed no longer needed \"refresh\" pulley option on the shortcuts page<br>" +
+            "- Improved manual sorting and renaming of bookmarks: press and hold, then drag and drop to sort them<br>" +
+            "- Improved performance when previewing large image files<br>" +
+            "- Fixed synchronization of bookmarks among multiple app windows<br>" +
+            "- Fixed sorting directories by modification date and by size<br>" +
+            "- Fixed root mode for Sailfish 4.3 and later<br>" +
+            "- Fixed keyboard randomly opening and closing when selecting suggestions while editing a path<br>" +
+            "- Fixed the path edit dialog misinterpreting empty files as directories<br>" +
+            "- Fixed searching for hidden files when they are locally configured to be shown<br>" +
+            "- Fixed an issue where trying to cut certain system files could possibly break the copying mechanism<br>" +
+            "- Fixed showing search/shortcuts from cover<br>" +
+            "- Fixed logging when config migration fails (for Sailjail)<br>" +
+            "- Fixed PDF annotations not being saved (not thoroughly tested yet)<br>" +
+            "- Fixed calculating folder sizes by not following symbolic links<br>" +
+            "- Fixed enabling gallery mode in a folder when it was globally disabled<br>" +
+            "- Fixed gallery mode hiding files unnecessarily<br>" +
+            "- Fixed many visual glitches, fixed papercuts, added minor quality-of-life features, and added various new icons<br>" +
+            "- Removed all dependencies on Busybox<br>" +
+            "- Modernized the code base under the hood<br>" +
+            "- and much, much more...<br>" +
+            "- *** For developers:<br>" +
+            "- FileModel now exposes file extensions<br>" +
+            "- FileData now exposes directory sizes, link targets, and more file properties<br>" +
+            "- Engine now exposes clipboard contents<br>" +
+            "- Engine no longer exposes paths of external devices and Android data<br>" +
+            "- Added a new settings handler which reduces complexity and should improve performance overall<br>" +
+            "-   - import module \"harbour.file.browser.Settings\"<br>" +
+            "-   - use singleton types \"GlobalSettings\" and \"RawSettings\" or instantiate \"DirectorySettings\"<br>" +
+            "- Improved the build system to possibly enable more features in Jolla store<br>" +
+            "- Refactored the root mode helper build process<br>" +
+            "- and much, much more...<br>" +
+            "- Note: I do not know of any other apps that use File Browser's current file handling code; if you do, please contact me if there are issues with updating<br>" +
+        ]
+    }
+    ChangelogItem {
         version: '2.5.1'
         date: "2022-03-30"
         paragraphs: [

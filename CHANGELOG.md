@@ -8,6 +8,10 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 ## Unreleased
 
+ * Nothing so far
+
+## Version 3.0.0 (2024-06-25)
+
  * This update finally brings over two years worth of new and refined features, bug fixes, and translation updates!
  * This is a major update with significant improvements above and under the hood!
  * New translations: Ukrainian
