@@ -38,6 +38,7 @@ class FileData : public QObject
     Q_PROPERTY(QString file READ file() WRITE setFile(QString) NOTIFY fileChanged())
     Q_PROPERTY(bool exists READ exists() NOTIFY existsChanged())
     Q_PROPERTY(bool isDir READ isDir() NOTIFY isDirChanged())
+    Q_PROPERTY(bool isFile READ isFile() NOTIFY isFileChanged())
     Q_PROPERTY(bool isSymLink READ isSymLink() NOTIFY isSymLinkChanged())
     Q_PROPERTY(QString kind READ kind() NOTIFY kindChanged())
     Q_PROPERTY(QString category READ typeCategory NOTIFY categoryChanged)
@@ -80,6 +81,7 @@ public:
 
     bool exists() const { return m_fileInfo.exists(); }
     bool isDir() const { return m_fileInfo.isDirAtEnd(); }
+    bool isFile() const { return m_fileInfo.isFileAtEnd(); }
     bool isSymLink() const { return m_fileInfo.isSymLink(); }
     QString kind() const { return m_fileInfo.kind(); }
     QString icon() const;
@@ -123,6 +125,7 @@ signals:
     void fileChanged();
     void existsChanged();
     void isDirChanged();
+    void isFileChanged();
     void isSymLinkChanged();
     void kindChanged();
     void categoryChanged();
