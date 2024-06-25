@@ -23,7 +23,7 @@ pageStack.completeAnimation()
 var dialog=pageStack.push(contents)
 if(!!dialog){dialog.done.connect(function(){_markAsSeen()
 })
-dialog._dontAskAgain.connect(function(){_dontAskAgain()
+dialog.dontAskAgain.connect(function(){_dontAskAgain()
 })
 }}function _markAsSeen(){configLoader.item.lastAskedAt=__startCount
 }function _dontAskAgain(){_markAsSeen()
