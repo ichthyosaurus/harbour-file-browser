@@ -134,7 +134,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="11"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Överväg om du kan bidra till det här projektet på ett eller annat sätt.</translation>
     </message>
 </context>
 <context>
@@ -447,107 +447,107 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show less</source>
-        <translation type="unfinished"></translation>
+        <translation>visa mindre</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show more</source>
-        <translation type="unfinished"></translation>
+        <translation>visa mer</translation>
     </message>
 </context>
 <context>
     <name>DirectoryPage</name>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="306"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="307"/>
         <source>Search</source>
         <translation>Sök</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="206"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="207"/>
         <source>Paste</source>
         <translation>Klistra in</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Remove bookmark</source>
         <translation>Ta bort bokmärke</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Add to bookmarks</source>
         <translation>Lägg till i bokmärken</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="320"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="321"/>
         <source>Copy path to clipboard</source>
         <translation>Kopiera sökvägen till urklipp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="446"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="447"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ingen matchning</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="448"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="449"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation type="unfinished">Tom</translation>
+        <translation>Tom</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="532"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="535"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="533"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="536"/>
         <source>Deleting</source>
         <translation>Tar bort</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="186"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="187"/>
         <source>View Preferences</source>
         <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
         <translation>Visa inställningar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="193"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="194"/>
         <source>Create New...</source>
         <translation>Skapa ny...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="224"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="225"/>
         <source>Filter directory contents</source>
         <translation>Filtrera mappinnehåll</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="383"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="384"/>
         <source>filtered by: %1</source>
         <translation>filtrerat efter: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="451"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="452"/>
         <source>No files matched the filter.</source>
         <translation>Inga filer matchade filtret.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="452"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="453"/>
         <source>This directory contains no files.</source>
         <translation>Denna mapp innehåller inga filer.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="547"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="548"/>
         <source>Internally not ready</source>
         <translation>Inte klart internt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="547"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="548"/>
         <source>Please simply try again</source>
         <translation>Försök igen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="590"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="591"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>Försöker du flytta mellan telefonminne och SD-kort? Det fungerar inte, försök med kopiering.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="592"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="593"/>
         <source>Perhaps the storage is full?</source>
         <translation>Lagringsutrymmet kanske är fullt?</translation>
     </message>
@@ -562,12 +562,12 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="325"/>
         <source>Open target folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Öppna målmapp</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="326"/>
         <source>Open containing folder</source>
-        <translation type="unfinished">Öppna innehållande mapp</translation>
+        <translation>Öppna innehållande mapp</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="338"/>
@@ -689,27 +689,27 @@
     <message>
         <location filename="../src/engine.cpp" line="416"/>
         <source>Source “%1” is not a symbolic link</source>
-        <translation type="unfinished"></translation>
+        <translation>Källan “%1” är ingen symbolisk länk</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="425"/>
         <source>No permissions to change contents of “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Du har inte behörighet att ändra innehållet i “%1”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="433"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunde inte ta bort gammal länk &quot;%1&quot; som pekar på &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="439"/>
         <source>Failed to revert link “%1” pointing to “%2” after failing to change target to “%3”</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunde inte backa länk &quot;%1&quot; som pekar på &quot;%2&quot; efter att ha misslyckats med att ändra målet till &quot;%3&quot;</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="446"/>
         <source>Failed to change link target of “%1” to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunde inte ändra länkmålet för &quot;%1&quot; till &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="472"/>
@@ -807,7 +807,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="264"/>
+        <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>komprimera filen</numerusform>
@@ -815,17 +815,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="273"/>
+        <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
-        <translation type="unfinished"></translation>
+        <translation>redigera länkmål</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="278"/>
+        <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
-        <translation type="unfinished">Tillämpa</translation>
+        <translation>Tillämpa</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="298"/>
+        <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>redigera filen</numerusform>
@@ -833,7 +833,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="323"/>
+        <location filename="../qml/components/FileActions.qml" line="324"/>
         <source>show file properties</source>
         <translation>visa filegenskaper</translation>
     </message>
@@ -1216,17 +1216,17 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="90"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
-        <translation type="unfinished"></translation>
+        <translation>I galleriläge visas bilder för att passa skärmen. Andra filer visas utan förhandsgranskningsminiatyrer.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="97"/>
         <source>Hint</source>
-        <translation type="unfinished"></translation>
+        <translation>Tips</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="98"/>
         <source>You can enable per-directory settings to configure your preferences for individual folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Du kan aktivera inställningar per katalog för att konfigurera dina inställningar för enskilda mappar.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="103"/>
@@ -1371,27 +1371,27 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="69"/>
         <source>View mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Visningsläge</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="76"/>
         <source>list</source>
-        <translation type="unfinished"></translation>
+        <translation>lista</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="78"/>
         <source>Show files in a list. Optionally enable preview thumbnails using the separate setting below.</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa filer i en lista. Alternativt aktivera förhandsgranskningsminiatyrer med den separata inställningen nedan.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="88"/>
         <source>gallery</source>
-        <translation type="unfinished"></translation>
+        <translation>galleri</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="180"/>
         <source>Show more recently changed files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa nyligen ändrade filer först.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="185"/>
@@ -2088,62 +2088,62 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="14"/>
         <source>Donate on Liberapay</source>
-        <translation type="unfinished"></translation>
+        <translation>Donera på Liberapay</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="15"/>
         <source>Pay the amount of a cup of coffee, a slice of pizza, or a ticket to the theater.</source>
-        <translation type="unfinished"></translation>
+        <translation>Betala för kaffe, en bit pizza eller en biljett till teatern.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
         <source>Translate on Weblate</source>
-        <translation type="unfinished"></translation>
+        <translation>Översätt på Weblate</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="23"/>
         <source>Help with translating this app in as many languages as possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hjälp till med att översätta denna app på så många språk som möjligt.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
         <source>Develop on Github</source>
-        <translation type="unfinished"></translation>
+        <translation>Utveckla på Github</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="31"/>
         <source>Support with maintenance and packaging, write code, or provide valuable bug reports.</source>
-        <translation type="unfinished"></translation>
+        <translation>Stöd underhåll och paketering, skriv kod eller lämna värdefulla felrapporter.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="37"/>
         <source>Why should you care?</source>
-        <translation type="unfinished"></translation>
+        <translation>Varför ska du bry dig?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="40"/>
         <source>This project is built with love and passion by a single developer in their spare time, and is provided to you free of charge.</source>
-        <translation type="unfinished"></translation>
+        <translation>Detta projekt är byggt med kärlek och passion av en enda utvecklare på fritiden, och ges till dig helt gratis.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="46"/>
         <source>I develop Free Software because I am convinced that it is the ethical thing to do - and it is a fun hobby. However, developing software takes a lot of time and effort. As Sailfish and living in general costs money, I need your support to be able to spend time on non-paying projects like this.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jag utvecklar fri programvara eftersom jag är övertygad om att det är det etiska rätta att göra - och det är en rolig hobby. Men att utveckla programvara tar mycket tid och ansträngning. Som Sailfish och levnadskostnader i allmänhet kostar pengar, behöver jag ditt stöd för att kunna spendera tid på icke-betalande projekt som detta.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="56"/>
         <source>Why donate?</source>
-        <translation type="unfinished"></translation>
+        <translation>Varför donera?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="59"/>
         <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jolla höjde priserna och försöker tvinga utvecklare (som arbetar gratis) att betala hyra för Sailfish.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="64"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
-        <translation type="unfinished"></translation>
+        <translation>Om du har råd med det är donation det enklaste sättet att se till att jag kan fortsätta arbeta med appar för Sailfish. Varje summa uppskattas, vare sig det är en kopp kaffe, en bit pizza eller mer.</translation>
     </message>
 </context>
 <context>
@@ -2331,7 +2331,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <source>Open in browser</source>
-        <translation>Öppna i webbläsare</translation>
+        <translation>Öppna i webbläsaren</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
@@ -2398,7 +2398,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="193"/>
         <source>Path to a target</source>
-        <translation type="unfinished"></translation>
+        <translation>Sökväg till målet</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/PathEditDialog.qml" line="357"/>
@@ -2556,7 +2556,7 @@ exposure program</extracomment>
         <translation>Var försiktig när du använder File Browser i root-läge. Åtgärderna kan oväntat förstöra ditt system.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Starta File Browser i root-läge</translation>
     </message>
@@ -2842,27 +2842,27 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="9"/>
         <source>Hi there!</source>
-        <translation type="unfinished"></translation>
+        <translation>Hallå där!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="10"/>
         <source>Thank you for using my little app! Maybe you can contribute back?</source>
-        <translation type="unfinished"></translation>
+        <translation>Tack för att du använder min lilla app! Kanske kan du bidra tillbaka?</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="11"/>
         <source>Thank you for your support!</source>
-        <translation type="unfinished"></translation>
+        <translation>Tack för ditt stöd!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="55"/>
         <source>Remind me later</source>
-        <translation type="unfinished"></translation>
+        <translation>Påminn mig senare</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="57"/>
         <source>Don&apos;t ask me again</source>
-        <translation type="unfinished"></translation>
+        <translation>Fråga mig inte igen</translation>
     </message>
 </context>
 <context>
@@ -3234,7 +3234,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="118"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
-        <translation type="unfinished"></translation>
+        <translation>I galleriläge visas bilder för att passa skärmen. Andra filer visas utan förhandsgranskningsminiatyrer.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="131"/>
