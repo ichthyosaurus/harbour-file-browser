@@ -105,6 +105,7 @@ Page {
                     showSelection: false
                     showShare: false
                     showEdit: false
+                    showEditLink: false
                     showRename: false
                     Component.onCompleted: labelText = "" // forcibly hide 'x files selected'
 

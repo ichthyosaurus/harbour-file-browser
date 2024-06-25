@@ -402,6 +402,56 @@ QStringList Engine::rename(QString fullOldFilename, QString newName)
     return QStringList() << fullNewFilename << errorMessage;
 }
 
+QString Engine::recreateLink(QString symlink, QString newTarget) {
+    QFileInfo source(symlink);
+    QFileInfo parent(source.absolutePath());
+    QFileInfo targetInfo(newTarget);
+    QFileInfo oldTarget(source.symLinkTarget());
+
+    if (symlink.isEmpty() || newTarget.isEmpty()) {
+        return QStringLiteral("bug: Engine::recreateLink: parameter is empty");
+    }
+
+    if (!source.isSymLink()) {
+        return tr("Source “%1” is not a symbolic link").arg(source.absoluteFilePath());
+    }
+
+    if (source.symLinkTarget() == targetInfo.absoluteFilePath()) {
+        // nothing to do, not an error
+        return QStringLiteral("");
+    }
+
+    if (!parent.isWritable()) {
+        return tr("No permissions to change contents of “%1”").arg(source.absolutePath());
+    }
+
+    if (!targetInfo.exists()) {
+        // ignore: broken symlinks are ok, maybe it's intentional
+    }
+
+    if (!QFile::remove(source.absoluteFilePath())) {
+        return tr("Failed to remove old link “%1” pointing to “%2”").arg(
+                    source.absoluteFilePath(), targetInfo.absoluteFilePath());
+    }
+
+    if (!QFile::link(targetInfo.absoluteFilePath(), source.absoluteFilePath())) {
+        if (!QFile::link(oldTarget.absoluteFilePath(), source.absoluteFilePath())) {
+            return tr("Failed to revert link “%1” pointing to “%2” "
+                      "after failing to change target to “%3”").arg(
+                source.absoluteFilePath(),
+                oldTarget.absoluteFilePath(),
+                targetInfo.absoluteFilePath()
+            );
+        } else {
+            return tr("Failed to change link target of “%1” to “%2”").arg(
+                source.absoluteFilePath(), targetInfo.absoluteFilePath()
+            );
+        }
+    }
+
+    return QStringLiteral("");
+}
+
 QString Engine::chmod(QString path,
                       bool ownerRead, bool ownerWrite, bool ownerExecute,
                       bool groupRead, bool groupWrite, bool groupExecute,

@@ -251,6 +251,7 @@ Page {
                     showSelection: false
                     showShare: !fileData.isSymLink
                     showEdit: fileData.isSafeToEdit
+                    showEditLink: fileData.isSafeToChangeLink
 
                     showDelete: allowMoveDelete
                     showTransfer: allowMoveDelete

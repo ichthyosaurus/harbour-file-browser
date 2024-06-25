@@ -55,6 +55,7 @@ DockedPanel {
                                                  : dockPanel.overrideText
         errorCallback: function(errorMsg) { notificationPanel.showTextWithTimer(errorMsg, ""); }
         showEdit: selectedCount == 1 && fileData.checkSafeToEdit(selectedFiles()[0])
+        showEditLink: selectedCount == 1 && fileData.checkSafeToChangeLink(selectedFiles()[0])
         enabled: enabled
     }
 }

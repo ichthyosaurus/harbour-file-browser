@@ -178,6 +178,17 @@ bool FileData::isSafeToEdit() const
     return false;
 }
 
+bool FileData::isSafeToChangeLink() const
+{
+    auto parent = QFileInfo(m_fileInfo.absolutePath());
+
+    if (isSymLink() && parent.isWritable()) {
+        return true;
+    }
+
+    return false;
+}
+
 QString FileData::typeCategory() const
 {
     if (m_mimeTypeName.startsWith("image/")) {
@@ -213,6 +224,12 @@ bool FileData::checkSafeToEdit(QString file) const {
     return f.isSafeToEdit();
 }
 
+bool FileData::checkSafeToChangeLink(QString file) const {
+    FileData f;
+    f.setFile(file);
+    return f.isSafeToChangeLink();
+}
+
 bool FileData::checkIsDir(QString file) const {
     return QFileInfo(file).isDir();
 }
@@ -245,6 +262,7 @@ void FileData::readInfo()
     emit isExecutableChanged();
     emit isSafeToOpenChanged();
     emit isSafeToEditChanged();
+    emit isSafeToChangeLinkChanged();
     emit ownerChanged();
     emit groupChanged();
     emit sizeChanged();

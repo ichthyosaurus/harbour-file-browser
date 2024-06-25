@@ -49,6 +49,7 @@ class FileData : public QObject
     Q_PROPERTY(bool isExecutable READ isExecutable() NOTIFY isExecutableChanged())
     Q_PROPERTY(bool isSafeToOpen READ isSafeToOpen() NOTIFY isSafeToOpenChanged())
     Q_PROPERTY(bool isSafeToEdit READ isSafeToEdit() NOTIFY isSafeToEditChanged())
+    Q_PROPERTY(bool isSafeToChangeLink READ isSafeToChangeLink() NOTIFY isSafeToChangeLinkChanged())
     Q_PROPERTY(QString owner READ owner() NOTIFY ownerChanged())
     Q_PROPERTY(QString group READ group() NOTIFY groupChanged())
     Q_PROPERTY(QString size READ size() NOTIFY sizeChanged())
@@ -92,6 +93,7 @@ public:
     bool isExecutable() const { return m_fileInfo.isExecutable(); }
     bool isSafeToOpen() const { return m_fileInfo.isSafeToRead(); }
     bool isSafeToEdit() const;
+    bool isSafeToChangeLink() const;
     QString owner() const;
     QString group() const;
     QString size() const;
@@ -121,7 +123,9 @@ public:
     Q_INVOKABLE void refresh();
     Q_INVOKABLE bool mimeTypeInherits(QString parentMimeType) const;
     Q_INVOKABLE QString typeCategory() const;
+
     Q_INVOKABLE bool checkSafeToEdit(QString file) const;
+    Q_INVOKABLE bool checkSafeToChangeLink(QString file) const;
     Q_INVOKABLE bool checkIsDir(QString file) const;
 
 signals:
@@ -139,6 +143,7 @@ signals:
     void isExecutableChanged();
     void isSafeToOpenChanged();
     void isSafeToEditChanged();
+    void isSafeToChangeLinkChanged();
     void ownerChanged();
     void groupChanged();
     void sizeChanged();

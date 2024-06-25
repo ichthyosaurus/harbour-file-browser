@@ -301,6 +301,7 @@ ListItem {
                 selectedCount: 1
                 showShare: !model.isLink
                 showEdit: fileData.checkSafeToEdit(fileModel.fileNameAt(index))
+                showEditLink: model.isLink && fileData.checkSafeToChangeLink(fileModel.fileNameAt(index))
                 showSelection: false
                 showCompress: false
                 onDeleteTriggered: {

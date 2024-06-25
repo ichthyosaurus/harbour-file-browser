@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2024 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -64,6 +64,7 @@ Item {
     property bool showTransfer: true
     property bool showCompress: true
     property bool showEdit: false
+    property bool showEditLink: false
 
     property int _itemSize: Theme.iconSizeMedium
 
@@ -79,6 +80,7 @@ Item {
     signal transferTriggered(var toTransfer, var targets, var selectedAction, var goToTarget)
     signal compressTriggered
     signal editTriggered
+    signal editLinkTriggered
 
     onSelectedCountChanged: {
         labelText = qsTr("%n file(s) selected", "", selectedCount);
@@ -262,6 +264,30 @@ Item {
                 labelText = qsTr("compress file(s)", "", selectedCount);
             }
         }
+        IconButton {
+            visible: showEditLink
+            enabled: base.enabled && selectedCount == 1
+            icon.width: _itemSize; icon.height: _itemSize
+            icon.source: "image://theme/icon-m-link"
+            icon.color: Theme.primaryColor
+            onPressAndHold: labelText = qsTr("edit link target")
+            onClicked: {
+                var files = selectedFiles()
+                var dialog = pageStack.push(Qt.resolvedUrl("../pages/PathEditDialog.qml"),
+                    { path: files[0], pickFolder: false, acceptText: qsTr("Apply") });
+                dialog.accepted.connect(function() {
+                    var oldPath = files[0]
+                    var newTarget = dialog.path
+                    fileData.file = oldPath
+
+                    console.log("changing target of link", oldPath, "from", fileData.symLinkTarget,
+                                "to", newTarget)
+                    engine.recreateLink(oldPath, newTarget)
+                    editLinkTriggered()
+                });
+            }
+        }
+
         IconButton {
             visible: showEdit
             enabled: base.enabled && selectedCount == 1
