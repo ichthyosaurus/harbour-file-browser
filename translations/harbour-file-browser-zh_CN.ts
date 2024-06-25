@@ -454,96 +454,96 @@
 <context>
     <name>DirectoryPage</name>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="306"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="307"/>
         <source>Search</source>
         <translation>搜索</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="206"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="207"/>
         <source>Paste</source>
         <translation>粘贴</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Remove bookmark</source>
         <translation>移除收藏</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Add to bookmarks</source>
         <translation>添加到收藏</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="320"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="321"/>
         <source>Copy path to clipboard</source>
         <translation>复制路径到剪切板</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="446"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="447"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="448"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="449"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation type="unfinished">空</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="532"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="535"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="533"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="536"/>
         <source>Deleting</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="186"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="187"/>
         <source>View Preferences</source>
         <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
         <translation>查看偏好</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="193"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="194"/>
         <source>Create New...</source>
         <translation>新建…</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="224"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="225"/>
         <source>Filter directory contents</source>
         <translation>筛选目录内容</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="383"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="384"/>
         <source>filtered by: %1</source>
         <translation>筛选方式: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="451"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="452"/>
         <source>No files matched the filter.</source>
         <translation>没有匹配筛选的文件。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="452"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="453"/>
         <source>This directory contains no files.</source>
         <translation>该目录内没有文件。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="547"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="548"/>
         <source>Internally not ready</source>
         <translation>内部未就绪</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="547"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="548"/>
         <source>Please simply try again</source>
         <translation>请重试</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="590"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="591"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>想要在手机存储和SD卡之间移动文件？请尝试复制。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="592"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="593"/>
         <source>Perhaps the storage is full?</source>
         <translation>或许存储已满？</translation>
     </message>
@@ -556,17 +556,22 @@
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="323"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="325"/>
+        <source>Open target folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="326"/>
         <source>Open containing folder</source>
         <translation type="unfinished">打开子文件夹</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="329"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="338"/>
         <source>Remove bookmark</source>
         <translation>移除收藏</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="329"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="338"/>
         <source>Add to bookmarks</source>
         <translation>添加到收藏</translation>
     </message>
@@ -678,7 +683,32 @@
         <translation>无法重命名 %1</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="422"/>
+        <location filename="../src/engine.cpp" line="416"/>
+        <source>Source “%1” is not a symbolic link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/engine.cpp" line="425"/>
+        <source>No permissions to change contents of “%1”</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/engine.cpp" line="433"/>
+        <source>Failed to remove old link “%1” pointing to “%2”</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/engine.cpp" line="439"/>
+        <source>Failed to revert link “%1” pointing to “%2” after failing to change target to “%3”</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/engine.cpp" line="446"/>
+        <source>Failed to change link target of “%1” to “%2”</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/engine.cpp" line="472"/>
         <source>Cannot change permissions</source>
         <translation>无法更改权限</translation>
     </message>
@@ -764,21 +794,31 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="264"/>
+        <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>压缩文件</numerusform>
         </translation>
     </message>
+    <message>
+        <location filename="../qml/components/FileActions.qml" line="274"/>
+        <source>edit link target</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/FileActions.qml" line="279"/>
+        <source>Apply</source>
+        <translation type="unfinished">确定</translation>
+    </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="273"/>
+        <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>编辑文件</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="298"/>
+        <location filename="../qml/components/FileActions.qml" line="324"/>
         <source>show file properties</source>
         <translation>显示文件属性</translation>
     </message>
@@ -817,37 +857,37 @@
         </translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="215"/>
+        <location filename="../src/filedata.cpp" line="247"/>
         <source>File does not exist</source>
         <translation>文件不存在</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="263"/>
+        <location filename="../src/filedata.cpp" line="297"/>
         <source>block device</source>
         <translation>块设备</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="267"/>
+        <location filename="../src/filedata.cpp" line="301"/>
         <source>character device</source>
         <translation>字符设备</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="271"/>
+        <location filename="../src/filedata.cpp" line="305"/>
         <source>pipe</source>
         <translation>管道</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="275"/>
+        <location filename="../src/filedata.cpp" line="309"/>
         <source>socket</source>
         <translation>套接字</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="279"/>
+        <location filename="../src/filedata.cpp" line="313"/>
         <source>folder</source>
         <translation>目录</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="285"/>
+        <location filename="../src/filedata.cpp" line="319"/>
         <source>unknown</source>
         <translation>未知</translation>
     </message>
@@ -988,48 +1028,48 @@
         <translation>文件已移除。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="263"/>
-        <location filename="../qml/pages/FilePage.qml" line="269"/>
+        <location filename="../qml/pages/FilePage.qml" line="264"/>
+        <location filename="../qml/pages/FilePage.qml" line="270"/>
         <source>Deleting</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="301"/>
+        <location filename="../qml/pages/FilePage.qml" line="302"/>
         <source>Location</source>
         <translation>位置</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="305"/>
+        <location filename="../qml/pages/FilePage.qml" line="306"/>
         <source>Type</source>
         <translation>类型</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="307"/>
+        <location filename="../qml/pages/FilePage.qml" line="308"/>
         <source>Link to %1</source>
         <translation>链接到 %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="307"/>
+        <location filename="../qml/pages/FilePage.qml" line="308"/>
         <source>Unknown (link target not found)</source>
         <translation>未知(链接目标未找到)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="314"/>
+        <location filename="../qml/pages/FilePage.qml" line="315"/>
         <source>Permissions</source>
         <translation>权限</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="318"/>
+        <location filename="../qml/pages/FilePage.qml" line="319"/>
         <source>Owner</source>
         <translation>所有者</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="323"/>
+        <location filename="../qml/pages/FilePage.qml" line="324"/>
         <source>Group</source>
         <translation>用户组</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="328"/>
+        <location filename="../qml/pages/FilePage.qml" line="329"/>
         <source>Last modified</source>
         <translation>上次修改</translation>
     </message>
@@ -1496,18 +1536,18 @@
 <context>
     <name>ImageMetaData</name>
     <message>
-        <location filename="../src/filedata.cpp" line="311"/>
+        <location filename="../src/filedata.cpp" line="345"/>
         <source>Image Size</source>
         <translation>图像大小</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="317"/>
+        <location filename="../src/filedata.cpp" line="351"/>
         <source>%1 x %2</source>
         <extracomment>image size description without aspect ratio: 1=width, 2=height</extracomment>
         <translation>%1 x %2</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="321"/>
+        <location filename="../src/filedata.cpp" line="355"/>
         <source>%1 x %2 (%3)</source>
         <extracomment>image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9</extracomment>
         <translation>%1 x %2 (%3)</translation>
@@ -2003,24 +2043,24 @@ exposure program</extracomment>
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MultiFilePage.qml" line="112"/>
-        <location filename="../qml/pages/MultiFilePage.qml" line="118"/>
+        <location filename="../qml/pages/MultiFilePage.qml" line="113"/>
+        <location filename="../qml/pages/MultiFilePage.qml" line="119"/>
         <source>Deleting</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MultiFilePage.qml" line="140"/>
+        <location filename="../qml/pages/MultiFilePage.qml" line="141"/>
         <source>Directories</source>
         <translation>目录</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MultiFilePage.qml" line="150"/>
+        <location filename="../qml/pages/MultiFilePage.qml" line="151"/>
         <source>Files</source>
         <translation>文件</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MultiFilePage.qml" line="166"/>
-        <location filename="../qml/pages/MultiFilePage.qml" line="175"/>
+        <location filename="../qml/pages/MultiFilePage.qml" line="167"/>
+        <location filename="../qml/pages/MultiFilePage.qml" line="176"/>
         <source>none</source>
         <translation>无</translation>
     </message>
@@ -2028,62 +2068,62 @@ exposure program</extracomment>
 <context>
     <name>MySupportDialog</name>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="8"/>
+        <location filename="../qml/MySupportDialog.qml" line="14"/>
         <source>Donate on Liberapay</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="9"/>
+        <location filename="../qml/MySupportDialog.qml" line="15"/>
         <source>Pay the amount of a cup of coffee, a slice of pizza, or a ticket to the theater.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="16"/>
+        <location filename="../qml/MySupportDialog.qml" line="22"/>
         <source>Translate on Weblate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="17"/>
+        <location filename="../qml/MySupportDialog.qml" line="23"/>
         <source>Help with translating this app in as many languages as possible.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="24"/>
+        <location filename="../qml/MySupportDialog.qml" line="30"/>
         <source>Develop on Github</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="25"/>
+        <location filename="../qml/MySupportDialog.qml" line="31"/>
         <source>Support with maintenance and packaging, write code, or provide valuable bug reports.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="31"/>
+        <location filename="../qml/MySupportDialog.qml" line="37"/>
         <source>Why should you care?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="34"/>
+        <location filename="../qml/MySupportDialog.qml" line="40"/>
         <source>This project is built with love and passion by a single developer in their spare time, and is provided to you free of charge.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="40"/>
+        <location filename="../qml/MySupportDialog.qml" line="46"/>
         <source>I develop Free Software because I am convinced that it is the ethical thing to do - and it is a fun hobby. However, developing software takes a lot of time and effort. As Sailfish and living in general costs money, I need your support to be able to spend time on non-paying projects like this.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="50"/>
+        <location filename="../qml/MySupportDialog.qml" line="56"/>
         <source>Why donate?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="53"/>
+        <location filename="../qml/MySupportDialog.qml" line="59"/>
         <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="58"/>
+        <location filename="../qml/MySupportDialog.qml" line="64"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2315,28 +2355,33 @@ exposure program</extracomment>
 <context>
     <name>PathEditDialog</name>
     <message>
-        <location filename="../qml/pages/PathEditDialog.qml" line="176"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="192"/>
         <source>Path to a folder</source>
         <translation>指向文件夹路径</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PathEditDialog.qml" line="154"/>
-        <location filename="../qml/pages/PathEditDialog.qml" line="279"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="169"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="303"/>
         <source>Remove last part</source>
         <translation>移除上个部分</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PathEditDialog.qml" line="138"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="153"/>
         <source>Root</source>
         <translation>根目录</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PathEditDialog.qml" line="143"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="158"/>
         <source>Places</source>
         <translation>位置</translation>
     </message>
+    <message>
+        <location filename="../qml/pages/PathEditDialog.qml" line="193"/>
+        <source>Path to a target</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message numerus="yes">
-        <location filename="../qml/pages/PathEditDialog.qml" line="331"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="357"/>
         <source>%n file(s)</source>
         <extracomment>hidden if n=0</extracomment>
         <translation>
@@ -2344,7 +2389,7 @@ exposure program</extracomment>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/PathEditDialog.qml" line="334"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="360"/>
         <source>%n folder(s)</source>
         <extracomment>hidden if n=0</extracomment>
         <translation>
@@ -2352,7 +2397,7 @@ exposure program</extracomment>
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/PathEditDialog.qml" line="337"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="363"/>
         <source>empty</source>
         <extracomment>as in &apos;this folder is empty&apos;</extracomment>
         <translation>空</translation>
@@ -2489,7 +2534,7 @@ exposure program</extracomment>
         <translation>在ROOT模式下使用文件浏览器时要小心。行动可能会意外地破坏你的系统。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
         <translation>在ROOT模式下启动文件浏览器</translation>
     </message>
@@ -2571,7 +2616,7 @@ exposure program</extracomment>
         <translation>正在搜索</translation>
     </message>
     <message>
-        <location filename="../src/searchworker.cpp" line="46"/>
+        <location filename="../src/searchworker.cpp" line="47"/>
         <source>Bad search parameters</source>
         <translation>搜索参数不正确</translation>
     </message>
