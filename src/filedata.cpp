@@ -120,9 +120,20 @@ QString FileData::createdLong() const
 
 QString FileData::absolutePath() const
 {
-    if (m_file.isEmpty())
+    if (m_file.isEmpty()) {
         return QString();
+    }
+
     return m_fileInfo.absolutePath();
+}
+
+QString FileData::absoluteFilePath() const
+{
+    if (m_file.isEmpty()) {
+        return QString();
+    }
+
+    return m_fileInfo.absoluteFilePath();
 }
 
 uint FileData::dirsCount() const
@@ -202,6 +213,10 @@ bool FileData::checkSafeToEdit(QString file) const {
     return f.isSafeToEdit();
 }
 
+bool FileData::checkIsDir(QString file) const {
+    return QFileInfo(file).isDir();
+}
+
 void FileData::readInfo()
 {
     m_errorMessage = "";
@@ -237,6 +252,7 @@ void FileData::readInfo()
     emit modifiedChanged();
     emit createdChanged();
     emit absolutePathChanged();
+    emit absoluteFilePathChanged();
     emit nameChanged();
     emit suffixChanged();
     emit symLinkTargetChanged();

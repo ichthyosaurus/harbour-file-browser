@@ -66,6 +66,13 @@ Dialog {
         pathReplaced(newPath)
     }
 
+    FileData {
+        id: commonFileData
+        // Used to check properties of files.
+        // Make sure to always set the file to use
+        // before using this object.
+    }
+
     Timer {
         id: delayedFocusTimer
         interval: 100
@@ -204,7 +211,7 @@ Dialog {
                 Component.onCompleted: {
                     forceActiveFocus() // grab focus when the page is openend
                     path = path.replace(/\/+/g, '/')
-                    path = path.replace(/\/$/, '')+'/'
+                    path = path.replace(/\/$/, '') + (commonFileData.checkIsDir(path) ? '/' : '')
                     text = path // set initial text
                 }
 
@@ -242,8 +249,14 @@ Dialog {
                 Connections {
                     target: dialog
                     onSuggestionSelected: {
-                        var newPath = '/'+Paths.dirName(path)+filename+'/';
-                        newPath = newPath.replace(/\/+/g, '/')
+                        var newPath = '/' + Paths.dirName(path) + filename;
+                        commonFileData.file = newPath
+                        newPath = commonFileData.absoluteFilePath
+
+                        if (commonFileData.isDir) {
+                            newPath += "/"
+                        }
+
                         pathField.text = newPath
                         pathField.forceActiveFocus()
                         delayedFocusTimer.restart()

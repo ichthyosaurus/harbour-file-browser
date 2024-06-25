@@ -57,6 +57,7 @@ class FileData : public QObject
     Q_PROPERTY(QString modifiedLong READ modifiedLong() NOTIFY modifiedChanged())
     Q_PROPERTY(QString created READ created() NOTIFY createdChanged())
     Q_PROPERTY(QString absolutePath READ absolutePath() NOTIFY absolutePathChanged())
+    Q_PROPERTY(QString absoluteFilePath READ absoluteFilePath() NOTIFY absoluteFilePathChanged())
     Q_PROPERTY(QString name READ name() NOTIFY nameChanged())
     Q_PROPERTY(QString suffix READ suffix() NOTIFY suffixChanged())
     Q_PROPERTY(QString symLinkTarget READ symLinkTarget() NOTIFY symLinkTargetChanged())
@@ -100,6 +101,7 @@ public:
     QString created(bool longFormat = false) const;
     QString createdLong() const;
     QString absolutePath() const;
+    QString absoluteFilePath() const;
     QString name() const { return m_fileInfo.fileName(); }
     QString suffix() const { return m_fileInfo.suffix().toLower(); }
     QString symLinkTarget() const { return m_fileInfo.symLinkTarget(); }
@@ -120,6 +122,7 @@ public:
     Q_INVOKABLE bool mimeTypeInherits(QString parentMimeType) const;
     Q_INVOKABLE QString typeCategory() const;
     Q_INVOKABLE bool checkSafeToEdit(QString file) const;
+    Q_INVOKABLE bool checkIsDir(QString file) const;
 
 signals:
     void fileChanged();
@@ -145,6 +148,7 @@ signals:
     void nameChanged();
     void suffixChanged();
     void absolutePathChanged();
+    void absoluteFilePathChanged();
     void symLinkTargetChanged();
     void isSymLinkBrokenChanged();
     void metaDataChanged();
