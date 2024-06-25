@@ -100,6 +100,7 @@ public:
     Q_INVOKABLE bool openNewWindow(QStringList arguments = QStringList()) const;
     Q_INVOKABLE bool pathIsDirectory(QString path) const;
     Q_INVOKABLE bool pathIsFile(QString path) const;
+    Q_INVOKABLE bool pathIsFileOrDirectory(QString path) const;
 
 signals:
     void progressChanged();

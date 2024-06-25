@@ -447,6 +447,11 @@ bool Engine::pathIsFile(QString path) const
     return info.isFileAtEnd();
 }
 
+bool Engine::pathIsFileOrDirectory(QString path) const
+{
+    return pathIsDirectory(path) || pathIsFile(path);
+}
+
 void Engine::setProgress(int progress, QString filename)
 {
     m_progress = progress;
