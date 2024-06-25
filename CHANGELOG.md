@@ -1,6 +1,6 @@
 <!--
 SPDX-FileCopyrightText: 2013-2016, 2018-2019 Kari Pihkala
-SPDX-FileCopyrightText: 2019-2023 Mirian Margiani
+SPDX-FileCopyrightText: 2019-2024 Mirian Margiani
 SPDX-License-Identifier: GFDL-1.3-or-later
 -->
 
@@ -9,15 +9,19 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 ## Unreleased
 
  * This update finally brings over two years worth of new and refined features, bug fixes, and translation updates!
+ * This is a major update with significant improvements above and under the hood!
  * New translations: Ukrainian
- * Updated translations: Spanish, Swedish, Estonian, French, Russian, Chinese, German, English, Polish, Turkish
+ * Updated translations: Finnish, Norwegian, Spanish, Slovak, Swedish, Estonian, French, Russian, Chinese, German, English, Polish, Turkish
  * Removed translations: Swiss German (not available in Sailfish)
- * Removed Paypal donations link, please use Liberapay and avoid Paypal wherever possible
+ * Removed Paypal donations link, please use Liberapay and avoid Paypal if at all possible
+ * Added a smart scrollbar that lets you easily jump to specific files in the middle of long folder listings
  * Added donation info to the "About" page: it is now possible to buy me a cup of coffee :-) (swipe right-to-left multiple times until you reach the "About" page)
+ * Added a call-for-support popup that shows up automatically when the app is used frequently
  * Added a new page showing currently copied/cut files (swipe right-to-left to the shortcuts page, then select "Clipboard")
  * Added quick access to overviews of all documents and multimedia files on the shortcuts page (this uses system components that sadly have terrible performance)
  * Added section headers when sorting by file type, which makes it easier to find files of a specific type
  * Added support for creating folders with subfolders and for creating empty files
+ * Added support for changing a link's target path
  * Added a very basic text editor, e.g. for quickly editing config files in root mode
  * Added option to set a custom directory to be opened when the app starts
  * Added descriptions for all config options and improved documentation
@@ -25,6 +29,10 @@ SPDX-License-Identifier: GFDL-1.3-or-later
  * Added automatic refreshing of the folder view when file properties change, e.g. when the size changes while copying files
  * Added support for showing shortcuts for all kinds of mounted devices (previously, only folders in /run/media/USER were shown)
  * Added proper support for calculating disk and file sizes (no longer relies on external commands and finally works without causing the app to hang)
+ * Added option to configure standard view mode globally
+ *   - current options: list and gallery
+ *   - planned: grid view
+ * Added context menu option to switch to a link's target folder
  * Greatly improved performance when switching between folders, checking bookmarks, editing settings, or reading the "About" page
  * Greatly improved performance of the "edit this path" dialog
  * Improved directory filtering: hidden files will be shown when the filter string starts with "."
@@ -34,6 +42,7 @@ SPDX-License-Identifier: GFDL-1.3-or-later
  * Improved feedback in case of errors or unexpected events
  * Improved bookmarks handling and removed no longer needed "refresh" pulley option on the shortcuts page
  * Improved manual sorting and renaming of bookmarks: press and hold, then drag and drop to sort them
+ * Improved performance when previewing large image files
  * Fixed synchronization of bookmarks among multiple app windows
  * Fixed sorting directories by modification date and by size
  * Fixed root mode for Sailfish 4.3 and later
@@ -44,7 +53,10 @@ SPDX-License-Identifier: GFDL-1.3-or-later
  * Fixed showing search/shortcuts from cover
  * Fixed logging when config migration fails (for Sailjail)
  * Fixed PDF annotations not being saved (not thoroughly tested yet)
- * Fixed many visual glitches, added minor quality-of-life features, and added various new icons
+ * Fixed calculating folder sizes by not following symbolic links
+ * Fixed enabling gallery mode in a folder when it was globally disabled
+ * Fixed gallery mode hiding files unnecessarily
+ * Fixed many visual glitches, fixed papercuts, added minor quality-of-life features, and added various new icons
  * Removed all dependencies on Busybox
  * Modernized the code base under the hood
  * and much, much more...
@@ -52,7 +64,7 @@ SPDX-License-Identifier: GFDL-1.3-or-later
  For developers:
 
  * FileModel now exposes file extensions
- * FileData now exposes directory sizes
+ * FileData now exposes directory sizes, link targets, and more file properties
  * Engine now exposes clipboard contents
  * Engine no longer exposes paths of external devices and Android data
  * Added a new settings handler which reduces complexity and should improve performance overall
