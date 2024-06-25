@@ -32,6 +32,9 @@ TRANSLATIONS = \
     translations/harbour-file-browser-tr.ts       \
     translations/harbour-file-browser.ts          \
     translations/harbour-file-browser-zh_CN.ts    \
+    translations/harbour-file-browser-ro.ts       \
+    translations/harbour-file-browser-uk.ts       \
+    translations/harbour-file-browser-ab.ts       \
 
 # ------------------------------------------------------------------------------
 
