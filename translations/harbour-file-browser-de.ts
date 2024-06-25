@@ -562,7 +562,7 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="325"/>
         <source>Open target folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Zielordner öffnen</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="326"/>
@@ -689,27 +689,27 @@
     <message>
         <location filename="../src/engine.cpp" line="416"/>
         <source>Source “%1” is not a symbolic link</source>
-        <translation type="unfinished"></translation>
+        <translation>Quelle „%1“ ist keine Verknüpfung</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="425"/>
         <source>No permissions to change contents of “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Keine Berechtigung zum Ändern des Inhalts von „%1“</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="433"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Konnte die alte Verknüpfung von „%1“ auf „%2“ nicht entfernen</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="439"/>
         <source>Failed to revert link “%1” pointing to “%2” after failing to change target to “%3”</source>
-        <translation type="unfinished"></translation>
+        <translation>Konnte die Verknüpfung „%1“ auf „%2“ nicht zurücksetzen, nachdem das Ändern des Ziels auf „%3“ fehlschlug</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="446"/>
         <source>Failed to change link target of “%1” to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Konnte das Verknüpfungsziel von „%1“ nicht zu „%2“ ändern</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="472"/>
@@ -817,12 +817,12 @@
     <message>
         <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
-        <translation type="unfinished"></translation>
+        <translation>Linkziel ändern</translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
-        <translation type="unfinished">Anwenden</translation>
+        <translation>Anwenden</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="299"/>
@@ -2093,7 +2093,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="15"/>
         <source>Pay the amount of a cup of coffee, a slice of pizza, or a ticket to the theater.</source>
-        <translation type="unfinished"></translation>
+        <translation>Spende den Betrag für eine Tasse Kaffee, ein Stück Pizza oder einen Theaterbesuch.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
@@ -2103,7 +2103,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="23"/>
         <source>Help with translating this app in as many languages as possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hilf dabei, die App in so viele Sprachen wie möglich zu übersetzen.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
@@ -2113,7 +2113,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="31"/>
         <source>Support with maintenance and packaging, write code, or provide valuable bug reports.</source>
-        <translation type="unfinished"></translation>
+        <translation>Unterstütze die Verwaltung, das Packaging, beim Programmieren oder schreibe Fehlerberichte.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="37"/>
@@ -2123,12 +2123,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="40"/>
         <source>This project is built with love and passion by a single developer in their spare time, and is provided to you free of charge.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dieses Projekt wird mit viel Liebe und Einsatz von einer Einzelperson in ihrer Freizeit entwickelt und dir gratis zur Verfügung gestellt.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="46"/>
         <source>I develop Free Software because I am convinced that it is the ethical thing to do - and it is a fun hobby. However, developing software takes a lot of time and effort. As Sailfish and living in general costs money, I need your support to be able to spend time on non-paying projects like this.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ich entwickle Freie Software aus ethischer Überzeugung - und Freude an diesem Hobby. Trotzdem braucht Softwareentwicklung viel Zeit und Einsatz. Da Sailfish und das Leben allgemein viel Geld kosten, bin ich auf deine Unterstützung angewiesen, um Zeit für unbezahlte Projekte wie dieses aufwenden zu können.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="56"/>
@@ -2138,12 +2138,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="59"/>
         <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jolla plant Preiserhöhungen und versucht Entwickler (die gratis arbeiten) auch noch zu zwingen, Sailfish zu mieten.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="64"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wenn du es dir leisten kannst, ist eine Spende der einfachste Weg, um dazu beizutragen, dass ich auch in Zukunft an Apps für Sailfish arbeiten kann. Jeder Betrag ist ein Beitrag - sei es eine Tasse Kaffee, ein Stück Pizza oder mehr.</translation>
     </message>
 </context>
 <context>
@@ -2398,7 +2398,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="193"/>
         <source>Path to a target</source>
-        <translation type="unfinished"></translation>
+        <translation>Pfad zu einem Ziel</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/PathEditDialog.qml" line="357"/>
