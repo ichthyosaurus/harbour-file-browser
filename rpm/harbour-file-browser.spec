@@ -10,7 +10,7 @@ Name:       harbour-file-browser
 %define __provides_exclude_from ^%{_datadir}/.*$
 
 Summary:    File Browser for Sailfish OS
-Version:    2.5.1
+Version:    3.0.0
 Release:    1
 Group:      Applications/Productivity
 License:    GPL-3.0-or-later
