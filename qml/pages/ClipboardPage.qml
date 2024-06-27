@@ -52,7 +52,7 @@ Page {
         text: "DEBUG!"
 
         onClicked: {
-            FileClipboard.setPaths(["/home/nemo/Documents", "/home/nemo/Videos", "/home/nemo/Downloads"], FileClipMode.Copy)
+            FileClipboard.setPaths(["/home"+"/nemo/Documents", "/home"+"/nemo/Videos", "/home"+"/nemo/Downloads"], FileClipMode.Copy)
             FileClipboard.setPaths(["/usr", "/etc", "/bin"], FileClipMode.Link)
             FileClipboard.setPaths(["/usr/lib", "/usr/share", "/usr/lib/qt5"], FileClipMode.Cut)
         }

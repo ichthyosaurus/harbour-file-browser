@@ -344,7 +344,7 @@ ChangelogList {
             '-   - Fixed a bug where bookmark names (not the bookmarks themselves) could get lost<br>' +
             '-   - Added runtime-caching of settings to handle missing permissions<br>' +
             '-   - Fixed changing view settings in read-only directories<br>' +
-            '-   - Restricted saving local view settings to /home/nemo/* and /run/media/nemo/*, so even if File Browser is run as root, no unwanted files will be written anywhere<br>' +
+            '-   - Restricted saving local view settings to the current user\'s user directory and their run-media directory, so even if File Browser is run as root, no unwanted files will be written anywhere<br>' +
             '-   - Improved settings handling to be more intuitive when resetting a local value to the global default<br>' +
             '- not Harbour-compliant changes:<br>' +
             '-   - Added showing PDF files directly from the file page (swipe right) using Sailfish Office<br>' +
