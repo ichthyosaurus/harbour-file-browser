@@ -94,5 +94,6 @@ echo "$with_latest" |\
             print;
         }
     }' |\
-    sed 's/ ichthyosaurus <>/ Mirian Margiani <mixosaurus+ichthyo@pm.me>/g' # |\
+    sed 's/ ichthyosaurus <>/ Mirian Margiani <mixosaurus+ichthyo@pm.me>/g' |\
+    sed -re 's/([0-9]) <> ([0-9])/\1 Mirian Margiani <mixosaurus+ichthyo@pm.me> \2/g' # |\
     # sed 's/ karip <>/ karip <karip@example.org>/g'
