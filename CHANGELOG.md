@@ -39,7 +39,7 @@ SPDX-License-Identifier: GFDL-1.3-or-later
  * Added context menu option to switch to a link's target folder
  * Greatly improved performance when switching between folders, checking bookmarks, editing settings, or reading the "About" page
  * Greatly improved performance of the "edit this path" dialog
- * Improved directory filtering: hidden files will be shown when the filter string starts with "."
+ * Improved directory filtering: hidden files will be shown when the filter string starts with a dot
  * Improved root mode:
  *   - it now requires entering your device lock code to access
  *   - note: unlocking is handled by the system, File Browser will never see your lock code

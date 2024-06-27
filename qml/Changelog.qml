@@ -11,7 +11,6 @@ ChangelogList {
     ChangelogItem {
         version: "3.0.0"
         date: "2024-06-25"
-        author: "Mirian Margiani"
         paragraphs: [
             "- This update finally brings over two years worth of new and refined features, bug fixes, and translation updates!<br>" +
             "- This is a major update with significant improvements above and under the hood!<br>" +
@@ -40,7 +39,7 @@ ChangelogList {
             "- Added context menu option to switch to a link's target folder<br>" +
             "- Greatly improved performance when switching between folders, checking bookmarks, editing settings, or reading the \"About\" page<br>" +
             "- Greatly improved performance of the \"edit this path\" dialog<br>" +
-            "- Improved directory filtering: hidden files will be shown when the filter string starts with "."<br>" +
+            "- Improved directory filtering: hidden files will be shown when the filter string starts with a dot<br>" +
             "- Improved root mode:<br>" +
             "-   - it now requires entering your device lock code to access<br>" +
             "-   - note: unlocking is handled by the system, File Browser will never see your lock code<br>" +
@@ -76,15 +75,15 @@ ChangelogList {
             "- Improved the build system to possibly enable more features in Jolla store<br>" +
             "- Refactored the root mode helper build process<br>" +
             "- and much, much more...<br>" +
-            "- Note: I do not know of any other apps that use File Browser's current file handling code; if you do, please contact me if there are issues with updating<br>" +
+            "- Note: I do not know of any other apps that use File Browser's current file handling code; if you do, please contact me if there are issues with updating"
         ]
     }
     ChangelogItem {
         version: '2.5.1'
         date: "2022-03-30"
         paragraphs: [
-            '- Hotfix for OpenRepos: fixed disabling sandboxing (Sailjail)<br>' +
-        '' ]
+            '- Hotfix for OpenRepos: fixed disabling sandboxing (Sailjail)'
+        ]
     }
     ChangelogItem {
         version: '2.5.0'
@@ -117,8 +116,8 @@ ChangelogList {
             '- Fixed zoom-by-double-tap for images with almost the same dimensions as the screen<br>' +
             '- Fixed "Open" instead of "Install" showing for APK files<br>' +
             '- Changed a settings key: "gallery" mode must be re-enabled once<br>' +
-            '- Updated config file location for Sailjail compatibility<br>' +
-        '' ]
+            '- Updated config file location for Sailjail compatibility'
+        ]
     }
     ChangelogItem {
         version: '2.4.3'
@@ -131,8 +130,8 @@ ChangelogList {
             '-   - File Browser can now be used in all orientations<br>' +
             '-   - Please file a bug report if startup fails and a note about "delaying initialization" appears in the log.<br>' +
             '-   - Part of the fix uses a workaround for a system bug and may break unexpectedly.<br>' +
-            '- Improved image page animations<br>' +
-        '' ]
+            '- Improved image page animations'
+        ]
     }
     ChangelogItem {
         version: '2.4.2'
@@ -140,8 +139,8 @@ ChangelogList {
         paragraphs: [
             '- New translations: Czech, Slovak, Hungarian<br>' +
             '- Added support for opening directories with xdg-open<br>' +
-            '- Updated list of contributors<br>' +
-        '' ]
+            '- Updated list of contributors'
+        ]
     }
     ChangelogItem {
         version: '2.4.1'
@@ -156,8 +155,8 @@ ChangelogList {
             '- Improved performance of file size preview and selecting files<br>' +
             '- Fixed label colors in permissions dialog, rename dialog, transfer dialog, file preview page<br>' +
             '- Fixed hiding empty file info fields<br>' +
-            '- Fixed creating numbered file names when pasting over existing files with “.” in their path<br>' +
-        '' ]
+            '- Fixed creating numbered file names when pasting over existing files with “.” in their path'
+        ]
     }
     ChangelogItem {
         version: '2.4.0'
@@ -205,8 +204,8 @@ ChangelogList {
             "- Implemented custom sorting by modification time, as QDir's performance is terrible<br>" +
             '- Implemented a hashing/caching algorithm for partially refreshing folder listings<br>' +
             '- Improved icon rendering: code can be easily reused in other projects<br>' +
-            '- Clarified licensing for all files: documentation is GFDL, some files are CC0 (all files have proper SPDX license headers now)<br>' +
-        '' ]
+            '- Clarified licensing for all files: documentation is GFDL, some files are CC0 (all files have proper SPDX license headers now)'
+        ]
     }
     ChangelogItem {
         version: '2.3.2-beta'
@@ -217,8 +216,8 @@ ChangelogList {
             '- Added a menu icon to directory headers (can be disabled in the settings)<br>' +
             '- Improved description text for adding custom transfer targets<br>' +
             '- Refactored page navigation and navigation history (even good things can be improved)<br>' +
-            '- Fixed some console noise<br>' +
-        '' ]
+            '- Fixed some console noise'
+        ]
     }
     ChangelogItem {
         version: '2.3.1-beta'
@@ -229,8 +228,8 @@ ChangelogList {
             '- Changed toolbar icons to 112x112px instead of 64x64px<br>' +
             '- Fixed height and thickness of toolbar icons (lines) to match system icons<br>' +
             "- Fixed file previews so file icons don't scale too much<br>" +
-            '- Fixed an error message caused by string formatting<br>' +
-        '' ]
+            '- Fixed an error message caused by string formatting'
+        ]
     }
     ChangelogItem {
         version: '2.3.0-beta'
@@ -267,8 +266,8 @@ ChangelogList {
             '- Implemented a new versatile dialog for manually entering paths, including completion suggestions<br>' +
             '- Implemented different search types in the search engine<br>' +
             '- Added support for limiting the amount of search results<br>' +
-            '- Added directory info properties to the file data backend<br>' +
-        '' ]
+            '- Added directory info properties to the file data backend'
+        ]
     }
     ChangelogItem {
         version: '2.2.2-beta'
@@ -285,8 +284,8 @@ ChangelogList {
             '- *** For developers:<br>' +
             '- Internal API changes<br>' +
             '-   - Documented Engine::isUsingBusybox()<br>' +
-            '-   - Added Settings::keys()<br>' +
-        '' ]
+            '-   - Added Settings::keys()'
+        ]
     }
     ChangelogItem {
         version: '2.2.1-beta'
@@ -295,8 +294,8 @@ ChangelogList {
             '- Added root mode (packaged separately)<br>' +
             '- Fixed inconsistent default setting for "View/UseLocalSettings"<br>' +
             '- Added "open storage settings" to bottom pulley of shortcuts page<br>' +
-            '- Disabled opening system settings from shortcuts for Jolla store and when running as root<br>' +
-        '' ]
+            '- Disabled opening system settings from shortcuts for Jolla store and when running as root'
+        ]
     }
     ChangelogItem {
         version: '2.2.0-beta'
@@ -311,16 +310,16 @@ ChangelogList {
             '-   - Removed some small helper functions<br>' +
             '-   - Refactored and split scripts and libraries<br>' +
             '-   - Removed Engine::homeFolder()<br>' +
-            '-   - Renamed Engine::androidSdcardPath() to Engine::androidDataPath()<br>' +
-        '' ]
+            '-   - Renamed Engine::androidSdcardPath() to Engine::androidDataPath()'
+        ]
     }
     ChangelogItem {
         version: '2.1.1-beta'
         date: "2020-04-19"
         paragraphs: [
             '- Added support for opus audio files: recognize them as audio, and allow internal playback<br>' +
-            '- Removed trying to show thumbnails for PDF files and videos: the system thumbnailer does not support it<br>' +
-        '' ]
+            '- Removed trying to show thumbnails for PDF files and videos: the system thumbnailer does not support it'
+        ]
     }
     ChangelogItem {
         version: '2.1.0-beta'
@@ -360,16 +359,16 @@ ChangelogList {
             '- *** For developers:<br>' +
             '- Internal API changes<br>' +
             '-   - Moved settings from Engine to standalone settings handler<br>' +
-            '-   - Replaced separate method for detecting SD cards by method collecting all mounted devices<br>' +
-        '' ]
+            '-   - Replaced separate method for detecting SD cards by method collecting all mounted devices'
+        ]
     }
     ChangelogItem {
         version: '2.0.1-beta'
         date: "2019-12-30"
         paragraphs: [
             '- Updated translations: Swedish, Chinese, Spanish<br>' +
-            '- (other translations still need updating - contributors welcome!)<br>' +
-        '' ]
+            '- (other translations still need updating - contributors welcome!)'
+        ]
     }
     ChangelogItem {
         version: '2.0.0-beta'
@@ -420,55 +419,55 @@ ChangelogList {
             '- Improved many strings (translations not updated yet)<br>' +
             '- Updated German translation<br>' +
             '- Polished user interface with improvements here and there<br>' +
-            '- **IMPORTANT**: for version 2.0.0 and upwards, the licensing has been changed to the GNU GPL v3 (or later).<br>' +
-        '' ]
+            '- **IMPORTANT**: for version 2.0.0 and upwards, the licensing has been changed to the GNU GPL v3 (or later).'
+        ]
     }
     ChangelogItem {
         version: '1.8.0'
         date: "2019-05-12"
         paragraphs: [
             '- Added a confirmation dialog for file overwriting<br>' +
-            '- Fixed colors and icons for Sailfish 3 light ambiences<br>' +
-        '' ]
+            '- Fixed colors and icons for Sailfish 3 light ambiences'
+        ]
     }
     ChangelogItem {
         version: '1.7.3'
         date: "2018-07-05"
         paragraphs: [
-            '- Fixed the SDCard location for users with an unusual sdcard symlink<br>' +
-        '' ]
+            '- Fixed the SDCard location for users with an unusual sdcard symlink'
+        ]
     }
     ChangelogItem {
         version: '1.7.2'
         date: "2018-06-11"
         paragraphs: [
             '- Fixed SDCard location for Sailfish 2.2.0<br>' +
-            '- Fixed to start on Sailfish 1 phones<br>' +
-        '' ]
+            '- Fixed to start on Sailfish 1 phones'
+        ]
     }
     ChangelogItem {
         version: '1.7.1'
         date: "2018-02-11"
         paragraphs: [
             '- Added translations for French, Dutch and Greek<br>' +
-            '- Fixed icons for high density screens<br>' +
-        '' ]
+            '- Fixed icons for high density screens'
+        ]
     }
     ChangelogItem {
         version: '1.7'
         date: "2016-06-27"
         paragraphs: [
             '- Add translations for Italian, Russian, Spanish and Swedish<br>' +
-            '- Small UI improvements to match the Sailfish look<br>' +
-        '' ]
+            '- Small UI improvements to match the Sailfish look'
+        ]
     }
     ChangelogItem {
         version: '1.6'
         date: "2015-03-22"
         paragraphs: [
             '- Add translations for Finnish, German and Simplified Chinese languages<br>' +
-            '- Fix occasional search page hangup<br>' +
-        '' ]
+            '- Fix occasional search page hangup'
+        ]
     }
     ChangelogItem {
         version: '1.5'
@@ -480,8 +479,8 @@ ChangelogList {
             '- Displays broken symbolic links<br>' +
             '- Move and copy symbolic links<br>' +
             '- Display mime type information<br>' +
-            '- Display chr, blk, fifo and sock files correctly<br>' +
-        '' ]
+            '- Display chr, blk, fifo and sock files correctly'
+        ]
     }
     ChangelogItem {
         version: '1.4.2'
@@ -490,8 +489,8 @@ ChangelogList {
             '- Added full public domain license text<br>' +
             '- Fixed path to sd card<br>' +
             '- Fixed deleting symlinks to directories<br>' +
-            '- Added view contents to show rpm, apk and zip files<br>' +
-        '' ]
+            '- Added view contents to show rpm, apk and zip files'
+        ]
     }
     ChangelogItem {
         version: '1.4.1'
@@ -504,8 +503,8 @@ ChangelogList {
             '- Added create folders<br>' +
             '- Added change permissions<br>' +
             '- Added disk space indicators<br>' +
-            '- Fixed two deletes to work simultaneously<br>' +
-        '' ]
+            '- Fixed two deletes to work simultaneously'
+        ]
     }
     ChangelogItem {
         version: '1.3'
@@ -514,8 +513,8 @@ ChangelogList {
             '- Added filename search<br>' +
             '- Added audio playback<br>' +
             '- Added image preview<br>' +
-            '- Added view contents to show text or binary dump<br>' +
-        '' ]
+            '- Added view contents to show text or binary dump'
+        ]
     }
     ChangelogItem {
         version: '1.2'
@@ -524,22 +523,22 @@ ChangelogList {
             '- Added menu to open files with xdg-open<br>' +
             '- Added context menu to cut, copy and paste (move/copy) files<br>' +
             '- Cancel file operations<br>' +
-            '- Watches file system for changes to update the views<br>' +
-        '' ]
+            '- Watches file system for changes to update the views'
+        ]
     }
     ChangelogItem {
         version: '1.1'
         date: "2013-12-19"
         paragraphs: [
             '- Android APK and Sailfish RPM packages can be installed<br>' +
-            '- Context menu to delete files and directories<br>' +
-        '' ]
+            '- Context menu to delete files and directories'
+        ]
     }
     ChangelogItem {
         version: '1.0'
         date: "2013-12-17"
         paragraphs: [
-            '- Initial release<br>' +
-        '' ]
+            '- Initial release'
+        ]
     }
 }
