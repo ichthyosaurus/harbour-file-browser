@@ -2,7 +2,7 @@ dnl/// SPDX-FileCopyrightText: 2023 Mirian Margiani
 dnl/// SPDX-License-Identifier: GFDL-1.3-or-later
 
 ifdef(${__X_summary}, ${
-__name is a comprehensive file manager for local files on [Sailfish OS](https://sailfishos.org/).
+A comprehensive file manager for local files on [Sailfish OS](https://sailfishos.org/).
 })dnl
 
 ifdef(${__X_description}, ${
@@ -51,8 +51,13 @@ simply presented as empty by the system.
 Additionally, some file previews and integrated access to storage settings are
 disabled.
 
+ifdef(${__X_harbour}, ${
 If you need full access to all files, please install __name from
 [OpenRepos](https://openrepos.net/content/ichthyosaurus/file-browser).
+}, ${
+The version on [OpenRepos](https://openrepos.net/content/ichthyosaurus/file-browser)
+is not affected by these limitations.
+})
 
 ## Permissions
 
