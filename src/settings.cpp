@@ -808,7 +808,7 @@ enum DeviceType {
 
 void BookmarksModel::updateExternalDevices()
 {
-    qDebug() << "checking mounts...";
+    // qDebug() << "checking mounts...";
 
     if (!m_groupsOrder.contains(BookmarkGroup::External)) {
         return;
