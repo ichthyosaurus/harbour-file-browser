@@ -134,7 +134,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="11"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Будь ласка, знайдіть хвилинку, якщо можете зробити свій внесок у цей проект у той чи інший спосіб.</translation>
     </message>
 </context>
 <context>
@@ -451,12 +451,12 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show less</source>
-        <translation type="unfinished"></translation>
+        <translation>сховати</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show more</source>
-        <translation type="unfinished"></translation>
+        <translation>показати більше</translation>
     </message>
 </context>
 <context>
@@ -511,13 +511,13 @@
         <location filename="../qml/pages/DirectoryPage.qml" line="446"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Немає збігів</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="448"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation type="unfinished">Порожньо</translation>
+        <translation>Порожньо</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="451"/>
@@ -566,12 +566,12 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="325"/>
         <source>Open target folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Відкрити цільову теку</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="326"/>
         <source>Open containing folder</source>
-        <translation type="unfinished">Відкрити вміст теки</translation>
+        <translation>Відкрити папку з вмістом</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="338"/>
@@ -698,27 +698,27 @@
     <message>
         <location filename="../src/engine.cpp" line="416"/>
         <source>Source “%1” is not a symbolic link</source>
-        <translation type="unfinished"></translation>
+        <translation>Джерело &quot;%1&quot; не є символічним посиланням</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="425"/>
         <source>No permissions to change contents of “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Немає дозволів на зміну вмісту &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="433"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Не вдалося видалити старе посилання &quot;%1&quot;, що вказує на &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="439"/>
         <source>Failed to revert link “%1” pointing to “%2” after failing to change target to “%3”</source>
-        <translation type="unfinished"></translation>
+        <translation>Не вдалося повернути посилання &quot;%1&quot;, що вказує на &quot;%2&quot;, після невдалої спроби змінити ціль на &quot;%3&quot;</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="446"/>
         <source>Failed to change link target of “%1” to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Не вдалося змінити ціль посилання з &quot;%1&quot; на &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="472"/>
@@ -831,12 +831,12 @@
     <message>
         <location filename="../qml/components/FileActions.qml" line="273"/>
         <source>edit link target</source>
-        <translation type="unfinished"></translation>
+        <translation>редагувати ціль посилання</translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="278"/>
         <source>Apply</source>
-        <translation type="unfinished">Застосувати</translation>
+        <translation>Застосувати</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="298"/>
@@ -1233,17 +1233,17 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="90"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
-        <translation type="unfinished"></translation>
+        <translation>У режимі галереї зображення будуть показані відповідно до розміру екрану. Інші файли показуються без мініатюр попереднього перегляду.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="97"/>
         <source>Hint</source>
-        <translation type="unfinished"></translation>
+        <translation>Порада</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="98"/>
         <source>You can enable per-directory settings to configure your preferences for individual folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ви можете увімкнути налаштування для кожного каталогу, щоб налаштувати ваші уподобання для окремих папок.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="103"/>
@@ -1388,27 +1388,27 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="69"/>
         <source>View mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим перегляду</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="76"/>
         <source>list</source>
-        <translation type="unfinished"></translation>
+        <translation>список</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="78"/>
         <source>Show files in a list. Optionally enable preview thumbnails using the separate setting below.</source>
-        <translation type="unfinished"></translation>
+        <translation>Показувати файли списком. За бажанням увімкніть попередній перегляд мініатюр за допомогою окремого налаштування нижче.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="88"/>
         <source>gallery</source>
-        <translation type="unfinished"></translation>
+        <translation>галерея</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="180"/>
         <source>Show more recently changed files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Спочатку показувати нещодавно змінені файли.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="185"/>
@@ -2054,7 +2054,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="119"/>
         <source>License text</source>
-        <translation type="unfinished">Текст ліцензії</translation>
+        <translation>Текст ліцензії</translation>
     </message>
 </context>
 <context>
@@ -2106,62 +2106,62 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="14"/>
         <source>Donate on Liberapay</source>
-        <translation type="unfinished"></translation>
+        <translation>Зробити донат через Liberapay</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="15"/>
         <source>Pay the amount of a cup of coffee, a slice of pizza, or a ticket to the theater.</source>
-        <translation type="unfinished"></translation>
+        <translation>Можете пожертвувати суму, що дорівнює чашці кави, шматку піци або квитку в театр.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
         <source>Translate on Weblate</source>
-        <translation type="unfinished"></translation>
+        <translation>Переклад на Weblate</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="23"/>
         <source>Help with translating this app in as many languages as possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Допоможіть перекласти цей додаток якомога більшою кількістю мов.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
         <source>Develop on Github</source>
-        <translation type="unfinished"></translation>
+        <translation>Розробка на Github</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="31"/>
         <source>Support with maintenance and packaging, write code, or provide valuable bug reports.</source>
-        <translation type="unfinished"></translation>
+        <translation>Підтримайте в обслуговуванні та пакуванні, написанні коду або наданні цінних звітів про помилки.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="37"/>
         <source>Why should you care?</source>
-        <translation type="unfinished"></translation>
+        <translation>Чому вас це має цікавити?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="40"/>
         <source>This project is built with love and passion by a single developer in their spare time, and is provided to you free of charge.</source>
-        <translation type="unfinished"></translation>
+        <translation>Цей проект створений з любов&apos;ю та пристрастю одним розробником у свій вільний час і надається вам безкоштовно.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="46"/>
         <source>I develop Free Software because I am convinced that it is the ethical thing to do - and it is a fun hobby. However, developing software takes a lot of time and effort. As Sailfish and living in general costs money, I need your support to be able to spend time on non-paying projects like this.</source>
-        <translation type="unfinished"></translation>
+        <translation>Я розробляю вільне програмне забезпечення, тому що переконаний, що це етично, і це цікаве хобі. Однак, розробка програмного забезпечення вимагає багато часу та зусиль. Оскільки Sailfish OS і життя в цілому коштує грошей, мені потрібна ваша підтримка, щоб мати змогу витрачати час на такі неоплачувані проекти, як цей.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="56"/>
         <source>Why donate?</source>
-        <translation type="unfinished"></translation>
+        <translation>Навіщо донатити?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="59"/>
         <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jolla підняла ціни і намагається змусити розробників (які працюють безкоштовно) платити підписку на Sailfish OS.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="64"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
-        <translation type="unfinished"></translation>
+        <translation>Якщо ви можете собі це дозволити, донат – це найпростіший спосіб гарантувати, що я зможу продовжувати працювати над додатками для Sailfish OS. Будь-яка сума цінна, будь то чашка кави, шматок піци чи щось більше.</translation>
     </message>
 </context>
 <context>
@@ -2169,24 +2169,24 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="55"/>
         <source>About</source>
-        <translation type="unfinished">Про застосунок</translation>
+        <translation>Про застосунок</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="84"/>
         <source>Version %1</source>
-        <translation type="unfinished">Версія %1</translation>
+        <translation>Версія %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="100"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="22"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="31"/>
         <source>Development</source>
-        <translation type="unfinished">Розробка</translation>
+        <translation>Розробка</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="103"/>
         <source>show contributors</source>
-        <translation type="unfinished">Показати учасників</translation>
+        <translation>показати учасників</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="105"/>
@@ -2194,37 +2194,37 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="57"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="47"/>
         <source>Homepage</source>
-        <translation type="unfinished">Головна</translation>
+        <translation>Головна</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="108"/>
         <location filename="../qml/modules/Opal/About/private/ChangelogPage.qml" line="16"/>
         <source>Changelog</source>
-        <translation type="unfinished">Список змін</translation>
+        <translation>Список змін</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="123"/>
         <source>Donations</source>
-        <translation type="unfinished">Пожертви</translation>
+        <translation>Пожертви</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="129"/>
         <source>License</source>
-        <translation type="unfinished">Ліцензія</translation>
+        <translation>Ліцензія</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="134"/>
         <source>show license(s)</source>
-        <translation type="unfinished">
-            <numerusform>Показати ліцензію</numerusform>
-            <numerusform>Показати ліцензії</numerusform>
-            <numerusform>Показати ліцензій</numerusform>
+        <translation>
+            <numerusform>показати ліцензію</numerusform>
+            <numerusform>показати ліцензії</numerusform>
+            <numerusform>показати ліцензій</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="111"/>
         <source>Translations</source>
-        <translation type="unfinished">Переклади</translation>
+        <translation>Переклади</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="114"/>
@@ -2232,43 +2232,43 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="58"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="50"/>
         <source>Source Code</source>
-        <translation type="unfinished">Вихідний код</translation>
+        <translation>Вихідний код</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/InfoSection.qml" line="15"/>
         <source>show details</source>
-        <translation type="unfinished">показати подробиці</translation>
+        <translation>показати подробиці</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="21"/>
         <source>Contributors</source>
-        <translation type="unfinished">Учасники</translation>
+        <translation>Учасники</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="37"/>
         <source>Acknowledgements</source>
-        <translation type="unfinished">Подяки</translation>
+        <translation>Подяки</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="44"/>
         <source>Thank you!</source>
-        <translation type="unfinished">Дякую!</translation>
+        <translation>Дякую!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="48"/>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
         <source>Details</source>
-        <translation type="unfinished">Подробиці</translation>
+        <translation>Подробиці</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="25"/>
         <source>Download license texts</source>
-        <translation type="unfinished">Завантажити тексти ліцензій</translation>
+        <translation>Завантажити тексти ліцензій</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
         <source>License(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>Ліцензія</numerusform>
             <numerusform>Ліцензії</numerusform>
             <numerusform>Ліцензій</numerusform>
@@ -2277,7 +2277,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="41"/>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation type="unfinished">Примітка: будь ласка, перевірте вихідний код для отримання найбільш точної інформації.</translation>
+        <translation>Примітка: будь ласка, перевірте вихідний код для отримання найбільш точної інформації.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="15"/>
@@ -2302,17 +2302,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="60"/>
         <source>News</source>
-        <translation type="unfinished">Новини</translation>
+        <translation>Новини</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="61"/>
         <source>Changes since version %1</source>
-        <translation type="unfinished">Зміни з попередньої версії %1</translation>
+        <translation>Зміни з версії %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="120"/>
         <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
-        <translation type="unfinished">Будь ласка, зверніться до &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
+        <translation>Будь ласка, зверніться до &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
 </context>
 <context>
@@ -2320,17 +2320,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="7"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation type="unfinished">Якщо ви хочете підтримати мою роботу, ви можете пригостити мене чашкою кави.</translation>
+        <translation>Якщо ви хочете підтримати мою роботу, ви можете пригостити мене чашкою кави.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="8"/>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation type="unfinished">Ви можете підтримати цей прожкт, зробивши свій внесок або пожертвувавши за допомогою будь-якого з цих сервісів.</translation>
+        <translation>Ви можете підтримати цей проект, зробивши свій внесок або пожертвувавши за допомогою будь-якого з цих сервісів.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="9"/>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation type="unfinished">Ваш внесок у переклади або код буде дуже доречним.</translation>
+        <translation>Ваш внесок у переклади або код дуже допоможе.</translation>
     </message>
 </context>
 <context>
@@ -2418,7 +2418,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="193"/>
         <source>Path to a target</source>
-        <translation type="unfinished"></translation>
+        <translation>Шлях до цілі</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/PathEditDialog.qml" line="357"/>
@@ -2868,27 +2868,27 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="9"/>
         <source>Hi there!</source>
-        <translation type="unfinished"></translation>
+        <translation>Вітаю!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="10"/>
         <source>Thank you for using my little app! Maybe you can contribute back?</source>
-        <translation type="unfinished"></translation>
+        <translation>Дякую за використання мого додатку! Можливо, ви можете зробити свій внесок у відповідь?</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="11"/>
         <source>Thank you for your support!</source>
-        <translation type="unfinished"></translation>
+        <translation>Дякую за вашу підтримку!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="55"/>
         <source>Remind me later</source>
-        <translation type="unfinished"></translation>
+        <translation>Нагадати пізніше</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="57"/>
         <source>Don&apos;t ask me again</source>
-        <translation type="unfinished"></translation>
+        <translation>Не питати знову</translation>
     </message>
 </context>
 <context>
@@ -3270,7 +3270,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="118"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
-        <translation type="unfinished"></translation>
+        <translation>У режимі галереї зображення будуть показані відповідно до розміру екрану. Інші файли показуються без мініатюр попереднього перегляду.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="131"/>
