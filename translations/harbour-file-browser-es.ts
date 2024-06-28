@@ -134,7 +134,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="11"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Por favor, tómate un momento para considerar si puedes contribuir a este proyecto de una forma u otra.</translation>
     </message>
 </context>
 <context>
@@ -447,12 +447,12 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show less</source>
-        <translation type="unfinished"></translation>
+        <translation>mostrar menos</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show more</source>
-        <translation type="unfinished"></translation>
+        <translation>mostrar más</translation>
     </message>
 </context>
 <context>
@@ -486,13 +486,13 @@
         <location filename="../qml/pages/DirectoryPage.qml" line="446"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Sin coincidencia</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="448"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Vacío</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="532"/>
@@ -562,12 +562,12 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="325"/>
         <source>Open target folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir carpeta de destino</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="326"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir la carpeta contenedora</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="338"/>
@@ -689,27 +689,27 @@
     <message>
         <location filename="../src/engine.cpp" line="416"/>
         <source>Source “%1” is not a symbolic link</source>
-        <translation type="unfinished"></translation>
+        <translation>La fuente &quot;%1&quot; no es un enlace simbólico</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="425"/>
         <source>No permissions to change contents of “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>No hay permisos para cambiar el contenido de &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="433"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Error al eliminar el antiguo enlace &quot;%1&quot; que apuntaba a &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="439"/>
         <source>Failed to revert link “%1” pointing to “%2” after failing to change target to “%3”</source>
-        <translation type="unfinished"></translation>
+        <translation>Error al revertir el enlace &quot;%1&quot; que apunta a &quot;%2&quot; tras fallar el cambio de destino a &quot;%3&quot;</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="446"/>
         <source>Failed to change link target of “%1” to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Error al cambiar el destino del enlace de &quot;%1&quot; a &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="472"/>
@@ -817,12 +817,12 @@
     <message>
         <location filename="../qml/components/FileActions.qml" line="273"/>
         <source>edit link target</source>
-        <translation type="unfinished"></translation>
+        <translation>editar destino del enlace</translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="278"/>
         <source>Apply</source>
-        <translation type="unfinished">Aplicar</translation>
+        <translation>Aplicar</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="298"/>
@@ -1216,17 +1216,17 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="90"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
-        <translation type="unfinished"></translation>
+        <translation>En el modo galería, las imágenes se mostrarán para ajustarse a la pantalla. Los demás archivos se muestran sin miniaturas de vista previa.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="97"/>
         <source>Hint</source>
-        <translation type="unfinished"></translation>
+        <translation>Sugerencia</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="98"/>
         <source>You can enable per-directory settings to configure your preferences for individual folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Puedes activar la configuración por directorio para configurar tus preferencias para carpetas individuales.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="103"/>
@@ -1371,27 +1371,27 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="69"/>
         <source>View mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo de visualización</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="76"/>
         <source>list</source>
-        <translation type="unfinished"></translation>
+        <translation>lista</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="78"/>
         <source>Show files in a list. Optionally enable preview thumbnails using the separate setting below.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar archivos en una lista. Si lo desea, puede activar la vista previa de miniaturas mediante la configuración que se indica a continuación.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="88"/>
         <source>gallery</source>
-        <translation type="unfinished"></translation>
+        <translation>galería</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="180"/>
         <source>Show more recently changed files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar primero los archivos modificados más recientemente.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="185"/>
@@ -2088,62 +2088,62 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="14"/>
         <source>Donate on Liberapay</source>
-        <translation type="unfinished"></translation>
+        <translation>Donar en Liberapay</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="15"/>
         <source>Pay the amount of a cup of coffee, a slice of pizza, or a ticket to the theater.</source>
-        <translation type="unfinished"></translation>
+        <translation>Paga el importe de una taza de café, un trozo de pizza o una entrada para el teatro.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
         <source>Translate on Weblate</source>
-        <translation type="unfinished"></translation>
+        <translation>Traducir en Weblate</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="23"/>
         <source>Help with translating this app in as many languages as possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ayuda a traducir esta aplicación al mayor número de idiomas posible.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
         <source>Develop on Github</source>
-        <translation type="unfinished"></translation>
+        <translation>Desarrollar en Github</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="31"/>
         <source>Support with maintenance and packaging, write code, or provide valuable bug reports.</source>
-        <translation type="unfinished"></translation>
+        <translation>Apoya el mantenimiento y empaquetado, escriba código o proporcione valiosos informes de errores.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="37"/>
         <source>Why should you care?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Por qué debería preocuparte?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="40"/>
         <source>This project is built with love and passion by a single developer in their spare time, and is provided to you free of charge.</source>
-        <translation type="unfinished"></translation>
+        <translation>Este proyecto ha sido creado con amor y pasión por un único desarrollador en su tiempo libre, y se pone a tu disposición de forma gratuita.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="46"/>
         <source>I develop Free Software because I am convinced that it is the ethical thing to do - and it is a fun hobby. However, developing software takes a lot of time and effort. As Sailfish and living in general costs money, I need your support to be able to spend time on non-paying projects like this.</source>
-        <translation type="unfinished"></translation>
+        <translation>Desarrollo software libre porque estoy convencido de que es lo más ético y es un pasatiempo divertido. Sin embargo, desarrollar software requiere mucho tiempo y esfuerzo. Como Sailfish y vivir en general cuesta dinero, necesito tu apoyo para poder dedicar tiempo a proyectos no remunerados como este.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="56"/>
         <source>Why donate?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Por qué donar?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="59"/>
         <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jolla subió los precios e intenta obligar a los desarrolladores (que trabajan gratis) a pagar un alquiler por Sailfish.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="64"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
-        <translation type="unfinished"></translation>
+        <translation>Si puedes permitírtelo, donar es la forma más fácil de asegurarte de que puedo seguir trabajando en aplicaciones para Sailfish. Cualquier cantidad es apreciada, ya sea una taza de café, un trozo de pizza, o más.</translation>
     </message>
 </context>
 <context>
@@ -2398,7 +2398,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="193"/>
         <source>Path to a target</source>
-        <translation type="unfinished"></translation>
+        <translation>Trayectoria hacia un objetivo</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/PathEditDialog.qml" line="357"/>
@@ -2842,27 +2842,27 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="9"/>
         <source>Hi there!</source>
-        <translation type="unfinished"></translation>
+        <translation>¡Hola a tod@s!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="10"/>
         <source>Thank you for using my little app! Maybe you can contribute back?</source>
-        <translation type="unfinished"></translation>
+        <translation>¡Gracias por usar mi pequeña aplicación!¿Quizás puedas contribuir de nuevo?</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="11"/>
         <source>Thank you for your support!</source>
-        <translation type="unfinished"></translation>
+        <translation>¡Gracias por tu apoyo!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="55"/>
         <source>Remind me later</source>
-        <translation type="unfinished"></translation>
+        <translation>Recuérdamelo más tarde</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="57"/>
         <source>Don&apos;t ask me again</source>
-        <translation type="unfinished"></translation>
+        <translation>No me lo vuelvas a preguntar</translation>
     </message>
 </context>
 <context>
@@ -3234,7 +3234,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="118"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
-        <translation type="unfinished"></translation>
+        <translation>En el modo galería, las imágenes se mostrarán para ajustarse a la pantalla. Los demás archivos se muestran sin miniaturas de vista previa.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="131"/>
