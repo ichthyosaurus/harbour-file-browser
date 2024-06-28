@@ -803,9 +803,11 @@ enum DeviceType {
 
 void BookmarksModel::updateExternalDevices()
 {
-    // qDebug() << "checking mounts...";
+    qDebug() << "checking mounts...";
 
-    if (!m_groupsOrder.contains(BookmarkGroup::External)) return;
+    if (!m_groupsOrder.contains(BookmarkGroup::External)) {
+        return;
+    }
 
     // currently visible list of mounts
     QSet<int> knownMounts;
@@ -814,30 +816,52 @@ void BookmarksModel::updateExternalDevices()
 
     for (int i = m_firstExternalIndex; i < knownCount; ++i) {
         const auto& item = m_entries.at(i);
-        if (item.group != BookmarkGroup::External) continue;
+
+        if (item.group != BookmarkGroup::External) {
+            continue;
+        }
+
         knownMounts.insert(qHash(item.path));
         nextExternalIndex = i;
     }
 
-    if (nextExternalIndex < 0) nextExternalIndex = m_firstExternalIndex;
-    else ++nextExternalIndex;
+    if (nextExternalIndex < 0) {
+        nextExternalIndex = m_firstExternalIndex;
+    } else {
+        ++nextExternalIndex;
+    }
 
     // currently active mounts reported by the system
     const auto activeMounts = QStorageInfo::mountedVolumes();
     QSet<int> activeHashes;
-    for (const auto& i : activeMounts) {
-        if (i.isValid() && i.isReady()
-                && !i.isRoot()
-                && i.fileSystemType() != QStringLiteral("tmpfs")
-                && !i.rootPath().startsWith(QStringLiteral("/opt/alien/"))) {
 
+    for (const auto& i : activeMounts) {
+        if (    i.isValid()
+            &&  i.isReady()
+            && !i.isRoot()
+            &&  i.fileSystemType() != QStringLiteral("tmpfs")
+            && !i.rootPath().startsWith(QStringLiteral("/opt/alien/"))
+        ) {
             int pathHash = qHash(i.rootPath());
-            if (!m_ignoredMounts.contains(pathHash)) activeHashes.insert(pathHash);
-            if (m_ignoredMounts.contains(pathHash) || knownMounts.contains(pathHash)) continue;
-            qDebug() << "new mount detected:" << i.displayName() << i.device() << i.fileSystemType() << i.rootPath();
+
+            if (!m_ignoredMounts.contains(pathHash)) {
+                activeHashes.insert(pathHash);
+            }
+
+            if (m_ignoredMounts.contains(pathHash) || knownMounts.contains(pathHash)) {
+                continue;
+            } else {
+                qDebug() << "new mount detected:"
+                         << i.displayName()
+                         << i.device()
+                         << i.fileSystemType()
+                         << i.rootPath()
+                ;
+            }
 
             DeviceType type = Any;
             QString icon;
+
             if (i.device().startsWith(QByteArray("/dev/mmc"))) {
                 type = SdCard;
                 icon = QStringLiteral("icon-m-sd-card");
@@ -889,9 +913,15 @@ void BookmarksModel::updateExternalDevices()
 
     // remove currently visible mounts that are no longer active
     int currentCount = m_entries.length();
+
     for (int i = currentCount-1; i >= 0; --i) {
-        if (m_entries.at(i).group != BookmarkGroup::External) continue;
-        if (activeHashes.contains(qHash(m_entries.at(i).path))) continue;
+        if (m_entries.at(i).group != BookmarkGroup::External) {
+            continue;
+        }
+
+        if (activeHashes.contains(qHash(m_entries.at(i).path))) {
+            continue;
+        }
 
         beginRemoveRows(QModelIndex(), i, i);
         m_entries.removeAt(i);
