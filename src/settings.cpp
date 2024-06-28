@@ -624,11 +624,14 @@ BookmarksModel::BookmarksModel(QObject *parent) :
     // NOTE Add only full paths to this list.
     //      Ignored base paths like /opt/appsupport/ where all mount points are
     //      to be ignored are listed in BookmarksModel::updateExternalDevices().
+    m_ignoredMounts.insert(qHash(QStringLiteral("/")));
     m_ignoredMounts.insert(qHash(QStringLiteral("/persist")));
     m_ignoredMounts.insert(qHash(QStringLiteral("/dsp")));
     m_ignoredMounts.insert(qHash(QStringLiteral("/odm")));
     m_ignoredMounts.insert(qHash(QStringLiteral("/home")));
     m_ignoredMounts.insert(qHash(QStringLiteral("/firmware")));
+    m_ignoredMounts.insert(qHash(QStringLiteral("/bt_firmware")));
+    m_ignoredMounts.insert(qHash(QStringLiteral("/firmware_mnt")));
     m_ignoredMounts.insert(qHash(QStringLiteral("/metadata")));
     m_ignoredMounts.insert(qHash(QStringLiteral("/mnt/vendor/persist")));
 
@@ -852,6 +855,12 @@ void BookmarksModel::updateExternalDevices()
             && !i.rootPath().startsWith(QStringLiteral("/apex/"))
             && !i.rootPath().startsWith(QStringLiteral("/opt/appsupport/"))
             && !i.rootPath().startsWith(QStringLiteral("/vendor/"))
+            && !i.rootPath().startsWith(QStringLiteral("/home/"))
+            && !i.rootPath().startsWith(QStringLiteral("/dsp/"))
+            && !i.rootPath().startsWith(QStringLiteral("/firmware/"))
+            && !i.rootPath().startsWith(QStringLiteral("/bt_firmware/"))
+            && !i.rootPath().startsWith(QStringLiteral("/firmware_mnt/"))
+            && !i.rootPath().startsWith(QStringLiteral("/persist/"))
         ) {
             int pathHash = qHash(i.rootPath());
 
