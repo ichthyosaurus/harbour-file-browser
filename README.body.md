@@ -72,3 +72,14 @@ __name requires the following permissions:
 version on [OpenRepos](https://openrepos.net/content/ichthyosaurus/file-browser)
 has no such restrictions and can show all files.
 })
+
+## Root mode
+
+__name can run with administrator privileges to give you unrestricted access to
+your system. To use this feature, you must install
+[Root mode for __name](https://openrepos.net/content/ichthyosaurus/root-mode-file-browser-v2)
+from OpenRepos. Root mode is protected by your lock code.
+
+ifdef(${__X_openrepos}, ${
+[translated names to help OpenRepo's search function: harbour-file-browser, harbour-file-browser-beta, File Browser, File Manager, Filemanager, Filebrowser, Files, Tiedostoselain, Dateiverwaltung, Pliki, ...]
+}, ${})
