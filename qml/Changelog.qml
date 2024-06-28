@@ -9,6 +9,15 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: "3.0.1"
+        date: "2024-06-28"
+        paragraphs: [
+            "- Updated translations: Spanish, Estonian, Ukrainian<br>" +
+            "- Fixed sharing on 64bit devices (feedback needed!)<br>" +
+            "- Fixed large amounts of useless system-internal mount points showing up as external devices"
+        ]
+    }
+    ChangelogItem {
         version: "3.0.0"
         date: "2024-06-25"
         paragraphs: [

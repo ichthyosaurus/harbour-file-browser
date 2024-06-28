@@ -10,6 +10,12 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
  * Nothing so far
 
+## Version 3.0.1 (2024-06-28)
+
+ * Updated translations: Spanish, Estonian, Ukrainian
+ * Fixed sharing on 64bit devices (feedback needed!)
+ * Fixed large amounts of useless system-internal mount points showing up as external devices
+
 ## Version 3.0.0 (2024-06-25)
 
  * This update finally brings over two years worth of new and refined features, bug fixes, and translation updates!
