@@ -5,7 +5,7 @@
 # SPDX-FileCopyrightText: 2014 jklingen
 # SPDX-FileCopyrightText: 2015 Alin Marin Elena
 # SPDX-FileCopyrightText: 2018-2019 Kari Pihkala
-# SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
+# SPDX-FileCopyrightText: 2019-2024 Mirian Margiani
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
@@ -25,7 +25,7 @@ Name: harbour-file-browser
 Summary: File Browser for Sailfish OS
 
 # This is not a library but we try to follow semantic versioning (semver.org).
-Version: 3.0.0
+Version: 3.0.1
 Release: 1
 
 # The contents of the Group field should be one of the groups listed here:
