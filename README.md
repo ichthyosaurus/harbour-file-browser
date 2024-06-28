@@ -17,7 +17,7 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
 
 
-File Browser is a comprehensive file manager for local files on [Sailfish OS](https://sailfishos.org/).
+A comprehensive file manager for local files on [Sailfish OS](https://sailfishos.org/).
 
 
 This repository contains the development of version 2.0.0 and upwards of File Browser.
@@ -62,8 +62,10 @@ simply presented as empty by the system.
 Additionally, some file previews and integrated access to storage settings are
 disabled.
 
-If you need full access to all files, please install File Browser from
-[OpenRepos](https://openrepos.net/content/ichthyosaurus/file-browser).
+
+The version on [OpenRepos](https://openrepos.net/content/ichthyosaurus/file-browser)
+is not affected by these limitations.
+
 
 ## Permissions
 
@@ -77,6 +79,15 @@ File Browser requires the following permissions:
 **Note:** sandboxing is only enabled for builds in Jolla's Harbour store. The
 version on [OpenRepos](https://openrepos.net/content/ichthyosaurus/file-browser)
 has no such restrictions and can show all files.
+
+
+## Root mode
+
+File Browser can run with administrator privileges to give you unrestricted access to
+your system. To use this feature, you must install
+[Root mode for File Browser](https://openrepos.net/content/ichthyosaurus/root-mode-file-browser-v2)
+from OpenRepos. Root mode is protected by your lock code.
+
 
 
 
