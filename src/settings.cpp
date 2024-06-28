@@ -621,11 +621,16 @@ BookmarksModel::BookmarksModel(QObject *parent) :
     m_mountsPollingTimer(new QTimer(this)),
     m_bookmarksMonitor(new ConfigFileMonitor(this))
 {
+    // NOTE Add only full paths to this list.
+    //      Ignored base paths like /opt/appsupport/ where all mount points are
+    //      to be ignored are listed in BookmarksModel::updateExternalDevices().
     m_ignoredMounts.insert(qHash(QStringLiteral("/persist")));
     m_ignoredMounts.insert(qHash(QStringLiteral("/dsp")));
     m_ignoredMounts.insert(qHash(QStringLiteral("/odm")));
     m_ignoredMounts.insert(qHash(QStringLiteral("/home")));
     m_ignoredMounts.insert(qHash(QStringLiteral("/firmware")));
+    m_ignoredMounts.insert(qHash(QStringLiteral("/metadata")));
+    m_ignoredMounts.insert(qHash(QStringLiteral("/mnt/vendor/persist")));
 
     QString bookmarksFile = RawSettingsHandler::instance()->configDirectory() + "/bookmarks.json";
 
@@ -840,7 +845,13 @@ void BookmarksModel::updateExternalDevices()
             &&  i.isReady()
             && !i.isRoot()
             &&  i.fileSystemType() != QStringLiteral("tmpfs")
+
+            // NOTE List only paths below which all mount points are ignore in this list.
+            //      Single ignored mount points are listed in the constructor.
             && !i.rootPath().startsWith(QStringLiteral("/opt/alien/"))
+            && !i.rootPath().startsWith(QStringLiteral("/apex/"))
+            && !i.rootPath().startsWith(QStringLiteral("/opt/appsupport/"))
+            && !i.rootPath().startsWith(QStringLiteral("/vendor/"))
         ) {
             int pathHash = qHash(i.rootPath());
 
