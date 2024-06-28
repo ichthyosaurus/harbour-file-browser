@@ -421,13 +421,20 @@ SharingMethod::Enum DirectorySettings::sharingMethod()
 
     SharingMethod::Enum method = SharingMethod::Disabled;
 
-    if (QFileInfo::exists(
+    if (   QFileInfo::exists(
                 QStringLiteral("/usr/lib/") +
+                QStringLiteral("qt5/qml/Sailfish/Share/qmldir"))
+        || QFileInfo::exists(
+                QStringLiteral("/usr/lib64/") +
                 QStringLiteral("qt5/qml/Sailfish/Share/qmldir"))) {
         method = SharingMethod::Share;
-    } else if (QFileInfo::exists(
-                   QStringLiteral("/usr/lib/") +
-                   QStringLiteral("qt5/qml/Sailfish/TransferEngine/qmldir"))) {
+    } else if (
+           QFileInfo::exists(
+                QStringLiteral("/usr/lib/") +
+                QStringLiteral("qt5/qml/Sailfish/TransferEngine/qmldir"))
+        || QFileInfo::exists(
+                QStringLiteral("/usr/lib64/") +
+                QStringLiteral("qt5/qml/Sailfish/TransferEngine/qmldir"))) {
         method = SharingMethod::TransferEngine;
     }
 
