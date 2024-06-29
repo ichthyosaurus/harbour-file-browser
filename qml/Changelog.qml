@@ -9,6 +9,14 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: "3.0.2"
+        date: "2024-06-29"
+        paragraphs: [
+            "- Updated translations: Spanish, Slovak<br>" +
+            "- Fixed \"/opt\" showing up as external device"
+        ]
+    }
+    ChangelogItem {
         version: "3.0.1"
         date: "2024-06-28"
         paragraphs: [

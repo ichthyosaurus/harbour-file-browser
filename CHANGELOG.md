@@ -10,6 +10,11 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
  * Nothing so far
 
+## Version 3.0.2 (2024-06-29)
+
+ * Updated translations: Spanish, Slovak
+ * Fixed "/opt" showing up as external device
+
 ## Version 3.0.1 (2024-06-28)
 
  * Updated translations: Spanish, Estonian, Ukrainian
