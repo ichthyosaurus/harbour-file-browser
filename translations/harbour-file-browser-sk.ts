@@ -134,7 +134,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="11"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvážte, prosím, či môžete nejako prispieť k tomuto projektu.</translation>
     </message>
 </context>
 <context>
@@ -451,12 +451,12 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show less</source>
-        <translation type="unfinished"></translation>
+        <translation>zobraziť menej</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show more</source>
-        <translation type="unfinished"></translation>
+        <translation>zobraziť viac</translation>
     </message>
 </context>
 <context>
@@ -511,13 +511,13 @@
         <location filename="../qml/pages/DirectoryPage.qml" line="446"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Žiadna zhoda</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="448"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation type="unfinished">Prázdny</translation>
+        <translation>Prázdny</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="451"/>
@@ -566,12 +566,12 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="325"/>
         <source>Open target folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Otvoriť cieľovú zložku</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="326"/>
         <source>Open containing folder</source>
-        <translation type="unfinished">Otvoriť zložku obsahujúcu</translation>
+        <translation>Otvoriť zložku obsahujúcu</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="338"/>
@@ -698,27 +698,27 @@
     <message>
         <location filename="../src/engine.cpp" line="416"/>
         <source>Source “%1” is not a symbolic link</source>
-        <translation type="unfinished"></translation>
+        <translation>Zdroj “%1” nie je symbolický odkaz</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="425"/>
         <source>No permissions to change contents of “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Žiadne oprávnenia na zmenu obsahu “%1”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="433"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Zlyhalo odstránenie starého odkazu “%1” odkazujúceho na “%2”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="439"/>
         <source>Failed to revert link “%1” pointing to “%2” after failing to change target to “%3”</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepodarilo vrátiť späť odkaz “%1” odkazujúci na “%2” po neúspešnej zmene cieľa na “%3”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="446"/>
         <source>Failed to change link target of “%1” to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepodarilo sa zmeniť cieľ odkazu “%1” na “%2”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="472"/>
@@ -831,12 +831,12 @@
     <message>
         <location filename="../qml/components/FileActions.qml" line="273"/>
         <source>edit link target</source>
-        <translation type="unfinished"></translation>
+        <translation>upraviť cieľ odkazu</translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="278"/>
         <source>Apply</source>
-        <translation type="unfinished">Aplikovať</translation>
+        <translation>Použiť</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="298"/>
@@ -1233,17 +1233,17 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="90"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
-        <translation type="unfinished"></translation>
+        <translation>V režime galérie sa obrázky zobrazia tak, aby sa zmestili na obrazovku. Ostatné súbory sa zobrazujú bez náhľadu miniatúr.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="97"/>
         <source>Hint</source>
-        <translation type="unfinished"></translation>
+        <translation>Pomoc</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="98"/>
         <source>You can enable per-directory settings to configure your preferences for individual folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Môžete povoliť nastavenia adresárov pre konfiguráciu jednotlivých zložiek.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="103"/>
@@ -1388,27 +1388,27 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="69"/>
         <source>View mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Režim zobrazenia</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="76"/>
         <source>list</source>
-        <translation type="unfinished"></translation>
+        <translation>zoznam</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="78"/>
         <source>Show files in a list. Optionally enable preview thumbnails using the separate setting below.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobraziť súbory v zozname. Voliteľne možno povoliť náhľad miniatúr použitím samostatného nastavenia nižšie.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="88"/>
         <source>gallery</source>
-        <translation type="unfinished"></translation>
+        <translation>galéria</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="180"/>
         <source>Show more recently changed files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Najprv zobraziť viac nedávno zmenených súborov.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="185"/>
@@ -2054,7 +2054,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="119"/>
         <source>License text</source>
-        <translation type="unfinished"></translation>
+        <translation>Znenie licencie</translation>
     </message>
 </context>
 <context>
@@ -2106,62 +2106,62 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="14"/>
         <source>Donate on Liberapay</source>
-        <translation type="unfinished"></translation>
+        <translation>Darovať cez Liberapay</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="15"/>
         <source>Pay the amount of a cup of coffee, a slice of pizza, or a ticket to the theater.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaplaťte obnos za šálku kávy, kúsok pizze alebo lístok do divadla.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
         <source>Translate on Weblate</source>
-        <translation type="unfinished"></translation>
+        <translation>Preklad na Weblate</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="23"/>
         <source>Help with translating this app in as many languages as possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pomôžte s prekladom tejto aplikácie do čo najväčšieho počtu jazykov.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
         <source>Develop on Github</source>
-        <translation type="unfinished"></translation>
+        <translation>Vývoj na Github</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="31"/>
         <source>Support with maintenance and packaging, write code, or provide valuable bug reports.</source>
-        <translation type="unfinished"></translation>
+        <translation>Podpora s údržbou a balíčkovaním, písaním kódu alebo poskytovanie hodnotných hlásení o chybách.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="37"/>
         <source>Why should you care?</source>
-        <translation type="unfinished"></translation>
+        <translation>Prečo by vás to malo zaujímať?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="40"/>
         <source>This project is built with love and passion by a single developer in their spare time, and is provided to you free of charge.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tento projekt je budovaný s láskou a vášňou jediným vývojárom vo svojom voľnom čase a je vám poskytnutý zadarmo.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="46"/>
         <source>I develop Free Software because I am convinced that it is the ethical thing to do - and it is a fun hobby. However, developing software takes a lot of time and effort. As Sailfish and living in general costs money, I need your support to be able to spend time on non-paying projects like this.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyvíjam slobodný softvér, pretože som presvedčený, že je to etická vec – a je to zábavný koníček. Vývoj softvéru však vyžaduje veľa času a úsilia. Keďže Sailfish a život vo všeobecnosti stojí peniaze, potrebujem vašu podporu, aby som mohol tráviť čas na bezplatných projektoch, ako je tento.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="56"/>
         <source>Why donate?</source>
-        <translation type="unfinished"></translation>
+        <translation>Prečo darovať?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="59"/>
         <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jolla zvýšila ceny a snaží sa prinútiť vývojárov (ktorí pracujú zadarmo), aby platili nájomné za Sailfish.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="64"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ak si to môžete dovoliť, darovanie je najjednoduchší spôsob, ako zabezpečiť, aby som mohol pokračovať v práci na aplikáciách pre Sailfish. Ocením akýkoľvek obnos, či už je to šálka kávy, kúsok pizze alebo viac.</translation>
     </message>
 </context>
 <context>
@@ -2200,7 +2200,7 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="108"/>
         <location filename="../qml/modules/Opal/About/private/ChangelogPage.qml" line="16"/>
         <source>Changelog</source>
-        <translation type="unfinished"></translation>
+        <translation>Protokol zmien</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="123"/>
@@ -2302,17 +2302,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="60"/>
         <source>News</source>
-        <translation type="unfinished"></translation>
+        <translation>Správy</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="61"/>
         <source>Changes since version %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Zmeny od verzie %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="120"/>
         <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozrite si prosím &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
 </context>
 <context>
@@ -2356,7 +2356,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <source>Open externally</source>
-        <translation type="unfinished">Otvoriť zvonku</translation>
+        <translation>Otvoriť zvonku</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
@@ -2418,7 +2418,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="193"/>
         <source>Path to a target</source>
-        <translation type="unfinished"></translation>
+        <translation>Cesta do cieľa</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/PathEditDialog.qml" line="357"/>
@@ -2868,27 +2868,27 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="9"/>
         <source>Hi there!</source>
-        <translation type="unfinished"></translation>
+        <translation>Ahojte!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="10"/>
         <source>Thank you for using my little app! Maybe you can contribute back?</source>
-        <translation type="unfinished"></translation>
+        <translation>Ďakujem, že používate moju malú aplikáciu! Môžete mi to oplatiť?</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="11"/>
         <source>Thank you for your support!</source>
-        <translation type="unfinished"></translation>
+        <translation>Ďakujem za Vašu podporu!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="55"/>
         <source>Remind me later</source>
-        <translation type="unfinished"></translation>
+        <translation>Pripomenúť neskôr</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="57"/>
         <source>Don&apos;t ask me again</source>
-        <translation type="unfinished"></translation>
+        <translation>Viac sa nepýtať</translation>
     </message>
 </context>
 <context>
@@ -3270,7 +3270,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="118"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
-        <translation type="unfinished"></translation>
+        <translation>V režime galérie sa obrázky zobrazia tak, aby sa zmestili na obrazovku. Ostatné súbory sa zobrazujú bez náhľadu miniatúr.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="131"/>
