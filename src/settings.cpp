@@ -628,6 +628,7 @@ BookmarksModel::BookmarksModel(QObject *parent) :
     m_ignoredMounts.insert(qHash(QStringLiteral("/persist")));
     m_ignoredMounts.insert(qHash(QStringLiteral("/dsp")));
     m_ignoredMounts.insert(qHash(QStringLiteral("/odm")));
+    m_ignoredMounts.insert(qHash(QStringLiteral("/opt")));
     m_ignoredMounts.insert(qHash(QStringLiteral("/home")));
     m_ignoredMounts.insert(qHash(QStringLiteral("/firmware")));
     m_ignoredMounts.insert(qHash(QStringLiteral("/bt_firmware")));
