@@ -61,7 +61,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="125"/>
         <source>Ukrainian</source>
-        <translation>Ucranio</translation>
+        <translation>Ucraniano</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="133"/>
