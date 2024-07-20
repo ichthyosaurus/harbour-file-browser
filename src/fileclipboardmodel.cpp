@@ -232,7 +232,7 @@ void FileClipboard::reload()
 
     const auto obj = data.toObject();
     const auto array = obj.value(QStringLiteral("paths")).toArray();
-    QString savedModeString = obj.value(QStringLiteral("mode")).toString(QLatin1Literal());
+    QString savedModeString = obj.value(QStringLiteral("mode")).toString(QStringLiteral());
     int savedMode = FileClipMode::Copy;
 
     if (!savedModeString.isEmpty()) {
@@ -261,7 +261,7 @@ void FileClipboard::saveToDisk()
     QString modeString = metaEnum.valueToKey(m_mode);
 
     QJsonObject obj;
-    obj.insert(QStringLiteral("mode"), m_paths.isEmpty() ? QLatin1Literal() : modeString);
+    obj.insert(QStringLiteral("mode"), m_paths.isEmpty() ? QStringLiteral() : modeString);
     obj.insert(QStringLiteral("paths"), QJsonArray::fromStringList(m_paths));
     m_monitor->writeJson(obj, QStringLiteral("1"));
 }
