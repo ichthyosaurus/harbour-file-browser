@@ -46,22 +46,22 @@ Local settings are read from a hidden file named `.directory` in the current dir
 They use the same entries as [KDE](https://kde.org)'s file manager
 [Dolphin](https://apps.kde.org/en/dolphin).
 
-| Key                                | Default value | Values
-|------------------------------------|---------------|-----------------------------------------------
-| **`[Sailfish]`**                   |               | not used by Dolphin
-| `SortCaseSensitively`              | `false`       | bool
-| `ViewMode`                         | `list`        | `list`/`gallery`/`grid`
-| `PreviewsSize`                     | `medium`      | `small`/`medium`/`large`/`huge`
-| **`[Settings]`**                   |               |
-| `HiddenFilesShown`                 | `false`       | bool
-| **`[Dolphin]`**                    |               |
-| `SortFoldersFirst`                 | `true`        | bool
-| `SortHiddenLast`                   | `false`       | bool
-| `SortOrder`                        | `0`           | `0`/`1` (`1` = reversed)
-| `SortRole`                         | `name`        | `name`/`size`/`modificationtime`/`type`
-| `PreviewsShown`                    | `false`       | bool
-| `Version`                          | (`4`)         | (not used yet)
-| `Timestamp`                        | (`yyyy,mm,dd,hh,mm,ss`) | (not used yet)
+| Key                                | Default value | Values                                        | Introduced in
+|------------------------------------|---------------|-----------------------------------------------|--------------
+| **`[Sailfish]`**                   |               | not used by Dolphin                           |
+| `SortCaseSensitively`              | `false`       | bool                                          |
+| `ViewMode`                         | `list`        | `list`/`gallery`/`grid`                       |
+| `PreviewsSize`                     | `medium`      | `small`/`medium`/`large`/`huge`               | 3.1.0
+| **`[Settings]`**                   |               |                                               |
+| `HiddenFilesShown`                 | `false`       | bool                                          |
+| **`[Dolphin]`**                    |               |                                               |
+| `SortFoldersFirst`                 | `true`        | bool                                          |
+| `SortHiddenLast`                   | `false`       | bool                                          |
+| `SortOrder`                        | `0`           | `0`/`1` (`1` = reversed)                      |
+| `SortRole`                         | `name`        | `name`/`size`/`modificationtime`/`type`       |
+| `PreviewsShown`                    | `false`       | bool                                          |
+| `Version`                          | (`4`)         | (not used yet)                                |
+| `Timestamp`                        | (`yyyy,mm,dd,hh,mm,ss`) | (not used yet)                      |
 
 
 ## Obsolete Settings
