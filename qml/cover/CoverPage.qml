@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2016 Joona Petrell
  * SPDX-FileCopyrightText: 2016-2018 Kari Pihkala
- * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2024 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -40,19 +40,14 @@ CoverBackground {
     function activatePage(newPage, pathKey, stayAtPage) {
         var checkPage = pageStack.currentPage
 
-        console.log("page A:", pageStack.currentPage.objectName)
-
         do {
             if (!!stayAtPage && checkPage.objectName === stayAtPage) {
-                console.log("staying at", stayAtPage, checkPage.objectName, pageStack.currentPage.objectName)
                 main.activate()
                 return
             } else if (checkPage.hasOwnProperty('__critical_process_page')) {
-                console.log("critical")
                 main.activate()
                 return
             } else if (checkPage.objectName === 'DirectoryPage') {
-                console.log("found dir", checkPage.dir)
                 break
             } else {
                 checkPage = pageStack.previousPage(checkPage)
@@ -60,7 +55,6 @@ CoverBackground {
         } while (checkPage !== null)
 
         if (checkPage === null) {
-            console.log("is null")
             // this should never happen as the root page should always be
             // the root directory page
             main.activate()
@@ -70,12 +64,9 @@ CoverBackground {
         var props = {}
         props[pathKey] = checkPage.dir
 
-        console.log("page B:", pageStack.currentPage.objectName)
         if (checkPage === pageStack.currentPage) {
-            console.log("pushing")
             pageStack.animatorPush(newPage, props, PageStackAction.Immediate)
         } else {
-            console.log("replacing")
             pageStack.replaceAbove(checkPage, newPage, props, PageStackAction.Immediate)
         }
 

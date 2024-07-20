@@ -398,7 +398,6 @@ Page {
         }
 
         section.property: {
-            console.error(prefs.viewSortRole, dir)
             if (prefs.viewSortRole === "type") return "fileType"
             // else if (prefs.viewSortRole === "modificationtime") return "lastModified"
             // else if (prefs.viewSortRole === "name") return "filename"

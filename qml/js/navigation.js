@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2020-2022 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2024 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -144,7 +144,7 @@ function goToFolder(folder, silent, startSearchQuery) {
         syncNavStack()
         currentPage = {type: "dir", path: folder}
         forwardStack = []; // clear the forward stack because we just started a new branch
-        console.log("go STACKS:", JSON.stringify(backStack), "||", JSON.stringify(currentPage), "||", JSON.stringify(forwardStack))
+        console.log("navigation stacks:", JSON.stringify(backStack), "||", JSON.stringify(currentPage), "||", JSON.stringify(forwardStack))
     }
 
     console.log("- searching...")
