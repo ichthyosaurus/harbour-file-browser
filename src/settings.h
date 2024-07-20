@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2024 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -417,7 +417,7 @@ private:
     PROP(bool, viewHiddenFilesShown, "View/HiddenFilesShown", "Settings/HiddenFilesShown", map_bool_false, map_bool_false)
     PROP(bool, viewPreviewsShown, "View/PreviewsShown", "Dolphin/PreviewsShown", map_bool_false, map_bool_false)
     Mapping<QString> map_previewSize{QSL("medium"), {QSL("small"), QSL("large"), QSL("huge")}};
-    PROP(QString, viewPreviewsSize, "View/PreviewsSize", "", map_previewSize, map_invalid);
+    PROP(QString, viewPreviewsSize, "View/PreviewsSize", "Sailfish/PreviewsSize", map_previewSize, map_previewSize);
     PROP(bool, viewUseLocalSettings, "View/UseLocalSettings", "", map_bool_true, map_bool_true)
     Mapping<QString> map_viewMode{QSL("list"), {QSL("gallery"), QSL("grid")}};
     PROP(QString, viewViewMode, "View/ViewMode", "Sailfish/ViewMode", map_viewMode, map_viewMode);

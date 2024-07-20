@@ -51,6 +51,7 @@ They use the same entries as [KDE](https://kde.org)'s file manager
 | **`[Sailfish]`**                   |               | not used by Dolphin
 | `SortCaseSensitively`              | `false`       | bool
 | `ViewMode`                         | `list`        | `list`/`gallery`/`grid`
+| `PreviewsSize`                     | `medium`      | `small`/`medium`/`large`/`huge`
 | **`[Settings]`**                   |               |
 | `HiddenFilesShown`                 | `false`       | bool
 | **`[Dolphin]`**                    |               |
