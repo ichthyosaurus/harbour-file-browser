@@ -165,6 +165,7 @@ HEADERS += \
     src/statfileinfo.h \
     src/globals.h \
     src/settings.h \
+    src/property_macros.h \
     src/overload_of.h \
     \
     src/configfilemonitor.h \
