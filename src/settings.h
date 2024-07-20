@@ -199,9 +199,9 @@ private:
             group(group), name(name), thumbnail(icon), path(path), showSize(showSize), userDefined(userDefined) {};
 
         BookmarkGroup::Enum group {BookmarkGroup::Temporary};
-        QString name {QLatin1Literal()};
+        QString name {QStringLiteral()};
         QString thumbnail {QStringLiteral("icon-m-favorite")};
-        QString path {QLatin1Literal()};
+        QString path {QStringLiteral()};
         bool showSize {false};
         bool userDefined {false};
     };
