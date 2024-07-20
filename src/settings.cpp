@@ -1031,7 +1031,7 @@ void BookmarksModel::updateStandardLocations(const QList<LocationAlternative>& n
     auto setAlternatives = [&](int idx, BookmarkItem& item, const QString& translatedName,
             QHash<QString, const LocationAlternative*>& existingAlternatives){
         bool changed = false;
-        QString name = QStringLiteral("/") + item.path.split("/").last();
+        QString name = item.path.split("/").last();
 
         for (auto i = item.alternatives.length()-1; i >= 0; --i) {
             if (!QFileInfo::exists(item.alternatives.at(i).path())) {
@@ -1050,7 +1050,7 @@ void BookmarksModel::updateStandardLocations(const QList<LocationAlternative>& n
             QList<QPair<QString, QString>> foundAlternatives;
 
             for (const auto& name : checkNames) {
-                QString option = i.path() + name;
+                QString option = i.path() + QStringLiteral("/") + name;
                 QFileInfo optionInfo(option);
 
                 if (optionInfo.exists() && optionInfo.isDir() &&
