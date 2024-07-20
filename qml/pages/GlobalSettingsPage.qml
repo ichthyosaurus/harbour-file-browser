@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2014-2019 Kari Pihkala
  * SPDX-FileCopyrightText: 2016 Joona Petrell
- * SPDX-FileCopyrightText: 2019-2023 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2024 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -243,15 +243,6 @@ Page {
                             focus = false // don't show the keyboard after the dialog has been closed
                         }
                     }
-                    /* SettingsSwitch {
-                        // TODO planned for v2.6.0
-                        text: qsTr("Share clipboard among windows")
-                        key: "generalShareClipboard"
-                        description: qsTr("Share the list of files currently in the clipboard " +
-                                          "among all open File Browser windows. When this is " +
-                                          "enabled, you can cut files in one window and paste " +
-                                          "them in another.")
-                    } */
                     ComboBox {
                         label: qsTr("Default transfer action")
                         property var indices: ({'copy': 0, 'move': 1, 'link': 2, 'none': 3})
@@ -295,6 +286,14 @@ Page {
                         }
                     }
                     SettingsSwitch {
+                        text: qsTr("Share clipboard among windows")
+                        key: "generalShareClipboard"
+                        description: qsTr("Share the list of files currently in the clipboard " +
+                                          "among all open File Browser windows. When this is " +
+                                          "enabled, you can cut files in one window and paste " +
+                                          "them in another.")
+                    }
+                    SettingsSwitch {
                         text: qsTr("Show full directory paths")
                         key: "generalShowFullDirectoryPaths"
                         description: qsTr("Show the full path in the page header of the directory view.")
@@ -306,7 +305,7 @@ Page {
                                           "tapping the page header of the directory view.")
                     }
                     /* SettingsSwitch {
-                        // TODO planned for v2.7.0
+                        // TODO planned for v3.2.0
                         text: qsTr("Enable trash can")
                         key: "generalUseTrashCan"
                         description: qsTr("Move files to a separate “trash can” when deleting, " +

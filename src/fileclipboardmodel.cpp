@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2022-2023 Mirian Margiani
+ * SPDX-FileCopyrightText: 2022-2024 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -19,9 +19,14 @@
  */
 
 #include <QDebug>
+#include <QStandardPaths>
+#include <QMetaEnum>
+#include <QJsonArray>
+#include <QJsonObject>
 #include "fileclipboardmodel.h"
 #include "statfileinfo.h"
 #include "configfilemonitor.h"
+#include "settings.h"
 
 DEFINE_ENUM_REGISTRATION_FUNCTION(FileClipboard) {
     REGISTER_ENUM_CONTAINER(FileClipMode)
@@ -57,19 +62,23 @@ QHash<int, QByteArray> PathsModel::roleNames() const
     return roles;
 }
 
-FileClipboard::FileClipboard(QObject* parent)
-    : QObject(parent), m_pathsModel(new PathsModel(this)), m_monitor(new ConfigFileMonitor(this))
+FileClipboard::FileClipboard(QObject* parent) :
+    QObject(parent),
+    m_pathsModel(new PathsModel(this)),
+    m_monitor(new ConfigFileMonitor(this)),
+    m_settings(new DirectorySettings(QStringLiteral(""), this))
 {
+    connect(m_settings, &DirectorySettings::generalShareClipboardChanged, this, [&](){
+        refreshSharedState();
+    });
+
     connect(this, &FileClipboard::pathsChanged, this, [&](){
         m_count = m_paths.count();
         m_pathsModel->setStringList(m_paths);
         emit countChanged();
     });
 
-    // TODO writableLocation can be empty, or the path might not exist!
-    m_monitor->reset(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/clipboard.json");
-    connect(m_monitor, &ConfigFileMonitor::configChanged, this, &FileClipboard::reload);
-    reload();  // must be called after m_monitor->reset(...) because it relies on m_monitor->file()
+    refreshSharedState();
 }
 
 FileClipboard::~FileClipboard()
@@ -244,6 +253,10 @@ void FileClipboard::reload()
 
 void FileClipboard::saveToDisk()
 {
+    if (!m_settings->get_generalShareClipboard()) {
+        return;
+    }
+
     QMetaEnum metaEnum = QMetaEnum::fromType<FileClipMode::Enum>();
     QString modeString = metaEnum.valueToKey(m_mode);
 
@@ -305,6 +318,26 @@ QString FileClipboard::validatePath(QString path)
         return QLatin1Literal();
     } else {
         return info.absoluteFilePath();
+    }
+}
+
+void FileClipboard::refreshSharedState() {
+    if (m_settings->get_generalShareClipboard()) {
+        // TODO writableLocation can be empty, or the path might not exist!
+        auto configLocation = QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation);
+
+        if (configLocation.isEmpty() || !QFileInfo(configLocation).exists()) {
+            qDebug() << "cannot locate any writable config location, shared/persistent clipboard disabled";
+            return;
+        }
+
+        m_monitor->reset(configLocation + "/clipboard.json");
+        connect(m_monitor, &ConfigFileMonitor::configChanged, this, &FileClipboard::reload);
+        reload();  // must be called after m_monitor->reset(...) because it relies on m_monitor->file()
+        m_monitor->setRunning(true);
+    } else {
+        m_monitor->setRunning(false);
+        disconnect(m_monitor, &ConfigFileMonitor::configChanged, this, &FileClipboard::reload);
     }
 }
 

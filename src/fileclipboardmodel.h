@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2022-2023 Mirian Margiani
+ * SPDX-FileCopyrightText: 2022-2024 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -32,6 +32,7 @@ CREATE_ENUM(FileClipMode, Copy, Link, Cut)
 DECLARE_ENUM_REGISTRATION_FUNCTION(FileClipboard)
 
 class ConfigFileMonitor;
+class DirectorySettings;
 
 class PathsModel : public QStringListModel {
     Q_OBJECT
@@ -85,12 +86,14 @@ private slots:
 private:
     void setPaths(const QStringList &newPaths, FileClipMode::Enum mode, bool doSave);
     QString validatePath(QString path);
+    void refreshSharedState();
 
     int m_count {0};
     QStringList m_paths {};
     FileClipMode::Enum m_mode {FileClipMode::Copy};
     PathsModel* m_pathsModel;
     ConfigFileMonitor* m_monitor;
+    DirectorySettings* m_settings = {nullptr};
 };
 
 #endif // FILECLIPBOARDMODEL_H
