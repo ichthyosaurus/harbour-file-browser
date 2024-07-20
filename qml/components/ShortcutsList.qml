@@ -176,7 +176,7 @@ SilicaListView {
                 left: icon.right
                 leftMargin: Theme.paddingMedium
                 top: parent.top
-                topMargin: model.path === model.name ? (parent.height / 2) - (height / 2) : 5
+                topMargin: infoRow.height <= 0 ? (parent.height / 2) - (height / 2) : 5
             }
             width: root.width - x - Theme.horizontalPageMargin
         }
@@ -209,16 +209,9 @@ SilicaListView {
                 width: parent.width
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                text: {
-                    if (!!listItem.selectedPath) {
-                        return Paths.unicodeArrow() + " " + listItem.selectedPath
-                    } else if (listItem.alternativePaths.length > 0) {
-                        return listItem.alternativeDevices.join(", ") // qsTr("%n alternatives", "", listItem.alternativePaths.length)
-                    } else {
-                        return Paths.unicodeArrow() + " " + model.path
-                    }
-                }
-                visible: model.path !== model.name && !model.showSize
+                text: Paths.unicodeArrow() + " " + (listItem.selectedPath || model.path)
+                visible: (model.group !== BookmarkGroup.Location
+                          && model.path !== model.name) || !!listItem.selectedPath
                 elide: Text.ElideMiddle
             }
         }
