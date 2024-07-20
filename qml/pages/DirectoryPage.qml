@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2013-2019 Kari Pihkala
  * SPDX-FileCopyrightText: 2016 Joona Petrell
- * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2024 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -331,6 +331,11 @@ Page {
             leftMargin: (navMenuIconShown ? menuIcon.width + Theme.paddingMedium : 0)
                         + Theme.horizontalPageMargin
             _titleItem.elide: Text.ElideMiddle
+
+            Connections {
+                target: header._navigateForwardMouseArea
+                onPressAndHold: dirPopup.show()
+            }
 
             IconButton {
                 id: menuIcon
