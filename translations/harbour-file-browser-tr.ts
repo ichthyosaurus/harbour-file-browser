@@ -140,62 +140,80 @@
 <context>
     <name>BookmarksModel</name>
     <message>
-        <location filename="../src/settings.cpp" line="899"/>
+        <location filename="../src/settings.cpp" line="972"/>
         <source>Memory card</source>
         <translation>Hafıza kardı</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="901"/>
+        <location filename="../src/settings.cpp" line="974"/>
         <source>Attached folder</source>
         <translation>Ekteki klasör</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="903"/>
+        <location filename="../src/settings.cpp" line="976"/>
         <source>Remote folder</source>
         <translation>Uzaktaki klasör</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="906"/>
+        <location filename="../src/settings.cpp" line="979"/>
         <source>Removable media</source>
         <translation>Kaldırılabilir medya</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1153"/>
+        <location filename="../src/settings.cpp" line="1066"/>
+        <location filename="../src/settings.cpp" line="1431"/>
+        <source>Internal storage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.cpp" line="1074"/>
+        <source>“%1” on “%2”</source>
+        <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.cpp" line="1346"/>
         <source>Home</source>
         <translation>Ev</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1161"/>
+        <location filename="../src/settings.cpp" line="1127"/>
+        <location filename="../src/settings.cpp" line="1356"/>
         <source>Documents</source>
         <translation>Belgeler</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1169"/>
+        <location filename="../src/settings.cpp" line="1129"/>
+        <location filename="../src/settings.cpp" line="1366"/>
         <source>Downloads</source>
         <translation>İndirilenler</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1177"/>
+        <location filename="../src/settings.cpp" line="1135"/>
+        <location filename="../src/settings.cpp" line="1396"/>
         <source>Music</source>
         <translation>Müzik</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1185"/>
+        <location filename="../src/settings.cpp" line="1131"/>
+        <location filename="../src/settings.cpp" line="1376"/>
         <source>Pictures</source>
         <translation>Resimler</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1193"/>
+        <location filename="../src/settings.cpp" line="1133"/>
+        <location filename="../src/settings.cpp" line="1386"/>
         <source>Videos</source>
         <translation>Videolar</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1203"/>
+        <location filename="../src/settings.cpp" line="1406"/>
+        <location filename="../src/settings.cpp" line="1432"/>
         <source>Android storage</source>
         <translation>Android depolaması</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1212"/>
+        <location filename="../src/settings.cpp" line="1416"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
@@ -353,7 +371,7 @@
 <context>
     <name>CoverPage</name>
     <message>
-        <location filename="../qml/cover/CoverPage.qml" line="104"/>
+        <location filename="../qml/cover/CoverPage.qml" line="95"/>
         <source>Root Mode</source>
         <translation>Root Modu</translation>
     </message>
@@ -454,96 +472,96 @@
 <context>
     <name>DirectoryPage</name>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="186"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="187"/>
         <source>View Preferences</source>
         <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
         <translation>Tercihleri Görüntüle</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="193"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="194"/>
         <source>Create New...</source>
         <translation>Yeni Oluştur...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="206"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="207"/>
         <source>Paste</source>
         <translation>Yapıştır</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="224"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="225"/>
         <source>Filter directory contents</source>
         <translation>Dizin içeriğini filtrele</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="306"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="307"/>
         <source>Search</source>
         <translation>Arama</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Remove bookmark</source>
         <translation>Yer işaretini kaldır</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Add to bookmarks</source>
         <translation>Yer işaretlerine ekle</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="320"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="321"/>
         <source>Copy path to clipboard</source>
         <translation>Yolu panoya kopyala</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="383"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="389"/>
         <source>filtered by: %1</source>
         <translation>filtreleyen: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="446"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="451"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="448"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="453"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation type="unfinished">Boş</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="451"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="456"/>
         <source>No files matched the filter.</source>
         <translation>Filtreyle eşleşen dosya yok.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="452"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="457"/>
         <source>This directory contains no files.</source>
         <translation>Bu dizinde dosya yok.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="532"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="535"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="537"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="540"/>
         <source>Deleting</source>
         <translation>Siliniyor</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="547"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="552"/>
         <source>Internally not ready</source>
         <translation>Dahili olarak hazır değil</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="547"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="552"/>
         <source>Please simply try again</source>
         <translation>Lütfen tekrar deneyin</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="590"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="595"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>Telefonunuz ve SD Kartınız arasında mı taşımaya çalışıyorsunuz? Çalışmazsa, kopyalamayı deneyin.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="592"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="597"/>
         <source>Perhaps the storage is full?</source>
         <translation>Belki de depolama alanı doludur?</translation>
     </message>
@@ -683,37 +701,37 @@
         <translation>“%2”nin içerisinde “%1” oluşturulamıyor</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="399"/>
+        <location filename="../src/engine.cpp" line="415"/>
         <source>Cannot rename %1</source>
         <translation>%1 yeniden adlandırılamıyor</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="416"/>
+        <location filename="../src/engine.cpp" line="432"/>
         <source>Source “%1” is not a symbolic link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="425"/>
+        <location filename="../src/engine.cpp" line="441"/>
         <source>No permissions to change contents of “%1”</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="433"/>
+        <location filename="../src/engine.cpp" line="449"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="439"/>
+        <location filename="../src/engine.cpp" line="455"/>
         <source>Failed to revert link “%1” pointing to “%2” after failing to change target to “%3”</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="446"/>
+        <location filename="../src/engine.cpp" line="462"/>
         <source>Failed to change link target of “%1” to “%2”</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="472"/>
+        <location filename="../src/engine.cpp" line="488"/>
         <source>Cannot change permissions</source>
         <translation>İzinler değiştirilemiyor</translation>
     </message>
@@ -794,31 +812,31 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="264"/>
+        <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>dosyayı sıkıştır</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="273"/>
+        <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="278"/>
+        <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
         <translation type="unfinished">Uygula</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="298"/>
+        <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>dosyayı düzenle</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="323"/>
+        <location filename="../qml/components/FileActions.qml" line="324"/>
         <source>show file properties</source>
         <translation>dosya özelliklerini göster</translation>
     </message>
@@ -1418,117 +1436,127 @@
         <translation>Seç</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="256"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="247"/>
         <source>Default transfer action</source>
         <translation type="unfinished">Öntanımlı aktarım eylemi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="260"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="251"/>
         <source>The action that is selected by default when using the bulk file management feature (available through the “shuffle” icon after selecting files).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="265"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="256"/>
         <source>copy</source>
         <translation type="unfinished">kopyala</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="266"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="257"/>
         <source>move</source>
         <translation type="unfinished">taşı</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="267"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="258"/>
         <source>link</source>
         <translation type="unfinished">bağlantı</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="268"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="259"/>
         <source>none</source>
         <translation type="unfinished">hiçbiri</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="272"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="263"/>
         <source>Default filter line action</source>
         <translation type="unfinished">Öntanımlı filtre satırı eylemi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="276"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="267"/>
         <source>Which action to take when the Enter key is pressed in the filter line in a directory&apos;s pull-down menu.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="280"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="271"/>
         <source>return to directory view</source>
         <translation type="unfinished">dizin görünümüne dön</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="281"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="272"/>
         <source>start recursive search</source>
         <translation type="unfinished">özyinelemeli arama başlat</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="285"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="276"/>
         <source>File name abbreviation</source>
         <translation type="unfinished">Dosya adı kısaltması</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="289"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="280"/>
         <source>How very long filenames are abbreviated in the directory view.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="292"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="283"/>
         <source>fade out</source>
         <translation type="unfinished">söndür</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="293"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="284"/>
         <source>elide end</source>
         <translation type="unfinished">sondan çıkar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="294"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="285"/>
         <source>elide middle</source>
         <translation type="unfinished">ortadan çıkar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="298"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="289"/>
+        <source>Share clipboard among windows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="291"/>
+        <source>Share the list of files currently in the clipboard among all open File Browser windows. When this is enabled, you can cut files in one window and paste them in another.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="297"/>
         <source>Show full directory paths</source>
         <translation type="unfinished">Tam dizin yollarını göster</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="300"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="299"/>
         <source>Show the full path in the page header of the directory view.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="303"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="302"/>
         <source>Show navigation menu icon</source>
         <translation type="unfinished">Gezinme menüsü simgesini göster</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="305"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="304"/>
         <source>Show a visual hint that the navigation menu is available by tapping the page header of the directory view.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="317"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="316"/>
         <source>Enable solid window background</source>
         <translation type="unfinished">Düz pencere arka planını etkinleştir</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="319"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="318"/>
         <source>Use a solid color instead of your wallpaper as the background of this app.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="329"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="328"/>
         <source>Swipe from the right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="344"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="343"/>
         <source>Settings</source>
         <translation type="unfinished">Ayarlar</translation>
     </message>
@@ -2534,7 +2562,7 @@ exposure program</extracomment>
         <translation>Dosya Tarayıcısını Root Modunda kullanırken dikkatli olun. Eylemler beklenmedik bir şekilde sisteminizi bozabilir.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Dosya Tarayıcısını Root Modunda Başlat</translation>
     </message>
@@ -2642,42 +2670,42 @@ exposure program</extracomment>
 <context>
     <name>ShortcutsList</name>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="191"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="238"/>
         <source>Open system settings</source>
         <translation>Sistem ayarlarını aç</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="209"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="256"/>
         <source>Rename</source>
         <translation type="unfinished">Yeniden adlandır</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="216"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="263"/>
         <source>Sort</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="222"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="269"/>
         <source>Remove</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="243"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="290"/>
         <source>Custom</source>
         <translation>Özel</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="242"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="289"/>
         <source>Locations</source>
         <translation>Konumlar</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="241"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="288"/>
         <source>Storage devices</source>
         <translation>Depolama aygıtları</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="240"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="287"/>
         <source>Bookmarks</source>
         <translation>Yer imleri</translation>
     </message>
