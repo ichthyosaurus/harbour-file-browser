@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2019-2023 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2024 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -67,12 +67,16 @@ SilicaListView {
     delegate: ListItem {
         id: listItem
         property var modelIndex: GlobalSettings.bookmarks.index(index, 0)
+        property int intIndex: index
         property bool selected: selectionModel.hasSelection && selectionModel.isSelected(modelIndex)
         property string shortcutPath: Paths.unicodeArrow() + " " + model.path
+        property var alternativePaths: model.alternatives
+        property var alternativeDevices: model.devices
+        property string selectedPath: ""
 
         ListView.onRemove: animateRemoval(listItem) // enable animated list item removals
         menu: {
-            if (!editable) return
+            if (!editable && model.group !== BookmarkGroup.Location) return
 
             if (model.group === BookmarkGroup.External &&
                     !GlobalSettings.runningAsRoot &&
@@ -80,23 +84,59 @@ SilicaListView {
                 return settingsContextMenu
             } else if (model.group === BookmarkGroup.Bookmark) {
                 return bookmarkContextMenu
+            } else if (model.group === BookmarkGroup.Location &&
+                       model.alternatives.length > 0) {
+                console.log(model.name, "shortcut alternatives:", model.alternatives)
+                return alternativesMenu
             } else {
                 return null
             }
         }
+
+        Component {
+            id: alternativesMenu
+
+            ContextMenu {
+                Repeater {
+                    model: listItem.alternativePaths
+
+                    MenuItem {
+                        text: modelData.name
+                        onClicked: {
+                            itemClicked(listItem.intIndex, modelData.path)
+
+                            if (root.selectable) {
+                                listItem.selectedPath = modelData.path
+
+                                if (root.multiSelect) {
+                                    selectionModel.select(listItem.modelIndex, ItemSelectionModel.Toggle)
+                                } else {
+                                    selectionModel.select(listItem.modelIndex, ItemSelectionModel.ClearAndSelect)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         openMenuOnPressAndHold: false
 
         width: root.width
         contentHeight: Theme.itemSizeSmall
 
         onClicked: {
-            itemClicked(index, model.path)
+            if (!!alternativePaths && alternativePaths.length > 0) {
+                openMenu()
+            } else {
+                itemClicked(index, model.path)
 
-            if (selectable) {
-                if (multiSelect) {
-                    selectionModel.select(modelIndex, ItemSelectionModel.Toggle)
-                } else {
-                    selectionModel.select(modelIndex, ItemSelectionModel.ClearAndSelect)
+                if (selectable) {
+                    if (multiSelect) {
+                        selectionModel.select(modelIndex, ItemSelectionModel.Toggle)
+                    } else {
+                        selectionModel.select(modelIndex, ItemSelectionModel.ClearAndSelect)
+                    }
                 }
             }
         }
@@ -163,7 +203,15 @@ SilicaListView {
                 width: parent.width
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                text: Paths.unicodeArrow() + " " + model.path
+                text: {
+                    if (!!listItem.selectedPath) {
+                        return Paths.unicodeArrow() + " " + listItem.selectedPath
+                    } else if (listItem.alternativePaths.length > 0) {
+                        return listItem.alternativeDevices.join(", ") // qsTr("%n alternatives", "", listItem.alternativePaths.length)
+                    } else {
+                        return Paths.unicodeArrow() + " " + model.path
+                    }
+                }
                 visible: model.path !== model.name && !model.showSize
                 elide: Text.ElideMiddle
             }
