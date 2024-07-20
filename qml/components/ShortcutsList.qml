@@ -127,7 +127,13 @@ SilicaListView {
 
         onClicked: {
             if (!!alternativePaths && alternativePaths.length > 0) {
-                openMenu()
+                if (selectable && selected) {
+                    selectedPath = ""
+                    selectionModel.select(modelIndex, ItemSelectionModel.Deselect)
+                    itemClicked(index, model.path)
+                } else {
+                    openMenu()
+                }
             } else {
                 itemClicked(index, model.path)
 
