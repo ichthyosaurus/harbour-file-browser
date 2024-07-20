@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2013-2019 Kari Pihkala
  * SPDX-FileCopyrightText: 2016 Malte Veerman
- * SPDX-FileCopyrightText: 2019-2023 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2024 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -379,8 +379,24 @@ QString Engine::createFile(QString path, QString name)
         return tr("Cannot create file “%1” in “%2”").arg(name, path);
     }
 
-    QTextStream out(&file);
-    out << QStringLiteral("\n");
+    // TODO decide whether it is better to create a completely
+    //      empty file or a file containing an empty line
+    // 1. File with empty line: is recognized as text file by
+    //    proper OSs, and can be opened on Windows if it has a
+    //    txt suffix.
+    // 2. Completely empty file: can be edited in File Browser
+    //    and can be used for all kinds of data. Also, .nomedia
+    //    files must be completely empty.
+    //
+    // Current rationale: create completely empty files because
+    // creating .nomedia files is a common use case in Sailfish
+    // and it is otherwise impossible without the terminal.
+    //
+    // Rationale before v3.1.0: create an empty line to indicate
+    // that the new file is a plain text file.
+
+    // QTextStream out(&file);
+    // out << QStringLiteral("\n");
     file.close();
 
     return QLatin1Literal("");
