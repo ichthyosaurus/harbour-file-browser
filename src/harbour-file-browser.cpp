@@ -113,6 +113,8 @@ int main(int argc, char *argv[])
     qRegisterMetaType<FileModelWorker::Mode>("FileModelWorker::Mode");
     qRegisterMetaType<StatFileInfo>("StatFileInfo");
     qRegisterMetaType<QList<StatFileInfo>>("QList<StatFileInfo>");
+    qRegisterMetaType<LocationAlternative>("LocationAlternative");
+    qRegisterMetaType<QList<LocationAlternative>>("QList<LocationAlternative>");
     qmlRegisterType<FileModel>("harbour.file.browser.FileModel", 1, 0, "FileModel");
     qmlRegisterType<FileData>("harbour.file.browser.FileData", 1, 0, "FileData");
     qmlRegisterType<SearchEngine>("harbour.file.browser.SearchEngine", 1, 0, "SearchEngine");

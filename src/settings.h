@@ -35,6 +35,7 @@
 
 #include "configfilemonitor.h"
 #include "enumcontainer.h"
+#include "property_macros.h"
 
 class QFileInfo;
 
@@ -130,6 +131,23 @@ private:
 };
 
 
+class LocationAlternative {
+    Q_GADGET
+    RO_PROPERTY_GADGET(QString, name, "");
+    RO_PROPERTY_GADGET(QString, path, "");
+    RO_PROPERTY_GADGET(QString, device, "");
+
+public:
+    LocationAlternative() = default;
+    LocationAlternative(QString name, QString path, QString device)
+        : m_name(name), m_path(path), m_device(device) {}
+    ~LocationAlternative() = default;
+
+    static QVariantList makeVariantList(const QList<LocationAlternative>& list);
+    static QStringList makeDevicesList(const QList<LocationAlternative>& list);
+};
+
+
 /**
  * @brief The BookmarksModel class provides a list of all currently configured bookmarks.
  *
@@ -183,6 +201,7 @@ signals:
 
 private slots:
     void updateExternalDevices();
+    void updateStandardLocations(const QList<LocationAlternative>& newExternalPaths, const uint& lostPathsCount);
     void reload();
 
 private:
@@ -195,13 +214,29 @@ private:
     QString loadBookmarksFile();
 
     struct BookmarkItem {
-        BookmarkItem(BookmarkGroup::Enum group, QString name, QString icon, QString path, bool showSize, bool userDefined) :
-            group(group), name(name), thumbnail(icon), path(path), showSize(showSize), userDefined(userDefined) {};
+        BookmarkItem(
+            BookmarkGroup::Enum group,
+            QString name,
+            QString icon,
+            QString path,
+            QList<LocationAlternative> alternatives,
+            bool showSize,
+            bool userDefined)
+        :
+            group(group),
+            name(name),
+            thumbnail(icon),
+            path(path),
+            alternatives(alternatives),
+            showSize(showSize),
+            userDefined(userDefined) {};
 
         BookmarkGroup::Enum group {BookmarkGroup::Temporary};
         QString name {QStringLiteral()};
         QString thumbnail {QStringLiteral("icon-m-favorite")};
         QString path {QStringLiteral()};
+        QList<LocationAlternative> alternatives {};
+        QStringList devices {};  // note: this is empty if alternatives is empty
         bool showSize {false};
         bool userDefined {false};
     };
@@ -226,6 +261,14 @@ private:
 
     QTimer* m_mountsPollingTimer {nullptr};
     QSet<int> m_ignoredMounts {};
+
+    bool m_haveAndroidPath {false};
+    QMap<QStandardPaths::StandardLocation, QString> m_standardLocations;
+    // BookmarkItem* m_documentsItem {nullptr};
+    // BookmarkItem* m_downloadsItem {nullptr};
+    // BookmarkItem* m_picturesItem {nullptr};
+    // BookmarkItem* m_videosItem {nullptr};
+    // BookmarkItem* m_musicItem {nullptr};
 
     // We monitor the bookmarks file except while saving entries.
     ConfigFileMonitor* m_bookmarksMonitor;

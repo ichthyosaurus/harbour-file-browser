@@ -37,6 +37,19 @@
 #include <QTimer>
 #include <QStorageInfo>
 
+// The lines below define which icons are used for the standard location
+// bookmarks. Each bookmark must have a unique icon because the icon is
+// used to identify the bookmark.
+// Only locations that can appear on different devices need unique icons
+// in this list. Other locations can use any icon.
+// Using defines for this is not beautiful but it works.
+#define DOCUMENTS_ICON QStringLiteral("icon-m-file-document-light")
+#define DOWNLOADS_ICON QStringLiteral("icon-m-cloud-download")
+#define MUSIC_ICON     QStringLiteral("icon-m-file-audio")
+#define PICTURES_ICON  QStringLiteral("icon-m-file-image")
+#define VIDEOS_ICON    QStringLiteral("icon-m-file-video")
+
+
 QSharedPointer<RawSettingsHandler> \
     RawSettingsHandler::s_globalInstance = \
         QSharedPointer<RawSettingsHandler>(nullptr);
@@ -554,14 +567,36 @@ void BookmarkWatcher::refresh() {
     emit nameChanged();
 }
 
+QVariantList LocationAlternative::makeVariantList(const QList<LocationAlternative>& list) {
+    QVariantList ret;
+
+    for (const auto& i : list) {
+        ret.append(QVariant::fromValue<LocationAlternative>(i));
+    }
+
+    return ret;
+}
+
+QStringList LocationAlternative::makeDevicesList(const QList<LocationAlternative> &list) {
+    QStringList ret;
+
+    for (const auto& alt : list) {
+        ret.append(alt.device());
+    }
+
+    ret.removeDuplicates();
+    return ret;
+}
 
 enum BookmarkRole {
     groupRole =         Qt::UserRole +  1,
     nameRole =          Qt::UserRole +  2,
     thumbnailRole =     Qt::UserRole +  3,
     pathRole =          Qt::UserRole +  4,
-    showSizeRole =      Qt::UserRole +  5,
-    userDefinedRole =   Qt::UserRole +  6
+    alternativesRole =  Qt::UserRole +  5,
+    devicesRole =       Qt::UserRole +  6,
+    showSizeRole =      Qt::UserRole +  7,
+    userDefinedRole =   Qt::UserRole +  8
 };
 
 namespace {
@@ -621,6 +656,25 @@ BookmarksModel::BookmarksModel(QObject *parent) :
     m_mountsPollingTimer(new QTimer(this)),
     m_bookmarksMonitor(new ConfigFileMonitor(this))
 {
+    m_standardLocations = {
+        {QStandardPaths::HomeLocation, QStandardPaths::writableLocation(QStandardPaths::HomeLocation)},
+        {QStandardPaths::DocumentsLocation, QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation)},
+        {QStandardPaths::DownloadLocation, QStandardPaths::writableLocation(QStandardPaths::DownloadLocation)},
+        {QStandardPaths::MusicLocation, QStandardPaths::writableLocation(QStandardPaths::MusicLocation)},
+        {QStandardPaths::PicturesLocation, QStandardPaths::writableLocation(QStandardPaths::PicturesLocation)},
+        {QStandardPaths::MoviesLocation, QStandardPaths::writableLocation(QStandardPaths::MoviesLocation)},
+
+        // DataLocation is (ab)used here to indicate Android data
+        {QStandardPaths::DataLocation, QStandardPaths::writableLocation(QStandardPaths::HomeLocation) + QStringLiteral("/android_storage")},
+    };
+
+    QFileInfo androidInfo(m_standardLocations[QStandardPaths::DataLocation]);
+
+    if (androidInfo.exists() && androidInfo.isDir()) {
+        m_haveAndroidPath = true;
+    }
+
+
     // NOTE Add only full paths to this list.
     //      Ignored base paths like /opt/appsupport/ where all mount points are
     //      to be ignored are listed in BookmarksModel::updateExternalDevices().
@@ -681,6 +735,9 @@ QVariant BookmarksModel::data(const QModelIndex &index, int role) const
     case BookmarkRole::groupRole: return entry.group;
     case BookmarkRole::thumbnailRole: return entry.thumbnail;
     case BookmarkRole::pathRole: return entry.path;
+    case BookmarkRole::alternativesRole:
+        return LocationAlternative::makeVariantList(entry.alternatives);
+    case BookmarkRole::devicesRole: return entry.devices;
     case BookmarkRole::showSizeRole: return entry.showSize;
     case BookmarkRole::userDefinedRole: return entry.userDefined;
 
@@ -698,6 +755,8 @@ QHash<int, QByteArray> BookmarksModel::roleNames() const
         ROLE(Bookmark, name)
         ROLE(Bookmark, thumbnail)
         ROLE(Bookmark, path)
+        ROLE(Bookmark, alternatives)
+        ROLE(Bookmark, devices)
         ROLE(Bookmark, showSize)
         ROLE(Bookmark, userDefined)
     };
@@ -844,6 +903,10 @@ void BookmarksModel::updateExternalDevices()
     const auto activeMounts = QStorageInfo::mountedVolumes();
     QSet<int> activeHashes;
 
+    QList<LocationAlternative> newDevices;
+    newDevices.reserve(activeMounts.length());
+    uint goneDevices = 0;
+
     for (const auto& i : activeMounts) {
         if (    i.isValid()
             &&  i.isReady()
@@ -919,10 +982,11 @@ void BookmarksModel::updateExternalDevices()
 
             auto newEntry = BookmarkItem(
                 BookmarkGroup::External,
-                title, icon, i.rootPath(),
+                title, icon, i.rootPath(), {},
                 true, false);
 
             beginInsertRows(QModelIndex(), nextExternalIndex, nextExternalIndex);
+            newDevices.append({newEntry.name, newEntry.path, newEntry.name});
             m_entries.insert(nextExternalIndex, newEntry);
             if (m_firstExternalIndex <= m_firstUserDefinedIndex) {
                 ++m_firstUserDefinedIndex;
@@ -945,6 +1009,7 @@ void BookmarksModel::updateExternalDevices()
         }
 
         beginRemoveRows(QModelIndex(), i, i);
+        goneDevices++;
         m_entries.removeAt(i);
         if (m_firstExternalIndex <= m_firstUserDefinedIndex) {
             --m_firstUserDefinedIndex;
@@ -952,6 +1017,124 @@ void BookmarksModel::updateExternalDevices()
             qDebug() << "changingB:" << nextExternalIndex << m_firstExternalIndex << m_lastUserDefinedIndex;
         }
         endRemoveRows();
+    }
+
+    // update standard location alternatives
+    updateStandardLocations(newDevices, goneDevices);
+}
+
+void BookmarksModel::updateStandardLocations(const QList<LocationAlternative>& newExternalPaths, const uint& lostPathsCount) {
+    if (newExternalPaths.isEmpty() && lostPathsCount == 0) {
+        return;
+    }
+
+    auto setAlternatives = [&](int idx, BookmarkItem& item, const QString& translatedName,
+            QHash<QString, const LocationAlternative*>& existingAlternatives){
+        bool changed = false;
+        QString name = QStringLiteral("/") + item.path.split("/").last();
+
+        for (auto i = item.alternatives.length()-1; i >= 0; --i) {
+            if (!QFileInfo::exists(item.alternatives.at(i).path())) {
+                item.alternatives.removeAt(i);
+                changed = true;
+            }
+        }
+
+        QStringList checkNames {name};
+
+        if (name != translatedName) {
+            checkNames.append(translatedName);
+        }
+
+        for (const auto& i : newExternalPaths) {
+            QList<QPair<QString, QString>> foundAlternatives;
+
+            for (const auto& name : checkNames) {
+                QString option = i.path() + name;
+                QFileInfo optionInfo(option);
+
+                if (optionInfo.exists() && optionInfo.isDir() &&
+                        !existingAlternatives.contains(option)) {
+                    foundAlternatives.append({name, option});
+                }
+            }
+
+            bool disambiguate = foundAlternatives.length() > 1;
+
+            if (!foundAlternatives.isEmpty()) {
+                if (item.alternatives.isEmpty()) {
+                    item.alternatives.append({tr("Internal storage"), item.path, tr("Internal storage")});
+                    existingAlternatives.insert(item.path, &item.alternatives.last());
+                }
+
+                for (const auto& newPath : foundAlternatives) {
+                    item.alternatives.insert(1, {
+                        disambiguate ?
+                            //: as in "the folder “Music” on the storage named “SD Card”"
+                            tr("“%1” on “%2”").arg(newPath.first, i.name()) :
+                            i.name(),
+                        newPath.second,
+                        i.name()
+                    });
+                    existingAlternatives.insert(newPath.second, &item.alternatives.at(1));
+                    changed = true;
+                }
+            }
+        }
+
+        // There are always at least two alternatives because the first alternative
+        // is always the default path. If only one is left, all actual alternatives
+        // have been removed, so the list can be cleared.
+        if (item.alternatives.length() == 1) {
+            item.alternatives = {};
+            changed = true;
+        }
+
+        if (changed) {
+            item.devices = LocationAlternative::makeDevicesList(item.alternatives);
+
+            QModelIndex topLeft = index(idx, 0);
+            QModelIndex bottomRight = index(idx, 0);
+            emit dataChanged(topLeft, bottomRight, {
+                BookmarkRole::alternativesRole,
+                BookmarkRole::devicesRole
+            });
+        }
+    };
+
+    QHash<QString, const LocationAlternative*> alternatives;
+
+    for (auto i = 0; i < m_entries.length(); ++i) {
+        if (m_entries.at(i).group != BookmarkGroup::Location) {
+            continue;
+        }
+
+        auto& entry = m_entries[i];
+        const auto& icon = entry.thumbnail;
+
+        if (icon == DOCUMENTS_ICON
+                || icon == DOWNLOADS_ICON
+                || icon == PICTURES_ICON
+                || icon == VIDEOS_ICON
+                || icon == MUSIC_ICON) {
+            alternatives.clear();
+
+            for (const auto& alt : entry.alternatives) {
+                alternatives.insert(alt.path(), &alt);
+            }
+
+            if (icon == DOCUMENTS_ICON) {
+                setAlternatives(i, entry, tr("Documents"), alternatives);
+            } else if (icon == DOWNLOADS_ICON) {
+                setAlternatives(i, entry, tr("Downloads"), alternatives);
+            } else if (icon == PICTURES_ICON) {
+                setAlternatives(i, entry, tr("Pictures"), alternatives);
+            } else if (icon == VIDEOS_ICON) {
+                setAlternatives(i, entry, tr("Videos"), alternatives);
+            } else if (icon == MUSIC_ICON) {
+                setAlternatives(i, entry, tr("Music"), alternatives);
+            }
+        }
     }
 }
 
@@ -986,7 +1169,7 @@ void BookmarksModel::reload()
                 BookmarkGroup::Bookmark,
                 name,
                 QStringLiteral("icon-m-favorite"),
-                path,
+                path, {},
                 false, true));
             newUserDefinedLookup.insert(path, &newEntries[BookmarkGroup::Bookmark].last());
         }
@@ -1084,7 +1267,8 @@ void BookmarksModel::addUserDefined(QString path, QString name, bool permanent)
         permanent ? BookmarkGroup::Bookmark : BookmarkGroup::Temporary,
         name,
         permanent ? QStringLiteral("icon-m-favorite") : QStringLiteral("icon-m-file-folder"),
-        path, false, true)
+        path, {},
+        false, true)
     );
     ++m_lastUserDefinedIndex;
     m_userDefinedLookup.insert(path, &m_entries[at]);
@@ -1157,79 +1341,108 @@ QString BookmarksModel::loadBookmarksFile()
 
 QList<BookmarksModel::BookmarkItem> BookmarksModel::getStandardLocations()
 {
-    const static QList<BookmarkItem> ret {
-        {
-            BookmarkGroup::Location,
-            tr("Home"),
-            QStringLiteral("icon-m-home"),
-            QStandardPaths::writableLocation(QStandardPaths::HomeLocation),
-            true,
-            false
-        },
-        {
-            BookmarkGroup::Location,
-            tr("Documents"),
-            QStringLiteral("icon-m-file-document-light"),
-            QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation),
-            false,
-            false
-        },
-        {
-            BookmarkGroup::Location,
-            tr("Downloads"),
-            QStringLiteral("icon-m-cloud-download"),
-            QStandardPaths::writableLocation(QStandardPaths::DownloadLocation),
-            false,
-            false
-        },
-        {
-            BookmarkGroup::Location,
-            tr("Music"),
-            QStringLiteral("icon-m-file-audio"),
-            QStandardPaths::writableLocation(QStandardPaths::MusicLocation),
-            false,
-            false
-        },
-        {
-            BookmarkGroup::Location,
-            tr("Pictures"),
-            QStringLiteral("icon-m-file-image"),
-            QStandardPaths::writableLocation(QStandardPaths::PicturesLocation),
-            false,
-            false
-        },
-        {
-            BookmarkGroup::Location,
-            tr("Videos"),
-            QStringLiteral("icon-m-file-video"),
-            QStandardPaths::writableLocation(QStandardPaths::MoviesLocation),
-            false,
-            false
-        },
+    BookmarkItem homeItem {
+        BookmarkGroup::Location,
+        tr("Home"),
+        QStringLiteral("icon-m-home"),
+        m_standardLocations[QStandardPaths::HomeLocation],
+        {},
+        true,
+        false
     };
 
-    const static QList<BookmarkItem> androidStorage {{
+    BookmarkItem documentsItem {
+        BookmarkGroup::Location,
+        tr("Documents"),
+        DOCUMENTS_ICON,
+        m_standardLocations[QStandardPaths::DocumentsLocation],
+        {},
+        false,
+        false
+    };
+
+    BookmarkItem downloadsItem {
+    BookmarkGroup::Location,
+        tr("Downloads"),
+        DOWNLOADS_ICON,
+        m_standardLocations[QStandardPaths::DownloadLocation],
+        {},
+        false,
+        false
+    };
+
+    BookmarkItem picturesItem {
+    BookmarkGroup::Location,
+        tr("Pictures"),
+        PICTURES_ICON,
+        m_standardLocations[QStandardPaths::PicturesLocation],
+        {},
+        false,
+        false
+    };
+
+    BookmarkItem videosItem {
+        BookmarkGroup::Location,
+        tr("Videos"),
+        VIDEOS_ICON,
+        m_standardLocations[QStandardPaths::MoviesLocation],
+        {},
+        false,
+        false
+    };
+
+    BookmarkItem musicItem {
+    BookmarkGroup::Location,
+        tr("Music"),
+        MUSIC_ICON,
+        m_standardLocations[QStandardPaths::MusicLocation],
+        {},
+        false,
+        false
+    };
+
+    BookmarkItem androidItem {
         BookmarkGroup::Location,
         tr("Android storage"),
         QStringLiteral("icon-m-file-apk"),
-        QStandardPaths::writableLocation(QStandardPaths::HomeLocation) + "/android_storage",
+        m_standardLocations[QStandardPaths::DataLocation],
+        {},
         false,
         false
-    }};
+    };
 
-    const static QList<BookmarkItem> root {{
+    BookmarkItem rootItem {
         BookmarkGroup::Location,
         tr("Root"),
         QStringLiteral("icon-m-file-rpm"),
         QStringLiteral("/"),
+        {},
         true,
         false
-    }};
+    };
 
-    QFileInfo androidInfo(androidStorage[0].path);
-    if (androidInfo.exists() && androidInfo.isDir()) {
-        return ret + androidStorage + root;
+    if (m_haveAndroidPath) {
+        auto setAlternatives = [&](BookmarkItem& item, const QString& androidName){
+            QString android = m_standardLocations[QStandardPaths::DataLocation] + QStringLiteral("/") + androidName;
+            QFileInfo androidInfo(android);
+
+            if (androidInfo.exists() && androidInfo.isDir()) {
+                item.alternatives = {
+                    {tr("Internal storage"), item.path, tr("Internal storage")},
+                    {tr("Android storage"), android, tr("Android storage")},
+                };
+                item.devices = LocationAlternative::makeDevicesList(item.alternatives);
+            }
+        };
+
+        setAlternatives(documentsItem, QStringLiteral("Documents"));
+        setAlternatives(downloadsItem, QStringLiteral("Download"));
+        setAlternatives(picturesItem, QStringLiteral("Pictures"));
+        setAlternatives(videosItem, QStringLiteral("Movies"));
+        setAlternatives(musicItem, QStringLiteral("Music"));
+
+        return {homeItem, documentsItem, downloadsItem, picturesItem, videosItem, musicItem, androidItem, rootItem};
     } else {
-        return ret + root;
+        return {homeItem, documentsItem, downloadsItem, picturesItem, videosItem, musicItem, rootItem};
     }
 }
