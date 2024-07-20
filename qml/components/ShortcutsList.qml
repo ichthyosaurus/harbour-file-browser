@@ -210,8 +210,8 @@ SilicaListView {
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
                 text: Paths.unicodeArrow() + " " + (listItem.selectedPath || model.path)
-                visible: (model.group !== BookmarkGroup.Location
-                          && model.path !== model.name) || !!listItem.selectedPath
+                visible: !model.showSize && ((model.group !== BookmarkGroup.Location
+                          && model.path !== model.name) || !!listItem.selectedPath)
                 elide: Text.ElideMiddle
             }
         }
