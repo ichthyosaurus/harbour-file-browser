@@ -1,14 +1,14 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2022 Mirian Margiani
+ * SPDX-FileCopyrightText: 2022-2024 Mirian Margiani
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 #ifndef ENUMCONTAINER_H
 #define ENUMCONTAINER_H
 
-#include <QtQml>
+#include <QtQml/QtQml>
 #include <QObject>
 
 // Use the following macros to expose an enumeration to QML.
