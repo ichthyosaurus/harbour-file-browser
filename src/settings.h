@@ -262,7 +262,7 @@ inline uint qHash(const BookmarksModel::BookmarkItem& key, uint seed=10)
 //
 // Specify a path to handle local settings. Leave the path empty to
 // handle global settings only. A global object exposing global settings
-// is available as "GlobalSettings" when importing the Settings module.
+// is available as "GlobalSettings" when importing the Settings module im QML.
 
 #define QSL QStringLiteral
 #include <QDebug>
