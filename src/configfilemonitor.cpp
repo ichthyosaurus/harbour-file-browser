@@ -338,8 +338,15 @@ void ConfigFileMonitor::resume()
 
 void ConfigFileMonitor::setRunning(bool running)
 {
-    if (running) resume();
-    else pause();
+    if (running == isRunning()) {
+        return;
+    }
+
+    if (running) {
+        resume();
+    } else {
+        pause();
+    }
 }
 
 /***********************************************************************
