@@ -332,9 +332,11 @@ Page {
                         + Theme.horizontalPageMargin
             _titleItem.elide: Text.ElideMiddle
 
-            Connections {
-                target: header._navigateForwardMouseArea
-                onPressAndHold: dirPopup.show()
+            interactive: false
+
+            Binding on highlighted {
+                when: popupArea.down
+                value: true
             }
 
             IconButton {
@@ -351,6 +353,7 @@ Page {
             }
 
             BackgroundItem {
+                id: popupArea
                 anchors.fill: parent
                 onClicked: dirPopup.show()
                 onPressAndHold: dirPopup.show()
