@@ -104,6 +104,7 @@ SilicaListView {
                         text: modelData.name
                         onClicked: {
                             itemClicked(listItem.intIndex, modelData.path)
+                            GlobalSettings.bookmarks.selectAlternative(modelIndex, modelData.path)
 
                             if (root.selectable) {
                                 listItem.selectedPath = modelData.path

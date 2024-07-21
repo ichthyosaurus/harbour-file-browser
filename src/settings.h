@@ -179,6 +179,7 @@ public:
 
     Q_INVOKABLE void clearTemporary();
     Q_INVOKABLE void sortFilter(QVariantList order); // list of BookmarkGroup::Enum
+    Q_INVOKABLE void selectAlternative(const QModelIndex& idx, QString alternative);
 
     Q_INVOKABLE void move(int fromIndex, int toIndex, bool saveImmediately = true);
     Q_INVOKABLE void rename(QString path, QString newName);
@@ -226,6 +227,7 @@ private:
             group(group),
             name(name),
             thumbnail(icon),
+            defaultPath(path),
             path(path),
             alternatives(alternatives),
             showSize(showSize),
@@ -234,6 +236,7 @@ private:
         BookmarkGroup::Enum group {BookmarkGroup::Temporary};
         QString name {QStringLiteral()};
         QString thumbnail {QStringLiteral("icon-m-favorite")};
+        QString defaultPath {QStringLiteral()};
         QString path {QStringLiteral()};
         QList<LocationAlternative> alternatives {};
         QStringList devices {};  // note: this is empty if alternatives is empty

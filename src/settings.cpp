@@ -814,6 +814,38 @@ void BookmarksModel::sortFilter(QVariantList order)
     reload();
 }
 
+void BookmarksModel::selectAlternative(const QModelIndex& idx, QString alternative)
+{
+    if (!idx.isValid()) {
+        return;
+    }
+
+    if (idx.row() >= 0 && idx.row() < m_entries.length()) {
+        auto& entry = m_entries[idx.row()];
+        bool found = false;
+
+        if (entry.path == alternative) {
+            return;
+        }
+
+        for (const auto& i : entry.alternatives) {
+            if (i.path() == alternative) {
+                found = true;
+            }
+        }
+
+        if (!found) {
+            qDebug() << "warning: cannot select" << alternative << "as alternative for" <<
+                        entry.defaultPath << "as it is not in" <<
+                        LocationAlternative::makeVariantList(entry.alternatives);
+            alternative = "";
+        }
+
+        m_entries[idx.row()].path = alternative;
+        emit dataChanged(idx, idx, {BookmarkRole::pathRole});
+    }
+}
+
 void BookmarksModel::rename(QString path, QString newName)
 {
     if (newName.isEmpty()) return;
@@ -1087,6 +1119,7 @@ void BookmarksModel::updateStandardLocations(const QList<LocationAlternative>& n
         // have been removed, so the list can be cleared.
         if (item.alternatives.length() == 1) {
             item.alternatives = {};
+            item.path = item.defaultPath;
             changed = true;
         }
 
@@ -1097,6 +1130,7 @@ void BookmarksModel::updateStandardLocations(const QList<LocationAlternative>& n
             QModelIndex bottomRight = index(idx, 0);
             emit dataChanged(topLeft, bottomRight, {
                 BookmarkRole::alternativesRole,
+                BookmarkRole::pathRole,
                 BookmarkRole::devicesRole
             });
         }
