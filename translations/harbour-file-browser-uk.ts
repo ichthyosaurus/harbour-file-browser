@@ -163,13 +163,13 @@
         <location filename="../src/settings.cpp" line="1066"/>
         <location filename="../src/settings.cpp" line="1431"/>
         <source>Internal storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Внутрішнє сховище</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1074"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>«%1» на «%2»</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1346"/>
@@ -1547,12 +1547,12 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="289"/>
         <source>Share clipboard among windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Спільний доступ до буфера обміну між вікнами</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="291"/>
         <source>Share the list of files currently in the clipboard among all open File Browser windows. When this is enabled, you can cut files in one window and paste them in another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Розповсюджувати список файлів у буфері обміну між усіма відкритими вікнами Файлового браузера. Якщо цей параметр увімкнено, ви можете вирізати файли в одному вікні та вставити їх в іншому.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="297"/>
