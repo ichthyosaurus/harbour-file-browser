@@ -23,13 +23,13 @@ spacing:Theme.paddingLarge
 width:parent.width
 height:childrenRect.height
 PageHeader{title:root.title
-description:qsTranslate("Opal.InfoCombo","Details")
 }Repeater{model:topNotes
 delegate:NoteDelegate{onLinkActivated:root.linkActivated(link)
 }}Repeater{model:items
 delegate:OptionDelegate{allowChanges:root.allowChanges
 comboBox:root.comboBox
 modelIndex:index
+onLinkActivated:root.linkActivated(link)
 }}Repeater{model:bottomNotes
 delegate:NoteDelegate{onLinkActivated:root.linkActivated(link)
 }}}}}
