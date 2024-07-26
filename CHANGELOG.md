@@ -10,6 +10,17 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
  * Nothing so far
 
+## Version 3.1.0 (2024-07-26)
+
+ * Updated translations: Spanish, German, Swedish, Ukrainian, Estonian
+ * Added support for shortcuts to standard locations on different storage media, like pictures in the internal memory, the SD card, and Android memory
+ * Added support for translated standard locations, e.g. Documents and "Dokumente"
+ * Added support for configuring thumbnail size for each folder separately
+ * Added automatic focus to the search field on the search page after clearing it
+ * Added new global option to disable clipboard sharing between File Browser windows
+ * Fixed opening the navigation menu by tapping anywhere on the page header of the folder view
+ * Fixed creating completely empty files, e.g. to create ".nomedia" files
+
 ## Version 3.0.2 (2024-06-29)
 
  * Updated translations: Spanish, Slovak

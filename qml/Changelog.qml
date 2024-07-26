@@ -9,6 +9,20 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: "3.1.0"
+        date: "2024-07-26"
+        paragraphs: [
+            "- Updated translations: Spanish, German, Swedish, Ukrainian, Estonian<br>" +
+            "- Added support for shortcuts to standard locations on different storage media, like pictures in the internal memory, the SD card, and Android memory<br>" +
+            "- Added support for translated standard locations, e.g. Documents and \"Dokumente\"<br>" +
+            "- Added support for configuring thumbnail size for each folder separately<br>" +
+            "- Added automatic focus to the search field on the search page after clearing it<br>" +
+            "- Added new global option to disable clipboard sharing between File Browser windows<br>" +
+            "- Fixed opening the navigation menu by tapping anywhere on the page header of the folder view<br>" +
+            "- Fixed creating completely empty files, e.g. to create \".nomedia\" files"
+        ]
+    }
+    ChangelogItem {
         version: "3.0.2"
         date: "2024-06-29"
         paragraphs: [
