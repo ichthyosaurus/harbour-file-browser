@@ -163,13 +163,13 @@
         <location filename="../src/settings.cpp" line="1066"/>
         <location filename="../src/settings.cpp" line="1431"/>
         <source>Internal storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Sisemine andmehoidla</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1074"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>„%1“ asukohas „%2“</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1346"/>
@@ -772,8 +772,8 @@
         <location filename="../qml/components/FileActions.qml" line="129"/>
         <source>%n file(s) cut</source>
         <translation>
-            <numerusform>%n fail on asetatud</numerusform>
-            <numerusform>%n faili on asetatud</numerusform>
+            <numerusform>%n fail on lõigatud</numerusform>
+            <numerusform>%n faili on lõigatud</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -1530,12 +1530,12 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="289"/>
         <source>Share clipboard among windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Jaga lõikelaua sisu eri akende vahel</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="291"/>
         <source>Share the list of files currently in the clipboard among all open File Browser windows. When this is enabled, you can cut files in one window and paste them in another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jaga lõikelauale asetatud failide loendi erinevate failihalduri akende vahe. Kui see eelistus on kasutusel, siis saad faile kopeerida või lõigata ühes aknas ja asetada teises.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="297"/>

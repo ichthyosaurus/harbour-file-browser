@@ -163,13 +163,13 @@
         <location filename="../src/settings.cpp" line="1066"/>
         <location filename="../src/settings.cpp" line="1431"/>
         <source>Internal storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Intern lagring</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1074"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>“%1“ på “%2“</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1346"/>
@@ -1530,12 +1530,12 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="289"/>
         <source>Share clipboard among windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Dela urklipp mellan fönster</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="291"/>
         <source>Share the list of files currently in the clipboard among all open File Browser windows. When this is enabled, you can cut files in one window and paste them in another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dela listan över filer som för närvarande finns i urklipp mellan alla öppna filhanterarfönster. När detta är aktiverat kan du klippa ut filer i ett fönster och klistra in dem i ett annat.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="297"/>
