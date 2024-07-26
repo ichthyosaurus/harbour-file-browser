@@ -140,6 +140,13 @@ Page {
                     // get focus when page is shown for the first time
                     Component.onCompleted: if (!startImmediately) forceActiveFocus();
 
+                    onTextChanged: {
+                        if (text == "") {
+                            // force focus when the field has been cleared
+                            forceActiveFocus()
+                        }
+                    }
+
                     // return key on virtual keyboard starts or restarts search
                     EnterKey.enabled: true
                     EnterKey.iconSource: "image://theme/icon-m-enter-accept"
