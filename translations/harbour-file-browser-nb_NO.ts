@@ -140,80 +140,80 @@
 <context>
     <name>BookmarksModel</name>
     <message>
-        <location filename="../src/settings.cpp" line="972"/>
+        <location filename="../src/settings.cpp" line="1004"/>
         <source>Memory card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="974"/>
+        <location filename="../src/settings.cpp" line="1006"/>
         <source>Attached folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="976"/>
+        <location filename="../src/settings.cpp" line="1008"/>
         <source>Remote folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="979"/>
+        <location filename="../src/settings.cpp" line="1011"/>
         <source>Removable media</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1066"/>
-        <location filename="../src/settings.cpp" line="1431"/>
+        <location filename="../src/settings.cpp" line="1098"/>
+        <location filename="../src/settings.cpp" line="1465"/>
         <source>Internal storage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1074"/>
+        <location filename="../src/settings.cpp" line="1106"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1346"/>
+        <location filename="../src/settings.cpp" line="1380"/>
         <source>Home</source>
         <translation type="unfinished">Hjem</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1127"/>
-        <location filename="../src/settings.cpp" line="1356"/>
+        <location filename="../src/settings.cpp" line="1161"/>
+        <location filename="../src/settings.cpp" line="1390"/>
         <source>Documents</source>
         <translation type="unfinished">Dokumenter</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1129"/>
-        <location filename="../src/settings.cpp" line="1366"/>
+        <location filename="../src/settings.cpp" line="1163"/>
+        <location filename="../src/settings.cpp" line="1400"/>
         <source>Downloads</source>
         <translation type="unfinished">Nedlastinger</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1135"/>
-        <location filename="../src/settings.cpp" line="1396"/>
+        <location filename="../src/settings.cpp" line="1169"/>
+        <location filename="../src/settings.cpp" line="1430"/>
         <source>Music</source>
         <translation type="unfinished">Musikk</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1131"/>
-        <location filename="../src/settings.cpp" line="1376"/>
+        <location filename="../src/settings.cpp" line="1165"/>
+        <location filename="../src/settings.cpp" line="1410"/>
         <source>Pictures</source>
         <translation type="unfinished">Bilder</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1133"/>
-        <location filename="../src/settings.cpp" line="1386"/>
+        <location filename="../src/settings.cpp" line="1167"/>
+        <location filename="../src/settings.cpp" line="1420"/>
         <source>Videos</source>
         <translation type="unfinished">Videoer</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1406"/>
-        <location filename="../src/settings.cpp" line="1432"/>
+        <location filename="../src/settings.cpp" line="1440"/>
+        <location filename="../src/settings.cpp" line="1466"/>
         <source>Android storage</source>
         <translation type="unfinished">Android-lagring</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1416"/>
+        <location filename="../src/settings.cpp" line="1450"/>
         <source>Root</source>
         <translation type="unfinished">Rot</translation>
     </message>
@@ -517,55 +517,55 @@
         <translation>Kopier sti til utklippstavle</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="389"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="392"/>
         <source>filtered by: %1</source>
         <translation>Filtrert av: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="451"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="454"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="453"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="456"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation type="unfinished">Tom</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="456"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="459"/>
         <source>No files matched the filter.</source>
         <translation>Ingen slike filer.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="457"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="460"/>
         <source>This directory contains no files.</source>
         <translation>Denne mappen inneholder ingen filer.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="537"/>
         <location filename="../qml/pages/DirectoryPage.qml" line="540"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="543"/>
         <source>Deleting</source>
         <translation>Sletter …</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="552"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="555"/>
         <source>Internally not ready</source>
         <translation>Ikke klar internt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="552"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="555"/>
         <source>Please simply try again</source>
         <translation>Prøv igjen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="595"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="598"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>Prøver du å flytte mellom telefonen og SD-kort? Det fungerer ikke. Prøv å kopiere.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="597"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="600"/>
         <source>Perhaps the storage is full?</source>
         <translation>Kanskje det ikke er mer plass der?</translation>
     </message>
@@ -2603,7 +2603,7 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="122"/>
-        <location filename="../qml/pages/SearchPage.qml" line="360"/>
+        <location filename="../qml/pages/SearchPage.qml" line="367"/>
         <source>Search</source>
         <translation>Søk</translation>
     </message>
@@ -2613,7 +2613,7 @@ exposure program</extracomment>
         <translation>Søk under «%1»</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/SearchPage.qml" line="190"/>
+        <location filename="../qml/pages/SearchPage.qml" line="197"/>
         <source>%n hit(s)</source>
         <translation>
             <numerusform>ett treff</numerusform>
@@ -2621,40 +2621,40 @@ exposure program</extracomment>
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="321"/>
-        <location filename="../qml/pages/SearchPage.qml" line="322"/>
-        <location filename="../qml/pages/SearchPage.qml" line="408"/>
-        <location filename="../qml/pages/SearchPage.qml" line="410"/>
+        <location filename="../qml/pages/SearchPage.qml" line="328"/>
+        <location filename="../qml/pages/SearchPage.qml" line="329"/>
+        <location filename="../qml/pages/SearchPage.qml" line="415"/>
+        <location filename="../qml/pages/SearchPage.qml" line="417"/>
         <source>Deleting</source>
         <translation>Sletter …</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="337"/>
+        <location filename="../qml/pages/SearchPage.qml" line="344"/>
         <source>Go to containing folder</source>
         <translation>Gå til inneholdende mappe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="341"/>
+        <location filename="../qml/pages/SearchPage.qml" line="348"/>
         <source>Cut</source>
         <translation>Klipp ut</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="345"/>
+        <location filename="../qml/pages/SearchPage.qml" line="352"/>
         <source>Copy</source>
         <translation>Kopier</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="351"/>
+        <location filename="../qml/pages/SearchPage.qml" line="358"/>
         <source>Delete</source>
         <translation>Slett</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="417"/>
+        <location filename="../qml/pages/SearchPage.qml" line="424"/>
         <source>Internally not ready</source>
         <translation>Ikke klar internt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="417"/>
+        <location filename="../qml/pages/SearchPage.qml" line="424"/>
         <source>Please simply try again</source>
         <translation>Prøv igjen</translation>
     </message>
@@ -2694,42 +2694,42 @@ exposure program</extracomment>
 <context>
     <name>ShortcutsList</name>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="238"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="239"/>
         <source>Open system settings</source>
         <translation>Åpne systeminnsntillinger</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="256"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="257"/>
         <source>Rename</source>
         <translation type="unfinished">Gi nytt navn</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="263"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="264"/>
         <source>Sort</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="269"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="270"/>
         <source>Remove</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="290"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="291"/>
         <source>Custom</source>
         <translation>Egendefinert</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="289"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="290"/>
         <source>Locations</source>
         <translation>Steder</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="288"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="289"/>
         <source>Storage devices</source>
         <translation>Lagringsenheter</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="287"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="288"/>
         <source>Bookmarks</source>
         <translation>Bokmerker</translation>
     </message>

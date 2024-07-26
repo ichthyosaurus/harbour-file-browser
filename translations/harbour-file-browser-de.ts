@@ -140,80 +140,80 @@
 <context>
     <name>BookmarksModel</name>
     <message>
-        <location filename="../src/settings.cpp" line="972"/>
+        <location filename="../src/settings.cpp" line="1004"/>
         <source>Memory card</source>
         <translation>Speicherkarte</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="974"/>
+        <location filename="../src/settings.cpp" line="1006"/>
         <source>Attached folder</source>
         <translation>Eingebundener Ordner</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="976"/>
+        <location filename="../src/settings.cpp" line="1008"/>
         <source>Remote folder</source>
         <translation>Entfernter Ordner</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="979"/>
+        <location filename="../src/settings.cpp" line="1011"/>
         <source>Removable media</source>
         <translation>Wechselmedium</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1066"/>
-        <location filename="../src/settings.cpp" line="1431"/>
+        <location filename="../src/settings.cpp" line="1098"/>
+        <location filename="../src/settings.cpp" line="1465"/>
         <source>Internal storage</source>
         <translation>Interner Speicher</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1074"/>
+        <location filename="../src/settings.cpp" line="1106"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
         <translation>„%1“ in „%2“</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1346"/>
+        <location filename="../src/settings.cpp" line="1380"/>
         <source>Home</source>
         <translation>Benutzerverzeichnis</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1127"/>
-        <location filename="../src/settings.cpp" line="1356"/>
+        <location filename="../src/settings.cpp" line="1161"/>
+        <location filename="../src/settings.cpp" line="1390"/>
         <source>Documents</source>
         <translation>Dokumente</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1129"/>
-        <location filename="../src/settings.cpp" line="1366"/>
+        <location filename="../src/settings.cpp" line="1163"/>
+        <location filename="../src/settings.cpp" line="1400"/>
         <source>Downloads</source>
         <translation>Downloads</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1135"/>
-        <location filename="../src/settings.cpp" line="1396"/>
+        <location filename="../src/settings.cpp" line="1169"/>
+        <location filename="../src/settings.cpp" line="1430"/>
         <source>Music</source>
         <translation>Musik</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1131"/>
-        <location filename="../src/settings.cpp" line="1376"/>
+        <location filename="../src/settings.cpp" line="1165"/>
+        <location filename="../src/settings.cpp" line="1410"/>
         <source>Pictures</source>
         <translation>Bilder</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1133"/>
-        <location filename="../src/settings.cpp" line="1386"/>
+        <location filename="../src/settings.cpp" line="1167"/>
+        <location filename="../src/settings.cpp" line="1420"/>
         <source>Videos</source>
         <translation>Videos</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1406"/>
-        <location filename="../src/settings.cpp" line="1432"/>
+        <location filename="../src/settings.cpp" line="1440"/>
+        <location filename="../src/settings.cpp" line="1466"/>
         <source>Android storage</source>
         <translation>Android-Datenspeicher</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1416"/>
+        <location filename="../src/settings.cpp" line="1450"/>
         <source>Root</source>
         <translation>Stammverzeichnis</translation>
     </message>
@@ -501,20 +501,20 @@
         <translation>Ordnerpfad kopieren</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="451"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="454"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
         <translation>Kein Treffer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="453"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="456"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation>Leer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="537"/>
         <location filename="../qml/pages/DirectoryPage.qml" line="540"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="543"/>
         <source>Deleting</source>
         <translation>Lösche</translation>
     </message>
@@ -535,37 +535,37 @@
         <translation>Ordnerinhalte filtern</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="389"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="392"/>
         <source>filtered by: %1</source>
         <translation>Filter: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="456"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="459"/>
         <source>No files matched the filter.</source>
         <translation>Der Filter passt auf keine Dateien.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="457"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="460"/>
         <source>This directory contains no files.</source>
         <translation>Dieser Ordner enthält keine Dateien.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="552"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="555"/>
         <source>Internally not ready</source>
         <translation>Intern noch nicht bereit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="552"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="555"/>
         <source>Please simply try again</source>
         <translation>Versuchen Sie es bitte noch einmal</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="595"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="598"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>Verschieben Sie von Telefon auf SD-Karte oder umgekehrt? Das funktioniert nicht, probieren Sie es mit Kopieren.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="597"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="600"/>
         <source>Perhaps the storage is full?</source>
         <translation>Vielleicht ist kein Speicherplatz mehr frei?</translation>
     </message>
@@ -2610,7 +2610,7 @@ exposure program</extracomment>
         <translation>in „%1“ suchen</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/SearchPage.qml" line="190"/>
+        <location filename="../qml/pages/SearchPage.qml" line="197"/>
         <source>%n hit(s)</source>
         <translation>
             <numerusform>%n Treffer</numerusform>
@@ -2618,46 +2618,46 @@ exposure program</extracomment>
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="321"/>
-        <location filename="../qml/pages/SearchPage.qml" line="322"/>
-        <location filename="../qml/pages/SearchPage.qml" line="408"/>
-        <location filename="../qml/pages/SearchPage.qml" line="410"/>
+        <location filename="../qml/pages/SearchPage.qml" line="328"/>
+        <location filename="../qml/pages/SearchPage.qml" line="329"/>
+        <location filename="../qml/pages/SearchPage.qml" line="415"/>
+        <location filename="../qml/pages/SearchPage.qml" line="417"/>
         <source>Deleting</source>
         <translation>Lösche</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="337"/>
+        <location filename="../qml/pages/SearchPage.qml" line="344"/>
         <source>Go to containing folder</source>
         <translation>Enthaltenden Ordner öffnen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="341"/>
+        <location filename="../qml/pages/SearchPage.qml" line="348"/>
         <source>Cut</source>
         <translation>Ausschneiden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="345"/>
+        <location filename="../qml/pages/SearchPage.qml" line="352"/>
         <source>Copy</source>
         <translation>Kopieren</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="351"/>
+        <location filename="../qml/pages/SearchPage.qml" line="358"/>
         <source>Delete</source>
         <translation>Löschen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="417"/>
+        <location filename="../qml/pages/SearchPage.qml" line="424"/>
         <source>Internally not ready</source>
         <translation>Intern noch nicht bereit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="417"/>
+        <location filename="../qml/pages/SearchPage.qml" line="424"/>
         <source>Please simply try again</source>
         <translation>Versuchen Sie es bitte erneut</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="122"/>
-        <location filename="../qml/pages/SearchPage.qml" line="360"/>
+        <location filename="../qml/pages/SearchPage.qml" line="367"/>
         <source>Search</source>
         <translation>Suchen</translation>
     </message>
@@ -2697,42 +2697,42 @@ exposure program</extracomment>
 <context>
     <name>ShortcutsList</name>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="238"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="239"/>
         <source>Open system settings</source>
         <translation>System-Einstellungen öffnen</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="256"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="257"/>
         <source>Rename</source>
         <translation>Umbenennen</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="263"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="264"/>
         <source>Sort</source>
         <translation>Ordnen</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="269"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="270"/>
         <source>Remove</source>
         <translation>Entfernen</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="290"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="291"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="289"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="290"/>
         <source>Locations</source>
         <translation>Verzeichnisse</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="288"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="289"/>
         <source>Storage devices</source>
         <translation>Massenspeicher</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="287"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="288"/>
         <source>Bookmarks</source>
         <translation>Lesezeichen</translation>
     </message>
