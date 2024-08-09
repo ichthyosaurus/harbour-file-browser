@@ -61,7 +61,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="125"/>
         <source>Ukrainian</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukrán</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="133"/>
@@ -142,7 +142,7 @@
     <message>
         <location filename="../src/settings.cpp" line="1004"/>
         <source>Memory card</source>
-        <translation type="unfinished"></translation>
+        <translation>Memóriakártya</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1006"/>

@@ -1254,7 +1254,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="105"/>
         <source>Show files with names starting with a full stop (“.”).</source>
-        <translation>Mostrar archivos cuyos nombres empiecen por un punto (&quot;.&quot;).</translation>
+        <translation>Muestra los archivos cuyos nombres empiecen por un punto (&quot;.&quot;).</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="108"/>
@@ -1304,7 +1304,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="141"/>
         <source>Always show folders at the top of the file list.</source>
-        <translation>Mostrar siempre las carpetas al principio de la lista de archivos.</translation>
+        <translation>Muestra siempre las carpetas al principio de la lista de archivos.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="144"/>
@@ -1314,7 +1314,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="146"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
-        <translation>Mostrar siempre los archivos que empiezan por un punto (&quot;.&quot;) al final de la lista de archivos.</translation>
+        <translation>Muestra siempre los archivos que empiezan por un punto (&quot;.&quot;) al final de la lista de archivos.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="149"/>
@@ -1349,7 +1349,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="164"/>
         <source>Show files with names starting with a capital letter first.</source>
-        <translation>Mostrar primero los archivos cuyos nombres empiezan por mayúscula.</translation>
+        <translation>Muestra primero los archivos cuyos nombres empiezan por mayúscula.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="168"/>
@@ -1535,7 +1535,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="291"/>
         <source>Share the list of files currently in the clipboard among all open File Browser windows. When this is enabled, you can cut files in one window and paste them in another.</source>
-        <translation>Compartir la lista de archivos actualmente en el portapapeles entre todas las ventanas abiertas en el Navegador de archivos. Cuando está habilitado, puedes cortar archivos en una ventana y pegarlos en otra.</translation>
+        <translation>Comparte la lista de archivos del portapapeles entre todas las ventanas abiertas de File Browser. Cuando está activado, puedes cortar archivos en una ventana y pegarlos en otra.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="297"/>
@@ -1545,7 +1545,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="299"/>
         <source>Show the full path in the page header of the directory view.</source>
-        <translation>Mostrar la ruta completa en la cabecera de la página de la vista de directorio.</translation>
+        <translation>Muestra la ruta completa en la cabecera de la página de la vista de directorio.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="302"/>
@@ -2136,7 +2136,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
         <source>Develop on Github</source>
-        <translation>Desarrollar en Github</translation>
+        <translation>Desarrollar en GitHub</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="31"/>
@@ -3252,7 +3252,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="112"/>
         <source>Show files with names starting with a full stop (“.”).</source>
-        <translation>Mostrar los archivos cuyos nombres empiecen por un punto (&quot;.&quot;).</translation>
+        <translation>Muestra los archivos cuyos nombres empiecen por un punto (&quot;.&quot;).</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="116"/>
@@ -3272,7 +3272,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="133"/>
         <source>Show files with names starting with a capital letter first.</source>
-        <translation>Mostrar primero los archivos cuyos nombres empiezan por una mayúscula.</translation>
+        <translation>Muestra primero los archivos cuyos nombres empiezan por una mayúscula.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="138"/>
@@ -3292,7 +3292,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="146"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
-        <translation>Mostrar siempre los archivos que empiezan por un punto (&quot;.&quot;) al final de la lista de archivos.</translation>
+        <translation>Muestra siempre los archivos que empiezan por un punto (&quot;.&quot;) al final de la lista de archivos.</translation>
     </message>
 </context>
 <context>
