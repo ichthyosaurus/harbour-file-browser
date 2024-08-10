@@ -1304,7 +1304,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="141"/>
         <source>Always show folders at the top of the file list.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alltid vis mapper på toppen av fillisten.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="144"/>
@@ -2342,14 +2342,6 @@ exposure program</extracomment>
     </message>
 </context>
 <context>
-    <name>Opal.InfoCombo</name>
-    <message>
-        <location filename="../qml/modules/Opal/InfoCombo/private/InfoComboPage.qml" line="26"/>
-        <source>Details</source>
-        <translation type="unfinished">Detaljer</translation>
-    </message>
-</context>
-<context>
     <name>Opal.LinkHandler</name>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="15"/>
@@ -3212,7 +3204,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="82"/>
         <source>descending</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">synkende</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="90"/>

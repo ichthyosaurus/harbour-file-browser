@@ -2342,14 +2342,6 @@ exposure program</extracomment>
     </message>
 </context>
 <context>
-    <name>Opal.InfoCombo</name>
-    <message>
-        <location filename="../qml/modules/Opal/InfoCombo/private/InfoComboPage.qml" line="26"/>
-        <source>Details</source>
-        <translation>Tiedot</translation>
-    </message>
-</context>
-<context>
     <name>Opal.LinkHandler</name>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="15"/>
