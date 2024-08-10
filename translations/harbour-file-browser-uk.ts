@@ -2154,7 +2154,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
         <source>Develop on Github</source>
-        <translation>Розробка на Github</translation>
+        <translation>Розробка на GitHub</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="31"/>
