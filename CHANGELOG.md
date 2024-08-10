@@ -10,6 +10,10 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
  * Nothing so far
 
+## Version 3.1.1 (2024-08-10)
+
+ * Updated translations: Spanish, Finnish, English, Estonian, Ukrainian, Slovak, Norwegian Bokmål, Swedish, German, Hungarian, Chinese
+
 ## Version 3.1.0 (2024-07-26)
 
  * Updated translations: Spanish, German, Swedish, Ukrainian, Estonian
