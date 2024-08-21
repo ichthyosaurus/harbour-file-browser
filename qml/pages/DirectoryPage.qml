@@ -326,13 +326,22 @@ Page {
             id: header
             title: Paths.formatPathForTitle(page.dir)
             description: page.fullPathShown ? Paths.dirName(page.dir) : ""
-            Component.onCompleted: dirPopup.menuTop = y+height
 
             leftMargin: (navMenuIconShown ? menuIcon.width + Theme.paddingMedium : 0)
                         + Theme.horizontalPageMargin
             _titleItem.elide: Text.ElideMiddle
 
-            interactive: false
+            // interactive: false
+
+            Component.onCompleted: {
+                dirPopup.menuTop = y+height
+
+                // Required for compatibility with SFOS 3.x
+                // where Silica.PageHeader doesn't have the 'interactive' property yet.
+                if (header.hasOwnProperty('interactive')) {
+                    header.interactive = false
+                }
+            }
 
             Binding on highlighted {
                 when: popupArea.down
