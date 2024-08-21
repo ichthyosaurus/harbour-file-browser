@@ -476,96 +476,96 @@
 <context>
     <name>DirectoryPage</name>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="307"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="306"/>
         <source>Search</source>
         <translation>Buscar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="207"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="206"/>
         <source>Paste</source>
         <translation>Pegar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
         <source>Remove bookmark</source>
         <translation>Borrar marcador</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
         <source>Add to bookmarks</source>
         <translation>Añadir a marcadores</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="321"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="320"/>
         <source>Copy path to clipboard</source>
         <translation>Copiar ruta al portapapeles</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="454"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="461"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
         <translation>Ninguna coincidencia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="456"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="463"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation>Vacío</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="540"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="543"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="547"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="550"/>
         <source>Deleting</source>
         <translation>Borrando</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="187"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="186"/>
         <source>View Preferences</source>
         <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
         <translation>Preferencias de vista</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="194"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="193"/>
         <source>Create New...</source>
         <translation>Crear nuevo...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="225"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="224"/>
         <source>Filter directory contents</source>
         <translation>Filtrar en directorio</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="392"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="399"/>
         <source>filtered by: %1</source>
         <translation>filtrado por: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="459"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="466"/>
         <source>No files matched the filter.</source>
         <translation>Ningún archivo coincide con el filtro.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="460"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="467"/>
         <source>This directory contains no files.</source>
         <translation>Este directorio no contiene archivos.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="555"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="562"/>
         <source>Internally not ready</source>
         <translation>Internamente no está listo</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="555"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="562"/>
         <source>Please simply try again</source>
         <translation>Inténtalo de nuevo</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="598"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="605"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>¿Estás intentado mover archivos entre el teléfono y la tarjeta SD? Si no funciona, intenta copiarlos.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="600"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="607"/>
         <source>Perhaps the storage is full?</source>
         <translation>¿Es posible que el almacenamiento esté lleno?</translation>
     </message>
@@ -825,7 +825,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="265"/>
+        <location filename="../qml/components/FileActions.qml" line="264"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>comprimir archivo</numerusform>
@@ -833,17 +833,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="274"/>
+        <location filename="../qml/components/FileActions.qml" line="273"/>
         <source>edit link target</source>
         <translation>editar destino del enlace</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="279"/>
+        <location filename="../qml/components/FileActions.qml" line="278"/>
         <source>Apply</source>
         <translation>Aplicar</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="299"/>
+        <location filename="../qml/components/FileActions.qml" line="298"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>editar archivo</numerusform>
@@ -851,7 +851,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="324"/>
+        <location filename="../qml/components/FileActions.qml" line="323"/>
         <source>show file properties</source>
         <translation>mostrar propiedades de archivo</translation>
     </message>
@@ -2576,7 +2576,7 @@ exposure program</extracomment>
         <translation>Ten cuidado al usar File Browser en modo root. Las acciones pueden romper inesperadamente tu sistema.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Abrir File Browser en modo root</translation>
     </message>
