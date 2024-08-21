@@ -9,6 +9,14 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: "3.2.1"
+        date: "2024-08-21"
+        paragraphs: [
+            "- Fixed ignoring mount points below base paths using the new config file<br>" +
+            "- Note: the generated config file is fine and no manual changes are necessary"
+        ]
+    }
+    ChangelogItem {
         version: "3.2.0"
         date: "2024-08-21"
         paragraphs: [

@@ -10,6 +10,11 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
  * Nothing so far
 
+## Version 3.2.1 (2024-08-21)
+
+ * Fixed ignoring mount points below base paths using the new config file
+ * Note: the generated config file is fine and no manual changes are necessary
+
 ## Version 3.2.0 (2024-08-21)
 
  * Updated translations: Italian, Slovak, Russian, Dutch
