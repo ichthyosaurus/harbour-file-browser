@@ -1199,6 +1199,12 @@ void BookmarksModel::reload()
             QString path = obj.value(QStringLiteral("path")).toString(QStringLiteral("/home"));
             QString name = obj.value(QStringLiteral("name")).toString(path.split("/").last());
 
+            if (path.isEmpty()) {
+                qWarning() << "invalid bookmarks entry in" << m_bookmarksMonitor->file() << i
+                           << "- path must not be empty";
+                continue;
+            }
+
             newEntries[BookmarkGroup::Bookmark].append(BookmarkItem(
                 BookmarkGroup::Bookmark,
                 name,
@@ -1234,7 +1240,10 @@ void BookmarksModel::save()
     QJsonArray array;
 
     for (const auto& i : std::as_const(m_entries)) {
-        if (!i.userDefined) continue;
+        if (   !i.userDefined
+            || i.path.isEmpty()) {
+            continue;
+        }
 
         QJsonObject item;
         item.insert(QStringLiteral("name"), i.name);
