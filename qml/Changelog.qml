@@ -9,6 +9,19 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: "3.2.0"
+        date: "2024-08-21"
+        paragraphs: [
+            "- Updated translations: Italian, Slovak, Russian, Dutch<br>" +
+            "- Added config file to configure ignored mount points<br>" +
+            "-   - this makes it easy to hide system paths that show up as external devices<br>" +
+            "-   - edit \"HOME/.config/harbour-file-browser/ignored-mounts.json\" to add custom paths<br>" +
+            "-   - please report any missing paths so they can be added to the default list<br>" +
+            "- Fixed compatibility with SailfishOS 3.x<br>" +
+            "- Added more checks to detect broken bookmark config files"
+        ]
+    }
+    ChangelogItem {
         version: "3.1.1"
         date: "2024-08-10"
         paragraphs: [

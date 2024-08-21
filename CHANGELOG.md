@@ -10,6 +10,16 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
  * Nothing so far
 
+## Version 3.2.0 (2024-08-21)
+
+ * Updated translations: Italian, Slovak, Russian, Dutch
+ * Added config file to configure ignored mount points
+ *   - this makes it easy to hide system paths that show up as external devices
+ *   - edit "HOME/.config/harbour-file-browser/ignored-mounts.json" to add custom paths
+ *   - please report any missing paths so they can be added to the default list
+ * Fixed compatibility with SailfishOS 3.x
+ * Added more checks to detect broken bookmark config files
+
 ## Version 3.1.1 (2024-08-10)
 
  * Updated translations: Spanish, Finnish, English, Estonian, Ukrainian, Slovak, Norwegian Bokmål, Swedish, German, Hungarian, Chinese
