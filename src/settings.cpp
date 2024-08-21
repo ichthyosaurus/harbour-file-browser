@@ -36,6 +36,7 @@
 #include <QtQml>
 #include <QTimer>
 #include <QStorageInfo>
+// #include <QtConcurrent>
 
 // The lines below define which icons are used for the standard location
 // bookmarks. Each bookmark must have a unique icon because the icon is
@@ -654,7 +655,8 @@ namespace {
 BookmarksModel::BookmarksModel(QObject *parent) :
     QAbstractListModel(parent),
     m_mountsPollingTimer(new QTimer(this)),
-    m_bookmarksMonitor(new ConfigFileMonitor(this))
+    m_bookmarksMonitor(new ConfigFileMonitor(this)),
+    m_ignoredMountsMonitor(new ConfigFileMonitor(this))
 {
     m_standardLocations = {
         {QStandardPaths::HomeLocation, QStandardPaths::writableLocation(QStandardPaths::HomeLocation)},
@@ -674,27 +676,16 @@ BookmarksModel::BookmarksModel(QObject *parent) :
         m_haveAndroidPath = true;
     }
 
-
-    // NOTE Add only full paths to this list.
-    //      Ignored base paths like /opt/appsupport/ where all mount points are
-    //      to be ignored are listed in BookmarksModel::updateExternalDevices().
-    m_ignoredMounts.insert(qHash(QStringLiteral("/")));
-    m_ignoredMounts.insert(qHash(QStringLiteral("/persist")));
-    m_ignoredMounts.insert(qHash(QStringLiteral("/dsp")));
-    m_ignoredMounts.insert(qHash(QStringLiteral("/odm")));
-    m_ignoredMounts.insert(qHash(QStringLiteral("/opt")));
-    m_ignoredMounts.insert(qHash(QStringLiteral("/home")));
-    m_ignoredMounts.insert(qHash(QStringLiteral("/firmware")));
-    m_ignoredMounts.insert(qHash(QStringLiteral("/bt_firmware")));
-    m_ignoredMounts.insert(qHash(QStringLiteral("/firmware_mnt")));
-    m_ignoredMounts.insert(qHash(QStringLiteral("/metadata")));
-    m_ignoredMounts.insert(qHash(QStringLiteral("/mnt/vendor/persist")));
-
     QString bookmarksFile = RawSettingsHandler::instance()->configDirectory() + "/bookmarks.json";
 
     if (!QFile::exists(bookmarksFile)) {
         QtConcurrent::run([=](){ migrateBookmarks(bookmarksFile); });
     }
+
+    QString ignoredMountsFile = RawSettingsHandler::instance()->configDirectory() + "/ignored-mounts.json";
+    m_ignoredMountsMonitor->reset(ignoredMountsFile);
+    connect(m_ignoredMountsMonitor, &ConfigFileMonitor::configChanged, this, &BookmarksModel::reloadIgnoredMounts);
+    reloadIgnoredMounts(); // must be called after m_ignoredMountsMonitor has a file
 
     m_bookmarksMonitor->reset(bookmarksFile);
     connect(m_bookmarksMonitor, &ConfigFileMonitor::configChanged, this, &BookmarksModel::reload);
@@ -944,24 +935,36 @@ void BookmarksModel::updateExternalDevices()
             &&  i.isReady()
             && !i.isRoot()
             &&  i.fileSystemType() != QStringLiteral("tmpfs")
-
-            // NOTE List only paths below which all mount points are ignore in this list.
-            //      Single ignored mount points are listed in the constructor.
-            && !i.rootPath().startsWith(QStringLiteral("/opt/alien/"))
-            && !i.rootPath().startsWith(QStringLiteral("/apex/"))
-            && !i.rootPath().startsWith(QStringLiteral("/opt/appsupport/"))
-            && !i.rootPath().startsWith(QStringLiteral("/vendor/"))
-            && !i.rootPath().startsWith(QStringLiteral("/home/"))
-            && !i.rootPath().startsWith(QStringLiteral("/dsp/"))
-            && !i.rootPath().startsWith(QStringLiteral("/firmware/"))
-            && !i.rootPath().startsWith(QStringLiteral("/bt_firmware/"))
-            && !i.rootPath().startsWith(QStringLiteral("/firmware_mnt/"))
-            && !i.rootPath().startsWith(QStringLiteral("/persist/"))
         ) {
-            int pathHash = qHash(i.rootPath());
+            const QString rootPath = i.rootPath();
+            int pathHash = qHash(rootPath);
 
             if (!m_ignoredMounts.contains(pathHash)) {
-                activeHashes.insert(pathHash);
+                // TODO use QtConcurrent::filtered to filter mount points
+                //      instead of the outer loop
+                // auto startsWith = [&rootPath](const QString& base) -> bool {
+                //     return rootPath.startsWith(base); };
+                // auto any = [](bool& result, const bool& intermediate) -> void {
+                //     result = result || intermediate; };
+                //
+                // if (QtConcurrent::blockingMappedReduced<bool>(m_ignoredMountBases, startsWith, any)) {
+                //     continue;
+                // }
+
+                bool isIgnored = false;
+                for (const auto& base : m_ignoredMountBases) {
+                    if (rootPath.startsWith(base)) {
+                        // qDebug() << "mount point ignored:" << rootPath << "is below" << base;
+                        isIgnored = true;
+                        break;
+                    }
+                }
+
+                if (isIgnored) {
+                    continue;
+                } else {
+                    activeHashes.insert(pathHash);
+                }
             }
 
             if (m_ignoredMounts.contains(pathHash) || knownMounts.contains(pathHash)) {
@@ -1232,6 +1235,92 @@ void BookmarksModel::reload()
 
     updateExternalDevices();
     m_mountsPollingTimer->start();
+}
+
+void BookmarksModel::reloadIgnoredMounts()
+{
+    if (m_ignoredMountsMonitor->file().isEmpty()) {
+        qWarning() << "bug: reloadIgnoredMounts() called before monitor has file";
+        return;
+    }
+
+    if (!QFile::exists(m_ignoredMountsMonitor->file())) {
+        qDebug() << "mount point ignore list not found at" << m_ignoredMountsMonitor->file()
+                 << "- creating file with default ignore list...";
+
+        // All mount points that exactly match one of these paths are ignored.
+        const static QJsonArray defaultIgnoredFullPaths {
+            {QStringLiteral("/")},
+            {QStringLiteral("/persist")},
+            {QStringLiteral("/dsp")},
+            {QStringLiteral("/odm")},
+            {QStringLiteral("/opt")},
+            {QStringLiteral("/home")},
+            {QStringLiteral("/firmware")},
+            {QStringLiteral("/bt_firmware")},
+            {QStringLiteral("/firmware_mnt")},
+            {QStringLiteral("/metadata")},
+            {QStringLiteral("/mnt/vendor/persist")},
+        };
+
+        // All mount points below these paths are ignored.
+        const static QJsonArray defaultIgnoredBasePaths {
+            {QStringLiteral("/opt/alien/")},
+            {QStringLiteral("/apex/")},
+            {QStringLiteral("/opt/appsupport/")},
+            {QStringLiteral("/vendor/")},
+            {QStringLiteral("/home/")},
+            {QStringLiteral("/dsp/")},
+            {QStringLiteral("/firmware/")},
+            {QStringLiteral("/bt_firmware/")},
+            {QStringLiteral("/firmware_mnt/")},
+            {QStringLiteral("/persist/")},
+        };
+
+        QJsonObject object;
+        object.insert(QStringLiteral("fullPaths"), defaultIgnoredFullPaths);
+        object.insert(QStringLiteral("basePaths"), defaultIgnoredBasePaths);
+        m_ignoredMountsMonitor->writeJson(object, QStringLiteral("1"));
+
+        qDebug() << "saved default ignore list:" << object;
+    }
+
+    const auto value = m_ignoredMountsMonitor->readJson(QStringLiteral("1"));
+
+    if (value.isObject()) {
+        const QJsonObject object = value.toObject();
+
+        const auto fullArray = object.value(QStringLiteral("fullPaths")).toArray();
+        const auto baseArray = object.value(QStringLiteral("basePaths")).toArray();
+
+        qDebug() << "loading mount point ignore list:";
+        qDebug() << "full paths:" << fullArray;
+        qDebug() << "base paths:" << baseArray;
+
+        m_ignoredMounts.clear();
+        m_ignoredMountBases.clear();
+
+        for (const auto& i : fullArray) {
+            m_ignoredMounts.insert(qHash(i.toString(QStringLiteral("/"))));
+        }
+
+        for (const auto& i : baseArray) {
+            if (i.isString()) {
+                QString string = i.toString();
+                string.remove(QRegExp(R"(/+$)"));
+
+                if (string.isEmpty()) {
+                    continue;
+                }
+
+                m_ignoredMountBases.append(i.toString() + QStringLiteral("/"));
+            }
+        }
+
+        m_ignoredMountBases.removeDuplicates();
+    } else {
+        qWarning() << "invalid mount point ignore data in" << m_ignoredMountsMonitor->file() << value;
+    }
 }
 
 void BookmarksModel::save()

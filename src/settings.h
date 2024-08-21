@@ -204,6 +204,7 @@ private slots:
     void updateExternalDevices();
     void updateStandardLocations(const QList<LocationAlternative>& newExternalPaths, const uint& lostPathsCount);
     void reload();
+    void reloadIgnoredMounts();
 
 private:
     void notifyWatchers(const QString& path);
@@ -264,6 +265,7 @@ private:
 
     QTimer* m_mountsPollingTimer {nullptr};
     QSet<int> m_ignoredMounts {};
+    QStringList m_ignoredMountBases {};
 
     bool m_haveAndroidPath {false};
     QMap<QStandardPaths::StandardLocation, QString> m_standardLocations;
@@ -275,6 +277,7 @@ private:
 
     // We monitor the bookmarks file except while saving entries.
     ConfigFileMonitor* m_bookmarksMonitor;
+    ConfigFileMonitor* m_ignoredMountsMonitor;
 
     QMutex m_mutex;
     static QSharedPointer<BookmarksModel> s_globalInstance;
