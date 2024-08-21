@@ -1309,7 +1309,7 @@ void BookmarksModel::reloadIgnoredMounts()
         for (const auto& i : baseArray) {
             if (i.isString()) {
                 QString string = i.toString();
-                string.remove(QRegExp(R"(/+$)"));
+                string.remove(QRegExp(QStringLiteral(R"(/+$)")));
 
                 if (string.isEmpty()) {
                     continue;
