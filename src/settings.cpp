@@ -1252,6 +1252,8 @@ void BookmarksModel::reloadIgnoredMounts()
         const static QJsonArray defaultIgnoredFullPaths {
             {QStringLiteral("/")},
             {QStringLiteral("/persist")},
+            {QStringLiteral("/protect_s")},
+            {QStringLiteral("/protect_f")},
             {QStringLiteral("/dsp")},
             {QStringLiteral("/odm")},
             {QStringLiteral("/opt")},
