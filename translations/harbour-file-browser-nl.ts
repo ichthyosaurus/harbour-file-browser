@@ -6,7 +6,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="54"/>
         <source>A fully-fledged file manager for Sailfish OS.</source>
-        <translation type="unfinished"></translation>
+        <translation>Een geavanceerde bestanden verkenner voor Sailfish OS.</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="90"/>
@@ -61,7 +61,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="125"/>
         <source>Ukrainian</source>
-        <translation type="unfinished"></translation>
+        <translation>Oekraïense</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="133"/>
@@ -111,22 +111,22 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="169"/>
         <source>Estonian</source>
-        <translation type="unfinished"></translation>
+        <translation>Ests</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="173"/>
         <source>Polish</source>
-        <translation type="unfinished"></translation>
+        <translation>Pools</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="177"/>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation>Indonesisch</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="181"/>
         <source>Turkish</source>
-        <translation type="unfinished"></translation>
+        <translation>Turks</translation>
     </message>
 </context>
 <context>
@@ -134,7 +134,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="11"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Neem alstublieft een moment of u iets kan bijdragen aan dit project.</translation>
     </message>
 </context>
 <context>
@@ -142,39 +142,39 @@
     <message>
         <location filename="../src/settings.cpp" line="1004"/>
         <source>Memory card</source>
-        <translation type="unfinished"></translation>
+        <translation>Geheugenkaart</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1006"/>
         <source>Attached folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Bijgevoegde map</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1008"/>
         <source>Remote folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Externe map</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1011"/>
         <source>Removable media</source>
-        <translation type="unfinished"></translation>
+        <translation>Verwisselbaar media</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1098"/>
         <location filename="../src/settings.cpp" line="1465"/>
         <source>Internal storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Interne opslag</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1106"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>“%1” op “%2”</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1380"/>
         <source>Home</source>
-        <translation type="unfinished">Persoonlijke map</translation>
+        <translation>Thuismap</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1161"/>
@@ -224,17 +224,17 @@
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="54"/>
         <source>Apply</source>
         <comment>as in &apos;apply these changes&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Pas toe</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="55"/>
         <source>Rename bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Hernoem bladwijzers</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="89"/>
         <source>Name must not be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Naam mag niet leeg zijn</translation>
     </message>
 </context>
 <context>
@@ -242,12 +242,12 @@
     <message>
         <location filename="../qml/pages/BookmarksSortPage.qml" line="37"/>
         <source>Sort bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorteer bladwijzers</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksSortPage.qml" line="38"/>
         <source>Arrange entries by dragging them to the left.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rangschik items door ze naar links te slepen.</translation>
     </message>
 </context>
 <context>
@@ -255,7 +255,7 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="70"/>
         <source>Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Klembord</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="75"/>
@@ -276,12 +276,12 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="260"/>
         <source>Remove from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Verwijder van klembord</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="252"/>
         <source>Open this folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Open deze map</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
@@ -295,27 +295,27 @@
         <location filename="../qml/pages/ClipboardPage.qml" line="115"/>
         <source>Clear</source>
         <comment>verb as in &apos;clear all contents from the clipboard&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Wis</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="117"/>
         <source>Clipboard cleared</source>
-        <translation type="unfinished"></translation>
+        <translation>Klembord gewist</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="256"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Open de bevattende map</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="274"/>
         <source>Empty</source>
-        <translation type="unfinished">Leeg</translation>
+        <translation>Leeg</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="275"/>
         <source>Cut or copied files will be shown here.</source>
-        <translation type="unfinished"></translation>
+        <translation>Geknipte of gekopieerde bestanden worden hier weergegeven.</translation>
     </message>
 </context>
 <context>
@@ -358,17 +358,17 @@
         <location filename="../qml/pages/ConsolePage.qml" line="75"/>
         <source>Preview</source>
         <comment>as in &apos;incomplete/aggregated preview of the contents of a file&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Voorvertoning</translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="151"/>
         <source>This file appears to be a software package. To install, swipe back and select the “Install” option from the menu.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dit bestand lijkt een software pakket te zijn. Om dit te installeren, sleep terug en selecteer de &quot;Installeer&quot; optie uit het menu.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="153"/>
         <source>Swipe from the right to view raw contents.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sleep van de rechterkant om de rauwe data te bekijken.</translation>
     </message>
 </context>
 <context>
@@ -376,7 +376,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="95"/>
         <source>Root Mode</source>
-        <translation type="unfinished">Root-modus</translation>
+        <translation>Root-modus</translation>
     </message>
 </context>
 <context>
@@ -384,44 +384,44 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="57"/>
         <source>Create</source>
-        <translation type="unfinished">Aanmaken</translation>
+        <translation>Aanmaken</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="73"/>
         <source>Not permitted</source>
-        <translation type="unfinished"></translation>
+        <translation>Niet bevoegd</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="74"/>
         <source>You don&apos;t have permission to change the contents of this directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>U heeft geen rechten om de inhoud van deze map te wijzigen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="87"/>
         <source>Create new</source>
-        <translation type="unfinished"></translation>
+        <translation>Maak nieuwe</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="89"/>
         <source>The new folder will be created under “%1”.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation type="unfinished"></translation>
+        <translation>De nieuwe map wordt gemaakt onder “%1”.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="91"/>
         <source>The new text file will be created under “%1” and can be edited later.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation type="unfinished"></translation>
+        <translation>Het nieuwe tekstbestand wordt gemaakt onder “%1” en kan later nog gewijzigd worden.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="97"/>
         <source>folder</source>
-        <translation type="unfinished">map</translation>
+        <translation>map</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="100"/>
         <source>empty text file</source>
-        <translation type="unfinished"></translation>
+        <translation>Maak tekstbestand leeg</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="112"/>
@@ -431,22 +431,22 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="112"/>
         <source>File name</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandsnaam</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="131"/>
         <source>File names must not contain slashes. To create a new file in a folder below “%1”, first create a folder and then create the file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandsnamen mogen geen slashes bevatten. Om een nieuw bestand te maken in de onderliggende map &quot;%1&quot;, maak eerst een map en daarna het bestand.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="135"/>
         <source>A file or folder with this name already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Een bestand of map met deze naam bestaat al.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="138"/>
         <source>Using slashes in folder names will create sub-folders, like so:</source>
-        <translation type="unfinished"></translation>
+        <translation>Door gebruikt te maken van slashes in de naam van een map, wordt er een submap aangemaakt, zoals dit:</translation>
     </message>
 </context>
 <context>
@@ -465,12 +465,12 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show less</source>
-        <translation type="unfinished"></translation>
+        <translation>Toon minder</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show more</source>
-        <translation type="unfinished"></translation>
+        <translation>Toon meer</translation>
     </message>
 </context>
 <context>
@@ -494,7 +494,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="194"/>
         <source>Create New...</source>
-        <translation type="unfinished"></translation>
+        <translation>Maak nieuwe...</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="225"/>
@@ -525,13 +525,13 @@
         <location filename="../qml/pages/DirectoryPage.qml" line="454"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Geen overeenkomst</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="456"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation type="unfinished">Leeg</translation>
+        <translation>Leeg</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="459"/>
@@ -580,12 +580,12 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="325"/>
         <source>Open target folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Doelmap openen</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="326"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Open onderliggende map</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="338"/>
@@ -692,7 +692,7 @@
     <message>
         <location filename="../src/engine.cpp" line="368"/>
         <source>No permissions to create “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen bevoegdheden om &quot;%1&quot; in &quot;%2&quot; aan te maken</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="379"/>
