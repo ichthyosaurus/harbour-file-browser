@@ -140,80 +140,80 @@
 <context>
     <name>BookmarksModel</name>
     <message>
-        <location filename="../src/settings.cpp" line="1004"/>
+        <location filename="../src/settings.cpp" line="1007"/>
         <source>Memory card</source>
         <translation>Scheda di memoria</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1006"/>
+        <location filename="../src/settings.cpp" line="1009"/>
         <source>Attached folder</source>
         <translation>Cartella attaccata</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1008"/>
+        <location filename="../src/settings.cpp" line="1011"/>
         <source>Remote folder</source>
         <translation>Cartella remota</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1011"/>
+        <location filename="../src/settings.cpp" line="1014"/>
         <source>Removable media</source>
         <translation>Media rimovibile</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1098"/>
-        <location filename="../src/settings.cpp" line="1465"/>
+        <location filename="../src/settings.cpp" line="1101"/>
+        <location filename="../src/settings.cpp" line="1565"/>
         <source>Internal storage</source>
         <translation>Memoria interna</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1106"/>
+        <location filename="../src/settings.cpp" line="1109"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
         <translation>“%1” su “%2”</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1380"/>
+        <location filename="../src/settings.cpp" line="1480"/>
         <source>Home</source>
         <translation>Home</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1161"/>
-        <location filename="../src/settings.cpp" line="1390"/>
+        <location filename="../src/settings.cpp" line="1164"/>
+        <location filename="../src/settings.cpp" line="1490"/>
         <source>Documents</source>
         <translation>Documenti</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1163"/>
-        <location filename="../src/settings.cpp" line="1400"/>
+        <location filename="../src/settings.cpp" line="1166"/>
+        <location filename="../src/settings.cpp" line="1500"/>
         <source>Downloads</source>
         <translation>Scaricamenti</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1169"/>
-        <location filename="../src/settings.cpp" line="1430"/>
+        <location filename="../src/settings.cpp" line="1172"/>
+        <location filename="../src/settings.cpp" line="1530"/>
         <source>Music</source>
         <translation>Musica</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1165"/>
-        <location filename="../src/settings.cpp" line="1410"/>
+        <location filename="../src/settings.cpp" line="1168"/>
+        <location filename="../src/settings.cpp" line="1510"/>
         <source>Pictures</source>
         <translation>Immagini</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1167"/>
-        <location filename="../src/settings.cpp" line="1420"/>
+        <location filename="../src/settings.cpp" line="1170"/>
+        <location filename="../src/settings.cpp" line="1520"/>
         <source>Videos</source>
         <translation>Video</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1440"/>
-        <location filename="../src/settings.cpp" line="1466"/>
+        <location filename="../src/settings.cpp" line="1540"/>
+        <location filename="../src/settings.cpp" line="1566"/>
         <source>Android storage</source>
         <translation>Memoria android</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1450"/>
+        <location filename="../src/settings.cpp" line="1550"/>
         <source>Root</source>
         <translation>Radice</translation>
     </message>

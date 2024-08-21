@@ -140,80 +140,80 @@
 <context>
     <name>BookmarksModel</name>
     <message>
-        <location filename="../src/settings.cpp" line="1004"/>
+        <location filename="../src/settings.cpp" line="1007"/>
         <source>Memory card</source>
         <translation>记忆卡</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1006"/>
+        <location filename="../src/settings.cpp" line="1009"/>
         <source>Attached folder</source>
         <translation>已附加目录</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1008"/>
+        <location filename="../src/settings.cpp" line="1011"/>
         <source>Remote folder</source>
         <translation>远程目录</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1011"/>
+        <location filename="../src/settings.cpp" line="1014"/>
         <source>Removable media</source>
         <translation>可移动媒介</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1098"/>
-        <location filename="../src/settings.cpp" line="1465"/>
+        <location filename="../src/settings.cpp" line="1101"/>
+        <location filename="../src/settings.cpp" line="1565"/>
         <source>Internal storage</source>
         <translation>内部储存空间</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1106"/>
+        <location filename="../src/settings.cpp" line="1109"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
         <translation>在%2里边的%1</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1380"/>
+        <location filename="../src/settings.cpp" line="1480"/>
         <source>Home</source>
         <translation>主目录</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1161"/>
-        <location filename="../src/settings.cpp" line="1390"/>
+        <location filename="../src/settings.cpp" line="1164"/>
+        <location filename="../src/settings.cpp" line="1490"/>
         <source>Documents</source>
         <translation>文档</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1163"/>
-        <location filename="../src/settings.cpp" line="1400"/>
+        <location filename="../src/settings.cpp" line="1166"/>
+        <location filename="../src/settings.cpp" line="1500"/>
         <source>Downloads</source>
         <translation>下载</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1169"/>
-        <location filename="../src/settings.cpp" line="1430"/>
+        <location filename="../src/settings.cpp" line="1172"/>
+        <location filename="../src/settings.cpp" line="1530"/>
         <source>Music</source>
         <translation>音乐</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1165"/>
-        <location filename="../src/settings.cpp" line="1410"/>
+        <location filename="../src/settings.cpp" line="1168"/>
+        <location filename="../src/settings.cpp" line="1510"/>
         <source>Pictures</source>
         <translation>图片</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1167"/>
-        <location filename="../src/settings.cpp" line="1420"/>
+        <location filename="../src/settings.cpp" line="1170"/>
+        <location filename="../src/settings.cpp" line="1520"/>
         <source>Videos</source>
         <translation>视频</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1440"/>
-        <location filename="../src/settings.cpp" line="1466"/>
+        <location filename="../src/settings.cpp" line="1540"/>
+        <location filename="../src/settings.cpp" line="1566"/>
         <source>Android storage</source>
         <translation>Android 存储</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1450"/>
+        <location filename="../src/settings.cpp" line="1550"/>
         <source>Root</source>
         <translation>根目录</translation>
     </message>
