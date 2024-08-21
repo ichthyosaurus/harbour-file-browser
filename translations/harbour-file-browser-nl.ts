@@ -517,55 +517,55 @@
         <translation>Pad kopiëren naar klembord</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="399"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="400"/>
         <source>filtered by: %1</source>
         <translation>gefilterd door: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="461"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="462"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
         <translation>Geen overeenkomst</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="463"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="464"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation>Leeg</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="466"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="467"/>
         <source>No files matched the filter.</source>
         <translation>Geen bestanden kwamen overeen met het filter.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="467"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="468"/>
         <source>This directory contains no files.</source>
         <translation>Deze map bevat geen bestanden.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="547"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="550"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="548"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="551"/>
         <source>Deleting</source>
         <translation>Wordt verwijderd</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="562"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="563"/>
         <source>Internally not ready</source>
         <translation>Intern niet klaar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="562"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="563"/>
         <source>Please simply try again</source>
         <translation>Probeer het nog een keer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="605"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="606"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>Probeer je bestanden te verplaatsen tussen de telefoon en de SD-kaart? Probeer ze te kopiëren als het niet werkt.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="607"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="608"/>
         <source>Perhaps the storage is full?</source>
         <translation>Misschien is de opslag vol?</translation>
     </message>

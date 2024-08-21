@@ -521,55 +521,55 @@
         <translation>Kopírovať cestu do schránky</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="399"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="400"/>
         <source>filtered by: %1</source>
         <translation>filtrované s: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="461"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="462"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
         <translation>Žiadna zhoda</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="463"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="464"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation>Prázdny</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="466"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="467"/>
         <source>No files matched the filter.</source>
         <translation>Žiaden súbor nevyhovuje filtru.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="467"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="468"/>
         <source>This directory contains no files.</source>
         <translation>Tento adresár neobsahuje žiadne súbory.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="547"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="550"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="548"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="551"/>
         <source>Deleting</source>
         <translation>Zmazanie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="562"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="563"/>
         <source>Internally not ready</source>
         <translation>Vnútorne nepripravený</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="562"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="563"/>
         <source>Please simply try again</source>
         <translation>Jednoducho zopakujte</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="605"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="606"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>Pokúšate sa presúvať medzi telefónom a SD kartou? Nefunguje to, skúste kopírovať.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="607"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="608"/>
         <source>Perhaps the storage is full?</source>
         <translation>Úložisko je možno plné?</translation>
     </message>

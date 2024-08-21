@@ -521,55 +521,55 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="399"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="400"/>
         <source>filtered by: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="461"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="462"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="463"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="464"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="466"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="467"/>
         <source>No files matched the filter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="467"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="468"/>
         <source>This directory contains no files.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="547"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="550"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="548"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="551"/>
         <source>Deleting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="562"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="563"/>
         <source>Internally not ready</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="562"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="563"/>
         <source>Please simply try again</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="605"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="606"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="607"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="608"/>
         <source>Perhaps the storage is full?</source>
         <translation type="unfinished"></translation>
     </message>

@@ -517,55 +517,55 @@
         <translation>Kopeeri otsitee lõikelauale</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="399"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="400"/>
         <source>filtered by: %1</source>
         <translation>filtreeritud %1 alusel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="461"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="462"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
         <translation>Vasteid pole</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="463"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="464"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation>Tühi kaust</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="466"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="467"/>
         <source>No files matched the filter.</source>
         <translation>Ükski fail ei vasta filtrile.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="467"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="468"/>
         <source>This directory contains no files.</source>
         <translation>Selles kaustas pole faile.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="547"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="550"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="548"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="551"/>
         <source>Deleting</source>
         <translation>Kustutan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="562"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="563"/>
         <source>Internally not ready</source>
         <translation>Rakendus pole sisemiselt valmis</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="562"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="563"/>
         <source>Please simply try again</source>
         <translation>Lihtsalt palun proovi uuesti</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="605"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="606"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>Kas sa üritad tõsta andmeid telefoni mälu ja SD-kaardi vahel? Nii see ei toimi, proovi kopeerimist.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="607"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="608"/>
         <source>Perhaps the storage is full?</source>
         <translation>Võib-olla andmekandja on triiki täis?</translation>
     </message>

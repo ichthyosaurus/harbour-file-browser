@@ -497,20 +497,20 @@
         <translation>复制路径到剪切板</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="461"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="462"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
         <translation>没有匹配的项目</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="463"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="464"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation type="unfinished">空</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="547"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="550"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="548"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="551"/>
         <source>Deleting</source>
         <translation>删除</translation>
     </message>
@@ -531,37 +531,37 @@
         <translation>筛选目录内容</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="399"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="400"/>
         <source>filtered by: %1</source>
         <translation>筛选方式: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="466"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="467"/>
         <source>No files matched the filter.</source>
         <translation>没有匹配筛选的文件。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="467"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="468"/>
         <source>This directory contains no files.</source>
         <translation>该目录内没有文件。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="562"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="563"/>
         <source>Internally not ready</source>
         <translation>内部未就绪</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="562"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="563"/>
         <source>Please simply try again</source>
         <translation>请重试</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="605"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="606"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>想要在手机存储和SD卡之间移动文件？请尝试复制。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="607"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="608"/>
         <source>Perhaps the storage is full?</source>
         <translation>或许存储已满？</translation>
     </message>
