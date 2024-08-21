@@ -1315,7 +1315,7 @@ void BookmarksModel::reloadIgnoredMounts()
                     continue;
                 }
 
-                m_ignoredMountBases.append(i.toString() + QStringLiteral("/"));
+                m_ignoredMountBases.append(string + QStringLiteral("/"));
             }
         }
 
