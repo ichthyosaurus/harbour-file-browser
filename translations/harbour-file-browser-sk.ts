@@ -163,13 +163,13 @@
         <location filename="../src/settings.cpp" line="1098"/>
         <location filename="../src/settings.cpp" line="1465"/>
         <source>Internal storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Vlastný ukladací priestor</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1106"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>“%1” v “%2”</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1380"/>
@@ -1547,12 +1547,12 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="289"/>
         <source>Share clipboard among windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Poskytnúť schránku medzi oknami</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="291"/>
         <source>Share the list of files currently in the clipboard among all open File Browser windows. When this is enabled, you can cut files in one window and paste them in another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Poskytnúť zoznam súborov v schránke medzi všetkými otvorenými oknami prehliadača súborov. Keď je toto povolené, môžete vystrihnúť súbory v jednom okne a prilepiť ich do druhého.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="297"/>
