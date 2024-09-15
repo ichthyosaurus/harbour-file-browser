@@ -441,7 +441,7 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="135"/>
         <source>A file or folder with this name already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>En fil eller mappe med dette navnet finnes allerede.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="138"/>
@@ -697,12 +697,12 @@
     <message>
         <location filename="../src/engine.cpp" line="368"/>
         <source>No permissions to create “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Mangler tilgang til å opprette «%1» i «%2»</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="379"/>
         <source>Cannot create file “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan ikke opprette filen «%1» i «%2»</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="415"/>
@@ -712,12 +712,12 @@
     <message>
         <location filename="../src/engine.cpp" line="432"/>
         <source>Source “%1” is not a symbolic link</source>
-        <translation type="unfinished"></translation>
+        <translation>Kilden «%1» er ikke en symbolsk lenke</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="441"/>
         <source>No permissions to change contents of “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Mangler tilgang til å endre innholdet av «%1»</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="449"/>
