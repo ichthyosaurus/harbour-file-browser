@@ -458,9 +458,9 @@
         <location filename="../qml/components/DetailList.qml" line="45"/>
         <source>... and %n more</source>
         <translation>
-            <numerusform>... %n и больше</numerusform>
-            <numerusform>... %n и больше</numerusform>
-            <numerusform>... %n и больше</numerusform>
+            <numerusform>... %n и более</numerusform>
+            <numerusform>... %n и более</numerusform>
+            <numerusform>... %n и более</numerusform>
         </translation>
     </message>
 </context>
@@ -2252,7 +2252,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="111"/>
         <source>Translations</source>
-        <translation>Перевод</translation>
+        <translation>Переводы</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="114"/>
@@ -2522,7 +2522,7 @@ exposure program</extracomment>
     <message>
         <location filename="../src/globals.cpp" line="124"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
-        <translation>dd MMM yyyy, hh:mm:ss t</translation>
+        <translation>дд МММ гггг, чч:мм:сс</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="126"/>

@@ -722,17 +722,17 @@
     <message>
         <location filename="../src/engine.cpp" line="449"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
-        <translation>Failed to remove old link “%1” pointing to “%2”</translation>
+        <translation>Could not remove the old link “%1” pointing to “%2”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="455"/>
         <source>Failed to revert link “%1” pointing to “%2” after failing to change target to “%3”</source>
-        <translation>Failed to revert link “%1” pointing to “%2” after failing to change target to “%3”</translation>
+        <translation>Could not revert the link “%1” pointing to “%2” after failing to change target to “%3”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="462"/>
         <source>Failed to change link target of “%1” to “%2”</source>
-        <translation>Failed to change link target of “%1” to “%2”</translation>
+        <translation>Could not change the link target of “%1” to “%2”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="488"/>
