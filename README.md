@@ -10,7 +10,7 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 # File Browser for Sailfish OS
 
 [![Liberapay donations](https://img.shields.io/liberapay/receives/ichthyosaurus)](https://liberapay.com/ichthyosaurus)
-[![Translations](https://hosted.weblate.org/widgets/harbour-file-browser/-/main-translations/svg-badge.svg)](https://hosted.weblate.org/projects/harbour-file-browser/main-translations/)
+[![Translations](https://hosted.weblate.org/widgets/harbour-file-browser/-/translations/svg-badge.svg)](https://hosted.weblate.org/projects/harbour-file-browser/translations/)
 [![Source code license](https://img.shields.io/badge/source_code-GPL--3.0--or--later-yellowdarkgreen)](https://github.com/ichthyosaurus/harbour-file-browser/tree/main/LICENSES)
 [![REUSE status](https://api.reuse.software/badge/github.com/ichthyosaurus/harbour-file-browser)](https://api.reuse.software/info/github.com/ichthyosaurus/harbour-file-browser)
 [![Development status](https://img.shields.io/badge/development-active-blue)](https://github.com/ichthyosaurus/harbour-file-browser)
@@ -105,7 +105,7 @@ if you have any questions or ideas.
 It would be wonderful if the app could be translated in as many languages as possible!
 
 Translations are managed using
-[Weblate](https://hosted.weblate.org/projects/harbour-file-browser/main-translations).
+[Weblate](https://hosted.weblate.org/projects/harbour-file-browser/translations).
 Please prefer this over pull request (which are still welcome, of course).
 If you just found a minor problem, you can also
 [leave a comment in the forum](https://forum.sailfishos.org/t/file-browser-support-and-feedback-thread/4566)

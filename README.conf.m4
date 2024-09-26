@@ -27,7 +27,7 @@ dnl/// [WEBLATE PROJECT](optional): set to __slug for most apps
 define(${__weblate_project}, __slug)
 
 dnl/// [WEBLATE COMPONENT](required if using Weblate): ignored if Weblate is disabled
-define(${__weblate_component}, ${main-translations})
+define(${__weblate_component}, ${translations})
 
 dnl/// [SUBMODULES](optional): set to "true" to enable docs for cloning with submodules
 define(${__have_submodules}, ${true})
