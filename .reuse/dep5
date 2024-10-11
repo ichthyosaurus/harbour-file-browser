@@ -56,3 +56,7 @@ Files: dist/ambience.jpg
 Copyright: Benjamin Jameson
 License: LicenseRef-Unsplash
 Comment: https://unsplash.com/de/fotos/Hh80UNMc5QQ
+
+Files: TRANSLATORS.json
+Copyright: translations contributors
+License: GPL-3.0-or-later
