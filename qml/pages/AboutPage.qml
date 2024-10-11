@@ -53,12 +53,9 @@ A.AboutPageBase {
 
     description: qsTr("A fully-fledged file manager for Sailfish OS.")
     mainAttributions: ["2019-2024 Mirian Margiani", "2013-2019 karip"]
+    autoAddOpalAttributions: true
 
     attributions: [
-        OpalAboutAttribution {},
-        OpalInfoComboAttribution {},
-        OpalComboDataAttribution {},
-        OpalSupportMeAttribution {},
         A.Attribution {
             name: "JHead (2.97)"
             entries: ["Matthias Wandel", /*qsTr*/("2014 adapted by karip"), /*qsTr*/("2021 adapted by ichthyosaurus")]
