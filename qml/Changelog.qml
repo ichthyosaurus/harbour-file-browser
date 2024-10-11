@@ -9,6 +9,17 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: "3.2.2"
+        date: "2024-10-11"
+        paragraphs: [
+            "- Updated translations: English, Russian, Polish, and more<br>" +
+            "- Fixed contribution links to Weblate (for contributing translations)<br>" +
+            "- Fixed moving bookmarks so they cannot end up in invalid places<br>" +
+            "- Implemented moving/ordering bookmarks via drag and drop using Opal.DragDrop<br>" +
+            "- Updated list of translations contributors (now generated from Weblate)"
+        ]
+    }
+    ChangelogItem {
         version: "3.2.1"
         date: "2024-08-21"
         paragraphs: [

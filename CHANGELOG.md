@@ -10,6 +10,14 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
  * Nothing so far
 
+## Version 3.2.2 (2024-10-11)
+
+ * Updated translations: English, Russian, Polish, and more
+ * Fixed contribution links to Weblate (for contributing translations)
+ * Fixed moving bookmarks so they cannot end up in invalid places
+ * Implemented moving/ordering bookmarks via drag and drop using Opal.DragDrop
+ * Updated list of translations contributors (now generated from Weblate)
+
 ## Version 3.2.1 (2024-08-21)
 
  * Fixed ignoring mount points below base paths using the new config file
