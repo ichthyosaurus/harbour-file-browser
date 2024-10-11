@@ -1,0 +1,4 @@
+module Opal.DragDrop.private
+# This file is part of Opal.DragDrop.
+# SPDX-FileCopyrightText: 2023-2024 Mirian Margiani
+# SPDX-License-Identifier: GPL-3.0-or-later

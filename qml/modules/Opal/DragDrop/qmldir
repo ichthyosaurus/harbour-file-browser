@@ -1,0 +1,7 @@
+module Opal.DragDrop
+# This file is part of Opal.DragDrop.
+# SPDX-FileCopyrightText: 2023-2024 Mirian Margiani
+# SPDX-License-Identifier: GPL-3.0-or-later
+ViewDragHandler 1.0 ViewDragHandler.qml
+DelegateDragHandler 1.0 DelegateDragHandler.qml
+DragHandle 1.0 DragHandle.qml

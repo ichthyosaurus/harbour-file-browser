@@ -4,16 +4,18 @@
 //@ SPDX-License-Identifier: GPL-3.0-or-later
 import QtQuick 2.2
 import Sailfish.Silica 1.0
-import"functions.js"as Func
 import".."
-Page{property list<ContributionSection>sections
+Page{id:root
+property list<ContributionSection>sections
 property list<Attribution>attributions
 property var mainAttributions:[]
 property string appName
 property bool allowDownloadingLicenses:false
-property list<Attribution>_defaultAttributions
+property bool autoAddOpalAttributions:false
 allowedOrientations:Orientation.All
-SilicaFlickable{anchors.fill:parent
+OpalAttributionsLoader{id:opalAttributions
+enabled:autoAddOpalAttributions
+}SilicaFlickable{anchors.fill:parent
 contentHeight:column.height+2*Theme.paddingLarge
 VerticalScrollDecorator{}Column{id:column
 width:parent.width
@@ -35,26 +37,7 @@ values:modelData.__effectiveEntries
 }}}}Column{width:parent.width
 spacing:column.spacing
 SectionHeader{text:qsTranslate("Opal.About","Acknowledgements")
-visible:attributions.length>0
-}Repeater{model:[attributions,_defaultAttributions]
-delegate:Repeater{model:modelData
-delegate:DetailList{property string spdxString:modelData._getSpdxString(" • • •")
-property bool showLicensePage:false
-activeLastValue:spdxString!==""||modelData.sources!==""||modelData.homepage!==""||modelData.description!==""
-label:(modelData.__effectiveEntries.length===0&&spdxString==="")?qsTranslate("Opal.About","Thank you!"):modelData.name
-values:{var vals=Func.makeStringListConcat(modelData.__effectiveEntries,spdxString,false)
-if(vals.length===0){vals=[modelData.name]
-}if(spdxString===""){var append=""
-if(modelData.description!==""||(modelData.sources!==""&&modelData.homepage!=="")){append=qsTranslate("Opal.About","Details")
-if(modelData.description!==""){showLicensePage=true
-}}else if(modelData.sources!==""){append=qsTranslate("Opal.About","Source Code")
-}else if(modelData.homepage!==""){append=qsTranslate("Opal.About","Homepage")
-}if(append!==""){vals.push(append+"  • • •")
-}}else{showLicensePage=true
-}return vals
-}onClicked:{if(showLicensePage){pageStack.animatorPush("LicensePage.qml",{"mainAttribution":modelData,"attributions":[],"allowDownloadingLicenses":allowDownloadingLicenses,"enableSourceHint":true})
-}else{var pages=[]
-if(modelData.homepage!=="")pages.push({"page":Qt.resolvedUrl("ExternalUrlPage.qml"),"properties":{"externalUrl":modelData.homepage,"title":qsTranslate("Opal.About","Homepage")}})
-if(modelData.sources!=="")pages.push({"page":Qt.resolvedUrl("ExternalUrlPage.qml"),"properties":{"externalUrl":modelData.sources,"title":qsTranslate("Opal.About","Source Code")}})
-pageStack.push(pages)
-}}}}}}}}}
+visible:attributions.length>0||opalAttributions.loadedAttributions.length>0
+}ContributorsAttributionRepeater{model:attributions
+}ContributorsAttributionRepeater{model:opalAttributions.loadedAttributions
+}}}}}

@@ -1,0 +1,14 @@
+module Opal.Delegates
+# This file is part of Opal.Delegates.
+# SPDX-FileCopyrightText: 2023 Peter G. (nephros)
+# SPDX-FileCopyrightText: 2024 Mirian Margiani
+# SPDX-License-Identifier: GPL-3.0-or-later
+PaddedDelegate 1.0 PaddedDelegate.qml
+OptionalLabel 1.0 OptionalLabel.qml
+DelegateColumn 1.0 DelegateColumn.qml
+OneLineDelegate 1.0 OneLineDelegate.qml
+TwoLineDelegate 1.0 TwoLineDelegate.qml
+ThreeLineDelegate 1.0 ThreeLineDelegate.qml
+DelegateIconItem 1.0 DelegateIconItem.qml
+DelegateInfoItem 1.0 DelegateInfoItem.qml
+DelegateIconButton 1.0 DelegateIconButton.qml

@@ -27,7 +27,8 @@ console.warn("[Opal.About] note that these properties are also required "+"for S
 console.warn("[Opal.About] see: https://github.com/sailfishos/"+"sailjail-permissions#desktop-file-changes")
 }}on__ReadyChanged:{if(__ready<2||itemsLoader.effectiveItems.length===0||__filteredItems.length>0)return
 if(!!__lastVersion){var loadedItems=[]
-for(var i in itemsLoader.effectiveItems){var v=itemsLoader.effectiveItems[i].version
+for(var i in itemsLoader.effectiveItems){if(itemsLoader.effectiveItems[i]===null){continue
+}var v=itemsLoader.effectiveItems[i].version
 if(v===__lastVersion){break
 }console.log("[Opal.About] showing changelog for:",v)
 loadedItems.push(itemsLoader.effectiveItems[i])

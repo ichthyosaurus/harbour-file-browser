@@ -9,9 +9,9 @@
 #       to the "attributions" list property of the “About” page.
 
 module: Opal.InfoCombo (opal-infocombo)
-version: 2.2.0 (git:ae42aa3)
+version: 2.2.1 (git:d8636c5)
 description: This module provides a combo box that can show details for each selectable option.
-maintainers: ichthyosaurus
+maintainers: Mirian Margiani
 attribution: 2023-2024 Mirian Margiani
 license: GPL-3.0-or-later
 sources: https://github.com/Pretty-SFOS/opal-infocombo

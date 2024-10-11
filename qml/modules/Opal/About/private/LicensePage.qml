@@ -15,10 +15,13 @@ property list<License>licenses
 property string appName
 property string mainSources
 property string mainHomepage
-allowedOrientations:Orientation.All
+property bool includeOpal:false
 function _downloadLicenses(){for(var lic in mainAttribution.licenses){mainAttribution.licenses[lic].__online=true
 }for(var attr in attributions){for(var lic in attributions[attr].licenses){attributions[attr].licenses[lic].__online=true
-}}}SilicaFlickable{anchors.fill:parent
+}}}allowedOrientations:Orientation.All
+OpalAttributionsLoader{id:opalAttributions
+enabled:includeOpal
+}SilicaFlickable{anchors.fill:parent
 contentHeight:column.height+Theme.horizontalPageMargin
 VerticalScrollDecorator{}PullDownMenu{visible:allowDownloadingLicenses
 enabled:visible
@@ -28,7 +31,7 @@ onClicked:_downloadLicenses()
 width:parent.width
 spacing:Theme.paddingMedium
 PageHeader{id:pageHeader
-title:root.mainAttribution.licenses.length+attributions.length===0?qsTranslate("Opal.About","Details"):qsTranslate("Opal.About","License(s)","",root.mainAttribution.licenses.length+attributions.length)
+title:(!includeOpal&&root.mainAttribution.licenses.length+attributions.length===0)?qsTranslate("Opal.About","Details"):qsTranslate("Opal.About","License(s)","",root.mainAttribution.licenses.length+attributions.length)
 description:mainAttribution.name
 }Label{visible:enableSourceHint
 width:parent.width-2*Theme.horizontalPageMargin
@@ -48,13 +51,9 @@ description:root.mainAttribution.description
 initiallyExpanded:root.mainAttribution.licenses.length===1&&root.attributions.length===0
 homepage:root.mainAttribution.homepage
 sources:root.mainAttribution.sources
-}Repeater{model:attributions
-delegate:LicenseListPart{title:modelData.name
-headerVisible:title!==""&&pageDescription!==title
-licenses:modelData.licenses
-extraTexts:modelData.__effectiveEntries
-description:modelData.description
-initiallyExpanded:root.licenses.length===0&&root.attributions.length===1&&root.attributions[0].licenses.length===1
-homepage:modelData.homepage
-sources:modelData.sources
-}}}}}
+}LicenseListRepeater{model:attributions
+mainModule:root.pageDescription
+initiallyExpanded:root.licenses.length===0&&root.attributions.length===1&&root.attributions[0].licenses.length===1&&!root.includeOpal
+}LicenseListRepeater{model:opalAttributions.loadedAttributions
+initiallyExpanded:false
+}}}}

@@ -24,6 +24,7 @@ property url changelogList
 property list<License>licenses
 property bool allowDownloadingLicenses:false
 property list<Attribution>attributions
+property bool autoAddOpalAttributions:false
 readonly property DonationsGroup donations:DonationsGroup{}
 property list<InfoSection>extraSections
 property list<ContributionSection>contributionSections
@@ -80,7 +81,7 @@ color:Theme.highlightColor
 font.pixelSize:Theme.fontSizeLarge
 horizontalAlignment:Text.AlignHCenter
 }Label{width:parent.width
-visible:String(appVersion!=="")
+visible:String(appVersion)!==""
 text:qsTranslate("Opal.About","Version %1").arg(Func.formatAppVersion(appVersion,appRelease,appReleaseType))
 wrapMode:Text.Wrap
 color:Theme.secondaryHighlightColor
@@ -98,10 +99,10 @@ palette.primaryColor:Theme.highlightColor
 }InfoSection{id:_develInfo
 width:parent.width
 title:qsTranslate("Opal.About","Development")
-enabled:contributionSections.length>0||attributions.length>0
+enabled:autoAddOpalAttributions||contributionSections.length>0||attributions.length>0
 text:__effectiveMainAttribs.join(", ")
 showMoreLabel:qsTranslate("Opal.About","show contributors")
-onClicked:{pageStack.animatorPush("private/ContributorsPage.qml",{"appName":appName,"sections":contributionSections,"attributions":attributions,"mainAttributions":__effectiveMainAttribs,"allowDownloadingLicenses":allowDownloadingLicenses})
+onClicked:{pageStack.animatorPush("private/ContributorsPage.qml",{"appName":appName,"sections":contributionSections,"attributions":attributions,"mainAttributions":__effectiveMainAttribs,"allowDownloadingLicenses":allowDownloadingLicenses,"autoAddOpalAttributions":autoAddOpalAttributions})
 }buttons:[InfoButton{text:qsTranslate("Opal.About","Homepage")
 onClicked:openOrCopyUrl(homepageUrl,text)
 enabled:homepageUrl!==""
@@ -128,7 +129,7 @@ __donationButtons:donations.services
 width:parent.width
 title:qsTranslate("Opal.About","License")
 enabled:licenses.length>0
-onClicked:pageStack.animatorPush("private/LicensePage.qml",{"mainAttribution":_effectiveSelfAttribution,"attributions":attributions,"allowDownloadingLicenses":allowDownloadingLicenses,"enableSourceHint":true})
+onClicked:pageStack.animatorPush("private/LicensePage.qml",{"mainAttribution":_effectiveSelfAttribution,"attributions":attributions,"allowDownloadingLicenses":allowDownloadingLicenses,"enableSourceHint":true,"includeOpal":autoAddOpalAttributions})
 text:enabled===false?"This component has been improperly configured. Please report this bug.":((licenses[0].name!==""&&licenses[0].error!==true)?licenses[0].name:licenses[0].spdxId)
 smallPrint:licenses[0].customShortText
 showMoreLabel:qsTranslate("Opal.About","show license(s)","",licenses.length+attributions.length)
@@ -137,5 +138,5 @@ Behavior on height{SmoothedAnimation{duration:80
 }}}Item{id:bottomVerticalSpacing
 width:parent.width
 height:Theme.paddingMedium
-}}}Component.onCompleted:{if(__silica_applicationwindow_instance&&__silica_applicationwindow_instance._defaultPageOrientations){__silica_applicationwindow_instance._defaultPageOrientations=Orientation.All
+}}}Component.onCompleted:{if(__silica_applicationwindow_instance&&__silica_applicationwindow_instance.hasOwnProperty("_defaultPageOrientations")){__silica_applicationwindow_instance._defaultPageOrientations=Orientation.All
 }}}
