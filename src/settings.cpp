@@ -1451,8 +1451,26 @@ int BookmarksModel::findUserDefinedIndex(QString path)
 
 void BookmarksModel::move(int fromIndex, int toIndex, bool saveImmediately)
 {
+    // Note: only user defined bookmarks can be moved.
+
     if (fromIndex < 0 || fromIndex > rowCount() || fromIndex == toIndex
-            || fromIndex < m_firstUserDefinedIndex || toIndex > m_lastUserDefinedIndex) {
+            || fromIndex < m_firstUserDefinedIndex || fromIndex > m_lastUserDefinedIndex) {
+        qDebug() << "cannot move bookmark at non-user-defined index" << fromIndex << "to" << toIndex;
+        return;
+    }
+
+    if (toIndex < m_firstUserDefinedIndex) {
+        qDebug() << "cannot move bookmark above" << m_firstUserDefinedIndex
+                 << "- requested" << toIndex << "but granting" << m_firstUserDefinedIndex;
+        toIndex = m_firstUserDefinedIndex;
+    } else if (toIndex > m_lastUserDefinedIndex) {
+        qDebug() << "cannot move bookmark below" << m_lastUserDefinedIndex
+                 << "- requested" << toIndex << "but granting" << m_lastUserDefinedIndex;
+        toIndex = m_lastUserDefinedIndex;
+    }
+
+    if (toIndex == fromIndex) {
+        qDebug() << "not moving bookmark: already at first/last legal index" << fromIndex;
         return;
     }
 
