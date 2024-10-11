@@ -76,12 +76,6 @@ A.AboutPageBase {
             entries: ["2021 Lukáš Karas"]
             licenses: A.License { spdxId: "GPL-2.0-or-later" }
             sources: "https://github.com/Karry/osmscout-sailfish/blob/35c12584e7016fc3651b36ef7c2b6a0898fd4ce1/src/Migration.cpp"
-        },
-        A.Attribution {
-            name: "PatchManager List View"
-            entries: ["2018 Coderus"]
-            licenses: A.License { spdxId: "BSD-3-Clause" }
-            sources: "https://github.com/sailfishos-patches/patchmanager"
         }
     ]
 
