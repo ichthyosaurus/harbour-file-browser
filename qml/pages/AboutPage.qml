@@ -93,90 +93,189 @@ A.AboutPageBase {
                 }
             ]
         },
+        //>>> GENERATED LIST OF TRANSLATION CREDITS
         A.ContributionSection {
             title: qsTr("Translations")
             groups: [
                 A.ContributionGroup {
-                    title: qsTr("English")
-                    entries: ["karip", "Mirian Margiani"]
-                },
-                A.ContributionGroup {
-                    title: qsTr("German")
-                    entries: ["jklingen", "karip", "Mirian Margiani"]
-                },
-                A.ContributionGroup {
-                    title: qsTr("Finnish")
-                    entries: ["karip", "Tathhu", "Jyri-Petteri Paloposki"]
-                },
-                A.ContributionGroup {
-                    title: qsTr("Chinese")
-                    entries: ["Tyler Temp", "dashinfantry", "玉堂白鹤", "joe (ourmicroid)", "yangyangdaji"]
-                },
-                A.ContributionGroup {
                     title: qsTr("Ukrainian")
-                    entries: ["Tymofii Lytvynenko", "mihajlo0743", "Artem"]
-                },
-                A.ContributionGroup {
-                    title: qsTr("Swedish")
-                    entries: ["Åke Engelbrektson"]
-                },
-                A.ContributionGroup {
-                    title: qsTr("Italian")
-                    entries: ["Tichy"]
-                },
-                A.ContributionGroup {
-                    title: qsTr("Spanish")
-                    entries: ["Carmen F. B.", "Lucas Peinado"]
-                },
-                A.ContributionGroup {
-                    title: qsTr("French")
-                    entries: ["Quent-in (Quentí)", "karip", "J. Lavoie", "K. Herbert", "Maxime Leroy"]
-                },
-                A.ContributionGroup {
-                    title: qsTr("Dutch")
-                    entries: ["Nathan Follens"]
-                },
-                A.ContributionGroup {
-                    title: qsTr("Greek")
-                    entries: ["Dimitrios Glentadakis"]
-                },
-                A.ContributionGroup {
-                    title: qsTr("Norwegian")
-                    entries: ["Bokmål: Allan Nordhøy"]
-                },
-                A.ContributionGroup {
-                    title: qsTr("Czech")
-                    entries: ["Malakay X"]
-                },
-                A.ContributionGroup {
-                    title: qsTr("Slovak")
-                    entries: ["Ladislav Hodas"]
-                },
-                A.ContributionGroup {
-                    title: qsTr("Hungarian")
-                    entries: ["Sz. G", "f3rr31"]
-                },
-                A.ContributionGroup {
-                    title: qsTr("Estonian")
-                    entries: ["Priit Jõerüüt"]
-                },
-                A.ContributionGroup {
-                    title: qsTr("Polish")
-                    entries: ["Patryk Szkudlarek"]
-                },
-                A.ContributionGroup {
-                    title: qsTr("Indonesian")
-                    entries: ["liimee", "Reza Almanda", "Jacque Fresco"]
+                    entries: [
+                        "Artem",
+                        "Bohdan Kolesnyk",
+                        "Dan",
+                        "Tymofii Lytvynenko",
+                        "mihajlo0743"
+                    ]
                 },
                 A.ContributionGroup {
                     title: qsTr("Turkish")
-                    entries: ["ToldYouThat", "Oğuz Ersen", "E-Akcaer"]
+                    entries: [
+                        "E-Akcaer",
+                        "Oğuz Ersen",
+                        "ToldYouThat",
+                        "İbrahim Dinç"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Swedish")
+                    entries: [
+                        "Allan Nordhøy",
+                        "Luna Jernberg",
+                        "bittin1ddc447d824349b2",
+                        "Åke Engelbrektson"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Spanish")
+                    entries: [
+                        "Carmen F. B.",
+                        "Lucas Peinado",
+                        "gallegonovato",
+                        "lucasengithub"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Slovak")
+                    entries: [
+                        "Ladislav Hodas"
+                    ]
                 },
                 A.ContributionGroup {
                     title: qsTr("Russian")
-                    entries: ["Petr Tsymbarovich", "Evgeniy Khramov"]
+                    entries: [
+                        "Evgeniy Khramov",
+                        "Lilia Savciuc",
+                        "Mika",
+                        "Petr Tsymbarovich",
+                        "sandworm88"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Romanian")
+                    entries: [
+                        "Florin Voicu"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Polish")
+                    entries: [
+                        "Eryk Michalak",
+                        "Patryk Szkudlarek",
+                        "neloduka-sobe",
+                        "senza"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Norwegian Bokmål")
+                    entries: [
+                        "Allan Nordhøy",
+                        "Mirian Margiani"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Italian")
+                    entries: [
+                        "Mirian Margiani",
+                        "Tichy",
+                        "luca rastelli"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Indonesian")
+                    entries: [
+                        "Jacque Fresco",
+                        "Reza Almanda",
+                        "liimee"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Hungarian")
+                    entries: [
+                        "Sz. G.",
+                        "f3rr31"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Greek")
+                    entries: [
+                        "Dimitrios Glentadakis"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("German")
+                    entries: [
+                        "Mirian Margiani",
+                        "jklingen",
+                        "karip"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("French")
+                    entries: [
+                        "J. Lavoie",
+                        "K. Herbert",
+                        "Maxime Leroy",
+                        "Mirian Margiani",
+                        "Quent-in (Quentí)",
+                        "karip"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Finnish")
+                    entries: [
+                        "Jyri-Petteri Paloposki",
+                        "Tathhu",
+                        "karip",
+                        "unnerving duck"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Estonian")
+                    entries: [
+                        "Priit Jõerüüt"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("English")
+                    entries: [
+                        "Allan Nordhøy",
+                        "Mirian Margiani",
+                        "karip"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Dutch (Belgium)")
+                    entries: [
+                        "Nathan Follens"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Dutch")
+                    entries: [
+                        "Nathan Follens",
+                        "Pieter Bikkel"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Czech")
+                    entries: [
+                        "Malakay X"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Chinese")
+                    entries: [
+                        "Jason Cai",
+                        "Tyler Temp",
+                        "dashinfantry",
+                        "joe (ourmicroid)",
+                        "yangyangdaji",
+                        "复予",
+                        "玉堂白鹤"
+                    ]
                 }
             ]
         }
+        //<<< GENERATED LIST OF TRANSLATION CREDITS
     ]
 }
