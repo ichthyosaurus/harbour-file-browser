@@ -9,122 +9,132 @@
         <translation>Plnohodnotný správca súborov pre Sailfish OS.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="90"/>
+        <location filename="../qml/pages/AboutPage.qml" line="81"/>
         <source>Development</source>
         <translation>Vývoj</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="93"/>
+        <location filename="../qml/pages/AboutPage.qml" line="84"/>
         <source>Programming</source>
         <translation>Programovanie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="100"/>
+        <location filename="../qml/pages/AboutPage.qml" line="91"/>
         <source>Icon Design</source>
         <translation>Návrh ikon</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="106"/>
+        <location filename="../qml/pages/AboutPage.qml" line="98"/>
         <source>Translations</source>
         <translation>Preklady</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="109"/>
+        <location filename="../qml/pages/AboutPage.qml" line="154"/>
+        <source>Romanian</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="169"/>
+        <source>Norwegian Bokmål</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="238"/>
         <source>English</source>
         <translation>Angličtina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="113"/>
+        <location filename="../qml/pages/AboutPage.qml" line="204"/>
         <source>German</source>
         <translation>Nemčina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="117"/>
+        <location filename="../qml/pages/AboutPage.qml" line="223"/>
         <source>Finnish</source>
         <translation>Fínčina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="121"/>
+        <location filename="../qml/pages/AboutPage.qml" line="246"/>
+        <source>Dutch (Belgium)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="265"/>
         <source>Chinese</source>
         <translation>Čínština</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="185"/>
+        <location filename="../qml/pages/AboutPage.qml" line="144"/>
         <source>Russian</source>
         <translation>Ruština</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="129"/>
+        <location filename="../qml/pages/AboutPage.qml" line="120"/>
         <source>Swedish</source>
         <translation>Švédčina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="125"/>
+        <location filename="../qml/pages/AboutPage.qml" line="101"/>
         <source>Ukrainian</source>
         <translation>Ukrajinčina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="133"/>
+        <location filename="../qml/pages/AboutPage.qml" line="176"/>
         <source>Italian</source>
         <translation>Taliančina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="137"/>
+        <location filename="../qml/pages/AboutPage.qml" line="129"/>
         <source>Spanish</source>
         <translation>Španielčina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="141"/>
+        <location filename="../qml/pages/AboutPage.qml" line="212"/>
         <source>French</source>
         <translation>Francúzština</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="145"/>
+        <location filename="../qml/pages/AboutPage.qml" line="252"/>
         <source>Dutch</source>
         <translation>Holandčina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="149"/>
+        <location filename="../qml/pages/AboutPage.qml" line="198"/>
         <source>Greek</source>
         <translation>Gréčtina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="153"/>
-        <source>Norwegian</source>
-        <translation>Nórčina</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AboutPage.qml" line="157"/>
+        <location filename="../qml/pages/AboutPage.qml" line="259"/>
         <source>Czech</source>
         <translation>Čeština</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="161"/>
+        <location filename="../qml/pages/AboutPage.qml" line="138"/>
         <source>Slovak</source>
         <translation>Slovenčina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="165"/>
+        <location filename="../qml/pages/AboutPage.qml" line="191"/>
         <source>Hungarian</source>
         <translation>Maďarčina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="169"/>
+        <location filename="../qml/pages/AboutPage.qml" line="232"/>
         <source>Estonian</source>
         <translation>Estónčina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="173"/>
+        <location filename="../qml/pages/AboutPage.qml" line="160"/>
         <source>Polish</source>
         <translation>Poľština</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="177"/>
+        <location filename="../qml/pages/AboutPage.qml" line="183"/>
         <source>Indonesian</source>
         <translation>Indonézština</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="181"/>
+        <location filename="../qml/pages/AboutPage.qml" line="111"/>
         <source>Turkish</source>
         <translation>Turečtina</translation>
     </message>
@@ -161,7 +171,7 @@
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1101"/>
-        <location filename="../src/settings.cpp" line="1565"/>
+        <location filename="../src/settings.cpp" line="1583"/>
         <source>Internal storage</source>
         <translation>Vlastný ukladací priestor</translation>
     </message>
@@ -172,48 +182,48 @@
         <translation>“%1” v “%2”</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1480"/>
+        <location filename="../src/settings.cpp" line="1498"/>
         <source>Home</source>
         <translation>Domov</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1164"/>
-        <location filename="../src/settings.cpp" line="1490"/>
+        <location filename="../src/settings.cpp" line="1508"/>
         <source>Documents</source>
         <translation>Dokumenty</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1166"/>
-        <location filename="../src/settings.cpp" line="1500"/>
+        <location filename="../src/settings.cpp" line="1518"/>
         <source>Downloads</source>
         <translation>Stiahnutia</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1172"/>
-        <location filename="../src/settings.cpp" line="1530"/>
+        <location filename="../src/settings.cpp" line="1548"/>
         <source>Music</source>
         <translation>Hudba</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1168"/>
-        <location filename="../src/settings.cpp" line="1510"/>
+        <location filename="../src/settings.cpp" line="1528"/>
         <source>Pictures</source>
         <translation>Obrázky</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1170"/>
-        <location filename="../src/settings.cpp" line="1520"/>
+        <location filename="../src/settings.cpp" line="1538"/>
         <source>Videos</source>
         <translation>Videá</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1540"/>
-        <location filename="../src/settings.cpp" line="1566"/>
+        <location filename="../src/settings.cpp" line="1558"/>
+        <location filename="../src/settings.cpp" line="1584"/>
         <source>Android storage</source>
         <translation>Ukladací priestor Android</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1550"/>
+        <location filename="../src/settings.cpp" line="1568"/>
         <source>Root</source>
         <translation>Koreň</translation>
     </message>
@@ -240,14 +250,9 @@
 <context>
     <name>BookmarksSortPage</name>
     <message>
-        <location filename="../qml/pages/BookmarksSortPage.qml" line="37"/>
+        <location filename="../qml/pages/BookmarksSortPage.qml" line="25"/>
         <source>Sort bookmarks</source>
         <translation>Usporiadať záložky</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/BookmarksSortPage.qml" line="38"/>
-        <source>Arrange entries by dragging them to the left.</source>
-        <translation>Zoradiť položky ich potiahnutím doľava.</translation>
     </message>
 </context>
 <context>
@@ -480,96 +485,96 @@
 <context>
     <name>DirectoryPage</name>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="186"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="187"/>
         <source>View Preferences</source>
         <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
         <translation>Zobraziť predvoľby</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="193"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="194"/>
         <source>Create New...</source>
         <translation>Vytvoriť Nový...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="206"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="207"/>
         <source>Paste</source>
         <translation>Prilepiť</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="224"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="225"/>
         <source>Filter directory contents</source>
         <translation>Filtrovať obsah adresára</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="306"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="307"/>
         <source>Search</source>
         <translation>Hľadať</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Remove bookmark</source>
         <translation>Odstrániť záložku</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Add to bookmarks</source>
         <translation>Pridať do záložiek</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="320"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="321"/>
         <source>Copy path to clipboard</source>
         <translation>Kopírovať cestu do schránky</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="400"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="401"/>
         <source>filtered by: %1</source>
         <translation>filtrované s: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="462"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="463"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
         <translation>Žiadna zhoda</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="464"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="465"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation>Prázdny</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="467"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="468"/>
         <source>No files matched the filter.</source>
         <translation>Žiaden súbor nevyhovuje filtru.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="468"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="469"/>
         <source>This directory contains no files.</source>
         <translation>Tento adresár neobsahuje žiadne súbory.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="548"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="551"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="549"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="552"/>
         <source>Deleting</source>
         <translation>Zmazanie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="563"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="564"/>
         <source>Internally not ready</source>
         <translation>Vnútorne nepripravený</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="563"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="564"/>
         <source>Please simply try again</source>
         <translation>Jednoducho zopakujte</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="606"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="607"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>Pokúšate sa presúvať medzi telefónom a SD kartou? Nefunguje to, skúste kopírovať.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="608"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="609"/>
         <source>Perhaps the storage is full?</source>
         <translation>Úložisko je možno plné?</translation>
     </message>
@@ -838,7 +843,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="264"/>
+        <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>komprimovať súbor</numerusform>
@@ -847,17 +852,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="273"/>
+        <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
         <translation>upraviť cieľ odkazu</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="278"/>
+        <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
         <translation>Použiť</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="298"/>
+        <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>upraviť súbor</numerusform>
@@ -866,7 +871,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="323"/>
+        <location filename="../qml/components/FileActions.qml" line="324"/>
         <source>show file properties</source>
         <translation>zobraziť vlastnosti súboru</translation>
     </message>
@@ -2195,53 +2200,53 @@ exposure program</extracomment>
 <context>
     <name>Opal.About</name>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="55"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="56"/>
         <source>About</source>
         <translation>O aplikácii</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="84"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="85"/>
         <source>Version %1</source>
         <translation>Verzia %1</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="100"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="22"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="31"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="101"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="24"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="33"/>
         <source>Development</source>
         <translation>Vývoj</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="103"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="104"/>
         <source>show contributors</source>
         <translation>zobraziť prispievateľov</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="105"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="51"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="57"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="106"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="18"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="24"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="47"/>
         <source>Homepage</source>
         <translation>Domovská stránka</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="108"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="109"/>
         <location filename="../qml/modules/Opal/About/private/ChangelogPage.qml" line="16"/>
         <source>Changelog</source>
         <translation>Protokol zmien</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="123"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="124"/>
         <source>Donations</source>
         <translation>Dary</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="129"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="130"/>
         <source>License</source>
         <translation>Licencia</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="134"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="135"/>
         <source>show license(s)</source>
         <translation>
             <numerusform>zobraziť licenciu</numerusform>
@@ -2250,14 +2255,14 @@ exposure program</extracomment>
         </translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="111"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="112"/>
         <source>Translations</source>
         <translation>Preklady</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="114"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="50"/>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="58"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="115"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="17"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="25"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="50"/>
         <source>Source Code</source>
         <translation>Zdrojový text</translation>
@@ -2268,33 +2273,33 @@ exposure program</extracomment>
         <translation>zobraziť podrobnosti</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="21"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="23"/>
         <source>Contributors</source>
         <translation>Prispievatelia</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="37"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="39"/>
         <source>Acknowledgements</source>
         <translation>Poďakovania</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="44"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="11"/>
         <source>Thank you!</source>
         <translation>Ďakujeme!</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="48"/>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
+        <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="15"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="34"/>
         <source>Details</source>
         <translation>Podrobnosti</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="25"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="28"/>
         <source>Download license texts</source>
         <translation>Stiahnuť text licencie</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="31"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="34"/>
         <source>License(s)</source>
         <translation>
             <numerusform>Licencia</numerusform>
@@ -2303,7 +2308,7 @@ exposure program</extracomment>
         </translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="41"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="44"/>
         <source>Note: please check the source code for most accurate information.</source>
         <translation>Poznámka: Najpresnejšie informácie nájdete v zdrojovom texte.</translation>
     </message>
@@ -2328,12 +2333,12 @@ exposure program</extracomment>
         <translation>Kopírovať do schránky</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="60"/>
+        <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="61"/>
         <source>News</source>
         <translation>Správy</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="61"/>
+        <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="62"/>
         <source>Changes since version %1</source>
         <translation>Zmeny od verzie %1</translation>
     </message>
@@ -2598,7 +2603,7 @@ exposure program</extracomment>
         <translation>Buďte opatrní pri používaní File Browsera v režime root. Akcie môžu neočakávane poškodiť Váš systém.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Spustiť File Browser v režime root</translation>
     </message>
