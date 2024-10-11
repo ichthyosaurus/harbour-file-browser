@@ -175,7 +175,6 @@ A.AboutPageBase {
                 A.ContributionGroup {
                     title: qsTr("Italian")
                     entries: [
-                        "Mirian Margiani",
                         "Tichy",
                         "luca rastelli"
                     ]
