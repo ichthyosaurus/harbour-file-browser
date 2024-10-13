@@ -31,12 +31,12 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="154"/>
         <source>Romanian</source>
-        <translation type="unfinished"></translation>
+        <translation>Румынский</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="169"/>
         <source>Norwegian Bokmål</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Норвежский букмол</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="238"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="246"/>
         <source>Dutch (Belgium)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Голландский (Бельгия)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="265"/>
