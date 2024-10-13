@@ -31,7 +31,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="154"/>
         <source>Romanian</source>
-        <translation type="unfinished"></translation>
+        <translation>Rumano</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="169"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="246"/>
         <source>Dutch (Belgium)</source>
-        <translation type="unfinished"></translation>
+        <translation>Holandés (Bélgica)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="265"/>
