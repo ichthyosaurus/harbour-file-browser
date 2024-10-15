@@ -68,7 +68,7 @@ private:
 
     const QString m_readError {QStringLiteral("read")};
     const QString m_writeError {QStringLiteral("write")};
-    const int m_maximumFileSize {200*1024} /* 200 KiB */;
+    const int m_maximumFileSize {2 * 1024 * 1024} /* MiB */;
 };
 
 #endif // FILEIO_H
