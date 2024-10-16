@@ -29,37 +29,37 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="154"/>
+        <location filename="../qml/pages/AboutPage.qml" line="155"/>
         <source>Romanian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="169"/>
+        <location filename="../qml/pages/AboutPage.qml" line="170"/>
         <source>Norwegian Bokmål</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="238"/>
+        <location filename="../qml/pages/AboutPage.qml" line="240"/>
         <source>English</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="204"/>
+        <location filename="../qml/pages/AboutPage.qml" line="205"/>
         <source>German</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="223"/>
+        <location filename="../qml/pages/AboutPage.qml" line="225"/>
         <source>Finnish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="246"/>
+        <location filename="../qml/pages/AboutPage.qml" line="248"/>
         <source>Dutch (Belgium)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="265"/>
+        <location filename="../qml/pages/AboutPage.qml" line="267"/>
         <source>Chinese</source>
         <translation type="unfinished"></translation>
     </message>
@@ -79,7 +79,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="176"/>
+        <location filename="../qml/pages/AboutPage.qml" line="177"/>
         <source>Italian</source>
         <translation type="unfinished"></translation>
     </message>
@@ -89,22 +89,22 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="212"/>
+        <location filename="../qml/pages/AboutPage.qml" line="213"/>
         <source>French</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="252"/>
+        <location filename="../qml/pages/AboutPage.qml" line="254"/>
         <source>Dutch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="198"/>
+        <location filename="../qml/pages/AboutPage.qml" line="199"/>
         <source>Greek</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="259"/>
+        <location filename="../qml/pages/AboutPage.qml" line="261"/>
         <source>Czech</source>
         <translation type="unfinished"></translation>
     </message>
@@ -114,22 +114,22 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="191"/>
+        <location filename="../qml/pages/AboutPage.qml" line="192"/>
         <source>Hungarian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="232"/>
+        <location filename="../qml/pages/AboutPage.qml" line="234"/>
         <source>Estonian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="160"/>
+        <location filename="../qml/pages/AboutPage.qml" line="161"/>
         <source>Polish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="183"/>
+        <location filename="../qml/pages/AboutPage.qml" line="184"/>
         <source>Indonesian</source>
         <translation type="unfinished"></translation>
     </message>

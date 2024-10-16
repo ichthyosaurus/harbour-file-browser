@@ -29,37 +29,37 @@
         <translation>Traductions</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="154"/>
+        <location filename="../qml/pages/AboutPage.qml" line="155"/>
         <source>Romanian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="169"/>
+        <location filename="../qml/pages/AboutPage.qml" line="170"/>
         <source>Norwegian Bokmål</source>
         <translation>norvégien (Bokmål)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="238"/>
+        <location filename="../qml/pages/AboutPage.qml" line="240"/>
         <source>English</source>
         <translation>anglais</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="204"/>
+        <location filename="../qml/pages/AboutPage.qml" line="205"/>
         <source>German</source>
         <translation>allemand</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="223"/>
+        <location filename="../qml/pages/AboutPage.qml" line="225"/>
         <source>Finnish</source>
         <translation>finnois</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="246"/>
+        <location filename="../qml/pages/AboutPage.qml" line="248"/>
         <source>Dutch (Belgium)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="265"/>
+        <location filename="../qml/pages/AboutPage.qml" line="267"/>
         <source>Chinese</source>
         <translation>chinois</translation>
     </message>
@@ -79,7 +79,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="176"/>
+        <location filename="../qml/pages/AboutPage.qml" line="177"/>
         <source>Italian</source>
         <translation>italien</translation>
     </message>
@@ -89,22 +89,22 @@
         <translation>espagnol</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="212"/>
+        <location filename="../qml/pages/AboutPage.qml" line="213"/>
         <source>French</source>
         <translation>français</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="252"/>
+        <location filename="../qml/pages/AboutPage.qml" line="254"/>
         <source>Dutch</source>
         <translation>néerlandais</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="198"/>
+        <location filename="../qml/pages/AboutPage.qml" line="199"/>
         <source>Greek</source>
         <translation>grec</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="259"/>
+        <location filename="../qml/pages/AboutPage.qml" line="261"/>
         <source>Czech</source>
         <translation>tchèque</translation>
     </message>
@@ -114,22 +114,22 @@
         <translation>slovaque</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="191"/>
+        <location filename="../qml/pages/AboutPage.qml" line="192"/>
         <source>Hungarian</source>
         <translation>hongrois</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="232"/>
+        <location filename="../qml/pages/AboutPage.qml" line="234"/>
         <source>Estonian</source>
         <translation>estonien</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="160"/>
+        <location filename="../qml/pages/AboutPage.qml" line="161"/>
         <source>Polish</source>
         <translation>polonais</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="183"/>
+        <location filename="../qml/pages/AboutPage.qml" line="184"/>
         <source>Indonesian</source>
         <translation>indonésien</translation>
     </message>
@@ -481,96 +481,96 @@
 <context>
     <name>DirectoryPage</name>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="306"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="307"/>
         <source>Search</source>
         <translation>Recherche</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="206"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="207"/>
         <source>Paste</source>
         <translation>Coller</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="186"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="187"/>
         <source>View Preferences</source>
         <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
         <translation>Voir les préférences</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="193"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="194"/>
         <source>Create New...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="224"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="225"/>
         <source>Filter directory contents</source>
         <translation>Filtrer le contenu du répertoire</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Remove bookmark</source>
         <translation>Supprimer le favoris</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Add to bookmarks</source>
         <translation>Ajouter aux favoris</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="320"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="321"/>
         <source>Copy path to clipboard</source>
         <translation>Copier le chemin dans le presse-papiers</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="400"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="401"/>
         <source>filtered by: %1</source>
         <translation>filtré par : %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="462"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="463"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="464"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="465"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation type="unfinished">Vide</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="467"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="468"/>
         <source>No files matched the filter.</source>
         <translation>Aucun fichier ne correspond au filtre.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="468"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="469"/>
         <source>This directory contains no files.</source>
         <translation>Cet dossier ne contient aucun fichier.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="548"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="551"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="549"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="552"/>
         <source>Deleting</source>
         <translation>Suppression</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="563"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="564"/>
         <source>Internally not ready</source>
         <translation type="unfinished">N&apos;est pas prêt en interne</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="563"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="564"/>
         <source>Please simply try again</source>
         <translation>Veuillez réessayer à nouveau</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="606"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="607"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>Souhaitez-vous basculer entre le téléphone et le carte SD ? Si cela échoue essayez de copier les fichiers.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="608"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="609"/>
         <source>Perhaps the storage is full?</source>
         <translation>L&apos;espace de stockage est peut-être plein ?</translation>
     </message>
@@ -830,7 +830,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="264"/>
+        <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>compresser le fichier</numerusform>
@@ -838,17 +838,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="273"/>
+        <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="278"/>
+        <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="298"/>
+        <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>modifier le fichier</numerusform>
@@ -856,7 +856,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="323"/>
+        <location filename="../qml/components/FileActions.qml" line="324"/>
         <source>show file properties</source>
         <translation>afficher les propriétés du fichier</translation>
     </message>
@@ -2581,7 +2581,7 @@ exposure program</extracomment>
         <translation type="unfinished">Soyez prudent en utilisant le Navigation de fichiers en mode root. Certaines actions pourraient casser votre système.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Démarrer le Navigation de fichier en mode root.</translation>
     </message>
