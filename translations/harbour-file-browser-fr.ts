@@ -31,7 +31,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="155"/>
         <source>Romanian</source>
-        <translation type="unfinished"></translation>
+        <translation>Roumain</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="170"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="248"/>
         <source>Dutch (Belgium)</source>
-        <translation type="unfinished"></translation>
+        <translation>Flamand</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="267"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="101"/>
         <source>Ukrainian</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukrainien</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="177"/>
@@ -144,7 +144,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="11"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Merci de prendre le temps d&apos;envisager si vous pouvez contribuer à ce projet d&apos;une manière ou d&apos;une autre.</translation>
     </message>
 </context>
 <context>
@@ -152,39 +152,39 @@
     <message>
         <location filename="../src/settings.cpp" line="1007"/>
         <source>Memory card</source>
-        <translation type="unfinished"></translation>
+        <translation>Carte mémoire</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1009"/>
         <source>Attached folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Dossier joint</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1011"/>
         <source>Remote folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Répertoire en ligne</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1014"/>
         <source>Removable media</source>
-        <translation type="unfinished"></translation>
+        <translation>Support amovible</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1101"/>
         <location filename="../src/settings.cpp" line="1583"/>
         <source>Internal storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Stockage interne</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1109"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>“%1” sur “%2”</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1498"/>
         <source>Home</source>
-        <translation type="unfinished">Home</translation>
+        <translation>Répertoire personnel</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1164"/>
@@ -234,17 +234,17 @@
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="54"/>
         <source>Apply</source>
         <comment>as in &apos;apply these changes&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Appliquer</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="55"/>
         <source>Rename bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Renommer les signets</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="89"/>
         <source>Name must not be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Le nom doit être complété</translation>
     </message>
 </context>
 <context>
@@ -252,7 +252,7 @@
     <message>
         <location filename="../qml/pages/BookmarksSortPage.qml" line="25"/>
         <source>Sort bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Trier les signets</translation>
     </message>
 </context>
 <context>
@@ -291,9 +291,9 @@
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
         <source>%n item(s) to be linked</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n élément à lier</numerusform>
+            <numerusform>%n éléments à lier</numerusform>
         </translation>
     </message>
     <message>
@@ -305,7 +305,7 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="117"/>
         <source>Clipboard cleared</source>
-        <translation type="unfinished"></translation>
+        <translation>Presse-papier vidé</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="256"/>
@@ -363,17 +363,17 @@
         <location filename="../qml/pages/ConsolePage.qml" line="75"/>
         <source>Preview</source>
         <comment>as in &apos;incomplete/aggregated preview of the contents of a file&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Aperçu</translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="151"/>
         <source>This file appears to be a software package. To install, swipe back and select the “Install” option from the menu.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ce fichier semble être un paquetage logiciel. Pour l&apos;installer, glissez en arrière et sélectionnez l&apos;option &quot;Installer&quot; depuis le menu.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="153"/>
         <source>Swipe from the right to view raw contents.</source>
-        <translation type="unfinished"></translation>
+        <translation>Glisser depuis la droite pour voir le contenu brut.</translation>
     </message>
 </context>
 <context>
@@ -394,29 +394,29 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="73"/>
         <source>Not permitted</source>
-        <translation type="unfinished"></translation>
+        <translation>Non permis</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="74"/>
         <source>You don&apos;t have permission to change the contents of this directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vous n&apos;avez pas la permission de modifier les contenus de ce répertoire.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="87"/>
         <source>Create new</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="89"/>
         <source>The new folder will be created under “%1”.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation type="unfinished"></translation>
+        <translation>Le nouveau répertoire sera créé sous “%1”.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="91"/>
         <source>The new text file will be created under “%1” and can be edited later.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation type="unfinished"></translation>
+        <translation>Le nouveau fichier texte sera créé sous “%1” et pourra être édité plus tard.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="97"/>
@@ -426,7 +426,7 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="100"/>
         <source>empty text file</source>
-        <translation type="unfinished"></translation>
+        <translation>fichier texte vide</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="112"/>
@@ -436,22 +436,22 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="112"/>
         <source>File name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom du fichier</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="131"/>
         <source>File names must not contain slashes. To create a new file in a folder below “%1”, first create a folder and then create the file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Les noms de fichier ne doivent pas contenir de caractère barre oblique. Pour créer un nouveau fichier sous “%1”, vous devez d&apos;abord créer le répertoire et ensuite créer le fichier.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="135"/>
         <source>A file or folder with this name already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Un fichier ou un répertoire porte déjà ce nom.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="138"/>
         <source>Using slashes in folder names will create sub-folders, like so:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Utiliser le caractère barre oblique dans un nom de répertoire créera les sous-répertoire, comme ceci&#xa0;:</translation>
     </message>
 </context>
 <context>
@@ -499,7 +499,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="194"/>
         <source>Create New...</source>
-        <translation type="unfinished"></translation>
+        <translation>Créer Nouveau...</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="225"/>
@@ -530,7 +530,7 @@
         <location filename="../qml/pages/DirectoryPage.qml" line="463"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Aucun résultat</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="465"/>
@@ -585,7 +585,7 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="325"/>
         <source>Open target folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouvrir le répertoire cible</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="326"/>
@@ -697,12 +697,12 @@
     <message>
         <location filename="../src/engine.cpp" line="368"/>
         <source>No permissions to create “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Permissions de créer “%1” dans “%2” manquantes</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="379"/>
         <source>Cannot create file “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible de créer le fichier “%1” dans “%2”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="415"/>
@@ -712,27 +712,27 @@
     <message>
         <location filename="../src/engine.cpp" line="432"/>
         <source>Source “%1” is not a symbolic link</source>
-        <translation type="unfinished"></translation>
+        <translation>La source “%1” n&apos;est pas un lien symbolique</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="441"/>
         <source>No permissions to change contents of “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Permissions de changer les contenus de “%1” manquantes</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="449"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Suppression de l&apos;ancien lien “%1” pointant vers “%2” échouée</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="455"/>
         <source>Failed to revert link “%1” pointing to “%2” after failing to change target to “%3”</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible de rétablir le lien « %1 » pointant vers « %2 » après avoir échoué à changer la cible vers « %3 »</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="462"/>
         <source>Failed to change link target of “%1” to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible de changer le lien cible de “%1” vers “%2”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="488"/>
@@ -840,12 +840,12 @@
     <message>
         <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
-        <translation type="unfinished"></translation>
+        <translation>Éditer le lien cible</translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Appliquer</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="299"/>
