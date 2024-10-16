@@ -147,6 +147,7 @@ A.AboutPageBase {
                         "Lilia Savciuc",
                         "Mika",
                         "Petr Tsymbarovich",
+                        "Victor K",
                         "sandworm88"
                     ]
                 },
@@ -212,6 +213,7 @@ A.AboutPageBase {
                     title: qsTr("French")
                     entries: [
                         "J. Lavoie",
+                        "Jerome M",
                         "K. Herbert",
                         "Maxime Leroy",
                         "Mirian Margiani",

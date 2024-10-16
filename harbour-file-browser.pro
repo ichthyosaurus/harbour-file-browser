@@ -2,41 +2,9 @@
 # This file is part of File Browser.
 #
 # SPDX-FileCopyrightText: 2013 Kari Pihkala
-# SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
+# SPDX-FileCopyrightText: 2019-2024 Mirian Margiani
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
-
-# TRANSLATORS
-# If you added a new translation catalog, please append its file name to this
-# list. Just copy the last line and modify it as needed.
-# Do not forget to modify the localized app name in the the .desktop file.
-TRANSLATIONS = \
-    translations/harbour-file-browser-cs.ts       \
-    translations/harbour-file-browser-de.ts       \
-    translations/harbour-file-browser-el.ts       \
-    translations/harbour-file-browser-en.ts       \
-    translations/harbour-file-browser-es.ts       \
-    translations/harbour-file-browser-et.ts       \
-    translations/harbour-file-browser-fi.ts       \
-    translations/harbour-file-browser-fr.ts       \
-    translations/harbour-file-browser-hu.ts       \
-    translations/harbour-file-browser-id.ts       \
-    translations/harbour-file-browser-it.ts       \
-    translations/harbour-file-browser-nb_NO.ts    \
-    translations/harbour-file-browser-nl_BE.ts    \
-    translations/harbour-file-browser-nl.ts       \
-    translations/harbour-file-browser-pl.ts       \
-    translations/harbour-file-browser-ru.ts       \
-    translations/harbour-file-browser-sk.ts       \
-    translations/harbour-file-browser-sv.ts       \
-    translations/harbour-file-browser-tr.ts       \
-    translations/harbour-file-browser.ts          \
-    translations/harbour-file-browser-zh_CN.ts    \
-    translations/harbour-file-browser-ro.ts       \
-    translations/harbour-file-browser-uk.ts       \
-    translations/harbour-file-browser-ab.ts       \
-
-# ------------------------------------------------------------------------------
 
 # Application name defined in TARGET has a corresponding QML filename.
 # If name defined in TARGET is changed, the following needs to be done
@@ -201,6 +169,7 @@ DISTFILES += qml/*.qml \
 # to disable building translations every time, comment out the
 # following CONFIG line
 CONFIG += sailfishapp_i18n
+TRANSLATIONS = translations/harbour-file-browser-*.ts
 
 # Build submodules
 include(libs/SortFilterProxyModel/SortFilterProxyModel.pri)
