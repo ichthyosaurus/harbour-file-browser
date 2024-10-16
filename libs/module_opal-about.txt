@@ -9,7 +9,7 @@
 #       to the "attributions" list property of the “About” page.
 
 module: Opal.About (opal-about)
-version: 2.3.0 (git:94096dc)
+version: 2.3.2 (git:7437919)
 description: This module provides <i>AboutPageBase</i> for building customizable application information pages.
 maintainers: Mirian Margiani
 attribution: 2018-2024 Mirian Margiani
