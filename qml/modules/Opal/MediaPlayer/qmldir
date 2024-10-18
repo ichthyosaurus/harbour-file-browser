@@ -1,0 +1,5 @@
+module Opal.MediaPlayer
+# This file is part of Opal.MediaPlayer.
+# SPDX-FileCopyrightText: 2023-2024 Mirian Margiani
+# SPDX-License-Identifier: GPL-3.0-or-later
+VideoPlayerPage 1.0 VideoPlayerPage.qml

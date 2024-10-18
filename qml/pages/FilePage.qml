@@ -433,7 +433,16 @@ Page {
         } else if (fileData.category === "image") {
             method(Qt.resolvedUrl("ViewImagePage.qml"), { path: page.file, title: fileData.name });
         } else if (fileData.category === "video") {
-            method(Qt.resolvedUrl("ViewVideoPage.qml"), { path: page.file, title: fileData.name, autoPlay: !asAttached });
+            if (asAttached) {
+                method(Qt.resolvedUrl("ViewVideoPage.qml"), {
+                    path: page.file,
+                    title: fileData.name,
+                    autoplay: true,
+                    continueInBackground: false,
+                })
+            } else {
+                pageStack.navigateForward()
+            }
         } else if (GlobalSettings.pdfViewerEnabled && fileData.category === "pdf") {
             _forceReloadAttachedPage = true
             method(GlobalSettings.pdfViewerPath, {

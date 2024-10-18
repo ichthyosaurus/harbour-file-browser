@@ -1,0 +1,12 @@
+module Opal.MediaPlayer.private
+# This file is part of Opal.MediaPlayer.
+# SPDX-FileCopyrightText: 2023-2024 Mirian Margiani
+# SPDX-License-Identifier: GPL-3.0-or-later
+CheckSubtitles 1.0 checksubtitles.js
+FileDetails 1.0 FileDetails.qml
+GetSubtitles 1.0 getsubtitles.js
+Jupii 1.0 Jupii.qml
+MediaPlayer 1.0 Mplayer.qml
+MprisConnector 1.0 MprisConnector.qml
+SubtitlesItem 1.0 SubtitlesItem.qml
+VideoPoster 1.0 VideoPoster.qml
