@@ -114,7 +114,10 @@ ApplicationWindow {
     Loader {
         id: shortcutsPageLoader
         asynchronous: false
-        onStatusChanged: if (status === Loader.Ready) shortcutsPage = shortcutsPageLoader.item
+        onStatusChanged: {
+            if (status === Loader.Ready) shortcutsPage = shortcutsPageLoader.item
+            console.log("[shortcuts loader] status:", status, shortcutsPage)
+        }
         sourceComponent: Component {
             ShortcutsPage {
                 currentPath: StandardPaths.home
