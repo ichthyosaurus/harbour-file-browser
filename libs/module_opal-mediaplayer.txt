@@ -9,7 +9,7 @@
 #       to the "attributions" list property of the “About” page.
 
 module: Opal.MediaPlayer (opal-mediaplayer)
-version: 0.1.0 (git:f792885)
+version: 0.1.0 (git:ff7024e)
 description: This module provides a media player page with support for subtitles.
 maintainers: Mirian Margiani
 attribution: 2024 Mirian Margiani:2013-2020 Leszek Lesner
