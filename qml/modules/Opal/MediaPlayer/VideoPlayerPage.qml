@@ -636,7 +636,9 @@ Page {
             id: scaleLblIndicator
             font.pixelSize: Theme.fontSizeSmall
             anchors.centerIn: parent
-            text: (video.fillMode === VideoOutput.PreserveAspectCrop) ? qsTr("Zoomed to fit screen") : qsTr("Original")
+            text: (video.fillMode === VideoOutput.PreserveAspectCrop) ?
+                qsTranslate("Opal.MediaPlayer", "Zoomed to fit screen") :
+                qsTranslate("Opal.MediaPlayer", "Original")
             color: Theme.primaryColor
         }
     }
