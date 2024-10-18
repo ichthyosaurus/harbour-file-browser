@@ -14,6 +14,7 @@ VideoPlayerPage {
 
     autoplay: false
     enableDarkBackground: true
+    mprisAppId: qsTr("File Browser", "translated app name")
 
     Component.onCompleted: {
         if (status !== PageStatus.Active) {

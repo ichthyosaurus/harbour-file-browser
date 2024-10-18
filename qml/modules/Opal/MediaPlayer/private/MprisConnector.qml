@@ -11,9 +11,6 @@ import Amber.Mpris 1.0
 MprisPlayer {
     id: mprisPlayer
 
-    // serviceName: "llsVplayer"
-    serviceName: "FileBrowser"
-
     property string title
 
     function hide() {
@@ -28,14 +25,18 @@ MprisPlayer {
     onTitleChanged: {
         if (title != "") {
             console.debug("Title changed to: " + title)
-            var metadata = mprisPlayer.metadata
-            metadata[Mpris.metadataToString(Mpris.Title)] = title
-            mprisPlayer.metadata = metadata
+            mprisPlayer.metaData.title = title
+
+//            var metadata = mprisPlayer.metadata
+//            metadata[Mpris.metadataToString(Mpris.Title)] = title
+//            mprisPlayer.metadata = metadata
         }
     }
 
+    serviceName: "OpalMediaPlayer"
+
     // Mpris2 Root Interface
-    identity: "Video Player"
+    identity: "Opal Video Player"
 
     // Mpris2 Player Interface
     canControl: true
@@ -54,7 +55,7 @@ MprisPlayer {
         // mprisPlayer.canGoPrevious = mainWindow.modelPlaylist.isPrev() && mainWindow.firstPage.isPlaylist
     }
 
-    loopStatus: Mpris.None
+    loopStatus: Mpris.LoopNone
     shuffle: false
     volume: 1
 }
