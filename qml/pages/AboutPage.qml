@@ -226,8 +226,7 @@ A.AboutPageBase {
                     entries: [
                         "Jyri-Petteri Paloposki",
                         "Tathhu",
-                        "karip",
-                        "unnerving duck"
+                        "karip"
                     ]
                 },
                 A.ContributionGroup {
