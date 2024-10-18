@@ -52,7 +52,7 @@ A.AboutPageBase {
     ]
 
     description: qsTr("A fully-fledged file manager for Sailfish OS.")
-    mainAttributions: ["2019-2024 Mirian Margiani", "2013-2019 karip"]
+    mainAttributions: ["2019-%1 Mirian Margiani".arg((new Date()).getFullYear()), "2013-2019 karip"]
     autoAddOpalAttributions: true
 
     attributions: [
