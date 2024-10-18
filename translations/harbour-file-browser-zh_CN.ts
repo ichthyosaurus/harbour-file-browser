@@ -39,7 +39,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="240"/>
+        <location filename="../qml/pages/AboutPage.qml" line="239"/>
         <source>English</source>
         <translation>英语</translation>
     </message>
@@ -54,12 +54,12 @@
         <translation>芬兰语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="248"/>
+        <location filename="../qml/pages/AboutPage.qml" line="247"/>
         <source>Dutch (Belgium)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="267"/>
+        <location filename="../qml/pages/AboutPage.qml" line="266"/>
         <source>Chinese</source>
         <translation>汉语</translation>
     </message>
@@ -94,7 +94,7 @@
         <translation>法语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="254"/>
+        <location filename="../qml/pages/AboutPage.qml" line="253"/>
         <source>Dutch</source>
         <translation>尼德兰语</translation>
     </message>
@@ -104,7 +104,7 @@
         <translation>希腊语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="261"/>
+        <location filename="../qml/pages/AboutPage.qml" line="260"/>
         <source>Czech</source>
         <translation>捷克语</translation>
     </message>
@@ -119,7 +119,7 @@
         <translation>匈牙利语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="234"/>
+        <location filename="../qml/pages/AboutPage.qml" line="233"/>
         <source>Estonian</source>
         <translation>爱沙尼亚语</translation>
     </message>
@@ -2355,6 +2355,85 @@ exposure program</extracomment>
     </message>
 </context>
 <context>
+    <name>Opal.MediaPlayer</name>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="17"/>
+        <source>Playback failed</source>
+        <comment>error info page heading</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="19"/>
+        <source>Resource error</source>
+        <comment>error info page heading</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="20"/>
+        <source>Format error</source>
+        <comment>error info page heading</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="21"/>
+        <source>Network error</source>
+        <comment>error info page heading</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="22"/>
+        <source>Access denied</source>
+        <comment>error info page heading</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="23"/>
+        <source>Media service missing</source>
+        <comment>error info page heading</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="24"/>
+        <source>The video cannot be played due to a problem allocating resources.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="25"/>
+        <source>The audio and or video format is not supported.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="26"/>
+        <source>The video cannot be played due to network issues.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="27"/>
+        <source>The video cannot be played due to insufficient permissions.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="28"/>
+        <source>The video cannot be played because the media service could not be instantiated.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="29"/>
+        <source>Playback failed due to an expected error. Please restart the app and try again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="640"/>
+        <source>Zoomed to fit screen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="641"/>
+        <source>Original</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>OverwriteDialog</name>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="49"/>
@@ -3259,10 +3338,10 @@ exposure program</extracomment>
 <context>
     <name>ViewVideoPage</name>
     <message>
-        <location filename="../qml/pages/ViewVideoPage.qml" line="107"/>
-        <source>Failed to play</source>
-        <extracomment>Full page placeholder shown when a video failed to load</extracomment>
-        <translation>播放失败</translation>
+        <location filename="../qml/pages/ViewVideoPage.qml" line="17"/>
+        <source>File Browser</source>
+        <comment>translated app name</comment>
+        <translation type="unfinished">文件浏览器</translation>
     </message>
 </context>
 <context>

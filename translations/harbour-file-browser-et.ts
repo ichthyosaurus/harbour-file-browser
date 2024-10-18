@@ -29,37 +29,37 @@
         <translation>Tõlked</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="154"/>
+        <location filename="../qml/pages/AboutPage.qml" line="155"/>
         <source>Romanian</source>
         <translation>rumeenia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="169"/>
+        <location filename="../qml/pages/AboutPage.qml" line="170"/>
         <source>Norwegian Bokmål</source>
         <translation>norra bokmål</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="238"/>
+        <location filename="../qml/pages/AboutPage.qml" line="239"/>
         <source>English</source>
         <translation>inglise</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="204"/>
+        <location filename="../qml/pages/AboutPage.qml" line="205"/>
         <source>German</source>
         <translation>saksa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="223"/>
+        <location filename="../qml/pages/AboutPage.qml" line="225"/>
         <source>Finnish</source>
         <translation>soome</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="246"/>
+        <location filename="../qml/pages/AboutPage.qml" line="247"/>
         <source>Dutch (Belgium)</source>
         <translation>hollandi (Belgia)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="265"/>
+        <location filename="../qml/pages/AboutPage.qml" line="266"/>
         <source>Chinese</source>
         <translation>hiina</translation>
     </message>
@@ -79,7 +79,7 @@
         <translation>ukraina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="176"/>
+        <location filename="../qml/pages/AboutPage.qml" line="177"/>
         <source>Italian</source>
         <translation>itaalia</translation>
     </message>
@@ -89,22 +89,22 @@
         <translation>hispaania</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="212"/>
+        <location filename="../qml/pages/AboutPage.qml" line="213"/>
         <source>French</source>
         <translation>prantsuse</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="252"/>
+        <location filename="../qml/pages/AboutPage.qml" line="253"/>
         <source>Dutch</source>
         <translation>hollandi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="198"/>
+        <location filename="../qml/pages/AboutPage.qml" line="199"/>
         <source>Greek</source>
         <translation>kreeka</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="259"/>
+        <location filename="../qml/pages/AboutPage.qml" line="260"/>
         <source>Czech</source>
         <translation>tšehhi</translation>
     </message>
@@ -114,22 +114,22 @@
         <translation>slovaki</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="191"/>
+        <location filename="../qml/pages/AboutPage.qml" line="192"/>
         <source>Hungarian</source>
         <translation>ungari</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="232"/>
+        <location filename="../qml/pages/AboutPage.qml" line="233"/>
         <source>Estonian</source>
         <translation>eesti</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="160"/>
+        <location filename="../qml/pages/AboutPage.qml" line="161"/>
         <source>Polish</source>
         <translation>poola</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="183"/>
+        <location filename="../qml/pages/AboutPage.qml" line="184"/>
         <source>Indonesian</source>
         <translation>indoneesia</translation>
     </message>
@@ -481,96 +481,96 @@
 <context>
     <name>DirectoryPage</name>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="186"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="187"/>
         <source>View Preferences</source>
         <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
         <translation>Vaata eelistusi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="193"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="194"/>
         <source>Create New...</source>
         <translation>Loo uus...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="206"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="207"/>
         <source>Paste</source>
         <translation>Aseta</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="224"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="225"/>
         <source>Filter directory contents</source>
         <translation>Filtreeri kausta sisu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="306"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="307"/>
         <source>Search</source>
         <translation>Otsi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Remove bookmark</source>
         <translation>Kustuta järjehoidja</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="312"/>
         <source>Add to bookmarks</source>
         <translation>Lisa järjehoidjaks</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="320"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="321"/>
         <source>Copy path to clipboard</source>
         <translation>Kopeeri otsitee lõikelauale</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="400"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="401"/>
         <source>filtered by: %1</source>
         <translation>filtreeritud %1 alusel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="462"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="463"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
         <translation>Vasteid pole</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="464"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="465"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation>Tühi kaust</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="467"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="468"/>
         <source>No files matched the filter.</source>
         <translation>Ükski fail ei vasta filtrile.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="468"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="469"/>
         <source>This directory contains no files.</source>
         <translation>Selles kaustas pole faile.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="548"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="551"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="549"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="552"/>
         <source>Deleting</source>
         <translation>Kustutan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="563"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="564"/>
         <source>Internally not ready</source>
         <translation>Rakendus pole sisemiselt valmis</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="563"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="564"/>
         <source>Please simply try again</source>
         <translation>Lihtsalt palun proovi uuesti</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="606"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="607"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>Kas sa üritad tõsta andmeid telefoni mälu ja SD-kaardi vahel? Nii see ei toimi, proovi kopeerimist.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="608"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="609"/>
         <source>Perhaps the storage is full?</source>
         <translation>Võib-olla andmekandja on triiki täis?</translation>
     </message>
@@ -830,7 +830,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="264"/>
+        <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>paki fail</numerusform>
@@ -838,17 +838,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="273"/>
+        <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
         <translation>muuda nimeviida sihtfaili</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="278"/>
+        <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
         <translation>Rakenda</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="298"/>
+        <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>muuda faili</numerusform>
@@ -856,7 +856,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="323"/>
+        <location filename="../qml/components/FileActions.qml" line="324"/>
         <source>show file properties</source>
         <translation>näita faili omadusi</translation>
     </message>
@@ -2375,6 +2375,85 @@ exposure program</extracomment>
     </message>
 </context>
 <context>
+    <name>Opal.MediaPlayer</name>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="17"/>
+        <source>Playback failed</source>
+        <comment>error info page heading</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="19"/>
+        <source>Resource error</source>
+        <comment>error info page heading</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="20"/>
+        <source>Format error</source>
+        <comment>error info page heading</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="21"/>
+        <source>Network error</source>
+        <comment>error info page heading</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="22"/>
+        <source>Access denied</source>
+        <comment>error info page heading</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="23"/>
+        <source>Media service missing</source>
+        <comment>error info page heading</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="24"/>
+        <source>The video cannot be played due to a problem allocating resources.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="25"/>
+        <source>The audio and or video format is not supported.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="26"/>
+        <source>The video cannot be played due to network issues.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="27"/>
+        <source>The video cannot be played due to insufficient permissions.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="28"/>
+        <source>The video cannot be played because the media service could not be instantiated.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="29"/>
+        <source>Playback failed due to an expected error. Please restart the app and try again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="640"/>
+        <source>Zoomed to fit screen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="641"/>
+        <source>Original</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>OverwriteDialog</name>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="49"/>
@@ -2581,7 +2660,7 @@ exposure program</extracomment>
         <translation>Kui kasutad failihaldurit juurkasutaja õigustes, siis ole ettevaatlik. Valed tegevused võivad ootamatult sinu nutiseadet kahjustada.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Käivita failihaldur juurkasutajana</translation>
     </message>
@@ -3295,10 +3374,10 @@ exposure program</extracomment>
 <context>
     <name>ViewVideoPage</name>
     <message>
-        <location filename="../qml/pages/ViewVideoPage.qml" line="107"/>
-        <source>Failed to play</source>
-        <extracomment>Full page placeholder shown when a video failed to load</extracomment>
-        <translation>Esitamine ei õnnestunud</translation>
+        <location filename="../qml/pages/ViewVideoPage.qml" line="17"/>
+        <source>File Browser</source>
+        <comment>translated app name</comment>
+        <translation type="unfinished">Failihaldur</translation>
     </message>
 </context>
 <context>

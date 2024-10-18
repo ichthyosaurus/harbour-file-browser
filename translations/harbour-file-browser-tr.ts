@@ -39,7 +39,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="240"/>
+        <location filename="../qml/pages/AboutPage.qml" line="239"/>
         <source>English</source>
         <translation>İngilizce</translation>
     </message>
@@ -54,12 +54,12 @@
         <translation>Fince</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="248"/>
+        <location filename="../qml/pages/AboutPage.qml" line="247"/>
         <source>Dutch (Belgium)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="267"/>
+        <location filename="../qml/pages/AboutPage.qml" line="266"/>
         <source>Chinese</source>
         <translation>Çince</translation>
     </message>
@@ -94,7 +94,7 @@
         <translation>Fransızca</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="254"/>
+        <location filename="../qml/pages/AboutPage.qml" line="253"/>
         <source>Dutch</source>
         <translation>Felemenkçe</translation>
     </message>
@@ -104,7 +104,7 @@
         <translation>Yunanca</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="261"/>
+        <location filename="../qml/pages/AboutPage.qml" line="260"/>
         <source>Czech</source>
         <translation>Çekçe</translation>
     </message>
@@ -119,7 +119,7 @@
         <translation>Macarca</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="234"/>
+        <location filename="../qml/pages/AboutPage.qml" line="233"/>
         <source>Estonian</source>
         <translation>Estonca</translation>
     </message>
@@ -144,7 +144,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="11"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lütfen bu projeye herhangi bir şekilde katkıda bulunup bulunamayacağınızı düşünmek için bir dakikanızı ayırın.</translation>
     </message>
 </context>
 <context>
@@ -466,12 +466,12 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show less</source>
-        <translation type="unfinished"></translation>
+        <translation>daha az göster</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show more</source>
-        <translation type="unfinished"></translation>
+        <translation>daha fazlasını göster</translation>
     </message>
 </context>
 <context>
@@ -2108,42 +2108,42 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="15"/>
         <source>Pay the amount of a cup of coffee, a slice of pizza, or a ticket to the theater.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bir fincan kahve, bir dilim pizza ya da bir tiyatro bileti bedelini ödeyin.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
         <source>Translate on Weblate</source>
-        <translation type="unfinished"></translation>
+        <translation>Weblate&apos;te çevir</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="23"/>
         <source>Help with translating this app in as many languages as possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu uygulamanın mümkün olduğunca çok dile çevrilmesine yardımcı olun.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
         <source>Develop on Github</source>
-        <translation type="unfinished"></translation>
+        <translation>Github&apos;da geliştirin</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="31"/>
         <source>Support with maintenance and packaging, write code, or provide valuable bug reports.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bakım ve paketleme konusunda destek verin, kod yazın veya değerli hata raporları sağlayın.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="37"/>
         <source>Why should you care?</source>
-        <translation type="unfinished"></translation>
+        <translation>Neden umurunuzda olmalı?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="40"/>
         <source>This project is built with love and passion by a single developer in their spare time, and is provided to you free of charge.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu proje tek bir geliştiricinin boş zamanlarında sevgi ve tutkuyla inşa edilmiş olup, size ücretsiz olarak sunulmaktadır.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="46"/>
         <source>I develop Free Software because I am convinced that it is the ethical thing to do - and it is a fun hobby. However, developing software takes a lot of time and effort. As Sailfish and living in general costs money, I need your support to be able to spend time on non-paying projects like this.</source>
-        <translation type="unfinished"></translation>
+        <translation>Özgür Yazılım geliştiriyorum çünkü bunun etik bir şey olduğuna ikna oldum - ve bu eğlenceli bir hobi. Ancak, yazılım geliştirmek çok fazla zaman ve çaba gerektirir. Sailfish ve genel olarak yaşamak paraya mal olduğu için, bunun gibi ücretli olmayan projelere zaman ayırabilmek için desteğinize ihtiyacım var.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="56"/>
@@ -2153,12 +2153,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="59"/>
         <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation type="unfinished"></translation>
+        <translation>Jolla fiyatları artırdı ve bedava çalışan müteahhitleri Sailfish için kira ödemeye zorlamaya çalışıyor.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="64"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eğer karşılayabiliyorsanız, Sailfish uygulamaları üzerinde çalışmaya devam edebilmemi sağlamanın en kolay yolu bağışta bulunmaktır. Bir fincan kahve, bir dilim pizza veya daha fazlası olsun, her miktar takdir edilir.</translation>
     </message>
 </context>
 <context>
@@ -2300,12 +2300,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="62"/>
         <source>Changes since version %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 sürümünden bu yana değişiklikler</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="120"/>
         <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Lütfen &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;&apos;e bakın</translation>
     </message>
 </context>
 <context>
@@ -2352,6 +2352,85 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="41"/>
         <source>Copy to clipboard</source>
         <translation>Panoya kopyala</translation>
+    </message>
+</context>
+<context>
+    <name>Opal.MediaPlayer</name>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="17"/>
+        <source>Playback failed</source>
+        <comment>error info page heading</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="19"/>
+        <source>Resource error</source>
+        <comment>error info page heading</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="20"/>
+        <source>Format error</source>
+        <comment>error info page heading</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="21"/>
+        <source>Network error</source>
+        <comment>error info page heading</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="22"/>
+        <source>Access denied</source>
+        <comment>error info page heading</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="23"/>
+        <source>Media service missing</source>
+        <comment>error info page heading</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="24"/>
+        <source>The video cannot be played due to a problem allocating resources.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="25"/>
+        <source>The audio and or video format is not supported.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="26"/>
+        <source>The video cannot be played due to network issues.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="27"/>
+        <source>The video cannot be played due to insufficient permissions.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="28"/>
+        <source>The video cannot be played because the media service could not be instantiated.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="29"/>
+        <source>Playback failed due to an expected error. Please restart the app and try again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="640"/>
+        <source>Zoomed to fit screen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="641"/>
+        <source>Original</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2846,22 +2925,22 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="10"/>
         <source>Thank you for using my little app! Maybe you can contribute back?</source>
-        <translation type="unfinished"></translation>
+        <translation>Küçük uygulamamı kullandığınız için teşekkür ederim! Belki siz de katkıda bulunabilirsiniz?</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="11"/>
         <source>Thank you for your support!</source>
-        <translation type="unfinished"></translation>
+        <translation>Desteğiniz için teşekkür ederiz!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="55"/>
         <source>Remind me later</source>
-        <translation type="unfinished"></translation>
+        <translation>Daha sonra hatırlat bana</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="57"/>
         <source>Don&apos;t ask me again</source>
-        <translation type="unfinished"></translation>
+        <translation>Bana bir daha sorma</translation>
     </message>
 </context>
 <context>
@@ -3259,10 +3338,10 @@ exposure program</extracomment>
 <context>
     <name>ViewVideoPage</name>
     <message>
-        <location filename="../qml/pages/ViewVideoPage.qml" line="107"/>
-        <source>Failed to play</source>
-        <extracomment>Full page placeholder shown when a video failed to load</extracomment>
-        <translation>Oynatma başarısız oldu</translation>
+        <location filename="../qml/pages/ViewVideoPage.qml" line="17"/>
+        <source>File Browser</source>
+        <comment>translated app name</comment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
