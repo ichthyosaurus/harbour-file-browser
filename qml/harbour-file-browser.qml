@@ -64,6 +64,58 @@ ApplicationWindow {
 
     initialPage: GlobalSettings.runningAsRoot ? initialPage_RootMode : initialPage_UserMode
 
+    function finishNavigationLater(target) {
+        console.log("[navigation] app state:", Qt.application.state,
+                    "expecting", Qt.ApplicationActive, "for", target.properties.dir)
+
+        if (pageStack.busy) {
+            navigationFinisher.targetPath = target.page
+            navigationFinisher.targetProperties = target.properties
+        }
+    }
+
+    Connections {
+        id: navigationFinisher
+        property string targetPath
+        property var targetProperties: ({})
+
+        target: !!targetPath ? pageStack : null
+
+        onBusyChanged: {
+            // When navigation occurs while the app is in the background,
+            // the last page will not be pushed correctly and the stack gets
+            // stuck showing only a fullscreen busy spinner while "busy" is "false".
+            // To work around this issue, we wait for changes to "busy" and
+            // verify that the top page has an "objectName". If it doesn't,
+            // we replace the top page with the expected target page.
+            // Only when navigation reaches a seemingly valid page, we reset
+            // the watcher.
+            //
+            // This workaround fixes the issue where the app would only show
+            // a busy spinner after startup. It might also fix the issue
+            // where the app starts properly but the attached shortcuts page
+            // is blank.
+            //
+            // Important: current valid navigation targets are DirectoryPage and
+            // SearchPage, both of which have an "objectName".
+
+            if (!pageStack.busy) {
+                if (!pageStack.currentPage.objectName) {
+                    console.log("[navigation] issue detected, replacing", pageStack.currentPage,
+                                "with", targetProperties.dir)
+                    pageStack.replace(targetPath, targetProperties)
+                } else {
+                    console.log("[navigation] navigation ended successfully with",
+                                pageStack.currentPage.objectName)
+                    targetPath = ''
+                    targetProperties = {}
+                }
+            } else {
+                console.log("[navigation] page stack is still busy, waiting...")
+            }
+        }
+    }
+
     Component {
         id: initialPage_RootMode
 
@@ -149,6 +201,7 @@ ApplicationWindow {
         console.log("[startup] pushing initial stack")
         Navigation.goToFolder(GlobalSettings.initialDirectory, true); // silent
         _startupDone = true
+        console.log("[startup] startup is done")
     }
 
     property bool _startupDone: false

@@ -180,11 +180,19 @@ function goToFolder(folder, silent, startSearchQuery) {
     var toPush = []
     var dirs = rest.split("/");
 
-    if (basePath === "") toPush.push({page: pagePath, properties: {dir: "/"}});
+    if (basePath === "") {
+        toPush.push({page: pagePath, properties: {dir: "/"}})
+    } else if (basePath === "/") {
+        // Clear the base path to avoid getting "//" at the beginning
+        // of following paths, which could break shared tree detection.
+        basePath = ""
+    }
+
     for (var j = 0; j < dirs.length-1; ++j) {
-        basePath += "/"+dirs[j];
+        basePath += "/" + dirs[j]
         toPush.push({page: pagePath, properties: {dir: basePath}});
     }
+
     toPush.push({page: pagePath, properties: {dir: folder}});
 
     if (startSearchQuery !== undefined) {
@@ -195,6 +203,11 @@ function goToFolder(folder, silent, startSearchQuery) {
                             startImmediately: true
                         }})
     }
+
+    // We have to keep a copy of the final page details here
+    // because for some reason the final page is lost after
+    // calling pageStack...().
+    var targetPush = toPush[toPush.length-1]
 
     if (toPush.length > 1) {
         if (above !== pageStack.currentPage) {
@@ -214,7 +227,16 @@ function goToFolder(folder, silent, startSearchQuery) {
         }
     }
 
-    console.log("- done")
+    if (pageStack.busy) {
+        // If the page stack is busy when navigation has ended,
+        // we have to make sure that the final page is correctly
+        // pushed. This is done through finishNavigationLater().
+        console.log("- page stack is busy, delaying finalizing navigation " +
+                    "for", folder, "| search mode:", startSearchQuery)
+        main.finishNavigationLater(targetPush)
+    } else {
+        console.log("- navigation done:", folder, "| search mode:", startSearchQuery)
+    }
 
     // 2020-05-01: use the commented-out code if pageStack does not support
     // pushing arrays for some reason. This feature might have been added with
