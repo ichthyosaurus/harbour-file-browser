@@ -9,6 +9,25 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: "3.3.0"
+        date: "2024-10-18"
+        paragraphs: [
+            "- Updated translations: Estonian, French, Russian, Slovak, Spanish, Swedish, Ukrainian<br>" +
+            "- Fixed missing translations so that all available translations are actually shippped!<br>" +
+            "- Increased maximum file size when editing files using the built-in text editor from 200 KiB to 2 MiB<br>" +
+            "- Replaced the old video preview page with a shiny new video preview player based<br>" +
+            "-   - The new player supports seeking and play/pause via headset buttons<br>" +
+            "-   - You can embed the new player in your own apps using the new Opal.MediaPlayer module<br>" +
+            "-   - The video player is originally based on Leszek Lesner's video player for Sailfish<br>" +
+            "- Fixed invalid copyright year on the about page<br>" +
+            "- Fixed an annoying issue where the app would show only a blank page with a busy spinner when it was started in the background<br>" +
+            "-   - This might also fix the issue where the shortcuts page sometimes stays blank<br>" +
+            "-   - The fix is a workaround for a bug in Sailfish and might not work reliably<br>" +
+            "-   - It does not yet fix the issue where the settings page is sometimes not immediately accessible from the shortcuts page<br>" +
+            "- Fixed an issue that could cause heavy lag when navigating from a folder on an SD card to the internal memory"
+        ]
+    }
+    ChangelogItem {
         version: "3.2.2"
         date: "2024-10-11"
         paragraphs: [

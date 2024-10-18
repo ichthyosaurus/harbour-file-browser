@@ -10,6 +10,22 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
  * Nothing so far
 
+## Version 3.3.0 (2024-10-18)
+
+- Updated translations: Estonian, French, Russian, Slovak, Spanish, Swedish, Ukrainian
+- Fixed missing translations so that all available translations are actually shippped!
+- Increased maximum file size when editing files using the built-in text editor from 200 KiB to 2 MiB
+- Replaced the old video preview page with a shiny new video preview player based
+-   - The new player supports seeking and play/pause via headset buttons
+-   - You can embed the new player in your own apps using the new Opal.MediaPlayer module
+-   - The video player is originally based on Leszek Lesner's video player for Sailfish
+- Fixed invalid copyright year on the about page
+- Fixed an annoying issue where the app would show only a blank page with a busy spinner when it was started in the background
+-   - This might also fix the issue where the shortcuts page sometimes stays blank
+-   - The fix is a workaround for a bug in Sailfish and might not work reliably
+-   - It does not yet fix the issue where the settings page is sometimes not immediately accessible from the shortcuts page
+- Fixed an issue that could cause heavy lag when navigating from a folder on an SD card to the internal memory
+
 ## Version 3.2.2 (2024-10-11)
 
  * Updated translations: English, Russian, Polish, and more
