@@ -135,8 +135,12 @@ Page {
         console.log("NEW STREAM URL:", streamUrl)
 
         errorOverlay.reset()
-        videoPoster.showControls()
 
+        if (autoplay && status === PageStatus.Active) {
+            play()
+        } else if (!autoplay) {
+            videoPoster.showControls()
+        }
 
 //        if (streamUrl.toString().match("^file://") || streamUrl.toString().match("^/")) {
 //            savePositionMsec = "Not Found" //DB.getPosition(streamUrl.toString());
@@ -526,11 +530,14 @@ Page {
 
             source: Mplayer {
                 id: mediaPlayer
+                autoLoad: true
+                autoPlay: root.autoplay
+
                 dataContainer: root
                 streamTitle: root.streamTitle
                 streamUrl: root.streamUrl
-                isPlaylist: false // root.isPlaylist
-                isLiveStream: false // root.isLiveStream
+//                isPlaylist: false // root.isPlaylist
+//                isLiveStream: false // root.isLiveStream
                 onPlaybackStateChanged: {
                     if (playbackState == MediaPlayer.PlayingState) {
                         if (onlyMusic.enabled) onlyMusic.playing = true
@@ -553,24 +560,21 @@ Page {
                     }
                 }
                 onStatusChanged: {
-                    //errorTxt.visible = false     // DEBUG: Always show errors for now
-                    //errorDetail.visible = false
-                    // console.debug("[videoPlayer.qml]: mediaPlayer.status: " + mediaPlayer.status + " isPlaylist:" + isPlaylist)
-//                    if (mediaPlayer.status === MediaPlayer.Loading || mediaPlayer.status === MediaPlayer.Buffering || mediaPlayer.status === MediaPlayer.Stalled) progressCircle.enabled = true;
-                    /*else*/ if (mediaPlayer.status === MediaPlayer.EndOfMedia) {
-                        videoPoster.showControls();
-                        // if (isPlaylist && mainWindow.modelPlaylist.isNext()) {
-                        //     videoPoster.next();
-                        // }
+                    if (mediaPlayer.status === MediaPlayer.Loaded) {
+                        if (autoPlay) {
+                            root.play()
+                        } else {
+                            videoPoster.showControls()
+                        }
+                    } else if (!isRepeat &&
+                               mediaPlayer.status === MediaPlayer.EndOfMedia) {
+                        videoPoster.showControls()
+                    } else {
+                        loadMetaDataPage("inBackground")
                     }
-                    else  {
-//                        progressCircle.enabled = false;
-                        /*if (!isPlaylist) */loadMetaDataPage("inBackground");
-                        // else loadPlaylistPage();
-                    }
+
                     if (metaData.title) {
-                        //console.debug("MetaData.title = " + metaData.title)
-                        if (dPage) dPage.title = metaData.title
+                        // if (dPage) dPage.title = metaData.title
                         mprisPlayer.title = metaData.title
                     }
                 }
@@ -597,7 +601,7 @@ Page {
 
                 onStopped: {
                     if (isRepeat) {
-                        play();
+                        play()
                     }
                 }
             }
