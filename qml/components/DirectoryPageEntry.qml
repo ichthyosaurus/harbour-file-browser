@@ -24,6 +24,7 @@ import harbour.file.browser.FileModel 1.0
 import harbour.file.browser.Settings 1.0
 
 import "../js/paths.js" as Paths
+import "folderentry"
 
 ListItem {
     id: listItem
@@ -155,6 +156,7 @@ ListItem {
 
     Component {
         id: galleryStillComponent
+
         Image {
             // 'fillMode: Image.PreserveAspectFit' does not scale up, so we do it manually
             asynchronous: true
@@ -170,6 +172,7 @@ ListItem {
 
     Component {
         id: galleryAnimatedComponent
+
         AnimatedImage {
             asynchronous: true
             source: dir+"/"+filename
@@ -181,18 +184,10 @@ ListItem {
 
     Component {
         id: galleryVideoComponent
-        Item {
+
+        GalleryVideoPreview {
             height: Theme.itemSizeExtraLarge
             width: parent.width
-            opacity: highlighted ? Theme.opacityLow : 1.0
-            Image {
-                anchors.centerIn: parent
-                height: Theme.itemSizeLarge
-                source: "image://theme/icon-l-play?" + (listItem.highlighted
-                                                        ? Theme.highlightColor :
-                                                          Theme.primaryColor)
-                fillMode: Image.PreserveAspectFit
-            }
         }
     }
 
