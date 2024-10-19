@@ -186,8 +186,8 @@ ListItem {
         id: galleryVideoComponent
 
         GalleryVideoPreview {
-            height: Theme.itemSizeExtraLarge
-            width: parent.width
+            file: dir + "/" + filename
+            highlighted: listItem.highlighted
         }
     }
 
