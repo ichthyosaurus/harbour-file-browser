@@ -106,12 +106,12 @@ Page {
     property bool enableSubtitles: false // dataContainer.enableSubtitles // REQUIRED
     property variant currentVideoSub: []
     property Page dPage
-    property bool savedPosition: false
-    property string savePositionMsec
+//    property bool savedPosition: false
+//    property string savePositionMsec
     property string subtitleUrl
     property bool subtitleSolid: true // dataContainer.subtitleSolid
     // property bool isPlaylist: dataContainer.isPlaylist
-    property bool isNewSource: false
+//    property bool isNewSource: false
     property bool allowScaling: false
     property bool isRepeat: false
 
@@ -135,17 +135,17 @@ Page {
         console.log("NEW STREAM URL:", streamUrl)
 
         errorOverlay.reset()
-//        if (errorDetail.visible && errorTxt.visible) { errorDetail.visible = false; errorTxt.visible = false }
         videoPoster.showControls()
 
-        if (streamUrl.toString().match("^file://") || streamUrl.toString().match("^/")) {
-            savePositionMsec = "Not Found" //DB.getPosition(streamUrl.toString());
-            console.debug("[videoPlayer.qml] streamUrl= " + streamUrl + " savePositionMsec= " + savePositionMsec + " streamUrl.length = " + streamUrl.length);
-            if (savePositionMsec !== "Not Found") savedPosition = true;
-            else savedPosition = false;
-        }
+
+//        if (streamUrl.toString().match("^file://") || streamUrl.toString().match("^/")) {
+//            savePositionMsec = "Not Found" //DB.getPosition(streamUrl.toString());
+//            console.debug("[videoPlayer.qml] streamUrl= " + streamUrl + " savePositionMsec= " + savePositionMsec + " streamUrl.length = " + streamUrl.length);
+//            if (savePositionMsec !== "Not Found") savedPosition = true;
+//            else savedPosition = false;
+//        }
         // if (isPlaylist) mainWindow.curPlaylistIndex = mainWindow.modelPlaylist.getPosition(streamUrl)
-        isNewSource = true
+//        isNewSource = true
     }
 
     function videoPauseTrigger() {

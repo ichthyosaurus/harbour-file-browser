@@ -14,11 +14,11 @@ MediaPlayer {
     property QtObject dataContainer
     property string streamTitle
     property string streamUrl
-    property bool isPlaylist: false
-    property bool isNewSource: true
-    property bool isLiveStream: false
+//    property bool isPlaylist: false
+//    property bool isNewSource: true
+//    property bool isLiveStream: false
     property bool isPlaying: playbackState === MediaPlayer.PlayingState ? true : false
-    property bool isMinMode
+//    property bool isMinMode
 
     function loadPlaylistPage() {
 //        var playlistPage = pageStack.pushAttached(Qt.resolvedUrl("../PlaylistPage.qml"), { "dataContainer" : dataContainer, "modelPlaylist" : mainWindow.modelPlaylist, "isPlayer" : true});
