@@ -61,7 +61,7 @@ ListItem {
                                    { path: fileModel.appendPath(filename), title: filename });
         } else if (_galleryModeActiveAvailable && fileIcon === "file-video") {
             pageStack.animatorPush(Qt.resolvedUrl("../pages/ViewVideoPage.qml"),
-                                   { path: fileModel.appendPath(filename), title: filename, autoPlay: true });
+                                   { path: fileModel.appendPath(filename), title: filename, autoplay: true });
         } else {
             pageStack.animatorPush(Qt.resolvedUrl("../pages/FilePage.qml"),
                                    { file: fileModel.appendPath(filename) });
