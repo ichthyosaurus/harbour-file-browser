@@ -155,6 +155,7 @@ DISTFILES += qml/*.qml \
     qml/cover/*.qml \
     qml/pages/*.qml \
     qml/components/*.qml \
+    qml/components/*/*.qml \
     qml/modules/*/*/*.qml \
     qml/modules/*/*/*/*.qml \
     qml/js/*.js \
