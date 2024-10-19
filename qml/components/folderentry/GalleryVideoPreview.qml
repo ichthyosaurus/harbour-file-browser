@@ -1,3 +1,9 @@
+/*
+ * This file is part of File Browser.
+ * SPDX-FileCopyrightText: 2024 Mirian Margiani
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import Nemo.Thumbnailer 1.0
