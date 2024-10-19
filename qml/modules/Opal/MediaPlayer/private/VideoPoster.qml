@@ -122,7 +122,7 @@ MouseArea {
         // this breaks it:
 //        fillMode: Thumbnail.PreserveAspectFit
 
-        opacity: !videoItem._loaded && !autoplay ? 1.0 : 0.0
+        opacity: (!videoItem._loaded && !autoplay) ? 1.0 : 0.0
         Behavior on opacity { FadeAnimator { duration: 80 } }
 
         visible: opacity > 0.0
@@ -136,7 +136,7 @@ MouseArea {
         height: videoItem.height
 
         z: 1000
-        opacity: 1.0
+        opacity: 0.0  // start hidden
         Behavior on opacity { FadeAnimation { duration: 80; id: controlFade } }
         visible: opacity > 0.0
 
@@ -224,88 +224,99 @@ MouseArea {
         }
 
 
-        Rectangle {
+        SilicaControl {
             anchors { left: parent.left; right: parent.right; bottom: parent.bottom }
-            enabled: { if (controls.opacity == 1.0) return true; else return false; }
-            height: Theme.itemSizeMedium + (2 * Theme.paddingLarge)
-            //color: "black"
-            //opacity: 0.5
-            gradient: Gradient {
-                GradientStop { position: 0.0; color: "transparent" }
-                GradientStop { position: 1.0; color: isLightTheme ? "white" : "black" } //Theme.highlightColor} // Black seems to look and work better
+            visible: controls.opacity > 0
+            enabled: visible
+            opacity: controls.opacity
+            height: Theme.itemSizeMedium + 2 * Theme.paddingLarge
+            palette.colorScheme: Theme.LightOnDark
+
+            Rectangle {
+                z: -100
+                anchors.fill: parent
+
+                gradient: Gradient {
+                    GradientStop { position: 0.0; color: "transparent" }
+                    GradientStop { position: 1.0; color: "black" } // black seems to look and work best
+                }
             }
 
-            BackgroundItem {
+            IconButton {
                 id: aspectBtn
-                anchors.right: /*qualBtn.visible ? qualBtn.left :*/ parent.right
-                anchors.rightMargin: Theme.paddingMedium
-                anchors.bottom: parent.bottom
-                anchors.bottomMargin: Theme.paddingMedium
-                width: height
-                height: Theme.iconSizeMedium
+                icon.source: "image://theme/icon-m-scale"
+                anchors {
+                    right: parent.right
+                    rightMargin: Theme.paddingMedium
+                    bottom: parent.bottom
+                    bottomMargin: Theme.paddingMedium
+                }
+                width: visible ? Theme.iconSizeMedium : 0
+                height: width
                 visible: allowScaling
                 onClicked: {
                     toggleAspectRatio();
                 }
-                Image {
-                    source: "image://theme/icon-m-scale"
-                    anchors.fill: parent
-                }
-            }
-            Label {
-                id: maxTime
-                anchors.right: {
-                    if (aspectBtn.visible) return aspectBtn.left
-                    else return parent.right
-                }
-                anchors.rightMargin: /*qualBtn.visible ||*/ aspectBtn.visible ? Theme.paddingMedium : (2 * Theme.paddingLarge)
-                anchors.bottom: parent.bottom
-                anchors.bottomMargin: Theme.paddingLarge
-                text: {
-                    if (positionSlider.maximumValue > 3599) return Format.formatDuration(positionSlider.maximumValue, Formatter.DurationLong)
-                    else return Format.formatDuration(positionSlider.maximumValue, Formatter.DurationShort)
-                }
-                visible: videoItem._loaded
             }
 
-            BackgroundItem {
+            Label {
+                id: maxTime
+                visible: videoItem._loaded || !!text
+
+                anchors {
+                    right: aspectBtn.left
+                    rightMargin: aspectBtn.visible ? Theme.paddingMedium : (2 * Theme.paddingLarge)
+                    bottom: parent.bottom
+                    bottomMargin: Theme.paddingLarge
+                }
+
+                text: {
+                    if (positionSlider.maximumValue > 3599) {
+                        return Format.formatDuration(
+                            positionSlider.maximumValue, Formatter.DurationLong)
+                    } else {
+                        return Format.formatDuration(
+                            positionSlider.maximumValue, Formatter.DurationShort)
+                    }
+                }
+            }
+
+            IconButton {
                 id: repeatBtn
-                anchors.left: parent.left
-                anchors.leftMargin: Theme.paddingMedium
-                anchors.bottom: parent.bottom
-                anchors.bottomMargin: Theme.paddingMedium
-                width: height
-                height: Theme.iconSizeMedium
+                icon.source: isRepeat ?
+                    "image://theme/icon-m-repeat" :
+                    "image://theme/icon-m-forward"
+                anchors {
+                    left: parent.left
+                    leftMargin: Theme.paddingMedium
+                    bottom: parent.bottom
+                    bottomMargin: Theme.paddingMedium
+                }
+                width: Theme.iconSizeMedium
+                height: width
                 onClicked: {
                     isRepeat = !isRepeat
                 }
-                Image {
-                    source: isRepeat ? "image://theme/icon-m-repeat" : "image://theme/icon-m-forward"
-                    anchors.fill: parent
-                }
             }
 
-            BackgroundItem {
+            IconButton {
                 id: castBtn
-                anchors.left: repeatBtn.right
-                anchors.leftMargin: Theme.paddingMedium
-                anchors.bottom: parent.bottom
-                anchors.bottomMargin: Theme.paddingMedium
-                width: height
-                visible: jupii.found
-                height: Theme.iconSizeMedium
-                onClicked: {
-                    jupii.addUrlOnceAndPlay(streamUrl.toString(), streamTitle, "", (onlyMusic.visible ? 1 : 2), "llsvplayer", "/usr/share/icons/hicolor/172x172/apps/harbour-videoPlayer.png")
+                icon.source: "images/icon-m-cast.png"
+                anchors {
+                    left: repeatBtn.right
+                    leftMargin: Theme.paddingMedium
+                    bottom: parent.bottom
+                    bottomMargin: Theme.paddingMedium
                 }
-                Image {
-                    source: "images/icon-m-cast.png"
-                    anchors.fill: parent
-//                    ColorOverlay {
-//                        anchors.fill: parent
-//                        source: parent
-//                        color: "black"
-//                        visible: isLightTheme
-//                    }
+                width: visible ? Theme.iconSizeMedium : 0
+                height: width
+                visible: jupii.found
+                onClicked: {
+                    jupii.addUrlOnceAndPlay(
+                        streamUrl.toString(), streamTitle,
+                        "", (onlyMusic.visible ? 1 : 2), "OpalMediaPlayer",
+                        Qt.resolvedUrl("images/icon-m-cast.png")
+                            .toString().replace('file://', ''))
                 }
             }
 
@@ -313,29 +324,27 @@ MouseArea {
                 id: positionSlider
 
                 anchors {
-                    left: castBtn.visible ? castBtn.right : repeatBtn.right
-                    right: {
-                        if (maxTime.visible) maxTime.left
-                        else parent.right;
-                    }
+                    left: castBtn.right
+                    right: maxTime.left
                     bottom: parent.bottom
+                    bottomMargin: Theme.paddingLarge + Theme.paddingMedium
                 }
-                anchors.bottomMargin: Theme.paddingLarge + Theme.paddingMedium
-                enabled: { if (controls.opacity == 1.0) return true; else return false; }
+
+                enabled: controls.opacity > 0.0
                 height: Theme.itemSizeMedium
-                width: {
-                    var slidWidth = parent.width
-                    if (maxTime.visible) slidWidth =- maxTime.width
-                    if (aspectBtn.visible) slidWidth =- aspectBtn.width
-                    return slidWidth
-                }
                 handleVisible: down ? true : false
                 minimumValue: 0
 
                 valueText: {
-                    if (value > 3599) return Format.formatDuration(value, Formatter.DurationLong)
-                    else return Format.formatDuration(value, Formatter.DurationShort)
+                    if (value > 3599) {
+                        return Format.formatDuration(
+                            value, Formatter.DurationLong)
+                    } else {
+                        return Format.formatDuration(
+                            value, Formatter.DurationShort)
+                    }
                 }
+
                 onReleased: {
                     if (videoItem.active) {
                         videoItem.player.source = videoItem.source
@@ -343,14 +352,15 @@ MouseArea {
                         //videoItem.player.pause()
                     }
                 }
-                onDownChanged: {
-                    if (down) {
-                        coverTime.visible = true
-                    }
-                    else
-                        coverTime.fadeOut.start()
-                }
+
+//                onDownChanged: {
+//                    if (down) {
+//                        coverTime.visible = true
+//                    }
+//                    else
+//                        coverTime.fadeOut.start()
+//                }
             }
-        } // Bottom rect End
+        }
     }
 }
