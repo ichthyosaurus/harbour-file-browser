@@ -9,6 +9,17 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: "3.3.1"
+        date: "2024-10-19"
+        paragraphs: [
+            "- Updated translations: Slovak, Swedish<br>" +
+            "- Fixed an issue where the video preview would not automatically play when opened from the gallery view<br>" +
+            "- Fixed gallery video preview styling<br>" +
+            "- Fixed video preview controls becoming invisible in light ambiences<br>" +
+            "- Fixed thumbnails not showing for videos in the gallery view"
+        ]
+    }
+    ChangelogItem {
         version: "3.3.0"
         date: "2024-10-18"
         paragraphs: [

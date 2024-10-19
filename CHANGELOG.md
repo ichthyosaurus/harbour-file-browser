@@ -10,6 +10,14 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
  * Nothing so far
 
+## Version 3.3.1 (2024-10-19)
+
+- Updated translations: Slovak, Swedish
+- Fixed an issue where the video preview would not automatically play when opened from the gallery view
+- Fixed gallery video preview styling
+- Fixed video preview controls becoming invisible in light ambiences
+- Fixed thumbnails not showing for videos in the gallery view
+
 ## Version 3.3.0 (2024-10-18)
 
 - Updated translations: Estonian, French, Russian, Slovak, Spanish, Swedish, Ukrainian
