@@ -12,13 +12,9 @@ VideoPlayerPage {
     id: root
     allowedOrientations: Orientation.All
 
-    enableDarkBackground: true
+    autoplay: false
+    repeat: true
     continueInBackground: false
+    enableDarkBackground: true
     mprisAppId: qsTr("File Browser", "translated app name")
-
-    Component.onCompleted: {
-        if (status === PageStatus.Deactivating) {
-            pause()
-        }
-    }
 }

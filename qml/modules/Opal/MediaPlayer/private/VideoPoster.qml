@@ -39,50 +39,38 @@ MouseArea {
     implicitHeight: poster.implicitHeight
 
     function ffwd(seconds) {
-        ffwdRewRectAnim.secs = seconds
-        ffwdRewRectAnim.isRew = false
-        ffwdRewAnim.start()
+        seekNotice.secs = seconds
+        seekNotice.isRewind = false
+        seekNotice.show()
         videoItem.player.seek((positionSlider.value*1000) + (seconds * 1000))
     }
 
     function rew(seconds) {
-        ffwdRewRectAnim.secs = seconds
-        ffwdRewRectAnim.isRew = true
-        ffwdRewAnim.start()
+        seekNotice.secs = seconds
+        seekNotice.isRewind = true
+        seekNotice.show()
         videoItem.player.seek((positionSlider.value*1000) - (seconds * 1000))
     }
 
-    SequentialAnimation {
-        id: ffwdRewAnim
-        PropertyAction { target: ffwdRewRectAnim; property: "visible"; value: true }
-        NumberAnimation { target: ffwdRewRectAnim; property: "opacity"; to: 1; duration: 200 }
-        NumberAnimation { target: ffwdRewRectAnim; property: "opacity"; to: 0; duration: 200 }
-        PropertyAction { target: ffwdRewRectAnim; property: "visible"; value: false }
-    }
-
-    Rectangle {
-        id: ffwdRewRectAnim
+    NoticeLabel {
+        id: seekNotice
 
         property int secs: 10
-        property bool isRew: false
+        property bool isRewind: false
+
+        opacity: 0.0
+        visible: opacity > 0.0
+        Behavior on opacity { FadeAnimator {} }
 
         anchors {
             verticalCenter: parent.verticalCenter
             verticalCenterOffset: -1.5*Theme.iconSizeLarge
             horizontalCenter: parent.horizontalCenter
-            horizontalCenterOffset: 1.5*Theme.iconSizeLarge * (isRew ? -1 : 1)
+            horizontalCenterOffset: 1.5*Theme.iconSizeLarge * (isRewind ? -1 : 1)
         }
 
-        width: parent.width / 2
-        color: Theme.backgroundGlowColor
-        visible: false
-        opacity: 0
-
-        Label {
-            anchors.centerIn: parent
-            text: (parent.isRew ? "-" : "+") + Number(parent.secs).toFixed(0) + "s"
-            font.pixelSize: Theme.fontSizeExtraLarge
-        }
+        fontSize: Theme.fontSizeLarge
+        text: (isRewind ? "-" : "+") + Number(secs).toFixed(0) + "s"
     }
 
     Connections {
@@ -168,7 +156,7 @@ MouseArea {
             grow: 0.8 * Theme.paddingLarge
 
             onClicked: {
-                if (!ffwdRewRectAnim.isRew) {
+                if (!seekNotice.isRewind) {
                     controls._clickCount = 0
                     multiClickTimer.stop()
                 }
@@ -207,7 +195,7 @@ MouseArea {
             grow: 0.8 * Theme.paddingLarge
 
             onClicked: {
-                if (ffwdRewRectAnim.isRew) {
+                if (seekNotice.isRewind) {
                     controls._clickCount = 0
                     multiClickTimer.stop()
                 }
@@ -283,9 +271,9 @@ MouseArea {
 
             IconButton {
                 id: repeatBtn
-                icon.source: isRepeat ?
+                icon.source: repeat ?
                     "image://theme/icon-m-repeat" :
-                    "image://theme/icon-m-forward"
+                    "image://theme/icon-m-repeat-single"
                 anchors {
                     left: parent.left
                     leftMargin: Theme.paddingMedium
@@ -295,7 +283,7 @@ MouseArea {
                 width: Theme.iconSizeMedium
                 height: width
                 onClicked: {
-                    isRepeat = !isRepeat
+                    toggleRepeat()
                 }
             }
 

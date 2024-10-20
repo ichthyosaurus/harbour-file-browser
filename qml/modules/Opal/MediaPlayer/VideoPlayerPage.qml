@@ -18,6 +18,7 @@ Page {
     property string path
     property alias title: titleOverlayItem.title
     property bool autoplay: false
+    property bool repeat: false
     property bool continueInBackground: false
     property bool enableDarkBackground: true
 
@@ -25,6 +26,8 @@ Page {
 
     readonly property alias _titleOverlay: titleOverlayItem
     readonly property bool _isPlaying: mediaPlayer.playbackState == MediaPlayer.PlayingState
+    readonly property bool _pageIsActive: status === PageStatus.Active ||
+                                          status === PageStatus.Activating
 
     function play() {
         videoPoster.play()
@@ -44,15 +47,17 @@ Page {
     onWidthChanged: video.checkScaleStatus()
 
     onStatusChanged: {
-        if (!continueInBackground && status === PageStatus.Deactivating) {
+        if (!continueInBackground && (
+                status === PageStatus.Deactivating ||
+                status === PageStatus.Inactive)) {
             pause()
-        } else if (autoplay && status === PageStatus.Activating) {
+        } else if (autoplay && _pageIsActive) {
             play()
         }
     }
 
     onAutoplayChanged: {
-        if (autoplay && status === PageStatus.Active) {
+        if (autoplay && _pageIsActive) {
             play()
         }
     }
@@ -113,22 +118,20 @@ Page {
     // property bool isPlaylist: dataContainer.isPlaylist
 //    property bool isNewSource: false
     property bool allowScaling: false
-    property bool isRepeat: false
 
     property alias videoPoster: videoPoster
 
     // +++
     property bool isLightTheme: Theme.colorScheme === Theme.DarkOnLight
 
-
     Component.onCompleted: {
-        if (autoplay) {
-            //console.debug("[videoPlayer.qml] Autoplay activated for url: " + videoPoster.source);
+        if (autoplay && _pageIsActive) {
             play()
-            showNavigationIndicator = false;
-            mprisPlayer.title = streamTitle;
+        } else {
+            mprisPlayer.title = streamTitle
         }
-        console.log("PLAYING", streamUrl, "AUTO", autoplay)
+
+        console.log("PLAYING", streamUrl, "AUTO", autoplay, "ACTIVE", _pageIsActive)
     }
 
     onStreamUrlChanged: {
@@ -157,15 +160,23 @@ Page {
         if (videoPoster.player.playbackState == MediaPlayer.PlayingState) videoPoster.pause();
         else if (videoPoster.source.toString().length !== 0) videoPoster.play();
         if (videoPoster.controls.opacity === 0.0) videoPoster.toggleControls();
+    }
 
+    function toggleRepeat() {
+        repeat = !repeat
+        repeatIndicator.show()
     }
 
     function toggleAspectRatio() {
         // This switches between different aspect ratio fill modes
         //console.debug("video.fillMode= " + video.fillMode)
-        if (video.fillMode == VideoOutput.PreserveAspectFit) video.fillMode = VideoOutput.PreserveAspectCrop
-        else video.fillMode = VideoOutput.PreserveAspectFit
-        showScaleIndicator.start();
+        if (video.fillMode == VideoOutput.PreserveAspectFit) {
+            video.fillMode = VideoOutput.PreserveAspectCrop
+        } else {
+            video.fillMode = VideoOutput.PreserveAspectFit
+        }
+
+        scaleIndicator.show()
     }
 
     SilicaFlickable {
@@ -314,15 +325,18 @@ Page {
                 }
 
                 function play() {
-                    playClicked();
+                    playClicked()
                 }
 
                 onPlayClicked: {
                     console.debug("Loading source into player")
-                    player.source = source;
+                    player.source = source
                     console.debug("Starting playback")
-                    player.play();
-                    hideControls();
+                    player.play()
+                    hideControls()
+
+                    showNavigationIndicator = false
+                    mprisPlayer.title = streamTitle
 
                     if (enableSubtitles) {
                         subTitleLoader.item.getSubtitles(subtitleUrl);
@@ -481,7 +495,7 @@ Page {
 
     PinchArea {
         id: pincher
-        enabled: allowScaling && /*!pulley.visible &&*/ !errorBox.visible
+        enabled: allowScaling && /*!pulley.visible &&*/ !errorOverlay.visible
         visible: enabled
         anchors.fill: parent
         pinch.target: video
@@ -504,7 +518,7 @@ Page {
             else {
                 video.fillMode = VideoOutput.PreserveAspectFit
             }
-            showScaleIndicator.start();
+            scaleIndicator.show()
         }
     }
 
@@ -566,7 +580,7 @@ Page {
                         } else {
                             videoPoster.showControls()
                         }
-                    } else if (!isRepeat &&
+                    } else if (!repeat &&
                                mediaPlayer.status === MediaPlayer.EndOfMedia) {
                         videoPoster.showControls()
                     } else {
@@ -600,7 +614,7 @@ Page {
                 }
 
                 onStopped: {
-                    if (isRepeat) {
+                    if (repeat) {
                         play()
                     }
                 }
@@ -612,58 +626,27 @@ Page {
             anchors.centerIn: root
         }
 
-    Item {
+    NoticeLabel {
         id: scaleIndicator
 
-        anchors.horizontalCenter: root.horizontalCenter
-        anchors.top: parent.top
-        anchors.topMargin: 4 * Theme.paddingLarge
-        opacity: 0
-        property alias fadeOut: fadeOut
-
-        NumberAnimation on opacity {
-            id: fadeOut
-            to: 0
-            duration: 400;
-            easing.type: Easing.InOutCubic
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            top: parent.top
+            topMargin: 4 * Theme.paddingLarge
         }
 
-        Rectangle {
-            width: scaleLblIndicator.width + 2 * Theme.paddingMedium
-            height: scaleLblIndicator.height + 2 * Theme.paddingMedium
-            color: isLightTheme? "white" : "black"
-            opacity: 0.4
-            anchors.centerIn: parent
-            radius: 2
-        }
-        Label {
-            id: scaleLblIndicator
-            font.pixelSize: Theme.fontSizeSmall
-            anchors.centerIn: parent
-            text: (video.fillMode === VideoOutput.PreserveAspectCrop) ?
-                qsTranslate("Opal.MediaPlayer", "Zoomed to fit screen") :
-                qsTranslate("Opal.MediaPlayer", "Original")
-            color: Theme.primaryColor
-        }
+        fontSize: Theme.fontSizeSmall
+        text: (video.fillMode === VideoOutput.PreserveAspectCrop) ?
+                  qsTranslate("Opal.MediaPlayer", "Zoomed to fit screen") :
+                  qsTranslate("Opal.MediaPlayer", "Original")
     }
 
-    Timer {
-        id: showScaleIndicator
-        interval: 1000
-        property int count: 0
-        triggeredOnStart: true
-        repeat: true
-        onTriggered: {
-            ++count
-            if (count == 2) {
-                scaleIndicator.fadeOut.start();
-                count = 0;
-                stop();
-            }
-            else {
-                scaleIndicator.opacity = 1.0
-            }
-        }
+    NoticeLabel {
+        id: repeatIndicator
+        anchors.centerIn: scaleIndicator
+        fontSize: Theme.fontSizeSmall
+        text: repeat ? qsTranslate("Opal.MediaPlayer", "Play on repeat") :
+                       qsTranslate("Opal.MediaPlayer", "Play once")
     }
 
     Keys.onPressed: {

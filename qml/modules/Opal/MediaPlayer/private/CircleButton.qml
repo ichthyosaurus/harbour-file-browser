@@ -34,7 +34,7 @@ IconButton {
         anchors.fill: parent
         color: Theme.rgba("black", Theme.opacityLow)
         radius: width / 2
-        border.color: _activeColor
+        border.color: Theme.rgba(_activeColor, 0.9)
         border.width: 2
     }
 }
