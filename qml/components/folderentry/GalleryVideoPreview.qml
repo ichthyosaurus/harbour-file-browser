@@ -12,9 +12,10 @@ SilicaItem {
     id: root
     property alias file: thumbnail.source
 
-    height: thumbnail.status !== Thumbnail.Error ?
-        thumbnail.height : Theme.itemSizeExtraLarge
-    palette.colorScheme: Theme.LightOnDark
+    readonly property bool _haveThumbnail: thumbnail.status !== Thumbnail.Error
+
+    height: _haveThumbnail ? thumbnail.height : Theme.itemSizeExtraLarge
+    palette.colorScheme: _haveThumbnail ? Theme.LightOnDark : Theme.colorScheme
 
     Thumbnail {
         id: thumbnail
@@ -32,12 +33,18 @@ SilicaItem {
             margins: -Theme.paddingLarge
         }
         radius: width
-        color: Theme.rgba(
-            highlighted ? Theme.highlightDimmerColor : "black",
-            Theme.opacityLow)
+        color: {
+            if (highlighted) {
+                Theme.rgba(palette.highlightDimmerColor, Theme.opacityLow)
+            } else if (palette.colorScheme === Theme.LightOnDark) {
+                Theme.rgba(Theme.darkPrimaryColor, Theme.opacityFaint)
+            } else {
+                Theme.rgba(Theme.lightPrimaryColor, Theme.opacityFaint)
+            }
+        }
         border.color: highlighted ?
-            Theme.secondaryHighlightColor :
-            Theme.secondaryColor
+            palette.secondaryHighlightColor :
+            palette.secondaryColor
         border.width: 2
     }
 
@@ -45,5 +52,6 @@ SilicaItem {
         id: playButton
         anchors.centerIn: parent
         source: "../../modules/Opal/MediaPlayer/private/images/icon-m-play.png"
+        color: palette.primaryColor
     }
 }
