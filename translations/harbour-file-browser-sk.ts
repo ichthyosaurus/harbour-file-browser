@@ -2463,14 +2463,24 @@ exposure program</extracomment>
         <translation>Prehrávanie zlyhalo kvôli neočakávanej chybe. Reštartujte aplikáciu a skúste znova.</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="644"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="640"/>
         <source>Zoomed to fit screen</source>
         <translation>Priblíženie prispôsobené obrazovke</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="645"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="641"/>
         <source>Original</source>
         <translation>Pôvodné</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="648"/>
+        <source>Play on repeat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="649"/>
+        <source>Play once</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3410,7 +3420,7 @@ exposure program</extracomment>
 <context>
     <name>ViewVideoPage</name>
     <message>
-        <location filename="../qml/pages/ViewVideoPage.qml" line="17"/>
+        <location filename="../qml/pages/ViewVideoPage.qml" line="19"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
         <translation>Prehliadač súborov</translation>
