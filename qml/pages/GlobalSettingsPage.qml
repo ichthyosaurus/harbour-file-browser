@@ -305,7 +305,7 @@ Page {
                                           "tapping the page header of the directory view.")
                     }
                     /* SettingsSwitch {
-                        // TODO planned for v3.2.0
+                        // TODO planned for v3.5.0
                         text: qsTr("Enable trash can")
                         key: "generalUseTrashCan"
                         description: qsTr("Move files to a separate “trash can” when deleting, " +
