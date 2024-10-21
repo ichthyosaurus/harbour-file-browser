@@ -4,137 +4,137 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="54"/>
+        <location filename="../qml/pages/AboutPage.qml" line="55"/>
         <source>A fully-fledged file manager for Sailfish OS.</source>
         <translation>Повноцінний файловий менеджер для Sailfish OS.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="81"/>
+        <location filename="../qml/pages/AboutPage.qml" line="82"/>
         <source>Development</source>
         <translation>Розробка</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="84"/>
+        <location filename="../qml/pages/AboutPage.qml" line="85"/>
         <source>Programming</source>
         <translation>Програмування</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="91"/>
+        <location filename="../qml/pages/AboutPage.qml" line="92"/>
         <source>Icon Design</source>
         <translation>Дизайн іконок</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="98"/>
+        <location filename="../qml/pages/AboutPage.qml" line="99"/>
         <source>Translations</source>
         <translation>Переклади</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="155"/>
+        <location filename="../qml/pages/AboutPage.qml" line="156"/>
         <source>Romanian</source>
         <translation>Румунська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="170"/>
+        <location filename="../qml/pages/AboutPage.qml" line="171"/>
         <source>Norwegian Bokmål</source>
         <translation>Норвезька (Букмол)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="239"/>
+        <location filename="../qml/pages/AboutPage.qml" line="240"/>
         <source>English</source>
         <translation>Англійська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="205"/>
+        <location filename="../qml/pages/AboutPage.qml" line="206"/>
         <source>German</source>
         <translation>Німецька</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="225"/>
+        <location filename="../qml/pages/AboutPage.qml" line="226"/>
         <source>Finnish</source>
         <translation>Фінська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="247"/>
+        <location filename="../qml/pages/AboutPage.qml" line="248"/>
         <source>Dutch (Belgium)</source>
         <translation>Нідерландська (Бельгія)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="266"/>
+        <location filename="../qml/pages/AboutPage.qml" line="267"/>
         <source>Chinese</source>
         <translation>Китайська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="144"/>
+        <location filename="../qml/pages/AboutPage.qml" line="145"/>
         <source>Russian</source>
         <translation>Російська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="120"/>
+        <location filename="../qml/pages/AboutPage.qml" line="121"/>
         <source>Swedish</source>
         <translation>Шведська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="101"/>
+        <location filename="../qml/pages/AboutPage.qml" line="102"/>
         <source>Ukrainian</source>
         <translation>Українська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="177"/>
+        <location filename="../qml/pages/AboutPage.qml" line="178"/>
         <source>Italian</source>
         <translation>Італійська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="129"/>
+        <location filename="../qml/pages/AboutPage.qml" line="130"/>
         <source>Spanish</source>
         <translation>Іспанська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="213"/>
+        <location filename="../qml/pages/AboutPage.qml" line="214"/>
         <source>French</source>
         <translation>Французька</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="253"/>
+        <location filename="../qml/pages/AboutPage.qml" line="254"/>
         <source>Dutch</source>
         <translation>Нідерландська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="199"/>
+        <location filename="../qml/pages/AboutPage.qml" line="200"/>
         <source>Greek</source>
         <translation>Грецька</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="260"/>
+        <location filename="../qml/pages/AboutPage.qml" line="261"/>
         <source>Czech</source>
         <translation>Чеська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="138"/>
+        <location filename="../qml/pages/AboutPage.qml" line="139"/>
         <source>Slovak</source>
         <translation>Словацька</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="192"/>
+        <location filename="../qml/pages/AboutPage.qml" line="193"/>
         <source>Hungarian</source>
         <translation>Угорська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="233"/>
+        <location filename="../qml/pages/AboutPage.qml" line="234"/>
         <source>Estonian</source>
         <translation>Естонська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="161"/>
+        <location filename="../qml/pages/AboutPage.qml" line="162"/>
         <source>Polish</source>
         <translation>Польська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="184"/>
+        <location filename="../qml/pages/AboutPage.qml" line="185"/>
         <source>Indonesian</source>
         <translation>Індонезійська</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="111"/>
+        <location filename="../qml/pages/AboutPage.qml" line="112"/>
         <source>Turkish</source>
         <translation>Турецька</translation>
     </message>
@@ -485,96 +485,96 @@
 <context>
     <name>DirectoryPage</name>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="186"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="158"/>
         <source>View Preferences</source>
         <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
         <translation>Переглянути Параметри</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="193"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="165"/>
         <source>Create New...</source>
         <translation>Створити новий...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="206"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="178"/>
         <source>Paste</source>
         <translation>Вставити</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="224"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="196"/>
         <source>Filter directory contents</source>
         <translation>Фільтрувати вміст каталогу</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="306"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="278"/>
         <source>Search</source>
         <translation>Пошук</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="283"/>
         <source>Remove bookmark</source>
         <translation>Видалити закладку</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="283"/>
         <source>Add to bookmarks</source>
         <translation>Додати закладку</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="320"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="292"/>
         <source>Copy path to clipboard</source>
         <translation>Скопіювати шлях до буфера обміну</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="400"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="372"/>
         <source>filtered by: %1</source>
         <translation>Відфільтровано за: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="462"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="434"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
         <translation>Немає збігів</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="464"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="436"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation>Порожньо</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="467"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="439"/>
         <source>No files matched the filter.</source>
         <translation>Не знайдено жодного файлу, який би відповідав фільтру.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="468"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="440"/>
         <source>This directory contains no files.</source>
         <translation>Цей каталог не містить файлів.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="548"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="551"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="520"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="523"/>
         <source>Deleting</source>
         <translation>Видалення</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="563"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="535"/>
         <source>Internally not ready</source>
         <translation>Внутрішньо не готовий</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="563"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="535"/>
         <source>Please simply try again</source>
         <translation>Просто спробуйте ще раз</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="606"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="578"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>Намагаєтесь перемістити між телефоном і SD картою? Це не працює, спробуйте скопіювати.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="608"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="580"/>
         <source>Perhaps the storage is full?</source>
         <translation>Переповнена сховище?</translation>
     </message>
@@ -587,22 +587,22 @@
         <translation>Видалення</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="320"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="323"/>
         <source>Open target folder</source>
         <translation>Відкрити цільову теку</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="321"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="324"/>
         <source>Open containing folder</source>
         <translation>Відкрити папку з вмістом</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="333"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="336"/>
         <source>Remove bookmark</source>
         <translation>Видалити закладку</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="333"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="336"/>
         <source>Add to bookmarks</source>
         <translation>Додати в закладки</translation>
     </message>
@@ -843,7 +843,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="264"/>
+        <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>стиснути файл</numerusform>
@@ -852,17 +852,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="273"/>
+        <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
         <translation>редагувати ціль посилання</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="278"/>
+        <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
         <translation>Застосувати</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="298"/>
+        <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>редагувати файл</numerusform>
@@ -871,7 +871,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="323"/>
+        <location filename="../qml/components/FileActions.qml" line="324"/>
         <source>show file properties</source>
         <translation>Показати властивості файлу</translation>
     </message>
@@ -1234,368 +1234,393 @@
 <context>
     <name>GlobalSettingsPage</name>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="47"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="48"/>
         <source>App Settings</source>
         <translation>Налаштування застосунку</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="52"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="53"/>
         <source>Directory View</source>
         <translation>Перегляд каталогу</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="63"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="64"/>
         <source>Use per-directory view settings</source>
         <translation>Використовувати налаштування перегляду для кожного каталогу</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="65"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="66"/>
         <source>Save view preferences individually for all folders in your home directory. The options below are used by default.</source>
         <translation>Зберегти налаштування перегляду для кожної теки окремо, якщо вони відрізняються від наведених нижче.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="90"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="91"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
         <translation>У режимі галереї зображення будуть показані відповідно до розміру екрану. Інші файли показуються без мініатюр попереднього перегляду.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="97"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="98"/>
         <source>Hint</source>
         <translation>Порада</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="98"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="99"/>
         <source>You can enable per-directory settings to configure your preferences for individual folders.</source>
         <translation>Ви можете увімкнути налаштування для кожного каталогу, щоб налаштувати ваші уподобання для окремих папок.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="103"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="104"/>
         <source>Show hidden files</source>
         <translation>Показати приховані файли</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="105"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="106"/>
         <source>Show files with names starting with a full stop (“.”).</source>
         <translation>Показувати файли з іменами, що починаються з крапки (&quot;.&quot;).</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="108"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="109"/>
         <source>Show preview images</source>
         <translation>Показати попередній перегляд зображень</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="110"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="111"/>
         <source>Preview contents of supported file types.</source>
         <translation>Попередній перегляд вмісту підтримуваних типів файлів.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="113"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="114"/>
         <source>Thumbnail size</source>
         <translation>Розмір мініатюри</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="119"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="120"/>
         <source>small</source>
         <translation>невеликий</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="120"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="121"/>
         <source>medium</source>
         <translation>середній</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="121"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="122"/>
         <source>large</source>
         <translation>великий</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="122"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="123"/>
         <source>huge</source>
         <translation>величезний</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="129"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="130"/>
         <source>Sorting</source>
         <translation>Сортування</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="139"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="140"/>
         <source>Show folders first</source>
         <translation>Спочатку показувати теки</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="141"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="142"/>
         <source>Always show folders at the top of the file list.</source>
         <translation>Завжди показувати теки у верхній частині списку файлів.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="144"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="145"/>
         <source>Show hidden files last</source>
         <translation>Показувати приховані файли останніми</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="146"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="147"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
         <translation>Завжди показувати файли, що починаються з крапки (&quot;.&quot;) в кінці списку файлів.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="149"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="150"/>
         <source>Sort by</source>
         <translation>Сортувати за</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="155"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="156"/>
         <source>name</source>
         <translation>ім&apos;ям</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="156"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="157"/>
         <source>size</source>
         <translation>розміром</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="157"/>
-        <source>file age</source>
-        <translation>час редагування</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="158"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="159"/>
         <source>file type</source>
         <translation>типом файлу</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="162"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="163"/>
         <source>Sort case-sensitively</source>
         <translation>Сортування з урахуванням регістру</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="164"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="165"/>
         <source>Show files with names starting with a capital letter first.</source>
         <translation>Спочатку показувати файли з іменами, що починаються з великої літери.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="168"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="169"/>
         <source>Sort order</source>
         <translation>Порядок сортування</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="178"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="179"/>
         <source>Sort names starting with the beginning of the alphabet first.</source>
         <translation>Спочатку відсортувати імена з початку алфавіту.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="179"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="180"/>
         <source>Show smaller files first.</source>
         <translation>Спочатку показувати менші файли.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="187"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="188"/>
         <source>Sort names starting with the end of the alphabet first.</source>
         <translation>Спочатку відсортувати імена з кінця алфавіту.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="188"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="189"/>
         <source>Show larger files first.</source>
         <translation>Спочатку показувати більші файли.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="189"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="218"/>
+        <source>Places</source>
+        <translation type="unfinished">Місця</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="181"/>
         <source>Show older files first.</source>
         <translation>Спочатку показувати старіші файли.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="176"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="177"/>
         <source>ascending</source>
         <translation>за зростанням</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="69"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="70"/>
         <source>View mode</source>
         <translation>Режим перегляду</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="76"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="77"/>
         <source>list</source>
         <translation>список</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="78"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="79"/>
         <source>Show files in a list. Optionally enable preview thumbnails using the separate setting below.</source>
         <translation>Показувати файли списком. За бажанням увімкніть попередній перегляд мініатюр за допомогою окремого налаштування нижче.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="88"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="89"/>
         <source>gallery</source>
         <translation>галерея</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="180"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="190"/>
         <source>Show more recently changed files first.</source>
         <translation>Спочатку показувати нещодавно змінені файли.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="185"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="186"/>
         <source>descending</source>
         <translation>за спаданням</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="198"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="158"/>
+        <source>modification date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="199"/>
         <source>Behavior and View</source>
         <translation>Поведінка та перегляд</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="209"/>
+        <source>Initial view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="210"/>
+        <source>The page that is shown when the app starts.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="217"/>
+        <source>Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="219"/>
+        <source>Search</source>
+        <translation type="unfinished">Пошук</translation>
+    </message>
+    <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="225"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="241"/>
         <source>Initial directory</source>
         <translation>Початковий каталог</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="214"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="230"/>
         <source>The directory that is shown when the app starts.</source>
         <translation>Каталог, який відображається при запуску застосунку.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="217"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="233"/>
         <source>user&apos;s home</source>
         <translation>домашня сторінка користувача</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="218"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="234"/>
         <source>last visited</source>
         <translation>останнє відвідування</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="219"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="235"/>
         <source>custom path</source>
         <translation>власний шлях</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="241"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="257"/>
         <source>Choose</source>
         <translation>Обрати</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="247"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="263"/>
         <source>Default transfer action</source>
         <translation>Дія переказу за замовчуванням</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="251"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="267"/>
         <source>The action that is selected by default when using the bulk file management feature (available through the “shuffle” icon after selecting files).</source>
         <translation>Дія, яка обирається за замовчуванням при використанні функції керування файлами (доступна через іконку &quot;перемішування&quot; після вибору файлів).</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="256"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="272"/>
         <source>copy</source>
         <translation>копіювати</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="257"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="273"/>
         <source>move</source>
         <translation>перемістити</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="258"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="274"/>
         <source>link</source>
         <translation>посилання</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="259"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="275"/>
         <source>none</source>
         <translation>немає</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="263"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="279"/>
         <source>Default filter line action</source>
         <translation>Дія лінії фільтра за замовчуванням</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="267"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="283"/>
         <source>Which action to take when the Enter key is pressed in the filter line in a directory&apos;s pull-down menu.</source>
         <translation>Яка дія виконується при натисканні клавіші Enter у рядку фільтрації у випадаючому меню каталогу.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="271"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="287"/>
         <source>return to directory view</source>
         <translation>повернутися до перегляду каталогу</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="272"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="288"/>
         <source>start recursive search</source>
         <translation>почати рекурсивний пошук</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="276"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="292"/>
         <source>File name abbreviation</source>
         <translation>Скорочення імені файлу</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="280"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="296"/>
         <source>How very long filenames are abbreviated in the directory view.</source>
         <translation>Як задовгі імена файлів скорочуються у перегляді каталогу.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="283"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="299"/>
         <source>fade out</source>
         <translation>зникають</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="284"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="300"/>
         <source>elide end</source>
         <translation>пропустити кінець</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="285"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="301"/>
         <source>elide middle</source>
         <translation>пропустити середину</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="289"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="305"/>
         <source>Share clipboard among windows</source>
         <translation>Спільний доступ до буфера обміну між вікнами</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="291"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="307"/>
         <source>Share the list of files currently in the clipboard among all open File Browser windows. When this is enabled, you can cut files in one window and paste them in another.</source>
         <translation>Розповсюджувати список файлів у буфері обміну між усіма відкритими вікнами Файлового браузера. Якщо цей параметр увімкнено, ви можете вирізати файли в одному вікні та вставити їх в іншому.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="297"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="313"/>
         <source>Show full directory paths</source>
         <translation>Показати повні шляхи до каталогів</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="299"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="315"/>
         <source>Show the full path in the page header of the directory view.</source>
         <translation>Показати повний шлях у заголовку сторінки перегляду каталогу.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="302"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="318"/>
         <source>Show navigation menu icon</source>
         <translation>Показати іконку меню навігації</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="304"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="320"/>
         <source>Show a visual hint that the navigation menu is available by tapping the page header of the directory view.</source>
         <translation>Показати візуальну підказку, що меню навігації доступне, натиснувши на заголовок сторінки подання каталогу.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="316"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="332"/>
         <source>Enable solid window background</source>
         <translation>Ввімкнути суцільний фон вікна</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="318"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="334"/>
         <source>Use a solid color instead of your wallpaper as the background of this app.</source>
         <translation>Використовуйте суцільний колір замість шпалер як фон цього застосунку.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="328"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="344"/>
         <source>Swipe from the right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
         <translation>Проведіть пальцем праворуч, щоб переглянути вихідний код Переглядача файлів, інформацію про ліцензію та список учасників.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="343"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="356"/>
         <source>Settings</source>
         <translation>Налаштування</translation>
     </message>
@@ -2692,7 +2717,7 @@ exposure program</extracomment>
         <translation>Будьте обережні під час використання Переглядачом Файлів у Root режимі. Дії можуть несподівано зламати вашу систему.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Запуск Переглядача Файлів у Root режимі</translation>
     </message>
@@ -2711,7 +2736,7 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="122"/>
-        <location filename="../qml/pages/SearchPage.qml" line="367"/>
+        <location filename="../qml/pages/SearchPage.qml" line="372"/>
         <source>Search</source>
         <translation>Пошук</translation>
     </message>
@@ -2721,7 +2746,7 @@ exposure program</extracomment>
         <translation>Шукайте нижче &quot;%1&quot;</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/SearchPage.qml" line="197"/>
+        <location filename="../qml/pages/SearchPage.qml" line="201"/>
         <source>%n hit(s)</source>
         <translation>
             <numerusform>%n результат</numerusform>
@@ -2730,40 +2755,40 @@ exposure program</extracomment>
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="328"/>
-        <location filename="../qml/pages/SearchPage.qml" line="329"/>
-        <location filename="../qml/pages/SearchPage.qml" line="415"/>
-        <location filename="../qml/pages/SearchPage.qml" line="417"/>
+        <location filename="../qml/pages/SearchPage.qml" line="333"/>
+        <location filename="../qml/pages/SearchPage.qml" line="334"/>
+        <location filename="../qml/pages/SearchPage.qml" line="420"/>
+        <location filename="../qml/pages/SearchPage.qml" line="422"/>
         <source>Deleting</source>
         <translation>Видалення</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="344"/>
+        <location filename="../qml/pages/SearchPage.qml" line="349"/>
         <source>Go to containing folder</source>
         <translation>Перейти до теки з вмістом</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="348"/>
+        <location filename="../qml/pages/SearchPage.qml" line="353"/>
         <source>Cut</source>
         <translation>Вирізати</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="352"/>
+        <location filename="../qml/pages/SearchPage.qml" line="357"/>
         <source>Copy</source>
         <translation>Копіювати</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="358"/>
+        <location filename="../qml/pages/SearchPage.qml" line="363"/>
         <source>Delete</source>
         <translation>Видалити</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="424"/>
+        <location filename="../qml/pages/SearchPage.qml" line="429"/>
         <source>Internally not ready</source>
         <translation>Внутрішньо не готовий</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="424"/>
+        <location filename="../qml/pages/SearchPage.qml" line="429"/>
         <source>Please simply try again</source>
         <translation>Просто спробуйте ще раз</translation>
     </message>
@@ -2847,78 +2872,78 @@ exposure program</extracomment>
 <context>
     <name>ShortcutsPage</name>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="104"/>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="295"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="108"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="300"/>
         <source>Places</source>
         <translation>Місця</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="62"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="66"/>
         <source>Clipboard</source>
         <translation>Буфер обміну</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="67"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="71"/>
         <source>Transfers</source>
         <translation>Передачі</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="72"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="76"/>
         <source>Documents</source>
         <translation>Документи</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="77"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="81"/>
         <source>Pictures</source>
         <translation>Фотографії</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="82"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="86"/>
         <source>Videos</source>
         <translation>Відео</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="87"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="91"/>
         <source>Music</source>
         <translation>Музика</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="233"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="237"/>
         <source>Remove bookmark for “%1”</source>
         <translation>Видалити закладку для &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="234"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="238"/>
         <source>Add “%1” to bookmarks</source>
         <translation>Додати &quot;%1&quot; в закладки</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="245"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="249"/>
         <source>New window opened. Sometimes the application stays in the background.</source>
         <translation>Відкрито нове вікно. Іноді застосунок залишається у фоновому режимі.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="251"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="255"/>
         <source>Open new window</source>
         <translation>Відкрити нове вікно</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="258"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="262"/>
         <source>Search</source>
         <translation>Пошук</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="267"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="271"/>
         <source>Create a new bookmark</source>
         <translation>Створити нову закладку</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="279"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="283"/>
         <source>Save</source>
         <translation>Зберегти</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="285"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="289"/>
         <source>Open storage settings</source>
         <translation>Відкрити налаштування сховища</translation>
     </message>
@@ -3282,137 +3307,137 @@ exposure program</extracomment>
 <context>
     <name>ViewSettingsPage</name>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="49"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="35"/>
         <source>Sorting and View</source>
         <translation>Сортування та перегляд</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="51"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="37"/>
         <source>Settings apply only to the current folder. Swipe from the right to change default values.</source>
         <translation>Налаштування застосовуються лише до поточної теки. Проведіть праворуч, щоб змінити значення за замовчуванням.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="52"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="38"/>
         <source>Settings apply to all folders.</source>
         <translation>Налаштування застосовуються до всіх тек.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="62"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="48"/>
         <source>Sort by...</source>
         <translation>Сортувати за...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="66"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="52"/>
         <source>Name</source>
         <translation>Ім&apos;ям</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="67"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="53"/>
         <source>Size</source>
         <translation>Розміром</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="68"/>
-        <source>File age</source>
-        <translation>Час редагування</translation>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="54"/>
+        <source>Modification date</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="69"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="55"/>
         <source>File type</source>
         <translation>Типом файлу</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="77"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="63"/>
         <source>Order...</source>
         <translation>Порядок...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="81"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="67"/>
         <source>ascending</source>
         <translation>за зростанням</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="82"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="68"/>
         <source>descending</source>
         <translation>за спаданням</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="90"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="76"/>
         <source>Preview images...</source>
         <translation>Попередній перегляд зображень...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="93"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="79"/>
         <source>none</source>
         <translation>немає</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="94"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="80"/>
         <source>small</source>
         <translation>невеликий</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="95"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="81"/>
         <source>medium</source>
         <translation>середній</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="96"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="82"/>
         <source>large</source>
         <translation>великий</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="97"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="83"/>
         <source>huge</source>
         <translation>величезний</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="110"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="96"/>
         <source>Show hidden files</source>
         <translation>Показати приховані файли</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="112"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="98"/>
         <source>Show files with names starting with a full stop (“.”).</source>
         <translation>Показувати файли з іменами, що починаються з крапки (&quot;.&quot;).</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="116"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="102"/>
         <source>Enable gallery mode</source>
         <translation>Ввімкнути режим галереї</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="118"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="104"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
         <translation>У режимі галереї зображення будуть показані відповідно до розміру екрану. Інші файли показуються без мініатюр попереднього перегляду.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="131"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="120"/>
         <source>Sort case-sensitively</source>
         <translation>Сортування з урахуванням регістру</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="133"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="122"/>
         <source>Show files with names starting with a capital letter first.</source>
         <translation>Спочатку показувати файли з іменами, що починаються з великої літери.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="138"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="127"/>
         <source>Show folders first</source>
         <translation>Спочатку показувати теки</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="140"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="129"/>
         <source>Always show folders at the top of the file list.</source>
         <translation>Завжди показувати теки у верхній частині списку файлів.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="144"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="133"/>
         <source>Show hidden files last</source>
         <translation>Показувати приховані файли останніми</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="146"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="135"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
         <translation>Завжди показувати файли, що починаються з крапки (&quot;.&quot;) в кінці списку файлів.</translation>
     </message>

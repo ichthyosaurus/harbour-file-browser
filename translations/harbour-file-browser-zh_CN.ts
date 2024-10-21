@@ -4,137 +4,137 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="54"/>
+        <location filename="../qml/pages/AboutPage.qml" line="55"/>
         <source>A fully-fledged file manager for Sailfish OS.</source>
         <translation>Sailfish OS 的成熟文件管理器。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="81"/>
+        <location filename="../qml/pages/AboutPage.qml" line="82"/>
         <source>Development</source>
         <translation>开发</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="84"/>
+        <location filename="../qml/pages/AboutPage.qml" line="85"/>
         <source>Programming</source>
         <translation>编程</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="91"/>
+        <location filename="../qml/pages/AboutPage.qml" line="92"/>
         <source>Icon Design</source>
         <translation>图标设计</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="98"/>
+        <location filename="../qml/pages/AboutPage.qml" line="99"/>
         <source>Translations</source>
         <translation>翻译</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="155"/>
+        <location filename="../qml/pages/AboutPage.qml" line="156"/>
         <source>Romanian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="170"/>
+        <location filename="../qml/pages/AboutPage.qml" line="171"/>
         <source>Norwegian Bokmål</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="239"/>
+        <location filename="../qml/pages/AboutPage.qml" line="240"/>
         <source>English</source>
         <translation>英语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="205"/>
+        <location filename="../qml/pages/AboutPage.qml" line="206"/>
         <source>German</source>
         <translation>德语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="225"/>
+        <location filename="../qml/pages/AboutPage.qml" line="226"/>
         <source>Finnish</source>
         <translation>芬兰语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="247"/>
+        <location filename="../qml/pages/AboutPage.qml" line="248"/>
         <source>Dutch (Belgium)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="266"/>
+        <location filename="../qml/pages/AboutPage.qml" line="267"/>
         <source>Chinese</source>
         <translation>汉语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="144"/>
+        <location filename="../qml/pages/AboutPage.qml" line="145"/>
         <source>Russian</source>
         <translation>俄语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="120"/>
+        <location filename="../qml/pages/AboutPage.qml" line="121"/>
         <source>Swedish</source>
         <translation>瑞典语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="101"/>
+        <location filename="../qml/pages/AboutPage.qml" line="102"/>
         <source>Ukrainian</source>
         <translation>乌克兰语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="177"/>
+        <location filename="../qml/pages/AboutPage.qml" line="178"/>
         <source>Italian</source>
         <translation>意大利语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="129"/>
+        <location filename="../qml/pages/AboutPage.qml" line="130"/>
         <source>Spanish</source>
         <translation>西班牙语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="213"/>
+        <location filename="../qml/pages/AboutPage.qml" line="214"/>
         <source>French</source>
         <translation>法语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="253"/>
+        <location filename="../qml/pages/AboutPage.qml" line="254"/>
         <source>Dutch</source>
         <translation>尼德兰语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="199"/>
+        <location filename="../qml/pages/AboutPage.qml" line="200"/>
         <source>Greek</source>
         <translation>希腊语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="260"/>
+        <location filename="../qml/pages/AboutPage.qml" line="261"/>
         <source>Czech</source>
         <translation>捷克语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="138"/>
+        <location filename="../qml/pages/AboutPage.qml" line="139"/>
         <source>Slovak</source>
         <translation>斯洛伐克语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="192"/>
+        <location filename="../qml/pages/AboutPage.qml" line="193"/>
         <source>Hungarian</source>
         <translation>匈牙利语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="233"/>
+        <location filename="../qml/pages/AboutPage.qml" line="234"/>
         <source>Estonian</source>
         <translation>爱沙尼亚语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="161"/>
+        <location filename="../qml/pages/AboutPage.qml" line="162"/>
         <source>Polish</source>
         <translation>波兰语</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="184"/>
+        <location filename="../qml/pages/AboutPage.qml" line="185"/>
         <source>Indonesian</source>
         <translation>印度尼西亚</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="111"/>
+        <location filename="../qml/pages/AboutPage.qml" line="112"/>
         <source>Turkish</source>
         <translation>土耳其</translation>
     </message>
@@ -477,96 +477,96 @@
 <context>
     <name>DirectoryPage</name>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="306"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="278"/>
         <source>Search</source>
         <translation>搜索</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="206"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="178"/>
         <source>Paste</source>
         <translation>粘贴</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="283"/>
         <source>Remove bookmark</source>
         <translation>移除收藏</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="311"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="283"/>
         <source>Add to bookmarks</source>
         <translation>添加到收藏</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="320"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="292"/>
         <source>Copy path to clipboard</source>
         <translation>复制路径到剪切板</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="462"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="434"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
         <translation>没有匹配的项目</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="464"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="436"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation type="unfinished">空</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="548"/>
-        <location filename="../qml/pages/DirectoryPage.qml" line="551"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="520"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="523"/>
         <source>Deleting</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="186"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="158"/>
         <source>View Preferences</source>
         <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
         <translation>查看偏好</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="193"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="165"/>
         <source>Create New...</source>
         <translation>新建…</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="224"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="196"/>
         <source>Filter directory contents</source>
         <translation>筛选目录内容</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="400"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="372"/>
         <source>filtered by: %1</source>
         <translation>筛选方式: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="467"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="439"/>
         <source>No files matched the filter.</source>
         <translation>没有匹配筛选的文件。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="468"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="440"/>
         <source>This directory contains no files.</source>
         <translation>该目录内没有文件。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="563"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="535"/>
         <source>Internally not ready</source>
         <translation>内部未就绪</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="563"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="535"/>
         <source>Please simply try again</source>
         <translation>请重试</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="606"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="578"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
         <translation>想要在手机存储和SD卡之间移动文件？请尝试复制。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DirectoryPage.qml" line="608"/>
+        <location filename="../qml/pages/DirectoryPage.qml" line="580"/>
         <source>Perhaps the storage is full?</source>
         <translation>或许存储已满？</translation>
     </message>
@@ -579,22 +579,22 @@
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="320"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="323"/>
         <source>Open target folder</source>
         <translation>打开目标档案夹</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="321"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="324"/>
         <source>Open containing folder</source>
         <translation type="unfinished">打开子文件夹</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="333"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="336"/>
         <source>Remove bookmark</source>
         <translation>移除收藏</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="333"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="336"/>
         <source>Add to bookmarks</source>
         <translation>添加到收藏</translation>
     </message>
@@ -817,31 +817,31 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="264"/>
+        <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>压缩文件</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="273"/>
+        <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
         <translation>编辑连接目标</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="278"/>
+        <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
         <translation>应用</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="298"/>
+        <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>编辑文件</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="323"/>
+        <location filename="../qml/components/FileActions.qml" line="324"/>
         <source>show file properties</source>
         <translation>显示文件属性</translation>
     </message>
@@ -1200,368 +1200,393 @@
 <context>
     <name>GlobalSettingsPage</name>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="47"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="48"/>
         <source>App Settings</source>
         <translation>应用设置</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="52"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="53"/>
         <source>Directory View</source>
         <translation>目录视图</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="63"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="64"/>
         <source>Use per-directory view settings</source>
         <translation>使用目录单独的视图设置</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="65"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="66"/>
         <source>Save view preferences individually for all folders in your home directory. The options below are used by default.</source>
         <translation>为主目录中所有文件夹单独保存视图设置。默认使用下面的设置。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="90"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="91"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
         <translation>在展厅模式 (gallery mode) 中，图像会被缩放至荧幕大小。其余没带有预览图像的文件则会被显示。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="97"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="98"/>
         <source>Hint</source>
         <translation>提示</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="98"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="99"/>
         <source>You can enable per-directory settings to configure your preferences for individual folders.</source>
         <translation>您可以开启路径一一对应的设置来一一配置您资料夹的偏好设定。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="103"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="104"/>
         <source>Show hidden files</source>
         <translation>显示隐藏文件</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="105"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="106"/>
         <source>Show files with names starting with a full stop (“.”).</source>
         <translation>显示名称开头为半角句号（“.”）的文件。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="108"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="109"/>
         <source>Show preview images</source>
         <translation>显示预览图</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="110"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="111"/>
         <source>Preview contents of supported file types.</source>
         <translation>预览受支持文件的内容。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="113"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="114"/>
         <source>Thumbnail size</source>
         <translation>缩略图大小</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="119"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="120"/>
         <source>small</source>
         <translation>小</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="120"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="121"/>
         <source>medium</source>
         <translation>中</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="121"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="122"/>
         <source>large</source>
         <translation>大</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="122"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="123"/>
         <source>huge</source>
         <translation>巨大</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="129"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="130"/>
         <source>Sorting</source>
         <translation>分类</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="139"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="140"/>
         <source>Show folders first</source>
         <translation>先显示目录</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="141"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="142"/>
         <source>Always show folders at the top of the file list.</source>
         <translation>文件夹总在文件列表顶部显示。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="144"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="145"/>
         <source>Show hidden files last</source>
         <translation>最后显示隐藏文件</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="146"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="147"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
         <translation>名称开头带句点（“.”）的文件总在文件列表末尾显示。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="149"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="150"/>
         <source>Sort by</source>
         <translation>分类方式</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="155"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="156"/>
         <source>name</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="156"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="157"/>
         <source>size</source>
         <translation>大小</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="157"/>
-        <source>file age</source>
-        <translation>创建时间</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="158"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="159"/>
         <source>file type</source>
         <translation>文件类型</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="162"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="163"/>
         <source>Sort case-sensitively</source>
         <translation>区分大小写</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="164"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="165"/>
         <source>Show files with names starting with a capital letter first.</source>
         <translation>先显示名称开头字母大写的文件。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="168"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="169"/>
         <source>Sort order</source>
         <translation>排序</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="178"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="179"/>
         <source>Sort names starting with the beginning of the alphabet first.</source>
         <translation>首字母在靠前的文件名排在前面。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="179"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="180"/>
         <source>Show smaller files first.</source>
         <translation>较小文件排在前面。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="187"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="188"/>
         <source>Sort names starting with the end of the alphabet first.</source>
         <translation>首字母靠后的文件排在前面。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="188"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="189"/>
         <source>Show larger files first.</source>
         <translation>较大文件排在前面。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="189"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="218"/>
+        <source>Places</source>
+        <translation type="unfinished">位置</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="181"/>
         <source>Show older files first.</source>
         <translation>较旧文件排在前面。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="176"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="177"/>
         <source>ascending</source>
         <translation>升序</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="69"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="70"/>
         <source>View mode</source>
         <translation>查看模式</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="76"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="77"/>
         <source>list</source>
         <translation>列表</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="78"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="79"/>
         <source>Show files in a list. Optionally enable preview thumbnails using the separate setting below.</source>
         <translation>以列表形式检视文档。您也可以选择用底下的独立设定来开启预览图像。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="88"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="89"/>
         <source>gallery</source>
         <translation>展厅</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="180"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="190"/>
         <source>Show more recently changed files first.</source>
         <translation>最先检视最近变更的文档。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="185"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="186"/>
         <source>descending</source>
         <translation>降序</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="198"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="158"/>
+        <source>modification date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="199"/>
         <source>Behavior and View</source>
         <translation>行为及视图</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="209"/>
+        <source>Initial view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="210"/>
+        <source>The page that is shown when the app starts.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="217"/>
+        <source>Directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="219"/>
+        <source>Search</source>
+        <translation type="unfinished">搜索</translation>
+    </message>
+    <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="225"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="241"/>
         <source>Initial directory</source>
         <translation>初始目录</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="214"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="230"/>
         <source>The directory that is shown when the app starts.</source>
         <translation>应用启动时显示的目录。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="217"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="233"/>
         <source>user&apos;s home</source>
         <translation>用户主目录</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="218"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="234"/>
         <source>last visited</source>
         <translation>最近访问</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="219"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="235"/>
         <source>custom path</source>
         <translation>自定义路径</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="241"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="257"/>
         <source>Choose</source>
         <translation>选择</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="247"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="263"/>
         <source>Default transfer action</source>
         <translation>默认传输操作</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="251"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="267"/>
         <source>The action that is selected by default when using the bulk file management feature (available through the “shuffle” icon after selecting files).</source>
         <translation>使用批量管理功能（选择文件后可通过“重排”图标使用）时，默认选中的操作。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="256"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="272"/>
         <source>copy</source>
         <translation>复制</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="257"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="273"/>
         <source>move</source>
         <translation>移动</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="258"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="274"/>
         <source>link</source>
         <translation>链接</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="259"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="275"/>
         <source>none</source>
         <translation>无</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="263"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="279"/>
         <source>Default filter line action</source>
         <translation>默认筛选操作</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="267"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="283"/>
         <source>Which action to take when the Enter key is pressed in the filter line in a directory&apos;s pull-down menu.</source>
         <translation>在目录下拉菜单中的筛选框按下回车时，要进行的操作。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="271"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="287"/>
         <source>return to directory view</source>
         <translation>返回目录视图</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="272"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="288"/>
         <source>start recursive search</source>
         <translation>开始递归搜索</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="276"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="292"/>
         <source>File name abbreviation</source>
         <translation>文件名称缩写</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="280"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="296"/>
         <source>How very long filenames are abbreviated in the directory view.</source>
         <translation>目录视图中较长文件名的缩写方式。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="283"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="299"/>
         <source>fade out</source>
         <translation>淡出</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="284"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="300"/>
         <source>elide end</source>
         <translation>缩写末尾</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="285"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="301"/>
         <source>elide middle</source>
         <translation>缩写中间</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="289"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="305"/>
         <source>Share clipboard among windows</source>
         <translation>把剪贴板分享给一众视窗</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="291"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="307"/>
         <source>Share the list of files currently in the clipboard among all open File Browser windows. When this is enabled, you can cut files in one window and paste them in another.</source>
         <translation>把一列当前文件的列表分享给所有已开启了的文件浏览器视窗。当这个选项可被执行时，您可以把一个文档在一个视窗里头切割，然后粘贴它们至另一个文档。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="297"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="313"/>
         <source>Show full directory paths</source>
         <translation>显示完整目录路径</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="299"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="315"/>
         <source>Show the full path in the page header of the directory view.</source>
         <translation>在目录视图页面头部显示完整路径。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="302"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="318"/>
         <source>Show navigation menu icon</source>
         <translation>显示导航菜单图标</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="304"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="320"/>
         <source>Show a visual hint that the navigation menu is available by tapping the page header of the directory view.</source>
         <translation>显示视觉提示，说明可以通过点击目录视图页面头部使用导航菜单。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="316"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="332"/>
         <source>Enable solid window background</source>
         <translation>启用纯色窗口背景</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="318"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="334"/>
         <source>Use a solid color instead of your wallpaper as the background of this app.</source>
         <translation>使用纯色而不是壁纸作为应用背景。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="328"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="344"/>
         <source>Swipe from the right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
         <translation>从右向左滑动来查看文件浏览器的源代码、许可证信息与贡献者列表。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="343"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="356"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
@@ -2648,7 +2673,7 @@ exposure program</extracomment>
         <translation>在ROOT模式下使用文件浏览器时要小心。行动可能会意外地破坏你的系统。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
         <translation>在ROOT模式下启动文件浏览器</translation>
     </message>
@@ -2671,53 +2696,53 @@ exposure program</extracomment>
         <translation>在 “%1” 下搜索</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/SearchPage.qml" line="197"/>
+        <location filename="../qml/pages/SearchPage.qml" line="201"/>
         <source>%n hit(s)</source>
         <translation>
             <numerusform>%n 条搜索结果</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="328"/>
-        <location filename="../qml/pages/SearchPage.qml" line="329"/>
-        <location filename="../qml/pages/SearchPage.qml" line="415"/>
-        <location filename="../qml/pages/SearchPage.qml" line="417"/>
+        <location filename="../qml/pages/SearchPage.qml" line="333"/>
+        <location filename="../qml/pages/SearchPage.qml" line="334"/>
+        <location filename="../qml/pages/SearchPage.qml" line="420"/>
+        <location filename="../qml/pages/SearchPage.qml" line="422"/>
         <source>Deleting</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="344"/>
+        <location filename="../qml/pages/SearchPage.qml" line="349"/>
         <source>Go to containing folder</source>
         <translation>跳转到所在目录</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="348"/>
+        <location filename="../qml/pages/SearchPage.qml" line="353"/>
         <source>Cut</source>
         <translation>剪切</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="352"/>
+        <location filename="../qml/pages/SearchPage.qml" line="357"/>
         <source>Copy</source>
         <translation>复制</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="358"/>
+        <location filename="../qml/pages/SearchPage.qml" line="363"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="424"/>
+        <location filename="../qml/pages/SearchPage.qml" line="429"/>
         <source>Internally not ready</source>
         <translation>搜索失败</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="424"/>
+        <location filename="../qml/pages/SearchPage.qml" line="429"/>
         <source>Please simply try again</source>
         <translation>请重试</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="122"/>
-        <location filename="../qml/pages/SearchPage.qml" line="367"/>
+        <location filename="../qml/pages/SearchPage.qml" line="372"/>
         <source>Search</source>
         <translation>搜索</translation>
     </message>
@@ -2799,78 +2824,78 @@ exposure program</extracomment>
 <context>
     <name>ShortcutsPage</name>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="258"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="262"/>
         <source>Search</source>
         <translation>搜索</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="251"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="255"/>
         <source>Open new window</source>
         <translation>打开新窗口</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="62"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="66"/>
         <source>Clipboard</source>
         <translation>剪贴板</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="67"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="71"/>
         <source>Transfers</source>
         <translation>传输</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="72"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="76"/>
         <source>Documents</source>
         <translation>文档</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="77"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="81"/>
         <source>Pictures</source>
         <translation>图片</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="82"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="86"/>
         <source>Videos</source>
         <translation>视频</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="87"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="91"/>
         <source>Music</source>
         <translation>音乐</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="233"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="237"/>
         <source>Remove bookmark for “%1”</source>
         <translation>移除收藏 “%1”</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="234"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="238"/>
         <source>Add “%1” to bookmarks</source>
         <translation>添加 “%1” 到收藏</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="245"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="249"/>
         <source>New window opened. Sometimes the application stays in the background.</source>
         <translation>已打开新窗口。应用有时会在后台继续运行。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="267"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="271"/>
         <source>Create a new bookmark</source>
         <translation>创建新收藏夹</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="279"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="283"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="285"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="289"/>
         <source>Open storage settings</source>
         <translation>打开储存设置</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="104"/>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="295"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="108"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="300"/>
         <source>Places</source>
         <translation>位置</translation>
     </message>
@@ -3210,137 +3235,137 @@ exposure program</extracomment>
 <context>
     <name>ViewSettingsPage</name>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="49"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="35"/>
         <source>Sorting and View</source>
         <translation>分类及视图</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="51"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="37"/>
         <source>Settings apply only to the current folder. Swipe from the right to change default values.</source>
         <translation>设置只对当前目录生效。从右向左滑动来改变默认值。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="52"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="38"/>
         <source>Settings apply to all folders.</source>
         <translation>设置对所有目录生效。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="62"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="48"/>
         <source>Sort by...</source>
         <translation>分类方式...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="66"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="52"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="67"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="53"/>
         <source>Size</source>
         <translation>大小</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="68"/>
-        <source>File age</source>
-        <translation>创建时间</translation>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="54"/>
+        <source>Modification date</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="69"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="55"/>
         <source>File type</source>
         <translation>文件类型</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="77"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="63"/>
         <source>Order...</source>
         <translation>顺序...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="81"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="67"/>
         <source>ascending</source>
         <translation>升序</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="82"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="68"/>
         <source>descending</source>
         <translation>降序</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="90"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="76"/>
         <source>Preview images...</source>
         <translation>预览图片...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="93"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="79"/>
         <source>none</source>
         <translation>无</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="94"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="80"/>
         <source>small</source>
         <translation>小</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="95"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="81"/>
         <source>medium</source>
         <translation>中</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="96"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="82"/>
         <source>large</source>
         <translation>大</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="97"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="83"/>
         <source>huge</source>
         <translation>巨大</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="110"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="96"/>
         <source>Show hidden files</source>
         <translation>显示隐藏文件</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="112"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="98"/>
         <source>Show files with names starting with a full stop (“.”).</source>
         <translation>显示文件名开头为句点（“.”）的文件。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="116"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="102"/>
         <source>Enable gallery mode</source>
         <translation>启用图库模式</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="118"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="104"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
         <translation>在展厅模式 (gallery mode) 中，图像会被缩放成荧幕的大小。其余没有预览图像的档案将会被显示。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="131"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="120"/>
         <source>Sort case-sensitively</source>
         <translation>区分大小写</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="133"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="122"/>
         <source>Show files with names starting with a capital letter first.</source>
         <translation>先显示名称开头字母大写的文件。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="138"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="127"/>
         <source>Show folders first</source>
         <translation>先显示目录</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="140"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="129"/>
         <source>Always show folders at the top of the file list.</source>
         <translation>文件夹总在文件列表顶部显示。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="144"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="133"/>
         <source>Show hidden files last</source>
         <translation>最后显示隐藏文件</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="146"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="135"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
         <translation>名称开头带句点（“.”）的文件总在文件列表末尾显示。</translation>
     </message>
