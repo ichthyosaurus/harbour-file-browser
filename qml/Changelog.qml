@@ -9,6 +9,32 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: "3.4.0"
+        date: "2024-10-21"
+        paragraphs: [
+            "- Updated translations: Estonian, Slovak, Spanish, Swedish, Ukrainian, German, English<br>" +
+            "- Important change: files are now sorted by modification date insteadd of file age<br>" +
+            "-   - This change is necessary to align File Browser's behavior with KDE Dolphin's behavior, so that you see the same sort order when opening a mounted folder on your desktop and when opening it on your phone<br>" +
+            "-   - If you were using local view settings, you now have to switch sort order in folders where you defined it<br>" +
+            "-   - Sorting by file age meant that more recently changed files were at the top, sorting by file data means that they are at the bottom now when sorting in ascending order<br>" +
+            "-   - The old and more mobile-friendly behavior is now emulated by automatically switching sort order when switching sort role<br>" +
+            "- Added a new setting in \"App Settings -> View and Behavior -> Initial view\" to choose which view is shown when the app is started (folder, places, or search)<br>" +
+            "- Added partition size info in the context menu of device shortcuts<br>" +
+            "- Fixed video preview starting to play when the file details page is entered, instead of when the preview page is actually shown<br>" +
+            "- Fixed synchronising settings between the global settings page and the view settings page<br>" +
+            "- Fixed managing files larger than 2 GiB on 32bit devices<br>" +
+            "-   - Their status, size, and date are now correctly shown in the folder view<br>" +
+            "-   - They can be put in the clipboard, copied, and moved now<br>" +
+            "- Fixed a bunch of styling issues on the new Opal.MediaPlayer video preview page<br>" +
+            "- Fixed styling of gallery video play button in light ambiences<br>" +
+            "- Fixed thumbnails for video files not appearing in gallery mode<br>" +
+            "- Fixed starting search via the cover<br>" +
+            "- Fixed immediately focussing the search field when opening the search page<br>" +
+            "- Fixed some causes of the shortcuts page or settings page suddenly being blank but it still happens sometimes<br>" +
+            "- Switched to Opal.SmartScrollbar for displaying the smart scrollbar in long folder views"
+        ]
+    }
+    ChangelogItem {
         version: "3.3.1"
         date: "2024-10-19"
         paragraphs: [

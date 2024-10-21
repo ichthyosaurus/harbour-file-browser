@@ -10,6 +10,29 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
  * Nothing so far
 
+## Version 3.4.0 (2024-10-21)
+
+- Updated translations: Estonian, Slovak, Spanish, Swedish, Ukrainian, German, English
+- Important change: files are now sorted by modification date insteadd of file age
+-   - This change is necessary to align File Browser's behavior with KDE Dolphin's behavior, so that you see the same sort order when opening a mounted folder on your desktop and when opening it on your phone
+-   - If you were using local view settings, you now have to switch sort order in folders where you defined it
+-   - Sorting by file age meant that more recently changed files were at the top, sorting by file data means that they are at the bottom now when sorting in ascending order
+-   - The old and more mobile-friendly behavior is now emulated by automatically switching sort order when switching sort role
+- Added a new setting in "App Settings -> View and Behavior -> Initial view" to choose which view is shown when the app is started (folder, places, or search)
+- Added partition size info in the context menu of device shortcuts
+- Fixed video preview starting to play when the file details page is entered, instead of when the preview page is actually shown
+- Fixed synchronising settings between the global settings page and the view settings page
+- Fixed managing files larger than 2 GiB on 32bit devices
+-   - Their status, size, and date are now correctly shown in the folder view
+-   - They can be put in the clipboard, copied, and moved now
+- Fixed a bunch of styling issues on the new Opal.MediaPlayer video preview page
+- Fixed styling of gallery video play button in light ambiences
+- Fixed thumbnails for video files not appearing in gallery mode
+- Fixed starting search via the cover
+- Fixed immediately focussing the search field when opening the search page
+- Fixed some causes of the shortcuts page or settings page suddenly being blank but it still happens sometimes
+- Switched to Opal.SmartScrollbar for displaying the smart scrollbar in long folder views
+
 ## Version 3.3.1 (2024-10-19)
 
 - Updated translations: Slovak, Swedish
