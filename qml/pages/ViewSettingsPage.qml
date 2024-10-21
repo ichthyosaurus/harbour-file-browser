@@ -143,16 +143,12 @@ Page {
         orderList.initial = prefs.viewSortOrder
 
         if (prefs.viewPreviewsShown) thumbList.initial = prefs.viewPreviewsSize
-        else thumbList.initial = "none";
-    }
-
-    Component.onCompleted: {
-        updateShownSettings();
+        else thumbList.initial = "none"
     }
 
     onStatusChanged: {
-        if (status === PageStatus.Active) {
-            pageStack.pushAttached(main.settingsPage);
+        if (status === PageStatus.Activating) {
+            updateShownSettings()
         }
     }
 
