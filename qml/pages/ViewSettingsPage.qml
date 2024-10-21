@@ -104,7 +104,10 @@ Page {
                 description: qsTr("In gallery mode, images will be shown to fit the screen. " +
                                   "Other files are shown without preview thumbnails.")
                 settingsContainer: prefs
+
+                // @disable-check M4
                 checkedValue: "gallery"
+
                 clickHandler: function() {
                     if (settingsContainer[key] === "gallery") {
                         settingsContainer[key] = "list"

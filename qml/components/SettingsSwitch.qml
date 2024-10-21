@@ -36,6 +36,10 @@ TextSwitch {
     property var defaultClickHandler: function() {
         settingsContainer[key] = !checked
     }
+
+    // The checkedValue may be of any type, it is not
+    // restricted to be only a boolean.
+    // @disable-check M311
     property var checkedValue: true
 
     // internal
