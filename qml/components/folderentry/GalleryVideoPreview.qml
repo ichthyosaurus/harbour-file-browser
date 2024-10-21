@@ -10,21 +10,35 @@ import Nemo.Thumbnailer 1.0
 
 SilicaItem {
     id: root
-    property alias file: thumbnail.source
+    property string file
+    property var mimeTypeCallback: null
 
-    readonly property bool _haveThumbnail: thumbnail.status !== Thumbnail.Error
+    readonly property bool _haveThumbnail:
+        thumbnailLoader.status !== Loader.Error &&
+        thumbnailLoader.item.status !== Thumbnail.Error
 
-    height: _haveThumbnail ? thumbnail.height : Theme.itemSizeExtraLarge
-    palette.colorScheme: _haveThumbnail ? Theme.LightOnDark : Theme.colorScheme
+    height: _haveThumbnail ?
+        Math.max(thumbnailLoader.height,
+                 Theme.itemSizeExtraLarge) :
+        Theme.itemSizeExtraLarge
 
-    Thumbnail {
-        id: thumbnail
-        opacity: highlighted ? Theme.opacityLow : 1.0
-        width: Math.min(Screen.width, Screen.height)
-        height: width
-        sourceSize.width: width
-        sourceSize.height: height
-        priority: Thumbnail.NormalPriority
+    Loader {
+        id: thumbnailLoader
+
+        sourceComponent: Component {
+            Thumbnail {
+                source: file
+                opacity: highlighted ? Theme.opacityLow : 1.0
+                width: Math.min(Screen.width, Screen.height)
+                height: width
+                fillMode: Thumbnail.PreserveAspectFit
+                mimeType: !!file && mimeTypeCallback instanceof Function ?
+                              mimeTypeCallback() : ""
+                sourceSize.width: width
+                sourceSize.height: height
+                priority: Thumbnail.NormalPriority
+            }
+        }
     }
 
     Rectangle {
@@ -32,26 +46,36 @@ SilicaItem {
             fill: playButton
             margins: -Theme.paddingLarge
         }
+
         radius: width
         color: {
             if (highlighted) {
-                Theme.rgba(palette.highlightDimmerColor, Theme.opacityLow)
-            } else if (palette.colorScheme === Theme.LightOnDark) {
-                Theme.rgba(Theme.darkPrimaryColor, Theme.opacityFaint)
+                Theme.rgba(Theme.highlightDimmerColor, Theme.opacityLow)
+            } else if (_haveThumbnail) {
+                Theme.rgba(Theme.darkPrimaryColor, Theme.opacityLow)
             } else {
-                Theme.rgba(Theme.lightPrimaryColor, Theme.opacityFaint)
+                Theme.rgba(Theme.primaryColor, Theme.opacityFaint)
             }
         }
-        border.color: highlighted ?
-            palette.secondaryHighlightColor :
-            palette.secondaryColor
+
         border.width: 2
+        border.color: {
+            if (highlighted) {
+                Theme.secondaryHighlightColor
+            } else if (_haveThumbnail) {
+                Theme.lightSecondaryColor
+            } else {
+                Theme.secondaryColor
+            }
+        }
     }
 
     HighlightImage {
         id: playButton
         anchors.centerIn: parent
         source: "../../modules/Opal/MediaPlayer/private/images/icon-m-play.png"
-        color: palette.primaryColor
+        color: _haveThumbnail ?
+            Theme.lightPrimaryColor :
+            Theme.primaryColor
     }
 }

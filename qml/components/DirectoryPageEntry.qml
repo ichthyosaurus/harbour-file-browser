@@ -188,6 +188,9 @@ ListItem {
         GalleryVideoPreview {
             file: dir + "/" + filename
             highlighted: listItem.highlighted
+            mimeTypeCallback: function() {
+                return fileModel.mimeTypeAt(index)
+            }
         }
     }
 
