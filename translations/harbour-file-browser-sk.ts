@@ -2475,12 +2475,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="648"/>
         <source>Play on repeat</source>
-        <translation type="unfinished"></translation>
+        <translation>Prehrávať opakovane</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="649"/>
         <source>Play once</source>
-        <translation type="unfinished"></translation>
+        <translation>Prehrať raz</translation>
     </message>
 </context>
 <context>
