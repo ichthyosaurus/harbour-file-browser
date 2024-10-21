@@ -51,7 +51,37 @@ Item {
                 main.coverText = coverText
             }
 
+            /*
+            console.log("STATUS CHANGED:", status, page, page.visible,
+                        page.dir, nextPage, JSON.stringify(nextPageProperties), nextPage.visible,
+                        pageStack._currentContainer.navigationPending, PageNavigation.Forward)
+            */
+
             pushAttached(nextPage)
         }
     }
+
+    /*
+    Connections {
+        target: pageStack._currentContainer
+        onNavigationPendingChanged: {
+            if (pageStack.currentPage != page ||
+                    pageStack._currentContainer.navigationPending !==
+                    PageNavigation.Forward) {
+                return
+            }
+
+            if (!!nextPage && !nextPage.visible) {
+                console.log("NAVI STATUS", pageStack._currentContainer.navigationPending ===
+                            PageNavigation.Forward)
+                nextPage.opacity = Qt.binding(function(){ return 1.0 })
+                pushAttached(nextPage)
+            }
+
+            console.log("STATUS CHANGED NAVIG:", status, page, page.visible,
+                        page.dir, nextPage, JSON.stringify(nextPageProperties), nextPage.visible,
+                        pageStack._currentContainer.navigationPending, PageNavigation.Forward)
+        }
+    }
+    */
 }
