@@ -29,7 +29,8 @@ import Opal.InfoCombo 1.0
 import "../components"
 
 Page {
-    id: page
+    id: root
+    objectName: "GlobalSettingsPage"
     allowedOrientations: Orientation.All
 
     SilicaFlickable {
@@ -349,13 +350,9 @@ Page {
         }
     }
 
-    onStatusChanged: {
-        if (status === PageStatus.Active && !forwardNavigation) {
-            pageStack.pushAttached(main.aboutPage);
-        }
-
-        if (status === PageStatus.Activating) {
-            main.coverText = qsTr("Settings")
-        }
+    AttachedPageManager {
+        page: root
+        nextPage: main.aboutPage
+        coverText: qsTr("Settings")
     }
 }

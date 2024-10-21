@@ -155,4 +155,9 @@ Page {
             pageStack.pushAttached(main.settingsPage);
         }
     }
+
+    AttachedPageManager {
+        page: page
+        nextPage: main.settingsPage
+    }
 }

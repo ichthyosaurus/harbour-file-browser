@@ -584,36 +584,19 @@ Page {
         }
     }
 
-    Connections {
-        target: main
-        onShortcutsPageChanged: {
-            if (main.shortcutsPage !== null && status === PageStatus.Active && !canNavigateForward) {
-                console.log("[directory page] pushing new shortcuts page |", dir)
-                pageStack.completeAnimation();
-                pageStack.pushAttached(main.shortcutsPage, { currentPath: dir });
-            } else {
-                console.log("[directory page] skipping new shortcuts page |", dir,
-                            main.shortcutsPage, status, canNavigateForward)
-            }
-        }
+    AttachedPageManager {
+        page: page
+        nextPage: main.shortcutsPage
+        nextPageProperties: ({currentPath: dir})
+        coverText: Paths.lastPartOfPath(page.dir) + "/"
     }
 
     onStatusChanged: {
-        if (status === PageStatus.Active) {
-            if (!canNavigateForward && main.shortcutsPage !== null) {
-                pageStack.completeAnimation();
-                pageStack.pushAttached(main.shortcutsPage, { currentPath: dir });
-                console.log("[directory page] page ready, pushing shortcuts |", dir)
-            } else {
-                console.log("[directory page] page ready, skipping shortcuts |", dir, canNavigateForward, main.shortcutsPage)
-            }
-
-            coverText = Paths.lastPartOfPath(page.dir) + "/"; // update cover
-        } else if (status === PageStatus.Activating) {
-            console.log("page: activating |", dir);
-            main.activePage = {type: "dir", path: dir};
-            navigate_syncNavStack();
-            console.log("page: activating done |", dir);
+        if (status === PageStatus.Activating) {
+            console.log("[page] activating", dir)
+            main.activePage = {type: "dir", path: dir}
+            navigate_syncNavStack()
+            console.log("[page] activating done for", dir)
         }
     }
 }

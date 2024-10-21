@@ -29,6 +29,7 @@ import "../modules/Opal/Attributions"
 
 A.AboutPageBase {
     id: root
+    objectName: "AboutPage"
 
     appName: "File Browser"
     appIcon: Qt.resolvedUrl("../images/%1.png".arg(Qt.application.name))

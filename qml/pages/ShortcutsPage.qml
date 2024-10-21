@@ -29,11 +29,15 @@ import "../js/paths.js" as Paths
 import "../components"
 
 Page {
-    id: page
+    id: root
     objectName: "ShortcutsPage"
     allowedOrientations: Orientation.All
 
     property string currentPath: ""
+
+    // This property is only used by the navigation finisher
+    // for logging.
+    readonly property string dir: currentPath
 
     function _showSailfishPicker(pickerType, title) {
         // note: we cannot use "animatorPush" because we need a proper
@@ -52,7 +56,7 @@ Page {
 
     NotificationPanel {
         id: notificationPanel
-        page: page
+        page: root
     }
 
     ListModel {
@@ -129,8 +133,8 @@ Page {
 
                         width: childrenRect.width
                         height: childrenRect.height
-                        spacing: (itemWidth * itemsPerScreen + 2*Theme.horizontalPageMargin) < page.width ?
-                                     (((page.width - 2*Theme.horizontalPageMargin) / itemsPerScreen) - itemWidth) : Theme.paddingMedium
+                        spacing: (itemWidth * itemsPerScreen + 2*Theme.horizontalPageMargin) < root.width ?
+                                     (((root.width - 2*Theme.horizontalPageMargin) / itemsPerScreen) - itemWidth) : Theme.paddingMedium
 
                         Repeater {
                             model: pickersModel
@@ -290,10 +294,9 @@ Page {
         }
     }
 
-    onStatusChanged: {
-        if (status === PageStatus.Active) {
-            main.coverText = qsTr("Places") // update cover
-            if (!forwardNavigation) pageStack.pushAttached(main.settingsPage);
-        }
+    AttachedPageManager {
+        page: root
+        nextPage: main.settingsPage
+        coverText: qsTr("Places")
     }
 }
