@@ -196,12 +196,14 @@ function goToFolder(folder, silent, startSearchQuery) {
     toPush.push({page: pagePath, properties: {dir: folder}});
 
     if (startSearchQuery !== undefined) {
-        toPush.push({page: Qt.resolvedUrl("../pages/SearchPage.qml"),
-                        properties: {
-                            dir: folder,
-                            searchText: startSearchQuery,
-                            startImmediately: true
-                        }})
+        toPush.push({
+            page: Qt.resolvedUrl("../pages/SearchPage.qml"),
+            properties: {
+                dir: folder,
+                searchText: startSearchQuery || "",
+                startImmediately: true
+            }})
+    } else if (!!startAtShortcuts) {
     }
 
     // We have to keep a copy of the final page details here
