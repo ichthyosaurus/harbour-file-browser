@@ -25,7 +25,7 @@ Name: harbour-file-browser
 Summary: File Browser for Sailfish OS
 
 # This is not a library but we try to follow semantic versioning (semver.org).
-Version: 3.3.1
+Version: 3.4.0
 Release: 1
 
 # The contents of the Group field should be one of the groups listed here:
