@@ -843,7 +843,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="265"/>
+        <location filename="../qml/components/FileActions.qml" line="264"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>komprimovať súbor</numerusform>
@@ -852,17 +852,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="274"/>
+        <location filename="../qml/components/FileActions.qml" line="273"/>
         <source>edit link target</source>
         <translation>upraviť cieľ odkazu</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="279"/>
+        <location filename="../qml/components/FileActions.qml" line="278"/>
         <source>Apply</source>
         <translation>Použiť</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="299"/>
+        <location filename="../qml/components/FileActions.qml" line="298"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>upraviť súbor</numerusform>
@@ -871,7 +871,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="324"/>
+        <location filename="../qml/components/FileActions.qml" line="323"/>
         <source>show file properties</source>
         <translation>zobraziť vlastnosti súboru</translation>
     </message>
@@ -2717,7 +2717,7 @@ exposure program</extracomment>
         <translation>Buďte opatrní pri používaní File Browsera v režime root. Akcie môžu neočakávane poškodiť Váš systém.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Spustiť File Browser v režime root</translation>
     </message>

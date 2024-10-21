@@ -830,7 +830,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="265"/>
+        <location filename="../qml/components/FileActions.qml" line="264"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>Datei komprimieren</numerusform>
@@ -838,17 +838,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="274"/>
+        <location filename="../qml/components/FileActions.qml" line="273"/>
         <source>edit link target</source>
         <translation>Linkziel ändern</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="279"/>
+        <location filename="../qml/components/FileActions.qml" line="278"/>
         <source>Apply</source>
         <translation>Anwenden</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="299"/>
+        <location filename="../qml/components/FileActions.qml" line="298"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>Datei bearbeiten</numerusform>
@@ -856,7 +856,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="324"/>
+        <location filename="../qml/components/FileActions.qml" line="323"/>
         <source>show file properties</source>
         <translation>Dateieigenschaften anzeigen</translation>
     </message>
@@ -2698,7 +2698,7 @@ exposure program</extracomment>
         <translation>Seien Sie vorsichtig, wenn Sie die Dateiverwaltung im Root-Modus verwenden. Sie könnten aus Versehen Ihr System beschädigen.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Dateiverwaltung im Root-Modus starten</translation>
     </message>

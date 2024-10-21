@@ -843,7 +843,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="265"/>
+        <location filename="../qml/components/FileActions.qml" line="264"/>
         <source>compress file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -852,17 +852,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="274"/>
+        <location filename="../qml/components/FileActions.qml" line="273"/>
         <source>edit link target</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="279"/>
+        <location filename="../qml/components/FileActions.qml" line="278"/>
         <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="299"/>
+        <location filename="../qml/components/FileActions.qml" line="298"/>
         <source>edit file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -871,7 +871,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="324"/>
+        <location filename="../qml/components/FileActions.qml" line="323"/>
         <source>show file properties</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2715,7 +2715,7 @@ exposure program</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
         <source>Start File Browser in Root Mode</source>
         <translation type="unfinished"></translation>
     </message>
