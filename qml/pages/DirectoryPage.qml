@@ -25,6 +25,7 @@ import Sailfish.Silica 1.0
 import harbour.file.browser.FileModel 1.0
 import harbour.file.browser.Settings 1.0
 import harbour.file.browser.FileClipboard 1.0
+import Opal.SmartScrollbar 1.0
 
 import "../components"
 import "../js/paths.js" as Paths
@@ -119,44 +120,15 @@ Page {
 
         model: fileModel
 
-        property bool useSmartScrollbar: fileList.count > 40
-        onUseSmartScrollbarChanged: refreshSmartScrollbar()
+        SmartScrollbar {
+            property int currentIndex: fileList.indexAt(fileList.contentX, fileList.contentY) + 2
 
-        property Item _scrollbar: null
-        quickScroll: !useSmartScrollbar || !_scrollbar || fileList.count > 1000
-
-        VerticalScrollDecorator {
             flickable: fileList
-            visible: !fileList.useSmartScrollbar || !fileList._scrollbar
-        }
+            text: fileList.currentSection
+            description: '%1 / %2'.arg(currentIndex).arg(fileList.count)
 
-        function refreshSmartScrollbar() {
-            if (!useSmartScrollbar) {
-                if (!!_scrollbar) _scrollbar.deleteLater()
-                return
-            }
-
-            try {
-                _scrollbar = Qt.createQmlObject("
-                    import QtQuick 2.0
-                    import %1 1.0 as Private
-                    Private.Scrollbar {
-                        property int currentIndex: fileList.indexAt(fileList.contentX, fileList.contentY) + 2
-                        text: fileList.currentSection
-                        description: '%2'.arg(currentIndex).arg(fileList.count)
-                        headerHeight: root.headerItem ? root.headerItem.height : 0
-                    }".arg("Sailfish.Silica.private").arg("%1 / %2"), fileList, 'Scrollbar')
-            } catch (e) {
-                if (!_scrollbar) {
-                    console.warn(e)
-                    console.warn('[BUG] failed to load customized scrollbar')
-                    console.warn('[BUG] this probably means the private API has changed')
-                }
-            }
-        }
-
-        Component.onCompleted: {
-            refreshSmartScrollbar()
+            smartWhen: fileList.count > 40
+            quickScrollWhen: !smartWhen || fileList.count > 1000
         }
 
         PullDownMenu {
