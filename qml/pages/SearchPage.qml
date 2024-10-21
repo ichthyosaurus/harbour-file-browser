@@ -137,8 +137,12 @@ Page {
                     inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhNoPredictiveText
                     text: page.searchText
 
-                    // get focus when page is shown for the first time
-                    Component.onCompleted: if (!startImmediately) forceActiveFocus();
+                    Component.onCompleted: {
+                        // get focus when page is shown for the first time
+                        if (!startImmediately || !text) {
+                            forceActiveFocus()
+                        }
+                    }
 
                     onTextChanged: {
                         if (text == "") {
@@ -479,16 +483,17 @@ Page {
     }
 
     onStatusChanged: {
-        if (_initialSearchDone) return;
+        if (_initialSearchDone) return
+
         if (status === PageStatus.Activating) {
             // clearSelectedFiles();
-            clearCover();
+            clearCover()
 
             // TODO enable once it no longer messes up the page stack
             // main.activePage = {type: "search", path: dir, query: searchText};
             // navigate_syncNavStack();
         } else if (status === PageStatus.Active &&
-                   startImmediately === true && searchText !== "") {
+                   startImmediately === true && !!searchText) {
             listModel.update(searchText);
             _initialSearchDone = true;
         }
