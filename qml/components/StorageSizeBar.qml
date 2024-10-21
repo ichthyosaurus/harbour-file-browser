@@ -16,6 +16,7 @@ Row {
 
     property string path
     property bool active: visible
+    readonly property var diskSpaceInfo: _diskSpaceInfo
 
     property int _diskSpaceHandle: -1
     property var _diskSpaceInfo: ['']

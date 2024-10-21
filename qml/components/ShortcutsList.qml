@@ -74,6 +74,11 @@ SilicaListView {
         property var alternativeDevices: model.devices
         property string selectedPath: ""
 
+        // this is loaded async through StorageSizeBar for entries that
+        // have model.showSize == true
+        property var diskSpaceInfo: ['']
+        property bool showSize: model.showSize
+
         ListView.onRemove: animateRemoval(listItem) // enable animated list item removals
         menu: {
             if (!editable && model.group !== BookmarkGroup.Location) return
@@ -88,6 +93,8 @@ SilicaListView {
                        model.alternatives.length > 0) {
                 console.log(model.name, "shortcut alternatives:", model.alternatives)
                 return alternativesMenu
+            } else if (model.showSize) {
+                return sizeContextMenu
             } else {
                 return null
             }
@@ -203,6 +210,16 @@ SilicaListView {
                         setSource(Qt.resolvedUrl("StorageSizeBar.qml"), {'path': model.path})
                     }
                 }
+
+                onItemChanged: {
+                    if (!item) {
+                        listItem.diskSpaceInfo = ['']
+                    } else {
+                        listItem.diskSpaceInfo = Qt.binding(function(){
+                            return item.diskSpaceInfo
+                        })
+                    }
+                }
             }
 
             Text {
@@ -225,14 +242,33 @@ SilicaListView {
     }
 
     Component {
+        id: sizeContextMenu
+
+        ContextMenu {
+            id: menu
+            property ListItem listItem
+
+            StorageSizeMenuLabel {
+                diskSpaceInfo: menu.listItem.diskSpaceInfo
+            }
+        }
+    }
+
+    Component {
         id: settingsContextMenu
 
         ContextMenu {
             id: menu
+            property ListItem listItem
             property string pathLabel
 
             MenuLabel {
                 text: pathLabel
+            }
+
+            StorageSizeMenuLabel {
+                visible: menu.listItem.showSize
+                diskSpaceInfo: menu.listItem.diskSpaceInfo
             }
 
             MenuItem {
