@@ -74,6 +74,10 @@ equals(FEATURE_SHARING, off) {
     message("feature flags: File sharing enabled")
 }
 
+# _FILE_OFFSET_BITS=64 must be defined to support files
+# larger than 2 GiB on 32bit phones like Xperia X.
+DEFINES += _FILE_OFFSET_BITS=64
+
 # Note: compile-time options can be configured in the yaml file.
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 DEFINES += APP_RELEASE=\\\"$$RELEASE\\\"

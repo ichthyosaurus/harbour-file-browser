@@ -21,6 +21,8 @@
 
 #include "statfileinfo.h"
 
+#include <QDebug>
+
 StatFileInfo::StatFileInfo() :
     m_filename(""), m_selected(false)
 {
@@ -111,8 +113,10 @@ void StatFileInfo::refresh()
     memset(&m_lstat, 0, sizeof(m_lstat));
 
     m_fileInfo = QFileInfo(m_filename);
-    if (m_filename.isEmpty())
+
+    if (m_filename.isEmpty()) {
         return;
+    }
 
     QByteArray ba = m_filename.toUtf8();
     char *fn = ba.data();
@@ -121,16 +125,18 @@ void StatFileInfo::refresh()
     int res = lstat(fn, &m_lstat);
     if (res != 0) { // if error, then set to undefined
         m_lstat.st_mode = 0;
-    }
-    // if not symlink, then just copy lstat data to stat
-    if (!S_ISLNK(m_lstat.st_mode)) {
-        memcpy(&m_stat, &m_lstat, sizeof(m_stat));
-        return;
+        qDebug() << "lstat failed for" << m_filename << res << errno << (errno == EOVERFLOW);
     }
 
-    // check the file after following possible symlinks
-    res = stat(fn, &m_stat);
-    if (res != 0) { // if error, then set to undefined
-        m_stat.st_mode = 0;
+    if (S_ISLNK(m_lstat.st_mode)) {
+        // check the file after following possible symlinks
+        res = stat(fn, &m_stat);
+        if (res != 0) { // if error, then set to undefined
+            m_stat.st_mode = 0;
+            qDebug() << "stat failed for" << m_filename << res << errno << (errno == EOVERFLOW);
+        }
+    } else {
+        // if not symlink, then just copy lstat data to stat
+        memcpy(&m_stat, &m_lstat, sizeof(m_stat));
     }
 }
