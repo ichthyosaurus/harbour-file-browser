@@ -46,7 +46,41 @@ Page {
             SelectableListView {
                 id: sortList
                 title: qsTr("Sort by...")
-                onSelectionChanged: prefs.viewSortRole = newValue.toString()
+                onSelectionChanged: {
+                    var oldValue = prefs.viewSortRole
+                    var newValue = newValue.toString()
+
+                    // This is a hackish workaround for the change from
+                    // sorting by file age to sorting by modification time
+                    // in version 3.4.0.
+                    //
+                    // When switching between sorting modes, you usually want
+                    // the most relevant files at the top of the list because
+                    // scrolling is annoying on mobile devices.
+                    // When sorting by date, the most relevant files are usually
+                    // the most recent ones, and not the oldest ones.
+                    // When sorting by name, the expected direction is A-Z.
+                    //
+                    // Switching between sorting by date and by name would
+                    // require a second click and possibly scrolling on the
+                    // settings page to also switch the direction setting.
+                    // This workaround anticipates that and automatically
+                    // changes the direction when sorting by date is involved.
+                    if (oldValue !== newValue && (
+                            oldValue === "modificationtime" ||
+                            newValue === "modificationtime"
+                    )) {
+                        if (prefs.viewSortOrder === "default") {
+                            prefs.viewSortOrder = "reversed"
+                        } else {
+                            prefs.viewSortOrder = "default"
+                        }
+
+                        orderList.initial = prefs.viewSortOrder
+                    }
+
+                    prefs.viewSortRole = newValue
+                }
 
                 model: ListModel {
                     ListElement { label: qsTr("Name"); value: "name" }
