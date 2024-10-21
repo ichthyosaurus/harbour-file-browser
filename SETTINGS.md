@@ -1,6 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
-
+SPDX-FileCopyrightText: 2020-2024 Mirian Margiani
 SPDX-License-Identifier: GFDL-1.3-or-later
 -->
 
@@ -62,6 +61,13 @@ They use the same entries as [KDE](https://kde.org)'s file manager
 | `PreviewsShown`                    | `false`       | bool                                          |
 | `Version`                          | (`4`)         | (not used yet)                                |
 | `Timestamp`                        | (`yyyy,mm,dd,hh,mm,ss`) | (not used yet)                      |
+
+In version 3.4.0, sorting behavior was changed to match Dolphin's approach.
+Dolphin sorts by file *date* instead of sorting by file *age*, i.e. when sorting
+ascendingly, Dolphin puts more recently changed files *last*. File Browser was
+putting more recently changed files *first* because that is more intuitive. This
+was changed to match Dolphin's behavior to make it easier to work with mounted
+file systems.
 
 
 ## Obsolete Settings

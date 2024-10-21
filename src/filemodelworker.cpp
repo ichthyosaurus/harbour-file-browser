@@ -410,12 +410,31 @@ void FileModelWorker::sortByModTime(QList<StatFileInfo> &files, bool reverse, in
     sortFileList(files, dirsFirstCount,
                  [&](const StatFileInfo& a, const StatFileInfo& b) -> bool {
         // return true if a comes before b
-        if (!reverse /* == default*/) {
-            // STL sorts ascending (using operator<) by default.
-            // We want newer dates first by default, i.e. descending.
-            return a.lastModifiedStat() > b.lastModifiedStat();
-        } else /* == reverse*/ {
+
+        // Behavior before version 3.4.0:
+        // STL sorts ascending (using operator<) by default.
+        // We want newer dates first by default, i.e. descending.
+        // We are sorting ascending by file *age*:
+        //     numerically small date <-> numerically large age -> bottom
+        //     numerically large date <-> numerically small age -> top
+        /*
+            if (!reverse) {  // == default
+                return a.lastModifiedStat() > b.lastModifiedStat();
+            } else {  // == reverse
+                return a.lastModifiedStat() < b.lastModifiedStat();
+            }
+        */
+
+        // Behavior since version 3.4.0:
+        // We want recently changed files *last* by default, because that
+        // is how KDE's Dolphin file manager sorts files.
+        // We are sorting ascending by file *date*:
+        //     numerically small date <-> numerically large age -> top
+        //     numerically large date <-> numerically small age -> bottom
+        if (!reverse) {  // == default
             return a.lastModifiedStat() < b.lastModifiedStat();
+        } else {  // == reverse
+            return a.lastModifiedStat() > b.lastModifiedStat();
         }
     });
 }

@@ -152,9 +152,9 @@ Page {
                         Component.onCompleted: cdata.reset(GlobalSettings.viewSortRole)
 
                         menu: ContextMenu {
-                            MenuItem { text: qsTr("name");      property string value: "name" }
-                            MenuItem { text: qsTr("size");      property string value: "size" }
-                            MenuItem { text: qsTr("file age");  property string value: "modificationtime" }
+                            MenuItem { text: qsTr("name"); property string value: "name" }
+                            MenuItem { text: qsTr("size"); property string value: "size" }
+                            MenuItem { text: qsTr("modification date"); property string value: "modificationtime" }
                             MenuItem { text: qsTr("file type"); property string value: "type" }
                         }
                     }
@@ -177,7 +177,7 @@ Page {
                                 info: "<ul>" +
                                       "<li>%1</li>".arg(qsTr("Sort names starting with the beginning of the alphabet first.")) +
                                       "<li>%1</li>".arg(qsTr("Show smaller files first.")) +
-                                      "<li>%1</li>".arg(qsTr("Show more recently changed files first.")) +
+                                      "<li>%1</li>".arg(qsTr("Show older files first.")) +
                                       "</ul>"
                             }
                             InfoMenuItem {
@@ -186,7 +186,7 @@ Page {
                                 info: "<ul>" +
                                       "<li>%1</li>".arg(qsTr("Sort names starting with the end of the alphabet first.")) +
                                       "<li>%1</li>".arg(qsTr("Show larger files first.")) +
-                                      "<li>%1</li>".arg(qsTr("Show older files first.")) +
+                                      "<li>%1</li>".arg(qsTr("Show more recently changed files first.")) +
                                       "</ul>"
                             }
                         }
