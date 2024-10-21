@@ -1379,7 +1379,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="218"/>
         <source>Places</source>
-        <translation type="unfinished">Places</translation>
+        <translation>Places</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="181"/>
@@ -1424,7 +1424,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="158"/>
         <source>modification date</source>
-        <translation type="unfinished"></translation>
+        <translation>modification date</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="199"/>
@@ -1434,22 +1434,22 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="209"/>
         <source>Initial view</source>
-        <translation type="unfinished"></translation>
+        <translation>Initial view</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="210"/>
         <source>The page that is shown when the app starts.</source>
-        <translation type="unfinished"></translation>
+        <translation>The page that is shown when the app starts.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="217"/>
         <source>Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Directory</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="219"/>
         <source>Search</source>
-        <translation type="unfinished">Search</translation>
+        <translation>Search</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="225"/>
@@ -2405,87 +2405,87 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="26"/>
         <source>Playback failed</source>
         <comment>error info page heading</comment>
-        <translation type="unfinished"></translation>
+        <translation>Playback failed</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="30"/>
         <source>Resource error</source>
         <comment>error info page heading</comment>
-        <translation type="unfinished"></translation>
+        <translation>Resource error</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="32"/>
         <source>Format error</source>
         <comment>error info page heading</comment>
-        <translation type="unfinished"></translation>
+        <translation>Format error</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="34"/>
         <source>Network error</source>
         <comment>error info page heading</comment>
-        <translation type="unfinished"></translation>
+        <translation>Network error</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="36"/>
         <source>Access denied</source>
         <comment>error info page heading</comment>
-        <translation type="unfinished"></translation>
+        <translation>Access denied</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="38"/>
         <source>Media service missing</source>
         <comment>error info page heading</comment>
-        <translation type="unfinished"></translation>
+        <translation>Media service missing</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="42"/>
         <source>The video cannot be played due to a problem allocating resources.</source>
-        <translation type="unfinished"></translation>
+        <translation>The video cannot be played due to a problem allocating resources.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="45"/>
         <source>The audio and or video format is not supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>The audio and or video format is not supported.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="48"/>
         <source>The video cannot be played due to network issues.</source>
-        <translation type="unfinished"></translation>
+        <translation>The video cannot be played due to network issues.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="51"/>
         <source>The video cannot be played due to insufficient permissions.</source>
-        <translation type="unfinished"></translation>
+        <translation>The video cannot be played due to insufficient permissions.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="54"/>
         <source>The video cannot be played because the media service could not be instantiated.</source>
-        <translation type="unfinished"></translation>
+        <translation>The video cannot be played because the media service could not be instantiated.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="57"/>
         <source>Playback failed due to an expected error. Please restart the app and try again.</source>
-        <translation type="unfinished"></translation>
+        <translation>Playback failed due to an expected error. Please restart the app and try again.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="640"/>
         <source>Zoomed to fit screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoomed to fit screen</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="641"/>
         <source>Original</source>
-        <translation type="unfinished"></translation>
+        <translation>Original</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="648"/>
         <source>Play on repeat</source>
-        <translation type="unfinished"></translation>
+        <translation>Play on repeat</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="649"/>
         <source>Play once</source>
-        <translation type="unfinished"></translation>
+        <translation>Play once</translation>
     </message>
 </context>
 <context>
@@ -2714,7 +2714,7 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="122"/>
-        <location filename="../qml/pages/SearchPage.qml" line="372"/>
+        <location filename="../qml/pages/SearchPage.qml" line="371"/>
         <source>Search</source>
         <translation>Search</translation>
     </message>
@@ -2732,40 +2732,40 @@ exposure program</extracomment>
         </translation>
     </message>
     <message>
+        <location filename="../qml/pages/SearchPage.qml" line="332"/>
         <location filename="../qml/pages/SearchPage.qml" line="333"/>
-        <location filename="../qml/pages/SearchPage.qml" line="334"/>
-        <location filename="../qml/pages/SearchPage.qml" line="420"/>
-        <location filename="../qml/pages/SearchPage.qml" line="422"/>
+        <location filename="../qml/pages/SearchPage.qml" line="419"/>
+        <location filename="../qml/pages/SearchPage.qml" line="421"/>
         <source>Deleting</source>
         <translation>Deleting</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="349"/>
+        <location filename="../qml/pages/SearchPage.qml" line="348"/>
         <source>Go to containing folder</source>
         <translation>Go to containing folder</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="353"/>
+        <location filename="../qml/pages/SearchPage.qml" line="352"/>
         <source>Cut</source>
         <translation>Cut</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="357"/>
+        <location filename="../qml/pages/SearchPage.qml" line="356"/>
         <source>Copy</source>
         <translation>Copy</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="363"/>
+        <location filename="../qml/pages/SearchPage.qml" line="362"/>
         <source>Delete</source>
         <translation>Delete</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="429"/>
+        <location filename="../qml/pages/SearchPage.qml" line="428"/>
         <source>Internally not ready</source>
         <translation>Internally not ready</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="429"/>
+        <location filename="../qml/pages/SearchPage.qml" line="428"/>
         <source>Please simply try again</source>
         <translation>Please simply try again</translation>
     </message>
@@ -2805,42 +2805,42 @@ exposure program</extracomment>
 <context>
     <name>ShortcutsList</name>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="239"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="275"/>
         <source>Open system settings</source>
         <translation>Open system settings</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="257"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="293"/>
         <source>Rename</source>
         <translation>Rename</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="264"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="300"/>
         <source>Sort</source>
         <translation>Sort</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="270"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="306"/>
         <source>Remove</source>
         <translation>Remove</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="291"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="327"/>
         <source>Custom</source>
         <translation>Custom</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="290"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="326"/>
         <source>Locations</source>
         <translation>Locations</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="289"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="325"/>
         <source>Storage devices</source>
         <translation>Storage devices</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="288"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="324"/>
         <source>Bookmarks</source>
         <translation>Bookmarks</translation>
     </message>
@@ -2971,9 +2971,18 @@ exposure program</extracomment>
 <context>
     <name>StorageSizeBar</name>
     <message>
-        <location filename="../qml/components/StorageSizeBar.qml" line="85"/>
+        <location filename="../qml/components/StorageSizeBar.qml" line="86"/>
         <source>%1 free</source>
         <translation>%1 free</translation>
+    </message>
+</context>
+<context>
+    <name>StorageSizeMenuLabel</name>
+    <message>
+        <location filename="../qml/components/StorageSizeMenuLabel.qml" line="14"/>
+        <source>%1 full (%2%)</source>
+        <comment>as in “15 of 20 GiB [%1] of this device are filled with data, which is 75% [%2] of its capacity”</comment>
+        <translation>%1 full (%2%)</translation>
     </message>
 </context>
 <context>
@@ -3291,117 +3300,117 @@ exposure program</extracomment>
         <translation>Sort by...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="52"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="86"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="53"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="87"/>
         <source>Size</source>
         <translation>Size</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="54"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="88"/>
         <source>Modification date</source>
-        <translation type="unfinished"></translation>
+        <translation>Modification date</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="55"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="89"/>
         <source>File type</source>
         <translation>File type</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="63"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="97"/>
         <source>Order...</source>
         <translation>Order...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="67"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="101"/>
         <source>ascending</source>
         <translation>ascending</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="68"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="102"/>
         <source>descending</source>
         <translation>descending</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="76"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="110"/>
         <source>Preview images...</source>
         <translation>Preview images...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="79"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="113"/>
         <source>none</source>
         <translation>none</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="80"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="114"/>
         <source>small</source>
         <translation>small</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="81"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="115"/>
         <source>medium</source>
         <translation>medium</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="82"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="116"/>
         <source>large</source>
         <translation>large</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="83"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="117"/>
         <source>huge</source>
         <translation>huge</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="96"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="130"/>
         <source>Show hidden files</source>
         <translation>Show hidden files</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="98"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="132"/>
         <source>Show files with names starting with a full stop (“.”).</source>
         <translation>Show files with names starting with a full stop (“.”).</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="102"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="136"/>
         <source>Enable gallery mode</source>
         <translation>Enable gallery mode</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="104"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="138"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
         <translation>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="120"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="154"/>
         <source>Sort case-sensitively</source>
         <translation>Sort case-sensitively</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="122"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="156"/>
         <source>Show files with names starting with a capital letter first.</source>
         <translation>Show files with names starting with a capital letter first.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="127"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="161"/>
         <source>Show folders first</source>
         <translation>Show folders first</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="129"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="163"/>
         <source>Always show folders at the top of the file list.</source>
         <translation>Always show folders at the top of the file list.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="133"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="167"/>
         <source>Show hidden files last</source>
         <translation>Show hidden files last</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="135"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="169"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
         <translation>Always show files starting with a full stop (“.”) at the end of the file list.</translation>
     </message>
@@ -3412,7 +3421,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewVideoPage.qml" line="19"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation type="unfinished">File Browser</translation>
+        <translation>File Browser</translation>
     </message>
 </context>
 <context>

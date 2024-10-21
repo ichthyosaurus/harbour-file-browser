@@ -2749,46 +2749,46 @@ exposure program</extracomment>
         </translation>
     </message>
     <message>
+        <location filename="../qml/pages/SearchPage.qml" line="332"/>
         <location filename="../qml/pages/SearchPage.qml" line="333"/>
-        <location filename="../qml/pages/SearchPage.qml" line="334"/>
-        <location filename="../qml/pages/SearchPage.qml" line="420"/>
-        <location filename="../qml/pages/SearchPage.qml" line="422"/>
+        <location filename="../qml/pages/SearchPage.qml" line="419"/>
+        <location filename="../qml/pages/SearchPage.qml" line="421"/>
         <source>Deleting</source>
         <translation>Удаление</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="349"/>
+        <location filename="../qml/pages/SearchPage.qml" line="348"/>
         <source>Go to containing folder</source>
         <translation>Расположение объекта</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="353"/>
+        <location filename="../qml/pages/SearchPage.qml" line="352"/>
         <source>Cut</source>
         <translation>Вырезать</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="357"/>
+        <location filename="../qml/pages/SearchPage.qml" line="356"/>
         <source>Copy</source>
         <translation>Копировать</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="363"/>
+        <location filename="../qml/pages/SearchPage.qml" line="362"/>
         <source>Delete</source>
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="429"/>
+        <location filename="../qml/pages/SearchPage.qml" line="428"/>
         <source>Internally not ready</source>
         <translation>Внутренняя неготовность</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="429"/>
+        <location filename="../qml/pages/SearchPage.qml" line="428"/>
         <source>Please simply try again</source>
         <translation>Пожалуйста, просто повторите попытку</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="122"/>
-        <location filename="../qml/pages/SearchPage.qml" line="372"/>
+        <location filename="../qml/pages/SearchPage.qml" line="371"/>
         <source>Search</source>
         <translation>Поиск</translation>
     </message>
@@ -2829,42 +2829,42 @@ exposure program</extracomment>
 <context>
     <name>ShortcutsList</name>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="239"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="275"/>
         <source>Open system settings</source>
         <translation>Откройте системные настройки</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="257"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="293"/>
         <source>Rename</source>
         <translation>Переименовать</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="264"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="300"/>
         <source>Sort</source>
         <translation>Сортировать</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="270"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="306"/>
         <source>Remove</source>
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="291"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="327"/>
         <source>Custom</source>
         <translation>Пользовательский</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="290"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="326"/>
         <source>Locations</source>
         <translation>Локации</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="289"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="325"/>
         <source>Storage devices</source>
         <translation>Устройства хранения данных</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="288"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="324"/>
         <source>Bookmarks</source>
         <translation>Закладки</translation>
     </message>
@@ -2997,9 +2997,18 @@ exposure program</extracomment>
 <context>
     <name>StorageSizeBar</name>
     <message>
-        <location filename="../qml/components/StorageSizeBar.qml" line="85"/>
+        <location filename="../qml/components/StorageSizeBar.qml" line="86"/>
         <source>%1 free</source>
         <translation>%1 свободно</translation>
+    </message>
+</context>
+<context>
+    <name>StorageSizeMenuLabel</name>
+    <message>
+        <location filename="../qml/components/StorageSizeMenuLabel.qml" line="14"/>
+        <source>%1 full (%2%)</source>
+        <comment>as in “15 of 20 GiB [%1] of this device are filled with data, which is 75% [%2] of its capacity”</comment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3327,117 +3336,117 @@ exposure program</extracomment>
         <translation>Сортировать по...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="52"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="86"/>
         <source>Name</source>
         <translation>Имя</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="53"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="87"/>
         <source>Size</source>
         <translation>Размер</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="54"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="88"/>
         <source>Modification date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="55"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="89"/>
         <source>File type</source>
         <translation>Тип файла</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="63"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="97"/>
         <source>Order...</source>
         <translation>Очередь...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="67"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="101"/>
         <source>ascending</source>
         <translation>восходящий</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="68"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="102"/>
         <source>descending</source>
         <translation>нисходящий</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="76"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="110"/>
         <source>Preview images...</source>
         <translation>Предварительный просмотр изображений...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="79"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="113"/>
         <source>none</source>
         <translation>никто</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="80"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="114"/>
         <source>small</source>
         <translation>маленький</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="81"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="115"/>
         <source>medium</source>
         <translation>средний</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="82"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="116"/>
         <source>large</source>
         <translation>большой</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="83"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="117"/>
         <source>huge</source>
         <translation>огромный</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="96"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="130"/>
         <source>Show hidden files</source>
         <translation>Показывать скрытые файлы</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="98"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="132"/>
         <source>Show files with names starting with a full stop (“.”).</source>
         <translation>Показывать файлы с именами, начинающимися с точки (“.”).</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="102"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="136"/>
         <source>Enable gallery mode</source>
         <translation>Включить режим галереи</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="104"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="138"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
         <translation>В режиме галереи изображения будут отображаться в соответствии с размером экрана. Другие файлы отображаются без эскизов предварительного просмотра.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="120"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="154"/>
         <source>Sort case-sensitively</source>
         <translation>Сортировка с учетом регистра</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="122"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="156"/>
         <source>Show files with names starting with a capital letter first.</source>
         <translation>Сначала покажите файлы с названиями, начинающимися с заглавной буквы.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="127"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="161"/>
         <source>Show folders first</source>
         <translation>Показывать сначала папки</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="129"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="163"/>
         <source>Always show folders at the top of the file list.</source>
         <translation>Всегда отображайте папки в верхней части списка файлов.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="133"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="167"/>
         <source>Show hidden files last</source>
         <translation>Показывать скрытые файлы последними</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="135"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="169"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
         <translation>Всегда показывайте файлы, начинающиеся с точки (“.”) в конце списка файлов.</translation>
     </message>

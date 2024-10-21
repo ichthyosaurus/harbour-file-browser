@@ -2734,7 +2734,7 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="122"/>
-        <location filename="../qml/pages/SearchPage.qml" line="372"/>
+        <location filename="../qml/pages/SearchPage.qml" line="371"/>
         <source>Search</source>
         <translation type="unfinished">Szukaj</translation>
     </message>
@@ -2753,40 +2753,40 @@ exposure program</extracomment>
         </translation>
     </message>
     <message>
+        <location filename="../qml/pages/SearchPage.qml" line="332"/>
         <location filename="../qml/pages/SearchPage.qml" line="333"/>
-        <location filename="../qml/pages/SearchPage.qml" line="334"/>
-        <location filename="../qml/pages/SearchPage.qml" line="420"/>
-        <location filename="../qml/pages/SearchPage.qml" line="422"/>
+        <location filename="../qml/pages/SearchPage.qml" line="419"/>
+        <location filename="../qml/pages/SearchPage.qml" line="421"/>
         <source>Deleting</source>
         <translation>Usuwanie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="349"/>
+        <location filename="../qml/pages/SearchPage.qml" line="348"/>
         <source>Go to containing folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="353"/>
+        <location filename="../qml/pages/SearchPage.qml" line="352"/>
         <source>Cut</source>
         <translation>Wytnij</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="357"/>
+        <location filename="../qml/pages/SearchPage.qml" line="356"/>
         <source>Copy</source>
         <translation type="unfinished">Kopiuj</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="363"/>
+        <location filename="../qml/pages/SearchPage.qml" line="362"/>
         <source>Delete</source>
         <translation>Usuń</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="429"/>
+        <location filename="../qml/pages/SearchPage.qml" line="428"/>
         <source>Internally not ready</source>
         <translation type="unfinished">Jeszcze nie gotowe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="429"/>
+        <location filename="../qml/pages/SearchPage.qml" line="428"/>
         <source>Please simply try again</source>
         <translation type="unfinished">Spróbuj ponownie</translation>
     </message>
@@ -2827,42 +2827,42 @@ exposure program</extracomment>
 <context>
     <name>ShortcutsList</name>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="239"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="275"/>
         <source>Open system settings</source>
         <translation>Otwórz ustawienia systemowe</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="257"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="293"/>
         <source>Rename</source>
         <translation type="unfinished">Zmień nazwę</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="264"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="300"/>
         <source>Sort</source>
         <translation>Sortuj</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="270"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="306"/>
         <source>Remove</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="291"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="327"/>
         <source>Custom</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="290"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="326"/>
         <source>Locations</source>
         <translation>Lokalizacje</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="289"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="325"/>
         <source>Storage devices</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="288"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="324"/>
         <source>Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2995,8 +2995,17 @@ exposure program</extracomment>
 <context>
     <name>StorageSizeBar</name>
     <message>
-        <location filename="../qml/components/StorageSizeBar.qml" line="85"/>
+        <location filename="../qml/components/StorageSizeBar.qml" line="86"/>
         <source>%1 free</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>StorageSizeMenuLabel</name>
+    <message>
+        <location filename="../qml/components/StorageSizeMenuLabel.qml" line="14"/>
+        <source>%1 full (%2%)</source>
+        <comment>as in “15 of 20 GiB [%1] of this device are filled with data, which is 75% [%2] of its capacity”</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3325,117 +3334,117 @@ exposure program</extracomment>
         <translation>Sortuj według...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="52"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="86"/>
         <source>Name</source>
         <translation>Nazwa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="53"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="87"/>
         <source>Size</source>
         <translation>Rozmiar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="54"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="88"/>
         <source>Modification date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="55"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="89"/>
         <source>File type</source>
         <translation>Rodzaj pliku</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="63"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="97"/>
         <source>Order...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="67"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="101"/>
         <source>ascending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="68"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="102"/>
         <source>descending</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="76"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="110"/>
         <source>Preview images...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="79"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="113"/>
         <source>none</source>
         <translation>brak</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="80"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="114"/>
         <source>small</source>
         <translation>małe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="81"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="115"/>
         <source>medium</source>
         <translation>średnie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="82"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="116"/>
         <source>large</source>
         <translation>duże</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="83"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="117"/>
         <source>huge</source>
         <translation>ogromne</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="96"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="130"/>
         <source>Show hidden files</source>
         <translation type="unfinished">Pokaż ukryte pliki</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="98"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="132"/>
         <source>Show files with names starting with a full stop (“.”).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="102"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="136"/>
         <source>Enable gallery mode</source>
         <translation>Włącz tryb galerii</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="104"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="138"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="120"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="154"/>
         <source>Sort case-sensitively</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="122"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="156"/>
         <source>Show files with names starting with a capital letter first.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="127"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="161"/>
         <source>Show folders first</source>
         <translation>Pokazuj foldery jako pierwsze</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="129"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="163"/>
         <source>Always show folders at the top of the file list.</source>
         <translation>Zawsze pokazuj foldery na górze listy plików.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="133"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="167"/>
         <source>Show hidden files last</source>
         <translation>Pokaż ukryte pliki jako ostatnie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ViewSettingsPage.qml" line="135"/>
+        <location filename="../qml/pages/ViewSettingsPage.qml" line="169"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
         <translation type="unfinished"></translation>
     </message>
