@@ -42,6 +42,7 @@ class QFileInfo;
 CREATE_ENUM(BookmarkGroup, Temporary, Location, External, Bookmark)
 CREATE_ENUM(SharingMethod, Share, TransferEngine, Disabled)
 CREATE_ENUM(InitialDirectoryMode, Home = 0, Last = 1, Custom = 2)
+CREATE_ENUM(InitialPageMode, Folder = 0, Shortcuts = 1, Search = 2)
 DECLARE_ENUM_REGISTRATION_FUNCTION(SettingsHandler)
 
 // Generic settings handler class.
@@ -447,6 +448,10 @@ private:
     Mapping<QString> map_initialDirPath{QDir::homePath(), true};
     PROP(QString, generalCustomInitialDirectoryPath, "General/CustomInitialDirectoryPath", "", map_initialDirPath, map_invalid);
     PROP(QString, generalLastDirectoryPath, "General/LastDirectoryPath", "", map_initialDirPath, map_invalid);
+    Mapping<InitialPageMode::Enum> map_initialPageMode{{QSL("folder"), InitialPageMode::Folder}, {
+            {QSL("shortcuts"), InitialPageMode::Shortcuts}, {QSL("search"), InitialPageMode::Search}}};
+    Mapping<InitialPageMode::Enum> map_initialPageInvalid{{QLatin1Literal(), {}}, {}};
+    PROP(InitialPageMode::Enum, generalInitialPageMode, "General/InitialPageMode", "", map_initialPageMode, map_initialPageInvalid)
     PROP(bool, generalShareClipboard, "General/ShareClipboard", "", map_bool_true, map_bool_true)
     // PROP(bool, generalUseTrashCan, "General/UseTrashCan", "", map_bool_true, map_bool_true)
 

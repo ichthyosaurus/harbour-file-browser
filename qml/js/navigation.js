@@ -108,7 +108,10 @@ function _sharedStart(array) {
     return shared;
 }
 
-function goToFolder(folder, silent, startSearchQuery) {
+function goToFolder(/*string*/ folder,
+                    /*bool*/ silent,
+                    /*string or undefined*/ startSearchQuery,
+                    /*bool*/ startAtShortcuts) {
     console.log("switching to:", folder)
     var pagePath = Qt.resolvedUrl("../pages/DirectoryPage.qml");
     var shared = "", rest = "", basePath = "", sourceDir = "", above = null;
@@ -204,6 +207,10 @@ function goToFolder(folder, silent, startSearchQuery) {
                 startImmediately: true
             }})
     } else if (!!startAtShortcuts) {
+        toPush.push({
+            page: Qt.resolvedUrl("../pages/ShortcutsPage.qml"),
+            properties: {currentPath: folder}
+        })
     }
 
     // We have to keep a copy of the final page details here

@@ -125,6 +125,7 @@ int main(int argc, char *argv[])
     qmlRegisterUncreatableType<BookmarkGroup>("harbour.file.browser.Settings", 1, 0, "BookmarkGroup", "This is only a container for an enumeration.");
     qmlRegisterUncreatableType<SharingMethod>("harbour.file.browser.Settings", 1, 0, "SharingMethod", "This is only a container for an enumeration.");
     qmlRegisterUncreatableType<InitialDirectoryMode>("harbour.file.browser.Settings", 1, 0, "InitialDirectoryMode", "This is only a container for an enumeration.");
+    qmlRegisterUncreatableType<InitialPageMode>("harbour.file.browser.Settings", 1, 0, "InitialPageMode", "This is only a container for an enumeration.");
 
     qmlRegisterType<DirectorySettings>("harbour.file.browser.Settings", 1, 0, "DirectorySettings");
     qmlRegisterType<BookmarkWatcher>("harbour.file.browser.Settings", 1, 0, "Bookmark");

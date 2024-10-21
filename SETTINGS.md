@@ -18,6 +18,7 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 | `InitialDirectoryMode`             | `home`        | `home`/`last`/`custom`                        |                              |
 | `CustomInitialDirectoryPath`       | home dir      | any string                                    |                              |
 | `LastDirectoryPath`                | home dir      | any string                                    |                              |
+| `InitialPageMode`                  | `folder`      | `folder`/`shortcuts`/`search`                 |                              | 3.4.0
 | `ShareClipboard`                   | `true`        | bool                                          |                              | 3.1.0
 | `UseTrashCan`                      | `true`        | bool                                          |                              | planned for >3.5.0
 | **`[Transfer]`**                   |               |                                               |                              |

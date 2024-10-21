@@ -198,8 +198,11 @@ ApplicationWindow {
     }
 
     function _doStartup() {
-        console.log("[startup] pushing initial stack")
-        Navigation.goToFolder(GlobalSettings.initialDirectory, true); // silent
+        console.log("[startup] pushing initial stack (%1)"
+                    .arg(GlobalSettings.generalInitialPageMode))
+        Navigation.goToFolder(GlobalSettings.initialDirectory, /*silent*/ true,
+            GlobalSettings.generalInitialPageMode === InitialPageMode.Search ? "" : undefined,
+            GlobalSettings.generalInitialPageMode === InitialPageMode.Shortcuts)
         _startupDone = true
         console.log("[startup] startup is done")
     }

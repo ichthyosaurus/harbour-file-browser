@@ -204,6 +204,21 @@ Page {
                     }
                 }
 
+                ComboBox {
+                    label: qsTr("Initial view")
+                    description: qsTr("The page that is shown when the app starts.")
+
+                    property ComboData cdata; ComboData { dataRole: "value" }
+                    onValueChanged: GlobalSettings.generalInitialPageMode = cdata.currentData
+                    Component.onCompleted: cdata.reset(GlobalSettings.generalInitialPageMode)
+
+                    menu: ContextMenu {
+                        MenuItem { text: qsTr("Directory"); property int value: InitialPageMode.Folder }
+                        MenuItem { text: qsTr("Places"); property int value: InitialPageMode.Shortcuts }
+                        MenuItem { text: qsTr("Search"); property int value: InitialPageMode.Search }
+                    }
+                }
+
                     ComboBox {
                         id: initialDirMode
                         label: qsTr("Initial directory")
