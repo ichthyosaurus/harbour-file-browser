@@ -1379,7 +1379,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="218"/>
         <source>Places</source>
-        <translation type="unfinished">Asukohad</translation>
+        <translation>Kohad</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="181"/>
@@ -1424,7 +1424,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="158"/>
         <source>modification date</source>
-        <translation type="unfinished"></translation>
+        <translation>muutmise kuupäev</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="199"/>
@@ -1434,22 +1434,22 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="209"/>
         <source>Initial view</source>
-        <translation type="unfinished"></translation>
+        <translation>Algne vaade</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="210"/>
         <source>The page that is shown when the app starts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaade, mis kuvatakse rakenduse käivitamisel.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="217"/>
         <source>Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaust</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="219"/>
         <source>Search</source>
-        <translation type="unfinished">Otsi</translation>
+        <translation>Otsi</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="225"/>
@@ -2315,7 +2315,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="44"/>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation>Märkus: kõige täpsema teabe saamiseks kontrollige vaata lähtekoodi.</translation>
+        <translation>Märkus: kõige täpsema teabe saamiseks palun vaata lähtekoodi.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="15"/>
@@ -2982,7 +2982,7 @@ exposure program</extracomment>
         <location filename="../qml/components/StorageSizeMenuLabel.qml" line="14"/>
         <source>%1 full (%2%)</source>
         <comment>as in “15 of 20 GiB [%1] of this device are filled with data, which is 75% [%2] of its capacity”</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 täis (%2%)</translation>
     </message>
 </context>
 <context>
@@ -3312,7 +3312,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="88"/>
         <source>Modification date</source>
-        <translation type="unfinished"></translation>
+        <translation>Muutmise kuupäev</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="89"/>
