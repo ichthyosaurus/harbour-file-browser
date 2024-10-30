@@ -2,17 +2,17 @@
 # kate: syntax YAML
 #
 # This file is part of harbour-file-browser.
-# SPDX-FileCopyrightText: 2022  Mirian Margiani
+# SPDX-FileCopyrightText: 2022-2024  Mirian Margiani
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 CompileFlags:
     Add:
-        - -std=c++11
+        - -std=c++17
         - -isystem/usr/include/qt5
         - -isystem/usr/include/qt5/QtCore
         - -isystem/usr/include/qt5/QtNetwork
         - -isystem/usr/include/qt5/QtQuick
-        - -isystem/opt/sfos/mersdk/targets/SailfishOS-3.4.0.24-armv7hl.default/usr/include/sailfishapp/
+        - -isystem/opt/sfos/mersdk/targets/SailfishOS-4.6.0.13-armv7hl.default/usr/include/sailfishapp
 
 # Diagnostics:
 #     ClangTidy:
