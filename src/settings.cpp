@@ -777,19 +777,17 @@ void BookmarksModel::removeTemporary(QString path)
 
 void BookmarksModel::clearTemporary()
 {
-    QList<int> toRemove;
-    toRemove.reserve(m_entries.size());
+    QStringList toRemove;
+    toRemove.reserve(m_lastUserDefinedIndex);
 
-    for (int i = m_entries.length()-1; i >= 0; --i) {
-        if (m_entries.at(i).group == BookmarkGroup::Temporary) {
-            toRemove.append(i);
+    for (const auto& i : m_entries) {
+        if (i.group == BookmarkGroup::Temporary) {
+            toRemove.append(i.path);
         }
     }
 
-    for (auto i : toRemove) {
-        beginRemoveRows(QModelIndex(), i, i);
-        m_entries.removeAt(i);
-        endRemoveRows();
+    for (const auto& i : toRemove) {
+        removeTemporary(i);
     }
 }
 
@@ -1377,7 +1375,18 @@ void BookmarksModel::notifyWatchers(const QString& path)
 void BookmarksModel::addUserDefined(QString path, QString name, bool permanent)
 {
     if (path.isEmpty()) return;
-    if (m_userDefinedLookup.contains(path)) return;
+
+    if (m_userDefinedLookup.contains(path)) {
+        if (!permanent) {
+            // If a new temporary bookmark already exists,
+            // we still send a signal so that the selection
+            // can be updated. The bookmark is not added twice.
+            int idx = findUserDefinedIndex(path);
+            emit temporaryAdded(index(idx), idx);
+        }
+
+        return;
+    }
 
     if (name.isEmpty()) {
         QDir dir(path);
