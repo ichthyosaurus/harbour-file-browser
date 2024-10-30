@@ -9,7 +9,7 @@
 #       to the "attributions" list property of the “About” page.
 
 module: Opal.MenuSwitch (opal-menuswitch)
-version: 1.0.0 (git:2a2aff2)
+version: 1.0.1 (git:04f4364)
 description: This module provides a toggle button to be used in Sailfish-style menus.
 maintainers: Mirian Margiani
 attribution: 2024 Mirian Margiani

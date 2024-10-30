@@ -9,7 +9,7 @@
 #       to the "attributions" list property of the “About” page.
 
 module: Opal.Delegates (opal-delegates)
-version: 3.2.0 (git:da5ba15)
+version: 3.3.0 (git:78da76c)
 description: This module provides list items for views, so you can concentrate on handling the data, not formatting the presentation.
 maintainers: Mirian Margiani
 attribution: 2023 Peter G. (nephros):2024 Mirian Margiani (ichthyosaurus)

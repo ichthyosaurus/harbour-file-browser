@@ -14,8 +14,10 @@ property bool _isOddRow:typeof index!=="undefined"&&(index%2!=0)
 readonly property int _modelIndex:typeof index!=="undefined"?index:-1
 property bool interactive:true
 property Component leftItem:null
+readonly property alias leftItemLoader:leftItemLoader
 readonly property alias centerItem:centerItem
 property Component rightItem:null
+readonly property alias rightItemLoader:rightItemLoader
 property bool loadSideItemsAsync:false
 default property alias contents:centerItem.data
 property var centeredContainer
@@ -28,7 +30,7 @@ readonly property int __defaultTopBottom:Theme.paddingSmall
 leftRight:!_isDefined(all)&&(!_isDefined(left)||!_isDefined(right))?__defaultLeftRight:NaN
 topBottom:!_isDefined(all)&&(!_isDefined(top)||!_isDefined(bottom))?__defaultTopBottom:NaN
 }
-property var dragHandler:null
+property Item dragHandler:null
 readonly property var _effectiveDragHandler:!!dragHandler&&dragHandler.hasOwnProperty("__opal_view_drag_handler")?dragHandler:null
 property int dragHandleAlignment:leftItemAlignment===Qt.AlignTop||rightItemAlignment===Qt.AlignTop?Qt.AlignTop:Qt.AlignVCenter
 property bool hideRightItemWhileDragging:true
@@ -61,7 +63,8 @@ sourceComponent:leftItem
 asynchronous:loadSideItemsAsync
 anchors{left:leftPaddingItem.right
 verticalCenter:parent.verticalCenter
-}Binding{target:!!leftItemLoader.item&&leftItemLoader.item.hasOwnProperty("_delegate")?leftItemLoader.item:null
+}property Item __padded_delegate:root
+Binding{target:!!leftItemLoader.item&&leftItemLoader.item.hasOwnProperty("_delegate")?leftItemLoader.item:null
 property:"_delegate"
 value:root
 }states:[State{when:leftItemAlignment==Qt.AlignVCenter
@@ -83,10 +86,10 @@ anchors.bottom:bottomPaddingItem.top
 visible:!hideRightItemWhileDragging||!dragHandleLoader.visible
 sourceComponent:rightItem
 asynchronous:loadSideItemsAsync
-anchors{right:dragHandleLoader.left
-rightMargin:dragHandleLoader.width>0?spacing:0
+anchors{right:rightPaddingItem.left
 verticalCenter:parent.verticalCenter
-}Binding{target:!!rightItemLoader.item&&rightItemLoader.item.hasOwnProperty("_delegate")?rightItemLoader.item:null
+}property Item __padded_delegate:root
+Binding{target:!!rightItemLoader.item&&rightItemLoader.item.hasOwnProperty("_delegate")?rightItemLoader.item:null
 property:"_delegate"
 value:root
 }states:[State{when:rightItemAlignment==Qt.AlignVCenter
@@ -112,7 +115,8 @@ property int modelIndex:root._modelIndex
 source:!!_effectiveDragHandler?Qt.resolvedUrl("private/OptionalDragHandle.qml"):""
 asynchronous:false
 height:contentHeight
-anchors{right:rightPaddingItem.left
+anchors{right:rightItemLoader.left
+rightMargin:rightItemLoader.width>0?root.spacing:0
 top:parent.top
 }Binding{target:!!dragHandleLoader.item&&dragHandleLoader.item.hasOwnProperty("_delegate")?dragHandleLoader.item:null
 property:"_delegate"

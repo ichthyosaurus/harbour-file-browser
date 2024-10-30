@@ -11,7 +11,7 @@ property alias text:label.text
 property alias icon:button.icon
 property alias iconButton:button
 property alias textLabel:label
-property var _delegate
+property Item _delegate:!!parent&&parent._delegate?parent._delegate:(__padded_delegate||null)
 signal clicked(var mouse)
 width:Math.max(label.implicitWidth,button.width)
 height:Math.max(button.height+label.effectiveHeight,(!!_delegate&&_delegate.minContentHeight?_delegate.minContentHeight:0))

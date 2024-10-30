@@ -21,7 +21,8 @@ highlighted:parent.highlighted
 height:S.Theme.itemSizeSmall
 width:S.Theme.iconSizeMedium+S.Theme.paddingSmall
 anchors.verticalCenter:parent.verticalCenter
-}TextMetrics{id:metrics
+onClicked:{if(!!mouse&&!automaticCheck){root.clicked()
+}}}TextMetrics{id:metrics
 font:root.font
 text:root.text
 }text:""
