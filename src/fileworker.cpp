@@ -466,13 +466,6 @@ QString FileWorker::copyOrMove(QString src, QString dest) {
         if (m_mode == MoveMode && !srcFile.remove()) {
             return srcFile.errorString();
         }
-
-        // The mtime of symlinks is reset to "now" when they
-        // are copied or moved. We don't restore it because C++'s
-        // std::filesystem::last_write_time always follows symlinks.
-        // It would be possible using lutimes(), though.
-
-        return {};
     } else if (fileInfo.isDir()) {
         return copyOrMoveDirRecursively(src, dest);
     } else {
@@ -514,16 +507,17 @@ QString FileWorker::copyOrMove(QString src, QString dest) {
         // - Rationale: when moving photos from the internal
         //   memory to an SD card, I want to keep the original
         //   mtime so I can still sort the files by date.
-        QFileInfo targetInfo(dest);
-        const auto targetFileStd = targetInfo.absoluteFilePath().toStdString();
-
-        utimensat(AT_FDCWD, targetFileStd.c_str(),
-                  sourceStat, AT_SYMLINK_NOFOLLOW);
 
         /*auto targetPath = std::filesystem::path(
             targetInfo.absoluteFilePath().toStdString());
         std::filesystem::last_write_time(targetPath, originalTime);*/
     }
+
+    QFileInfo targetInfo(dest);
+    const auto targetFileStd = targetInfo.absoluteFilePath().toStdString();
+
+    utimensat(AT_FDCWD, targetFileStd.c_str(),
+              sourceStat, AT_SYMLINK_NOFOLLOW);
 
     return {};
 }
