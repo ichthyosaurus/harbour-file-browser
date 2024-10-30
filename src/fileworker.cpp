@@ -352,7 +352,7 @@ QString FileWorker::copyOrMoveDirRecursively(QString srcDirectory, QString destD
 
         // move dir symlink by removing the old link
         // after creating the new link
-        QFile srcFile(destDirectory);
+        QFile srcFile(srcDirectory);
         if (m_mode == MoveMode && !srcFile.remove()) {
             return srcFile.errorString();
         }
@@ -451,7 +451,7 @@ QString FileWorker::copyOrMove(QString src, QString dest) {
 
         // move symlink by removing the old link
         // after creating the new link
-        QFile srcFile(dest);
+        QFile srcFile(src);
         if (m_mode == MoveMode && !srcFile.remove()) {
             return srcFile.errorString();
         }
