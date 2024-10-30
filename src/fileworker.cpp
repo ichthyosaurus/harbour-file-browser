@@ -22,7 +22,6 @@
 
 #include "fileworker.h"
 #include <QDateTime>
-#include "globals.h"
 
 // creates a "Document (2)" numbered name from the given filename
 static QString createNumberedFilename(QString filename)
