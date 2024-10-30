@@ -33,6 +33,8 @@ Dialog {
     property string acceptText
     property bool pickFolder: true // set to false to allow selecting a file
 
+    property bool allowCreateNewFolder: true
+
     // set this to a function(var newPath) that is
     // called when the dialog is accepted
     property var acceptCallback
@@ -71,6 +73,11 @@ Dialog {
         // Used to check properties of files.
         // Make sure to always set the file to use
         // before using this object.
+    }
+
+    FileData {
+        id: currentPathData
+        file: path
     }
 
     Timer {
@@ -149,9 +156,17 @@ Dialog {
             flickable: hintList
 
             MenuItem {
-                visible: path != "/"
-                text: qsTr("Root")
-                onDelayedClick: pathReplaced("/")
+                text: qsTr("New folder")
+                visible: allowCreateNewFolder &&
+                         currentPathData.isDir &&
+                         currentPathData.isWritable
+                onDelayedClick: {
+                    var dialog = pageStack.push(Qt.resolvedUrl("CreateNewDialog.qml"),
+                        {allowNewFile: false, path: path})
+                    dialog.accepted.connect(function() {
+                        pathReplaced(dialog.newPath + "/")
+                    })
+                }
             }
 
             MenuItem {

@@ -60,8 +60,10 @@ BackgroundItem {
             anchors.horizontalCenter: parent.horizontalCenter
             fillMode: Image.PreserveAspectFit
             source: ""
-            highlighted: parent.highlighted
+            highlighted: root.highlighted
             visible: true
+            color: Theme.primaryColor
+            highlightColor: Theme.highlightColor
         }
 
         Label {

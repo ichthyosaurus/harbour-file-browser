@@ -24,12 +24,16 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.file.browser.FileData 1.0
 import "../components"
+import "../js/paths.js" as Paths
 
 Dialog {
     id: root
 
     property string path: "/"  // parent directory of the new entry
     property string errorMessage: ""  // return value
+
+    property bool allowNewFile: true
+    readonly property string newPath: fileData.absoluteFilePath
 
     allowedOrientations: Orientation.All
     canAccept: parentData.isWritable && folderName.text !== "" && !folderName.errorHighlight
@@ -84,6 +88,9 @@ Dialog {
 
             ComboBox {
                 id: typeCombo
+                currentIndex: 0
+                enabled: allowNewFile
+
                 label: qsTr("Create new")
                 description: (currentIndex == 0 ?
                                  qsTr("The new folder will be created under “%1”.",
