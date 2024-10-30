@@ -100,8 +100,10 @@ QString StatFileInfo::symLinkTargetFolder() const
 bool StatFileInfo::isSymLinkBroken() const
 {
     // if it is a symlink but it doesn't exist, then it is broken
-    if (m_fileInfo.isSymLink() && !m_fileInfo.exists())
+    if (m_fileInfo.isSymLink() && !m_fileInfo.exists()) {
         return true;
+    }
+
     return false;
 }
 
