@@ -316,6 +316,9 @@ void FileWorker::copyOrMoveFiles() {
         }
 
         // move or copy and stop if errors
+
+        // FIXME broken symlinks are not copied at all!
+
         QString errmsg = copyOrMove(filename, newname);
 
         if (!errmsg.isEmpty()) {
