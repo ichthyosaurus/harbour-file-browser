@@ -150,80 +150,80 @@
 <context>
     <name>BookmarksModel</name>
     <message>
-        <location filename="../src/settings.cpp" line="1007"/>
+        <location filename="../src/settings.cpp" line="1005"/>
         <source>Memory card</source>
         <translation>Hafıza kardı</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1009"/>
+        <location filename="../src/settings.cpp" line="1007"/>
         <source>Attached folder</source>
         <translation>Ekteki klasör</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1011"/>
+        <location filename="../src/settings.cpp" line="1009"/>
         <source>Remote folder</source>
         <translation>Uzaktaki klasör</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1014"/>
+        <location filename="../src/settings.cpp" line="1012"/>
         <source>Removable media</source>
         <translation>Kaldırılabilir medya</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1101"/>
-        <location filename="../src/settings.cpp" line="1583"/>
+        <location filename="../src/settings.cpp" line="1099"/>
+        <location filename="../src/settings.cpp" line="1592"/>
         <source>Internal storage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1109"/>
+        <location filename="../src/settings.cpp" line="1107"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1498"/>
+        <location filename="../src/settings.cpp" line="1507"/>
         <source>Home</source>
         <translation>Ev</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1164"/>
-        <location filename="../src/settings.cpp" line="1508"/>
+        <location filename="../src/settings.cpp" line="1162"/>
+        <location filename="../src/settings.cpp" line="1517"/>
         <source>Documents</source>
         <translation>Belgeler</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1166"/>
-        <location filename="../src/settings.cpp" line="1518"/>
+        <location filename="../src/settings.cpp" line="1164"/>
+        <location filename="../src/settings.cpp" line="1527"/>
         <source>Downloads</source>
         <translation>İndirilenler</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1172"/>
-        <location filename="../src/settings.cpp" line="1548"/>
+        <location filename="../src/settings.cpp" line="1170"/>
+        <location filename="../src/settings.cpp" line="1557"/>
         <source>Music</source>
         <translation>Müzik</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1168"/>
-        <location filename="../src/settings.cpp" line="1528"/>
+        <location filename="../src/settings.cpp" line="1166"/>
+        <location filename="../src/settings.cpp" line="1537"/>
         <source>Pictures</source>
         <translation>Resimler</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1170"/>
-        <location filename="../src/settings.cpp" line="1538"/>
+        <location filename="../src/settings.cpp" line="1168"/>
+        <location filename="../src/settings.cpp" line="1547"/>
         <source>Videos</source>
         <translation>Videolar</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1558"/>
-        <location filename="../src/settings.cpp" line="1584"/>
+        <location filename="../src/settings.cpp" line="1567"/>
+        <location filename="../src/settings.cpp" line="1593"/>
         <source>Android storage</source>
         <translation>Android depolaması</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1568"/>
+        <location filename="../src/settings.cpp" line="1577"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
@@ -384,69 +384,69 @@
 <context>
     <name>CreateNewDialog</name>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="57"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="61"/>
         <source>Create</source>
         <translation>Oluştur</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="73"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="77"/>
         <source>Not permitted</source>
         <translation>Yetkisiz</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="74"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="78"/>
         <source>You don&apos;t have permission to change the contents of this directory.</source>
         <translation>Bu dizinin içeriklerini değiştirmek için yetkiniz yok.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="87"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="94"/>
         <source>Create new</source>
         <translation>Yeni oluştur</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="89"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="96"/>
         <source>The new folder will be created under “%1”.</source>
         <comment>placeholder is the parent directory of the new element</comment>
         <translation>Yeni klasör &quot;%1&quot;in altında oluşturulacaktır.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="91"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="98"/>
         <source>The new text file will be created under “%1” and can be edited later.</source>
         <comment>placeholder is the parent directory of the new element</comment>
         <translation>Yeni metin belgesi &quot;%1&quot;in altında oluşturulacaktır.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="97"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="104"/>
         <source>folder</source>
         <translation>klasör</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="100"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="107"/>
         <source>empty text file</source>
         <translation>boş metin belgesi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="112"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="119"/>
         <source>Folder name</source>
         <translation>Klasör adı</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="112"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="119"/>
         <source>File name</source>
         <translation>Dosya adı</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="131"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="138"/>
         <source>File names must not contain slashes. To create a new file in a folder below “%1”, first create a folder and then create the file.</source>
         <translation>Dosya adları eğik çizgi içermek zorundadır. &quot;%1&quot;in altındaki bir klasörde yeni bir dosya oluşturmak için ilk olarak bir klasör oluşturun ve sonrasında dosyayı oluşturun.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="135"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="142"/>
         <source>A file or folder with this name already exists.</source>
         <translation>Bu isimde halihazırda bir dosya veya klasör mevcut.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="138"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="145"/>
         <source>Using slashes in folder names will create sub-folders, like so:</source>
         <translation>Dosya adlarında eğik çizgi kullanmak şu şekilde alt klasörler oluşturacaktır:</translation>
     </message>
@@ -574,27 +574,27 @@
 <context>
     <name>DirectoryPageEntry</name>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="47"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="48"/>
         <source>Deleting</source>
         <translation>Siliniyor</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="323"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="324"/>
         <source>Open target folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="324"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="325"/>
         <source>Open containing folder</source>
         <translation type="unfinished">İçeren klasörü aç</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="336"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="337"/>
         <source>Remove bookmark</source>
         <translation>Yer işaretini kaldır</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="336"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="337"/>
         <source>Add to bookmarks</source>
         <translation>Yer işaretlerine ekle</translation>
     </message>
@@ -817,31 +817,31 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="264"/>
+        <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>dosyayı sıkıştır</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="273"/>
+        <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="278"/>
+        <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
         <translation type="unfinished">Uygula</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="298"/>
+        <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>dosyayı düzenle</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="323"/>
+        <location filename="../qml/components/FileActions.qml" line="324"/>
         <source>show file properties</source>
         <translation>dosya özelliklerini göster</translation>
     </message>
@@ -1155,46 +1155,51 @@
 <context>
     <name>FileWorker</name>
     <message>
-        <location filename="../src/fileworker.cpp" line="76"/>
-        <location filename="../src/fileworker.cpp" line="92"/>
-        <location filename="../src/fileworker.cpp" line="109"/>
-        <location filename="../src/fileworker.cpp" line="126"/>
+        <location filename="../src/fileworker.cpp" line="67"/>
+        <location filename="../src/fileworker.cpp" line="83"/>
+        <location filename="../src/fileworker.cpp" line="100"/>
+        <location filename="../src/fileworker.cpp" line="117"/>
         <source>File operation already in progress</source>
         <translation>Dosya işlemi zaten devam ediyor</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="168"/>
+        <location filename="../src/fileworker.cpp" line="159"/>
         <source>Empty filename</source>
         <translation>Boş dosya adı</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="187"/>
-        <location filename="../src/fileworker.cpp" line="259"/>
-        <location filename="../src/fileworker.cpp" line="291"/>
-        <location filename="../src/fileworker.cpp" line="387"/>
-        <location filename="../src/fileworker.cpp" line="403"/>
+        <location filename="../src/fileworker.cpp" line="178"/>
+        <location filename="../src/fileworker.cpp" line="252"/>
+        <location filename="../src/fileworker.cpp" line="289"/>
+        <location filename="../src/fileworker.cpp" line="374"/>
+        <location filename="../src/fileworker.cpp" line="397"/>
         <source>Cancelled</source>
         <translation>İptal edildi</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="224"/>
+        <location filename="../src/fileworker.cpp" line="216"/>
         <source>File not found</source>
         <translation>Dosya bulunamadı</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="237"/>
+        <location filename="../src/fileworker.cpp" line="230"/>
         <source>Folder delete failed</source>
         <translation>Klasör silme başarısız oldu</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="372"/>
+        <location filename="../src/fileworker.cpp" line="353"/>
         <source>Source folder does not exist</source>
         <translation>Kaynak klasör mevcut değil</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="379"/>
+        <location filename="../src/fileworker.cpp" line="362"/>
         <source>Cannot create target folder %1</source>
         <translation>%1 hedef klasörü oluşturulamıyor</translation>
+    </message>
+    <message>
+        <location filename="../src/fileworker.cpp" line="413"/>
+        <source>Failed to remove source folder “%1” after moving.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2448,23 +2453,53 @@ exposure program</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="640"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="208"/>
+        <source>Clear subtitles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="212"/>
+        <source>Load subtitles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="663"/>
         <source>Zoomed to fit screen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="641"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="664"/>
         <source>Original</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="648"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="671"/>
         <source>Play on repeat</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="649"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="672"/>
         <source>Play once</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="113"/>
+        <source>Select from file system</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="123"/>
+        <source>No files ready</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="126"/>
+        <source>Copy subtitle files in the SRT format next to the video file to open them quickly.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="130"/>
+        <source>Pull down to pick a file.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2494,33 +2529,33 @@ exposure program</extracomment>
 <context>
     <name>PathEditDialog</name>
     <message>
-        <location filename="../qml/pages/PathEditDialog.qml" line="192"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="207"/>
         <source>Path to a folder</source>
         <translation>Klasör yolu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PathEditDialog.qml" line="169"/>
-        <location filename="../qml/pages/PathEditDialog.qml" line="303"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="184"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="318"/>
         <source>Remove last part</source>
         <translation>Son kısmı kaldır</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PathEditDialog.qml" line="153"/>
-        <source>Root</source>
-        <translation type="unfinished">Kök</translation>
+        <location filename="../qml/pages/PathEditDialog.qml" line="159"/>
+        <source>New folder</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PathEditDialog.qml" line="158"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="173"/>
         <source>Places</source>
         <translation type="unfinished">Yerler</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PathEditDialog.qml" line="193"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="208"/>
         <source>Path to a target</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/PathEditDialog.qml" line="357"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="372"/>
         <source>%n file(s)</source>
         <extracomment>hidden if n=0</extracomment>
         <translation>
@@ -2528,7 +2563,7 @@ exposure program</extracomment>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/PathEditDialog.qml" line="360"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="375"/>
         <source>%n folder(s)</source>
         <extracomment>hidden if n=0</extracomment>
         <translation>
@@ -2536,7 +2571,7 @@ exposure program</extracomment>
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/PathEditDialog.qml" line="363"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="378"/>
         <source>empty</source>
         <extracomment>as in &apos;this folder is empty&apos;</extracomment>
         <translation>boş</translation>
@@ -2673,7 +2708,7 @@ exposure program</extracomment>
         <translation>Dosya Tarayıcısını Root Modunda kullanırken dikkatli olun. Eylemler beklenmedik bir şekilde sisteminizi bozabilir.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Dosya Tarayıcısını Root Modunda Başlat</translation>
     </message>
@@ -3069,41 +3104,41 @@ exposure program</extracomment>
 <context>
     <name>TransferDialog</name>
     <message>
-        <location filename="../qml/pages/TransferDialog.qml" line="63"/>
+        <location filename="../qml/pages/TransferDialog.qml" line="64"/>
         <source>Clear selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/TransferDialog.qml" line="84"/>
+        <location filename="../qml/pages/TransferDialog.qml" line="77"/>
         <source>Enter target path</source>
         <translation>Hedef yolu gir</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TransferDialog.qml" line="96"/>
+        <location filename="../qml/pages/TransferDialog.qml" line="89"/>
         <source>Select</source>
         <translation>Seç</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TransferDialog.qml" line="79"/>
+        <location filename="../qml/pages/TransferDialog.qml" line="73"/>
         <source>Switch to target directory</source>
         <translation>Hedef dizine geç</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/TransferDialog.qml" line="113"/>
+        <location filename="../qml/pages/TransferDialog.qml" line="106"/>
         <source>%n item(s)</source>
         <translation type="unfinished">
             <numerusform>%n öge</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/TransferDialog.qml" line="114"/>
+        <location filename="../qml/pages/TransferDialog.qml" line="107"/>
         <source>%n target(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/TransferDialog.qml" line="155"/>
+        <location filename="../qml/pages/TransferDialog.qml" line="148"/>
         <source>Nothing selected to transfer</source>
         <translation>Aktarmak için hiçbir şey seçilmedi</translation>
     </message>
@@ -3197,7 +3232,7 @@ exposure program</extracomment>
         <translation>Belki de depolama alanı doludur?</translation>
     </message>
     <message>
-        <location filename="../qml/components/TransferPanel.qml" line="287"/>
+        <location filename="../qml/components/TransferPanel.qml" line="289"/>
         <source>Unable to overwrite existing file with symlink</source>
         <translation>Sembolik bağlantıyla mevcut dosyanın üzerine yazılamıyor</translation>
     </message>
@@ -3207,12 +3242,12 @@ exposure program</extracomment>
         <translation>Kopyalanıyor</translation>
     </message>
     <message>
-        <location filename="../qml/components/TransferPanel.qml" line="309"/>
+        <location filename="../qml/components/TransferPanel.qml" line="308"/>
         <source>Moving</source>
         <translation>Taşınıyor</translation>
     </message>
     <message>
-        <location filename="../qml/components/TransferPanel.qml" line="312"/>
+        <location filename="../qml/components/TransferPanel.qml" line="310"/>
         <source>Linking</source>
         <translation>Bağlantı oluşturuluyor</translation>
     </message>

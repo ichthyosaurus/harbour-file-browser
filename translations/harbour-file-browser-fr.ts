@@ -150,80 +150,80 @@
 <context>
     <name>BookmarksModel</name>
     <message>
-        <location filename="../src/settings.cpp" line="1007"/>
+        <location filename="../src/settings.cpp" line="1005"/>
         <source>Memory card</source>
         <translation>Carte mémoire</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1009"/>
+        <location filename="../src/settings.cpp" line="1007"/>
         <source>Attached folder</source>
         <translation>Dossier joint</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1011"/>
+        <location filename="../src/settings.cpp" line="1009"/>
         <source>Remote folder</source>
         <translation>Répertoire en ligne</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1014"/>
+        <location filename="../src/settings.cpp" line="1012"/>
         <source>Removable media</source>
         <translation>Support amovible</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1101"/>
-        <location filename="../src/settings.cpp" line="1583"/>
+        <location filename="../src/settings.cpp" line="1099"/>
+        <location filename="../src/settings.cpp" line="1592"/>
         <source>Internal storage</source>
         <translation>Stockage interne</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1109"/>
+        <location filename="../src/settings.cpp" line="1107"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
         <translation>“%1” sur “%2”</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1498"/>
+        <location filename="../src/settings.cpp" line="1507"/>
         <source>Home</source>
         <translation>Répertoire personnel</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1164"/>
-        <location filename="../src/settings.cpp" line="1508"/>
+        <location filename="../src/settings.cpp" line="1162"/>
+        <location filename="../src/settings.cpp" line="1517"/>
         <source>Documents</source>
         <translation type="unfinished">Documents</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1166"/>
-        <location filename="../src/settings.cpp" line="1518"/>
+        <location filename="../src/settings.cpp" line="1164"/>
+        <location filename="../src/settings.cpp" line="1527"/>
         <source>Downloads</source>
         <translation type="unfinished">Téléchargements</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1172"/>
-        <location filename="../src/settings.cpp" line="1548"/>
+        <location filename="../src/settings.cpp" line="1170"/>
+        <location filename="../src/settings.cpp" line="1557"/>
         <source>Music</source>
         <translation type="unfinished">Musique</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1168"/>
-        <location filename="../src/settings.cpp" line="1528"/>
+        <location filename="../src/settings.cpp" line="1166"/>
+        <location filename="../src/settings.cpp" line="1537"/>
         <source>Pictures</source>
         <translation type="unfinished">Images</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1170"/>
-        <location filename="../src/settings.cpp" line="1538"/>
+        <location filename="../src/settings.cpp" line="1168"/>
+        <location filename="../src/settings.cpp" line="1547"/>
         <source>Videos</source>
         <translation type="unfinished">Vidéos</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1558"/>
-        <location filename="../src/settings.cpp" line="1584"/>
+        <location filename="../src/settings.cpp" line="1567"/>
+        <location filename="../src/settings.cpp" line="1593"/>
         <source>Android storage</source>
         <translation type="unfinished">Stockage Android</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1568"/>
+        <location filename="../src/settings.cpp" line="1577"/>
         <source>Root</source>
         <translation type="unfinished">Racine</translation>
     </message>
@@ -387,71 +387,71 @@
 <context>
     <name>CreateNewDialog</name>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="57"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="61"/>
         <source>Create</source>
         <translation type="unfinished">Créer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="73"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="77"/>
         <source>Not permitted</source>
         <translation>Non permis</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="74"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="78"/>
         <source>You don&apos;t have permission to change the contents of this directory.</source>
         <translation>Vous n&apos;avez pas la permission de modifier les contenus de ce répertoire.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="87"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="94"/>
         <source>Create new</source>
         <translation>Nouveau</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="89"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="96"/>
         <source>The new folder will be created under “%1”.</source>
         <comment>placeholder is the parent directory of the new element</comment>
         <translation>Le nouveau répertoire sera créé sous “%1”.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="91"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="98"/>
         <source>The new text file will be created under “%1” and can be edited later.</source>
         <comment>placeholder is the parent directory of the new element</comment>
         <translation>Le nouveau fichier texte sera créé sous “%1” et pourra être édité plus tard.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="97"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="104"/>
         <source>folder</source>
         <translation type="unfinished">dossier</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="100"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="107"/>
         <source>empty text file</source>
         <translation>fichier texte vide</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="112"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="119"/>
         <source>Folder name</source>
         <translation type="unfinished">Nom du dossier</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="112"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="119"/>
         <source>File name</source>
         <translation>Nom du fichier</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="131"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="138"/>
         <source>File names must not contain slashes. To create a new file in a folder below “%1”, first create a folder and then create the file.</source>
         <translation>Les noms de fichier ne doivent pas contenir de caractère barre oblique. Pour créer un nouveau fichier sous “%1”, vous devez d&apos;abord créer le répertoire et ensuite créer le fichier.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="135"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="142"/>
         <source>A file or folder with this name already exists.</source>
         <translation>Un fichier ou un répertoire porte déjà ce nom.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CreateNewDialog.qml" line="138"/>
+        <location filename="../qml/pages/CreateNewDialog.qml" line="145"/>
         <source>Using slashes in folder names will create sub-folders, like so:</source>
-        <translation type="unfinished">Utiliser le caractère barre oblique dans un nom de répertoire créera les sous-répertoire, comme ceci :</translation>
+        <translation type="unfinished">Utiliser le caractère barre oblique dans un nom de répertoire créera les sous-répertoire, comme ceci&#xa0;:</translation>
     </message>
 </context>
 <context>
@@ -578,27 +578,27 @@
 <context>
     <name>DirectoryPageEntry</name>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="47"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="48"/>
         <source>Deleting</source>
         <translation>Suppression</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="323"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="324"/>
         <source>Open target folder</source>
         <translation>Ouvrir le répertoire cible</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="324"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="325"/>
         <source>Open containing folder</source>
         <translation type="unfinished">Ouvrir le dossier parent</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="336"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="337"/>
         <source>Remove bookmark</source>
         <translation>Supprimer le favoris</translation>
     </message>
     <message>
-        <location filename="../qml/components/DirectoryPageEntry.qml" line="336"/>
+        <location filename="../qml/components/DirectoryPageEntry.qml" line="337"/>
         <source>Add to bookmarks</source>
         <translation>Ajouter aux favoris</translation>
     </message>
@@ -830,7 +830,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="264"/>
+        <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>compresser le fichier</numerusform>
@@ -838,17 +838,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="273"/>
+        <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
         <translation>Éditer le lien cible</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="278"/>
+        <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
         <translation>Appliquer</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="298"/>
+        <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>modifier le fichier</numerusform>
@@ -856,7 +856,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="323"/>
+        <location filename="../qml/components/FileActions.qml" line="324"/>
         <source>show file properties</source>
         <translation>afficher les propriétés du fichier</translation>
     </message>
@@ -1172,44 +1172,49 @@
 <context>
     <name>FileWorker</name>
     <message>
-        <location filename="../src/fileworker.cpp" line="76"/>
-        <location filename="../src/fileworker.cpp" line="92"/>
-        <location filename="../src/fileworker.cpp" line="109"/>
-        <location filename="../src/fileworker.cpp" line="126"/>
+        <location filename="../src/fileworker.cpp" line="67"/>
+        <location filename="../src/fileworker.cpp" line="83"/>
+        <location filename="../src/fileworker.cpp" line="100"/>
+        <location filename="../src/fileworker.cpp" line="117"/>
         <source>File operation already in progress</source>
         <translation>Opération sur le fichier déjà en cours</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="168"/>
+        <location filename="../src/fileworker.cpp" line="159"/>
         <source>Empty filename</source>
         <translation>Nombre de dossiers vides</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="224"/>
+        <location filename="../src/fileworker.cpp" line="216"/>
         <source>File not found</source>
         <translation>Fichier introuvable</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="237"/>
+        <location filename="../src/fileworker.cpp" line="230"/>
         <source>Folder delete failed</source>
         <translation>Échec lors de la suppression du dossier</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="187"/>
-        <location filename="../src/fileworker.cpp" line="259"/>
-        <location filename="../src/fileworker.cpp" line="291"/>
-        <location filename="../src/fileworker.cpp" line="387"/>
-        <location filename="../src/fileworker.cpp" line="403"/>
+        <location filename="../src/fileworker.cpp" line="413"/>
+        <source>Failed to remove source folder “%1” after moving.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/fileworker.cpp" line="178"/>
+        <location filename="../src/fileworker.cpp" line="252"/>
+        <location filename="../src/fileworker.cpp" line="289"/>
+        <location filename="../src/fileworker.cpp" line="374"/>
+        <location filename="../src/fileworker.cpp" line="397"/>
         <source>Cancelled</source>
         <translation>Annulé</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="372"/>
+        <location filename="../src/fileworker.cpp" line="353"/>
         <source>Source folder does not exist</source>
         <translation>Le dossier source n&apos;existe pas</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="379"/>
+        <location filename="../src/fileworker.cpp" line="362"/>
         <source>Cannot create target folder %1</source>
         <translation>Impossible de créer le dossier de destination %1</translation>
     </message>
@@ -2468,23 +2473,53 @@ exposure program</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="640"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="208"/>
+        <source>Clear subtitles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="212"/>
+        <source>Load subtitles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="663"/>
         <source>Zoomed to fit screen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="641"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="664"/>
         <source>Original</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="648"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="671"/>
         <source>Play on repeat</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="649"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="672"/>
         <source>Play once</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="113"/>
+        <source>Select from file system</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="123"/>
+        <source>No files ready</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="126"/>
+        <source>Copy subtitle files in the SRT format next to the video file to open them quickly.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="130"/>
+        <source>Pull down to pick a file.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2514,33 +2549,33 @@ exposure program</extracomment>
 <context>
     <name>PathEditDialog</name>
     <message>
-        <location filename="../qml/pages/PathEditDialog.qml" line="192"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="207"/>
         <source>Path to a folder</source>
         <translation>Le chemin vers le dossier</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PathEditDialog.qml" line="169"/>
-        <location filename="../qml/pages/PathEditDialog.qml" line="303"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="184"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="318"/>
         <source>Remove last part</source>
         <translation>Supprimer la dernière partie</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PathEditDialog.qml" line="153"/>
-        <source>Root</source>
-        <translation type="unfinished">Racine</translation>
+        <location filename="../qml/pages/PathEditDialog.qml" line="159"/>
+        <source>New folder</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PathEditDialog.qml" line="158"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="173"/>
         <source>Places</source>
         <translation type="unfinished">Emplacements</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PathEditDialog.qml" line="193"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="208"/>
         <source>Path to a target</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/PathEditDialog.qml" line="357"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="372"/>
         <source>%n file(s)</source>
         <extracomment>hidden if n=0</extracomment>
         <translation>
@@ -2549,7 +2584,7 @@ exposure program</extracomment>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/PathEditDialog.qml" line="360"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="375"/>
         <source>%n folder(s)</source>
         <extracomment>hidden if n=0</extracomment>
         <translation>
@@ -2558,7 +2593,7 @@ exposure program</extracomment>
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/PathEditDialog.qml" line="363"/>
+        <location filename="../qml/pages/PathEditDialog.qml" line="378"/>
         <source>empty</source>
         <extracomment>as in &apos;this folder is empty&apos;</extracomment>
         <translation>vide</translation>
@@ -2695,7 +2730,7 @@ exposure program</extracomment>
         <translation type="unfinished">Soyez prudent en utilisant le Navigation de fichiers en mode root. Certaines actions pourraient casser votre système.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Démarrer le Navigation de fichier en mode root.</translation>
     </message>
@@ -3095,27 +3130,27 @@ exposure program</extracomment>
 <context>
     <name>TransferDialog</name>
     <message>
-        <location filename="../qml/pages/TransferDialog.qml" line="63"/>
+        <location filename="../qml/pages/TransferDialog.qml" line="64"/>
         <source>Clear selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/TransferDialog.qml" line="84"/>
+        <location filename="../qml/pages/TransferDialog.qml" line="77"/>
         <source>Enter target path</source>
         <translation>Entrez le chemin cible</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TransferDialog.qml" line="96"/>
+        <location filename="../qml/pages/TransferDialog.qml" line="89"/>
         <source>Select</source>
         <translation>Sélectionné</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TransferDialog.qml" line="79"/>
+        <location filename="../qml/pages/TransferDialog.qml" line="73"/>
         <source>Switch to target directory</source>
         <translation>Basculer vers le dossier cible</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/TransferDialog.qml" line="113"/>
+        <location filename="../qml/pages/TransferDialog.qml" line="106"/>
         <source>%n item(s)</source>
         <translation type="unfinished">
             <numerusform>%n élément</numerusform>
@@ -3123,7 +3158,7 @@ exposure program</extracomment>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/TransferDialog.qml" line="114"/>
+        <location filename="../qml/pages/TransferDialog.qml" line="107"/>
         <source>%n target(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -3131,7 +3166,7 @@ exposure program</extracomment>
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/TransferDialog.qml" line="155"/>
+        <location filename="../qml/pages/TransferDialog.qml" line="148"/>
         <source>Nothing selected to transfer</source>
         <translation>La sélection à transférer est vide</translation>
     </message>
@@ -3233,7 +3268,7 @@ exposure program</extracomment>
         <translation>L&apos;espace de stockage est peut-être plein ?</translation>
     </message>
     <message>
-        <location filename="../qml/components/TransferPanel.qml" line="287"/>
+        <location filename="../qml/components/TransferPanel.qml" line="289"/>
         <source>Unable to overwrite existing file with symlink</source>
         <translation>Impossible d&apos;écraser le fichier existant avec un lien symbolique</translation>
     </message>
@@ -3243,12 +3278,12 @@ exposure program</extracomment>
         <translation>Copie</translation>
     </message>
     <message>
-        <location filename="../qml/components/TransferPanel.qml" line="309"/>
+        <location filename="../qml/components/TransferPanel.qml" line="308"/>
         <source>Moving</source>
         <translation>Déplacement</translation>
     </message>
     <message>
-        <location filename="../qml/components/TransferPanel.qml" line="312"/>
+        <location filename="../qml/components/TransferPanel.qml" line="310"/>
         <source>Linking</source>
         <translation type="unfinished">Liaison</translation>
     </message>
