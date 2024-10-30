@@ -389,7 +389,7 @@ QString FileWorker::copyOrMoveDirRecursively(QString srcDirectory, QString destD
         }
     }
 
-    // copy dirs
+    // copy/move dirs
     names = srcDir.entryList(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::Hidden);
     for (int i = 0 ; i < names.count() ; ++i) {
         // stop if cancelled
@@ -405,6 +405,13 @@ QString FileWorker::copyOrMoveDirRecursively(QString srcDirectory, QString destD
 
         if (!errmsg.isEmpty()) {
             return errmsg;
+        }
+    }
+
+    if (m_mode == MoveMode) {
+        if (!srcDir.removeRecursively()) {
+            return tr("Failed to remove source folder "
+                      "“%1” after moving.").arg(srcDirectory);
         }
     }
 
@@ -425,9 +432,9 @@ QString FileWorker::copyOrMove(QString src, QString dest) {
 
     if (fileInfo.isSymLink()) {
         // copy symlink by creating a new link
-        QFile targetFile(fileInfo.symLinkTarget());
-        if (!targetFile.link(dest)) {
-            return targetFile.errorString();
+        QFile linkTarget(fileInfo.symLinkTarget());
+        if (!linkTarget.link(dest)) {
+            return linkTarget.errorString();
         }
 
         // move symlink by removing the old link
