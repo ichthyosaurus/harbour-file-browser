@@ -160,6 +160,7 @@ QStringList FileClipboard::listExistingFiles(QString destDirectory, bool ignoreI
 
     QDir destination(destDirectory);
     if (!destination.exists()) {
+        // must exist and must not be a broken symlink
         return QStringList();
     }
 
@@ -168,6 +169,7 @@ QStringList FileClipboard::listExistingFiles(QString destDirectory, bool ignoreI
     for (const auto& path : currentFiles) {
         QFileInfo fileInfo(path);
         QString newPath = destination.absoluteFilePath(fileInfo.fileName());
+        QFileInfo newInfo(newPath);
 
         // Are source and destination paths the same?
         // Note: Engine::pasteFiles() can create numbered copies.
@@ -182,7 +184,7 @@ QStringList FileClipboard::listExistingFiles(QString destDirectory, bool ignoreI
             return QStringList();
         }
 
-        if (QFile::exists(newPath)) {
+        if (newInfo.exists() || newInfo.isSymLink()) {
             if (getNamesOnly) {
                 existingFiles.append(fileInfo.fileName());
             } else {
@@ -302,7 +304,7 @@ void FileClipboard::setPaths(const QStringList &newPaths)
 QString FileClipboard::validatePath(QString path)
 {
     // - never allow special files (char/block/fifo/socket) in the clipboard
-    // - never allow non-existent files
+    // - never allow non-existent files (but do allow broken symlinks)
     // - make sure all paths are absolute
     // - note: duplicates are not allowed but are not checked by this method
 
@@ -313,7 +315,8 @@ QString FileClipboard::validatePath(QString path)
     if (info.isSystem()) {
         qDebug() << "cannot put special files in the clipboard:" << path;
         return QLatin1Literal();
-    } else if (!info.exists()) {
+    } else if (!info.exists() && !info.isSymLink()) {
+        // broken symlinks are explicitly allowed
         qDebug() << "cannot put non-existent files in the clipboard:" << path;
         return QLatin1Literal();
     } else {
@@ -327,6 +330,7 @@ void FileClipboard::refreshSharedState() {
         auto configLocation = QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation);
 
         if (configLocation.isEmpty() || !QFileInfo(configLocation).exists()) {
+            // this will also (correctly) fail if the location is a broken symlink
             qDebug() << "cannot locate any writable config location, shared/persistent clipboard disabled";
             return;
         }

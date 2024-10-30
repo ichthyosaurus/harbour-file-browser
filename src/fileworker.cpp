@@ -50,11 +50,15 @@ static QString createNumberedFilename(QString filename)
 
     int number = 2;
     QString numberedFilename = QStringLiteral("%1 (%2)%3").arg(basename).arg(number).arg(suffix);
-    while (QFileInfo::exists(path+QStringLiteral("/")+numberedFilename)) {
+    QFileInfo newInfo(path+QStringLiteral("/")+numberedFilename);
+
+    while (newInfo.exists() || newInfo.isSymLink()) {
         ++number;
         numberedFilename = QStringLiteral("%1 (%2)%3").arg(basename).arg(number).arg(suffix);
+        newInfo.setFile(path+QStringLiteral("/")+numberedFilename);
     }
-    return path+QStringLiteral("/")+numberedFilename;
+
+    return newInfo.absoluteFilePath();
 }
 
 FileWorker::FileWorker(QObject *parent) :
@@ -189,14 +193,15 @@ void FileWorker::symlinkFiles()
 
         QFileInfo fileInfo(filename);
         QString newname = dest.absoluteFilePath(fileInfo.fileName());
+        QFileInfo newInfo(newname);
 
         if (filename == newname) { // pasting over the source file, so copy a renamed file
-            if (QFileInfo::exists(newname)) {
+            if (newInfo.exists() || newInfo.isSymLink()) {
                 newname = createNumberedFilename(newname);
             }
         } else {
             // the destination exists either as a regular file/folder or as a symlink: abort
-            if (QFileInfo::exists(newname)) {
+            if (newInfo.exists() || newInfo.isSymLink()) {
                 emit errorOccurred(QString("Unable to overwrite existing file with symlink"), filename);
                 return;
             }
@@ -219,8 +224,9 @@ void FileWorker::symlinkFiles()
 QString FileWorker::deleteFile(QString filename)
 {
     QFileInfo info(filename);
-    if (!info.exists() && !info.isSymLink())
+    if (!info.exists() && !info.isSymLink()) {
         return tr("File not found");
+    }
 
     if (info.isDir() && info.isSymLink()) {
         // only delete the link and do not remove recursively subfolders
@@ -298,14 +304,15 @@ void FileWorker::copyOrMoveFiles() {
 
         QFileInfo fileInfo(filename);
         QString newname = dest.absoluteFilePath(fileInfo.fileName());
+        QFileInfo newInfo(newname);
 
         if (filename == newname) { // pasting over the source file, so copy a renamed file
-            if (QFileInfo::exists(newname)) {
+            if (newInfo.exists() || newInfo.isSymLink()) {
                 newname = createNumberedFilename(newname);
             }
         } else {
             // not pasting over the source file, but the destination already has the file: delete it
-            if (QFileInfo::exists(newname)) {
+            if (newInfo.exists() || newInfo.isSymLink()) {
                 QString errorString = deleteFile(newname);
                 if (!errorString.isEmpty()) {
                     emit errorOccurred(errorString, filename);
@@ -354,12 +361,12 @@ QString FileWorker::copyOrMoveDirRecursively(QString srcDirectory, QString destD
     }
 
     QDir srcDir(srcDirectory);
-    if (!srcDir.exists()) {
+    if (!srcDir.exists()) {  // cannot be a symlink
         return tr("Source folder does not exist");
     }
 
     QDir destDir(destDirectory);
-    if (!destDir.exists()) {
+    if (!destDir.exists()) {  // cannot be a symlink
         QDir d(destDir);
         d.cdUp();
 
@@ -369,7 +376,10 @@ QString FileWorker::copyOrMoveDirRecursively(QString srcDirectory, QString destD
     }
 
     // copy/move files
-    QStringList names = srcDir.entryList(QDir::Files | QDir::Hidden);
+    QStringList names = srcDir.entryList(
+        // the System filter is required to include broken symlinks
+        QDir::Files | QDir::Hidden | QDir::System);
+
     for (int i = 0 ; i < names.count() ; ++i) {
         // stop if cancelled
         if (m_cancelled.loadAcquire() == Cancelled) {
