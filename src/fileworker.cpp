@@ -23,6 +23,8 @@
 #include "fileworker.h"
 #include <QDateTime>
 
+#include <filesystem>
+#include <chrono>
 // creates a "Document (2)" numbered name from the given filename
 static QString createNumberedFilename(QString filename)
 {
@@ -456,11 +458,21 @@ QString FileWorker::copyOrMove(QString src, QString dest) {
             return srcFile.errorString();
         }
 
+        // The mtime of symlinks is reset to "now" when they
+        // are copied or moved. We don't restore it because C++'s
+        // std::filesystem::last_write_time always follows symlinks.
+        // It would be possible using lutimes(), though.
+
         return {};
     } else if (fileInfo.isDir()) {
         return copyOrMoveDirRecursively(src, dest);
     } else {
         QFile sfile(src);
+
+        auto sourcePath = std::filesystem::path(
+            fileInfo.absoluteFilePath().toStdString());
+        std::filesystem::file_time_type originalTime =
+            std::filesystem::last_write_time(sourcePath);
 
         if (m_mode == MoveMode) {
             if (!sfile.rename(dest)) {
@@ -471,6 +483,25 @@ QString FileWorker::copyOrMove(QString src, QString dest) {
                 return sfile.errorString();
             }
         }
+
+        // Reset the new file's mtime.
+        //
+        // Copying sets the new file's mtime to "now" but
+        // we want to keep the original mtime.
+        // - Rationale: copying doesn't actually modify the
+        //   file. Only the new file's ctime should be set to "now".
+        //
+        // rename() will copy the file if simple renaming
+        // fails, e.g. when moving across partitions.
+        // We still want to keep the original file's mtime.
+        // - Rationale: when moving photos from the internal
+        //   memory to an SD card, I want to keep the original
+        //   mtime so I can still sort the files by date.
+        QFileInfo targetInfo(dest);
+
+        auto targetPath = std::filesystem::path(
+            targetInfo.absoluteFilePath().toStdString());
+        std::filesystem::last_write_time(targetPath, originalTime);
     }
 
     return {};

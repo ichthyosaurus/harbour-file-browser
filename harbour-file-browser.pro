@@ -16,7 +16,7 @@
 #   - translation filenames have to be changed
 TARGET = harbour-file-browser
 
-# require the C++17 standard to be able to use std::as_const
+# require the C++17 standard to be able to use std::as_const and std::filesystem
 # Note: old Qt only recognizes up to "c++14" as valid config options
 CONFIG += c++1z
 
