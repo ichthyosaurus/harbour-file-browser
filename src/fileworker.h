@@ -71,8 +71,8 @@ private:
     void deleteFiles();
     void copyOrMoveFiles();
     void symlinkFiles();
-    QString copyDirRecursively(QString srcDirectory, QString destDirectory);
-    QString copyOverwrite(QString src, QString dest);
+    QString copyOrMoveDirRecursively(QString srcDirectory, QString destDirectory);
+    QString copyOrMoveOverwrite(QString src, QString dest);
 
     FileWorker::Mode m_mode;
     QStringList m_filenames;

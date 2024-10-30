@@ -276,8 +276,12 @@ void FileWorker::deleteFiles()
     emit done();
 }
 
-void FileWorker::copyOrMoveFiles()
-{
+void FileWorker::copyOrMoveFiles() {
+    if (m_mode != CopyMode && m_mode != MoveMode) {
+        emit errorOccurred("Bug: copyOrMoveFiles was called with "
+                           "an invalid clipboard mode", "");
+    }
+
     int fileIndex = 0;
     int fileCount = m_filenames.count();
 
@@ -314,40 +318,19 @@ void FileWorker::copyOrMoveFiles()
         // move or copy and stop if errors
         QFile file(filename);
 
-        if (m_mode == MoveMode) {
-            if (fileInfo.isSymLink()) {
-                // move symlink by creating a new link and deleting the old one
-                QFile targetFile(fileInfo.symLinkTarget());
+        if (fileInfo.isDir()) {
+            QString errmsg = copyOrMoveDirRecursively(filename, newname);
 
-                if (!targetFile.link(newname)) {
-                    emit errorOccurred(targetFile.errorString(), filename);
-                    return;
-                }
-
-                if (!file.remove()) {
-                    emit errorOccurred(file.errorString(), filename);
-                    return;
-                }
-
-            } else if (!file.rename(newname)) {
-                emit errorOccurred(file.errorString(), filename);
+            if (!errmsg.isEmpty()) {
+                emit errorOccurred(errmsg, filename);
                 return;
             }
-        } else { // CopyMode
-            if (fileInfo.isDir()) {
-                QString errmsg = copyDirRecursively(filename, newname);
+        } else {
+            QString errmsg = copyOrMoveOverwrite(filename, newname);
 
-                if (!errmsg.isEmpty()) {
-                    emit errorOccurred(errmsg, filename);
-                    return;
-                }
-            } else {
-                QString errmsg = copyOverwrite(filename, newname);
-
-                if (!errmsg.isEmpty()) {
-                    emit errorOccurred(errmsg, filename);
-                    return;
-                }
+            if (!errmsg.isEmpty()) {
+                emit errorOccurred(errmsg, filename);
+                return;
             }
         }
 
@@ -359,7 +342,7 @@ void FileWorker::copyOrMoveFiles()
     emit done();
 }
 
-QString FileWorker::copyDirRecursively(QString srcDirectory, QString destDirectory)
+QString FileWorker::copyOrMoveDirRecursively(QString srcDirectory, QString destDirectory)
 {
     QFileInfo srcInfo(srcDirectory);
     if (srcInfo.isSymLink()) {
@@ -367,6 +350,13 @@ QString FileWorker::copyDirRecursively(QString srcDirectory, QString destDirecto
         QFile targetFile(srcInfo.symLinkTarget());
         if (!targetFile.link(destDirectory)) {
             return targetFile.errorString();
+        }
+
+        // move dir symlink by removing the old link
+        // after creating the new link
+        QFile srcFile(destDirectory);
+        if (m_mode == MoveMode && !srcFile.remove()) {
+            return srcFile.errorString();
         }
 
         return {};
@@ -387,7 +377,7 @@ QString FileWorker::copyDirRecursively(QString srcDirectory, QString destDirecto
         }
     }
 
-    // copy files
+    // copy/move files
     QStringList names = srcDir.entryList(QDir::Files | QDir::Hidden);
     for (int i = 0 ; i < names.count() ; ++i) {
         // stop if cancelled
@@ -399,7 +389,7 @@ QString FileWorker::copyDirRecursively(QString srcDirectory, QString destDirecto
         emit progressChanged(m_progress, filename);
         QString spath = srcDir.absoluteFilePath(filename);
         QString dpath = destDir.absoluteFilePath(filename);
-        QString errmsg = copyOverwrite(spath, dpath);
+        QString errmsg = copyOrMoveOverwrite(spath, dpath);
 
         if (!errmsg.isEmpty()) {
             return errmsg;
@@ -418,7 +408,7 @@ QString FileWorker::copyDirRecursively(QString srcDirectory, QString destDirecto
         emit progressChanged(m_progress, filename);
         QString spath = srcDir.absoluteFilePath(filename);
         QString dpath = destDir.absoluteFilePath(filename);
-        QString errmsg = copyDirRecursively(spath, dpath);
+        QString errmsg = copyOrMoveDirRecursively(spath, dpath);
 
         if (!errmsg.isEmpty()) {
             return errmsg;
@@ -428,22 +418,46 @@ QString FileWorker::copyDirRecursively(QString srcDirectory, QString destDirecto
     return QString();
 }
 
-QString FileWorker::copyOverwrite(QString src, QString dest)
-{
+QString FileWorker::copyOrMoveOverwrite(QString src, QString dest) {
+    // FIXME the method is called "...Overwrite" but it doesn't
+    //       actually overwrite if the target exists. Is the actual
+    //       behavior correct and the name should be changed, or
+    //       is the name correct and the behavior should be changed?
+
     QFileInfo fileInfo(src);
+
     if (fileInfo.isSymLink()) {
         // copy symlink by creating a new link
         QFile targetFile(fileInfo.symLinkTarget());
-        if (!targetFile.link(dest))
+        if (!targetFile.link(dest)) {
             return targetFile.errorString();
+        }
 
-        return QString();
+        // move symlink by removing the old link
+        // after creating the new link
+        QFile srcFile(dest);
+        if (m_mode == MoveMode && !srcFile.remove()) {
+            return srcFile.errorString();
+        }
+
+        return {};
     }
 
     // normal file copy
     QFile sfile(src);
-    if (!sfile.copy(dest))
-        return sfile.errorString();
+
+    if (m_mode == MoveMode) {
+        if (!sfile.rename(dest)) {
+            return sfile.errorString();
+        }
+    } else { // CopyMode
+        // TODO do we have to check if m_mode is valid?
+        //      it would be a bug if this method were called
+        //      e.g. with SymlinkMode
+        if (!sfile.copy(dest)) {
+            return sfile.errorString();
+        }
+    }
 
     return QString();
 }
