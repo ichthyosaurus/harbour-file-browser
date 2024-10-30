@@ -23,8 +23,8 @@
 #include "fileworker.h"
 #include <QDateTime>
 
-#include <filesystem>
-#include <chrono>
+//#include <filesystem>
+//#include <chrono>
 // creates a "Document (2)" numbered name from the given filename
 static QString createNumberedFilename(QString filename)
 {
@@ -469,10 +469,15 @@ QString FileWorker::copyOrMove(QString src, QString dest) {
     } else {
         QFile sfile(src);
 
-        auto sourcePath = std::filesystem::path(
+        // FIXME Enable this code again once Sailfish supports it:
+        // error during installation:
+        // "nothing provides 'libstdc++.so.6(GLIBCXX_3.4.26)' needed by
+        //  the to be installed harbour-file-browser"
+
+        /*auto sourcePath = std::filesystem::path(
             fileInfo.absoluteFilePath().toStdString());
         std::filesystem::file_time_type originalTime =
-            std::filesystem::last_write_time(sourcePath);
+            std::filesystem::last_write_time(sourcePath);*/
 
         if (m_mode == MoveMode) {
             if (!sfile.rename(dest)) {
@@ -499,9 +504,9 @@ QString FileWorker::copyOrMove(QString src, QString dest) {
         //   mtime so I can still sort the files by date.
         QFileInfo targetInfo(dest);
 
-        auto targetPath = std::filesystem::path(
+        /*auto targetPath = std::filesystem::path(
             targetInfo.absoluteFilePath().toStdString());
-        std::filesystem::last_write_time(targetPath, originalTime);
+        std::filesystem::last_write_time(targetPath, originalTime);*/
     }
 
     return {};
