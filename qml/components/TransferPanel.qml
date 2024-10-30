@@ -279,9 +279,11 @@ Rectangle {
         }
 
         _currentDir = targets[_current]
-        _toGo -= 1; _current += 1;
+        _toGo -= 1
+        _current += 1
 
         var existingFiles = FileClipboard.listExistingFiles(_currentDir, true, true);
+
         if (existingFiles.length > 0) { // ask for permission to overwrite
             if (action === "link") {
                 notificationPanel.showText(qsTr("Unable to overwrite existing file with symlink"), "");
@@ -315,8 +317,12 @@ Rectangle {
         progressPanel.showText(panelText);
 
         engineConnection.target = engine;
-        if (_toGo > 0) _finished = false;
-        else _finished = true;
-        engine.pasteFiles(FileClipboard.paths, _currentDir, mode);
+
+        if (_toGo > 0) {
+            _finished = false
+        } else {
+            _finished = true
+        }
+
     }
 }
