@@ -282,6 +282,7 @@ void FileWorker::copyOrMoveFiles()
     int fileCount = m_filenames.count();
 
     QDir dest(m_destDirectory);
+
     for (const auto& filename : std::as_const(m_filenames)) {
         m_progress = 100 * fileIndex / fileCount;
         emit progressChanged(m_progress, filename);
@@ -299,7 +300,6 @@ void FileWorker::copyOrMoveFiles()
             if (QFileInfo::exists(newname)) {
                 newname = createNumberedFilename(newname);
             }
-
         } else {
             // not pasting over the source file, but the destination already has the file: delete it
             if (QFileInfo::exists(newname)) {
@@ -313,10 +313,12 @@ void FileWorker::copyOrMoveFiles()
 
         // move or copy and stop if errors
         QFile file(filename);
+
         if (m_mode == MoveMode) {
             if (fileInfo.isSymLink()) {
                 // move symlink by creating a new link and deleting the old one
                 QFile targetFile(fileInfo.symLinkTarget());
+
                 if (!targetFile.link(newname)) {
                     emit errorOccurred(targetFile.errorString(), filename);
                     return;
@@ -330,16 +332,17 @@ void FileWorker::copyOrMoveFiles()
                 emit errorOccurred(file.errorString(), filename);
                 return;
             }
-
         } else { // CopyMode
             if (fileInfo.isDir()) {
                 QString errmsg = copyDirRecursively(filename, newname);
+
                 if (!errmsg.isEmpty()) {
                     emit errorOccurred(errmsg, filename);
                     return;
                 }
             } else {
                 QString errmsg = copyOverwrite(filename, newname);
+
                 if (!errmsg.isEmpty()) {
                     emit errorOccurred(errmsg, filename);
                     return;
@@ -361,54 +364,64 @@ QString FileWorker::copyDirRecursively(QString srcDirectory, QString destDirecto
     if (srcInfo.isSymLink()) {
         // copy dir symlink by creating a new link
         QFile targetFile(srcInfo.symLinkTarget());
-        if (!targetFile.link(destDirectory))
+        if (!targetFile.link(destDirectory)) {
             return targetFile.errorString();
+        }
 
-        return QString();
+        return {};
     }
 
     QDir srcDir(srcDirectory);
-    if (!srcDir.exists())
+    if (!srcDir.exists()) {
         return tr("Source folder does not exist");
+    }
 
     QDir destDir(destDirectory);
     if (!destDir.exists()) {
         QDir d(destDir);
         d.cdUp();
-        if (!d.mkdir(destDir.dirName()))
+
+        if (!d.mkdir(destDir.dirName())) {
             return tr("Cannot create target folder %1").arg(destDirectory);
+        }
     }
 
     // copy files
     QStringList names = srcDir.entryList(QDir::Files | QDir::Hidden);
     for (int i = 0 ; i < names.count() ; ++i) {
         // stop if cancelled
-        if (m_cancelled.loadAcquire() == Cancelled)
+        if (m_cancelled.loadAcquire() == Cancelled) {
             return tr("Cancelled");
+        }
 
         QString filename = names.at(i);
         emit progressChanged(m_progress, filename);
         QString spath = srcDir.absoluteFilePath(filename);
         QString dpath = destDir.absoluteFilePath(filename);
         QString errmsg = copyOverwrite(spath, dpath);
-        if (!errmsg.isEmpty())
+
+        if (!errmsg.isEmpty()) {
             return errmsg;
+        }
     }
 
     // copy dirs
     names = srcDir.entryList(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::Hidden);
     for (int i = 0 ; i < names.count() ; ++i) {
         // stop if cancelled
-        if (m_cancelled.loadAcquire() == Cancelled)
+        if (m_cancelled.loadAcquire() == Cancelled) {
             return tr("Cancelled");
+        }
 
         QString filename = names.at(i);
         emit progressChanged(m_progress, filename);
         QString spath = srcDir.absoluteFilePath(filename);
         QString dpath = destDir.absoluteFilePath(filename);
         QString errmsg = copyDirRecursively(spath, dpath);
-        if (!errmsg.isEmpty())
+
+        if (!errmsg.isEmpty()) {
             return errmsg;
+        }
     }
 
     return QString();
