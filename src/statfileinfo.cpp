@@ -62,8 +62,11 @@ uint StatFileInfo::dirSize() const
     if (!isDirAtEnd()) return 0;
     return QDir(m_fileInfo.absoluteFilePath(),
                 QLatin1String(""),
-                QDir::NoSort, QDir::AllEntries |
-                QDir::NoDotAndDotDot | QDir::Hidden).count();
+                QDir::NoSort,
+                QDir::AllEntries |
+                QDir::System | /* System is not included in AllEntries */
+                QDir::NoDotAndDotDot |
+                QDir::Hidden).count();
 }
 
 bool StatFileInfo::exists() const
