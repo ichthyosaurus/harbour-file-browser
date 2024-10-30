@@ -317,21 +317,10 @@ void FileWorker::copyOrMoveFiles() {
 
         // move or copy and stop if errors
         QString errmsg = copyOrMove(filename, newname);
-        QFile file(filename);
 
-        if (fileInfo.isDir()) {
-            QString errmsg = copyOrMoveDirRecursively(filename, newname);
-
-            if (!errmsg.isEmpty()) {
-                emit errorOccurred(errmsg, filename);
-                return;
-            }
-        } else {
-
-            if (!errmsg.isEmpty()) {
-                emit errorOccurred(errmsg, filename);
-                return;
-            }
+        if (!errmsg.isEmpty()) {
+            emit errorOccurred(errmsg, filename);
+            return;
         }
 
         fileIndex++;
@@ -419,7 +408,7 @@ QString FileWorker::copyOrMoveDirRecursively(QString srcDirectory, QString destD
         }
     }
 
-    return QString();
+    return {};
 }
 
 QString FileWorker::copyOrMove(QString src, QString dest) {
@@ -427,6 +416,10 @@ QString FileWorker::copyOrMove(QString src, QString dest) {
     // items. Make sure to either remove existing targets,
     // or generate a non-colliding target name before
     // calling this method.
+    //
+    // IMPORTANT This method does *not* verify that the
+    // current mode is MoveMode or CopyMode. It copies by
+    // default, and moves if mode is MoveMode.
 
     QFileInfo fileInfo(src);
 
@@ -445,23 +438,21 @@ QString FileWorker::copyOrMove(QString src, QString dest) {
         }
 
         return {};
-    }
+    } else if (fileInfo.isDir()) {
+        return copyOrMoveDirRecursively(src, dest);
+    } else {
+        QFile sfile(src);
 
-    // normal file copy
-    QFile sfile(src);
-
-    if (m_mode == MoveMode) {
-        if (!sfile.rename(dest)) {
-            return sfile.errorString();
-        }
-    } else { // CopyMode
-        // TODO do we have to check if m_mode is valid?
-        //      it would be a bug if this method were called
-        //      e.g. with SymlinkMode
-        if (!sfile.copy(dest)) {
-            return sfile.errorString();
+        if (m_mode == MoveMode) {
+            if (!sfile.rename(dest)) {
+                return sfile.errorString();
+            }
+        } else { // CopyMode
+            if (!sfile.copy(dest)) {
+                return sfile.errorString();
+            }
         }
     }
 
-    return QString();
+    return {};
 }
