@@ -456,7 +456,7 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="145"/>
         <source>Using slashes in folder names will create sub-folders, like so:</source>
-        <translation type="unfinished">Utiliser le caractère barre oblique dans un nom de répertoire créera les sous-répertoire, comme ceci&#xa0;:</translation>
+        <translation type="unfinished">Utiliser le caractère barre oblique dans un nom de répertoire créera les sous-répertoire, comme ceci :</translation>
     </message>
 </context>
 <context>
@@ -835,7 +835,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="265"/>
+        <location filename="../qml/components/FileActions.qml" line="264"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>compresser le fichier</numerusform>
@@ -843,17 +843,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="274"/>
+        <location filename="../qml/components/FileActions.qml" line="273"/>
         <source>edit link target</source>
         <translation>Éditer le lien cible</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="279"/>
+        <location filename="../qml/components/FileActions.qml" line="278"/>
         <source>Apply</source>
         <translation>Appliquer</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="299"/>
+        <location filename="../qml/components/FileActions.qml" line="298"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>modifier le fichier</numerusform>
@@ -861,7 +861,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="324"/>
+        <location filename="../qml/components/FileActions.qml" line="323"/>
         <source>show file properties</source>
         <translation>afficher les propriétés du fichier</translation>
     </message>
@@ -2735,7 +2735,7 @@ exposure program</extracomment>
         <translation type="unfinished">Soyez prudent en utilisant le Navigation de fichiers en mode root. Certaines actions pourraient casser votre système.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Démarrer le Navigation de fichier en mode root.</translation>
     </message>
