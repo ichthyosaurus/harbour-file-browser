@@ -10,6 +10,23 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
  * Nothing so far
 
+## Version 3.5.0 (2024-10-30)
+
+- Updated translations: Belarusian, Estonian, Spanish, Swedish, Ukrainian
+- Added option to create a new folder when manually entering a path (e.g. when selecting a transfer target)
+- Fixed the issue where attached pages (shortcuts, settings) would suddenly become blank
+- Fixed an issue where the file selection could be lost by accidentally opening a context menu
+- Fixed moving directories across partitions, e.g. from the internal memory to a SD card
+- Fixed an issue where it was impossible to add the same manual path twice when transferring files, without restarting the app
+- Fixed copied/moved files getting new timestamps instead of preserving original timestamps
+- Fixed moving files to multiple targets at once
+- Fixed system files (special files and broken links) not being counted in the folder size
+- Fixed some instances where broken symlinks were ignored instead of being treated as files
+- Fixed error message when moving a symlink fails
+- Fixed a handful of bugs that could break copying and moving
+- Updated Opal.MediaPlayer, now with subtitle support
+- Updated all Opal modules, bringing new translations and bug fixes under the hood
+
 ## Version 3.4.0 (2024-10-21)
 
 - Updated translations: Estonian, Slovak, Spanish, Swedish, Ukrainian, German, English

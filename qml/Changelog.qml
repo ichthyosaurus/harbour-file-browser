@@ -9,6 +9,26 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: "3.5.0"
+        date: "2024-10-30"
+        paragraphs: [
+            "- Updated translations: Belarusian, Estonian, Spanish, Swedish, Ukrainian<br>" +
+            "- Added option to create a new folder when manually entering a path (e.g. when selecting a transfer target)<br>" +
+            "- Fixed the issue where attached pages (shortcuts, settings) would suddenly become blank<br>" +
+            "- Fixed an issue where the file selection could be lost by accidentally opening a context menu<br>" +
+            "- Fixed moving directories across partitions, e.g. from the internal memory to a SD card<br>" +
+            "- Fixed an issue where it was impossible to add the same manual path twice when transferring files, without restarting the app<br>" +
+            "- Fixed copied/moved files getting new timestamps instead of preserving original timestamps<br>" +
+            "- Fixed moving files to multiple targets at once<br>" +
+            "- Fixed system files (special files and broken links) not being counted in the folder size<br>" +
+            "- Fixed some instances where broken symlinks were ignored instead of being treated as files<br>" +
+            "- Fixed error message when moving a symlink fails<br>" +
+            "- Fixed a handful of bugs that could break copying and moving<br>" +
+            "- Updated Opal.MediaPlayer, now with subtitle support<br>" +
+            "- Updated all Opal modules, bringing new translations and bug fixes under the hood"
+        ]
+    }
+    ChangelogItem {
         version: "3.4.0"
         date: "2024-10-21"
         paragraphs: [
