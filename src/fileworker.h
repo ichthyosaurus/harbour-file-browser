@@ -72,7 +72,7 @@ private:
     void copyOrMoveFiles();
     void symlinkFiles();
     QString copyOrMoveDirRecursively(QString srcDirectory, QString destDirectory);
-    QString copyOrMoveOverwrite(QString src, QString dest);
+    QString copyOrMove(QString src, QString dest);
 
     FileWorker::Mode m_mode;
     QStringList m_filenames;

@@ -316,6 +316,7 @@ void FileWorker::copyOrMoveFiles() {
         }
 
         // move or copy and stop if errors
+        QString errmsg = copyOrMove(filename, newname);
         QFile file(filename);
 
         if (fileInfo.isDir()) {
@@ -326,7 +327,6 @@ void FileWorker::copyOrMoveFiles() {
                 return;
             }
         } else {
-            QString errmsg = copyOrMoveOverwrite(filename, newname);
 
             if (!errmsg.isEmpty()) {
                 emit errorOccurred(errmsg, filename);
@@ -389,7 +389,11 @@ QString FileWorker::copyOrMoveDirRecursively(QString srcDirectory, QString destD
         emit progressChanged(m_progress, filename);
         QString spath = srcDir.absoluteFilePath(filename);
         QString dpath = destDir.absoluteFilePath(filename);
-        QString errmsg = copyOrMoveOverwrite(spath, dpath);
+
+        // We do not (yet) support copying recursively
+        // into a target folder, so we don't have to
+        // handle overwriting here.
+        QString errmsg = copyOrMove(spath, dpath);
 
         if (!errmsg.isEmpty()) {
             return errmsg;
@@ -418,11 +422,11 @@ QString FileWorker::copyOrMoveDirRecursively(QString srcDirectory, QString destD
     return QString();
 }
 
-QString FileWorker::copyOrMoveOverwrite(QString src, QString dest) {
-    // FIXME the method is called "...Overwrite" but it doesn't
-    //       actually overwrite if the target exists. Is the actual
-    //       behavior correct and the name should be changed, or
-    //       is the name correct and the behavior should be changed?
+QString FileWorker::copyOrMove(QString src, QString dest) {
+    // IMPORTANT This method does *not* overwrite existing
+    // items. Make sure to either remove existing targets,
+    // or generate a non-colliding target name before
+    // calling this method.
 
     QFileInfo fileInfo(src);
 
