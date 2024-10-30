@@ -44,8 +44,11 @@
 //
 
 #define CREATE_ENUM(NAME, VALUES...) \
-    class NAME { \
-        Q_GADGET \
+    class NAME : public QObject { \
+        Q_OBJECT \
+        Q_DISABLE_COPY(NAME) \
+        \
+        NAME() {}\
     \
     public: \
         enum Enum { VALUES }; \
@@ -54,12 +57,23 @@
         \
         static void registerToQml(const char* url, int major, int minor) { \
             static const char* qmlName = #NAME; \
-            qmlRegisterUncreatableType<NAME>(url, major, minor, qmlName, "This is only a container for an enumeration."); \
+            qmlRegisterSingletonType<NAME>(url, major, minor, qmlName, &NAME::qmlInstance); \
         } \
-    \
-    private: \
-        explicit NAME(); \
-    };
+        \
+        Q_INVOKABLE static bool isValid(int value) { \
+            return QMetaEnum::fromType<Enum>().valueToKey(value) != 0; \
+        } \
+        \
+        Q_INVOKABLE static QString string(int value) { \
+            return QString::fromLatin1(QMetaEnum::fromType<Enum>().valueToKey(value)); \
+        } \
+        \
+        static QObject* qmlInstance(QQmlEngine* engine, QJSEngine* scriptEngine) { \
+            Q_UNUSED(engine); \
+            Q_UNUSED(scriptEngine); \
+            return new NAME; \
+        } \
+    }; \
 
 #define DECLARE_ENUM_REGISTRATION_FUNCTION(NAMESPACE) \
     namespace NAMESPACE##Enums { void registerEnumTypes(const char* qmlUrl, int major, int minor); }
@@ -69,6 +83,7 @@
 
 #define REGISTER_ENUM_CONTAINER(NAME) \
     qRegisterMetaType<NAME::Enum>(#NAME "::Enum"); \
+    qRegisterMetaType<QList<NAME::Enum>>("QList<" #NAME "::Enum>"); \
     NAME::registerToQml(qmlUrl, major, minor);
 
 #define REGISTER_ENUMS(NAMESPACE, URI, MAJOR, MINOR) \
