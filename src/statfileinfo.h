@@ -94,6 +94,14 @@ public:
     qint64 size() const { return m_fileInfo.size(); }
     uint dirSize() const;
     qint64 lastModifiedStat() const { return m_stat.st_mtime; }
+    timespec lastModifiedTimespec() const {
+        // Get modification date without following symlinks.
+        return m_lstat.st_mtim;
+    }
+    timespec lastAccessTimespec() const {
+        // Get access date without following symlinks.
+        return m_lstat.st_atim;
+    }
     QDateTime lastModified() const { return m_fileInfo.lastModified(); }
     QDateTime created() const { return m_fileInfo.created(); }
     bool exists() const;

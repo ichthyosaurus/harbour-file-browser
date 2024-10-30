@@ -21,10 +21,13 @@
  */
 
 #include "fileworker.h"
+#include "statfileinfo.h"
 #include <QDateTime>
 
 //#include <filesystem>
 //#include <chrono>
+#include <fcntl.h>
+
 // creates a "Document (2)" numbered name from the given filename
 static QString createNumberedFilename(QString filename)
 {
@@ -442,7 +445,13 @@ QString FileWorker::copyOrMove(QString src, QString dest) {
     // current mode is MoveMode or CopyMode. It copies by
     // default, and moves if mode is MoveMode.
 
-    QFileInfo fileInfo(src);
+    StatFileInfo fileInfo(src);
+
+    const std::string sourceFileStd = fileInfo.absoluteFilePath().toStdString();
+    timespec sourceStat[2] = {
+        fileInfo.lastAccessTimespec(),
+        fileInfo.lastModifiedTimespec(),
+    };
 
     if (fileInfo.isSymLink()) {
         // copy symlink by creating a new link
@@ -479,6 +488,9 @@ QString FileWorker::copyOrMove(QString src, QString dest) {
         std::filesystem::file_time_type originalTime =
             std::filesystem::last_write_time(sourcePath);*/
 
+        // FIXME Remove the C API code again once we can use the
+        // standard library for this.
+
         if (m_mode == MoveMode) {
             if (!sfile.rename(dest)) {
                 return sfile.errorString();
@@ -503,6 +515,10 @@ QString FileWorker::copyOrMove(QString src, QString dest) {
         //   memory to an SD card, I want to keep the original
         //   mtime so I can still sort the files by date.
         QFileInfo targetInfo(dest);
+        const auto targetFileStd = targetInfo.absoluteFilePath().toStdString();
+
+        utimensat(AT_FDCWD, targetFileStd.c_str(),
+                  sourceStat, AT_SYMLINK_NOFOLLOW);
 
         /*auto targetPath = std::filesystem::path(
             targetInfo.absoluteFilePath().toStdString());
