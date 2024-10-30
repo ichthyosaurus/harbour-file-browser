@@ -20,6 +20,7 @@
 
 import QtQuick 2.2
 import Sailfish.Silica 1.0
+import Opal.MenuSwitch 1.0
 import harbour.file.browser.Settings 1.0
 import "../js/paths.js" as Paths
 
@@ -30,7 +31,7 @@ Dialog {
     property var toTransfer: []
     property var targets: []
     property string selectedAction: ""
-    property bool goToTarget: false
+    property alias goToTarget: goToTargetSwitch.checked
     property string errorMessage: ""
 
     allowedOrientations: Orientation.All
@@ -65,19 +66,11 @@ Dialog {
                 visible: shortcutsView.selectedLocations.length > 0
             }
 
-            MenuItem {
-                TextSwitch {
-                    checked: goToTarget
-                    text: " "
-                    highlighted: parent.highlighted
-                    height: Theme.itemSizeSmall
-                    width: height
-                    anchors.verticalCenter: parent.verticalCenter
-                }
-
+            MenuSwitch {
+                id: goToTargetSwitch
+                checked: false
                 visible: shortcutsView.selectedLocations.length <= 1
                 text: qsTr("Switch to target directory")
-                onClicked: goToTarget = !goToTarget
             }
 
             MenuItem {

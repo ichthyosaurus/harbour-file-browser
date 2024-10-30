@@ -1,0 +1,5 @@
+module Opal.MenuSwitch
+# This file is part of Opal.MenuSwitch.
+# SPDX-FileCopyrightText: 2023-2024 Mirian Margiani
+# SPDX-License-Identifier: GPL-3.0-or-later
+MenuSwitch 1.0 MenuSwitch.qml
