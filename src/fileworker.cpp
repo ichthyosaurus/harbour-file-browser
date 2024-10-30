@@ -1,32 +1,15 @@
 /*
  * This file is part of File Browser.
- *
  * SPDX-FileCopyrightText: 2013-2014, 2019 Kari Pihkala
  * SPDX-FileCopyrightText: 2018 Marcin Mielniczuk
- * SPDX-FileCopyrightText: 2019-2021 Mirian Margiani
- *
+ * SPDX-FileCopyrightText: 2019-2024 Mirian Margiani
  * SPDX-License-Identifier: GPL-3.0-or-later
- *
- * File Browser is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
- *
- * File Browser is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
 #include "fileworker.h"
 #include "statfileinfo.h"
-#include <QDateTime>
-
-//#include <filesystem>
-//#include <chrono>
 #include <fcntl.h>
+#include <QDateTime>
 
 // creates a "Document (2)" numbered name from the given filename
 static QString createNumberedFilename(QString filename)
@@ -446,8 +429,6 @@ QString FileWorker::copyOrMove(QString src, QString dest) {
     // default, and moves if mode is MoveMode.
 
     StatFileInfo fileInfo(src);
-
-    const std::string sourceFileStd = fileInfo.absoluteFilePath().toStdString();
     timespec sourceStat[2] = {
         fileInfo.lastAccessTimespec(),
         fileInfo.lastModifiedTimespec(),
@@ -471,19 +452,6 @@ QString FileWorker::copyOrMove(QString src, QString dest) {
     } else {
         QFile sfile(src);
 
-        // FIXME Enable this code again once Sailfish supports it:
-        // error during installation:
-        // "nothing provides 'libstdc++.so.6(GLIBCXX_3.4.26)' needed by
-        //  the to be installed harbour-file-browser"
-
-        /*auto sourcePath = std::filesystem::path(
-            fileInfo.absoluteFilePath().toStdString());
-        std::filesystem::file_time_type originalTime =
-            std::filesystem::last_write_time(sourcePath);*/
-
-        // FIXME Remove the C API code again once we can use the
-        // standard library for this.
-
         if (m_mode == MoveMode) {
             if (!sfile.rename(dest)) {
                 return sfile.errorString();
@@ -494,24 +462,32 @@ QString FileWorker::copyOrMove(QString src, QString dest) {
             }
         }
 
-        // Reset the new file's mtime.
-        //
-        // Copying sets the new file's mtime to "now" but
-        // we want to keep the original mtime.
-        // - Rationale: copying doesn't actually modify the
-        //   file. Only the new file's ctime should be set to "now".
-        //
-        // rename() will copy the file if simple renaming
-        // fails, e.g. when moving across partitions.
-        // We still want to keep the original file's mtime.
-        // - Rationale: when moving photos from the internal
-        //   memory to an SD card, I want to keep the original
-        //   mtime so I can still sort the files by date.
-
-        /*auto targetPath = std::filesystem::path(
-            targetInfo.absoluteFilePath().toStdString());
-        std::filesystem::last_write_time(targetPath, originalTime);*/
     }
+
+    // Restore mtime and atime.
+    //
+    // Copying sets the new file's timestamps to "now" but
+    // we want to keep the original times.
+    // - Rationale: copying doesn't actually modify the
+    //   file content. The file's ctime will always be
+    //   set to "now".
+    //
+    // rename() will copy the file if simple renaming
+    // fails, e.g. when moving across partitions.
+    // We still want to keep the original file's timestamps.
+    // - Rationale: when moving photos from the internal
+    //   memory to an SD card, I want to keep the original
+    //   mtime so I can still sort the files by date.
+    //
+    // Symlinks itself should keep their original timestamps
+    // too. The linked to file is not modified, and its
+    // timestamps are not touched anyway.
+
+    // Note: we are using the C API instead of std::filesystem
+    // because a) C++17 is not fully supported on SFOS 4.5,
+    // b) std::filesystem cannot change a symlink's timestamps,
+    // it always follows symlinks, and c) std::filesystem can
+    // only set mtime, not atime.
 
     QFileInfo targetInfo(dest);
     const auto targetFileStd = targetInfo.absoluteFilePath().toStdString();
