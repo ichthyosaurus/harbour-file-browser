@@ -75,6 +75,54 @@ ApplicationWindow {
     }
 
     Connections {
+        id: attachedWatcher
+        target: pageStack
+
+        // Attached pages sometimes become blank (visible == false)
+        // during navigation. This is fixed by pushing them again
+        // to the stack, however calling replace() is not sufficient.
+        // Setting "visible" to "true" is also not enough.
+        //
+        // This only happens if the same object is used as attached
+        // page mutliple times. We still use shared attached page
+        // objects because it is much faster than creating the
+        // attached page chain for each directory page separately.
+        //
+        // The workaround is to simply pop the current attached page
+        // from the stack and then let the AttachedPageManager
+        // of the current page handle pushing it again.
+        // It is a bit annoying having to swipe a second time if the
+        // page pops suddenly, but that is less annoying than having
+        // to navigate to a different folder before being able to use
+        // the shortcuts page again, for example.
+        //
+        // This workaround cannot be implemented in the AttachedPageManager
+        // component because it becomes inactive once its parent page
+        // is no longer the top page on the stack. It must be global.
+
+        onBusyChanged: {
+            if (!pageStack.busy &&
+                    !navigationFinisher.targetPath &&
+                    !!pageStack.currentPage &&
+                    !pageStack.currentPage.visible) {
+                var currentPage = pageStack.currentPage
+                console.warn("[navigation] issue detected: " +
+                             "active page is invisible", currentPage)
+
+                if (currentPage == shortcutsPage ||
+                        currentPage == aboutPage ||
+                        currentPage == settingsPage) {
+                    pageStack.popAttached()
+                    console.log("[navigation] workaround for known invisible page applied")
+                } else {
+                    console.error("[navigation] invisible page is unknown " +
+                                  "and cannot be fixed automatically")
+                }
+            }
+        }
+    }
+
+    Connections {
         id: navigationFinisher
         property string targetPath
         property var targetProperties: ({})
@@ -92,9 +140,10 @@ ApplicationWindow {
             // the watcher.
             //
             // This workaround fixes the issue where the app would only show
-            // a busy spinner after startup. It might also fix the issue
+            // a busy spinner after startup. It also fixes the issue
             // where the app starts properly but the attached shortcuts page
-            // is blank.
+            // is blank. It does not fix the issue where attached pages
+            // sometimes become blank during navigation.
             //
             // Important: current valid navigation targets are DirectoryPage and
             // SearchPage, both of which have an "objectName".
