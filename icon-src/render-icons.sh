@@ -73,14 +73,6 @@ cRESOLUTIONS=(128+large- 32+small-)
 cTARGETS=(../qml/images)
 render_batch
 
-cNAME="misc icons"
-cITEMS=(
-    drag-background
-)
-cRESOLUTIONS=(42)
-cTARGETS=(../qml/images)
-render_batch
-
 cNAME="banner image"
 cITEMS=(../dist/banner)
 cRESOLUTIONS=(
