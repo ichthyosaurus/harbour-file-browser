@@ -274,6 +274,12 @@ A.AboutPageBase {
                         "复予",
                         "玉堂白鹤"
                     ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Belarusian")
+                    entries: [
+                        "Toha"
+                    ]
                 }
             ]
         }

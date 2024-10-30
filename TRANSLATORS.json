@@ -1,6 +1,12 @@
 {
   "weblate": [
     {
+      "language": "Belarusian",
+      "entries": [
+        "Toha"
+      ]
+    },
+    {
       "language": "Chinese",
       "entries": [
         "复予",
@@ -120,8 +126,8 @@
         "Evgeniy Khramov",
         "sandworm88",
         "Mirian Margiani",
-        "Lilia Savciuc",
-        "Victor K"
+        "Victor K",
+        "Lilia Savciuc"
       ]
     },
     {
@@ -165,8 +171,8 @@
         "Bohdan Kolesnyk",
         "mihajlo0743",
         "Tymofii Lytvynenko",
-        "Allan Nordhøy",
-        "Artem"
+        "Artem",
+        "Allan Nordhøy"
       ]
     }
   ],
