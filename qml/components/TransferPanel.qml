@@ -301,16 +301,12 @@ Rectangle {
 
     function _doPaste() {
         var panelText = ""
-        var mode = -1
 
         if (action === "copy") {
-            mode = FileClipMode.Copy
             panelText = qsTr("Copying");
         } else if (action === "move") {
-            mode = FileClipMode.Cut
             panelText = qsTr("Moving");
         } else if (action === "link") {
-            mode = FileClipMode.Link
             panelText = qsTr("Linking");
         }
 
@@ -324,5 +320,7 @@ Rectangle {
             _finished = true
         }
 
+        engine.pasteFiles(
+            FileClipboard.paths, _currentDir, FileClipboard.mode)
     }
 }
