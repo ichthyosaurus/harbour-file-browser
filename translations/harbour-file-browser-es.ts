@@ -44,6 +44,11 @@
         <translation>Inglés</translation>
     </message>
     <message>
+        <location filename="../qml/pages/AboutPage.qml" line="279"/>
+        <source>Belarusian</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../qml/pages/AboutPage.qml" line="206"/>
         <source>German</source>
         <translation>Alemán</translation>
@@ -2407,68 +2412,68 @@ exposure program</extracomment>
 <context>
     <name>Opal.MediaPlayer</name>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="26"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="17"/>
         <source>Playback failed</source>
         <comment>error info page heading</comment>
         <translation>Error en la reproducción</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="30"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="19"/>
         <source>Resource error</source>
         <comment>error info page heading</comment>
         <translation>Error en los recursos</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="32"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="20"/>
         <source>Format error</source>
         <comment>error info page heading</comment>
         <translation>Error de formato</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="34"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="21"/>
         <source>Network error</source>
         <comment>error info page heading</comment>
         <translation>Error en la red</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="36"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="22"/>
         <source>Access denied</source>
         <comment>error info page heading</comment>
         <translation>Acceso denegado</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="38"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="23"/>
         <source>Media service missing</source>
         <comment>error info page heading</comment>
         <translation>Falta el servicio de medios</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="42"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="24"/>
         <source>The video cannot be played due to a problem allocating resources.</source>
         <translation>El vídeo no puede reproducirse debido a un problema de asignación de recursos.</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="45"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="25"/>
         <source>The audio and or video format is not supported.</source>
         <translation>El formato de audio y/o vídeo no es compatible.</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="48"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="26"/>
         <source>The video cannot be played due to network issues.</source>
         <translation>El vídeo no puede reproducirse debido a problemas de red.</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="51"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="27"/>
         <source>The video cannot be played due to insufficient permissions.</source>
         <translation>El vídeo no puede reproducirse debido a permisos insuficientes.</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="54"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="28"/>
         <source>The video cannot be played because the media service could not be instantiated.</source>
         <translation>El vídeo no se puede reproducir porque falló la instancia del servicio multimedia.</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="57"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="29"/>
         <source>Playback failed due to an expected error. Please restart the app and try again.</source>
         <translation>La reproducción ha fallado debido a un error esperado. Reinicia la aplicación e inténtalo de nuevo.</translation>
     </message>
@@ -2503,22 +2508,22 @@ exposure program</extracomment>
         <translation>Reproducir una vez</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="113"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="38"/>
         <source>Select from file system</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="123"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="41"/>
         <source>No files ready</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="126"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="42"/>
         <source>Copy subtitle files in the SRT format next to the video file to open them quickly.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="130"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="42"/>
         <source>Pull down to pick a file.</source>
         <translation type="unfinished"></translation>
     </message>
