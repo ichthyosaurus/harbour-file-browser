@@ -32,6 +32,7 @@ ListItem {
     menu: contextMenu
     ListView.onRemove: animateRemoval(listItem)
     highlighted: down || isSelected || selectionArea.pressed || menuOpen
+    openMenuOnPressAndHold: fileModel.selectedFileCount == 0
 
     property Item _remorseItem
     property int _extraContentHeight: 0
