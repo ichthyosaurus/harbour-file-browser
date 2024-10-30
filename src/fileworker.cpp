@@ -323,8 +323,9 @@ void FileWorker::copyOrMoveFiles()
                     emit errorOccurred(targetFile.errorString(), filename);
                     return;
                 }
+
                 if (!file.remove()) {
-                    emit errorOccurred(targetFile.errorString(), filename);
+                    emit errorOccurred(file.errorString(), filename);
                     return;
                 }
 
