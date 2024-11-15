@@ -31,12 +31,12 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="156"/>
         <source>Romanian</source>
-        <translation type="unfinished"></translation>
+        <translation>Romanian kieli</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="171"/>
         <source>Norwegian Bokmål</source>
-        <translation type="unfinished"></translation>
+        <translation>Norjan kirjakieli</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="240"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="279"/>
         <source>Belarusian</source>
-        <translation type="unfinished"></translation>
+        <translation>Valko-Venäjän kieli</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="206"/>
@@ -61,7 +61,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="248"/>
         <source>Dutch (Belgium)</source>
-        <translation type="unfinished"></translation>
+        <translation>Belgian kieli</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="267"/>
@@ -149,7 +149,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="11"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Harkitse voisitko tukea tätä projektia jollain tavalla.</translation>
     </message>
 </context>
 <context>
@@ -157,80 +157,80 @@
     <message>
         <location filename="../src/settings.cpp" line="1005"/>
         <source>Memory card</source>
-        <translation type="unfinished"></translation>
+        <translation>Muistikortti</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1007"/>
         <source>Attached folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Liitetty kansio</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1009"/>
         <source>Remote folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Etäkansio</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1012"/>
         <source>Removable media</source>
-        <translation type="unfinished"></translation>
+        <translation>Irroitettava media</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1099"/>
         <location filename="../src/settings.cpp" line="1592"/>
         <source>Internal storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Sisäinen tallennustila</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1107"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>”%1” ”%2”:ssa/lla</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1507"/>
         <source>Home</source>
-        <translation type="unfinished">Koti</translation>
+        <translation>Koti</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1162"/>
         <location filename="../src/settings.cpp" line="1517"/>
         <source>Documents</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokumentit</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1164"/>
         <location filename="../src/settings.cpp" line="1527"/>
         <source>Downloads</source>
-        <translation type="unfinished"></translation>
+        <translation>Lataukset</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1170"/>
         <location filename="../src/settings.cpp" line="1557"/>
         <source>Music</source>
-        <translation type="unfinished"></translation>
+        <translation>Musiikki</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1166"/>
         <location filename="../src/settings.cpp" line="1537"/>
         <source>Pictures</source>
-        <translation type="unfinished"></translation>
+        <translation>Valokuvat</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1168"/>
         <location filename="../src/settings.cpp" line="1547"/>
         <source>Videos</source>
-        <translation type="unfinished"></translation>
+        <translation>Videot</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1567"/>
         <location filename="../src/settings.cpp" line="1593"/>
         <source>Android storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Android tallennustila</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1577"/>
         <source>Root</source>
-        <translation type="unfinished">Juurihakemisto</translation>
+        <translation>Juurihakemisto</translation>
     </message>
 </context>
 <context>
@@ -239,17 +239,17 @@
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="54"/>
         <source>Apply</source>
         <comment>as in &apos;apply these changes&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Vahvista</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="55"/>
         <source>Rename bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Uudelleennimeä kirjanmerkit</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="89"/>
         <source>Name must not be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Nimi ei saa olla tyhjä</translation>
     </message>
 </context>
 <context>
@@ -257,7 +257,7 @@
     <message>
         <location filename="../qml/pages/BookmarksSortPage.qml" line="25"/>
         <source>Sort bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Lajittele kirjanmerkit</translation>
     </message>
 </context>
 <context>
@@ -265,67 +265,67 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="70"/>
         <source>Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Leikepöytä</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="75"/>
         <source>%n item(s) to be copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n asia kopioitavaksi</numerusform>
+            <numerusform>%n asiaa kopioitavaksi</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
         <source>%n item(s) to be moved</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n asia siirrettäväksi</numerusform>
+            <numerusform>%n asiaa siirrettäväksi</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="260"/>
         <source>Remove from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista leikepöydältä</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="252"/>
         <source>Open this folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Avaa tämä kansio</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
         <source>%n item(s) to be linked</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n asia linkitettäväksi</numerusform>
+            <numerusform>%n asiaa linkitettäväksi</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="115"/>
         <source>Clear</source>
         <comment>verb as in &apos;clear all contents from the clipboard&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Tyhjennä</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="117"/>
         <source>Clipboard cleared</source>
-        <translation type="unfinished"></translation>
+        <translation>Leikepöytä tyhjennetty</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="256"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Avaa sisältävä kansio</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="274"/>
         <source>Empty</source>
-        <translation type="unfinished">Tyhjä</translation>
+        <translation>Tyhjä</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="275"/>
         <source>Cut or copied files will be shown here.</source>
-        <translation type="unfinished"></translation>
+        <translation>Leikatut tai kopioidut tiedostot näytetään tässä.</translation>
     </message>
 </context>
 <context>
@@ -368,17 +368,17 @@
         <location filename="../qml/pages/ConsolePage.qml" line="75"/>
         <source>Preview</source>
         <comment>as in &apos;incomplete/aggregated preview of the contents of a file&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Esikatselu</translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="151"/>
         <source>This file appears to be a software package. To install, swipe back and select the “Install” option from the menu.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tämä tiedosto on ohjelmistopaketti. Asentaaksesi sen, swaippaa takaisin ja valitse vaihtoehto &quot;asenna&quot; valikosta.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="153"/>
         <source>Swipe from the right to view raw contents.</source>
-        <translation type="unfinished"></translation>
+        <translation>Swaippaa oikealta nähdäksesi pelkät sisällöt.</translation>
     </message>
 </context>
 <context>
@@ -386,7 +386,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="95"/>
         <source>Root Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Juuritila</translation>
     </message>
 </context>
 <context>
@@ -394,69 +394,69 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="61"/>
         <source>Create</source>
-        <translation type="unfinished">Luo</translation>
+        <translation>Luo</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="77"/>
         <source>Not permitted</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei sallittu</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="78"/>
         <source>You don&apos;t have permission to change the contents of this directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sinulla ei ole oikeuksia muuttaa tämän hakemiston sisältöä.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="94"/>
         <source>Create new</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää uusi</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="96"/>
         <source>The new folder will be created under “%1”.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation type="unfinished"></translation>
+        <translation>Uusi kansio luodaan hakemiston ”%1” alle.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="98"/>
         <source>The new text file will be created under “%1” and can be edited later.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation type="unfinished"></translation>
+        <translation>Uusi tekstitiedosto luodaan hakemiston ”%1” alle ja sitä voidaan muokata myöhemmin.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="104"/>
         <source>folder</source>
-        <translation type="unfinished">kansio</translation>
+        <translation>kansio</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="107"/>
         <source>empty text file</source>
-        <translation type="unfinished"></translation>
+        <translation>tyhjä tekstitiedosto</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="119"/>
         <source>Folder name</source>
-        <translation type="unfinished">Kansion nimi</translation>
+        <translation>Kansion nimi</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="119"/>
         <source>File name</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedoston nimi</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="138"/>
         <source>File names must not contain slashes. To create a new file in a folder below “%1”, first create a folder and then create the file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedoston nimessä ei saa olla kauttaviivaa. Jos haluat luoda tiedoston kansion sisälle hakemiston ”%1” alle, sinun tarvitsee ensin luoda kansio ja sen jälkeen tiedosto.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="142"/>
         <source>A file or folder with this name already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Samanniminen tiedosto tai kansio on jo olemassa.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="145"/>
         <source>Using slashes in folder names will create sub-folders, like so:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kauttaviivan käyttäminen kansion nimessä luo alakansioita, kuten:</translation>
     </message>
 </context>
 <context>
@@ -464,9 +464,9 @@
     <message numerus="yes">
         <location filename="../qml/components/DetailList.qml" line="45"/>
         <source>... and %n more</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>… ja %n lisää</numerusform>
+            <numerusform>… ja %na lisää</numerusform>
         </translation>
     </message>
 </context>
@@ -475,12 +475,12 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show less</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä vähemmän</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show more</source>
-        <translation type="unfinished"></translation>
+        <translation>näytä enemmän</translation>
     </message>
 </context>
 <context>
@@ -499,17 +499,17 @@
         <location filename="../qml/pages/DirectoryPage.qml" line="158"/>
         <source>View Preferences</source>
         <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Näytä vaihtoehdot</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="165"/>
         <source>Create New...</source>
-        <translation type="unfinished"></translation>
+        <translation>Luo uusi…</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="196"/>
         <source>Filter directory contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Suodata hakemiston sisällöt</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="283"/>
@@ -529,19 +529,19 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="372"/>
         <source>filtered by: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Suodatettu: %1:lla</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="434"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ei sopivia</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="436"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation type="unfinished">Tyhjä</translation>
+        <translation>Tyhjä</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="439"/>
@@ -590,12 +590,12 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="324"/>
         <source>Open target folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Avaa kohdekansio</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="325"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Avaa sisältävä kansio</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="337"/>
@@ -682,17 +682,17 @@
     <message>
         <location filename="../src/engine.cpp" line="310"/>
         <source>Binary file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>Binääritiedoston esikatselu on rajoitettu %1 kB</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="329"/>
         <source>Text file preview clipped at %1 lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekstitiedoston esikatselu on rajoitettu %1 riviin</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="331"/>
         <source>Text file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekstitiedoston esikatselu on rajoitettu %1 kB</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="350"/>
@@ -702,12 +702,12 @@
     <message>
         <location filename="../src/engine.cpp" line="368"/>
         <source>No permissions to create “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei oikeuksia luoda ” %1” ”%2” sisälle</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="379"/>
         <source>Cannot create file “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei voida luoda tiedostoa ”%1” ”%2”n sisälle</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="415"/>
@@ -717,27 +717,27 @@
     <message>
         <location filename="../src/engine.cpp" line="432"/>
         <source>Source “%1” is not a symbolic link</source>
-        <translation type="unfinished"></translation>
+        <translation>Lähde ”%1” ei ole symboolinen linkki</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="441"/>
         <source>No permissions to change contents of “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei oikeuksia muokata ”%1” sisältöä</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="449"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Linkin poistaminen ”%1”, joka johtaa ”%2” epäonnistui</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="455"/>
         <source>Failed to revert link “%1” pointing to “%2” after failing to change target to “%3”</source>
-        <translation type="unfinished"></translation>
+        <translation>Linkin siirtäminen ”%1” joka johtaa ”%2” epäonnistui yrittäessä vaihtaa kohteeksi ”%3”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="462"/>
         <source>Failed to change link target of “%1” to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Linkin kohteen vaihtaminen kohteesta ”%1” kohteeseen ”%2” epäonnistui</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="488"/>
@@ -755,115 +755,115 @@
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="86"/>
         <source>%n file(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n tiedosto valittu</numerusform>
+            <numerusform>%n tiedostoa valittu</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="114"/>
         <source>clear selection</source>
-        <translation type="unfinished"></translation>
+        <translation>tyhjennä valinta</translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="115"/>
         <source>select all</source>
-        <translation type="unfinished"></translation>
+        <translation>valitse kaikki</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="124"/>
         <source>cut file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>leikkaa tiedosto</numerusform>
+            <numerusform>leikkaa tiedostot</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="129"/>
         <source>%n file(s) cut</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n tiedosto leikattu</numerusform>
+            <numerusform>%n tiedostoa leikattu</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="138"/>
         <source>copy file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>kopioi tiedosto</numerusform>
+            <numerusform>kopioi tiedostot</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="143"/>
         <source>%n file(s) copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n tiedosto kopioitu</numerusform>
+            <numerusform>%n tiedostoa kopioitu</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="152"/>
         <source>transfer file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>siirrä tiedosto</numerusform>
+            <numerusform>siirrä tiedostot</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="171"/>
         <source>delete file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>poista tiedosto</numerusform>
+            <numerusform>poista tiedostot</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="186"/>
         <source>rename file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>uudelleennimeä tiedosto</numerusform>
+            <numerusform>uudelleennimeä tiedostot</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="216"/>
         <source>share file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>jaa tiedosto</numerusform>
+            <numerusform>jaa tiedostot</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="264"/>
         <source>compress file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>pakkaa tiedosto</numerusform>
+            <numerusform>pakkaa tiedostot</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="273"/>
         <source>edit link target</source>
-        <translation type="unfinished"></translation>
+        <translation>muokkaa linkin kohdetta</translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="278"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Hyväksy</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="298"/>
         <source>edit file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>muokkaa tiedostoa</numerusform>
+            <numerusform>muokkaa tiedostoja</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="323"/>
         <source>show file properties</source>
-        <translation type="unfinished"></translation>
+        <translation>näytä tiedoston ominaisuudet</translation>
     </message>
 </context>
 <context>
@@ -871,17 +871,17 @@
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="32"/>
         <source>Copy</source>
-        <translation type="unfinished">Kopioi</translation>
+        <translation>Kopioi</translation>
     </message>
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="33"/>
         <source>Move</source>
-        <translation type="unfinished"></translation>
+        <translation>Siirrä</translation>
     </message>
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="34"/>
         <source>Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Linkki</translation>
     </message>
 </context>
 <context>
@@ -890,14 +890,14 @@
         <location filename="../src/filedata.cpp" line="94"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>tyhjä</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/filedata.cpp" line="95"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n asia</numerusform>
+            <numerusform>%n asiaa</numerusform>
         </translation>
     </message>
     <message>
@@ -941,30 +941,30 @@
     <message>
         <location filename="../src/filemodel.cpp" line="115"/>
         <source>folder</source>
-        <translation type="unfinished">kansio</translation>
+        <translation>kansio</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="117"/>
         <source>link</source>
-        <translation type="unfinished"></translation>
+        <translation>linkki</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="118"/>
         <source>file</source>
-        <translation type="unfinished"></translation>
+        <translation>tiedosto</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="130"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>tyhjä</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/filemodel.cpp" line="131"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n asia</numerusform>
+            <numerusform>%n asiaa</numerusform>
         </translation>
     </message>
 </context>
@@ -986,12 +986,12 @@
     <message>
         <location filename="../qml/pages/FileOperationsPage.qml" line="60"/>
         <source>Tasks</source>
-        <translation type="unfinished"></translation>
+        <translation>Tehtäviä</translation>
     </message>
     <message>
         <location filename="../qml/pages/FileOperationsPage.qml" line="81"/>
         <source>Empty</source>
-        <translation type="unfinished">Tyhjä</translation>
+        <translation>Tyhjä</translation>
     </message>
 </context>
 <context>
@@ -1029,7 +1029,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="82"/>
         <source>View Raw Contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä raakasisällöt</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="90"/>
@@ -1055,7 +1055,7 @@
         <location filename="../qml/pages/FilePage.qml" line="106"/>
         <source>Swipe from the right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Swaippaa oikealta nähdäksesi sen sisällöt.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="119"/>
@@ -1065,12 +1065,12 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="129"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Avaa sisältävä kansio</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="148"/>
         <source>The file has been moved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedostoa on siirretty.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="264"/>
@@ -1096,7 +1096,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="308"/>
         <source>Unknown (link target not found)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tuntematon (linkin kohdetta ei löydetty)</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="315"/>
@@ -1129,42 +1129,42 @@
     <message>
         <location filename="../src/globals.cpp" line="80"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="81"/>
         <source>MiB</source>
-        <translation type="unfinished"></translation>
+        <translation>MiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="82"/>
         <source>GiB</source>
-        <translation type="unfinished"></translation>
+        <translation>GiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="83"/>
         <source>TiB</source>
-        <translation type="unfinished"></translation>
+        <translation>TiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="84"/>
         <source>PiB</source>
-        <translation type="unfinished"></translation>
+        <translation>PiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="85"/>
         <source>EiB</source>
-        <translation type="unfinished"></translation>
+        <translation>EiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="86"/>
         <source>ZiB</source>
-        <translation type="unfinished"></translation>
+        <translation>ZiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="87"/>
         <source>YiB</source>
-        <translation type="unfinished"></translation>
+        <translation>YiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="107"/>
@@ -1202,7 +1202,7 @@
     <message>
         <location filename="../src/fileworker.cpp" line="413"/>
         <source>Failed to remove source folder “%1” after moving.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lähdekansion ”%1” poistaminen epäonnistui siirtämisen jälkeen.</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="178"/>
@@ -1229,142 +1229,142 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="48"/>
         <source>App Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Sovelluksen Asetukset</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="53"/>
         <source>Directory View</source>
-        <translation type="unfinished"></translation>
+        <translation>Hakemistonäkymä</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="64"/>
         <source>Use per-directory view settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä per-hakemisto näkymäasetuksia</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="66"/>
         <source>Save view preferences individually for all folders in your home directory. The options below are used by default.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tallenna näkymäasetukset erikseen kaikille kansioille kotihakemistossasi. Alla olevia asetuksia käytetään oletuksena.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="91"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
-        <translation type="unfinished"></translation>
+        <translation>Galleriatilassa kuvat sovitetaan ruudun kokoon. Muut tiedostot näytetään ilman esikatselunäkymää.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="98"/>
         <source>Hint</source>
-        <translation type="unfinished"></translation>
+        <translation>Ohje</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="99"/>
         <source>You can enable per-directory settings to configure your preferences for individual folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Voit aktivoida per-hakemisto asetukset, joilla voit säätää asetuksiasi tietyille kansioille.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="104"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">Näytä piilotiedostot</translation>
+        <translation>Näytä piilotetut tiedostot</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="106"/>
         <source>Show files with names starting with a full stop (“.”).</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä tiedostot, joiden nimi alkaa pisteellä (”.”).</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="109"/>
         <source>Show preview images</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä esikatselukuvat</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="111"/>
         <source>Preview contents of supported file types.</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä tuettujen tiedostomuotojen sisällöt.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="114"/>
         <source>Thumbnail size</source>
-        <translation type="unfinished"></translation>
+        <translation>Pikkukuvan koko</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="120"/>
         <source>small</source>
-        <translation type="unfinished"></translation>
+        <translation>pieni</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="121"/>
         <source>medium</source>
-        <translation type="unfinished"></translation>
+        <translation>keskikokoinen</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="122"/>
         <source>large</source>
-        <translation type="unfinished"></translation>
+        <translation>iso</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="123"/>
         <source>huge</source>
-        <translation type="unfinished"></translation>
+        <translation>valtava</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="130"/>
         <source>Sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>Lajittelu</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="140"/>
         <source>Show folders first</source>
-        <translation type="unfinished">Näytä kansiot ensin</translation>
+        <translation>Näytä kansiot ensin</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="142"/>
         <source>Always show folders at the top of the file list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä aina kansiot tiedostolistan ylhäällä.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="145"/>
         <source>Show hidden files last</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä piilotetut tiedostot viimeisenä</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="147"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä aina viimeisenä tiedostot, jotka alkavat pisteellä (”.”).</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="150"/>
         <source>Sort by</source>
-        <translation type="unfinished"></translation>
+        <translation>Lajittele</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="156"/>
         <source>name</source>
-        <translation type="unfinished"></translation>
+        <translation>nimi</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="157"/>
         <source>size</source>
-        <translation type="unfinished"></translation>
+        <translation>koko</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="159"/>
         <source>file type</source>
-        <translation type="unfinished"></translation>
+        <translation>tiedostomuoto</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="163"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished"></translation>
+        <translation>Lajittele kirjainkoon mukaan</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="165"/>
         <source>Show files with names starting with a capital letter first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä ensimmäisenä tiedostot, joiden nimi alkaa isolla kirjaimella.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="169"/>
         <source>Sort order</source>
-        <translation type="unfinished"></translation>
+        <translation>Lajittelujärjestys</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="179"/>
@@ -1459,7 +1459,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="219"/>
         <source>Search</source>
-        <translation type="unfinished">Haku</translation>
+        <translation>Haku</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="225"/>
@@ -1615,7 +1615,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="356"/>
         <source>Settings</source>
-        <translation type="unfinished">Asetukset</translation>
+        <translation>Asetukset</translation>
     </message>
 </context>
 <context>
@@ -2794,12 +2794,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="428"/>
         <source>Internally not ready</source>
-        <translation type="unfinished">Ei ole sisäisesti valmis</translation>
+        <translation>Ei ole sisäisesti valmis</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="428"/>
         <source>Please simply try again</source>
-        <translation type="unfinished">Yritä uudelleen</translation>
+        <translation>Yritä uudelleen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="122"/>
@@ -2837,7 +2837,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsDialog.qml" line="32"/>
         <source>Select</source>
-        <translation type="unfinished">Valitse</translation>
+        <translation>Valitse</translation>
     </message>
 </context>
 <context>
@@ -2850,7 +2850,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="293"/>
         <source>Rename</source>
-        <translation type="unfinished">Nimeä uudelleen</translation>
+        <translation>Nimeä uudelleen</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="300"/>
@@ -2880,7 +2880,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="324"/>
         <source>Bookmarks</source>
-        <translation type="unfinished">Kirjanmerkit</translation>
+        <translation>Kirjanmerkit</translation>
     </message>
 </context>
 <context>
@@ -2954,7 +2954,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="283"/>
         <source>Save</source>
-        <translation type="unfinished">Tallenna</translation>
+        <translation>Tallenna</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="289"/>
@@ -3111,7 +3111,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="102"/>
         <source>No application to open the file</source>
-        <translation type="unfinished">Ei ohjelmaa tiedoston avaamiseen</translation>
+        <translation>Ei ohjelmaa tiedoston avaamiseen</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="109"/>
@@ -3127,7 +3127,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/TextEditorDialog.qml" line="116"/>
         <location filename="../qml/pages/TextEditorDialog.qml" line="124"/>
         <source>Save</source>
-        <translation type="unfinished">Tallenna</translation>
+        <translation>Tallenna</translation>
     </message>
 </context>
 <context>
@@ -3145,7 +3145,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="89"/>
         <source>Select</source>
-        <translation type="unfinished">Valitse</translation>
+        <translation>Valitse</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="73"/>
@@ -3312,7 +3312,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewPage.qml" line="49"/>
         <source>Edit</source>
         <comment>verb as in &apos;edit this file&apos;</comment>
-        <translation type="unfinished">Muokkaa</translation>
+        <translation>Muokkaa</translation>
     </message>
 </context>
 <context>
@@ -3345,7 +3345,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="87"/>
         <source>Size</source>
-        <translation type="unfinished">Koko</translation>
+        <translation>Koko</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="88"/>
@@ -3405,7 +3405,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="130"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">Näytä piilotiedostot</translation>
+        <translation>Näytä piilotetut tiedostot</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="132"/>
