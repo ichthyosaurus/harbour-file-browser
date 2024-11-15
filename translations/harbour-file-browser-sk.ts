@@ -46,7 +46,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="279"/>
         <source>Belarusian</source>
-        <translation type="unfinished"></translation>
+        <translation>Bieloruština</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="206"/>
@@ -1238,7 +1238,7 @@
     <message>
         <location filename="../src/fileworker.cpp" line="413"/>
         <source>Failed to remove source folder “%1” after moving.</source>
-        <translation type="unfinished"></translation>
+        <translation>Odstránenie zložky “%1” po presúvaní zlyhalo.</translation>
     </message>
 </context>
 <context>
@@ -1406,7 +1406,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="218"/>
         <source>Places</source>
-        <translation type="unfinished">Miesta</translation>
+        <translation>Miesta</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="181"/>
@@ -1451,7 +1451,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="158"/>
         <source>modification date</source>
-        <translation type="unfinished"></translation>
+        <translation>dátum zmeny</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="199"/>
@@ -1461,22 +1461,22 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="209"/>
         <source>Initial view</source>
-        <translation type="unfinished"></translation>
+        <translation>Počiatočný pohľad</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="210"/>
         <source>The page that is shown when the app starts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Stránka zobrazená po spustení aplikácie.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="217"/>
         <source>Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Adresár</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="219"/>
         <source>Search</source>
-        <translation type="unfinished">Hľadať</translation>
+        <translation>Hľada5</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="225"/>
@@ -2500,12 +2500,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="208"/>
         <source>Clear subtitles</source>
-        <translation type="unfinished"></translation>
+        <translation>Priehľadné titulky</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="212"/>
         <source>Load subtitles</source>
-        <translation type="unfinished"></translation>
+        <translation>Načítať titulky</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="663"/>
@@ -2530,22 +2530,22 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="38"/>
         <source>Select from file system</source>
-        <translation type="unfinished"></translation>
+        <translation>Vybrať zo súborového systému</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="41"/>
         <source>No files ready</source>
-        <translation type="unfinished"></translation>
+        <translation>Žiadne súbory</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="42"/>
         <source>Copy subtitle files in the SRT format next to the video file to open them quickly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Skopírovať súbory s titulkami vo formáte SRT z video súborom, aby sa rýchlo otvorili.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="42"/>
         <source>Pull down to pick a file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Potiahnuť nadol a vybrať súbor.</translation>
     </message>
 </context>
 <context>
@@ -2587,7 +2587,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="159"/>
         <source>New folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Nová zložka</translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="173"/>
@@ -3048,7 +3048,7 @@ exposure program</extracomment>
         <location filename="../qml/components/StorageSizeMenuLabel.qml" line="14"/>
         <source>%1 full (%2%)</source>
         <comment>as in “15 of 20 GiB [%1] of this device are filled with data, which is 75% [%2] of its capacity”</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 zaplnené (%2%)</translation>
     </message>
 </context>
 <context>
@@ -3388,7 +3388,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="88"/>
         <source>Modification date</source>
-        <translation type="unfinished"></translation>
+        <translation>Dátum zmeny</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="89"/>
