@@ -46,7 +46,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="279"/>
         <source>Belarusian</source>
-        <translation type="unfinished"></translation>
+        <translation>Belarusiska</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="206"/>
