@@ -14,8 +14,6 @@
 #include <QJsonArray>
 #include <QTimer>
 #include <QStorageInfo>
-#include <QtConcurrentRun>
-// #include <QtConcurrent>
 
 // The lines below define which icons are used for the standard location
 // bookmarks. Each bookmark must have a unique icon because the icon is
@@ -136,66 +134,6 @@ enum BookmarkRole {
     userDefinedRole =   Qt::UserRole +  8
 };
 
-namespace {
-    void migrateBookmarks(QString bookmarksFile) {
-        // 2024-11-16: since Sailjail has been introduced a long time ago
-        // and we are currently at Sailfish 5.0, it is safe to assume
-        // that migration is no longer necessary. If people need it, they
-        // can always perform the migration manually.
-        Q_UNUSED(bookmarksFile)
-        return;
-
-        /*
-        if (QFile::exists(bookmarksFile)) {
-            return;
-        }
-
-        qDebug() << "migrating bookmarks from old config location to" << bookmarksFile;
-
-        std::string order = RawSettingsHandler::instance()->read(
-                    QStringLiteral("Bookmarks/Entries"), QStringLiteral("[]")).toStdString();
-        auto inDoc = QJsonDocument::fromJson(QByteArray::fromStdString(order));
-
-        QStringList keys;
-        QJsonArray outArray;
-
-        if (inDoc.isArray()) {
-            const auto inArray = inDoc.array();
-            for (const auto& i : inArray) {
-                QString path = i.toString();
-                QString name = RawSettingsHandler::instance()->read(
-                            QStringLiteral("Bookmarks/") + path, path.split("/").last());
-
-                QJsonObject obj;
-                obj.insert(QStringLiteral("name"), name);
-                obj.insert(QStringLiteral("path"), path);
-                outArray.append(obj);
-                keys.append(path);
-            }
-        }
-
-        {
-            ConfigFileMonitor out;
-            out.reset(bookmarksFile, ConfigFileMonitor::InitiallyPaused);
-
-            if (!out.writeJson(outArray, QStringLiteral("1"))) {
-                qWarning() << "failed to migrate bookmarks to new location at" << bookmarksFile;
-                return;
-            }
-        }
-
-        qDebug() << "removing bookmarks from old location";
-
-        for (const auto& i : std::as_const(keys)) {
-            RawSettingsHandler::instance()->remove(QStringLiteral("Bookmarks/") + i);
-        }
-        RawSettingsHandler::instance()->remove(QStringLiteral("Bookmarks/Entries"));
-
-        qDebug() << "bookmarks successfully migrated";
-        */
-    }
-}
-
 BookmarksModel::BookmarksModel(QObject *parent) :
     QAbstractListModel(parent),
     m_mountsPollingTimer(new QTimer(this)),
@@ -227,10 +165,6 @@ BookmarksModel::BookmarksModel(QObject *parent) :
         qWarning() << "[bookmarks] cannot save bookmarks:" <<
                       "cannot create base directory at" <<
                       configDirectory;
-    }
-
-    if (!QFile::exists(bookmarksFile)) {
-        QtConcurrent::run([=](){ migrateBookmarks(bookmarksFile); });
     }
 
     QString ignoredMountsFile = configDirectory + "/ignored-mounts.json";
