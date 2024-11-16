@@ -154,8 +154,11 @@ private:
     void readInfo();
     void readMetaData();
     QString calculateAspectRatio(int width, int height) const;
-    QStringList readExifData(QString filename);
     void addMetaData(uint priority, QString label, QString value);
+
+#ifndef FILEDATA_NO_EXIF
+    QStringList readExifData(QString filename);
+#endif
 
     QString m_file;
     StatFileInfo m_fileInfo;

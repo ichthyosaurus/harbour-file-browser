@@ -13,11 +13,17 @@
 #include <QImageReader>
 #include <QSettings>
 #include "globals.h"
+
+#ifndef FILEDATA_NO_EXIF
+// defines METADATA_SEPARATOR
 #include "jhead/jhead-api.h"
+#else
+#define METADATA_SEPARATOR QStringLiteral("\uF83F")
+#endif
 
 FileData::FileData(QObject *parent) :
     QObject(parent),
-    STRING_SEP(METADATA_SEPARATOR)  // defined in jhead-api.h
+    STRING_SEP(METADATA_SEPARATOR)
 {
     m_file = "";
 }
@@ -351,6 +357,7 @@ void FileData::readMetaData()
             }
         }
 
+#ifndef FILEDATA_NO_EXIF
         // read exif data for selected formats
         if (m_mimeTypeName == "image/jpeg" || m_mimeTypeName == "image/png" ||
                 m_mimeTypeName == "image/gif" || m_mimeTypeName == "image/tiff" ) {
@@ -368,6 +375,7 @@ void FileData::readMetaData()
                 addMetaData(8, label, value);
             }
         }
+#endif
 
         // read comments
         const QStringList textKeys = reader.textKeys();
@@ -399,6 +407,7 @@ QString FileData::calculateAspectRatio(int width, int height) const
     return QString();
 }
 
+#ifndef FILEDATA_NO_EXIF
 QStringList FileData::readExifData(QString filename)
 {
     QByteArray ba = filename.toUtf8();
@@ -406,6 +415,7 @@ QStringList FileData::readExifData(QString filename)
     bool error = false;
     return jhead_readJpegFile(f, &error);
 }
+#endif
 
 // first char is priority (0-9), labels and values are delimited with STRING_SEP
 // label and value are already translated strings

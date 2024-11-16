@@ -57,6 +57,7 @@ void Engine::deleteFiles(QStringList filenames)
     m_fileWorker->startDeleteFiles(filenames);
 }
 
+#ifndef ENGINE_NO_CLIPBOARD
 void Engine::pasteFiles(QStringList files, QString destDirectory, FileClipMode::Enum mode)
 {
     // TODO use FileOperations directly from QML instead
@@ -106,6 +107,7 @@ void Engine::pasteFiles(QStringList files, QString destDirectory, FileClipMode::
         emit workerErrorOccurred(QStringLiteral("Bug: unknown file operation mode requested: %1").arg(mode), destDirectory);
     }
 }
+#endif
 
 int Engine::runDiskSpaceWorker(std::function<void (int, QStringList)> signal,
                                std::function<QStringList (void)> function)
