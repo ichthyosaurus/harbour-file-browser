@@ -175,6 +175,11 @@ BookmarksModel::BookmarksModel(QObject *parent) :
     m_bookmarksMonitor->reset(bookmarksFile);
     connect(m_bookmarksMonitor, &ConfigFileMonitor::configChanged, this, &BookmarksModel::reload);
 
+    if (!QFile::exists(bookmarksFile)) {
+        // must be called after m_bookmarksMonitor has a file
+        save();
+    }
+
     m_mountsPollingTimer->setInterval(5 * 1000);
     m_mountsPollingTimer->setTimerType(Qt::VeryCoarseTimer);
     m_mountsPollingTimer->setSingleShot(false);
