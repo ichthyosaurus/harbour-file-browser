@@ -14,6 +14,9 @@
 #include <QDir>
 #include <QVariant>
 
+#include <QQmlEngine>
+#include <QJSEngine>
+
 #include "fileclipboardmodel.h"
 
 class FileWorker;
