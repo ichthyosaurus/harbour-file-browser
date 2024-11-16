@@ -2,21 +2,9 @@
  * This file is part of File Browser.
  *
  * SPDX-FileCopyrightText: 2013-2014, 2019 Kari Pihkala
- * SPDX-FileCopyrightText: 2019-2023 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2024 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
- *
- * File Browser is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
- *
- * File Browser is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
 #ifndef ENGINE_H
@@ -102,6 +90,12 @@ public:
     Q_INVOKABLE bool pathIsDirectory(QString path) const;
     Q_INVOKABLE bool pathIsFile(QString path) const;
     Q_INVOKABLE bool pathIsFileOrDirectory(QString path) const;
+
+    static QObject* qmlInstance(QQmlEngine* engine, QJSEngine* scriptEngine) {
+        Q_UNUSED(engine);
+        Q_UNUSED(scriptEngine);
+        return new Engine;
+    }
 
 signals:
     void progressChanged();
