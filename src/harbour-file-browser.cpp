@@ -99,6 +99,7 @@ namespace {
 
 int main(int argc, char *argv[])
 {
+    qRegisterMetaType<BookmarksModel*>("BookmarksModel*");
     qRegisterMetaType<FileModelWorker::Mode>("FileModelWorker::Mode");
     qRegisterMetaType<StatFileInfo>("StatFileInfo");
     qRegisterMetaType<QList<StatFileInfo>>("QList<StatFileInfo>");
@@ -110,8 +111,8 @@ int main(int argc, char *argv[])
     qmlRegisterType<ConsoleModel>("harbour.file.browser.ConsoleModel", 1, 0, "ConsoleModel");
     qmlRegisterType<TextEditor>("harbour.file.browser.TextEditor", 1, 0, "TextEditor");
 
-    REGISTER_ENUMS(SettingsHandler, "harbour.file.browser.Settings", 1, 0)
     REGISTER_ENUMS(Bookmarks, "harbour.file.browser.Settings", 1, 0)
+    REGISTER_ENUMS(SettingsHandler, "harbour.file.browser.Settings", 1, 0)
     qmlRegisterUncreatableType<BookmarkGroup>("harbour.file.browser.Settings", 1, 0, "BookmarkGroup", "This is only a container for an enumeration.");
     qmlRegisterUncreatableType<SharingMethod>("harbour.file.browser.Settings", 1, 0, "SharingMethod", "This is only a container for an enumeration.");
     qmlRegisterUncreatableType<InitialDirectoryMode>("harbour.file.browser.Settings", 1, 0, "InitialDirectoryMode", "This is only a container for an enumeration.");

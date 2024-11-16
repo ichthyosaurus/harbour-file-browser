@@ -14,6 +14,7 @@
 #include <QSharedPointer>
 #include <QPointer>
 #include <QAbstractListModel>
+#include <QObject>
 
 #include "configfilemonitor.h"
 #include "enumcontainer.h"
