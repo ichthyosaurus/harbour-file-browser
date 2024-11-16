@@ -3,21 +3,9 @@
  *
  * SPDX-FileCopyrightText: 2013-2016 Kari Pihkala
  * SPDX-FileCopyrightText: 2014 jklingen
- * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2024 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
- *
- * File Browser is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
- *
- * File Browser is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
 #ifdef QT_QML_DEBUG
@@ -180,9 +168,12 @@ int main(int argc, char *argv[])
     // setup global engine object
     // TODO use QML singleton instead
     QScopedPointer<Engine> engine(new Engine);
-    QVariant engineVariant = QVariant::fromValue(engine.data());
-    qApp->setProperty("engine", engineVariant); // store as singleton
     view->rootContext()->setContextProperty("engine", engine.data()); // expose to QML
+
+    // store a pointer to the engine to access it in any class
+    // as singleton on the C++ side
+    QVariant engineVariant = QVariant::fromValue(engine.data());
+    qApp->setProperty("engine", engineVariant);
 
     // add module search path so Opal modules can be found
     view->engine()->addImportPath(SailfishApp::pathTo("qml/modules").toString());
