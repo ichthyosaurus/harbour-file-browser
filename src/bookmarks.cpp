@@ -349,7 +349,15 @@ void BookmarksModel::sortFilter(QVariantList order)
     QList<BookmarkGroup::Enum> newOrder;
     for (const auto& i : std::as_const(order)) {
         if (i.isValid()) {
-            newOrder.append(i.value<BookmarkGroup::Enum>());
+            auto group = i.value<BookmarkGroup::Enum>();
+
+            if (group == BookmarkGroup::Device) {
+                newOrder.append(BookmarkGroup::Location);
+                newOrder.append(BookmarkGroup::External);
+                m_showOnlyDevices = true;
+            } else {
+                newOrder.append(group);
+            }
         }
     }
 
@@ -1157,8 +1165,42 @@ QList<BookmarksModel::BookmarkItem> BookmarksModel::getStandardLocations()
         setAlternatives(videosItem, QStringLiteral("Movies"));
         setAlternatives(musicItem, QStringLiteral("Music"));
 
-        return {homeItem, documentsItem, downloadsItem, picturesItem, videosItem, musicItem, androidItem, rootItem};
+        if (m_showOnlyDevices) {
+            return {
+                homeItem,
+                androidItem, // <-- difference
+                rootItem,
+            };
+        } else {
+            return {
+                homeItem,
+                documentsItem,
+                downloadsItem,
+                picturesItem,
+                videosItem,
+                musicItem,
+                androidItem, // <-- difference
+                rootItem,
+            };
+        }
     } else {
-        return {homeItem, documentsItem, downloadsItem, picturesItem, videosItem, musicItem, rootItem};
+        if (m_showOnlyDevices) {
+            return {
+                homeItem,
+                // androidItem, // <-- difference
+                rootItem,
+            };
+        } else {
+            return {
+                homeItem,
+                documentsItem,
+                downloadsItem,
+                picturesItem,
+                videosItem,
+                musicItem,
+                // androidItem, // <-- difference
+                rootItem,
+            };
+        }
     }
 }

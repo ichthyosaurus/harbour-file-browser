@@ -21,7 +21,7 @@
 
 // group Device includes everything that should show disk space info
 // - it is *not* strictly limited to physical devices or partitions
-CREATE_ENUM(BookmarkGroup, Temporary, Location, External, Bookmark)
+CREATE_ENUM(BookmarkGroup, Temporary, Location, External, Bookmark, Device)
 DECLARE_ENUM_REGISTRATION_FUNCTION(Bookmarks)
 
 
