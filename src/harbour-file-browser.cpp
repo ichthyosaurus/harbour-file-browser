@@ -30,6 +30,7 @@
 #include "engine.h"
 #include "consolemodel.h"
 #include "settings.h"
+#include "bookmarks.h"
 #include "texteditor.h"
 #include "fileoperations.h"
 #include "fileclipboardmodel.h"
@@ -110,6 +111,7 @@ int main(int argc, char *argv[])
     qmlRegisterType<TextEditor>("harbour.file.browser.TextEditor", 1, 0, "TextEditor");
 
     REGISTER_ENUMS(SettingsHandler, "harbour.file.browser.Settings", 1, 0)
+    REGISTER_ENUMS(Bookmarks, "harbour.file.browser.Settings", 1, 0)
     qmlRegisterUncreatableType<BookmarkGroup>("harbour.file.browser.Settings", 1, 0, "BookmarkGroup", "This is only a container for an enumeration.");
     qmlRegisterUncreatableType<SharingMethod>("harbour.file.browser.Settings", 1, 0, "SharingMethod", "This is only a container for an enumeration.");
     qmlRegisterUncreatableType<InitialDirectoryMode>("harbour.file.browser.Settings", 1, 0, "InitialDirectoryMode", "This is only a container for an enumeration.");
