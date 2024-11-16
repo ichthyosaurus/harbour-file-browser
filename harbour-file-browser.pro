@@ -118,6 +118,7 @@ SOURCES += \
     src/statfileinfo.cpp \
     src/globals.cpp \
     src/settings.cpp \
+    src/bookmarks.cpp \
     \
     src/configfilemonitor.cpp \
 
@@ -137,6 +138,7 @@ HEADERS += \
     src/statfileinfo.h \
     src/globals.h \
     src/settings.h \
+    src/bookmarks.h \
     src/property_macros.h \
     src/overload_of.h \
     \

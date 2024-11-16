@@ -1,21 +1,7 @@
 /*
  * This file is part of File Browser.
- *
  * SPDX-FileCopyrightText: 2020-2024 Mirian Margiani
- *
  * SPDX-License-Identifier: GPL-3.0-or-later
- *
- * File Browser is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
- *
- * File Browser is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
 #ifndef SETTINGS_H
@@ -25,21 +11,17 @@
 #include <QMap>
 #include <QHash>
 #include <QPair>
-#include <QString>
 #include <QMutex>
 #include <QSharedPointer>
-#include <QPointer>
 #include <QDir>
-#include <QAbstractListModel>
-#include <QFileSystemWatcher>
 
 #include "configfilemonitor.h"
 #include "enumcontainer.h"
 #include "property_macros.h"
 
 class QFileInfo;
+class BookmarksModel;
 
-CREATE_ENUM(BookmarkGroup, Temporary, Location, External, Bookmark)
 CREATE_ENUM(SharingMethod, Share, TransferEngine, Disabled)
 CREATE_ENUM(InitialDirectoryMode, Home = 0, Last = 1, Custom = 2)
 CREATE_ENUM(InitialPageMode, Folder = 0, Shortcuts = 1, Search = 2)
@@ -95,209 +77,6 @@ private:
 
     static QSharedPointer<RawSettingsHandler> s_globalInstance;
 };
-
-
-// Allows watching a single path, notifying when a bookmark
-// is added, removed, or renamed.
-//
-// Changing the status manually is possible only through setMarked()
-// and rename(), to avoid accidents.
-class BookmarkWatcher : public QObject {
-    Q_OBJECT
-    Q_PROPERTY(QString path READ path WRITE setPath NOTIFY pathChanged)
-    Q_PROPERTY(bool marked READ marked NOTIFY markedChanged)
-    Q_PROPERTY(QString name READ name NOTIFY nameChanged)
-
-public:
-    explicit BookmarkWatcher(QObject* parent = nullptr);
-    ~BookmarkWatcher();
-
-    bool marked();
-    QString path() const { return m_path; }
-    void setPath(QString path);
-    QString name();
-    void refresh();
-
-    Q_INVOKABLE void setMarked(bool active) const;
-    Q_INVOKABLE void toggle();
-    Q_INVOKABLE void rename(QString newName) const;
-
-signals:
-    void markedChanged();
-    void pathChanged();
-    void nameChanged();
-
-private:
-    QString m_path;
-};
-
-
-class LocationAlternative {
-    Q_GADGET
-    RO_PROPERTY_GADGET(QString, name, "");
-    RO_PROPERTY_GADGET(QString, path, "");
-    RO_PROPERTY_GADGET(QString, device, "");
-
-public:
-    LocationAlternative() = default;
-    LocationAlternative(QString name, QString path, QString device)
-        : m_name(name), m_path(path), m_device(device) {}
-    ~LocationAlternative() = default;
-
-    static QVariantList makeVariantList(const QList<LocationAlternative>& list);
-    static QStringList makeDevicesList(const QList<LocationAlternative>& list);
-};
-
-
-/**
- * @brief The BookmarksModel class provides a list of all currently configured bookmarks.
- *
- * Changes to the model are immediately stored on disk. The
- * model re-reads the file automatically if the file changes.
- *
- * This class should not be used directly. Instead, use the
- * "bookmarks" property on the GlobalSettings singleton in QML.
- */
-class BookmarksModel : public QAbstractListModel
-{
-    Q_OBJECT
-
-public:
-    explicit BookmarksModel(QObject *parent = nullptr);
-    ~BookmarksModel();
-
-    // methods needed by ListView
-    Q_INVOKABLE int rowCount(const QModelIndex& parent = QModelIndex()) const;
-    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const;
-    QHash<int, QByteArray> roleNames() const;
-
-    // methods for handling user defined bookmarks from QML
-    Q_INVOKABLE void add(QString path, QString name = QStringLiteral());
-    Q_INVOKABLE void addTemporary(QString path, QString name = QStringLiteral());
-
-    Q_INVOKABLE void remove(QString path);
-    Q_INVOKABLE void removeTemporary(QString path);
-
-    Q_INVOKABLE void clearTemporary();
-    Q_INVOKABLE void sortFilter(QVariantList order); // list of BookmarkGroup::Enum
-    Q_INVOKABLE void selectAlternative(const QModelIndex& idx, QString alternative);
-
-    Q_INVOKABLE void move(int fromIndex, int toIndex, bool saveImmediately = true);
-    Q_INVOKABLE void rename(QString path, QString newName);
-    Q_INVOKABLE bool hasBookmark(QString path) const;
-    Q_INVOKABLE void save();
-
-    Q_INVOKABLE QStringList pathsForIndexes(const QModelIndexList& indexes);
-
-    void registerWatcher(QString path, QPointer<BookmarkWatcher> mark);
-    void unregisterWatcher(QString path, QPointer<BookmarkWatcher> mark);
-    QString getBookmarkName(QString path) const;
-
-    static BookmarksModel* instance() {
-        if (s_globalInstance.isNull()) s_globalInstance.reset(new BookmarksModel());
-        return s_globalInstance.data();
-    }
-
-signals:
-    void temporaryAdded(QModelIndex modelIndex, int row);
-
-private slots:
-    void updateExternalDevices();
-    void updateStandardLocations(const QList<LocationAlternative>& newExternalPaths, const uint& lostPathsCount);
-    void reload();
-    void reloadIgnoredMounts();
-
-private:
-    void notifyWatchers(const QString& path);
-
-    void addUserDefined(QString path, QString name, bool permanent);
-    void removeUserDefined(QString path, bool permanent);
-    int findUserDefinedIndex(QString path);
-
-    QString loadBookmarksFile();
-
-    struct BookmarkItem {
-        BookmarkItem(
-            BookmarkGroup::Enum group,
-            QString name,
-            QString icon,
-            QString path,
-            QList<LocationAlternative> alternatives,
-            bool showSize,
-            bool userDefined)
-        :
-            group(group),
-            name(name),
-            thumbnail(icon),
-            defaultPath(path),
-            path(path),
-            alternatives(alternatives),
-            showSize(showSize),
-            userDefined(userDefined) {};
-
-        BookmarkGroup::Enum group {BookmarkGroup::Temporary};
-        QString name {QStringLiteral()};
-        QString thumbnail {QStringLiteral("icon-m-favorite")};
-        QString defaultPath {QStringLiteral()};
-        QString path {QStringLiteral()};
-        QList<LocationAlternative> alternatives {};
-        QStringList devices {};  // note: this is empty if alternatives is empty
-        bool showSize {false};
-        bool userDefined {false};
-    };
-
-    QList<BookmarkItem> m_entries;
-    QList<BookmarkGroup::Enum> m_groupsOrder;
-    QList<BookmarkItem> getStandardLocations();
-
-    int m_firstUserDefinedIndex {-1};
-    int m_lastUserDefinedIndex {-1};
-    int m_firstExternalIndex {-1};
-
-    // maps paths of custom bookmarks to indices in the entries list
-    QHash<QString, BookmarkItem*> m_userDefinedLookup;
-
-    // holds registered bookmark watchers
-    // Bookmark watchers can be created from QML to monitor a single
-    // path. They are registered here so that they can be directly notified of
-    // any changes, without having to handle change signals for all paths
-    // every time in all watchers.
-    QMap<QString, QList<QPointer<BookmarkWatcher>>> m_watchers;
-
-    QTimer* m_mountsPollingTimer {nullptr};
-    QSet<int> m_ignoredMounts {};
-    QStringList m_ignoredMountBases {};
-
-    bool m_haveAndroidPath {false};
-    QMap<QStandardPaths::StandardLocation, QString> m_standardLocations;
-    // BookmarkItem* m_documentsItem {nullptr};
-    // BookmarkItem* m_downloadsItem {nullptr};
-    // BookmarkItem* m_picturesItem {nullptr};
-    // BookmarkItem* m_videosItem {nullptr};
-    // BookmarkItem* m_musicItem {nullptr};
-
-    // We monitor the bookmarks file except while saving entries.
-    ConfigFileMonitor* m_bookmarksMonitor;
-    ConfigFileMonitor* m_ignoredMountsMonitor;
-
-    QMutex m_mutex;
-    static QSharedPointer<BookmarksModel> s_globalInstance;
-
-    friend uint qHash(const BookmarksModel::BookmarkItem& key, uint seed);
-};
-
-inline uint qHash(const BookmarksModel::BookmarkItem& key, uint seed=10)
-{
-    QByteArray result;
-    result.reserve(24);
-    result.append(QByteArray::number(qHash(key.path, seed)));
-    result.append('#');
-    result.append(QByteArray::number(qHash(key.name, seed)));
-    result.append('#');
-    result.append(QByteArray::number(qHash(key.userDefined, seed)));
-    // qDebug() << (result.size() > 24) << "hashed" << key.path << "to" << result << "(" << result.size() << ")";
-    return qHash(result, seed);
-}
 
 
 // Settings specific to File Browser.
@@ -478,7 +257,7 @@ private:
 
     // [Bookmarks] section with custom API
     private: Q_PROPERTY(BookmarksModel* bookmarks READ bookmarks CONSTANT)
-    public: BookmarksModel* bookmarks() { return BookmarksModel::instance(); }
+    public: BookmarksModel* bookmarks();
 
     //
     // ^^^ SETTINGS ^^^
