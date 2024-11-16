@@ -170,11 +170,6 @@ int main(int argc, char *argv[])
     QScopedPointer<Engine> engine(new Engine);
     view->rootContext()->setContextProperty("engine", engine.data()); // expose to QML
 
-    // store a pointer to the engine to access it in any class
-    // as singleton on the C++ side
-    QVariant engineVariant = QVariant::fromValue(engine.data());
-    qApp->setProperty("engine", engineVariant);
-
     // add module search path so Opal modules can be found
     view->engine()->addImportPath(SailfishApp::pathTo("qml/modules").toString());
 
