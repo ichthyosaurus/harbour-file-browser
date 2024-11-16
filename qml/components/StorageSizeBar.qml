@@ -6,9 +6,7 @@
 
 import QtQuick 2.6
 import Sailfish.Silica 1.0
-import harbour.file.browser.Settings 1.0
-
-import "../js/paths.js" as Paths
+import Harbour.FileBrowser.Engine 1.0
 
 Row {
     id: root
@@ -17,24 +15,27 @@ Row {
     property string path
     property bool active: visible
     readonly property var diskSpaceInfo: _diskSpaceInfo
+    property bool showLabel: true
+
+    property bool highlighted: parent.highlighted
 
     property int _diskSpaceHandle: -1
     property var _diskSpaceInfo: ['']
 
     onActiveChanged: {
         if (active) {
-            _diskSpaceHandle = engine.requestDiskSpaceInfo(path)
+            _diskSpaceHandle = Engine.requestDiskSpaceInfo(path)
         }
     }
 
     Component.onCompleted: {
         if (active) {
-            _diskSpaceHandle = engine.requestDiskSpaceInfo(path)
+            _diskSpaceHandle = Engine.requestDiskSpaceInfo(path)
         }
     }
 
     Connections {
-        target: active ? engine : null
+        target: active ? Engine : null
         onDiskSpaceInfoReady: {
             if (_diskSpaceHandle == handle) {
                 _diskSpaceHandle = -1
@@ -82,10 +83,10 @@ Row {
         }
 
         Label {
-            visible: _diskSpaceInfo[0] !== ''
+            visible: _diskSpaceInfo[0] !== '' && showLabel
             text: qsTr("%1 free").arg(_diskSpaceInfo[3])
             font.pixelSize: Theme.fontSizeExtraSmall
-            color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
+            color: root.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
         }
     }
 }

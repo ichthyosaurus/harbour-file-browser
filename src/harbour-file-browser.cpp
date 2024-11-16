@@ -149,7 +149,7 @@ int main(int argc, char *argv[])
     });
 
     // TODO replace "engine" context property by a singleton type
-    // qmlRegisterSingletonType<Engine>("harbour.file.browser.Engine", 1, 0, "Engine", &Engine::qmlInstance);
+    qmlRegisterSingletonType<Engine>("Harbour.FileBrowser.Engine", 1, 0, "Engine", &Engine::qmlInstance);
 
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
     app->setOrganizationName("harbour-file-browser"); // needed for Sailjail
