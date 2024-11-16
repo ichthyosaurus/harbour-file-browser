@@ -83,12 +83,8 @@ DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 DEFINES += APP_RELEASE=\\\"$$RELEASE\\\"
 DEFINES += RELEASE_TYPE=\\\"$$RELEASE_TYPE\\\"
 
-OLD_DEFINES = "$$cat($$OUT_PWD/requires_defines.h)"
-!equals(OLD_DEFINES, $$join(DEFINES, ";", "//")) {
-    NEW_DEFINES = "$$join(DEFINES, ";", "//")"
-    write_file("$$OUT_PWD/requires_defines.h", NEW_DEFINES)
-    message("DEFINES changed..." $$DEFINES)
-}
+# Enable rebuilding when defines change
+include(libs/opal-cached-defines.pri)
 
 # copy change log file to build root;
 # needed for generating rpm change log entries
