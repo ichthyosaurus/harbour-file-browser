@@ -2,26 +2,13 @@
  * This file is part of File Browser.
  *
  * SPDX-FileCopyrightText: 2013-2015 Kari Pihkala
- * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2024 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
- *
- * File Browser is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
- *
- * File Browser is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
 #include "filedata.h"
 #include <QDir>
-#include <QDateTime>
 #include <QMimeDatabase>
 #include <QImageReader>
 #include <QSettings>
@@ -136,26 +123,34 @@ QString FileData::absoluteFilePath() const
     return m_fileInfo.absoluteFilePath();
 }
 
-uint FileData::dirsCount() const
-{
-    if (!isDir()) return 0;
-    QDir::Filters filters = QDir::AllDirs | QDir::NoDotAndDotDot;
-    if (QSettings().value("View/HiddenFilesShown", false).toBool()) {
-        filters |= QDir::Hidden;
+uint FileData::dirsCount() const {
+    if (!isDir()) {
+        return 0;
     }
-    QDir dir(m_file, QLatin1String(), QDir::NoSort, filters);
-    return dir.count();
+
+    return QDir(m_file,
+        QLatin1String(),
+        QDir::NoSort,
+        QDir::AllDirs |
+        QDir::NoDotAndDotDot |
+        QDir::Hidden
+    ).count();
 }
 
-uint FileData::filesCount() const
-{
-    if (!isDir()) return 0;
-    QDir::Filters filters = QDir::Files;
-    if (QSettings().value("View/HiddenFilesShown", false).toBool()) {
-        filters |= QDir::Hidden;
+uint FileData::filesCount() const {
+    if (!isDir()) {
+        return 0;
     }
-    QDir dir(m_file, QLatin1String(), QDir::NoSort, filters);
-    return dir.count();
+
+    return QDir(m_file,
+        QLatin1String(),
+        QDir::NoSort,
+        QDir::Files |
+        QDir::Drives |
+        QDir::System | /* System is not included in AllEntries */
+        QDir::NoDotAndDotDot |
+        QDir::Hidden
+    ).count();
 }
 
 void FileData::refresh()
