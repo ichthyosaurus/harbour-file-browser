@@ -36,7 +36,7 @@ class Engine : public QObject
 
 public:
     explicit Engine(QObject *parent = nullptr);
-    ~Engine();
+    virtual ~Engine();
 
     // properties
     int progress() const { return m_progress; }
@@ -149,6 +149,10 @@ signals:
 private slots:
     void setProgress(int progress, QString filename);
 
+protected:
+    int runDiskSpaceWorker(std::function<void(int, QStringList)> signal,
+                           std::function<QStringList(void)> function);
+
 private:
     QString createHexDump(char *buffer, int size, int bytesPerLine);
     QStringList makeStringList(QString msg, QString str = QString());
@@ -158,8 +162,6 @@ private:
     QString m_errorMessage;
     FileWorker* m_fileWorker;
 
-    int runDiskSpaceWorker(std::function<void(int, QStringList)> signal,
-                           std::function<QStringList(void)> function);
     QList<QPair<QSharedPointer<QFutureWatcher<QStringList>>, QFuture<QStringList>>> m_diskSpaceWorkers;
 };
 
