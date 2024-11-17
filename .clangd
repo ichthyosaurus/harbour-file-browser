@@ -12,6 +12,8 @@ CompileFlags:
         - -isystem/usr/include/qt5/QtCore
         - -isystem/usr/include/qt5/QtNetwork
         - -isystem/usr/include/qt5/QtQuick
+        - -isystem/usr/include/qt5/QtConcurrent
+        - -isystem/usr/include/qt5/QtQml
         - -isystem/opt/sfos/mersdk/targets/SailfishOS-4.6.0.13-armv7hl.default/usr/include/sailfishapp
 
 # Diagnostics:
