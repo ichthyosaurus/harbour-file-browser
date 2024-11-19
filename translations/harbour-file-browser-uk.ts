@@ -46,7 +46,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="279"/>
         <source>Belarusian</source>
-        <translation type="unfinished"></translation>
+        <translation>Білоруська</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="206"/>
@@ -162,12 +162,12 @@
     <message>
         <location filename="../src/settings.cpp" line="1007"/>
         <source>Attached folder</source>
-        <translation>Прикріплена тека</translation>
+        <translation>Прикріплена папка</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1009"/>
         <source>Remote folder</source>
-        <translation>Віддалена тека</translation>
+        <translation>Віддалена папка</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1012"/>
@@ -293,7 +293,7 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="252"/>
         <source>Open this folder</source>
-        <translation>Відкрити цю теку</translation>
+        <translation>Відкрити цю папку</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
@@ -318,7 +318,7 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="256"/>
         <source>Open containing folder</source>
-        <translation>Відкрити вміст теки</translation>
+        <translation>Відкрити вміст папки</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="274"/>
@@ -418,7 +418,7 @@
         <location filename="../qml/pages/CreateNewDialog.qml" line="96"/>
         <source>The new folder will be created under “%1”.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation>Нова тека буде створена за адресою &quot;%1&quot;.</translation>
+        <translation>Нова папка буде створена за адресою &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="98"/>
@@ -429,7 +429,7 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="104"/>
         <source>folder</source>
-        <translation>тека</translation>
+        <translation>папка</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="107"/>
@@ -439,7 +439,7 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="119"/>
         <source>Folder name</source>
-        <translation>Назва теки</translation>
+        <translation>Назва папки</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="119"/>
@@ -449,17 +449,17 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="138"/>
         <source>File names must not contain slashes. To create a new file in a folder below “%1”, first create a folder and then create the file.</source>
-        <translation>Імена файлів не повинні містити косих рисок. Щоб створити новий файл у теці під &quot;%1&quot;, спочатку створіть теку, а потім створіть файл.</translation>
+        <translation>Імена файлів не повинні містити косих рисок. Щоб створити новий файл у папці під &quot;%1&quot;, спочатку створіть папку, а потім створіть файл.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="142"/>
         <source>A file or folder with this name already exists.</source>
-        <translation>Файл або тека з таким ім&apos;ям вже існує.</translation>
+        <translation>Файл або папка з таким ім&apos;ям вже існує.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="145"/>
         <source>Using slashes in folder names will create sub-folders, like so:</source>
-        <translation>Використання косих рисок у назві теки створить підтеки, наприклад, так:</translation>
+        <translation>Використання косих рисок у назві папки створить підпапки, наприклад, так:</translation>
     </message>
 </context>
 <context>
@@ -594,7 +594,7 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="324"/>
         <source>Open target folder</source>
-        <translation>Відкрити цільову теку</translation>
+        <translation>Відкрити цільову папку</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="325"/>
@@ -706,7 +706,7 @@
     <message>
         <location filename="../src/engine.cpp" line="352"/>
         <source>Cannot create folder %1</source>
-        <translation>Не вдається створити теку %1</translation>
+        <translation>Не вдається створити папку %1</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="368"/>
@@ -944,7 +944,7 @@
     <message>
         <location filename="../src/filedata.cpp" line="313"/>
         <source>folder</source>
-        <translation>тека</translation>
+        <translation>каталог</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="319"/>
@@ -957,7 +957,7 @@
     <message>
         <location filename="../src/filemodel.cpp" line="115"/>
         <source>folder</source>
-        <translation>тека</translation>
+        <translation>папка</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="117"/>
@@ -995,7 +995,7 @@
     <message>
         <location filename="../src/filemodelworker.cpp" line="245"/>
         <source>No permission to read the folder</source>
-        <translation>Немає дозволу на читання теки</translation>
+        <translation>Немає дозволу на читання папки</translation>
     </message>
 </context>
 <context>
@@ -1082,7 +1082,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="129"/>
         <source>Open containing folder</source>
-        <translation>Відкрити вміст теки</translation>
+        <translation>Відкрити вміст папки</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="148"/>
@@ -1228,17 +1228,17 @@
     <message>
         <location filename="../src/fileworker.cpp" line="353"/>
         <source>Source folder does not exist</source>
-        <translation>Вихідна теки не існує</translation>
+        <translation>Вихідна папка не існує</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="362"/>
         <source>Cannot create target folder %1</source>
-        <translation>Неможливо створити цільову теку %1</translation>
+        <translation>Неможливо створити цільову папку %1</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="413"/>
         <source>Failed to remove source folder “%1” after moving.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не вдалося видалити вихідну папку “%1” після переміщення.</translation>
     </message>
 </context>
 <context>
@@ -1261,7 +1261,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="66"/>
         <source>Save view preferences individually for all folders in your home directory. The options below are used by default.</source>
-        <translation>Зберегти налаштування перегляду для кожної теки окремо, якщо вони відрізняються від наведених нижче.</translation>
+        <translation>Зберегти налаштування перегляду для кожної папки окремо, якщо вони відрізняються від наведених нижче.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="91"/>
@@ -1331,12 +1331,12 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="140"/>
         <source>Show folders first</source>
-        <translation>Спочатку показувати теки</translation>
+        <translation>Спочатку показувати папки</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="142"/>
         <source>Always show folders at the top of the file list.</source>
-        <translation>Завжди показувати теки у верхній частині списку файлів.</translation>
+        <translation>Завжди показувати папки у верхній частині списку файлів.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="145"/>
@@ -2500,12 +2500,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="208"/>
         <source>Clear subtitles</source>
-        <translation type="unfinished"></translation>
+        <translation>Прибрати субтитри</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="212"/>
         <source>Load subtitles</source>
-        <translation type="unfinished"></translation>
+        <translation>Завантажити субтитри</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="663"/>
@@ -2530,22 +2530,22 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="38"/>
         <source>Select from file system</source>
-        <translation type="unfinished"></translation>
+        <translation>Вибір з файлової системи</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="41"/>
         <source>No files ready</source>
-        <translation type="unfinished"></translation>
+        <translation>Немає готових файлів</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="42"/>
         <source>Copy subtitle files in the SRT format next to the video file to open them quickly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Скопіюйте файли субтитрів у форматі SRT поруч із відеофайлом, щоб швидко відкрити їх.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="42"/>
         <source>Pull down to pick a file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Потягніть вниз, щоб вибрати файл.</translation>
     </message>
 </context>
 <context>
@@ -2563,12 +2563,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="54"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation>Ці файли/теки вже існують “%1”:</translation>
+        <translation>Ці файли/папки вже існують “%1”:</translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="55"/>
         <source>These files or folders already exist:</source>
-        <translation>Ці файли або теки вже існують:</translation>
+        <translation>Ці файли або папки вже існують:</translation>
     </message>
 </context>
 <context>
@@ -2576,7 +2576,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="207"/>
         <source>Path to a folder</source>
-        <translation>Шлях до теки</translation>
+        <translation>Шлях до папки</translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="184"/>
@@ -2587,7 +2587,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="159"/>
         <source>New folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Нова папка</translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="173"/>
@@ -2614,9 +2614,9 @@ exposure program</extracomment>
         <source>%n folder(s)</source>
         <extracomment>hidden if n=0</extracomment>
         <translation>
-            <numerusform>%n тека</numerusform>
-            <numerusform>%n теки</numerusform>
-            <numerusform>%n тек</numerusform>
+            <numerusform>%n папка</numerusform>
+            <numerusform>%n папки</numerusform>
+            <numerusform>%n папок</numerusform>
         </translation>
     </message>
     <message>
@@ -2805,7 +2805,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="348"/>
         <source>Go to containing folder</source>
-        <translation>Перейти до теки з вмістом</translation>
+        <translation>Перейти до папки з вмістом</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="352"/>
@@ -3296,7 +3296,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="163"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation>Ці файли/теки вже існують “%1”:</translation>
+        <translation>Ці файли/папки вже існують “%1”:</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="203"/>
@@ -3363,12 +3363,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="37"/>
         <source>Settings apply only to the current folder. Swipe from the right to change default values.</source>
-        <translation>Налаштування застосовуються лише до поточної теки. Проведіть праворуч, щоб змінити значення за замовчуванням.</translation>
+        <translation>Налаштування застосовуються лише до поточної папки. Проведіть праворуч, щоб змінити значення за замовчуванням.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="38"/>
         <source>Settings apply to all folders.</source>
-        <translation>Налаштування застосовуються до всіх тек.</translation>
+        <translation>Налаштування застосовуються до всіх папок.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="48"/>
@@ -3473,12 +3473,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="161"/>
         <source>Show folders first</source>
-        <translation>Спочатку показувати теки</translation>
+        <translation>Спочатку показувати папки</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="163"/>
         <source>Always show folders at the top of the file list.</source>
-        <translation>Завжди показувати теки у верхній частині списку файлів.</translation>
+        <translation>Завжди показувати папки у верхній частині списку файлів.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="167"/>

@@ -31,12 +31,12 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="156"/>
         <source>Romanian</source>
-        <translation type="unfinished"></translation>
+        <translation>Rumence</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="171"/>
         <source>Norwegian Bokmål</source>
-        <translation type="unfinished"></translation>
+        <translation>Norveççe (Bokmål)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="240"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="279"/>
         <source>Belarusian</source>
-        <translation type="unfinished"></translation>
+        <translation>Belarusça</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="206"/>
@@ -61,7 +61,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="248"/>
         <source>Dutch (Belgium)</source>
-        <translation type="unfinished"></translation>
+        <translation>Felemenkçe (Belçika)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="267"/>
@@ -178,13 +178,13 @@
         <location filename="../src/settings.cpp" line="1099"/>
         <location filename="../src/settings.cpp" line="1592"/>
         <source>Internal storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Dahili depolama</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1107"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&quot;%2&quot;de olan &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="1507"/>
@@ -531,13 +531,13 @@
         <location filename="../qml/pages/DirectoryPage.qml" line="434"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Eşleşme bulunamadı</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="436"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation type="unfinished">Boş</translation>
+        <translation>Boş</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="439"/>
@@ -586,7 +586,7 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="324"/>
         <source>Open target folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Hedef klasörü aç</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="325"/>
@@ -718,17 +718,17 @@
     <message>
         <location filename="../src/engine.cpp" line="432"/>
         <source>Source “%1” is not a symbolic link</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaynak &quot;%1&quot; bir sembolik bağlantı değil</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="441"/>
         <source>No permissions to change contents of “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;%1&quot;in içeriğini değiştirmeye izin bulunmamakta</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="449"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;%2&quot;e işaret eden eski &quot;%1&quot; bağlantısının kaldırması başarısız oldu</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="455"/>
