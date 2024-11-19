@@ -28,6 +28,7 @@ QString DirectorySettings::s_cachedInitialDirectory = QLatin1Literal();
 QString DirectorySettings::s_forcedInitialDirectory = QLatin1Literal();
 bool DirectorySettings::s_haveForcedInitialDirectory = false;
 QString DirectorySettings::s_cachedStorageSettingsPath = QLatin1Literal();
+QString DirectorySettings::s_cachedSpaceInspectorPath = QLatin1Literal();
 QString DirectorySettings::s_cachedPdfViewerPath = QLatin1Literal();
 SharingMethod::Enum DirectorySettings::s_cachedSharingMethod = SharingMethod::Disabled;
 bool DirectorySettings::s_cachedSharingMethodDetermined = false;
@@ -341,6 +342,72 @@ QString DirectorySettings::storageSettingsPath()
                                                    "jolla-settings/pages/storage/storage.qml",
                                                    QStandardPaths::LocateFile);
     return s_cachedStorageSettingsPath;
+#endif
+}
+
+bool DirectorySettings::spaceInspectorEnabled()
+{
+#ifdef NO_FEATURE_SPACE_INSPECTOR
+    return false;
+#else
+    return !spaceInspectorPath().isEmpty();
+#endif
+}
+
+QString DirectorySettings::spaceInspectorPath()
+{
+#ifdef NO_FEATURE_SPACE_INSPECTOR
+    return QStringLiteral("");
+#else
+    if (!s_cachedSpaceInspectorPath.isEmpty()) {
+        return s_cachedSpaceInspectorPath;
+    }
+
+    QString& newPath = s_cachedSpaceInspectorPath;
+
+    newPath =
+        QStringLiteral("/opt/sdk/") +
+        QStringLiteral("harbour-space-inspector/usr/"
+                       "bin/harbour-space-inspector");
+
+    if (!QFileInfo::exists(newPath)) {
+        newPath = QStringLiteral("/usr/bin/") +
+                  QStringLiteral("harbour-space-inspector");
+
+        if (!QFileInfo::exists(newPath)) {
+            newPath = QLatin1String("");
+        }
+    }
+
+    if (!newPath.isEmpty() && !QFileInfo(newPath).isExecutable()) {
+        qDebug() << "found space inspector at" << newPath
+                 << "but the file is not executable";
+        newPath = QLatin1String("");
+    }
+
+    return s_cachedSpaceInspectorPath;
+#endif
+}
+
+bool DirectorySettings::launchSpaceInspector(const QString& folder)
+{
+#ifdef NO_FEATURE_SPACE_INSPECTOR
+    return false;
+#else
+    if (!spaceInspectorEnabled()) {
+        return false;
+    }
+
+    QFileInfo folderInfo(folder);
+    QFileInfo appInfo(spaceInspectorPath());
+    QStringList args = {folderInfo.absoluteFilePath()};
+
+    if (!folderInfo.isDir()) {
+        return false;
+    }
+
+    return QProcess::startDetached(
+        appInfo.absoluteFilePath(), args);
 #endif
 }
 

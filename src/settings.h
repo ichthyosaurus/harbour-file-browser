@@ -275,6 +275,11 @@ private:
     public: bool systemSettingsEnabled();
     public: QString storageSettingsPath();
 
+    private: Q_PROPERTY(bool spaceInspectorEnabled READ spaceInspectorEnabled CONSTANT)
+    public: bool spaceInspectorEnabled();
+    private: QString spaceInspectorPath();
+    public: Q_INVOKABLE bool launchSpaceInspector(const QString& folder);
+
     private: Q_PROPERTY(bool pdfViewerEnabled READ pdfViewerEnabled CONSTANT)
     private: Q_PROPERTY(QString pdfViewerPath READ pdfViewerPath CONSTANT)
     public: bool pdfViewerEnabled();
@@ -332,6 +337,7 @@ private:
     static bool s_haveForcedInitialDirectory;
 
     static QString s_cachedStorageSettingsPath;
+    static QString s_cachedSpaceInspectorPath;
     static QString s_cachedPdfViewerPath;
     static SharingMethod::Enum s_cachedSharingMethod;
     static bool s_cachedSharingMethodDetermined;

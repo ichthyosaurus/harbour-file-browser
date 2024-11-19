@@ -42,6 +42,7 @@ File Browser for Sailfish OS. A fully-fledged file manager for your phone.
     RELEASE_TYPE=OpenRepos \
     FEATURE_PDF_VIEWER=on \
     FEATURE_STORAGE_SETTINGS=on \
+    FEATURE_SPACE_INSPECTOR=on \
     FEATURE_SHARING=on \
     VERSION=%{version} \
     RELEASE=%{release}

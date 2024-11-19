@@ -70,6 +70,7 @@ SilicaListView {
         property int intIndex: index
         property bool selected: selectionModel.hasSelection && selectionModel.isSelected(modelIndex)
         property string shortcutPath: Paths.unicodeArrow() + " " + model.path
+        property string basePath: model.path
         property var alternativePaths: model.alternatives
         property var alternativeDevices: model.devices
         property string selectedPath: ""
@@ -251,6 +252,10 @@ SilicaListView {
             StorageSizeMenuLabel {
                 diskSpaceInfo: menu.listItem.diskSpaceInfo
             }
+
+            SpaceInspectorMenuItem {
+                path: menu.listItem.basePath
+            }
         }
     }
 
@@ -276,6 +281,10 @@ SilicaListView {
                 onClicked: {
                     pageStack.push(Qt.resolvedUrl(GlobalSettings.storageSettingsPath));
                 }
+            }
+
+            SpaceInspectorMenuItem {
+                path: menu.listItem.basePath
             }
         }
     }

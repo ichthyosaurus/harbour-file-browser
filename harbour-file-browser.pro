@@ -66,6 +66,14 @@ equals(FEATURE_STORAGE_SETTINGS, off) {
     message("feature flags: Integrated system storage settings enabled")
 }
 
+FEATURE_SPACE_INSPECTOR=$$FEATURE_SPACE_INSPECTOR
+equals(FEATURE_SPACE_INSPECTOR, off) {
+    DEFINES += NO_FEATURE_SPACE_INSPECTOR
+    message("feature flags: Disk usage analyser disabled")
+} else {
+    message("feature flags: Disk usage analyser enabled")
+}
+
 FEATURE_SHARING=$$FEATURE_SHARING
 equals(FEATURE_SHARING, off) {
     DEFINES += NO_FEATURE_SHARING

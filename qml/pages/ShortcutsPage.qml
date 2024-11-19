@@ -244,7 +244,7 @@ Page {
                 }
             }
             MenuItem {
-                Notification{
+                Notification {
                     id: windowNotification
                     previewSummary: qsTr("New window opened. Sometimes the application stays in the background.")
                     isTransient: true
@@ -267,6 +267,7 @@ Page {
 
         PushUpMenu {
             id: pulley
+
             MenuItem {
                 text: qsTr("Create a new bookmark")
                 onClicked: {
@@ -284,12 +285,17 @@ Page {
                     })
                 }
             }
+
             MenuItem {
                 visible: !GlobalSettings.runningAsRoot && GlobalSettings.systemSettingsEnabled
                 text: qsTr("Open storage settings");
                 onClicked: {
                     pageStack.push(Qt.resolvedUrl(GlobalSettings.storageSettingsPath));
                 }
+            }
+
+            SpaceInspectorMenuItem {
+                path: currentPath
             }
         }
     }
