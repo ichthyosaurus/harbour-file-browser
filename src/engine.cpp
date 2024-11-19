@@ -109,11 +109,11 @@ void Engine::pasteFiles(QStringList files, QString destDirectory, FileClipMode::
 }
 #endif
 
-int Engine::runDiskSpaceWorker(std::function<void (int, QStringList)> signal,
-                               std::function<QStringList (void)> function)
+int Engine::runDiskSpaceWorker(std::function<void(int, QVariant)> signal,
+                               std::function<QVariant(void)> function)
 {
     m_diskSpaceWorkers.append({
-        QSharedPointer<QFutureWatcher<QStringList>>{new QFutureWatcher<QStringList>},
+        QSharedPointer<QFutureWatcher<QVariant>>{new QFutureWatcher<QVariant>},
         QtConcurrent::run(function)
     });
 
@@ -132,13 +132,13 @@ int Engine::runDiskSpaceWorker(std::function<void (int, QStringList)> signal,
 
 int Engine::requestDiskSpaceInfo(const QString& path)
 {
-    return runDiskSpaceWorker([&](int handle, QStringList result){
-        emit diskSpaceInfoReady(handle, result);
-    }, [path]() -> QStringList {
+    return runDiskSpaceWorker([&](int handle, QVariant resultVariant){
+        emit diskSpaceInfoReady(handle, resultVariant.toStringList());
+    }, [path]() -> QVariant {
         QStorageInfo info(path);
 
         if (!info.isValid()) {
-            return {{}, {}, {}, {}};
+            return QVariant::fromValue(QStringList{{}, {}, {}, {}});
         }
 
         while (!info.isReady()) {
@@ -154,22 +154,22 @@ int Engine::requestDiskSpaceInfo(const QString& path)
         auto used = total - free;
         auto usedPercent = used / (total / 100);
 
-        return {
+        return QVariant::fromValue(QStringList{
             QStringLiteral("ok"),
             QString::number(usedPercent),
             QStringLiteral("%1/%2").arg(filesizeToString(used), filesizeToString(total)),
             filesizeToString(free)
-        };
+        });
     });
 }
 
 int Engine::requestFileSizeInfo(const QStringList& paths)
 {
-    return runDiskSpaceWorker([&](int handle, QStringList result){
-        emit fileSizeInfoReady(handle, result);
-    }, [paths]() -> QStringList {
+    return runDiskSpaceWorker([&](int handle, QVariant resultVariant){
+        emit fileSizeInfoReady(handle, resultVariant.toStringList());
+    }, [paths]() -> QVariant {
         if (paths.isEmpty()) {
-            return {{}, {}, {}, {}, {}};
+            return QVariant::fromValue(QStringList{{}, {}, {}, {}, {}});
         }
 
         int topLevelItems = 0;
@@ -222,13 +222,13 @@ int Engine::requestFileSizeInfo(const QStringList& paths)
             --dirs;
         }
 
-        return {
+        return QVariant::fromValue(QStringList{
             QStringLiteral("ok"),
             filesizeToString(bytes),
             QString::number(dirs),
             QString::number(files),
             QString::number(topLevelItems)
-        };
+        });
     });
 }
 

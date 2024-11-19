@@ -151,8 +151,8 @@ private slots:
     void setProgress(int progress, QString filename);
 
 protected:
-    int runDiskSpaceWorker(std::function<void(int, QStringList)> signal,
-                           std::function<QStringList(void)> function);
+    int runDiskSpaceWorker(std::function<void(int, QVariant)> signal,
+                           std::function<QVariant(void)> function);
 
 private:
     QString createHexDump(char *buffer, int size, int bytesPerLine);
@@ -163,7 +163,7 @@ private:
     QString m_errorMessage;
     FileWorker* m_fileWorker;
 
-    QList<QPair<QSharedPointer<QFutureWatcher<QStringList>>, QFuture<QStringList>>> m_diskSpaceWorkers;
+    QList<QPair<QSharedPointer<QFutureWatcher<QVariant>>, QFuture<QVariant>>> m_diskSpaceWorkers;
 };
 
 #endif // ENGINE_H
