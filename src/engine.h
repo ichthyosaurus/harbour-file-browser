@@ -137,8 +137,9 @@ signals:
      *   2. combined disk usage (e.g. "2.1 GiB", falls back to "-")
      *   3. how many folders were counted? (e.g. "451", includes nested folders)
      *   4. how many files were counted? (e.g. "1984", includes nested files and symlinks)
+     *   5. how many top level items were processed? (e.g. "5", excluding any non-existent paths that were passed in)
      *
-     * The result list always has four fields.
+     * The result list always has five fields.
      * All fields are empty if the data could not be determined.
      *
      * @param handle

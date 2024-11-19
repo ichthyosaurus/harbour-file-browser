@@ -169,12 +169,14 @@ int Engine::requestFileSizeInfo(const QStringList& paths)
         emit fileSizeInfoReady(handle, result);
     }, [paths]() -> QStringList {
         if (paths.isEmpty()) {
-            return {{}, {}, {}, {}};
+            return {{}, {}, {}, {}, {}};
         }
 
+        int topLevelItems = 0;
         int files = 0;
         int dirs = 0;
         qint64 bytes = 0;
+        QStringList validPaths;
 
         auto process = [&files, &dirs, &bytes](const QString& dir){
             QDirIterator it(dir, QDir::AllEntries | QDir::System | QDir::NoDotAndDotDot | QDir::Hidden,
@@ -189,6 +191,13 @@ int Engine::requestFileSizeInfo(const QStringList& paths)
 
         for (const auto& i : paths) {
             auto info = QFileInfo(i);
+
+            if (!info.exists() && !info.isSymLink()) {
+                continue;
+            }
+
+            validPaths << i;
+            ++topLevelItems;
             bytes += info.size();
 
             if (info.isDir()) {
@@ -199,7 +208,7 @@ int Engine::requestFileSizeInfo(const QStringList& paths)
             }
         }
 
-        if (paths.length() == 1 && QFileInfo(paths[0]).isDir()) {
+        if (validPaths.length() == 1 && QFileInfo(validPaths[0]).isDir()) {
             // When calculating the size of a selection, the selected
             // paths themselves are also included in the calculation.
             // If the user wants to see the size of the content of a
@@ -217,7 +226,8 @@ int Engine::requestFileSizeInfo(const QStringList& paths)
             QStringLiteral("ok"),
             filesizeToString(bytes),
             QString::number(dirs),
-            QString::number(files)
+            QString::number(files),
+            QString::number(topLevelItems)
         };
     });
 }
