@@ -155,80 +155,80 @@
 <context>
     <name>BookmarksModel</name>
     <message>
-        <location filename="../src/settings.cpp" line="1005"/>
+        <location filename="../src/bookmarks.cpp" line="507"/>
         <source>Memory card</source>
         <translation>记忆卡</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1007"/>
+        <location filename="../src/bookmarks.cpp" line="509"/>
         <source>Attached folder</source>
         <translation>已附加目录</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1009"/>
+        <location filename="../src/bookmarks.cpp" line="511"/>
         <source>Remote folder</source>
         <translation>远程目录</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1012"/>
+        <location filename="../src/bookmarks.cpp" line="514"/>
         <source>Removable media</source>
         <translation>可移动媒介</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1099"/>
-        <location filename="../src/settings.cpp" line="1592"/>
+        <location filename="../src/bookmarks.cpp" line="601"/>
+        <location filename="../src/bookmarks.cpp" line="1094"/>
         <source>Internal storage</source>
         <translation>内部储存空间</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1107"/>
+        <location filename="../src/bookmarks.cpp" line="609"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
         <translation>在%2里边的%1</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1507"/>
+        <location filename="../src/bookmarks.cpp" line="1009"/>
         <source>Home</source>
         <translation>主目录</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1162"/>
-        <location filename="../src/settings.cpp" line="1517"/>
+        <location filename="../src/bookmarks.cpp" line="664"/>
+        <location filename="../src/bookmarks.cpp" line="1019"/>
         <source>Documents</source>
         <translation>文档</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1164"/>
-        <location filename="../src/settings.cpp" line="1527"/>
+        <location filename="../src/bookmarks.cpp" line="666"/>
+        <location filename="../src/bookmarks.cpp" line="1029"/>
         <source>Downloads</source>
         <translation>下载</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1170"/>
-        <location filename="../src/settings.cpp" line="1557"/>
+        <location filename="../src/bookmarks.cpp" line="672"/>
+        <location filename="../src/bookmarks.cpp" line="1059"/>
         <source>Music</source>
         <translation>音乐</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1166"/>
-        <location filename="../src/settings.cpp" line="1537"/>
+        <location filename="../src/bookmarks.cpp" line="668"/>
+        <location filename="../src/bookmarks.cpp" line="1039"/>
         <source>Pictures</source>
         <translation>图片</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1168"/>
-        <location filename="../src/settings.cpp" line="1547"/>
+        <location filename="../src/bookmarks.cpp" line="670"/>
+        <location filename="../src/bookmarks.cpp" line="1049"/>
         <source>Videos</source>
         <translation>视频</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1567"/>
-        <location filename="../src/settings.cpp" line="1593"/>
+        <location filename="../src/bookmarks.cpp" line="1069"/>
+        <location filename="../src/bookmarks.cpp" line="1095"/>
         <source>Android storage</source>
         <translation>Android 存储</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1577"/>
+        <location filename="../src/bookmarks.cpp" line="1079"/>
         <source>Root</source>
         <translation>根目录</translation>
     </message>
@@ -625,22 +625,22 @@
 <context>
     <name>Engine</name>
     <message>
-        <location filename="../src/engine.cpp" line="89"/>
+        <location filename="../src/engine.cpp" line="78"/>
         <source>Destination does not exist</source>
         <translation>目标不存在</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="100"/>
+        <location filename="../src/engine.cpp" line="89"/>
         <source>Cannot overwrite itself</source>
         <translation>不能复写自身</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="106"/>
+        <location filename="../src/engine.cpp" line="95"/>
         <source>Cannot move/copy to itself</source>
         <translation>不能移动/复制到自身</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="81"/>
+        <location filename="../src/engine.cpp" line="70"/>
         <source>No files to paste</source>
         <translation>没有需要粘贴的文件</translation>
     </message>
@@ -822,31 +822,31 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="264"/>
+        <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>压缩文件</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="273"/>
+        <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
         <translation>编辑连接目标</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="278"/>
+        <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
         <translation>应用</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="298"/>
+        <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>编辑文件</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="323"/>
+        <location filename="../qml/components/FileActions.qml" line="324"/>
         <source>show file properties</source>
         <translation>显示文件属性</translation>
     </message>
@@ -872,50 +872,50 @@
 <context>
     <name>FileData</name>
     <message>
-        <location filename="../src/filedata.cpp" line="94"/>
+        <location filename="../src/filedata.cpp" line="87"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
         <translation>空</translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/filedata.cpp" line="95"/>
+        <location filename="../src/filedata.cpp" line="88"/>
         <source>%n item(s)</source>
         <translation>
             <numerusform>%n 个项目</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="247"/>
+        <location filename="../src/filedata.cpp" line="248"/>
         <source>File does not exist</source>
         <translation>文件不存在</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="297"/>
+        <location filename="../src/filedata.cpp" line="298"/>
         <source>block device</source>
         <translation>块设备</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="301"/>
+        <location filename="../src/filedata.cpp" line="302"/>
         <source>character device</source>
         <translation>字符设备</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="305"/>
+        <location filename="../src/filedata.cpp" line="306"/>
         <source>pipe</source>
         <translation>管道</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="309"/>
+        <location filename="../src/filedata.cpp" line="310"/>
         <source>socket</source>
         <translation>套接字</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="313"/>
+        <location filename="../src/filedata.cpp" line="314"/>
         <source>folder</source>
         <translation>目录</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="319"/>
+        <location filename="../src/filedata.cpp" line="320"/>
         <source>unknown</source>
         <translation>未知</translation>
     </message>
@@ -1604,18 +1604,18 @@
 <context>
     <name>ImageMetaData</name>
     <message>
-        <location filename="../src/filedata.cpp" line="345"/>
+        <location filename="../src/filedata.cpp" line="346"/>
         <source>Image Size</source>
         <translation>图像大小</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="351"/>
+        <location filename="../src/filedata.cpp" line="352"/>
         <source>%1 x %2</source>
         <extracomment>image size description without aspect ratio: 1=width, 2=height</extracomment>
         <translation>%1 x %2</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="355"/>
+        <location filename="../src/filedata.cpp" line="356"/>
         <source>%1 x %2 (%3)</source>
         <extracomment>image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9</extracomment>
         <translation>%1 x %2 (%3)</translation>
@@ -2713,7 +2713,7 @@ exposure program</extracomment>
         <translation>在ROOT模式下使用文件浏览器时要小心。行动可能会意外地破坏你的系统。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
         <translation>在ROOT模式下启动文件浏览器</translation>
     </message>
@@ -2821,42 +2821,42 @@ exposure program</extracomment>
 <context>
     <name>ShortcutsList</name>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="275"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="280"/>
         <source>Open system settings</source>
         <translation>打开系统设置</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="293"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="302"/>
         <source>Rename</source>
         <translation>重命名</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="300"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="309"/>
         <source>Sort</source>
         <translation>排序</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="306"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="315"/>
         <source>Remove</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="327"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="336"/>
         <source>Custom</source>
         <translation>自定义</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="326"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="335"/>
         <source>Locations</source>
         <translation>位置</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="325"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="334"/>
         <source>Storage devices</source>
         <translation>存储设备</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="324"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="333"/>
         <source>Bookmarks</source>
         <translation>收藏</translation>
     </message>
@@ -2919,23 +2919,23 @@ exposure program</extracomment>
         <translation>已打开新窗口。应用有时会在后台继续运行。</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="271"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="272"/>
         <source>Create a new bookmark</source>
         <translation>创建新收藏夹</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="283"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="284"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="289"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="291"/>
         <source>Open storage settings</source>
         <translation>打开储存设置</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="108"/>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="300"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="306"/>
         <source>Places</source>
         <translation>位置</translation>
     </message>
@@ -2943,43 +2943,61 @@ exposure program</extracomment>
 <context>
     <name>SizeDetailItem</name>
     <message>
-        <location filename="../qml/components/SizeDetailItem.qml" line="34"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="35"/>
         <source>Size</source>
         <translation>大小</translation>
     </message>
     <message>
-        <location filename="../qml/components/SizeDetailItem.qml" line="55"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="56"/>
         <source>size</source>
         <translation>大小</translation>
     </message>
     <message>
-        <location filename="../qml/components/SizeDetailItem.qml" line="62"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="63"/>
         <source>directories</source>
         <translation>目录</translation>
     </message>
     <message>
-        <location filename="../qml/components/SizeDetailItem.qml" line="69"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="70"/>
         <source>files</source>
         <translation>文件</translation>
     </message>
     <message>
-        <location filename="../qml/components/SizeDetailItem.qml" line="79"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="80"/>
         <source>unknown size</source>
         <translation>大小未知</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/SizeDetailItem.qml" line="83"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="84"/>
         <source>%n directories</source>
         <translation>
             <numerusform>%n 个目录</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/SizeDetailItem.qml" line="91"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="92"/>
         <source>%n file(s)</source>
         <translation>
             <numerusform>%n 个文件</numerusform>
         </translation>
+    </message>
+</context>
+<context>
+    <name>SpaceInspectorMenuItem</name>
+    <message>
+        <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="18"/>
+        <source>Analyse disk usage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="29"/>
+        <source>The “Space Inspector” app will open shortly.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="37"/>
+        <source>The “Space Inspector” app could not be opened.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

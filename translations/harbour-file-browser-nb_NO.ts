@@ -155,80 +155,80 @@
 <context>
     <name>BookmarksModel</name>
     <message>
-        <location filename="../src/settings.cpp" line="1005"/>
+        <location filename="../src/bookmarks.cpp" line="507"/>
         <source>Memory card</source>
         <translation>Minnekort</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1007"/>
+        <location filename="../src/bookmarks.cpp" line="509"/>
         <source>Attached folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1009"/>
+        <location filename="../src/bookmarks.cpp" line="511"/>
         <source>Remote folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1012"/>
+        <location filename="../src/bookmarks.cpp" line="514"/>
         <source>Removable media</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1099"/>
-        <location filename="../src/settings.cpp" line="1592"/>
+        <location filename="../src/bookmarks.cpp" line="601"/>
+        <location filename="../src/bookmarks.cpp" line="1094"/>
         <source>Internal storage</source>
         <translation>Intenlagring</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1107"/>
+        <location filename="../src/bookmarks.cpp" line="609"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
         <translation>«%1» på «%2»</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1507"/>
+        <location filename="../src/bookmarks.cpp" line="1009"/>
         <source>Home</source>
         <translation type="unfinished">Hjem</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1162"/>
-        <location filename="../src/settings.cpp" line="1517"/>
+        <location filename="../src/bookmarks.cpp" line="664"/>
+        <location filename="../src/bookmarks.cpp" line="1019"/>
         <source>Documents</source>
         <translation type="unfinished">Dokumenter</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1164"/>
-        <location filename="../src/settings.cpp" line="1527"/>
+        <location filename="../src/bookmarks.cpp" line="666"/>
+        <location filename="../src/bookmarks.cpp" line="1029"/>
         <source>Downloads</source>
         <translation type="unfinished">Nedlastinger</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1170"/>
-        <location filename="../src/settings.cpp" line="1557"/>
+        <location filename="../src/bookmarks.cpp" line="672"/>
+        <location filename="../src/bookmarks.cpp" line="1059"/>
         <source>Music</source>
         <translation type="unfinished">Musikk</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1166"/>
-        <location filename="../src/settings.cpp" line="1537"/>
+        <location filename="../src/bookmarks.cpp" line="668"/>
+        <location filename="../src/bookmarks.cpp" line="1039"/>
         <source>Pictures</source>
         <translation type="unfinished">Bilder</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1168"/>
-        <location filename="../src/settings.cpp" line="1547"/>
+        <location filename="../src/bookmarks.cpp" line="670"/>
+        <location filename="../src/bookmarks.cpp" line="1049"/>
         <source>Videos</source>
         <translation type="unfinished">Videoer</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1567"/>
-        <location filename="../src/settings.cpp" line="1593"/>
+        <location filename="../src/bookmarks.cpp" line="1069"/>
+        <location filename="../src/bookmarks.cpp" line="1095"/>
         <source>Android storage</source>
         <translation type="unfinished">Android-lagring</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="1577"/>
+        <location filename="../src/bookmarks.cpp" line="1079"/>
         <source>Root</source>
         <translation type="unfinished">Rot</translation>
     </message>
@@ -629,22 +629,22 @@
 <context>
     <name>Engine</name>
     <message>
-        <location filename="../src/engine.cpp" line="81"/>
+        <location filename="../src/engine.cpp" line="70"/>
         <source>No files to paste</source>
         <translation>Ingen filer å lime inn</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="89"/>
+        <location filename="../src/engine.cpp" line="78"/>
         <source>Destination does not exist</source>
         <translation>Målet finnes ikke</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="100"/>
+        <location filename="../src/engine.cpp" line="89"/>
         <source>Cannot overwrite itself</source>
         <translation>Kan ikke overskrive seg selv</translation>
     </message>
     <message>
-        <location filename="../src/engine.cpp" line="106"/>
+        <location filename="../src/engine.cpp" line="95"/>
         <source>Cannot move/copy to itself</source>
         <translation>Kan ikke flytte/kopiere til seg selv</translation>
     </message>
@@ -835,7 +835,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="264"/>
+        <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>pakk sammen fil</numerusform>
@@ -843,17 +843,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="273"/>
+        <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
         <translation>rediger lenkemål</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="278"/>
+        <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
         <translation>Bruk</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="298"/>
+        <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>rediger fil</numerusform>
@@ -861,7 +861,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="323"/>
+        <location filename="../qml/components/FileActions.qml" line="324"/>
         <source>show file properties</source>
         <translation>vis filegenskaper</translation>
     </message>
@@ -887,13 +887,13 @@
 <context>
     <name>FileData</name>
     <message>
-        <location filename="../src/filedata.cpp" line="94"/>
+        <location filename="../src/filedata.cpp" line="87"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
         <translation type="unfinished">tom</translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/filedata.cpp" line="95"/>
+        <location filename="../src/filedata.cpp" line="88"/>
         <source>%n item(s)</source>
         <translation type="unfinished">
             <numerusform>%n element</numerusform>
@@ -901,37 +901,37 @@
         </translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="247"/>
+        <location filename="../src/filedata.cpp" line="248"/>
         <source>File does not exist</source>
         <translation>Filen finnes ikke</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="297"/>
+        <location filename="../src/filedata.cpp" line="298"/>
         <source>block device</source>
         <translation>blokkenhet</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="301"/>
+        <location filename="../src/filedata.cpp" line="302"/>
         <source>character device</source>
         <translation>tegnenhet</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="305"/>
+        <location filename="../src/filedata.cpp" line="306"/>
         <source>pipe</source>
         <translation>rør</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="309"/>
+        <location filename="../src/filedata.cpp" line="310"/>
         <source>socket</source>
         <translation>socket</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="313"/>
+        <location filename="../src/filedata.cpp" line="314"/>
         <source>folder</source>
         <translation>mappe</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="319"/>
+        <location filename="../src/filedata.cpp" line="320"/>
         <source>unknown</source>
         <translation>ukjent</translation>
     </message>
@@ -1621,18 +1621,18 @@
 <context>
     <name>ImageMetaData</name>
     <message>
-        <location filename="../src/filedata.cpp" line="345"/>
+        <location filename="../src/filedata.cpp" line="346"/>
         <source>Image Size</source>
         <translation>Bildestørrelse</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="351"/>
+        <location filename="../src/filedata.cpp" line="352"/>
         <source>%1 x %2</source>
         <extracomment>image size description without aspect ratio: 1=width, 2=height</extracomment>
         <translation>%1 x %2</translation>
     </message>
     <message>
-        <location filename="../src/filedata.cpp" line="355"/>
+        <location filename="../src/filedata.cpp" line="356"/>
         <source>%1 x %2 (%3)</source>
         <extracomment>image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9</extracomment>
         <translation>%1 x %2 (%3)</translation>
@@ -2735,7 +2735,7 @@ exposure program</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2845,42 +2845,42 @@ exposure program</extracomment>
 <context>
     <name>ShortcutsList</name>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="275"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="280"/>
         <source>Open system settings</source>
         <translation>Åpne systeminnsntillinger</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="293"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="302"/>
         <source>Rename</source>
         <translation type="unfinished">Gi nytt navn</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="300"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="309"/>
         <source>Sort</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="306"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="315"/>
         <source>Remove</source>
         <translation>Fjern</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="327"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="336"/>
         <source>Custom</source>
         <translation>Egendefinert</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="326"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="335"/>
         <source>Locations</source>
         <translation>Steder</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="325"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="334"/>
         <source>Storage devices</source>
         <translation>Lagringsenheter</translation>
     </message>
     <message>
-        <location filename="../qml/components/ShortcutsList.qml" line="324"/>
+        <location filename="../qml/components/ShortcutsList.qml" line="333"/>
         <source>Bookmarks</source>
         <translation>Bokmerker</translation>
     </message>
@@ -2889,7 +2889,7 @@ exposure program</extracomment>
     <name>ShortcutsPage</name>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="108"/>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="300"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="306"/>
         <source>Places</source>
         <translation>Steder</translation>
     </message>
@@ -2949,17 +2949,17 @@ exposure program</extracomment>
         <translation>Søk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="271"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="272"/>
         <source>Create a new bookmark</source>
         <translation>Opprett nytt bokmerke</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="283"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="284"/>
         <source>Save</source>
         <translation>Lagre</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ShortcutsPage.qml" line="289"/>
+        <location filename="../qml/pages/ShortcutsPage.qml" line="291"/>
         <source>Open storage settings</source>
         <translation>Åpne lagringsinnstillinger</translation>
     </message>
@@ -2967,32 +2967,32 @@ exposure program</extracomment>
 <context>
     <name>SizeDetailItem</name>
     <message>
-        <location filename="../qml/components/SizeDetailItem.qml" line="34"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="35"/>
         <source>Size</source>
         <translation>Størrelse</translation>
     </message>
     <message>
-        <location filename="../qml/components/SizeDetailItem.qml" line="55"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="56"/>
         <source>size</source>
         <translation>størrelse</translation>
     </message>
     <message>
-        <location filename="../qml/components/SizeDetailItem.qml" line="62"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="63"/>
         <source>directories</source>
         <translation>mapper</translation>
     </message>
     <message>
-        <location filename="../qml/components/SizeDetailItem.qml" line="69"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="70"/>
         <source>files</source>
         <translation>filer</translation>
     </message>
     <message>
-        <location filename="../qml/components/SizeDetailItem.qml" line="79"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="80"/>
         <source>unknown size</source>
         <translation>ukjent størrelse</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/SizeDetailItem.qml" line="83"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="84"/>
         <source>%n directories</source>
         <translation>
             <numerusform>én mappe</numerusform>
@@ -3000,12 +3000,30 @@ exposure program</extracomment>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/SizeDetailItem.qml" line="91"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="92"/>
         <source>%n file(s)</source>
         <translation>
             <numerusform>én fil</numerusform>
             <numerusform>%n filer</numerusform>
         </translation>
+    </message>
+</context>
+<context>
+    <name>SpaceInspectorMenuItem</name>
+    <message>
+        <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="18"/>
+        <source>Analyse disk usage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="29"/>
+        <source>The “Space Inspector” app will open shortly.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="37"/>
+        <source>The “Space Inspector” app could not be opened.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
