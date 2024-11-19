@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2019-2023 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2024 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -20,6 +20,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import Harbour.FileBrowser.Engine 1.0
 
 Item {
     width: parent.width
@@ -27,7 +28,7 @@ Item {
     height: sizeLabel.height+dirCountLabel.height+fileCountLabel.height
 
     property var files: []
-    property int _workerHandle: engine.requestFileSizeInfo(files)
+    property int _workerHandle: Engine.requestFileSizeInfo(files)
 
     Label {
         id: title
@@ -70,7 +71,7 @@ Item {
     }
 
     Connections {
-        target: engine
+        target: Engine
         onFileSizeInfoReady: {
             if (_workerHandle == handle) {
                 _workerHandle = -1
