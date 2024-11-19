@@ -42,6 +42,7 @@ class FileData : public QObject
     Q_PROPERTY(QString modified READ modified() NOTIFY modifiedChanged())
     Q_PROPERTY(QString modifiedLong READ modifiedLong() NOTIFY modifiedChanged())
     Q_PROPERTY(QString created READ created() NOTIFY createdChanged())
+    Q_PROPERTY(QString createdLong READ createdLong() NOTIFY createdChanged())
     Q_PROPERTY(QString absolutePath READ absolutePath() NOTIFY absolutePathChanged())
     Q_PROPERTY(QString absoluteFilePath READ absoluteFilePath() NOTIFY absoluteFilePathChanged())
     Q_PROPERTY(QString name READ name() NOTIFY nameChanged())
