@@ -68,6 +68,11 @@
             return QString::fromLatin1(QMetaEnum::fromType<Enum>().valueToKey(value)); \
         } \
         \
+        Q_INVOKABLE static int value(const QString& string) { \
+            auto stdString = string.toStdString(); \
+            return QMetaEnum::fromType<Enum>().keyToValue(stdString.c_str()); \
+        } \
+        \
         static QObject* qmlInstance(QQmlEngine* engine, QJSEngine* scriptEngine) { \
             Q_UNUSED(engine); \
             Q_UNUSED(scriptEngine); \
