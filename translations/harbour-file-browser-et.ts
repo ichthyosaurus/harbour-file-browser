@@ -6,7 +6,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="55"/>
         <source>A fully-fledged file manager for Sailfish OS.</source>
-        <translation>Tervikliku funktsionaalsusega failihaldur Sailfish OS-i jaoks.</translation>
+        <translation>Tervikliku funktsionaalsusega failihaldur Sailfish OSi jaoks.</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="82"/>
@@ -1229,7 +1229,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="48"/>
         <source>App Settings</source>
-        <translation>Rakenduse seaded</translation>
+        <translation>Rakenduse seadistused</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="53"/>
@@ -3013,17 +3013,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="18"/>
         <source>Analyse disk usage</source>
-        <translation type="unfinished"></translation>
+        <translation>Analüüsi ruumikasutust andmekandjal</translation>
     </message>
     <message>
         <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="29"/>
         <source>The “Space Inspector” app will open shortly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Avaneb rakendus „Space Inspector“.</translation>
     </message>
     <message>
         <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="37"/>
         <source>The “Space Inspector” app could not be opened.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rakendust „Space Inspector“ ei õnnestunud avada.</translation>
     </message>
 </context>
 <context>
