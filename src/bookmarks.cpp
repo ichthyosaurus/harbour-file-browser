@@ -762,7 +762,7 @@ void BookmarksModel::reloadIgnoredMounts()
             {QStringLiteral("/bt_firmware")},
             {QStringLiteral("/firmware_mnt")},
             {QStringLiteral("/metadata")},
-            {QStringLiteral("/mnt/vendor/persist")},
+            {QStringLiteral("/blackbox")},
         };
 
         // All mount points below these paths are ignored.
@@ -777,6 +777,7 @@ void BookmarksModel::reloadIgnoredMounts()
             {QStringLiteral("/bt_firmware/")},
             {QStringLiteral("/firmware_mnt/")},
             {QStringLiteral("/persist/")},
+            {QStringLiteral("/mnt/vendor/")},
         };
 
         QJsonObject object;
