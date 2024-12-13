@@ -26,6 +26,8 @@ import Sailfish.Silica 1.0
 import harbour.file.browser.FileData 1.0
 import harbour.file.browser.Settings 1.0
 import QtMultimedia 5.0
+import Amber.Mpris 1.0
+import Opal.MediaPlayer.private 1.0  // for MprisConnector
 
 import "../components"
 import "../js/paths.js" as Paths
@@ -50,6 +52,35 @@ Page {
     FileData {
         id: fileData
         file: page.file
+    }
+
+    Loader {
+        active: fileData.category === "audio"
+        sourceComponent: Component {
+            MprisConnector {
+                id: mprisPlayer
+
+                canSeek: false
+                identity: qsTr("File Browser", "translated app name")
+                title: fileData.name
+
+                onPauseRequested: playAudio()
+                onPlayRequested: playAudio()
+                onPlayPauseRequested: playAudio()
+                onStopRequested: audioPlayer.stop()
+
+                property Connections _c: Connections {
+                    target: audioPlayer
+                    onPlaybackStateChanged: {
+                        if (audioPlayer.playbackState === MediaPlayer.PlayingState) {
+                            mprisPlayer.playbackStatus = Mpris.Playing
+                        } else {
+                            mprisPlayer.playbackStatus = Mpris.Paused
+                        }
+                    }
+                }
+            }
+        }
     }
 
     SilicaFlickable {
@@ -455,10 +486,10 @@ Page {
 
     function playAudio() {
         if (audioPlayer.playbackState !== MediaPlayer.PlayingState) {
-            audioPlayer.source = fileData.file;
-            audioPlayer.play();
+            audioPlayer.source = fileData.file
+            audioPlayer.play()
         } else {
-            audioPlayer.stop();
+            audioPlayer.pause()
         }
     }
 }
