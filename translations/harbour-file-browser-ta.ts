@@ -1,147 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="uk">
+<TS version="2.1" language="ta">
 <context>
     <name>AboutPage</name>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="55"/>
         <source>A fully-fledged file manager for Sailfish OS.</source>
-        <translation>Повноцінний файловий менеджер для Sailfish OS.</translation>
+        <translation>SAILFISH OS க்கான முழுமையான கோப்பு மேலாளர்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="82"/>
         <source>Development</source>
-        <translation>Розробка</translation>
+        <translation>வளர்ச்சி</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="85"/>
         <source>Programming</source>
-        <translation>Програмування</translation>
+        <translation>நிரலாக்க</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="92"/>
         <source>Icon Design</source>
-        <translation>Дизайн іконок</translation>
+        <translation>படவுரு வடிவமைப்பு</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="99"/>
         <source>Translations</source>
-        <translation>Переклади</translation>
+        <translation>மொழிபெயர்ப்புகள்</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="156"/>
         <source>Romanian</source>
-        <translation>Румунська</translation>
+        <translation>ருமேனிய</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="171"/>
         <source>Norwegian Bokmål</source>
-        <translation>Норвезька (Букмол)</translation>
+        <translation>நார்வேசியன் பொக்மால்</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="240"/>
         <source>English</source>
-        <translation>Англійська</translation>
+        <translation>ஆங்கிலம்</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="279"/>
         <source>Belarusian</source>
-        <translation>Білоруська</translation>
+        <translation>பெலாருசியன்</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="206"/>
         <source>German</source>
-        <translation>Німецька</translation>
+        <translation>செர்மன்</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="226"/>
         <source>Finnish</source>
-        <translation>Фінська</translation>
+        <translation>பின்னிச்</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="248"/>
         <source>Dutch (Belgium)</source>
-        <translation>Нідерландська (Бельгія)</translation>
+        <translation>டச்சு (பெல்சியம்)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="267"/>
         <source>Chinese</source>
-        <translation>Китайська</translation>
+        <translation>சீன</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="145"/>
         <source>Russian</source>
-        <translation>Російська</translation>
+        <translation>ரச்ய</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="121"/>
         <source>Swedish</source>
-        <translation>Шведська</translation>
+        <translation>ச்வீடிச்</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="102"/>
         <source>Ukrainian</source>
-        <translation>Українська</translation>
+        <translation>உக்ரேனிய</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="178"/>
         <source>Italian</source>
-        <translation>Італійська</translation>
+        <translation>இத்தாலிய</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="130"/>
         <source>Spanish</source>
-        <translation>Іспанська</translation>
+        <translation>ச்பானிச்</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="214"/>
         <source>French</source>
-        <translation>Французька</translation>
+        <translation>பிரஞ்சு</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="254"/>
         <source>Dutch</source>
-        <translation>Нідерландська</translation>
+        <translation>டச்சு</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="200"/>
         <source>Greek</source>
-        <translation>Грецька</translation>
+        <translation>கிரேக்கம்</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="261"/>
         <source>Czech</source>
-        <translation>Чеська</translation>
+        <translation>செக்</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="139"/>
         <source>Slovak</source>
-        <translation>Словацька</translation>
+        <translation>ச்லோவாக்</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="193"/>
         <source>Hungarian</source>
-        <translation>Угорська</translation>
+        <translation>அங்கேரியன்</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="234"/>
         <source>Estonian</source>
-        <translation>Естонська</translation>
+        <translation>எச்டோனிய</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="162"/>
         <source>Polish</source>
-        <translation>Польська</translation>
+        <translation>போலீச்</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="185"/>
         <source>Indonesian</source>
-        <translation>Індонезійська</translation>
+        <translation>இந்தோனேசிய</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="112"/>
         <source>Turkish</source>
-        <translation>Турецька</translation>
+        <translation>துருக்கிய</translation>
     </message>
 </context>
 <context>
@@ -149,7 +149,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="11"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
-        <translation>Будь ласка, знайдіть хвилинку, якщо можете зробити свій внесок у цей проект у той чи інший спосіб.</translation>
+        <translation>இந்த திட்டத்திற்கு நீங்கள் ஒரு வழியில் அல்லது வேறு வழியில் பங்களிக்க முடியுமா என்பதைக் கருத்தில் கொள்ள சிறிது நேரம் ஒதுக்குங்கள்.</translation>
     </message>
 </context>
 <context>
@@ -157,80 +157,80 @@
     <message>
         <location filename="../src/bookmarks.cpp" line="507"/>
         <source>Memory card</source>
-        <translation>Карта пам&apos;яті</translation>
+        <translation>நினைவக அட்டை</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="509"/>
         <source>Attached folder</source>
-        <translation>Прикріплена папка</translation>
+        <translation>இணைக்கப்பட்ட கோப்புறை</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="511"/>
         <source>Remote folder</source>
-        <translation>Віддалена папка</translation>
+        <translation>தொலை கோப்புறை</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="514"/>
         <source>Removable media</source>
-        <translation>Змінний носій</translation>
+        <translation>நீக்கக்கூடிய மீடியா</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="601"/>
         <location filename="../src/bookmarks.cpp" line="1094"/>
         <source>Internal storage</source>
-        <translation>Внутрішнє сховище</translation>
+        <translation>உள் சேமிப்பு</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="609"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
-        <translation>«%1» на «%2»</translation>
+        <translation>“%2” இல் “%1”</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="1009"/>
         <source>Home</source>
-        <translation>Головна</translation>
+        <translation>வீடு</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="664"/>
         <location filename="../src/bookmarks.cpp" line="1019"/>
         <source>Documents</source>
-        <translation>Документи</translation>
+        <translation>ஆவணங்கள்</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="666"/>
         <location filename="../src/bookmarks.cpp" line="1029"/>
         <source>Downloads</source>
-        <translation>Завантаження</translation>
+        <translation>பதிவிறக்கங்கள்</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="672"/>
         <location filename="../src/bookmarks.cpp" line="1059"/>
         <source>Music</source>
-        <translation>Музика</translation>
+        <translation>இசை</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="668"/>
         <location filename="../src/bookmarks.cpp" line="1039"/>
         <source>Pictures</source>
-        <translation>Фотографії</translation>
+        <translation>படங்கள்</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="670"/>
         <location filename="../src/bookmarks.cpp" line="1049"/>
         <source>Videos</source>
-        <translation>Відео</translation>
+        <translation>வீடியோக்கள்</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="1069"/>
         <location filename="../src/bookmarks.cpp" line="1095"/>
         <source>Android storage</source>
-        <translation>Android сховище</translation>
+        <translation>ஆண்ட்ராய்டு சேமிப்பு</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="1079"/>
         <source>Root</source>
-        <translation>Root</translation>
+        <translation>மூலம்</translation>
     </message>
 </context>
 <context>
@@ -239,17 +239,17 @@
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="54"/>
         <source>Apply</source>
         <comment>as in &apos;apply these changes&apos;</comment>
-        <translation>Застосувати</translation>
+        <translation>இடு</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="55"/>
         <source>Rename bookmarks</source>
-        <translation>Перейменувати закладки</translation>
+        <translation>புக்மார்க்குகளை மறுபெயரிடுங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="89"/>
         <source>Name must not be empty</source>
-        <translation>Ім&apos;я не повинно бути порожнім</translation>
+        <translation>பெயர் காலியாக இருக்கக்கூடாது</translation>
     </message>
 </context>
 <context>
@@ -257,7 +257,7 @@
     <message>
         <location filename="../qml/pages/BookmarksSortPage.qml" line="25"/>
         <source>Sort bookmarks</source>
-        <translation>Сортувати закладки</translation>
+        <translation>புக்மார்க்குகளை வரிசைப்படுத்துங்கள்</translation>
     </message>
 </context>
 <context>
@@ -265,70 +265,67 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="70"/>
         <source>Clipboard</source>
-        <translation>Буфер обміну</translation>
+        <translation>இடைநிலைப் பலகை</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="75"/>
         <source>%n item(s) to be copied</source>
         <translation>
-            <numerusform>%n елемент для копіювання</numerusform>
-            <numerusform>%n елементи для копіювання</numerusform>
-            <numerusform>%n елементів для копіювання</numerusform>
+            <numerusform>%N உருப்படி நகலெடுக்கப்பட வேண்டும்</numerusform>
+            <numerusform>நகலெடுக்கப்பட வேண்டிய %n உருப்படிகள்</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
         <source>%n item(s) to be moved</source>
         <translation>
-            <numerusform>%n елемент для переміщення</numerusform>
-            <numerusform>%n елементи для переміщення</numerusform>
-            <numerusform>%n елементів для переміщення</numerusform>
+            <numerusform>%N உருப்படி நகர்த்தப்பட வேண்டும்</numerusform>
+            <numerusform>நகர்த்தப்பட வேண்டிய %n உருப்படிகள்</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="260"/>
         <source>Remove from clipboard</source>
-        <translation>Видалити з буфера обміну</translation>
+        <translation>கிளிப்போர்டிலிருந்து அகற்று</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="252"/>
         <source>Open this folder</source>
-        <translation>Відкрити цю папку</translation>
+        <translation>இந்த கோப்புறையைத் திறக்கவும்</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
         <source>%n item(s) to be linked</source>
         <translation>
-            <numerusform>%n елемент для зв&apos;язування</numerusform>
-            <numerusform>%n елементи для зв&apos;язування</numerusform>
-            <numerusform>%n елементів для зв&apos;язування</numerusform>
+            <numerusform>இணைக்கப்பட வேண்டிய %n உருப்படி</numerusform>
+            <numerusform>இணைக்கப்பட வேண்டிய %n உருப்படிகள்</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="115"/>
         <source>Clear</source>
         <comment>verb as in &apos;clear all contents from the clipboard&apos;</comment>
-        <translation>Очистити</translation>
+        <translation>தெளிவான</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="117"/>
         <source>Clipboard cleared</source>
-        <translation>Буфер обміну очищено</translation>
+        <translation>கிளிப்போர்டு அழிக்கப்பட்டது</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="256"/>
         <source>Open containing folder</source>
-        <translation>Відкрити вміст папки</translation>
+        <translation>கோப்புறை கொண்ட திறந்த</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="274"/>
         <source>Empty</source>
-        <translation>Порожньо</translation>
+        <translation>காலி</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="275"/>
         <source>Cut or copied files will be shown here.</source>
-        <translation>Тут будуть показані вирізані або скопійовані файли.</translation>
+        <translation>வெட்டு அல்லது நகலெடுக்கப்பட்ட கோப்புகள் இங்கே காண்பிக்கப்படும்.</translation>
     </message>
 </context>
 <context>
@@ -337,32 +334,32 @@
         <location filename="../src/consolemodel.cpp" line="124"/>
         <location filename="../src/consolemodel.cpp" line="136"/>
         <source>** crashed</source>
-        <translation>** аварійно завершився</translation>
+        <translation>** செயலிழந்தது</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="126"/>
         <source>** error: %1</source>
-        <translation>** помилка: %1</translation>
+        <translation>** பிழை: %1</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="134"/>
         <source>** command “%1” not found</source>
-        <translation>** команду &quot;%1&quot; не знайдено</translation>
+        <translation>** கட்டளை “%1” காணப்படவில்லை</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="138"/>
         <source>** timeout reached</source>
-        <translation>** досягнуто ліміт часу</translation>
+        <translation>** நேரம் முடிந்தது</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="140"/>
         <source>** internal communication failed</source>
-        <translation>** Не вдалося встановити внутрішній зв&apos;язок</translation>
+        <translation>** உள் தொடர்பு தோல்வியுற்றது</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="142"/>
         <source>** an unknown error occurred</source>
-        <translation>** сталася невідома помилка</translation>
+        <translation>** அறியப்படாத பிழை ஏற்பட்டது</translation>
     </message>
 </context>
 <context>
@@ -371,17 +368,17 @@
         <location filename="../qml/pages/ConsolePage.qml" line="75"/>
         <source>Preview</source>
         <comment>as in &apos;incomplete/aggregated preview of the contents of a file&apos;</comment>
-        <translation>Попередній перегляд</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/ConsolePage.qml" line="153"/>
-        <source>Swipe from the right to view raw contents.</source>
-        <translation>Проведіть праворуч, щоб переглянути raw вміст.</translation>
+        <translation>முன்னோட்டம்</translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="151"/>
         <source>This file appears to be a software package. To install, swipe back and select the “Install” option from the menu.</source>
-        <translation>Цей файл є програмним пакетом. Щоб встановити його, проведіть пальцем назад і виберіть у меню пункт &quot;Встановити&quot;.</translation>
+        <translation>இந்த கோப்பு ஒரு மென்பொருள் தொகுப்பாகத் தோன்றுகிறது. நிறுவ, மீண்டும் ச்வைப் செய்து மெனுவிலிருந்து “நிறுவு” விருப்பத்தைத் தேர்ந்தெடுக்கவும்.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ConsolePage.qml" line="153"/>
+        <source>Swipe from the right to view raw contents.</source>
+        <translation>மூல உள்ளடக்கங்களைக் காண உரிமையிலிருந்து ச்வைப் செய்யவும்.</translation>
     </message>
 </context>
 <context>
@@ -389,7 +386,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="95"/>
         <source>Root Mode</source>
-        <translation>Root режим</translation>
+        <translation>ரூட் பயன்முறை</translation>
     </message>
 </context>
 <context>
@@ -397,69 +394,69 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="61"/>
         <source>Create</source>
-        <translation>Створити</translation>
+        <translation>உருவாக்கு</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="77"/>
         <source>Not permitted</source>
-        <translation>Не дозволено</translation>
+        <translation>அனுமதிக்கப்படவில்லை</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="78"/>
         <source>You don&apos;t have permission to change the contents of this directory.</source>
-        <translation>Ви не маєте права змінювати вміст цього каталогу.</translation>
+        <translation>இந்த கோப்பகத்தின் உள்ளடக்கங்களை மாற்ற உங்களுக்கு இசைவு இல்லை.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="94"/>
         <source>Create new</source>
-        <translation>Створити новий</translation>
+        <translation>புதியதை உருவாக்கவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="96"/>
         <source>The new folder will be created under “%1”.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation>Нова папка буде створена за адресою &quot;%1&quot;.</translation>
+        <translation>புதிய கோப்புறை “%1” இன் கீழ் உருவாக்கப்படும்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="98"/>
         <source>The new text file will be created under “%1” and can be edited later.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation>Новий текстовий файл буде створено за адресою &quot;%1&quot; і його можна буде відредагувати пізніше.</translation>
+        <translation>புதிய உரை கோப்பு “%1” இன் கீழ் உருவாக்கப்படும், பின்னர் திருத்தலாம்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="104"/>
         <source>folder</source>
-        <translation>папка</translation>
+        <translation>கோப்புறை</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="107"/>
         <source>empty text file</source>
-        <translation>порожній текстовий файл</translation>
+        <translation>வெற்று உரை கோப்பு</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="119"/>
         <source>Folder name</source>
-        <translation>Назва папки</translation>
+        <translation>கோப்புறை பெயர்</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="119"/>
         <source>File name</source>
-        <translation>Ім&apos;я файлу</translation>
+        <translation>கோப்பு பெயர்</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="138"/>
         <source>File names must not contain slashes. To create a new file in a folder below “%1”, first create a folder and then create the file.</source>
-        <translation>Імена файлів не повинні містити косих рисок. Щоб створити новий файл у папці під &quot;%1&quot;, спочатку створіть папку, а потім створіть файл.</translation>
+        <translation>கோப்பு பெயர்களில் குறைப்புக்கள் இருக்கக்கூடாது. “%1” க்குக் கீழே ஒரு கோப்புறையில் ஒரு புதிய கோப்பை உருவாக்க, முதலில் ஒரு கோப்புறையை உருவாக்கி பின்னர் கோப்பை உருவாக்கவும்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="142"/>
         <source>A file or folder with this name already exists.</source>
-        <translation>Файл або папка з таким ім&apos;ям вже існує.</translation>
+        <translation>இந்த பெயருடன் ஒரு கோப்பு அல்லது கோப்புறை ஏற்கனவே உள்ளது.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="145"/>
         <source>Using slashes in folder names will create sub-folders, like so:</source>
-        <translation>Використання косих рисок у назві папки створить підпапки, наприклад, так:</translation>
+        <translation>கோப்புறை பெயர்களில் ச்லாச்களைப் பயன்படுத்துவது அவ்வாறு துணை கோப்புறைகளை உருவாக்கும்:</translation>
     </message>
 </context>
 <context>
@@ -468,9 +465,8 @@
         <location filename="../qml/components/DetailList.qml" line="45"/>
         <source>... and %n more</source>
         <translation>
-            <numerusform>... та %n більше</numerusform>
-            <numerusform>... та %n більше</numerusform>
-            <numerusform>... та %n більше</numerusform>
+            <numerusform>... மற்றும் %n மேலும்</numerusform>
+            <numerusform>... மற்றும் %n மேலும்</numerusform>
         </translation>
     </message>
 </context>
@@ -479,12 +475,12 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show less</source>
-        <translation>сховати</translation>
+        <translation>குறைவாகக் காட்டு</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show more</source>
-        <translation>показати більше</translation>
+        <translation>மேலும் காட்டு</translation>
     </message>
 </context>
 <context>
@@ -493,95 +489,95 @@
         <location filename="../qml/pages/DirectoryPage.qml" line="158"/>
         <source>View Preferences</source>
         <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
-        <translation>Переглянути Параметри</translation>
+        <translation>விருப்பங்களைக் காண்க</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="165"/>
         <source>Create New...</source>
-        <translation>Створити новий...</translation>
+        <translation>புதியதை உருவாக்கு ...</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="178"/>
         <source>Paste</source>
-        <translation>Вставити</translation>
+        <translation>ஒட்டு</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="196"/>
         <source>Filter directory contents</source>
-        <translation>Фільтрувати вміст каталогу</translation>
+        <translation>அடைவு உள்ளடக்கங்களை வடிகட்டவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="278"/>
         <source>Search</source>
-        <translation>Пошук</translation>
+        <translation>தேடல்</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="283"/>
         <source>Remove bookmark</source>
-        <translation>Видалити закладку</translation>
+        <translation>புத்தகக்குறியை அகற்று</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="283"/>
         <source>Add to bookmarks</source>
-        <translation>Додати закладку</translation>
+        <translation>புக்மார்க்குகளில் சேர்க்கவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="292"/>
         <source>Copy path to clipboard</source>
-        <translation>Скопіювати шлях до буфера обміну</translation>
+        <translation>கிளிப்போர்டுக்கு பாதையை நகலெடுக்கவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="372"/>
         <source>filtered by: %1</source>
-        <translation>Відфільтровано за: %1</translation>
+        <translation>வடிகட்டப்பட்டது: %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="434"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
-        <translation>Немає збігів</translation>
+        <translation>பொருந்தவில்லை</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="436"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation>Порожньо</translation>
+        <translation>காலி</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="439"/>
         <source>No files matched the filter.</source>
-        <translation>Не знайдено жодного файлу, який би відповідав фільтру.</translation>
+        <translation>கோப்புகள் எதுவும் வடிகட்டியுடன் பொருந்தவில்லை.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="440"/>
         <source>This directory contains no files.</source>
-        <translation>Цей каталог не містить файлів.</translation>
+        <translation>இந்த கோப்பகத்தில் கோப்புகள் இல்லை.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="520"/>
         <location filename="../qml/pages/DirectoryPage.qml" line="523"/>
         <source>Deleting</source>
-        <translation>Видалення</translation>
+        <translation>நீக்குதல்</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="535"/>
         <source>Internally not ready</source>
-        <translation>Внутрішньо не готовий</translation>
+        <translation>உள்நாட்டில் தயாராக இல்லை</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="535"/>
         <source>Please simply try again</source>
-        <translation>Просто спробуйте ще раз</translation>
+        <translation>தயவுசெய்து மீண்டும் முயற்சிக்கவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="578"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation>Намагаєтесь перемістити між телефоном і SD картою? Це не працює, спробуйте скопіювати.</translation>
+        <translation>தொலைபேசி மற்றும் எச்டி கார்டுக்கு இடையில் செல்ல முயற்சிக்கிறீர்களா? இது வேலை செய்யாது, நகலெடுக்க முயற்சிக்கவும்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="580"/>
         <source>Perhaps the storage is full?</source>
-        <translation>Переповнена сховище?</translation>
+        <translation>ஒருவேளை சேமிப்பு நிரம்பியிருக்கலாம்?</translation>
     </message>
 </context>
 <context>
@@ -589,27 +585,27 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="48"/>
         <source>Deleting</source>
-        <translation>Видалення</translation>
+        <translation>நீக்குதல்</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="324"/>
         <source>Open target folder</source>
-        <translation>Відкрити цільову папку</translation>
+        <translation>இலக்கு கோப்புறையைத் திறக்கவும்</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="325"/>
         <source>Open containing folder</source>
-        <translation>Відкрити папку з вмістом</translation>
+        <translation>கோப்புறை கொண்ட திறந்த</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="337"/>
         <source>Remove bookmark</source>
-        <translation>Видалити закладку</translation>
+        <translation>புத்தகக்குறியை அகற்று</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="337"/>
         <source>Add to bookmarks</source>
-        <translation>Додати в закладки</translation>
+        <translation>புக்மார்க்குகளில் சேர்க்கவும்</translation>
     </message>
 </context>
 <context>
@@ -617,17 +613,17 @@
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="134"/>
         <source>Hide hidden files</source>
-        <translation>Приховати приховані файли</translation>
+        <translation>மறைக்கப்பட்ட கோப்புகளை மறைக்கவும்</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="135"/>
         <source>Show hidden files</source>
-        <translation>Показати приховані файли</translation>
+        <translation>மறைக்கப்பட்ட கோப்புகளைக் காட்டு</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="140"/>
         <source>Edit path</source>
-        <translation>Редагувати шлях</translation>
+        <translation>பாதையைத் திருத்து</translation>
     </message>
 </context>
 <context>
@@ -635,123 +631,123 @@
     <message>
         <location filename="../src/engine.cpp" line="70"/>
         <source>No files to paste</source>
-        <translation>Немає файлів для вставки</translation>
+        <translation>ஒட்டுவதற்கு கோப்புகள் இல்லை</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="78"/>
         <source>Destination does not exist</source>
-        <translation>Пункту призначення не існує</translation>
+        <translation>இலக்கு இல்லை</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="89"/>
         <source>Cannot overwrite itself</source>
-        <translation>Неможливо перезаписати себе</translation>
+        <translation>தன்னை மேலெழுத முடியாது</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="95"/>
         <source>Cannot move/copy to itself</source>
-        <translation>Неможливо перемістити/скопіювати до себе</translation>
+        <translation>தனக்குத்தானே நகர்த்த/நகலெடுக்க முடியாது</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="258"/>
         <source>File does not exist</source>
-        <translation>Файлу не існує</translation>
+        <translation>கோப்பு இல்லை</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="260"/>
         <source>Broken symbolic link</source>
-        <translation>Зламане символічне посилання</translation>
+        <translation>உடைந்த குறியீட்டு இணைப்பு</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="265"/>
         <source>Cannot read this type of file</source>
-        <translation>Не вдається прочитати цей тип файлів</translation>
+        <translation>இந்த வகை கோப்பைப் படிக்க முடியாது</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="271"/>
         <source>No permission to read the file</source>
-        <translation>Немає дозволу на читання файлу</translation>
+        <translation>கோப்பைப் படிக்க இசைவு இல்லை</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="275"/>
         <location filename="../src/engine.cpp" line="281"/>
         <source>Error reading file</source>
-        <translation>Помилка читання файлу</translation>
+        <translation>கோப்பைப் படிப்பது பிழை</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="284"/>
         <source>Empty file</source>
-        <translation>Порожній файл</translation>
+        <translation>வெற்று கோப்பு</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="310"/>
         <source>Binary file preview clipped at %1 kB</source>
-        <translation>Попередній перегляд бінарного файлу за посиланням %1 кб</translation>
+        <translation>பைனரி கோப்பு முன்னோட்டம் %1 kb இல் கிளிப் செய்யப்பட்டது</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="329"/>
         <source>Text file preview clipped at %1 lines</source>
-        <translation>Попередній перегляд текстового файлу обрізано на %1 рядків</translation>
+        <translation>உரை கோப்பு முன்னோட்டம் %1 வரிகளில் கிளிப் செய்யப்பட்டது</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="331"/>
         <source>Text file preview clipped at %1 kB</source>
-        <translation>Попередній перегляд текстового файлу за посиланням %1 кб</translation>
+        <translation>உரை கோப்பு முன்னோட்டம் %1 kb இல் கிளிப் செய்யப்பட்டது</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="350"/>
         <source>No permissions to create %1</source>
-        <translation>Немає дозволів на створення %1</translation>
+        <translation>%1 ஐ உருவாக்க அனுமதிகள் எதுவும் இல்லை</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="352"/>
         <source>Cannot create folder %1</source>
-        <translation>Не вдається створити папку %1</translation>
+        <translation>%1 கோப்புறை உருவாக்க முடியாது</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="368"/>
         <source>No permissions to create “%1” in “%2”</source>
-        <translation>Немає дозволів на створення &quot;%1&quot; в &quot;%2&quot;</translation>
+        <translation>“%2” இல் “%1” ஐ உருவாக்க அனுமதிகள் எதுவும் இல்லை</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="379"/>
         <source>Cannot create file “%1” in “%2”</source>
-        <translation>Не вдається створити файл &quot;%1&quot; в &quot;%2&quot;</translation>
+        <translation>“%2” இல் “%1” கோப்பை உருவாக்க முடியாது</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="415"/>
         <source>Cannot rename %1</source>
-        <translation>Неможливо перейменувати %1</translation>
+        <translation>%1 ஐ மறுபெயரிட முடியாது</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="432"/>
         <source>Source “%1” is not a symbolic link</source>
-        <translation>Джерело &quot;%1&quot; не є символічним посиланням</translation>
+        <translation>மூல “%1” என்பது ஒரு குறியீட்டு இணைப்பு அல்ல</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="441"/>
         <source>No permissions to change contents of “%1”</source>
-        <translation>Немає дозволів на зміну вмісту &quot;%1&quot;</translation>
+        <translation>“%1” இன் உள்ளடக்கங்களை மாற்ற அனுமதிகள் இல்லை</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="449"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
-        <translation>Не вдалося видалити старе посилання &quot;%1&quot;, що вказує на &quot;%2&quot;</translation>
+        <translation>“%2” ஐ சுட்டிக்காட்டி பழைய இணைப்பை “%1” அகற்றுவதில் தோல்வி</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="455"/>
         <source>Failed to revert link “%1” pointing to “%2” after failing to change target to “%3”</source>
-        <translation>Не вдалося повернути посилання &quot;%1&quot;, що вказує на &quot;%2&quot;, після невдалої спроби змінити ціль на &quot;%3&quot;</translation>
+        <translation>%3 இலக்கை “%2” என்று சுட்டிக்காட்டி “%1” ஐ மாற்றுவதில் தோல்வியுற்றது</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="462"/>
         <source>Failed to change link target of “%1” to “%2”</source>
-        <translation>Не вдалося змінити ціль посилання з &quot;%1&quot; на &quot;%2&quot;</translation>
+        <translation>“%1” இன் இணைப்பு இலக்கை “%2” ஆக மாற்றத் தவறிவிட்டது</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="488"/>
         <source>Cannot change permissions</source>
-        <translation>Неможливо змінити дозволи</translation>
+        <translation>அனுமதிகளை மாற்ற முடியாது</translation>
     </message>
 </context>
 <context>
@@ -760,125 +756,114 @@
         <location filename="../qml/components/FileActions.qml" line="86"/>
         <source>%n file(s) selected</source>
         <translation>
-            <numerusform>Вибрано %n файл</numerusform>
-            <numerusform>Вибрано %n файли</numerusform>
-            <numerusform>Вибрано %n файлів</numerusform>
+            <numerusform>%n கோப்பு தேர்ந்தெடுக்கப்பட்டது</numerusform>
+            <numerusform>%n கோப்புகள் தேர்ந்தெடுக்கப்பட்டன</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="114"/>
         <source>clear selection</source>
-        <translation>очистити виділення</translation>
+        <translation>தெளிவான தேர்வு</translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="115"/>
         <source>select all</source>
-        <translation>вибрати все</translation>
+        <translation>அனைத்தையும் தெரிவுசெய்</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="124"/>
         <source>cut file(s)</source>
         <translation>
-            <numerusform>вирізати файл</numerusform>
-            <numerusform>вирізати файли</numerusform>
-            <numerusform>вирізати файлів</numerusform>
+            <numerusform>கோப்பு வெட்டு</numerusform>
+            <numerusform>கோப்புகளை வெட்டுங்கள்</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="129"/>
         <source>%n file(s) cut</source>
         <translation>
-            <numerusform>%n файл вирізано</numerusform>
-            <numerusform>%n файли вирізано</numerusform>
-            <numerusform>%n файлів вирізано</numerusform>
+            <numerusform>%n கோப்பு வெட்டு</numerusform>
+            <numerusform>%n கோப்புகள் வெட்டப்படுகின்றன</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="138"/>
         <source>copy file(s)</source>
         <translation>
-            <numerusform>копіювати файл</numerusform>
-            <numerusform>копіювати файли</numerusform>
-            <numerusform>копіювати файлів</numerusform>
+            <numerusform>கோப்பை நகலெடுக்கவும்</numerusform>
+            <numerusform>கோப்புகளை நகலெடுக்கவும்</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="143"/>
         <source>%n file(s) copied</source>
         <translation>
-            <numerusform>%n файл скопійовано</numerusform>
-            <numerusform>%n файли скопійовано</numerusform>
-            <numerusform>%n файлів скопійовано</numerusform>
+            <numerusform>%n கோப்பு நகலெடுக்கப்பட்டது</numerusform>
+            <numerusform>%n கோப்புகள் நகலெடுக்கப்பட்டன</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="152"/>
         <source>transfer file(s)</source>
         <translation>
-            <numerusform>передавати файл</numerusform>
-            <numerusform>передавати файли</numerusform>
-            <numerusform>передавати файлів</numerusform>
+            <numerusform>கோப்பை மாற்றவும்</numerusform>
+            <numerusform>கோப்புகளை மாற்றவும்</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="171"/>
         <source>delete file(s)</source>
         <translation>
-            <numerusform>видалити файл</numerusform>
-            <numerusform>видалити файли</numerusform>
-            <numerusform>видалити файлів</numerusform>
+            <numerusform>கோப்பை அழி</numerusform>
+            <numerusform>கோப்புகளை நீக்கு</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="186"/>
         <source>rename file(s)</source>
         <translation>
-            <numerusform>перейменувати файл</numerusform>
-            <numerusform>перейменувати файли</numerusform>
-            <numerusform>перейменувати файлів</numerusform>
+            <numerusform>கோப்பை மறுபெயரிடுங்கள்</numerusform>
+            <numerusform>கோப்புகளை மறுபெயரிடுங்கள்</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="216"/>
         <source>share file(s)</source>
         <translation>
-            <numerusform>поділитися файлом</numerusform>
-            <numerusform>поділитися файлами</numerusform>
-            <numerusform>поділитися файлами</numerusform>
+            <numerusform>கோப்பைப் பகிரவும்</numerusform>
+            <numerusform>கோப்புகளைப் பகிரவும்</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
         <translation>
-            <numerusform>стиснути файл</numerusform>
-            <numerusform>стиснути файли</numerusform>
-            <numerusform>стиснути файлів</numerusform>
+            <numerusform>கோப்பை சுருக்கவும்</numerusform>
+            <numerusform>கோப்புகளை சுருக்கவும்</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
-        <translation>редагувати ціль посилання</translation>
+        <translation>இணைப்பு இலக்கைத் திருத்தவும்</translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
-        <translation>Застосувати</translation>
+        <translation>இடு</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
         <translation>
-            <numerusform>редагувати файл</numerusform>
-            <numerusform>редагувати файли</numerusform>
-            <numerusform>редагувати файлів</numerusform>
+            <numerusform>கோப்பைத் திருத்து</numerusform>
+            <numerusform>கோப்புகளைத் திருத்தவும்</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="324"/>
         <source>show file properties</source>
-        <translation>Показати властивості файлу</translation>
+        <translation>கோப்பு பண்புகளைக் காட்டு</translation>
     </message>
 </context>
 <context>
@@ -886,17 +871,17 @@
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="32"/>
         <source>Copy</source>
-        <translation>Копіювати</translation>
+        <translation>நகலெடு</translation>
     </message>
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="33"/>
         <source>Move</source>
-        <translation>Перемістити</translation>
+        <translation>நகர்த்தவும்</translation>
     </message>
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="34"/>
         <source>Link</source>
-        <translation>Посилання</translation>
+        <translation>இணைப்பு</translation>
     </message>
 </context>
 <context>
@@ -905,51 +890,50 @@
         <location filename="../src/filedata.cpp" line="87"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation>порожньо</translation>
+        <translation>காலி</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/filedata.cpp" line="88"/>
         <source>%n item(s)</source>
         <translation>
-            <numerusform>%n елемент</numerusform>
-            <numerusform>%n елементи</numerusform>
-            <numerusform>%n елементів</numerusform>
+            <numerusform>%n உருப்படி</numerusform>
+            <numerusform>%n உருப்படிகள்</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="248"/>
         <source>File does not exist</source>
-        <translation>Файлу не існує</translation>
+        <translation>கோப்பு இல்லை</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="298"/>
         <source>block device</source>
-        <translation>Блокувати пристрій</translation>
+        <translation>தொகுதி சாதனம்</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="302"/>
         <source>character device</source>
-        <translation>символьний пристрій</translation>
+        <translation>எழுத்து சாதனம்</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="306"/>
         <source>pipe</source>
-        <translation>труба</translation>
+        <translation>புழம்பு</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="310"/>
         <source>socket</source>
-        <translation>розетка</translation>
+        <translation>மாட்டி</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="314"/>
         <source>folder</source>
-        <translation>каталог</translation>
+        <translation>கோப்புறை</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="320"/>
         <source>unknown</source>
-        <translation>невідомо</translation>
+        <translation>தெரியவில்லை</translation>
     </message>
 </context>
 <context>
@@ -957,31 +941,30 @@
     <message>
         <location filename="../src/filemodel.cpp" line="115"/>
         <source>folder</source>
-        <translation>папка</translation>
+        <translation>கோப்புறை</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="117"/>
         <source>link</source>
-        <translation>посилання</translation>
+        <translation>இணைப்பு</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="118"/>
         <source>file</source>
-        <translation>файл</translation>
+        <translation>கோப்பு</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="130"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation>порожньо</translation>
+        <translation>காலி</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/filemodel.cpp" line="131"/>
         <source>%n item(s)</source>
         <translation>
-            <numerusform>%n елемент</numerusform>
-            <numerusform>%n елементи</numerusform>
-            <numerusform>%n елементів</numerusform>
+            <numerusform>%n உருப்படி</numerusform>
+            <numerusform>%n உருப்படிகள்</numerusform>
         </translation>
     </message>
 </context>
@@ -990,12 +973,12 @@
     <message>
         <location filename="../src/filemodelworker.cpp" line="240"/>
         <source>Folder does not exist</source>
-        <translation>Теки не існує</translation>
+        <translation>கோப்புறை இல்லை</translation>
     </message>
     <message>
         <location filename="../src/filemodelworker.cpp" line="245"/>
         <source>No permission to read the folder</source>
-        <translation>Немає дозволу на читання папки</translation>
+        <translation>கோப்புறையைப் படிக்க இசைவு இல்லை</translation>
     </message>
 </context>
 <context>
@@ -1003,12 +986,12 @@
     <message>
         <location filename="../qml/pages/FileOperationsPage.qml" line="60"/>
         <source>Tasks</source>
-        <translation>Завдання</translation>
+        <translation>பணிகள்</translation>
     </message>
     <message>
         <location filename="../qml/pages/FileOperationsPage.qml" line="81"/>
         <source>Empty</source>
-        <translation>Порожньо</translation>
+        <translation>காலி</translation>
     </message>
 </context>
 <context>
@@ -1016,124 +999,124 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="103"/>
         <source>Install launched</source>
-        <translation>Запущено встановлення</translation>
+        <translation>நிறுவப்பட்டது</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="104"/>
         <source>If nothing happens, then the package is probably faulty.</source>
-        <translation>Якщо нічого не відбувається, то, ймовірно, пакунок несправний.</translation>
+        <translation>எதுவும் நடக்கவில்லை என்றால், தொகுப்பு அநேகமாக தவறானது.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="108"/>
         <source>Open successful</source>
-        <translation>Відкрито успішно</translation>
+        <translation>திறந்திருக்கும் வெற்றிகரமாக</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="109"/>
         <source>Sometimes the application stays in the background</source>
-        <translation>Іноді застосунок залишається у фоновому режимі</translation>
+        <translation>சில நேரங்களில் பயன்பாடு பின்னணியில் இருக்கும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="113"/>
         <source>No application to open the file</source>
-        <translation>Немає застосунку для відкриття файлу</translation>
+        <translation>கோப்பைத் திறக்க விண்ணப்பம் இல்லை</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="68"/>
         <source>Change Permissions</source>
-        <translation>Змінити дозволи</translation>
+        <translation>அனுமதிகளை மாற்றவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="82"/>
         <source>View Raw Contents</source>
-        <translation>Перегляд Raw вмісту</translation>
+        <translation>மூல உள்ளடக்கங்களைக் காண்க</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="90"/>
         <source>Install</source>
-        <translation>Встановити</translation>
+        <translation>நிறுவவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="90"/>
         <source>Open</source>
-        <translation>Відкрити</translation>
+        <translation>திற</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="94"/>
         <source>File cannot be opened</source>
-        <translation>Неможливо відкрити файл</translation>
+        <translation>கோப்பைத் திறக்க முடியாது</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="95"/>
         <source>This type of file cannot be opened.</source>
-        <translation>Цей тип файлів неможливо відкрити.</translation>
+        <translation>இந்த வகை கோப்பைத் திறக்க முடியாது.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="106"/>
         <source>Swipe from the right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation>Проведіть праворуч, щоб переглянути його вміст.</translation>
+        <translation>அதன் உள்ளடக்கங்களை ஆய்வு செய்ய உரிமையிலிருந்து ச்வைப் செய்யவும்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="119"/>
         <source>Go to Target</source>
-        <translation>Перейти до Цілі</translation>
+        <translation>இலக்குக்குச் செல்லுங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="129"/>
         <source>Open containing folder</source>
-        <translation>Відкрити вміст папки</translation>
+        <translation>கோப்புறை கொண்ட திறந்த</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="148"/>
         <source>The file has been moved.</source>
-        <translation>Файл переміщено.</translation>
+        <translation>கோப்பு நகர்த்தப்பட்டுள்ளது.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="264"/>
         <location filename="../qml/pages/FilePage.qml" line="270"/>
         <source>Deleting</source>
-        <translation>Видалення</translation>
+        <translation>நீக்குதல்</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="302"/>
         <source>Location</source>
-        <translation>Розташування</translation>
+        <translation>இடம்</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="306"/>
         <source>Type</source>
-        <translation>Тип</translation>
+        <translation>வகை</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="308"/>
         <source>Unknown (link target not found)</source>
-        <translation>Невідомо (цільове посилання не знайдено)</translation>
+        <translation>தெரியாத (இணைப்பு இலக்கு கிடைக்கவில்லை)</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="308"/>
         <source>Link to %1</source>
-        <translation>Посилання на %1</translation>
+        <translation>%1 உடன் இணைப்பு</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="315"/>
         <source>Permissions</source>
-        <translation>Дозволи</translation>
+        <translation>அனுமதிகள்</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="319"/>
         <source>Owner</source>
-        <translation>Власник</translation>
+        <translation>உரிமையாளர்</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="324"/>
         <source>Group</source>
-        <translation>Група</translation>
+        <translation>குழு</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="329"/>
         <source>Last modified</source>
-        <translation>Остання зміна</translation>
+        <translation>கடைசியாக மாற்றப்பட்டது</translation>
     </message>
 </context>
 <context>
@@ -1141,47 +1124,47 @@
     <message>
         <location filename="../src/globals.cpp" line="79"/>
         <source>B</source>
-        <translation>Б</translation>
+        <translation>B</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="80"/>
         <source>KiB</source>
-        <translation>КБ</translation>
+        <translation>வினோதமாக</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="81"/>
         <source>MiB</source>
-        <translation>МБ</translation>
+        <translation>Mib</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="82"/>
         <source>GiB</source>
-        <translation>ГБ</translation>
+        <translation>கிப்</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="83"/>
         <source>TiB</source>
-        <translation>ТБ</translation>
+        <translation>திப்</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="84"/>
         <source>PiB</source>
-        <translation>ПБ</translation>
+        <translation>தொடங்கவும்</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="85"/>
         <source>EiB</source>
-        <translation>ЕБ</translation>
+        <translation>Eib</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="86"/>
         <source>ZiB</source>
-        <translation>ЗБ</translation>
+        <translation>இனிப்பு</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="87"/>
         <source>YiB</source>
-        <translation>ЙБ</translation>
+        <translation>யிப்</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="107"/>
@@ -1199,12 +1182,12 @@
         <location filename="../src/fileworker.cpp" line="100"/>
         <location filename="../src/fileworker.cpp" line="117"/>
         <source>File operation already in progress</source>
-        <translation>Операція з файлом вже виконується</translation>
+        <translation>கோப்பு செயல்பாடு ஏற்கனவே செயலில் உள்ளது</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="159"/>
         <source>Empty filename</source>
-        <translation>Порожня назва файлу</translation>
+        <translation>வெற்று கோப்பு பெயர்</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="178"/>
@@ -1213,32 +1196,32 @@
         <location filename="../src/fileworker.cpp" line="374"/>
         <location filename="../src/fileworker.cpp" line="397"/>
         <source>Cancelled</source>
-        <translation>Скасовано</translation>
+        <translation>ரத்து செய்யப்பட்டது</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="216"/>
         <source>File not found</source>
-        <translation>Файл не знайдено</translation>
+        <translation>கோப்பு கிடைக்கவில்லை</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="230"/>
         <source>Folder delete failed</source>
-        <translation>Не вдалося видалити папку</translation>
+        <translation>கோப்புறை நீக்குதல் தோல்வியடைந்தது</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="353"/>
         <source>Source folder does not exist</source>
-        <translation>Вихідна папка не існує</translation>
+        <translation>மூல கோப்புறை இல்லை</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="362"/>
         <source>Cannot create target folder %1</source>
-        <translation>Неможливо створити цільову папку %1</translation>
+        <translation>இலக்கு கோப்புறை %1 ஐ உருவாக்க முடியாது</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="413"/>
         <source>Failed to remove source folder “%1” after moving.</source>
-        <translation>Не вдалося видалити вихідну папку “%1” після переміщення.</translation>
+        <translation>நகர்ந்த பிறகு “%1” மூல கோப்புறையை அகற்றுவதில் தோல்வி.</translation>
     </message>
 </context>
 <context>
@@ -1246,393 +1229,393 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="48"/>
         <source>App Settings</source>
-        <translation>Налаштування застосунку</translation>
+        <translation>பயன்பாட்டு அமைப்புகள்</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="53"/>
         <source>Directory View</source>
-        <translation>Перегляд каталогу</translation>
+        <translation>அடைவு பார்வை</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="64"/>
         <source>Use per-directory view settings</source>
-        <translation>Використовувати налаштування перегляду для кожного каталогу</translation>
+        <translation>ஒவ்வொரு அடக்கு பார்வை அமைப்புகளையும் பயன்படுத்தவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="66"/>
         <source>Save view preferences individually for all folders in your home directory. The options below are used by default.</source>
-        <translation>Зберегти налаштування перегляду для кожної папки окремо, якщо вони відрізняються від наведених нижче.</translation>
+        <translation>உங்கள் வீட்டு கோப்பகத்தில் உள்ள அனைத்து கோப்புறைகளுக்கும் தனித்தனியாக காட்சி விருப்பங்களை சேமிக்கவும். கீழே உள்ள விருப்பங்கள் இயல்பாகவே பயன்படுத்தப்படுகின்றன.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="91"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
-        <translation>У режимі галереї зображення будуть показані відповідно до розміру екрану. Інші файли показуються без мініатюр попереднього перегляду.</translation>
+        <translation>கேலரி பயன்முறையில், திரைக்கு ஏற்றவாறு படங்கள் காண்பிக்கப்படும். பிற கோப்புகள் முன்னோட்ட சிறு உருவங்கள் இல்லாமல் காட்டப்படுகின்றன.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="98"/>
         <source>Hint</source>
-        <translation>Порада</translation>
+        <translation>குறிப்பு</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="99"/>
         <source>You can enable per-directory settings to configure your preferences for individual folders.</source>
-        <translation>Ви можете увімкнути налаштування для кожного каталогу, щоб налаштувати ваші уподобання для окремих папок.</translation>
+        <translation>தனிப்பட்ட கோப்புறைகளுக்கான உங்கள் விருப்பங்களை உள்ளமைக்க ஒவ்வொரு அடைவு அமைப்புகளையும் இயக்கலாம்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="104"/>
         <source>Show hidden files</source>
-        <translation>Показати приховані файли</translation>
+        <translation>மறைக்கப்பட்ட கோப்புகளைக் காட்டு</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="106"/>
         <source>Show files with names starting with a full stop (“.”).</source>
-        <translation>Показувати файли з іменами, що починаються з крапки (&quot;.&quot;).</translation>
+        <translation>முழு நிறுத்தத்துடன் (“.”) தொடங்கும் பெயர்களுடன் கோப்புகளைக் காண்பி.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="109"/>
         <source>Show preview images</source>
-        <translation>Показати попередній перегляд зображень</translation>
+        <translation>முன்னோட்டப் படங்களைக் காட்டு</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="111"/>
         <source>Preview contents of supported file types.</source>
-        <translation>Попередній перегляд вмісту підтримуваних типів файлів.</translation>
+        <translation>ஆதரிக்கப்பட்ட கோப்பு வகைகளின் உள்ளடக்கங்களை முன்னோட்டமிடுங்கள்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="114"/>
         <source>Thumbnail size</source>
-        <translation>Розмір мініатюри</translation>
+        <translation>சிறு அளவு</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="120"/>
         <source>small</source>
-        <translation>невеликий</translation>
+        <translation>சிறிய</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="121"/>
         <source>medium</source>
-        <translation>середній</translation>
+        <translation>சராசரி</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="122"/>
         <source>large</source>
-        <translation>великий</translation>
+        <translation>பெரிய</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="123"/>
         <source>huge</source>
-        <translation>величезний</translation>
+        <translation>பெரிய</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="130"/>
         <source>Sorting</source>
-        <translation>Сортування</translation>
+        <translation>வரிசைப்படுத்துதல்</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="140"/>
         <source>Show folders first</source>
-        <translation>Спочатку показувати папки</translation>
+        <translation>முதலில் கோப்புறைகளைக் காட்டு</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="142"/>
         <source>Always show folders at the top of the file list.</source>
-        <translation>Завжди показувати папки у верхній частині списку файлів.</translation>
+        <translation>கோப்பு பட்டியலின் மேலே எப்போதும் கோப்புறைகளைக் காட்டுங்கள்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="145"/>
         <source>Show hidden files last</source>
-        <translation>Показувати приховані файли останніми</translation>
+        <translation>மறைக்கப்பட்ட கோப்புகளை கடைசியாக காட்டு</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="147"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
-        <translation>Завжди показувати файли, що починаються з крапки (&quot;.&quot;) в кінці списку файлів.</translation>
+        <translation>கோப்பு பட்டியலின் முடிவில் முழு நிறுத்தத்தில் (“.”) தொடங்கும் கோப்புகளை எப்போதும் காண்பி.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="150"/>
         <source>Sort by</source>
-        <translation>Сортувати за</translation>
+        <translation>வரிசைப்படுத்தவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="156"/>
         <source>name</source>
-        <translation>ім&apos;ям</translation>
+        <translation>பெயர்</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="157"/>
         <source>size</source>
-        <translation>розміром</translation>
+        <translation>அளவு</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="159"/>
         <source>file type</source>
-        <translation>типом файлу</translation>
+        <translation>கோப்பு வகை</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="163"/>
         <source>Sort case-sensitively</source>
-        <translation>Сортування з урахуванням регістру</translation>
+        <translation>வழக்கு-உணர்திறன் வரிசைப்படுத்தவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="165"/>
         <source>Show files with names starting with a capital letter first.</source>
-        <translation>Спочатку показувати файли з іменами, що починаються з великої літери.</translation>
+        <translation>முதலில் ஒரு பெரிய கடிதத்துடன் தொடங்கும் பெயர்களுடன் கோப்புகளைக் காண்பி.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="169"/>
         <source>Sort order</source>
-        <translation>Порядок сортування</translation>
+        <translation>வரிசைப்படுத்தும் முறை</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="179"/>
         <source>Sort names starting with the beginning of the alphabet first.</source>
-        <translation>Спочатку відсортувати імена з початку алфавіту.</translation>
+        <translation>முதலில் எழுத்துக்களின் தொடக்கத்தில் தொடங்கி பெயர்களை வரிசைப்படுத்துங்கள்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="180"/>
         <source>Show smaller files first.</source>
-        <translation>Спочатку показувати менші файли.</translation>
+        <translation>முதலில் சிறிய கோப்புகளைக் காட்டுங்கள்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="188"/>
         <source>Sort names starting with the end of the alphabet first.</source>
-        <translation>Спочатку відсортувати імена з кінця алфавіту.</translation>
+        <translation>முதலில் எழுத்துக்களின் முடிவில் தொடங்கும் பெயர்களை வரிசைப்படுத்தவும்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="189"/>
         <source>Show larger files first.</source>
-        <translation>Спочатку показувати більші файли.</translation>
+        <translation>பெரிய கோப்புகளை முதலில் காட்டு.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="218"/>
         <source>Places</source>
-        <translation>Місця</translation>
+        <translation>இடங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="181"/>
         <source>Show older files first.</source>
-        <translation>Спочатку показувати старіші файли.</translation>
+        <translation>பழைய கோப்புகளை முதலில் காட்டு.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="177"/>
         <source>ascending</source>
-        <translation>за зростанням</translation>
+        <translation>ஏறுதல்</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="70"/>
         <source>View mode</source>
-        <translation>Режим перегляду</translation>
+        <translation>பார்வை பயன்முறையை</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="77"/>
         <source>list</source>
-        <translation>список</translation>
+        <translation>பட்டியல்</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="79"/>
         <source>Show files in a list. Optionally enable preview thumbnails using the separate setting below.</source>
-        <translation>Показувати файли списком. За бажанням увімкніть попередній перегляд мініатюр за допомогою окремого налаштування нижче.</translation>
+        <translation>பட்டியலில் கோப்புகளைக் காட்டு. கீழேயுள்ள தனி அமைப்பைப் பயன்படுத்தி முன்னோட்ட சிறு உருவங்களை விருப்பமாக இயக்கவும்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="89"/>
         <source>gallery</source>
-        <translation>галерея</translation>
+        <translation>கேலரி</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="190"/>
         <source>Show more recently changed files first.</source>
-        <translation>Спочатку показувати нещодавно змінені файли.</translation>
+        <translation>அண்மைக் காலத்தில் மாற்றப்பட்ட கோப்புகளை முதலில் காட்டு.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="186"/>
         <source>descending</source>
-        <translation>за спаданням</translation>
+        <translation>இறங்கு</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="158"/>
         <source>modification date</source>
-        <translation>дата зміни</translation>
+        <translation>மாற்றும் தேதி</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="199"/>
         <source>Behavior and View</source>
-        <translation>Поведінка та перегляд</translation>
+        <translation>நடத்தை மற்றும் பார்வை</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="209"/>
         <source>Initial view</source>
-        <translation>Початковий вигляд</translation>
+        <translation>தொடக்க பார்வை</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="210"/>
         <source>The page that is shown when the app starts.</source>
-        <translation>Сторінка, яка показується при запуску застосунку.</translation>
+        <translation>பயன்பாடு தொடங்கும் போது காண்பிக்கப்படும் பக்கம்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="217"/>
         <source>Directory</source>
-        <translation>Каталог</translation>
+        <translation>அடைவு</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="219"/>
         <source>Search</source>
-        <translation>Пошук</translation>
+        <translation>தேடல்</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="225"/>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="241"/>
         <source>Initial directory</source>
-        <translation>Початковий каталог</translation>
+        <translation>தொடக்க அடைவு</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="230"/>
         <source>The directory that is shown when the app starts.</source>
-        <translation>Каталог, який відображається при запуску застосунку.</translation>
+        <translation>பயன்பாடு தொடங்கும் போது காண்பிக்கப்படும் அடைவு.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="233"/>
         <source>user&apos;s home</source>
-        <translation>домашня сторінка користувача</translation>
+        <translation>பயனரின் வீடு</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="234"/>
         <source>last visited</source>
-        <translation>останнє відвідування</translation>
+        <translation>கடைசியாக பார்வையிட்டார்</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="235"/>
         <source>custom path</source>
-        <translation>власний шлях</translation>
+        <translation>தனிப்பயன் பாதை</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="257"/>
         <source>Choose</source>
-        <translation>Обрати</translation>
+        <translation>தேர்வு</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="263"/>
         <source>Default transfer action</source>
-        <translation>Дія переказу за замовчуванням</translation>
+        <translation>இயல்புநிலை பரிமாற்ற செயல்</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="267"/>
         <source>The action that is selected by default when using the bulk file management feature (available through the “shuffle” icon after selecting files).</source>
-        <translation>Дія, яка обирається за замовчуванням при використанні функції керування файлами (доступна через іконку &quot;перемішування&quot; після вибору файлів).</translation>
+        <translation>மொத்த கோப்பு மேலாண்மை அம்சத்தைப் பயன்படுத்தும் போது இயல்புநிலையாக தேர்ந்தெடுக்கப்பட்ட செயல் (கோப்புகளைத் தேர்ந்தெடுத்த பிறகு “கலக்கு” ஐகான் மூலம் கிடைக்கிறது).</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="272"/>
         <source>copy</source>
-        <translation>копіювати</translation>
+        <translation>நகலெடு</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="273"/>
         <source>move</source>
-        <translation>перемістити</translation>
+        <translation>நகர்த்தவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="274"/>
         <source>link</source>
-        <translation>посилання</translation>
+        <translation>இணைப்பு</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="275"/>
         <source>none</source>
-        <translation>немає</translation>
+        <translation>எதுவுமில்லை</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="279"/>
         <source>Default filter line action</source>
-        <translation>Дія лінії фільтра за замовчуванням</translation>
+        <translation>இயல்புநிலை வடிகட்டி வரி செயல்</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="283"/>
         <source>Which action to take when the Enter key is pressed in the filter line in a directory&apos;s pull-down menu.</source>
-        <translation>Яка дія виконується при натисканні клавіші Enter у рядку фільтрації у випадаючому меню каталогу.</translation>
+        <translation>ஒரு கோப்பகத்தின் இழுக்கும் பட்டியலில் வடிகட்டி வரியில் ENTER விசையை அழுத்தும்போது எந்த நடவடிக்கை எடுக்க வேண்டும்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="287"/>
         <source>return to directory view</source>
-        <translation>повернутися до перегляду каталогу</translation>
+        <translation>அடைவு பார்வைக்குத் திரும்பு</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="288"/>
         <source>start recursive search</source>
-        <translation>почати рекурсивний пошук</translation>
+        <translation>சுழல்நிலை தேடலைத் தொடங்குங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="292"/>
         <source>File name abbreviation</source>
-        <translation>Скорочення імені файлу</translation>
+        <translation>கோப்பு பெயர் சுருக்கம்</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="296"/>
         <source>How very long filenames are abbreviated in the directory view.</source>
-        <translation>Як задовгі імена файлів скорочуються у перегляді каталогу.</translation>
+        <translation>அடைவு பார்வையில் எவ்வளவு மிக நீண்ட கோப்பு பெயர்கள் சுருக்கமாக உள்ளன.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="299"/>
         <source>fade out</source>
-        <translation>зникають</translation>
+        <translation>மங்கிவிடும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="300"/>
         <source>elide end</source>
-        <translation>пропустити кінець</translation>
+        <translation>எலைட் முடிவு</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="301"/>
         <source>elide middle</source>
-        <translation>пропустити середину</translation>
+        <translation>எலைட் மிடில்</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="305"/>
         <source>Share clipboard among windows</source>
-        <translation>Спільний доступ до буфера обміну між вікнами</translation>
+        <translation>சாளரங்களிடையே கிளிப்போர்டைப் பகிரவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="307"/>
         <source>Share the list of files currently in the clipboard among all open File Browser windows. When this is enabled, you can cut files in one window and paste them in another.</source>
-        <translation>Розповсюджувати список файлів у буфері обміну між усіма відкритими вікнами Файлового браузера. Якщо цей параметр увімкнено, ви можете вирізати файли в одному вікні та вставити їх в іншому.</translation>
+        <translation>அனைத்து திறந்த கோப்பு உலாவி சாளரங்களுக்கிடையில் தற்போது கிளிப்போர்டில் உள்ள கோப்புகளின் பட்டியலைப் பகிரவும். இது இயக்கப்பட்டிருக்கும் போது, நீங்கள் ஒரு சாளரத்தில் கோப்புகளை வெட்டி அவற்றை மற்றொரு இடத்தில் ஒட்டலாம்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="313"/>
         <source>Show full directory paths</source>
-        <translation>Показати повні шляхи до каталогів</translation>
+        <translation>முழு அடைவு பாதைகளைக் காட்டு</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="315"/>
         <source>Show the full path in the page header of the directory view.</source>
-        <translation>Показати повний шлях у заголовку сторінки перегляду каталогу.</translation>
+        <translation>அடைவு பார்வையின் பக்க தலைப்பில் முழு பாதையையும் காட்டுங்கள்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="318"/>
         <source>Show navigation menu icon</source>
-        <translation>Показати іконку меню навігації</translation>
+        <translation>வழிசெலுத்தல் பட்டியல் ஐகானைக் காட்டு</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="320"/>
         <source>Show a visual hint that the navigation menu is available by tapping the page header of the directory view.</source>
-        <translation>Показати візуальну підказку, що меню навігації доступне, натиснувши на заголовок сторінки подання каталогу.</translation>
+        <translation>கோப்பகக் காட்சியின் பக்கத் தலைப்பைத் தட்டுவதன் மூலம் வழிசெலுத்தல் பட்டியல் கிடைக்கிறது என்பதற்கான காட்சி குறிப்பைக் காட்டு.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="332"/>
         <source>Enable solid window background</source>
-        <translation>Ввімкнути суцільний фон вікна</translation>
+        <translation>திட சாளர பின்னணியை இயக்கவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="334"/>
         <source>Use a solid color instead of your wallpaper as the background of this app.</source>
-        <translation>Використовуйте суцільний колір замість шпалер як фон цього застосунку.</translation>
+        <translation>இந்த பயன்பாட்டின் பின்னணியாக உங்கள் வால்பேப்பருக்கு பதிலாக திட நிறத்தைப் பயன்படுத்தவும்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="344"/>
         <source>Swipe from the right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
-        <translation>Проведіть пальцем праворуч, щоб переглянути вихідний код Переглядача файлів, інформацію про ліцензію та список учасників.</translation>
+        <translation>கோப்பு உலாவியின் மூலக் குறியீடு, உரிமத் செய்தி மற்றும் பங்களிப்பாளர்களின் பட்டியலைக் காண உரிமையிலிருந்து ச்வைப் செய்யவும்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="356"/>
         <source>Settings</source>
-        <translation>Налаштування</translation>
+        <translation>அமைப்புகள்</translation>
     </message>
 </context>
 <context>
@@ -1640,61 +1623,61 @@
     <message>
         <location filename="../src/filedata.cpp" line="346"/>
         <source>Image Size</source>
-        <translation>Розмір зображення</translation>
+        <translation>பட அளவு</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="352"/>
         <source>%1 x %2</source>
         <extracomment>image size description without aspect ratio: 1=width, 2=height</extracomment>
-        <translation>%1 x %2</translation>
+        <translation>%1 ஃச் %2</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="356"/>
         <source>%1 x %2 (%3)</source>
         <extracomment>image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9</extracomment>
-        <translation>%1 x %2 (%3)</translation>
+        <translation>%1 ஃச் %2 ( %3)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="156"/>
         <source>Make</source>
-        <translation>Виробник</translation>
+        <translation>உருவாக்கு</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="157"/>
         <source>Model</source>
-        <translation>Модель</translation>
+        <translation>மாதிரியுரு</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="160"/>
         <source>Date/Time</source>
-        <translation>Дата/час</translation>
+        <translation>தேதி/நேரம்</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="168"/>
         <source>Orientation</source>
-        <translation>Орієнтація</translation>
+        <translation>நோக்குநிலை</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="173"/>
         <source>Color/BW</source>
-        <translation>Кольоровий/ЧБ</translation>
+        <translation>நிறம்/BW</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="173"/>
         <source>Black and White</source>
-        <translation>Чорний і Білий</translation>
+        <translation>கருப்பு மற்றும் வெள்ளை</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="181"/>
         <source>Strobe light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation>Спалаху не виявлено</translation>
+        <translation>ச்ட்ரோப் லைட் கண்டறியப்படவில்லை</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="183"/>
         <source>Strobe light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation>Виявлено спалах</translation>
+        <translation>ச்ட்ரோப் லைட் கண்டறியப்பட்டது</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="185"/>
@@ -1705,87 +1688,87 @@
         <extracomment>description of camera flash mode
 ----------
 exposure program</extracomment>
-        <translation>Ручний</translation>
+        <translation>கையேடு</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="187"/>
         <source>Manual, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation>Ручний, спалаху не виявлено</translation>
+        <translation>கையேடு, திரும்ப ஒளி கண்டறியப்படவில்லை</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="189"/>
         <source>Manual, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation>Ручний, спалах виявлено</translation>
+        <translation>கையேடு, திரும்ப ஒளி கண்டறியப்பட்டது</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="191"/>
         <location filename="../src/jhead/jhead-api.cpp" line="304"/>
         <source>Auto</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation>Авто</translation>
+        <translation>தானி</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="193"/>
         <source>Auto, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation>Авто, спалаху не виявлено</translation>
+        <translation>ஆட்டோ, திரும்ப ஒளி கண்டறியப்படவில்லை</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="195"/>
         <source>Auto, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation>Авто, спалах виявлено</translation>
+        <translation>ஆட்டோ, ரிட்டர்ன் லைட் கண்டறியப்பட்டது</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="197"/>
         <source>Red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation>Режим зменшення ефекту &quot;червоних очей&quot;</translation>
+        <translation>சிவப்பு கண் குறைப்பு முறை</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="199"/>
         <source>Red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation>Режим зменшення ефекту &quot;червоних очей&quot;, спалаху не виявлено</translation>
+        <translation>சிவப்பு கண் குறைப்பு முறை, திரும்ப ஒளி கண்டறியப்படவில்லை</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="201"/>
         <location filename="../src/jhead/jhead-api.cpp" line="207"/>
         <source>Red eye reduction mode, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation>Режим зменшення ефекту &quot;червоних очей&quot;, спалах виявлено</translation>
+        <translation>சிவப்பு கண் குறைப்பு முறை, திரும்ப ஒளி கண்டறியப்பட்டது</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="203"/>
         <source>Manual, red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation>Ручний, режим зменшення &quot;червоних очей&quot;</translation>
+        <translation>கையேடு, சிவப்பு கண் குறைப்பு முறை</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="205"/>
         <source>Manual, red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation>Ручний, режим зменшення ефекту &quot;червоних очей&quot;, спалаху не виявлено</translation>
+        <translation>கையேடு, சிவப்பு கண் குறைப்பு முறை, திரும்ப ஒளி கண்டறியப்படவில்லை</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="209"/>
         <source>Auto, red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation>Авто, режим зменшення &quot;червоних очей&quot;</translation>
+        <translation>ஆட்டோ, சிவப்பு கண் குறைப்பு முறை</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="211"/>
         <source>Auto, red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation>Авто, режим зменшення &quot;червоних очей&quot;, спалаху не виявлено</translation>
+        <translation>ஆட்டோ, சிவப்பு கண் குறைப்பு முறை, திரும்ப ஒளி கண்டறியப்படவில்லை</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="213"/>
         <source>Auto, red eye reduction mode, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation>Авто, режим зменшення ефекту &quot;червоних очей&quot;, спалах виявлено</translation>
+        <translation>ஆட்டோ, சிவப்பு கண் குறைப்பு முறை, திரும்ப ஒளி கண்டறியப்பட்டது</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="217"/>
@@ -1794,49 +1777,49 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="225"/>
         <location filename="../src/jhead/jhead-api.cpp" line="320"/>
         <source>Flash</source>
-        <translation>Спалах</translation>
+        <translation>ஃபிளாச்</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="217"/>
         <source>Yes (%1)</source>
-        <translation>Так (%1)</translation>
+        <translation>ஆம் (%1)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="219"/>
         <source>Yes</source>
-        <translation>Так</translation>
+        <translation>ஆம்</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="223"/>
         <source>No (Auto)</source>
-        <translation>Ні (Авто)</translation>
+        <translation>இல்லை (ஆட்டோ)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="225"/>
         <source>No</source>
-        <translation>Ні</translation>
+        <translation>இல்லை</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="234"/>
         <source>%1mm (35mm equivalent: %2mm)</source>
         <extracomment>size in millimeters</extracomment>
-        <translation>%1мм (еквівалент 35 мм: %2мм)</translation>
+        <translation>%1 மிமீ (35 மிமீ சமம்: %2 மிமீ)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="239"/>
         <source>%1mm</source>
         <extracomment>size in millimeters</extracomment>
-        <translation>%1мм</translation>
+        <translation>%1 மிமீ</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="242"/>
         <source>Focal Length</source>
-        <translation>Фокусна відстань</translation>
+        <translation>குவிநீளம், குவியத் தொலைவு</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="247"/>
         <source>Digital Zoom</source>
-        <translation>Цифровий зум</translation>
+        <translation>டிசிட்டல் சூம்</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="249"/>
@@ -1848,7 +1831,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="255"/>
         <source>CCD Width</source>
         <extracomment>photographic sensor width; cf. https://en.wikipedia.org/wiki/Charge-coupled_device</extracomment>
-        <translation>Ширина ПЗЗ</translation>
+        <translation>சிசிடி அகலம்</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="267"/>
@@ -1859,53 +1842,53 @@ exposure program</extracomment>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="269"/>
         <source>Exposure Time</source>
-        <translation>Час експозиції</translation>
+        <translation>நேரிடுதல் காலம்</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="272"/>
         <source>Aperture</source>
-        <translation>Діафрагма</translation>
+        <translation>துளை</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="274"/>
         <source>f/%1</source>
         <extracomment>aperture &quot;f&quot; number; cf. https://en.wikipedia.org/wiki/Aperture</extracomment>
-        <translation>f/%1</translation>
+        <translation>எஃப்/%1</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="278"/>
         <location filename="../src/jhead/jhead-api.cpp" line="282"/>
         <source>Focus Distance</source>
-        <translation>Відстань фокусування</translation>
+        <translation>கவனம் தூரம்</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="280"/>
         <source>Infinite</source>
         <extracomment>focus distance</extracomment>
-        <translation>Безкінечна</translation>
+        <translation>கந்தழி, முடிவிலி</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="284"/>
         <source>%1m</source>
         <extracomment>focus distance in meters</extracomment>
-        <translation>%1м</translation>
+        <translation>%1 மீ</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="289"/>
         <source>ISO Equivalent</source>
-        <translation>Еквівалент ISO</translation>
+        <translation>ஐஎச்ஓ சமமான</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="296"/>
         <source>Exposure Bias</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Exposure_compensation</extracomment>
-        <translation>Зміна експозиції</translation>
+        <translation>வெளிப்பாடு சார்பு</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="301"/>
         <location filename="../src/jhead/jhead-api.cpp" line="304"/>
         <source>White Balance</source>
-        <translation>Баланс білого</translation>
+        <translation>வெள்ளை இருப்பு</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="311"/>
@@ -1915,206 +1898,206 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="323"/>
         <location filename="../src/jhead/jhead-api.cpp" line="326"/>
         <source>Light Source</source>
-        <translation>Джерело світла</translation>
+        <translation>ஒளி மூல</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="311"/>
         <source>Daylight</source>
-        <translation>Денне світло</translation>
+        <translation>பகல்</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="314"/>
         <source>Fluorescent</source>
-        <translation>Флуоресцентна</translation>
+        <translation>ஒளிரும்</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="317"/>
         <source>Incandescent</source>
-        <translation>Лампа розжарювання</translation>
+        <translation>ஒளிரும்</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="323"/>
         <source>Fine weather</source>
-        <translation>Гарна погода</translation>
+        <translation>நல்ல வானிலை</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="326"/>
         <source>Shade</source>
-        <translation>Тінь</translation>
+        <translation>நிழல்</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="337"/>
         <source>Average</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation>Середнє</translation>
+        <translation>சராசரி</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="339"/>
         <source>Center weighted average</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation>Середньозважене по центру</translation>
+        <translation>மைய எடை சராசரி</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="341"/>
         <source>Spot</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation>Точковий</translation>
+        <translation>ச்பாட்</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="343"/>
         <source>Multi spot</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation>Багатоточкове</translation>
+        <translation>பல இடங்கள்</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="345"/>
         <source>Pattern</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation>Шаблон</translation>
+        <translation>முறை</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="347"/>
         <source>Partial</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation>Часткове</translation>
+        <translation>பகுதி</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="349"/>
         <source>Other</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation>Інше</translation>
+        <translation>மற்றொன்று</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="351"/>
         <source>Unknown (%1)</source>
         <extracomment>inlcudes an unknown value (1); cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation>Невідомо (%1)</translation>
+        <translation>தெரியாத (%1)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="354"/>
         <source>Metering Mode</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation>Режим вимірювання</translation>
+        <translation>அளவீட்டு முறை</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="366"/>
         <source>Program (auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation>Програмно (авто)</translation>
+        <translation>நிரல் (கார்)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="370"/>
         <source>Aperture priority (semi-auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation>Пріоритет діафрагми (напівавтоматичний)</translation>
+        <translation>துளை முன்னுரிமை (அரை ஆட்டோ)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="374"/>
         <source>Shutter priority (semi-auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation>Пріоритет затвора (напівавтоматичний)</translation>
+        <translation>சட்டர் முன்னுரிமை (அரை ஆட்டோ)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="378"/>
         <source>Creative Program (based towards depth of field)</source>
         <extracomment>exposure program</extracomment>
-        <translation>Творчий (на основі глибини різкості)</translation>
+        <translation>கிரியேட்டிவ் புரோகிராம் (புலத்தின் ஆழத்தை அடிப்படையாகக் கொண்டது)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="382"/>
         <source>Action program (based towards fast shutter speed)</source>
         <extracomment>exposure program</extracomment>
-        <translation>Рухливий (на основі короткої витримки)</translation>
+        <translation>செயல் நிரல் (வேகமான சட்டர் வேகத்தை நோக்கி)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="386"/>
         <source>Portrait mode</source>
         <extracomment>exposure program</extracomment>
-        <translation>Портретний режим</translation>
+        <translation>ஃபேசன் உருவப்படம்</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="390"/>
         <source>Landscape mode</source>
         <extracomment>exposure program</extracomment>
-        <translation>Альбомний режим</translation>
+        <translation>இயற்கை முறை</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="395"/>
         <source>Exposure Program</source>
-        <translation>Програма експозиції</translation>
+        <translation>வெளிப்பாடு திட்டம்</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="401"/>
         <location filename="../src/jhead/jhead-api.cpp" line="404"/>
         <source>Exposure Mode</source>
-        <translation>Режим експозиції</translation>
+        <translation>வெளிப்பாடு பயன்முறை</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="406"/>
         <source>Auto bracketing</source>
         <extracomment>exposure mode; cf. https://en.wikipedia.org/wiki/Autobracketing#Exposure</extracomment>
-        <translation>Автобрикетинг</translation>
+        <translation>ஆட்டோ அடைப்புக்குறி</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="415"/>
         <source>Macro</source>
         <extracomment>focus range</extracomment>
-        <translation>Макро</translation>
+        <translation>குறுநிரல்</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="419"/>
         <source>Close</source>
         <extracomment>focus range</extracomment>
-        <translation>Близько</translation>
+        <translation>மூடு</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="423"/>
         <source>Distant</source>
         <extracomment>focus range</extracomment>
-        <translation>Далеко</translation>
+        <translation>தொலைவில்</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="426"/>
         <source>Focus Range</source>
-        <translation>Діапазон фокусування</translation>
+        <translation>கவனம் வரம்பு</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="436"/>
         <location filename="../src/jhead/jhead-api.cpp" line="440"/>
         <source>JPEG Process</source>
-        <translation>Процес JPEG</translation>
+        <translation>JPEG செயல்முறை</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="436"/>
         <source>Unknown</source>
-        <translation>Невідомо</translation>
+        <translation>தெரியாத</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="447"/>
         <source>Latitude</source>
-        <translation>Широта</translation>
+        <translation>அகலாங்கு</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="448"/>
         <source>Longitude</source>
-        <translation>Довгота</translation>
+        <translation>நெட்டாங்கு</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="450"/>
         <source>Altitude</source>
-        <translation>Висота</translation>
+        <translation>குத்துயரம்</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="456"/>
         <source>JPEG Quality</source>
-        <translation>Якість JPEG</translation>
+        <translation>JPEG தகுதி</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="473"/>
         <location filename="../src/jhead/jhead-api.cpp" line="484"/>
         <location filename="../src/jhead/jhead-api.cpp" line="487"/>
         <source>Comment</source>
-        <translation>Коментар</translation>
+        <translation>கருத்து</translation>
     </message>
 </context>
 <context>
@@ -2122,7 +2105,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="119"/>
         <source>License text</source>
-        <translation>Текст ліцензії</translation>
+        <translation>உரிம உரை</translation>
     </message>
 </context>
 <context>
@@ -2130,43 +2113,42 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="59"/>
         <source>Selection Properties</source>
-        <translation>Властивості виділення</translation>
+        <translation>தேர்வு பண்புகள்</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="69"/>
         <source>The files have been moved.</source>
-        <translation>Файл переміщено.</translation>
+        <translation>கோப்புகள் நகர்த்தப்பட்டுள்ளன.</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/MultiFilePage.qml" line="93"/>
         <source>%n item(s) selected</source>
         <translation>
-            <numerusform>Вибрано %n елемент</numerusform>
-            <numerusform>Вибрано %n елементи</numerusform>
-            <numerusform>Вибрано %n елементів</numerusform>
+            <numerusform>%n உருப்படி தேர்ந்தெடுக்கப்பட்டது</numerusform>
+            <numerusform>தேர்ந்தெடுக்கப்பட்ட %n உருப்படிகள்</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="113"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="119"/>
         <source>Deleting</source>
-        <translation>Видалення</translation>
+        <translation>நீக்குதல்</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="141"/>
         <source>Directories</source>
-        <translation>Каталоги</translation>
+        <translation>கோப்பகங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="151"/>
         <source>Files</source>
-        <translation>Файли</translation>
+        <translation>கோப்புகள்</translation>
     </message>
     <message>
         <location filename="../qml/pages/MultiFilePage.qml" line="167"/>
         <location filename="../qml/pages/MultiFilePage.qml" line="176"/>
         <source>none</source>
-        <translation>немає</translation>
+        <translation>எதுவுமில்லை</translation>
     </message>
 </context>
 <context>
@@ -2174,62 +2156,62 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="14"/>
         <source>Donate on Liberapay</source>
-        <translation>Зробити донат через Liberapay</translation>
+        <translation>லிபராபேயில் நன்கொடை</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="15"/>
         <source>Pay the amount of a cup of coffee, a slice of pizza, or a ticket to the theater.</source>
-        <translation>Можете пожертвувати суму, що дорівнює чашці кави, шматку піци або квитку в театр.</translation>
+        <translation>ஒரு கப் காபி, ஒரு துண்டு பீச்சா அல்லது தியேட்டருக்கு டிக்கெட் ஆகியவற்றின் அளவு செலுத்துங்கள்.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
         <source>Translate on Weblate</source>
-        <translation>Переклад на Weblate</translation>
+        <translation>வெப்லேட்டில் மொழிபெயர்க்கவும்</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="23"/>
         <source>Help with translating this app in as many languages as possible.</source>
-        <translation>Допоможіть перекласти цей додаток якомога більшою кількістю мов.</translation>
+        <translation>இந்த பயன்பாட்டை முடிந்தவரை பல மொழிகளில் மொழிபெயர்க்க உதவுங்கள்.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
         <source>Develop on Github</source>
-        <translation>Розробка на GitHub</translation>
+        <translation>கிட்அப்பில் உருவாக்குங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="31"/>
         <source>Support with maintenance and packaging, write code, or provide valuable bug reports.</source>
-        <translation>Підтримайте в обслуговуванні та пакуванні, написанні коду або наданні цінних звітів про помилки.</translation>
+        <translation>பராமரிப்பு மற்றும் பேக்கேசிங், குறியீட்டை எழுதுதல் அல்லது மதிப்புமிக்க பிழை அறிக்கைகளை வழங்குதல்.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="37"/>
         <source>Why should you care?</source>
-        <translation>Чому вас це має цікавити?</translation>
+        <translation>நீங்கள் ஏன் கவலைப்பட வேண்டும்?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="40"/>
         <source>This project is built with love and passion by a single developer in their spare time, and is provided to you free of charge.</source>
-        <translation>Цей проект створений з любов&apos;ю та пристрастю одним розробником у свій вільний час і надається вам безкоштовно.</translation>
+        <translation>இந்த திட்டம் அவர்களின் ஓய்வு நேரத்தில் ஒரு டெவலப்பரால் அன்புடனும் ஆர்வத்துடனும் கட்டப்பட்டுள்ளது, மேலும் இது உங்களுக்கு இலவசமாக வழங்கப்படுகிறது.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="46"/>
         <source>I develop Free Software because I am convinced that it is the ethical thing to do - and it is a fun hobby. However, developing software takes a lot of time and effort. As Sailfish and living in general costs money, I need your support to be able to spend time on non-paying projects like this.</source>
-        <translation>Я розробляю вільне програмне забезпечення, тому що переконаний, що це етично, і це цікаве хобі. Однак, розробка програмного забезпечення вимагає багато часу та зусиль. Оскільки Sailfish OS і життя в цілому коштує грошей, мені потрібна ваша підтримка, щоб мати змогу витрачати час на такі неоплачувані проекти, як цей.</translation>
+        <translation>நான் இலவச மென்பொருளை உருவாக்குகிறேன், ஏனென்றால் இது நெறிமுறை சேதி என்று நான் நம்புகிறேன் - இது ஒரு வேடிக்கையான பொழுதுபோக்கு. இருப்பினும், மென்பொருளை உருவாக்குவதற்கு நிறைய நேரமும் முயற்சியும் தேவை. படகோட்டியாகவும், பொது செலவினங்களுடனும், இது போன்ற ஊதியம் பெறாத திட்டங்களுக்கு நேரத்தை செலவிட எனக்கு உங்கள் உதவி தேவை.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="56"/>
         <source>Why donate?</source>
-        <translation>Навіщо донатити?</translation>
+        <translation>ஏன் நன்கொடை?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="59"/>
         <source>Jolla raised prices and is trying to force developers (who work for free) to pay rent for Sailfish.</source>
-        <translation>Jolla підняла ціни і намагається змусити розробників (які працюють безкоштовно) платити підписку на Sailfish OS.</translation>
+        <translation>சொல்லா விலைகளை உயர்த்தினார், மேலும் டெவலப்பர்களை (இலவசமாக வேலை செய்யும்) படகோட்டிக்கு வாடகை செலுத்த கட்டாயப்படுத்த முயற்சிக்கிறார்.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="64"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
-        <translation>Якщо ви можете собі це дозволити, донат – це найпростіший спосіб гарантувати, що я зможу продовжувати працювати над додатками для Sailfish OS. Будь-яка сума цінна, будь то чашка кави, шматок піци чи щось більше.</translation>
+        <translation>நீங்கள் அதை வாங்க முடிந்தால், சாய்ல்ஃபிசிற்கான பயன்பாடுகளில் நான் தொடர்ந்து பணியாற்ற முடியும் என்பதை உறுதிப்படுத்த நன்கொடை என்பது எளிதான வழியாகும். எந்தவொரு தொகையும் பாராட்டப்படுகிறது, அது ஒரு கப் காபி, ஒரு துண்டு பீச்சா அல்லது அதற்கு மேற்பட்டதாக இருக்கலாம்.</translation>
     </message>
 </context>
 <context>
@@ -2237,24 +2219,24 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="56"/>
         <source>About</source>
-        <translation>Про застосунок</translation>
+        <translation>பற்றி</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="85"/>
         <source>Version %1</source>
-        <translation>Версія %1</translation>
+        <translation>பதிப்பு %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="101"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="24"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="33"/>
         <source>Development</source>
-        <translation>Розробка</translation>
+        <translation>வளர்ச்சி</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="104"/>
         <source>show contributors</source>
-        <translation>показати учасників</translation>
+        <translation>பங்களிப்பாளர்களைக் காட்டு</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="106"/>
@@ -2262,37 +2244,36 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="24"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="47"/>
         <source>Homepage</source>
-        <translation>Головна</translation>
+        <translation>முகப்புப்பக்கம்</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="109"/>
         <location filename="../qml/modules/Opal/About/private/ChangelogPage.qml" line="16"/>
         <source>Changelog</source>
-        <translation>Список змін</translation>
+        <translation>மாற்றபதிவு</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="124"/>
         <source>Donations</source>
-        <translation>Пожертви</translation>
+        <translation>நன்கொடைகள்</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="130"/>
         <source>License</source>
-        <translation>Ліцензія</translation>
+        <translation>உரிமம்</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="135"/>
         <source>show license(s)</source>
         <translation>
-            <numerusform>показати ліцензію</numerusform>
-            <numerusform>показати ліцензії</numerusform>
-            <numerusform>показати ліцензій</numerusform>
+            <numerusform>உரிமத்தைக் காட்டு</numerusform>
+            <numerusform>உரிமங்களைக் காட்டு</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="112"/>
         <source>Translations</source>
-        <translation>Переклади</translation>
+        <translation>மொழிபெயர்ப்புகள்</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="115"/>
@@ -2300,87 +2281,86 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="25"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="50"/>
         <source>Source Code</source>
-        <translation>Вихідний код</translation>
+        <translation>மூலக் குறியீடு</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/InfoSection.qml" line="15"/>
         <source>show details</source>
-        <translation>показати подробиці</translation>
+        <translation>விவரங்களைக் காட்டு</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="23"/>
         <source>Contributors</source>
-        <translation>Учасники</translation>
+        <translation>பங்களிப்பாளர்கள்</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="39"/>
         <source>Acknowledgements</source>
-        <translation>Подяки</translation>
+        <translation>ஒப்புதல்கள்</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="11"/>
         <source>Thank you!</source>
-        <translation>Дякую!</translation>
+        <translation>நன்றி!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="15"/>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="34"/>
         <source>Details</source>
-        <translation>Подробиці</translation>
+        <translation>விவரங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="28"/>
         <source>Download license texts</source>
-        <translation>Завантажити тексти ліцензій</translation>
+        <translation>உரிம உரைகளைப் பதிவிறக்கவும்</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="34"/>
         <source>License(s)</source>
         <translation>
-            <numerusform>Ліцензія</numerusform>
-            <numerusform>Ліцензії</numerusform>
-            <numerusform>Ліцензій</numerusform>
+            <numerusform>உரிமம்</numerusform>
+            <numerusform>உரிமங்கள்</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="44"/>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation>Примітка: будь ласка, перевірте вихідний код для отримання найбільш точної інформації.</translation>
+        <translation>குறிப்பு: மிகவும் துல்லியமான தகவல்களுக்கு மூலக் குறியீட்டைச் சரிபார்க்கவும்.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="15"/>
         <source>External Link</source>
-        <translation>Зовнішнє посилання</translation>
+        <translation>வெளிப்புற இணைப்பு</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="32"/>
         <source>Open in browser</source>
-        <translation>Відкрити в браузері</translation>
+        <translation>உலாவியில் திற</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="36"/>
         <source>Copied to clipboard: %1</source>
-        <translation>Скопійовано до буфера обміну: %1</translation>
+        <translation>கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது: %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="41"/>
         <source>Copy to clipboard</source>
-        <translation>Копіювати в буфер обміну</translation>
+        <translation>கிளிப்போர்டுக்கு நகலெடுக்கவும்</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="61"/>
         <source>News</source>
-        <translation>Новини</translation>
+        <translation>செய்தி</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="62"/>
         <source>Changes since version %1</source>
-        <translation>Зміни з версії %1</translation>
+        <translation>பதிப்பு %1 முதல் மாற்றங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="120"/>
         <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
-        <translation>Будь ласка, зверніться до &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
+        <translation>தயவுசெய்து &lt;a href=&quot;%1&quot;&gt;%1 &lt;/a&gt; ஐப் பார்க்கவும்</translation>
     </message>
 </context>
 <context>
@@ -2388,17 +2368,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="7"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation>Якщо ви хочете підтримати мою роботу, ви можете пригостити мене чашкою кави.</translation>
+        <translation>நீங்கள் எனது வேலையை ஆதரிக்க விரும்பினால், நீங்கள் எனக்கு ஒரு கப் காபி வாங்கலாம்.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="8"/>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation>Ви можете підтримати цей проект, зробивши свій внесок або пожертвувавши за допомогою будь-якого з цих сервісів.</translation>
+        <translation>இந்த திட்டத்தை பங்களிப்பதன் மூலம் அல்லது இந்த சேவைகளில் ஏதேனும் ஒன்றைப் பயன்படுத்தி நன்கொடை அளிப்பதன் மூலம் நீங்கள் ஆதரிக்கலாம்.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="9"/>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation>Ваш внесок у переклади або код дуже допоможе.</translation>
+        <translation>மொழிபெயர்ப்புகள் அல்லது குறியீட்டிற்கான உங்கள் பங்களிப்புகள் மிகவும் வரவேற்கப்படும்.</translation>
     </message>
 </context>
 <context>
@@ -2406,27 +2386,27 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="15"/>
         <source>External Link</source>
-        <translation>Зовнішнє посилання</translation>
+        <translation>வெளிப்புற இணைப்பு</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <source>Open in browser</source>
-        <translation>Відкрити в браузері</translation>
+        <translation>உலாவியில் திற</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <source>Open externally</source>
-        <translation>Відкрити зовні</translation>
+        <translation>வெளிப்புறமாக திறக்கவும்</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
         <source>Copied to clipboard: %1</source>
-        <translation>Скопійовано до буфера обміну: %1</translation>
+        <translation>கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது: %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="41"/>
         <source>Copy to clipboard</source>
-        <translation>Копіювати в буфер обміну</translation>
+        <translation>கிளிப்போர்டுக்கு நகலெடுக்கவும்</translation>
     </message>
 </context>
 <context>
@@ -2435,117 +2415,117 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="17"/>
         <source>Playback failed</source>
         <comment>error info page heading</comment>
-        <translation>Не вдалося відтворити</translation>
+        <translation>பிளேபேக் தோல்வியடைந்தது</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="19"/>
         <source>Resource error</source>
         <comment>error info page heading</comment>
-        <translation>Помилка ресурсу</translation>
+        <translation>வள பிழை</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="20"/>
         <source>Format error</source>
         <comment>error info page heading</comment>
-        <translation>Помилка формату</translation>
+        <translation>வடிவமைப்பு பிழை</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="21"/>
         <source>Network error</source>
         <comment>error info page heading</comment>
-        <translation>Помилка мережі</translation>
+        <translation>பிணைய பிழை</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="22"/>
         <source>Access denied</source>
         <comment>error info page heading</comment>
-        <translation>У доступі відмовлено</translation>
+        <translation>அணுகல் மறுக்கப்பட்டது</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="23"/>
         <source>Media service missing</source>
         <comment>error info page heading</comment>
-        <translation>Відсутня медіа-послуга</translation>
+        <translation>ஊடக பணி இல்லை</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="24"/>
         <source>The video cannot be played due to a problem allocating resources.</source>
-        <translation>Відео не може бути відтворено через проблему з розподілом ресурсів.</translation>
+        <translation>வளங்களை ஒதுக்குவதில் சிக்கல் காரணமாக வீடியோவை இயக்க முடியாது.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="25"/>
         <source>The audio and or video format is not supported.</source>
-        <translation>Формат аудіо та/або відео не підтримується.</translation>
+        <translation>ஆடியோ மற்றும் வீடியோ வடிவம் ஆதரிக்கப்படவில்லை.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="26"/>
         <source>The video cannot be played due to network issues.</source>
-        <translation>Відео не може бути відтворено через проблеми з мережею.</translation>
+        <translation>பிணையம் சிக்கல்கள் காரணமாக வீடியோவை இயக்க முடியாது.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="27"/>
         <source>The video cannot be played due to insufficient permissions.</source>
-        <translation>Відео не може бути відтворено через недостатні дозволи.</translation>
+        <translation>போதிய அனுமதிகள் இல்லாததால் வீடியோவை இயக்க முடியாது.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="28"/>
         <source>The video cannot be played because the media service could not be instantiated.</source>
-        <translation>Відео не може бути відтворено, оскільки медіа-послуга не може бути інстанційованим.</translation>
+        <translation>ஊடக சேவையை உடனடிப்படுத்த முடியாததால் வீடியோவை இயக்க முடியாது.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="29"/>
         <source>Playback failed due to an expected error. Please restart the app and try again.</source>
-        <translation>Не вдалося відтворити через очікувану помилку. Перезапустіть застосунок і спробуйте ще раз.</translation>
+        <translation>எதிர்பார்க்கப்படும் பிழை காரணமாக பின்னணி தோல்வியடைந்தது. பயன்பாட்டை மறுதொடக்கம் செய்து மீண்டும் முயற்சிக்கவும்.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="208"/>
         <source>Clear subtitles</source>
-        <translation>Прибрати субтитри</translation>
+        <translation>தெளிவான வசன வரிகள்</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="212"/>
         <source>Load subtitles</source>
-        <translation>Завантажити субтитри</translation>
+        <translation>வசன வரிகள் ஏற்றவும்</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="663"/>
         <source>Zoomed to fit screen</source>
-        <translation>Зменшено до розміру екрана</translation>
+        <translation>திரைக்கு பொருத்தமாக பெரிதாக்கப்பட்டது</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="664"/>
         <source>Original</source>
-        <translation>Оригінал</translation>
+        <translation>அசல்</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="671"/>
         <source>Play on repeat</source>
-        <translation>Безперервне відтворення</translation>
+        <translation>மீண்டும் விளையாடுங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="672"/>
         <source>Play once</source>
-        <translation>Відтворити один раз</translation>
+        <translation>ஒரு முறை விளையாடுங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="38"/>
         <source>Select from file system</source>
-        <translation>Вибір з файлової системи</translation>
+        <translation>கோப்பு முறைமையிலிருந்து தேர்ந்தெடுக்கவும்</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="41"/>
         <source>No files ready</source>
-        <translation>Немає готових файлів</translation>
+        <translation>கோப்புகள் தயாராக இல்லை</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="42"/>
         <source>Copy subtitle files in the SRT format next to the video file to open them quickly.</source>
-        <translation>Скопіюйте файли субтитрів у форматі SRT поруч із відеофайлом, щоб швидко відкрити їх.</translation>
+        <translation>நகலெடுக்க வீடியோ கோப்புக்கு அடுத்த SRT வடிவத்தில் நகலெடுக்கவும் அவற்றை விரைவாக திறக்க.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="42"/>
         <source>Pull down to pick a file.</source>
-        <translation>Потягніть вниз, щоб вибрати файл.</translation>
+        <translation>ஒரு கோப்பை எடுக்க கீழே இழுக்கவும்.</translation>
     </message>
 </context>
 <context>
@@ -2553,22 +2533,22 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="49"/>
         <source>Replace?</source>
-        <translation>Замінити?</translation>
+        <translation>மாற்றவா?</translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="50"/>
         <source>Replace</source>
-        <translation>Замінити</translation>
+        <translation>மாற்றவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="54"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation>Ці файли/папки вже існують “%1”:</translation>
+        <translation>இந்த கோப்புகள் அல்லது கோப்புறைகள் ஏற்கனவே “%1” இல் உள்ளன:</translation>
     </message>
     <message>
         <location filename="../qml/pages/OverwriteDialog.qml" line="55"/>
         <source>These files or folders already exist:</source>
-        <translation>Ці файли або папки вже існують:</translation>
+        <translation>இந்த கோப்புகள் அல்லது கோப்புறைகள் ஏற்கனவே உள்ளன:</translation>
     </message>
 </context>
 <context>
@@ -2576,37 +2556,36 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="207"/>
         <source>Path to a folder</source>
-        <translation>Шлях до папки</translation>
+        <translation>ஒரு கோப்புறைக்கு பாதை</translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="184"/>
         <location filename="../qml/pages/PathEditDialog.qml" line="318"/>
         <source>Remove last part</source>
-        <translation>Видалити останню частину</translation>
+        <translation>கடைசி பகுதியை அகற்று</translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="159"/>
         <source>New folder</source>
-        <translation>Нова папка</translation>
+        <translation>புதிய கோப்புறை</translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="173"/>
         <source>Places</source>
-        <translation>Місця</translation>
+        <translation>இடங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="208"/>
         <source>Path to a target</source>
-        <translation>Шлях до цілі</translation>
+        <translation>இலக்குக்கான பாதை</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/PathEditDialog.qml" line="372"/>
         <source>%n file(s)</source>
         <extracomment>hidden if n=0</extracomment>
         <translation>
-            <numerusform>%n файл</numerusform>
-            <numerusform>%n файли</numerusform>
-            <numerusform>%n файлів</numerusform>
+            <numerusform>%n கோப்பு</numerusform>
+            <numerusform>%n கோப்புகள்</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -2614,16 +2593,15 @@ exposure program</extracomment>
         <source>%n folder(s)</source>
         <extracomment>hidden if n=0</extracomment>
         <translation>
-            <numerusform>%n папка</numerusform>
-            <numerusform>%n папки</numerusform>
-            <numerusform>%n папок</numerusform>
+            <numerusform>%n கோப்புறை</numerusform>
+            <numerusform>%n கோப்புறைகள்</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="378"/>
         <source>empty</source>
         <extracomment>as in &apos;this folder is empty&apos;</extracomment>
-        <translation>порожньо</translation>
+        <translation>காலி</translation>
     </message>
 </context>
 <context>
@@ -2631,44 +2609,44 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="78"/>
         <source>Change</source>
-        <translation>Змінити</translation>
+        <translation>மாற்றம்</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="84"/>
         <source>Change permissions for
 %1</source>
-        <translation>Змінити дозволи для
-%1</translation>
+        <translation>அனுமதிகளை மாற்றவும்
+ %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="104"/>
         <source>Read</source>
-        <translation>Читати</translation>
+        <translation>படிக்க</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="112"/>
         <source>Write</source>
-        <translation>Написати</translation>
+        <translation>எழுதுங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="119"/>
         <source>Execute</source>
-        <translation>Виконати</translation>
+        <translation>செயல்படுத்தவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="140"/>
         <source>Owner</source>
-        <translation>Власник</translation>
+        <translation>உரிமையாளர்</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="178"/>
         <source>Group</source>
-        <translation>Група</translation>
+        <translation>குழு</translation>
     </message>
     <message>
         <location filename="../qml/pages/PermissionsDialog.qml" line="211"/>
         <source>Others</source>
-        <translation>Інші</translation>
+        <translation>மற்றவர்கள்</translation>
     </message>
 </context>
 <context>
@@ -2676,17 +2654,17 @@ exposure program</extracomment>
     <message>
         <location filename="../src/globals.cpp" line="121"/>
         <source>hh:mm:ss</source>
-        <translation>hh:mm:ss</translation>
+        <translation>HH: மிமீ: எச்.எச்</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="124"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
-        <translation>dd MMM yyyy, hh:mm:ss t</translation>
+        <translation>dd mmm yyyy, hh: mm: ss t</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="126"/>
         <source>dd.MM.yy, hh:mm</source>
-        <translation>dd.MM.yy, hh:mm</translation>
+        <translation>dd.mm.yy, hh: mm</translation>
     </message>
 </context>
 <context>
@@ -2695,7 +2673,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/QuickSwitchDialog.qml" line="29"/>
         <source>Switch</source>
         <extracomment>as in &quot;Switch to this folder, please&quot;</extracomment>
-        <translation>Перейдіть</translation>
+        <translation>ஆளி, நிலைமாறி</translation>
     </message>
 </context>
 <context>
@@ -2703,25 +2681,25 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="66"/>
         <source>Rename</source>
-        <translation>Перейменувати</translation>
+        <translation>மறுபெயரிடுங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="85"/>
         <source>Give a new name for
 %1</source>
-        <translation>Дайте нову назву для
-%1</translation>
+        <translation>ஒரு புதிய பெயரைக் கொடுங்கள்
+ %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="95"/>
         <location filename="../qml/pages/RenameDialog.qml" line="96"/>
         <source>New name</source>
-        <translation>Нова назва</translation>
+        <translation>புதிய பெயர்</translation>
     </message>
     <message>
         <location filename="../qml/pages/RenameDialog.qml" line="97"/>
         <source>A file with this name already exists.</source>
-        <translation>Файл з такою назвою вже існує.</translation>
+        <translation>இந்த பெயருடன் ஒரு கோப்பு ஏற்கனவே உள்ளது.</translation>
     </message>
 </context>
 <context>
@@ -2729,37 +2707,37 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="19"/>
         <source>Unable to authenticate</source>
-        <translation>Не вдалося автентифікувати</translation>
+        <translation>அங்கீகரிக்க முடியவில்லை</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="20"/>
         <source>It is not possible to use File Browser in Root Mode without authentication.</source>
-        <translation>Неможливо користуватися Переглядачом Файлів у Root-режимі без автентифікації.</translation>
+        <translation>ஏற்பு இல்லாமல் ரூட் பயன்முறையில் கோப்பு உலாவியைப் பயன்படுத்த முடியாது.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="36"/>
         <source>Root Mode: be careful, you could break your system.</source>
-        <translation>Root режим: будьте обережні, ви можете зламати свою систему.</translation>
+        <translation>ரூட் பயன்முறை: கவனமாக இருங்கள், உங்கள் கணினியை உடைக்கலாம்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="68"/>
         <source>Understood!</source>
-        <translation>Зрозумів!</translation>
+        <translation>புரிந்து கொண்டேன்!</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="86"/>
         <source>Root Mode</source>
-        <translation>Root режим</translation>
+        <translation>ரூட் பயன்முறை</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="87"/>
         <source>Be careful when using File Browser in Root Mode. Actions may unexpectedly break your system.</source>
-        <translation>Будьте обережні під час використання Переглядачом Файлів у Root режимі. Дії можуть несподівано зламати вашу систему.</translation>
+        <translation>ரூட் பயன்முறையில் கோப்பு உலாவியைப் பயன்படுத்தும் போது கவனமாக இருங்கள். செயல்கள் எதிர்பாராத விதமாக உங்கள் கணினியை உடைக்கக்கூடும்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
-        <translation>Запуск Переглядача Файлів у Root режимі</translation>
+        <translation>ரூட் பயன்முறையில் கோப்பு உலாவியைத் தொடங்கவும்</translation>
     </message>
 </context>
 <context>
@@ -2767,31 +2745,30 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="102"/>
         <source>Searching</source>
-        <translation>Пошук</translation>
+        <translation>தேடுகிறது</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="111"/>
         <source>Settings</source>
-        <translation>Налаштування</translation>
+        <translation>அமைப்புகள்</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="122"/>
         <location filename="../qml/pages/SearchPage.qml" line="371"/>
         <source>Search</source>
-        <translation>Пошук</translation>
+        <translation>தேடல்</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="136"/>
         <source>Search below “%1”</source>
-        <translation>Шукайте нижче &quot;%1&quot;</translation>
+        <translation>“%1” க்கு கீழே தேடுங்கள்</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/SearchPage.qml" line="201"/>
         <source>%n hit(s)</source>
         <translation>
-            <numerusform>%n результат</numerusform>
-            <numerusform>%n результати</numerusform>
-            <numerusform>%n результатів</numerusform>
+            <numerusform>%n வெற்றி</numerusform>
+            <numerusform>%n வெற்றிகள்</numerusform>
         </translation>
     </message>
     <message>
@@ -2800,37 +2777,37 @@ exposure program</extracomment>
         <location filename="../qml/pages/SearchPage.qml" line="419"/>
         <location filename="../qml/pages/SearchPage.qml" line="421"/>
         <source>Deleting</source>
-        <translation>Видалення</translation>
+        <translation>நீக்குதல்</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="348"/>
         <source>Go to containing folder</source>
-        <translation>Перейти до папки з вмістом</translation>
+        <translation>கோப்புறையைக் கொண்டிருக்கும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="352"/>
         <source>Cut</source>
-        <translation>Вирізати</translation>
+        <translation>வெட்டு</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="356"/>
         <source>Copy</source>
-        <translation>Копіювати</translation>
+        <translation>நகலெடு</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="362"/>
         <source>Delete</source>
-        <translation>Видалити</translation>
+        <translation>நீக்கு</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="428"/>
         <source>Internally not ready</source>
-        <translation>Внутрішньо не готовий</translation>
+        <translation>உள்நாட்டில் தயாராக இல்லை</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="428"/>
         <source>Please simply try again</source>
-        <translation>Просто спробуйте ще раз</translation>
+        <translation>தயவுசெய்து மீண்டும் முயற்சிக்கவும்</translation>
     </message>
 </context>
 <context>
@@ -2838,12 +2815,12 @@ exposure program</extracomment>
     <message>
         <location filename="../src/searchworker.cpp" line="41"/>
         <source>Search already in progress</source>
-        <translation>Пошук вже триває</translation>
+        <translation>ஏற்கனவே செயலில் தேடுங்கள்</translation>
     </message>
     <message>
         <location filename="../src/searchworker.cpp" line="47"/>
         <source>Bad search parameters</source>
-        <translation>Погані параметри пошуку</translation>
+        <translation>மோசமான தேடல் அளவுருக்கள்</translation>
     </message>
 </context>
 <context>
@@ -2852,9 +2829,8 @@ exposure program</extracomment>
         <location filename="../qml/components/SelectionPanel.qml" line="54"/>
         <source>%n file(s) selected</source>
         <translation>
-            <numerusform>Вибрано %n файл</numerusform>
-            <numerusform>Вибрано %n файли</numerusform>
-            <numerusform>Вибрано %n файлів</numerusform>
+            <numerusform>%n கோப்பு தேர்ந்தெடுக்கப்பட்டது</numerusform>
+            <numerusform>%n கோப்புகள் தேர்ந்தெடுக்கப்பட்டன</numerusform>
         </translation>
     </message>
 </context>
@@ -2863,7 +2839,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsDialog.qml" line="32"/>
         <source>Select</source>
-        <translation>Вибрати</translation>
+        <translation>தேர்ந்தெடு</translation>
     </message>
 </context>
 <context>
@@ -2871,42 +2847,42 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="280"/>
         <source>Open system settings</source>
-        <translation>Відкрити налаштування системи</translation>
+        <translation>கணினி அமைப்புகள்</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="302"/>
         <source>Rename</source>
-        <translation>Перейменувати</translation>
+        <translation>மறுபெயரிடுங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="309"/>
         <source>Sort</source>
-        <translation>Сортувати</translation>
+        <translation>வரிசைப்படுத்து</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="315"/>
         <source>Remove</source>
-        <translation>Видалити</translation>
+        <translation>அகற்று</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="336"/>
         <source>Custom</source>
-        <translation>Власний</translation>
+        <translation>தனிப்பயன்</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="335"/>
         <source>Locations</source>
-        <translation>Розташування</translation>
+        <translation>இருப்பிடங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="334"/>
         <source>Storage devices</source>
-        <translation>Пристрої зберігання даних</translation>
+        <translation>சேமிப்பக சாதனங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="333"/>
         <source>Bookmarks</source>
-        <translation>Закладки</translation>
+        <translation>புக்மார்க்குகள்</translation>
     </message>
 </context>
 <context>
@@ -2915,77 +2891,77 @@ exposure program</extracomment>
         <location filename="../qml/pages/ShortcutsPage.qml" line="108"/>
         <location filename="../qml/pages/ShortcutsPage.qml" line="306"/>
         <source>Places</source>
-        <translation>Місця</translation>
+        <translation>இடங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="66"/>
         <source>Clipboard</source>
-        <translation>Буфер обміну</translation>
+        <translation>இடைநிலைப் பலகை</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="71"/>
         <source>Transfers</source>
-        <translation>Передачі</translation>
+        <translation>இடமாற்றங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="76"/>
         <source>Documents</source>
-        <translation>Документи</translation>
+        <translation>ஆவணங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="81"/>
         <source>Pictures</source>
-        <translation>Фотографії</translation>
+        <translation>படங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="86"/>
         <source>Videos</source>
-        <translation>Відео</translation>
+        <translation>வீடியோக்கள்</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="91"/>
         <source>Music</source>
-        <translation>Музика</translation>
+        <translation>இசை</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="237"/>
         <source>Remove bookmark for “%1”</source>
-        <translation>Видалити закладку для &quot;%1&quot;</translation>
+        <translation>“%1” க்கான புத்தகக்குறியை அகற்று</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="238"/>
         <source>Add “%1” to bookmarks</source>
-        <translation>Додати &quot;%1&quot; в закладки</translation>
+        <translation>புக்மார்க்குகளில் “%1” ஐச் சேர்க்கவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="249"/>
         <source>New window opened. Sometimes the application stays in the background.</source>
-        <translation>Відкрито нове вікно. Іноді застосунок залишається у фоновому режимі.</translation>
+        <translation>புதிய சாளரம் திறக்கப்பட்டது. சில நேரங்களில் பயன்பாடு பின்னணியில் இருக்கும்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="255"/>
         <source>Open new window</source>
-        <translation>Відкрити нове вікно</translation>
+        <translation>புதிய சாளரத்தைத் திறக்கவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="262"/>
         <source>Search</source>
-        <translation>Пошук</translation>
+        <translation>தேடல்</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="272"/>
         <source>Create a new bookmark</source>
-        <translation>Створити нову закладку</translation>
+        <translation>புதிய புத்தகக்குறியை உருவாக்கவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="284"/>
         <source>Save</source>
-        <translation>Зберегти</translation>
+        <translation>சேமி</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="291"/>
         <source>Open storage settings</source>
-        <translation>Відкрити налаштування сховища</translation>
+        <translation>திறந்த சேமிப்பு அமைப்புகள்</translation>
     </message>
 </context>
 <context>
@@ -2993,44 +2969,42 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="35"/>
         <source>Size</source>
-        <translation>Розмір</translation>
+        <translation>அளவு</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="56"/>
         <source>size</source>
-        <translation>розмір</translation>
+        <translation>அளவு</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="63"/>
         <source>directories</source>
-        <translation>каталоги</translation>
+        <translation>கோப்பகங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="70"/>
         <source>files</source>
-        <translation>файли</translation>
+        <translation>கோப்புகள்</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="80"/>
         <source>unknown size</source>
-        <translation>невідомий розмір</translation>
+        <translation>தெரியாத அளவு</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="84"/>
         <source>%n directories</source>
         <translation>
-            <numerusform>%n каталог</numerusform>
-            <numerusform>%n каталоги</numerusform>
-            <numerusform>%n каталогів</numerusform>
+            <numerusform>%n கோப்பகம்</numerusform>
+            <numerusform>%n கோப்பகங்கள்</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="92"/>
         <source>%n file(s)</source>
         <translation>
-            <numerusform>%n файл</numerusform>
-            <numerusform>%n файли</numerusform>
-            <numerusform>%n файлів</numerusform>
+            <numerusform>%n கோப்பு</numerusform>
+            <numerusform>%n கோப்புகள்</numerusform>
         </translation>
     </message>
 </context>
@@ -3039,17 +3013,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="18"/>
         <source>Analyse disk usage</source>
-        <translation>Проаналізувати використання диска</translation>
+        <translation>பகுப்பாய்வு வட்டு பயன்பாடு</translation>
     </message>
     <message>
         <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="29"/>
         <source>The “Space Inspector” app will open shortly.</source>
-        <translation>Додаток “Space Inspector” зараз відкриється.</translation>
+        <translation>“ச்பேச் இன்ச்பெக்டர்” பயன்பாடு விரைவில் திறக்கப்படும்.</translation>
     </message>
     <message>
         <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="37"/>
         <source>The “Space Inspector” app could not be opened.</source>
-        <translation>Не вдалося відкрити додаток “Space Inspector”.</translation>
+        <translation>“ச்பேச் இன்ச்பெக்டர்” பயன்பாட்டை திறக்க முடியவில்லை.</translation>
     </message>
 </context>
 <context>
@@ -3057,7 +3031,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/StorageSizeBar.qml" line="86"/>
         <source>%1 free</source>
-        <translation>%1 вільно</translation>
+        <translation>%1 இலவசம்</translation>
     </message>
 </context>
 <context>
@@ -3066,7 +3040,7 @@ exposure program</extracomment>
         <location filename="../qml/components/StorageSizeMenuLabel.qml" line="14"/>
         <source>%1 full (%2%)</source>
         <comment>as in “15 of 20 GiB [%1] of this device are filled with data, which is 75% [%2] of its capacity”</comment>
-        <translation>%1 заповнено (%2%)</translation>
+        <translation>%1 முழு (%2%)</translation>
     </message>
 </context>
 <context>
@@ -3074,27 +3048,27 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="9"/>
         <source>Hi there!</source>
-        <translation>Вітаю!</translation>
+        <translation>ஆய்!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="10"/>
         <source>Thank you for using my little app! Maybe you can contribute back?</source>
-        <translation>Дякую за використання мого додатку! Можливо, ви можете зробити свій внесок у відповідь?</translation>
+        <translation>எனது சிறிய பயன்பாட்டைப் பயன்படுத்தியதற்கு நன்றி! ஒருவேளை நீங்கள் மீண்டும் பங்களிக்க முடியுமா?</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="11"/>
         <source>Thank you for your support!</source>
-        <translation>Дякую за вашу підтримку!</translation>
+        <translation>உங்கள் ஆதரவுக்கு நன்றி!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="55"/>
         <source>Remind me later</source>
-        <translation>Нагадати пізніше</translation>
+        <translation>பின்னர் எனக்கு நினைவூட்டுங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="57"/>
         <source>Don&apos;t ask me again</source>
-        <translation>Не питати знову</translation>
+        <translation>மீண்டும் என்னிடம் கேட்க வேண்டாம்</translation>
     </message>
 </context>
 <context>
@@ -3102,27 +3076,27 @@ exposure program</extracomment>
     <message>
         <location filename="../src/texteditor.cpp" line="61"/>
         <source>Cannot open “%1”</source>
-        <translation>Неможливо відкрити &quot;%1&quot;</translation>
+        <translation>“%1” ஐ திறக்க முடியாது</translation>
     </message>
     <message>
         <location filename="../src/texteditor.cpp" line="67"/>
         <source>File “%1” is too large to be edited</source>
-        <translation>Файл &quot;%1&quot; занадто великий для редагування</translation>
+        <translation>“%1” கோப்பு திருத்தப்பட முடியாத அளவுக்கு பெரியது</translation>
     </message>
     <message>
         <location filename="../src/texteditor.cpp" line="81"/>
         <source>No file name specified</source>
-        <translation>Не вказано ім&apos;я файлу</translation>
+        <translation>கோப்பு பெயர் எதுவும் குறிப்பிடப்படவில்லை</translation>
     </message>
     <message>
         <location filename="../src/texteditor.cpp" line="86"/>
         <source>No permission to write to “%1”</source>
-        <translation>Немає дозволу на запис &quot;%1&quot;</translation>
+        <translation>“%1” க்கு எழுத இசைவு இல்லை</translation>
     </message>
     <message>
         <location filename="../src/texteditor.cpp" line="92"/>
         <source>Cannot open “%1” for writing</source>
-        <translation>Неможливо відкрити &quot;%1&quot; для запису</translation>
+        <translation>எழுதுவதற்கு “%1” ஐ திறக்க முடியாது</translation>
     </message>
 </context>
 <context>
@@ -3131,49 +3105,49 @@ exposure program</extracomment>
         <location filename="../qml/pages/TextEditorDialog.qml" line="60"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation>Переглядач файлів</translation>
+        <translation>கோப்பு உலாவி</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="77"/>
         <location filename="../qml/pages/TextEditorDialog.qml" line="101"/>
         <source>Failed to open “%1”</source>
-        <translation>Не вдалося відкрити &quot;%1&quot;</translation>
+        <translation>“%1” ஐ திறக்கத் தவறிவிட்டது</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="79"/>
         <source>Failed to save “%1”</source>
-        <translation>Не вдалося зберегти &quot;%1&quot;</translation>
+        <translation>“%1” ஐ சேமிப்பதில் தோல்வி</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="81"/>
         <source>Failed to edit “%1”</source>
-        <translation>Не вдалося відредагувати &quot;%1&quot;</translation>
+        <translation>“%1” ஐ திருத்துவதில் தோல்வி</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="98"/>
         <source>Open externally</source>
-        <translation>Відкрити зовні</translation>
+        <translation>வெளிப்புறமாக திறக்கவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="102"/>
         <source>No application to open the file</source>
-        <translation>Немає застосунку для відкриття файлу</translation>
+        <translation>கோப்பைத் திறக்க விண்ணப்பம் இல்லை</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="109"/>
         <source>Disable predictive text input</source>
-        <translation>Вимкнути предиктивне введення тексту</translation>
+        <translation>முன்கணிப்பு உரை உள்ளீட்டை முடக்கு</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="110"/>
         <source>Enable predictive text input</source>
-        <translation>Ввімкнути предиктивне введення тексту</translation>
+        <translation>முன்கணிப்பு உரை உள்ளீட்டை இயக்கவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="116"/>
         <location filename="../qml/pages/TextEditorDialog.qml" line="124"/>
         <source>Save</source>
-        <translation>Зберегти</translation>
+        <translation>சேமி</translation>
     </message>
 </context>
 <context>
@@ -3181,45 +3155,43 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="64"/>
         <source>Clear selection</source>
-        <translation>Очистити виділення</translation>
+        <translation>துடை தேர்வு</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="77"/>
         <source>Enter target path</source>
-        <translation>Введіть шлях до цілі</translation>
+        <translation>இலக்கு பாதையை உள்ளிடவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="89"/>
         <source>Select</source>
-        <translation>Вибрати</translation>
+        <translation>தேர்ந்தெடு</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="73"/>
         <source>Switch to target directory</source>
-        <translation>Перехід до цільового каталогу</translation>
+        <translation>இலக்கு கோப்பகத்திற்கு மாறவும்</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="106"/>
         <source>%n item(s)</source>
         <translation>
-            <numerusform>%n елемент</numerusform>
-            <numerusform>%n елементи</numerusform>
-            <numerusform>%n елементів</numerusform>
+            <numerusform>%n உருப்படி</numerusform>
+            <numerusform>%n உருப்படிகள்</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="107"/>
         <source>%n target(s)</source>
         <translation>
-            <numerusform>%n ціль</numerusform>
-            <numerusform>%n цілі</numerusform>
-            <numerusform>%n цілей</numerusform>
+            <numerusform>%n இலக்கு</numerusform>
+            <numerusform>%n இலக்குகள்</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="148"/>
         <source>Nothing selected to transfer</source>
-        <translation>Нічого не вибрано для передачі</translation>
+        <translation>இடமாற்றம் செய்ய எதுவும் தேர்ந்தெடுக்கப்படவில்லை</translation>
     </message>
 </context>
 <context>
@@ -3228,123 +3200,115 @@ exposure program</extracomment>
         <location filename="../qml/components/TransferPanel.qml" line="64"/>
         <source>%n file(s)</source>
         <translation>
-            <numerusform>%n файл</numerusform>
-            <numerusform>%n файли</numerusform>
-            <numerusform>%n файлів</numerusform>
+            <numerusform>%n கோப்பு</numerusform>
+            <numerusform>%n கோப்புகள்</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="64"/>
         <source>%n destination(s)</source>
         <translation>
-            <numerusform>%n призначення</numerusform>
-            <numerusform>%n призначення</numerusform>
-            <numerusform>%n призначень</numerusform>
+            <numerusform>%n இலக்கிடம்</numerusform>
+            <numerusform>%n இலக்கிடங்கள்</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="69"/>
         <source>Successfully copied</source>
         <translation>
-            <numerusform>Успішно скопійовано</numerusform>
-            <numerusform>Успішно скопійовані</numerusform>
-            <numerusform>Успішно скопійованих</numerusform>
+            <numerusform>வெற்றிகரமாக நகலெடுக்கப்பட்டது</numerusform>
+            <numerusform>வெற்றிகரமாக நகலெடுக்கப்பட்டன</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="71"/>
         <source>Successfully moved</source>
         <translation>
-            <numerusform>Успішно переміщено</numerusform>
-            <numerusform>Успішно переміщені</numerusform>
-            <numerusform>Успішно переміщених</numerusform>
+            <numerusform>வெற்றிகரமாக நகர்ந்தது</numerusform>
+            <numerusform>வெற்றிகரமாக நகர்ந்தன</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="73"/>
         <source>Successfully linked</source>
         <translation>
-            <numerusform>Успішно з&apos;єднано</numerusform>
-            <numerusform>Успішно з&apos;єднані</numerusform>
-            <numerusform>Успішно з&apos;єднаних</numerusform>
+            <numerusform>வெற்றிகரமாக இணைக்கப்பட்டுள்ளது</numerusform>
+            <numerusform>வெற்றிகரமாக இணைக்கப்பட்டுள்ளன</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="77"/>
         <source>Failed to copy</source>
         <translation>
-            <numerusform>Не вдалося скопіювати</numerusform>
-            <numerusform>Не вдалося скопіювати</numerusform>
-            <numerusform>Не вдалося скопіювати</numerusform>
+            <numerusform>நகலெடுப்பதில் தோல்வி</numerusform>
+            <numerusform>நகலெடுப்பதில் தோல்வி</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="79"/>
         <source>Failed to move</source>
         <translation>
-            <numerusform>Не вдалося перемістити</numerusform>
-            <numerusform>Не вдалося перемістити</numerusform>
-            <numerusform>Не вдалося перемістити</numerusform>
+            <numerusform>நகர்த்தத் தவறிவிட்டது</numerusform>
+            <numerusform>நகர்த்தத் தவறிவிட்டது</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="81"/>
         <source>Failed to link</source>
         <translation>
-            <numerusform>Не вдалося створити посилання</numerusform>
-            <numerusform>Не вдалося створити посилання</numerusform>
-            <numerusform>Не вдалося створити посилання</numerusform>
+            <numerusform>இணைக்கத் தவறிவிட்டது</numerusform>
+            <numerusform>இணைக்கத் தவறிவிட்டது</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="126"/>
         <source>Replace?</source>
-        <translation>Замінити?</translation>
+        <translation>மாற்றவா?</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="142"/>
         <source>Cancel</source>
-        <translation>Скасувати</translation>
+        <translation>ரத்துசெய்</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="154"/>
         <source>Overwrite</source>
-        <translation>Перезаписати</translation>
+        <translation>மேலெழுதும்</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="163"/>
         <source>These files or folders already exist in “%1”:</source>
-        <translation>Ці файли/папки вже існують “%1”:</translation>
+        <translation>இந்த கோப்புகள் அல்லது கோப்புறைகள் ஏற்கனவே “%1” இல் உள்ளன:</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="203"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation>Намагаєтесь перемістити між телефоном і SD картою? Це не працює, спробуйте скопіювати.</translation>
+        <translation>தொலைபேசி மற்றும் எச்டி கார்டுக்கு இடையில் செல்ல முயற்சிக்கிறீர்களா? இது வேலை செய்யாது, நகலெடுக்க முயற்சிக்கவும்.</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="205"/>
         <source>Perhaps the storage is full?</source>
-        <translation>Переповнена пам&apos;ять?</translation>
+        <translation>ஒருவேளை சேமிப்பு நிரம்பியிருக்கலாம்?</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="289"/>
         <source>Unable to overwrite existing file with symlink</source>
-        <translation>Не вдалося замінити існуючий файл посиланням</translation>
+        <translation>சிம்லிங்குடன் இருக்கும் கோப்பை மேலெழுத முடியவில்லை</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="306"/>
         <source>Copying</source>
-        <translation>Копіювання</translation>
+        <translation>நகலெடுக்கும்</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="308"/>
         <source>Moving</source>
-        <translation>Переміщення</translation>
+        <translation>நகரும்</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="310"/>
         <source>Linking</source>
-        <translation>Зв&apos;язування</translation>
+        <translation>இணைத்தல்</translation>
     </message>
 </context>
 <context>
@@ -3353,13 +3317,13 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewImagePage.qml" line="256"/>
         <source>Loading image</source>
         <extracomment>Full page placeholder shown while a large image is being loaded</extracomment>
-        <translation>Зображення завантажуєтся</translation>
+        <translation>படத்தை ஏற்றுகிறது</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewImagePage.qml" line="266"/>
         <source>Failed to load</source>
         <extracomment>Full page placeholder shown when an image failed to load</extracomment>
-        <translation>Не вдалося завантажити</translation>
+        <translation>ஏற்றுவதில் தோல்வி</translation>
     </message>
 </context>
 <context>
@@ -3368,7 +3332,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewPage.qml" line="49"/>
         <source>Edit</source>
         <comment>verb as in &apos;edit this file&apos;</comment>
-        <translation>Редагувати</translation>
+        <translation>தொகு</translation>
     </message>
 </context>
 <context>
@@ -3376,137 +3340,137 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="35"/>
         <source>Sorting and View</source>
-        <translation>Сортування та перегляд</translation>
+        <translation>வரிசைப்படுத்துதல் மற்றும் பார்வை</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="37"/>
         <source>Settings apply only to the current folder. Swipe from the right to change default values.</source>
-        <translation>Налаштування застосовуються лише до поточної папки. Проведіть праворуч, щоб змінити значення за замовчуванням.</translation>
+        <translation>அமைப்புகள் தற்போதைய கோப்புறைக்கு மட்டுமே பொருந்தும். இயல்புநிலை மதிப்புகளை மாற்றுவதற்கான உரிமையிலிருந்து ச்வைப் செய்யவும்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="38"/>
         <source>Settings apply to all folders.</source>
-        <translation>Налаштування застосовуються до всіх папок.</translation>
+        <translation>அனைத்து கோப்புறைகளுக்கும் அமைப்புகள் பொருந்தும்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="48"/>
         <source>Sort by...</source>
-        <translation>Сортувати за...</translation>
+        <translation>வரிசைப்படுத்துங்கள் ...</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="86"/>
         <source>Name</source>
-        <translation>Ім&apos;ям</translation>
+        <translation>பெயர்</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="87"/>
         <source>Size</source>
-        <translation>Розміром</translation>
+        <translation>அளவு</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="88"/>
         <source>Modification date</source>
-        <translation>Дата зміни</translation>
+        <translation>மாற்றும் தேதி</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="89"/>
         <source>File type</source>
-        <translation>Типом файлу</translation>
+        <translation>கோப்பு வகை</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="97"/>
         <source>Order...</source>
-        <translation>Порядок...</translation>
+        <translation>ஒழுங்கு ...</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="101"/>
         <source>ascending</source>
-        <translation>за зростанням</translation>
+        <translation>ஏறுதல்</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="102"/>
         <source>descending</source>
-        <translation>за спаданням</translation>
+        <translation>இறங்கு</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="110"/>
         <source>Preview images...</source>
-        <translation>Попередній перегляд зображень...</translation>
+        <translation>முன்னோட்ட படங்கள் ...</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="113"/>
         <source>none</source>
-        <translation>немає</translation>
+        <translation>எதுவுமில்லை</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="114"/>
         <source>small</source>
-        <translation>невеликий</translation>
+        <translation>சிறிய</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="115"/>
         <source>medium</source>
-        <translation>середній</translation>
+        <translation>நடுத்தர</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="116"/>
         <source>large</source>
-        <translation>великий</translation>
+        <translation>பெரிய</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="117"/>
         <source>huge</source>
-        <translation>величезний</translation>
+        <translation>பெரிய</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="130"/>
         <source>Show hidden files</source>
-        <translation>Показати приховані файли</translation>
+        <translation>மறைக்கப்பட்ட கோப்புகளைக் காட்டு</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="132"/>
         <source>Show files with names starting with a full stop (“.”).</source>
-        <translation>Показувати файли з іменами, що починаються з крапки (&quot;.&quot;).</translation>
+        <translation>முழு நிறுத்தத்துடன் (“.”) தொடங்கும் பெயர்களுடன் கோப்புகளைக் காண்பி.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="136"/>
         <source>Enable gallery mode</source>
-        <translation>Ввімкнути режим галереї</translation>
+        <translation>கேலரி பயன்முறையை இயக்கவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="138"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
-        <translation>У режимі галереї зображення будуть показані відповідно до розміру екрану. Інші файли показуються без мініатюр попереднього перегляду.</translation>
+        <translation>கேலரி பயன்முறையில், திரைக்கு ஏற்றவாறு படங்கள் காண்பிக்கப்படும். பிற கோப்புகள் முன்னோட்ட சிறு உருவங்கள் இல்லாமல் காட்டப்படுகின்றன.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="154"/>
         <source>Sort case-sensitively</source>
-        <translation>Сортування з урахуванням регістру</translation>
+        <translation>வழக்கு-உணர்திறன் வரிசைப்படுத்தவும்</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="156"/>
         <source>Show files with names starting with a capital letter first.</source>
-        <translation>Спочатку показувати файли з іменами, що починаються з великої літери.</translation>
+        <translation>முதலில் ஒரு பெரிய கடிதத்துடன் தொடங்கும் பெயர்களுடன் கோப்புகளைக் காண்பி.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="161"/>
         <source>Show folders first</source>
-        <translation>Спочатку показувати папки</translation>
+        <translation>முதலில் கோப்புறைகளைக் காட்டு</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="163"/>
         <source>Always show folders at the top of the file list.</source>
-        <translation>Завжди показувати папки у верхній частині списку файлів.</translation>
+        <translation>கோப்பு பட்டியலின் மேலே எப்போதும் கோப்புறைகளைக் காட்டுங்கள்.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="167"/>
         <source>Show hidden files last</source>
-        <translation>Показувати приховані файли останніми</translation>
+        <translation>மறைக்கப்பட்ட கோப்புகளை கடைசியாக காட்டு</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="169"/>
         <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
-        <translation>Завжди показувати файли, що починаються з крапки (&quot;.&quot;) в кінці списку файлів.</translation>
+        <translation>கோப்பு பட்டியலின் முடிவில் முழு நிறுத்தத்தில் (“.”) தொடங்கும் கோப்புகளை எப்போதும் காண்பி.</translation>
     </message>
 </context>
 <context>
@@ -3515,7 +3479,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewVideoPage.qml" line="19"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation>Переглядач файлів</translation>
+        <translation>கோப்பு உலாவி</translation>
     </message>
 </context>
 <context>
@@ -3523,22 +3487,22 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/js/files.js" line="28"/>
         <source>Copying</source>
-        <translation>Копіювання</translation>
+        <translation>நகலெடுக்கும்</translation>
     </message>
     <message>
         <location filename="../qml/js/files.js" line="30"/>
         <source>Moving</source>
-        <translation>Переміщення</translation>
+        <translation>நகரும்</translation>
     </message>
     <message>
         <location filename="../qml/js/files.js" line="32"/>
         <source>Linking</source>
-        <translation>Зв&apos;язування</translation>
+        <translation>இணைத்தல்</translation>
     </message>
     <message>
         <location filename="../qml/js/files.js" line="35"/>
         <source>Unknown</source>
-        <translation>Невідомо</translation>
+        <translation>தெரியாத</translation>
     </message>
 </context>
 <context>
@@ -3547,7 +3511,7 @@ exposure program</extracomment>
         <location filename="../qml/js/paths.js" line="50"/>
         <source>root</source>
         <extracomment>root directory (placeholder instead of &quot;/&quot; in search mask)</extracomment>
-        <translation>root</translation>
+        <translation>மூலம்</translation>
     </message>
 </context>
 </TS>
