@@ -3013,17 +3013,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="18"/>
         <source>Analyse disk usage</source>
-        <translation type="unfinished"></translation>
+        <translation>Analizar el uso del disco</translation>
     </message>
     <message>
         <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="29"/>
         <source>The “Space Inspector” app will open shortly.</source>
-        <translation type="unfinished"></translation>
+        <translation>La aplicación “Analizador del uso del disco” se abrirá en breve.</translation>
     </message>
     <message>
         <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="37"/>
         <source>The “Space Inspector” app could not be opened.</source>
-        <translation type="unfinished"></translation>
+        <translation>No se pudo abrir la aplicación “Analizador del uso del disco”.</translation>
     </message>
 </context>
 <context>
