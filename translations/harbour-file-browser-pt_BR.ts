@@ -6,7 +6,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="55"/>
         <source>A fully-fledged file manager for Sailfish OS.</source>
-        <translation type="unfinished"></translation>
+        <translation>Um gerenciador de arquivos completo para o Sailfish OS.</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="82"/>
@@ -149,7 +149,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="11"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Por favor, tome um momento para considerar se você pode contribuir para este projeto de uma forma ou de outra.</translation>
     </message>
 </context>
 <context>
@@ -157,17 +157,17 @@
     <message>
         <location filename="../src/bookmarks.cpp" line="507"/>
         <source>Memory card</source>
-        <translation type="unfinished"></translation>
+        <translation>Cartão de memória</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="509"/>
         <source>Attached folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Pastas em anexo</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="511"/>
         <source>Remote folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasto remoto</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="514"/>
@@ -184,12 +184,12 @@
         <location filename="../src/bookmarks.cpp" line="609"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>“%1” em “%2”</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="1009"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Casa</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="664"/>
@@ -225,7 +225,7 @@
         <location filename="../src/bookmarks.cpp" line="1069"/>
         <location filename="../src/bookmarks.cpp" line="1095"/>
         <source>Android storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Armazenamento Android</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="1079"/>
@@ -244,7 +244,7 @@
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="55"/>
         <source>Rename bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Renomear favoritos</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="89"/>
@@ -257,7 +257,7 @@
     <message>
         <location filename="../qml/pages/BookmarksSortPage.qml" line="25"/>
         <source>Sort bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Classificar favoritos</translation>
     </message>
 </context>
 <context>
@@ -265,7 +265,7 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="70"/>
         <source>Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Área de transferência</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="75"/>
@@ -296,8 +296,9 @@
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
         <source>%n item(s) to be linked</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n item a ser vinculado</numerusform>
+            <numerusform>%n itens a serem vinculados</numerusform>
         </translation>
     </message>
     <message>
@@ -314,7 +315,7 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="256"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir pasta contendo</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="274"/>
@@ -333,7 +334,7 @@
         <location filename="../src/consolemodel.cpp" line="124"/>
         <location filename="../src/consolemodel.cpp" line="136"/>
         <source>** crashed</source>
-        <translation type="unfinished"></translation>
+        <translation>** caiu</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="126"/>
@@ -348,7 +349,7 @@
     <message>
         <location filename="../src/consolemodel.cpp" line="138"/>
         <source>** timeout reached</source>
-        <translation type="unfinished"></translation>
+        <translation>** tempo limite atingido</translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="140"/>
@@ -367,17 +368,17 @@
         <location filename="../qml/pages/ConsolePage.qml" line="75"/>
         <source>Preview</source>
         <comment>as in &apos;incomplete/aggregated preview of the contents of a file&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Pré-visualização</translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="151"/>
         <source>This file appears to be a software package. To install, swipe back and select the “Install” option from the menu.</source>
-        <translation type="unfinished"></translation>
+        <translation>Este arquivo parece ser um pacote de software. Para instalar, deslize para trás e selecione a opção “Install” no menu.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="153"/>
         <source>Swipe from the right to view raw contents.</source>
-        <translation type="unfinished"></translation>
+        <translation>Deslize da direita para ver o conteúdo bruto.</translation>
     </message>
 </context>
 <context>
@@ -385,7 +386,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="95"/>
         <source>Root Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo Root</translation>
     </message>
 </context>
 <context>
@@ -393,69 +394,69 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="61"/>
         <source>Create</source>
-        <translation type="unfinished"></translation>
+        <translation>Criar</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="77"/>
         <source>Not permitted</source>
-        <translation type="unfinished"></translation>
+        <translation>Não permitido</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="78"/>
         <source>You don&apos;t have permission to change the contents of this directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>Você não tem permissão para alterar o conteúdo deste diretório.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="94"/>
         <source>Create new</source>
-        <translation type="unfinished"></translation>
+        <translation>Criar novo</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="96"/>
         <source>The new folder will be created under “%1”.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation type="unfinished"></translation>
+        <translation>A nova pasta será criada em “%1”.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="98"/>
         <source>The new text file will be created under “%1” and can be edited later.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation type="unfinished"></translation>
+        <translation>O novo arquivo de texto será criado em “%1” e poderá ser editado posteriormente.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="104"/>
         <source>folder</source>
-        <translation type="unfinished"></translation>
+        <translation>pasta</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="107"/>
         <source>empty text file</source>
-        <translation type="unfinished"></translation>
+        <translation>arquivo de texto vazio</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="119"/>
         <source>Folder name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome da pasta</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="119"/>
         <source>File name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome do arquivo</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="138"/>
         <source>File names must not contain slashes. To create a new file in a folder below “%1”, first create a folder and then create the file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Os nomes de arquivo não devem conter barras. Para criar um novo arquivo em uma pasta abaixo de “%1”, primeiro crie uma pasta e depois crie o arquivo.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="142"/>
         <source>A file or folder with this name already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Já existe um arquivo ou pasta com este nome.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="145"/>
         <source>Using slashes in folder names will create sub-folders, like so:</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar barras em nomes de pastas criará subpastas, como esta:</translation>
     </message>
 </context>
 <context>
@@ -463,8 +464,9 @@
     <message numerus="yes">
         <location filename="../qml/components/DetailList.qml" line="45"/>
         <source>... and %n more</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>... e mais %n</numerusform>
+            <numerusform>... e outros %n</numerusform>
         </translation>
     </message>
 </context>
@@ -473,12 +475,12 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show less</source>
-        <translation type="unfinished"></translation>
+        <translation>mostrar menos</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show more</source>
-        <translation type="unfinished"></translation>
+        <translation>mostrar mais</translation>
     </message>
 </context>
 <context>
@@ -487,95 +489,95 @@
         <location filename="../qml/pages/DirectoryPage.qml" line="158"/>
         <source>View Preferences</source>
         <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ver Preferências</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="165"/>
         <source>Create New...</source>
-        <translation type="unfinished"></translation>
+        <translation>Criar um novo...</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="178"/>
         <source>Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasta</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="196"/>
         <source>Filter directory contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtrar conteúdo do diretório</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="278"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Procurar</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="283"/>
         <source>Remove bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Remover marcador</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="283"/>
         <source>Add to bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Adicionar aos favoritos</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="292"/>
         <source>Copy path to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar caminho para a área de transferência</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="372"/>
         <source>filtered by: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>filtrado por: %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="434"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Nenhuma correspondência</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="436"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Vazio</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="439"/>
         <source>No files matched the filter.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nenhum arquivo corresponde ao filtro.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="440"/>
         <source>This directory contains no files.</source>
-        <translation type="unfinished"></translation>
+        <translation>Este diretório não contém arquivos.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="520"/>
         <location filename="../qml/pages/DirectoryPage.qml" line="523"/>
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Apagando</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="535"/>
         <source>Internally not ready</source>
-        <translation type="unfinished"></translation>
+        <translation>Internamente não está pronto</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="535"/>
         <source>Please simply try again</source>
-        <translation type="unfinished"></translation>
+        <translation>Por favor, tente novamente</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="578"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tentando mover entre o telefone e o cartão SD ? Não funciona, tente copiar.</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="580"/>
         <source>Perhaps the storage is full?</source>
-        <translation type="unfinished"></translation>
+        <translation>Talvez o armazenamento esteja cheio?</translation>
     </message>
 </context>
 <context>
@@ -583,27 +585,27 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="48"/>
         <source>Deleting</source>
-        <translation type="unfinished"></translation>
+        <translation>Apagando</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="324"/>
         <source>Open target folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir pasta de destino</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="325"/>
         <source>Open containing folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir pasta contendo</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="337"/>
         <source>Remove bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Remover marcador</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="337"/>
         <source>Add to bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Adicionar aos favoritos</translation>
     </message>
 </context>
 <context>
@@ -611,17 +613,17 @@
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="134"/>
         <source>Hide hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation>Ocultar arquivos ocultos</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="135"/>
         <source>Show hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar arquivos ocultos</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="140"/>
         <source>Edit path</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar caminho</translation>
     </message>
 </context>
 <context>
@@ -629,123 +631,123 @@
     <message>
         <location filename="../src/engine.cpp" line="70"/>
         <source>No files to paste</source>
-        <translation type="unfinished"></translation>
+        <translation>Nenhum arquivo para colar</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="78"/>
         <source>Destination does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>O destino não existe</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="89"/>
         <source>Cannot overwrite itself</source>
-        <translation type="unfinished"></translation>
+        <translation>Não pode sobrescrever a si mesmo</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="95"/>
         <source>Cannot move/copy to itself</source>
-        <translation type="unfinished"></translation>
+        <translation>Não é possível mover/copiar para si mesmo</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="258"/>
         <source>File does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>O arquivo não existe</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="260"/>
         <source>Broken symbolic link</source>
-        <translation type="unfinished"></translation>
+        <translation>Link simbólico quebrado</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="265"/>
         <source>Cannot read this type of file</source>
-        <translation type="unfinished"></translation>
+        <translation>Não é possível ler este tipo de arquivo</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="271"/>
         <source>No permission to read the file</source>
-        <translation type="unfinished"></translation>
+        <translation>Sem permissão para ler o arquivo</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="275"/>
         <location filename="../src/engine.cpp" line="281"/>
         <source>Error reading file</source>
-        <translation type="unfinished"></translation>
+        <translation>Erro ao ler arquivo</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="284"/>
         <source>Empty file</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo vazio</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="310"/>
         <source>Binary file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>Prévia do arquivo binário cortada em %1 kB</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="329"/>
         <source>Text file preview clipped at %1 lines</source>
-        <translation type="unfinished"></translation>
+        <translation>A pré-visualização do arquivo de texto foi cortada em %1 linhas</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="331"/>
         <source>Text file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>A pré-visualização do arquivo de texto foi cortada em %1 kB</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="350"/>
         <source>No permissions to create %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nenhuma permissão para criar %1</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="352"/>
         <source>Cannot create folder %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Não é possível criar a pasta %1</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="368"/>
         <source>No permissions to create “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Nenhuma permissão para criar “%1” em “%2”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="379"/>
         <source>Cannot create file “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Não é possível criar o arquivo “%1” em “%2”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="415"/>
         <source>Cannot rename %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Não é possível renomear %1</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="432"/>
         <source>Source “%1” is not a symbolic link</source>
-        <translation type="unfinished"></translation>
+        <translation>A fonte “%1” não é um link simbólico</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="441"/>
         <source>No permissions to change contents of “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Nenhuma permissão para alterar o conteúdo de “%1”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="449"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Falha ao remover o link antigo “%1” apontando para “%2”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="455"/>
         <source>Failed to revert link “%1” pointing to “%2” after failing to change target to “%3”</source>
-        <translation type="unfinished"></translation>
+        <translation>Falha ao reverter o link “%1” apontando para “%2” após falha ao alterar o alvo para “%3”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="462"/>
         <source>Failed to change link target of “%1” to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Falha ao alterar o destino do link de “%1” para “%2”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="488"/>
         <source>Cannot change permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>Não é possível alterar as permissões</translation>
     </message>
 </context>
 <context>
@@ -753,104 +755,115 @@
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="86"/>
         <source>%n file(s) selected</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n arquivo selecionado</numerusform>
+            <numerusform>%n arquivos selecionados</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="114"/>
         <source>clear selection</source>
-        <translation type="unfinished"></translation>
+        <translation>limpar seleção</translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="115"/>
         <source>select all</source>
-        <translation type="unfinished"></translation>
+        <translation>selecionar tudo</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="124"/>
         <source>cut file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>arquivo de corte</numerusform>
+            <numerusform>arquivos de cortes</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="129"/>
         <source>%n file(s) cut</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n arquivo cortado</numerusform>
+            <numerusform>%n arquivos cortados</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="138"/>
         <source>copy file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>copiar arquivo</numerusform>
+            <numerusform>copiar arquivos</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="143"/>
         <source>%n file(s) copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n arquivo copiado</numerusform>
+            <numerusform>%n arquivos copiados</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="152"/>
         <source>transfer file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>transferir arquivo</numerusform>
+            <numerusform>transferir arquivos</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="171"/>
         <source>delete file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>apagar arquivo</numerusform>
+            <numerusform>apagar arquivos</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="186"/>
         <source>rename file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>renomear arquivo</numerusform>
+            <numerusform>renomear arquivos</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="216"/>
         <source>share file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>compartilhar arquivo</numerusform>
+            <numerusform>compartilhar arquivos</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>comprimir arquivo</numerusform>
+            <numerusform>comprimir arquivos</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
-        <translation type="unfinished"></translation>
+        <translation>editar link alvo</translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplicar</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>editar arquivo</numerusform>
+            <numerusform>editar arquivos</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/FileActions.qml" line="324"/>
         <source>show file properties</source>
-        <translation type="unfinished"></translation>
+        <translation>mostrar propriedades do arquivo</translation>
     </message>
 </context>
 <context>
@@ -858,17 +871,17 @@
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="32"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar</translation>
     </message>
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="33"/>
         <source>Move</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover</translation>
     </message>
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="34"/>
         <source>Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Link</translation>
     </message>
 </context>
 <context>
@@ -877,49 +890,50 @@
         <location filename="../src/filedata.cpp" line="87"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>vazio</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/filedata.cpp" line="88"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n item</numerusform>
+            <numerusform>%n itens</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="248"/>
         <source>File does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>O arquivo não existe</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="298"/>
         <source>block device</source>
-        <translation type="unfinished"></translation>
+        <translation>dispositivo de bloco</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="302"/>
         <source>character device</source>
-        <translation type="unfinished"></translation>
+        <translation>dispositivo de personagem</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="306"/>
         <source>pipe</source>
-        <translation type="unfinished"></translation>
+        <translation>cano</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="310"/>
         <source>socket</source>
-        <translation type="unfinished"></translation>
+        <translation>tomada</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="314"/>
         <source>folder</source>
-        <translation type="unfinished"></translation>
+        <translation>pasta</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="320"/>
         <source>unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>desconhecido</translation>
     </message>
 </context>
 <context>
@@ -927,29 +941,30 @@
     <message>
         <location filename="../src/filemodel.cpp" line="115"/>
         <source>folder</source>
-        <translation type="unfinished"></translation>
+        <translation>pasta</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="117"/>
         <source>link</source>
-        <translation type="unfinished"></translation>
+        <translation>link</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="118"/>
         <source>file</source>
-        <translation type="unfinished"></translation>
+        <translation>arquivo</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="130"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>vazio</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/filemodel.cpp" line="131"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n item</numerusform>
+            <numerusform>%n itens</numerusform>
         </translation>
     </message>
 </context>
@@ -958,12 +973,12 @@
     <message>
         <location filename="../src/filemodelworker.cpp" line="240"/>
         <source>Folder does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>A pasta não existe</translation>
     </message>
     <message>
         <location filename="../src/filemodelworker.cpp" line="245"/>
         <source>No permission to read the folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Sem permissão para ler a pasta</translation>
     </message>
 </context>
 <context>
@@ -971,12 +986,12 @@
     <message>
         <location filename="../qml/pages/FileOperationsPage.qml" line="60"/>
         <source>Tasks</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarefas</translation>
     </message>
     <message>
         <location filename="../qml/pages/FileOperationsPage.qml" line="81"/>
         <source>Empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Vazio</translation>
     </message>
 </context>
 <context>
@@ -984,37 +999,37 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="103"/>
         <source>Install launched</source>
-        <translation type="unfinished"></translation>
+        <translation>Instalação lançada</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="104"/>
         <source>If nothing happens, then the package is probably faulty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Se nada acontecer, provavelmente o pacote está com defeito.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="108"/>
         <source>Open successful</source>
-        <translation type="unfinished"></translation>
+        <translation>Aberto com sucesso</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="109"/>
         <source>Sometimes the application stays in the background</source>
-        <translation type="unfinished"></translation>
+        <translation>Às vezes, o aplicativo fica em segundo plano</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="113"/>
         <source>No application to open the file</source>
-        <translation type="unfinished"></translation>
+        <translation>Nenhum aplicativo para abrir o arquivo</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="68"/>
         <source>Change Permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>Alterar permissões</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="82"/>
         <source>View Raw Contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Ver Conteúdo Bruto</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="90"/>
