@@ -103,7 +103,7 @@ Page {
                     SettingsSwitch {
                         text: qsTr("Show hidden files")
                         key: "viewHiddenFilesShown"
-                        description: qsTr('Show files with names starting with a full stop (“.”).')
+                        description: qsTr('Show files with names starting with a dot (“.”).')
                     }
                     SettingsSwitch {
                         text: qsTr("Show preview images")
@@ -144,7 +144,7 @@ Page {
                     SettingsSwitch {
                         text: qsTr("Show hidden files last")
                         key: "viewShowHiddenLast"
-                        description: qsTr("Always show files starting with a full stop (“.”) at the end of the file list.")
+                        description: qsTr("Always show files starting with a dot (“.”) at the end of the file list.")
                     }
                     ComboBox {
                         label: qsTr("Sort by")

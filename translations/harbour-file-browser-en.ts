@@ -1268,8 +1268,8 @@
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="106"/>
-        <source>Show files with names starting with a full stop (“.”).</source>
-        <translation>Show files with names starting with a full stop (“.”).</translation>
+        <source>Show files with names starting with a dot (“.”).</source>
+        <translation>Show files with names starting with a dot (“.”).</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="109"/>
@@ -1328,8 +1328,8 @@
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="147"/>
-        <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
-        <translation>Always show files starting with a full stop (“.”) at the end of the file list.</translation>
+        <source>Always show files starting with a dot (“.”) at the end of the file list.</source>
+        <translation>Always show files starting with a dot (“.”) at the end of the file list.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="150"/>
@@ -3429,8 +3429,8 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="132"/>
-        <source>Show files with names starting with a full stop (“.”).</source>
-        <translation>Show files with names starting with a full stop (“.”).</translation>
+        <source>Show files with names starting with a dot (“.”).</source>
+        <translation>Show files with names starting with a dot (“.”).</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="136"/>
@@ -3469,8 +3469,8 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="169"/>
-        <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
-        <translation>Always show files starting with a full stop (“.”) at the end of the file list.</translation>
+        <source>Always show files starting with a dot (“.”) at the end of the file list.</source>
+        <translation>Always show files starting with a dot (“.”) at the end of the file list.</translation>
     </message>
 </context>
 <context>
