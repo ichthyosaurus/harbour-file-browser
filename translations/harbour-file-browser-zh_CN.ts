@@ -1251,7 +1251,7 @@
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="106"/>
-        <source>Show files with names starting with a full stop (“.”).</source>
+        <source>Show files with names starting with a dot (“.”).</source>
         <translation>显示名称开头为半角句号（“.”）的文件。</translation>
     </message>
     <message>
@@ -1311,7 +1311,7 @@
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="147"/>
-        <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
+        <source>Always show files starting with a dot (“.”) at the end of the file list.</source>
         <translation>名称开头带句点（“.”）的文件总在文件列表末尾显示。</translation>
     </message>
     <message>
@@ -3393,7 +3393,7 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="132"/>
-        <source>Show files with names starting with a full stop (“.”).</source>
+        <source>Show files with names starting with a dot (“.”).</source>
         <translation>显示文件名开头为句点（“.”）的文件。</translation>
     </message>
     <message>
@@ -3433,7 +3433,7 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="169"/>
-        <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
+        <source>Always show files starting with a dot (“.”) at the end of the file list.</source>
         <translation>名称开头带句点（“.”）的文件总在文件列表末尾显示。</translation>
     </message>
 </context>

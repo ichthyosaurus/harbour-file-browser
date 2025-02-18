@@ -1268,7 +1268,7 @@
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="106"/>
-        <source>Show files with names starting with a full stop (“.”).</source>
+        <source>Show files with names starting with a dot (“.”).</source>
         <translation>Visa filer med namn som börjar med punkt (&quot;.&quot;).</translation>
     </message>
     <message>
@@ -1328,7 +1328,7 @@
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="147"/>
-        <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
+        <source>Always show files starting with a dot (“.”) at the end of the file list.</source>
         <translation>Visa alltid filer som börjar med en punkt (“.”), sist i fillistan.</translation>
     </message>
     <message>
@@ -3429,7 +3429,7 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="132"/>
-        <source>Show files with names starting with a full stop (“.”).</source>
+        <source>Show files with names starting with a dot (“.”).</source>
         <translation>Visa filer med namn som börjar med punkt (&quot;.&quot;).</translation>
     </message>
     <message>
@@ -3469,7 +3469,7 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="169"/>
-        <source>Always show files starting with a full stop (“.”) at the end of the file list.</source>
+        <source>Always show files starting with a dot (“.”) at the end of the file list.</source>
         <translation>Visa alltid filer som börjar med punkt (&quot;.&quot;) i slutet av fillistan.</translation>
     </message>
 </context>
