@@ -29,52 +29,67 @@
         <translation>Käännökset</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="156"/>
+        <location filename="../qml/pages/AboutPage.qml" line="122"/>
+        <source>Tamil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="153"/>
+        <source>Serbian</source>
+        <translation>Serbian kieli</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="171"/>
         <source>Romanian</source>
         <translation>Romania</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="171"/>
+        <location filename="../qml/pages/AboutPage.qml" line="177"/>
+        <source>Portuguese (Brazil)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="193"/>
         <source>Norwegian Bokmål</source>
         <translation>Norja (kirjanorja)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="240"/>
+        <location filename="../qml/pages/AboutPage.qml" line="264"/>
         <source>English</source>
         <translation>Englanti</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="279"/>
+        <location filename="../qml/pages/AboutPage.qml" line="303"/>
         <source>Belarusian</source>
         <translation>Valkovenäjä</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="206"/>
+        <location filename="../qml/pages/AboutPage.qml" line="228"/>
         <source>German</source>
         <translation>Saksa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="226"/>
+        <location filename="../qml/pages/AboutPage.qml" line="248"/>
         <source>Finnish</source>
         <translation>Suomi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="248"/>
+        <location filename="../qml/pages/AboutPage.qml" line="272"/>
         <source>Dutch (Belgium)</source>
         <translation>Hollanti (Belgia)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="267"/>
+        <location filename="../qml/pages/AboutPage.qml" line="291"/>
         <source>Chinese</source>
         <translation>Kiina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="145"/>
+        <location filename="../qml/pages/AboutPage.qml" line="159"/>
         <source>Russian</source>
         <translation>Venäjä</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="121"/>
+        <location filename="../qml/pages/AboutPage.qml" line="128"/>
         <source>Swedish</source>
         <translation>Ruotsi</translation>
     </message>
@@ -84,57 +99,57 @@
         <translation>Ukraina</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="178"/>
+        <location filename="../qml/pages/AboutPage.qml" line="200"/>
         <source>Italian</source>
         <translation>Italia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="130"/>
+        <location filename="../qml/pages/AboutPage.qml" line="137"/>
         <source>Spanish</source>
         <translation>Espanja</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="214"/>
+        <location filename="../qml/pages/AboutPage.qml" line="236"/>
         <source>French</source>
         <translation>Ranska</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="254"/>
+        <location filename="../qml/pages/AboutPage.qml" line="278"/>
         <source>Dutch</source>
         <translation>Hollanti</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="200"/>
+        <location filename="../qml/pages/AboutPage.qml" line="222"/>
         <source>Greek</source>
         <translation>Kreikka</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="261"/>
+        <location filename="../qml/pages/AboutPage.qml" line="285"/>
         <source>Czech</source>
         <translation>Tsekki</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="139"/>
+        <location filename="../qml/pages/AboutPage.qml" line="146"/>
         <source>Slovak</source>
         <translation>Slovakia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="193"/>
+        <location filename="../qml/pages/AboutPage.qml" line="215"/>
         <source>Hungarian</source>
         <translation>Unkari</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="234"/>
+        <location filename="../qml/pages/AboutPage.qml" line="258"/>
         <source>Estonian</source>
         <translation>Viro</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="162"/>
+        <location filename="../qml/pages/AboutPage.qml" line="184"/>
         <source>Polish</source>
         <translation>Puola</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="185"/>
+        <location filename="../qml/pages/AboutPage.qml" line="207"/>
         <source>Indonesian</source>
         <translation>Indonesia</translation>
     </message>
@@ -2484,32 +2499,32 @@ exposure program</extracomment>
         <translation>Toisto epäonnistui odottamattoman virheen vuoksi. Sulje sovellus ja yritä uudelleen.</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="208"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="87"/>
         <source>Clear subtitles</source>
         <translation>Poista tekstitys</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="212"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="89"/>
         <source>Load subtitles</source>
         <translation>Lisää tekstitystiedosto</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="663"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="246"/>
         <source>Zoomed to fit screen</source>
         <translation>Sovitettu näytölle</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="664"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="246"/>
         <source>Original</source>
         <translation>Alkuperäinen</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="671"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="250"/>
         <source>Play on repeat</source>
         <translation>Toista kertauksella</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="672"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="250"/>
         <source>Play once</source>
         <translation>Toista kerran</translation>
     </message>

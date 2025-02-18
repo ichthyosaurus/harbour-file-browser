@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sr">
+<TS version="2.1" language="nn">
 <context>
     <name>AboutPage</name>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="55"/>
         <source>A fully-fledged file manager for Sailfish OS.</source>
-        <translation>Fajl menadžer u punoj meri za sailfish OS.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="82"/>
         <source>Development</source>
-        <translation>razvitak</translation>
+        <translation>Utvikling</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="85"/>
         <source>Programming</source>
-        <translation>programiranje</translation>
+        <translation>Programmering</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="92"/>
         <source>Icon Design</source>
-        <translation>dizajn ikona</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="99"/>
         <source>Translations</source>
-        <translation>prevodi</translation>
+        <translation>Omsetjingar</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="122"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="171"/>
         <source>Romanian</source>
-        <translation>rumunski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="177"/>
@@ -51,112 +51,112 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="193"/>
         <source>Norwegian Bokmål</source>
-        <translation>norveški bokmal</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="264"/>
         <source>English</source>
-        <translation>engleski</translation>
+        <translation type="unfinished">Engelsk</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="303"/>
         <source>Belarusian</source>
-        <translation>beloruski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="228"/>
         <source>German</source>
-        <translation>nemački</translation>
+        <translation>Tysk</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="248"/>
         <source>Finnish</source>
-        <translation>finski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="272"/>
         <source>Dutch (Belgium)</source>
-        <translation>belgijski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="291"/>
         <source>Chinese</source>
-        <translation>kineski</translation>
+        <translation>Kinesisk</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="159"/>
         <source>Russian</source>
-        <translation>ruski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="128"/>
         <source>Swedish</source>
-        <translation>švedski</translation>
+        <translation>Svensk</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="102"/>
         <source>Ukrainian</source>
-        <translation>ukrajinski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="200"/>
         <source>Italian</source>
-        <translation>italijanski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="137"/>
         <source>Spanish</source>
-        <translation>španski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="236"/>
         <source>French</source>
-        <translation>francuski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="278"/>
         <source>Dutch</source>
-        <translation>holandski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="222"/>
         <source>Greek</source>
-        <translation>grčki</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="285"/>
         <source>Czech</source>
-        <translation>češki</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="146"/>
         <source>Slovak</source>
-        <translation>slovački</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="215"/>
         <source>Hungarian</source>
-        <translation>mađarski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="258"/>
         <source>Estonian</source>
-        <translation>estonski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="184"/>
         <source>Polish</source>
-        <translation>poljski</translation>
+        <translation>Polsk</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="207"/>
         <source>Indonesian</source>
-        <translation>indonežanski</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="112"/>
         <source>Turkish</source>
-        <translation>turski</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -164,7 +164,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="11"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
-        <translation>Molim vas uzmite trenutak da razmislite možete li doprineti ovom projektu da jedan ili drugi način.</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -172,80 +172,80 @@
     <message>
         <location filename="../src/bookmarks.cpp" line="507"/>
         <source>Memory card</source>
-        <translation>Memorijska kartica</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="509"/>
         <source>Attached folder</source>
-        <translation>Zakačen folder</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="511"/>
         <source>Remote folder</source>
-        <translation>Prenosivi folder</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="514"/>
         <source>Removable media</source>
-        <translation>Uklanjajući medija</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="601"/>
         <location filename="../src/bookmarks.cpp" line="1095"/>
         <source>Internal storage</source>
-        <translation>Spoljna memorija</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="609"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
-        <translation>%1 na %2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="1010"/>
         <source>Home</source>
-        <translation>kuća</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="664"/>
         <location filename="../src/bookmarks.cpp" line="1020"/>
         <source>Documents</source>
-        <translation>dokumenti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="666"/>
         <location filename="../src/bookmarks.cpp" line="1030"/>
         <source>Downloads</source>
-        <translation>preuzimanja</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="672"/>
         <location filename="../src/bookmarks.cpp" line="1060"/>
         <source>Music</source>
-        <translation>muzika</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="668"/>
         <location filename="../src/bookmarks.cpp" line="1040"/>
         <source>Pictures</source>
-        <translation>slike</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="670"/>
         <location filename="../src/bookmarks.cpp" line="1050"/>
         <source>Videos</source>
-        <translation>videi</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="1070"/>
         <location filename="../src/bookmarks.cpp" line="1096"/>
         <source>Android storage</source>
-        <translation>android memorija</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="1080"/>
         <source>Root</source>
-        <translation>root</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -254,17 +254,17 @@
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="54"/>
         <source>Apply</source>
         <comment>as in &apos;apply these changes&apos;</comment>
-        <translation>primeni</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="55"/>
         <source>Rename bookmarks</source>
-        <translation>preimenuj obeleživač</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksRenameDialog.qml" line="89"/>
         <source>Name must not be empty</source>
-        <translation>Ime ne treba biti prazno</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -272,7 +272,7 @@
     <message>
         <location filename="../qml/pages/BookmarksSortPage.qml" line="25"/>
         <source>Sort bookmarks</source>
-        <translation>sortiraj obeleživače</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -280,70 +280,67 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="70"/>
         <source>Clipboard</source>
-        <translation>ostava</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="75"/>
         <source>%n item(s) to be copied</source>
-        <translation>
-            <numerusform>%n stvar za kopiranje</numerusform>
-            <numerusform>%n stvari za kopiranje</numerusform>
-            <numerusform>%nstvari za kopiranje</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
         <source>%n item(s) to be moved</source>
-        <translation>
-            <numerusform>%nstvar za pomeranje</numerusform>
-            <numerusform>%nstvari za pomeranje</numerusform>
-            <numerusform>%nstvari za pomeranje</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="260"/>
         <source>Remove from clipboard</source>
-        <translation>ukloni iz ostave</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="252"/>
         <source>Open this folder</source>
-        <translation>otvori ovaj folder</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
         <source>%n item(s) to be linked</source>
-        <translation>
-            <numerusform>%nstvar za povezivanje</numerusform>
-            <numerusform>%nstvari za povezivanje</numerusform>
-            <numerusform>%nstvari za povezivanje</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="115"/>
         <source>Clear</source>
         <comment>verb as in &apos;clear all contents from the clipboard&apos;</comment>
-        <translation>čisto</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="117"/>
         <source>Clipboard cleared</source>
-        <translation>ostava očišćena</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="256"/>
         <source>Open containing folder</source>
-        <translation>otvori sadržajući folder</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="274"/>
         <source>Empty</source>
-        <translation>prazno</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="275"/>
         <source>Cut or copied files will be shown here.</source>
-        <translation>Isečeni ili kopirani fajlovi će biti prikazani ovde.</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -352,32 +349,32 @@
         <location filename="../src/consolemodel.cpp" line="124"/>
         <location filename="../src/consolemodel.cpp" line="136"/>
         <source>** crashed</source>
-        <translation>** slomljeno</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="126"/>
         <source>** error: %1</source>
-        <translation>**eror:%1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="134"/>
         <source>** command “%1” not found</source>
-        <translation>** komanda &quot;%1&quot; nije pronađena</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="138"/>
         <source>** timeout reached</source>
-        <translation>** vremensko ograničenje dostignuto</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="140"/>
         <source>** internal communication failed</source>
-        <translation>** spoljna komunikacija neuspela</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/consolemodel.cpp" line="142"/>
         <source>** an unknown error occurred</source>
-        <translation>** nepoznati eror</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -386,17 +383,17 @@
         <location filename="../qml/pages/ConsolePage.qml" line="75"/>
         <source>Preview</source>
         <comment>as in &apos;incomplete/aggregated preview of the contents of a file&apos;</comment>
-        <translation>prikaz</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="151"/>
         <source>This file appears to be a software package. To install, swipe back and select the “Install” option from the menu.</source>
-        <translation>Ovaj fajl je softverski paket. Da instalirate, vratite se nazad i pritisnite &quot;instalirajte&quot; opcija sa menija.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="153"/>
         <source>Swipe from the right to view raw contents.</source>
-        <translation>Prevucite od desno da vidite sirov sadržaj.</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -404,7 +401,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="95"/>
         <source>Root Mode</source>
-        <translation>root mod</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -412,69 +409,69 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="61"/>
         <source>Create</source>
-        <translation>napravite</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="77"/>
         <source>Not permitted</source>
-        <translation>nedozvoljeno</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="78"/>
         <source>You don&apos;t have permission to change the contents of this directory.</source>
-        <translation>Nemate dozvolu da promenite sadržaj ove direktorije.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="94"/>
         <source>Create new</source>
-        <translation>Napravite novo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="96"/>
         <source>The new folder will be created under “%1”.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation>Novi folder će biti napravjen pod &quot;%1&quot;.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="98"/>
         <source>The new text file will be created under “%1” and can be edited later.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation>Novi tekst fajč će biti napravljen pod &quot;%1&quot; i može biti izmenjen kasnije.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="104"/>
         <source>folder</source>
-        <translation>folder</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="107"/>
         <source>empty text file</source>
-        <translation>prazan tekst fajl</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="119"/>
         <source>Folder name</source>
-        <translation>ime foldera</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="119"/>
         <source>File name</source>
-        <translation>ime fajla</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="138"/>
         <source>File names must not contain slashes. To create a new file in a folder below “%1”, first create a folder and then create the file.</source>
-        <translation>Ime fajla ne sme sadržati linije. Da napravite novi fajl u folderu ispod &quot;%1&quot;, prvo napravite folder i onda napravite fajl.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="142"/>
         <source>A file or folder with this name already exists.</source>
-        <translation>Fajl ili folder sa ovim imenom već postoji.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="145"/>
         <source>Using slashes in folder names will create sub-folders, like so:</source>
-        <translation>Koristeći linije u imenu foldera napraviće subfoldere, kao:</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -482,10 +479,9 @@
     <message numerus="yes">
         <location filename="../qml/components/DetailList.qml" line="45"/>
         <source>... and %n more</source>
-        <translation>
-            <numerusform>i%nviše</numerusform>
-            <numerusform>i%nviše</numerusform>
-            <numerusform>i%nviše</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -494,12 +490,12 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show less</source>
-        <translation>prikaži manje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show more</source>
-        <translation>prikaži više</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -508,95 +504,95 @@
         <location filename="../qml/pages/DirectoryPage.qml" line="158"/>
         <source>View Preferences</source>
         <extracomment>This describes a page with settings for how things are displayed, i.e. &quot;preferences regarding the view&quot; (and not &quot;let&apos;s view the preferences&quot;).</extracomment>
-        <translation>vidi preferencije</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="165"/>
         <source>Create New...</source>
-        <translation>napravi novi...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="178"/>
         <source>Paste</source>
-        <translation>pasterizuj</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="196"/>
         <source>Filter directory contents</source>
-        <translation>filtrijar imenski sadržaj</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="278"/>
         <source>Search</source>
-        <translation>pretraži</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="283"/>
         <source>Remove bookmark</source>
-        <translation>ukloni obeleživače</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="283"/>
         <source>Add to bookmarks</source>
-        <translation>dodaj u obeleživače</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="292"/>
         <source>Copy path to clipboard</source>
-        <translation>kopiraj put do ostave</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="372"/>
         <source>filtered by: %1</source>
-        <translation>filterovano od: %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="434"/>
         <source>No match</source>
         <comment>as in “no files matched the current filter”</comment>
-        <translation>nema povezanosti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="436"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation>prazno</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="439"/>
         <source>No files matched the filter.</source>
-        <translation>Nijedan fajl ne podudara filter.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="440"/>
         <source>This directory contains no files.</source>
-        <translation>Ova aresa ne sadrži fajlove.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="520"/>
         <location filename="../qml/pages/DirectoryPage.qml" line="523"/>
         <source>Deleting</source>
-        <translation>brisanje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="535"/>
         <source>Internally not ready</source>
-        <translation>Interno nije spremno</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="535"/>
         <source>Please simply try again</source>
-        <translation>Molim vas jednostavno probajte opet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="578"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation>Pokušavate da prebacite između telefona i SD kartice? Ne radi, pokušajte kopirati.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="580"/>
         <source>Perhaps the storage is full?</source>
-        <translation>Možda je skladište puno?</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -604,27 +600,27 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="48"/>
         <source>Deleting</source>
-        <translation>Brisanje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="324"/>
         <source>Open target folder</source>
-        <translation>Otvori folder metu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="325"/>
         <source>Open containing folder</source>
-        <translation>Otvori sadržajući folder</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="337"/>
         <source>Remove bookmark</source>
-        <translation>Ukloni obeleživač</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="337"/>
         <source>Add to bookmarks</source>
-        <translation>Dodaj u obeleživač</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -632,17 +628,17 @@
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="134"/>
         <source>Hide hidden files</source>
-        <translation>Sakrij sakrivene foldere</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="135"/>
         <source>Show hidden files</source>
-        <translation>Prikaži sakrivene fajlove</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPopup.qml" line="140"/>
         <source>Edit path</source>
-        <translation>Izmeni put</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -650,12 +646,12 @@
     <message>
         <location filename="../src/engine.cpp" line="70"/>
         <source>No files to paste</source>
-        <translation>Nema fajlova za pasterizovanje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="78"/>
         <source>Destination does not exist</source>
-        <translation>Destinacije ne postoji</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="89"/>
@@ -777,7 +773,6 @@
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -796,14 +791,12 @@
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="129"/>
         <source>%n file(s) cut</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -814,14 +807,12 @@
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="143"/>
         <source>%n file(s) copied</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -832,14 +823,12 @@
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="171"/>
         <source>delete file(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -850,7 +839,6 @@
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -859,14 +847,12 @@
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -879,13 +865,12 @@
     <message>
         <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
-        <translation type="unfinished">primeni</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -928,7 +913,6 @@
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -959,7 +943,7 @@
     <message>
         <location filename="../src/filedata.cpp" line="314"/>
         <source>folder</source>
-        <translation type="unfinished">folder</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="320"/>
@@ -972,7 +956,7 @@
     <message>
         <location filename="../src/filemodel.cpp" line="115"/>
         <source>folder</source>
-        <translation type="unfinished">folder</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="117"/>
@@ -994,7 +978,6 @@
         <location filename="../src/filemodel.cpp" line="131"/>
         <source>%n item(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -1023,7 +1006,7 @@
     <message>
         <location filename="../qml/pages/FileOperationsPage.qml" line="81"/>
         <source>Empty</source>
-        <translation type="unfinished">prazno</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1302,7 +1285,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="104"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">Prikaži sakrivene fajlove</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="106"/>
@@ -1497,7 +1480,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="219"/>
         <source>Search</source>
-        <translation type="unfinished">pretraži</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="225"/>
@@ -2164,7 +2147,6 @@ exposure program</extracomment>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -2258,24 +2240,24 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="56"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Om</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="85"/>
         <source>Version %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Versjon %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="101"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="24"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="33"/>
         <source>Development</source>
-        <translation>razvitak</translation>
+        <translation>Utvikling</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="104"/>
         <source>show contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>vis bidragsytar</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="106"/>
@@ -2299,21 +2281,20 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="130"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisens</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="135"/>
         <source>show license(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>vis lisens</numerusform>
+            <numerusform>vis lisensar</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="112"/>
         <source>Translations</source>
-        <translation>prevodi</translation>
+        <translation>Omsetjingar</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="115"/>
@@ -2321,17 +2302,17 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="25"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="50"/>
         <source>Source Code</source>
-        <translation type="unfinished"></translation>
+        <translation>Kjeldekode</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/InfoSection.qml" line="15"/>
         <source>show details</source>
-        <translation type="unfinished"></translation>
+        <translation>vis detaljar</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="23"/>
         <source>Contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>Bidragsytarar</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="39"/>
@@ -2357,10 +2338,9 @@ exposure program</extracomment>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="34"/>
         <source>License(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Lisens</numerusform>
+            <numerusform>Lisensar</numerusform>
         </translation>
     </message>
     <message>
@@ -2627,7 +2607,6 @@ exposure program</extracomment>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -2635,7 +2614,6 @@ exposure program</extracomment>
         <source>%n folder(s)</source>
         <extracomment>hidden if n=0</extracomment>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -2768,7 +2746,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="86"/>
         <source>Root Mode</source>
-        <translation type="unfinished">root mod</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="87"/>
@@ -2797,7 +2775,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/SearchPage.qml" line="122"/>
         <location filename="../qml/pages/SearchPage.qml" line="371"/>
         <source>Search</source>
-        <translation type="unfinished">pretraži</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="136"/>
@@ -2808,7 +2786,6 @@ exposure program</extracomment>
         <location filename="../qml/pages/SearchPage.qml" line="201"/>
         <source>%n hit(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -2844,12 +2821,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="428"/>
         <source>Internally not ready</source>
-        <translation type="unfinished">Interno nije spremno</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="428"/>
         <source>Please simply try again</source>
-        <translation type="unfinished">Molim vas jednostavno probajte opet</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2871,7 +2848,6 @@ exposure program</extracomment>
         <location filename="../qml/components/SelectionPanel.qml" line="54"/>
         <source>%n file(s) selected</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -2939,7 +2915,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="66"/>
         <source>Clipboard</source>
-        <translation type="unfinished">ostava</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="71"/>
@@ -2949,22 +2925,22 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="76"/>
         <source>Documents</source>
-        <translation type="unfinished">dokumenti</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="81"/>
         <source>Pictures</source>
-        <translation type="unfinished">slike</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="86"/>
         <source>Videos</source>
-        <translation type="unfinished">videi</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="91"/>
         <source>Music</source>
-        <translation type="unfinished">muzika</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="237"/>
@@ -2989,7 +2965,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="262"/>
         <source>Search</source>
-        <translation type="unfinished">pretraži</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="272"/>
@@ -3040,14 +3016,12 @@ exposure program</extracomment>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="87"/>
         <source>%n file(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -3223,14 +3197,12 @@ exposure program</extracomment>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="107"/>
         <source>%n target(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -3249,14 +3221,12 @@ exposure program</extracomment>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="64"/>
         <source>%n destination(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -3267,14 +3237,12 @@ exposure program</extracomment>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="71"/>
         <source>Successfully moved</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -3285,14 +3253,12 @@ exposure program</extracomment>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="77"/>
         <source>Failed to copy</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -3303,14 +3269,12 @@ exposure program</extracomment>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/TransferPanel.qml" line="81"/>
         <source>Failed to link</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -3338,12 +3302,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="203"/>
         <source>Trying to move between phone and SD Card? It does not work, try copying.</source>
-        <translation type="unfinished">Pokušavate da prebacite između telefona i SD kartice? Ne radi, pokušajte kopirati.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="205"/>
         <source>Perhaps the storage is full?</source>
-        <translation type="unfinished">Možda je skladište puno?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="289"/>
@@ -3480,7 +3444,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="130"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">Prikaži sakrivene fajlove</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="132"/>
