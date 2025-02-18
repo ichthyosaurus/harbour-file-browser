@@ -113,8 +113,15 @@ A.AboutPageBase {
                     entries: [
                         "E-Akcaer",
                         "Oğuz Ersen",
+                        "TCr3",
                         "ToldYouThat",
                         "İbrahim Dinç"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Tamil")
+                    entries: [
+                        "தமிழ்நேரம்"
                     ]
                 },
                 A.ContributionGroup {
@@ -138,7 +145,14 @@ A.AboutPageBase {
                 A.ContributionGroup {
                     title: qsTr("Slovak")
                     entries: [
-                        "Ladislav Hodas"
+                        "Ladislav Hodas",
+                        "Milan Šalka"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Serbian")
+                    entries: [
+                        "dex girl"
                     ]
                 },
                 A.ContributionGroup {
@@ -148,6 +162,7 @@ A.AboutPageBase {
                         "Lilia Savciuc",
                         "Mika",
                         "Petr Tsymbarovich",
+                        "RoundedRectangle",
                         "Victor K",
                         "sandworm88"
                     ]
@@ -156,6 +171,13 @@ A.AboutPageBase {
                     title: qsTr("Romanian")
                     entries: [
                         "Florin Voicu"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Portuguese (Brazil)")
+                    entries: [
+                        "John Peter Sa",
+                        "Thiago Carmona"
                     ]
                 },
                 A.ContributionGroup {
@@ -225,7 +247,9 @@ A.AboutPageBase {
                 A.ContributionGroup {
                     title: qsTr("Finnish")
                     entries: [
+                        "Elmeri Länsiharju",
                         "Jyri-Petteri Paloposki",
+                        "Lassi Määttä",
                         "Tathhu",
                         "karip"
                     ]
