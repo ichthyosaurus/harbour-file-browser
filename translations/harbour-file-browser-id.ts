@@ -176,7 +176,7 @@
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="601"/>
-        <location filename="../src/bookmarks.cpp" line="1094"/>
+        <location filename="../src/bookmarks.cpp" line="1095"/>
         <source>Internal storage</source>
         <translation type="unfinished"></translation>
     </message>
@@ -187,48 +187,48 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/bookmarks.cpp" line="1009"/>
+        <location filename="../src/bookmarks.cpp" line="1010"/>
         <source>Home</source>
         <translation type="unfinished">Beranda</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="664"/>
-        <location filename="../src/bookmarks.cpp" line="1019"/>
+        <location filename="../src/bookmarks.cpp" line="1020"/>
         <source>Documents</source>
         <translation type="unfinished">Dokumen</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="666"/>
-        <location filename="../src/bookmarks.cpp" line="1029"/>
+        <location filename="../src/bookmarks.cpp" line="1030"/>
         <source>Downloads</source>
         <translation type="unfinished">Unduhan</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="672"/>
-        <location filename="../src/bookmarks.cpp" line="1059"/>
+        <location filename="../src/bookmarks.cpp" line="1060"/>
         <source>Music</source>
         <translation type="unfinished">Musik</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="668"/>
-        <location filename="../src/bookmarks.cpp" line="1039"/>
+        <location filename="../src/bookmarks.cpp" line="1040"/>
         <source>Pictures</source>
         <translation type="unfinished">Gambar</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="670"/>
-        <location filename="../src/bookmarks.cpp" line="1049"/>
+        <location filename="../src/bookmarks.cpp" line="1050"/>
         <source>Videos</source>
         <translation type="unfinished">Video</translation>
     </message>
     <message>
-        <location filename="../src/bookmarks.cpp" line="1069"/>
-        <location filename="../src/bookmarks.cpp" line="1095"/>
+        <location filename="../src/bookmarks.cpp" line="1070"/>
+        <location filename="../src/bookmarks.cpp" line="1096"/>
         <source>Android storage</source>
         <translation type="unfinished">Penyimpanan android</translation>
     </message>
     <message>
-        <location filename="../src/bookmarks.cpp" line="1079"/>
+        <location filename="../src/bookmarks.cpp" line="1080"/>
         <source>Root</source>
         <translation type="unfinished">Root</translation>
     </message>
@@ -980,124 +980,130 @@
 <context>
     <name>FilePage</name>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="103"/>
+        <location filename="../qml/pages/FilePage.qml" line="139"/>
         <source>Install launched</source>
         <translation>Penginstalan diluncurkan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="104"/>
+        <location filename="../qml/pages/FilePage.qml" line="140"/>
         <source>If nothing happens, then the package is probably faulty.</source>
         <translation>Jika tidak ada yang terjadi, maka mungkin paketnya bermasalah.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="108"/>
+        <location filename="../qml/pages/FilePage.qml" line="144"/>
         <source>Open successful</source>
         <translation>Syabas buka</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="109"/>
+        <location filename="../qml/pages/FilePage.qml" line="145"/>
         <source>Sometimes the application stays in the background</source>
         <translation>Kadang-kadang aplikasi ini tetap berjalan di belakang layar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="113"/>
+        <location filename="../qml/pages/FilePage.qml" line="149"/>
         <source>No application to open the file</source>
         <translation>Tidak ada aplikasi untuk membuka berkas ini</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="68"/>
+        <location filename="../qml/pages/FilePage.qml" line="99"/>
         <source>Change Permissions</source>
         <translation>Ubah Perizinan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="82"/>
+        <location filename="../qml/pages/FilePage.qml" line="64"/>
+        <source>File Browser</source>
+        <comment>translated app name</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FilePage.qml" line="113"/>
         <source>View Raw Contents</source>
         <translation>Lihat Konten Raw</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="90"/>
+        <location filename="../qml/pages/FilePage.qml" line="126"/>
         <source>Install</source>
         <translation>Pasang</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="90"/>
+        <location filename="../qml/pages/FilePage.qml" line="126"/>
         <source>Open</source>
         <translation>Buka</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="94"/>
+        <location filename="../qml/pages/FilePage.qml" line="130"/>
         <source>File cannot be opened</source>
         <translation>Berkas tidak dapat dibuka</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="95"/>
+        <location filename="../qml/pages/FilePage.qml" line="131"/>
         <source>This type of file cannot be opened.</source>
         <translation>Berkas dengan jenis ini tidak dapat dibuka.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="106"/>
+        <location filename="../qml/pages/FilePage.qml" line="142"/>
         <source>Swipe from the right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="119"/>
+        <location filename="../qml/pages/FilePage.qml" line="155"/>
         <source>Go to Target</source>
         <translation>Pergi ke Target</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="129"/>
+        <location filename="../qml/pages/FilePage.qml" line="165"/>
         <source>Open containing folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="148"/>
+        <location filename="../qml/pages/FilePage.qml" line="184"/>
         <source>The file has been moved.</source>
         <translation>Berkas ini telah dipindahkan.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="264"/>
-        <location filename="../qml/pages/FilePage.qml" line="270"/>
+        <location filename="../qml/pages/FilePage.qml" line="300"/>
+        <location filename="../qml/pages/FilePage.qml" line="306"/>
         <source>Deleting</source>
         <translation>Menghapus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="302"/>
+        <location filename="../qml/pages/FilePage.qml" line="338"/>
         <source>Location</source>
         <translation>Lokasi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="306"/>
+        <location filename="../qml/pages/FilePage.qml" line="342"/>
         <source>Type</source>
         <translation>Jenis</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="308"/>
+        <location filename="../qml/pages/FilePage.qml" line="344"/>
         <source>Unknown (link target not found)</source>
         <translation>Tidak diketahui (target tautan tidak ditemukan)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="308"/>
+        <location filename="../qml/pages/FilePage.qml" line="344"/>
         <source>Link to %1</source>
         <translation>Tautkan ke %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="315"/>
+        <location filename="../qml/pages/FilePage.qml" line="359"/>
         <source>Permissions</source>
         <translation>Perizinan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="319"/>
+        <location filename="../qml/pages/FilePage.qml" line="363"/>
         <source>Owner</source>
         <translation>Pemilik</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="324"/>
+        <location filename="../qml/pages/FilePage.qml" line="368"/>
         <source>Group</source>
         <translation>Grup</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="329"/>
+        <location filename="../qml/pages/FilePage.qml" line="373"/>
         <source>Last modified</source>
         <translation>Terakhir dimodifikasi</translation>
     </message>
@@ -2943,39 +2949,39 @@ exposure program</extracomment>
 <context>
     <name>SizeDetailItem</name>
     <message>
-        <location filename="../qml/components/SizeDetailItem.qml" line="35"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="28"/>
         <source>Size</source>
         <translation>Ukuran</translation>
     </message>
     <message>
-        <location filename="../qml/components/SizeDetailItem.qml" line="56"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="49"/>
         <source>size</source>
         <translation>ukuran</translation>
     </message>
     <message>
-        <location filename="../qml/components/SizeDetailItem.qml" line="63"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="56"/>
         <source>directories</source>
         <translation>direktori</translation>
     </message>
     <message>
-        <location filename="../qml/components/SizeDetailItem.qml" line="70"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="63"/>
         <source>files</source>
         <translation>file</translation>
     </message>
     <message>
-        <location filename="../qml/components/SizeDetailItem.qml" line="80"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="75"/>
         <source>unknown size</source>
         <translation>ukuran tidak diketahui</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/SizeDetailItem.qml" line="84"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="79"/>
         <source>%n directories</source>
         <translation>
             <numerusform>%n direktori</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/SizeDetailItem.qml" line="92"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="87"/>
         <source>%n file(s)</source>
         <translation>
             <numerusform>%n file</numerusform>

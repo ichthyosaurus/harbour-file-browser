@@ -176,7 +176,7 @@
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="601"/>
-        <location filename="../src/bookmarks.cpp" line="1094"/>
+        <location filename="../src/bookmarks.cpp" line="1095"/>
         <source>Internal storage</source>
         <translation>Interner Speicher</translation>
     </message>
@@ -187,48 +187,48 @@
         <translation>„%1“ in „%2“</translation>
     </message>
     <message>
-        <location filename="../src/bookmarks.cpp" line="1009"/>
+        <location filename="../src/bookmarks.cpp" line="1010"/>
         <source>Home</source>
         <translation>Benutzerverzeichnis</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="664"/>
-        <location filename="../src/bookmarks.cpp" line="1019"/>
+        <location filename="../src/bookmarks.cpp" line="1020"/>
         <source>Documents</source>
         <translation>Dokumente</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="666"/>
-        <location filename="../src/bookmarks.cpp" line="1029"/>
+        <location filename="../src/bookmarks.cpp" line="1030"/>
         <source>Downloads</source>
         <translation>Downloads</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="672"/>
-        <location filename="../src/bookmarks.cpp" line="1059"/>
+        <location filename="../src/bookmarks.cpp" line="1060"/>
         <source>Music</source>
         <translation>Musik</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="668"/>
-        <location filename="../src/bookmarks.cpp" line="1039"/>
+        <location filename="../src/bookmarks.cpp" line="1040"/>
         <source>Pictures</source>
         <translation>Bilder</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="670"/>
-        <location filename="../src/bookmarks.cpp" line="1049"/>
+        <location filename="../src/bookmarks.cpp" line="1050"/>
         <source>Videos</source>
         <translation>Videos</translation>
     </message>
     <message>
-        <location filename="../src/bookmarks.cpp" line="1069"/>
-        <location filename="../src/bookmarks.cpp" line="1095"/>
+        <location filename="../src/bookmarks.cpp" line="1070"/>
+        <location filename="../src/bookmarks.cpp" line="1096"/>
         <source>Android storage</source>
         <translation>Android-Datenspeicher</translation>
     </message>
     <message>
-        <location filename="../src/bookmarks.cpp" line="1079"/>
+        <location filename="../src/bookmarks.cpp" line="1080"/>
         <source>Root</source>
         <translation>Stammverzeichnis</translation>
     </message>
@@ -997,124 +997,130 @@
 <context>
     <name>FilePage</name>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="103"/>
+        <location filename="../qml/pages/FilePage.qml" line="139"/>
         <source>Install launched</source>
         <translation>Installation gestartet</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="104"/>
+        <location filename="../qml/pages/FilePage.qml" line="140"/>
         <source>If nothing happens, then the package is probably faulty.</source>
         <translation>Wenn nichts passiert, ist das Paket vermutlich fehlerhaft.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="108"/>
+        <location filename="../qml/pages/FilePage.qml" line="144"/>
         <source>Open successful</source>
         <translation>Öffnen erfolgreich</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="109"/>
+        <location filename="../qml/pages/FilePage.qml" line="145"/>
         <source>Sometimes the application stays in the background</source>
         <translation>Manchmal bleibt die Anwendung im Hintergrund</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="113"/>
+        <location filename="../qml/pages/FilePage.qml" line="149"/>
         <source>No application to open the file</source>
         <translation>Keine Anwendung zum Öffnen der Datei</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="68"/>
+        <location filename="../qml/pages/FilePage.qml" line="99"/>
         <source>Change Permissions</source>
         <translation>Berechtigungen ändern</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="82"/>
+        <location filename="../qml/pages/FilePage.qml" line="64"/>
+        <source>File Browser</source>
+        <comment>translated app name</comment>
+        <translation type="unfinished">Dateiverwaltung</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FilePage.qml" line="113"/>
         <source>View Raw Contents</source>
         <translation>Datei-Rohdaten anzeigen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="90"/>
+        <location filename="../qml/pages/FilePage.qml" line="126"/>
         <source>Install</source>
         <translation>Installieren</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="90"/>
+        <location filename="../qml/pages/FilePage.qml" line="126"/>
         <source>Open</source>
         <translation>Öffnen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="94"/>
+        <location filename="../qml/pages/FilePage.qml" line="130"/>
         <source>File cannot be opened</source>
         <translation>Datei kann nicht geöffnet werden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="95"/>
+        <location filename="../qml/pages/FilePage.qml" line="131"/>
         <source>This type of file cannot be opened.</source>
         <translation>Dieser Dateityp kann nicht geöffnet werden.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="106"/>
+        <location filename="../qml/pages/FilePage.qml" line="142"/>
         <source>Swipe from the right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
         <translation>Von rechts nach links wischen, um den Dateiinhalt zu inspizieren.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="119"/>
+        <location filename="../qml/pages/FilePage.qml" line="155"/>
         <source>Go to Target</source>
         <translation>Zu Ziel gehen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="129"/>
+        <location filename="../qml/pages/FilePage.qml" line="165"/>
         <source>Open containing folder</source>
         <translation>Beinhaltenden Ordner öffnen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="148"/>
+        <location filename="../qml/pages/FilePage.qml" line="184"/>
         <source>The file has been moved.</source>
         <translation>Die Datei wurde verschoben.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="264"/>
-        <location filename="../qml/pages/FilePage.qml" line="270"/>
+        <location filename="../qml/pages/FilePage.qml" line="300"/>
+        <location filename="../qml/pages/FilePage.qml" line="306"/>
         <source>Deleting</source>
         <translation>Lösche</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="302"/>
+        <location filename="../qml/pages/FilePage.qml" line="338"/>
         <source>Location</source>
         <translation>Ort</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="306"/>
+        <location filename="../qml/pages/FilePage.qml" line="342"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="308"/>
+        <location filename="../qml/pages/FilePage.qml" line="344"/>
         <source>Link to %1</source>
         <translation>Link zu %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="308"/>
+        <location filename="../qml/pages/FilePage.qml" line="344"/>
         <source>Unknown (link target not found)</source>
         <translation>Unbekannt (Verknüfungsziel nicht gefunden)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="315"/>
+        <location filename="../qml/pages/FilePage.qml" line="359"/>
         <source>Permissions</source>
         <translation>Berechtigungen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="319"/>
+        <location filename="../qml/pages/FilePage.qml" line="363"/>
         <source>Owner</source>
         <translation>Besitzer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="324"/>
+        <location filename="../qml/pages/FilePage.qml" line="368"/>
         <source>Group</source>
         <translation>Gruppe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FilePage.qml" line="329"/>
+        <location filename="../qml/pages/FilePage.qml" line="373"/>
         <source>Last modified</source>
         <translation>Zuletzt geändert</translation>
     </message>
@@ -2970,32 +2976,32 @@ exposure program</extracomment>
 <context>
     <name>SizeDetailItem</name>
     <message>
-        <location filename="../qml/components/SizeDetailItem.qml" line="35"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="28"/>
         <source>Size</source>
         <translation>Größe</translation>
     </message>
     <message>
-        <location filename="../qml/components/SizeDetailItem.qml" line="56"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="49"/>
         <source>size</source>
         <translation>Größe</translation>
     </message>
     <message>
-        <location filename="../qml/components/SizeDetailItem.qml" line="63"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="56"/>
         <source>directories</source>
         <translation>Ordner</translation>
     </message>
     <message>
-        <location filename="../qml/components/SizeDetailItem.qml" line="70"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="63"/>
         <source>files</source>
         <translation>Dateien</translation>
     </message>
     <message>
-        <location filename="../qml/components/SizeDetailItem.qml" line="80"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="75"/>
         <source>unknown size</source>
         <translation>unbekannte Größe</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/SizeDetailItem.qml" line="84"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="79"/>
         <source>%n directories</source>
         <translation>
             <numerusform>%n Ordner</numerusform>
@@ -3003,7 +3009,7 @@ exposure program</extracomment>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/SizeDetailItem.qml" line="92"/>
+        <location filename="../qml/components/SizeDetailItem.qml" line="87"/>
         <source>%n file(s)</source>
         <translation>
             <numerusform>%n Datei</numerusform>
