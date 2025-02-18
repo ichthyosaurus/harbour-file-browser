@@ -3039,17 +3039,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="18"/>
         <source>Analyse disk usage</source>
-        <translation type="unfinished"></translation>
+        <translation>Проаналізувати використання диска</translation>
     </message>
     <message>
         <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="29"/>
         <source>The “Space Inspector” app will open shortly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Додаток “Space Inspector” зараз відкриється.</translation>
     </message>
     <message>
         <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="37"/>
         <source>The “Space Inspector” app could not be opened.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не вдалося відкрити додаток “Space Inspector”.</translation>
     </message>
 </context>
 <context>

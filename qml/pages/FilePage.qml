@@ -115,6 +115,11 @@ Page {
                 onClicked: viewContents(false, true)
             }
 
+            SpaceInspectorMenuItem {
+                visible: fileData.isDir && GlobalSettings.spaceInspectorEnabled
+                path: page.file
+            }
+
             // open/install tries to open the file and fileData.onProcessExited shows error
             // if it fails
             MenuItem {
@@ -339,9 +344,17 @@ Page {
                                 ? (fileData.isSymLinkBroken ? qsTr("Unknown (link target not found)") : qsTr("Link to %1").arg(fileData.mimeTypeComment) + "\n("+fileData.mimeType+")")
                                 : fileData.mimeTypeComment + "\n("+fileData.mimeType+")"
                 }
+
                 SizeDetailItem {
+                    id: sizeDetailItem
                     files: [page.file]
+
+                    Connections {
+                        target: fileData
+                        onSizeChanged: sizeDetailItem.refresh()
+                    }
                 }
+
                 DetailItem {
                     label: qsTr("Permissions")
                     value: fileData.permissions
@@ -389,6 +402,8 @@ Page {
             // update cover
             coverText = Paths.lastPartOfPath(page.file);
         } else if (status === PageStatus.Active) {
+            fileData.refresh()
+
             if (!canNavigateForward) {
                 viewContents(true);
             } else if (_forceReloadAttachedPage === true) {
