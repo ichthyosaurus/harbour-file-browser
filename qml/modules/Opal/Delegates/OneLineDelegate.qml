@@ -6,10 +6,11 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 PaddedDelegate{id:root
 minContentHeight:Theme.itemSizeSmall-padding.effectiveTop-padding.effectiveBottom
-centeredContainer:contentContainer
+centeredContainer:contentColumn
 property string text
 readonly property alias textLabel:_line1
-Column{id:contentContainer
+readonly property alias bodyColumn:contentColumn
+Column{id:contentColumn
 width:parent.width
 OptionalLabel{id:_line1
 width:parent.width

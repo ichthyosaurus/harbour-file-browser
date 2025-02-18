@@ -13,6 +13,7 @@ property alias iconButton:button
 property alias textLabel:label
 property Item _delegate:!!parent&&parent._delegate?parent._delegate:(__padded_delegate||null)
 signal clicked(var mouse)
+signal pressAndHold(var mouse)
 width:Math.max(label.implicitWidth,button.width)
 height:Math.max(button.height+label.effectiveHeight,(!!_delegate&&_delegate.minContentHeight?_delegate.minContentHeight:0))
 highlighted:area.pressed||button.down||(!!_delegate&&_delegate.interactive&&_delegate.down)||(!!_delegate&&_delegate.menuOpen)
@@ -22,6 +23,7 @@ z:-100
 anchors.fill:parent
 enabled:root.enabled
 onClicked:{root.clicked(mouse)
+}onPressAndHold:{root.clicked(mouse)
 }}SilicaItem{id:body
 width:parent.width
 height:button.height+label.effectiveHeight
@@ -34,6 +36,7 @@ icon.fillMode:Image.PreserveAspectFit
 icon.source:iconSource
 enabled:root.enabled
 onClicked:{root.clicked(mouse)
+}onPressAndHold:{root.clicked(mouse)
 }Binding on highlighted{when:area.pressed||root.highlighted
 value:true
 }}OptionalLabel{id:label

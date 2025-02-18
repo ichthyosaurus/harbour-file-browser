@@ -9,7 +9,7 @@
 #       to the "attributions" list property of the “About” page.
 
 module: Opal.DragDrop (opal-dragdrop)
-version: 1.0.1 (git:ea13624)
+version: 1.0.1 (git:39c35e0)
 description: This module enables ordering lists by drag-and-drop with just a few lines of code.
 maintainers: Mirian Margiani
 attribution: 2024 Mirian Margiani

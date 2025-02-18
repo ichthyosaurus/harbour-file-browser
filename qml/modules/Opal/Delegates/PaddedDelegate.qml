@@ -27,11 +27,11 @@ property int rightItemAlignment:Qt.AlignVCenter
 property int leftItemAlignment:Qt.AlignVCenter
 readonly property PaddingData padding:PaddingData{readonly property int __defaultLeftRight:Theme.horizontalPageMargin
 readonly property int __defaultTopBottom:Theme.paddingSmall
-leftRight:!_isDefined(all)&&(!_isDefined(left)||!_isDefined(right))?__defaultLeftRight:NaN
-topBottom:!_isDefined(all)&&(!_isDefined(top)||!_isDefined(bottom))?__defaultTopBottom:NaN
+leftRight:all===_undefinedValue&&(left===_undefinedValue||right===_undefinedValue)?__defaultLeftRight:NaN
+topBottom:all===_undefinedValue&&(top===_undefinedValue||bottom===_undefinedValue)?__defaultTopBottom:NaN
 }
 property Item dragHandler:null
-readonly property var _effectiveDragHandler:!!dragHandler&&dragHandler.hasOwnProperty("__opal_view_drag_handler")?dragHandler:null
+readonly property Item _effectiveDragHandler:!!dragHandler&&dragHandler.hasOwnProperty("__opal_view_drag_handler")?dragHandler:null
 property int dragHandleAlignment:leftItemAlignment===Qt.AlignTop||rightItemAlignment===Qt.AlignTop?Qt.AlignTop:Qt.AlignVCenter
 property bool hideRightItemWhileDragging:true
 readonly property bool draggable:!!_effectiveDragHandler&&!!_effectiveDragHandler.active

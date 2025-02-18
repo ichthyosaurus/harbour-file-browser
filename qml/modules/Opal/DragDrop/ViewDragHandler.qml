@@ -36,7 +36,7 @@ listView.moveDisplaced=moveDisplaced
 }onItemMoved:{if(!handleMove)return
 listView.model.move(fromIndex,toIndex,1)
 }onListViewChanged:{_setListViewProperties()
-}onListViewCacheBufferChanged:{if(listViewCacheBuffer>0){listView.cacheBuffer=listViewCacheBuffer
+}onListViewCacheBufferChanged:{if(!!listView&&listView.hasOwnProperty("cacheBuffer")&&listViewCacheBuffer>0){listView.cacheBuffer=listViewCacheBuffer
 }}implicitWidth:0
 implicitHeight:0
 Binding{target:smartScrollbar
