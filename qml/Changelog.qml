@@ -9,6 +9,23 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: "3.6.0"
+        date: "2025-02-18"
+        paragraphs: [
+            "- Added translations: Portuguese (Brazil), Tamil<br>" +
+            "- Updated translations: Estonian, Finnish, French, German, Italian, Portuguese (Brazil), Russian, Serbian, Slovak, Spanish, Swedish, Tamil, Turkish, Ukrainian<br>" +
+            "- Added support for analyzing disk space usage using “Space Inspector” (only enabled if “Space Inspector” is installed)<br>" +
+            "- Added support for play/pause using headphone buttons for audio previews<br>" +
+            "- Added more unused paths to the mount point ignore list<br>" +
+            "- Fixed file size info not being updated after editing a text file<br>" +
+            "- Fixed issues with counting files and folders<br>" +
+            "- Fixed bookmark warnings when no bookmarks file was found<br>" +
+            "- Removed bookmark migration that was needed for the switch to Sailjail<br>" +
+            "- Improved modularity to make it easier to use parts of File Browser in other apps (e.g. “Space Inspector” is built on top of File Browser's core)<br>" +
+            "- Lots of internal cleanup and modernization"
+        ]
+    }
+    ChangelogItem {
         version: "3.5.0"
         date: "2024-10-30"
         paragraphs: [
@@ -33,7 +50,7 @@ ChangelogList {
         date: "2024-10-21"
         paragraphs: [
             "- Updated translations: Estonian, Slovak, Spanish, Swedish, Ukrainian, German, English<br>" +
-            "- Important change: files are now sorted by modification date insteadd of file age<br>" +
+            "- Important change: files are now sorted by modification date instead of file age<br>" +
             "-   - This change is necessary to align File Browser's behavior with KDE Dolphin's behavior, so that you see the same sort order when opening a mounted folder on your desktop and when opening it on your phone<br>" +
             "-   - If you were using local view settings, you now have to switch sort order in folders where you defined it<br>" +
             "-   - Sorting by file age meant that more recently changed files were at the top, sorting by file data means that they are at the bottom now when sorting in ascending order<br>" +

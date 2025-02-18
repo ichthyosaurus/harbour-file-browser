@@ -10,6 +10,20 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
  * Nothing so far
 
+## Version 3.6.0 (2025-02-18)
+
+- Added translations: Portuguese (Brazil), Tamil
+- Updated translations: Estonian, Finnish, French, German, Italian, Portuguese (Brazil), Russian, Serbian, Slovak, Spanish, Swedish, Tamil, Turkish, Ukrainian
+- Added support for analyzing disk space usage using “Space Inspector” (only enabled if “Space Inspector” is installed)
+- Added support for play/pause using headphone buttons for audio previews
+- Added more unused paths to the mount point ignore list
+- Fixed file size info not being updated after editing a text file
+- Fixed issues with counting files and folders
+- Fixed bookmark warnings when no bookmarks file was found
+- Removed bookmark migration that was needed for the switch to Sailjail
+- Improved modularity to make it easier to use parts of File Browser in other apps (e.g. “Space Inspector” is built on top of File Browser's core)
+- Lots of internal cleanup and modernization
+
 ## Version 3.5.0 (2024-10-30)
 
 - Updated translations: Belarusian, Estonian, Spanish, Swedish, Ukrainian
@@ -30,7 +44,7 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 ## Version 3.4.0 (2024-10-21)
 
 - Updated translations: Estonian, Slovak, Spanish, Swedish, Ukrainian, German, English
-- Important change: files are now sorted by modification date insteadd of file age
+- Important change: files are now sorted by modification date instead of file age
 -   - This change is necessary to align File Browser's behavior with KDE Dolphin's behavior, so that you see the same sort order when opening a mounted folder on your desktop and when opening it on your phone
 -   - If you were using local view settings, you now have to switch sort order in folders where you defined it
 -   - Sorting by file age meant that more recently changed files were at the top, sorting by file data means that they are at the bottom now when sorting in ascending order
