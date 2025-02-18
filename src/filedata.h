@@ -16,6 +16,8 @@
 
 /**
  * @brief The FileData class provides info about one file.
+ *
+ * @todo Monitor files for changes and call refresh() automatically.
  */
 class FileData : public QObject
 {
