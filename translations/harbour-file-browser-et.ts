@@ -31,12 +31,12 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="122"/>
         <source>Tamil</source>
-        <translation type="unfinished"></translation>
+        <translation>tamili</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="153"/>
         <source>Serbian</source>
-        <translation>serbia keel</translation>
+        <translation>serbia</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="171"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="177"/>
         <source>Portuguese (Brazil)</source>
-        <translation type="unfinished"></translation>
+        <translation>portugali (Brasiilia)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="193"/>
@@ -1045,7 +1045,7 @@
         <location filename="../qml/pages/FilePage.qml" line="64"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation type="unfinished">Failihaldur</translation>
+        <translation>Failihaldur</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="113"/>
