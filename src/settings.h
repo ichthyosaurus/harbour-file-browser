@@ -15,7 +15,6 @@
 #include <QSharedPointer>
 #include <QDir>
 
-#include "configfilemonitor.h"
 #include "enumcontainer.h"
 #include "property_macros.h"
 
