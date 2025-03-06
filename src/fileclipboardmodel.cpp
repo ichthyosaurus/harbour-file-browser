@@ -225,6 +225,11 @@ PathsModel* FileClipboard::pathsModel() const
 
 void FileClipboard::reload()
 {
+    if (!m_monitor->fileExists()) {
+        qDebug() << "clipboard file does not exist:" << m_monitor->file();
+        return;
+    }
+
     const auto data = m_monitor->readJson(1);
 
     if (!data.isObject()) {
