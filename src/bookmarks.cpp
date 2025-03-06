@@ -1,6 +1,6 @@
 /*
  * This file is part of File Browser.
- * SPDX-FileCopyrightText: 2020-2024 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2025 Mirian Margiani
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -687,7 +687,7 @@ void BookmarksModel::reload()
     newEntries.insert(BookmarkGroup::Temporary, {}); // reset on reload
 
     // load user defined bookmarks
-    const auto value = m_bookmarksMonitor->readJson(QStringLiteral("1"), QJsonArray());
+    const auto value = m_bookmarksMonitor->readJson(1, QJsonArray());
 
     if (value.isArray()) {
         const auto array = value.toArray();
@@ -843,7 +843,7 @@ void BookmarksModel::save()
         array.append(item);
     }
 
-    m_bookmarksMonitor->writeJson(array, QStringLiteral("1"));
+    m_bookmarksMonitor->writeJson(array, 1);
 }
 
 QStringList BookmarksModel::pathsForIndexes(const QModelIndexList& indexes)

@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  *
- * SPDX-FileCopyrightText: 2022-2024 Mirian Margiani
+ * SPDX-FileCopyrightText: 2022-2025 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -225,7 +225,7 @@ PathsModel* FileClipboard::pathsModel() const
 
 void FileClipboard::reload()
 {
-    const auto data = m_monitor->readJson(QStringLiteral("1"));
+    const auto data = m_monitor->readJson(1);
 
     if (!data.isObject()) {
         qDebug() << "clipboard file is invalid:" << m_monitor->readFile();
@@ -265,7 +265,7 @@ void FileClipboard::saveToDisk()
     QJsonObject obj;
     obj.insert(QStringLiteral("mode"), m_paths.isEmpty() ? QStringLiteral() : modeString);
     obj.insert(QStringLiteral("paths"), QJsonArray::fromStringList(m_paths));
-    m_monitor->writeJson(obj, QStringLiteral("1"));
+    m_monitor->writeJson(obj, 1);
 }
 
 void FileClipboard::setPaths(const QStringList& newPaths, FileClipMode::Enum mode, bool doSave)
