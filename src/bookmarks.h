@@ -143,8 +143,6 @@ private:
     void removeUserDefined(QString path, bool permanent);
     int findUserDefinedIndex(QString path);
 
-    QString loadBookmarksFile();
-
     struct BookmarkItem {
         BookmarkItem(
             BookmarkGroup::Enum group,

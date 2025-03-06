@@ -998,11 +998,6 @@ void BookmarksModel::move(int fromIndex, int toIndex, bool saveImmediately)
     }
 }
 
-QString BookmarksModel::loadBookmarksFile()
-{
-    return m_bookmarksMonitor->readFile();
-}
-
 QList<BookmarksModel::BookmarkItem> BookmarksModel::getStandardLocations()
 {
     BookmarkItem homeItem {
