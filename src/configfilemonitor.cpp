@@ -189,6 +189,12 @@ QString ConfigFileMonitor::file() const
     return d->m_file;
 }
 
+bool ConfigFileMonitor::fileExists() const
+{
+    Q_D(const ConfigFileMonitor);
+    return !d->m_file.isEmpty() && QFileInfo::exists(d->m_file);
+}
+
 ConfigFileMonitor::ConfigFileMonitorOptions ConfigFileMonitor::options() const
 {
     Q_D(const ConfigFileMonitor);

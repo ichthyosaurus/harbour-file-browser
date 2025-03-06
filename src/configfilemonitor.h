@@ -1,6 +1,6 @@
 /*
  * This file is part of File Browser.
- * SPDX-FileCopyrightText: 2023 Mirian Margiani
+ * SPDX-FileCopyrightText: 2023-2025 Mirian Margiani
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -96,6 +96,7 @@ public:  // interface
                int maximumSize = -1);
 
     QString file() const;
+    bool fileExists() const;
     ConfigFileMonitorOptions options() const;
     bool isRunning() const;
 
