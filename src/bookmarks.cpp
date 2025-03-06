@@ -687,7 +687,7 @@ void BookmarksModel::reload()
     newEntries.insert(BookmarkGroup::Temporary, {}); // reset on reload
 
     // load user defined bookmarks
-    const auto value = m_bookmarksMonitor->readJson(QStringLiteral("1"));
+    const auto value = m_bookmarksMonitor->readJson(QStringLiteral("1"), QJsonArray());
 
     if (value.isArray()) {
         const auto array = value.toArray();
