@@ -46,7 +46,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="177"/>
         <source>Portuguese (Brazil)</source>
-        <translation type="unfinished"></translation>
+        <translation>Português (Brasil)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="193"/>
@@ -1055,12 +1055,12 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="126"/>
         <source>Install</source>
-        <translation type="unfinished"></translation>
+        <translation>Instalar</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="126"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="130"/>
@@ -1070,7 +1070,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="131"/>
         <source>This type of file cannot be opened.</source>
-        <translation type="unfinished"></translation>
+        <translation>Esse tipo de arquivo não pode ser aberto.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="142"/>
@@ -1091,7 +1091,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="184"/>
         <source>The file has been moved.</source>
-        <translation type="unfinished"></translation>
+        <translation>O arquivo foi movido.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="300"/>
@@ -1102,12 +1102,12 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="338"/>
         <source>Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Localização</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="342"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipo</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="344"/>
@@ -1117,12 +1117,12 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="344"/>
         <source>Link to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Link para %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="359"/>
         <source>Permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>Permissões</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="363"/>
@@ -1132,12 +1132,12 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="368"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grupo</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="373"/>
         <source>Last modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Última modificação</translation>
     </message>
 </context>
 <context>
@@ -1145,42 +1145,42 @@
     <message>
         <location filename="../src/globals.cpp" line="79"/>
         <source>B</source>
-        <translation type="unfinished"></translation>
+        <translation>B</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="80"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="81"/>
         <source>MiB</source>
-        <translation type="unfinished"></translation>
+        <translation>MiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="82"/>
         <source>GiB</source>
-        <translation type="unfinished"></translation>
+        <translation>GiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="83"/>
         <source>TiB</source>
-        <translation type="unfinished"></translation>
+        <translation>TiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="84"/>
         <source>PiB</source>
-        <translation type="unfinished"></translation>
+        <translation>PiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="85"/>
         <source>EiB</source>
-        <translation type="unfinished"></translation>
+        <translation>EiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="86"/>
         <source>ZiB</source>
-        <translation type="unfinished"></translation>
+        <translation>ZiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="87"/>
@@ -1250,7 +1250,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="48"/>
         <source>App Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurações do App</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="53"/>
