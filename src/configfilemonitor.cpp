@@ -1,6 +1,6 @@
 /*
  * This file is part of File Browser.
- * SPDX-FileCopyrightText: 2023 Mirian Margiani
+ * SPDX-FileCopyrightText: 2023-2025 Mirian Margiani
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -258,7 +258,123 @@ int ConfigFileMonitor::maximumFileSize() const
     return d->m_maximumFileSize;
 }
 
-QJsonValue ConfigFileMonitor::readJson(QString expectedVersion, QJsonValue fallback) const
+bool ConfigFileMonitor::writeFile(const QByteArray& value, ReadErrorState& state, bool createBackup)
+{
+    Q_D(ConfigFileMonitor);
+
+    ConfigFileMonitorBlocker blocker(this);
+
+    if (d->m_file.isEmpty()) {
+        qWarning() << "bug: cannot save file without filename";
+        state = ReadErrorState::FileNotDefined;
+        return false;
+    }
+
+    qDebug() << "saving config file" << d->m_file;
+
+    if (fileExists() && createBackup) {
+        if (!backupFile(state)) {
+            qWarning() << "cannot save config file because backup failed" << d->m_file;
+            return false;
+        }
+    }
+
+    QSaveFile outFile(d->m_file);
+
+    if (!outFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Unbuffered)) {
+        state = ReadErrorState::FailedToOpen;
+        qWarning() << "failed to open a temporary file for saving configuration to" << d->m_file;
+        qWarning() << "dataloss is possible!";
+        return false;
+    }
+
+    outFile.write(value);
+
+    if (!outFile.commit()) {
+        state = ReadErrorState::FailedToOpen;
+        qWarning() << "failed to save config to" << d->m_file;
+        qWarning() << "dataloss is possible!";
+        return false;
+    }
+
+    state = ReadErrorState::NoError;
+    qDebug() << "config file saved to" << d->m_file;
+    return true;
+}
+
+bool ConfigFileMonitor::writeFile(const QByteArray& value, bool createBackup)
+{
+    ReadErrorState state;
+    return writeFile(value, state, createBackup);
+}
+
+bool ConfigFileMonitor::backupFile(ReadErrorState& state) const
+{
+    if (file().isEmpty()) {
+        qWarning() << "bug: cannot backup file without filename";
+        state = ReadErrorState::FileNotDefined;
+        return false;
+    }
+
+    if (!fileExists()) {
+        // file does not exist so no backup is needed
+        state = ReadErrorState::NoError;
+        return true;
+    }
+
+    QFileInfo info = QFileInfo(file());
+    QString name = info.fileName();
+    QString path = info.absolutePath();
+
+    int number = 1;
+    QString numberedFilename = QStringLiteral("%1.~%2~").arg(name).arg(number);
+    QFileInfo newInfo(path+QStringLiteral("/")+numberedFilename);
+
+    while (newInfo.exists() || newInfo.isSymLink()) {
+        ++number;
+        numberedFilename = QStringLiteral("%1.~%2~").arg(name).arg(number);
+        newInfo.setFile(path+QStringLiteral("/")+numberedFilename);
+    }
+
+    if (!QFile::copy(info.absoluteFilePath(), newInfo.absoluteFilePath())) {
+        qWarning() << "failed to create backup copy of"
+                   << info.absoluteFilePath()
+                   << "to" << newInfo.absoluteFilePath();
+        state = ReadErrorState::FailedToOpen;
+        return false;
+    }
+
+    state = ReadErrorState::NoError;
+    return true;
+}
+
+bool ConfigFileMonitor::backupFile() const
+{
+    ReadErrorState state;
+    return backupFile(state);
+}
+
+QJsonValue ConfigFileMonitor::readJson(int expectedVersion, QJsonValue fallback)
+{
+    Q_D(const ConfigFileMonitor);
+
+    return readJson([&](int& version, QJsonValue& data){
+        if (version <= 0) {
+            data = fallback;
+            return true;
+        }
+
+        if (version == expectedVersion) {
+            return true;
+        }
+
+        qWarning() << "unsupported config file version in" << d->m_file << version << "expected" << expectedVersion;
+        data = fallback;
+        return false;
+    });
+}
+
+QJsonValue ConfigFileMonitor::readJson(std::function<bool(int&, QJsonValue&)> migrator)
 {
     Q_D(const ConfigFileMonitor);
 
@@ -266,54 +382,88 @@ QJsonValue ConfigFileMonitor::readJson(QString expectedVersion, QJsonValue fallb
     auto doc = QJsonDocument::fromJson(QByteArray::fromStdString(configString));
 
     if (!doc.isObject()) {
-        qDebug() << "failed to load config file: not a JSON object" << d->m_file;
-        return fallback;
+        qDebug() << "failed to load config file" << file() << ": not a JSON object";
+        return makeFallbackJson(migrator);
     }
 
     const auto obj = doc.object();
-    QString version = obj.value(QStringLiteral("version")).toString(QLatin1Literal(""));
-    const auto data = obj.value(QStringLiteral("data"));
+    auto versionValue = obj.value(QStringLiteral("version"));
+    int version = -1;
 
-    if (version != expectedVersion) {
-        qWarning() << "unsupported config file version in" << d->m_file << version;
-        return fallback;
+    if (versionValue.isNull()) {
+        qDebug() << "failed to load config file" << file() << ": version is undefined";
+        return makeFallbackJson(migrator);
+    } else if (versionValue.isString()) {
+        // Support for loading version as string is required
+        // to keep compatibility with File Browser < 3.7.0.
+
+        bool ok = false;
+        version = versionValue.toString().toInt(&ok);
+
+        if (!ok) {
+            qDebug() << "failed to load config file" << file() << ": got an invalid version string" << versionValue;
+            return makeFallbackJson(migrator);
+        }
+    } else {
+        version = versionValue.toInt(-1);
+    }
+
+    if (version < 0) {
+        qDebug() << "failed to load config file" << file() << ": version" << versionValue << "is invalid";
+        return makeFallbackJson(migrator);
+    }
+
+    int migratedVersion = -1;
+    QJsonValue data = obj.value(QStringLiteral("data"));
+
+    /* example migrator:
+
+    auto x = [](int& version, QJsonValue& data){
+        if (version <= 0) {
+            // initialize data...
+            version = 1;
+        }
+
+        if (version == 1) {
+            // do stuff...
+            version = 2;
+        }
+
+        if (version == 2) {
+            return true;  // final version
+        }
+
+        return false;  // got an unsupported version
+    };
+
+    */
+
+    migratedVersion = version;
+
+    if (migrator(migratedVersion, data)) {
+        if (migratedVersion != version) {
+            qDebug() << "migrated config file" << d->m_file << "from version" << version
+                     << "to version" << migratedVersion;
+            writeJson(data, migratedVersion, true);
+        }
+    } else {
+        qWarning() << "failed to migrate config file" << d->m_file << "from version" << version;
+        return makeFallbackJson(migrator);
     }
 
     return data;
 }
 
-bool ConfigFileMonitor::writeJson(QJsonValue data, QString version)
+bool ConfigFileMonitor::writeJson(QJsonValue data, int version, bool createBackup)
 {
-    Q_D(ConfigFileMonitor);
-
-    ConfigFileMonitorBlocker blocker(this);
-
-    qDebug() << "saving config file" << d->m_file;
-    QSaveFile outFile(d->m_file);
-
-    if (!outFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Unbuffered)) {
-        qWarning() << "failed to open a temporary file for saving configuration to" << d->m_file;
-        qWarning() << "dataloss is possible!";
-        return false;
-    }
-
     QJsonDocument doc;
     QJsonObject obj;
 
     obj.insert(QStringLiteral("version"), version);
     obj.insert(QStringLiteral("data"), data);
-
     doc.setObject(obj);
-    outFile.write(doc.toJson(QJsonDocument::Indented));
 
-    if (!outFile.commit()) {
-        qWarning() << "failed to save config to" << d->m_file;
-        qWarning() << "dataloss is possible!";
-        return false;
-    }
-
-    qDebug() << "config saved to" << d->m_file;
-    return true;
+    return writeFile(doc.toJson(QJsonDocument::Indented), createBackup);
 }
 
 void ConfigFileMonitor::pause()
@@ -353,6 +503,21 @@ void ConfigFileMonitor::setRunning(bool running)
     } else {
         pause();
     }
+}
+
+QJsonValue ConfigFileMonitor::makeFallbackJson(std::function<bool (int&, QJsonValue&)> migrator)
+{
+    int migratedVersion = -1;
+    QJsonValue empty;
+
+    if (migrator(migratedVersion, empty)) {
+        qWarning() << "using fallback config data for" << file() << "at version" << migratedVersion;
+    } else {
+        qWarning() << "bug: failed to generate fallback config data for" << file();
+        empty = {};
+    }
+
+    return empty;
 }
 
 /***********************************************************************

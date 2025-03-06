@@ -109,8 +109,25 @@ public:  // interface
     QString readFile() const;
     int maximumFileSize() const;
 
-    QJsonValue readJson(QString expectedVersion, QJsonValue fallback = {}) const;
-    bool writeJson(QJsonValue data, QString version);
+    bool writeFile(const QByteArray& value, ConfigFileMonitor::ReadErrorState& state, bool createBackup = false);
+    bool writeFile(const QByteArray& value, bool createBackup = false);
+
+    bool backupFile(ConfigFileMonitor::ReadErrorState& state) const;
+    bool backupFile() const;
+
+    // TODO: docs
+    // - how to use migrator functions
+    // - version must be int
+    // - readJson saves the file if migrations were applied!
+    // - readJson fails if the file does not exist -> check fileExists and save an empty value using writeJson({}, -1) to create a new config file
+    QJsonValue readJson(std::function<bool(int&, QJsonValue&)> migrator);
+
+    // TODO: docs
+    // - does not apply migrations
+    // - returns fallback if loaded version does not match expected version
+    QJsonValue readJson(int expectedVersion, QJsonValue fallback = {});
+
+    bool writeJson(QJsonValue data, int version, bool createBackup = false);
 
 public slots:
     void pause();
@@ -119,6 +136,9 @@ public slots:
 
 signals:
     void configChanged();
+
+private:
+    QJsonValue makeFallbackJson(std::function<bool(int&, QJsonValue&)> migrator);
 };
 Q_DECLARE_OPERATORS_FOR_FLAGS(ConfigFileMonitor::ConfigFileMonitorOptions)
 
