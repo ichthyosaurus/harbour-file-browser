@@ -20,14 +20,31 @@ class ConfigFileMonitorPrivate;
  * changes on disk. Unless the \c NotifyWhenRemoved option is set,
  * it will not be emitted when the file is removed.
  *
- * @section Reading
+ * File contents can be accessed as plain text or as JSON data.
+ *
+ * @section JSON
+ *
+ * Two shortcut methods are available for reading and writing JSON
+ * configuration files. These methods automatically check versions
+ * and handle pause/resume: \c readJson, \c writeJson.
+ *
+ * @subsection Version migrations
+ *
+ * Config files can be migrated through \c readJson. Backups are
+ * created automatically.
+ *
+ * @section Plain text
  *
  * The file contents can be accessed using \c readFile, if the
  * file is smaller than the maximum file size (default: 200 KiB).
  *
- * @section Writing
+ * Use \c writeFile for saving. This method automatically handles
+ * pause/resume.
  *
- * Use the \l QSaveFile class for saving, and use the \c QIODevice::Unbuffered
+ * @subsection Saving manually
+ *
+ * If \c writeFile and \c writeJson are insufficient for some reason,
+ * use the \l QSaveFile class for saving, and use the \c QIODevice::Unbuffered
  * option when opening the save file.
  *
  * Always pause the monitor using \c pause before starting the
@@ -35,11 +52,11 @@ class ConfigFileMonitorPrivate;
  * simplify this, you can use a \c ConfigFileMonitorBlocker
  * that automatically resumes monitoring when it is destroyed.
  *
- * @section JSON
+ * @section Backups
  *
- * Two shortcut methods are available for reading and writing JSON
- * configuration files. These methods automatically check versions
- * and handle pause/resume: \c readJson, \c writeJson.
+ * The \c backupFile method allows creating numbered backups of
+ * existing config files.
+ *
  */
 class ConfigFileMonitor : public QObject {
     Q_OBJECT
@@ -95,38 +112,148 @@ public:  // interface
                const ConfigFileMonitorOptions& options = 0,
                int maximumSize = -1);
 
+    /**
+     * @brief Get the current config file path.
+     */
     QString file() const;
+
+    /**
+     * @brief Check whether the currently set config file exists on disk.
+     */
     bool fileExists() const;
+
+    /**
+     * @brief Check options for this monitor.
+     */
     ConfigFileMonitorOptions options() const;
+
+    /**
+     * @brief Check whether the monitor is active.
+     */
     bool isRunning() const;
 
     /**
      * @brief Read config file contents.
+     *
+     * @note Use @c readJson to read structured data with
+     * version checking.
+     *
      * @param state
      * @return Data, or empty string in case of errors.
      */
     QString readFile(ConfigFileMonitor::ReadErrorState& state) const;
     QString readFile() const;
+
+    /**
+     * @brief Check the currently defined maximum file size.
+     *
+     * Files larger than this cannot be loaded for performance
+     * reasons. It is not recommended to change this value.
+     */
     int maximumFileSize() const;
 
+    /**
+     * @brief Write config file contents.
+     *
+     * Set @c createBackup to @c true to automatically create
+     * a backup if the file already exists.
+     *
+     * @return @c true on success, @c false if nothing was saved
+     */
     bool writeFile(const QByteArray& value, ConfigFileMonitor::ReadErrorState& state, bool createBackup = false);
     bool writeFile(const QByteArray& value, bool createBackup = false);
 
+    /**
+     * @brief Create a numbered copy of the config file.
+     *
+     * The copy is placed in the same folder as the original file.
+     * If the original file does not exist, nothing happens and the
+     * method returns @c true.
+     */
     bool backupFile(ConfigFileMonitor::ReadErrorState& state) const;
     bool backupFile() const;
 
-    // TODO: docs
-    // - how to use migrator functions
-    // - version must be int
-    // - readJson saves the file if migrations were applied!
-    // - readJson fails if the file does not exist -> check fileExists and save an empty value using writeJson({}, -1) to create a new config file
+    /**
+     * @brief Read JSON formatted config files.
+     *
+     * @section Important note
+     *
+     * This method reads existing JSON config files. If the file does not
+     * exist yet, make sure to save an empty value using @c writeJson({}, 0)
+     * first to create a new file.
+     *
+     * @code
+     * if (!myMonitor.fileExists()) {
+     *     myMonitor.writeJson({}, 0);
+     * }
+     * @endcode
+     *
+     * @section Structure
+     *
+     * JSON formatted config files have a standard structure that
+     * is managed by the @c writeJson and @c readJson methods.
+     * Custom data can have any structure.
+     *
+     * @code
+     * {
+     *     "version": 1,
+     *     "data": {},
+     * }
+     * @endcode
+     *
+     * The @c readJson method returns data in the @c data key,
+     * while @c writeJson writes data to the @c data key.
+     *
+     * @section Migrations
+     *
+     * Optional config migrations can be applied through the custom
+     * @c migrator function.
+     *
+     * @code
+     * auto exampleMigrator = [](int& version, QJsonValue& data){
+     *  if (version <= 0) {
+     *      // initialize data...
+     *      version = 1;
+     *  }
+     *
+     *  if (version == 1) {
+     *      // modify data...
+     *      version = 2;
+     *  }
+     *
+     *  if (version == 2) {
+     *      return true;  // final version
+     *  }
+     *
+     *  return false;  // got an unsupported version
+     * };
+     * @endcode
+     *
+     * @note The config file will be saved and a backup will be
+     * created automatically if a migration is applied.
+     */
     QJsonValue readJson(std::function<bool(int&, QJsonValue&)> migrator);
 
-    // TODO: docs
-    // - does not apply migrations
-    // - returns fallback if loaded version does not match expected version
+    /**
+     * @brief Read JSON formatted files without migrations.
+     *
+     * Use this function if no migrations are needed. The fallback
+     * value is returned if loading fails or if loaded version and
+     * expected version do not match.
+     */
     QJsonValue readJson(int expectedVersion, QJsonValue fallback = {});
 
+    /**
+     * @brief Save JSON formatted data.
+     *
+     * This method saves the @c data value opaquely and sets the
+     * config file version to @c version.
+     *
+     * If @c createBackup is @c true, a backup will be created if
+     * the config file already exists on disk.
+     *
+     * @sa readJson
+     */
     bool writeJson(QJsonValue data, int version, bool createBackup = false);
 
 public slots:
@@ -150,7 +277,7 @@ Q_DECLARE_OPERATORS_FOR_FLAGS(ConfigFileMonitor::ConfigFileMonitorOptions)
  * \c ConfigFileMonitor::pause and \c ConfigFileMonitor::resume.
  * This ensures that the monitor is always resumed after it has been paused.
  *
- * Use this helper when saving config files like this:
+ * Use this helper when manually saving config files like this:
  *
  * \code
  * void save() {
@@ -189,6 +316,9 @@ Q_DECLARE_OPERATORS_FOR_FLAGS(ConfigFileMonitor::ConfigFileMonitorOptions)
  *     myMonitor->resume();
  * }
  * \endcode
+ *
+ * @note Using the blocker is not necessary when saving config
+ * files using the @c writeJson or @c writeFile methods.
  */
 class ConfigFileMonitorBlocker
 {

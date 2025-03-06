@@ -416,28 +416,6 @@ QJsonValue ConfigFileMonitor::readJson(std::function<bool(int&, QJsonValue&)> mi
     int migratedVersion = -1;
     QJsonValue data = obj.value(QStringLiteral("data"));
 
-    /* example migrator:
-
-    auto x = [](int& version, QJsonValue& data){
-        if (version <= 0) {
-            // initialize data...
-            version = 1;
-        }
-
-        if (version == 1) {
-            // do stuff...
-            version = 2;
-        }
-
-        if (version == 2) {
-            return true;  // final version
-        }
-
-        return false;  // got an unsupported version
-    };
-
-    */
-
     migratedVersion = version;
 
     if (migrator(migratedVersion, data)) {
