@@ -744,51 +744,73 @@ void BookmarksModel::reloadIgnoredMounts()
         return;
     }
 
-    if (!QFile::exists(m_ignoredMountsMonitor->file())) {
-        qDebug() << "mount point ignore list not found at" << m_ignoredMountsMonitor->file()
-                 << "- creating file with default ignore list...";
-
-        // All mount points that exactly match one of these paths are ignored.
-        const static QJsonArray defaultIgnoredFullPaths {
-            {QStringLiteral("/")},
-            {QStringLiteral("/persist")},
-            {QStringLiteral("/protect_s")},
-            {QStringLiteral("/protect_f")},
-            {QStringLiteral("/dsp")},
-            {QStringLiteral("/odm")},
-            {QStringLiteral("/opt")},
-            {QStringLiteral("/home")},
-            {QStringLiteral("/firmware")},
-            {QStringLiteral("/bt_firmware")},
-            {QStringLiteral("/firmware_mnt")},
-            {QStringLiteral("/metadata")},
-            {QStringLiteral("/blackbox")},
-        };
-
-        // All mount points below these paths are ignored.
-        const static QJsonArray defaultIgnoredBasePaths {
-            {QStringLiteral("/opt/alien/")},
-            {QStringLiteral("/apex/")},
-            {QStringLiteral("/opt/appsupport/")},
-            {QStringLiteral("/vendor/")},
-            {QStringLiteral("/home/")},
-            {QStringLiteral("/dsp/")},
-            {QStringLiteral("/firmware/")},
-            {QStringLiteral("/bt_firmware/")},
-            {QStringLiteral("/firmware_mnt/")},
-            {QStringLiteral("/persist/")},
-            {QStringLiteral("/mnt/vendor/")},
-        };
-
-        QJsonObject object;
-        object.insert(QStringLiteral("fullPaths"), defaultIgnoredFullPaths);
-        object.insert(QStringLiteral("basePaths"), defaultIgnoredBasePaths);
-        m_ignoredMountsMonitor->writeJson(object, QStringLiteral("1"));
-
-        qDebug() << "saved default ignore list:" << object;
+    if (!m_ignoredMountsMonitor->fileExists()) {
+        m_ignoredMountsMonitor->writeJson({}, 0);
     }
 
-    const auto value = m_ignoredMountsMonitor->readJson(QStringLiteral("1"));
+    const auto value = m_ignoredMountsMonitor->readJson(
+        [&](int& version, QJsonValue& data){
+            if (version <= 0) {
+                qDebug() << "creating default mount point ignore list at" << m_ignoredMountsMonitor->file();
+
+                // All mount points that exactly match one of these paths are ignored.
+                const static QJsonArray defaultIgnoredFullPaths {
+                    {QStringLiteral("/")},
+                    {QStringLiteral("/persist")},
+                    {QStringLiteral("/protect_s")},
+                    {QStringLiteral("/protect_f")},
+                    {QStringLiteral("/dsp")},
+                    {QStringLiteral("/odm")},
+                    {QStringLiteral("/opt")},
+                    {QStringLiteral("/home")},
+                    {QStringLiteral("/firmware")},
+                    {QStringLiteral("/bt_firmware")},
+                    {QStringLiteral("/firmware_mnt")},
+                    {QStringLiteral("/metadata")},
+                };
+
+                // All mount points below these paths are ignored.
+                const static QJsonArray defaultIgnoredBasePaths {
+                    {QStringLiteral("/opt/alien/")},
+                    {QStringLiteral("/apex/")},
+                    {QStringLiteral("/opt/appsupport/")},
+                    {QStringLiteral("/vendor/")},
+                    {QStringLiteral("/home/")},
+                    {QStringLiteral("/dsp/")},
+                    {QStringLiteral("/firmware/")},
+                    {QStringLiteral("/bt_firmware/")},
+                    {QStringLiteral("/firmware_mnt/")},
+                    {QStringLiteral("/persist/")},
+                };
+
+                QJsonObject object;
+                object.insert(QStringLiteral("fullPaths"), defaultIgnoredFullPaths);
+                object.insert(QStringLiteral("basePaths"), defaultIgnoredBasePaths);
+
+                data = object;
+                version = 1;
+            }
+
+            if (version == 1) {
+                QJsonObject object = data.toObject();
+                QJsonArray fullPaths = object.value("fullPaths").toArray();
+                QJsonArray basePaths = object.value("basePaths").toArray();
+
+                fullPaths.append(QStringLiteral("/blackbox"));
+                basePaths.append(QStringLiteral("/mnt/vendor/"));
+
+                object.insert(QStringLiteral("fullPaths"), fullPaths);
+                object.insert(QStringLiteral("basePaths"), basePaths);
+                data = object;
+                version = 2;
+            }
+
+            if (version == 2) {
+                return true;  // final version
+            }
+
+            return false;  // got an unsupported version
+    });
 
     if (value.isObject()) {
         const QJsonObject object = value.toObject();
