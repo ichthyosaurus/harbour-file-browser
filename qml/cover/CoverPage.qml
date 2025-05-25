@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2016 Joona Petrell
  * SPDX-FileCopyrightText: 2016-2018 Kari Pihkala
- * SPDX-FileCopyrightText: 2019-2024 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2025 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -73,6 +73,22 @@ CoverBackground {
         main.activate()
     }
 
+    function openNewWindow() {
+        var checkPage = pageStack.currentPage
+        var path = null
+
+        do {
+            if (checkPage.objectName === 'DirectoryPage') {
+                path = checkPage.dir
+                break
+            } else {
+                checkPage = pageStack.previousPage(checkPage)
+            }
+        } while (checkPage !== null)
+
+        engine.openNewWindow(path)
+    }
+
     Image {
         id: bgIcon
         y: Theme.paddingLarge
@@ -117,14 +133,8 @@ CoverBackground {
             onTriggered: activatePage(Qt.resolvedUrl("../pages/SearchPage.qml"), 'dir', 'SearchPage')
         }
         CoverAction {
-            iconSource: "image://theme/icon-cover-favorite"
-            // Note: the "current page" stays the same on the page stack when an attached
-            // page is being shown. That means we cannot stay when 'ShortcutsPage' is the
-            // current page. Instead, we have to push a new instance of the shortcuts page
-            // that will be destroyed once the user navigates back. We cannot use main.shortcutsPage
-            // either, because that would mean pushing the same page twice onto the stack
-            // when it is actually being shown currently.
-            onTriggered: activatePage(Qt.resolvedUrl("../pages/ShortcutsPage.qml"), 'currentPath', null)
+            iconSource: "image://theme/icon-cover-new"
+            onTriggered: openNewWindow()
         }
     }
 }
