@@ -2788,7 +2788,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="102"/>
         <source>Searching</source>
-        <translation>Пошук</translation>
+        <translation>Шукаю</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="111"/>
@@ -2907,7 +2907,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="315"/>
         <source>Remove</source>
-        <translation>Видалити</translation>
+        <translation>Вилучити</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="336"/>
