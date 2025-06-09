@@ -6,7 +6,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="55"/>
         <source>A fully-fledged file manager for Sailfish OS.</source>
-        <translation>Sailfish OS 的成熟文件管理器。</translation>
+        <translation>一个功能齐全的Sailfish操作系统文件管理器。</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="82"/>
