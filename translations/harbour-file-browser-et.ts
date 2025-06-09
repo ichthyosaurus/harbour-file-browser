@@ -31,7 +31,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="122"/>
         <source>Tamil</source>
-        <translation type="unfinished"></translation>
+        <translation>tamili keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="153"/>
@@ -41,122 +41,122 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="171"/>
         <source>Romanian</source>
-        <translation>rumeenia</translation>
+        <translation>rumeenia keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="177"/>
         <source>Portuguese (Brazil)</source>
-        <translation type="unfinished"></translation>
+        <translation>portugali keel (Brasiilia)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="193"/>
         <source>Norwegian Bokmål</source>
-        <translation>norra bokmål</translation>
+        <translation>norra keel (bokmål)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="264"/>
         <source>English</source>
-        <translation>inglise</translation>
+        <translation>inglise keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="303"/>
         <source>Belarusian</source>
-        <translation>valgevene</translation>
+        <translation>valgevene keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="228"/>
         <source>German</source>
-        <translation>saksa</translation>
+        <translation>saksa keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="248"/>
         <source>Finnish</source>
-        <translation>soome</translation>
+        <translation>soome keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="272"/>
         <source>Dutch (Belgium)</source>
-        <translation>hollandi (Belgia)</translation>
+        <translation>hollandi keel (Belgia)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="291"/>
         <source>Chinese</source>
-        <translation>hiina</translation>
+        <translation>hiina keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="159"/>
         <source>Russian</source>
-        <translation>vene</translation>
+        <translation>vene keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="128"/>
         <source>Swedish</source>
-        <translation>rootsi</translation>
+        <translation>rootsi keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="102"/>
         <source>Ukrainian</source>
-        <translation>ukraina</translation>
+        <translation>ukraina keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="200"/>
         <source>Italian</source>
-        <translation>itaalia</translation>
+        <translation>itaalia keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="137"/>
         <source>Spanish</source>
-        <translation>hispaania</translation>
+        <translation>hispaania keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="236"/>
         <source>French</source>
-        <translation>prantsuse</translation>
+        <translation>prantsuse keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="278"/>
         <source>Dutch</source>
-        <translation>hollandi</translation>
+        <translation>hollandi keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="222"/>
         <source>Greek</source>
-        <translation>kreeka</translation>
+        <translation>kreeka keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="285"/>
         <source>Czech</source>
-        <translation>tšehhi</translation>
+        <translation>tšehhi keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="146"/>
         <source>Slovak</source>
-        <translation>slovaki</translation>
+        <translation>slovaki keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="215"/>
         <source>Hungarian</source>
-        <translation>ungari</translation>
+        <translation>ungari keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="258"/>
         <source>Estonian</source>
-        <translation>eesti</translation>
+        <translation>eesti keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="184"/>
         <source>Polish</source>
-        <translation>poola</translation>
+        <translation>poola keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="207"/>
         <source>Indonesian</source>
-        <translation>indoneesia</translation>
+        <translation>indoneesia keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="112"/>
         <source>Turkish</source>
-        <translation>türgi</translation>
+        <translation>türgi keel</translation>
     </message>
 </context>
 <context>
@@ -286,16 +286,16 @@
         <location filename="../qml/pages/ClipboardPage.qml" line="75"/>
         <source>%n item(s) to be copied</source>
         <translation>
-            <numerusform>%n kopeeritav ese</numerusform>
-            <numerusform>%n kopeeritavat eset</numerusform>
+            <numerusform>%n kopeeritav objekt</numerusform>
+            <numerusform>%n kopeeritavat objekti</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
         <source>%n item(s) to be moved</source>
         <translation>
-            <numerusform>%n uude kohta tõstetav ese</numerusform>
-            <numerusform>%n uude kohta tõstetavat eset</numerusform>
+            <numerusform>%n uude kohta tõstetav objekt</numerusform>
+            <numerusform>%n uude kohta tõstetavat objekti</numerusform>
         </translation>
     </message>
     <message>
@@ -312,8 +312,8 @@
         <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
         <source>%n item(s) to be linked</source>
         <translation>
-            <numerusform>%n viidatav kirje</numerusform>
-            <numerusform>%n viidatavat kirjet</numerusform>
+            <numerusform>%n viidatav objekt</numerusform>
+            <numerusform>%n viidatavat objekti</numerusform>
         </translation>
     </message>
     <message>
@@ -911,8 +911,8 @@
         <location filename="../src/filedata.cpp" line="88"/>
         <source>%n item(s)</source>
         <translation>
-            <numerusform>%n ese</numerusform>
-            <numerusform>%n eset</numerusform>
+            <numerusform>%n objekt</numerusform>
+            <numerusform>%n objekti</numerusform>
         </translation>
     </message>
     <message>
@@ -978,8 +978,8 @@
         <location filename="../src/filemodel.cpp" line="131"/>
         <source>%n item(s)</source>
         <translation>
-            <numerusform>%n ese</numerusform>
-            <numerusform>%n eset</numerusform>
+            <numerusform>%n objekt</numerusform>
+            <numerusform>%n objekti</numerusform>
         </translation>
     </message>
 </context>
@@ -1045,7 +1045,7 @@
         <location filename="../qml/pages/FilePage.qml" line="64"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation type="unfinished">Failihaldur</translation>
+        <translation>Failihaldur</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="113"/>
@@ -2145,8 +2145,8 @@ exposure program</extracomment>
         <location filename="../qml/pages/MultiFilePage.qml" line="93"/>
         <source>%n item(s) selected</source>
         <translation>
-            <numerusform>%n kirje valitud</numerusform>
-            <numerusform>%n kirjet valitud</numerusform>
+            <numerusform>%n objekt valitud</numerusform>
+            <numerusform>%n objekti valitud</numerusform>
         </translation>
     </message>
     <message>
@@ -3197,8 +3197,8 @@ exposure program</extracomment>
         <location filename="../qml/pages/TransferDialog.qml" line="106"/>
         <source>%n item(s)</source>
         <translation>
-            <numerusform>%n ese</numerusform>
-            <numerusform>%n eset</numerusform>
+            <numerusform>%n objekt</numerusform>
+            <numerusform>%n objekti</numerusform>
         </translation>
     </message>
     <message numerus="yes">
