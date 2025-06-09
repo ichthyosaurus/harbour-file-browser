@@ -1045,7 +1045,7 @@
         <location filename="../qml/pages/FilePage.qml" line="64"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation type="unfinished">Navegador de archivos</translation>
+        <translation>Explorador de archivo</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="113"/>
