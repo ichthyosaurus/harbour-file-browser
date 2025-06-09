@@ -31,7 +31,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="122"/>
         <source>Tamil</source>
-        <translation type="unfinished"></translation>
+        <translation>Тамильский</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="153"/>
@@ -46,12 +46,12 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="177"/>
         <source>Portuguese (Brazil)</source>
-        <translation type="unfinished"></translation>
+        <translation>Португальский (Бразилия)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="193"/>
         <source>Norwegian Bokmål</source>
-        <translation type="unfinished">Норвежский букмол</translation>
+        <translation>Норвежский букмол</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="264"/>
@@ -172,7 +172,7 @@
     <message>
         <location filename="../src/bookmarks.cpp" line="507"/>
         <source>Memory card</source>
-        <translation>карта памяти</translation>
+        <translation>Карта памяти</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="509"/>
@@ -543,7 +543,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="292"/>
         <source>Copy path to clipboard</source>
-        <translation>Копирование пути в буфер обмена</translation>
+        <translation>Копировать путь в буфер обмена</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="372"/>
@@ -1062,7 +1062,7 @@
         <location filename="../qml/pages/FilePage.qml" line="64"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation type="unfinished">Файловый менеджер</translation>
+        <translation>Файловый браузер</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="113"/>
@@ -2531,7 +2531,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="246"/>
         <source>Zoomed to fit screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Увеличено до размера экрана</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="246"/>
@@ -2561,7 +2561,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="42"/>
         <source>Copy subtitle files in the SRT format next to the video file to open them quickly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Скопируйте файлы субтитров в формате SRT рядом с видеофайлом, чтобы быстро открыть их.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="42"/>
@@ -3065,12 +3065,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="29"/>
         <source>The “Space Inspector” app will open shortly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Приложение &quot;Space Inspector&quot; откроется в ближайшее время.</translation>
     </message>
     <message>
         <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="37"/>
         <source>The “Space Inspector” app could not be opened.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не удалось открыть приложение &quot;Space Inspector&quot;.</translation>
     </message>
 </context>
 <context>
@@ -3087,7 +3087,7 @@ exposure program</extracomment>
         <location filename="../qml/components/StorageSizeMenuLabel.qml" line="14"/>
         <source>%1 full (%2%)</source>
         <comment>as in “15 of 20 GiB [%1] of this device are filled with data, which is 75% [%2] of its capacity”</comment>
-        <translation type="unfinished">%1 заполнено (%2%)</translation>
+        <translation>%1 заполнено (%2%)</translation>
     </message>
 </context>
 <context>
@@ -3536,7 +3536,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewVideoPage.qml" line="19"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation type="unfinished">Файловый менеджер</translation>
+        <translation>Файловый Браузер</translation>
     </message>
 </context>
 <context>
