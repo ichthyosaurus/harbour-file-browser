@@ -31,7 +31,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="122"/>
         <source>Tamil</source>
-        <translation type="unfinished"></translation>
+        <translation>Тамільська</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="153"/>
@@ -46,7 +46,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="177"/>
         <source>Portuguese (Brazil)</source>
-        <translation type="unfinished"></translation>
+        <translation>Португальська (Бразилія)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="193"/>
@@ -484,8 +484,8 @@
         <source>... and %n more</source>
         <translation>
             <numerusform>... та %n більше</numerusform>
-            <numerusform>... та %n більше</numerusform>
-            <numerusform>... та %n більше</numerusform>
+            <numerusform>... та %n більший</numerusform>
+            <numerusform>... та %n більший</numerusform>
         </translation>
     </message>
 </context>
@@ -494,7 +494,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
         <source>show less</source>
-        <translation>сховати</translation>
+        <translation>показувати менше</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
@@ -1062,7 +1062,7 @@
         <location filename="../qml/pages/FilePage.qml" line="64"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation type="unfinished">Переглядач файлів</translation>
+        <translation>Файловий браузер</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="113"/>
@@ -2702,7 +2702,7 @@ exposure program</extracomment>
     <message>
         <location filename="../src/globals.cpp" line="124"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
-        <translation>dd MMM yyyy, hh:mm:ss t</translation>
+        <translation>дд МММ рррр, гг:мм:сс т</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="126"/>
@@ -2788,7 +2788,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="102"/>
         <source>Searching</source>
-        <translation>Пошук</translation>
+        <translation>Шукаю</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="111"/>
@@ -2907,7 +2907,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="315"/>
         <source>Remove</source>
-        <translation>Видалити</translation>
+        <translation>Вилучити</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="336"/>
@@ -2917,7 +2917,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="335"/>
         <source>Locations</source>
-        <translation>Розташування</translation>
+        <translation>Розташуванні</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="334"/>
@@ -3095,7 +3095,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="9"/>
         <source>Hi there!</source>
-        <translation>Вітаю!</translation>
+        <translation>Привіт!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="10"/>
@@ -3295,8 +3295,8 @@ exposure program</extracomment>
         <source>Failed to copy</source>
         <translation>
             <numerusform>Не вдалося скопіювати</numerusform>
-            <numerusform>Не вдалося скопіювати</numerusform>
-            <numerusform>Не вдалося скопіювати</numerusform>
+            <numerusform>Не вдалося скопіюватися</numerusform>
+            <numerusform>Не вдалося скопіюватися</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -3304,8 +3304,8 @@ exposure program</extracomment>
         <source>Failed to move</source>
         <translation>
             <numerusform>Не вдалося перемістити</numerusform>
-            <numerusform>Не вдалося перемістити</numerusform>
-            <numerusform>Не вдалося перемістити</numerusform>
+            <numerusform>Не вдалося переміститися</numerusform>
+            <numerusform>Не вдалося переміститися</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -3313,8 +3313,8 @@ exposure program</extracomment>
         <source>Failed to link</source>
         <translation>
             <numerusform>Не вдалося створити посилання</numerusform>
-            <numerusform>Не вдалося створити посилання</numerusform>
-            <numerusform>Не вдалося створити посилання</numerusform>
+            <numerusform>Не вдалося створити посиланням</numerusform>
+            <numerusform>Не вдалося створити посиланням</numerusform>
         </translation>
     </message>
     <message>
