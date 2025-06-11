@@ -14,7 +14,7 @@ readonly property alias textLabel:_line1
 readonly property alias descriptionLabel:_line2
 readonly property alias bodyColumn:contentColumn
 Column{id:contentColumn
-width:root.width
+width:parent.width
 OptionalLabel{id:_line1
 width:parent.width
 text:root.text
