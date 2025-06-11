@@ -855,7 +855,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="265"/>
+        <location filename="../qml/components/FileActions.qml" line="264"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>comprimir archivo</numerusform>
@@ -863,17 +863,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="274"/>
+        <location filename="../qml/components/FileActions.qml" line="273"/>
         <source>edit link target</source>
         <translation>editar destino del enlace</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="279"/>
+        <location filename="../qml/components/FileActions.qml" line="278"/>
         <source>Apply</source>
         <translation>Aplicar</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="299"/>
+        <location filename="../qml/components/FileActions.qml" line="298"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>editar archivo</numerusform>
@@ -881,7 +881,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="324"/>
+        <location filename="../qml/components/FileActions.qml" line="323"/>
         <source>show file properties</source>
         <translation>mostrar propiedades de archivo</translation>
     </message>
@@ -2761,7 +2761,7 @@ exposure program</extracomment>
         <translation>Ten cuidado al usar File Browser en modo root. Las acciones pueden romper inesperadamente tu sistema.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Abrir File Browser en modo root</translation>
     </message>
