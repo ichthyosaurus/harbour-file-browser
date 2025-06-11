@@ -1,6 +1,12 @@
 {
   "weblate": [
     {
+      "language": "Arabic",
+      "entries": [
+        "Moayad Ibrahim"
+      ]
+    },
+    {
       "language": "Belarusian",
       "entries": [
         "Toha"
@@ -11,9 +17,10 @@
       "entries": [
         "复予",
         "yangyangdaji",
+        "玉堂白鹤",
         "Jason Cai",
         "joe",
-        "Mirian Margiani"
+        "petter0011"
       ]
     },
     {
@@ -26,8 +33,7 @@
       "language": "Dutch",
       "entries": [
         "Nathan",
-        "Pieter Bikkel",
-        "Mirian Margiani"
+        "Pieter Bikkel"
       ]
     },
     {
@@ -55,8 +61,7 @@
       "entries": [
         "Elmeri Länsiharju",
         "Lassi Määttä",
-        "Jyri-Petteri Paloposki",
-        "Mirian Margiani",
+        "Jyri-Petteri Paloposki"
         "Deleted User"
       ]
     },
@@ -66,6 +71,7 @@
         "Maxime Leroy",
         "Jerome M",
         "Mirian Margiani",
+        "Laurent FAVOLE",
         "J. Lavoie",
         "K. Herbert"
       ]
@@ -74,7 +80,8 @@
       "language": "German",
       "entries": [
         "Mirian Margiani",
-        "Allan Nordhøy"
+        "Allan Nordhøy",
+        "Deleted User"
       ]
     },
     {
@@ -95,15 +102,13 @@
     {
       "language": "Italian",
       "entries": [
-        "luca rastelli",
-        "Mirian Margiani"
+        "luca rastelli"
       ]
     },
     {
       "language": "Norwegian Bokmål",
       "entries": [
-        "Allan Nordhøy",
-        "Mirian Margiani"
+        "Allan Nordhøy"
       ]
     },
     {
@@ -112,7 +117,8 @@
         "Patryk Szkudlarek",
         "senza",
         "Eryk Michalak",
-        "neloduka-sobe"
+        "neloduka-sobe",
+        "J3Extreme"
       ]
     },
     {
@@ -135,9 +141,10 @@
         "Evgeniy Khramov",
         "RoundedRectangle",
         "sandworm88",
-        "Mirian Margiani",
+        "Romeostar",
         "Lilia Savciuc",
-        "Victor K"
+        "Victor K",
+        "Yurt Page"
       ]
     },
     {
@@ -157,9 +164,11 @@
     {
       "language": "Spanish",
       "entries": [
-        "gallegonovato",
+        "Deleted User",
         "Carmen F. B.",
         "lucasengithub",
+        "Jaime Marquínez Ferrándiz",
+        "Francisco Serrador",
         "Allan Nordhøy"
       ]
     },
@@ -185,7 +194,8 @@
         "Deleted User",
         "İbrahim Dinç",
         "E-Akcaer",
-        "TCr3"
+        "TCr3",
+        "Turker"
       ]
     },
     {
@@ -194,9 +204,10 @@
         "Dan",
         "Bohdan Kolesnyk",
         "mihajlo0743",
+        "Максим Горпиніч",
         "Tymofii Lytvynenko",
-        "Artem",
-        "Allan Nordhøy"
+        "Allan Nordhøy",
+        "Artem"
       ]
     }
   ],

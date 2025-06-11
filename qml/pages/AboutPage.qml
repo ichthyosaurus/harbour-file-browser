@@ -105,7 +105,8 @@ A.AboutPageBase {
                         "Bohdan Kolesnyk",
                         "Dan",
                         "Tymofii Lytvynenko",
-                        "mihajlo0743"
+                        "mihajlo0743",
+                        "Максим Горпиніч"
                     ]
                 },
                 A.ContributionGroup {
@@ -115,6 +116,7 @@ A.AboutPageBase {
                         "Oğuz Ersen",
                         "TCr3",
                         "ToldYouThat",
+                        "Turker",
                         "İbrahim Dinç"
                     ]
                 },
@@ -137,8 +139,9 @@ A.AboutPageBase {
                     title: qsTr("Spanish")
                     entries: [
                         "Carmen F. B.",
+                        "Francisco Serrador",
+                        "Jaime Marquínez Ferrándiz",
                         "Lucas Peinado",
-                        "gallegonovato",
                         "lucasengithub"
                     ]
                 },
@@ -162,8 +165,10 @@ A.AboutPageBase {
                         "Lilia Savciuc",
                         "Mika",
                         "Petr Tsymbarovich",
+                        "Romeostar",
                         "RoundedRectangle",
                         "Victor K",
+                        "Yurt Page",
                         "sandworm88"
                     ]
                 },
@@ -184,6 +189,7 @@ A.AboutPageBase {
                     title: qsTr("Polish")
                     entries: [
                         "Eryk Michalak",
+                        "J3Extreme",
                         "Patryk Szkudlarek",
                         "neloduka-sobe",
                         "senza"
@@ -238,6 +244,7 @@ A.AboutPageBase {
                         "J. Lavoie",
                         "Jerome M",
                         "K. Herbert",
+                        "Laurent FAVOLE",
                         "Maxime Leroy",
                         "Mirian Margiani",
                         "Quent-in (Quentí)",
@@ -294,6 +301,7 @@ A.AboutPageBase {
                         "Tyler Temp",
                         "dashinfantry",
                         "joe (ourmicroid)",
+                        "petter0011",
                         "yangyangdaji",
                         "复予",
                         "玉堂白鹤"
@@ -303,6 +311,12 @@ A.AboutPageBase {
                     title: qsTr("Belarusian")
                     entries: [
                         "Toha"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Arabic")
+                    entries: [
+                        "Moayad Ibrahim"
                     ]
                 }
             ]
