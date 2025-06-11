@@ -9,7 +9,7 @@
 #       to the "attributions" list property of the “About” page.
 
 module: Opal.SupportMe (opal-supportme)
-version: 1.2.5 (git:7e78832)
+version: 1.2.8 (git:dca0696)
 description: A dialog asking for contributions that is shown when a user has used your app for some time.
 maintainers: Mirian Margiani
 attribution: 2024 Mirian Margiani

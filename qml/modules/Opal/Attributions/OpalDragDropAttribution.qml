@@ -3,7 +3,7 @@
 //@ SPDX-FileCopyrightText: 2024 Mirian Margiani
 //@ SPDX-License-Identifier: GPL-3.0-or-later
 import"../../Opal/About"as A
-A.Attribution{name:"Opal.DragDrop (v1.0.1)"
+A.Attribution{name:"Opal.DragDrop (v1.0.2)"
 entries:["2024 Mirian Margiani"]
 licenses:A.License{spdxId:"GPL-3.0-or-later"
 }sources:"https://github.com/Pretty-SFOS/opal-dragdrop"
