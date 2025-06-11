@@ -10,6 +10,16 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
  * Nothing so far
 
+## Version 3.7.0 (2025-06-11)
+
+- Added translations: Arabic
+- Updated translations: Chinese, Estonian, Finnish, French, Polish, Portuguese (Brazil), Russian, Spanish, Swedish, Turkish, Ukrainian
+- Fixed missing bookmarks file causing issues at startup
+- Fixed a warning when starting the app and the file clipboard is empty
+- Added support for automatically updating config files
+- Added more invalid "external devices" to the ignore list
+- Added an "open new window" button to the app cover
+
 ## Version 3.6.0 (2025-02-18)
 
 - Added translations: Portuguese (Brazil), Tamil

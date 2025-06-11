@@ -9,6 +9,19 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: "3.7.0"
+        date: "2025-06-11"
+        paragraphs: [
+            "- Added translations: Arabic<br>" +
+            "- Updated translations: Chinese, Estonian, Finnish, French, Polish, Portuguese (Brazil), Russian, Spanish, Swedish, Turkish, Ukrainian<br>" +
+            "- Fixed missing bookmarks file causing issues at startup<br>" +
+            "- Fixed a warning when starting the app and the file clipboard is empty<br>" +
+            "- Added support for automatically updating config files<br>" +
+            "- Added more invalid \"external devices\" to the ignore list<br>" +
+            "- Added an \"open new window\" button to the app cover"
+        ]
+    }
+    ChangelogItem {
         version: "3.6.0"
         date: "2025-02-18"
         paragraphs: [
