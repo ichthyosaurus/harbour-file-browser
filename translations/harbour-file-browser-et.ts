@@ -66,7 +66,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="317"/>
         <source>Arabic</source>
-        <translation type="unfinished"></translation>
+        <translation>araabia keel</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="234"/>
