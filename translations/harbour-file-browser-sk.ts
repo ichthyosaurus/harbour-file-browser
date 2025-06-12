@@ -46,7 +46,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="182"/>
         <source>Portuguese (Brazil)</source>
-        <translation type="unfinished"></translation>
+        <translation>Portugalčina (Brazília)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="199"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="317"/>
         <source>Arabic</source>
-        <translation type="unfinished"></translation>
+        <translation>Arabčina</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="234"/>
@@ -1067,7 +1067,7 @@
         <location filename="../qml/pages/FilePage.qml" line="64"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation type="unfinished">Prehliadač súborov</translation>
+        <translation>Prehliadač súborov</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="113"/>
