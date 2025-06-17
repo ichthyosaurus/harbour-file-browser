@@ -289,6 +289,9 @@ private:
     public: bool sharingEnabled();
     public: SharingMethod::Enum sharingMethod();
 
+    private: Q_PROPERTY(bool runningInSailjail READ runningInSailjail CONSTANT)
+    public: bool runningInSailjail();
+
     private: Q_PROPERTY(bool runningAsRoot READ runningAsRoot CONSTANT)
     public: bool runningAsRoot() const;
 

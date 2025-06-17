@@ -61,6 +61,7 @@ ApplicationWindow {
 
     property string coverText: "File Browser"
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
+    readonly property string openReposUrl: "https://openrepos.net/content/ichthyosaurus/file-browser"
 
     initialPage: GlobalSettings.runningAsRoot ? initialPage_RootMode : initialPage_UserMode
 
@@ -303,13 +304,27 @@ ApplicationWindow {
         }
     }
 
+    M.AskForSupport {
+        objectName: "sailjail-popup"
+        enabled: GlobalSettings.runningInSailjail
+        showOnInitialStart: true
+        customConfigPath: "/apps/harbour-file-browser/sailjail-popup"
+        interval: 1
+        longInterval: 50
+
+        contents: Component {
+            SailjailInfoDialog {}
+        }
+    }
+
     Component.onCompleted: {
         console.log("running File Browser: version %1 (%2)".arg(
                         APP_VERSION+"-"+APP_RELEASE).arg(RELEASE_TYPE))
         console.log("info: " + BUILD_MESSAGE)
-        console.log("enabled features: sharing = %1 (%2), PDF viewer = %3, storage settings = %4".arg(
+        console.log("enabled features: sailjail = %5, sharing = %1 (%2), PDF viewer = %3, storage settings = %4".arg(
             GlobalSettings.sharingEnabled).arg(GlobalSettings.sharingMethod).arg(
-            GlobalSettings.pdfViewerEnabled).arg(GlobalSettings.systemSettingsEnabled))
+            GlobalSettings.pdfViewerEnabled).arg(GlobalSettings.systemSettingsEnabled).arg(
+            GlobalSettings.runningInSailjail))
 
         if (GlobalSettings.runningAsRoot) {
             console.log("warning: running as root")

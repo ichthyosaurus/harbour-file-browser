@@ -450,6 +450,15 @@ QString DirectorySettings::pdfViewerPath()
 #endif
 }
 
+bool DirectorySettings::runningInSailjail()
+{
+#ifdef NO_HARBOUR_COMPLIANCE
+    return false;
+#else
+    return true;
+#endif
+}
+
 bool DirectorySettings::sharingEnabled()
 {
 #ifdef NO_FEATURE_SHARING
