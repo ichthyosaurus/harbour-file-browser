@@ -31,6 +31,7 @@ x:Theme.horizontalPageMargin
 width:parent.width-2*x
 spacing:Theme.paddingMedium
 SectionHeader{id:titleField
+x:0
 Binding on height{when:titleField.text===""
 value:0
 }}Column{id:contentBody

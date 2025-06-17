@@ -1,6 +1,6 @@
 # Store this file to keep track of packaged module versions.
 # It is not necessary to ship this in your app's final RPM package.
-# SPDX-FileCopyrightText: 2024 Mirian Margiani
+# SPDX-FileCopyrightText: 2024-2025 Mirian Margiani
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # Attribution using Opal.About:
@@ -9,9 +9,9 @@
 #       to the "attributions" list property of the “About” page.
 
 module: Opal.DragDrop (opal-dragdrop)
-version: 1.0.2 (git:9bb96d0)
+version: 1.0.3 (git:9745600)
 description: This module enables ordering lists by drag-and-drop with just a few lines of code.
 maintainers: Mirian Margiani
-attribution: 2024 Mirian Margiani
+attribution: 2024-2025 Mirian Margiani
 license: GPL-3.0-or-later
 sources: https://github.com/Pretty-SFOS/opal-dragdrop

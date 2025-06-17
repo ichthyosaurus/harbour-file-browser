@@ -9,7 +9,8 @@ import"private"
 ListItem{id:root
 property bool showOddEven:false
 property color oddColor:"transparent"
-property color evenColor:Theme.highlightBackgroundColor
+property color evenColor:Theme.rgba(Theme.highlightBackgroundColor,Theme.opacityLow)
+property alias emphasisBackground:emphasisBackground
 property bool _isOddRow:typeof index!=="undefined"&&(index%2!=0)
 readonly property int _modelIndex:typeof index!=="undefined"?index:-1
 property bool interactive:true
@@ -33,7 +34,8 @@ topBottom:all===_undefinedValue&&(top===_undefinedValue||bottom===_undefinedValu
 property Item dragHandler:null
 readonly property Item _effectiveDragHandler:!!dragHandler&&dragHandler.hasOwnProperty("__opal_view_drag_handler")?dragHandler:null
 property int dragHandleAlignment:leftItemAlignment===Qt.AlignTop||rightItemAlignment===Qt.AlignTop?Qt.AlignTop:Qt.AlignVCenter
-property bool hideRightItemWhileDragging:true
+property bool enableDefaultGrabHandle:true
+property bool hideRightItemWhileDragging:enableDefaultGrabHandle
 readonly property bool draggable:!!_effectiveDragHandler&&!!_effectiveDragHandler.active
 function toggleWrappedText(label){label.wrapped=!label.wrapped
 }opacity:enabled?1.0:Theme.opacityLow
@@ -108,11 +110,11 @@ anchors.verticalCenter:undefined
 anchors.top:undefined
 anchors.bottom:bottomPaddingItem.top
 }}]}Loader{id:dragHandleLoader
-visible:status===Loader.Ready&&draggable
+visible:enableDefaultGrabHandle&&status===Loader.Ready&&draggable
 property QtObject viewHandler:_effectiveDragHandler
 property Item handledItem:root
 property int modelIndex:root._modelIndex
-source:!!_effectiveDragHandler?Qt.resolvedUrl("private/OptionalDragHandle.qml"):""
+source:!!_effectiveDragHandler&&enableDefaultGrabHandle?Qt.resolvedUrl("private/OptionalDragHandle.qml"):""
 asynchronous:false
 height:contentHeight
 anchors{right:rightItemLoader.left
@@ -136,12 +138,10 @@ anchors.rightMargin:dragHandleLoader.width>0?spacing:0
 }}}Rectangle{id:emphasisBackground
 anchors.fill:parent
 visible:showOddEven
-radius:Theme.paddingSmall
+radius:0
 opacity:Theme.opacityFaint
 color:_isOddRow?oddColor:evenColor
-border{color:"transparent"
-width:radius/2
-}}states:[State{name:"tall"
+}states:[State{name:"tall"
 when:!!centeredContainer&&(centeredContainer.height>minContentHeight||centeredContainer.implicitHeight>minContentHeight||centeredContainer.childrenRect.height>minContentHeight)
 AnchorChanges{target:centeredContainer
 anchors{verticalCenter:undefined

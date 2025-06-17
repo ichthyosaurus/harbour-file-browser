@@ -4,7 +4,7 @@
 //@ SPDX-License-Identifier: GPL-3.0-or-later
 import QtQuick 2.6
 import Sailfish.Silica 1.0
-SilicaItem{id:root
+Item{id:root
 property DelegateDragHandler moveHandler
 property alias handleImage:image
 property int verticalAlignment:Qt.AlignCenter

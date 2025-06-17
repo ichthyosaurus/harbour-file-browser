@@ -1,17 +1,17 @@
 # Store this file to keep track of packaged module versions.
 # It is not necessary to ship this in your app's final RPM package.
-# SPDX-FileCopyrightText: 2024-2025 Mirian Margiani
+# SPDX-FileCopyrightText: 2020-2024 Mirian Margiani
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # Attribution using Opal.About:
 #    1. Import "../modules/Opal/Attributions" in your “About” page.
-#    2. Attribute this module by adding "OpalSupportMeAttribution {}"
+#    2. Attribute this module by adding "OpalLinkHandlerAttribution {}"
 #       to the "attributions" list property of the “About” page.
 
-module: Opal.SupportMe (opal-supportme)
-version: 1.3.0 (git:c6fb416)
-description: A dialog asking for contributions that is shown when a user has used your app for some time.
+module: Opal.LinkHandler (opal-linkhandler)
+version: 2.2.6 (git:bef53ee)
+description: This module provides a link handler to open or copy external links.
 maintainers: Mirian Margiani
-attribution: 2024-2025 Mirian Margiani
+attribution: 2020-2024 Mirian Margiani
 license: GPL-3.0-or-later
-sources: https://github.com/Pretty-SFOS/opal-supportme
+sources: https://github.com/Pretty-SFOS/opal-linkhandler

@@ -1,6 +1,6 @@
 # Store this file to keep track of packaged module versions.
 # It is not necessary to ship this in your app's final RPM package.
-# SPDX-FileCopyrightText: 2023 Peter G. (nephros):2024 Mirian Margiani (ichthyosaurus)
+# SPDX-FileCopyrightText: 2024-2025 Mirian Margiani (ichthyosaurus):2023 Peter G. (nephros)
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # Attribution using Opal.About:
@@ -9,9 +9,9 @@
 #       to the "attributions" list property of the “About” page.
 
 module: Opal.Delegates (opal-delegates)
-version: 3.4.1 (git:6e0921c)
+version: 3.5.0 (git:3fd84be)
 description: This module provides list items for views, so you can concentrate on handling the data, not formatting the presentation.
 maintainers: Mirian Margiani
-attribution: 2023 Peter G. (nephros):2024 Mirian Margiani (ichthyosaurus)
+attribution: 2024-2025 Mirian Margiani (ichthyosaurus):2023 Peter G. (nephros)
 license: GPL-3.0-or-later
 sources: https://github.com/Pretty-SFOS/opal-delegates
