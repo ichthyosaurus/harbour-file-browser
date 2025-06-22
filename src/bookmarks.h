@@ -114,6 +114,7 @@ public:
     Q_INVOKABLE void move(int fromIndex, int toIndex, bool saveImmediately = true);
     Q_INVOKABLE void rename(QString path, QString newName);
     Q_INVOKABLE bool hasBookmark(QString path) const;
+    Q_INVOKABLE int findUserDefinedIndex(QString path) const;
     Q_INVOKABLE void save();
 
     Q_INVOKABLE QStringList pathsForIndexes(const QModelIndexList& indexes);
@@ -141,7 +142,6 @@ private:
 
     void addUserDefined(QString path, QString name, bool permanent);
     void removeUserDefined(QString path, bool permanent);
-    int findUserDefinedIndex(QString path);
 
     struct BookmarkItem {
         BookmarkItem(

@@ -967,7 +967,7 @@ void BookmarksModel::removeUserDefined(QString path, bool permanent)
     }
 }
 
-int BookmarksModel::findUserDefinedIndex(QString path)
+int BookmarksModel::findUserDefinedIndex(QString path) const
 {
     if (path.isEmpty() || !m_userDefinedLookup.contains(path)) return -1;
 
