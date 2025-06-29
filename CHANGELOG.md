@@ -10,6 +10,15 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
  * Nothing so far
 
+## Version 3.8.0 (2025-06-29)
+
+- Updated translations: Estonian, Slovak, Swedish, Ukrainian
+- Added an info popup that shows on startup when the app is running in Sailjail
+-   - when running in Sailjail, File Browser doesn't have full access to all files and folders which is confusing for users
+-   - it's recommended to install the app from OpenRepos where Sailjail is disabled
+- Fixed visual glitches when editing bookmarks
+- Updated Opal modules, fixing some visual glitches and adding translations
+
 ## Version 3.7.0 (2025-06-11)
 
 - Added translations: Arabic

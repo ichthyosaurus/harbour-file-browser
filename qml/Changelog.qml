@@ -9,6 +9,18 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: "3.8.0"
+        date: "2025-06-29"
+        paragraphs: [
+            "- Updated translations: Estonian, Slovak, Swedish, Ukrainian<br>" +
+            "- Added an info popup that shows on startup when the app is running in Sailjail<br>" +
+            "-   - when running in Sailjail, File Browser doesn't have full access to all files and folders which is confusing for users<br>" +
+            "-   - it's recommended to install the app from OpenRepos where Sailjail is disabled<br>" +
+            "- Fixed visual glitches when editing bookmarks<br>" +
+            "- Updated Opal modules, fixing some visual glitches and adding translations"
+        ]
+    }
+    ChangelogItem {
         version: "3.7.0"
         date: "2025-06-11"
         paragraphs: [
