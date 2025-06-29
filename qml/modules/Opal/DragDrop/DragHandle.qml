@@ -10,6 +10,7 @@ property alias handleImage:image
 property int verticalAlignment:Qt.AlignCenter
 property int verticalPadding:Theme.paddingMedium
 property bool showActiveArea:false
+property bool highlighted:false
 visible:!!moveHandler&&moveHandler.active
 implicitWidth:visible?Theme.itemSizeMedium:0
 implicitHeight:visible?Theme.itemSizeSmall-2*Theme.paddingMedium:0
