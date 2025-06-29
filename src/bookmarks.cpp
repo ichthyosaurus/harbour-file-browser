@@ -173,7 +173,7 @@ BookmarksModel::BookmarksModel(QObject *parent) :
     reloadIgnoredMounts(); // must be called after m_ignoredMountsMonitor has a file
 
     m_bookmarksMonitor->reset(bookmarksFile);
-    connect(m_bookmarksMonitor, &ConfigFileMonitor::configChanged, this, &BookmarksModel::reload);
+    connect(m_bookmarksMonitor, &ConfigFileMonitor::configChanged, this, [&](){ reload(); });
 
     if (!QFile::exists(bookmarksFile)) {
         // must be called after m_bookmarksMonitor has a file
@@ -703,7 +703,7 @@ void BookmarksModel::updateStandardLocations(const QList<LocationAlternative>& n
     }
 }
 
-void BookmarksModel::reload()
+void BookmarksModel::reload(bool keepTemporary)
 {
     m_mountsPollingTimer->stop();
 
@@ -712,7 +712,19 @@ void BookmarksModel::reload()
     newEntries.insert(BookmarkGroup::Location, getStandardLocations());
     newEntries.insert(BookmarkGroup::External, {}); // loaded when m_mountsPollingTimer triggers
     newEntries.insert(BookmarkGroup::Bookmark, {}); // loaded below
-    newEntries.insert(BookmarkGroup::Temporary, {}); // reset on reload
+
+    if (keepTemporary) {
+        QList<BookmarkItem> temporary;
+        for (const auto& i : m_entries) {
+            if (i.group == BookmarkGroup::Temporary) {
+                temporary.append(i);
+            }
+        }
+
+        newEntries.insert(BookmarkGroup::Temporary, temporary);
+    } else {
+        newEntries.insert(BookmarkGroup::Temporary, {}); // reset on reload
+    }
 
     // load user defined bookmarks
     const auto value = m_bookmarksMonitor->readJson(1, QJsonArray());

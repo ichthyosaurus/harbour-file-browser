@@ -132,10 +132,12 @@ public:
 signals:
     void temporaryAdded(QModelIndex modelIndex, int row);
 
+public slots:
+    void reload(bool keepTemporary = false);
+
 private slots:
     void updateExternalDevices();
     void updateStandardLocations(const QList<LocationAlternative>& newExternalPaths, const uint& lostPathsCount);
-    void reload();
     void reloadIgnoredMounts();
 
 private:
