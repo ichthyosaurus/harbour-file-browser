@@ -167,88 +167,139 @@
 <context>
     <name>AskForSupport</name>
     <message>
-        <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="11"/>
+        <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="13"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
         <translation>Harkitse, voisitko tukea tätä projektia jollain tavalla.</translation>
     </message>
 </context>
 <context>
+    <name>BookmarksEditDialog</name>
+    <message>
+        <location filename="../qml/pages/BookmarksEditDialog.qml" line="25"/>
+        <source>Name</source>
+        <comment>as in: “name of the bookmark you are currently editing”</comment>
+        <translation type="unfinished">Nimi</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BookmarksEditDialog.qml" line="26"/>
+        <source>Name must not be empty</source>
+        <translation type="unfinished">Kirjanmerkillä tulee olla nimi</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BookmarksEditDialog.qml" line="28"/>
+        <source>Path</source>
+        <comment>as in: “path of the bookmark you are currently editing”</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BookmarksEditDialog.qml" line="29"/>
+        <source>Path must not be empty</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BookmarksEditDialog.qml" line="30"/>
+        <source>Path does not exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BookmarksEditDialog.qml" line="31"/>
+        <source>Path is not a folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BookmarksEditDialog.qml" line="96"/>
+        <source>Apply</source>
+        <comment>as in &apos;apply these changes&apos;</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BookmarksEditDialog.qml" line="97"/>
+        <source>Edit bookmarks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BookmarksEditDialog.qml" line="232"/>
+        <source>Apply</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>BookmarksModel</name>
     <message>
-        <location filename="../src/bookmarks.cpp" line="507"/>
+        <location filename="../src/bookmarks.cpp" line="535"/>
         <source>Memory card</source>
         <translation>Muistikortti</translation>
     </message>
     <message>
-        <location filename="../src/bookmarks.cpp" line="509"/>
+        <location filename="../src/bookmarks.cpp" line="537"/>
         <source>Attached folder</source>
         <translation>Liitetty kansio</translation>
     </message>
     <message>
-        <location filename="../src/bookmarks.cpp" line="511"/>
+        <location filename="../src/bookmarks.cpp" line="539"/>
         <source>Remote folder</source>
         <translation>Etäkansio</translation>
     </message>
     <message>
-        <location filename="../src/bookmarks.cpp" line="514"/>
+        <location filename="../src/bookmarks.cpp" line="542"/>
         <source>Removable media</source>
         <translation>Irrotettava tallennuslaite</translation>
     </message>
     <message>
-        <location filename="../src/bookmarks.cpp" line="601"/>
-        <location filename="../src/bookmarks.cpp" line="1112"/>
+        <location filename="../src/bookmarks.cpp" line="629"/>
+        <location filename="../src/bookmarks.cpp" line="1152"/>
         <source>Internal storage</source>
         <translation>Sisäinen tallennustila</translation>
     </message>
     <message>
-        <location filename="../src/bookmarks.cpp" line="609"/>
+        <location filename="../src/bookmarks.cpp" line="637"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
         <translation type="unfinished">”%1” ”%2”:ssa/lla</translation>
     </message>
     <message>
-        <location filename="../src/bookmarks.cpp" line="1027"/>
+        <location filename="../src/bookmarks.cpp" line="1067"/>
         <source>Home</source>
         <translation>Koti</translation>
     </message>
     <message>
-        <location filename="../src/bookmarks.cpp" line="664"/>
-        <location filename="../src/bookmarks.cpp" line="1037"/>
+        <location filename="../src/bookmarks.cpp" line="692"/>
+        <location filename="../src/bookmarks.cpp" line="1077"/>
         <source>Documents</source>
         <translation>Asiakirjat</translation>
     </message>
     <message>
-        <location filename="../src/bookmarks.cpp" line="666"/>
-        <location filename="../src/bookmarks.cpp" line="1047"/>
+        <location filename="../src/bookmarks.cpp" line="694"/>
+        <location filename="../src/bookmarks.cpp" line="1087"/>
         <source>Downloads</source>
         <translation>Lataukset</translation>
     </message>
     <message>
-        <location filename="../src/bookmarks.cpp" line="672"/>
-        <location filename="../src/bookmarks.cpp" line="1077"/>
+        <location filename="../src/bookmarks.cpp" line="700"/>
+        <location filename="../src/bookmarks.cpp" line="1117"/>
         <source>Music</source>
         <translation>Musiikki</translation>
     </message>
     <message>
-        <location filename="../src/bookmarks.cpp" line="668"/>
-        <location filename="../src/bookmarks.cpp" line="1057"/>
+        <location filename="../src/bookmarks.cpp" line="696"/>
+        <location filename="../src/bookmarks.cpp" line="1097"/>
         <source>Pictures</source>
         <translation>Kuvat</translation>
     </message>
     <message>
-        <location filename="../src/bookmarks.cpp" line="670"/>
-        <location filename="../src/bookmarks.cpp" line="1067"/>
+        <location filename="../src/bookmarks.cpp" line="698"/>
+        <location filename="../src/bookmarks.cpp" line="1107"/>
         <source>Videos</source>
         <translation>Videot</translation>
     </message>
     <message>
-        <location filename="../src/bookmarks.cpp" line="1087"/>
-        <location filename="../src/bookmarks.cpp" line="1113"/>
+        <location filename="../src/bookmarks.cpp" line="1127"/>
+        <location filename="../src/bookmarks.cpp" line="1153"/>
         <source>Android storage</source>
         <translation>Android-tallennustila</translation>
     </message>
     <message>
-        <location filename="../src/bookmarks.cpp" line="1097"/>
+        <location filename="../src/bookmarks.cpp" line="1137"/>
         <source>Root</source>
         <translation>Juurihakemisto</translation>
     </message>
@@ -493,12 +544,12 @@
 <context>
     <name>DetailsDrawer</name>
     <message>
-        <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
+        <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="54"/>
         <source>show less</source>
         <translation>näytä vähemmän</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="53"/>
+        <location filename="../qml/modules/Opal/SupportMe/DetailsDrawer.qml" line="54"/>
         <source>show more</source>
         <translation>näytä enemmän</translation>
     </message>
@@ -855,7 +906,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="264"/>
+        <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>pakkaa tiedosto</numerusform>
@@ -863,17 +914,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="273"/>
+        <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
         <translation>muokkaa linkin kohdetta</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="278"/>
+        <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
         <translation>Hyväksy</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="298"/>
+        <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>muokkaa tiedostoa</numerusform>
@@ -881,7 +932,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="323"/>
+        <location filename="../qml/components/FileActions.qml" line="324"/>
         <source>show file properties</source>
         <translation>näytä tiedoston ominaisuudet</translation>
     </message>
@@ -2410,26 +2461,46 @@ exposure program</extracomment>
 <context>
     <name>Opal.LinkHandler</name>
     <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="24"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="15"/>
         <source>External Link</source>
         <translation>Ulkoinen linkki</translation>
     </message>
     <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="44"/>
+        <source>Copy text to clipboard</source>
+        <translation>Kopioi teksti leikepöydälle</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="55"/>
+        <source>Share</source>
+        <translation>Jaa</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="60"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <source>Open in browser</source>
         <translation>Avaa selaimessa</translation>
     </message>
     <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="60"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="32"/>
         <source>Open externally</source>
         <translation>Avaa ulkoisessa sovelluksessa</translation>
     </message>
     <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="17"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
         <source>Copied to clipboard: %1</source>
         <translation>Kopioitu leikepöydälle: %1</translation>
     </message>
     <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="15"/>
+        <source>Share link</source>
+        <translation>Jaa linkki</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="50"/>
         <location filename="../qml/modules/Opal/SupportMe/private/LinkHandler/private/ExternalUrlPage.qml" line="41"/>
         <source>Copy to clipboard</source>
         <translation>Kopioi leikepöydälle</translation>
@@ -2761,9 +2832,48 @@ exposure program</extracomment>
         <translation>Ole varovainen käyttäessäsi Tiedostoselainta pääkäyttäjätilassa. Jotkin toiminnot voivat rikkoa järjestelmän yllättäen.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Käynnistä Tiedostoselain pääkäyttäjätilassa</translation>
+    </message>
+</context>
+<context>
+    <name>SailjailInfoDialog</name>
+    <message>
+        <location filename="../qml/SailjailInfoDialog.qml" line="13"/>
+        <source>Notice</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/SailjailInfoDialog.qml" line="14"/>
+        <source>Please install this app from Storeman / OpenRepos to get unrestricted access to all files and folders.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/SailjailInfoDialog.qml" line="18"/>
+        <source>Limitations in this version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/SailjailInfoDialog.qml" line="22"/>
+        <source>This app is currently running in a sandbox environment and does not have access to all files and folders.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/SailjailInfoDialog.qml" line="28"/>
+        <source>Inaccessible folders appear empty as there is no way for the app to determine if a folder is actually empty or simply presented as empty by the system.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/SailjailInfoDialog.qml" line="35"/>
+        <source>Additionally, some file previews and integrated access to storage settings are disabled.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/SailjailInfoDialog.qml" line="54"/>
+        <source>Install from OpenRepos</source>
+        <comment>as in: “open the OpenRepos website to install the File Browser app from there”</comment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3087,12 +3197,12 @@ exposure program</extracomment>
         <translation>Kiitos tuestasi!</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="55"/>
+        <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="57"/>
         <source>Remind me later</source>
         <translation>Muistuta myöhemmin</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="57"/>
+        <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="59"/>
         <source>Don&apos;t ask me again</source>
         <translation>Älä kysy uudelleen</translation>
     </message>
