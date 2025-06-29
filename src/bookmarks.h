@@ -112,7 +112,8 @@ public:
     Q_INVOKABLE void selectAlternative(const QModelIndex& idx, QString alternative);
 
     Q_INVOKABLE void move(int fromIndex, int toIndex, bool saveImmediately = true);
-    Q_INVOKABLE void rename(QString path, QString newName);
+    Q_INVOKABLE void rename(QString path, QString newName, bool saveImmediately = true);
+    Q_INVOKABLE void reset(QString path, QString newPath, bool saveImmediately = true);
     Q_INVOKABLE bool hasBookmark(QString path) const;
     Q_INVOKABLE int findUserDefinedIndex(QString path) const;
     Q_INVOKABLE void save();

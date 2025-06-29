@@ -337,7 +337,7 @@ void BookmarksModel::selectAlternative(const QModelIndex& idx, QString alternati
     }
 }
 
-void BookmarksModel::rename(QString path, QString newName)
+void BookmarksModel::rename(QString path, QString newName, bool saveImmediately)
 {
     if (newName.isEmpty()) return;
     int idx = findUserDefinedIndex(path);
@@ -348,8 +348,36 @@ void BookmarksModel::rename(QString path, QString newName)
     QModelIndex bottomRight = index(idx, 0);
     emit dataChanged(topLeft, bottomRight, {BookmarkRole::nameRole});
 
-    save();
     notifyWatchers(path);
+
+    if (saveImmediately) {
+        save();
+    }
+}
+
+void BookmarksModel::reset(QString path, QString newPath, bool saveImmediately)
+{
+    int idx = findUserDefinedIndex(path);
+    if (idx < 0) return;
+
+    m_entries[idx].path = newPath;
+    QModelIndex modelIndex = index(idx, 0);
+    emit dataChanged(modelIndex, modelIndex, {BookmarkRole::pathRole});
+
+    if (m_watchers.contains(path)) {
+        m_watchers.insert(newPath, m_watchers.value(path));
+        m_watchers.remove(path);
+
+        for (const auto& i : m_watchers.value(path)) {
+            i->setPath(newPath);
+        }
+    }
+
+    notifyWatchers(newPath);
+
+    if (saveImmediately) {
+        save();
+    }
 }
 
 bool BookmarksModel::hasBookmark(QString path) const
