@@ -55,15 +55,14 @@ Page {
 
         Column {
             id: column
-            x: Theme.horizontalPageMargin
-            width: parent.width - 2*x
+            width: parent.width
 
             PageHeader { title: Paths.lastPartOfPath(page.path) }
 
             TextArea {
                 id: portraitText
                 width: parent.width
-                wrapMode: Text.WrapAnywhere
+                wrapMode: Text.Wrap
                 font.pixelSize: Theme.fontSizeTiny
                 font.family: "Monospace"
                 color: Theme.secondaryColor
@@ -71,12 +70,18 @@ Page {
                          page.orientation === Orientation.PortraitInverted
                 inputMethodHints: Qt.ImhNoPredictiveText
                 softwareInputPanelEnabled: false
-                background: null
+                backgroundStyle: TextEditor.NoBackground
+
+                x: Theme.paddingSmall
+                textLeftMargin: Theme.horizontalPageMargin
+                textRightMargin: Theme.horizontalPageMargin - Theme.paddingMedium
+                textRightPadding: 0
+                textLeftPadding: 0
             }
             TextArea {
                 id: landscapeText
                 width: parent.width
-                wrapMode: Text.WrapAnywhere
+                wrapMode: Text.Wrap
                 font.pixelSize: Theme.fontSizeTiny
                 font.family: "Monospace"
                 color: Theme.secondaryColor
@@ -84,7 +89,13 @@ Page {
                          page.orientation === Orientation.LandscapeInverted
                 softwareInputPanelEnabled: false
                 inputMethodHints: Qt.ImhNoPredictiveText
-                background: null
+                backgroundStyle: TextEditor.NoBackground
+
+                x: Theme.paddingSmall
+                textLeftMargin: Theme.horizontalPageMargin
+                textRightMargin: Theme.horizontalPageMargin - Theme.paddingMedium
+                textRightPadding: 0
+                textLeftPadding: 0
             }
             Spacer {
                 height: 2*Theme.paddingLarge
@@ -92,7 +103,7 @@ Page {
             }
             Label {
                 id: message
-                width: parent.width
+                width: parent.width - 2*Theme.horizontalPageMargin
                 wrapMode: Text.Wrap
                 // show medium size if there is no portrait (or landscape text)
                 // in that case, this message becomes main message
