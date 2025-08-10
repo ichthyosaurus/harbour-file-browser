@@ -4,12 +4,16 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # Attribution using Opal.About:
-#    1. Import "../modules/Opal/Attributions" in your “About” page.
-#    2. Attribute this module by adding "OpalSupportMeAttribution {}"
-#       to the "attributions" list property of the “About” page.
+#   Opal attributions are automatically added since version 3.0.0.
+#   Check the "autoAddOpalAttributions" property on your About page.
+#
+# Manual attribution:
+#   1. Import "../modules/Opal/Attributions" in your "About" page.
+#   2. Attribute this module by adding "OpalSupportMeAttribution {}"
+#      to the "attributions" list property of the "About" page.
 
 module: Opal.SupportMe (opal-supportme)
-version: 1.3.0 (git:c6fb416)
+version: 2.0.0 (git:aaf22e0)
 description: A dialog asking for contributions that is shown when a user has used your app for some time.
 maintainers: Mirian Margiani
 attribution: 2024-2025 Mirian Margiani

@@ -4,6 +4,7 @@
 //@ SPDX-License-Identifier: GPL-3.0-or-later
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import"../../LinkHandler"as L
 import".."
 Column{property string title
 property bool headerVisible:title!==""
@@ -17,8 +18,7 @@ visible:licenses.length>0||description!=""
 width:parent.width
 height:childrenRect.height
 spacing:Theme.paddingSmall
-function openOrCopyUrl(externalUrl,title){pageStack.push(Qt.resolvedUrl("ExternalUrlPage.qml"),{"externalUrl":externalUrl,"title":!!title?title:""})
-}SectionHeader{visible:headerVisible
+SectionHeader{visible:headerVisible
 text:title
 }Label{x:Theme.horizontalPageMargin
 visible:description!==""
@@ -29,7 +29,7 @@ font.pixelSize:Theme.fontSizeSmall
 color:Theme.highlightColor
 bottomPadding:Theme.paddingSmall
 textFormat:Text.StyledText
-onLinkActivated:openOrCopyUrl(link)
+onLinkActivated:L.LinkHandler.openOrCopyUrl(link)
 linkColor:palette.secondaryHighlightColor
 palette.primaryColor:Theme.highlightColor
 }Label{x:Theme.horizontalPageMargin
@@ -40,15 +40,15 @@ text:extraTexts.join(", ")
 font.pixelSize:Theme.fontSizeSmall
 color:Theme.highlightColor
 linkColor:Theme.primaryColor
-onLinkActivated:openOrCopyUrl(link)
+onLinkActivated:L.LinkHandler.openOrCopyUrl(link)
 bottomPadding:Theme.paddingSmall
 }ButtonLayout{visible:homepage!==""||sources!==""
 Button{visible:homepage!==""
 text:qsTranslate("Opal.About","Homepage")
-onClicked:openOrCopyUrl(homepage,text)
+onClicked:L.LinkHandler.openOrCopyUrl(homepage,text)
 }Button{visible:sources!==""
 text:qsTranslate("Opal.About","Source Code")
-onClicked:openOrCopyUrl(sources,text)
+onClicked:L.LinkHandler.openOrCopyUrl(sources,text)
 }}Repeater{model:licenses
 delegate:Column{id:licenseColumn
 width:parent.width
@@ -107,7 +107,7 @@ font.pixelSize:Theme.fontSizeSmall
 textFormat:Text.StyledText
 palette.primaryColor:Theme.highlightColor
 linkColor:Theme.primaryColor
-onLinkActivated:openOrCopyUrl(link)
+onLinkActivated:L.LinkHandler.openOrCopyUrl(link)
 }Label{id:licenseTextLabel
 property bool error:modelData.error===true||modelData.fullText===""
 width:parent.width
@@ -116,6 +116,6 @@ font.pixelSize:Theme.fontSizeExtraSmall
 textFormat:error?Text.StyledText:Text.PlainText
 palette.primaryColor:Theme.highlightColor
 linkColor:Theme.primaryColor
-onLinkActivated:openOrCopyUrl(link,error?qsTr("License text"):"")
+onLinkActivated:L.LinkHandler.openOrCopyUrl(link,error?qsTr("License text"):"")
 text:error?qsTranslate("Opal.About","Please refer to <a href=\"%1\">%1</a>").arg("https://spdx.org/licenses/%1.html".arg(modelData.spdxId)):modelData.fullText
 }}}}}}}}

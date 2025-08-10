@@ -4,12 +4,16 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # Attribution using Opal.About:
-#    1. Import "../modules/Opal/Attributions" in your “About” page.
-#    2. Attribute this module by adding "OpalMenuSwitchAttribution {}"
-#       to the "attributions" list property of the “About” page.
+#   Opal attributions are automatically added since version 3.0.0.
+#   Check the "autoAddOpalAttributions" property on your About page.
+#
+# Manual attribution:
+#   1. Import "../modules/Opal/Attributions" in your "About" page.
+#   2. Attribute this module by adding "OpalMenuSwitchAttribution {}"
+#      to the "attributions" list property of the "About" page.
 
 module: Opal.MenuSwitch (opal-menuswitch)
-version: 1.0.1 (git:04f4364)
+version: 1.0.1 (git:66ab90b)
 description: This module provides a toggle button to be used in Sailfish-style menus.
 maintainers: Mirian Margiani
 attribution: 2024 Mirian Margiani

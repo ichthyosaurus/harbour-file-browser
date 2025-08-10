@@ -4,12 +4,16 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # Attribution using Opal.About:
-#    1. Import "../modules/Opal/Attributions" in your “About” page.
-#    2. Attribute this module by adding "OpalDelegatesAttribution {}"
-#       to the "attributions" list property of the “About” page.
+#   Opal attributions are automatically added since version 3.0.0.
+#   Check the "autoAddOpalAttributions" property on your About page.
+#
+# Manual attribution:
+#   1. Import "../modules/Opal/Attributions" in your "About" page.
+#   2. Attribute this module by adding "OpalDelegatesAttribution {}"
+#      to the "attributions" list property of the "About" page.
 
 module: Opal.Delegates (opal-delegates)
-version: 3.5.0 (git:3fd84be)
+version: 3.5.1 (git:6cac9fd)
 description: This module provides list items for views, so you can concentrate on handling the data, not formatting the presentation.
 maintainers: Mirian Margiani
 attribution: 2024-2025 Mirian Margiani (ichthyosaurus):2023 Peter G. (nephros)

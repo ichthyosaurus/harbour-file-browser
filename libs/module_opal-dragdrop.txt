@@ -4,12 +4,16 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # Attribution using Opal.About:
-#    1. Import "../modules/Opal/Attributions" in your “About” page.
-#    2. Attribute this module by adding "OpalDragDropAttribution {}"
-#       to the "attributions" list property of the “About” page.
+#   Opal attributions are automatically added since version 3.0.0.
+#   Check the "autoAddOpalAttributions" property on your About page.
+#
+# Manual attribution:
+#   1. Import "../modules/Opal/Attributions" in your "About" page.
+#   2. Attribute this module by adding "OpalDragDropAttribution {}"
+#      to the "attributions" list property of the "About" page.
 
 module: Opal.DragDrop (opal-dragdrop)
-version: 1.0.4 (git:330b341)
+version: 1.0.4 (git:be442b7)
 description: This module enables ordering lists by drag-and-drop with just a few lines of code.
 maintainers: Mirian Margiani
 attribution: 2024-2025 Mirian Margiani

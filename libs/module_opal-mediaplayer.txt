@@ -4,12 +4,16 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # Attribution using Opal.About:
-#    1. Import "../modules/Opal/Attributions" in your “About” page.
-#    2. Attribute this module by adding "OpalMediaPlayerAttribution {}"
-#       to the "attributions" list property of the “About” page.
+#   Opal attributions are automatically added since version 3.0.0.
+#   Check the "autoAddOpalAttributions" property on your About page.
+#
+# Manual attribution:
+#   1. Import "../modules/Opal/Attributions" in your "About" page.
+#   2. Attribute this module by adding "OpalMediaPlayerAttribution {}"
+#      to the "attributions" list property of the "About" page.
 
 module: Opal.MediaPlayer (opal-mediaplayer)
-version: 1.0.5 (git:3965d54)
+version: 1.0.7 (git:69fc50e)
 description: This module provides a media player page with support for subtitles.
 maintainers: Mirian Margiani
 attribution: 2024 Mirian Margiani:2013-2020 Leszek Lesner

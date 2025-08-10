@@ -1,5 +1,0 @@
-module Opal.LinkHandler
-# This file is part of Opal.LinkHandler.
-# SPDX-FileCopyrightText: 2023 Mirian Margiani
-# SPDX-License-Identifier: GPL-3.0-or-later
-LinkHandler 1.0 LinkHandler.js

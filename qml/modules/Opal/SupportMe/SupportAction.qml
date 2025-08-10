@@ -4,7 +4,7 @@
 //@ SPDX-License-Identifier: GPL-3.0-or-later
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import"private/LinkHandler"
+import"../LinkHandler"as L
 BackgroundItem{id:root
 width:parent.width
 height:_body.height+2*Theme.paddingMedium
@@ -21,7 +21,7 @@ Binding on palette.primaryColor{when:!__isLink
 value:palette.highlightColor
 }Binding on highlightedColor{when:!__isLink
 value:"transparent"
-}onClicked:{if(__isLink){LinkHandler.openOrCopyUrl(link)
+}onClicked:{if(__isLink){L.LinkHandler.openOrCopyUrl(link)
 }}Item{id:_body
 x:Theme.horizontalPageMargin
 width:parent.width-2*x

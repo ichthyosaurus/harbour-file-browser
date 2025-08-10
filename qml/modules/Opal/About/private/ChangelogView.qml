@@ -4,6 +4,7 @@
 //@ SPDX-License-Identifier: GPL-3.0-or-later
 import QtQuick 2.2
 import Sailfish.Silica 1.0
+import"../../LinkHandler"as L
 import".."
 import"."
 SilicaListView{id:root
@@ -11,8 +12,7 @@ property list<ChangelogItem>changelogItems
 property url changelogList
 property int scrollbarType:ScrollbarType.auto
 property Item _scrollbar:null
-function openOrCopyUrl(externalUrl,title){pageStack.push(Qt.resolvedUrl("ExternalUrlPage.qml"),{"externalUrl":externalUrl,"title":!!title?title:""})
-}function _reloadScrollbar(){if(scrollbarType===ScrollbarType.plain){_scrollbar=null
+function _reloadScrollbar(){if(scrollbarType===ScrollbarType.plain){_scrollbar=null
 return
 }else if(scrollbarType===ScrollbarType.auto){var paragraphCount=0
 var useAdvanced=false
@@ -68,7 +68,7 @@ wrapMode:Text.Wrap
 textFormat:item.textFormat
 text:modelData
 linkColor:Theme.primaryColor
-onLinkActivated:openOrCopyUrl(link)
+onLinkActivated:L.LinkHandler.openOrCopyUrl(link)
 bottomPadding:Theme.paddingMedium
 }}}ChangelogItemsLoader{id:itemsLoader
 changelogItems:root.changelogItems

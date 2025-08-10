@@ -123,7 +123,12 @@ top:parent.top
 }Binding{target:!!dragHandleLoader.item&&dragHandleLoader.item.hasOwnProperty("_delegate")?dragHandleLoader.item:null
 property:"_delegate"
 value:root
-}}SilicaItem{id:centerItem
+}states:[State{when:!rightItemLoader.visible
+AnchorChanges{target:dragHandleLoader
+anchors.right:rightPaddingItem.left
+}PropertyChanges{target:dragHandleLoader
+anchors.rightMargin:0
+}}]}SilicaItem{id:centerItem
 height:Math.max(minContentHeight,childrenRect.height)
 anchors{left:leftItemLoader.right
 leftMargin:leftItemLoader.width>0?spacing:0

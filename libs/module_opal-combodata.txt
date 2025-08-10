@@ -4,12 +4,16 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # Attribution using Opal.About:
-#    1. Import "../modules/Opal/Attributions" in your “About” page.
-#    2. Attribute this module by adding "OpalComboDataAttribution {}"
-#       to the "attributions" list property of the “About” page.
+#   Opal attributions are automatically added since version 3.0.0.
+#   Check the "autoAddOpalAttributions" property on your About page.
+#
+# Manual attribution:
+#   1. Import "../modules/Opal/Attributions" in your "About" page.
+#   2. Attribute this module by adding "OpalComboDataAttribution {}"
+#      to the "attributions" list property of the "About" page.
 
 module: Opal.ComboData (opal-combodata)
-version: 2.1.1 (git:6a3e0ed)
+version: 2.1.1 (git:33f9e30)
 description: This module provides an extension for combo boxes to access the current value instead of the label.
 maintainers: Mirian Margiani
 attribution: 2023-2024 Mirian Margiani

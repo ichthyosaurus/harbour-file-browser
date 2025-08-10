@@ -4,11 +4,12 @@
 //@ SPDX-License-Identifier: GPL-3.0-or-later
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import"../LinkHandler"as L
 Column{id:root
 spacing:0
 width:parent.width
 height:childrenRect.height
-function openOrCopyUrl(externalUrl,title){pageStack.push(Qt.resolvedUrl("private/ExternalUrlPage.qml"),{"externalUrl":externalUrl,"title":!!title?title:""})
+function openOrCopyUrl(externalUrl,title){L.LinkHandler.openOrCopyUrl(externalUrl,title)
 }property alias title:_titleLabel.text
 property string text:""
 property string smallPrint:""
@@ -101,5 +102,5 @@ width:parent.width/4*3
 height:visible?implicitHeight:0
 visible:modelData.name!==""&&modelData.url!==""
 text:modelData.name
-onClicked:pageStack.push("private/ExternalUrlPage.qml",{"externalUrl":modelData.url})
+onClicked:openOrCopyUrl(modelData.url)
 }}}}

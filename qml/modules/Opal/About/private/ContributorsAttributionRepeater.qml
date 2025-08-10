@@ -20,8 +20,8 @@ if(modelData.description!==""){showLicensePage=true
 }}else{showLicensePage=true
 }return vals
 }onClicked:{if(showLicensePage){pageStack.animatorPush("LicensePage.qml",{"mainAttribution":modelData,"attributions":[],"allowDownloadingLicenses":allowDownloadingLicenses,"enableSourceHint":true})
-}else{var pages=[]
-if(modelData.homepage!=="")pages.push({"page":Qt.resolvedUrl("ExternalUrlPage.qml"),"properties":{"externalUrl":modelData.homepage,"title":qsTranslate("Opal.About","Homepage")}})
-if(modelData.sources!=="")pages.push({"page":Qt.resolvedUrl("ExternalUrlPage.qml"),"properties":{"externalUrl":modelData.sources,"title":qsTranslate("Opal.About","Source Code")}})
-pageStack.push(pages)
+}else{var urls=[]
+if(modelData.homepage!==""){urls.push({externalUrl:modelData.homepage,title:qsTranslate("Opal.About","Homepage")})
+}if(modelData.sources!==""){urls.push({externalUrl:modelData.sources,title:qsTranslate("Opal.About","Source Code")})
+}L.LinkHandler.openOrCopyMultipleUrls(urls)
 }}}}

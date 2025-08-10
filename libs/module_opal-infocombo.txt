@@ -4,12 +4,16 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # Attribution using Opal.About:
-#    1. Import "../modules/Opal/Attributions" in your “About” page.
-#    2. Attribute this module by adding "OpalInfoComboAttribution {}"
-#       to the "attributions" list property of the “About” page.
+#   Opal attributions are automatically added since version 3.0.0.
+#   Check the "autoAddOpalAttributions" property on your About page.
+#
+# Manual attribution:
+#   1. Import "../modules/Opal/Attributions" in your "About" page.
+#   2. Attribute this module by adding "OpalInfoComboAttribution {}"
+#      to the "attributions" list property of the "About" page.
 
 module: Opal.InfoCombo (opal-infocombo)
-version: 2.2.1 (git:d8636c5)
+version: 2.2.1 (git:c5fcdf4)
 description: This module provides a combo box that can show details for each selectable option.
 maintainers: Mirian Margiani
 attribution: 2023-2024 Mirian Margiani

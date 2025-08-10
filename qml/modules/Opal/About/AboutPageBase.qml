@@ -4,6 +4,7 @@
 //@ SPDX-License-Identifier: GPL-3.0-or-later
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import"../LinkHandler"as L
 import"private/functions.js"as Func
 import"private"
 Page{id:page
@@ -24,7 +25,7 @@ property url changelogList
 property list<License>licenses
 property bool allowDownloadingLicenses:false
 property list<Attribution>attributions
-property bool autoAddOpalAttributions:false
+property bool autoAddOpalAttributions:true
 readonly property DonationsGroup donations:DonationsGroup{}
 property list<InfoSection>extraSections
 property list<ContributionSection>contributionSections
@@ -40,7 +41,7 @@ licenses:page.licenses
 homepage:homepageUrl
 sources:sourcesUrl
 }
-function openOrCopyUrl(externalUrl,title){pageStack.push(Qt.resolvedUrl("private/ExternalUrlPage.qml"),{"externalUrl":externalUrl,"title":!!title?title:""})
+function openOrCopyUrl(externalUrl,title){L.LinkHandler.openOrCopyUrl(externalUrl,title)
 }allowedOrientations:Orientation.All
 SilicaFlickable{id:_flickable
 contentHeight:column.height
