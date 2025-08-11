@@ -2526,7 +2526,7 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="25"/>
-        <source>The audio and or video format is not supported.</source>
+        <source>The audio or video format is not supported.</source>
         <translation>Ääni- tai videoformaattia ei tueta.</translation>
     </message>
     <message>

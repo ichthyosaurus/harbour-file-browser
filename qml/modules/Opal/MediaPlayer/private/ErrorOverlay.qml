@@ -22,7 +22,7 @@ if(error===MediaPlayer.ResourceError){title=qsTranslate("Opal.MediaPlayer","Reso
 }else if(error===MediaPlayer.AccessDenied){qsTranslate("Opal.MediaPlayer","Access denied","error info page heading")
 }else if(error===MediaPlayer.ServiceMissing){qsTranslate("Opal.MediaPlayer","Media service missing","error info page heading")
 }if(error===MediaPlayer.ResourceError){details+=qsTranslate("Opal.MediaPlayer","The video cannot be played due to a problem allocating resources.")
-}else if(error===MediaPlayer.FormatError){details+=qsTranslate("Opal.MediaPlayer","The audio and or video format is not supported.")
+}else if(error===MediaPlayer.FormatError){details+=qsTranslate("Opal.MediaPlayer","The audio or video format is not supported.")
 }else if(error===MediaPlayer.NetworkError){details+=qsTranslate("Opal.MediaPlayer","The video cannot be played due to network issues.")
 }else if(error===MediaPlayer.AccessDenied){details+=qsTranslate("Opal.MediaPlayer","The video cannot be played due to insufficient permissions.")
 }else if(error===MediaPlayer.ServiceMissing){details+=qsTranslate("Opal.MediaPlayer","The video cannot be played because the media service could not be instantiated.")
