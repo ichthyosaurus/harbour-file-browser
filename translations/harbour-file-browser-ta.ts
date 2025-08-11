@@ -2724,19 +2724,34 @@ exposure program</extracomment>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/globals.cpp" line="121"/>
         <source>hh:mm:ss</source>
-        <translation>HH: மிமீ: எச்.எச்</translation>
+        <translation type="vanished">HH: மிமீ: எச்.எச்</translation>
     </message>
     <message>
-        <location filename="../src/globals.cpp" line="124"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
-        <translation>dd mmm yyyy, hh: mm: ss t</translation>
+        <translation type="vanished">dd mmm yyyy, hh: mm: ss t</translation>
     </message>
     <message>
-        <location filename="../src/globals.cpp" line="126"/>
         <source>dd.MM.yy, hh:mm</source>
-        <translation>dd.mm.yy, hh: mm</translation>
+        <translation type="vanished">dd.mm.yy, hh: mm</translation>
+    </message>
+    <message>
+        <location filename="../src/globals.cpp" line="122"/>
+        <source>hh:mm:ss</source>
+        <comment>Time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
+        <translation type="unfinished">HH: மிமீ: எச்.எச்</translation>
+    </message>
+    <message>
+        <location filename="../src/globals.cpp" line="125"/>
+        <source>dd MMM yyyy, hh:mm:ss t</source>
+        <comment>Date and time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
+        <translation type="unfinished">dd mmm yyyy, hh: mm: ss t</translation>
+    </message>
+    <message>
+        <location filename="../src/globals.cpp" line="127"/>
+        <source>dd.MM.yy, hh:mm</source>
+        <comment>Date and format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
+        <translation type="unfinished">dd.mm.yy, hh: mm</translation>
     </message>
 </context>
 <context>
