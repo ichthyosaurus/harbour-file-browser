@@ -206,7 +206,8 @@ A.AboutPageBase {
                     title: qsTr("Italian")
                     entries: [
                         "Tichy",
-                        "luca rastelli"
+                        "luca rastelli",
+                        "Mauro Scomparin"
                     ]
                 },
                 A.ContributionGroup {
