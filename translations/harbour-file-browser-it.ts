@@ -2729,11 +2729,11 @@ exposure program</extracomment>
     </message>
     <message>
         <source>dd MMM yyyy, hh:mm:ss t</source>
-        <translation type="vanished">gg MMM aaaa, hh:mm:ss t</translation>
+        <translation type="vanished">dd MMM aaaa, hh:mm:ss t</translation>
     </message>
     <message>
         <source>dd.MM.yy, hh:mm</source>
-        <translation type="vanished">gg.MM.yy, hh:mm</translation>
+        <translation type="vanished">dd.MM.yy, hh:mm</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="122"/>
@@ -2745,13 +2745,13 @@ exposure program</extracomment>
         <location filename="../src/globals.cpp" line="125"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
         <comment>Date and time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">gg MMM aaaa, hh:mm:ss t</translation>
+        <translation type="unfinished">dd MMM aaaa, hh:mm:ss t</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="127"/>
         <source>dd.MM.yy, hh:mm</source>
         <comment>Date and format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">gg.MM.yy, hh:mm</translation>
+        <translation type="unfinished">dd.MM.yy, hh:mm</translation>
     </message>
 </context>
 <context>
