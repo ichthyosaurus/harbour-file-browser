@@ -189,38 +189,38 @@
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="28"/>
         <source>Path</source>
         <comment>as in: “path of the bookmark you are currently editing”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Cesta</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="29"/>
         <source>Path must not be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Cesta nemôže byť prázdna</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="30"/>
         <source>Path does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Cesta neexistuje</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="31"/>
         <source>Path is not a folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Cesta nie je zložka</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="96"/>
         <source>Apply</source>
         <comment>as in &apos;apply these changes&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Použiť</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="97"/>
         <source>Edit bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Upraviť záložky</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="232"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Použiť</translation>
     </message>
 </context>
 <context>
@@ -2547,7 +2547,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="25"/>
         <source>The audio or video format is not supported.</source>
-        <translation>Formát zvuku a videa nie je podporovaný.</translation>
+        <translation>Formát zvuku alebo videa nie je podporovaný.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="26"/>
@@ -2854,38 +2854,38 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="13"/>
         <source>Notice</source>
-        <translation type="unfinished"></translation>
+        <translation>Oznam</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="14"/>
         <source>Please install this app from Storeman / OpenRepos to get unrestricted access to all files and folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nainštalujte túto aplikáciu zo Storeman/OpenRepos a získajte neobmedzený prístup ku všetkým súborom a priečinkom.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="18"/>
         <source>Limitations in this version</source>
-        <translation type="unfinished"></translation>
+        <translation>Obmedzenia v tejto verzii</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="22"/>
         <source>This app is currently running in a sandbox environment and does not have access to all files and folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Táto aplikácia je v súčasnosti spustená v prostredí s sandbox takže nemá prístup ku všetkým súborom a priečinkom.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="28"/>
         <source>Inaccessible folders appear empty as there is no way for the app to determine if a folder is actually empty or simply presented as empty by the system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Neprístupné priečinky sa javia ako prázdne, pretože neexistuje spôsob, ako by aplikácia určila, či je priečinok skutočne prázdny alebo jednoducho prezentovaný systémom ako prázdny.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="35"/>
         <source>Additionally, some file previews and integrated access to storage settings are disabled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Navyše, niektoré náhľady súborov a integrovaný prístup k nastaveniam úložiska sú zakázané.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="54"/>
         <source>Install from OpenRepos</source>
         <comment>as in: “open the OpenRepos website to install the File Browser app from there”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Inštalovať z OpenRepos</translation>
     </message>
 </context>
 <context>
