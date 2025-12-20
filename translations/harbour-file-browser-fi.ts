@@ -46,7 +46,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="182"/>
         <source>Portuguese (Brazil)</source>
-        <translation type="unfinished"></translation>
+        <translation>Portugali (Brasilia)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="199"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="317"/>
         <source>Arabic</source>
-        <translation type="unfinished"></translation>
+        <translation>Arabia</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="234"/>
@@ -178,49 +178,49 @@
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="25"/>
         <source>Name</source>
         <comment>as in: “name of the bookmark you are currently editing”</comment>
-        <translation type="unfinished">Nimi</translation>
+        <translation>Nimi</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="26"/>
         <source>Name must not be empty</source>
-        <translation type="unfinished">Kirjanmerkillä tulee olla nimi</translation>
+        <translation>Kirjanmerkillä tulee olla nimi</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="28"/>
         <source>Path</source>
         <comment>as in: “path of the bookmark you are currently editing”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Polku</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="29"/>
         <source>Path must not be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Polkua ei voi jättää tyhjäksi</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="30"/>
         <source>Path does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Polkua ei ole olemassa</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="31"/>
         <source>Path is not a folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Polku ei viittaa kansioon</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="96"/>
         <source>Apply</source>
         <comment>as in &apos;apply these changes&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Vahvista</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="97"/>
         <source>Edit bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Muokkaa kirjanmerkkejä</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="232"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Vahvista</translation>
     </message>
 </context>
 <context>
@@ -255,7 +255,7 @@
         <location filename="../src/bookmarks.cpp" line="637"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
-        <translation type="unfinished">”%1” ”%2”:ssa/lla</translation>
+        <translation>”%1” sijainnissa ”%2”</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="1067"/>
@@ -633,7 +633,7 @@
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="535"/>
         <source>Internally not ready</source>
-        <translation type="unfinished">Ei ole sisäisesti valmis</translation>
+        <translation>Ei ole sisäisesti valmis</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="535"/>
@@ -717,7 +717,7 @@
     <message>
         <location filename="../src/engine.cpp" line="95"/>
         <source>Cannot move/copy to itself</source>
-        <translation type="unfinished">Ei voida siirtää/kopioida itseensä</translation>
+        <translation>Ei voida siirtää/kopioida itseensä</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="258"/>
@@ -1101,7 +1101,7 @@
         <location filename="../qml/pages/FilePage.qml" line="64"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation type="unfinished">Tiedostoselain</translation>
+        <translation>Tiedostoselain</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="113"/>
@@ -2739,19 +2739,19 @@ exposure program</extracomment>
         <location filename="../src/globals.cpp" line="122"/>
         <source>hh:mm:ss</source>
         <comment>Time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">hh:mm:ss</translation>
+        <translation>h:mm:ss</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="125"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
         <comment>Date and time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">d. MMMM yyyy, hh:mm:ss t</translation>
+        <translation>d. MMM yyyy, h:mm:ss t</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="127"/>
         <source>dd.MM.yy, hh:mm</source>
         <comment>Date and format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">d.M.yyyy, hh:mm</translation>
+        <translation>d.M.yyyy, h:mm</translation>
     </message>
 </context>
 <context>
@@ -2832,27 +2832,27 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="13"/>
         <source>Notice</source>
-        <translation type="unfinished"></translation>
+        <translation>Huomio</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="14"/>
         <source>Please install this app from Storeman / OpenRepos to get unrestricted access to all files and folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Asennathan tämän sovelluksen Storemanista / OpenReposista saadaksesi rajoittamattoman pääsyn kaikkiin tiedostoihin ja kansioihin.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="18"/>
         <source>Limitations in this version</source>
-        <translation type="unfinished"></translation>
+        <translation>Rajoitteet tässä versiossa</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="22"/>
         <source>This app is currently running in a sandbox environment and does not have access to all files and folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tätä sovellusta suoritetaan hiekkalaatikoidussa ympäristössä eikä sillä ei ole pääsyä kaikkiin tiedostoihin ja kansioihin.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="28"/>
         <source>Inaccessible folders appear empty as there is no way for the app to determine if a folder is actually empty or simply presented as empty by the system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Käyttöoikeudettomat kansiot näkyvät tyhjinä, sillä sovellus ei osaa päätellä, onko kansio oikeasti tyhjä vai esittääkö järjestelmä sen vain tyhjänä.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="35"/>
@@ -2863,7 +2863,7 @@ exposure program</extracomment>
         <location filename="../qml/SailjailInfoDialog.qml" line="54"/>
         <source>Install from OpenRepos</source>
         <comment>as in: “open the OpenRepos website to install the File Browser app from there”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Asenna OpenReposista</translation>
     </message>
 </context>
 <context>
@@ -2922,7 +2922,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="428"/>
         <source>Internally not ready</source>
-        <translation type="unfinished">Ei ole sisäisesti valmis</translation>
+        <translation>Ei ole sisäisesti valmis</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="428"/>
@@ -3399,7 +3399,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="154"/>
         <source>Overwrite</source>
-        <translation type="unfinished">Korvaa</translation>
+        <translation>Ylikirjoita</translation>
     </message>
     <message>
         <location filename="../qml/components/TransferPanel.qml" line="163"/>
