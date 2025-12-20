@@ -46,7 +46,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="182"/>
         <source>Portuguese (Brazil)</source>
-        <translation type="unfinished"></translation>
+        <translation>Portugiesisch (Brasilien)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="199"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="317"/>
         <source>Arabic</source>
-        <translation type="unfinished"></translation>
+        <translation>Arabisch</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="234"/>
@@ -189,22 +189,22 @@
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="28"/>
         <source>Path</source>
         <comment>as in: “path of the bookmark you are currently editing”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Pfad</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="29"/>
         <source>Path must not be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Der Pfad darf nicht leer sein</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="30"/>
         <source>Path does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Pfad existiert nicht</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="31"/>
         <source>Path is not a folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Pfad ist kein Ordner</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="96"/>
@@ -215,7 +215,7 @@
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="97"/>
         <source>Edit bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Lesezeichen bearbeiten</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="232"/>
@@ -2835,38 +2835,38 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="13"/>
         <source>Notice</source>
-        <translation type="unfinished"></translation>
+        <translation>Notiz</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="14"/>
         <source>Please install this app from Storeman / OpenRepos to get unrestricted access to all files and folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitte installieren Sie diese App von Storeman / OpenRepos, um uneingeschränkten Zugriff auf alle Dateien und Ordner zu erhalten.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="18"/>
         <source>Limitations in this version</source>
-        <translation type="unfinished"></translation>
+        <translation>Einschränkungen in dieser Version</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="22"/>
         <source>This app is currently running in a sandbox environment and does not have access to all files and folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Diese App wird derzeit in einer Sandbox-Umgebung ausgeführt und hat keinen Zugriff auf alle Dateien und Ordner.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="28"/>
         <source>Inaccessible folders appear empty as there is no way for the app to determine if a folder is actually empty or simply presented as empty by the system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Unzugängliche Ordner werden leer angezeigt, da die App nicht feststellen kann, ob ein Ordner tatsächlich leer ist oder vom System lediglich als leer angezeigt wird.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="35"/>
         <source>Additionally, some file previews and integrated access to storage settings are disabled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Darüber hinaus sind einige Dateivorschauen und der integrierte Zugriff auf Speichereinstellungen deaktiviert.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="54"/>
         <source>Install from OpenRepos</source>
         <comment>as in: “open the OpenRepos website to install the File Browser app from there”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Von OpenRepos installieren</translation>
     </message>
 </context>
 <context>
