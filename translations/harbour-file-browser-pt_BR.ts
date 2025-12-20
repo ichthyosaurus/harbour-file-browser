@@ -66,7 +66,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="317"/>
         <source>Arabic</source>
-        <translation type="unfinished"></translation>
+        <translation>Árabe</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="234"/>
@@ -178,49 +178,49 @@
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="25"/>
         <source>Name</source>
         <comment>as in: “name of the bookmark you are currently editing”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Nome</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="26"/>
         <source>Name must not be empty</source>
-        <translation type="unfinished">O nome não pode estar vazio</translation>
+        <translation>O nome não pode estar em branco</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="28"/>
         <source>Path</source>
         <comment>as in: “path of the bookmark you are currently editing”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Caminho</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="29"/>
         <source>Path must not be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>O caminho não pode estar em branco</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="30"/>
         <source>Path does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>O caminho não existe</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="31"/>
         <source>Path is not a folder</source>
-        <translation type="unfinished"></translation>
+        <translation>O caminho não é uma pasta</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="96"/>
         <source>Apply</source>
         <comment>as in &apos;apply these changes&apos;</comment>
-        <translation type="unfinished">Aplicar</translation>
+        <translation>Aplicar</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="97"/>
         <source>Edit bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar favoritos</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="232"/>
         <source>Apply</source>
-        <translation type="unfinished">Aplicar</translation>
+        <translation>Aplicar</translation>
     </message>
 </context>
 <context>
@@ -1101,7 +1101,7 @@
         <location filename="../qml/pages/FilePage.qml" line="64"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation type="unfinished"></translation>
+        <translation>Navegador de arquivos</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="113"/>
@@ -1121,7 +1121,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="130"/>
         <source>File cannot be opened</source>
-        <translation type="unfinished"></translation>
+        <translation>O arquivo não pode ser aberto</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="131"/>
@@ -1132,17 +1132,17 @@
         <location filename="../qml/pages/FilePage.qml" line="142"/>
         <source>Swipe from the right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Deslize o dedo da direita para a esquerda para visualizar o conteúdo.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="155"/>
         <source>Go to Target</source>
-        <translation type="unfinished"></translation>
+        <translation>Vá para o alvo</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="165"/>
         <source>Open containing folder</source>
-        <translation type="unfinished">Abrir pasta contendo</translation>
+        <translation>Abra a pasta que contém</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="184"/>
@@ -1153,7 +1153,7 @@
         <location filename="../qml/pages/FilePage.qml" line="300"/>
         <location filename="../qml/pages/FilePage.qml" line="306"/>
         <source>Deleting</source>
-        <translation type="unfinished">Apagando</translation>
+        <translation>Apagando</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="338"/>
@@ -1168,7 +1168,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="344"/>
         <source>Unknown (link target not found)</source>
-        <translation type="unfinished"></translation>
+        <translation>Desconhecido (destino do link não encontrado)</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="344"/>
@@ -1183,7 +1183,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="363"/>
         <source>Owner</source>
-        <translation type="unfinished"></translation>
+        <translation>Proprietário</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="368"/>
@@ -1241,14 +1241,14 @@
     <message>
         <location filename="../src/globals.cpp" line="87"/>
         <source>YiB</source>
-        <translation type="unfinished"></translation>
+        <translation>YiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="107"/>
         <location filename="../src/globals.cpp" line="111"/>
         <source>%1 %2</source>
         <extracomment>1=file size (number), 2=unit (e.g. KiB)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 %2</translation>
     </message>
 </context>
 <context>
@@ -1259,12 +1259,12 @@
         <location filename="../src/fileworker.cpp" line="100"/>
         <location filename="../src/fileworker.cpp" line="117"/>
         <source>File operation already in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Operação de arquivo já em andamento</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="159"/>
         <source>Empty filename</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome do arquivo vazio</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="178"/>
@@ -1273,32 +1273,32 @@
         <location filename="../src/fileworker.cpp" line="374"/>
         <location filename="../src/fileworker.cpp" line="397"/>
         <source>Cancelled</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancelado</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="216"/>
         <source>File not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo não encontrado</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="230"/>
         <source>Folder delete failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Falha ao deletar pasta</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="353"/>
         <source>Source folder does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>A pasta de origem não existe</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="362"/>
         <source>Cannot create target folder %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Não foi possível criar a pasta de destino %1</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="413"/>
         <source>Failed to remove source folder “%1” after moving.</source>
-        <translation type="unfinished"></translation>
+        <translation>Falha ao remover a pasta de origem “%1” após a movimentação.</translation>
     </message>
 </context>
 <context>
@@ -1311,32 +1311,32 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="53"/>
         <source>Directory View</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualização de diretório</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="64"/>
         <source>Use per-directory view settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar configurações de visualização por diretório</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="66"/>
         <source>Save view preferences individually for all folders in your home directory. The options below are used by default.</source>
-        <translation type="unfinished"></translation>
+        <translation>Salve as preferências de visualização individualmente para todas as pastas em seu diretório pessoal. As opções abaixo são usadas por padrão.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="91"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
-        <translation type="unfinished"></translation>
+        <translation>No modo galeria, as imagens serão exibidas para se ajustarem à tela. Os demais arquivos serão exibidos sem miniaturas de pré-visualização.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="98"/>
         <source>Hint</source>
-        <translation type="unfinished"></translation>
+        <translation>Dica</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="99"/>
         <source>You can enable per-directory settings to configure your preferences for individual folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Você pode ativar as configurações por diretório para configurar suas preferências para pastas individuais.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="104"/>
@@ -1346,353 +1346,353 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="106"/>
         <source>Show files with names starting with a dot (“.”).</source>
-        <translation type="unfinished"></translation>
+        <translation>Exibir arquivos com nomes que começam com um ponto (“.”).</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="109"/>
         <source>Show preview images</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar imagens de visualização</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="111"/>
         <source>Preview contents of supported file types.</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualize o conteúdo dos tipos de arquivo suportados.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="114"/>
         <source>Thumbnail size</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamanho da miniatura</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="120"/>
         <source>small</source>
-        <translation type="unfinished"></translation>
+        <translation>pequeno</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="121"/>
         <source>medium</source>
-        <translation type="unfinished"></translation>
+        <translation>médio</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="122"/>
         <source>large</source>
-        <translation type="unfinished"></translation>
+        <translation>grande</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="123"/>
         <source>huge</source>
-        <translation type="unfinished"></translation>
+        <translation>enorme</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="130"/>
         <source>Sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>Classificando</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="140"/>
         <source>Show folders first</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar as pastas primeiro</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="142"/>
         <source>Always show folders at the top of the file list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Exibir sempre as pastas no topo da lista de arquivos.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="145"/>
         <source>Show hidden files last</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar os arquivos ocultos por último</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="147"/>
         <source>Always show files starting with a dot (“.”) at the end of the file list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sempre mostre os arquivos que começam com um ponto (“.”) no final da lista de arquivos.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="150"/>
         <source>Sort by</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordenar por</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="156"/>
         <source>name</source>
-        <translation type="unfinished"></translation>
+        <translation>nome</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="157"/>
         <source>size</source>
-        <translation type="unfinished"></translation>
+        <translation>tamanho</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="159"/>
         <source>file type</source>
-        <translation type="unfinished"></translation>
+        <translation>tipo de arquivo</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="163"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished"></translation>
+        <translation>Classificar diferenciando maiúsculas de minúsculas</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="165"/>
         <source>Show files with names starting with a capital letter first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Exibir primeiro os arquivos cujos nomes começam com letra maiúscula.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="169"/>
         <source>Sort order</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordem de classificação</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="179"/>
         <source>Sort names starting with the beginning of the alphabet first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordene os nomes começando pela primeira letra do alfabeto.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="180"/>
         <source>Show smaller files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Exibir primeiro os arquivos menores.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="188"/>
         <source>Sort names starting with the end of the alphabet first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordene os nomes começando pelo final do alfabeto.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="189"/>
         <source>Show larger files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Exibir primeiro os arquivos maiores.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="218"/>
         <source>Places</source>
-        <translation type="unfinished"></translation>
+        <translation>Locais</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="181"/>
         <source>Show older files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar primeiro os arquivos mais antigos.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="177"/>
         <source>ascending</source>
-        <translation type="unfinished"></translation>
+        <translation>ascendente</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="70"/>
         <source>View mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo de visualização</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="77"/>
         <source>list</source>
-        <translation type="unfinished"></translation>
+        <translation>lista</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="79"/>
         <source>Show files in a list. Optionally enable preview thumbnails using the separate setting below.</source>
-        <translation type="unfinished"></translation>
+        <translation>Exibir arquivos em uma lista. Opcionalmente, habilite as miniaturas de pré-visualização usando a configuração separada abaixo.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="89"/>
         <source>gallery</source>
-        <translation type="unfinished"></translation>
+        <translation>galeria</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="190"/>
         <source>Show more recently changed files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar primeiro os arquivos alterados mais recentemente.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="186"/>
         <source>descending</source>
-        <translation type="unfinished"></translation>
+        <translation>descendente</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="158"/>
         <source>modification date</source>
-        <translation type="unfinished"></translation>
+        <translation>data de modificação</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="199"/>
         <source>Behavior and View</source>
-        <translation type="unfinished"></translation>
+        <translation>Comportamento e Visualização</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="209"/>
         <source>Initial view</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualização inicial</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="210"/>
         <source>The page that is shown when the app starts.</source>
-        <translation type="unfinished"></translation>
+        <translation>A página que é exibida quando o aplicativo é iniciado.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="217"/>
         <source>Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Diretório</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="219"/>
         <source>Search</source>
-        <translation type="unfinished">Procurar</translation>
+        <translation>Pesquisar</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="225"/>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="241"/>
         <source>Initial directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Diretório inicial</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="230"/>
         <source>The directory that is shown when the app starts.</source>
-        <translation type="unfinished"></translation>
+        <translation>O diretório que é exibido quando o aplicativo é iniciado.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="233"/>
         <source>user&apos;s home</source>
-        <translation type="unfinished"></translation>
+        <translation>pasta do usuário</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="234"/>
         <source>last visited</source>
-        <translation type="unfinished"></translation>
+        <translation>última visita</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="235"/>
         <source>custom path</source>
-        <translation type="unfinished"></translation>
+        <translation>caminho personalizado</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="257"/>
         <source>Choose</source>
-        <translation type="unfinished"></translation>
+        <translation>Escolher</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="263"/>
         <source>Default transfer action</source>
-        <translation type="unfinished"></translation>
+        <translation>Ação de transferência padrão</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="267"/>
         <source>The action that is selected by default when using the bulk file management feature (available through the “shuffle” icon after selecting files).</source>
-        <translation type="unfinished"></translation>
+        <translation>A ação selecionada por padrão ao usar o recurso de gerenciamento em lote de arquivos (disponível através do ícone &quot;embaralhar&quot; após selecionar os arquivos).</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="272"/>
         <source>copy</source>
-        <translation type="unfinished"></translation>
+        <translation>copiar</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="273"/>
         <source>move</source>
-        <translation type="unfinished"></translation>
+        <translation>mover</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="274"/>
         <source>link</source>
-        <translation type="unfinished">link</translation>
+        <translation>atalho</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="275"/>
         <source>none</source>
-        <translation type="unfinished"></translation>
+        <translation>nenhum</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="279"/>
         <source>Default filter line action</source>
-        <translation type="unfinished"></translation>
+        <translation>Ação de linha de filtro padrão</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="283"/>
         <source>Which action to take when the Enter key is pressed in the filter line in a directory&apos;s pull-down menu.</source>
-        <translation type="unfinished"></translation>
+        <translation>Qual ação tomar ao pressionar a tecla Enter na linha de filtro do menu suspenso de um diretório?</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="287"/>
         <source>return to directory view</source>
-        <translation type="unfinished"></translation>
+        <translation>retornar à visualização do diretório</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="288"/>
         <source>start recursive search</source>
-        <translation type="unfinished"></translation>
+        <translation>iniciar pesquisa recursiva</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="292"/>
         <source>File name abbreviation</source>
-        <translation type="unfinished"></translation>
+        <translation>Abreviação do nome do arquivo</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="296"/>
         <source>How very long filenames are abbreviated in the directory view.</source>
-        <translation type="unfinished"></translation>
+        <translation>Como os nomes de arquivos muito longos são abreviados na visualização de diretórios.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="299"/>
         <source>fade out</source>
-        <translation type="unfinished"></translation>
+        <translation>desaparecer</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="300"/>
         <source>elide end</source>
-        <translation type="unfinished"></translation>
+        <translation>omissão final</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="301"/>
         <source>elide middle</source>
-        <translation type="unfinished"></translation>
+        <translation>omissão medial</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="305"/>
         <source>Share clipboard among windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Compartilhar a área de transferência entre janelas</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="307"/>
         <source>Share the list of files currently in the clipboard among all open File Browser windows. When this is enabled, you can cut files in one window and paste them in another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Compartilhe a lista de arquivos atualmente na área de transferência entre todas as janelas abertas do Navegador de Arquivos. Quando essa opção está ativada, você pode recortar arquivos em uma janela e colá-los em outra.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="313"/>
         <source>Show full directory paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar caminhos de diretório completos</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="315"/>
         <source>Show the full path in the page header of the directory view.</source>
-        <translation type="unfinished"></translation>
+        <translation>Exiba o caminho completo no cabeçalho da página da visualização de diretório.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="318"/>
         <source>Show navigation menu icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar ícone do menu de navegação</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="320"/>
         <source>Show a visual hint that the navigation menu is available by tapping the page header of the directory view.</source>
-        <translation type="unfinished"></translation>
+        <translation>Exiba uma indicação visual de que o menu de navegação está disponível ao tocar no cabeçalho da página da visualização do diretório.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="332"/>
         <source>Enable solid window background</source>
-        <translation type="unfinished"></translation>
+        <translation>Ativar fundo sólido da janela</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="334"/>
         <source>Use a solid color instead of your wallpaper as the background of this app.</source>
-        <translation type="unfinished"></translation>
+        <translation>Use uma cor sólida em vez do seu papel de parede como plano de fundo deste aplicativo.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="344"/>
         <source>Swipe from the right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Deslize o dedo da direita para a esquerda para visualizar o código-fonte do Navegador de arquivos, informações sobre a licença e uma lista de colaboradores.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="356"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurações</translation>
     </message>
 </context>
 <context>
@@ -1700,61 +1700,61 @@
     <message>
         <location filename="../src/filedata.cpp" line="346"/>
         <source>Image Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamanho da Imagem</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="352"/>
         <source>%1 x %2</source>
         <extracomment>image size description without aspect ratio: 1=width, 2=height</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 x %2</translation>
     </message>
     <message>
         <location filename="../src/filedata.cpp" line="356"/>
         <source>%1 x %2 (%3)</source>
         <extracomment>image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 x %2 (%3)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="156"/>
         <source>Make</source>
-        <translation type="unfinished"></translation>
+        <translation>Fazer</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="157"/>
         <source>Model</source>
-        <translation type="unfinished"></translation>
+        <translation>Modelo</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="160"/>
         <source>Date/Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Data/Hora</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="168"/>
         <source>Orientation</source>
-        <translation type="unfinished"></translation>
+        <translation>Orientação</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="173"/>
         <source>Color/BW</source>
-        <translation type="unfinished"></translation>
+        <translation>Colorido/Preto e branco</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="173"/>
         <source>Black and White</source>
-        <translation type="unfinished"></translation>
+        <translation>Preto e branco</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="181"/>
         <source>Strobe light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Luz do flash não detectada</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="183"/>
         <source>Strobe light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Flash detectado</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="185"/>
@@ -1765,87 +1765,87 @@
         <extracomment>description of camera flash mode
 ----------
 exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Manual</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="187"/>
         <source>Manual, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Manual, luz de retorno não detectada</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="189"/>
         <source>Manual, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Manual, luz de retorno detectada</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="191"/>
         <location filename="../src/jhead/jhead-api.cpp" line="304"/>
         <source>Auto</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Automático</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="193"/>
         <source>Auto, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Automático, luz de retorno não detectada</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="195"/>
         <source>Auto, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Automático, luz de retorno detectada</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="197"/>
         <source>Red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Modo de redução de olhos vermelhos</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="199"/>
         <source>Red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Modo de redução de olhos vermelhos, luz de retorno não detectada</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="201"/>
         <location filename="../src/jhead/jhead-api.cpp" line="207"/>
         <source>Red eye reduction mode, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Modo de redução de olhos vermelhos, detecção de retorno de luz</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="203"/>
         <source>Manual, red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Manual, modo de redução de olhos vermelhos</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="205"/>
         <source>Manual, red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Manual, modo de redução de olhos vermelhos, luz de retorno não detectada</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="209"/>
         <source>Auto, red eye reduction mode</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Modo automático de redução de olhos vermelhos</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="211"/>
         <source>Auto, red eye reduction mode, return light not detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Modo automático de redução de olhos vermelhos, luz de retorno não detectada</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="213"/>
         <source>Auto, red eye reduction mode, return light detected</source>
         <extracomment>description of camera flash mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Modo automático de redução de olhos vermelhos, detecção de retorno de luz</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="217"/>
@@ -1854,118 +1854,118 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="225"/>
         <location filename="../src/jhead/jhead-api.cpp" line="320"/>
         <source>Flash</source>
-        <translation type="unfinished"></translation>
+        <translation>Flash</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="217"/>
         <source>Yes (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Sim (%1)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="219"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Sim</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="223"/>
         <source>No (Auto)</source>
-        <translation type="unfinished"></translation>
+        <translation>Não (Automaticamente)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="225"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Não</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="234"/>
         <source>%1mm (35mm equivalent: %2mm)</source>
         <extracomment>size in millimeters</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1mm (35mm equivalente: %2mm)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="239"/>
         <source>%1mm</source>
         <extracomment>size in millimeters</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1mm</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="242"/>
         <source>Focal Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Distância focal</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="247"/>
         <source>Digital Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoom digital</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="249"/>
         <source>%1x</source>
         <extracomment>as in &quot;zoom: %1 times&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1x</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="255"/>
         <source>CCD Width</source>
         <extracomment>photographic sensor width; cf. https://en.wikipedia.org/wiki/Charge-coupled_device</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Largura do CCD</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="267"/>
         <source>%1 (1/%2)</source>
         <extracomment>exposure time as raw value (1) and as fraction (2)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 (1/%2)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="269"/>
         <source>Exposure Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Período de exposição</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="272"/>
         <source>Aperture</source>
-        <translation type="unfinished"></translation>
+        <translation>Abertura</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="274"/>
         <source>f/%1</source>
         <extracomment>aperture &quot;f&quot; number; cf. https://en.wikipedia.org/wiki/Aperture</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>f/%1</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="278"/>
         <location filename="../src/jhead/jhead-api.cpp" line="282"/>
         <source>Focus Distance</source>
-        <translation type="unfinished"></translation>
+        <translation>Distância de foco</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="280"/>
         <source>Infinite</source>
         <extracomment>focus distance</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Infinito</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="284"/>
         <source>%1m</source>
         <extracomment>focus distance in meters</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1m</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="289"/>
         <source>ISO Equivalent</source>
-        <translation type="unfinished"></translation>
+        <translation>Equivalência do foco</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="296"/>
         <source>Exposure Bias</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Exposure_compensation</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Viés de exposição</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="301"/>
         <location filename="../src/jhead/jhead-api.cpp" line="304"/>
         <source>White Balance</source>
-        <translation type="unfinished"></translation>
+        <translation>Balanço de branco</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="311"/>
@@ -1975,139 +1975,139 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="323"/>
         <location filename="../src/jhead/jhead-api.cpp" line="326"/>
         <source>Light Source</source>
-        <translation type="unfinished"></translation>
+        <translation>Fonte de luz</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="311"/>
         <source>Daylight</source>
-        <translation type="unfinished"></translation>
+        <translation>Luz do dia</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="314"/>
         <source>Fluorescent</source>
-        <translation type="unfinished"></translation>
+        <translation>Fluorescente</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="317"/>
         <source>Incandescent</source>
-        <translation type="unfinished"></translation>
+        <translation>Incandescente</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="323"/>
         <source>Fine weather</source>
-        <translation type="unfinished"></translation>
+        <translation>Bom tempo</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="326"/>
         <source>Shade</source>
-        <translation type="unfinished"></translation>
+        <translation>Sombra</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="337"/>
         <source>Average</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Média</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="339"/>
         <source>Center weighted average</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Média ponderada central</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="341"/>
         <source>Spot</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ponto</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="343"/>
         <source>Multi spot</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Vários pontos</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="345"/>
         <source>Pattern</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Padrão</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="347"/>
         <source>Partial</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Parcial</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="349"/>
         <source>Other</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Outro</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="351"/>
         <source>Unknown (%1)</source>
         <extracomment>inlcudes an unknown value (1); cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Desconhecido (%1)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="354"/>
         <source>Metering Mode</source>
         <extracomment>cf. https://en.wikipedia.org/wiki/Metering_mode</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Modo de medição</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="366"/>
         <source>Program (auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Programa (automático)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="370"/>
         <source>Aperture priority (semi-auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Prioridade de abertura (semiautomático)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="374"/>
         <source>Shutter priority (semi-auto)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Prioridade de obturador (semiautomático)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="378"/>
         <source>Creative Program (based towards depth of field)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Programa criativo (baseado na profundidade de campo)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="382"/>
         <source>Action program (based towards fast shutter speed)</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Programa de ação (baseado em alta velocidade do obturador)</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="386"/>
         <source>Portrait mode</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Modo retrato</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="390"/>
         <source>Landscape mode</source>
         <extracomment>exposure program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Modo paisagem</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="395"/>
         <source>Exposure Program</source>
-        <translation type="unfinished"></translation>
+        <translation>Programa de Exposição</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="401"/>
         <location filename="../src/jhead/jhead-api.cpp" line="404"/>
         <source>Exposure Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo de Exposição</translation>
     </message>
     <message>
         <location filename="../src/jhead/jhead-api.cpp" line="406"/>
@@ -3557,32 +3557,32 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="154"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished"></translation>
+        <translation>Classificar diferenciando maiúsculas de minúsculas</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="156"/>
         <source>Show files with names starting with a capital letter first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Exibir primeiro os arquivos cujos nomes começam com letra maiúscula.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="161"/>
         <source>Show folders first</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar as pastas primeiro</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="163"/>
         <source>Always show folders at the top of the file list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Exibir sempre as pastas no topo da lista de arquivos.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="167"/>
         <source>Show hidden files last</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar os arquivos ocultos por último</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="169"/>
         <source>Always show files starting with a dot (“.”) at the end of the file list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sempre mostre os arquivos que começam com um ponto (“.”) no final da lista de arquivos.</translation>
     </message>
 </context>
 <context>
@@ -3591,7 +3591,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewVideoPage.qml" line="19"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation type="unfinished"></translation>
+        <translation>Navegador de arquivo</translation>
     </message>
 </context>
 <context>
@@ -3609,7 +3609,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/js/files.js" line="32"/>
         <source>Linking</source>
-        <translation type="unfinished"></translation>
+        <translation>Vinculando</translation>
     </message>
     <message>
         <location filename="../qml/js/files.js" line="35"/>
