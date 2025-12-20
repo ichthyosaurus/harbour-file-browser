@@ -2739,19 +2739,19 @@ exposure program</extracomment>
         <location filename="../src/globals.cpp" line="122"/>
         <source>hh:mm:ss</source>
         <comment>Time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">hh:mm:ss</translation>
+        <translation>hh:mm:ss</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="125"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
         <comment>Date and time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">dd MMM yyyy, hh:mm:ss t</translation>
+        <translation>dd MMM yyyy, hh:mm:ss t</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="127"/>
         <source>dd.MM.yy, hh:mm</source>
         <comment>Date and format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">dd.MM.yy, hh:mm</translation>
+        <translation>dd.MM.yy, hh:mm</translation>
     </message>
 </context>
 <context>
