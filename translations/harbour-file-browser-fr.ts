@@ -3501,12 +3501,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="89"/>
         <source>File type</source>
-        <translation type="unfinished">Type de fichier</translation>
+        <translation>Type de fichier</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="97"/>
         <source>Order...</source>
-        <translation type="unfinished">Tri...</translation>
+        <translation>Tri...</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="101"/>
@@ -3623,7 +3623,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/js/files.js" line="32"/>
         <source>Linking</source>
-        <translation type="unfinished">Liaison</translation>
+        <translation type="unfinished">Lier</translation>
     </message>
     <message>
         <location filename="../qml/js/files.js" line="35"/>
