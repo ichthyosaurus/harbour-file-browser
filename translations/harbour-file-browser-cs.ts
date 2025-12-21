@@ -61,12 +61,12 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="311"/>
         <source>Belarusian</source>
-        <translation type="unfinished"></translation>
+        <translation>Běloruština</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="317"/>
         <source>Arabic</source>
-        <translation type="unfinished"></translation>
+        <translation>Arabština</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="234"/>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="102"/>
         <source>Ukrainian</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukrajinština</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="206"/>
@@ -131,7 +131,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="292"/>
         <source>Czech</source>
-        <translation type="unfinished"></translation>
+        <translation>Čeština</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="149"/>

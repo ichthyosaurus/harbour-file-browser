@@ -66,7 +66,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="317"/>
         <source>Arabic</source>
-        <translation type="unfinished"></translation>
+        <translation>Árabe</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="234"/>
@@ -178,49 +178,49 @@
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="25"/>
         <source>Name</source>
         <comment>as in: “name of the bookmark you are currently editing”</comment>
-        <translation type="unfinished">Nombre</translation>
+        <translation>Nombre</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="26"/>
         <source>Name must not be empty</source>
-        <translation type="unfinished">El nombre no puede estar vacío</translation>
+        <translation>El nombre no puede estar vacío</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="28"/>
         <source>Path</source>
         <comment>as in: “path of the bookmark you are currently editing”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ruta</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="29"/>
         <source>Path must not be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>La ruta no debe estar vacía</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="30"/>
         <source>Path does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>No existe la ruta</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="31"/>
         <source>Path is not a folder</source>
-        <translation type="unfinished"></translation>
+        <translation>La ruta no es una carpeta</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="96"/>
         <source>Apply</source>
         <comment>as in &apos;apply these changes&apos;</comment>
-        <translation type="unfinished">Aplicar</translation>
+        <translation>Aplicar</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="97"/>
         <source>Edit bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar marcadores</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="232"/>
         <source>Apply</source>
-        <translation type="unfinished">Aplicar</translation>
+        <translation>Aplicar</translation>
     </message>
 </context>
 <context>
@@ -2739,19 +2739,19 @@ exposure program</extracomment>
         <location filename="../src/globals.cpp" line="122"/>
         <source>hh:mm:ss</source>
         <comment>Time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">hh:mm:ss</translation>
+        <translation>hh:mm:ss</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="125"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
         <comment>Date and time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">dd MMM yyyy, hh:mm:ss t</translation>
+        <translation>dd MMM aaaa, hh:mm:ss t</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="127"/>
         <source>dd.MM.yy, hh:mm</source>
         <comment>Date and format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">dd.MM.yy, hh:mm</translation>
+        <translation>dd.MM.aa, hh:mm</translation>
     </message>
 </context>
 <context>
@@ -2832,38 +2832,38 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="13"/>
         <source>Notice</source>
-        <translation type="unfinished"></translation>
+        <translation>Notificación</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="14"/>
         <source>Please install this app from Storeman / OpenRepos to get unrestricted access to all files and folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Instale esta apl desde Storeman / OpenRepos para obtener acceso no restringido a todos los archivos y carpetas.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="18"/>
         <source>Limitations in this version</source>
-        <translation type="unfinished"></translation>
+        <translation>Limitaciones en esta versión</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="22"/>
         <source>This app is currently running in a sandbox environment and does not have access to all files and folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Esta aplicación actualmente está ejecutando en un entorno de caja de tierra y no tiene acceso a todos los archivos y carpetas.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="28"/>
         <source>Inaccessible folders appear empty as there is no way for the app to determine if a folder is actually empty or simply presented as empty by the system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Las carpetas inaccesibles aparecen vacías como no hay manera de la apl determinar si una carpeta actualmente está vacía o simplemente presentada como vacía por el sistema.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="35"/>
         <source>Additionally, some file previews and integrated access to storage settings are disabled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Adicionalmente, algunas vistas previas del archivo y el acceso integrado para almacenar ajustes están inhabilitados.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="54"/>
         <source>Install from OpenRepos</source>
         <comment>as in: “open the OpenRepos website to install the File Browser app from there”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Instalar desde OpenRepos</translation>
     </message>
 </context>
 <context>
