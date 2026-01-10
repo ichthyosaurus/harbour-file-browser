@@ -27,8 +27,12 @@
 #include <QDir>
 #include <QFileSystemWatcher>
 #include <QTimer>
+
+#include <libs/opal/propertymacros/property_macros.h>
+
 #include "statfileinfo.h"
 #include "filemodelworker.h"
+
 
 class RawSettingsHandler;
 
@@ -43,14 +47,14 @@ class RawSettingsHandler;
 class FileModel : public QAbstractListModel
 {
     Q_OBJECT
-    Q_PROPERTY(QString dir READ dir() WRITE setDir(QString) NOTIFY dirChanged())
-    Q_PROPERTY(int fileCount READ fileCount() NOTIFY fileCountChanged())
-    Q_PROPERTY(QString errorMessage READ errorMessage() NOTIFY errorMessageChanged())
-    Q_PROPERTY(bool active READ active() WRITE setActive(bool) NOTIFY activeChanged())
-    Q_PROPERTY(int selectedFileCount READ selectedFileCount() NOTIFY selectedFileCountChanged())
-    Q_PROPERTY(QString filterString READ filterString() WRITE setFilterString(QString) NOTIFY filterStringChanged())
-    Q_PROPERTY(bool busy READ busy() NOTIFY busyChanged())
-    Q_PROPERTY(bool partlyBusy READ partlyBusy() NOTIFY partlyBusyChanged())
+    RW_PROPERTY_CUSTOM(QString, dir, Dir, "")
+    RO_PROPERTY_CUSTOM(int, fileCount, 0)
+    RO_PROPERTY(QString, errorMessage, "")
+    RW_PROPERTY_CUSTOM(bool, active, Active, false)
+    RO_PROPERTY(int, selectedFileCount, 0)
+    RW_PROPERTY_CUSTOM(QString, filterString, FilterString, "")
+    RO_PROPERTY(bool, busy, false)
+    RO_PROPERTY(bool, partlyBusy, false)
 
 public:
     explicit FileModel(QObject *parent = nullptr);
@@ -62,17 +66,10 @@ public:
     QHash<int, QByteArray> roleNames() const;
 
     // property accessors
-    QString dir() const { return m_dir; }
     void setDir(QString dir);
-    int fileCount() const;
-    QString errorMessage() const;
-    bool active() const { return m_active; }
+    int fileCount() const { return m_files.count(); }
     void setActive(bool active);
-    int selectedFileCount() const { return m_selectedFileCount; }
-    QString filterString() const { return m_filterString; }
     void setFilterString(QString newFilter);
-    bool busy() const { return m_busy; }
-    bool partlyBusy() const { return m_partlyBusy; }
 
     // methods accessible from QML
     Q_INVOKABLE QString appendPath(QString dirName);
@@ -96,16 +93,6 @@ public slots:
     Q_INVOKABLE void refreshFull(QString localPath = QStringLiteral(""));
 
     void refreshChangedItem(const QString &path);
-
-signals:
-    void dirChanged();
-    void fileCountChanged();
-    void errorMessageChanged();
-    void activeChanged();
-    void selectedFileCountChanged();
-    void filterStringChanged();
-    void busyChanged();
-    void partlyBusyChanged();
 
 private slots:
     void applyFilterString();
@@ -143,15 +130,6 @@ private:
     void resetContentsWatcher();
     void switchToWatching();
     void switchToPolling();
-
-    // accessible as properties
-    QString m_dir {};
-    QString m_errorMessage {};
-    bool m_active {false};
-    int m_selectedFileCount {0};
-    QString m_filterString {};
-    bool m_busy {false};
-    bool m_partlyBusy {false};
 
     // internal state
     QList<StatFileInfo> m_files {};

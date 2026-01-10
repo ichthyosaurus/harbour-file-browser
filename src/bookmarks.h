@@ -1,6 +1,6 @@
 /*
  * This file is part of File Browser.
- * SPDX-FileCopyrightText: 2020-2025 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2026 Mirian Margiani
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -16,9 +16,10 @@
 #include <QAbstractListModel>
 #include <QObject>
 
+#include <libs/opal/propertymacros/property_macros.h>
+
 #include "configfilemonitor.h"
 #include "enumcontainer.h"
-#include "property_macros.h"
 
 // group Device includes everything that should show disk space info
 // - it is *not* strictly limited to physical devices or partitions

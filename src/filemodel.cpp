@@ -182,16 +182,6 @@ QHash<int, QByteArray> FileModel::roleNames() const
     return roles;
 }
 
-int FileModel::fileCount() const
-{
-    return m_files.count();
-}
-
-QString FileModel::errorMessage() const
-{
-    return m_errorMessage;
-}
-
 void FileModel::setDir(QString dir)
 {
     if (m_dir == dir) {

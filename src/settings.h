@@ -1,6 +1,6 @@
 /*
  * This file is part of File Browser.
- * SPDX-FileCopyrightText: 2020-2024 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2026 Mirian Margiani
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -15,8 +15,9 @@
 #include <QSharedPointer>
 #include <QDir>
 
+#include <libs/opal/propertymacros/property_macros.h>
+
 #include "enumcontainer.h"
-#include "property_macros.h"
 
 class QFileInfo;
 class BookmarksModel;
