@@ -182,7 +182,4 @@ DISTFILES += qml/*.qml \
 CONFIG += sailfishapp_i18n
 TRANSLATIONS = translations/harbour-file-browser-*.ts
 
-# Build submodules
-include(libs/SortFilterProxyModel/SortFilterProxyModel.pri)
-
-QML_IMPORT_PATH += qml/modules
+include(libs/opal.pri)

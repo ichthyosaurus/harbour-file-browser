@@ -141,8 +141,7 @@ details on how to translate date formats to your *local* format.
 
 *Bug reports, and contributions for translations, bug fixes, or new features are always welcome!*
 
-1. Clone the repository by running `git clone --recurse-submodules https://github.com/ichthyosaurus/harbour-file-browser.git`
-2. Apply necessary patches: `git apply libs/*.patch`
+1. Clone the repository by running `git clone https://github.com/ichthyosaurus/harbour-file-browser.git`
 2. Open `harbour-file-browser.pro` in Sailfish OS IDE (Qt Creator for Sailfish)
 3. To run on emulator, select the `i486` target and press the run button
 4. To build for the device, select the `aarch64` or `armv7hl` target and click “deploy all”;

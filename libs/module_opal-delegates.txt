@@ -1,21 +1,22 @@
 # Store this file to keep track of packaged module versions.
 # It is not necessary to ship this in your app's final RPM package.
-# SPDX-FileCopyrightText: 2024-2025 Mirian Margiani (ichthyosaurus):2023 Peter G. (nephros)
 # SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2024-2025 Mirian Margiani
+# SPDX-FileCopyrightText: 2023 Peter G. (nephros)
 
 # Attribution using Opal.About:
-#   Opal attributions are automatically added since version 3.0.0.
-#   Check the "autoAddOpalAttributions" property on your About page.
+#   Opal attributions are automatically added to the About page.
+#   Make sure to use the latest version of Opal.About:
+#   https://github.com/Pretty-SFOS/opal-about/releases/latest
 #
 # Manual attribution:
-#   1. Import "../modules/Opal/Attributions" in your "About" page.
-#   2. Attribute this module by adding "OpalDelegatesAttribution {}"
-#      to the "attributions" list property of the "About" page.
+#   Mention at least name, license, and the attribution text
+#   on the About page of your app. Use the information below.
 
 module: Opal.Delegates (opal-delegates)
-version: 3.5.1 (git:6cac9fd)
+version: 3.5.2 (git:80c7344)
 description: This module provides list items for views, so you can concentrate on handling the data, not formatting the presentation.
 maintainers: Mirian Margiani
-attribution: 2024-2025 Mirian Margiani (ichthyosaurus):2023 Peter G. (nephros)
+attribution: 2024-2025 Mirian Margiani:2023 Peter G. (nephros)
 license: GPL-3.0-or-later
 sources: https://github.com/Pretty-SFOS/opal-delegates

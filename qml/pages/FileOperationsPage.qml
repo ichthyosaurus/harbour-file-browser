@@ -23,7 +23,7 @@ import Sailfish.Silica 1.0
 //import harbour.file.browser.FileData 1.0
 //import harbour.file.browser.Settings 1.0
 import harbour.file.browser.FileOperations 1.0
-import SortFilterProxyModel 0.2
+import Opal.SortFilterProxyModel 1.0
 
 import "../components"
 import "../js/paths.js" as Paths

@@ -1,21 +1,22 @@
 # Store this file to keep track of packaged module versions.
 # It is not necessary to ship this in your app's final RPM package.
-# SPDX-FileCopyrightText: 2024 Mirian Margiani:2013-2020 Leszek Lesner
 # SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2024-2025 Mirian Margiani
+# SPDX-FileCopyrightText: 2013-2020 Leszek Lesner
 
 # Attribution using Opal.About:
-#   Opal attributions are automatically added since version 3.0.0.
-#   Check the "autoAddOpalAttributions" property on your About page.
+#   Opal attributions are automatically added to the About page.
+#   Make sure to use the latest version of Opal.About:
+#   https://github.com/Pretty-SFOS/opal-about/releases/latest
 #
 # Manual attribution:
-#   1. Import "../modules/Opal/Attributions" in your "About" page.
-#   2. Attribute this module by adding "OpalMediaPlayerAttribution {}"
-#      to the "attributions" list property of the "About" page.
+#   Mention at least name, license, and the attribution text
+#   on the About page of your app. Use the information below.
 
 module: Opal.MediaPlayer (opal-mediaplayer)
-version: 1.0.7 (git:69fc50e)
+version: 1.0.9 (git:27357bf)
 description: This module provides a media player page with support for subtitles.
 maintainers: Mirian Margiani
-attribution: 2024 Mirian Margiani:2013-2020 Leszek Lesner
+attribution: 2024-2025 Mirian Margiani:2013-2020 Leszek Lesner
 license: GPL-3.0-or-later
 sources: https://github.com/Pretty-SFOS/opal-mediaplayer

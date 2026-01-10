@@ -1,21 +1,21 @@
 # Store this file to keep track of packaged module versions.
 # It is not necessary to ship this in your app's final RPM package.
-# SPDX-FileCopyrightText: 2024 Mirian Margiani
 # SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2024-2025 Mirian Margiani
 
 # Attribution using Opal.About:
-#   Opal attributions are automatically added since version 3.0.0.
-#   Check the "autoAddOpalAttributions" property on your About page.
+#   Opal attributions are automatically added to the About page.
+#   Make sure to use the latest version of Opal.About:
+#   https://github.com/Pretty-SFOS/opal-about/releases/latest
 #
 # Manual attribution:
-#   1. Import "../modules/Opal/Attributions" in your "About" page.
-#   2. Attribute this module by adding "OpalMenuSwitchAttribution {}"
-#      to the "attributions" list property of the "About" page.
+#   Mention at least name, license, and the attribution text
+#   on the About page of your app. Use the information below.
 
 module: Opal.MenuSwitch (opal-menuswitch)
-version: 1.0.1 (git:66ab90b)
+version: 1.0.2 (git:55cbe8e)
 description: This module provides a toggle button to be used in Sailfish-style menus.
 maintainers: Mirian Margiani
-attribution: 2024 Mirian Margiani
+attribution: 2024-2025 Mirian Margiani
 license: GPL-3.0-or-later
 sources: https://github.com/Pretty-SFOS/opal-menuswitch

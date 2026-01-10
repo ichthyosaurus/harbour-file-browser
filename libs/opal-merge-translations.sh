@@ -1,14 +1,13 @@
 #!/bin/bash
 #
-# This file is part of Opal and has been released under the Creative Commons
-# Attribution-ShareAlike 4.0 International License.
+# This file is part of Opal.
 # SPDX-License-Identifier: CC-BY-SA-4.0
-# SPDX-FileCopyrightText: 2021 Mirian Margiani
+# SPDX-FileCopyrightText: 2021-2025 Mirian Margiani
 #
 # See https://github.com/Pretty-SFOS/opal/blob/main/snippets/opal-merge-translations.md
 # for documentation.
 #
-# @@@ FILE VERSION 0.1.2
+# @@@ FILE VERSION 1.0.0
 #
 
 shopt -s extglob
@@ -107,8 +106,7 @@ log "           changing many strings, so the same-text heuristic can pick up"
 log "           any strings that have moved."
 log
 log "           Typically, the command is:"
-log "               lupdate qml src -ts translations/*.ts"
+log "               $cLCONVERT qml src -ts translations/*.ts"
 log
 log "           Otherwise, you may lose translations because the Sailfish SDK"
 log "           drops 'obsolete' translations by default (option '-no-obsolete')."
-log "           E.g. after replacing an old 'About' page with Opal.About."

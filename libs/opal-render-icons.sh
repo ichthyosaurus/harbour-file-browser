@@ -3,7 +3,7 @@
 # This file is part of Opal and has been released under the Creative Commons
 # Attribution-ShareAlike 4.0 International License.
 # SPDX-License-Identifier: CC-BY-SA-4.0
-# SPDX-FileCopyrightText: 2018-2023 Mirian Margiani
+# SPDX-FileCopyrightText: 2018-2025 Mirian Margiani
 #
 # See https://github.com/Pretty-SFOS/opal/blob/main/snippets/opal-render-icons.md
 # for documentation.
@@ -11,7 +11,7 @@
 # @@@ FILE VERSION $c__OPAL_RENDER_ICONS_VERSION__
 #
 
-c__OPAL_RENDER_ICONS_VERSION__="1.0.0"
+c__OPAL_RENDER_ICONS_VERSION__="1.1.0"
 # c__FOR_RENDER_LIB__=version must be set in module release scripts
 
 shopt -s extglob
@@ -90,9 +90,9 @@ verify_version
 check_dependencies
 
 function do_render_single() { # 1: input, 2: width, 3: height, 4: output
-    printf "rendering %s to %s at %sx%s" "$1" "$4" "$2" "$3"
+    printf "rendering %s to %s at %sx%s\n" "$1" "$4" "$2" "$3"
     # replace '-o' by '-z -e' for inkscape < 1.0
-    inkscape -o "$4" -w "$2" -h "$3" "$1" && pngcrush -ow "$4"
+    inkscape -o "$4" -w "$2" -h "$3" "${cEXTRA_INKSCAPE_ARGS[@]}" -- "$1" && pngcrush -ow "$4"
 }
 
 function split_at_sign() { # 1: string with values separated by @, |, +
@@ -191,7 +191,7 @@ function render_batch() { # 1: keep or unset config after rendering?
     done
 
     if [[ "$keep_config" != "keep" ]]; then
-        unset cNAME cITEMS cRESOLUTIONS cTARGETS cSUFFIX cPREFIX
+        unset cNAME cITEMS cRESOLUTIONS cTARGETS cSUFFIX cPREFIX cEXTRA_INKSCAPE_ARGS
         # cFORCE is always preserved
     fi
 }

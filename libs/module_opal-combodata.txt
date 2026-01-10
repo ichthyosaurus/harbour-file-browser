@@ -1,21 +1,21 @@
 # Store this file to keep track of packaged module versions.
 # It is not necessary to ship this in your app's final RPM package.
-# SPDX-FileCopyrightText: 2023-2024 Mirian Margiani
 # SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2023-2025 Mirian Margiani
 
 # Attribution using Opal.About:
-#   Opal attributions are automatically added since version 3.0.0.
-#   Check the "autoAddOpalAttributions" property on your About page.
+#   Opal attributions are automatically added to the About page.
+#   Make sure to use the latest version of Opal.About:
+#   https://github.com/Pretty-SFOS/opal-about/releases/latest
 #
 # Manual attribution:
-#   1. Import "../modules/Opal/Attributions" in your "About" page.
-#   2. Attribute this module by adding "OpalComboDataAttribution {}"
-#      to the "attributions" list property of the "About" page.
+#   Mention at least name, license, and the attribution text
+#   on the About page of your app. Use the information below.
 
 module: Opal.ComboData (opal-combodata)
-version: 2.1.1 (git:33f9e30)
+version: 2.1.2 (git:af338ad)
 description: This module provides an extension for combo boxes to access the current value instead of the label.
 maintainers: Mirian Margiani
-attribution: 2023-2024 Mirian Margiani
+attribution: 2023-2025 Mirian Margiani
 license: GPL-3.0-or-later
 sources: https://github.com/Pretty-SFOS/opal-combodata

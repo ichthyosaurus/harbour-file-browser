@@ -1,0 +1,21 @@
+# Store this file to keep track of packaged module versions.
+# It is not necessary to ship this in your app's final RPM package.
+# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2025 Mirian Margiani
+
+# Attribution using Opal.About:
+#   Opal attributions are automatically added to the About page.
+#   Make sure to use the latest version of Opal.About:
+#   https://github.com/Pretty-SFOS/opal-about/releases/latest
+#
+# Manual attribution:
+#   Mention at least name, license, and the attribution text
+#   on the About page of your app. Use the information below.
+
+module: Opal.PropertyMacros (opal-propertymacros)
+version: 1.0.0 (git:5e6f4ce)
+description: This module provides C++ macros that simplify adding properties to Qt objects.
+maintainers: Mirian Margiani
+attribution: 2025 Mirian Margiani
+license: GPL-3.0-or-later
+sources: https://github.com/Pretty-SFOS/opal-propertymacros

@@ -14,7 +14,7 @@ property bool highlighted:false
 visible:!!moveHandler&&moveHandler.active
 implicitWidth:visible?Theme.itemSizeMedium:0
 implicitHeight:visible?Theme.itemSizeSmall-2*Theme.paddingMedium:0
-anchors.verticalCenter:parent.verticalCenter
+anchors.verticalCenter:parent?parent.verticalCenter:undefined
 MouseArea{id:area
 anchors.fill:parent
 enabled:root.visible
