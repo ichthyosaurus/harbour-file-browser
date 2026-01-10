@@ -2214,8 +2214,8 @@ exposure program</extracomment>
     <name>MySupportDialog</name>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="14"/>
-        <source>Donate on Liberapay</source>
-        <translation>在 Liberapay 上捐款</translation>
+        <source>Donate on %1</source>
+        <translation>在 %1 上捐款</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="15"/>
@@ -2224,8 +2224,8 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
-        <source>Translate on Weblate</source>
-        <translation>在Weblate上翻译</translation>
+        <source>Translate on %1</source>
+        <translation>在%1上翻译</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="23"/>
@@ -2234,8 +2234,8 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
-        <source>Develop on Github</source>
-        <translation>在GitHub上开发</translation>
+        <source>Develop on %1</source>
+        <translation>在%1上开发</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="31"/>

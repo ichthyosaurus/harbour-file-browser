@@ -2232,8 +2232,8 @@ exposure program</extracomment>
     <name>MySupportDialog</name>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="14"/>
-        <source>Donate on Liberapay</source>
-        <translation>Toeta meid Liberapay vahendusel</translation>
+        <source>Donate on %1</source>
+        <translation>Toeta meid %1 vahendusel</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="15"/>
@@ -2242,8 +2242,8 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
-        <source>Translate on Weblate</source>
-        <translation>Tõlgi Weblate&apos;i abil</translation>
+        <source>Translate on %1</source>
+        <translation>Tõlgi %1&apos;i abil</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="23"/>
@@ -2252,8 +2252,8 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
-        <source>Develop on Github</source>
-        <translation>Osale arenduses GitHubi abil</translation>
+        <source>Develop on %1</source>
+        <translation>Osale arenduses %1i abil</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="31"/>

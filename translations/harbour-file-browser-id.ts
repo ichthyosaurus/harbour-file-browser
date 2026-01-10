@@ -2213,9 +2213,9 @@ exposure program</extracomment>
 <context>
     <name>MySupportDialog</name>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="14"/>
-        <source>Donate on Liberapay</source>
-        <translation>Donasi melalui Liberapay</translation>
+        <location filename="../qml/MySupportDialog.qml" line="14"></location>
+        <source>Donate on %1</source>
+        <translation>Donasi melalui %1</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="15"/>
@@ -2223,9 +2223,9 @@ exposure program</extracomment>
         <translation>Belilah secangkir kopi, sepotong pizza, atau tiket ke teater.</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="22"/>
-        <source>Translate on Weblate</source>
-        <translation>Terjemahkan di Weblate</translation>
+        <location filename="../qml/MySupportDialog.qml" line="22"></location>
+        <source>Translate on %1</source>
+        <translation>Terjemahkan di %1</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="23"/>
@@ -2233,9 +2233,9 @@ exposure program</extracomment>
         <translation>Bantu terjemahkan aplikasi ini ke dalam banyak bahasa sebanyak mungkin.</translation>
     </message>
     <message>
-        <location filename="../qml/MySupportDialog.qml" line="30"/>
-        <source>Develop on Github</source>
-        <translation>Kembangkan di Github</translation>
+        <location filename="../qml/MySupportDialog.qml" line="30"></location>
+        <source>Develop on %1</source>
+        <translation>Kembangkan di %1</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="31"/>

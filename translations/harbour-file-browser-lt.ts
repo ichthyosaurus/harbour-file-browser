@@ -2250,8 +2250,8 @@ exposure program</extracomment>
     <name>MySupportDialog</name>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="14"/>
-        <source>Donate on Liberapay</source>
-        <translation>Aukoti per Liberapay</translation>
+        <source>Donate on %1</source>
+        <translation>Aukoti per %1</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="15"/>
@@ -2260,7 +2260,7 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
-        <source>Translate on Weblate</source>
+        <source>Translate on %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2270,7 +2270,7 @@ exposure program</extracomment>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
-        <source>Develop on Github</source>
+        <source>Develop on %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
