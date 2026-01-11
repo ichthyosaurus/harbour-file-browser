@@ -1,6 +1,6 @@
 /*
  * This file is part of harbour-file-browser.
- * SPDX-FileCopyrightText: 2021-2024 Mirian Margiani
+ * SPDX-FileCopyrightText: 2021-2026 Mirian Margiani
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -37,7 +37,6 @@ A.AboutPageBase {
     appRelease: APP_RELEASE
     appReleaseType: RELEASE_TYPE
 
-    allowDownloadingLicenses: false
     sourcesUrl: "https://github.com/ichthyosaurus/%1".arg(Qt.application.name)
     homepageUrl: "https://forum.sailfishos.org/t/file-browser-support-and-feedback-thread/4566"
     translationsUrl: "https://hosted.weblate.org/projects/%1".arg(Qt.application.name)
@@ -54,7 +53,6 @@ A.AboutPageBase {
 
     description: qsTr("A fully-fledged file manager for Sailfish OS.")
     mainAttributions: ["2019-%1 Mirian Margiani".arg((new Date()).getFullYear()), "2013-2019 karip"]
-    autoAddOpalAttributions: true
 
     attributions: [
         A.Attribution {
