@@ -46,7 +46,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="182"/>
         <source>Portuguese (Brazil)</source>
-        <translation type="unfinished"></translation>
+        <translation>portugál (brazil)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="199"/>
@@ -61,12 +61,12 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="311"/>
         <source>Belarusian</source>
-        <translation type="unfinished"></translation>
+        <translation>belarusz</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="317"/>
         <source>Arabic</source>
-        <translation type="unfinished"></translation>
+        <translation>arab</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="234"/>
@@ -81,7 +81,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="279"/>
         <source>Dutch (Belgium)</source>
-        <translation type="unfinished"></translation>
+        <translation>holland</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="298"/>
@@ -178,49 +178,49 @@
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="25"/>
         <source>Name</source>
         <comment>as in: “name of the bookmark you are currently editing”</comment>
-        <translation type="unfinished">Név</translation>
+        <translation>Név</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="26"/>
         <source>Name must not be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>A név nem lehet üres</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="28"/>
         <source>Path</source>
         <comment>as in: “path of the bookmark you are currently editing”</comment>
-        <translation type="unfinished"></translation>
+        <translation>útvonal</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="29"/>
         <source>Path must not be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Az útvonal nem lehet üres</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="30"/>
         <source>Path does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Az útvonal nem létezik</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="31"/>
         <source>Path is not a folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Az útvonal nem egy mappa</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="96"/>
         <source>Apply</source>
         <comment>as in &apos;apply these changes&apos;</comment>
-        <translation type="unfinished"></translation>
+        <translation>Alkalmaz</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="97"/>
         <source>Edit bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Könyvjelzők szerkesztése</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="232"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Alkalmaz</translation>
     </message>
 </context>
 <context>
@@ -233,23 +233,23 @@
     <message>
         <location filename="../src/bookmarks.cpp" line="537"/>
         <source>Attached folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Hozzáadott mappa</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="539"/>
         <source>Remote folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Távoli mappa</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="542"/>
         <source>Removable media</source>
-        <translation type="unfinished"></translation>
+        <translation>Eltávolítaható eszközök</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="629"/>
         <location filename="../src/bookmarks.cpp" line="1152"/>
         <source>Internal storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Belső tárhely</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="637"/>
