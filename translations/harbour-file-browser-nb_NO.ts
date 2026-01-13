@@ -31,22 +31,22 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="124"/>
         <source>Tamil</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamilsk</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="156"/>
         <source>Serbian</source>
-        <translation type="unfinished"></translation>
+        <translation>Serbisk</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="176"/>
         <source>Romanian</source>
-        <translation type="unfinished"></translation>
+        <translation>Rumensk</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="182"/>
         <source>Portuguese (Brazil)</source>
-        <translation type="unfinished"></translation>
+        <translation>Portugisisk (Brasil)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="199"/>
@@ -61,12 +61,12 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="311"/>
         <source>Belarusian</source>
-        <translation type="unfinished"></translation>
+        <translation>Hviterussisk</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="317"/>
         <source>Arabic</source>
-        <translation type="unfinished"></translation>
+        <translation>Arabisk</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="234"/>
@@ -81,7 +81,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="279"/>
         <source>Dutch (Belgium)</source>
-        <translation type="unfinished"></translation>
+        <translation>Flamsk (Belgia)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="298"/>
@@ -178,49 +178,49 @@
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="25"/>
         <source>Name</source>
         <comment>as in: “name of the bookmark you are currently editing”</comment>
-        <translation type="unfinished">Navn</translation>
+        <translation>Navn</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="26"/>
         <source>Name must not be empty</source>
-        <translation type="unfinished">Navnet kan ikke stå tomt</translation>
+        <translation>Navnet kan ikke stå tomt</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="28"/>
         <source>Path</source>
         <comment>as in: “path of the bookmark you are currently editing”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Sti</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="29"/>
         <source>Path must not be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Stien må ikke være tom</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="30"/>
         <source>Path does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Stien finnes ikke</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="31"/>
         <source>Path is not a folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Stien er ikke en mappe</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="96"/>
         <source>Apply</source>
         <comment>as in &apos;apply these changes&apos;</comment>
-        <translation type="unfinished">Bruk</translation>
+        <translation>Bruk</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="97"/>
         <source>Edit bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Rediger bokmerker</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="232"/>
         <source>Apply</source>
-        <translation type="unfinished">Bruk</translation>
+        <translation>Bruk</translation>
     </message>
 </context>
 <context>
@@ -233,17 +233,17 @@
     <message>
         <location filename="../src/bookmarks.cpp" line="537"/>
         <source>Attached folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Vedlagt mappe</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="539"/>
         <source>Remote folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekstern mappe</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="542"/>
         <source>Removable media</source>
-        <translation type="unfinished"></translation>
+        <translation>Flyttbart lagringsmedium</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="629"/>
@@ -260,48 +260,48 @@
     <message>
         <location filename="../src/bookmarks.cpp" line="1067"/>
         <source>Home</source>
-        <translation type="unfinished">Hjem</translation>
+        <translation>Hjem</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="692"/>
         <location filename="../src/bookmarks.cpp" line="1077"/>
         <source>Documents</source>
-        <translation type="unfinished">Dokumenter</translation>
+        <translation>Dokumenter</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="694"/>
         <location filename="../src/bookmarks.cpp" line="1087"/>
         <source>Downloads</source>
-        <translation type="unfinished">Nedlastinger</translation>
+        <translation>Nedlastinger</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="700"/>
         <location filename="../src/bookmarks.cpp" line="1117"/>
         <source>Music</source>
-        <translation type="unfinished">Musikk</translation>
+        <translation>Musikk</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="696"/>
         <location filename="../src/bookmarks.cpp" line="1097"/>
         <source>Pictures</source>
-        <translation type="unfinished">Bilder</translation>
+        <translation>Bilder</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="698"/>
         <location filename="../src/bookmarks.cpp" line="1107"/>
         <source>Videos</source>
-        <translation type="unfinished">Videoer</translation>
+        <translation>Videoer</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="1127"/>
         <location filename="../src/bookmarks.cpp" line="1153"/>
         <source>Android storage</source>
-        <translation type="unfinished">Android-lagring</translation>
+        <translation>Android-lagring</translation>
     </message>
     <message>
         <location filename="../src/bookmarks.cpp" line="1137"/>
         <source>Root</source>
-        <translation type="unfinished">Rot</translation>
+        <translation>Root</translation>
     </message>
 </context>
 <context>
@@ -367,9 +367,9 @@
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
         <source>%n item(s) to be linked</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n oppføring som skal lenkes</numerusform>
+            <numerusform>%n oppføringer som skal lenkes</numerusform>
         </translation>
     </message>
     <message>
@@ -386,12 +386,12 @@
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="256"/>
         <source>Open containing folder</source>
-        <translation type="unfinished">Åpne inneholdende mappe</translation>
+        <translation>Åpne overordnet mappe</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="274"/>
         <source>Empty</source>
-        <translation type="unfinished">Tom</translation>
+        <translation>Tom</translation>
     </message>
     <message>
         <location filename="../qml/pages/ClipboardPage.qml" line="275"/>
@@ -444,12 +444,12 @@
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="151"/>
         <source>This file appears to be a software package. To install, swipe back and select the “Install” option from the menu.</source>
-        <translation type="unfinished"></translation>
+        <translation>Denne filen ser ut til å være en programvarepakke. Sveip tilbake og velg «Installer» i menyen for å installere.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="153"/>
         <source>Swipe from the right to view raw contents.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sveip fra høyre for å vise råinnhold.</translation>
     </message>
 </context>
 <context>
@@ -457,7 +457,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="111"/>
         <source>Root Mode</source>
-        <translation type="unfinished">Rot-modus</translation>
+        <translation>Root-modus</translation>
     </message>
 </context>
 <context>
@@ -465,7 +465,7 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="61"/>
         <source>Create</source>
-        <translation type="unfinished">Opprett</translation>
+        <translation>Opprett</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="77"/>
@@ -475,7 +475,7 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="78"/>
         <source>You don&apos;t have permission to change the contents of this directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>Du har ikke tillatelse til å endre innholdet i denne mappen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="94"/>
@@ -486,18 +486,18 @@
         <location filename="../qml/pages/CreateNewDialog.qml" line="96"/>
         <source>The new folder will be created under “%1”.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation type="unfinished">Den nye mappen vil bli opprettet under «%1».</translation>
+        <translation>Den nye mappen vil bli opprettet under “%1”.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="98"/>
         <source>The new text file will be created under “%1” and can be edited later.</source>
         <comment>placeholder is the parent directory of the new element</comment>
-        <translation type="unfinished"></translation>
+        <translation>Den nye tekstfilen opprettes under “%1” og kan redigeres senere.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="104"/>
         <source>folder</source>
-        <translation type="unfinished">mappe</translation>
+        <translation>mappe</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="107"/>
@@ -507,7 +507,7 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="119"/>
         <source>Folder name</source>
-        <translation type="unfinished">Mappenavn</translation>
+        <translation>Mappenavn</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="119"/>
@@ -517,7 +517,7 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="138"/>
         <source>File names must not contain slashes. To create a new file in a folder below “%1”, first create a folder and then create the file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Filnavn må ikke inneholde skråstreker (/). For å opprette en ny fil i en mappe under “%1”, opprett først en mappe og opprett deretter filen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="142"/>
@@ -527,7 +527,7 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="145"/>
         <source>Using slashes in folder names will create sub-folders, like so:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ved å bruke skråstreker i mappenavn vil det opprettes undermapper, slik som:</translation>
     </message>
 </context>
 <context>
@@ -612,7 +612,7 @@
         <location filename="../qml/pages/DirectoryPage.qml" line="436"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation type="unfinished">Tom</translation>
+        <translation>Tom</translation>
     </message>
     <message>
         <location filename="../qml/pages/DirectoryPage.qml" line="439"/>
@@ -666,7 +666,7 @@
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="325"/>
         <source>Open containing folder</source>
-        <translation type="unfinished">Åpne inneholdende mappe</translation>
+        <translation>Åpne overordnet mappe</translation>
     </message>
     <message>
         <location filename="../qml/components/DirectoryPageEntry.qml" line="337"/>
@@ -803,17 +803,17 @@
     <message>
         <location filename="../src/engine.cpp" line="449"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunne ikke fjerne gammel lenke “%1”som peker til “%2”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="455"/>
         <source>Failed to revert link “%1” pointing to “%2” after failing to change target to “%3”</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunne ikke gjenopprette lenken “%1” som peker til “%2” etter at endring av mål til “%3” mislyktes</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="462"/>
         <source>Failed to change link target of “%1” to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunne ikke endre målet for lenken “%1” til “%2”</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="488"/>
@@ -942,17 +942,17 @@
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="32"/>
         <source>Copy</source>
-        <translation type="unfinished">Kopier</translation>
+        <translation>Kopier</translation>
     </message>
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="33"/>
         <source>Move</source>
-        <translation type="unfinished">Flytt</translation>
+        <translation>Flytt</translation>
     </message>
     <message>
         <location filename="../qml/components/FileClipModePicker.qml" line="34"/>
         <source>Link</source>
-        <translation type="unfinished">Lenke</translation>
+        <translation>Lenke</translation>
     </message>
 </context>
 <context>
@@ -961,14 +961,14 @@
         <location filename="../src/filedata.cpp" line="87"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation type="unfinished">tom</translation>
+        <translation>tom</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/filedata.cpp" line="88"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
-            <numerusform>%n element</numerusform>
-            <numerusform>%n elementer</numerusform>
+        <translation>
+            <numerusform>%n oppføring</numerusform>
+            <numerusform>%n oppføringer</numerusform>
         </translation>
     </message>
     <message>
@@ -1012,12 +1012,12 @@
     <message>
         <location filename="../src/filemodel.cpp" line="115"/>
         <source>folder</source>
-        <translation type="unfinished">mappe</translation>
+        <translation>mappe</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="117"/>
         <source>link</source>
-        <translation type="unfinished">lenke</translation>
+        <translation>lenke</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="118"/>
@@ -1057,12 +1057,12 @@
     <message>
         <location filename="../qml/pages/FileOperationsPage.qml" line="60"/>
         <source>Tasks</source>
-        <translation type="unfinished"></translation>
+        <translation>Oppgaver</translation>
     </message>
     <message>
         <location filename="../qml/pages/FileOperationsPage.qml" line="81"/>
         <source>Empty</source>
-        <translation type="unfinished">Tom</translation>
+        <translation>Tom</translation>
     </message>
 </context>
 <context>
@@ -1101,7 +1101,7 @@
         <location filename="../qml/pages/FilePage.qml" line="64"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation type="unfinished">Filutforsker</translation>
+        <translation>File Browser</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="113"/>
@@ -1132,7 +1132,7 @@
         <location filename="../qml/pages/FilePage.qml" line="142"/>
         <source>Swipe from the right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Sveip fra høyre for å inspisere innholdet.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="155"/>
@@ -1142,7 +1142,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="165"/>
         <source>Open containing folder</source>
-        <translation type="unfinished">Åpne inneholdende mappe</translation>
+        <translation>Åpne overordnet mappe</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="184"/>
@@ -1298,7 +1298,7 @@
     <message>
         <location filename="../src/fileworker.cpp" line="413"/>
         <source>Failed to remove source folder “%1” after moving.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunne ikke fjerne kilde­mappen “%1” etter flytting.</translation>
     </message>
 </context>
 <context>
@@ -1311,22 +1311,22 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="53"/>
         <source>Directory View</source>
-        <translation type="unfinished"></translation>
+        <translation>Katalogvisning</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="64"/>
         <source>Use per-directory view settings</source>
-        <translation type="unfinished">Visningsinnstillinger per mappe</translation>
+        <translation>Bruk visningsinnstillinger per mappe</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="66"/>
         <source>Save view preferences individually for all folders in your home directory. The options below are used by default.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lagre visningspreferanser individuelt for alle mapper i din hjemmekatalog. Nedenstående valg brukes som standard.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="91"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
-        <translation type="unfinished"></translation>
+        <translation>I gallerivisning vises bildene tilpasset skjermen. Andre filer vises uten forhåndsvisninger.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="98"/>
@@ -1336,57 +1336,57 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="99"/>
         <source>You can enable per-directory settings to configure your preferences for individual folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Du kan aktivere innstillinger per mappe for å konfigurere preferanser for enkeltmapper.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="104"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">Vis skjulte filer</translation>
+        <translation>Vis skjulte filer</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="106"/>
         <source>Show files with names starting with a dot (“.”).</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis filer som begynner med punktum («.»).</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="109"/>
         <source>Show preview images</source>
-        <translation type="unfinished">Vis forhåndsvisningsbilder</translation>
+        <translation>Vis forhåndsvisningsbilder</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="111"/>
         <source>Preview contents of supported file types.</source>
-        <translation type="unfinished"></translation>
+        <translation>Forhåndsvis innholdet i støttede filtyper.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="114"/>
         <source>Thumbnail size</source>
-        <translation type="unfinished">Miniatyrbildestørrelse</translation>
+        <translation>Størrelse på miniatyrbilder</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="120"/>
         <source>small</source>
-        <translation type="unfinished"></translation>
+        <translation>liten</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="121"/>
         <source>medium</source>
-        <translation type="unfinished">middels</translation>
+        <translation>middels</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="122"/>
         <source>large</source>
-        <translation type="unfinished"></translation>
+        <translation>stor</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="123"/>
         <source>huge</source>
-        <translation type="unfinished"></translation>
+        <translation>diger</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="130"/>
         <source>Sorting</source>
-        <translation type="unfinished">Sortering</translation>
+        <translation>Sortering</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="140"/>
@@ -1396,7 +1396,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="142"/>
         <source>Always show folders at the top of the file list.</source>
-        <translation type="unfinished">Alltid vis mapper på toppen av fillisten.</translation>
+        <translation>Alltid vis mapper på toppen av fillisten.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="145"/>
@@ -1406,47 +1406,47 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="147"/>
         <source>Always show files starting with a dot (“.”) at the end of the file list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis alltid filer som begynner med punktum («.») sist i fillisten.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="150"/>
         <source>Sort by</source>
-        <translation type="unfinished">Sorter etter</translation>
+        <translation>Sorter etter</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="156"/>
         <source>name</source>
-        <translation type="unfinished">navn</translation>
+        <translation>navn</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="157"/>
         <source>size</source>
-        <translation type="unfinished">størrelse</translation>
+        <translation>størrelse</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="159"/>
         <source>file type</source>
-        <translation type="unfinished">filtype</translation>
+        <translation>filtype</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="163"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished">Sorter versalsensitivt</translation>
+        <translation>Skille mellom store og små bokstaver</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="165"/>
         <source>Show files with names starting with a capital letter first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis filer som begynner med stor bokstav først.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="169"/>
         <source>Sort order</source>
-        <translation type="unfinished">Sorteringsrekkefølge</translation>
+        <translation>Sorteringsrekkefølge</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="179"/>
         <source>Sort names starting with the beginning of the alphabet first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorter alfabetisk (A–Å først).</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="180"/>
@@ -1456,7 +1456,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="188"/>
         <source>Sort names starting with the end of the alphabet first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorter alfabetisk (Å–A først).</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="189"/>
@@ -1466,17 +1466,17 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="218"/>
         <source>Places</source>
-        <translation type="unfinished">Steder</translation>
+        <translation>Steder</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="181"/>
         <source>Show older files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis eldre filer først.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="177"/>
         <source>ascending</source>
-        <translation type="unfinished"></translation>
+        <translation>stigende</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="70"/>
@@ -1491,7 +1491,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="79"/>
         <source>Show files in a list. Optionally enable preview thumbnails using the separate setting below.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis filer i liste. Slå eventuelt på forhåndsvisningsminiatyrer med egen innstilling nedenfor.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="89"/>
@@ -1501,7 +1501,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="190"/>
         <source>Show more recently changed files first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis nylig endrede filer først.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="186"/>
@@ -1511,48 +1511,48 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="158"/>
         <source>modification date</source>
-        <translation type="unfinished"></translation>
+        <translation>endringsdato</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="199"/>
         <source>Behavior and View</source>
-        <translation type="unfinished">Oppførsel og visning</translation>
+        <translation>Oppførsel og visning</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="209"/>
         <source>Initial view</source>
-        <translation type="unfinished"></translation>
+        <translation>Standardvisning</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="210"/>
         <source>The page that is shown when the app starts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Siden vises når appen starter.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="217"/>
         <source>Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Katalog</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="219"/>
         <source>Search</source>
-        <translation type="unfinished">Søk</translation>
+        <translation>Søk</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="225"/>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="241"/>
         <source>Initial directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Standardmappe</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="230"/>
         <source>The directory that is shown when the app starts.</source>
-        <translation type="unfinished"></translation>
+        <translation>Katalogen som vises når appen starter.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="233"/>
         <source>user&apos;s home</source>
-        <translation type="unfinished"></translation>
+        <translation>brukerens hjemmappe</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="234"/>
@@ -1572,127 +1572,127 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="263"/>
         <source>Default transfer action</source>
-        <translation type="unfinished">Forvalgt overføringshandling</translation>
+        <translation>Forhåndsvalgt overføringshandling</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="267"/>
         <source>The action that is selected by default when using the bulk file management feature (available through the “shuffle” icon after selecting files).</source>
-        <translation type="unfinished"></translation>
+        <translation>Handlingen som er forhåndsvalgt ved bruk av massefilhåndtering (tilgjengelig via «shuffle»-ikonet etter at du har merket filer).</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="272"/>
         <source>copy</source>
-        <translation type="unfinished">kopier</translation>
+        <translation>kopier</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="273"/>
         <source>move</source>
-        <translation type="unfinished">flytt</translation>
+        <translation>flytt</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="274"/>
         <source>link</source>
-        <translation type="unfinished">lenke</translation>
+        <translation>lenke</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="275"/>
         <source>none</source>
-        <translation type="unfinished">ingen</translation>
+        <translation>ingen</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="279"/>
         <source>Default filter line action</source>
-        <translation type="unfinished">Forvalgt handling for filterlinje</translation>
+        <translation>Forhåndsvalgt handling for filterlinje</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="283"/>
         <source>Which action to take when the Enter key is pressed in the filter line in a directory&apos;s pull-down menu.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hvilken handling som skal utføres når Enter trykkes i filterfeltet i en katalogs nedtrekksmeny.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="287"/>
         <source>return to directory view</source>
-        <translation type="unfinished">gå tilbake til mappevisning</translation>
+        <translation>gå tilbake til mappevisning</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="288"/>
         <source>start recursive search</source>
-        <translation type="unfinished">start rekursivt søk</translation>
+        <translation>start rekursivt søk</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="292"/>
         <source>File name abbreviation</source>
-        <translation type="unfinished">Filnavnsforkortelse</translation>
+        <translation>Filnavnsforkortelse</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="296"/>
         <source>How very long filenames are abbreviated in the directory view.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hvordan svært lange filnavn forkortes i katalogvisningen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="299"/>
         <source>fade out</source>
-        <translation type="unfinished">ton ut</translation>
+        <translation>ton ut</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="300"/>
         <source>elide end</source>
-        <translation type="unfinished">Elideringsslutt</translation>
+        <translation>forkort slutten</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="301"/>
         <source>elide middle</source>
-        <translation type="unfinished">Elideringsmidt</translation>
+        <translation>forkort midten</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="305"/>
         <source>Share clipboard among windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Del utklippstavlen mellom vinduer</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="307"/>
         <source>Share the list of files currently in the clipboard among all open File Browser windows. When this is enabled, you can cut files in one window and paste them in another.</source>
-        <translation type="unfinished"></translation>
+        <translation>Del listen over filer som for øyeblikket ligger i utklippstavlen mellom alle åpne File Browser‑vinduer. Når dette er aktivert, kan du klippe ut filer i ett vindu og lime dem inn i et annet.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="313"/>
         <source>Show full directory paths</source>
-        <translation type="unfinished">Vis fullstendige mappestier</translation>
+        <translation>Vis fullstendige mappestier</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="315"/>
         <source>Show the full path in the page header of the directory view.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis hele stien i sidehodet for katalogvisningen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="318"/>
         <source>Show navigation menu icon</source>
-        <translation type="unfinished">Vis menyikon for navigering</translation>
+        <translation>Vis menyikon for navigering</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="320"/>
         <source>Show a visual hint that the navigation menu is available by tapping the page header of the directory view.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis et visuelt indikasjon om at navigasjonsmenyen er tilgjengelig ved å trykke på sidehodet i katalogvisningen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="332"/>
         <source>Enable solid window background</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktiver ensfarget vindusbakgrunn</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="334"/>
         <source>Use a solid color instead of your wallpaper as the background of this app.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bruk en ensfarget bakgrunn i stedet for ditt bakgrunnsbilde for denne appen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="344"/>
         <source>Swipe from the right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sveip fra høyre for å se File Browsers kildekode, lisensinformasjon og en liste over bidragsytere.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="356"/>
         <source>Settings</source>
-        <translation type="unfinished">Innstillinger</translation>
+        <translation>Innstillinger</translation>
     </message>
 </context>
 <context>
@@ -2378,7 +2378,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="11"/>
         <source>Thank you!</source>
-        <translation>Takk.</translation>
+        <translation>Takk!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="15"/>
@@ -2448,12 +2448,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="44"/>
         <source>Copy text to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopier tekst til utklippstavle</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="55"/>
         <source>Share</source>
-        <translation type="unfinished"></translation>
+        <translation>Del</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="60"/>
@@ -2473,7 +2473,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="15"/>
         <source>Share link</source>
-        <translation type="unfinished"></translation>
+        <translation>Del lenke</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="50"/>
@@ -2487,117 +2487,117 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="17"/>
         <source>Playback failed</source>
         <comment>error info page heading</comment>
-        <translation type="unfinished"></translation>
+        <translation>Avspilling feilet</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="19"/>
         <source>Resource error</source>
         <comment>error info page heading</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ressursfeil</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="20"/>
         <source>Format error</source>
         <comment>error info page heading</comment>
-        <translation type="unfinished"></translation>
+        <translation>Formatfeil</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="21"/>
         <source>Network error</source>
         <comment>error info page heading</comment>
-        <translation type="unfinished"></translation>
+        <translation>Nettverksfeil</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="22"/>
         <source>Access denied</source>
         <comment>error info page heading</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ingen tilgang</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="23"/>
         <source>Media service missing</source>
         <comment>error info page heading</comment>
-        <translation type="unfinished"></translation>
+        <translation>Medietjeneste mangler</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="24"/>
         <source>The video cannot be played due to a problem allocating resources.</source>
-        <translation type="unfinished"></translation>
+        <translation>Videoen kan ikke spilles av på grunn av problemer med tildeling av ressurser.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="25"/>
         <source>The audio or video format is not supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lyd- eller videoformatet er ikke støttet.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="26"/>
         <source>The video cannot be played due to network issues.</source>
-        <translation type="unfinished"></translation>
+        <translation>Videoen kan ikke avspilles grunnet nettverksproblemer.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="27"/>
         <source>The video cannot be played due to insufficient permissions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Videoen kan ikke spilles av på grunn av manglende tillatelser.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="28"/>
         <source>The video cannot be played because the media service could not be instantiated.</source>
-        <translation type="unfinished"></translation>
+        <translation>Videoen kan ikke spilles av fordi medietjenesten ikke kunne opprettes.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/ErrorOverlay.qml" line="29"/>
         <source>Playback failed due to an expected error. Please restart the app and try again.</source>
-        <translation type="unfinished"></translation>
+        <translation>Avspilling mislyktes på grunn av en forventet feil. Start appen på nytt og prøv igjen.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="87"/>
         <source>Clear subtitles</source>
-        <translation type="unfinished"></translation>
+        <translation>Fjern undertekster</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="89"/>
         <source>Load subtitles</source>
-        <translation type="unfinished"></translation>
+        <translation>Last inn undertekster</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="246"/>
         <source>Zoomed to fit screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Forstørret til å passe skjermen</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="246"/>
         <source>Original</source>
-        <translation type="unfinished"></translation>
+        <translation>Original</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="250"/>
         <source>Play on repeat</source>
-        <translation type="unfinished"></translation>
+        <translation>Gjenta avspilling</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="250"/>
         <source>Play once</source>
-        <translation type="unfinished"></translation>
+        <translation>Spill en gang</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="38"/>
         <source>Select from file system</source>
-        <translation type="unfinished"></translation>
+        <translation>Velg fra filsystem</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="41"/>
         <source>No files ready</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen filer er klare</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="42"/>
         <source>Copy subtitle files in the SRT format next to the video file to open them quickly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopier undertekstfiler i SRT‑format ved siden av videofilen for å åpne dem raskt.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="42"/>
         <source>Pull down to pick a file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Trekk ned for å velge en fil.</translation>
     </message>
 </context>
 <context>
@@ -2639,12 +2639,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="159"/>
         <source>New folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Ny mappe</translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="173"/>
         <source>Places</source>
-        <translation type="unfinished">Steder</translation>
+        <translation>Steder</translation>
     </message>
     <message>
         <location filename="../qml/pages/PathEditDialog.qml" line="208"/>
@@ -2665,7 +2665,7 @@ exposure program</extracomment>
         <source>%n folder(s)</source>
         <extracomment>hidden if n=0</extracomment>
         <translation>
-            <numerusform>én mappe</numerusform>
+            <numerusform>%n mappe</numerusform>
             <numerusform>%n mapper</numerusform>
         </translation>
     </message>
@@ -2739,19 +2739,19 @@ exposure program</extracomment>
         <location filename="../src/globals.cpp" line="122"/>
         <source>hh:mm:ss</source>
         <comment>Time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">hh:mm:ss</translation>
+        <translation>hh:mm:ss</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="125"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
         <comment>Date and time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">dd MMM yyyy, hh:mm:ss t</translation>
+        <translation>dd MMM yyyy, hh:mm:ss t</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="127"/>
         <source>dd.MM.yy, hh:mm</source>
         <comment>Date and format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">d. M. yy, hh:mm</translation>
+        <translation>d. M. yy, hh:mm</translation>
     </message>
 </context>
 <context>
@@ -2794,37 +2794,37 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="19"/>
         <source>Unable to authenticate</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunne ikke autentisere</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="20"/>
         <source>It is not possible to use File Browser in Root Mode without authentication.</source>
-        <translation type="unfinished"></translation>
+        <translation>Det er ikke mulig å bruke File Browser i root‑modus uten autentisering.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="36"/>
         <source>Root Mode: be careful, you could break your system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Root‑modus: vær forsiktig — du kan gjøre alvorlig skade på systemet.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="68"/>
         <source>Understood!</source>
-        <translation type="unfinished"></translation>
+        <translation>Forstått!</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="86"/>
         <source>Root Mode</source>
-        <translation type="unfinished">Rot-modus</translation>
+        <translation>Root-modus</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="87"/>
         <source>Be careful when using File Browser in Root Mode. Actions may unexpectedly break your system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Root‑modus gir full systemtilgang. Feil handlinger kan føre til tap av data eller gjøre systemet ubrukelig. Fortsett bare hvis du forstår risikoen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Start File Browser i rotmodus</translation>
     </message>
 </context>
 <context>
@@ -2832,38 +2832,38 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="13"/>
         <source>Notice</source>
-        <translation type="unfinished"></translation>
+        <translation>Merk</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="14"/>
         <source>Please install this app from Storeman / OpenRepos to get unrestricted access to all files and folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vennligst installer denne appen fra Storeman / OpenRepos for å få ubegrenset tilgang til alle filer og mapper.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="18"/>
         <source>Limitations in this version</source>
-        <translation type="unfinished"></translation>
+        <translation>Begrensninger i denne versjonen</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="22"/>
         <source>This app is currently running in a sandbox environment and does not have access to all files and folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Denne appen kjører for øyeblikket i et sandkassemiljø og har ikke tilgang til alle filer og mapper.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="28"/>
         <source>Inaccessible folders appear empty as there is no way for the app to determine if a folder is actually empty or simply presented as empty by the system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilgjengelige mapper fremstår som tomme fordi appen ikke kan vite om en mappe faktisk er tom eller bare vist som tom av systemet.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="35"/>
         <source>Additionally, some file previews and integrated access to storage settings are disabled.</source>
-        <translation type="unfinished"></translation>
+        <translation>I tillegg er noen filvisninger og integrert tilgang til lagringsinnstillinger deaktivert.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="54"/>
         <source>Install from OpenRepos</source>
         <comment>as in: “open the OpenRepos website to install the File Browser app from there”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Installer fra OpenRepos</translation>
     </message>
 </context>
 <context>
@@ -2965,7 +2965,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsDialog.qml" line="32"/>
         <source>Select</source>
-        <translation type="unfinished">Velg</translation>
+        <translation>Velg</translation>
     </message>
 </context>
 <context>
@@ -2978,12 +2978,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="302"/>
         <source>Rename</source>
-        <translation type="unfinished">Gi nytt navn</translation>
+        <translation>Gi nytt navn</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="309"/>
         <source>Sort</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorter</translation>
     </message>
     <message>
         <location filename="../qml/components/ShortcutsList.qml" line="315"/>
@@ -3032,22 +3032,22 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="76"/>
         <source>Documents</source>
-        <translation type="unfinished">Dokumenter</translation>
+        <translation>Dokumenter</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="81"/>
         <source>Pictures</source>
-        <translation type="unfinished">Bilder</translation>
+        <translation>Bilder</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="86"/>
         <source>Videos</source>
-        <translation type="unfinished">Videoer</translation>
+        <translation>Videoer</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="91"/>
         <source>Music</source>
-        <translation type="unfinished">Musikk</translation>
+        <translation>Musikk</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="237"/>
@@ -3062,7 +3062,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="249"/>
         <source>New window opened. Sometimes the application stays in the background.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nytt vindu åpnet. Noen ganger blir applikasjonen værende i bakgrunnen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="255"/>
@@ -3121,7 +3121,7 @@ exposure program</extracomment>
         <location filename="../qml/components/SizeDetailItem.qml" line="79"/>
         <source>%n directories</source>
         <translation>
-            <numerusform>én mappe</numerusform>
+            <numerusform>%n mappe</numerusform>
             <numerusform>%n mapper</numerusform>
         </translation>
     </message>
@@ -3139,17 +3139,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="18"/>
         <source>Analyse disk usage</source>
-        <translation type="unfinished"></translation>
+        <translation>Analyser diskbruk</translation>
     </message>
     <message>
         <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="29"/>
         <source>The “Space Inspector” app will open shortly.</source>
-        <translation type="unfinished"></translation>
+        <translation>Appen «Space Inspector» åpnes snart.</translation>
     </message>
     <message>
         <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="37"/>
         <source>The “Space Inspector” app could not be opened.</source>
-        <translation type="unfinished"></translation>
+        <translation>Appen «Space Inspector» kunne ikke åpnes.</translation>
     </message>
 </context>
 <context>
@@ -3157,7 +3157,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/StorageSizeBar.qml" line="86"/>
         <source>%1 free</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 ledig</translation>
     </message>
 </context>
 <context>
@@ -3166,7 +3166,7 @@ exposure program</extracomment>
         <location filename="../qml/components/StorageSizeMenuLabel.qml" line="14"/>
         <source>%1 full (%2%)</source>
         <comment>as in “15 of 20 GiB [%1] of this device are filled with data, which is 75% [%2] of its capacity”</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 full (%2%)</translation>
     </message>
 </context>
 <context>
@@ -3174,7 +3174,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="9"/>
         <source>Hi there!</source>
-        <translation>Hei på deg</translation>
+        <translation>Hei på deg!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="10"/>
@@ -3184,7 +3184,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="11"/>
         <source>Thank you for your support!</source>
-        <translation>Takk for din støtte.</translation>
+        <translation>Takk for din støtte!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="57"/>
@@ -3207,22 +3207,22 @@ exposure program</extracomment>
     <message>
         <location filename="../src/texteditor.cpp" line="67"/>
         <source>File “%1” is too large to be edited</source>
-        <translation type="unfinished"></translation>
+        <translation>Filen “%1” er for stor til å redigeres</translation>
     </message>
     <message>
         <location filename="../src/texteditor.cpp" line="81"/>
         <source>No file name specified</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen filnavn oppgitt</translation>
     </message>
     <message>
         <location filename="../src/texteditor.cpp" line="86"/>
         <source>No permission to write to “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen tillatelse til å skrive til “%1”</translation>
     </message>
     <message>
         <location filename="../src/texteditor.cpp" line="92"/>
         <source>Cannot open “%1” for writing</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan ikke åpne “%1” for skriving</translation>
     </message>
 </context>
 <context>
@@ -3237,17 +3237,17 @@ exposure program</extracomment>
         <location filename="../qml/pages/TextEditorDialog.qml" line="77"/>
         <location filename="../qml/pages/TextEditorDialog.qml" line="101"/>
         <source>Failed to open “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunne ikke åpne “%1”</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="79"/>
         <source>Failed to save “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunne ikke lagre “%1”</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="81"/>
         <source>Failed to edit “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Kunne ikke endre “%1”</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="98"/>
@@ -3257,23 +3257,23 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="102"/>
         <source>No application to open the file</source>
-        <translation type="unfinished">Mangler program for åpning av fil</translation>
+        <translation>Mangler program som kan åpne fil</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="109"/>
         <source>Disable predictive text input</source>
-        <translation type="unfinished"></translation>
+        <translation>Deaktiver tekstforslag</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="110"/>
         <source>Enable predictive text input</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktiver tekstforslag</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="116"/>
         <location filename="../qml/pages/TextEditorDialog.qml" line="124"/>
         <source>Save</source>
-        <translation type="unfinished">Lagre</translation>
+        <translation>Lagre</translation>
     </message>
 </context>
 <context>
@@ -3281,7 +3281,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="64"/>
         <source>Clear selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Fjern markering</translation>
     </message>
     <message>
         <location filename="../qml/pages/TransferDialog.qml" line="77"/>
@@ -3301,9 +3301,9 @@ exposure program</extracomment>
     <message numerus="yes">
         <location filename="../qml/pages/TransferDialog.qml" line="106"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
-            <numerusform>%n element</numerusform>
-            <numerusform>%n elementer</numerusform>
+        <translation>
+            <numerusform>%n oppføring</numerusform>
+            <numerusform>%n oppføringer</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -3458,7 +3458,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewPage.qml" line="49"/>
         <source>Edit</source>
         <comment>verb as in &apos;edit this file&apos;</comment>
-        <translation type="unfinished">Rediger</translation>
+        <translation>Rediger</translation>
     </message>
 </context>
 <context>
@@ -3466,97 +3466,97 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="35"/>
         <source>Sorting and View</source>
-        <translation type="unfinished">Sortering og visning</translation>
+        <translation>Sortering og visning</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="37"/>
         <source>Settings apply only to the current folder. Swipe from the right to change default values.</source>
-        <translation type="unfinished"></translation>
+        <translation>Innstillinger gjelder bare for gjeldende mappe. Sveip fra høyre for å endre standardverdier.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="38"/>
         <source>Settings apply to all folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Innstillingene gjelder for alle mapper.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="48"/>
         <source>Sort by...</source>
-        <translation type="unfinished">Sorter etter …</translation>
+        <translation>Sorter etter …</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="86"/>
         <source>Name</source>
-        <translation type="unfinished">Navn</translation>
+        <translation>Navn</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="87"/>
         <source>Size</source>
-        <translation type="unfinished">Størrelse</translation>
+        <translation>Størrelse</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="88"/>
         <source>Modification date</source>
-        <translation type="unfinished"></translation>
+        <translation>Endringsdato</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="89"/>
         <source>File type</source>
-        <translation type="unfinished">Filtype</translation>
+        <translation>Filtype</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="97"/>
         <source>Order...</source>
-        <translation type="unfinished">Sortering …</translation>
+        <translation>Sortering …</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="101"/>
         <source>ascending</source>
-        <translation type="unfinished"></translation>
+        <translation>stigende</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="102"/>
         <source>descending</source>
-        <translation type="unfinished">synkende</translation>
+        <translation>synkende</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="110"/>
         <source>Preview images...</source>
-        <translation type="unfinished">Forhåndsvis bilder …</translation>
+        <translation>Forhåndsvis bilder …</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="113"/>
         <source>none</source>
-        <translation type="unfinished">ingen</translation>
+        <translation>ingen</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="114"/>
         <source>small</source>
-        <translation type="unfinished"></translation>
+        <translation>liten</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="115"/>
         <source>medium</source>
-        <translation type="unfinished">middels</translation>
+        <translation>middels</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="116"/>
         <source>large</source>
-        <translation type="unfinished"></translation>
+        <translation>stor</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="117"/>
         <source>huge</source>
-        <translation type="unfinished"></translation>
+        <translation>diger</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="130"/>
         <source>Show hidden files</source>
-        <translation type="unfinished">Vis skjulte filer</translation>
+        <translation>Vis skjulte filer</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="132"/>
         <source>Show files with names starting with a dot (“.”).</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis filer som begynner med punktum (“.”).</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="136"/>
@@ -3566,17 +3566,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="138"/>
         <source>In gallery mode, images will be shown to fit the screen. Other files are shown without preview thumbnails.</source>
-        <translation type="unfinished"></translation>
+        <translation>gallerivisning vises bildene tilpasset skjermen. Andre filer vises uten forhåndsvisninger.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="154"/>
         <source>Sort case-sensitively</source>
-        <translation type="unfinished">Sorter versalsensitivt</translation>
+        <translation>Skille mellom store og små bokstaver</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="156"/>
         <source>Show files with names starting with a capital letter first.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis filer som begynner med stor bokstav først.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="161"/>
@@ -3596,7 +3596,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="169"/>
         <source>Always show files starting with a dot (“.”) at the end of the file list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vis alltid filer som begynner med punktum («.») sist i fillisten.</translation>
     </message>
 </context>
 <context>
@@ -3605,7 +3605,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewVideoPage.qml" line="19"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation type="unfinished">Filutforsker</translation>
+        <translation>File Browser</translation>
     </message>
 </context>
 <context>
@@ -3623,12 +3623,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/js/files.js" line="32"/>
         <source>Linking</source>
-        <translation type="unfinished">Lenker …</translation>
+        <translation>Lenker…</translation>
     </message>
     <message>
         <location filename="../qml/js/files.js" line="35"/>
         <source>Unknown</source>
-        <translation type="unfinished">Ukjent</translation>
+        <translation>Ukjent</translation>
     </message>
 </context>
 <context>
