@@ -2857,7 +2857,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="35"/>
         <source>Additionally, some file previews and integrated access to storage settings are disabled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tämän lisäksi joidenkin tiedostojen esikatselu sekä integroitu pääsy tallennustila-asetuksiin on poistettu käytöstä.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="54"/>
