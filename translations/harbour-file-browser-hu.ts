@@ -29,72 +29,77 @@
         <translation>Fordítások</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="122"/>
+        <location filename="../qml/pages/AboutPage.qml" line="123"/>
         <source>Tamil</source>
         <translation>Tamil</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="154"/>
+        <location filename="../qml/pages/AboutPage.qml" line="155"/>
         <source>Serbian</source>
         <translation>Szerb</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="174"/>
+        <location filename="../qml/pages/AboutPage.qml" line="176"/>
         <source>Romanian</source>
         <translation>Román</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="180"/>
-        <source>Portuguese (Brazil)</source>
-        <translation>portugál (brazil)</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AboutPage.qml" line="197"/>
+        <location filename="../qml/pages/AboutPage.qml" line="198"/>
         <source>Norwegian Bokmål</source>
         <translation>Norvég Bokmål</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="270"/>
+        <location filename="../qml/pages/AboutPage.qml" line="276"/>
         <source>English</source>
         <translation>angol</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="310"/>
+        <location filename="../qml/pages/AboutPage.qml" line="319"/>
+        <source>Brazilian Portuguese</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="327"/>
         <source>Belarusian</source>
         <translation>belarusz</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="316"/>
+        <location filename="../qml/pages/AboutPage.qml" line="333"/>
         <source>Arabic</source>
         <translation>arab</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="233"/>
+        <location filename="../qml/pages/AboutPage.qml" line="237"/>
         <source>German</source>
         <translation>német</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="254"/>
+        <location filename="../qml/pages/AboutPage.qml" line="182"/>
+        <source>Portuguese</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="260"/>
         <source>Finnish</source>
         <translation>finn</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="278"/>
+        <location filename="../qml/pages/AboutPage.qml" line="284"/>
         <source>Dutch (Belgium)</source>
         <translation>holland</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="297"/>
+        <location filename="../qml/pages/AboutPage.qml" line="306"/>
         <source>Chinese</source>
         <translation>kínai</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="160"/>
+        <location filename="../qml/pages/AboutPage.qml" line="161"/>
         <source>Russian</source>
         <translation>orosz</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="128"/>
+        <location filename="../qml/pages/AboutPage.qml" line="129"/>
         <source>Swedish</source>
         <translation>svéd</translation>
     </message>
@@ -104,57 +109,57 @@
         <translation>Ukrán</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="204"/>
+        <location filename="../qml/pages/AboutPage.qml" line="205"/>
         <source>Italian</source>
         <translation>olasz</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="137"/>
+        <location filename="../qml/pages/AboutPage.qml" line="138"/>
         <source>Spanish</source>
         <translation>spanyol</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="241"/>
+        <location filename="../qml/pages/AboutPage.qml" line="246"/>
         <source>French</source>
         <translation>francia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="284"/>
+        <location filename="../qml/pages/AboutPage.qml" line="290"/>
         <source>Dutch</source>
         <translation>holland</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="227"/>
+        <location filename="../qml/pages/AboutPage.qml" line="231"/>
         <source>Greek</source>
         <translation>görög</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="291"/>
+        <location filename="../qml/pages/AboutPage.qml" line="298"/>
         <source>Czech</source>
         <translation>cseh</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="147"/>
+        <location filename="../qml/pages/AboutPage.qml" line="148"/>
         <source>Slovak</source>
         <translation>szlovák</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="220"/>
+        <location filename="../qml/pages/AboutPage.qml" line="223"/>
         <source>Hungarian</source>
         <translation>magyar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="264"/>
+        <location filename="../qml/pages/AboutPage.qml" line="270"/>
         <source>Estonian</source>
         <translation>észt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="187"/>
+        <location filename="../qml/pages/AboutPage.qml" line="188"/>
         <source>Polish</source>
         <translation>lengyel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="212"/>
+        <location filename="../qml/pages/AboutPage.qml" line="213"/>
         <source>Indonesian</source>
         <translation>indonéz</translation>
     </message>
@@ -906,31 +911,31 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="265"/>
+        <location filename="../qml/components/FileActions.qml" line="264"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>fájl tömörítése</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="274"/>
+        <location filename="../qml/components/FileActions.qml" line="273"/>
         <source>edit link target</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="279"/>
+        <location filename="../qml/components/FileActions.qml" line="278"/>
         <source>Apply</source>
         <translation type="unfinished">Alkalmaz</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="299"/>
+        <location filename="../qml/components/FileActions.qml" line="298"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>fájl szerkesztése</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="324"/>
+        <location filename="../qml/components/FileActions.qml" line="323"/>
         <source>show file properties</source>
         <translation>Fájl tulajdonságainak megjelenítése</translation>
     </message>
@@ -2816,7 +2821,7 @@ exposure program</extracomment>
         <translation>Légy óvatos, ha a File Browser-t root módban használod. A műveletek váratlanul tönkretehetik a rendszered.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
         <source>Start File Browser in Root Mode</source>
         <translation>A File Browser indítása root módban</translation>
     </message>
