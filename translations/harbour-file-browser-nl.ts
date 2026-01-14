@@ -46,12 +46,12 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="182"/>
         <source>Portuguese (Brazil)</source>
-        <translation type="unfinished"></translation>
+        <translation>Portugees (Brazilië)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="199"/>
         <source>Norwegian Bokmål</source>
-        <translation type="unfinished"></translation>
+        <translation>Noors (Bokmål)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="271"/>
@@ -61,12 +61,12 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="311"/>
         <source>Belarusian</source>
-        <translation type="unfinished"></translation>
+        <translation>Belarussisch</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="317"/>
         <source>Arabic</source>
-        <translation type="unfinished"></translation>
+        <translation>Arabisch</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="234"/>
@@ -81,7 +81,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="279"/>
         <source>Dutch (Belgium)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nederlands (België)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="298"/>
@@ -189,22 +189,22 @@
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="28"/>
         <source>Path</source>
         <comment>as in: “path of the bookmark you are currently editing”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Pad</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="29"/>
         <source>Path must not be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Pad kan niet leeg zijn</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="30"/>
         <source>Path does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Pad bestaat niet</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="31"/>
         <source>Path is not a folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Pad is geen map</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="96"/>
@@ -215,7 +215,7 @@
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="97"/>
         <source>Edit bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Bladwijzers bewerken</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="232"/>
@@ -341,17 +341,17 @@
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="75"/>
         <source>%n item(s) to be copied</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n item om te kopiëren</numerusform>
+            <numerusform>%n items om te kopiëren</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
         <source>%n item(s) to be moved</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n item om te verplaatsen</numerusform>
+            <numerusform>%n items om te verplaatsen</numerusform>
         </translation>
     </message>
     <message>
@@ -367,9 +367,9 @@
     <message numerus="yes">
         <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
         <source>%n item(s) to be linked</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n item om te koppelen</numerusform>
+            <numerusform>%n items om te koppelen</numerusform>
         </translation>
     </message>
     <message>
@@ -778,7 +778,7 @@
     <message>
         <location filename="../src/engine.cpp" line="379"/>
         <source>Cannot create file “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan bestand &quot;%1&quot; niet creeëren in &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="415"/>
@@ -793,12 +793,12 @@
     <message>
         <location filename="../src/engine.cpp" line="441"/>
         <source>No permissions to change contents of “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen toestemming om de inhoud van &quot;%1&quot; te veranderen</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="449"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Kon de oude link &quot;%1&quot; naar &quot;%2&quot; niet verwijderen</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="455"/>
@@ -1022,7 +1022,7 @@
     <message>
         <location filename="../src/filemodel.cpp" line="118"/>
         <source>file</source>
-        <translation type="unfinished"></translation>
+        <translation>bestand</translation>
     </message>
     <message>
         <location filename="../src/filemodel.cpp" line="130"/>
@@ -1057,7 +1057,7 @@
     <message>
         <location filename="../qml/pages/FileOperationsPage.qml" line="60"/>
         <source>Tasks</source>
-        <translation type="unfinished"></translation>
+        <translation>Taken</translation>
     </message>
     <message>
         <location filename="../qml/pages/FileOperationsPage.qml" line="81"/>
