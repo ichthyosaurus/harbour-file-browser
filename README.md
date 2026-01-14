@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2018-2025 Mirian Margiani
+SPDX-FileCopyrightText: 2018-2026 Mirian Margiani
 SPDX-FileCopyrightText: 2013-2016 Kari Pihkala
 SPDX-FileCopyrightText: 2013 Michael Faro-Tusino
 SPDX-License-Identifier: GFDL-1.3-or-later
@@ -190,7 +190,7 @@ AI-generated contributions.
 
 ## License
 
-> Copyright (C) 2019-2025  Mirian Margiani
+> Copyright (C) 2019-2026  Mirian Margiani
 >
 > Copyright (C) 2013-2019  karip
 
