@@ -110,6 +110,7 @@ A.AboutPageBase {
                 A.ContributionGroup {
                     title: qsTr("Turkish")
                     entries: [
+                        "Burak Hüseyin Ekseli",
                         "E-Akcaer",
                         "Oğuz Ersen",
                         "TCr3",
@@ -167,6 +168,7 @@ A.AboutPageBase {
                         "RoundedRectangle",
                         "Victor K",
                         "Yurt Page",
+                        "gfbdrgn",
                         "sandworm88"
                     ]
                 },
@@ -177,10 +179,9 @@ A.AboutPageBase {
                     ]
                 },
                 A.ContributionGroup {
-                    title: qsTr("Portuguese (Brazil)")
+                    title: qsTr("Portuguese")
                     entries: [
-                        "John Peter Sa",
-                        "Thiago Carmona"
+                        "ssantos"
                     ]
                 },
                 A.ContributionGroup {
@@ -197,28 +198,31 @@ A.AboutPageBase {
                     title: qsTr("Norwegian Bokmål")
                     entries: [
                         "Allan Nordhøy",
-                        "Mirian Margiani"
+                        "Frank Paul Silye"
                     ]
                 },
                 A.ContributionGroup {
                     title: qsTr("Italian")
                     entries: [
+                        "Mauro Scomparin",
                         "Tichy",
-                        "luca rastelli",
-                        "Mauro Scomparin"
+                        "luca rastelli"
                     ]
                 },
                 A.ContributionGroup {
                     title: qsTr("Indonesian")
                     entries: [
+                        "Arif Budiman",
                         "Jacque Fresco",
                         "Reza Almanda",
+                        "itsfihanni",
                         "liimee"
                     ]
                 },
                 A.ContributionGroup {
                     title: qsTr("Hungarian")
                     entries: [
+                        "Gergely Turi",
                         "Sz. G.",
                         "f3rr31"
                     ]
@@ -233,6 +237,7 @@ A.AboutPageBase {
                     title: qsTr("German")
                     entries: [
                         "Mirian Margiani",
+                        "Phil Jope",
                         "jklingen",
                         "karip"
                     ]
@@ -240,6 +245,7 @@ A.AboutPageBase {
                 A.ContributionGroup {
                     title: qsTr("French")
                     entries: [
+                        "David D.",
                         "J. Lavoie",
                         "Jerome M",
                         "K. Herbert",
@@ -283,6 +289,7 @@ A.AboutPageBase {
                 A.ContributionGroup {
                     title: qsTr("Dutch")
                     entries: [
+                        "Anna Wolf",
                         "Nathan Follens",
                         "Pieter Bikkel"
                     ]
@@ -290,7 +297,9 @@ A.AboutPageBase {
                 A.ContributionGroup {
                     title: qsTr("Czech")
                     entries: [
-                        "Malakay X"
+                        "Jiří Vírava",
+                        "Malakay X",
+                        "Michal Čihař"
                     ]
                 },
                 A.ContributionGroup {
@@ -304,6 +313,14 @@ A.AboutPageBase {
                         "yangyangdaji",
                         "复予",
                         "玉堂白鹤"
+                    ]
+                },
+                A.ContributionGroup {
+                    title: qsTr("Brazilian Portuguese")
+                    entries: [
+                        "John Peter Sa",
+                        "Mateus Liberale Gomes",
+                        "Thiago Carmona"
                     ]
                 },
                 A.ContributionGroup {
