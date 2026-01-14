@@ -1,3 +1,7 @@
+// Copyright (c) 2016 Pierre-Yves Siret
+//
+// SPDX-License-Identifier: MIT
+
 #ifndef ALLOFFILTER_H
 #define ALLOFFILTER_H
 

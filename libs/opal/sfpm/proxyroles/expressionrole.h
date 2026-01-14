@@ -1,3 +1,7 @@
+// Copyright (c) 2016 Pierre-Yves Siret
+//
+// SPDX-License-Identifier: MIT
+
 #ifndef EXPRESSIONROLE_H
 #define EXPRESSIONROLE_H
 

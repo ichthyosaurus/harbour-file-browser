@@ -7,6 +7,7 @@ import Sailfish.Silica 1.0
 import"../LinkHandler"as L
 import"private/functions.js"as Func
 import"private"
+import"."
 Page{id:page
 property string appName:""
 property string appIcon:""
@@ -23,7 +24,7 @@ property string homepageUrl:""
 property list<ChangelogItem>changelogItems
 property url changelogList
 property list<License>licenses
-property bool allowDownloadingLicenses:false
+property var allowDownloadingLicenses:NetworkMode.auto
 property list<Attribution>attributions
 property bool autoAddOpalAttributions:true
 readonly property DonationsGroup donations:DonationsGroup{}

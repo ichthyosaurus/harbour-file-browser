@@ -13,7 +13,7 @@
 #   on the About page of your app. Use the information below.
 
 module: Opal.DragDrop (opal-dragdrop)
-version: 1.0.5 (git:7251916)
+version: 1.0.6 (git:7de62b3)
 description: This module enables ordering lists by drag-and-drop with just a few lines of code.
 maintainers: Mirian Margiani
 attribution: 2024-2025 Mirian Margiani

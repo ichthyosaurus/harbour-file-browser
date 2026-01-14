@@ -2,7 +2,7 @@
 # It is not necessary to ship this in your app's final RPM package.
 # SPDX-License-Identifier: GPL-3.0-or-later
 # SPDX-FileCopyrightText: 2016 Pierre-Yves Siret
-# SPDX-FileCopyrightText: 2025 Mirian Margiani
+# SPDX-FileCopyrightText: 2025-2026 Mirian Margiani
 
 # Attribution using Opal.About:
 #   Opal attributions are automatically added to the About page.
@@ -14,9 +14,9 @@
 #   on the About page of your app. Use the information below.
 
 module: Opal.SortFilterProxyModel (opal-sfpm)
-version: 1.0.2 (git:ef95587)
+version: 1.0.3 (git:9bcefe8)
 description: This module provides an up-to-date and patched version of SortFilterProxyModel for QML (old Qt 5).
 maintainers: Mirian Margiani
-attribution: 2016 Pierre-Yves Siret:2025 Mirian Margiani
+attribution: 2016 Pierre-Yves Siret:2025-2026 Mirian Margiani
 license: GPL-3.0-or-later
 sources: https://github.com/Pretty-SFOS/opal-sfpm

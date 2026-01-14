@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Mirian Margiani
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 !contains( CONFIG, c\+\+1[14z] ): warning("SortFilterProxyModel needs at least c++11, add CONFIG += c++11 to your .pro")
 
 equals(QT_MAJOR_VERSION, 5):lessThan(QT_MINOR_VERSION, 9) {

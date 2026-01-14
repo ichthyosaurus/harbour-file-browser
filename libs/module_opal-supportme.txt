@@ -1,7 +1,7 @@
 # Store this file to keep track of packaged module versions.
 # It is not necessary to ship this in your app's final RPM package.
 # SPDX-License-Identifier: GPL-3.0-or-later
-# SPDX-FileCopyrightText: 2024-2025 Mirian Margiani
+# SPDX-FileCopyrightText: 2024-2026 Mirian Margiani
 
 # Attribution using Opal.About:
 #   Opal attributions are automatically added to the About page.
@@ -13,9 +13,9 @@
 #   on the About page of your app. Use the information below.
 
 module: Opal.SupportMe (opal-supportme)
-version: 2.1.0 (git:facaba8)
+version: 2.1.2 (git:fb96c06)
 description: A dialog asking for contributions that is shown when a user has used your app for some time.
 maintainers: Mirian Margiani
-attribution: 2024-2025 Mirian Margiani
+attribution: 2024-2026 Mirian Margiani
 license: GPL-3.0-or-later
 sources: https://github.com/Pretty-SFOS/opal-supportme

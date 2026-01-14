@@ -1,7 +1,7 @@
 # Store this file to keep track of packaged module versions.
 # It is not necessary to ship this in your app's final RPM package.
 # SPDX-License-Identifier: GPL-3.0-or-later
-# SPDX-FileCopyrightText: 2024-2025 Mirian Margiani
+# SPDX-FileCopyrightText: 2024-2026 Mirian Margiani
 # SPDX-FileCopyrightText: 2013-2020 Leszek Lesner
 
 # Attribution using Opal.About:
@@ -14,9 +14,9 @@
 #   on the About page of your app. Use the information below.
 
 module: Opal.MediaPlayer (opal-mediaplayer)
-version: 1.0.9 (git:27357bf)
+version: 1.0.11 (git:641254a)
 description: This module provides a media player page with support for subtitles.
 maintainers: Mirian Margiani
-attribution: 2024-2025 Mirian Margiani:2013-2020 Leszek Lesner
+attribution: 2024-2026 Mirian Margiani:2013-2020 Leszek Lesner
 license: GPL-3.0-or-later
 sources: https://github.com/Pretty-SFOS/opal-mediaplayer

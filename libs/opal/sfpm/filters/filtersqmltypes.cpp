@@ -1,3 +1,7 @@
+// Copyright (c) 2016 Pierre-Yves Siret
+//
+// SPDX-License-Identifier: MIT
+
 #include "filter.h"
 #include "valuefilter.h"
 #include "indexfilter.h"

@@ -10,23 +10,34 @@ property Attribution mainAttribution
 property list<Attribution>attributions
 property bool enableSourceHint:true
 property alias pageDescription:pageHeader.description
-property bool allowDownloadingLicenses:false
+property int allowDownloadingLicenses:NetworkMode.auto
 property list<License>licenses
 property string appName
 property string mainSources
 property string mainHomepage
-property bool includeOpal:false
-function _downloadLicenses(){for(var lic in mainAttribution.licenses){mainAttribution.licenses[lic].__online=true
-}for(var attr in attributions){for(var lic in attributions[attr].licenses){attributions[attr].licenses[lic].__online=true
+property bool includeOpal:true
+function _downloadLicenses(){for(var i=0;i<mainAttribution.licenses.length;++i){mainAttribution.licenses[i].__online=true
+}for(var k=0;k<attributions.length;++k){for(var j=0;j<attributions[j].licenses.length;++j){attributions[k].licenses[j].__online=true
+}}for(var m=0;m<opalAttributions.loadedAttributions.length;++m){for(var l=0;l<opalAttributions.loadedAttributions[m].licenses.length;++l){opalAttributions.loadedAttributions[m].licenses[l].__online=true
 }}}allowedOrientations:Orientation.All
-OpalAttributionsLoader{id:opalAttributions
+Loader{id:netCheck
+active:allowDownloadingLicenses==NetworkMode.auto||allowDownloadingLicenses==NetworkMode.enabled
+asynchronous:true
+source:Qt.resolvedUrl("ConnectivityCheck.qml")
+property bool _networkIsConnected:item?item.networkIsConnected:false
+property bool _networkIsWifi:item?item.networkIsWifi:false
+}OpalAttributionsLoader{id:opalAttributions
 enabled:includeOpal
-}SilicaFlickable{anchors.fill:parent
+}SilicaFlickable{id:flick
+anchors.fill:parent
 contentHeight:column.height+Theme.horizontalPageMargin
-VerticalScrollDecorator{}PullDownMenu{visible:allowDownloadingLicenses
+VerticalScrollDecorator{flickable:flick
+}PullDownMenu{visible:allowDownloadingLicenses==NetworkMode.enabled||(allowDownloadingLicenses==NetworkMode.auto&&netCheck._networkIsConnected)
 enabled:visible
 MenuItem{text:qsTranslate("Opal.About","Download license texts")
 onClicked:_downloadLicenses()
+}MenuLabel{visible:netCheck._networkIsConnected&&!netCheck._networkIsWifi
+text:qsTranslate("Opal.About","You are using a mobile data connection.")
 }}Column{id:column
 width:parent.width
 spacing:Theme.paddingMedium

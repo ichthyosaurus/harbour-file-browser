@@ -1,3 +1,7 @@
+// Copyright (c) 2016 Pierre-Yves Siret
+//
+// SPDX-License-Identifier: MIT
+
 #include "switchrole.h"
 #include "qqmlsortfilterproxymodel.h"
 #include "filters/filter.h"

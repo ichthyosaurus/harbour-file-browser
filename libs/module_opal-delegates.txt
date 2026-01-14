@@ -14,7 +14,7 @@
 #   on the About page of your app. Use the information below.
 
 module: Opal.Delegates (opal-delegates)
-version: 3.5.2 (git:80c7344)
+version: 3.5.3 (git:94f7342)
 description: This module provides list items for views, so you can concentrate on handling the data, not formatting the presentation.
 maintainers: Mirian Margiani
 attribution: 2024-2025 Mirian Margiani:2023 Peter G. (nephros)

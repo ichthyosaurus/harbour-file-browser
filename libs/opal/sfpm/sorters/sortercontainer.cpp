@@ -1,3 +1,7 @@
+// Copyright (c) 2016 Pierre-Yves Siret
+//
+// SPDX-License-Identifier: MIT
+
 #include "sortercontainer.h"
 #include "sorter.h"
 #include <QtQml>

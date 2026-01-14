@@ -13,7 +13,7 @@
 #   on the About page of your app. Use the information below.
 
 module: Opal.InfoCombo (opal-infocombo)
-version: 2.2.2 (git:4ef24eb)
+version: 2.2.3 (git:2451af7)
 description: This module provides a combo box that can show details for each selectable option.
 maintainers: Mirian Margiani
 attribution: 2023-2025 Mirian Margiani

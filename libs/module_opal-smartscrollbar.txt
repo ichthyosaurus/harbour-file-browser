@@ -13,7 +13,7 @@
 #   on the About page of your app. Use the information below.
 
 module: Opal.SmartScrollbar (opal-smartscrollbar)
-version: 1.0.1 (git:fe0e0cc)
+version: 1.0.2 (git:b0fe64f)
 description: This module provides a Harbour-compatible smart scroll bar for long lists.
 maintainers: Mirian Margiani
 attribution: 2024-2025 Mirian Margiani

@@ -13,5 +13,6 @@ License 1.0 License.qml
 ChangelogItem 1.0 ChangelogItem.qml
 ChangelogList 1.0 ChangelogList.qml
 ChangelogNews 1.0 ChangelogNews.qml
+singleton NetworkMode 1.0 NetworkMode.qml
 # generated files:
 OpalAboutAttribution 1.0 OpalAboutAttribution.qml
