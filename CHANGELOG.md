@@ -10,6 +10,15 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
  * Nothing so far
 
+## Version 3.8.1 (2026-01-14)
+
+- Added translations: Bengali, Chinese (Taiwan), Hindi, Malayalam, Persian, Portuguese, Thai, Vietnamese
+- Updated translations: Czech, Dutch, Estonian, Finnish, French, German, Hungarian, Indonesian, Norwegian Bokmål, Portuguese, Portuguese (Brazil), Russian, Slovak, Spanish, Swedish, Turkish, Ukrainian
+- Fixed date formats being incorrectly translated; dates should be formatted more naturally now
+- Fixed dconf issues after running File Browser in Root Mode (install the Root Mode update separately)
+- Updated Opal modules, fixing some visual glitches and adding translations
+- Various UI fixes here and there
+
 ## Version 3.8.0 (2025-06-29)
 
 - Updated translations: Estonian, Slovak, Swedish, Ukrainian

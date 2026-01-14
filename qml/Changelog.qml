@@ -9,6 +9,18 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: "3.8.1"
+        date: "2026-01-14"
+        paragraphs: [
+            "- Added translations: Bengali, Chinese (Taiwan), Hindi, Malayalam, Persian, Portuguese, Thai, Vietnamese<br>" +
+            "- Updated translations: Czech, Dutch, Estonian, Finnish, French, German, Hungarian, Indonesian, Norwegian Bokmål, Portuguese, Portuguese (Brazil), Russian, Slovak, Spanish, Swedish, Turkish, Ukrainian<br>" +
+            "- Fixed date formats being incorrectly translated; dates should be formatted more naturally now<br>" +
+            "- Fixed dconf issues after running File Browser in Root Mode (install the Root Mode update separately)<br>" +
+            "- Updated Opal modules, fixing some visual glitches and adding translations<br>" +
+            "- Various UI fixes here and there"
+        ]
+    }
+    ChangelogItem {
         version: "3.8.0"
         date: "2025-06-29"
         paragraphs: [
