@@ -5,7 +5,7 @@
 %define appname harbour-file-browser-root
 Name: %{appname}
 Summary: File Browser with root privileges
-Version: 1.3.0
+Version: 1.4.0
 Release: 1
 Group: System/Tools
 License: GPL-3.0-or-later
@@ -69,6 +69,10 @@ cp %appname.desktop %{buildroot}/usr/share/applications/
 cp start-root start-root-helper.c %{buildroot}/usr/share/%appname/
 
 %changelog
+
+* Wed Jan 14 2026 Mirian Margiani <mixosaurus+ichthyo@pm.me> 1.4.0-1
+- Fixed dconf issues after running File Browser in Root Mode
+- Rebuilt with latest SDK for SFOS 5.x
 
 * Sat Jan 06 2024 Mirian Margiani <mixosaurus+ichthyo@pm.me> 1.3.0-1
 - Fixed root mode for SFOS 4.x
