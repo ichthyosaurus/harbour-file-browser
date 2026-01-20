@@ -56,7 +56,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="319"/>
         <source>Brazilian Portuguese</source>
-        <translation type="unfinished"></translation>
+        <translation>Brasiliansk portugisiska</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="327"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="182"/>
         <source>Portuguese</source>
-        <translation type="unfinished"></translation>
+        <translation>Portugisiska</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="260"/>
