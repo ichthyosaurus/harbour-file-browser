@@ -56,7 +56,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="319"/>
         <source>Brazilian Portuguese</source>
-        <translation type="unfinished"></translation>
+        <translation>Бразильский(Brazilian) Португальский(Portuguese)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="327"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="182"/>
         <source>Portuguese</source>
-        <translation type="unfinished"></translation>
+        <translation>Португальский(Portuguese)</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="260"/>
@@ -835,12 +835,12 @@
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="87"/>
         <source>Swipe left to preview.</source>
-        <translation type="unfinished"></translation>
+        <translation>Смахните влево для предпросмотра.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="87"/>
         <source>You are using a mobile data connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы используете мобильное интернет-соединение.</translation>
     </message>
 </context>
 <context>
@@ -2279,7 +2279,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="21"/>
         <source>Translate on %1</source>
-        <translation>Перевести на Веблейт</translation>
+        <translation>Перевести на %1</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
@@ -2426,7 +2426,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="40"/>
         <source>You are using a mobile data connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы используете мобильное интернет-соединение.</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
@@ -2491,12 +2491,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
         <source>Copy link</source>
-        <translation type="unfinished"></translation>
+        <translation>Скопировать ссылку</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="75"/>
         <source>Copy text</source>
-        <translation type="unfinished"></translation>
+        <translation>Скопировать текст</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="79"/>
@@ -2526,12 +2526,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="27"/>
         <source>No preview available.</source>
-        <translation type="unfinished"></translation>
+        <translation>Предварительный просмотр недоступен.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="28"/>
         <source>The page is taking too long to load.</source>
-        <translation type="unfinished"></translation>
+        <translation>Страница загружается слишком долго.</translation>
     </message>
 </context>
 <context>
