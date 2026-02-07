@@ -62,12 +62,6 @@ A.AboutPageBase {
             sources: "https://www.sentex.net/~mwandel/jhead/"
         },
         A.Attribution {
-            name: "SortFilterProxyModel"
-            entries: ["2016 Pierre-Yves Siret"]
-            licenses: A.License { spdxId: "MIT" }
-            sources: "https://github.com/oKcerG/SortFilterProxyModel"
-        },
-        A.Attribution {
             name: "OSMScout Migration"
             entries: ["2021 Lukáš Karas"]
             licenses: A.License { spdxId: "GPL-2.0-or-later" }
