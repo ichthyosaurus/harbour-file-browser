@@ -24,11 +24,6 @@ This repository contains the development of version 2.0.0 and upwards of File Br
 See the [release notes](https://github.com/ichthyosaurus/harbour-file-browser/blob/main/CHANGELOG.md)
 for further details.
 
-## Warning
-
-**Use at your own risk**. You can use this app to corrupt files and break
-Sailfish on your device. The author of File Browser does not
-take any responsibility if that happens. So, be careful.
 
 ## Features
 
@@ -49,6 +44,9 @@ take any responsibility if that happens. So, be careful.
 - Save custom quick shortcuts for navigating and moving files
 
 ... and much more.
+
+**Remember:** this is a power tool, so be careful.
+
 
 
 ## Limitations in Jolla's Harbour store

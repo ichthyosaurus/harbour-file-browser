@@ -10,12 +10,7 @@ ifdef(${__X_readme}, ${This repository contains the development of version 2.0.0
 See the [release notes](__full_repo_url/blob/main/CHANGELOG.md)
 for further details.
 
-## Warning
 })dnl
-
-**Use at your own risk**. You can use this app to corrupt files and break
-Sailfish on your device. The author ifdef(${__X_readme}, ${of __name}) does not
-take any responsibility if that happens. So, be careful.
 
 ## Features
 
@@ -36,6 +31,9 @@ take any responsibility if that happens. So, be careful.
 - Save custom quick shortcuts for navigating and moving files
 
 ... and much more.
+
+**Remember:** this is a power tool, so be careful.
+
 
 ifdef(${__X_harbour}, ${
 ## Limitations in this version
