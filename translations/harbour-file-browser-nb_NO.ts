@@ -9,162 +9,162 @@
         <translation>Fullstendig filbehandler for Sailfish OS.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="80"/>
+        <location filename="../qml/pages/AboutPage.qml" line="74"/>
         <source>Development</source>
         <translation>Utvikling</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="83"/>
+        <location filename="../qml/pages/AboutPage.qml" line="77"/>
         <source>Programming</source>
         <translation>Programmering</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="90"/>
+        <location filename="../qml/pages/AboutPage.qml" line="84"/>
         <source>Icon Design</source>
         <translation>Ikondesign</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="97"/>
+        <location filename="../qml/pages/AboutPage.qml" line="91"/>
         <source>Translations</source>
         <translation>Oversettelser</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="123"/>
+        <location filename="../qml/pages/AboutPage.qml" line="117"/>
         <source>Tamil</source>
         <translation>Tamilsk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="155"/>
+        <location filename="../qml/pages/AboutPage.qml" line="149"/>
         <source>Serbian</source>
         <translation>Serbisk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="176"/>
+        <location filename="../qml/pages/AboutPage.qml" line="170"/>
         <source>Romanian</source>
         <translation>Rumensk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="198"/>
+        <location filename="../qml/pages/AboutPage.qml" line="192"/>
         <source>Norwegian Bokmål</source>
         <translation>Norsk bokmål</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="276"/>
+        <location filename="../qml/pages/AboutPage.qml" line="270"/>
         <source>English</source>
         <translation>Engelsk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="319"/>
+        <location filename="../qml/pages/AboutPage.qml" line="313"/>
         <source>Brazilian Portuguese</source>
         <translation>Portugisisk (Brasil)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="327"/>
+        <location filename="../qml/pages/AboutPage.qml" line="321"/>
         <source>Belarusian</source>
         <translation>Hviterussland</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="333"/>
+        <location filename="../qml/pages/AboutPage.qml" line="327"/>
         <source>Arabic</source>
         <translation>Arabisk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="237"/>
+        <location filename="../qml/pages/AboutPage.qml" line="231"/>
         <source>German</source>
         <translation>Tysk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="182"/>
+        <location filename="../qml/pages/AboutPage.qml" line="176"/>
         <source>Portuguese</source>
         <translation>Portugisisk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="260"/>
+        <location filename="../qml/pages/AboutPage.qml" line="254"/>
         <source>Finnish</source>
         <translation>Finsk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="284"/>
+        <location filename="../qml/pages/AboutPage.qml" line="278"/>
         <source>Dutch (Belgium)</source>
         <translation>Flamsk (Belgia)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="306"/>
+        <location filename="../qml/pages/AboutPage.qml" line="300"/>
         <source>Chinese</source>
         <translation>Kinesisk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="161"/>
+        <location filename="../qml/pages/AboutPage.qml" line="155"/>
         <source>Russian</source>
         <translation>Russisk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="129"/>
+        <location filename="../qml/pages/AboutPage.qml" line="123"/>
         <source>Swedish</source>
         <translation>Svensk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="100"/>
+        <location filename="../qml/pages/AboutPage.qml" line="94"/>
         <source>Ukrainian</source>
         <translation>Ukrainsk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="205"/>
+        <location filename="../qml/pages/AboutPage.qml" line="199"/>
         <source>Italian</source>
         <translation>Italiensk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="138"/>
+        <location filename="../qml/pages/AboutPage.qml" line="132"/>
         <source>Spanish</source>
         <translation>Spansk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="246"/>
+        <location filename="../qml/pages/AboutPage.qml" line="240"/>
         <source>French</source>
         <translation>Fransk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="290"/>
+        <location filename="../qml/pages/AboutPage.qml" line="284"/>
         <source>Dutch</source>
         <translation>Hollandsk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="231"/>
+        <location filename="../qml/pages/AboutPage.qml" line="225"/>
         <source>Greek</source>
         <translation>Gresk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="298"/>
+        <location filename="../qml/pages/AboutPage.qml" line="292"/>
         <source>Czech</source>
         <translation>Tsjekkisk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="148"/>
+        <location filename="../qml/pages/AboutPage.qml" line="142"/>
         <source>Slovak</source>
         <translation>Slovakisk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="223"/>
+        <location filename="../qml/pages/AboutPage.qml" line="217"/>
         <source>Hungarian</source>
         <translation>Ungarsk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="270"/>
+        <location filename="../qml/pages/AboutPage.qml" line="264"/>
         <source>Estonian</source>
         <translation>Estisk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="188"/>
+        <location filename="../qml/pages/AboutPage.qml" line="182"/>
         <source>Polish</source>
         <translation>Polsk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="213"/>
+        <location filename="../qml/pages/AboutPage.qml" line="207"/>
         <source>Indonesian</source>
         <translation>Indonesisk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="111"/>
+        <location filename="../qml/pages/AboutPage.qml" line="105"/>
         <source>Turkish</source>
         <translation>Tyrkisk</translation>
     </message>
@@ -924,7 +924,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="264"/>
+        <location filename="../qml/components/FileActions.qml" line="271"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>pakk sammen fil</numerusform>
@@ -932,17 +932,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="273"/>
+        <location filename="../qml/components/FileActions.qml" line="280"/>
         <source>edit link target</source>
         <translation>rediger lenkemål</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="278"/>
+        <location filename="../qml/components/FileActions.qml" line="285"/>
         <source>Apply</source>
         <translation>Bruk</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="298"/>
+        <location filename="../qml/components/FileActions.qml" line="305"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>rediger fil</numerusform>
@@ -950,7 +950,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="323"/>
+        <location filename="../qml/components/FileActions.qml" line="330"/>
         <source>show file properties</source>
         <translation>vis filegenskaper</translation>
     </message>
@@ -1693,22 +1693,37 @@
         <translation>Vis et visuelt indikasjon om at navigasjonsmenyen er tilgjengelig ved å trykke på sidehodet i katalogvisningen.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="332"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="333"/>
         <source>Enable solid window background</source>
         <translation>Aktiver ensfarget vindusbakgrunn</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="334"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="335"/>
         <source>Use a solid color instead of your wallpaper as the background of this app.</source>
         <translation>Bruk en ensfarget bakgrunn i stedet for ditt bakgrunnsbilde for denne appen.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="344"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="339"/>
+        <source>Enable plain black background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="341"/>
+        <source>Use plain black instead of your wallpaper as the background of this app.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="343"/>
+        <source>This is useful for devices with OLED displays.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="352"/>
         <source>Swipe from the right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
         <translation>Sveip fra høyre for å se File Browsers kildekode, lisensinformasjon og en liste over bidragsytere.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="356"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="364"/>
         <source>Settings</source>
         <translation>Innstillinger</translation>
     </message>
@@ -2583,32 +2598,32 @@ exposure program</extracomment>
         <translation>Avspilling mislyktes på grunn av en forventet feil. Start appen på nytt og prøv igjen.</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="87"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="88"/>
         <source>Clear subtitles</source>
         <translation>Fjern undertekster</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="89"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="90"/>
         <source>Load subtitles</source>
         <translation>Last inn undertekster</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="246"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="247"/>
         <source>Zoomed to fit screen</source>
         <translation>Tilpasset skjermen</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="246"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="247"/>
         <source>Original</source>
         <translation>Original</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="250"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="251"/>
         <source>Play on repeat</source>
         <translation>Spill gjentatte ganger</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="250"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="251"/>
         <source>Play once</source>
         <translation>Spill en gang</translation>
     </message>
@@ -2843,7 +2858,7 @@ exposure program</extracomment>
         <translation>Root‑modus gir full systemtilgang. Feil handlinger kan føre til tap av data eller gjøre systemet ubrukelig. Fortsett bare hvis du forstår risikoen.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Start File Browser i rotmodus</translation>
     </message>
@@ -3623,7 +3638,7 @@ exposure program</extracomment>
 <context>
     <name>ViewVideoPage</name>
     <message>
-        <location filename="../qml/pages/ViewVideoPage.qml" line="19"/>
+        <location filename="../qml/pages/ViewVideoPage.qml" line="21"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
         <translation>File Browser</translation>

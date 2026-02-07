@@ -9,162 +9,162 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="80"/>
+        <location filename="../qml/pages/AboutPage.qml" line="74"/>
         <source>Development</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="83"/>
+        <location filename="../qml/pages/AboutPage.qml" line="77"/>
         <source>Programming</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="90"/>
+        <location filename="../qml/pages/AboutPage.qml" line="84"/>
         <source>Icon Design</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="97"/>
+        <location filename="../qml/pages/AboutPage.qml" line="91"/>
         <source>Translations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="123"/>
+        <location filename="../qml/pages/AboutPage.qml" line="117"/>
         <source>Tamil</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="155"/>
+        <location filename="../qml/pages/AboutPage.qml" line="149"/>
         <source>Serbian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="176"/>
+        <location filename="../qml/pages/AboutPage.qml" line="170"/>
         <source>Romanian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="198"/>
+        <location filename="../qml/pages/AboutPage.qml" line="192"/>
         <source>Norwegian Bokmål</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="276"/>
+        <location filename="../qml/pages/AboutPage.qml" line="270"/>
         <source>English</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="319"/>
+        <location filename="../qml/pages/AboutPage.qml" line="313"/>
         <source>Brazilian Portuguese</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="327"/>
+        <location filename="../qml/pages/AboutPage.qml" line="321"/>
         <source>Belarusian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="333"/>
+        <location filename="../qml/pages/AboutPage.qml" line="327"/>
         <source>Arabic</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="237"/>
+        <location filename="../qml/pages/AboutPage.qml" line="231"/>
         <source>German</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="182"/>
+        <location filename="../qml/pages/AboutPage.qml" line="176"/>
         <source>Portuguese</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="260"/>
+        <location filename="../qml/pages/AboutPage.qml" line="254"/>
         <source>Finnish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="284"/>
+        <location filename="../qml/pages/AboutPage.qml" line="278"/>
         <source>Dutch (Belgium)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="306"/>
+        <location filename="../qml/pages/AboutPage.qml" line="300"/>
         <source>Chinese</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="161"/>
+        <location filename="../qml/pages/AboutPage.qml" line="155"/>
         <source>Russian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="129"/>
+        <location filename="../qml/pages/AboutPage.qml" line="123"/>
         <source>Swedish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="100"/>
+        <location filename="../qml/pages/AboutPage.qml" line="94"/>
         <source>Ukrainian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="205"/>
+        <location filename="../qml/pages/AboutPage.qml" line="199"/>
         <source>Italian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="138"/>
+        <location filename="../qml/pages/AboutPage.qml" line="132"/>
         <source>Spanish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="246"/>
+        <location filename="../qml/pages/AboutPage.qml" line="240"/>
         <source>French</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="290"/>
+        <location filename="../qml/pages/AboutPage.qml" line="284"/>
         <source>Dutch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="231"/>
+        <location filename="../qml/pages/AboutPage.qml" line="225"/>
         <source>Greek</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="298"/>
+        <location filename="../qml/pages/AboutPage.qml" line="292"/>
         <source>Czech</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="148"/>
+        <location filename="../qml/pages/AboutPage.qml" line="142"/>
         <source>Slovak</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="223"/>
+        <location filename="../qml/pages/AboutPage.qml" line="217"/>
         <source>Hungarian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="270"/>
+        <location filename="../qml/pages/AboutPage.qml" line="264"/>
         <source>Estonian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="188"/>
+        <location filename="../qml/pages/AboutPage.qml" line="182"/>
         <source>Polish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="213"/>
+        <location filename="../qml/pages/AboutPage.qml" line="207"/>
         <source>Indonesian</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="111"/>
+        <location filename="../qml/pages/AboutPage.qml" line="105"/>
         <source>Turkish</source>
         <translation type="unfinished"></translation>
     </message>
@@ -911,31 +911,31 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="264"/>
+        <location filename="../qml/components/FileActions.qml" line="271"/>
         <source>compress file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="273"/>
+        <location filename="../qml/components/FileActions.qml" line="280"/>
         <source>edit link target</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="278"/>
+        <location filename="../qml/components/FileActions.qml" line="285"/>
         <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="298"/>
+        <location filename="../qml/components/FileActions.qml" line="305"/>
         <source>edit file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="323"/>
+        <location filename="../qml/components/FileActions.qml" line="330"/>
         <source>show file properties</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1676,22 +1676,37 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="332"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="333"/>
         <source>Enable solid window background</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="334"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="335"/>
         <source>Use a solid color instead of your wallpaper as the background of this app.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="344"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="339"/>
+        <source>Enable plain black background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="341"/>
+        <source>Use plain black instead of your wallpaper as the background of this app.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="343"/>
+        <source>This is useful for devices with OLED displays.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="352"/>
         <source>Swipe from the right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="356"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="364"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2563,32 +2578,32 @@ exposure program</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="87"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="88"/>
         <source>Clear subtitles</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="89"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="90"/>
         <source>Load subtitles</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="246"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="247"/>
         <source>Zoomed to fit screen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="246"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="247"/>
         <source>Original</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="250"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="251"/>
         <source>Play on repeat</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="250"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="251"/>
         <source>Play once</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2819,7 +2834,7 @@ exposure program</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3585,7 +3600,7 @@ exposure program</extracomment>
 <context>
     <name>ViewVideoPage</name>
     <message>
-        <location filename="../qml/pages/ViewVideoPage.qml" line="19"/>
+        <location filename="../qml/pages/ViewVideoPage.qml" line="21"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
         <translation type="unfinished"></translation>

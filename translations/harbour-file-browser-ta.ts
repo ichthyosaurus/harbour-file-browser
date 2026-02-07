@@ -9,162 +9,162 @@
         <translation>SAILFISH OS க்கான முழுமையான கோப்பு மேலாளர்.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="80"/>
+        <location filename="../qml/pages/AboutPage.qml" line="74"/>
         <source>Development</source>
         <translation>வளர்ச்சி</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="83"/>
+        <location filename="../qml/pages/AboutPage.qml" line="77"/>
         <source>Programming</source>
         <translation>நிரலாக்க</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="90"/>
+        <location filename="../qml/pages/AboutPage.qml" line="84"/>
         <source>Icon Design</source>
         <translation>படவுரு வடிவமைப்பு</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="97"/>
+        <location filename="../qml/pages/AboutPage.qml" line="91"/>
         <source>Translations</source>
         <translation>மொழிபெயர்ப்புகள்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="123"/>
+        <location filename="../qml/pages/AboutPage.qml" line="117"/>
         <source>Tamil</source>
         <translation>தமிழ்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="155"/>
+        <location filename="../qml/pages/AboutPage.qml" line="149"/>
         <source>Serbian</source>
         <translation>செர்பிய</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="176"/>
+        <location filename="../qml/pages/AboutPage.qml" line="170"/>
         <source>Romanian</source>
         <translation>ருமேனிய</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="198"/>
+        <location filename="../qml/pages/AboutPage.qml" line="192"/>
         <source>Norwegian Bokmål</source>
         <translation>நார்வேசியன் பொக்மால்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="276"/>
+        <location filename="../qml/pages/AboutPage.qml" line="270"/>
         <source>English</source>
         <translation>ஆங்கிலம்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="319"/>
+        <location filename="../qml/pages/AboutPage.qml" line="313"/>
         <source>Brazilian Portuguese</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="327"/>
+        <location filename="../qml/pages/AboutPage.qml" line="321"/>
         <source>Belarusian</source>
         <translation>பெலாருசியன்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="333"/>
+        <location filename="../qml/pages/AboutPage.qml" line="327"/>
         <source>Arabic</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="237"/>
+        <location filename="../qml/pages/AboutPage.qml" line="231"/>
         <source>German</source>
         <translation>செர்மன்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="182"/>
+        <location filename="../qml/pages/AboutPage.qml" line="176"/>
         <source>Portuguese</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="260"/>
+        <location filename="../qml/pages/AboutPage.qml" line="254"/>
         <source>Finnish</source>
         <translation>பின்னிச்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="284"/>
+        <location filename="../qml/pages/AboutPage.qml" line="278"/>
         <source>Dutch (Belgium)</source>
         <translation>டச்சு (பெல்சியம்)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="306"/>
+        <location filename="../qml/pages/AboutPage.qml" line="300"/>
         <source>Chinese</source>
         <translation>சீன</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="161"/>
+        <location filename="../qml/pages/AboutPage.qml" line="155"/>
         <source>Russian</source>
         <translation>ரச்ய</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="129"/>
+        <location filename="../qml/pages/AboutPage.qml" line="123"/>
         <source>Swedish</source>
         <translation>ச்வீடிச்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="100"/>
+        <location filename="../qml/pages/AboutPage.qml" line="94"/>
         <source>Ukrainian</source>
         <translation>உக்ரேனிய</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="205"/>
+        <location filename="../qml/pages/AboutPage.qml" line="199"/>
         <source>Italian</source>
         <translation>இத்தாலிய</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="138"/>
+        <location filename="../qml/pages/AboutPage.qml" line="132"/>
         <source>Spanish</source>
         <translation>ச்பானிச்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="246"/>
+        <location filename="../qml/pages/AboutPage.qml" line="240"/>
         <source>French</source>
         <translation>பிரஞ்சு</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="290"/>
+        <location filename="../qml/pages/AboutPage.qml" line="284"/>
         <source>Dutch</source>
         <translation>டச்சு</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="231"/>
+        <location filename="../qml/pages/AboutPage.qml" line="225"/>
         <source>Greek</source>
         <translation>கிரேக்கம்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="298"/>
+        <location filename="../qml/pages/AboutPage.qml" line="292"/>
         <source>Czech</source>
         <translation>செக்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="148"/>
+        <location filename="../qml/pages/AboutPage.qml" line="142"/>
         <source>Slovak</source>
         <translation>ச்லோவாக்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="223"/>
+        <location filename="../qml/pages/AboutPage.qml" line="217"/>
         <source>Hungarian</source>
         <translation>அங்கேரியன்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="270"/>
+        <location filename="../qml/pages/AboutPage.qml" line="264"/>
         <source>Estonian</source>
         <translation>எச்டோனிய</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="188"/>
+        <location filename="../qml/pages/AboutPage.qml" line="182"/>
         <source>Polish</source>
         <translation>போலீச்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="213"/>
+        <location filename="../qml/pages/AboutPage.qml" line="207"/>
         <source>Indonesian</source>
         <translation>இந்தோனேசிய</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="111"/>
+        <location filename="../qml/pages/AboutPage.qml" line="105"/>
         <source>Turkish</source>
         <translation>துருக்கிய</translation>
     </message>
@@ -924,7 +924,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="264"/>
+        <location filename="../qml/components/FileActions.qml" line="271"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>கோப்பை சுருக்கவும்</numerusform>
@@ -932,17 +932,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="273"/>
+        <location filename="../qml/components/FileActions.qml" line="280"/>
         <source>edit link target</source>
         <translation>இணைப்பு இலக்கைத் திருத்தவும்</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="278"/>
+        <location filename="../qml/components/FileActions.qml" line="285"/>
         <source>Apply</source>
         <translation>இடு</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="298"/>
+        <location filename="../qml/components/FileActions.qml" line="305"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>கோப்பைத் திருத்து</numerusform>
@@ -950,7 +950,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="323"/>
+        <location filename="../qml/components/FileActions.qml" line="330"/>
         <source>show file properties</source>
         <translation>கோப்பு பண்புகளைக் காட்டு</translation>
     </message>
@@ -1693,22 +1693,37 @@
         <translation>கோப்பகக் காட்சியின் பக்கத் தலைப்பைத் தட்டுவதன் மூலம் வழிசெலுத்தல் பட்டியல் கிடைக்கிறது என்பதற்கான காட்சி குறிப்பைக் காட்டு.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="332"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="333"/>
         <source>Enable solid window background</source>
         <translation>திட சாளர பின்னணியை இயக்கவும்</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="334"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="335"/>
         <source>Use a solid color instead of your wallpaper as the background of this app.</source>
         <translation>இந்த பயன்பாட்டின் பின்னணியாக உங்கள் வால்பேப்பருக்கு பதிலாக திட நிறத்தைப் பயன்படுத்தவும்.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="344"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="339"/>
+        <source>Enable plain black background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="341"/>
+        <source>Use plain black instead of your wallpaper as the background of this app.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="343"/>
+        <source>This is useful for devices with OLED displays.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="352"/>
         <source>Swipe from the right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
         <translation>கோப்பு உலாவியின் மூலக் குறியீடு, உரிமத் செய்தி மற்றும் பங்களிப்பாளர்களின் பட்டியலைக் காண உரிமையிலிருந்து ச்வைப் செய்யவும்.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/GlobalSettingsPage.qml" line="356"/>
+        <location filename="../qml/pages/GlobalSettingsPage.qml" line="364"/>
         <source>Settings</source>
         <translation>அமைப்புகள்</translation>
     </message>
@@ -2583,32 +2598,32 @@ exposure program</extracomment>
         <translation>எதிர்பார்க்கப்படும் பிழை காரணமாக பின்னணி தோல்வியடைந்தது. பயன்பாட்டை மறுதொடக்கம் செய்து மீண்டும் முயற்சிக்கவும்.</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="87"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="88"/>
         <source>Clear subtitles</source>
         <translation>தெளிவான வசன வரிகள்</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="89"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="90"/>
         <source>Load subtitles</source>
         <translation>வசன வரிகள் ஏற்றவும்</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="246"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="247"/>
         <source>Zoomed to fit screen</source>
         <translation>திரைக்கு பொருத்தமாக பெரிதாக்கப்பட்டது</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="246"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="247"/>
         <source>Original</source>
         <translation>அசல்</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="250"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="251"/>
         <source>Play on repeat</source>
         <translation>மீண்டும் விளையாடுங்கள்</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="250"/>
+        <location filename="../qml/modules/Opal/MediaPlayer/VideoPlayerPage.qml" line="251"/>
         <source>Play once</source>
         <translation>ஒரு முறை விளையாடுங்கள்</translation>
     </message>
@@ -2843,7 +2858,7 @@ exposure program</extracomment>
         <translation>ரூட் பயன்முறையில் கோப்பு உலாவியைப் பயன்படுத்தும் போது கவனமாக இருங்கள். செயல்கள் எதிர்பாராத விதமாக உங்கள் கணினியை உடைக்கக்கூடும்.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
         <source>Start File Browser in Root Mode</source>
         <translation>ரூட் பயன்முறையில் கோப்பு உலாவியைத் தொடங்கவும்</translation>
     </message>
@@ -3623,7 +3638,7 @@ exposure program</extracomment>
 <context>
     <name>ViewVideoPage</name>
     <message>
-        <location filename="../qml/pages/ViewVideoPage.qml" line="19"/>
+        <location filename="../qml/pages/ViewVideoPage.qml" line="21"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
         <translation>கோப்பு உலாவி</translation>
