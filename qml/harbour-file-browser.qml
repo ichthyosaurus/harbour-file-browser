@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2013 Kari Pihkala
  * SPDX-FileCopyrightText: 2016 Joona Petrell
- * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2026 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -85,7 +85,7 @@ ApplicationWindow {
         // Setting "visible" to "true" is also not enough.
         //
         // This only happens if the same object is used as attached
-        // page mutliple times. We still use shared attached page
+        // page multiple times. We still use shared attached page
         // objects because it is much faster than creating the
         // attached page chain for each directory page separately.
         //
@@ -288,9 +288,10 @@ ApplicationWindow {
         visible: opacity > 0.0
         z: -10000
         color: Theme.colorScheme === Theme.LightOnDark ?
-                   Theme.highlightDimmerColor :
+                   (GlobalSettings.generalBlackBackground ? "black" : Theme.highlightDimmerColor) :
                    Theme.overlayBackgroundColor
-        opacity: GlobalSettings.generalSolidWindowBackground ? 1.0 : 0.0
+        opacity: GlobalSettings.generalSolidWindowBackground || GlobalSettings.generalBlackBackground ?
+                    1.0 : 0.0
         Behavior on opacity { FadeAnimator { duration: 100 } }
     }
 

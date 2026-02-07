@@ -220,6 +220,7 @@ private:
     Mapping<QString> map_elideMode{QSL("fade"), {QSL("end"), QSL("middle")}};
     PROP(QString, generalFilenameElideMode, "General/FilenameElideMode", "", map_elideMode, map_invalid)
     PROP(bool, generalSolidWindowBackground, "General/SolidWindowBackground", "", map_bool_false, map_bool_false)
+    PROP(bool, generalBlackBackground, "General/BlackWindowBackground", "", map_bool_false, map_bool_false)
     Mapping<InitialDirectoryMode::Enum> map_initialDirMode{{QSL("home"), InitialDirectoryMode::Home}, {
             {QSL("last"), InitialDirectoryMode::Last}, {QSL("custom"), InitialDirectoryMode::Custom}}};
     Mapping<InitialDirectoryMode::Enum> map_initialDirInvalid{{QLatin1Literal(), {}}, {}};

@@ -1,6 +1,6 @@
 //@ This file is part of opal-mediaplayer.
 //@ https://github.com/Pretty-SFOS/opal-mediaplayer
-//@ SPDX-FileCopyrightText: 2024 Mirian Margiani
+//@ SPDX-FileCopyrightText: 2024-2026 Mirian Margiani
 //@ SPDX-FileCopyrightText: 2013-2020 Leszek Lesner
 //@ SPDX-License-Identifier: GPL-3.0-or-later
 import QtQuick 2.6
@@ -17,6 +17,7 @@ property bool autoplay:false
 property bool repeat:false
 property bool continueInBackground:false
 property bool enableDarkBackground:true
+property bool enableBlackBackground:false
 property alias mprisAppId:mprisPlayer.identity
 readonly property alias _titleOverlay:titleOverlayItem
 readonly property bool _isPlaying:mediaPlayer.playbackState==MediaPlayer.PlayingState
@@ -33,12 +34,12 @@ onStatusChanged:{if(!continueInBackground&&(status===PageStatus.Deactivating||st
 }}onAutoplayChanged:{if(autoplay&&_pageIsActive){play()
 }}DisplayBlanking{preventBlanking:mediaPlayer.playbackState==MediaPlayer.PlayingState
 }Loader{z:-1000
-sourceComponent:enableDarkBackground?backgroundComponent:null
+sourceComponent:(enableDarkBackground||enableBlackBackground)?backgroundComponent:null
 anchors.fill:parent
 Component{id:backgroundComponent
-Rectangle{visible:enableDarkBackground
-color:Theme.colorScheme===Theme.LightOnDark?Qt.darker(Theme.highlightDimmerColor,4.0):Qt.darker(Theme.highlightDimmerColor,8.0)
-opacity:0.98
+Rectangle{visible:enableDarkBackground||enableBlackBackground
+color:enableBlackBackground?"black":(Theme.colorScheme===Theme.LightOnDark?Qt.darker(Theme.highlightDimmerColor,4.0):Qt.darker(Theme.highlightDimmerColor,8.0))
+opacity:enableBlackBackground?1.0:0.98
 }}}MediaTitleOverlay{id:titleOverlayItem
 shown:!autoplay
 title:videoPoster.player.metaData.title||""

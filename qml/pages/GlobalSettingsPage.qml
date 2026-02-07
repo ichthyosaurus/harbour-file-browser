@@ -3,7 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2014-2019 Kari Pihkala
  * SPDX-FileCopyrightText: 2016 Joona Petrell
- * SPDX-FileCopyrightText: 2019-2024 Mirian Margiani
+ * SPDX-FileCopyrightText: 2019-2026 Mirian Margiani
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
@@ -329,10 +329,18 @@ Page {
                                           "If this is disabled, files will always be deleted permanently.")
                     } */
                     SettingsSwitch {
+                        enabled: !GlobalSettings.generalBlackBackground
                         text: qsTr("Enable solid window background")
                         key: "generalSolidWindowBackground"
                         description: qsTr("Use a solid color instead of your wallpaper as the " +
                                           "background of this app.")
+                    }
+                    SettingsSwitch {
+                        text: qsTr("Enable plain black background")
+                        key: "generalBlackBackground"
+                        description: qsTr("Use plain black instead of your wallpaper as the " +
+                                          "background of this app.") + " " +
+                                     qsTr("This is useful for devices with OLED displays.")
                     }
             }
 
