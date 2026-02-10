@@ -1705,17 +1705,17 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="339"/>
         <source>Enable plain black background</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktivera svart bakgrund</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="341"/>
         <source>Use plain black instead of your wallpaper as the background of this app.</source>
-        <translation type="unfinished"></translation>
+        <translation>Använd svart bakgrund istället för din vanliga systembakgrund i den här appen.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="343"/>
         <source>This is useful for devices with OLED displays.</source>
-        <translation type="unfinished"></translation>
+        <translation>Detta är användbart på enheter med OLED-skärm.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="352"/>
