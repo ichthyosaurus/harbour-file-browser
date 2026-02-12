@@ -1,12 +1,12 @@
 //@ This file is part of opal-delegates.
 //@ https://github.com/Pretty-SFOS/opal-delegates
-//@ SPDX-FileCopyrightText: 2024 Mirian Margiani
+//@ SPDX-FileCopyrightText: 2024-2026 Mirian Margiani
 //@ SPDX-License-Identifier: GPL-3.0-or-later
 import QtQuick 2.5
 import Sailfish.Silica 1.0
 Item{id:root
 width:Math.max(column.width,minWidth)
-height:Math.max(parent.height,column.height)
+height:column.height
 property int minWidth:Theme.itemSizeMedium
 property int fixedWidth:0
 property int alignment:Qt.AlignHCenter
@@ -22,7 +22,7 @@ readonly property alias textLabel:_line1
 readonly property alias descriptionLabel:_line2
 Column{id:column
 width:Math.max(_line0.width,_line1.width,_line2.width)
-height:Math.max(root.parent.height,_line0.height+_line1.height+_line2.height)
+height:_line0.height+_line1.height+_line2.height
 anchors{horizontalCenter:parent.horizontalCenter
 verticalCenter:parent.verticalCenter
 }OptionalLabel{id:_line0

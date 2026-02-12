@@ -14,7 +14,7 @@
 #   on the About page of your app. Use the information below.
 
 module: Opal.MediaPlayer (opal-mediaplayer)
-version: 1.0.11 (git:641254a)
+version: 1.0.11 (git:1bc393d)
 description: This module provides a media player page with support for subtitles.
 maintainers: Mirian Margiani
 attribution: 2024-2026 Mirian Margiani:2013-2020 Leszek Lesner

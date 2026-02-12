@@ -13,6 +13,7 @@ property color evenColor:Theme.rgba(Theme.highlightBackgroundColor,Theme.opacity
 property alias emphasisBackground:emphasisBackground
 property bool _isOddRow:typeof index!=="undefined"&&(index%2!=0)
 readonly property int _modelIndex:typeof index!=="undefined"?index:-1
+readonly property int modelIndex:_modelIndex
 property bool interactive:true
 property Component leftItem:null
 readonly property alias leftItemLoader:leftItemLoader
