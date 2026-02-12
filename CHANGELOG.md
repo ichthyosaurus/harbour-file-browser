@@ -10,6 +10,15 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 
  * Nothing so far
 
+## Version 3.9.1 (2026-02-12)
+
+- Added translations: Baoulé, Burmese
+- Updated translations: Estonian, French, Norwegian Bokmål, Portuguese (Brazil), Russian, Serbian, Slovak, Swedish, Tamil
+- Fixed the issue where cutting, pasting, then re-pasting and overwriting a file would delete the file
+- Fixed missing scroll bar on the clipboard page
+- Fixed duplicated attributions on the About page
+- Added a new option to enable a solid black app background (for OLED displays)
+
 ## Version 3.8.1 (2026-01-14)
 
 - Added translations: Bengali, Chinese (Taiwan), Hindi, Malayalam, Persian, Portuguese, Thai, Vietnamese

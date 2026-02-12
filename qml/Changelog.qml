@@ -9,6 +9,18 @@ import "modules/Opal/About"
 
 ChangelogList {
     ChangelogItem {
+        version: "3.9.1"
+        date: "2026-02-12"
+        paragraphs: [
+            "- Added translations: Baoulé, Burmese<br>" +
+            "- Updated translations: Estonian, French, Norwegian Bokmål, Portuguese (Brazil), Russian, Serbian, Slovak, Swedish, Tamil<br>" +
+            "- Fixed the issue where cutting, pasting, then re-pasting and overwriting a file would delete the file<br>" +
+            "- Fixed missing scroll bar on the clipboard page<br>" +
+            "- Fixed duplicated attributions on the About page<br>" +
+            "- Added a new option to enable a solid black app background (for OLED displays)"
+        ]
+    }
+    ChangelogItem {
         version: "3.8.1"
         date: "2026-01-14"
         paragraphs: [
