@@ -21,6 +21,8 @@
 import QtQuick 2.6
 import Sailfish.Silica 1.0
 import Opal.SortFilterProxyModel 1.0
+import Opal.SmartScrollbar 1.0
+
 import harbour.file.browser.FileData 1.0
 import harbour.file.browser.Settings 1.0
 import harbour.file.browser.FileClipboard 1.0
@@ -30,10 +32,6 @@ import "../js/paths.js" as Paths
 
 Page {
     id: root
-
-    // TODO
-    // - store clipboard contents somewhere and share the clipboard with
-    //   other windows of File Browser (through dconf?)
 
     readonly property string _fnElide: GlobalSettings.generalFilenameElideMode
     readonly property int _nameTruncMode: _fnElide === 'fade' ? TruncationMode.Fade : TruncationMode.Elide
@@ -106,6 +104,11 @@ Page {
             }
         }
 
+        footer: Item {
+            height: Theme.horizontalPageMargin
+            width: parent.width
+        }
+
         PullDownMenu {
             enabled: visible
             visible: FileClipboard.count > 0
@@ -120,7 +123,15 @@ Page {
             }
         }
 
-        VerticalScrollDecorator { flickable: list }
+        SmartScrollbar {
+            property int currentIndex: list.indexAt(list.contentX, list.contentY) + 2
+
+            flickable: list
+            text: '%1 / %2'.arg(currentIndex).arg(list.count)
+
+            smartWhen: list.count > 40
+            quickScrollWhen: !smartWhen || list.count > 1000
+        }
 
         section {
             property: "directory"
@@ -274,5 +285,9 @@ Page {
             text: qsTr("Empty")
             hintText: qsTr("Cut or copied files will be shown here.")
         }
+    }
+
+    Component.onCompleted: {
+        FileClipboard.validate()
     }
 }
