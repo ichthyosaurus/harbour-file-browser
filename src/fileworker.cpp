@@ -155,8 +155,13 @@ bool FileWorker::validateFilenames(const QStringList &filenames)
 {
     // basic validity check
     for (const auto& filename : filenames) {
+        StatFileInfo info(filename);
+
         if (filename.isEmpty()) {
             emit errorOccurred(tr("Empty filename"), "");
+            return false;
+        } else if (!info.exists() && !info.isSymLink()) {
+            emit errorOccurred(tr("File or folder does not exist"), filename);
             return false;
         }
     }
@@ -293,6 +298,12 @@ void FileWorker::copyOrMoveFiles() {
         QFileInfo fileInfo(filename);
         QString newname = dest.absoluteFilePath(fileInfo.fileName());
         QFileInfo newInfo(newname);
+
+        // verify that source exists, but allow broken symlinks
+        if (!fileInfo.exists() && !fileInfo.isSymLink()) {
+            emit errorOccurred(tr("File or folder does not exist"), filename);
+            return;
+        }
 
         if (filename == newname) { // pasting over the source file, so copy a renamed file
             if (newInfo.exists() || newInfo.isSymLink()) {
