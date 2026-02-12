@@ -50,6 +50,111 @@ ApplicationWindow {
     _defaultPageOrientations: Orientation.All
     allowedOrientations: Orientation.All
 
+
+    /*
+     * App startup and initial page
+     *
+     */
+
+    initialPage: GlobalSettings.runningAsRoot ? initialPage_RootMode : initialPage_UserMode
+
+    function _doStartup() {
+        console.log("[startup] pushing initial stack (%1)"
+                    .arg(GlobalSettings.generalInitialPageMode))
+        Navigation.goToFolder(GlobalSettings.initialDirectory, /*silent*/ true,
+            GlobalSettings.generalInitialPageMode === InitialPageMode.Search ? "" : undefined,
+            GlobalSettings.generalInitialPageMode === InitialPageMode.Shortcuts)
+        _startupDone = true
+        console.log("[startup] startup is done")
+    }
+
+    property bool _startupDone: false
+    property bool _delayStackInit: false
+
+    property bool _initialPageReady: false
+    on_InitialPageReadyChanged: {
+        if (!_initialPageReady) return
+
+        if (pageStack.busy) {
+            console.warn("[startup] page stack is busy, delaying initialization")
+            console.warn("[startup] this stage should never be reached, please file a bug report")
+            _delayStackInit = true
+        } else {
+            _doStartup()
+        }
+    }
+
+    // Enable this if there are reports that startup failed because the page
+    // stack was busy. The code is disabled as it would be run on every page
+    // change, which may have a negative impact on performance.
+    /* pageStack.onBusyChanged: {
+        if (!_startupDone && _delayStackInit && !pageStack.busy) {
+            console.warn("[startup] delayed initialization started")
+            _delayStackInit = false
+            _doStartup()
+        }
+    } */
+
+    Component {
+        id: initialPage_RootMode
+
+        Page {
+            id: page
+            allowedOrientations: Orientation.All
+
+            Loader {
+                id: rootLockLoader
+                anchors.fill: parent
+                source: GlobalSettings.runningAsRoot ? Qt.resolvedUrl('pages/RootModeLockPage.qml') : ''
+            }
+
+            Connections {
+                target: GlobalSettings.runningAsRoot ? rootLockLoader.item : null
+                onAuthenticated: {
+                    console.warn("[startup] root mode authenticated")
+                    _initialPageReady = true  // to continue with startup
+                    GlobalSettings.authenticatedForRoot = true
+                }
+            }
+        }
+    }
+
+    Component {
+        id: initialPage_UserMode
+
+        Page {
+            // We start with an empty placeholder page that will be replaced
+            // by the actual array of pages for the directory in \c GlobalSettings.initialDirectory.
+            // (\c Navigation.goToFolder() will replace the whole page stack if
+            // the first page is not DirectoryPage { dir: '/' }.)
+            // Starting with a DirectoryPage will make the page stack go crazy in horizontal
+            // mode when the app is started in *portrait* mode and turned later.
+            onStatusChanged: {
+                if (status === PageStatus.Activating) {
+                    console.log("[startup] initial page is activating")
+                    // Setting this property will start the next step. This has to be
+                    // delayed in case the page stack is still in \c busy state when
+                    // the page is in \c Activating state (not yet \c Active).
+                    _initialPageReady = true
+                }
+            }
+        }
+    }
+
+
+    /*
+     * File actions and notifications handling
+     *
+     */
+
+    // TODO
+
+
+    /*
+     * Navigation handling
+     *
+     */
+
     // Navigation history: see navigation.js for details
     property var backStack: ([])
     property var forwardStack: ([])
@@ -67,8 +172,6 @@ ApplicationWindow {
     function navigate_canGoForward() { return Navigation.canGoForward(); }
     function navigate_syncNavStack() { return Navigation.syncNavStack(); }
 
-    initialPage: GlobalSettings.runningAsRoot ? initialPage_RootMode : initialPage_UserMode
-
     function finishNavigationLater(target) {
         console.log("[navigation] app state:", Qt.application.state,
                     "expecting", Qt.ApplicationActive, "for", target.properties.dir)
@@ -78,6 +181,55 @@ ApplicationWindow {
             navigationFinisher.targetProperties = target.properties
         }
     }
+
+    Connections {
+        id: navigationFinisher
+        property string targetPath
+        property var targetProperties: ({})
+
+        target: !!targetPath ? pageStack : null
+
+        onBusyChanged: {
+            // When navigation occurs while the app is in the background,
+            // the last page will not be pushed correctly and the stack gets
+            // stuck showing only a fullscreen busy spinner while "busy" is "false".
+            // To work around this issue, we wait for changes to "busy" and
+            // verify that the top page has an "objectName". If it doesn't,
+            // we replace the top page with the expected target page.
+            // Only when navigation reaches a seemingly valid page, we reset
+            // the watcher.
+            //
+            // This workaround fixes the issue where the app would only show
+            // a busy spinner after startup. It also fixes the issue
+            // where the app starts properly but the attached shortcuts page
+            // is blank. It does not fix the issue where attached pages
+            // sometimes become blank during navigation.
+            //
+            // Important: current valid navigation targets are DirectoryPage and
+            // SearchPage, both of which have an "objectName".
+
+            if (!pageStack.busy) {
+                if (!pageStack.currentPage.objectName) {
+                    console.log("[navigation] issue detected, replacing", pageStack.currentPage,
+                                "with", targetProperties.dir)
+                    pageStack.replace(targetPath, targetProperties)
+                } else {
+                    console.log("[navigation] navigation ended successfully with",
+                                pageStack.currentPage.objectName)
+                    targetPath = ''
+                    targetProperties = {}
+                }
+            } else {
+                console.log("[navigation] page stack is still busy, waiting...")
+            }
+        }
+    }
+
+
+    /*
+     * Shared attached pages handling
+     *
+     */
 
     Connections {
         id: attachedWatcher
@@ -127,95 +279,6 @@ ApplicationWindow {
         }
     }
 
-    Connections {
-        id: navigationFinisher
-        property string targetPath
-        property var targetProperties: ({})
-
-        target: !!targetPath ? pageStack : null
-
-        onBusyChanged: {
-            // When navigation occurs while the app is in the background,
-            // the last page will not be pushed correctly and the stack gets
-            // stuck showing only a fullscreen busy spinner while "busy" is "false".
-            // To work around this issue, we wait for changes to "busy" and
-            // verify that the top page has an "objectName". If it doesn't,
-            // we replace the top page with the expected target page.
-            // Only when navigation reaches a seemingly valid page, we reset
-            // the watcher.
-            //
-            // This workaround fixes the issue where the app would only show
-            // a busy spinner after startup. It also fixes the issue
-            // where the app starts properly but the attached shortcuts page
-            // is blank. It does not fix the issue where attached pages
-            // sometimes become blank during navigation.
-            //
-            // Important: current valid navigation targets are DirectoryPage and
-            // SearchPage, both of which have an "objectName".
-
-            if (!pageStack.busy) {
-                if (!pageStack.currentPage.objectName) {
-                    console.log("[navigation] issue detected, replacing", pageStack.currentPage,
-                                "with", targetProperties.dir)
-                    pageStack.replace(targetPath, targetProperties)
-                } else {
-                    console.log("[navigation] navigation ended successfully with",
-                                pageStack.currentPage.objectName)
-                    targetPath = ''
-                    targetProperties = {}
-                }
-            } else {
-                console.log("[navigation] page stack is still busy, waiting...")
-            }
-        }
-    }
-
-    Component {
-        id: initialPage_RootMode
-
-        Page {
-            id: page
-            allowedOrientations: Orientation.All
-
-            Loader {
-                id: rootLockLoader
-                anchors.fill: parent
-                source: GlobalSettings.runningAsRoot ? Qt.resolvedUrl('pages/RootModeLockPage.qml') : ''
-            }
-
-            Connections {
-                target: GlobalSettings.runningAsRoot ? rootLockLoader.item : null
-                onAuthenticated: {
-                    console.warn("[startup] root mode authenticated")
-                    _initialPageReady = true  // to continue with startup
-                    GlobalSettings.authenticatedForRoot = true
-                }
-            }
-        }
-    }
-
-    Component {
-        id: initialPage_UserMode
-
-        Page {
-            // We start with an empty placeholder page that will be replaced
-            // by the actual array of pages for the directory in \c GlobalSettings.initialDirectory.
-            // (\c Navigation.goToFolder() will replace the whole page stack if
-            // the first page is not DirectoryPage { dir: '/' }.)
-            // Starting with a DirectoryPage will make the page stack go crazy in horizontal
-            // mode when the app is started in *portrait* mode and turned later.
-            onStatusChanged: {
-                if (status === PageStatus.Activating) {
-                    console.log("[startup] initial page is activating")
-                    // Setting this property will start the next step. This has to be
-                    // delayed in case the page stack is still in \c busy state when
-                    // the page is in \c Activating state (not yet \c Active).
-                    _initialPageReady = true
-                }
-            }
-        }
-    }
-
     property ShortcutsPage shortcutsPage: null
     Loader {
         id: shortcutsPageLoader
@@ -251,40 +314,11 @@ ApplicationWindow {
         }
     }
 
-    function _doStartup() {
-        console.log("[startup] pushing initial stack (%1)"
-                    .arg(GlobalSettings.generalInitialPageMode))
-        Navigation.goToFolder(GlobalSettings.initialDirectory, /*silent*/ true,
-            GlobalSettings.generalInitialPageMode === InitialPageMode.Search ? "" : undefined,
-            GlobalSettings.generalInitialPageMode === InitialPageMode.Shortcuts)
-        _startupDone = true
-        console.log("[startup] startup is done")
-    }
 
-    property bool _startupDone: false
-    property bool _initialPageReady: false
-    property bool _delayStackInit: false
-    on_InitialPageReadyChanged: {
-        if (!_initialPageReady) return
-        if (pageStack.busy) {
-            console.warn("[startup] page stack is busy, delaying initialization")
-            console.warn("[startup] this stage should never be reached, please file a bug report")
-            _delayStackInit = true
-        } else {
-            _doStartup()
-        }
-    }
-
-    // Enable this if there are reports that startup failed because the page
-    // stack was busy. The code is disabled as it would be run on every page
-    // change, which may have a negative impact on performance.
-    /* pageStack.onBusyChanged: {
-        if (!_startupDone && _delayStackInit && !pageStack.busy) {
-            console.warn("[startup] delayed initialization started")
-            _delayStackInit = false
-            _doStartup()
-        }
-    } */
+    /*
+     * Popups and app background
+     *
+     */
 
     Rectangle {
         id: solidBackground
@@ -321,6 +355,12 @@ ApplicationWindow {
             SailjailInfoDialog {}
         }
     }
+
+
+    /*
+     * On completed
+     *
+     */
 
     Component.onCompleted: {
         console.log("running File Browser: version %1 (%2)".arg(
