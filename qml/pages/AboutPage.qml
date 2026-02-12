@@ -160,6 +160,7 @@ A.AboutPageBase {
                         "Petr Tsymbarovich",
                         "Romeostar",
                         "RoundedRectangle",
+                        "ShowhyT",
                         "Victor K",
                         "Yurt Page",
                         "gfbdrgn",
@@ -312,6 +313,7 @@ A.AboutPageBase {
                 A.ContributionGroup {
                     title: qsTr("Brazilian Portuguese")
                     entries: [
+                        "Elliot S",
                         "John Peter Sa",
                         "Mateus Liberale Gomes",
                         "Thiago Carmona"
