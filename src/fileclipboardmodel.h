@@ -61,6 +61,7 @@ public:
     void setPaths(const QStringList &newPaths);
     Q_INVOKABLE void forgetPath(QString path);
     Q_INVOKABLE void forgetIndex(int index);
+    Q_INVOKABLE void validate();
     Q_INVOKABLE void appendPath(QString path);
     Q_INVOKABLE bool hasPath(QString path);
     Q_INVOKABLE void clear();

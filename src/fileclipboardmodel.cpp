@@ -115,6 +115,41 @@ void FileClipboard::forgetIndex(int index)
     saveToDisk();
 }
 
+void FileClipboard::validate()
+{
+    // note: for efficiency, prefer to use validatePath() directly when possible
+
+    QStringList validatedPaths;
+    validatedPaths.reserve(m_paths.length());
+    bool changed = false;
+
+    for (const auto& i : m_paths) {
+        auto v = validatePath(i);
+
+        if (v != i) {
+            changed = true;
+        }
+
+        if (!v.isEmpty()) {
+            validatedPaths.append(v);
+        } else {
+            changed = true;
+        }
+    }
+
+    validatedPaths.removeDuplicates();
+
+    if (validatedPaths.length() != m_paths.length()) {
+        changed = true;
+    }
+
+    if (changed) {
+        m_paths = validatedPaths;
+        emit pathsChanged();
+        saveToDisk();
+    }
+}
+
 void FileClipboard::appendPath(QString path)
 {
     QString validated = validatePath(path);
@@ -152,6 +187,7 @@ void FileClipboard::clear()
 
 QStringList FileClipboard::listExistingFiles(QString destDirectory, bool ignoreInCurrentDir, bool getNamesOnly)
 {
+    validate();
     const QStringList& currentFiles = m_paths;
 
     if (currentFiles.isEmpty()) {

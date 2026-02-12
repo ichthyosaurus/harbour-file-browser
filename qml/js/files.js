@@ -37,6 +37,8 @@ function _getPanelText() {
 }
 
 function pasteFiles(targetDir, progressPanel, runBefore) {
+    Clip.FileClipboard.validate();
+
     if (Clip.FileClipboard.count === 0) return;
     if (targetDir === undefined) return;
 
