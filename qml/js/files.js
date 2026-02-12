@@ -36,6 +36,19 @@ function _getPanelText() {
     }
 }
 
+function _doPasteFiles(engine, targetDir, progressPanel, runBefore) {
+    if (progressPanel !== undefined) {
+        progressPanel.showText(_getPanelText())
+    }
+
+    if (runBefore !== undefined) runBefore();
+    engine.pasteFiles(Clip.FileClipboard.paths, targetDir, Clip.FileClipboard.mode);
+
+    if (Clip.FileClipboard.mode == Clip.FileClipMode.Cut) {
+        Clip.FileClipboard.clear()
+    }
+}
+
 function pasteFiles(targetDir, progressPanel, runBefore) {
     Clip.FileClipboard.validate();
 
@@ -44,26 +57,15 @@ function pasteFiles(targetDir, progressPanel, runBefore) {
 
     var existingFiles = Clip.FileClipboard.listExistingFiles(targetDir, true, true);
 
+    var _paster = _doPasteFiles.bind(this, engine, targetDir, progressPanel, runBefore);
+
     if (existingFiles.length > 0) {
         // show overwrite dialog
         var dialog = pageStack.push(Qt.resolvedUrl("../pages/OverwriteDialog.qml"),
                                     { "files": existingFiles })
-
-        dialog.accepted.connect(function() {
-            if (progressPanel !== undefined) {
-                progressPanel.showText(_getPanelText())
-            }
-
-            if (runBefore !== undefined) runBefore();
-            engine.pasteFiles(Clip.FileClipboard.paths, targetDir, Clip.FileClipboard.mode);
-        })
+        dialog.accepted.connect(_paster)
     } else {
         // no overwrite dialog
-        if (progressPanel !== undefined) {
-            progressPanel.showText(_getPanelText())
-        }
-
-        if (runBefore !== undefined) runBefore();
-        engine.pasteFiles(Clip.FileClipboard.paths, targetDir, Clip.FileClipboard.mode);
+        _paster();
     }
 }
