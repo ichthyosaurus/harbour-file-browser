@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
+SPDX-FileCopyrightText: 2020-2026 Mirian Margiani
 
 SPDX-License-Identifier: GFDL-1.3-or-later
 -->
@@ -9,7 +9,7 @@ SPDX-License-Identifier: GFDL-1.3-or-later
 Run File Browser with super user privileges. (For version 2.0.0+.)
 
 A setuid helper binary is used to start the app. The source file is also
-included in the package at: `/usr/share/%appname/start-root-helper.c`
+included in the package at: `/usr/share/%appname/start-root-helper.cpp`
 
 
 ## ** Warning **

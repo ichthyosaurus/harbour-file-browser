@@ -1,6 +1,6 @@
 # This file is part of File Browser and has been released into the public domain.
 # SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2020-2023 Mirian Margiani
+# SPDX-FileCopyrightText: 2020-2026 Mirian Margiani
 
 .PHONY: default clean
 
@@ -9,7 +9,7 @@
 #      in Jolla's Harbour store anyway.
 SUFFIX=
 SPEC=harbour-file-browser-root$(SUFFIX).spec
-SOURCES=icons harbour-file-browser-root$(SUFFIX).desktop start-root-helper.c
+SOURCES=icons harbour-file-browser-root$(SUFFIX).desktop start-root-helper.cpp
 
 default: $(SOURCES) $(SPEC)
 	rm -rf build

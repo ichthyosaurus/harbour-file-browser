@@ -1,6 +1,6 @@
 # This file is part of File Browser.
 # SPDX-License-Identifier: GPL-3.0-or-later
-# SPDX-FileCopyrightText: 2020-2024 Mirian Margiani
+# SPDX-FileCopyrightText: 2020-2026 Mirian Margiani
 
 %define appname harbour-file-browser-root
 Name: %{appname}
@@ -34,10 +34,10 @@ Run File Browser with super user privileges. (For version 2.0.0+.)
 
 A setuid helper binary is used to start the app. The source file is included
 in this package:
-    /usr/share/%appname/start-root-helper.c
+    /usr/share/%appname/start-root-helper.cpp
 
 The start helper is built using these steps in the Sailfish SDK:
-    $ gcc "/usr/share/%appname/start-root-helper.c" -o "/usr/share/%appname/start-root"
+    $ g++ "/usr/share/%appname/start-root-helper.cpp" -o "/usr/share/%appname/start-root"
     $ chmod 4755 "/usr/share/%appname/start-root"
 
 Sources and documentation can be found online at:
@@ -51,7 +51,7 @@ using the Sailfish SDK. Prefer this over trying to build it on your phone.
 %setup -q -n %{name}-%{version}
 
 %build
-gcc start-root-helper.c -o start-root
+g++ start-root-helper.cpp -o start-root
 chmod 4755 start-root
 
 %install
@@ -66,7 +66,7 @@ for d in "86x86" "108x108" "128x128" "172x172"; do
 done
 
 cp %appname.desktop %{buildroot}/usr/share/applications/
-cp start-root start-root-helper.c %{buildroot}/usr/share/%appname/
+cp start-root start-root-helper.cpp %{buildroot}/usr/share/%appname/
 
 %changelog
 
@@ -114,4 +114,4 @@ cp start-root start-root-helper.c %{buildroot}/usr/share/%appname/
 %attr(0644, root, root) "/usr/share/icons/hicolor/128x128/apps/%appname.png"
 %attr(0644, root, root) "/usr/share/icons/hicolor/172x172/apps/%appname.png"
 %attr(4755, root, root) "/usr/share/%appname/start-root"
-%attr(0644, root, root) "/usr/share/%appname/start-root-helper.c"
+%attr(0644, root, root) "/usr/share/%appname/start-root-helper.cpp"
