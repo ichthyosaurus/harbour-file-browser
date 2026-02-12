@@ -339,12 +339,12 @@
 <context>
     <name>ClipboardPage</name>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="70"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="68"/>
         <source>Clipboard</source>
         <translation>Lõikelaud</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/ClipboardPage.qml" line="75"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="73"/>
         <source>%n item(s) to be copied</source>
         <translation>
             <numerusform>%n kopeeritav objekt</numerusform>
@@ -352,7 +352,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="75"/>
         <source>%n item(s) to be moved</source>
         <translation>
             <numerusform>%n uude kohta tõstetav objekt</numerusform>
@@ -360,17 +360,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="260"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="271"/>
         <source>Remove from clipboard</source>
         <translation>Kustuta lõikelaualt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="252"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="263"/>
         <source>Open this folder</source>
         <translation>Ava see kaust</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
         <source>%n item(s) to be linked</source>
         <translation>
             <numerusform>%n viidatav objekt</numerusform>
@@ -378,28 +378,28 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="115"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="118"/>
         <source>Clear</source>
         <comment>verb as in &apos;clear all contents from the clipboard&apos;</comment>
         <translation>Kustuta</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="117"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="120"/>
         <source>Clipboard cleared</source>
         <translation>Lõikelaud on tühjendatud</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="256"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="267"/>
         <source>Open containing folder</source>
         <translation>Ava sisalduv kaust</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="274"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="285"/>
         <source>Empty</source>
         <translation>Kirjed puuduvad</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="275"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="286"/>
         <source>Cut or copied files will be shown here.</source>
         <translation>Lõigatud või kopeeritud failid on näha siin.</translation>
     </message>
@@ -829,12 +829,12 @@
 <context>
     <name>ExternalUrlPage</name>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="87"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
         <source>Swipe left to preview.</source>
         <translation>Eelvaateks viipa vasakule.</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="87"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
         <source>You are using a mobile data connection.</source>
         <translation>Sa kasutad mobiilset andmesideühendust.</translation>
     </message>
@@ -924,7 +924,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="271"/>
+        <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>paki fail</numerusform>
@@ -932,17 +932,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="280"/>
+        <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
         <translation>muuda nimeviida sihtfaili</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="285"/>
+        <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
         <translation>Rakenda</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="305"/>
+        <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>muuda faili</numerusform>
@@ -950,7 +950,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="330"/>
+        <location filename="../qml/components/FileActions.qml" line="324"/>
         <source>show file properties</source>
         <translation>näita faili omadusi</translation>
     </message>
@@ -1280,41 +1280,47 @@
         <translation>Failiga tehtav toiming on juba pooleli</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="159"/>
+        <location filename="../src/fileworker.cpp" line="161"/>
         <source>Empty filename</source>
         <translation>Failinimi puudub</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="178"/>
-        <location filename="../src/fileworker.cpp" line="252"/>
-        <location filename="../src/fileworker.cpp" line="289"/>
-        <location filename="../src/fileworker.cpp" line="374"/>
-        <location filename="../src/fileworker.cpp" line="397"/>
+        <location filename="../src/fileworker.cpp" line="164"/>
+        <location filename="../src/fileworker.cpp" line="304"/>
+        <source>File or folder does not exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/fileworker.cpp" line="183"/>
+        <location filename="../src/fileworker.cpp" line="257"/>
+        <location filename="../src/fileworker.cpp" line="294"/>
+        <location filename="../src/fileworker.cpp" line="385"/>
+        <location filename="../src/fileworker.cpp" line="408"/>
         <source>Cancelled</source>
         <translation>Tühistatud</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="216"/>
+        <location filename="../src/fileworker.cpp" line="221"/>
         <source>File not found</source>
         <translation>Faili ei leidunud</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="230"/>
+        <location filename="../src/fileworker.cpp" line="235"/>
         <source>Folder delete failed</source>
         <translation>Kausta kustutamine ei õnnestunud</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="353"/>
+        <location filename="../src/fileworker.cpp" line="364"/>
         <source>Source folder does not exist</source>
         <translation>Lähtekausta pole olemas</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="362"/>
+        <location filename="../src/fileworker.cpp" line="373"/>
         <source>Cannot create target folder %1</source>
         <translation>Sihtkausta %1 loomine ei õnnestu</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="413"/>
+        <location filename="../src/fileworker.cpp" line="424"/>
         <source>Failed to remove source folder “%1” after moving.</source>
         <translation>„%1“ lähtekausta eemaldamine pärast teisaldamist ei õnnestunud.</translation>
     </message>
@@ -2484,27 +2490,27 @@ exposure program</extracomment>
         <translation>Väline link</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="81"/>
         <source>Copy link</source>
         <translation>Kopeeri link</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="75"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="83"/>
         <source>Copy text</source>
         <translation>Kopeeri tekst</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="79"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="76"/>
         <source>Share</source>
         <translation>Jaga</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="84"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
         <source>Open in browser</source>
         <translation>Ava veebibrauseris</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="84"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
         <source>Open externally</source>
         <translation>Ava välise rakendusega</translation>
     </message>
@@ -2866,37 +2872,37 @@ exposure program</extracomment>
 <context>
     <name>SailjailInfoDialog</name>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="13"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="15"/>
         <source>Notice</source>
         <translation>Märkus</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="14"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="16"/>
         <source>Please install this app from Storeman / OpenRepos to get unrestricted access to all files and folders.</source>
         <translation>Piiranguteta ligipääsuks failidele ja kaustadele palun paigalda see rakendus Storemani abil OpenRepose tarkvarahoidlast.</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="18"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="20"/>
         <source>Limitations in this version</source>
         <translation>Selle versiooni piirangud</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="22"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="24"/>
         <source>This app is currently running in a sandbox environment and does not have access to all files and folders.</source>
         <translation>See rakendus töötab hetkel aedikkäituse tingimustes ja tal puudub ligipääs kõikidele failidele ja kaustadele.</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="28"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="30"/>
         <source>Inaccessible folders appear empty as there is no way for the app to determine if a folder is actually empty or simply presented as empty by the system.</source>
         <translation>Kaustad, kuhu ligipääs on puudu, tunduvad tühjadena ning rakendusel pole mitte ühtegi võimalust tuvastamaks, kas nad on päriselt tühjad või lihtsalt operatsioonisüsteem näitab neid sellisena.</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="35"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="37"/>
         <source>Additionally, some file previews and integrated access to storage settings are disabled.</source>
         <translation>Lisaks ei toimi mõnede failide eelvaated ning lõimitud ligipääs andmeruumile.</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="54"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="56"/>
         <source>Install from OpenRepos</source>
         <comment>as in: “open the OpenRepos website to install the File Browser app from there”</comment>
         <translation>Paigalda OpenRepose tarkvarahoidlast</translation>

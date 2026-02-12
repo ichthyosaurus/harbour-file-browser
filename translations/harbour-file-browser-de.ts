@@ -56,7 +56,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="313"/>
         <source>Brazilian Portuguese</source>
-        <translation type="unfinished"></translation>
+        <translation>Brasilianisches Portugiesisch</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="321"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="176"/>
         <source>Portuguese</source>
-        <translation type="unfinished"></translation>
+        <translation>Portugiesisch</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="254"/>
@@ -183,12 +183,12 @@
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="25"/>
         <source>Name</source>
         <comment>as in: “name of the bookmark you are currently editing”</comment>
-        <translation type="unfinished">Name</translation>
+        <translation>Name</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="26"/>
         <source>Name must not be empty</source>
-        <translation type="unfinished">Name darf nicht leer sein</translation>
+        <translation>Name darf nicht leer sein</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="28"/>
@@ -215,7 +215,7 @@
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="96"/>
         <source>Apply</source>
         <comment>as in &apos;apply these changes&apos;</comment>
-        <translation type="unfinished">Anwenden</translation>
+        <translation>Anwenden</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="97"/>
@@ -225,7 +225,7 @@
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="232"/>
         <source>Apply</source>
-        <translation type="unfinished">Anwenden</translation>
+        <translation>Anwenden</translation>
     </message>
 </context>
 <context>
@@ -339,12 +339,12 @@
 <context>
     <name>ClipboardPage</name>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="70"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="68"/>
         <source>Clipboard</source>
         <translation>Zwischenablage</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/ClipboardPage.qml" line="75"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="73"/>
         <source>%n item(s) to be copied</source>
         <translation>
             <numerusform>%n Element zum Kopieren</numerusform>
@@ -352,7 +352,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="75"/>
         <source>%n item(s) to be moved</source>
         <translation>
             <numerusform>%n Element zum Verschieben</numerusform>
@@ -360,17 +360,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="260"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="271"/>
         <source>Remove from clipboard</source>
         <translation>Aus der Zwischenablage entfernen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="252"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="263"/>
         <source>Open this folder</source>
         <translation>Diesen Ordner öffnen</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
         <source>%n item(s) to be linked</source>
         <translation>
             <numerusform>%n Element zum Verknüpfen</numerusform>
@@ -378,28 +378,28 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="115"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="118"/>
         <source>Clear</source>
         <comment>verb as in &apos;clear all contents from the clipboard&apos;</comment>
         <translation>Leeren</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="117"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="120"/>
         <source>Clipboard cleared</source>
         <translation>Zwischenablage geleert</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="256"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="267"/>
         <source>Open containing folder</source>
         <translation>Beinhaltenden Ordner öffnen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="274"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="285"/>
         <source>Empty</source>
         <translation>Leer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="275"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="286"/>
         <source>Cut or copied files will be shown here.</source>
         <translation>Hier werden ausgeschnittene oder kopierte Dateien angezeigt.</translation>
     </message>
@@ -829,12 +829,12 @@
 <context>
     <name>ExternalUrlPage</name>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="87"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
         <source>Swipe left to preview.</source>
         <translation>Für Vorschau nach links wischen.</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="87"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
         <source>You are using a mobile data connection.</source>
         <translation>Sie verwenden eine Mobile Datenverbindung.</translation>
     </message>
@@ -924,7 +924,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="271"/>
+        <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>Datei komprimieren</numerusform>
@@ -932,17 +932,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="280"/>
+        <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
         <translation>Linkziel ändern</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="285"/>
+        <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
         <translation>Anwenden</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="305"/>
+        <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>Datei bearbeiten</numerusform>
@@ -950,7 +950,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="330"/>
+        <location filename="../qml/components/FileActions.qml" line="324"/>
         <source>show file properties</source>
         <translation>Dateieigenschaften anzeigen</translation>
     </message>
@@ -1119,7 +1119,7 @@
         <location filename="../qml/pages/FilePage.qml" line="64"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation type="unfinished">Dateiverwaltung</translation>
+        <translation>Dateiverwaltung</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="113"/>
@@ -1280,41 +1280,47 @@
         <translation>Dateivorgang noch nicht abgeschlossen</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="159"/>
+        <location filename="../src/fileworker.cpp" line="161"/>
         <source>Empty filename</source>
         <translation>Leerer Dateiname</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="216"/>
+        <location filename="../src/fileworker.cpp" line="164"/>
+        <location filename="../src/fileworker.cpp" line="304"/>
+        <source>File or folder does not exist</source>
+        <translation>Datei oder Ordner existiert nicht</translation>
+    </message>
+    <message>
+        <location filename="../src/fileworker.cpp" line="221"/>
         <source>File not found</source>
         <translation>Datei nicht gefunden</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="230"/>
+        <location filename="../src/fileworker.cpp" line="235"/>
         <source>Folder delete failed</source>
         <translation>Ordner konnte nicht gelöscht werden</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="413"/>
+        <location filename="../src/fileworker.cpp" line="424"/>
         <source>Failed to remove source folder “%1” after moving.</source>
         <translation>Quellordner “%1” konnte nach dem Verschieben nicht entfernt werden.</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="178"/>
-        <location filename="../src/fileworker.cpp" line="252"/>
-        <location filename="../src/fileworker.cpp" line="289"/>
-        <location filename="../src/fileworker.cpp" line="374"/>
-        <location filename="../src/fileworker.cpp" line="397"/>
+        <location filename="../src/fileworker.cpp" line="183"/>
+        <location filename="../src/fileworker.cpp" line="257"/>
+        <location filename="../src/fileworker.cpp" line="294"/>
+        <location filename="../src/fileworker.cpp" line="385"/>
+        <location filename="../src/fileworker.cpp" line="408"/>
         <source>Cancelled</source>
         <translation>Abgebrochen</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="353"/>
+        <location filename="../src/fileworker.cpp" line="364"/>
         <source>Source folder does not exist</source>
         <translation>Quellordner existiert nicht</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="362"/>
+        <location filename="../src/fileworker.cpp" line="373"/>
         <source>Cannot create target folder %1</source>
         <translation>Kann Zielordner nicht erstellen %1</translation>
     </message>
@@ -1705,7 +1711,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="339"/>
         <source>Enable plain black background</source>
-        <translation type="unfinished"></translation>
+        <translation>Schwarzen Hintergrund aktivieren</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="341"/>
@@ -2484,27 +2490,27 @@ exposure program</extracomment>
         <translation>Externer Link</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="81"/>
         <source>Copy link</source>
         <translation>Link kopieren</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="75"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="83"/>
         <source>Copy text</source>
         <translation>Text kopieren</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="79"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="76"/>
         <source>Share</source>
         <translation>Teilen</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="84"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
         <source>Open in browser</source>
         <translation>Im Browser öffnen</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="84"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
         <source>Open externally</source>
         <translation>Extern öffnen</translation>
     </message>
@@ -2778,19 +2784,19 @@ exposure program</extracomment>
         <location filename="../src/globals.cpp" line="122"/>
         <source>hh:mm:ss</source>
         <comment>Time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">hh:mm:ss</translation>
+        <translation>hh:mm:ss</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="125"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
         <comment>Date and time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">d. MMM yyyy, hh:mm:ss t</translation>
+        <translation>d. MMM yyyy, hh:mm:ss t</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="127"/>
         <source>dd.MM.yy, hh:mm</source>
         <comment>Date and format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">d. M. yy, hh:mm</translation>
+        <translation>d. M. yy, hh:mm</translation>
     </message>
 </context>
 <context>
@@ -2869,37 +2875,37 @@ exposure program</extracomment>
 <context>
     <name>SailjailInfoDialog</name>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="13"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="15"/>
         <source>Notice</source>
         <translation>Notiz</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="14"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="16"/>
         <source>Please install this app from Storeman / OpenRepos to get unrestricted access to all files and folders.</source>
         <translation>Bitte installieren Sie diese App von Storeman / OpenRepos, um uneingeschränkten Zugriff auf alle Dateien und Ordner zu erhalten.</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="18"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="20"/>
         <source>Limitations in this version</source>
         <translation>Einschränkungen in dieser Version</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="22"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="24"/>
         <source>This app is currently running in a sandbox environment and does not have access to all files and folders.</source>
         <translation>Diese App wird derzeit in einer Sandbox-Umgebung ausgeführt und hat keinen Zugriff auf alle Dateien und Ordner.</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="28"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="30"/>
         <source>Inaccessible folders appear empty as there is no way for the app to determine if a folder is actually empty or simply presented as empty by the system.</source>
         <translation>Unzugängliche Ordner werden leer angezeigt, da die App nicht feststellen kann, ob ein Ordner tatsächlich leer ist oder vom System lediglich als leer angezeigt wird.</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="35"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="37"/>
         <source>Additionally, some file previews and integrated access to storage settings are disabled.</source>
         <translation>Darüber hinaus sind einige Dateivorschauen und der integrierte Zugriff auf Speichereinstellungen deaktiviert.</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="54"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="56"/>
         <source>Install from OpenRepos</source>
         <comment>as in: “open the OpenRepos website to install the File Browser app from there”</comment>
         <translation>Von OpenRepos installieren</translation>

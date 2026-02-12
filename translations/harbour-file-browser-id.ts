@@ -56,7 +56,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="313"/>
         <source>Brazilian Portuguese</source>
-        <translation type="unfinished"></translation>
+        <translation>Portugis Brasil</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="321"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="176"/>
         <source>Portuguese</source>
-        <translation type="unfinished"></translation>
+        <translation>Portugis</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="254"/>
@@ -339,64 +339,64 @@
 <context>
     <name>ClipboardPage</name>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="70"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="68"/>
         <source>Clipboard</source>
         <translation>Papan klip</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/ClipboardPage.qml" line="75"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="73"/>
         <source>%n item(s) to be copied</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="75"/>
         <source>%n item(s) to be moved</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="260"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="271"/>
         <source>Remove from clipboard</source>
         <translation>Hapus dari papan klip</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="252"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="263"/>
         <source>Open this folder</source>
         <translation>Buka folder ini</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
         <source>%n item(s) to be linked</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="115"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="118"/>
         <source>Clear</source>
         <comment>verb as in &apos;clear all contents from the clipboard&apos;</comment>
         <translation>Bersihkan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="117"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="120"/>
         <source>Clipboard cleared</source>
         <translation>Papan klip dibersihkan</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="256"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="267"/>
         <source>Open containing folder</source>
         <translation>Buka folder induk</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="274"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="285"/>
         <source>Empty</source>
         <translation>Kosong</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="275"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="286"/>
         <source>Cut or copied files will be shown here.</source>
         <translation>Berkas yang dipotong atau disalin akan ditampilkan di sini.</translation>
     </message>
@@ -825,12 +825,12 @@
 <context>
     <name>ExternalUrlPage</name>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="87"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
         <source>Swipe left to preview.</source>
         <translation>Geser ke kiri untuk melihat pratinjau.</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="87"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
         <source>You are using a mobile data connection.</source>
         <translation>Saat ini Anda terhubung melalui data seluler.</translation>
     </message>
@@ -911,31 +911,31 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="271"/>
+        <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>kompres berkas</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="280"/>
+        <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
         <translation>edit target tautan</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="285"/>
+        <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
         <translation>Terapkan</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="305"/>
+        <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>edit berkas</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="330"/>
+        <location filename="../qml/components/FileActions.qml" line="324"/>
         <source>show file properties</source>
         <translation>tampilkan properti berkas</translation>
     </message>
@@ -1263,41 +1263,47 @@
         <translation>Operasi berkas sedang berlangsung</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="159"/>
+        <location filename="../src/fileworker.cpp" line="161"/>
         <source>Empty filename</source>
         <translation>Nama berkas kosong</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="178"/>
-        <location filename="../src/fileworker.cpp" line="252"/>
-        <location filename="../src/fileworker.cpp" line="289"/>
-        <location filename="../src/fileworker.cpp" line="374"/>
-        <location filename="../src/fileworker.cpp" line="397"/>
+        <location filename="../src/fileworker.cpp" line="164"/>
+        <location filename="../src/fileworker.cpp" line="304"/>
+        <source>File or folder does not exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/fileworker.cpp" line="183"/>
+        <location filename="../src/fileworker.cpp" line="257"/>
+        <location filename="../src/fileworker.cpp" line="294"/>
+        <location filename="../src/fileworker.cpp" line="385"/>
+        <location filename="../src/fileworker.cpp" line="408"/>
         <source>Cancelled</source>
         <translation>Dibatalkan</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="216"/>
+        <location filename="../src/fileworker.cpp" line="221"/>
         <source>File not found</source>
         <translation>Berkas tidak ditemukan</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="230"/>
+        <location filename="../src/fileworker.cpp" line="235"/>
         <source>Folder delete failed</source>
         <translation>Penghapusan folder gagal</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="353"/>
+        <location filename="../src/fileworker.cpp" line="364"/>
         <source>Source folder does not exist</source>
         <translation>Folder sumber tidak ada</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="362"/>
+        <location filename="../src/fileworker.cpp" line="373"/>
         <source>Cannot create target folder %1</source>
         <translation>Tak bisa membuat folder target %1</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="413"/>
+        <location filename="../src/fileworker.cpp" line="424"/>
         <source>Failed to remove source folder “%1” after moving.</source>
         <translation>Gagal menghapus folder sumber “%1” setelah dipindahkan.</translation>
     </message>
@@ -2464,27 +2470,27 @@ exposure program</extracomment>
         <translation>Tautan luar</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="81"/>
         <source>Copy link</source>
         <translation>Salin link</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="75"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="83"/>
         <source>Copy text</source>
         <translation>Salin tulisan</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="79"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="76"/>
         <source>Share</source>
         <translation>Bagikan</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="84"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
         <source>Open in browser</source>
         <translation>Buka di browser</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="84"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
         <source>Open externally</source>
         <translation>Buka di luar</translation>
     </message>
@@ -2844,37 +2850,37 @@ exposure program</extracomment>
 <context>
     <name>SailjailInfoDialog</name>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="13"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="15"/>
         <source>Notice</source>
         <translation>Pemberitahuan</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="14"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="16"/>
         <source>Please install this app from Storeman / OpenRepos to get unrestricted access to all files and folders.</source>
         <translation>Silakan instal aplikasi ini dari Storeman / OpenRepos untuk mendapatkan akses tanpa batas ke semua berkas dan folder.</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="18"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="20"/>
         <source>Limitations in this version</source>
         <translation>Keterbatasan pada versi ini</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="22"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="24"/>
         <source>This app is currently running in a sandbox environment and does not have access to all files and folders.</source>
         <translation>Aplikasi ini saat ini berjalan di lingkungan sandbox dan tidak memiliki akses ke semua berkas dan folder.</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="28"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="30"/>
         <source>Inaccessible folders appear empty as there is no way for the app to determine if a folder is actually empty or simply presented as empty by the system.</source>
         <translation>Folder yang tidak dapat diakses tampak kosong karena tidak ada cara bagi aplikasi untuk menentukan apakah folder benar-benar kosong atau hanya ditampilkan kosong oleh sistem.</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="35"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="37"/>
         <source>Additionally, some file previews and integrated access to storage settings are disabled.</source>
         <translation>Selain itu, beberapa pratinjau berkas dan akses terintegrasi ke pengaturan penyimpanan dinonaktifkan.</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="54"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="56"/>
         <source>Install from OpenRepos</source>
         <comment>as in: “open the OpenRepos website to install the File Browser app from there”</comment>
         <translation>Instal dari OpenRepos</translation>

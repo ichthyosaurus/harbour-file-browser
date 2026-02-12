@@ -56,7 +56,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="313"/>
         <source>Brazilian Portuguese</source>
-        <translation type="unfinished"></translation>
+        <translation>Portugués del Brasil</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="321"/>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="176"/>
         <source>Portuguese</source>
-        <translation type="unfinished"></translation>
+        <translation>Portugués</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="254"/>
@@ -339,12 +339,12 @@
 <context>
     <name>ClipboardPage</name>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="70"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="68"/>
         <source>Clipboard</source>
         <translation>Portapapeles</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/ClipboardPage.qml" line="75"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="73"/>
         <source>%n item(s) to be copied</source>
         <translation>
             <numerusform>%n elemento a copiar</numerusform>
@@ -352,7 +352,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="75"/>
         <source>%n item(s) to be moved</source>
         <translation>
             <numerusform>%n elemento a mover</numerusform>
@@ -360,17 +360,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="260"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="271"/>
         <source>Remove from clipboard</source>
         <translation>Eliminar del portapapeles</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="252"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="263"/>
         <source>Open this folder</source>
         <translation>Abre esta carpeta</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
         <source>%n item(s) to be linked</source>
         <translation>
             <numerusform>%n elemento a vincular</numerusform>
@@ -378,28 +378,28 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="115"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="118"/>
         <source>Clear</source>
         <comment>verb as in &apos;clear all contents from the clipboard&apos;</comment>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="117"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="120"/>
         <source>Clipboard cleared</source>
         <translation>Portapapeles borrado</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="256"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="267"/>
         <source>Open containing folder</source>
         <translation>Abrir carpeta contenedora</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="274"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="285"/>
         <source>Empty</source>
         <translation>Vaciar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="275"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="286"/>
         <source>Cut or copied files will be shown here.</source>
         <translation>Los archivos cortados o copiados se mostrarán aquí.</translation>
     </message>
@@ -829,12 +829,12 @@
 <context>
     <name>ExternalUrlPage</name>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="87"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
         <source>Swipe left to preview.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="87"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
         <source>You are using a mobile data connection.</source>
         <translation>Está utilizando una conexión de datos al móvil.</translation>
     </message>
@@ -924,7 +924,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="271"/>
+        <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>comprimir archivo</numerusform>
@@ -932,17 +932,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="280"/>
+        <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
         <translation>editar destino del enlace</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="285"/>
+        <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
         <translation>Aplicar</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="305"/>
+        <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>editar archivo</numerusform>
@@ -950,7 +950,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="330"/>
+        <location filename="../qml/components/FileActions.qml" line="324"/>
         <source>show file properties</source>
         <translation>mostrar propiedades de archivo</translation>
     </message>
@@ -1280,41 +1280,47 @@
         <translation>La operación del archivo ya está en proceso</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="159"/>
+        <location filename="../src/fileworker.cpp" line="161"/>
         <source>Empty filename</source>
         <translation>Nombre del archivo vacío</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="216"/>
+        <location filename="../src/fileworker.cpp" line="164"/>
+        <location filename="../src/fileworker.cpp" line="304"/>
+        <source>File or folder does not exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/fileworker.cpp" line="221"/>
         <source>File not found</source>
         <translation>Archivo no encontrado</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="230"/>
+        <location filename="../src/fileworker.cpp" line="235"/>
         <source>Folder delete failed</source>
         <translation>Error al borrar carpeta</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="413"/>
+        <location filename="../src/fileworker.cpp" line="424"/>
         <source>Failed to remove source folder “%1” after moving.</source>
         <translation>No se pudo eliminar la carpeta de origen “ %1 ” después de moverla.</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="178"/>
-        <location filename="../src/fileworker.cpp" line="252"/>
-        <location filename="../src/fileworker.cpp" line="289"/>
-        <location filename="../src/fileworker.cpp" line="374"/>
-        <location filename="../src/fileworker.cpp" line="397"/>
+        <location filename="../src/fileworker.cpp" line="183"/>
+        <location filename="../src/fileworker.cpp" line="257"/>
+        <location filename="../src/fileworker.cpp" line="294"/>
+        <location filename="../src/fileworker.cpp" line="385"/>
+        <location filename="../src/fileworker.cpp" line="408"/>
         <source>Cancelled</source>
         <translation>Cancelado</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="353"/>
+        <location filename="../src/fileworker.cpp" line="364"/>
         <source>Source folder does not exist</source>
         <translation>La carpeta de origen no existe</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="362"/>
+        <location filename="../src/fileworker.cpp" line="373"/>
         <source>Cannot create target folder %1</source>
         <translation>No es posible crear la carpeta de destino %1</translation>
     </message>
@@ -2484,27 +2490,27 @@ exposure program</extracomment>
         <translation>Enlace externo</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="81"/>
         <source>Copy link</source>
         <translation>Copiar enlace</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="75"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="83"/>
         <source>Copy text</source>
         <translation>Copiar texto</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="79"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="76"/>
         <source>Share</source>
         <translation>Compartir</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="84"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
         <source>Open in browser</source>
         <translation>Abrir en el navegador</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="84"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
         <source>Open externally</source>
         <translation>Abrir externamente</translation>
     </message>
@@ -2866,37 +2872,37 @@ exposure program</extracomment>
 <context>
     <name>SailjailInfoDialog</name>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="13"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="15"/>
         <source>Notice</source>
         <translation>Notificación</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="14"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="16"/>
         <source>Please install this app from Storeman / OpenRepos to get unrestricted access to all files and folders.</source>
         <translation>Instale esta apl desde Storeman / OpenRepos para obtener acceso no restringido a todos los archivos y carpetas.</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="18"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="20"/>
         <source>Limitations in this version</source>
         <translation>Limitaciones en esta versión</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="22"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="24"/>
         <source>This app is currently running in a sandbox environment and does not have access to all files and folders.</source>
         <translation>Esta aplicación actualmente está ejecutando en un entorno de caja de tierra y no tiene acceso a todos los archivos y carpetas.</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="28"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="30"/>
         <source>Inaccessible folders appear empty as there is no way for the app to determine if a folder is actually empty or simply presented as empty by the system.</source>
         <translation>Las carpetas inaccesibles aparecen vacías como no hay manera de la apl determinar si una carpeta actualmente está vacía o simplemente presentada como vacía por el sistema.</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="35"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="37"/>
         <source>Additionally, some file previews and integrated access to storage settings are disabled.</source>
         <translation>Adicionalmente, algunas vistas previas del archivo y el acceso integrado para almacenar ajustes están inhabilitados.</translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="54"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="56"/>
         <source>Install from OpenRepos</source>
         <comment>as in: “open the OpenRepos website to install the File Browser app from there”</comment>
         <translation>Instalar desde OpenRepos</translation>

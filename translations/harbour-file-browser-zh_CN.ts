@@ -76,7 +76,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="176"/>
         <source>Portuguese</source>
-        <translation type="unfinished"></translation>
+        <translation>葡萄牙语</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="254"/>
@@ -339,64 +339,64 @@
 <context>
     <name>ClipboardPage</name>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="70"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="68"/>
         <source>Clipboard</source>
         <translation>剪贴板</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/ClipboardPage.qml" line="75"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="73"/>
         <source>%n item(s) to be copied</source>
         <translation>
             <numerusform>%n 要复制的项目</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="75"/>
         <source>%n item(s) to be moved</source>
         <translation>
             <numerusform>%n 要移动的项目</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="260"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="271"/>
         <source>Remove from clipboard</source>
         <translation>从剪贴板中删除</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="252"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="263"/>
         <source>Open this folder</source>
         <translation>打开此目录</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/ClipboardPage.qml" line="79"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="77"/>
         <source>%n item(s) to be linked</source>
         <translation>
             <numerusform>将合并 %n 个项目</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="115"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="118"/>
         <source>Clear</source>
         <comment>verb as in &apos;clear all contents from the clipboard&apos;</comment>
         <translation>清空</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="117"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="120"/>
         <source>Clipboard cleared</source>
         <translation>剪贴板已清空</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="256"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="267"/>
         <source>Open containing folder</source>
         <translation>打开子文件夹</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="274"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="285"/>
         <source>Empty</source>
         <translation>空</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ClipboardPage.qml" line="275"/>
+        <location filename="../qml/pages/ClipboardPage.qml" line="286"/>
         <source>Cut or copied files will be shown here.</source>
         <translation>剪切或复制的文件将显示在此处。</translation>
     </message>
@@ -825,12 +825,12 @@
 <context>
     <name>ExternalUrlPage</name>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="87"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
         <source>Swipe left to preview.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="87"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
         <source>You are using a mobile data connection.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -911,31 +911,31 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="271"/>
+        <location filename="../qml/components/FileActions.qml" line="265"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>压缩文件</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="280"/>
+        <location filename="../qml/components/FileActions.qml" line="274"/>
         <source>edit link target</source>
         <translation>编辑连接目标</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="285"/>
+        <location filename="../qml/components/FileActions.qml" line="279"/>
         <source>Apply</source>
         <translation>应用</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="305"/>
+        <location filename="../qml/components/FileActions.qml" line="299"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>编辑文件</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="330"/>
+        <location filename="../qml/components/FileActions.qml" line="324"/>
         <source>show file properties</source>
         <translation>显示文件属性</translation>
     </message>
@@ -1263,41 +1263,47 @@
         <translation>文件操作已在进程中</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="159"/>
+        <location filename="../src/fileworker.cpp" line="161"/>
         <source>Empty filename</source>
         <translation>文件名为空</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="216"/>
+        <location filename="../src/fileworker.cpp" line="164"/>
+        <location filename="../src/fileworker.cpp" line="304"/>
+        <source>File or folder does not exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/fileworker.cpp" line="221"/>
         <source>File not found</source>
         <translation>找不到文件</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="230"/>
+        <location filename="../src/fileworker.cpp" line="235"/>
         <source>Folder delete failed</source>
         <translation>目录删除失败</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="413"/>
+        <location filename="../src/fileworker.cpp" line="424"/>
         <source>Failed to remove source folder “%1” after moving.</source>
         <translation>移动后无法删除源文件夹“%1”。</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="178"/>
-        <location filename="../src/fileworker.cpp" line="252"/>
-        <location filename="../src/fileworker.cpp" line="289"/>
-        <location filename="../src/fileworker.cpp" line="374"/>
-        <location filename="../src/fileworker.cpp" line="397"/>
+        <location filename="../src/fileworker.cpp" line="183"/>
+        <location filename="../src/fileworker.cpp" line="257"/>
+        <location filename="../src/fileworker.cpp" line="294"/>
+        <location filename="../src/fileworker.cpp" line="385"/>
+        <location filename="../src/fileworker.cpp" line="408"/>
         <source>Cancelled</source>
         <translation>已取消</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="353"/>
+        <location filename="../src/fileworker.cpp" line="364"/>
         <source>Source folder does not exist</source>
         <translation>源目录不存在</translation>
     </message>
     <message>
-        <location filename="../src/fileworker.cpp" line="362"/>
+        <location filename="../src/fileworker.cpp" line="373"/>
         <source>Cannot create target folder %1</source>
         <translation>无法创建目标目录 %1</translation>
     </message>
@@ -2464,27 +2470,27 @@ exposure program</extracomment>
         <translation>外部链接</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="81"/>
         <source>Copy link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="75"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="83"/>
         <source>Copy text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="79"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="76"/>
         <source>Share</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="84"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
         <source>Open in browser</source>
         <translation>用浏览器打开</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="84"/>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
         <source>Open externally</source>
         <translation>用外部应用打开</translation>
     </message>
@@ -2844,37 +2850,37 @@ exposure program</extracomment>
 <context>
     <name>SailjailInfoDialog</name>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="13"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="15"/>
         <source>Notice</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="14"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="16"/>
         <source>Please install this app from Storeman / OpenRepos to get unrestricted access to all files and folders.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="18"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="20"/>
         <source>Limitations in this version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="22"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="24"/>
         <source>This app is currently running in a sandbox environment and does not have access to all files and folders.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="28"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="30"/>
         <source>Inaccessible folders appear empty as there is no way for the app to determine if a folder is actually empty or simply presented as empty by the system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="35"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="37"/>
         <source>Additionally, some file previews and integrated access to storage settings are disabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/SailjailInfoDialog.qml" line="54"/>
+        <location filename="../qml/SailjailInfoDialog.qml" line="56"/>
         <source>Install from OpenRepos</source>
         <comment>as in: “open the OpenRepos website to install the File Browser app from there”</comment>
         <translation type="unfinished"></translation>
