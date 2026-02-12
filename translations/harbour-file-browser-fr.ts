@@ -39,57 +39,57 @@
         <translation>Serbe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="170"/>
+        <location filename="../qml/pages/AboutPage.qml" line="171"/>
         <source>Romanian</source>
         <translation>Roumain</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="192"/>
+        <location filename="../qml/pages/AboutPage.qml" line="193"/>
         <source>Norwegian Bokmål</source>
         <translation>norvégien (Bokmål)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="270"/>
+        <location filename="../qml/pages/AboutPage.qml" line="271"/>
         <source>English</source>
         <translation>anglais</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="313"/>
+        <location filename="../qml/pages/AboutPage.qml" line="314"/>
         <source>Brazilian Portuguese</source>
         <translation>Portugais du Brésil</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="321"/>
+        <location filename="../qml/pages/AboutPage.qml" line="323"/>
         <source>Belarusian</source>
         <translation>Bélarusse</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="327"/>
+        <location filename="../qml/pages/AboutPage.qml" line="329"/>
         <source>Arabic</source>
         <translation>Arabe</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="231"/>
+        <location filename="../qml/pages/AboutPage.qml" line="232"/>
         <source>German</source>
         <translation>allemand</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="176"/>
+        <location filename="../qml/pages/AboutPage.qml" line="177"/>
         <source>Portuguese</source>
         <translation>Portugais</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="254"/>
+        <location filename="../qml/pages/AboutPage.qml" line="255"/>
         <source>Finnish</source>
         <translation>finnois</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="278"/>
+        <location filename="../qml/pages/AboutPage.qml" line="279"/>
         <source>Dutch (Belgium)</source>
         <translation>Flamand</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="300"/>
+        <location filename="../qml/pages/AboutPage.qml" line="301"/>
         <source>Chinese</source>
         <translation>chinois</translation>
     </message>
@@ -109,7 +109,7 @@
         <translation>ukrainien</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="199"/>
+        <location filename="../qml/pages/AboutPage.qml" line="200"/>
         <source>Italian</source>
         <translation>italien</translation>
     </message>
@@ -119,22 +119,22 @@
         <translation>espagnol</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="240"/>
+        <location filename="../qml/pages/AboutPage.qml" line="241"/>
         <source>French</source>
         <translation>français</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="284"/>
+        <location filename="../qml/pages/AboutPage.qml" line="285"/>
         <source>Dutch</source>
         <translation>néerlandais</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="225"/>
+        <location filename="../qml/pages/AboutPage.qml" line="226"/>
         <source>Greek</source>
         <translation>grec</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="292"/>
+        <location filename="../qml/pages/AboutPage.qml" line="293"/>
         <source>Czech</source>
         <translation>tchèque</translation>
     </message>
@@ -144,22 +144,22 @@
         <translation>slovaque</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="217"/>
+        <location filename="../qml/pages/AboutPage.qml" line="218"/>
         <source>Hungarian</source>
         <translation>hongrois</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="264"/>
+        <location filename="../qml/pages/AboutPage.qml" line="265"/>
         <source>Estonian</source>
         <translation>estonien</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="182"/>
+        <location filename="../qml/pages/AboutPage.qml" line="183"/>
         <source>Polish</source>
         <translation>polonais</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="207"/>
+        <location filename="../qml/pages/AboutPage.qml" line="208"/>
         <source>Indonesian</source>
         <translation>indonésien</translation>
     </message>
@@ -532,7 +532,7 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="145"/>
         <source>Using slashes in folder names will create sub-folders, like so:</source>
-        <translation>Utiliser le caractère barre oblique dans un nom de répertoire créera les sous-répertoire, comme ceci&#xa0;:</translation>
+        <translation>Utiliser le caractère barre oblique dans un nom de répertoire créera les sous-répertoire, comme ceci :</translation>
     </message>
 </context>
 <context>
@@ -924,7 +924,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="265"/>
+        <location filename="../qml/components/FileActions.qml" line="264"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>compresser le fichier</numerusform>
@@ -932,17 +932,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="274"/>
+        <location filename="../qml/components/FileActions.qml" line="273"/>
         <source>edit link target</source>
         <translation>Éditer le lien cible</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="279"/>
+        <location filename="../qml/components/FileActions.qml" line="278"/>
         <source>Apply</source>
         <translation>Appliquer</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="299"/>
+        <location filename="../qml/components/FileActions.qml" line="298"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>modifier le fichier</numerusform>
@@ -950,7 +950,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="324"/>
+        <location filename="../qml/components/FileActions.qml" line="323"/>
         <source>show file properties</source>
         <translation>afficher les propriétés du fichier</translation>
     </message>
@@ -2302,7 +2302,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="36"/>
         <source>Why should you care?</source>
-        <translation>En quoi ça te concerne&#x202f;?</translation>
+        <translation>En quoi ça te concerne ?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="39"/>
@@ -2317,7 +2317,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="55"/>
         <source>Why donate?</source>
-        <translation>Pourquoi faire un don&#x202f;?</translation>
+        <translation>Pourquoi faire un don ?</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="58"/>
@@ -2846,7 +2846,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="36"/>
         <source>Root Mode: be careful, you could break your system.</source>
-        <translation>Mode Root&#xa0;: soyez prudent, vous pourriez casser votre système.</translation>
+        <translation>Mode Root : soyez prudent, vous pourriez casser votre système.</translation>
     </message>
     <message>
         <location filename="../qml/pages/RootModeLockPage.qml" line="68"/>
@@ -2864,7 +2864,7 @@ exposure program</extracomment>
         <translation>Soyez prudent en utilisant le Navigation de fichiers en mode Root. Certaines actions pourraient casser votre système.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Démarrer Navigateur de fichiers en mode Root</translation>
     </message>
@@ -3208,7 +3208,7 @@ exposure program</extracomment>
         <location filename="../qml/components/StorageSizeMenuLabel.qml" line="14"/>
         <source>%1 full (%2%)</source>
         <comment>as in “15 of 20 GiB [%1] of this device are filled with data, which is 75% [%2] of its capacity”</comment>
-        <translation>%1 libre (%2&#xa0;%)</translation>
+        <translation>%1 libre (%2 %)</translation>
     </message>
 </context>
 <context>
@@ -3216,17 +3216,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="9"/>
         <source>Hi there!</source>
-        <translation>Salut&#x202f;!</translation>
+        <translation>Salut !</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="10"/>
         <source>Thank you for using my little app! Maybe you can contribute back?</source>
-        <translation>Merci d&apos;utiliser ma petite application&#x202f;! Vous pouvez peut-être contribuer&#x202f;?</translation>
+        <translation>Merci d&apos;utiliser ma petite application ! Vous pouvez peut-être contribuer ?</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="11"/>
         <source>Thank you for your support!</source>
-        <translation>Merci pour votre soutien&#x202f;!</translation>
+        <translation>Merci pour votre soutien !</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="57"/>

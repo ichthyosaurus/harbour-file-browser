@@ -39,57 +39,57 @@
         <translation>serbia keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="170"/>
+        <location filename="../qml/pages/AboutPage.qml" line="171"/>
         <source>Romanian</source>
         <translation>rumeenia keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="192"/>
+        <location filename="../qml/pages/AboutPage.qml" line="193"/>
         <source>Norwegian Bokmål</source>
         <translation>norra bokmål</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="270"/>
+        <location filename="../qml/pages/AboutPage.qml" line="271"/>
         <source>English</source>
         <translation>inglise keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="313"/>
+        <location filename="../qml/pages/AboutPage.qml" line="314"/>
         <source>Brazilian Portuguese</source>
         <translation>portugali keel (Brasiilia)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="321"/>
+        <location filename="../qml/pages/AboutPage.qml" line="323"/>
         <source>Belarusian</source>
         <translation>valgevene keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="327"/>
+        <location filename="../qml/pages/AboutPage.qml" line="329"/>
         <source>Arabic</source>
         <translation>araabia keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="231"/>
+        <location filename="../qml/pages/AboutPage.qml" line="232"/>
         <source>German</source>
         <translation>saksa keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="176"/>
+        <location filename="../qml/pages/AboutPage.qml" line="177"/>
         <source>Portuguese</source>
         <translation>portugali keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="254"/>
+        <location filename="../qml/pages/AboutPage.qml" line="255"/>
         <source>Finnish</source>
         <translation>soome keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="278"/>
+        <location filename="../qml/pages/AboutPage.qml" line="279"/>
         <source>Dutch (Belgium)</source>
         <translation>hollandi keel (Belgia)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="300"/>
+        <location filename="../qml/pages/AboutPage.qml" line="301"/>
         <source>Chinese</source>
         <translation>hiina keel</translation>
     </message>
@@ -109,7 +109,7 @@
         <translation>ukraina keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="199"/>
+        <location filename="../qml/pages/AboutPage.qml" line="200"/>
         <source>Italian</source>
         <translation>itaalia keel</translation>
     </message>
@@ -119,22 +119,22 @@
         <translation>hispaania keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="240"/>
+        <location filename="../qml/pages/AboutPage.qml" line="241"/>
         <source>French</source>
         <translation>prantsuse keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="284"/>
+        <location filename="../qml/pages/AboutPage.qml" line="285"/>
         <source>Dutch</source>
         <translation>hollandi keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="225"/>
+        <location filename="../qml/pages/AboutPage.qml" line="226"/>
         <source>Greek</source>
         <translation>kreeka keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="292"/>
+        <location filename="../qml/pages/AboutPage.qml" line="293"/>
         <source>Czech</source>
         <translation>tšehhi keel</translation>
     </message>
@@ -144,22 +144,22 @@
         <translation>slovaki keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="217"/>
+        <location filename="../qml/pages/AboutPage.qml" line="218"/>
         <source>Hungarian</source>
         <translation>ungari keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="264"/>
+        <location filename="../qml/pages/AboutPage.qml" line="265"/>
         <source>Estonian</source>
         <translation>eesti keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="182"/>
+        <location filename="../qml/pages/AboutPage.qml" line="183"/>
         <source>Polish</source>
         <translation>poola keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="207"/>
+        <location filename="../qml/pages/AboutPage.qml" line="208"/>
         <source>Indonesian</source>
         <translation>indoneesia keel</translation>
     </message>
@@ -924,7 +924,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="265"/>
+        <location filename="../qml/components/FileActions.qml" line="264"/>
         <source>compress file(s)</source>
         <translation>
             <numerusform>paki fail</numerusform>
@@ -932,17 +932,17 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="274"/>
+        <location filename="../qml/components/FileActions.qml" line="273"/>
         <source>edit link target</source>
         <translation>muuda nimeviida sihtfaili</translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="279"/>
+        <location filename="../qml/components/FileActions.qml" line="278"/>
         <source>Apply</source>
         <translation>Rakenda</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/components/FileActions.qml" line="299"/>
+        <location filename="../qml/components/FileActions.qml" line="298"/>
         <source>edit file(s)</source>
         <translation>
             <numerusform>muuda faili</numerusform>
@@ -950,7 +950,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/FileActions.qml" line="324"/>
+        <location filename="../qml/components/FileActions.qml" line="323"/>
         <source>show file properties</source>
         <translation>näita faili omadusi</translation>
     </message>
@@ -2864,7 +2864,7 @@ exposure program</extracomment>
         <translation>Kui kasutad failihaldurit juurkasutaja õigustes, siis ole ettevaatlik. Valed tegevused võivad ootamatult sinu nutiseadet kahjustada.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RootModeLockPage.qml" line="128"/>
+        <location filename="../qml/pages/RootModeLockPage.qml" line="127"/>
         <source>Start File Browser in Root Mode</source>
         <translation>Käivita failihaldur juurkasutajana</translation>
     </message>
