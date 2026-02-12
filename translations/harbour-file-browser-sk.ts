@@ -1722,17 +1722,17 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="339"/>
         <source>Enable plain black background</source>
-        <translation type="unfinished"></translation>
+        <translation>Povoliť obyčajné čierne pozadie</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="341"/>
         <source>Use plain black instead of your wallpaper as the background of this app.</source>
-        <translation type="unfinished"></translation>
+        <translation>Použiť jednoduchú čiernu namiesto tapety pre túto aplikáciu.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="343"/>
         <source>This is useful for devices with OLED displays.</source>
-        <translation type="unfinished"></translation>
+        <translation>Toto je vhodné pre zariadenia s OLED displejom.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="352"/>
