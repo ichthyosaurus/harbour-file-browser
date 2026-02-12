@@ -1,7 +1,7 @@
 /*
  * This file is part of File Browser.
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2025 Mirian Margiani
+ * SPDX-FileCopyrightText: 2025-2026 Mirian Margiani
  */
 
 import QtQuick 2.0
@@ -10,6 +10,8 @@ import Opal.SupportMe 1.0
 import Opal.LinkHandler 1.0
 
 SupportDialog {
+    readonly property string openReposUrl: "https://openrepos.net/content/ichthyosaurus/file-browser"
+
     greeting: qsTr("Notice")
     hook: qsTr("Please install this app from Storeman / OpenRepos to get " +
                "unrestricted access to all files and folders.")

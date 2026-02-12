@@ -31,7 +31,14 @@ import "js/navigation.js" as Navigation
 
 ApplicationWindow {
     id: main
-    allowedOrientations: Orientation.All
+
+    /*
+     * Some general configuration
+     *
+     */
+
+    property string coverText: "File Browser"
+    cover: Qt.resolvedUrl("cover/CoverPage.qml")
 
     // We have to explicitly set the \c _defaultPageOrientations property
     // to \c Orientation.All so the page stack's default placeholder page
@@ -41,6 +48,7 @@ ApplicationWindow {
     // the view to rotate back and forth between orientations.
     // [as of 2021-02-17, SFOS 3.4.0.24, sailfishsilica-qt5 version 1.1.110.3-1.33.3.jolla]
     _defaultPageOrientations: Orientation.All
+    allowedOrientations: Orientation.All
 
     // Navigation history: see navigation.js for details
     property var backStack: ([])
@@ -58,10 +66,6 @@ ApplicationWindow {
     function navigate_canGoBack() { return Navigation.canGoBack(); }
     function navigate_canGoForward() { return Navigation.canGoForward(); }
     function navigate_syncNavStack() { return Navigation.syncNavStack(); }
-
-    property string coverText: "File Browser"
-    cover: Qt.resolvedUrl("cover/CoverPage.qml")
-    readonly property string openReposUrl: "https://openrepos.net/content/ichthyosaurus/file-browser"
 
     initialPage: GlobalSettings.runningAsRoot ? initialPage_RootMode : initialPage_UserMode
 
