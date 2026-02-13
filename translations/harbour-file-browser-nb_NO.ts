@@ -1288,7 +1288,7 @@
         <location filename="../src/fileworker.cpp" line="164"/>
         <location filename="../src/fileworker.cpp" line="304"/>
         <source>File or folder does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Filen eller mappen finnes ikke</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="183"/>
@@ -2213,7 +2213,7 @@ exposure program</extracomment>
         <location filename="../src/jhead/jhead-api.cpp" line="484"/>
         <location filename="../src/jhead/jhead-api.cpp" line="487"/>
         <source>Comment</source>
-        <translation>JPEG-kommentar</translation>
+        <translation>Kommenter</translation>
     </message>
 </context>
 <context>
