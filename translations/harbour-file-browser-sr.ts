@@ -2290,7 +2290,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="13"/>
         <source>Donate on %1</source>
-        <translation>Donirajte na liberapay</translation>
+        <translation type="unfinished">Donirajte na liberapay</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="14"/>
@@ -2300,7 +2300,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="21"/>
         <source>Translate on %1</source>
-        <translation>Prevodite na weblate</translation>
+        <translation type="unfinished">Prevodite na weblate</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
