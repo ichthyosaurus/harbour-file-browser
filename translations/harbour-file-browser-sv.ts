@@ -1288,7 +1288,7 @@
         <location filename="../src/fileworker.cpp" line="164"/>
         <location filename="../src/fileworker.cpp" line="304"/>
         <source>File or folder does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Filen eller mappen finns inte</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="221"/>
