@@ -174,7 +174,7 @@
     <message>
         <location filename="../qml/modules/Opal/SupportMe/AskForSupport.qml" line="13"/>
         <source>Please take a moment to consider if you can contribute to this project in one way or another.</source>
-        <translation>Por favor, tómese un momento para considerar si puede contribuir a este proyecto de una forma u otra.</translation>
+        <translation>Por favor, dedica un momento a considerar si puedes colaborar en este proyecto de una forma u otra.</translation>
     </message>
 </context>
 <context>
@@ -449,12 +449,12 @@
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="151"/>
         <source>This file appears to be a software package. To install, swipe back and select the “Install” option from the menu.</source>
-        <translation>Este archivo parece ser un paquete de software. Para instalarlo, desliza el dedo hacia atrás y selecciona la opción &quot;Instalar&quot; en el menú.</translation>
+        <translation>Este archivo parece ser un paquete de software. Para instalarlo, desliza hacia atrás y selecciona la opción &quot;Instalar&quot; en el menú.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ConsolePage.qml" line="153"/>
         <source>Swipe from the right to view raw contents.</source>
-        <translation>Desliza el dedo desde la derecha para ver los contenidos sin procesar.</translation>
+        <translation>Desliza desde la derecha para ver los contenidos sin procesar.</translation>
     </message>
 </context>
 <context>
@@ -532,7 +532,7 @@
     <message>
         <location filename="../qml/pages/CreateNewDialog.qml" line="145"/>
         <source>Using slashes in folder names will create sub-folders, like so:</source>
-        <translation>Al usar una barra inclinada en el nombre de la carpeta, puede crear subcarpetas como ésta:</translation>
+        <translation>El uso de barras inclinadas en los nombres de carpetas crearán subcarpetas:</translation>
     </message>
 </context>
 <context>
@@ -778,7 +778,7 @@
     <message>
         <location filename="../src/engine.cpp" line="368"/>
         <source>No permissions to create “%1” in “%2”</source>
-        <translation>No hay permisos para crear &quot;%1&quot; en &quot;%2&quot;</translation>
+        <translation>No tienes permisos para crear &quot;%1&quot; en &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="379"/>
@@ -788,7 +788,7 @@
     <message>
         <location filename="../src/engine.cpp" line="415"/>
         <source>Cannot rename %1</source>
-        <translation>No es posible renombrar %1</translation>
+        <translation>No se puede renombrar %1</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="432"/>
@@ -798,7 +798,7 @@
     <message>
         <location filename="../src/engine.cpp" line="441"/>
         <source>No permissions to change contents of “%1”</source>
-        <translation>No hay permisos para cambiar el contenido de &quot;%1&quot;</translation>
+        <translation>No tienes permisos para cambiar el contenido de &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="449"/>
@@ -818,12 +818,12 @@
     <message>
         <location filename="../src/engine.cpp" line="488"/>
         <source>Cannot change permissions</source>
-        <translation>No es posible cambiar permisos</translation>
+        <translation>No puedes cambiar permisos</translation>
     </message>
     <message>
         <location filename="../src/engine.cpp" line="352"/>
         <source>Cannot create folder %1</source>
-        <translation>No es posible crear carpeta %1</translation>
+        <translation>No se puede crear la carpeta %1</translation>
     </message>
 </context>
 <context>
@@ -831,12 +831,12 @@
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
         <source>Swipe left to preview.</source>
-        <translation type="unfinished"></translation>
+        <translation>Desliza a la izquiera para mostrar vista previa.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
         <source>You are using a mobile data connection.</source>
-        <translation>Está utilizando una conexión de datos al móvil.</translation>
+        <translation>Estás usando una conexión de datos móviles.</translation>
     </message>
 </context>
 <context>
@@ -1067,7 +1067,7 @@
     <message>
         <location filename="../src/filemodelworker.cpp" line="245"/>
         <source>No permission to read the folder</source>
-        <translation>No tienes permisos para leer la carpeta</translation>
+        <translation>No tienes permiso para leer la carpeta</translation>
     </message>
 </context>
 <context>
@@ -1093,7 +1093,7 @@
     <message>
         <location filename="../qml/pages/FilePage.qml" line="140"/>
         <source>If nothing happens, then the package is probably faulty.</source>
-        <translation>Si no ocurre nada, entonces seguramente el paquete es defectuoso.</translation>
+        <translation>Si no ocurre nada, es probable que el paquete esté defectuoso.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="144"/>
@@ -1119,7 +1119,7 @@
         <location filename="../qml/pages/FilePage.qml" line="64"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation>Explorador de archivo</translation>
+        <translation>File Browser</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="113"/>
@@ -1150,7 +1150,7 @@
         <location filename="../qml/pages/FilePage.qml" line="142"/>
         <source>Swipe from the right to inspect its contents.</source>
         <extracomment>&quot;it&quot; = &quot;the package&quot;, i.e. an RPM or APK file</extracomment>
-        <translation>Desliza el dedo desde la derecha para ver su contenido.</translation>
+        <translation>Desliza desde la derecha para ver su contenido.</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="155"/>
@@ -1288,7 +1288,7 @@
         <location filename="../src/fileworker.cpp" line="164"/>
         <location filename="../src/fileworker.cpp" line="304"/>
         <source>File or folder does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo o carpeta no existe</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="221"/>
@@ -1303,7 +1303,7 @@
     <message>
         <location filename="../src/fileworker.cpp" line="424"/>
         <source>Failed to remove source folder “%1” after moving.</source>
-        <translation>No se pudo eliminar la carpeta de origen “ %1 ” después de moverla.</translation>
+        <translation>Error al eliminar la carpeta de origen “ %1 ” después de moverla.</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="183"/>
@@ -1322,7 +1322,7 @@
     <message>
         <location filename="../src/fileworker.cpp" line="373"/>
         <source>Cannot create target folder %1</source>
-        <translation>No es posible crear la carpeta de destino %1</translation>
+        <translation>No se puede crear la carpeta de destino %1</translation>
     </message>
 </context>
 <context>
@@ -1696,7 +1696,7 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="320"/>
         <source>Show a visual hint that the navigation menu is available by tapping the page header of the directory view.</source>
-        <translation>Muestra una sugerencia visual de que el menú de navegación está disponible tocando la cabecera de la página de la vista de directorio.</translation>
+        <translation>Muestra una sugerencia visual de que el menú de navegación está disponible al pulsar el encabezado de la página de vista del directorio.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="333"/>
@@ -1711,22 +1711,22 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="339"/>
         <source>Enable plain black background</source>
-        <translation type="unfinished"></translation>
+        <translation>Activar fondo negro liso</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="341"/>
         <source>Use plain black instead of your wallpaper as the background of this app.</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa el negro liso en lugar de tu fondo de pantalla como fondo de esta aplicación.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="343"/>
         <source>This is useful for devices with OLED displays.</source>
-        <translation type="unfinished"></translation>
+        <translation>Esto es útil para dispositivos con pantallas OLED.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="352"/>
         <source>Swipe from the right to view File Browser&apos;s source code, license information, and a list of contributors.</source>
-        <translation>Desliza el dedo desde la derecha para ver el código fuente de File Browser, la información sobre la licencia y una lista de los colaboradores.</translation>
+        <translation>Desliza desde la derecha para ver el código fuente de File Browser, la información sobre la licencia y una lista de los colaboradores.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="364"/>
@@ -2297,7 +2297,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
         <source>Support with maintenance and packaging, write code, or provide valuable bug reports.</source>
-        <translation>Brinde soporte con mantenimiento y empaquetado, escriba código o proporcione valiosos informes de errores.</translation>
+        <translation>Ayuda con el mantenimiento y empaquetado, escribe código o envía informes valiosos de errores.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="36"/>
@@ -2312,7 +2312,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="45"/>
         <source>I develop Free Software because I am convinced that it is the ethical thing to do - and it is a fun hobby. However, developing software takes a lot of time and effort. As Sailfish and living in general costs money, I need your support to be able to spend time on non-paying projects like this.</source>
-        <translation>Desarrollo software libre por convicción ética y por la alegría de este hobby. Sin embargo, el desarrollo de software requiere mucho tiempo y esfuerzo. Dado que Sailfish y la vida en general cuestan mucho dinero, cuento con vuestro apoyo para poder dedicar tiempo a proyectos no remunerados como este.</translation>
+        <translation>Desarrollo software libre por convicción ética y por diversión. Sin embargo, el desarrollo de software requiere mucho tiempo y esfuerzo. Como Sailfish y la vida en general cuestan mucho dinero, necesito tu apoyo para poder dedicar tiempo a proyectos no remunerados como éste.</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="55"/>
@@ -2322,7 +2322,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="58"/>
         <source>If you can afford it, donating is the easiest way to ensure that I can continue working on apps for Sailfish. Any amount is appreciated, be it a cup of coffee, a slice of pizza, or more.</source>
-        <translation>Si puedes permitírtelo, donar es la forma más fácil de asegurarme de que puedo seguir trabajando en aplicaciones para Sailfish. Se agradece cualquier cantidad, ya sea una taza de café, una porción de pizza o más.</translation>
+        <translation>Si te lo puedes permitir, donar es la forma más fácil de garantizar que pueda seguir trabajando en aplicaciones para Sailfish. Se agradece cualquier cantidad, ya sea una taza de café, una porción de pizza o más.</translation>
     </message>
 </context>
 <context>
@@ -2347,7 +2347,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="106"/>
         <source>show contributors</source>
-        <translation>Mostrar contribuidores</translation>
+        <translation>Mostrar colaboradores</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="108"/>
@@ -2392,7 +2392,7 @@ exposure program</extracomment>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="25"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="50"/>
         <source>Source Code</source>
-        <translation>Código Fuente</translation>
+        <translation>Código fuente</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/InfoSection.qml" line="16"/>
@@ -2407,7 +2407,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="39"/>
         <source>Acknowledgements</source>
-        <translation>Reconocimientos</translation>
+        <translation>Agradecimientos</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="11"/>
@@ -2428,7 +2428,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="40"/>
         <source>You are using a mobile data connection.</source>
-        <translation>Está utilizando una conexión de datos al móvil.</translation>
+        <translation>Está usando una conexión de datos móviles.</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
@@ -2441,7 +2441,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="55"/>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation>Nota: compruebe el código fuente para la información más precisa.</translation>
+        <translation>Nota: consulta el código fuente para una información más precisa.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="61"/>
@@ -2469,12 +2469,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="8"/>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation>Puedes apoyar este proyecto contribuyendo o donando por cualquiera de estos servicios.</translation>
+        <translation>Puedes apoyar este proyecto colaborando o donando por cualquiera de estos servicios.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="9"/>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation>Tus contribuciones a traducir o escribir código serán bien recibidas.</translation>
+        <translation>Tus colaboraciones en la traducción o el código serán bien recibidas.</translation>
     </message>
 </context>
 <context>
@@ -2482,7 +2482,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="51"/>
         <source>Phone number</source>
-        <translation>Número telefónico</translation>
+        <translation>Número de teléfono</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="51"/>
@@ -2532,7 +2532,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="28"/>
         <source>The page is taking too long to load.</source>
-        <translation>La página está tomando mucho tiempo para cargar.</translation>
+        <translation>La página está tardando mucho en cargar.</translation>
     </message>
 </context>
 <context>
@@ -2646,12 +2646,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="42"/>
         <source>Copy subtitle files in the SRT format next to the video file to open them quickly.</source>
-        <translation>Copie los archivos de subtítulos en formato SRT junto al archivo de video para abrirlos rápidamente.</translation>
+        <translation>Copia los archivos de subtítulos en formato SRT junto al archivo de video para abrirlos rápidamente.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/MediaPlayer/private/LoadSubtitlesDialog.qml" line="42"/>
         <source>Pull down to pick a file.</source>
-        <translation>Desplácese hacia abajo para seleccionar un archivo.</translation>
+        <translation>Desliza hacia abajo para seleccionar un archivo.</translation>
     </message>
 </context>
 <context>
@@ -2787,13 +2787,13 @@ exposure program</extracomment>
         <location filename="../src/globals.cpp" line="125"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
         <comment>Date and time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation>dd MMM aaaa, hh:mm:ss t</translation>
+        <translation>dd MMM yyyy, hh:mm:ss t</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="127"/>
         <source>dd.MM.yy, hh:mm</source>
         <comment>Date and format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation>dd.MM.aa, hh:mm</translation>
+        <translation>dd.MM.yy, hh:mm</translation>
     </message>
 </context>
 <context>
@@ -2879,7 +2879,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="16"/>
         <source>Please install this app from Storeman / OpenRepos to get unrestricted access to all files and folders.</source>
-        <translation>Instale esta apl desde Storeman / OpenRepos para obtener acceso no restringido a todos los archivos y carpetas.</translation>
+        <translation>Instala esta aplicación desde Storeman / OpenRepos para obtener acceso no restringido a todos los archivos y carpetas.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="20"/>
@@ -2889,17 +2889,17 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="24"/>
         <source>This app is currently running in a sandbox environment and does not have access to all files and folders.</source>
-        <translation>Esta aplicación actualmente está ejecutando en un entorno de caja de tierra y no tiene acceso a todos los archivos y carpetas.</translation>
+        <translation>Esta aplicación actualmente se ejecuta en un entorno aislado y no tiene acceso a todos los archivos y carpetas.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="30"/>
         <source>Inaccessible folders appear empty as there is no way for the app to determine if a folder is actually empty or simply presented as empty by the system.</source>
-        <translation>Las carpetas inaccesibles aparecen vacías como no hay manera de la apl determinar si una carpeta actualmente está vacía o simplemente presentada como vacía por el sistema.</translation>
+        <translation>Las carpetas inaccesibles aparecen vacías, ya que no hay forma de que la aplicación determine si una carpeta está realmente vacía o si simplemente el sistema la presenta como vacía.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="37"/>
         <source>Additionally, some file previews and integrated access to storage settings are disabled.</source>
-        <translation>Adicionalmente, algunas vistas previas del archivo y el acceso integrado para almacenar ajustes están inhabilitados.</translation>
+        <translation>Además, la vista previa de algunos archivos y el acceso integrado a los ajustes de almacenamiento están desactivados.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="56"/>
@@ -2964,7 +2964,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="428"/>
         <source>Internally not ready</source>
-        <translation>Internamente no listo</translation>
+        <translation>Internamente no está listo</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="428"/>
@@ -3083,7 +3083,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="81"/>
         <source>Pictures</source>
-        <translation>Fotos</translation>
+        <translation>Imágenes</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="86"/>
@@ -3098,7 +3098,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="237"/>
         <source>Remove bookmark for “%1”</source>
-        <translation>Borrar “%1” de marcadores</translation>
+        <translation>Quitar “%1” de marcadores</translation>
     </message>
     <message>
         <location filename="../qml/pages/ShortcutsPage.qml" line="238"/>
@@ -3186,12 +3186,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="29"/>
         <source>The “Space Inspector” app will open shortly.</source>
-        <translation>La aplicación “Analizador del uso del disco” se abrirá en breve.</translation>
+        <translation>La aplicación “Space Inspector” se abrirá en breve.</translation>
     </message>
     <message>
         <location filename="../qml/components/SpaceInspectorMenuItem.qml" line="37"/>
         <source>The “Space Inspector” app could not be opened.</source>
-        <translation>No se pudo abrir la aplicación “Analizador del uso del disco”.</translation>
+        <translation>No se pudo abrir la aplicación “Space Inspector”.</translation>
     </message>
 </context>
 <context>
@@ -3221,7 +3221,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="10"/>
         <source>Thank you for using my little app! Maybe you can contribute back?</source>
-        <translation>¡Gracias por usar mi pequeña aplicación! ¿Quizás puedas contribuir?</translation>
+        <translation>¡Gracias por usar mi pequeña aplicación! ¿Podrías colaborar?</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/SupportMe/SupportDialog.qml" line="11"/>
@@ -3249,7 +3249,7 @@ exposure program</extracomment>
     <message>
         <location filename="../src/texteditor.cpp" line="67"/>
         <source>File “%1” is too large to be edited</source>
-        <translation>El fichero &quot;%1&quot; es demasiado grande para ser editado</translation>
+        <translation>El archivo &quot;%1&quot; es demasiado grande para ser editado</translation>
     </message>
     <message>
         <location filename="../src/texteditor.cpp" line="81"/>
@@ -3259,7 +3259,7 @@ exposure program</extracomment>
     <message>
         <location filename="../src/texteditor.cpp" line="86"/>
         <source>No permission to write to “%1”</source>
-        <translation>No hay permisos para escribir en &quot;%1&quot;</translation>
+        <translation>No tienes permiso para escribir en &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../src/texteditor.cpp" line="92"/>
@@ -3273,7 +3273,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/TextEditorDialog.qml" line="60"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation>Navegador de archivos</translation>
+        <translation>File Browser</translation>
     </message>
     <message>
         <location filename="../qml/pages/TextEditorDialog.qml" line="77"/>
@@ -3500,7 +3500,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewPage.qml" line="49"/>
         <source>Edit</source>
         <comment>verb as in &apos;edit this file&apos;</comment>
-        <translation>Modificar</translation>
+        <translation>Editar</translation>
     </message>
 </context>
 <context>
@@ -3513,7 +3513,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="37"/>
         <source>Settings apply only to the current folder. Swipe from the right to change default values.</source>
-        <translation>Los ajustes sólo se aplican a la carpeta actual. Desliza el dedo desde la derecha para cambiar los valores predeterminados.</translation>
+        <translation>Los ajustes sólo se aplican a la carpeta actual. Desliza desde la derecha para cambiar los valores predeterminados.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="38"/>
@@ -3613,7 +3613,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="154"/>
         <source>Sort case-sensitively</source>
-        <translation>Ordenar según los casos</translation>
+        <translation>Ordenar distinguiendo mayúsculas y minúsculas</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="156"/>
@@ -3623,12 +3623,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="161"/>
         <source>Show folders first</source>
-        <translation>Mostrar las carpetas primero</translation>
+        <translation>Mostrar primero las carpetas</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="163"/>
         <source>Always show folders at the top of the file list.</source>
-        <translation>Mostrar siempre las carpetas en la parte superior de la lista de los archivos.</translation>
+        <translation>Muestra siempre las carpetas al principio de la lista de archivos.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ViewSettingsPage.qml" line="167"/>
@@ -3647,7 +3647,7 @@ exposure program</extracomment>
         <location filename="../qml/pages/ViewVideoPage.qml" line="21"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation>Navegador de archivos</translation>
+        <translation>File Browser</translation>
     </message>
 </context>
 <context>
