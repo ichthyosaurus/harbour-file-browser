@@ -1246,37 +1246,37 @@
     <message>
         <location filename="../src/globals.cpp" line="81"/>
         <source>MiB</source>
-        <translation>MB</translation>
+        <translation>MiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="82"/>
         <source>GiB</source>
-        <translation>GB</translation>
+        <translation>GiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="83"/>
         <source>TiB</source>
-        <translation>TB</translation>
+        <translation>TiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="84"/>
         <source>PiB</source>
-        <translation>PB</translation>
+        <translation>PiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="85"/>
         <source>EiB</source>
-        <translation>EB</translation>
+        <translation>EiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="86"/>
         <source>ZiB</source>
-        <translation>ZB</translation>
+        <translation>ZiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="87"/>
         <source>YiB</source>
-        <translation>YB</translation>
+        <translation>YiB</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="107"/>
@@ -1305,7 +1305,7 @@
         <location filename="../src/fileworker.cpp" line="164"/>
         <location filename="../src/fileworker.cpp" line="304"/>
         <source>File or folder does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Súbor alebo zložka neexistuje</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="183"/>
