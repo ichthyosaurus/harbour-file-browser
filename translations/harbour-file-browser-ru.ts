@@ -2300,7 +2300,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="21"/>
         <source>Translate on %1</source>
-        <translation>Перевести на Веблейт</translation>
+        <translation type="unfinished">Перевести на Веблейт</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
