@@ -117,7 +117,7 @@ File Browser requires the following
 
 ## Help and support
 
-There is a [FAQ](https://github.com/ichthyosaurus/harbour-file-browser/blob/main/FAQ.md) about some common questions.
+There is a [FAQ](https://codeberg.org/ichthyosaurus/harbour-file-browser/src/branch/main/FAQ.md) about some common questions.
 If your question is not listed there, you are welcome to
 [leave a comment in the forum](https://forum.sailfishos.org/t/file-browser-support-and-feedback-thread/4566)
 if you have any questions or ideas.

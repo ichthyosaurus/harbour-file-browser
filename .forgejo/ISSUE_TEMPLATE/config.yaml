@@ -5,7 +5,7 @@
 blank_issues_enabled: true
 contact_links:
   - name: FAQ
-    url: https://github.com/ichthyosaurus/harbour-file-browser/blob/main/FAQ.md
+    url: https://codeberg.org/ichthyosaurus/harbour-file-browser/src/branch/main/FAQ.md
     about: Read the list of frequently asked questions
   - name: Weblate translations
     url: https://hosted.weblate.org/projects/harbour-file-browser
