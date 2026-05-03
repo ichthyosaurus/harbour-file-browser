@@ -543,6 +543,11 @@ void BookmarksModel::updateExternalDevices()
                 }
             }
 
+            // replace literal "\x20" with whitespace
+            // TODO maybe we should fully decode the string?
+            //      -> currently, this is too much complexity for too little gain
+            title = title.replace("\\x20", " ");
+
             auto newEntry = BookmarkItem(
                 BookmarkGroup::External,
                 title, icon, i.rootPath(), {},
