@@ -56,7 +56,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="314"/>
         <source>Brazilian Portuguese</source>
-        <translation type="unfinished"></translation>
+        <translation>Portoghese brasiliano</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="323"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="329"/>
         <source>Arabic</source>
-        <translation type="unfinished"></translation>
+        <translation>Arabo</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="232"/>
@@ -183,49 +183,49 @@
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="25"/>
         <source>Name</source>
         <comment>as in: “name of the bookmark you are currently editing”</comment>
-        <translation type="unfinished">Nome</translation>
+        <translation>Nome</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="26"/>
         <source>Name must not be empty</source>
-        <translation type="unfinished">Il nome non deve essere vuoto</translation>
+        <translation>Il nome non deve essere vuoto</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="28"/>
         <source>Path</source>
         <comment>as in: “path of the bookmark you are currently editing”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Percorso</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="29"/>
         <source>Path must not be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Il percorso non deve essere vuoto</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="30"/>
         <source>Path does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Il percorso non esiste</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="31"/>
         <source>Path is not a folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Il percorso non è una cartella</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="96"/>
         <source>Apply</source>
         <comment>as in &apos;apply these changes&apos;</comment>
-        <translation type="unfinished">Applica</translation>
+        <translation>Applica</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="97"/>
         <source>Edit bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica segnalibri</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksEditDialog.qml" line="232"/>
         <source>Apply</source>
-        <translation type="unfinished">Applica</translation>
+        <translation>Applica</translation>
     </message>
 </context>
 <context>
@@ -831,12 +831,12 @@
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
         <source>Swipe left to preview.</source>
-        <translation type="unfinished"></translation>
+        <translation>Scorri verso sinistra per visualizzare l&apos;anteprima.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="86"/>
         <source>You are using a mobile data connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Stai utilizzando una connessione dati mobile.</translation>
     </message>
 </context>
 <context>
@@ -1119,7 +1119,7 @@
         <location filename="../qml/pages/FilePage.qml" line="64"/>
         <source>File Browser</source>
         <comment>translated app name</comment>
-        <translation type="unfinished">Gestore File</translation>
+        <translation>Gestore File</translation>
     </message>
     <message>
         <location filename="../qml/pages/FilePage.qml" line="113"/>
@@ -1288,7 +1288,7 @@
         <location filename="../src/fileworker.cpp" line="164"/>
         <location filename="../src/fileworker.cpp" line="304"/>
         <source>File or folder does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Il file o la cartella non esiste</translation>
     </message>
     <message>
         <location filename="../src/fileworker.cpp" line="221"/>
@@ -1711,17 +1711,17 @@
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="339"/>
         <source>Enable plain black background</source>
-        <translation type="unfinished"></translation>
+        <translation>Abilita lo sfondo nero semplice</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="341"/>
         <source>Use plain black instead of your wallpaper as the background of this app.</source>
-        <translation type="unfinished"></translation>
+        <translation>Per lo sfondo di questa app, usa un semplice sfondo nero anziché lo sfondo del desktop.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="343"/>
         <source>This is useful for devices with OLED displays.</source>
-        <translation type="unfinished"></translation>
+        <translation>Questa funzione è utile per i dispositivi dotati di display OLED.</translation>
     </message>
     <message>
         <location filename="../qml/pages/GlobalSettingsPage.qml" line="352"/>
@@ -2428,7 +2428,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="40"/>
         <source>You are using a mobile data connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Stai utilizzando una connessione dati mobile.</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
@@ -2492,12 +2492,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="81"/>
         <source>Copy link</source>
-        <translation type="unfinished"></translation>
+        <translation>Copia link</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="83"/>
         <source>Copy text</source>
-        <translation type="unfinished"></translation>
+        <translation>Copia testo</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="76"/>
@@ -2527,12 +2527,12 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="27"/>
         <source>No preview available.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuna anteprima disponibile.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="28"/>
         <source>The page is taking too long to load.</source>
-        <translation type="unfinished"></translation>
+        <translation>La pagina impiega troppo tempo a caricarsi.</translation>
     </message>
 </context>
 <context>
@@ -2781,19 +2781,19 @@ exposure program</extracomment>
         <location filename="../src/globals.cpp" line="122"/>
         <source>hh:mm:ss</source>
         <comment>Time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">hh:mm:ss</translation>
+        <translation>hh:mm:ss</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="125"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
         <comment>Date and time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">dd MMM aaaa, hh:mm:ss t</translation>
+        <translation>dd MM aaaa, hh:mm:ss t</translation>
     </message>
     <message>
         <location filename="../src/globals.cpp" line="127"/>
         <source>dd.MM.yy, hh:mm</source>
         <comment>Date and format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">dd.MM.yy, hh:mm</translation>
+        <translation>dd.MM.yy, hh:mm</translation>
     </message>
 </context>
 <context>
@@ -2874,38 +2874,38 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="15"/>
         <source>Notice</source>
-        <translation type="unfinished"></translation>
+        <translation>Avviso</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="16"/>
         <source>Please install this app from Storeman / OpenRepos to get unrestricted access to all files and folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Installa questa app da Storeman / OpenRepos per ottenere accesso illimitato a tutti i file e le cartelle.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="20"/>
         <source>Limitations in this version</source>
-        <translation type="unfinished"></translation>
+        <translation>Limitazioni in questa versione</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="24"/>
         <source>This app is currently running in a sandbox environment and does not have access to all files and folders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Questa app è attualmente in esecuzione in un ambiente sandbox e non ha accesso a tutti i file e le cartelle.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="30"/>
         <source>Inaccessible folders appear empty as there is no way for the app to determine if a folder is actually empty or simply presented as empty by the system.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le cartelle inaccessibili appaiono vuote quindi l&apos;app non ha modo di stabilire se una cartella è effettivamente vuota o se viene semplicemente presentata come vuota dal sistema.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="37"/>
         <source>Additionally, some file previews and integrated access to storage settings are disabled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Inoltre, alcune anteprime dei file e l&apos;accesso integrato alle impostazioni di archiviazione sono disabilitati.</translation>
     </message>
     <message>
         <location filename="../qml/SailjailInfoDialog.qml" line="56"/>
         <source>Install from OpenRepos</source>
         <comment>as in: “open the OpenRepos website to install the File Browser app from there”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Installa da OpenRepos</translation>
     </message>
 </context>
 <context>

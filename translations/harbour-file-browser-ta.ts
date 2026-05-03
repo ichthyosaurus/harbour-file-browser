@@ -2272,7 +2272,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="13"/>
         <source>Donate on %1</source>
-        <translation>லிபராபேயில் நன்கொடை</translation>
+        <translation type="unfinished">லிபராபேயில் நன்கொடை</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="14"/>
@@ -2282,7 +2282,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="21"/>
         <source>Translate on %1</source>
-        <translation>வெப்லேட்டில் மொழிபெயர்க்கவும்</translation>
+        <translation type="unfinished">வெப்லேட்டில் மொழிபெயர்க்கவும்</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="22"/>
@@ -2292,7 +2292,7 @@ exposure program</extracomment>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="29"/>
         <source>Develop on %1</source>
-        <translation>கிட்அப்பில் உருவாக்குங்கள்</translation>
+        <translation type="unfinished">கிட்அப்பில் உருவாக்குங்கள்</translation>
     </message>
     <message>
         <location filename="../qml/MySupportDialog.qml" line="30"/>
