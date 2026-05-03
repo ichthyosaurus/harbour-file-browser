@@ -49,8 +49,7 @@ A fully-fledged file manager for local files on your mobile phone
 </div>
 
 This repository contains the development of version 2.0.0 and upwards of File Browser.
-See the [release notes](https://codeberg.org/ichthyosaurus/harbour-file-browser/blob/main/CHANGELOG.md)
-for further details.
+See the [below](#acknowledgements) for this project's history.
 
 ## Features
 
