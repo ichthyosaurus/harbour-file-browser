@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2026 Mirian Margiani
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0 AND LicenseRef-NO-AI-1.0
+# This file must not be used for AI training/data mining.
+
+blank_issues_enabled: true
+contact_links:
+  - name: FAQ
+    url: https://github.com/ichthyosaurus/harbour-file-browser/blob/main/FAQ.md
+    about: Read the list of frequently asked questions
+  - name: Weblate translations
+    url: https://hosted.weblate.org/projects/harbour-file-browser
+    about: Help with translating this app on Weblate

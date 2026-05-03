@@ -1,0 +1,58 @@
+# SPDX-FileCopyrightText: 2026 Mirian Margiani
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0 AND LicenseRef-NO-AI-1.0
+# This file must not be used for AI training/data mining.
+
+name: Translation mistake
+about: Report mistakes with translated strings
+title: 'Translation mistake'
+ref: 'main'
+labels:
+  - 'i18n'
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report this issue!
+
+        I will try to respond in a timely manner but please be patient because
+        I have very little free time. Feel free to ping me though, if there
+        is no reaction after a few weeks.
+  - type: input
+    id: lang
+    attributes:
+      label: Affected translation
+      description: Which language is affected by this mistake?
+      placeholder: English name or ISO code of the language
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: Where did you find the issue?
+      placeholder: e.g. "settings page"
+    validations:
+      required: true
+  - type: textarea
+    id: incorrect-text
+    attributes:
+      label: Incorrect text
+      description: The text as it appears in the app.
+      placeholder: Please attach a screenshot of the whole page *and* describe which string is affected.
+    validations:
+      required: true
+  - type: textarea
+    id: correct-text
+    attributes:
+      label: Correct text
+      description: The corrected text as it should appear in the app.
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Licensing
+      description: By submitting your translation suggestion, you agree that it is included into the project under this project's main license.
+      options:
+        - label: I agree to license my contributions under the [GNU Affero General Public License v3 (or later)](https://spdx.org/licenses/AGPL-3.0-or-later.html)
+          required: true

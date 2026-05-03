@@ -1,0 +1,44 @@
+version = 1
+SPDX-PackageName = "File Browser"
+SPDX-PackageSupplier = "Mirian Margiani <mixosaurus+ichthyo@pm.me>"
+SPDX-PackageDownloadLocation = "https://codeberg.org/ichthyosaurus/harbour-file-browser"
+
+[[annotations]]
+path = "translations/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2013-2024 this project's translations contributors"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+[[annotations]]
+path = "rpm/harbour-**.spec"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Mirian Margiani"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+SPDX-FileComment = "This file is generated from [this file's name].yaml and shares copyright with it."
+
+[[annotations]]
+path = ["icons/**", "qml/images/**", "dist/harbour-**.png", "root/icons/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Mirian Margiani"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+SPDX-FileComment = "These files are generated from the sources at icon-src/*."
+
+[[annotations]]
+path = "icon-src/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Mirian Margiani"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+SPDX-FileComment = "These files contain proper Dublin Core licensing metadata."
+
+[[annotations]]
+path = [".gitmodules", "libs/SortFilterProxyModel.patch"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Mirian Margiani"
+SPDX-License-Identifier = "CC0-1.0"
+SPDX-FileComment = "These files have been released into the public domain."
+
+[[annotations]]
+path = "TRANSLATORS.json"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "translations contributors"
+SPDX-License-Identifier = "GPL-3.0-or-later"
