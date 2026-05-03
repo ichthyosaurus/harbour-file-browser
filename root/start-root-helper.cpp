@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2020-2026 Mirian Margiani
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
- * Repository: https://github.com/ichthyosaurus/harbour-file-browser
+ * Repository: https://codeberg.org/ichthyosaurus/harbour-file-browser
  *
  */
 

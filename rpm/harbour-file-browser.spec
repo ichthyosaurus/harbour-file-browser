@@ -14,7 +14,7 @@ Version:    3.9.1
 Release:    1
 Group:      Applications/Productivity
 License:    GPL-3.0-or-later
-URL:        https://github.com/ichthyosaurus/harbour-file-browser
+URL:        https://codeberg.org/ichthyosaurus/harbour-file-browser
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-file-browser.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9

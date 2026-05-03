@@ -37,7 +37,7 @@ A.AboutPageBase {
     appRelease: APP_RELEASE
     appReleaseType: RELEASE_TYPE
 
-    sourcesUrl: "https://github.com/ichthyosaurus/%1".arg(Qt.application.name)
+    sourcesUrl: "https://codeberg.org/ichthyosaurus/%1".arg(Qt.application.name)
     homepageUrl: "https://forum.sailfishos.org/t/file-browser-support-and-feedback-thread/4566"
     translationsUrl: "https://hosted.weblate.org/projects/%1".arg(Qt.application.name)
     changelogList: Qt.resolvedUrl("../Changelog.qml")
